@@ -1,0 +1,44 @@
+# Dependencias y build
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Material bruto del DEMRE (PDFs con derechos reservados, no se versionan)
+Pruebas_DEMRE/
+Clavijeros_Pruebas_DEMRE/
+pruebas-oficiales
+pruebas-oficiales/
+facsimiles-oficiales
+facsimiles-oficiales/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Artefactos de compilación LaTeX
+latex/output/*.aux
+latex/output/*.log
+latex/output/*.out
+latex/output/*.toc
+latex/output/*.nav
+latex/output/*.snm
+latex/output/*.fls
+latex/output/*.fdb_latexmk
+latex/output/*.synctex.gz
+
+# Editor / SO
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Video del proyecto (hve-video-director) y skills de agentes
+videos/
+.agents/

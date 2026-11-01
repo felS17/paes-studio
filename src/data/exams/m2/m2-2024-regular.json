@@ -1,0 +1,2010 @@
+{
+ "id": "m2-2024-regular",
+ "subject": "m2",
+ "title": "PAES Regular 2024",
+ "description": "Prueba oficial completa de Competencia Matemática 2 (M2): 55 preguntas, aplicada el 27-11-2023 (Admisión 2024). Claves del clavijero oficial DEMRE.",
+ "year": 2024,
+ "modality": "regular",
+ "source": "demre",
+ "form": "193",
+ "appliedOn": "2023-11-27",
+ "durationMinutes": 140,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   163,
+   195,
+   223,
+   248,
+   271,
+   292,
+   312,
+   330,
+   348,
+   366,
+   381,
+   395,
+   408,
+   422,
+   437,
+   452,
+   466,
+   478,
+   488,
+   498,
+   509,
+   522,
+   537,
+   551,
+   563,
+   573,
+   582,
+   592,
+   603,
+   616,
+   631,
+   645,
+   657,
+   667,
+   678,
+   689,
+   703,
+   718,
+   734,
+   748,
+   762,
+   776,
+   792,
+   810,
+   829,
+   848,
+   868,
+   890,
+   915,
+   1000
+  ],
+  "officialQuestionCount": 55,
+  "officialScorableCount": 50
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-2024-regular-q01",
+   "number": 1,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "El nivel de colesterol para las personas se presenta en la tabla adjunta.\n\nCategoría Nivel de colesterol total mg Deseable Hasta 200 dL mg mg Riesgo bajo Mayor que 200 hasta 240 dL dL mg Riesgo alto Mayor que 240 dL\n\nmg Rodrigo presenta un colesterol de 255 y su doctor le deja dos recetas: dL\n\nLa primera receta es para que tome un medicamento que reduce el nivel de mg colesterol en 5,2 diarios, pero que solo debe tomar mientras presente un dL riesgo alto.\n\nLa segunda receta indica un medicamento que reduce su nivel de colesterol en mg 8,0 diarios, pero que solo debe tomar mientras presente un riesgo bajo. dL\n\nSi Rodrigo sigue el tratamiento indicado por el doctor, ¿cuál de las siguientes expresiones numéricas permite determinar la duración del tratamiento, en días, para que el nivel de colesterol de Rodrigo llegue a ser deseable?\n\n5,2 ( 255 − 240 ) + 8,0 ( 240 − 200 )",
+   "options": [
+    {
+     "key": "A",
+     "text": "5,2 + 8,0 255 − 200"
+    },
+    {
+     "key": "B",
+     "text": "5,2 + 8,0 240 255 +"
+    },
+    {
+     "key": "C",
+     "text": "5,2 8,0 255 − 240 5,2"
+    },
+    {
+     "key": "D",
+     "text": "· 240 − 200 8,0 255 − 240 240 − 200"
+    },
+    {
+     "key": "E",
+     "text": "+ 5,2 8,0"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q01.webp",
+    "width": 903,
+    "height": 1124,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "n − 1 Considera la igualdad P = , con n un número entero. n + 1\n\n¿Para cuántos valores distintos de n se cumple que P es un número entero?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Solo para un valor."
+    },
+    {
+     "key": "B",
+     "text": "Solo para dos valores."
+    },
+    {
+     "key": "C",
+     "text": "Solo para cuatro valores."
+    },
+    {
+     "key": "D",
+     "text": "Solo para cinco valores."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q02.webp",
+    "width": 903,
+    "height": 293,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q03",
+   "number": 3,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Considera un cuadrado A de lado p cm y un cuadrado B cuyo lado tiene medida igual a la medida de la diagonal del cuadrado A.\n\n¿Para cuál de los siguientes valores de p, en cm, la suma de las medidas de las diagonales de los cuadrados A y B es un número racional?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2"
+    },
+    {
+     "key": "B",
+     "text": "2 − 2"
+    },
+    {
+     "key": "C",
+     "text": "2 + 2"
+    },
+    {
+     "key": "D",
+     "text": "2 − 2"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q03.webp",
+    "width": 903,
+    "height": 377,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "En el gráfico adjunto se presenta la composición elemental del cuerpo humano.\n\n65 % 18 % Oxígeno Carbono\n\n10 % 4 % 3 % Hidrógeno Nitrógeno\n\nOtros elementos\n\nTal como en el ser humano, los cuatro elementos más abundantes en el resto de los organismos vivos son el Carbono, Hidrógeno, Oxígeno y Nitrógeno, y para recordar estos cuatro elementos es usual usar el acrónimo nemotécnico CHON.\n\n¿Qué porcentaje de los elementos CHON en el cuerpo humano corresponde a Oxígeno?\n\n65 ·",
+   "options": [
+    {
+     "key": "A",
+     "text": "100 % 100 65"
+    },
+    {
+     "key": "B",
+     "text": "% 32 · 100 65 ·"
+    },
+    {
+     "key": "C",
+     "text": "100 % 96 65"
+    },
+    {
+     "key": "D",
+     "text": "% 4 · 100"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q04.webp",
+    "width": 903,
+    "height": 885,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q05",
+   "number": 5,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "3 3 ¿Cuál es el valor de 2 5 + 2 10 ?\n\n6 6",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 + 20"
+    },
+    {
+     "key": "B",
+     "text": "6 80 5 40"
+    },
+    {
+     "key": "C",
+     "text": "2 6 6"
+    },
+    {
+     "key": "D",
+     "text": "30 + 40 6 40"
+    },
+    {
+     "key": "E",
+     "text": "2"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q05.webp",
+    "width": 903,
+    "height": 322,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q06",
+   "number": 6,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Considera los números reales a y b, ambos distintos de cero.\n\n¿Cuál de las siguientes relaciones permite asegurar que ( ) 2 a − b = a − b ?\n\n( ) 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "a + b = a + b 2 2"
+    },
+    {
+     "key": "B",
+     "text": "a − b = a − b"
+    },
+    {
+     "key": "C",
+     "text": "a − b > 0"
+    },
+    {
+     "key": "D",
+     "text": "a − b < 0"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q06.webp",
+    "width": 903,
+    "height": 359,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q07",
+   "number": 7,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "6 3 ¿Cuál es el valor de 4 · 5 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 10"
+    },
+    {
+     "key": "B",
+     "text": "9 20"
+    },
+    {
+     "key": "C",
+     "text": "9 10"
+    },
+    {
+     "key": "D",
+     "text": "18 20"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q07.webp",
+    "width": 903,
+    "height": 269,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q08",
+   "number": 8,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "x 2 x + y ¿Cuál de las siguientes expresiones es igual a 5 · ?\n\nx 2 y",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 · 2 x y"
+    },
+    {
+     "key": "B",
+     "text": "10 · 2 2 x + y"
+    },
+    {
+     "key": "C",
+     "text": "10 2 x + xy"
+    },
+    {
+     "key": "D",
+     "text": "10"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q08.webp",
+    "width": 903,
+    "height": 286,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q09",
+   "number": 9,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "Una sustancia radiactiva se desintegra de tal forma que después de una hora queda la mitad de la masa inicial.\n\nEn la tabla adjunta se registra la masa de sustancia en las primeras cuatro horas de observación. Tiempo transcurrido (horas) Masa de sustancia (gramos) 1 1 2 1 5,2 · 10 · 2 2 1 2 2 5,2 · 10 · 2 3 1 2 3 5,2 · 10 · 2 4 1 2 4 5,2 · 10 · 2\n\n¿Cuál de los siguientes puntos está correctamente graficado en los ejes coordenados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Masa de sustancia en gramos 5⁴ 2 1 Tiempo transcurrido en horas"
+    },
+    {
+     "key": "B",
+     "text": "Masa de sustancia en gramos 2 5 2 Tiempo transcurrido en horas"
+    },
+    {
+     "key": "C",
+     "text": "Masa de sustancia en gramos Masa de sustancia en gramos 5² 2,5³ 4 3 Tiempo transcurrido en horas 4 Tiempo transcurrido en horas"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q09.webp",
+    "width": 903,
+    "height": 1103,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q10",
+   "number": 10,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "¿Cuál es el valor de log3 1,0 ?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "²"
+    },
+    {
+     "key": "B",
+     "text": "2 − 1"
+    },
+    {
+     "key": "C",
+     "text": "log 3"
+    },
+    {
+     "key": "D",
+     "text": "− 1"
+    },
+    {
+     "key": "E",
+     "text": "− 2"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q10.webp",
+    "width": 903,
+    "height": 344,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q11",
+   "number": 11,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "El área de un triángulo equilátero de lado q cm es la cuarta parte del área de un cuadrado de lado p cm .\n\np? ¿Cuál es el valor de q\n\n1 4",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 1 3⁴"
+    },
+    {
+     "key": "B",
+     "text": "4 4"
+    },
+    {
+     "key": "C",
+     "text": "3 1 2"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q11.webp",
+    "width": 903,
+    "height": 437,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q12",
+   "number": 12,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "En la siguiente tabla se presentan los valores aproximados de log N para algunos números N:\n\nN log N N log N\n\n1 0 6 0,778\n\n2 0,301 7 0,845\n\n3 0,477 8 0,903\n\n4 0,602 9 0,954\n\n5 0,699 10 1\n\nConsiderando los valores de la tabla, ¿cuál es el valor de log 35 000 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": ",0 699 · ,0 845 · 3"
+    },
+    {
+     "key": "B",
+     "text": ",0 699 · ,0 845 · 1"
+    },
+    {
+     "key": "C",
+     "text": ",0 699 + ,0 845 + 3"
+    },
+    {
+     "key": "D",
+     "text": ",0 699 + ,0 845 + 1"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q12.webp",
+    "width": 903,
+    "height": 616,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q13",
+   "number": 13,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Si p, b y c son números reales mayores que 1 tal que logp b = c , ¿cuál de las\n\n1 siguientes expresiones es igual a log + log b ? p 1 b p",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 2 c"
+    },
+    {
+     "key": "B",
+     "text": "c 2 2"
+    },
+    {
+     "key": "C",
+     "text": "c 1"
+    },
+    {
+     "key": "D",
+     "text": "− c + c"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q13.webp",
+    "width": 903,
+    "height": 381,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q14",
+   "number": 14,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Bajo condiciones especiales, la población de cierto tipo de bacterias se triplica cada 10 días.\n\nEn esas condiciones, si una colonia de este tipo tiene inicialmente 5 8 · 10 bacterias, ¿cuál será su población de bacterias al término de 50 días?\n\n5",
+   "options": [
+    {
+     "key": "A",
+     "text": "8 · 30 5 50"
+    },
+    {
+     "key": "B",
+     "text": "8 · 10 · 3 5"
+    },
+    {
+     "key": "C",
+     "text": "15 · 8 · 10 5"
+    },
+    {
+     "key": "D",
+     "text": "150 · 8 · 10"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q14.webp",
+    "width": 903,
+    "height": 395,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q15",
+   "number": 15,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Si 46 44 p = 7 − 7 , ¿cuál de las siguientes afirmaciones es verdadera con respecto a p?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Es un número impar."
+    },
+    {
+     "key": "B",
+     "text": "Es un número primo."
+    },
+    {
+     "key": "C",
+     "text": "Es un múltiplo de 13."
+    },
+    {
+     "key": "D",
+     "text": "Es un múltiplo de 21."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q15.webp",
+    "width": 903,
+    "height": 263,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q16",
+   "number": 16,
+   "axis": "Números",
+   "topic": "Interés",
+   "stem": "Un banco garantiza una tasa de interés trimestral de 5,2 % para los depósitos a plazo. La función que modela el capital final que tendrá una persona luego de depositar es: C = M ( 1 + N )ⁿ\n\nen la que M corresponde al capital inicial, N es la tasa de interés expresada como decimal y n es la cantidad de trimestres que se mantiene el dinero en el banco.\n\nSi una persona hace un solo depósito inicial de \\$ 2 500 000 en ese banco, ¿cuál es la expresión que representa el capital final que tendrá esta persona después de 2 años?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 2 500 000 · ( ,1 25 )⁸"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 2 500 000 · ( ,1 025 )⁸ ( 8 − )1"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 2 500 000 · ,1 25 ( 8 − )1"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 2 500 000 · ,1 025"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q16.webp",
+    "width": 903,
+    "height": 584,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q17",
+   "number": 17,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "El sueldo líquido es el monto total que recibe una persona que trabaja, luego de descontar del total de haberes, las cotizaciones obligatorias y voluntarias del sueldo total imponible.\n\nConsidera la siguiente liquidación de sueldo de una persona:\n\n**LIQUIDACIÓN DE SUELDO**\n\n**DATOS DEL(A) TRABAJADOR(A)**\n\n**RUT: 1*.***.***-8 NOMBRE: a r *s Período de Remuneración: 31 días** Mes: Enero Año: 2022\n\n**Haberes del Trabajador Valor**\n\nSueldo Base \\$ 700 000\n\n\\$ 50 000 **DESCUENTOS** Horas Extras\n\n**SUELDO IMPONIBLE Valor**\n\n\\$ 50 000 Cotización Previsional AFP \\$ 80 000 Aguinaldo (10 %) **Sueldo total imponible** \\$ 800 000 Cotización Salud \\$ 56 000 (7 %) Bono de la empresa \\$ 100 000 Cotización Voluntaria X (a **%**) Movilización \\$ 50 000\n\n**TOTAL DESCUENTOS**\n\nY\n\n**PREVISIONALES**\n\n**Sueldo total no Imponible** \\$ 150 000\n\n**Total de Haberes** \\$ 950 000\n\n**DETALLE DE REMUNERACIÓN SUELDO LIQUIDO A PAGAR \\$Z**\n\n¿Cuál es la expresión que representa el sueldo líquido de esta persona en función del número “a ” del porcentaje de cotización voluntaria, en pesos?\n\n17 + a",
+   "options": [
+    {
+     "key": "A",
+     "text": "950 000 · 1 − 100 1 − ( 17 + a"
+    },
+    {
+     "key": "B",
+     "text": "950 000 · ) 100 17 + a"
+    },
+    {
+     "key": "C",
+     "text": "800 000 · 1 − + 150 000 100 1 − ( 17 + a )"
+    },
+    {
+     "key": "D",
+     "text": "800 000 · + 150 000 100"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q17.webp",
+    "width": 903,
+    "height": 1141,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q18",
+   "number": 18,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Considera la figura adjunta formada por tres cuadrados, uno de lado a metros 2 y otros dos de área p metros cuadrados, cada uno.\n\na metros\n\n¿Cuál de las siguientes expresiones representa el área de la zona gris en metros cuadrados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "( a − 2 p )( a + 2 p )"
+    },
+    {
+     "key": "B",
+     "text": "( )( ) a − 2 p a + 2 p"
+    },
+    {
+     "key": "C",
+     "text": "2 ( a − p )²"
+    },
+    {
+     "key": "D",
+     "text": "( a − 2 p )²"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q18.webp",
+    "width": 903,
+    "height": 715,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q19",
+   "number": 19,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la siguiente gráfica que corresponde a la función que modela la relación lineal entre la profundidad t, en metros, de un objeto sumergido y la presión que el agua ejerce sobre este.\n\nPresión (Pa) 10\n\n1 Profundidad (m) 90\n\n¿Cuál de las siguientes funciones modela la presión, en Pa, que el agua ejerce sobre el objeto, respecto de t, en metros?",
+   "options": [
+    {
+     "key": "A",
+     "text": "f )t( = 90 · t"
+    },
+    {
+     "key": "B",
+     "text": "g )t( = 10 · t + 1"
+    },
+    {
+     "key": "C",
+     "text": "h )t( = 1,0 · t"
+    },
+    {
+     "key": "D",
+     "text": "n )t( = 1,0 · t + 1"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q19.webp",
+    "width": 903,
+    "height": 664,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q20",
+   "number": 20,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "¿En cuál de las siguientes representaciones las variables son inversamente proporcionales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "**M N** 5 8 10 4 20 2"
+    },
+    {
+     "key": "B",
+     "text": "**P Q** 5 10 10 9 20 8"
+    },
+    {
+     "key": "C",
+     "text": "R 5 2 3 6 S"
+    },
+    {
+     "key": "D",
+     "text": "T 5 2 3 6 U"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q20.webp",
+    "width": 903,
+    "height": 926,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q21",
+   "number": 21,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "El azúcar de mesa, cuyo nombre químico es sacarosa, corresponde a un compuesto formado por carbono, hidrógeno y oxígeno.\n\nEn un experimento hipotético se utiliza sacarosa para obtener agua de manera directamente proporcional a la masa de sacarosa utilizada. En la siguiente gráfica se relaciona la masa de agua obtenida en el experimento con varias masas de sacarosa.\n\nAgua (g)\n\n171\n\n150 500 g( ) Sacarosa\n\n¿Cuál de las siguientes expresiones representa la masa en gramos de sacarosa ( S ) necesarios para obtener cierta masa en gramos de agua? ( A )\n\n57",
+   "options": [
+    {
+     "key": "A",
+     "text": "S = 100 · A 57 · A"
+    },
+    {
+     "key": "B",
+     "text": "S = 100 100 · A"
+    },
+    {
+     "key": "C",
+     "text": "S = 57 100"
+    },
+    {
+     "key": "D",
+     "text": "S = 57 · A"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q21.webp",
+    "width": 903,
+    "height": 932,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q22",
+   "number": 22,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "En el gráfico adjunto se presentan ciertas temperaturas medidas en distintas escalas de temperaturas.\n\nPunto de Menor Temperatura Punto de Temperatura Temperatura Mayor ebullición temperatura de mezcla de fusión del hielo promedio en promedio del temperatura del agua registrada sal de bajo presión la cuerpo registrada bajo presión en la amonio, hielo de una superficie de humano en la de una superficie y Agua en atmósfera la Tierra **(37**o**C)** superficie atmósfera de la Tierra Fahrenheit **(0**o**) (15**o**C)** de la Tierra\n\nLa ecuación de equivalencia entre una escala de temperatura y otra es siempre 9 una ecuación lineal, por ejemplo la ecuación ° F = ° C + 32 es la ecuación de 5 equivalencia entre grados Celsius y grados Fahrenheit.\n\nSi la ecuación de equivalencia de grados Newton y grados Delisle es ° D = a ° N + b , ¿cuáles son los signos de a y b?",
+   "options": [
+    {
+     "key": "A",
+     "text": "a > 0 y b > 0"
+    },
+    {
+     "key": "B",
+     "text": "a > 0 y b < 0"
+    },
+    {
+     "key": "C",
+     "text": "a < 0 y b > 0"
+    },
+    {
+     "key": "D",
+     "text": "a < 0 y b < 0"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q22.webp",
+    "width": 903,
+    "height": 1119,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q23",
+   "number": 23,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "4 x m 1 2 x Considera la inecuación − < − + , en x, tal que m es un número 5 6 10 3 real.\n\nSi el conjunto solución de la inecuación es] − ∞ , − [2 , ¿cuál es el valor de m?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 − 11"
+    },
+    {
+     "key": "B",
+     "text": "− 5"
+    },
+    {
+     "key": "C",
+     "text": "¹ 9"
+    },
+    {
+     "key": "D",
+     "text": "− 5"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q23.webp",
+    "width": 903,
+    "height": 396,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q24",
+   "number": 24,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Para probar la rapidez de dos computadores, se ejecuta un mismo algoritmo en ambos.\n\nEl computador A ejecuta el algoritmo en p segundos, mientras que el\n\ncomputador B lo ejecuta tres veces en p segundos, demorándose lo mismo en 2 cada ejecución.\n\nAl ejecutar el algoritmo n veces seguidas en ambos computadores, el computador más rápido demora 60 segundos menos que el otro.\n\n¿Cuál de las siguientes expresiones permite determinar el tiempo, en segundos, que demora el computador más lento en ejecutar el algoritmo?\n\n72",
+   "options": [
+    {
+     "key": "A",
+     "text": "n 120"
+    },
+    {
+     "key": "B",
+     "text": "n"
+    },
+    {
+     "key": "C",
+     "text": "72 n"
+    },
+    {
+     "key": "D",
+     "text": "120 n"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q24.webp",
+    "width": 903,
+    "height": 595,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q25",
+   "number": 25,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Un total de q personas planea ir al cine, de las cuales x son adultos e y son niños. El valor de la entrada de un niño es n \\$ y el valor para adultos es m \\$ , por lo que se pagarían p \\$ por todas las entradas.\n\nSi finalmente tres niños no asistieron al cine y el precio de la entrada de un adulto tenía un 30 % de descuento, pagándose k \\$ por todas las entradas, ¿cuál de los siguientes sistemas representa la situación planteada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "x + (y – 3) = q – 3 0,70mx + n(y – 3) = k"
+    },
+    {
+     "key": "B",
+     "text": "x + (y – 3) = q – 3 0,30mx + n(y – 3) = k x + (y – 3) = q"
+    },
+    {
+     "key": "C",
+     "text": "0,70mx + n(y – 3) = p – k"
+    },
+    {
+     "key": "D",
+     "text": "x + (y – 3) = q – 3 0,30mx + n(y – 3) = p – k"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q25.webp",
+    "width": 903,
+    "height": 754,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q26",
+   "number": 26,
+   "axis": "Números",
+   "topic": "Números reales",
+   "stem": "¿Para qué valores de p y q, respectivamente, se cumple la igualdad px + qx − 2 p − 3 q = 2 x + 1 , para todo número real x?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 y − 3"
+    },
+    {
+     "key": "B",
+     "text": "7 y − 5 3 7 y 5"
+    },
+    {
+     "key": "C",
+     "text": "5"
+    },
+    {
+     "key": "D",
+     "text": "1 y 1 −"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q26.webp",
+    "width": 903,
+    "height": 296,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q27",
+   "number": 27,
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "stem": "Si p, q y k son números reales, con q distinto de cero y k distinto de 0 y 1, ¿cuál de los siguientes sistemas en x e y no tiene solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "x + y = p kx + ky = kp"
+    },
+    {
+     "key": "B",
+     "text": "x + y = q kx + ky = q"
+    },
+    {
+     "key": "C",
+     "text": "x − y = k x + y = k"
+    },
+    {
+     "key": "D",
+     "text": "y = k x + y = k"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q27.webp",
+    "width": 903,
+    "height": 803,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q28",
+   "number": 28,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "¿Cuál de los siguientes sistemas de ecuaciones, en x e y, cumple que tiene infinitas soluciones para a = 0 y tiene solución única para a ≠ 0 ?\n\nx + y = 1",
+   "options": [
+    {
+     "key": "A",
+     "text": "ax + ay = a x + 2y = 1"
+    },
+    {
+     "key": "B",
+     "text": "2x + 4ay = 2"
+    },
+    {
+     "key": "C",
+     "text": "2x + y = 1 ax + 2ay = 0"
+    },
+    {
+     "key": "D",
+     "text": "ax + ay = 1 2ax + y = 0"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q28.webp",
+    "width": 903,
+    "height": 548,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q29",
+   "number": 29,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "El nivel de agua, en milímetros, en un estanque al abrir una llave de paso se modela mediante una función, cuya gráfica es una recta, con respecto al tiempo transcurrido en horas.\n\nEl nivel inicial del agua es cuatro veces el nivel que aumenta cada hora.\n\nSi al cabo de una hora de abrir la llave, el nivel del agua es 500 mm , ¿cuál es el nivel del agua al cabo de cinco horas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "625 mm"
+    },
+    {
+     "key": "B",
+     "text": "900 mm"
+    },
+    {
+     "key": "C",
+     "text": "2100 mm"
+    },
+    {
+     "key": "D",
+     "text": "2500 mm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q29.webp",
+    "width": 903,
+    "height": 432,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q30",
+   "number": 30,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Si m y n son las soluciones de la ecuación cuadrática 5 ² x + x − 5 = 0 , ¿cuál es − 1 m + n el valor de ? m n",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 1"
+    },
+    {
+     "key": "B",
+     "text": "5 1"
+    },
+    {
+     "key": "C",
+     "text": "− 5"
+    },
+    {
+     "key": "D",
+     "text": "− 1"
+    },
+    {
+     "key": "E",
+     "text": "− 5"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q30.webp",
+    "width": 903,
+    "height": 411,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q31",
+   "number": 31,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Una empresa que vende cubos de sal, vende paquetes de x cubos de lado 8 cm cada uno. El volumen de sal en cada paquete, como función de la cantidad de cubos que este contiene, x, corresponde a () 3 f x = 8 x .\n\nLa empresa decide reducir el tamaño de los lados de los cubos de sal en 1 cm , manteniendo la cantidad de cubos por paquete.\n\n3 ¿Cuál de las siguientes funciones modela el volumen de sal, en cm, que la empresa deja de incluir por paquete, en términos de la cantidad de cubos del paquete?\n\n() 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "g x = 13 x () 3"
+    },
+    {
+     "key": "B",
+     "text": "h x = 7 x ()"
+    },
+    {
+     "key": "C",
+     "text": "j x = x () 3 ( )1"
+    },
+    {
+     "key": "D",
+     "text": "k x = 8 x −"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q31.webp",
+    "width": 903,
+    "height": 524,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q32",
+   "number": 32,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Considera el triángulo ABC, con AB = BC = 12 cm y sea x la medida, en cm, de la altura trazada desde el vértice B, la cual excede en 3 cm a la medida de\n\nAC.\n\n¿Cuál de las siguientes ecuaciones permite calcular x?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 ² x − 6 x = 135"
+    },
+    {
+     "key": "B",
+     "text": "5 ² x + 6 x = 567"
+    },
+    {
+     "key": "C",
+     "text": "2 ² x + 6 x = 135"
+    },
+    {
+     "key": "D",
+     "text": "5 ² x − 6 x = 567"
+    },
+    {
+     "key": "E",
+     "text": "5 ² x − 6 x = 135"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q32.webp",
+    "width": 903,
+    "height": 444,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q33",
+   "number": 33,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "La parábola de la figura representa la gráfica de la función f, con dominio el conjunto de los números reales, definida por () = ( + ) ² − f x x 1 1 .\n\nY\n\n–1\n\nX –1\n\nSi a esta parábola se le aplica una reflexión con respecto al eje Y **,** luego una traslación según el vector ( ,0 )1 , ¿cuál es la función que corresponde a la gráfica que se obtiene?\n\n() 2 +",
+   "options": [
+    {
+     "key": "A",
+     "text": "g x = x 1 () ( )²"
+    },
+    {
+     "key": "B",
+     "text": "h x = x − 1 () 2 −"
+    },
+    {
+     "key": "C",
+     "text": "t x = x 1 () ( ) 2 +"
+    },
+    {
+     "key": "D",
+     "text": "s x = x − 1 1 () ( ) 2 +"
+    },
+    {
+     "key": "E",
+     "text": "r x = x + 1 1"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q33.webp",
+    "width": 903,
+    "height": 716,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q34",
+   "number": 34,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Un estanque de altura b cm que se encuentra lleno de agua, comienza a perder agua de manera constante, sin llegar a vaciarse por completo.\n\n2 − b La función p, con dominio ,0 , que modela la altura del agua que va a\n\na quedando en el estanque, medida en cm, está dada por p )t( = t + b , tal que t b es el tiempo transcurrido, medido en horas desde que el estanque comienza a perder agua.\n\n¿Cuál de las siguientes expresiones representa el tiempo t, en horas, que debe 2 b transcurrir para que la altura del agua que queda sea cm ? 3\n\n2 2 b",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 3 a b²"
+    },
+    {
+     "key": "B",
+     "text": "− 3 a 2 ² − b 3 b"
+    },
+    {
+     "key": "C",
+     "text": "3 a 4 ² b"
+    },
+    {
+     "key": "D",
+     "text": "3 a"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q34.webp",
+    "width": 903,
+    "height": 736,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q35",
+   "number": 35,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Se desea pintar en una pared una superficie de forma triangular, cuya altura es de 500 centímetros y cuya base es de 700 centímetros. El encargado de realizar el pintado concluye que se necesitan dar tres manos de pintura para que quede bien el trabajo.\n\nLos tarros de pintura se venden en formatos de medio galón y un galón. Cada 2 galón rinde 40 m .\n\n¿Cuántos tarros necesita como mínimo para pintar la superficie triangular y que quede bien?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un tarro de medio galón."
+    },
+    {
+     "key": "B",
+     "text": "Un tarro de un galón."
+    },
+    {
+     "key": "C",
+     "text": "Tres tarros de un galón."
+    },
+    {
+     "key": "D",
+     "text": "Un tarro de un galón y un tarro de medio galón."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q35.webp",
+    "width": 903,
+    "height": 459,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q36",
+   "number": 36,
+   "axis": "Geometría",
+   "topic": "Homotecia",
+   "stem": "En la figura adjunta se presenta el cuadrado ABCD, al que se le aplica una homotecia, obteniéndose el cuadrado APQR, donde P ( − 2, 0 ) es la imagen de B 3, 0. ( )\n\nY\n\nD C\n\nP A B X\n\nQ R\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La homotecia aplicada al cuadrado ABCD es equivalente a una rotación de 180 con respecto al centro de homotecia. °"
+    },
+    {
+     "key": "B",
+     "text": "Si k es la razón de homotecia, entonces k pertenece al intervalo 0 < k < 1 ."
+    },
+    {
+     "key": "C",
+     "text": "Si k es la razón de homotecia y se considera el punto D ( ,0 y ) , entonces las coordenadas de su imagen R son ( 0, ky. ) 3"
+    },
+    {
+     "key": "D",
+     "text": "La razón de homotecia k es − . 2"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q36.webp",
+    "width": 903,
+    "height": 720,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q37",
+   "number": 37,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "Un segmento, de 20 cm de longitud, de una arteria ubicada cerca del corazón se puede aproximar, de forma teórica, a un cilindro de 6 mm de diámetro interior.\n\nConsiderando esta aproximación teórica, ¿cuál es el volumen de sangre que contiene este segmento de arteria?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "8,1 π cm 3"
+    },
+    {
+     "key": "B",
+     "text": "2,7 π cm 3"
+    },
+    {
+     "key": "C",
+     "text": "312π cm 3"
+    },
+    {
+     "key": "D",
+     "text": "720π cm"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q37.webp",
+    "width": 903,
+    "height": 387,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q38",
+   "number": 38,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Considera los números reales a y b distintos de cero y c un número real negativo.\n\nSi el vector ( ,a b ) está en el segundo cuadrante del plano cartesiano, ¿cuál de las siguientes afirmaciones es **siempre** verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El vector ( a + ,c b + c ) está en el tercer cuadrante."
+    },
+    {
+     "key": "B",
+     "text": "El vector ( c ,a b ) está en el primer cuadrante."
+    },
+    {
+     "key": "C",
+     "text": "El vector ( a − ,c b ) está en el segundo cuadrante."
+    },
+    {
+     "key": "D",
+     "text": "El vector ( ,a − cb ) está en el tercer cuadrante."
+    },
+    {
+     "key": "E",
+     "text": "El vector ( ,b a + c ) está en el cuarto cuadrante."
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q38.webp",
+    "width": 903,
+    "height": 395,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q39",
+   "number": 39,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Al punto ( C − ,1 7 ) se le aplica una traslación según el vector ( − ,2 − )3 y luego al punto trasladado se le aplica una rotación en 90 con centro en el origen y en ° sentido antihorario, obteniéndose un nuevo punto.\n\n¿Cuáles son las coordenadas de este último punto obtenido?\n\n( )",
+   "options": [
+    {
+     "key": "A",
+     "text": ",3 4 ( )3"
+    },
+    {
+     "key": "B",
+     "text": ",4 ( )3"
+    },
+    {
+     "key": "C",
+     "text": "− ,4 ( )3"
+    },
+    {
+     "key": "D",
+     "text": "− ,4 − ( )3"
+    },
+    {
+     "key": "E",
+     "text": ",4 −"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q39.webp",
+    "width": 903,
+    "height": 411,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q40",
+   "number": 40,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Una nutria está intentando cruzar un río desde el punto A hasta llegar a su madriguera en el otro lado del río en el punto B. Sin embargo, la corriente del río la desplaza constantemente en la dirección que indica la figura adjunta. Y\n\nA 4\n\nCorriente del río Madriguera\n\nB\n\n−1 3 X\n\nSi la corriente del río desplazará a la nutria según el vector v = ,r( 0 ) , con r > 0 , ¿cuál de los siguientes vectores indica la dirección que debe tomar la nutria desde el punto A para llegar a su madriguera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n = ( − ,4 − 4 )"
+    },
+    {
+     "key": "B",
+     "text": "m = ( − ,4 − 4 − )r"
+    },
+    {
+     "key": "C",
+     "text": "q = ( − 4 − ,r − 4 )"
+    },
+    {
+     "key": "D",
+     "text": "s = ( − 4 − ,r − 4 − )r"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q40.webp",
+    "width": 903,
+    "height": 728,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q41",
+   "number": 41,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Considera los vectores v = ( ,a b ) y u = ( ,c d ) , con a, b, c y d números reales.\n\nSi w = u + v , ¿cuál de las siguientes relaciones permite deducir que el vector w se encuentra en el primer cuadrante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "a < c y b < d"
+    },
+    {
+     "key": "B",
+     "text": "a > c y b > d"
+    },
+    {
+     "key": "C",
+     "text": "ac > 0 y bd > 0"
+    },
+    {
+     "key": "D",
+     "text": "a > b > c > d > 0"
+    },
+    {
+     "key": "E",
+     "text": "a = b = c = d"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q41.webp",
+    "width": 903,
+    "height": 386,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q42",
+   "number": 42,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "¿Cuál es el área del triángulo de vértices A ( ,p 2 p ) , B ( p − ,2 2 p ) y C ( p − ,2 p ) , con p un número real negativo?\n\n( p − 2 ) · 2 p",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 ( p − 2 ) · p"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "− p"
+    },
+    {
+     "key": "D",
+     "text": "− 2 p"
+    },
+    {
+     "key": "E",
+     "text": "( p − 2 )2 ·"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q42.webp",
+    "width": 903,
+    "height": 378,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q43",
+   "number": 43,
+   "axis": "Geometría",
+   "topic": "Circunferencia y círculo",
+   "stem": "En la figura adjunta se representa a un triángulo rectángulo de modo que uno de sus vértices O coincide con el centro de una circunferencia con radio 6 cm y el otro vértice B está sobre la circunferencia.\n\nB\n\n60 ° A O\n\nSe realiza el siguiente procedimiento para determinar la longitud de OA, cometiéndose un error:\n\nAB **Paso 1:** se plantea la ecuación cos 60 ° = . OB AB 1 = **Paso 2:** se reemplaza en la ecuación y se obtiene , lo cual equivale a 2 6 AB= 3 .\n\n+ 2 = **Paso 3:** se aplica el teorema de Pitágoras, obteniéndose 9 OA 36 .\n\n**Paso 4:** se resuelve la ecuación para concluir que OA mide 27 cm .\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q43.webp",
+    "width": 903,
+    "height": 1055,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q44",
+   "number": 44,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "En el gráfico adjunto se presenta la cantidad de días de lluvia y la cantidad de milímetros de agua lluvia registrada en cada uno de los doce meses de un año, en cierto lugar.\n\nAdaptado de *Ghana: Economía y demografía, por Datosmacro*, 2023, (https://datosmacro.expansion.com/paises/ghana).\n\nSe define el “índice de lluvia diaria” de cada mes como el cociente entre la cantidad de milímetros de agua lluvia de un mes y la cantidad de días que llovió ese mes.\n\nSegún el gráfico, ¿en cuál mes se presentó el mayor índice de lluvia diaria?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mayo"
+    },
+    {
+     "key": "B",
+     "text": "Junio"
+    },
+    {
+     "key": "C",
+     "text": "Agosto"
+    },
+    {
+     "key": "D",
+     "text": "Octubre"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q44.webp",
+    "width": 903,
+    "height": 1122,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q45",
+   "number": 45,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "En un instituto de idiomas se aplicó un examen de 100 puntos a los estudiantes de japonés y a los estudiantes de alemán. Los resultados obtenidos por ambos grupos se representan a continuación:\n\nJaponés\n\nAlemán\n\n0 10 20 30 40 50 60 70 80 90 100\n\nPuntaje\n\n¿Cuál de los siguientes argumentos es válido?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La mediana de los puntajes de los estudiantes de japonés es mayor que la mediana de los puntajes de los estudiantes de alemán, porque el nivel de exigencia del examen de japonés fue de un 50 % y el de alemán fue de un 40 % ."
+    },
+    {
+     "key": "B",
+     "text": "El rango intercuartil de los puntajes de los estudiantes de alemán es 40 puntos, porque tal valor corresponde a la resta entre el puntaje máximo y el mínimo y lo anterior dividido por dos."
+    },
+    {
+     "key": "C",
+     "text": "En ambos exámenes se obtuvo el puntaje máximo, porque la mayor cantidad de estudiantes de ambos grupos obtuvo 100 puntos."
+    },
+    {
+     "key": "D",
+     "text": "El rango intercuartil de los puntajes de los estudiantes de japonés y el de los estudiantes que estudiaron alemán son iguales, porque para ambos grupos la diferencia entre el tercer cuartil y el primer cuartil es igual."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q45.webp",
+    "width": 903,
+    "height": 848,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q46",
+   "number": 46,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "En las siguientes tablas se presentan las edades de un grupo de niñas y un grupo de niños que asisten a un centro pediátrico.\n\nGrupo de niñas Grupo de niños Edad en años Frecuencia Edad en años Frecuencia\n\n3 10 8 10\n\n4 10 9 10\n\n5 10 10 10\n\n¿Cuál de las siguientes afirmaciones es verdadera respecto a las edades de los grupos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tienen la misma desviación estándar y el mismo promedio."
+    },
+    {
+     "key": "B",
+     "text": "Tienen la misma desviación estándar, pero distinto promedio."
+    },
+    {
+     "key": "C",
+     "text": "Tienen el mismo promedio, pero distinta desviación estándar."
+    },
+    {
+     "key": "D",
+     "text": "Tienen distinto promedio y distinta desviación estándar."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q46.webp",
+    "width": 903,
+    "height": 567,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q47",
+   "number": 47,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "En la tabla adjunta se presenta la cantidad de estudiantes de dos cursos que rindieron una prueba de historia en dos horarios distintos.\n\nHorario 1 Horario 2\n\nCantidad de estudiantes del curso A x 2x\n\nCantidad de estudiantes del curso B 2y y\n\nPromedio de notas obtenidas en la prueba por los p q estudiantes de cada horario\n\n¿Cuál de las siguientes expresiones representa **siempre** el promedio general obtenido en la prueba considerando a todos los estudiantes?\n\n( x + 2 y ) p + ( 2 x + y ) q",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 ( x + y ) ( x + 2 x ) p + ( 2 y + y ) q"
+    },
+    {
+     "key": "B",
+     "text": "3 ( x + y ) 1 p q"
+    },
+    {
+     "key": "C",
+     "text": "· + 2 x + 2 y 2 x + y ( x + 2 y ) q + ( 2 x + y ) p"
+    },
+    {
+     "key": "D",
+     "text": "3 ( x + y )"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q47.webp",
+    "width": 903,
+    "height": 747,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q48",
+   "number": 48,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Un naipe de 40 cartas tiene las siguientes características:\n\n- 10 cartas numeradas del 1 al 10, con el símbolo ⱷ de color rojo.\n\n- 10 cartas numeradas del 1 al 10, con el símbolo ☼ de color rojo.\n\n- 10 cartas numeradas del 1 al 10, con el símbolo ◘ de color negro.\n\n- 10 cartas numeradas del 1 al 10, con el símbolo ☻ de color negro.\n\nUn juego consiste en que un jugador extrae una carta al azar y gana si la carta es un número primo y el símbolo es de color rojo.\n\n¿Cuál es la probabilidad de que el jugador gane?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 1"
+    },
+    {
+     "key": "B",
+     "text": "4 1"
+    },
+    {
+     "key": "C",
+     "text": "10 3"
+    },
+    {
+     "key": "D",
+     "text": "20"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q48.webp",
+    "width": 903,
+    "height": 620,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q49",
+   "number": 49,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Considera dos sucesos independientes entre sí. El suceso A ocurre con probabilidad 6,0 , mientras que la probabilidad de que ocurra simultáneamente con el suceso B es 3,0 .\n\n¿Cuál es la probabilidad de que ocurra el suceso B?",
+   "options": [
+    {
+     "key": "A",
+     "text": ",0 18"
+    },
+    {
+     "key": "B",
+     "text": ",0 30"
+    },
+    {
+     "key": "C",
+     "text": ",0 50"
+    },
+    {
+     "key": "D",
+     "text": ",0 90"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q49.webp",
+    "width": 903,
+    "height": 347,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q50",
+   "number": 50,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En una caja se tienen 17 bolitas, del mismo tipo, numeradas del 1 al 17.\n\nSi se extraen, sin reposición, 4 bolitas al azar, ¿cuál es la probabilidad de obtener 4 números impares?\n\n4",
+   "options": [
+    {
+     "key": "A",
+     "text": "9 17 4"
+    },
+    {
+     "key": "B",
+     "text": "1 9 9"
+    },
+    {
+     "key": "C",
+     "text": "4 · 17 1"
+    },
+    {
+     "key": "D",
+     "text": "4 · 9 9"
+    },
+    {
+     "key": "E",
+     "text": "170"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q50.webp",
+    "width": 903,
+    "height": 479,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q51",
+   "number": 51,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En un curso se rifan dos premios, para lo que se vendieron exactamente 30 números. El primer número extraído al azar se lleva el primer premio y el segundo número extraído al azar se lleva el segundo premio. Pedro compró dos números de la rifa.\n\nSi el sorteo es sin reposición, ¿cuál es la probabilidad de que Pedro gane los dos premios?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "15 1"
+    },
+    {
+     "key": "B",
+     "text": "435 1"
+    },
+    {
+     "key": "C",
+     "text": "900 1"
+    },
+    {
+     "key": "D",
+     "text": "450"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q51.webp",
+    "width": 903,
+    "height": 472,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q52",
+   "number": 52,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f, cuyo dominio es el conjunto de los números reales, 2 definida por f ( x ) = ax + 3 x + c , con a y c números reales distintos de cero.\n\nSe puede determinar que la gráfica de f no interseca al eje X , si se sabe que:\n\n(1) a = c 3 (2) a ∈ , ∞ 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q52.webp",
+    "width": 903,
+    "height": 478,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q53",
+   "number": 53,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Considera el siguiente cuadrilátero:\n\nb² D C\n\np\n\nA B\n\nb¹\n\n( b 1 ⁺ b ) p 2 Se puede determinar que el área del cuadrilátero ABCD es , si se 2 sabe que:\n\n(1) AB // DC\n\n(2) b + b = 2 p 1 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q53.webp",
+    "width": 903,
+    "height": 735,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q54",
+   "number": 54,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Sin conocer las notas que obtuvieron las personas de un curso en una prueba, es posible asegurar que al menos el 50 % de los estudiantes obtuvo nota superior a 2,5 , si se sabe que:\n\n(1) el promedio es 2,5 .\n\n(2) la mediana es 3,5 .",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q54.webp",
+    "width": 903,
+    "height": 443,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-regular-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Se puede determinar la varianza de las edades de un grupo de 30 personas mayores de 15 años, si se conoce:\n\n(1) la varianza que tenían las edades del grupo hace 3 años. (2) el promedio y el rango de las edades del grupo.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-regular/q55.webp",
+    "width": 903,
+    "height": 395,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}

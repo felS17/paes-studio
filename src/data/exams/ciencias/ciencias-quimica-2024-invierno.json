@@ -1,0 +1,2637 @@
+{
+ "id": "ciencias-quimica-2024-invierno",
+ "subject": "ciencias",
+ "area": "quimica",
+ "title": "PAES Invierno 2024",
+ "description": "Prueba oficial completa de Ciencias (Química): 80 preguntas, aplicada el 20-06-2023 (Admisión 2024). Claves del clavijero oficial DEMRE.",
+ "year": 2024,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "171",
+ "appliedOn": "2023-06-20",
+ "durationMinutes": 160,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   154,
+   174,
+   193,
+   211,
+   227,
+   241,
+   254,
+   268,
+   283,
+   297,
+   310,
+   321,
+   329,
+   338,
+   348,
+   359,
+   372,
+   385,
+   396,
+   405,
+   411,
+   417,
+   423,
+   430,
+   440,
+   452,
+   464,
+   476,
+   486,
+   492,
+   497,
+   501,
+   505,
+   511,
+   519,
+   529,
+   542,
+   554,
+   565,
+   573,
+   579,
+   583,
+   587,
+   592,
+   598,
+   607,
+   618,
+   631,
+   643,
+   653,
+   661,
+   666,
+   671,
+   677,
+   684,
+   694,
+   706,
+   719,
+   732,
+   742,
+   750,
+   758,
+   767,
+   777,
+   790,
+   804,
+   818,
+   831,
+   844,
+   857,
+   872,
+   889,
+   907,
+   926,
+   1000
+  ],
+  "officialQuestionCount": 80,
+  "officialScorableCount": 75
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-quimica-2024-invierno-q01",
+   "number": 1,
+   "axis": "Química",
+   "topic": "Gases",
+   "stem": "Dos localidades costeras presentan las mismas condiciones de temperatura y humedad ambiental. La localidad 1 está ubicada en una zona cercana a un polo industrial. La localidad 2, en cambio, se encuentra alejada de cualquier fuente de contaminación ambiental. Un grupo de estudiantes observa que varias estructuras metálicas, especialmente las de hierro, se corroen más rápidamente en la localidad 1 que en la localidad 2. En relación con los antecedentes presentados, ¿cuál de las siguientes opciones corresponde a una pregunta de investigación coherente con el fenómeno descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Qué efecto tiene la distancia al mar en el proceso de corrosión de las estructuras metálicas?"
+    },
+    {
+     "key": "B",
+     "text": "¿Qué efecto tiene la humedad ambiental en el proceso de corrosión de las estructuras metálicas?"
+    },
+    {
+     "key": "C",
+     "text": "¿Qué efecto tienen los gases contaminantes en el proceso de corrosión de las estructuras metálicas?"
+    },
+    {
+     "key": "D",
+     "text": "¿Qué efecto tiene la temperatura ambiental en el proceso de corrosión de las estructuras metálicas?"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q02",
+   "number": 2,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "89 El isótopo Sr está constituido por 38",
+   "options": [
+    {
+     "key": "A",
+     "text": "89 protones, 89 electrones y 38 neutrones."
+    },
+    {
+     "key": "B",
+     "text": "38 protones, 38 electrones y 51 neutrones."
+    },
+    {
+     "key": "C",
+     "text": "51 protones, 51 electrones y 38 neutrones."
+    },
+    {
+     "key": "D",
+     "text": "38 protones, 38 electrones y 89 neutrones."
+    },
+    {
+     "key": "E",
+     "text": "89 protones, 51 electrones y 51 neutrones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q03",
+   "number": 3,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Se sabe que un átomo es la unidad básica de un elemento y está formado por partículas positivas, negativas y neutras. ¿Cuál de las siguientes opciones explica correctamente que un átomo tenga carga positiva o negativa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las cantidades de partículas positivas, negativas y neutras son iguales."
+    },
+    {
+     "key": "B",
+     "text": "Las cantidades de partículas neutras y positivas son diferentes."
+    },
+    {
+     "key": "C",
+     "text": "Las cantidades de partículas neutras y negativas son iguales."
+    },
+    {
+     "key": "D",
+     "text": "Las cantidades de partículas positivas y negativas son diferentes."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q04",
+   "number": 4,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "Un estudiante investiga acerca de la estructura del átomo, encontrando la siguiente información: a fines del siglo XIX J. J. Thomson, realizó diversos experimentos empleando un tubo de rayos catódicos, lo que sumado a sus conocimientos acerca de la teoría electromagnética, le permitió determinar la relación existente entre la carga eléctrica y la masa de un electrón. En 1906, recibió el Premio Nobel de Física por el descubrimiento del electrón. Posteriormente, el investigador estadounidense R. A. Millikan, en base a los estudios de Thomson y su conocido experimento de la “gota de aceite”, pudo demostrar que las partículas subatómicas denominadas electrones, poseen una carga idéntica, con un valor de –1,6022 × 10–¹⁹ C. Considerando la información entregada, ¿cuál de las siguientes opciones muestra el impacto de este conocimiento en la Ciencia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El desarrollo de experimentos para determinar valores de constantes físicas de los componentes del átomo."
+    },
+    {
+     "key": "B",
+     "text": "El desarrollo de instrumentos para realizar mediciones experimentales en materiales como el aceite."
+    },
+    {
+     "key": "C",
+     "text": "El desarrollo de experimentos con el instrumento denominado “tubo de rayos catódicos”."
+    },
+    {
+     "key": "D",
+     "text": "El desarrollo de experimentos que permitieron construir el instrumento denominado “tubo de rayos catódicos”."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q05",
+   "number": 5,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "¿Cuál de los siguientes pares de elementos forman un compuesto covalente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Na y F"
+    },
+    {
+     "key": "B",
+     "text": "Li y O"
+    },
+    {
+     "key": "C",
+     "text": "O y F"
+    },
+    {
+     "key": "D",
+     "text": "Na y O"
+    },
+    {
+     "key": "E",
+     "text": "Li y Na"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q06",
+   "number": 6,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Con respecto a la siguiente estructura molecular:\n\nX\n\nY\n\nZ\n\n¿Cuál de las siguientes opciones presenta la hibridación correcta de los átomos de carbono señalados en X, Y y Z?\n\nX Y Z",
+   "options": [
+    {
+     "key": "A",
+     "text": "sp² sp sp³"
+    },
+    {
+     "key": "B",
+     "text": "sp³ sp² sp"
+    },
+    {
+     "key": "C",
+     "text": "sp sp² sp³"
+    },
+    {
+     "key": "D",
+     "text": "sp sp³ sp²"
+    },
+    {
+     "key": "E",
+     "text": "sp³ sp sp²"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q06.webp",
+    "width": 907,
+    "height": 561,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q07",
+   "number": 7,
+   "axis": "Química",
+   "topic": "Propiedades coligativas",
+   "stem": "En un estudio se comparan hidrocarburos lineales y cíclicos, considerando las propiedades físicas de temperatura de fusión (Tf) y de ebullición (Teb), obteniendo los datos que se presentan en las siguientes tablas:\n\nHidrocarburos Hidrocarburos Tf (°C) Teb (°C) Tf (°C) Teb (°C) lineales cíclicos C³H⁸ – 187,0 – 42,0 C³H⁶ – 127,0 – 32,7 C⁴H¹⁰ – 138,0 0 C⁴H⁸ – 50,0 12,5 C⁵H¹² – 130,0 36,0 C⁵H¹⁰ – 93,0 49,3 C⁶H¹⁴ – 95,0 69,0 C⁶H¹² 6,6 80,7\n\nEn relación con lo anterior, ¿cuál de las siguientes opciones representa una conclusión correcta según los datos obtenidos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los hidrocarburos cíclicos presentan menores temperaturas de ebullición y de fusión que los hidrocarburos lineales a igual número de átomos de carbono."
+    },
+    {
+     "key": "B",
+     "text": "A igual cantidad de átomos de carbono, las temperaturas de ebullición y fusión se mantienen constantes tanto en los hidrocarburos cíclicos como lineales."
+    },
+    {
+     "key": "C",
+     "text": "Los hidrocarburos cíclicos presentan menores temperaturas de ebullición y similares temperaturas de fusión que los hidrocarburos lineales a igual número de átomos de carbono."
+    },
+    {
+     "key": "D",
+     "text": "A mayor cantidad de átomos de carbono, aumenta la temperatura de ebullición tanto en hidrocarburos lineales como cíclicos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q07.webp",
+    "width": 907,
+    "height": 656,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q08",
+   "number": 8,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "Un grupo de estudiantes de 2° medio, preocupados por el efecto del cambio climático, diseñaron un estudio enfocado en la aceleración del crecimiento de árboles. Para ello, sintetizaron un compuesto orgánico para ser utilizado como abono. Con la finalidad de verificar la efectividad de este, seleccionaron 10 árboles de la misma especie, de idéntico tamaño y características. A uno de ellos no se le administró abono y a los 9 restantes se les administró abono en diversas cantidades. Luego, bajo las mismas condiciones, observaron el crecimiento de los árboles durante 75 días. En relación con lo descrito, ¿cuál de las siguientes opciones señala correctamente el gráfico con las variables que permitiría reportar los resultados obtenidos del estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tamaño del árbol (cm) Cantidad de abono (g)"
+    },
+    {
+     "key": "B",
+     "text": "Edad del árbol (días) Cantidad de árboles"
+    },
+    {
+     "key": "C",
+     "text": "Cantidad de abono (g) Tiempo (días)"
+    },
+    {
+     "key": "D",
+     "text": "Cantidad de árboles Tiempo (días)"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q08.webp",
+    "width": 907,
+    "height": 960,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q09",
+   "number": 9,
+   "axis": "Química",
+   "topic": "Química orgánica",
+   "stem": "¿Cuántos carbonos terciarios se encuentran en el biciclononano?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2"
+    },
+    {
+     "key": "B",
+     "text": "3"
+    },
+    {
+     "key": "C",
+     "text": "4"
+    },
+    {
+     "key": "D",
+     "text": "5"
+    },
+    {
+     "key": "E",
+     "text": "9"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q10",
+   "number": 10,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "Un grupo de estudiantes de primer año medio llevan a cabo el siguiente experimento: masan 10 cm de cinta de magnesio (Mg); luego, en un sistema cerrado, toman la cinta con una pinza acercándola a la llama de un mechero. Cuando entra en contacto con la llama, la cinta comienza a combustionar, observándose una luz blanca intensa. Cuando se consume toda la cinta, se observa un polvo blanco el cual es depositado en un vidrio de reloj. Al producto obtenido le determinan la masa y establecen que corresponde a óxido de magnesio (MgO). Finalmente, restan la masa de producto obtenido con la masa inicial de cinta de magnesio. En relación con lo anterior, ¿cuál de las siguientes opciones señala correctamente el objetivo de este último paso experimental?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar la masa de producto."
+    },
+    {
+     "key": "B",
+     "text": "Determinar el tipo de compuesto formado."
+    },
+    {
+     "key": "C",
+     "text": "Determinar la masa de oxígeno en la reacción."
+    },
+    {
+     "key": "D",
+     "text": "Determinar la cantidad de cinta de magnesio que queda sin reaccionar."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q11",
+   "number": 11,
+   "axis": "Química",
+   "topic": "Química general",
+   "stem": "Un grupo de investigadores de una universidad ha desarrollado, bajo condiciones específicas, una transformación química que consiste en dos etapas consecutivas, tal como se describe en las siguientes ecuaciones:\n\nEtapa 1: C (diamante) + O²(g) CO² (g) Etapa 2: 2 Mg (s) + CO²(g) 2 MgO (s) + C (grafito)\n\nEl grupo de difusión de la universidad desea presentar estos resultados en su página web, con el objetivo de visibilizar el trabajo científico en la sociedad. En este contexto, ¿cuál de los siguientes enunciados presenta un titular correcto para informar el trabajo descrito anteriormente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Investigadores de la universidad han desarrollado un método que permite convertir el diamante en grafito."
+    },
+    {
+     "key": "B",
+     "text": "Investigadores de la universidad han desarrollado un método que permite convertir el CO² en diamante utilizando MgO."
+    },
+    {
+     "key": "C",
+     "text": "Investigadores de la universidad han desarrollado un método que produce diamante a partir de grafito."
+    },
+    {
+     "key": "D",
+     "text": "Investigadores de la universidad han desarrollado un método que produce diamante a partir de CO²."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q11.webp",
+    "width": 907,
+    "height": 519,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q12",
+   "number": 12,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Con respecto a la siguiente ecuación:\n\n2 NO (g) + O² (g) 2 NO² (g)\n\nAl reaccionar 10,0 mol de NO con 6,0 mol de O², ¿cuál es la cantidad máxima de NO² formada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,0 mol"
+    },
+    {
+     "key": "B",
+     "text": "6,0 mol"
+    },
+    {
+     "key": "C",
+     "text": "10,0 mol"
+    },
+    {
+     "key": "D",
+     "text": "16,0 mol"
+    },
+    {
+     "key": "E",
+     "text": "32,0 mol"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q13",
+   "number": 13,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "Una estudiante colocó tres pastillas efervescentes, de 5 g cada una, en tres vasos de precipitados. Luego, agregó el mismo volumen de agua destilada a diferentes temperaturas a cada vaso y cronometró el tiempo de efervescencia de cada pastilla, que representa el tiempo que demoró en disolverse completamente. Los resultados obtenidos por la estudiante se presentan en la siguiente tabla:\n\nMasa Cantidad Tiempo de Vaso de Temperatura pastilla de agua efervescencia precipitados (ºC) (g) (mL) (s) 1 5 200 25 90 2 5 200 70 60 3 5 200 90 45\n\nEn relación con lo anterior, ¿cuál de las siguientes opciones señala correctamente las variables dependiente e independiente para este experimento?\n\nVariable dependiente Variable independiente",
+   "options": [
+    {
+     "key": "A",
+     "text": "Temperatura del agua Tiempo de efervescencia"
+    },
+    {
+     "key": "B",
+     "text": "Tiempo de efervescencia Temperatura del agua"
+    },
+    {
+     "key": "C",
+     "text": "Masa pastilla Temperatura del agua"
+    },
+    {
+     "key": "D",
+     "text": "Tiempo de efervescencia Cantidad de agua"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q13.webp",
+    "width": 907,
+    "height": 548,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q14",
+   "number": 14,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "La vitamina C es reconocida por sus múltiples funciones en el organismo. A continuación se presenta un gráfico con el contenido de vitamina C en algunas frutas y verduras.\n\n160 140 120 100 80 Contenido de vitamina C (mg/100 g) 60 40 20 0\n\nCon respecto a la información del gráfico, ¿cuál de las siguientes opciones es una conclusión correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "100 mg de pimentón rojo aportan la misma cantidad de vitamina C que 200 g de fresas."
+    },
+    {
+     "key": "B",
+     "text": "Una ensalada con 50 g de repollo morado, 50 g de pimentón rojo y 50 g de cebollín contiene más vitamina C que 200 g de pimentón rojo."
+    },
+    {
+     "key": "C",
+     "text": "200 g de melón aportan la misma cantidad de vitamina C que 100 g de pimentón verde."
+    },
+    {
+     "key": "D",
+     "text": "Un postre con 100 g de melón y 100 g de kiwi aportan la misma cantidad de vitamina C que 100 g de pimentón verde."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q14.webp",
+    "width": 907,
+    "height": 775,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q15",
+   "number": 15,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "En un vaso de precipitados que contiene 50 g de agua se agregan 18 g de NaCl a temperatura ambiente y la mezcla se calienta hasta la disolución completa de los cristales. Al disminuir la temperatura se registra el valor al que aparecen los primeros cristales, lo que corresponde a la máxima cantidad de NaCl que se disuelve a esa temperatura. Se repite el procedimiento anterior aumentando 0,2 g de sal en cada medida, hasta una temperatura máxima de 90 °C. Respecto a la información anterior, ¿cuál de las siguientes opciones es una hipótesis que pudo dar origen al experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La solubilidad del NaCl depende del aumento de la temperatura."
+    },
+    {
+     "key": "B",
+     "text": "La temperatura de ebullición del agua aumenta con la masa de NaCl."
+    },
+    {
+     "key": "C",
+     "text": "La solubilidad de distintas sales aumenta con la temperatura."
+    },
+    {
+     "key": "D",
+     "text": "El NaCl se disuelve más rápido a temperaturas altas."
+    },
+    {
+     "key": "E",
+     "text": "La solubilidad del NaCl depende del solvente en el que se disuelve."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q16",
+   "number": 16,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "En la construcción de las paredes de una casa es necesario usar un tipo de hormigón que contiene un volumen de cemento, por tres volúmenes de arena, cuatro volúmenes de grava y agua necesaria para obtener una consistencia que permita trabajar con la mezcla. Si es la primera vez que está trabajando con esta preparación y no sabe qué cantidad de agua se necesita, ¿cuál de las siguientes acciones experimentales le puede ayudar a establecer la cantidad de agua que se debiese utilizar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Se mezcla media cucharada de cemento, con una y media cucharada de arena, dos cucharadas de grava y se va agregando de a media cucharada de agua a la vez, hasta que la mezcla tenga la consistencia adecuada."
+    },
+    {
+     "key": "B",
+     "text": "A una cucharada de arena se le agrega la misma medida de agua hasta que se disuelva, después se le agregan dos cucharadas de cemento y se establece si se necesita más agua."
+    },
+    {
+     "key": "C",
+     "text": "A una taza de cemento se le agrega una taza de agua, se disuelve todo y se va agregando lentamente arena y grava hasta lograr una consistencia adecuada en la mezcla."
+    },
+    {
+     "key": "D",
+     "text": "Se mezcla una taza de cemento, una taza de arena, una taza de grava y una taza de agua hasta que la mezcla presente la consistencia esperada."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q17",
+   "number": 17,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "En una actividad experimental se obtiene el siguiente gráfico de solubilidad versus temperatura:\n\n74\n\n57 Solubilidad (g soluto/100 g agua) 40\n\n20\n\n10 30 37 40 Temperatura (°C)\n\nAl respecto y considerando que se tiene una solución saturada a 37 °C, ¿qué masa de soluto precipitará, si la temperatura disminuye de 37 ºC a 10 ºC?",
+   "options": [
+    {
+     "key": "A",
+     "text": "20 g"
+    },
+    {
+     "key": "B",
+     "text": "27 g"
+    },
+    {
+     "key": "C",
+     "text": "30 g"
+    },
+    {
+     "key": "D",
+     "text": "37 g"
+    },
+    {
+     "key": "E",
+     "text": "47 g"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q17.webp",
+    "width": 907,
+    "height": 662,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q18",
+   "number": 18,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un vaso contiene 100 mL de solución acuosa de HCl 1 mol/L. De este vaso 1, se sacan 50 mL y se distribuyen 25 mL en el vaso 2 y 25 mL en el vaso 3. Posteriormente, se procede del siguiente modo:\n\n- Solución 1: vaso 1 tenía 50 mL de solución y se agregan 50 mL de agua.\n\n- Solución 2: vaso 2 tenía 25 mL de solución y se agregan 25 mL de agua.\n\n- Solución 3: vaso 3 tenía 25 mL de solución y no se le agrega agua.\n\nSolución 1 Solución 2 Solución 3\n\n¿Cuál es la concentración molar final de la solución de HCl contenida en cada uno de los vasos?\n\nSolución 1 Solución 2 Solución 3 (mol/L) (mol/L) (mol/L)",
+   "options": [
+    {
+     "key": "A",
+     "text": "1,0 0,5 1,00"
+    },
+    {
+     "key": "B",
+     "text": "2,0 1,0 0,25"
+    },
+    {
+     "key": "C",
+     "text": "2,0 2,0 0,50"
+    },
+    {
+     "key": "D",
+     "text": "1,0 1,0 0,25"
+    },
+    {
+     "key": "E",
+     "text": "0,5 0,5 1,00"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q18.webp",
+    "width": 907,
+    "height": 698,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q19",
+   "number": 19,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "Usando una guitarra y un piano, se solicita ejecutar consecutivamente tres notas de la misma octava, de modo que la primera con la segunda difieran solo en altura, mientras que la segunda con la tercera difieran solo en el timbre. ¿Cuál de las siguientes opciones presenta el conjunto de acciones que permite realizar lo solicitado?\n\nNota 1 Nota 2 Nota 3 Tocar en la guitarra Tocar en el piano Tocar en el piano",
+   "options": [
+    {
+     "key": "A",
+     "text": "una nota Mi una nota Mi una nota Sol Tocar en el piano Tocar en la guitarra Tocar en el piano"
+    },
+    {
+     "key": "B",
+     "text": "una nota Mi una nota Sol una nota Sol Tocar en la guitarra Tocar en la guitarra Tocar en el piano"
+    },
+    {
+     "key": "C",
+     "text": "una nota Mi una nota Sol una nota Mi Tocar en el piano Tocar en el piano Tocar en la guitarra"
+    },
+    {
+     "key": "D",
+     "text": "una nota Mi una nota Sol una nota Sol Tocar en el piano Tocar en la guitarra Tocar en el piano"
+    },
+    {
+     "key": "E",
+     "text": "una nota Mi una nota Mi una nota Sol"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q19.webp",
+    "width": 907,
+    "height": 453,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q20",
+   "number": 20,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un grupo de estudiantes tiene como objetivo determinar si el tiempo que tarda en reventarse un globo expuesto a la luz depende de su tonalidad y plantean que globos de tonalidad oscura absorben más luz que los de tonalidad clara, por lo que debiesen reventarse antes. Para ello inflan con aire globos de las mismas características a su máxima capacidad y hacen incidir luz solar sobre ellos. Los datos y resultados registrados se resumen en la siguiente tabla.\n\nTonalidad Volumen de Reventado a los Reventado a los del globo gas (mL) 2 min 5 min Oscura 100 No Sí Clara 100 No No\n\nEn relación con lo anterior, ¿cuál de las siguientes opciones señala correctamente las variables involucradas en el experimento?\n\nVariable independiente Variable dependiente Variable controlada Tiempo en que se",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tonalidad del globo Volumen de gas revienta el globo Tiempo en que se"
+    },
+    {
+     "key": "B",
+     "text": "Volumen de gas Tonalidad del globo revienta el globo Tiempo en que se"
+    },
+    {
+     "key": "C",
+     "text": "Tonalidad del globo Volumen de gas revienta el globo Tiempo en que se"
+    },
+    {
+     "key": "D",
+     "text": "Tonalidad del globo Volumen de gas revienta el globo"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q20.webp",
+    "width": 907,
+    "height": 625,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q21",
+   "number": 21,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Una persona mira su imagen en una bandeja metálica y se da cuenta de que dicha bandeja funciona como un espejo. Luego, la persona cubre esta bandeja con una lámina delgada, plana, transparente y uniforme, de un material con un índice de refracción igual que el del aire, conservando su distancia a la bandeja. Al respecto, ¿cuál de las siguientes características posee la imagen de la persona formada por la bandeja tras poner la lámina transparente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mantiene su distancia a la bandeja y es de mayor tamaño que la inicial."
+    },
+    {
+     "key": "B",
+     "text": "Es más cercana a la bandeja y del mismo tamaño que la inicial."
+    },
+    {
+     "key": "C",
+     "text": "Es más cercana a la bandeja y de mayor tamaño que la inicial."
+    },
+    {
+     "key": "D",
+     "text": "Mantiene su distancia a la bandeja y su tamaño inicial."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q22",
+   "number": 22,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "La figura siguiente representa la fotografía del perfil de una onda que se propaga cm. La en una cuerda, moviéndose hacia la derecha con una rapidez de 24 s fotografía incluye una regla graduada en centímetros.\n\n¿Cuál es la frecuencia de esta onda?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,5 Hz"
+    },
+    {
+     "key": "B",
+     "text": "2,0 Hz"
+    },
+    {
+     "key": "C",
+     "text": "4,0 Hz"
+    },
+    {
+     "key": "D",
+     "text": "6,0 Hz"
+    },
+    {
+     "key": "E",
+     "text": "12,0 Hz"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q22.webp",
+    "width": 907,
+    "height": 517,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q23",
+   "number": 23,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "¿Cuál de las siguientes opciones respecto de la imagen de un objeto ubicado en el foco de un espejo cóncavo es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "No se produce imagen del objeto."
+    },
+    {
+     "key": "B",
+     "text": "Es real y derecha respecto al objeto."
+    },
+    {
+     "key": "C",
+     "text": "Es real e invertida respecto al objeto."
+    },
+    {
+     "key": "D",
+     "text": "Es virtual y derecha respecto al objeto."
+    },
+    {
+     "key": "E",
+     "text": "Es virtual e invertida respecto al objeto."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q24",
+   "number": 24,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "De acuerdo con las leyes de Newton, ¿cuál de las siguientes opciones es una característica de las fuerzas de acción y reacción?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Son aplicadas sobre un mismo cuerpo."
+    },
+    {
+     "key": "B",
+     "text": "Son aplicadas en el mismo sentido."
+    },
+    {
+     "key": "C",
+     "text": "Una se aplica antes que la otra."
+    },
+    {
+     "key": "D",
+     "text": "Tienen igual magnitud."
+    },
+    {
+     "key": "E",
+     "text": "Se anulan entre sí."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q25",
+   "number": 25,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "Dos personas P y R, cuyas respectivas masas son 100 kg y 50 kg, se encuentran de pie y en reposo sobre una superficie horizontal que carece de rugosidad. Si P ejerce sobre R una fuerza de magnitud igual a 300 N, ¿cuál es la m, sobre cada una de estas personas? magnitud de la aceleración, medida en 2 s\n\nP R",
+   "options": [
+    {
+     "key": "A",
+     "text": "3,0 6,0"
+    },
+    {
+     "key": "B",
+     "text": "3,0 3,0"
+    },
+    {
+     "key": "C",
+     "text": "6,0 6,0"
+    },
+    {
+     "key": "D",
+     "text": "1,5 3,0"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q25.webp",
+    "width": 907,
+    "height": 341,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q26",
+   "number": 26,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un estudiante intenta determinar el coeficiente de roce de distintas superficies, sabiendo que este corresponde al cuociente entre la fuerza de roce y la fuerza normal. Para lograr su objetivo desliza por superficies horizontales bloques de madera de distinta masa con velocidad constante. El experimento lo realiza con tres superficies distintas. A continuación se muestran los gráficos de la fuerza de roce, FR, en función de la fuerza normal, FN, que obtiene para cada superficie:\n\n¿Cuál de las siguientes opciones ordena correctamente los coeficientes de roce μ , μ y μ medidos en las superficies 1, 2 y 3, respectivamente? 1 2 3",
+   "options": [
+    {
+     "key": "A",
+     "text": "μ < μ < μ 1 2 3"
+    },
+    {
+     "key": "B",
+     "text": "μ < μ < μ 1 3 2"
+    },
+    {
+     "key": "C",
+     "text": "μ < μ < μ 2 1 3"
+    },
+    {
+     "key": "D",
+     "text": "μ < μ < μ 2 3 1"
+    },
+    {
+     "key": "E",
+     "text": "μ < μ < μ 3 2 1"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q26.webp",
+    "width": 907,
+    "height": 828,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q27",
+   "number": 27,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Cuando un alambre se somete a un esfuerzo ε (fuerza por unidad de área), se produce en él una deformación.δ Existe un modelo en que el esfuerzo ε es directamente proporcional a la deformación,δ es decir, ε = K δ , donde K es una constante. El siguiente gráfico representa el esfuerzo en función de la deformación para cierto alambre, desde la deformación cero hasta que se corta en las condiciones del punto R.\n\nε\n\n¿En cuál de los siguientes intervalos de deformación el modelo ε = K δ es válido?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Entre δ y δ 3 5"
+    },
+    {
+     "key": "B",
+     "text": "Entre 2 δ y δ 4"
+    },
+    {
+     "key": "C",
+     "text": "Entre 0 y δ 4"
+    },
+    {
+     "key": "D",
+     "text": "Entre 0 y δ 2"
+    },
+    {
+     "key": "E",
+     "text": "Entre 0 y 1 δ"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q27.webp",
+    "width": 907,
+    "height": 859,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q28",
+   "number": 28,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "A un grupo de personas se les encarga realizar un experimento para comprobar si la magnitud de la aceleración que adquiere un carro es directamente proporcional a la magnitud de la fuerza neta aplicada sobre él. Para aquello utilizan un carro con las ruedas trabadas, distintas pesas de peso P, un sensor S que mide aceleraciones, una polea e hilos inextensibles. Con estos materiales se instala el montaje que muestra la figura y obtienen los datos que se presentan en el gráfico, donde **P** corresponde al peso de las distintas pesas y **a** corresponde a la aceleración del carrito.\n\nConsiderando los resultados obtenidos, ¿cuál de las siguientes opciones corresponde al principal error cometido por estas personas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Suponer que la magnitud de la fuerza P es constante durante cada medición."
+    },
+    {
+     "key": "B",
+     "text": "Suponer que la magnitud de la fuerza neta aplicada al carro es igual a la de P."
+    },
+    {
+     "key": "C",
+     "text": "No tener en cuenta la diferencia de masa entre el carro y las pesas."
+    },
+    {
+     "key": "D",
+     "text": "No tener en cuenta la longitud de los hilos durante las mediciones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q28.webp",
+    "width": 907,
+    "height": 761,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q29",
+   "number": 29,
+   "axis": "Física",
+   "topic": "Energía",
+   "stem": "Un grupo de estudiantes realizó un experimento relacionado con la transferencia de energía térmica en un laboratorio, donde la temperatura ambiente es de 25 °C. Para ello, utilizaron tres frascos de vidrio de iguales características. Envolvieron los tres frascos con papel de distinto material e igual espesor. Posteriormente, a cada uno de los frascos adicionaron el mismo volumen de agua a 80 °C. Luego de 10 minutos registraron la temperatura de cada uno de los frascos. Según lo anterior, ¿cuál de las siguientes opciones señala la hipótesis que pudo haber dado origen al experimento diseñado por el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El espesor del papel influye en la transferencia de energía térmica."
+    },
+    {
+     "key": "B",
+     "text": "La temperatura ambiental influye en la transferencia de energía térmica."
+    },
+    {
+     "key": "C",
+     "text": "El tipo de material del papel influye en la transferencia de energía térmica."
+    },
+    {
+     "key": "D",
+     "text": "La temperatura inicial del agua influye en la transferencia de energía térmica."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q30",
+   "number": 30,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "En condiciones normales de presión, ¿cuánta es la diferencia entre la temperatura de fusión del hielo y la temperatura de ebullición del agua?",
+   "options": [
+    {
+     "key": "A",
+     "text": "273 °C"
+    },
+    {
+     "key": "B",
+     "text": "273 K"
+    },
+    {
+     "key": "C",
+     "text": "173 K"
+    },
+    {
+     "key": "D",
+     "text": "100 K"
+    },
+    {
+     "key": "E",
+     "text": "0 °C"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q31",
+   "number": 31,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Un grupo de estudiantes calienta 50 mL de un líquido puro en un vaso de precipitados y con un termómetro miden la temperatura del líquido cada minuto. Una vez finalizado el experimento, el análisis de los datos obtenidos por los estudiantes muestra un aumento rápido y sostenido de la temperatura del líquido hasta el minuto ocho, en que esta se estabilizó en 78 °C mientras seguía en contacto con la fuente de calor. A partir de lo anterior, ¿cuál de las siguientes opciones corresponde a una explicación correcta de lo observado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El vidrio del vaso de precipitados es suficientemente grueso para aislar térmicamente al líquido en su interior."
+    },
+    {
+     "key": "B",
+     "text": "La fuente de calor no entrega energía térmica suficiente para aumentar la temperatura del líquido por sobre los 78 °C."
+    },
+    {
+     "key": "C",
+     "text": "La energía térmica entregada al líquido, una vez alcanzados los 78 °C, se consume en el cambio de fase de líquido a gas."
+    },
+    {
+     "key": "D",
+     "text": "La condensación del líquido evaporado desde el vaso de precipitados absorbe el exceso de energía térmica, impidiendo el aumento de la temperatura del líquido."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q32",
+   "number": 32,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "El cinturón de fuego del Pacífico recibe su nombre por la presencia casi continua alrededor del Océano Pacífico de volcanes, cuyo origen es principalmente asociado al proceso de subducción, concentrando la mayor parte de la sismicidad a nivel mundial. Por ello, el casi nulo volcanismo y la escasa sismicidad alrededor del Océano Atlántico son indicativos de la ausencia de subducción. No obstante, existe una serie de zonas en el mundo que presentan volcanismo y sismicidad sin estar relacionados al proceso de subducción. En relación con lo anterior, ¿cuál de las siguientes opciones es una inferencia correcta con la información entregada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La interacción convergente de placas suele producir volcanismo y sismicidad."
+    },
+    {
+     "key": "B",
+     "text": "El volcanismo y la sismicidad están siempre asociados con el proceso de subducción."
+    },
+    {
+     "key": "C",
+     "text": "El volcanismo en zonas de subducción solo se produce en zonas continentales."
+    },
+    {
+     "key": "D",
+     "text": "La interacción divergente de placas es la responsable del volcanismo y la sismicidad en el cinturón de fuego del Pacífico."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q33",
+   "number": 33,
+   "axis": "Física",
+   "topic": "Electricidad",
+   "stem": "Una estudiante se encuentra investigando sobre la electrificación causada por frotamiento con otro material. Basada en un libro de física, centra su análisis en la denominada “secuencia triboeléctrica”, que corresponde a una lista de materiales dispuestos en un orden determinado e indica que, al frotar dos materiales de la secuencia, el que esté en la posición más alta se cargará positivamente, mientras que el que esté en una posición más baja se cargará negativamente. La estudiante recopila los datos de su investigación en la siguiente tabla:\n\nMayor carga + Vidrio Cabello Lana Papel Madera Poliéster PVC Mayor carga – Teflón\n\nAsumiendo que existen todas las condiciones para que se produzca la electrificación por frotamiento y basándose en el análisis de la tabla, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Al frotar vidrio con teflón, el vidrio se cargará negativamente."
+    },
+    {
+     "key": "B",
+     "text": "Al frotar lana con poliéster, la lana se cargará positivamente."
+    },
+    {
+     "key": "C",
+     "text": "Al frotar madera con papel, ambos se cargarán negativamente."
+    },
+    {
+     "key": "D",
+     "text": "Al frotar cabello con PVC, ambos se cargarán positivamente."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q33.webp",
+    "width": 907,
+    "height": 697,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q34",
+   "number": 34,
+   "axis": "Física",
+   "topic": "Electricidad",
+   "stem": "Una estudiante está preparando su examen de física y en su texto de estudio se enfoca en la siguiente cita: “Considerando que la intensidad de la corriente eléctrica es directamente proporcional al número de cargas que atraviesan un conductor e inversamente proporcional al tiempo que esas cargas demoran en atravesarlo”. Según lo anterior, ¿cuál de las siguientes afirmaciones se ajusta correctamente a la relación descrita en la cita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Si las mismas cargas demoran el doble de tiempo en atravesar un conductor, entonces la intensidad de la corriente aumenta al doble."
+    },
+    {
+     "key": "B",
+     "text": "Si la intensidad de la corriente se duplica, entonces la cantidad de carga por segundo que atraviesa un conductor disminuye a la mitad."
+    },
+    {
+     "key": "C",
+     "text": "Si la cantidad de carga por segundo que atraviesa un conductor se duplica, entonces la intensidad de la corriente disminuye a la mitad."
+    },
+    {
+     "key": "D",
+     "text": "Si la intensidad de la corriente disminuye a la mitad, entonces el tiempo que demora la misma carga en atravesar un conductor aumenta al doble."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q35",
+   "number": 35,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "Para un proyecto escolar, un grupo de estudiantes construye un modelo a escala de un generador eólico con una turbina de cuatro aspas. Para ello, utilizan un ventilador para impulsar, a distintas velocidades, el aire a temperatura ambiente de una habitación, el cual pone en movimiento las aspas y miden la corriente eléctrica que produce el generador. Al respecto, ¿cuál de las siguientes opciones es una hipótesis pertinente al diseño experimental descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La electricidad generada por un generador eólico depende de la velocidad del viento."
+    },
+    {
+     "key": "B",
+     "text": "La electricidad generada por un generador eólico depende de la temperatura del viento."
+    },
+    {
+     "key": "C",
+     "text": "La electricidad generada por un generador eólico depende del número de aspas."
+    },
+    {
+     "key": "D",
+     "text": "La electricidad generada por un generador eólico depende del tamaño de las aspas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q36",
+   "number": 36,
+   "axis": "Física",
+   "topic": "Energía",
+   "stem": "En el contexto de una investigación escolar para una feria científica, un grupo de estudiantes coloca la misma cantidad de alimentos en el interior de dos refrigeradores idénticos y se organizan para abrir uno de ellos dos veces al día y el otro diez veces al día. En ambos casos, medirán el consumo de energía del refrigerador al cabo de una semana. Al respecto, ¿a qué componente de la investigación científica corresponde la descripción anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un modelo"
+    },
+    {
+     "key": "B",
+     "text": "A una hipótesis"
+    },
+    {
+     "key": "C",
+     "text": "A un resultado"
+    },
+    {
+     "key": "D",
+     "text": "A un procedimiento"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q37",
+   "number": 37,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un profesor solicita a sus estudiantes observar al microscopio una célula desconocida e identificar a qué tipo de célula corresponde. Pasado un tiempo los estudiantes afirman que es una célula eucarionte vegetal. ¿Cuál de las siguientes opciones presenta las observaciones que permitieron a los estudiantes afirmar inequívocamente lo anterior?\n\nPresencia de Presencia de una",
+   "options": [
+    {
+     "key": "A",
+     "text": "Presencia de pared celular núcleo gran vacuola Presencia de membrana Ausencia de Presencia de"
+    },
+    {
+     "key": "B",
+     "text": "plasmática núcleo cloroplastos Ausencia de Presencia de"
+    },
+    {
+     "key": "C",
+     "text": "Presencia de pared celular núcleo cloroplastos Presencia de membrana Presencia de Presencia de"
+    },
+    {
+     "key": "D",
+     "text": "plasmática núcleo mitocondrias"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q37.webp",
+    "width": 907,
+    "height": 379,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q38",
+   "number": 38,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "El esquema representa la situación inicial de dos células (M y K), permeables a un tipo de molécula X () que se moviliza por difusión simple. Además, las células M y K se encuentran en dos medios con diferentes temperaturas.\n\nCélula M Célula K (25 °C) (38 °C)\n\nA partir de estos antecedentes, ¿cuál de las siguientes afirmaciones con respecto a la molécula X es esperable observar inmediatamente después de la situación del esquema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que las moléculas X difundan más rápido hacia afuera de K que de M."
+    },
+    {
+     "key": "B",
+     "text": "Que las moléculas X difundan más rápido hacia afuera de M que de K."
+    },
+    {
+     "key": "C",
+     "text": "Que las moléculas X difundan más rápido hacia adentro de K que de M."
+    },
+    {
+     "key": "D",
+     "text": "Que las moléculas X difundan más rápido hacia adentro de M que de K."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q38.webp",
+    "width": 907,
+    "height": 592,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q39",
+   "number": 39,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En un experimento se cultivó un grupo de células intestinales del colon humano sobre una membrana semipermeable, bajo las condiciones que se presentan en las siguientes figuras:\n\nA partir del análisis de estos antecedentes, ¿cuál de las siguientes opciones corresponde a un objetivo pertinente al experimento realizado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cuantificar la absorción del fármaco a través de las vellosidades intestinales."
+    },
+    {
+     "key": "B",
+     "text": "Establecer el tipo de mecanismo de transporte del fármaco a través de las vellosidades intestinales."
+    },
+    {
+     "key": "C",
+     "text": "Determinar la función de las vellosidades presentes en las células intestinales."
+    },
+    {
+     "key": "D",
+     "text": "Determinar la respuesta de las células intestinales al ser expuestas a un medio con mayor concentración de un tipo de soluto."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q39.webp",
+    "width": 907,
+    "height": 740,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q40",
+   "number": 40,
+   "axis": "Biología",
+   "topic": "Enzimas",
+   "stem": "Los peroxisomas contienen enzimas que contribuyen a la detoxificación del peróxido de hidrógeno. Una investigadora estudia el efecto de la temperatura en estos organelos señalando que, “el tratamiento a altas temperaturas disminuye la eficiencia detoxificadora debido a la desnaturalización de las enzimas peroxisomales”. A partir de lo anterior, diseña un experimento usando cinco muestras de peroxisomas sometidas a diferentes temperaturas para luego evaluar la actividad enzimática en cada muestra. Al respecto, ¿a qué componente de la investigación científica corresponde la frase entre comillas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un objetivo"
+    },
+    {
+     "key": "B",
+     "text": "A una hipótesis"
+    },
+    {
+     "key": "C",
+     "text": "A un resultado"
+    },
+    {
+     "key": "D",
+     "text": "A un experimento"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q41",
+   "number": 41,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En un experimento, se colocan miocitos indiferenciados en un medio de cultivo ideal (control), para facilitar que estas células se diferencien en fibras musculares normales. A un grupo experimental se le agregó una sustancia que inhibe la síntesis de las proteínas actina y miosina. Los datos obtenidos del grupo experimental están aún en proceso de análisis. En relación con lo anterior, ¿cuál de las siguientes opciones corresponde a una hipótesis pertinente a la metodología experimental descrita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La diferenciación de células mediante la manipulación del medio de cultivo es posible solamente con la utilización de miocitos indiferenciados."
+    },
+    {
+     "key": "B",
+     "text": "Si a un cultivo de miocitos indiferenciados puestos en un medio ideal se le adiciona un inhibidor de la síntesis de actina y miosina, la cantidad de fibras musculares que se obtenga será menor que la del grupo control."
+    },
+    {
+     "key": "C",
+     "text": "Los miocitos indiferenciados que están en un medio ideal serán “incapaces” de diferenciarse, mientras no se les adicione un inhibidor para la síntesis de actina y miosina."
+    },
+    {
+     "key": "D",
+     "text": "Los miocitos indiferenciados que crecen en un cultivo donde el medio y las condiciones son ideales, originarán toda una variedad de células especializadas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q42",
+   "number": 42,
+   "axis": "Biología",
+   "topic": "Biología",
+   "stem": "¿Qué efecto provocará la mantención del cuerpo lúteo por un tiempo superior a la duración de un ciclo ovárico normal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un ciclo menstrual de menos de 20 días"
+    },
+    {
+     "key": "B",
+     "text": "Una menstruación más prolongada"
+    },
+    {
+     "key": "C",
+     "text": "Un retraso de la menstruación"
+    },
+    {
+     "key": "D",
+     "text": "Una ovulación prematura"
+    },
+    {
+     "key": "E",
+     "text": "Una ovulación múltiple"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q43",
+   "number": 43,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Una clínica de inseminación artificial humana está optimizando un método que aumente la eficiencia de la fecundación *in vitro*. Para ello, co-cultivan en la misma placa, X cantidad de espermatozoides con Y cantidad de ovocitos. Para evaluar la eficiencia de la fecundación, una vez terminado el procedimiento, ¿cuál de las siguientes opciones corresponde al parámetro que se debería cuantificar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ovocitos y espermatozoides que hay en la placa."
+    },
+    {
+     "key": "B",
+     "text": "Células con 46 cromosomas."
+    },
+    {
+     "key": "C",
+     "text": "Espermatozoides que rodean a cada ovocito."
+    },
+    {
+     "key": "D",
+     "text": "Espermatozoides que quedan en la placa."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q44",
+   "number": 44,
+   "axis": "Biología",
+   "topic": "Hormonas",
+   "stem": "En un artículo científico, un investigador ha reportado que la administración de una molécula X en ratas inhibe la secreción de cierta hormona, la cual induce la maduración de las células foliculares y, a partir de ello, concluye que esta molécula puede ser utilizada como método anticonceptivo en mamíferos. Los datos recopilados por el investigador se presentan en la siguiente tabla:\n\nConcentración de la % de inhibición en la Número de ratas molécula X (u.a.) secreción de la hormona testeadas 20,0 95 1 10,0 92 1 5,0 87 1 2,5 80 1\n\nA partir de los antecedentes presentados, ¿cuál de las siguientes variables es la que invalida la conclusión propuesta por el investigador?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La concentración de X"
+    },
+    {
+     "key": "B",
+     "text": "El modelo animal utilizado"
+    },
+    {
+     "key": "C",
+     "text": "La efectividad anticonceptiva de X"
+    },
+    {
+     "key": "D",
+     "text": "El tamaño de la muestra analizada"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q44.webp",
+    "width": 907,
+    "height": 586,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q45",
+   "number": 45,
+   "axis": "Biología",
+   "topic": "Hormonas",
+   "stem": "La progesterona es una hormona esteroidal involucrada en el ciclo ovárico. Al principio del ciclo, esta hormona presenta niveles muy bajos, los cuales se incrementan posterior a la ovulación. De acuerdo a esta descripción, ¿cuál de los siguientes gráficos representa las variaciones en los niveles de progesterona a lo largo del ciclo ovárico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Concentración de progesterona (u.a.) 1 14 28 Día del ciclo"
+    },
+    {
+     "key": "B",
+     "text": "Concentración de progesterona (u.a.) 1 14 28 Día del ciclo"
+    },
+    {
+     "key": "C",
+     "text": "Concentración de progesterona (u.a.) 1 14 28 Día del ciclo"
+    },
+    {
+     "key": "D",
+     "text": "Concentración de progesterona (u.a.) 1 14 28 Día del ciclo"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q45.webp",
+    "width": 907,
+    "height": 1013,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q46",
+   "number": 46,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "¿Cuál de las siguientes figuras corresponde a una célula animal en citocinesis?\n\nB) C)",
+   "options": [
+    {
+     "key": "A",
+     "text": "D) E)"
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q46.webp",
+    "width": 907,
+    "height": 424,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q47",
+   "number": 47,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "A un cultivo de células se le agrega colchicina y después de un tiempo se observan células poliploides. Al respecto, ¿en cuál de las etapas del ciclo celular actúa la colchicina para producir este efecto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "G1"
+    },
+    {
+     "key": "B",
+     "text": "S"
+    },
+    {
+     "key": "C",
+     "text": "Profase"
+    },
+    {
+     "key": "D",
+     "text": "Metafase"
+    },
+    {
+     "key": "E",
+     "text": "Citocinesis"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "pilot": true
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q48",
+   "number": 48,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "La tabla siguiente presenta los datos de un estudio comparativo de la duración de algunas etapas de la mitosis en diferentes tejidos de organismos pluricelulares:\n\nTiempo (minutos) Etapas Mosca Pollo Avena (*Drosophila melanogaster*) (*Gallus gallus*) (*Avena sativa*) Profase 3,6 30-60 36-45 Metafase 0,5 2-10 7-10 Anafase 1,2 2-3 15-20 Telofase 0,9 3-12 20-35\n\nAl respecto, ¿cuál de las siguientes opciones corresponde a la pregunta que esta investigación buscaba responder?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cómo varía la duración de las etapas de la mitosis en diversos grupos de pluricelulares?"
+    },
+    {
+     "key": "B",
+     "text": "¿Qué factores determinan la duración de las etapas de la mitosis en organismos pluricelulares?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cuál es la diferencia en la duración del ciclo celular en función de la presencia de pared celular?"
+    },
+    {
+     "key": "D",
+     "text": "¿Qué características tiene el ciclo celular en los organismos a medida que aumenta el tamaño y el número de células?"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q48.webp",
+    "width": 907,
+    "height": 656,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q49",
+   "number": 49,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En una investigación sobre el índice mitótico de células tumorales del mismo tipo, se aplicó a tres cultivos sincronizados en etapa G1, que tienen el mismo medio de cultivo, distintas concentraciones de una sustancia X, a una temperatura de 36 °C. Con respecto a este procedimiento, ¿cuál de las siguientes hipótesis es pertinente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La temperatura del cultivo afecta la cantidad de nutrientes del cultivo celular."
+    },
+    {
+     "key": "B",
+     "text": "La concentración de la sustancia X en los medios de cultivo afecta el índice mitótico."
+    },
+    {
+     "key": "C",
+     "text": "La etapa del ciclo celular en la que se encuentran las células del cultivo afecta la concentración de la sustancia X."
+    },
+    {
+     "key": "D",
+     "text": "El índice mitótico del cultivo afecta la etapa del ciclo celular en la que se encuentran las células tumorales."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q50",
+   "number": 50,
+   "axis": "Biología",
+   "topic": "Ecosistemas",
+   "stem": "En la tabla siguiente se presenta el flujo de energía de cuatro ecosistemas terrestres de Chile:\n\nPorcentaje de energía Consumidores Consumidores Consumidores Ecosistema Productores primarios secundarios terciarios Matorral 100 9,5 0,9 0,09 Desierto 100 9,0 0,9 0,09 Bosque 100 9,8 1,1 0,10 Pastizal 100 10,5 1,3 0,10\n\nDados estos antecedentes, ¿cuál de las siguientes opciones permitiría explicar las diferencias en la energía dentro de cada ecosistema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cantidad de energía presente en la base de la trama trófica."
+    },
+    {
+     "key": "B",
+     "text": "La variabilidad de las condiciones existentes entre los ecosistemas."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de niveles tróficos presentes en los ecosistemas."
+    },
+    {
+     "key": "D",
+     "text": "La transferencia de un porcentaje similar de energía entre niveles tróficos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q50.webp",
+    "width": 907,
+    "height": 519,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q51",
+   "number": 51,
+   "axis": "Biología",
+   "topic": "Genética",
+   "stem": "Un grupo de bacterias del género *Rhizobium* habita los nódulos de las raíces de las leguminosas, realizando la fijación del nitrógeno atmosférico, a la vez que se alimenta de nutrientes generados por la planta. Al respecto, ¿qué tipo de relación se establece entre las bacterias del género *Rhizobium* y las leguminosas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mutualismo"
+    },
+    {
+     "key": "B",
+     "text": "Parasitismo"
+    },
+    {
+     "key": "C",
+     "text": "Comensalismo"
+    },
+    {
+     "key": "D",
+     "text": "Depredación"
+    },
+    {
+     "key": "E",
+     "text": "Competencia"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q52",
+   "number": 52,
+   "axis": "Biología",
+   "topic": "Plantas",
+   "stem": "Daniel Janzen, un ecólogo estadounidense, vio un escarabajo volador posarse sobre un árbol espinoso (acacia) y ser rápidamente ahuyentado de él por una hormiga. Al acercarse, vio que la acacia estaba cubierta de hormigas que habitaban en la parte interna de las espinas de la planta. En uno de sus experimentos, Janzen utilizó un insecticida para eliminar todas las hormigas de un gran grupo de acacias. El veneno dejó intactas las acacias y todas las hormigas murieron. Menos de un año después de rociar el insecticida, todas las acacias habían muerto, consumidas por los insectos y otros herbívoros y por falta de sol debido a la sombra producida por otras plantas competidoras. En el terreno alrededor de los árboles, que normalmente las hormigas mantenían podado, la vegetación había crecido demasiado. Al parecer, las acacias dependían de las hormigas residentes en ellas para su supervivencia. En relación con lo anterior, ¿cuál de las siguientes opciones corresponde a una pregunta de investigación que habría guiado el experimento realizado por Janzen?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cómo afecta la falta de sol a la sobrevivencia de las acacias?"
+    },
+    {
+     "key": "B",
+     "text": "¿Qué estructura de las acacias utilizan las hormigas como refugio?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cómo afecta la utilización del insecticida a la población de acacias?"
+    },
+    {
+     "key": "D",
+     "text": "¿Qué relación entre especies se establece entre las hormigas y las acacias?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q53",
+   "number": 53,
+   "axis": "Biología",
+   "topic": "Genética",
+   "stem": "Se realizó un estudio comparativo entre la cantidad de materia orgánica (biomasa) disponible en árboles de un bosque ubicado en una zona con alta tasa de precipitaciones (bosque 1) versus otro localizado en una zona con déficit de precipitaciones (bosque 2). Los datos muestran que el bosque 2 presenta una elevada tolerancia al déficit de lluvias, pero menor biomasa que el bosque 1. Lo anterior, posiblemente se deba al gasto diferencial de energía generado por mecanismos de adaptación a la falta de agua. Teniendo en cuenta estos antecedentes, ¿cuál de las siguientes preguntas pudo orientar la investigación anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuál es la tasa de precipitación anual en los bosques 1 y 2?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cómo influyen las lluvias en la acumulación de biomasa en los bosques?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cuáles son los procesos de adaptación al estrés hídrico de los bosques?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuánta energía destinan los bosques en la producción de materia orgánica?"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q54",
+   "number": 54,
+   "axis": "Biología",
+   "topic": "Organismos",
+   "stem": "La euglena es un organismo unicelular flagelado que realiza fotosíntesis, debido a la presencia de cloroplastos en su citoplasma. En este contexto, una científica está estudiando el desplazamiento de estos microorganismos en dos placas de vidrio que contienen el mismo medio de cultivo a igual pH y temperatura, pero variando la ubicación de la fuente lumínica. El siguiente esquema resume el diseño experimental realizado por la científica:\n\nLuz Luz luz Luz luz\n\nEuglena Placas de vidrio\n\nSegún los antecedentes presentados en el esquema, ¿cuál de las siguientes opciones contiene tres materiales indispensables para que la científica lleve a cabo este experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Lámpara, cloroplasto, cultivo de euglenas"
+    },
+    {
+     "key": "B",
+     "text": "Microscopio, lámpara, cultivo de euglenas"
+    },
+    {
+     "key": "C",
+     "text": "Medios con distintos pH, lámpara, microscopio"
+    },
+    {
+     "key": "D",
+     "text": "Cultivo de euglenas, lámpara, balanza digital"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q54.webp",
+    "width": 907,
+    "height": 666,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q55",
+   "number": 55,
+   "axis": "Química",
+   "topic": "Química general",
+   "stem": "La siguiente figura representa equipos de laboratorio para separar mezclas que una profesora de química presenta a sus estudiantes.\n\nEquipo 1 Equipo 2\n\nPapel filtro Refrigerante Embudo\n\nBalón\n\nConsiderando los equipos 1 y 2, con respecto a los materiales presentes en cada uno, ¿cuál de las siguientes opciones relaciona correctamente cada uno de los equipos con una mezcla que se puede separar en ellos?\n\nEquipo 1 Equipo 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "Agua con acetona Arena con agua"
+    },
+    {
+     "key": "B",
+     "text": "Vinagre con agua Parafina con arena"
+    },
+    {
+     "key": "C",
+     "text": "Grava con agua Agua con alcohol"
+    },
+    {
+     "key": "D",
+     "text": "Parafina con arena Agua con harina"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q55.webp",
+    "width": 907,
+    "height": 714,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q56",
+   "number": 56,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "En el laboratorio se dispone de tres compuestos (X, Y y Z), los cuales están en estado líquido, a temperatura ambiente. El compuesto X es coloreado, presenta la menor densidad y no se mezcla con ninguno de los otros compuestos ni con la mezcla de ellos. En cambio Y y Z son incoloros y se mezclan completamente entre ellos. Si se agregan a un tubo de ensayo los tres compuestos en igual proporción, ¿cuál de los siguientes tubos representa mejor el resultado final?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q56.webp",
+    "width": 907,
+    "height": 572,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q57",
+   "number": 57,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Una docente representa el siguiente modelo atómico en la pizarra:\n\nPosteriormente, solicita a sus estudiantes: Anaís, Isaac, Tamara y Felipe, que escriban una conclusión correcta en relación al modelo atómico presentado. Al respecto, ¿cuál de los estudiantes presenta una conclusión correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Anaís: el número atómico del átomo representado es 18, pues presenta 18 neutrones."
+    },
+    {
+     "key": "B",
+     "text": "Isaac: el átomo representado tiene un número másico igual a 36, porque corresponde a la suma de electrones y neutrones."
+    },
+    {
+     "key": "C",
+     "text": "Tamara: el átomo representado corresponde a un anión, debido a que presenta 18 electrones."
+    },
+    {
+     "key": "D",
+     "text": "Felipe: el átomo representado es erróneo, pues presenta diferente cantidad de protones y electrones."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q57.webp",
+    "width": 907,
+    "height": 667,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q58",
+   "number": 58,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "En la siguiente tabla periódica reducida se muestra la posición del elemento Z.\n\nCon respecto a cuatro elementos X, R, T y Q, de los cuales se sabe que X tiene 2 protones menos que Z, R tiene 3 protones más que Z, T tiene 9 protones más que Z, y Q tiene 12 protones más que Z. ¿Cuál de las siguientes opciones muestra la posición correcta del elemento al que alude?",
+   "options": [
+    {
+     "key": "A",
+     "text": "X se ubica en el grupo 1 (I A), período 1."
+    },
+    {
+     "key": "B",
+     "text": "R se ubica en el grupo 2 (II A), período 3."
+    },
+    {
+     "key": "C",
+     "text": "T se ubica en el grupo 13 (III A), período 3."
+    },
+    {
+     "key": "D",
+     "text": "Q se ubica en el grupo 14 (IV A), período 3."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q58.webp",
+    "width": 907,
+    "height": 592,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q59",
+   "number": 59,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "Un estudiante analiza qué ocurre cuando el sodio y el cloro se unen para formar un enlace químico. Al respecto, ¿cuál de las siguientes opciones es correcta respecto de este enlace químico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El sodio transfiere un electrón al cloro."
+    },
+    {
+     "key": "B",
+     "text": "El cloro transfiere un electrón al sodio."
+    },
+    {
+     "key": "C",
+     "text": "El cloro aporta un par electrónico al sodio."
+    },
+    {
+     "key": "D",
+     "text": "El sodio y el cloro comparten un par de electrones."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q60",
+   "number": 60,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "En una clase de química se presenta la siguiente estructura dibujada en la pizarra:\n\nO\n\nOH\n\nCon respecto a la estructura, ¿cuántos átomos de carbono e hidrógeno tiene el compuesto dibujado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "9 átomos de carbono y 12 átomos de hidrógeno."
+    },
+    {
+     "key": "B",
+     "text": "10 átomos de carbono y 1 átomo de hidrógeno."
+    },
+    {
+     "key": "C",
+     "text": "10 átomos de carbono y 12 átomos de hidrógeno."
+    },
+    {
+     "key": "D",
+     "text": "12 átomos de carbono y 1 átomo de hidrógeno."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q60.webp",
+    "width": 907,
+    "height": 454,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q61",
+   "number": 61,
+   "axis": "Química",
+   "topic": "Enlace químico",
+   "stem": "¿Cuántos enlaces sigma (σ) tiene el 2-buteno?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "10"
+    },
+    {
+     "key": "D",
+     "text": "11"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q62",
+   "number": 62,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Una docente de química presenta a sus estudiantes la siguiente estructura orgánica, que corresponde a un neurotransmisor natural que se produce en pequeñas cantidades en las células del sistema nervioso central.\n\nO\n\nHO OH\n\nLuego les solicita presenten, en su informe, esta estructura mediante otra fórmula. Al respecto, ¿cuál de las siguientes opciones corresponde a la fórmula molecular de dicha estructura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "C³H²O³"
+    },
+    {
+     "key": "B",
+     "text": "C³H⁸O³"
+    },
+    {
+     "key": "C",
+     "text": "C⁴H²O³"
+    },
+    {
+     "key": "D",
+     "text": "C⁴H⁸O³"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q62.webp",
+    "width": 907,
+    "height": 455,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q63",
+   "number": 63,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "El propano es un gas que proviene del petróleo, principalmente se utiliza licuado y mezclado con butano, en balones de uso doméstico. El propano está compuesto por tres átomos de carbono y ocho átomos de hidrógeno, unidos entre sí mediante enlaces simples. Considerando esto, un estudiante quiere elaborar una infografía para comunicar los beneficios del propano en nuestra vida cotidiana. De acuerdo con el propósito del estudiante, ¿qué información debe presentar la infografía?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El proceso de obtención del propano licuado."
+    },
+    {
+     "key": "B",
+     "text": "Las propiedades y los usos del gas propano."
+    },
+    {
+     "key": "C",
+     "text": "Los átomos y enlaces en las moléculas de propano."
+    },
+    {
+     "key": "D",
+     "text": "El tipo de hibridación de cada átomo de carbono que forma parte del propano."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q64",
+   "number": 64,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Una docente dibuja la siguiente representación en la pizarra:\n\nLuego, pregunta a sus estudiantes cuál es el nombre del grupo sustituyente que más se repite en la molécula, considerando las reglas de la IUPAC. Al respecto, ¿cuál de las siguientes respuestas dadas por algunos de sus estudiantes es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Metilo"
+    },
+    {
+     "key": "B",
+     "text": "Etilo"
+    },
+    {
+     "key": "C",
+     "text": "Propilo"
+    },
+    {
+     "key": "D",
+     "text": "Isobutilo"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q64.webp",
+    "width": 907,
+    "height": 523,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q65",
+   "number": 65,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "En una clase de química se presenta la siguiente molécula, correspondiente a un medicamento antiinflamatorio:\n\nH3C OH\n\nCH C\n\nO\n\nH3C O\n\nAl respecto, ¿cuáles son los grupos funcionales que contiene la molécula del medicamento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Aldehído y éster"
+    },
+    {
+     "key": "B",
+     "text": "Alcohol y cetona"
+    },
+    {
+     "key": "C",
+     "text": "Ácido carboxílico y amina"
+    },
+    {
+     "key": "D",
+     "text": "Éter y ácido carboxílico"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q65.webp",
+    "width": 907,
+    "height": 484,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q66",
+   "number": 66,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "Un estudiante encuentra la siguiente tabla, que informa sobre cuatro experimentos que se realizan al hacer reaccionar, completamente, diferentes masas de dos elementos (X e Y).\n\nX Y Experimento (g) (g) 1 9 12 2 9 24 3 6 8 4 3 8\n\nConsiderando la proporción en que se combinan los elementos en cada experimento, ¿cuál de las siguientes opciones es correcta en cuanto a la formación de compuestos entre X e Y?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En los experimentos 1 y 2 se forma el mismo compuesto."
+    },
+    {
+     "key": "B",
+     "text": "En los experimentos 1 y 4 se forma el mismo compuesto."
+    },
+    {
+     "key": "C",
+     "text": "En los experimentos 2 y 4 se forman compuestos diferentes."
+    },
+    {
+     "key": "D",
+     "text": "En los experimentos 3 y 4 se forman compuestos diferentes."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q66.webp",
+    "width": 907,
+    "height": 522,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q67",
+   "number": 67,
+   "axis": "Química",
+   "topic": "Química general",
+   "stem": "Una analista química se encuentra realizando experiencias en el laboratorio con la siguiente reacción química:\n\n2 NaOH + CuSO⁴ Cu(OH)² + Na²SO⁴\n\nEn su trabajo, utilizó diferentes masas de reactantes e hizo mediciones de masas de los productos, que luego ordenó en la siguiente tabla:\n\nExperiencia NaOH (g) CuSO⁴(g) Cu(OH)²(g) Na²SO⁴(g) 1 40 80 49 71 2 80 160 98 142 3 160 320 196 284\n\nSi la analista química siguiera la misma relación en masas de reactantes, que se presenta en la tabla, al realizar una quinta experiencia, ¿cuál sería la masa total de los reactantes que necesitaría?",
+   "options": [
+    {
+     "key": "A",
+     "text": "640 g"
+    },
+    {
+     "key": "B",
+     "text": "1280 g"
+    },
+    {
+     "key": "C",
+     "text": "1920 g"
+    },
+    {
+     "key": "D",
+     "text": "2560 g"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q67.webp",
+    "width": 907,
+    "height": 551,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q68",
+   "number": 68,
+   "axis": "Química",
+   "topic": "Ácidos y bases",
+   "stem": "En una empresa productora de vinagre se toman muestras para un control de calidad del producto, las muestras deben cumplir con una norma interna que indica que un volumen de 250 mL de vinagre debe contener, como máximo, 100,0 g de ácido acético, CH³COOH, (masa molar = 60,0 g/mol). Si se toma una muestra de 250 mL de vinagre y se detectan 1,84 mol de ácido acético, ¿cuál de las siguientes opciones es una conclusión correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La muestra presenta 60 g de ácido acético, lo cual es menor a los 100,0 g que indica la norma."
+    },
+    {
+     "key": "B",
+     "text": "La muestra presenta 110,4 g de ácido acético, lo cual es mayor a los 100,0 g que indica la norma."
+    },
+    {
+     "key": "C",
+     "text": "La muestra presenta 32,6 g de ácido acético, lo cual es menor a los 100,0 g que indica la norma."
+    },
+    {
+     "key": "D",
+     "text": "La muestra presenta 250 g de ácido acético, lo cual es mayor a los 100,0 g que indica la norma."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q69",
+   "number": 69,
+   "axis": "Química",
+   "topic": "Química general",
+   "stem": "En el siguiente modelo se representa una reacción química entre X e Y:\n\nEn base al modelo, ¿cuál de las siguientes opciones representa correctamente su ecuación química?",
+   "options": [
+    {
+     "key": "A",
+     "text": "X² + Y⁶ 2 XY³"
+    },
+    {
+     "key": "B",
+     "text": "2 X + 3 Y² XY³"
+    },
+    {
+     "key": "C",
+     "text": "X² + 3 Y² 3 X³Y³"
+    },
+    {
+     "key": "D",
+     "text": "X² + 3 Y² 2 XY³"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q69.webp",
+    "width": 907,
+    "height": 485,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q70",
+   "number": 70,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "Dada la siguiente reacción:\n\nu Li (s) + 2 H²O (λ) w LiOH (ac) + H²(g)\n\n¿Cuáles deben ser los coeficientes estequiométricos para que cumpla con la Ley de Lavoisier?\n\nu w",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 2"
+    },
+    {
+     "key": "B",
+     "text": "2 1"
+    },
+    {
+     "key": "C",
+     "text": "1 2"
+    },
+    {
+     "key": "D",
+     "text": "1 1"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q70.webp",
+    "width": 907,
+    "height": 361,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q71",
+   "number": 71,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Si reaccionan 10 g de CuCl (masa molar = 99 g/mol) con un exceso de H²S de acuerdo con la siguiente ecuación:\n\n2 CuCl + H²S Cu²S + 2 HCl\n\n¿Qué masa de Cu²S (masa molar = 159 g/mol) se obtiene aproximadamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 g"
+    },
+    {
+     "key": "B",
+     "text": "8 g"
+    },
+    {
+     "key": "C",
+     "text": "10 g"
+    },
+    {
+     "key": "D",
+     "text": "16 g"
+    },
+    {
+     "key": "E",
+     "text": "20 g"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q72",
+   "number": 72,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "Un docente escribe en la pizarra la siguiente representación de una reacción química:\n\n**+**\n\nLuego, pide a sus estudiantes que dibujen la representación que corresponde al reactivo limitante. Al respecto, ¿cuál de las siguientes opciones corresponde a la representación que deben dibujar los estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q72.webp",
+    "width": 907,
+    "height": 666,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q73",
+   "number": 73,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Un grupo de estudiantes se dispone a analizar la molécula de colesterol, para ello deben recolectar todos los antecedentes de su estructura, antes de comenzar la investigación. Hasta el momento conocen la fórmula molecular, C²⁷H⁴⁶O y las masas atómicas de cada elemento que la forma. A partir de estos datos, ¿cuál de las siguientes conclusiones respecto de la composición porcentual, aproximada, es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El porcentaje de hidrógeno en la molécula es 46 %."
+    },
+    {
+     "key": "B",
+     "text": "El porcentaje de oxígeno en la molécula es 16 %."
+    },
+    {
+     "key": "C",
+     "text": "El porcentaje de carbono en la molécula es 84 %."
+    },
+    {
+     "key": "D",
+     "text": "El porcentaje de carbono y oxígeno en la molécula es 28 %."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q74",
+   "number": 74,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un grupo de estudiantes realiza el siguiente experimento, a temperatura ambiente y 1 atm, para conocer la tendencia de una propiedad (P) de una solución, cuando varía la cantidad de materia. En vasos de precipitados individuales, preparan cinco soluciones homogéneas de concentración X % m/v, 5X % m/v, 10X % m/v, 15X % m/v y 20X % m/v, respectivamente. Posteriormente, a cada una de ellas les miden la propiedad P, obteniendo los siguientes resultados: 1P, 1,5P, 2P, 2,5P y 3P, respectivamente. Al respecto, ¿cuál es la forma correcta de presentar los resultados según el objetivo experimental?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Gráfico de torta de % m/v y de P"
+    },
+    {
+     "key": "B",
+     "text": "Gráfico de dispersión de P en función de % m/v"
+    },
+    {
+     "key": "C",
+     "text": "Gráfico lineal de temperatura en función de P"
+    },
+    {
+     "key": "D",
+     "text": "Tabla de temperatura y % m/v"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q75",
+   "number": 75,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "En un laboratorio se realiza el siguiente proceso:\n\n1 L NaOH NaOH 2 mol/L X mol/L\n\nAl respecto, es correcto afirmar que",
+   "options": [
+    {
+     "key": "A",
+     "text": "en 1 mL de la solución final hay 0,1 mol de NaOH."
+    },
+    {
+     "key": "B",
+     "text": "en los 100 mL de solución final, hay 0,2 mol de NaOH."
+    },
+    {
+     "key": "C",
+     "text": "en los 10 mL de la solución inicial, hay 2 mol de NaOH."
+    },
+    {
+     "key": "D",
+     "text": "la concentración X, es 100 veces menor que la concentración inicial."
+    },
+    {
+     "key": "E",
+     "text": "la concentración final de la solución de NaOH, es 0,2 mol/L."
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q75.webp",
+    "width": 907,
+    "height": 709,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q76",
+   "number": 76,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "Se mezclan 100 g de la sustancia X en recipientes que contienen 200 g de agua a diferentes temperaturas, quedando en todos los casos una masa de X sin disolver, la que fue filtrada, secada y masada. Con las masas obtenidas se realizó el siguiente gráfico en función de la temperatura inicial del agua.\n\n100 90 80 70 60 50 Masa de X no disuelta (g) 40 30 20 10 0 20 30 40 50 60 70 80 Temperatura inicial del agua (°C)\n\nRespecto del gráfico, ¿cuál de las siguientes opciones es una conclusión correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A medida que aumenta la temperatura, disminuye la cantidad de X disuelto."
+    },
+    {
+     "key": "B",
+     "text": "A 20 °C la sustancia X presentará su mayor solubilidad."
+    },
+    {
+     "key": "C",
+     "text": "La sustancia X se disuelve solo entre los 10 °C y los 90 °C."
+    },
+    {
+     "key": "D",
+     "text": "A 80 °C se disuelven 70 g de X en 200 g de agua."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q76.webp",
+    "width": 907,
+    "height": 732,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q77",
+   "number": 77,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Una persona prepara una mezcla con 50 mL de una solución acuosa de mol concentración 0,1 Lde NaOH coⁿ ⁵⁰ mL de otra solucióⁿ acuosa de NaOH, de mol concentración 0,05 L, ¿cuál es la coⁿceⁿtracióⁿ de la solucióⁿ resultaⁿte?\n\nmol",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,010 L mol"
+    },
+    {
+     "key": "B",
+     "text": "0,050 L mol"
+    },
+    {
+     "key": "C",
+     "text": "0,075 L mol"
+    },
+    {
+     "key": "D",
+     "text": "0,105 L"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q78",
+   "number": 78,
+   "axis": "Química",
+   "topic": "Ácidos y bases",
+   "stem": "En la etiqueta de un frasco de venta comercial aparece una descripción que dice “32 % en masa de ácido clorhídrico”. Al respecto, ¿cuál de las siguientes opciones corresponde al significado de la descripción que aparece en el frasco?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que contiene 32 g de ácido clorhídrico en 100 g de solución."
+    },
+    {
+     "key": "B",
+     "text": "Que contiene 32 g de ácido clorhídrico en 68 g de solución."
+    },
+    {
+     "key": "C",
+     "text": "Que contiene 68 g de ácido clorhídrico en 32 mL de solvente."
+    },
+    {
+     "key": "D",
+     "text": "Que contiene 68 g de ácido clorhídrico en 100 mL de solución."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q79",
+   "number": 79,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "¿Cuál es el volumen de agua que se necesita agregar a 200 mL de una solución mol acuosa 1 Lpara que su coⁿceⁿtracióⁿ dismiⁿuya eⁿ uⁿ ²⁰ %?",
+   "options": [
+    {
+     "key": "A",
+     "text": "20 mL"
+    },
+    {
+     "key": "B",
+     "text": "50 mL"
+    },
+    {
+     "key": "C",
+     "text": "200 mL"
+    },
+    {
+     "key": "D",
+     "text": "250 mL"
+    },
+    {
+     "key": "E",
+     "text": "400 mL"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2024-invierno-q80",
+   "number": 80,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "El cemento es un material que por sus características químicas puede ser dañino para la piel de las personas, que por su trabajo, están en constante contacto con él. Se han observado quemaduras de distinto grado en la piel de las manos. La composición del cemento es, en términos generales, la siguiente:\n\nÓxido de calcio \"cal\" (CaO) 60 a 69 %\n\nÓxido de silicio \"sílice\" (SiO²) 18 a 24 %\n\nÓxido de aluminio \"alúmina\" (Al²O³) 4 a 8 %\n\nÓxido de hierro (Fe²O³) 1 a 8 %\n\nSabiendo que los óxidos de metales alcalinos y alcalinotérreos, grupos 1 y 2 (I A y II A), reaccionan enérgicamente con el agua según:\n\nM²Om + H²O M(OH)m + calor\n\nY que los hidróxidos de los metales alcalinos y alcalinotérreos son altamente corrosivos. ¿Cuál de las siguientes opciones explica químicamente las quemaduras en las manos de personas que están en constante contacto con cemento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Se producen, principalmente, por la reacción de la sílice con la humedad de las manos."
+    },
+    {
+     "key": "B",
+     "text": "Se producen, principalmente, por la reacción del óxido de hierro con la humedad de las manos."
+    },
+    {
+     "key": "C",
+     "text": "Se producen, principalmente, por la reacción de la alúmina con la humedad de las manos."
+    },
+    {
+     "key": "D",
+     "text": "Se producen, principalmente, por la reacción de la cal con la humedad de las manos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2024-invierno/q80.webp",
+    "width": 907,
+    "height": 822,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}

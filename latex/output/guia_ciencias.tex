@@ -1,0 +1,1430 @@
+% =============================================================================
+%  PAES Studio: guía de síntesis (plantilla)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Formato: A4, dos columnas, cajas tcolorbox con la paleta Zinc de la app.
+%  Entornos disponibles:
+%    definicion, formula, ley, mecanismo, ideasclave, metodo, ejemplo,
+%    errorfrecuente, dato, lineatiempo   (título opcional en [])
+%  Comandos:
+%    \alternativa{A}{texto}   alternativa con su tecla (igual que en la app)
+%    \clave{C}        marca la alternativa correcta
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%. Fuera de ellos, edita libremente.
+% =============================================================================
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=1.5cm,top=1.9cm,bottom=1.9cm,columnsep=0.75cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ── Paleta Zinc (misma que la app) ───────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc100}{HTML}{F4F4F5}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+\definecolor{ambar}{HTML}{B45309}
+
+% ── Tipografía: texto con serifa, estructura en sans ─────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.08}
+\color{zinc900}
+\newcommand{\sen}{\operatorname{sen}}
+\renewcommand{\arraystretch}{1.18}
+
+\titleformat{\section}{\sffamily\bfseries\large\color{zinc950}}{\thesection}{0.6em}{}
+  [{\color{zinc300}\titlerule[0.4pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{zinc900}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.3em}
+
+\setlist{leftmargin=1.2em,itemsep=0.15em,topsep=0.3em}
+\setlist[itemize]{label={\color{zinc500}\textbullet}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\scriptsize\color{zinc500}\guiaAsignatura}
+\fancyfoot[R]{\sffamily\scriptsize\color{zinc500}\thepage}
+
+% ── Cajas ────────────────────────────────────────────────────────────────────
+\tcbset{
+  paes/.style={
+    enhanced, breakable, sharp corners=south, arc=1.5pt,
+    boxrule=0.4pt, colback=white, colframe=zinc300,
+    colbacktitle=white, coltitle=zinc900, titlerule=0pt,
+    fonttitle=\sffamily\bfseries\footnotesize,
+    toptitle=3pt, bottomtitle=0pt,
+    left=7pt, right=7pt, top=2pt, bottom=6pt,
+    before skip=7pt, after skip=7pt,
+  },
+  acento/.style={borderline west={2pt}{0pt}{#1}},
+}
+\newtcolorbox{definicion}[1][Definición]{paes, acento=zinc900, title={#1}}
+\newtcolorbox{formula}[1][Fórmula clave]{paes, colback=zinc50, colbacktitle=zinc50, title={#1}}
+\newtcolorbox{ejemplo}[1][Ejemplo resuelto]{paes, title={#1}}
+\newtcolorbox{errorfrecuente}[1][Error frecuente]{paes, colframe=rosa!35, acento=rosa, title={#1}}
+\newtcolorbox{dato}[1][Dato PAES]{paes, colframe=ambar!40, acento=ambar, title={#1}}
+\newtcolorbox{mecanismo}[1][Mecanismo]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc700, title={#1}}
+\newtcolorbox{ley}[1][Ley]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc900, title={#1}}
+\newtcolorbox{ideasclave}[1][Ideas clave]{paes, title={#1}}
+\newtcolorbox{metodo}[1][Cómo abordarlo en la PAES]{paes, acento=esmeralda, title={#1}}
+% Línea de tiempo: filas «fecha & hecho \\».
+\newenvironment{lineatiempo}[1][Línea de tiempo]
+  {\begin{tcolorbox}[paes, acento=zinc700, title={#1}]\small\renewcommand{\arraystretch}{1.25}%
+   \begin{tabular}{@{}>{\leavevmode\sffamily\bfseries\color{zinc700}}p{0.24\linewidth}p{\dimexpr0.76\linewidth-2\tabcolsep\relax}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+
+% Alternativa con su tecla (eco de la anatomía A–E de la app).
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\bfseries\color{white}}
+\newcommand{\alternativa}[2]{\par\noindent\hangindent=1.6em\hangafter=1\makebox[1.6em][l]{\tecla{#1}}#2\par}
+\newcommand{\clave}[1]{\par\smallskip{\sffamily\footnotesize\color{esmeralda} Clave \teclaok{#1}}\par}
+
+% Barra horizontal proporcional (para tablas de frecuencia).
+\newcommand{\barra}[1]{{\color{zinc900}\rule[0.15ex]{#1\linewidth}{0.9ex}}}
+
+%%<META>%%
+\newcommand{\guiaTitulo}{Compendio de estudio}
+\newcommand{\guiaAsignatura}{Ciencias}
+\newcommand{\guiaDescripcion}{La prueba de Ciencias tiene 80 preguntas: 54 del módulo común (18 de Biología, 18 de Física y 18 de Química) y 26 del módulo electivo. Además de contenidos, evalúa habilidades de pensamiento científico: identificar variables, formular hipótesis, interpretar datos y evaluar conclusiones.}
+\newcommand{\guiaFuente}{4 ejes y 18 subtemas. Frecuencias calculadas sobre 18 ensayos (17 oficiales DEMRE), 1306 preguntas. Generado el 1 de noviembre de 2026.}
+%%</META>%%
+
+\begin{document}
+
+\twocolumn[{%
+  \begin{tcolorbox}[enhanced, frame hidden, colback=white, left=0pt, right=0pt, top=0pt, bottom=6pt,
+      borderline south={0.4pt}{0pt}{zinc300}]
+    {\sffamily\footnotesize\color{zinc500} PAES Studio}\par\vspace{0.2em}
+    {\sffamily\bfseries\LARGE\color{zinc950} \guiaTitulo: \guiaAsignatura}\par\vspace{0.35em}
+    {\normalsize\color{zinc700} \guiaDescripcion}\par\vspace{0.25em}
+    {\sffamily\scriptsize\color{zinc500} \guiaFuente}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}]
+
+%%<CONTENIDO>%%
+\section*{Cómo usar este compendio}
+
+Cada subtema sigue el mismo orden: teoría, recuadro con las fórmulas, leyes o mecanismos centrales, ideas clave, método para responder en la PAES, trampas frecuentes y ejemplos resueltos paso a paso. Resuelve cada ejemplo antes de leer su desarrollo.
+
+\section*{Qué se evalúa}
+
+Distribución de las preguntas por eje en los ensayos disponibles en PAES Studio.
+
+\begin{center}\small
+
+\begin{tabular}{@{}p{0.42\linewidth}rrp{0.22\linewidth}@{}}
+
+\toprule Eje & Preg. & \% & \\ \midrule
+
+Biología & 440 & 34 & \barra{0.074} \\
+
+Física & 440 & 34 & \barra{0.074} \\
+
+Química & 426 & 33 & \barra{0.072} \\
+
+\bottomrule
+
+\end{tabular}
+
+\end{center}
+
+\begin{dato}Biología y Física concentran el 67 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
+
+\section{Biología}
+
+{\itshape\color{zinc700} Organización celular, procesos y funciones biológicas, herencia y evolución, organismo y ambiente.}
+
+\subsection{Organización celular}
+
+La célula es la unidad estructural y funcional de los seres vivos. Las procariontes (bacterias) no tienen núcleo ni organelos con membrana; las eucariontes (animales, plantas, hongos, protistas) tienen núcleo y organelos membranosos.
+
+La membrana plasmática es una bicapa de fosfolípidos con proteínas que regula el paso de sustancias. El transporte pasivo (difusión, osmosis) ocurre a favor del gradiente y sin gasto de ATP; el activo, en contra del gradiente y con gasto de ATP.
+
+\begin{mecanismo}[Organelos y función]
+Núcleo: material genético. Mitocondria: respiración celular (ATP). Cloroplasto: fotosíntesis (solo vegetales). Ribosoma: síntesis de proteínas. Retículo endoplasmático y aparato de Golgi: síntesis, modificación y transporte. Lisosoma: digestión celular.
+\end{mecanismo}
+
+{\sffamily\footnotesize\color{zinc500} Esquema comparativo}
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Procarionte} & \textbf{Eucarionte} \\
+\midrule
+Núcleo & no (nucleoide) & sí \\
+Organelos con membrana & no & sí \\
+Ejemplos & bacterias & animales, plantas, hongos \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Célula vegetal: pared celular, cloroplastos y vacuola grande.
+  \item Osmosis: el agua pasa hacia el medio más concentrado en solutos.
+  \item Los virus no son células.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el tipo de célula o estructura involucrada.
+  \item Relaciona estructura con función.
+  \item En transporte, determina el sentido del gradiente y si hay gasto de energía.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Atribuir cloroplastos o pared celular a células animales.
+  \item Pensar que en la osmosis se mueve el soluto (se mueve el agua).
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un glóbulo rojo se coloca en agua destilada. ¿Qué ocurrirá con la célula?
+\alternativa{A}{Se deshidrata, porque el agua sale de ella.}
+\alternativa{B}{Se hincha y puede estallar, porque el agua entra en ella.}
+\alternativa{C}{No cambia, porque la membrana es impermeable al agua.}
+\alternativa{D}{Pierde sus sales hacia el agua por transporte activo.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El agua destilada es hipotónica respecto del interior celular.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El interior del glóbulo rojo tiene más solutos que el agua destilada.
+  \item Por osmosis, el agua entra hacia el medio más concentrado: la célula se hincha (hemólisis).
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Biomoléculas, enzimas y metabolismo}
+
+Las biomoléculas orgánicas son carbohidratos (energía), lípidos (reserva energética y membranas), proteínas (estructura, enzimas, transporte, defensa) y ácidos nucleicos (información genética).
+
+Las enzimas son proteínas que aceleran reacciones al disminuir la energía de activación; no se consumen y actúan sobre un sustrato específico. Su actividad depende de la temperatura y el pH: lejos de su óptimo se desnaturalizan.
+
+La fotosíntesis transforma energía lumínica en energía química (glucosa) y libera $\mathrm{O_2}$ proveniente del agua. La respiración celular oxida la glucosa para producir ATP en las mitocondrias.
+
+\begin{mecanismo}[Ecuaciones globales]
+\[\text{Fotosíntesis: } 6\,\mathrm{CO_2}+6\,\mathrm{H_2O}\xrightarrow{\text{luz}}\mathrm{C_6H_{12}O_6}+6\,\mathrm{O_2}\]
+
+\[\text{Respiración: } \mathrm{C_6H_{12}O_6}+6\,\mathrm{O_2}\rightarrow 6\,\mathrm{CO_2}+6\,\mathrm{H_2O}+\text{ATP}\]
+\end{mecanismo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Enzima: específica, reutilizable, sensible a temperatura y pH.
+  \item El $\mathrm{O_2}$ de la fotosíntesis proviene del agua.
+  \item Fotosíntesis y respiración son procesos complementarios.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica la biomolécula o el proceso.
+  \item Recuerda reactantes, productos y lugar donde ocurre.
+  \item En gráficos de actividad enzimática, ubica el óptimo y explica la caída por desnaturalización.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Decir que las enzimas se consumen en la reacción.
+  \item Creer que las plantas no respiran (respiran siempre; fotosintetizan con luz).
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una enzima del estómago humano tiene su máxima actividad a pH 2. ¿Qué ocurrirá si se la coloca a pH 8?
+\alternativa{A}{Su actividad aumentará.}
+\alternativa{B}{Su actividad disminuirá, porque se aleja de su pH óptimo.}
+\alternativa{C}{Se transformará en otra enzima.}
+\alternativa{D}{Su actividad no cambiará, porque el pH no afecta a las proteínas.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Cada enzima tiene un pH óptimo; lejos de él cambia su forma y pierde actividad.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item pH 8 está lejos del óptimo (pH 2).
+  \item Cambia la estructura del sitio activo y la actividad disminuye.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Enzimas]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un grupo de estudiantes mide la actividad de una enzima digestiva humana a distintas temperaturas. Observan que la actividad aumenta hasta un máximo cerca de 37 \textdegree{}C y que sobre 45 \textdegree{}C cae bruscamente hasta casi desaparecer.
+
+¿Qué explica la caída de la actividad sobre 45 \textdegree{}C?
+\alternativa{A}{La enzima se consume a medida que cataliza la reacción.}
+\alternativa{B}{La enzima pierde su estructura tridimensional y con ello su sitio activo funcional.}
+\alternativa{C}{El sustrato se transforma en enzima a altas temperaturas.}
+\alternativa{D}{Las moléculas se mueven más lento y chocan con menos frecuencia.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Las enzimas son proteínas: el calor excesivo rompe las interacciones que mantienen su forma (desnaturalización) y el sitio activo deja de reconocer al sustrato.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Hasta 37 \textdegree{}C, el aumento de temperatura acelera las moléculas y aumentan los choques efectivos: la actividad sube.
+  \item Sobre la temperatura óptima, la energía térmica rompe enlaces débiles (puentes de hidrógeno, interacciones iónicas) de la estructura terciaria.
+  \item Sin su forma, el sitio activo ya no es complementario al sustrato y la actividad cae.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Fotosíntesis]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se riega una planta con agua cuyo oxígeno es el isótopo $^{18}\mathrm{O}$ y se la ilumina para que realice fotosíntesis. ¿Dónde se detectará principalmente el $^{18}\mathrm{O}$?
+\alternativa{A}{En la glucosa producida.}
+\alternativa{B}{En el $\mathrm{CO_2}$ absorbido por las hojas.}
+\alternativa{C}{En la clorofila de los cloroplastos.}
+\alternativa{D}{En el $\mathrm{O_2}$ liberado a la atmósfera.}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En la fase dependiente de la luz, el agua se rompe (fotólisis) y su oxígeno se libera como $\mathrm{O_2}$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Ecuación global: $6\,\mathrm{CO_2} + 6\,\mathrm{H_2O} \xrightarrow{\text{luz}} \mathrm{C_6H_{12}O_6} + 6\,\mathrm{O_2}$.
+  \item La fotólisis del agua ($2\,\mathrm{H_2O} \rightarrow 4\,\mathrm{H^+} + 4\,e^- + \mathrm{O_2}$) aporta electrones y libera el oxígeno del agua como $\mathrm{O_2}$.
+  \item El oxígeno de la glucosa proviene del $\mathrm{CO_2}$ fijado en el ciclo de Calvin. Por eso el isótopo aparece en el $\mathrm{O_2}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{División celular y herencia}
+
+La mitosis produce dos células hijas idénticas a la madre (crecimiento y reparación). La meiosis produce cuatro células haploides genéticamente distintas (gametos) e incluye el entrecruzamiento, fuente de variabilidad.
+
+Un gen tiene variantes llamadas alelos. Un alelo dominante se expresa en heterocigosis; uno recesivo solo en homocigosis. El cuadro de Punnett permite calcular proporciones de genotipos y fenotipos.
+
+El ADN se replica antes de la división y se transcribe a ARN, que se traduce a proteínas en los ribosomas.
+
+\begin{formula}[Proporciones mendelianas]
+$Aa\times Aa \Rightarrow$ genotipos $1\,AA : 2\,Aa : 1\,aa$; fenotipos $3$ dominante $: 1$ recesivo.
+
+$Aa\times aa \Rightarrow 1\,Aa : 1\,aa$. Humanos: $2n=46$ (células somáticas), $n=23$ (gametos).
+\end{formula}
+
+{\sffamily\footnotesize\color{zinc500} Esquema comparativo}
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Mitosis} & \textbf{Meiosis} \\
+\midrule
+Células hijas & 2 & 4 \\
+Cromosomas & igual a la madre ($2n$) & la mitad ($n$) \\
+Función & crecimiento y reparación & formar gametos \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Mitosis: 2 células, mismo número de cromosomas.
+  \item Meiosis: 4 células, la mitad de cromosomas.
+  \item Rasgo recesivo: solo se expresa en $aa$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Escribe los genotipos de los progenitores.
+  \item Arma el cuadro de Punnett con sus gametos.
+  \item Cuenta las combinaciones que cumplen lo pedido.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir genotipo con fenotipo.
+  \item Atribuir a la mitosis la variabilidad genética.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una planta de flores rojas ($Rr$) se cruza con una de flores blancas ($rr$). Si el rojo es dominante, ¿qué proporción de la descendencia tendrá flores blancas?
+\alternativa{A}{0 \%}
+\alternativa{B}{25 \%}
+\alternativa{C}{50 \%}
+\alternativa{D}{75 \%}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Cruce de prueba: heterocigoto por homocigoto recesivo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Gametos: $R$ o $r$ por un lado; solo $r$ por el otro.
+  \item Descendencia: $Rr$ y $rr$ en igual proporción.
+  \item Flores blancas ($rr$): 50 \%.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: División celular]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una célula humana con 46 cromosomas ($2n = 46$) completa una meiosis. ¿Qué se obtiene al final del proceso?
+\alternativa{A}{4 células con 23 cromosomas cada una.}
+\alternativa{B}{2 células con 46 cromosomas cada una.}
+\alternativa{C}{4 células con 46 cromosomas cada una.}
+\alternativa{D}{2 células con 23 cromosomas cada una.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La meiosis consta de dos divisiones sucesivas y reduce a la mitad el número de cromosomas: de una célula diploide se obtienen cuatro haploides.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Meiosis I separa los cromosomas homólogos: de $2n = 46$ se pasa a dos células con $n = 23$.
+  \item Meiosis II separa las cromátidas hermanas de esas dos células: resultan 4 células con $n = 23$.
+  \item Estas células haploides son los gametos; en la fecundación se recupera $2n = 46$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Herencia mendeliana]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+El albinismo se hereda como un rasgo autosómico recesivo. Si una pareja de padres no albinos tiene ambos el genotipo heterocigoto $Aa$, ¿cuál es la probabilidad de que un hijo sea albino?
+\alternativa{A}{0 \%}
+\alternativa{B}{25 \%}
+\alternativa{C}{50 \%}
+\alternativa{D}{75 \%}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Un rasgo recesivo solo se expresa en homocigotos $aa$; el cruce $Aa\times Aa$ se resuelve con un cuadro de Punnett.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Gametos de cada progenitor: $A$ o $a$, con probabilidad $\frac{1}{2}$ cada uno.
+  \item Combinaciones: $AA$ (1/4), $Aa$ (2/4) y $aa$ (1/4).
+  \item Solo $aa$ es albino: $P = \frac{1}{4} = 25\,\%$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Evolución y biodiversidad}
+
+La teoría de la evolución por selección natural (Darwin y Wallace) explica que en una población hay variabilidad heredable; los individuos con características ventajosas en un ambiente dejan más descendencia y esas características se vuelven más frecuentes.
+
+Las evidencias de la evolución incluyen el registro fósil, las estructuras homólogas, la embriología comparada y las semejanzas en el ADN.
+
+\begin{mecanismo}[Selección natural]
+Variabilidad $\rightarrow$ presión del ambiente $\rightarrow$ supervivencia y reproducción diferencial $\rightarrow$ cambio en la frecuencia de los rasgos en la población.
+\end{mecanismo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Evolucionan las poblaciones, no los individuos.
+  \item Las mutaciones ocurren al azar; la selección no es azarosa.
+  \item Lamarck (caracteres adquiridos) fue descartado.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica la variación presente en la población.
+  \item Determina qué presión ambiental favorece a qué variante.
+  \item Concluye cómo cambia la frecuencia del rasgo en generaciones.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Pensar que el individuo cambia «para adaptarse».
+  \item Explicar con herencia de caracteres adquiridos.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Tras usar un antibiótico por años, en un hospital predominan bacterias resistentes. ¿Cuál es la mejor explicación?
+\alternativa{A}{El antibiótico produjo mutaciones dirigidas a la resistencia.}
+\alternativa{B}{Las bacterias resistentes ya existían y sobrevivieron y se reprodujeron más.}
+\alternativa{C}{Las bacterias aprendieron a resistir el antibiótico.}
+\alternativa{D}{El antibiótico perdió su efecto por el paso del tiempo.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Es un ejemplo clásico de selección natural.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La resistencia surgió por variación previa (mutaciones al azar).
+  \item El antibiótico eliminó a las sensibles y las resistentes dejaron más descendencia.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Sistemas del organismo y homeostasis}
+
+La homeostasis es la mantención de un medio interno estable (temperatura, glicemia, agua). Se logra principalmente por retroalimentación negativa: el cambio de una variable desencadena una respuesta que lo revierte.
+
+El sistema nervioso coordina respuestas rápidas mediante impulsos eléctricos y neurotransmisores; el endocrino, respuestas más lentas y duraderas mediante hormonas transportadas por la sangre. El sistema inmune defiende de patógenos con respuestas innatas y adaptativas (anticuerpos, memoria).
+
+\begin{mecanismo}[Regulación de la glicemia]
+Glicemia alta $\rightarrow$ páncreas libera \textbf{insulina} $\rightarrow$ las células captan glucosa y el hígado la almacena como glucógeno $\rightarrow$ glicemia baja.
+
+Glicemia baja $\rightarrow$ páncreas libera \textbf{glucagón} $\rightarrow$ el hígado libera glucosa $\rightarrow$ glicemia sube.
+\end{mecanismo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Insulina baja la glicemia; glucagón la sube.
+  \item Las vacunas generan memoria inmunológica sin enfermar.
+  \item Retroalimentación negativa: la respuesta se opone al cambio.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica la variable regulada y su cambio.
+  \item Identifica el órgano sensor y la hormona o señal liberada.
+  \item Describe el efecto que devuelve la variable a su valor normal.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir los efectos de insulina y glucagón.
+  \item Creer que los antibióticos sirven contra virus.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué efecto tiene una vacuna en el organismo?
+\alternativa{A}{Mata directamente al patógeno ya presente.}
+\alternativa{B}{Estimula la producción de anticuerpos y células de memoria.}
+\alternativa{C}{Reemplaza los glóbulos blancos.}
+\alternativa{D}{Actúa como antibiótico.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La vacuna presenta un antígeno inofensivo que entrena al sistema inmune adaptativo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El antígeno de la vacuna activa linfocitos que producen anticuerpos.
+  \item Quedan células de memoria que responden rápido ante una infección futura.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Regulación de la glicemia]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Después de una comida rica en carbohidratos, la concentración de glucosa en la sangre aumenta. ¿Qué hormona libera el páncreas en respuesta y qué efecto produce?
+\alternativa{A}{Glucagón, que aumenta la glucosa en la sangre.}
+\alternativa{B}{Glucagón, que disminuye la glucosa en la sangre.}
+\alternativa{C}{Insulina, que aumenta la glucosa en la sangre.}
+\alternativa{D}{Insulina, que disminuye la glucosa en la sangre.}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La glicemia se regula por retroalimentación negativa: un aumento de glucosa provoca una respuesta que la hace bajar.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Las células beta del páncreas detectan el alza y secretan insulina.
+  \item La insulina favorece la entrada de glucosa a las células (músculo, tejido adiposo) y su almacenamiento como glucógeno en el hígado.
+  \item Resultado: la glucosa en la sangre vuelve a su rango normal.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Organismo y ambiente}
+
+En un ecosistema la energía fluye en una sola dirección: de los productores a los consumidores, y en cada nivel trófico se pierde la mayor parte como calor (aproximadamente solo el 10 \% pasa al siguiente). La materia, en cambio, se recicla en ciclos (carbono, nitrógeno, agua).
+
+Las relaciones entre especies incluyen depredación, competencia, mutualismo, comensalismo y parasitismo. El tamaño de una población depende de natalidad, mortalidad, inmigración y emigración.
+
+\begin{mecanismo}[Flujo de energía]
+Productores $\rightarrow$ consumidores primarios $\rightarrow$ secundarios $\rightarrow$ terciarios. Regla del 10 \%: $E_{n+1}\approx 0{,}1\cdot E_n$.
+
+Los descomponedores devuelven los nutrientes al suelo.
+\end{mecanismo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item La energía fluye; la materia se recicla.
+  \item Mutualismo: ambas especies se benefician.
+  \item Las cadenas tróficas rara vez superan cuatro o cinco niveles.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ubica cada organismo en su nivel trófico.
+  \item Aplica la regla del 10 \% o sigue el ciclo de materia correspondiente.
+  \item Predice el efecto de un cambio en una población sobre las demás.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Decir que la energía se recicla.
+  \item Confundir comensalismo con mutualismo.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En una cadena trófica pasto $\rightarrow$ conejo $\rightarrow$ zorro, desaparecen los zorros. ¿Qué es lo más probable a corto plazo?
+\alternativa{A}{La población de conejos disminuye.}
+\alternativa{B}{La población de conejos aumenta y luego el pasto disminuye.}
+\alternativa{C}{El pasto aumenta de inmediato.}
+\alternativa{D}{No hay cambios en la cadena.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Sin su depredador, los conejos aumentan y consumen más pasto.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Desaparece la presión de depredación sobre los conejos.
+  \item Más conejos consumen más pasto, que disminuye.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Flujo de energía]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En un ecosistema, los productores fijan 20 000 kJ de energía. Si en cada nivel trófico se transfiere aproximadamente el 10 \% de la energía al nivel siguiente, ¿cuánta energía llega a los consumidores terciarios?
+\alternativa{A}{2 kJ}
+\alternativa{B}{20 kJ}
+\alternativa{C}{200 kJ}
+\alternativa{D}{2000 kJ}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Cada paso de un nivel trófico al siguiente conserva cerca del 10 \%; el resto se pierde principalmente como calor en la respiración celular.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Consumidores primarios: $20\,000\cdot 0{,}1 = 2000$ kJ.
+  \item Consumidores secundarios: $2000\cdot 0{,}1 = 200$ kJ.
+  \item Consumidores terciarios: $200\cdot 0{,}1 = 20$ kJ.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Física}
+
+{\itshape\color{zinc700} Ondas, mecánica, energía, electricidad y magnetismo.}
+
+\subsection{Ondas y sonido}
+
+Una onda transporta energía sin transportar materia. Se caracteriza por su frecuencia $f$ (oscilaciones por segundo, en Hz), su período $T=\frac{1}{f}$, su longitud de onda $\lambda$ y su rapidez $v=\lambda f$.
+
+Las ondas mecánicas, como el sonido, necesitan un medio; las electromagnéticas, como la luz, se propagan también en el vacío. Al cambiar de medio, la frecuencia se mantiene y cambian la rapidez y la longitud de onda.
+
+En el sonido, la frecuencia determina el tono (agudo o grave) y la amplitud, la intensidad. El oído humano percibe aproximadamente entre 20 Hz y 20 000 Hz.
+
+\begin{formula}[Relaciones]
+\begin{gather*}
+v=\lambda\,f \\
+T=\frac{1}{f}
+\end{gather*}
+
+Rapidez del sonido: unos 340 m/s en el aire, mayor en líquidos y aún mayor en sólidos.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Al cambiar de medio, la frecuencia no cambia.
+  \item El sonido no se propaga en el vacío.
+  \item Tono depende de la frecuencia; intensidad, de la amplitud.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica qué magnitudes se conocen ($v$, $f$, $\lambda$, $T$).
+  \item Aplica $v=\lambda f$ despejando la incógnita.
+  \item Si hay cambio de medio, mantén la frecuencia constante.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Pensar que la frecuencia cambia al pasar a otro medio.
+  \item Confundir tono con intensidad.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una onda de 5 Hz tiene una longitud de onda de 2 m. ¿Cuál es su rapidez?
+\alternativa{A}{0,4 m/s}
+\alternativa{B}{2,5 m/s}
+\alternativa{C}{7 m/s}
+\alternativa{D}{10 m/s}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $v=\lambda f$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $v=2\cdot 5=10$ m/s.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Ondas]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un sonido de 680 Hz se propaga en el aire con una rapidez de 340 m/s. ¿Cuál es su longitud de onda?
+\alternativa{A}{0,5 m}
+\alternativa{B}{2 m}
+\alternativa{C}{1020 m}
+\alternativa{D}{231 200 m}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Para cualquier onda: $v = \lambda\, f$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Despeja: $\lambda = \dfrac{v}{f} = \dfrac{340}{680}$.
+  \item $\lambda = 0{,}5$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Luz y óptica}
+
+La luz se propaga en línea recta y a unos $3\cdot 10^8$ m/s en el vacío. Al incidir en una superficie puede reflejarse (el ángulo de incidencia es igual al de reflexión) o refractarse al cambiar de medio, desviándose por el cambio de rapidez.
+
+Los espejos planos forman imágenes virtuales del mismo tamaño. Las lentes convergentes concentran la luz y pueden formar imágenes reales; las divergentes la dispersan y forman imágenes virtuales más pequeñas.
+
+\begin{ley}[Leyes]
+Reflexión: $\theta_i=\theta_r$. Refracción: al pasar a un medio donde la luz es más lenta, el rayo se acerca a la normal.
+
+Índice de refracción: $n=\dfrac{c}{v}$.
+\end{ley}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Los ángulos se miden respecto de la normal.
+  \item El arcoíris se explica por refracción y dispersión.
+  \item La miopía se corrige con lentes divergentes.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Dibuja la normal a la superficie.
+  \item Aplica la ley de reflexión o el criterio de refracción.
+  \item Determina el tipo de imagen según el espejo o la lente.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Medir los ángulos respecto de la superficie y no de la normal.
+  \item Pensar que en la refracción cambia la frecuencia.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un rayo de luz incide sobre un espejo plano formando $35^\circ$ con la normal. ¿Qué ángulo forma el rayo reflejado con la normal?
+\alternativa{A}{$35^\circ$}
+\alternativa{B}{$55^\circ$}
+\alternativa{C}{$70^\circ$}
+\alternativa{D}{$145^\circ$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Ley de reflexión: el ángulo de incidencia es igual al de reflexión.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\theta_r=\theta_i=35^\circ$ (ambos medidos desde la normal).
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Movimiento (cinemática)}
+
+La cinemática describe el movimiento. La rapidez media es la distancia recorrida dividida por el tiempo; la velocidad considera además la dirección. La aceleración mide cuánto cambia la velocidad por unidad de tiempo.
+
+En el movimiento rectilíneo uniforme (MRU) la velocidad es constante; en el uniformemente acelerado (MRUA), la aceleración es constante. En un gráfico posición–tiempo la pendiente es la velocidad; en uno velocidad–tiempo, la pendiente es la aceleración y el área bajo la curva, el desplazamiento.
+
+\begin{formula}[Ecuaciones]
+\begin{gather*}
+\text{MRU: } x=x_0+vt \\
+\text{MRUA: } v=v_0+at,\quad x=x_0+v_0t+\tfrac{1}{2}at^2
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Pendiente de $x$–$t$ = velocidad.
+  \item Área bajo $v$–$t$ = desplazamiento.
+  \item 72 km/h = 20 m/s (divide por 3,6).
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el tipo de movimiento y los datos con sus unidades.
+  \item Elige la ecuación que relaciona datos e incógnita.
+  \item En gráficos, usa la pendiente o el área según lo pedido.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Mezclar km/h con m/s.
+  \item Olvidar el factor $\frac{1}{2}$ en $\frac{1}{2}at^2$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un ciclista recorre 18 km en 45 minutos. ¿Cuál es su rapidez media?
+\alternativa{A}{0,4 km/h}
+\alternativa{B}{2,5 km/h}
+\alternativa{C}{24 km/h}
+\alternativa{D}{40 km/h}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Rapidez media = distancia / tiempo, con unidades coherentes.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item 45 min = 0,75 h.
+  \item $v=\dfrac{18}{0{,}75}=24$ km/h.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Movimiento rectilíneo uniformemente acelerado]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un automóvil parte del reposo y acelera de manera constante a $2\ \mathrm{m/s^2}$ durante 5 s. ¿Qué distancia recorre en ese tiempo?
+\alternativa{A}{5 m}
+\alternativa{B}{10 m}
+\alternativa{C}{25 m}
+\alternativa{D}{50 m}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con velocidad inicial cero y aceleración constante: $d = v_0 t + \tfrac{1}{2}at^2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $v_0 = 0$, $a = 2\ \mathrm{m/s^2}$, $t = 5$ s.
+  \item $d = \tfrac{1}{2}\cdot 2\cdot 5^2 = 25$ m.
+  \item Control: la rapidez final es $v = at = 10$ m/s y la rapidez media es $5$ m/s; $5\cdot 5 = 25$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Fuerzas y leyes de Newton}
+
+Primera ley (inercia): si la fuerza neta es cero, un cuerpo mantiene su estado de reposo o de velocidad constante. Segunda ley: $F_{\text{neta}}=ma$. Tercera ley: a toda acción corresponde una reacción de igual magnitud y sentido opuesto, aplicada sobre el \textbf{otro} cuerpo.
+
+El peso es la fuerza de gravedad ($P=mg$) y depende del lugar; la masa no. El roce se opone al deslizamiento. La presión es fuerza por unidad de área, y la densidad, masa por unidad de volumen.
+
+\begin{ley}[Fórmulas]
+\begin{gather*}
+F_{\text{neta}}=m\,a \\
+P=m\,g \\
+p=\frac{F}{A} \\
+\rho=\frac{m}{V}
+\end{gather*}
+\end{ley}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Acción y reacción actúan sobre cuerpos distintos: no se anulan.
+  \item Velocidad constante $\Rightarrow$ fuerza neta nula.
+  \item En la Luna cambia el peso, no la masa.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Dibuja las fuerzas que actúan sobre el cuerpo (diagrama de cuerpo libre).
+  \item Calcula la fuerza neta sumando con signo.
+  \item Aplica $F=ma$ o la ley pertinente.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Creer que se necesita una fuerza para mantener la velocidad constante.
+  \item Sumar acción y reacción como si actuaran sobre el mismo cuerpo.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un auto avanza en línea recta a 60 km/h constantes. ¿Qué se puede afirmar de la fuerza neta sobre él?
+\alternativa{A}{Es nula.}
+\alternativa{B}{Apunta en el sentido del movimiento.}
+\alternativa{C}{Apunta en sentido contrario al movimiento.}
+\alternativa{D}{Es igual a su peso.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Velocidad constante significa aceleración cero.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Si $a=0$, por la segunda ley $F_{\text{neta}}=m\cdot 0=0$.
+  \item La fuerza del motor se equilibra con los roces.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Segunda ley de Newton]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Sobre una caja de 4 kg que se desliza por el suelo actúa una fuerza horizontal de 20 N. La fuerza de roce cinético con el suelo es de 4 N. ¿Cuál es la magnitud de la aceleración de la caja?
+\alternativa{A}{$4\ \mathrm{m/s^2}$}
+\alternativa{B}{$5\ \mathrm{m/s^2}$}
+\alternativa{C}{$6\ \mathrm{m/s^2}$}
+\alternativa{D}{$16\ \mathrm{m/s^2}$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La aceleración depende de la fuerza \textbf{neta}: $F_{\text{neta}} = m\,a$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El roce se opone al movimiento: $F_{\text{neta}} = 20 - 4 = 16$ N.
+  \item $a = \dfrac{F_{\text{neta}}}{m} = \dfrac{16}{4} = 4\ \mathrm{m/s^2}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Energía, trabajo y calor}
+
+La energía mecánica es la suma de la cinética ($\frac{1}{2}mv^2$) y la potencial gravitatoria ($mgh$). Sin roce se conserva; con roce, parte se transforma en calor.
+
+El trabajo de una fuerza es $W=Fd\cos\theta$ y la potencia, el trabajo por unidad de tiempo. El calor es energía que se transfiere por diferencia de temperatura (conducción, convección, radiación); la temperatura mide la agitación de las partículas.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+E_c=\tfrac{1}{2}mv^2 \\
+E_p=mgh \\
+W=F\,d \\
+P=\frac{W}{t} \\
+Q=m\,c\,\Delta T
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Sin roce: $E_c+E_p$ constante.
+  \item Calor y temperatura no son lo mismo.
+  \item El agua tiene un calor específico alto: $1\ \text{cal}/(\text{g}\cdot{}^\circ\text{C})$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica las formas de energía al inicio y al final.
+  \item Plantea la conservación o el balance con pérdidas.
+  \item Despeja la incógnita y revisa las unidades.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Olvidar elevar la rapidez al cuadrado en la energía cinética.
+  \item Confundir calor con temperatura.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un cuerpo de 4 kg se mueve a 3 m/s. ¿Cuál es su energía cinética?
+\alternativa{A}{6 J}
+\alternativa{B}{12 J}
+\alternativa{C}{18 J}
+\alternativa{D}{36 J}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $E_c=\frac{1}{2}mv^2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $E_c=\tfrac{1}{2}\cdot 4\cdot 3^2=2\cdot 9=18$ J.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Conservación de la energía]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una pelota de 2 kg se deja caer desde 5 m de altura. Si se desprecia el roce con el aire y $g = 10\ \mathrm{m/s^2}$, ¿con qué rapidez llega al suelo?
+\alternativa{A}{5 m/s}
+\alternativa{B}{50 m/s}
+\alternativa{C}{100 m/s}
+\alternativa{D}{10 m/s}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Sin roce, la energía mecánica se conserva: la energía potencial inicial se transforma en energía cinética.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $E_p = mgh = 2\cdot 10\cdot 5 = 100$ J.
+  \item Al llegar al suelo: $\tfrac{1}{2}mv^2 = 100 \Rightarrow v^2 = \dfrac{2\cdot 100}{2} = 100$.
+  \item $v = 10$ m/s. La masa se simplifica: $v = \sqrt{2gh}$ no depende de ella.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Calor y temperatura]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuánto calor se necesita para elevar la temperatura de 500 g de agua desde 20 \textdegree{}C hasta 60 \textdegree{}C? Considera que el calor específico del agua es $1\ \mathrm{cal/(g\cdot ^{\circ}C)}$.
+\alternativa{A}{2000 cal}
+\alternativa{B}{10 000 cal}
+\alternativa{C}{20 000 cal}
+\alternativa{D}{30 000 cal}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El calor sensible se calcula con $Q = m\,c\,\Delta T$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\Delta T = 60 - 20 = 40$ \textdegree{}C.
+  \item $Q = 500\cdot 1\cdot 40 = 20\,000$ cal.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Electricidad y magnetismo}
+
+La corriente eléctrica es el flujo de carga; se mide en amperes. La ley de Ohm relaciona voltaje, corriente y resistencia: $V=IR$. La potencia eléctrica es $P=VI$.
+
+En serie, la corriente es la misma en todas las resistencias y los voltajes se suman; en paralelo, el voltaje es el mismo y las corrientes se suman. Una corriente genera un campo magnético, y un campo magnético variable induce corriente (base de generadores y transformadores).
+
+\begin{ley}[Fórmulas]
+\begin{gather*}
+V=I\,R \\
+P=V\,I \\
+R_{\text{serie}}=R_1+R_2 \\
+\frac{1}{R_{\text{paralelo}}}=\frac{1}{R_1}+\frac{1}{R_2}
+\end{gather*}
+\end{ley}
+
+{\sffamily\footnotesize\color{zinc500} Esquema comparativo}
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Serie} & \textbf{Paralelo} \\
+\midrule
+Corriente & igual en todas & se reparte \\
+Voltaje & se reparte & igual en todas \\
+$R$ equivalente & $R_1+R_2$ & menor que cada una \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Las casas conectan los artefactos en paralelo (mismo voltaje).
+  \item Cargas de igual signo se repelen.
+  \item La resistencia equivalente en paralelo es menor que la menor de ellas.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica si las resistencias están en serie o en paralelo.
+  \item Calcula la resistencia equivalente y la corriente total.
+  \item Aplica Ohm a la resistencia pedida.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Sumar resistencias en paralelo como si estuvieran en serie.
+  \item Confundir corriente con voltaje.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un hervidor funciona con 220 V y por él circulan 10 A. ¿Cuál es su potencia?
+\alternativa{A}{22 W}
+\alternativa{B}{230 W}
+\alternativa{C}{2200 W}
+\alternativa{D}{22 000 W}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $P=VI$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $P=220\cdot 10=2200$ W.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Circuitos eléctricos]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Dos resistencias de $4\ \Omega$ y $6\ \Omega$ se conectan en serie a una batería de 20 V. ¿Cuál es el voltaje entre los extremos de la resistencia de $6\ \Omega$?
+\alternativa{A}{2 V}
+\alternativa{B}{8 V}
+\alternativa{C}{12 V}
+\alternativa{D}{20 V}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En serie, la corriente es la misma en ambas resistencias y el voltaje se reparte en proporción a cada resistencia.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Resistencia equivalente: $R = 4 + 6 = 10\ \Omega$.
+  \item Corriente: $I = \dfrac{V}{R} = \dfrac{20}{10} = 2$ A.
+  \item Voltaje en la de $6\ \Omega$: $V = I\,R = 2\cdot 6 = 12$ V (y $8$ V en la de $4\ \Omega$; suman 20 V).
+\end{enumerate}
+\end{ejemplo}
+
+\section{Química}
+
+{\itshape\color{zinc700} Estructura atómica, química orgánica, reacciones y estequiometría, disoluciones.}
+
+\subsection{Estructura atómica y tabla periódica}
+
+El átomo tiene un núcleo con protones y neutrones y electrones a su alrededor. El número atómico $Z$ es la cantidad de protones; el número másico $A$, la suma de protones y neutrones. Los isótopos tienen igual $Z$ y distinto $A$.
+
+La configuración electrónica distribuye los electrones en niveles y subniveles. El último nivel ocupado indica el período, y los electrones de valencia, el grupo. En la tabla, el radio atómico aumenta hacia abajo y hacia la izquierda; la electronegatividad, hacia arriba y hacia la derecha.
+
+\begin{formula}[Relaciones]
+\begin{gather*}
+n=A-Z \\
+e^-=Z-\text{carga}
+\end{gather*}
+
+Modelos: Dalton (esfera indivisible) $\rightarrow$ Thomson (electrones incrustados) $\rightarrow$ Rutherford (núcleo pequeño y denso) $\rightarrow$ Bohr (niveles de energía).
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Un catión perdió electrones; un anión los ganó.
+  \item Isótopos: mismo elemento, distinta masa.
+  \item Grupo 1: metales alcalinos; grupo 17: halógenos; grupo 18: gases nobles.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Lee $Z$ y $A$ del símbolo y la carga.
+  \item Calcula protones, neutrones y electrones.
+  \item Ubica el elemento con su configuración electrónica.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Tomar $A$ como número de neutrones.
+  \item Olvidar ajustar los electrones según la carga del ion.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+El ion ${}^{32}_{16}\mathrm{S}^{2-}$ tiene:
+\alternativa{A}{16 protones y 16 electrones.}
+\alternativa{B}{16 protones y 18 electrones.}
+\alternativa{C}{18 protones y 16 electrones.}
+\alternativa{D}{32 protones y 18 electrones.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La carga $2-$ indica que ganó dos electrones.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Protones: $Z=16$.
+  \item Electrones: $16+2=18$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Estructura atómica]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuántos protones, neutrones y electrones tiene el ion ${}^{23}_{11}\mathrm{Na}^{+}$?
+\alternativa{A}{11 protones, 12 neutrones y 11 electrones.}
+\alternativa{B}{11 protones, 12 neutrones y 10 electrones.}
+\alternativa{C}{12 protones, 11 neutrones y 10 electrones.}
+\alternativa{D}{11 protones, 23 neutrones y 10 electrones.}
+\alternativa{E}{10 protones, 12 neutrones y 11 electrones.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $Z$ (abajo) da los protones, $A$ (arriba) es protones + neutrones, y la carga indica cuántos electrones se ganaron o perdieron.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Protones: $Z = 11$.
+  \item Neutrones: $A - Z = 23 - 11 = 12$.
+  \item Electrones: el átomo neutro tiene 11; la carga $+1$ indica que perdió uno: $11 - 1 = 10$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Configuración electrónica y tabla periódica]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un elemento tiene número atómico $Z = 17$. ¿Cuál de las siguientes opciones describe correctamente su ubicación en la tabla periódica y su comportamiento químico?
+\alternativa{A}{Período 3, grupo 17; tiende a ganar un electrón.}
+\alternativa{B}{Período 3, grupo 7; tiende a perder siete electrones.}
+\alternativa{C}{Período 2, grupo 17; tiende a ganar un electrón.}
+\alternativa{D}{Período 3, grupo 1; tiende a perder un electrón.}
+\alternativa{E}{Período 4, grupo 17; tiende a compartir un electrón.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La configuración electrónica indica el período (nivel más externo) y los electrones de valencia (grupo).
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Configuración: $1s^2\,2s^2\,2p^6\,3s^2\,3p^5$.
+  \item Nivel más externo $n = 3$: período 3. Electrones de valencia: $2 + 5 = 7$, grupo 17 (halógenos).
+  \item Le falta un electrón para completar el octeto, por eso tiende a ganarlo y formar el anión $\mathrm{Cl^-}$ (es el cloro).
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Enlace químico y moléculas}
+
+El enlace iónico se forma por transferencia de electrones entre un metal y un no metal (gran diferencia de electronegatividad); el covalente, por compartición de electrones entre no metales. El metálico mantiene unidos a los átomos de un metal.
+
+La geometría molecular depende de los pares de electrones alrededor del átomo central, y la polaridad de la molécula, de la polaridad de sus enlaces y de su geometría.
+
+\begin{definicion}[Tipos de enlace]
+Iónico: $\mathrm{NaCl}$. Covalente polar: $\mathrm{H_2O}$. Covalente apolar: $\mathrm{O_2}$, $\mathrm{CH_4}$ (molécula apolar).
+
+Regla del octeto: los átomos tienden a completar 8 electrones de valencia.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Metal + no metal $\Rightarrow$ iónico.
+  \item Los compuestos iónicos conducen la electricidad fundidos o disueltos.
+  \item Una molécula con enlaces polares puede ser apolar si es simétrica ($\mathrm{CO_2}$).
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Clasifica los elementos como metales o no metales.
+  \item Decide el tipo de enlace.
+  \item Deduce propiedades (conductividad, solubilidad, puntos de fusión).
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Suponer que toda molécula con enlaces polares es polar.
+  \item Confundir enlace iónico con covalente polar.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué tipo de enlace une los átomos del cloruro de sodio, $\mathrm{NaCl}$?
+\alternativa{A}{Covalente apolar}
+\alternativa{B}{Covalente polar}
+\alternativa{C}{Iónico}
+\alternativa{D}{Metálico}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Sodio es metal y cloro, no metal.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El sodio cede un electrón al cloro: se forman $\mathrm{Na^+}$ y $\mathrm{Cl^-}$.
+  \item La atracción entre iones es un enlace iónico.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Estequiometría]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Considera la reacción balanceada:
+
+\[2\,\mathrm{H_2} + \mathrm{O_2} \rightarrow 2\,\mathrm{H_2O}\]
+
+Si reaccionan por completo 4 g de $\mathrm{H_2}$ con la cantidad exacta de $\mathrm{O_2}$, ¿qué masa de agua se forma? (Masas molares: H = 1 g/mol; O = 16 g/mol.)
+\alternativa{A}{18 g}
+\alternativa{B}{34 g}
+\alternativa{C}{36 g}
+\alternativa{D}{72 g}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Convierte la masa a moles, usa la proporción de la ecuación y vuelve a masa.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Moles de $\mathrm{H_2}$: $\dfrac{4\ \text{g}}{2\ \text{g/mol}} = 2$ mol.
+  \item Según la ecuación, 2 mol de $\mathrm{H_2}$ forman 2 mol de $\mathrm{H_2O}$.
+  \item Masa: $2\ \text{mol}\cdot 18\ \text{g/mol} = 36$ g.
+  \item Control por conservación de la masa: 4 g de $\mathrm{H_2}$ + 32 g de $\mathrm{O_2}$ (1 mol) = 36 g.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Concentración molar]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se disuelven 20 g de hidróxido de sodio ($\mathrm{NaOH}$, masa molar 40 g/mol) en agua hasta completar 500 mL de solución. ¿Cuál es la concentración molar de la solución?
+\alternativa{A}{0,04 mol/L}
+\alternativa{B}{0,5 mol/L}
+\alternativa{C}{1 mol/L}
+\alternativa{D}{2 mol/L}
+\alternativa{E}{40 mol/L}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Molaridad = moles de soluto / litros de solución.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Moles: $\dfrac{20}{40} = 0{,}5$ mol.
+  \item Volumen: $500$ mL $= 0{,}5$ L.
+  \item $M = \dfrac{0{,}5\ \text{mol}}{0{,}5\ \text{L}} = 1$ mol/L.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Química orgánica}
+
+La química orgánica estudia los compuestos del carbono. El carbono forma cuatro enlaces y puede unirse a otros carbonos formando cadenas y anillos. Su hibridación determina la geometría: $sp^3$ (enlaces simples, tetraédrica), $sp^2$ (un doble enlace, plana) y $sp$ (triple enlace, lineal).
+
+Los grupos funcionales determinan las propiedades: alcoholes ($-\mathrm{OH}$), aldehídos ($-\mathrm{CHO}$), cetonas ($-\mathrm{CO}-$), ácidos carboxílicos ($-\mathrm{COOH}$), éteres ($-\mathrm{O}-$), ésteres, aminas y amidas. Los isómeros tienen igual fórmula molecular y distinta estructura.
+
+\begin{definicion}[Grupos funcionales]
+Alcohol: $\mathrm{R{-}OH}$. Aldehído: $\mathrm{R{-}CHO}$. Cetona: $\mathrm{R{-}CO{-}R'}$. Ácido: $\mathrm{R{-}COOH}$. Éter: $\mathrm{R{-}O{-}R'}$. Éster: $\mathrm{R{-}COO{-}R'}$. Amina: $\mathrm{R{-}NH_2}$.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Cada doble enlace aporta un enlace pi ($\pi$).
+  \item Carbono con doble enlace: $sp^2$.
+  \item Alcanos: solo enlaces simples ($\mathrm{C_nH_{2n+2}}$).
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el grupo funcional o los tipos de enlace.
+  \item Cuenta carbonos y enlaces múltiples.
+  \item Nombra o clasifica según las reglas IUPAC.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir aldehído (carbonilo en el extremo) con cetona (carbonilo interno).
+  \item Contar mal los enlaces pi.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es la fórmula molecular del propano, un alcano de 3 carbonos?
+\alternativa{A}{$\mathrm{C_3H_4}$}
+\alternativa{B}{$\mathrm{C_3H_6}$}
+\alternativa{C}{$\mathrm{C_3H_8}$}
+\alternativa{D}{$\mathrm{C_3H_{10}}$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Alcanos: $\mathrm{C_nH_{2n+2}}$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $n=3$: $2\cdot 3+2=8$ hidrógenos.
+  \item $\mathrm{C_3H_8}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Reacciones químicas y estequiometría}
+
+En una reacción química los átomos se reordenan: la masa se conserva (ley de Lavoisier), por eso la ecuación debe estar balanceada. Los coeficientes indican la proporción en moles.
+
+El mol es la cantidad de sustancia que contiene $6{,}02\cdot 10^{23}$ partículas. La masa molar convierte gramos en moles. El reactivo limitante es el que se consume primero y determina la cantidad de producto.
+
+\begin{formula}[Relaciones]
+\begin{gather*}
+n=\frac{m}{M} \\
+N=n\cdot 6{,}02\cdot 10^{23} \\
+\text{gas ideal: } PV=nRT
+\end{gather*}
+
+A condiciones normales, 1 mol de gas ocupa 22,4 L.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Balancea antes de calcular.
+  \item Los coeficientes relacionan moles, no gramos.
+  \item Masa total de reactantes = masa total de productos.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Balancea la ecuación.
+  \item Convierte los datos a moles.
+  \item Usa la proporción de coeficientes y vuelve a la unidad pedida.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar las proporciones de coeficientes directamente con gramos.
+  \item Olvidar balancear la ecuación.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En la reacción balanceada $\mathrm{N_2}+3\,\mathrm{H_2}\rightarrow 2\,\mathrm{NH_3}$, ¿cuántos moles de $\mathrm{NH_3}$ se forman a partir de 6 mol de $\mathrm{H_2}$ con exceso de $\mathrm{N_2}$?
+\alternativa{A}{2 mol}
+\alternativa{B}{3 mol}
+\alternativa{C}{4 mol}
+\alternativa{D}{6 mol}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La proporción entre $\mathrm{H_2}$ y $\mathrm{NH_3}$ es $3:2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $6\ \text{mol H}_2\cdot\dfrac{2\ \text{mol NH}_3}{3\ \text{mol H}_2}=4$ mol de $\mathrm{NH_3}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Disoluciones y pH}
+
+Una disolución es una mezcla homogénea de soluto y disolvente. Su concentración puede expresarse en porcentaje masa/masa, masa/volumen o en molaridad (moles de soluto por litro de disolución). Al diluir, la cantidad de soluto se mantiene.
+
+El pH mide la acidez: $\mathrm{pH}=-\log[\mathrm{H^+}]$. A 25 \textdegree{}C, pH menor que 7 es ácido, igual a 7 neutro y mayor que 7 básico. Las propiedades coligativas (descenso del punto de congelación, aumento del punto de ebullición) dependen de la cantidad de partículas de soluto.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+M=\frac{n_{\text{soluto}}}{V_{\text{disolución}}\,(\text{L})} \\
+C_1V_1=C_2V_2 \\
+\mathrm{pH}=-\log[\mathrm{H^+}] \\
+\mathrm{pH}+\mathrm{pOH}=14
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Diluir no cambia los moles de soluto.
+  \item Cada unidad de pH es un factor 10 en $[\mathrm{H^+}]$.
+  \item Agregar sal al agua baja su punto de congelación.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Convierte los datos a moles y litros.
+  \item Aplica la fórmula de concentración o de dilución.
+  \item Para pH, usa el logaritmo y clasifica la disolución.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar mililitros en vez de litros en la molaridad.
+  \item Pensar que un pH 4 es el doble de ácido que uno 5 (es 10 veces).
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se diluyen 100 mL de una disolución 2 mol/L hasta 400 mL. ¿Cuál es la nueva concentración?
+\alternativa{A}{0,5 mol/L}
+\alternativa{B}{1 mol/L}
+\alternativa{C}{4 mol/L}
+\alternativa{D}{8 mol/L}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Los moles de soluto se conservan: $C_1V_1=C_2V_2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $2\cdot 100=C_2\cdot 400$.
+  \item $C_2=0{,}5$ mol/L.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Habilidades científicas}
+
+{\itshape\color{zinc700} Pensamiento científico: variables, hipótesis, procedimientos y conclusiones.}
+
+\subsection{Habilidades de pensamiento científico}
+
+Muchas preguntas de Ciencias no evalúan un contenido, sino el razonamiento experimental. La variable independiente es la que el investigador manipula; la dependiente, la que mide como respuesta; las controladas, las que se mantienen constantes.
+
+Una hipótesis es una respuesta tentativa y comprobable a una pregunta de investigación. Una conclusión se deriva de los resultados obtenidos y no debe ir más allá de ellos. Una teoría explica un conjunto amplio de fenómenos; una ley describe una regularidad, a menudo matemática.
+
+\begin{mecanismo}[Esquema de una investigación]
+Observación $\rightarrow$ pregunta de investigación $\rightarrow$ hipótesis $\rightarrow$ diseño experimental (variables y grupo control) $\rightarrow$ resultados $\rightarrow$ conclusión.
+\end{mecanismo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Independiente: lo que yo cambio. Dependiente: lo que mido.
+  \item Una conclusión solo puede afirmar lo que los datos muestran.
+  \item El grupo control permite comparar el efecto de la variable.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica qué se cambia a propósito y qué se mide.
+  \item Revisa qué factores se mantienen constantes.
+  \item Evalúa si la conclusión se sigue de los datos, sin generalizar.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir la variable que se mide con la que se manipula.
+  \item Elegir una conclusión que generaliza más allá de los datos.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una estudiante riega cuatro plantas iguales con distinta cantidad de agua y mide su altura después de un mes. ¿Cuál es la variable dependiente?
+\alternativa{A}{La cantidad de agua.}
+\alternativa{B}{El tipo de planta.}
+\alternativa{C}{La altura de las plantas.}
+\alternativa{D}{El tiempo de un mes.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La dependiente es la que se mide como respuesta.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Manipula: cantidad de agua (independiente).
+  \item Mide: altura (dependiente). Tipo de planta y tiempo son controladas.
+\end{enumerate}
+\end{ejemplo}
+%%</CONTENIDO>%%
+
+\end{document}

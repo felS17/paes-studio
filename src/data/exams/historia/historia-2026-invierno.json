@@ -1,0 +1,2964 @@
+{
+ "id": "historia-2026-invierno",
+ "subject": "historia",
+ "title": "PAES Invierno 2026",
+ "description": "Prueba oficial completa de Historia y Ciencias Sociales: 65 preguntas, aplicada el 18-06-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2026,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "121",
+ "appliedOn": "2025-06-18",
+ "durationMinutes": 120,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   114,
+   142,
+   167,
+   190,
+   211,
+   232,
+   252,
+   270,
+   286,
+   300,
+   315,
+   332,
+   349,
+   364,
+   378,
+   388,
+   398,
+   408,
+   420,
+   435,
+   451,
+   466,
+   478,
+   488,
+   495,
+   502,
+   511,
+   522,
+   536,
+   551,
+   566,
+   579,
+   588,
+   596,
+   603,
+   611,
+   622,
+   636,
+   651,
+   667,
+   680,
+   691,
+   701,
+   710,
+   722,
+   736,
+   752,
+   769,
+   785,
+   799,
+   814,
+   829,
+   848,
+   868,
+   889,
+   910,
+   933,
+   958,
+   987,
+   1000
+  ],
+  "officialQuestionCount": 65,
+  "officialScorableCount": 60
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "historia-2026-invierno-q01",
+   "number": 1,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "En Chile, uno de los principios que rige la institucionalidad democrática es el principio de supremacía constitucional. ¿Cuál de los siguientes planteamientos evidencia la aplicación de dicho principio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El Poder Ejecutivo puede aprobar de manera unilateral una nueva constitución política."
+    },
+    {
+     "key": "B",
+     "text": "Las autoridades públicas deben ajustar su actuar a las normas de la constitución."
+    },
+    {
+     "key": "C",
+     "text": "Los partidos políticos carecen de reconocimiento en las disposiciones de la constitución."
+    },
+    {
+     "key": "D",
+     "text": "La ciudadanía tiene la facultad de modificar directamente las reformas a la constitución propuestas por el Legislativo."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El principio de supremacía constitucional establece que la Constitución es la norma de mayor jerarquía y que toda autoridad debe ajustar su actuar a ella.",
+    "steps": [
+     "La supremacía constitucional significa que la Constitución está por sobre cualquier otra norma y que ningún órgano del Estado puede actuar fuera de ella.",
+     "El artículo 6º de la Constitución obliga a los órganos del Estado a someter su acción a la Constitución y a las normas dictadas conforme a ella.",
+     "La alternativa B señala que las autoridades públicas deben ajustar su actuar a las normas de la Constitución, que es exactamente lo que exige el principio.",
+     "A le da al Poder Ejecutivo una facultad unilateral para aprobar una nueva Constitución, lo que vulnera la norma suprema. C niega el reconocimiento de los partidos políticos, que la Constitución sí reconoce. D atribuye a la ciudadanía una facultad de modificación directa que no existe: la reforma la tramitan el Congreso y el Presidente, y el plebiscito solo aprueba o rechaza un texto.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Confundir el Poder Ejecutivo con el poder constituyente, y creer que el gobierno puede cambiar la Constitución por sí solo.",
+     "D": "Pensar que la participación ciudadana en un plebiscito equivale a poder modificar directamente las reformas constitucionales."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q02",
+   "number": 2,
+   "axis": "Formación ciudadana",
+   "topic": "Poderes del Estado",
+   "stem": "Lee el siguiente texto sobre la relación entre medios de comunicación y democracia a inicios del siglo XXI:\n\n«La venta de periódicos cae, y la opinión pública comienza a decantarse por canales alternativos, no formalizados, no gestionados por un aparato industrial poderoso, precisamente porque esos ciudadanos ya no son ajenos a los intereses creados en torno a ese aparato industrial, que es influyente e influenciable al mismo tiempo. Junto a Internet, los mensajes [electrónicos] se han popularizado, y se presentan como cruciales para comprender algunas movilizaciones públicas en momentos de especial tensión informativa».\n\nBlesa, P. (2006). Medios de comunicación y democracia: ¿El poder de los medios o los medios al poder?\n\nA partir del contenido del texto, ¿cuál es uno de los factores que explica el declive de los medios de comunicación tradicionales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La imposición de restricciones legales a estos medios."
+    },
+    {
+     "key": "B",
+     "text": "La diversificación ideológica que representan estos medios."
+    },
+    {
+     "key": "C",
+     "text": "La disminución de la capacidad de difusión de estos medios."
+    },
+    {
+     "key": "D",
+     "text": "La identificación de estos medios con las agendas corporativas."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q02.webp",
+    "width": 907,
+    "height": 591,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto explica que la gente se aleja de los periódicos porque sabe que el aparato industrial de los medios responde a intereses creados, por lo que busca canales alternativos.",
+    "steps": [
+     "El texto dice que la venta de periódicos cae y que la opinión pública se decanta por «canales alternativos, no formalizados, no gestionados por un aparato industrial poderoso».",
+     "La causa que da el autor es que «esos ciudadanos ya no son ajenos a los intereses creados en torno a ese aparato industrial», es decir, ven que los medios tienen intereses.",
+     "El autor describe a ese aparato como «influyente e influenciable al mismo tiempo», lo que indica que sus contenidos dependen de intereses externos.",
+     "La alternativa D nombra ese mismo factor: los medios identificados con agendas corporativas, que es el interés creado que el público percibe.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "Confundir el declive, que es el efecto que describe el texto, con su causa. La menor difusión es lo que se explica, no lo que lo explica.",
+     "A": "Buscar en el texto una regulación estatal que no aparece. El texto habla de desconfianza ciudadana, no de restricciones legales."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q03",
+   "number": 3,
+   "axis": "Formación ciudadana",
+   "topic": "Democracia",
+   "stem": "En Chile existe una democracia de carácter representativo donde la población elige a sus autoridades mediante elecciones periódicas. Pero también, existen algunas instancias donde la población puede ejercer una participación directa en la toma de decisiones políticas. ¿Cuál es una de estas instancias a nivel local?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las consultas ciudadanas de carácter vinculante."
+    },
+    {
+     "key": "B",
+     "text": "La aprobación de los proyectos de impacto ambiental."
+    },
+    {
+     "key": "C",
+     "text": "La asistencia a la rendición de cuenta anual del Ejecutivo."
+    },
+    {
+     "key": "D",
+     "text": "La solicitud de información pública en plataformas digitales."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "A nivel local, la participación directa en decisiones se expresa en consultas y plebiscitos comunales; las demás alternativas son formas de evaluación, información o rendición de cuentas.",
+    "steps": [
+     "El enunciado pide un mecanismo a nivel local por el que la población participe directamente en la toma de decisiones, y no solo eligiendo autoridades.",
+     "Las consultas ciudadanas vinculantes (A) son el instrumento que permite a los vecinos decidir sobre asuntos de su comuna, en el marco de la Ley Orgánica Constitucional de Municipalidades.",
+     "B es una evaluación técnica dentro de un procedimiento ambiental: la ciudadanía participa, pero no aprueba el proyecto.",
+     "C es la rendición de cuenta del Ejecutivo: la población escucha y se informa, pero no decide.",
+     "D es el derecho a solicitar información pública, un mecanismo de transparencia y control, no de decisión.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Confundir la participación ciudadana en la evaluación ambiental con una decisión de la comunidad sobre el proyecto.",
+     "C": "Confundir la rendición de cuenta, que es informativa, con una instancia en la que la población decide."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q04",
+   "number": 4,
+   "axis": "Formación ciudadana",
+   "topic": "Derechos",
+   "stem": "La existencia de situaciones de desigualdad en el siglo XXI implica un problema para los sistemas democráticos, puesto que representa un indicador de debilidad en dichos sistemas. Al respecto, ¿de qué manera la desigualdad afecta al funcionamiento de la democracia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Dificulta el establecimiento legal de derechos políticos."
+    },
+    {
+     "key": "B",
+     "text": "Agudiza las tensiones entre diferentes sectores sociales."
+    },
+    {
+     "key": "C",
+     "text": "Disminuye los mecanismos de participación de la ciudadanía."
+    },
+    {
+     "key": "D",
+     "text": "Desincentiva la búsqueda de acuerdos entre las coaliciones políticas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La desigualdad es un problema social que, al profundizar la brecha entre grupos, aumenta las tensiones entre los sectores de la sociedad y debilita la democracia.",
+    "steps": [
+     "El enunciado presenta la desigualdad como un indicador de debilidad del sistema democrático, y pide su efecto sobre el funcionamiento de la democracia.",
+     "La desigualdad es una brecha de condiciones entre grupos sociales, así que su efecto más directo recae sobre la convivencia entre esos grupos.",
+     "La alternativa B señala que la desigualdad agudiza las tensiones entre sectores sociales: al percibirse injusticia, los conflictos entre grupos se intensifican.",
+     "A, C y D se refieren a aspectos legales o institucionales (reconocimiento de derechos políticos, mecanismos de participación, acuerdos entre coaliciones) que no dependen directamente de la brecha social.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Suponer que la desigualdad reduce automáticamente los canales de participación, cuando el efecto que pide la pregunta es social y no institucional.",
+     "D": "Trasladar el problema social a la política partidista y asumir que la desigualdad impide directamente los acuerdos entre coaliciones."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q05",
+   "number": 5,
+   "axis": "Formación ciudadana",
+   "topic": "Democracia",
+   "stem": "En el siglo XXI, la democracia se ha convertido en el régimen político predominante en el mundo, teniendo entre sus atributos el sufragio como uno de los mecanismos de participación ciudadana. ¿Cuál es la importancia de este atributo para el desarrollo sociopolítico de una sociedad democrática?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Garantiza la alternancia ideológica en el poder político."
+    },
+    {
+     "key": "B",
+     "text": "Evita la difusión de posturas políticas de carácter extremo."
+    },
+    {
+     "key": "C",
+     "text": "Otorga representatividad política a las autoridades de gobierno."
+    },
+    {
+     "key": "D",
+     "text": "Impide la ocurrencia de conflictos entre distintos partidos políticos."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El sufragio otorga representatividad a las autoridades, porque su mandato proviene de la elección directa de la ciudadanía.",
+    "steps": [
+     "El enunciado pregunta por la importancia del sufragio para el desarrollo de una sociedad democrática.",
+     "Mediante el voto, la ciudadanía elige a sus autoridades, y esas autoridades obtienen su mandato de la mayoría que las elige.",
+     "Esa elección directa es lo que da representatividad política: las autoridades de gobierno actúan en nombre de quienes las votaron.",
+     "A sostiene que el sufragio garantiza la alternancia, pero el voto solo la hace posible, ya que el mismo electorado puede reelegir. B y D asumen que la democracia elimina posturas extremas o conflictos, lo que el sufragio no garantiza.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Confundir la posibilidad de alternancia con una garantía: el voto permite el cambio de gobierno, pero no lo asegura.",
+     "D": "Suponer que la democracia elimina los conflictos entre partidos, cuando la competencia política es parte del sistema."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q06",
+   "number": 6,
+   "axis": "Formación ciudadana",
+   "topic": "Democracia",
+   "stem": "La libertad de expresión es una de las libertades civiles que se garantizan en una sociedad democrática. Considerando los fundamentos de la democracia, ¿en cuál de las siguientes situaciones es legítimo limitar la libertad de expresión?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cuando se declara una huelga convocada por un sindicato."
+    },
+    {
+     "key": "B",
+     "text": "Cuando se lidera un partido político de una manera autoritaria."
+    },
+    {
+     "key": "C",
+     "text": "Cuando se organiza una protesta callejera contra la homofobia."
+    },
+    {
+     "key": "D",
+     "text": "Cuando se difunden ideas racistas en un programa de televisión."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La libertad de expresión se limita cuando atenta contra la dignidad y la igualdad de las personas, como ocurre con la difusión de ideas racistas.",
+    "steps": [
+     "La libertad de expresión protege incluso opiniones incómodas, pero no ampara discursos que vulneren la dignidad y la igualdad de las personas.",
+     "Difundir ideas racistas en un programa de televisión discrimina a personas o grupos por su origen, lo que atenta contra la igualdad y la convivencia democrática.",
+     "A corresponde a una huelga sindical, que es un derecho de los trabajadores. C corresponde a una protesta contra la homofobia, que es ejercicio legítimo de la libertad de reunión y de expresión.",
+     "B describe un estilo autoritario de liderazgo dentro de un partido: es una conducta criticable, pero no es un discurso que justifique limitar la libertad de expresión en una democracia.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Creer que un liderazgo autoritario dentro de un partido justifica censurar la expresión, cuando la crítica política es parte del debate democrático.",
+     "C": "Confundir una protesta pública con alteración del orden, cuando protestar contra la discriminación es un derecho."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q07",
+   "number": 7,
+   "axis": "Formación ciudadana",
+   "topic": "Democracia",
+   "stem": "Uno de los fundamentos sobre los que se sustenta el funcionamiento de las democracias contemporáneas es el de la soberanía popular. En este sentido, ¿en cuál de las siguientes situaciones se evidencia este fundamento de la democracia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En la libertad de expresar las propias ideas."
+    },
+    {
+     "key": "B",
+     "text": "En la designación de los ministros de Estado."
+    },
+    {
+     "key": "C",
+     "text": "En el ejercicio del voto en elecciones periódicas."
+    },
+    {
+     "key": "D",
+     "text": "En la militancia en un partido político tradicional."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La soberanía popular se evidencia cuando el pueblo ejerce el poder mediante el voto en elecciones periódicas.",
+    "steps": [
+     "La soberanía popular significa que el poder político reside en el pueblo y que este lo ejerce a través de mecanismos como las elecciones.",
+     "El artículo 5º de la Constitución establece que la soberanía se ejerce por el pueblo a través del plebiscito y de elecciones periódicas.",
+     "La alternativa C describe el ejercicio del voto en elecciones periódicas, que es la forma directa en que el pueblo decide quién lo gobierna.",
+     "A y D son derechos o prácticas individuales (expresar ideas, militar en un partido), no la forma en que se ejerce la soberanía. B corresponde a un acto del Presidente de la República, no del pueblo.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Pensar que la designación de ministros es una expresión de la soberanía popular, cuando es una atribución del Presidente.",
+     "D": "Confundir la militancia partidaria con el ejercicio de la soberanía, que se da a través del voto."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q08",
+   "number": 8,
+   "axis": "Geografía y espacio",
+   "topic": "Riesgos naturales",
+   "stem": "En las sociedades actuales los medios de comunicación representan ventajas, pero también riesgos que deterioran la calidad de la democracia. Considerando las características de las sociedades democráticas, ¿cuál de las siguientes situaciones evidencia uno de estos riesgos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La elevada diversidad de los tipos de soportes utilizados."
+    },
+    {
+     "key": "B",
+     "text": "El aumento de la cantidad de anuncios publicitarios pagados."
+    },
+    {
+     "key": "C",
+     "text": "El incremento del espacio destinado a acoger debates políticos."
+    },
+    {
+     "key": "D",
+     "text": "La alta concentración de la propiedad de las empresas del rubro."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La alta concentración de la propiedad de los medios es un riesgo democrático, porque reduce la pluralidad de voces y el control ciudadano sobre la información.",
+    "steps": [
+     "El enunciado pide un riesgo que los medios representan para la calidad de la democracia, no una ventaja.",
+     "Un riesgo democrático es algo que concentra el poder informativo o limita el pluralismo de voces.",
+     "La alta concentración de la propiedad de las empresas significa que pocos grupos controlan la información, lo que reduce la diversidad de opiniones y el contrapeso ciudadano.",
+     "A (diversidad de soportes) y C (más espacio para debates) son aspectos positivos. B (más publicidad pagada) es un problema comercial, pero no afecta directamente la pluralidad política como lo hace la concentración.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Confundir un riesgo comercial, como la publicidad pagada, con un riesgo para la democracia que afecta el pluralismo político."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q09",
+   "number": 9,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "La Constitución Política de la República de Chile señala que las autoridades que componen la presidencia de la República, los ministerios, el Senado de la República y la Cámara de Diputadas y Diputados, entre otras, deben realizar una declaración pública de su patrimonio e intereses. Considerando el funcionamiento de los sistemas democráticos, ¿cuál es un propósito que tiene para el Estado la implementación de este tipo de disposiciones constitucionales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fortalecer la probidad en el ejercicio de la función pública."
+    },
+    {
+     "key": "B",
+     "text": "Disminuir los aportes financieros a las candidaturas políticas."
+    },
+    {
+     "key": "C",
+     "text": "Preservar la separación de los poderes de la administración pública."
+    },
+    {
+     "key": "D",
+     "text": "Resguardar el correcto desarrollo de la elección de representantes políticos."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La declaración pública de patrimonio e intereses busca transparentar a las autoridades para prevenir conflictos de interés y fortalecer la probidad en el ejercicio de la función pública.",
+    "steps": [
+     "El enunciado describe la obligación de las autoridades de declarar públicamente su patrimonio e intereses, y pregunta por su propósito para el Estado.",
+     "Esta declaración permite a la ciudadanía y a los órganos de control conocer los bienes y posibles conflictos de interés de quienes ejercen funciones públicas.",
+     "Al transparentar esa información se previene el uso del cargo para beneficio personal, lo que corresponde a la probidad en la función pública.",
+     "B se regula en las normas de financiamiento electoral, C es un principio estructural de la organización del Estado y D se relaciona con la integridad de los procesos electorales: ninguna de estas es el propósito de la declaración patrimonial.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "Confundir el control del patrimonio de las autoridades con la separación de los poderes del Estado, que es un principio distinto.",
+     "B": "Pensar que la declaración de patrimonio busca reducir los aportes a las campañas, cuando ese es un asunto de financiamiento electoral."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q10",
+   "number": 10,
+   "axis": "Formación ciudadana",
+   "topic": "Participación",
+   "stem": "Durante las primeras décadas del siglo XXI las redes sociales de internet han adquirido un papel cada vez más importante en la vida cotidiana de las personas, generando diversas oportunidades y riesgos para la sociedad. En el contexto de la convivencia democrática, ¿cuál es un riesgo asociado a la masificación del uso de las redes sociales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La difusión de opiniones contrarias al gobierno."
+    },
+    {
+     "key": "B",
+     "text": "La exposición al contenido de canales independientes."
+    },
+    {
+     "key": "C",
+     "text": "La sustitución de los medios tradicionales de participación."
+    },
+    {
+     "key": "D",
+     "text": "La vulneración de datos de la vida privada de los usuarios."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La masificación de las redes sociales aumenta los riesgos para la privacidad, porque concentra y expone grandes cantidades de datos personales de sus usuarios.",
+    "steps": [
+     "El enunciado pide un riesgo asociado a la masificación de las redes sociales en la convivencia democrática.",
+     "Al crecer el número de usuarios, aumenta también la cantidad de datos personales que circulan y se almacenan en estas plataformas.",
+     "Esa mayor cantidad de datos hace más probable su vulneración, lo que expone la vida privada de las personas.",
+     "A y B son elementos propios de un espacio público plural, no riesgos. C describe un cambio en los canales de participación, no un perjuicio directo de la masificación.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "Pensar que las redes reemplazan a los medios tradicionales de participación, cuando el enunciado busca un riesgo concreto y no un cambio de canales."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q11",
+   "number": 11,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "La libertad de asociación en Chile es un derecho garantizado constitucionalmente cuyo ejercicio robustece el carácter democrático del sistema político. ¿En cuál de las siguientes situaciones una persona ejerce dicha libertad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cuando forma parte de una federación deportiva."
+    },
+    {
+     "key": "B",
+     "text": "Cuando solicita información sobre el gasto electoral."
+    },
+    {
+     "key": "C",
+     "text": "Cuando escribe una carta al diario criticando al gobierno."
+    },
+    {
+     "key": "D",
+     "text": "Cuando firma un contrato para la realización de un trabajo."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La libertad de asociación se ejerce cuando las personas se unen voluntariamente con otras para un fin común, como al formar parte de una federación deportiva.",
+    "steps": [
+     "La libertad de asociación es el derecho a unirse voluntariamente con otras personas para perseguir un fin común.",
+     "En la alternativa A, la persona forma parte de una federación deportiva, es decir, se asocia voluntariamente con otras personas para un fin compartido.",
+     "B corresponde al derecho de acceso a la información pública, y D a la libertad contractual, que es una relación entre partes. C corresponde a la libertad de expresión.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "Confundir la libertad de expresión con la libertad de asociación, porque ambas se ejercen en el espacio público."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q12",
+   "number": 12,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "Lee el texto que se refiere a la incorporación de la interpelación parlamentaria en la Constitución chilena:\n\n«La interpelación parlamentaria es una de las atribuciones exclusivas que ostenta la Cámara de Diputados, a partir de la reforma constitucional que introduce diversas modificaciones durante el gobierno del entonces presidente Ricardo Lagos Escobar el año 2005, en el cual se otorgaron herramientas de fiscalización a dicha Corporación, respecto de los actos del gobierno».\n\nObservatorio del Congreso (s.f.). Interpelaciones parlamentarias desde 2006 a la fecha. ¿Qué es una interpelación parlamentaria? Recuperado el 6 de noviembre de 2023.\n\nConsiderando el texto citado, ¿de qué forma la incorporación de este mecanismo contribuye al funcionamiento de la democracia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Garantiza la actuación autónoma de los poderes políticos que componen el Estado."
+    },
+    {
+     "key": "B",
+     "text": "Permite a los representantes de la ciudadanía supervisar la gestión del Ejecutivo."
+    },
+    {
+     "key": "C",
+     "text": "Verifica el cumplimiento de las promesas de campaña del Presidente de la República."
+    },
+    {
+     "key": "D",
+     "text": "Favorece la participación de la mayoría de la población en los procesos eleccionarios."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q12.webp",
+    "width": 907,
+    "height": 670,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La interpelación parlamentaria permite a la Cámara de Diputados fiscalizar al Ejecutivo, lo que equilibra el poder y contribuye al control democrático de la gestión de gobierno.",
+    "steps": [
+     "El texto indica que la interpelación es una atribución exclusiva de la Cámara de Diputados, incorporada en la reforma de 2005, que otorgó «herramientas de fiscalización» respecto de «los actos del gobierno».",
+     "Fiscalizar significa supervisar que el Ejecutivo actúe correctamente, y la interpelación obliga a los ministros a dar explicaciones ante los representantes elegidos.",
+     "De esta forma, los representantes de la ciudadanía supervisan la gestión del Ejecutivo, lo que contribuye al equilibrio entre poderes y al control democrático.",
+     "A confunde el control entre poderes con su autonomía. C y D no se relacionan con la fiscalización de la gestión: la interpelación no verifica promesas de campaña ni influye en la participación electoral.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Confundir el control mutuo entre poderes con la autonomía de cada poder, cuando la interpelación justamente implica supervisión."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q13",
+   "number": 13,
+   "axis": "Formación ciudadana",
+   "topic": "Derechos",
+   "stem": "La Constitución Política de la República de Chile reconoce un conjunto de derechos de la ciudadanía, garantizando la participación en la sociedad democrática, entre los que se encuentra el derecho a sufragar. Considerando este contexto, ¿en cuál de las siguientes situaciones se limita arbitrariamente el ejercicio del derecho a voto a una persona mayor de edad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una persona fue retirada del local de votación por gritar consignas en contra del proceso."
+    },
+    {
+     "key": "B",
+     "text": "El presidente de una mesa impidió la votación de una persona que llegó sin carnet de identidad."
+    },
+    {
+     "key": "C",
+     "text": "La jefa de un local de votación negó el acceso a una persona que portaba carteles a favor de una candidatura."
+    },
+    {
+     "key": "D",
+     "text": "Una persona con movilidad reducida fue marginada de la votación porque su mesa estaba en un segundo piso."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Es una limitación arbitraria impedir votar a una persona por una barrera física que el sistema no le ofrece resolver, mientras que las demás situaciones corresponden a restricciones legales o a conductas prohibidas dentro del local.",
+    "steps": [
+     "El enunciado pide identificar una limitación arbitraria del derecho a voto de una persona mayor de edad.",
+     "Una limitación es arbitraria cuando excluye a alguien del ejercicio de un derecho por una situación que no justifica la exclusión y que el sistema debería resolver.",
+     "En la alternativa D, una persona con movilidad reducida fue marginada de la votación porque su mesa estaba en un segundo piso, una barrera de acceso que la excluye del derecho a sufragar.",
+     "B corresponde al requisito legal de presentar la cédula de identidad para votar, y A y C corresponden a conductas prohibidas dentro del local de votación (gritar consignas o portar propaganda de una candidatura). Estas restricciones son legítimas.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Creer que negar el voto a quien no porta su carnet es una exclusión arbitraria, cuando presentar la cédula es un requisito legal para sufragar.",
+     "C": "Considerar que la prohibición de portar carteles de campaña dentro del local es una limitación indebida del voto."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q14",
+   "number": 14,
+   "axis": "Formación ciudadana",
+   "topic": "Elecciones",
+   "stem": "Lee el siguiente texto que alude al impacto de la difusión de noticias falsas:\n\n«Las cuentas automáticas de robots, además, siguen siendo una táctica muy utilizada. Las cuentas falsas y los opinadores online acostumbran a difundir mensajes a favor de partidos determinados y también son usados para compartir contenido de manera estratégica o publicar palabras claves para alterar los algoritmos y generar tendencia».\n\nRuiz, D. (2018). La manipulación en las redes sociales no para de crecer a escala mundial. *La Vanguardia*.\n\n¿Qué efecto político tiene la situación descrita en el texto para el funcionamiento de un sistema democrático?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La alteración de las normas sobre la elección de autoridades políticas."
+    },
+    {
+     "key": "B",
+     "text": "La erradicación de las formas convencionales de participación política."
+    },
+    {
+     "key": "C",
+     "text": "La distorsión del debate político sobre asuntos de connotación pública."
+    },
+    {
+     "key": "D",
+     "text": "La invisibilización de posturas políticas opositoras al gobierno de turno."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q14.webp",
+    "width": 907,
+    "height": 490,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las cuentas falsas y los robots que difunden mensajes y fabrican tendencias distorsionan el debate público, porque hacen parecer que una posición tiene más respaldo del que realmente tiene.",
+    "steps": [
+     "El texto describe cuentas automáticas de robots y cuentas falsas que difunden mensajes a favor de partidos y que usan «palabras claves para alterar los algoritmos y generar tendencia».",
+     "Al generar tendencias artificiales, se hace parecer que un tema o una posición tiene un respaldo que no existe en la ciudadanía.",
+     "Esto altera la discusión pública sobre asuntos de interés general, porque lo que se debate y cómo se percibe la opinión pública deja de reflejar la deliberación real.",
+     "A se refiere a normas electorales, que el texto no menciona. B y D sostienen que se elimina la participación o se invisibilizan opositores, pero el texto indica lo contrario: la manipulación amplifica algunas voces.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "Pensar que la manipulación oculta las posturas opositoras, cuando el texto describe que se amplifican unos mensajes y no que se silencien otros.",
+     "A": "Asociar la manipulación de tendencias con cambios en las normas electorales, que no aparecen en el texto."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q15",
+   "number": 15,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "Lee el siguiente extracto de la Constitución Política de la República de Chile:\n\n«Artículo 6º.- Los órganos del Estado deben someter su acción a la Constitución y a las normas dictadas conforme a ella y garantizar el orden institucional de la República. Los preceptos de esta Constitución obligan tanto a los titulares o integrantes de dichos órganos como a toda persona, institución o grupo. La infracción de esta norma generará las responsabilidades y sanciones que determine la ley».\n\nDecreto 100 de 2005. Fija el texto refundido, coordinado y sistematizado de la Constitución Política de la República de Chile. 22 de septiembre de 2005.\n\nConsiderando el contexto político chileno, ¿cuál de las siguientes afirmaciones es correcta respecto de las responsabilidades atribuidas a los gobernantes a las que se alude en el artículo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La posesión de cargos públicos implica renunciar al ejercicio de derechos civiles."
+    },
+    {
+     "key": "B",
+     "text": "La realización de actos de corrupción de las autoridades anula el Estado de derecho."
+    },
+    {
+     "key": "C",
+     "text": "La designación de las autoridades públicas es una función independiente del gobierno."
+    },
+    {
+     "key": "D",
+     "text": "La actuación de las autoridades públicas condiciona la estabilidad del sistema democrático."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q15.webp",
+    "width": 907,
+    "height": 671,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El artículo 6º obliga a todos los órganos del Estado y a sus integrantes a actuar conforme a la Constitución, por lo que la conducta de las autoridades incide en la estabilidad del sistema democrático.",
+    "steps": [
+     "El artículo 6º establece que los órganos del Estado deben someter su acción a la Constitución y garantizar el orden institucional, y que sus preceptos obligan a las autoridades y a toda persona.",
+     "De esto se sigue que las autoridades deben actuar dentro de la ley, y que su conducta define si las instituciones se respetan y funcionan.",
+     "El propio artículo señala que la infracción «generará las responsabilidades y sanciones que determine la ley», lo que muestra que la actuación de las autoridades tiene consecuencias para el orden institucional.",
+     "A asume que el cargo implica renunciar a derechos civiles, algo que el artículo no dice. B exagera al afirmar que la corrupción anula el Estado de derecho. C sostiene que la designación de autoridades es independiente del gobierno, lo que el artículo no establece.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Exagerar la consecuencia de la corrupción y afirmar que anula el Estado de derecho, cuando el artículo solo habla de responsabilidades y sanciones."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q16",
+   "number": 16,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "Lee el siguiente texto que aborda aspectos sociales y políticos del siglo XIX:\n\n«La filosofía que se creó para justificar este desplazamiento del poder ocultaba una contradicción implícita, y encerraba una negación de la justicia, que desacreditó la síntesis burguesa, puesto que el credo liberal predicaba la igualdad de todos los ciudadanos ante la ley, pero el liberalismo, en la práctica, ocultó muy frecuentemente, detrás de una fachada de reformas democráticas, la concentración del superávit económico en una minoría cada vez menos reducida».\n\nBruun, G. (1964). *La Europa del siglo XIX (1815-1914)*.\n\nDurante el siglo XIX los ideales burgueses y el liberalismo se expandieron por diversas áreas del mundo. Considerando esta situación en Latinoamérica, ¿cuál fue una de las manifestaciones de la contradicción destacada en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La imposición de gobiernos de tipo federalista sobre los ideales modernizadores del centralismo."
+    },
+    {
+     "key": "B",
+     "text": "La lucha de algunos sectores políticos para secularizar la sociedad imponiendo un retroceso al catolicismo."
+    },
+    {
+     "key": "C",
+     "text": "La incorporación en los textos constitucionales de requisitos de patrimonio para sufragar limitando la universalidad del voto."
+    },
+    {
+     "key": "D",
+     "text": "La introducción de sistemas políticos en los que predominaba el reformismo social contrapuesto al modelo de progreso nacional."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q16.webp",
+    "width": 907,
+    "height": 625,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La contradicción entre la igualdad ante la ley y la concentración económica se expresó en Latinoamérica en el voto censitario, que limitaba el sufragio a quienes tenían patrimonio.",
+    "steps": [
+     "El texto señala que el liberalismo predicaba «la igualdad de todos los ciudadanos ante la ley», pero que en la práctica ocultaba la concentración del superávit económico en una minoría.",
+     "La contradicción se aprecia cuando un derecho que se declara universal, como el sufragio, queda restringido por condiciones económicas.",
+     "La alternativa C describe la incorporación en los textos constitucionales de requisitos de patrimonio para votar, lo que deja el sufragio en manos de una minoría con propiedades.",
+     "A (federalismo frente a centralismo), B (secularización frente al catolicismo) y D (reformismo social frente al progreso nacional) no tratan de la igualdad formal contrapuesta a la concentración económica.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Confundir la contradicción económica del liberalismo con el conflicto entre liberales y sectores católicos por la secularización.",
+     "A": "Pensar que el conflicto entre federalismo y centralismo es la manifestación de la contradicción, cuando el texto habla de desigualdad económica."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q17",
+   "number": 17,
+   "axis": "Formación ciudadana",
+   "topic": "Ciudadanía",
+   "stem": "Lee el siguiente texto que corresponde a una carta escrita por Diego Portales en 1822:\n\n«La democracia, que tanto pregonan los ilusos, es un absurdo en los países como los americanos, llenos de vicios y donde los ciudadanos carecen de toda virtud […]. La monarquía no es tampoco el ideal americano: salimos de una terrible para volver a otra ¿y qué ganamos? La república es el sistema que hay que adoptar; ¿pero sabe cómo yo la entiendo para estos países? Un gobierno fuerte, centralizador, cuyos hombres sean verdaderos modelos de virtud y patriotismo, y así enderezar a los ciudadanos por el camino del orden y de las virtudes. Cuando se hayan moralizado, venga el gobierno completamente liberal, libre y lleno de ideales, donde tengan parte todos los ciudadanos».\n\nPortales (1822) como se citó en Silva, R. (1954). *Ideas y confesiones de Portales*.\n\nDe acuerdo con el texto, ¿qué requisito consideraba necesario Portales para la conformación de la República en Chile?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Debilitar la presencia de un Estado unitario."
+    },
+    {
+     "key": "B",
+     "text": "Garantizar la obediencia de la sociedad civil."
+    },
+    {
+     "key": "C",
+     "text": "Favorecer la difusión de los valores religiosos."
+    },
+    {
+     "key": "D",
+     "text": "Fortalecer el personalismo en los cargos públicos."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q17.webp",
+    "width": 907,
+    "height": 596,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Portales considera que, antes de la república liberal, la sociedad debe ser ordenada y moralizada desde un gobierno fuerte, lo que supone que la sociedad civil obedezca.",
+    "steps": [
+     "Portales afirma que la democracia es «un absurdo» en países «llenos de vicios» y propone una república con «un gobierno fuerte, centralizador».",
+     "Antes de llegar al «gobierno completamente liberal», la sociedad debe «moralizarse» y que el gobierno sirva para «enderezar a los ciudadanos por el camino del orden y de las virtudes».",
+     "Ese orden se impone desde el Estado, lo que supone que la sociedad civil obedezca a la autoridad antes de que todos participen en el gobierno.",
+     "A contradice la idea de un Estado fuerte y centralizado. C no aparece en el texto, que no menciona valores religiosos. D no corresponde: Portales habla de virtud y patriotismo de los gobernantes, no de personalismo.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Pensar que Portales buscaba debilitar el Estado unitario, cuando propone justamente un gobierno fuerte y centralizador.",
+     "D": "Asociar la virtud de los gobernantes con el personalismo en los cargos públicos, cuando el texto propone un Estado impersonal y ordenado."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q18",
+   "number": 18,
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "stem": "La separación de los poderes del Estado fue una de las ideas republicanas que se expandió por los nacientes Estados de América Latina durante el siglo XIX. Al respecto, ¿de qué manera se concretó esta idea en la región en el periodo señalado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En la fiscalización centralizada de los poderes del Estado."
+    },
+    {
+     "key": "B",
+     "text": "En el equilibrio de atribuciones entre las instituciones del Estado."
+    },
+    {
+     "key": "C",
+     "text": "En la elección popular del conjunto de las autoridades del Estado."
+    },
+    {
+     "key": "D",
+     "text": "En la jerarquización de los poderes del Estado en las constituciones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La separación de poderes se concretó en América Latina en un equilibrio de atribuciones entre las instituciones del Estado, de modo que ninguna concentrara todo el poder.",
+    "steps": [
+     "La separación de poderes busca que el Ejecutivo, el Legislativo y el Judicial sean independientes y se limiten mutuamente.",
+     "En las constituciones latinoamericanas del siglo XIX, cada poder tuvo atribuciones propias y mecanismos para frenar a los demás, como vetos, fiscalización y control de nombramientos.",
+     "Este equilibrio de atribuciones evitaba que el poder se concentrara en una sola institución, que era justamente el objetivo de la idea republicana.",
+     "A propone una fiscalización centralizada, que contradice la separación. C supone elegir por voto popular a todas las autoridades, lo que no es separación de poderes. D propone jerarquizar los poderes, lo que los subordinaría entre sí.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Confundir la separación de poderes con la elección popular de todas las autoridades, cuando la idea republicana busca equilibrio entre instituciones."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q19",
+   "number": 19,
+   "axis": "Formación ciudadana",
+   "topic": "Derechos",
+   "stem": "Durante el siglo XIX, la influencia de las ideas liberales propició el desarrollo de una serie de transformaciones en América Latina, por ejemplo, la ampliación de los derechos políticos a un sector de la población. Al respecto, ¿cuál de los siguientes factores facilitó la difusión de las ideas liberales en América Latina?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La uniformidad en el pensamiento de las elites criollas."
+    },
+    {
+     "key": "B",
+     "text": "La ausencia de conflictos armados de carácter interno."
+    },
+    {
+     "key": "C",
+     "text": "La estabilidad de las instituciones políticas tradicionales."
+    },
+    {
+     "key": "D",
+     "text": "La formación de miembros de las elites locales en Europa."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las elites criollas se formaron en Europa, donde conocieron el liberalismo y luego lo difundieron en sus países, lo que facilitó su expansión.",
+    "steps": [
+     "El enunciado pregunta por el factor que facilitó la difusión de las ideas liberales en América Latina durante el siglo XIX.",
+     "Muchos miembros de las elites locales se formaron en Europa, donde conocieron de primera mano las ideas liberales y las trajeron de vuelta a sus países.",
+     "Esas elites impulsaron luego reformas como la ampliación de los derechos políticos, lo que muestra cómo el liberalismo llegó a la política regional.",
+     "A es falsa: las elites no eran uniformes, y estaban divididas entre liberales y conservadores. B y C son también falsas: el periodo estuvo marcado por conflictos armados internos (como la Guerra Civil chilena de 1829-1830), y las instituciones tradicionales se transformaban, no permanecían estables.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Creer que la ausencia de conflictos favorecía el liberalismo, cuando el siglo XIX latinoamericano estuvo marcado por guerras civiles y disputas de poder."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q20",
+   "number": 20,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Durante la primera mitad del siglo XIX en Chile se desarrollaron diversos conflictos políticos entre liberales y conservadores. Luego de la derrota de los liberales en la Guerra Civil (1829-1830) los conservadores llegaron al gobierno. En este contexto, ¿cuál fue un cambio político que introdujeron los conservadores?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fomentaron la participación de los sectores populares."
+    },
+    {
+     "key": "B",
+     "text": "Impusieron un sistema republicano con rasgos autoritarios."
+    },
+    {
+     "key": "C",
+     "text": "Establecieron una dictadura militar basada en el caudillismo."
+    },
+    {
+     "key": "D",
+     "text": "Impulsaron la separación de la Iglesia Católica respecto del Estado."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los conservadores que llegaron al gobierno tras 1830 impusieron un sistema republicano con rasgos autoritarios, reflejado en la Constitución de 1833 y en un Ejecutivo fuerte.",
+    "steps": [
+     "El enunciado indica que, tras la derrota de los liberales en la Guerra Civil de 1829-1830, los conservadores llegaron al gobierno.",
+     "Los conservadores impulsaron la Constitución de 1833, que fortaleció al Presidente de la República y mantuvo la forma republicana.",
+     "Esa Constitución restringió la participación política, con un sufragio censitario y una autoridad presidencial fuerte, lo que da un carácter autoritario a la república.",
+     "A es contraria a su programa, porque restringían la participación popular. C no corresponde: no fue una dictadura militar. D tampoco: el catolicismo se mantuvo como religión oficial del Estado.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Pensar que los conservadores impulsaron la participación popular, cuando restringieron el voto y la participación política.",
+     "C": "Confundir el autoritarismo conservador con una dictadura militar basada en el caudillismo."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q21",
+   "number": 21,
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "stem": "Durante la primera mitad del siglo XIX en Chile, en el marco de la formación del Estado-nación, la elite gobernante enfrentó la necesidad de forjar las bases de la identidad nacional. En este contexto histórico, ¿cuál fue una estrategia desarrollada por la elite dirigente para lograr este propósito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Instaurar la enseñanza secundaria obligatoria."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la cobertura de la educación pública."
+    },
+    {
+     "key": "C",
+     "text": "Establecer una red de universidades provinciales."
+    },
+    {
+     "key": "D",
+     "text": "Estatizar las escuelas administradas por la Iglesia."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para forjar la identidad nacional, la elite dirigente amplió la educación pública, un medio para difundir una lengua, una historia y valores comunes a toda la población.",
+    "steps": [
+     "El enunciado pregunta por una estrategia de la elite para forjar la identidad nacional durante la formación del Estado-nación.",
+     "La educación pública permite difundir entre toda la población valores, historia y símbolos comunes, lo que construye una identidad nacional compartida.",
+     "Por eso el Estado impulsó la expansión de la educación pública, como la creación de la Escuela Normal de Preceptores en 1842 para formar maestros.",
+     "A (secundaria obligatoria) no se instauró en el siglo XIX. C (universidades provinciales) no era el medio para forjar identidad. D no fue la estrategia: la educación religiosa mantuvo su presencia en el sistema.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "D": "Suponer que el Estado asumió el control de las escuelas de la Iglesia como estrategia de identidad, cuando la educación religiosa siguió existiendo."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q22",
+   "number": 22,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "Durante el siglo XIX la economía chilena se organizó principalmente sobre la base de los principios del liberalismo. En este contexto, la exportación de minerales fue una actividad económica destacada, que permitió abrirse a los mercados internacionales, generando un importante volumen de riqueza. ¿De qué manera el Estado consiguió beneficiarse de esta situación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Interviniendo en la explotación agraria en las haciendas."
+    },
+    {
+     "key": "B",
+     "text": "Articulando el sistema financiero a través del Banco Central."
+    },
+    {
+     "key": "C",
+     "text": "Impulsando un modelo fundado en la industrialización estatal."
+    },
+    {
+     "key": "D",
+     "text": "Mejorando la recaudación fiscal al modernizar las leyes tributarias."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el modelo liberal, el Estado se benefició de la exportación de minerales mediante la recaudación fiscal, mejorando sus leyes tributarias sin intervenir directamente en la producción.",
+    "steps": [
+     "El texto indica que la economía se basaba en el liberalismo y que la exportación de minerales generó «un importante volumen de riqueza».",
+     "En ese modelo, el Estado no era productor, pero sí podía obtener ingresos mediante impuestos y derechos sobre la exportación.",
+     "Al modernizar las leyes tributarias, el Estado aumentó su recaudación fiscal y obtuvo parte de la riqueza generada por la minería sin intervenir en la explotación.",
+     "A (intervención en haciendas) no corresponde a la minería. B es un error histórico: el Banco Central se fundó en 1925. C (industrialización estatal) pertenece al modelo posterior a 1930 y no al liberalismo del siglo XIX.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Creer que el Banco Central ya articulaba el sistema financiero en el siglo XIX, cuando se fundó en 1925."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q23",
+   "number": 23,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Independencia",
+   "stem": "Lee el siguiente extracto que hace referencia a las tendencias políticas surgidas en Chile durante la década de 1820:\n\n«La característica más prominente de estas nuevas asociaciones o facciones es su falta de coherencia […]. Estas tendencias y grupos no se distinguen en términos doctrinarios muy estrictos o en relación a factores socioeconómicos; sin excepción, se trata de facciones dentro del grupo dirigente».\n\nJocelyn-Holt, A. (2014). *La independencia de Chile: tradición, modernización y mito*.\n\nA partir de lo expresado en el texto y considerando el contexto de la época, ¿qué problema trajo para la organización de la nueva república la situación descrita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La pérdida de confianza por parte de los sectores populares."
+    },
+    {
+     "key": "B",
+     "text": "La incapacidad de la oligarquía para frenar a caudillos militares."
+    },
+    {
+     "key": "C",
+     "text": "La dificultad de otorgar un ordenamiento institucional sólido al país."
+    },
+    {
+     "key": "D",
+     "text": "La clausura del debate político entre sectores con ideas divergentes."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q23.webp",
+    "width": 907,
+    "height": 479,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las facciones de la década de 1820 carecían de un programa doctrinario y de una base socioeconómica claras, y todas pertenecían al mismo grupo dirigente; esa fragmentación dificultó dar a la república un ordenamiento institucional sólido.",
+    "steps": [
+     "El texto afirma que la característica más prominente de estas asociaciones es «su falta de coherencia», y que no se distinguen «en términos doctrinarios muy estrictos o en relación a factores socioeconómicos».",
+     "Además, «sin excepción, se trata de facciones dentro del grupo dirigente»: no hay un proyecto alternativo, sino disputas internas de una misma elite.",
+     "Una elite dividida en facciones sin un programa común hace difícil acordar constituciones y leyes duraderas, que es precisamente el problema que pregunta el enunciado para la organización de la nueva república.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Menciona a caudillos militares, pero el texto no habla de militares; la fragmentación descrita es política y doctrinal, no un conflicto de mando armado.",
+     "D": "Confunde la fragmentación con la clausura del debate: las facciones discuten entre ellas, aunque sin coherencia, por lo que el debate no se cierra."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q24",
+   "number": 24,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "El proceso de surgimiento de los Estados-nación en América Latina a comienzos del siglo XIX generó diversos impactos, algunos de los cuales profundizaron problemáticas de diversa índole presentes en la sociedad. Durante la primera mitad del siglo XIX en Chile, ¿cuál fue uno de los impactos de este proceso para los pueblos indígenas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fueron obligados a emigrar desde las ciudades."
+    },
+    {
+     "key": "B",
+     "text": "Fueron sometidos a políticas de imposición cultural."
+    },
+    {
+     "key": "C",
+     "text": "Fueron forzados a trabajar en la economía industrial."
+    },
+    {
+     "key": "D",
+     "text": "Fueron concentrados en lugares de provincias extremas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Estado-nación chileno buscaba una identidad nacional homogénea, y los pueblos indígenas quedaron fuera de ese proyecto y expuestos a políticas que apuntaban a asimilarlos culturalmente.",
+    "steps": [
+     "El enunciado pide un impacto del surgimiento del Estado-nación sobre los pueblos indígenas durante la primera mitad del siglo XIX en Chile.",
+     "La construcción del Estado-nación supuso una ciudadanía y una identidad nacional únicas; los pueblos indígenas, con lenguas y formas propias de organización, no encajaban en ese modelo y se buscó integrarlos o asimilarlos.",
+     "Descartes: la emigración forzada desde las ciudades (A) no corresponde a este proceso, y el trabajo en una economía industrial (C) no era un destino masivo en un país agrícola y minero; la concentración en provincias extremas (D) es un proceso posterior, ligado a la ocupación militar de la Araucanía.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Confunde la economía de la época con una economía industrial; en la primera mitad del siglo XIX el trabajo indígena se insertaba sobre todo en haciendas, minería y servicios.",
+     "D": "Parece coherente con la ocupación de la Araucanía, pero la radicación de población mapuche en espacios reducidos ocurrió sobre todo después de 1860, no en la primera mitad del siglo."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q25",
+   "number": 25,
+   "axis": "Formación ciudadana",
+   "topic": "Derechos",
+   "stem": "Una estudiante debe confeccionar un ensayo sobre la expansión de las ideas liberales y republicanas en América Latina durante la primera mitad del siglo XIX. Considerando este contexto histórico, ¿cuál es un planteamiento adecuado para iniciar este ensayo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La Iglesia Católica fue una institución clave en la propagación de la libertad de culto."
+    },
+    {
+     "key": "B",
+     "text": "La clase terrateniente fue un actor significativo promoviendo la abolición de la esclavitud."
+    },
+    {
+     "key": "C",
+     "text": "La prensa escrita fue una entidad activa que favoreció la difusión de la igualdad de derechos."
+    },
+    {
+     "key": "D",
+     "text": "La clase dirigente fue un sector decisivo en la defensa del derecho a voto de los sectores populares."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "pilot": true,
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La prensa escrita fue un vehículo de difusión de las ideas liberales y republicanas, como la igualdad de derechos, y por eso es un inicio razonable para el ensayo.",
+    "steps": [
+     "El ensayo trata sobre la expansión de las ideas liberales y republicanas en América Latina durante la primera mitad del siglo XIX, por lo que el planteamiento inicial debe ser coherente con esos principios.",
+     "La opción C presenta a la prensa escrita como agente activo que favoreció la difusión de la igualdad de derechos, idea central del liberalismo y del republicanismo; gacetas y periódicos fueron un canal clave para difundir proclamas, constituciones y debates.",
+     "Las otras opciones contienen errores históricos: la Iglesia Católica defendió la unidad religiosa y resistió la tolerancia de cultos (A); la abolición de la esclavitud no fue impulsada por la clase terrateniente (B); y la elite dirigente restringió el voto censitario en lugar de defender el voto de los sectores populares (D).",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Atrae por la idea de la libertad, pero la Iglesia fue más bien una institución que se resistió a la libertad de culto.",
+     "D": "Suena a la defensa de la participación, pero el voto censitario excluía a la mayoría popular, y la elite lo mantuvo."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q26",
+   "number": 26,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "El equipo organizador de una muestra cultural necesita diseñar un cartel, para usar en la entrada de la sala, que contenga piezas informativas y fotografías de la historia económica chilena durante la segunda mitad del siglo XIX. Considerando que el título del cartel debe sintetizar el comportamiento de la economía durante este periodo, ¿qué título es adecuado para la producción de este cartel?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La hacienda chilena se moderniza: hacia una agricultura industrial."
+    },
+    {
+     "key": "B",
+     "text": "La inversión privada rinde frutos: los productos chilenos salen al mundo."
+    },
+    {
+     "key": "C",
+     "text": "La nacionalización del cobre chileno: el Estado empresario se consolida."
+    },
+    {
+     "key": "D",
+     "text": "La demanda chilena se expande: el consumo interno estimula el progreso."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Durante la segunda mitad del siglo XIX la economía chilena creció apoyada en la inversión privada y en la exportación de bienes primarios, como trigo, cobre y plata, y después salitre.",
+    "steps": [
+     "El cartel debe sintetizar el comportamiento de la economía chilena durante la segunda mitad del siglo XIX, periodo marcado por un auge exportador.",
+     "El trigo encontró demanda externa, especialmente tras la fiebre del oro en California (1848-1849), y el cobre y la plata se exportaron en volúmenes crecientes, con capitales privados nacionales y extranjeros.",
+     "La opción B resume ese proceso con sus dos ideas centrales: «la inversión privada rinde frutos» y «los productos chilenos salen al mundo».",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Habla de una agricultura industrial, pero la hacienda seguía siendo un sistema tradicional; el cambio del periodo fue la orientación exportadora, no la industrialización agraria.",
+     "C": "La nacionalización del cobre es de 1971 y el Estado empresario es posterior; no corresponde a la segunda mitad del siglo XIX.",
+     "D": "El consumo interno no fue el motor del crecimiento: la economía del periodo estuvo orientada a la exportación de productos primarios."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q27",
+   "number": 27,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Durante el siglo XIX se produjo en Europa un proceso que llevó a la conformación de Estados nacionales en distintas regiones de este continente. Un ejemplo de estos fueron los procesos de unificación que dieron origen a los Estados de Italia y Alemania. Considerando este contexto, ¿qué aspecto en común tuvieron estos procesos políticos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La imposición de la homogeneidad religiosa a sus habitantes."
+    },
+    {
+     "key": "B",
+     "text": "La emancipación territorial respecto de un dominio extranjero."
+    },
+    {
+     "key": "C",
+     "text": "La preexistencia de elementos culturales de carácter identitario."
+    },
+    {
+     "key": "D",
+     "text": "La conformación de repúblicas con características democráticas."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La unificación de Italia y Alemania se apoyó en identidades culturales previas, como la lengua y las tradiciones compartidas, que los movimientos nacionales buscaron transformar en un Estado.",
+    "steps": [
+     "El enunciado se refiere a la conformación de Estados nacionales en Europa durante el siglo XIX; Italia y Alemania se unificaron en 1861-1871 y 1871, respectivamente.",
+     "Ambos procesos buscaron reunir en un solo Estado a pueblos que ya compartían lengua, historia y tradiciones; la nación se entendía como una comunidad cultural anterior al Estado, es decir, con elementos identitarios preexistentes.",
+     "Descartes: la emancipación de un dominio extranjero (B) solo se da parcialmente en Italia, frente a Austria, y no en Alemania, que se unificó sobre todo por la hegemonía prusiana; y ninguno de los dos países se constituyó como república democrática (D), sino como monarquía.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Italia se liberó parcialmente de Austria, por lo que parece un patrón común; pero Alemania se unificó por la hegemonía de Prusia y no por una liberación de un dominio extranjero.",
+     "D": "Atrae por la idea de Estado nacional, pero Italia y Alemania se organizaron como monarquías y no como repúblicas democráticas."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q28",
+   "number": 28,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Lee el siguiente texto relacionado con la creación de la Escuela de Artes y Oficios en Chile a mediados del siglo XIX:\n\n«Manuel Montt anuncia en 1844, como Ministro de Justicia, Culto e Instrucción Pública, la creación de la Escuela de Artes y Oficios, proyecto que tardaría un quinquenio más en realizarse. Su creación seguía de cerca las ideas de Varas al plantear que “ejercería una influencia saludable sobre la moralidad del pueblo y los progresos de la civilización, miradas con relación al bien material del país, sus ventajas para las clases trabajadoras y por consecuencia, para la sociedad entera”».\n\nGutiérrez, C. (2011). *Educación, ciencias y artes en Chile, 1797-1843: revolución* *y contrarrevolución en las ideas y políticas*.\n\n¿Qué demanda socioeconómica de la época se relaciona con la creación de la Escuela de Artes y Oficios en Chile?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Potenciar las capacidades productivas de la mano de obra."
+    },
+    {
+     "key": "B",
+     "text": "Disminuir la participación del sector primario en la producción."
+    },
+    {
+     "key": "C",
+     "text": "Concentrar la producción industrial en las principales ciudades."
+    },
+    {
+     "key": "D",
+     "text": "Descentralizar la competitividad productiva hacia las provincias."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q28.webp",
+    "width": 907,
+    "height": 571,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Escuela de Artes y Oficios respondía a la necesidad de formar trabajadores calificados para mejorar la producción y el progreso material del país.",
+    "steps": [
+     "El texto vincula la creación de la Escuela con «el bien material del país» y con «sus ventajas para las clases trabajadoras».",
+     "Esa finalidad se relaciona con la demanda de mano de obra capacitada en un país que buscaba desarrollar su producción a mediados del siglo XIX, cuando el trabajo manual y la técnica eran aún muy precarios.",
+     "La opción A plantea justamente la capacitación de los trabajadores para aumentar su productividad, que es lo que el texto presenta como un progreso de la civilización y del bien material.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "Concentrar la producción en las ciudades puede sonar a industrialización, pero el texto no habla de la localización de la industria ni de la distribución territorial.",
+     "D": "Parece un planteamiento de desarrollo regional, pero la Escuela buscaba formar capacidades en la mano de obra, no descentralizar la producción."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q29",
+   "number": 29,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "Examina los siguientes datos del comercio mayorista en Chile en 1849:\n\nNacionalidad de los principales comerciantes mayoristas de Santiago y Valparaíso en 1849\n\nCantidad en Cantidad en Nacionalidad Totales % Santiago Valparaíso Chilenos 14 22 36 37 % Ingleses 7 17 24 Alemanes 2 9 11 Franceses 2 8 10 63 % Norteamericanos - 7 7 Españoles - 3 3 Otros - 7 7\n\nTotales 25 73 98 100 %\n\nBauer, A. (1994). *La sociedad rural chilena: desde la conquista española a* *nuestros días*.\n\nA partir de los datos de la tabla, ¿cuál fue un rasgo de la economía chilena de mediados del siglo XIX?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La escasa participación de las potencias europeas en la dinámica comercial nacional."
+    },
+    {
+     "key": "B",
+     "text": "La consolidación del país como exportador de productos industriales manufacturados."
+    },
+    {
+     "key": "C",
+     "text": "El carácter proteccionista de las estrategias económicas aplicadas por los gobiernos liberales."
+    },
+    {
+     "key": "D",
+     "text": "El protagonismo del principal puerto del país en la inserción en los mercados internacionales."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q29.webp",
+    "width": 907,
+    "height": 762,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los datos muestran que casi tres de cada cuatro comerciantes mayoristas registrados operaban en Valparaíso, lo que confirma el papel del puerto como centro del comercio exterior chileno.",
+    "steps": [
+     "Sumando la columna de Valparaíso se obtienen 73 comerciantes (22 + 17 + 9 + 8 + 7 + 3 + 7), frente a 25 en Santiago (14 + 7 + 2 + 2), con un total de 98.",
+     "Así, $\\frac{73}{98} \\approx 74{,}5\\,\\%$ de los comerciantes mayoristas estaba en Valparaíso, puerto por el que se realizaba la mayor parte del comercio internacional.",
+     "Los extranjeros eran 62 de los 98 comerciantes (63 %), pero la pregunta busca el rasgo económico que la tabla refleja: la concentración del comercio mayorista en el principal puerto del país, que lo convierte en el eje de la inserción en los mercados internacionales.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Confunde la presencia extranjera con escasa participación: los ingleses, alemanes, franceses y españoles suman 48 de 98 comerciantes, casi la mitad del total.",
+     "B": "La tabla solo muestra la nacionalidad de los comerciantes mayoristas; no contiene datos sobre exportaciones de productos industriales."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q30",
+   "number": 30,
+   "axis": "Sistema económico",
+   "topic": "Mercado",
+   "stem": "Chile en la segunda mitad del siglo XIX tuvo una importante producción triguera que le permitió abastecer tanto el mercado nacional como el mercado internacional. En este contexto, ¿cuál fue una de las razones que favoreció la exportación de trigo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La demanda creciente de alimentos por parte de países industrializados."
+    },
+    {
+     "key": "B",
+     "text": "La especialización paulatina de la agricultura nacional en un monocultivo."
+    },
+    {
+     "key": "C",
+     "text": "La subvención fiscal progresiva establecida para los compradores externos."
+    },
+    {
+     "key": "D",
+     "text": "La eliminación de los aranceles aduaneros aplicados a la producción agraria."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La exportación triguera chilena respondió a la demanda externa de alimentos, sobre todo de regiones en industrialización o en auge minero y urbano, y no a subsidios ni a la supresión de tarifas.",
+    "steps": [
+     "El texto indica que el trigo abastecía tanto el mercado nacional como el internacional; la pregunta busca el factor que favoreció la exportación.",
+     "Hacia mediados del siglo XIX, la fiebre del oro en California y el crecimiento urbano e industrial de otras regiones aumentaron la demanda de harina y trigo.",
+     "Esa demanda externa de alimentos, proveniente de países industrializados o en rápido crecimiento, explica por qué los productores chilenos encontraron mercado para su excedente.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Confunde el auge triguero con un monocultivo; la agricultura chilena siguió siendo diversa y la exportación se explica por la demanda, no por la especialización.",
+     "D": "Parece una medida favorable al comercio agrario, pero la pregunta busca una razón del lado de la demanda externa, y el texto no menciona cambios arancelarios."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q31",
+   "number": 31,
+   "axis": "Geografía y espacio",
+   "topic": "Espacio urbano",
+   "stem": "Lee el siguiente texto sobre la situación de los obreros a fines del siglo XIX en Chile:\n\n«[…] abandonados a su suerte por un Estado oligárquico, profundamente “a-social”; carentes de recursos en casos de enfermedades, accidentes, desempleos u otras desgracias; confiando únicamente en la caridad de las clases superiores».\n\nGrez, S. (1998). La trayectoria histórica del mutualismo en Chile (1853-1990): apuntes para su estudio.\n\n¿Cuál fue una de las acciones realizadas por los obreros hacia fines del siglo XIX para enfrentar la situación descrita en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Crear organizaciones de cooperación solidaria."
+    },
+    {
+     "key": "B",
+     "text": "Financiar diversas asociaciones de beneficencia."
+    },
+    {
+     "key": "C",
+     "text": "Organizar tomas de terreno en la periferia urbana."
+    },
+    {
+     "key": "D",
+     "text": "Coordinar los flujos migratorios hacia las ciudades."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q31.webp",
+    "width": 907,
+    "height": 498,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Ante la falta de protección estatal, los obreros formaron sociedades de socorros mutuos y otras organizaciones de ayuda solidaria, que dieron origen al mutualismo.",
+    "steps": [
+     "El texto describe obreros «abandonados a su suerte» por el Estado, sin recursos ante enfermedades, accidentes o desempleo, y dependientes «únicamente» de la caridad de las clases superiores.",
+     "La respuesta de los propios trabajadores fue asociarse para protegerse mutuamente con cuotas y ayuda entre socios: son las sociedades de socorros mutuos, que se desarrollaron desde la segunda mitad del siglo XIX, como indica el título de la cita (1853-1990).",
+     "La opción A corresponde exactamente a esa cooperación solidaria, en la que los obreros se organizan para no depender de la caridad.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Parece una acción obrera, pero el texto dice que los trabajadores dependían de la caridad de las clases superiores, que eran quienes financiaban la beneficencia.",
+     "C": "Las tomas de terreno respondían al problema de la vivienda, no a la falta de protección frente a enfermedades, accidentes y desempleo que describe el texto."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q32",
+   "number": 32,
+   "axis": "Sistema económico",
+   "topic": "Trabajo",
+   "stem": "Lee el siguiente texto sobre la infancia en la pampa salitrera durante el tránsito del siglo XIX al XX:\n\n«La infancia pampina, por tanto, se caracterizó por un importante porcentaje de niños “sin infancia”, que tempranamente debieron insertarse en el mundo del trabajo, con una nula o escasa capacitación para realizar dichas labores, exponiéndose a graves consecuencias, producto de las precarias condiciones laborales que debieron enfrentar. Todo esto fundamentado en la ausencia de barreras etarias en la incorporación al mundo laboral».\n\nValenzuela, C. (2023). Los niños del caliche: educación y trabajo infantil en la pampa salitrera. Taltal (1900-1920).\n\n¿Cuál fue una consecuencia social de la situación descrita en el texto durante las dos primeras décadas del siglo XX?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La promulgación de leyes contra la explotación infantil."
+    },
+    {
+     "key": "B",
+     "text": "La persistencia de altas tasas de analfabetismo infantil."
+    },
+    {
+     "key": "C",
+     "text": "La reducción progresiva de las tasas de mortalidad infantil."
+    },
+    {
+     "key": "D",
+     "text": "La creación de un organismo público de protección infantil."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q32.webp",
+    "width": 907,
+    "height": 549,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al entrar a trabajar muy pequeños y sin escolarización, los niños de la pampa salitrera quedaban fuera de la educación, lo que contribuyó a mantener altas tasas de analfabetismo infantil.",
+    "steps": [
+     "El texto describe niños «sin infancia» que se incorporaban tempranamente al trabajo, con «una nula o escasa capacitación» y sin «barreras etarias» para entrar al mundo laboral.",
+     "Si el niño trabaja desde temprana edad, no asiste a la escuela o la abandona; por eso el trabajo infantil se conecta con la falta de educación formal, como lo indica el título de la cita («educación y trabajo infantil»).",
+     "En las dos primeras décadas del siglo XX, la asistencia escolar en la pampa seguía siendo baja, y la combinación de trabajo temprano con escuelas insuficientes sostuvo el analfabetismo infantil.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Las leyes contra la explotación infantil son una respuesta posterior del Estado, no una consecuencia directa de la situación que describe el texto.",
+     "C": "Confunde la situación de trabajo infantil con mejoras sanitarias; el texto habla de condiciones laborales precarias, que no favorecen la reducción de la mortalidad."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q33",
+   "number": 33,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Desde finales del siglo XIX el concepto Cuestión Social fue una expresión que se materializó en el debate de la clase política chilena, en relación con los problemas sociales que afectaban a los sectores populares. En este contexto, ¿cuál fue una situación que estimuló la discusión sobre la Cuestión Social en Chile?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La movilización del movimiento obrero que exigía mejores condiciones laborales."
+    },
+    {
+     "key": "B",
+     "text": "La presión del empresariado ante el Estado con el fin de traer mano de obra extranjera."
+    },
+    {
+     "key": "C",
+     "text": "La implementación de una política pública que reguló los flujos de la migración del campo a la ciudad."
+    },
+    {
+     "key": "D",
+     "text": "La promoción de iniciativas legislativas que promovieran una mejor distribución del gasto público."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las movilizaciones y huelgas obreras hicieron visibles las malas condiciones laborales y pusieron en la agenda política la Cuestión Social.",
+    "steps": [
+     "La Cuestión Social designa los problemas de los sectores populares, como los salarios, las condiciones de trabajo y la vivienda, que la clase política comenzó a debatir desde fines del siglo XIX.",
+     "Lo que obligó a discutir el problema fue la presión de la acción colectiva: la movilización del movimiento obrero, con huelgas y exigencias de mejores condiciones laborales, hizo visible el conflicto social.",
+     "La opción A es la única que describe una presión de los sectores populares sobre el sistema político; las demás describen demandas del empresariado, políticas públicas de migración o contenidos del propio debate.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Hubo presión empresarial por mano de obra extranjera, pero esa demanda no fue el detonante de la discusión sobre la Cuestión Social, que nace de los problemas de los sectores populares.",
+     "D": "Las iniciativas sobre el gasto público forman parte del contenido del debate, no la situación que lo estimuló."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q34",
+   "number": 34,
+   "axis": "Geografía y espacio",
+   "topic": "Espacio urbano",
+   "stem": "En Chile, a inicios del siglo XX, se inauguró el primer tranvía eléctrico en Santiago, reemplazando a los antiguos «carros de sangre», que eran vagones tirados por caballos que funcionaban desde la segunda mitad del siglo XIX. En este contexto histórico, ¿cuál fue una consecuencia derivada del uso de tranvías eléctricos en las ciudades?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El aumento de la conectividad urbano-rural."
+    },
+    {
+     "key": "B",
+     "text": "La estatización de los medios de transporte."
+    },
+    {
+     "key": "C",
+     "text": "El fin de la tracción animal en las áreas urbanas."
+    },
+    {
+     "key": "D",
+     "text": "La mejora de las condiciones de desplazamiento."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tranvía eléctrico mejoró el desplazamiento urbano porque ofrecía un transporte más rápido, regular y eficiente que los carros tirados por caballos.",
+    "steps": [
+     "El texto describe el reemplazo de los «carros de sangre», vagones tirados por caballos que funcionaban desde la segunda mitad del siglo XIX, por tranvías eléctricos a inicios del siglo XX.",
+     "La electricidad permitió vehículos más rápidos, con mayor capacidad y sin depender de la fuerza de los animales, lo que hizo más cómodos y eficientes los trayectos dentro de la ciudad.",
+     "La consecuencia que se deriva directamente de ese cambio tecnológico es la mejora de las condiciones de desplazamiento: la opción D.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Podría parecer una mejora de la conectividad, pero el tranvía opera dentro de la ciudad y el texto no menciona enlaces con zonas rurales.",
+     "C": "Describe un cambio real en Santiago, pero es demasiado general: el texto solo habla del reemplazo de los carros de sangre, y en la ciudad siguieron circulando carruajes y carretas de tracción animal."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q35",
+   "number": 35,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Examina la siguiente imagen que muestra un conventillo en Santiago a principios del siglo XX:\n\nColección Biblioteca Nacional de Chile (1920). Interior de un conventillo [Lámina].\n\nA principios del siglo XX se experimentaron una serie de transformaciones en la sociedad chilena, producto de los procesos económicos desarrollados en el siglo anterior, los cuales impactaron en los diversos grupos de la sociedad. En este contexto, ¿cuál fue un impacto de estas transformaciones en los sectores populares que se evidencia en la imagen?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El desarrollo de un movimiento de pobladores."
+    },
+    {
+     "key": "B",
+     "text": "La convivencia en condiciones de hacinamiento."
+    },
+    {
+     "key": "C",
+     "text": "La disminución de los índices de mortalidad infantil."
+    },
+    {
+     "key": "D",
+     "text": "El establecimiento de una segregación socioespacial."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q35.webp",
+    "width": 907,
+    "height": 792,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La fotografía muestra un conventillo con muchas personas, entre ellas familias y niños, que comparten un mismo patio y pasillos, lo que evidencia la convivencia en hacinamiento.",
+    "steps": [
+     "El enunciado pide un impacto de las transformaciones económicas de fines del siglo XIX en los sectores populares que se evidencie en la imagen.",
+     "La fotografía muestra un patio de conventillo flanqueado por habitaciones que dan a un mismo espacio común, con ropa tendida y grupos de niños y adultos sentados en el suelo.",
+     "Esa disposición de muchas familias en un espacio compartido y reducido es lo que se entiende por hacinamiento, un rasgo de la vida popular urbana de la época: la opción B.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El movimiento de pobladores surge después, con las tomas de terreno; la escena muestra la vida en el conventillo, no una organización de pobladores.",
+     "D": "La segregación socioespacial es un proceso real de la época, pero la imagen muestra a las familias populares dentro de la misma trama urbana, sin evidenciar un corte espacial con otros grupos."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q36",
+   "number": 36,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Lee el siguiente texto sobre las características del fascismo europeo durante la primera mitad del siglo XX:\n\n«En el sentido ideológico, el fascismo utiliza principalmente las ideas del nacionalismo, tratando de enfrentar a los obreros nacionalistas con los inmigrantes, tratando de engañar particularmente a los parados, y distrayendo la atención de las masas de los problemas internos hacia los externos, azuzándolos contra los demás pueblos, atizando las pasiones nacional-chovinistas, y pintando perspectivas de mejora para la clase obrera por medio de la conquista de regiones y territorios vecinos».\n\nDimitrov, G. (1928). Intervención en el IV Congreso de la Internacional Sindical. En Hernández, E. (1992). *Los Fascismos Europeos.*\n\nConsiderando el contexto de la época y el contenido de la cita, ¿cuál fue una de las estrategias utilizadas por el fascismo para conseguir apoyo de los grupos obreros?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Garantizar la participación democrática de las mayorías."
+    },
+    {
+     "key": "B",
+     "text": "Exaltar la noción de patria con un fuerte espíritu identitario."
+    },
+    {
+     "key": "C",
+     "text": "Impulsar el desarrollo de la lucha de clases en la sociedad."
+    },
+    {
+     "key": "D",
+     "text": "Potenciar la promoción social a través del ingreso al ejército."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q36.webp",
+    "width": 907,
+    "height": 572,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El fascismo buscó apoyo obrero exaltando la nación y desviando los problemas internos hacia enemigos externos e inmigrantes, en lugar de promover la lucha de clases.",
+    "steps": [
+     "La cita de Dimitrov explica que el fascismo «utiliza principalmente las ideas del nacionalismo» y que busca «enfrentar a los obreros nacionalistas con los inmigrantes».",
+     "Según el texto, el fascismo logra apoyo al «distraer la atención de las masas de los problemas internos hacia los externos» y «atizar las pasiones nacional-chovinistas».",
+     "La estrategia que resume esto es la exaltación de la patria y de una identidad nacional fuerte, es decir, la opción B.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Los obreros aparecen en la cita, lo que sugiere lucha de clases, pero el fascismo los enfrenta con los inmigrantes para dividirlos, no para impulsar la lucha de clases.",
+     "D": "La conquista de territorios vecinos aparece en la cita y podría asociarse al ejército, pero el texto no menciona la promoción social mediante el servicio militar."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q37",
+   "number": 37,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "Tras la Gran Depresión de 1929 las economías de todo el mundo se vieron gravemente afectadas por la crisis. En este contexto, diversos países de occidente debieron implementar estrategias de recuperación. ¿Cuál fue una de las medidas de recuperación económica adoptadas por los países afectados por esta crisis?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El incremento de los mecanismos de control estatal en el sector financiero."
+    },
+    {
+     "key": "B",
+     "text": "La limitación del monto de los subsidios fiscales a las industrias nacionales."
+    },
+    {
+     "key": "C",
+     "text": "El incentivo fiscal a la importación de productos manufacturados extranjeros."
+    },
+    {
+     "key": "D",
+     "text": "La aplicación de restricciones a la inversión estatal en programas de empleo."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras la crisis de 1929, varios países reforzaron la intervención y el control estatal sobre el sistema financiero como parte de su estrategia de recuperación.",
+    "steps": [
+     "La Gran Depresión provocó quiebras bancarias, caída del crédito y desempleo masivo, lo que exigió respuestas desde el Estado.",
+     "Los países afectados aumentaron la regulación y el control estatal de la banca, por ejemplo con la Ley Glass-Steagall (1933) en Estados Unidos, para restablecer la confianza en el sistema financiero.",
+     "Esa intervención, junto con el gasto público, forma parte del giro hacia una mayor presencia del Estado en la economía que permitió reactivar la actividad.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "Un incentivo a la importación competía con la producción nacional y habría agravado la crisis; los países afectados recurrieron más bien a barreras arancelarias.",
+     "D": "Restringir la inversión en empleo habría reducido aún más la demanda; el New Deal hizo lo contrario con programas de empleo público."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q38",
+   "number": 38,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Los regímenes populistas latinoamericanos que surgieron durante la primera mitad del siglo XX se desarrollaron en un contexto de crisis política, social y económica. Considerando este contexto, ¿cuál fue un rasgo común entre los populismos latinoamericanos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El deterioro del aparato estatal."
+    },
+    {
+     "key": "B",
+     "text": "La existencia de un partido único."
+    },
+    {
+     "key": "C",
+     "text": "La supresión del modelo capitalista."
+    },
+    {
+     "key": "D",
+     "text": "El rechazo a los grupos oligárquicos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los populismos latinoamericanos se presentaron como alternativa a las oligarquías tradicionales y buscaron incorporar a sectores populares a la política.",
+    "steps": [
+     "Los regímenes populistas surgieron en un contexto de crisis política, social y económica, y su discurso enfrentaba a las elites tradicionales con el pueblo.",
+     "El rasgo común es el rechazo a los grupos oligárquicos, a quienes se acusaba de excluir a obreros y sectores medios del poder.",
+     "Esto corresponde a la opción D: el populismo se construyó contra la oligarquía, aunque tendió a fortalecer el Estado y a mantener el capitalismo.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Los populismos ampliaron el aparato estatal, con industrialización y políticas sociales; por eso su rasgo no es el deterioro del Estado.",
+     "B": "El partido único es un rasgo de regímenes como el fascismo o el comunismo, no de los populismos latinoamericanos, que tuvieron movimientos amplios y liderazgos carismáticos."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q39",
+   "number": 39,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Guerras mundiales",
+   "stem": "Desde la década de 1920 en Europa se levantaron movimientos políticos contrarios a la democracia que desembocaron en regímenes totalitarios. Considerando el caso del nazismo alemán, ¿cuál de las siguientes opciones permite explicar la consolidación de este régimen en Europa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La crisis económica mundial de 1929."
+    },
+    {
+     "key": "B",
+     "text": "La expansión del imperialismo colonial."
+    },
+    {
+     "key": "C",
+     "text": "La derrota en la Segunda Guerra Mundial."
+    },
+    {
+     "key": "D",
+     "text": "La polarización ideológica a escala mundial."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La crisis de 1929 golpeó la economía alemana, aumentó el desempleo y debilitó la confianza en la república de Weimar, lo que facilitó el ascenso electoral del nazismo.",
+    "steps": [
+     "Tras 1929, Alemania sufrió una caída fuerte de la producción y un aumento masivo del desempleo, con pérdida de confianza en la democracia de Weimar.",
+     "En las elecciones de julio de 1932, el Partido Nazi se transformó en la primera fuerza del Reichstag, con cerca de 37 % de los votos.",
+     "El partido capitalizó el malestar social prometiendo empleo y orden, y tras la designación de Hitler como canciller en 1933 el régimen se consolidó.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El imperialismo colonial pertenece a la historia de Alemania antes de 1914 y no explica la consolidación del régimen nazi en Europa.",
+     "D": "La polarización ideológica mundial existió como contexto, pero no explica por sí sola el crecimiento del nazismo dentro de Alemania; la clave fue la crisis económica interna."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q40",
+   "number": 40,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "En la primera mitad del siglo XX en los Estados latinoamericanos hubo diversos movimientos populistas, caracterizados por un discurso de incorporación de los sectores excluidos de la sociedad a la política. Al respecto, ¿cuál es un factor sociopolítico que contribuye a explicar el surgimiento del populismo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La inexistencia de proyectos partidistas de base obrera."
+    },
+    {
+     "key": "B",
+     "text": "La retirada de los grupos oligárquicos del ámbito público."
+    },
+    {
+     "key": "C",
+     "text": "La intención por atender las demandas de los trabajadores."
+    },
+    {
+     "key": "D",
+     "text": "La decadencia de los grupos que conformaron la clase media."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El populismo surgió como respuesta a la demanda de incorporación de trabajadores y sectores excluidos, y sus líderes buscaron atender esas demandas para ganar apoyo.",
+    "steps": [
+     "El enunciado pide un factor sociopolítico que explique el surgimiento del populismo, caracterizado por incorporar a sectores excluidos a la política.",
+     "En la primera mitad del siglo XX crecieron los obreros y los sectores medios urbanos, que exigían derechos sociales, mejores salarios y participación política.",
+     "La intención de atender esas demandas por parte de líderes que se presentaban como voceros del pueblo es el factor sociopolítico clave: la opción C.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "No es una explicación sociopolítica: la pregunta busca el factor que motiva la incorporación de los sectores populares, no la ausencia de partidos obreros.",
+     "D": "La clase media sí tuvo un papel en el populismo; su crecimiento, y no su decadencia, ayuda a explicar el fenómeno."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q41",
+   "number": 41,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Lee el siguiente texto sobre los populismos en América Latina:\n\n«La “tesis culturalista” sostiene que la causa del populismo en América Latina es su historia colonial, puesto que la tradición iberoamericana fomenta el clientelismo, el patronazgo, la corrupción y los vínculos personales de poder en detrimento de la democracia representativa».\n\nGratius, S. (2007). La “Tercera Ola Populista” de América Latina.\n\n¿En qué característica de los populismos latinoamericanos de la primera mitad del siglo XX se sustenta el argumento presentado en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La ausencia de representación política con base ideológica."
+    },
+    {
+     "key": "B",
+     "text": "La subordinación de la masa a un influyente liderazgo individual."
+    },
+    {
+     "key": "C",
+     "text": "La incorporación de nuevos actores sociales al escenario político."
+    },
+    {
+     "key": "D",
+     "text": "La defensa de una política de nacionalización de carácter estatista."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q41.webp",
+    "width": 907,
+    "height": 462,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tesis culturalista explica el populismo por las relaciones personales de poder heredadas de la colonia, lo que se refleja en la subordinación de la masa a un liderazgo individual.",
+    "steps": [
+     "El texto sostiene que la causa del populismo es la historia colonial, que fomenta «el clientelismo, el patronazgo, la corrupción y los vínculos personales de poder».",
+     "Esa idea describe una relación en la que las masas se vinculan con el líder de manera personal, más que a través de partidos o programas.",
+     "El rasgo de los populismos de la primera mitad del siglo XX que sustenta esta tesis es la subordinación de la masa a un influyente liderazgo individual: la opción B.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La falta de base ideológica es una crítica frecuente al populismo, pero el texto se centra en los vínculos personales de poder y no en la ausencia de representación ideológica.",
+     "D": "La nacionalización de carácter estatista es un rasgo económico de muchos populismos; el texto, en cambio, pone el énfasis en la cultura política heredada."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q42",
+   "number": 42,
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "stem": "En Alemania, entre 1933 y 1945, se desarrolló el régimen totalitario nacionalsocialista el cual se caracterizó, entre otros elementos, por la promoción de la idea del *Lebensraum* o espacio vital como fundamento ideológico-político. En este sentido, ¿de qué manera el régimen totalitario alemán propició el desarrollo de esta idea?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mediante la instauración de un Estado plurinacional."
+    },
+    {
+     "key": "B",
+     "text": "A través de la promoción de una sociedad sin clases."
+    },
+    {
+     "key": "C",
+     "text": "A través de la presión por recuperar territorios fronterizos."
+    },
+    {
+     "key": "D",
+     "text": "Mediante la negativa a establecer relaciones diplomáticas."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El nazismo promovió el Lebensraum mediante la presión por recuperar territorios perdidos o habitados por población de origen alemán, lo que derivó en anexiones y expansión territorial.",
+    "steps": [
+     "El Lebensraum, o espacio vital, era la justificación ideológica para obtener territorio considerado necesario para el pueblo alemán.",
+     "El régimen presionó para recuperar territorios que Alemania había perdido con el Tratado de Versalles (1919), o que tenían población de origen alemán, como los Sudetes, Danzig y Austria.",
+     "Esa presión territorial, expresada en anexiones y reclamaciones fronterizas, es la forma concreta de impulsar el Lebensraum: la opción C.",
+     "Descartes: un Estado plurinacional (A) contradice el nacionalismo racial del régimen; la comunidad nacional unida (B) no implica buscar territorio fuera de Alemania; y la negativa a relaciones diplomáticas (D) no fue el mecanismo, pues Alemania firmó tratados como el pacto germano-soviético de 1939.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "La propaganda promovió una comunidad nacional unida, lo que puede parecer una sociedad sin clases; pero esa unidad interna no explica la búsqueda de espacio vital fuera de Alemania.",
+     "D": "Hitler rompió acuerdos internacionales en algunos casos, pero la negativa a mantener relaciones diplomáticas no era el mecanismo para obtener territorio."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q43",
+   "number": 43,
+   "axis": "Geografía y espacio",
+   "topic": "Espacio urbano",
+   "stem": "A inicios de la década de 1940 en Chile, la población urbana alcanzó un 52 % del total nacional debido, entre otros factores, a un proceso de migración campociudad. Al respecto, ¿cuál de las siguientes situaciones se enmarca en el contexto del espacio urbano de la época?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El gobierno otorgó subsidios para financiar la autoconstrucción."
+    },
+    {
+     "key": "B",
+     "text": "Un grupo de familias decidió construir sus viviendas en un sitio eriazo."
+    },
+    {
+     "key": "C",
+     "text": "Un partido político donó un terreno para edificar un conjunto habitacional."
+    },
+    {
+     "key": "D",
+     "text": "El conjunto de empresas privadas financió la compra de terrenos fiscales."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La migración campo-ciudad creó una demanda de vivienda que el Estado no alcanzó a satisfacer, por lo que muchas familias ocuparon terrenos sin uso para levantar sus casas.",
+    "steps": [
+     "A inicios de la década de 1940, la población urbana crecía con rapidez por la migración campo-ciudad, y la oferta de vivienda popular era insuficiente.",
+     "Sin acceso al mercado formal de vivienda, muchas familias ocupaban sitios eriazos o terrenos periféricos para levantar sus casas, dando origen a campamentos y poblaciones informales.",
+     "La opción B describe exactamente ese fenómeno: un grupo de familias construye sus viviendas en un sitio eriazo, situación propia del espacio urbano de la época.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La autoconstrucción con subsidio es una política estatal posible, pero la pregunta busca una situación que se dé en el espacio urbano de la época, y la ocupación espontánea de terrenos era la respuesta más extendida.",
+     "C": "Los terrenos donados por partidos políticos no eran el mecanismo habitual de la vivienda popular; la respuesta espontánea de las familias fue ocupar terrenos vacíos."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q44",
+   "number": 44,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "stem": "Una vez finalizada la Segunda Guerra Mundial, los imperios coloniales establecidos en Asia y África fueron desapareciendo, mientras surgían nuevos países independientes en estos territorios. ¿Cuál de los siguientes acontecimientos históricos del siglo XX fundamentó el proceso de descolonización durante las décadas posteriores?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La preeminencia de dos superpotencias que dividieron al mundo en dos bloques ideológicos contrapuestos."
+    },
+    {
+     "key": "B",
+     "text": "La implementación del Estado de Bienestar en países europeos que priorizó la protección social al interior de sus fronteras."
+    },
+    {
+     "key": "C",
+     "text": "La creación de la Organización del Tratado del Atlántico Norte que implicó un acuerdo de defensa colectiva entre sus miembros."
+    },
+    {
+     "key": "D",
+     "text": "La creación de la Organización de las Naciones Unidas que declaró como uno de sus principios la autodeterminación de los pueblos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Carta de las Naciones Unidas (1945) consagró la libre determinación de los pueblos, principio que sirvió de base para legitimar la descolonización de Asia y África.",
+    "steps": [
+     "La descolonización de Asia y África consistió en la independencia de territorios que estaban bajo dominio europeo tras la Segunda Guerra Mundial.",
+     "Para legitimar esas independencias se recurrió al principio de la autodeterminación de los pueblos, incorporado en el derecho internacional.",
+     "La Carta de la ONU (1945) incluye, en su artículo 1, el respeto a «la igualdad de derechos y de la libre determinación de los pueblos», y la Asamblea General lo reafirmó en la Resolución 1514 (1960).",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La bipolaridad influyó en las independencias, pero el principio que las legitimó fue la autodeterminación, no la división del mundo en bloques.",
+     "C": "La OTAN fue una alianza militar de la Guerra Fría, sin relación directa con el principio de descolonización."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q45",
+   "number": 45,
+   "axis": "Formación ciudadana",
+   "topic": "Participación",
+   "stem": "Lee el siguiente texto sobre los asentamientos denominados poblaciones callampa que surgieron en Chile a mediados del siglo XX:\n\n«[…] aquellas que carecían de organizaciones internas permanecían estáticas y en condiciones prácticamente inhumanas, mientras que aquellas que contaban con una organización fuerte, conseguían mejoras tales como instalación de pilones de agua, alumbrado domiciliario y público, letrinas colectivas, rellenos; también otros progresos, tales como la instalación de escuelas, cursos de alfabetización, policlínicas, extensión de los servicios de locomoción pública».\n\nGarcés, M. (2002). *Tomando su sitio: el movimiento de pobladores de Santiago, 1957-1970.*\n\nConsiderando el contexto de mediados del siglo XX, ¿cuál fue un factor que permitió el mejoramiento de las condiciones de vida de las poblaciones aludidas en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La colaboración municipal en la construcción de sus viviendas."
+    },
+    {
+     "key": "B",
+     "text": "La participación del empresariado en el mejoramiento de barrios."
+    },
+    {
+     "key": "C",
+     "text": "La gestión de los habitantes en la satisfacción de sus necesidades."
+    },
+    {
+     "key": "D",
+     "text": "La intervención del gobierno en la erradicación de los campamentos."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q45.webp",
+    "width": 907,
+    "height": 548,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las poblaciones que se organizaban internamente consiguieron mejoras básicas y servicios; el factor decisivo fue la gestión colectiva de sus propios habitantes.",
+    "steps": [
+     "El texto contrasta dos situaciones: las poblaciones que «carecían de organizaciones internas permanecían estáticas y en condiciones prácticamente inhumanas».",
+     "En cambio, las que «contaban con una organización fuerte» consiguieron pilones de agua, alumbrado domiciliario y público, letrinas colectivas y rellenos.",
+     "También lograron escuelas, cursos de alfabetización, policlínicas y extensión del transporte público.",
+     "Lo que diferencia a ambos grupos es la organización interna, es decir, la capacidad de los propios pobladores para reunirse y gestionar sus demandas.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Atribuye el progreso a la municipalidad, pero el texto no menciona ayuda municipal en la construcción de viviendas; el factor destacado es la organización de los pobladores.",
+     "B": "Supone un rol del empresariado que el texto no menciona; confunde mejoras barriales organizadas por los vecinos con inversión privada.",
+     "D": "El texto no atribuye las mejoras al Estado ni habla de erradicar campamentos; su foco es mejorar el lugar a partir de la organización interna."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q46",
+   "number": 46,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Guerras",
+   "stem": "Lee el siguiente texto sobre el encuentro entre los líderes de Estados Unidos, Reino Unido y la Unión Soviética en la Conferencia de Potsdam, tras la rendición de Alemania en 1945:\n\n«Desde el final de la guerra, Churchill, que temía que el traslado de las tropas estadounidenses al Pacífico facilitara la expansión soviética en Europa, se había mostrado cada vez más duro con Stalin. Durante la conferencia, le acusó de implantar gobiernos comunistas en Bulgaria y Rumanía sin respetar los deseos de una parte de su población. El líder soviético […] replicó que eso mismo estaban haciendo los británicos en Grecia al apoyar a los monárquicos en la guerra civil».\n\nJoric, C. (2020). Lo que se jugaron Truman y Stalin en la Conferencia de Potsdam. *La Vanguardia.*\n\n¿Qué dinámica del orden internacional posterior a la Segunda Guerra Mundial se evidencia en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La conformación de zonas de influencia geopolítica."
+    },
+    {
+     "key": "B",
+     "text": "La proliferación de movimientos de descolonización."
+    },
+    {
+     "key": "C",
+     "text": "La erradicación de los regímenes políticos totalitarios."
+    },
+    {
+     "key": "D",
+     "text": "La creación de organismos de cooperación internacional."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q46.webp",
+    "width": 907,
+    "height": 576,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras la guerra, Estados Unidos, Reino Unido y la Unión Soviética se disputaron la influencia en Europa y Grecia, lo que dio origen a zonas de influencia geopolítica.",
+    "steps": [
+     "Churchill temía «la expansión soviética en Europa» y por eso se mostró «cada vez más duro con Stalin».",
+     "Le reprochó a Stalin «implantar gobiernos comunistas en Bulgaria y Rumanía sin respetar los deseos de una parte de su población».",
+     "Stalin respondió que los británicos hacían lo mismo en Grecia, apoyando a los monárquicos: cada bloque intervenía en áreas que consideraba propias.",
+     "El intercambio muestra un reparto de Europa en áreas de dominio de cada potencia, es decir, la conformación de zonas de influencia geopolítica.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La descolonización es un proceso de Asia y África; el texto solo habla de Europa del Este y Grecia.",
+     "C": "Los regímenes que se mencionan son gobiernos comunistas y monárquicos que no se buscaban eliminar; el texto no habla de erradicar regímenes totalitarios.",
+     "D": "Confunde el contexto con la ONU: la conferencia muestra rivalidad entre aliados, no cooperación institucional."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q47",
+   "number": 47,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Dictaduras",
+   "stem": "Lee el siguiente extracto de la carta de fundación de la Organización de las Naciones Unidas (ONU) del año 1945:\n\n«[…] prevenir y eliminar amenazas a la paz, y para suprimir actos de agresión u otros quebrantamientos de la paz; y lograr por medios pacíficos, y de conformidad con los principios de la justicia y del derecho internacional, el ajuste o arreglo de controversias o situaciones internacionales susceptibles de conducir a quebrantamientos de la paz».\n\nOrganización de las Naciones Unidas. Carta de las Naciones Unidas. Capítulo 1: propósitos y principios. 1945.\n\nConsiderando el contexto histórico y la información de la cita, ¿cuál fue una de las características de las relaciones internacionales que justificó la creación de la ONU?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El fomento de los procesos de descolonización."
+    },
+    {
+     "key": "B",
+     "text": "El apoyo a la instalación de dictaduras militares."
+    },
+    {
+     "key": "C",
+     "text": "El desarrollo de un enfrentamiento ideológico bipolar."
+    },
+    {
+     "key": "D",
+     "text": "El protagonismo que tenían los nacionalismos belicistas."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q47.webp",
+    "width": 907,
+    "height": 548,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La carta busca impedir nuevas agresiones entre Estados, lo que responde a la experiencia de una guerra provocada por nacionalismos belicistas.",
+    "steps": [
+     "La carta se propone «prevenir y eliminar amenazas a la paz» y «suprimir actos de agresión», es decir, evitar que un Estado ataque a otro.",
+     "Ese énfasis responde a la Segunda Guerra Mundial, desatada por potencias que impulsaban expansiones territoriales y nacionalismos belicistas, como Alemania, Italia y Japón.",
+     "La Sociedad de Naciones no logró contener esas agresiones; por eso la ONU busca el «arreglo o ajuste de controversias» por medios pacíficos antes de que lleguen a la guerra.",
+     "La característica de las relaciones internacionales que justifica la creación de la ONU es, entonces, el protagonismo de los nacionalismos agresivos que llevaron a la guerra.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La descolonización fue un proceso posterior que la ONU acompañó, pero la cita no menciona colonias ni explica la creación de la organización.",
+     "B": "Las dictaduras militares no aparecen en la cita; la ONU condena las agresiones y no respalda regímenes.",
+     "C": "El enfrentamiento bipolar se consolidó después de 1945 y no es el motivo central de la carta, que se enfoca en la agresión entre Estados."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q48",
+   "number": 48,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "En 1945 se creó la Organización de las Naciones Unidas, con el propósito de mantener la paz y la seguridad internacional, fomentar las relaciones de amistad entre las naciones, realizar cooperación internacional y estimular las libertades fundamentales sin ningún tipo de discriminación. En este sentido, ¿cuál es una forma a través de la que esta organización ha procurado avanzar en el cumplimiento de sus objetivos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Promoviendo pactos internacionales en diversas materias."
+    },
+    {
+     "key": "B",
+     "text": "Exigiendo a los países miembros alinear sus constituciones."
+    },
+    {
+     "key": "C",
+     "text": "Sancionando los casos de corrupción en los países miembros."
+    },
+    {
+     "key": "D",
+     "text": "Monopolizando la fuerza militar al crear un ejército supranacional."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ONU avanza en sus objetivos de cooperación y libertades mediante tratados y pactos internacionales que los Estados suscriben voluntariamente.",
+    "steps": [
+     "Los objetivos del enunciado son mantener la paz, fomentar la amistad entre las naciones, realizar cooperación internacional y estimular las libertades fundamentales.",
+     "Para cumplir con la cooperación y las libertades, la ONU ha promovido instrumentos como la Declaración Universal de Derechos Humanos (1948) y los Pactos Internacionales de 1966.",
+     "Estos acuerdos abarcan materias diversas, como derechos humanos, medio ambiente o desarme, y cada Estado decide si los ratifica.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La ONU no puede exigir cambios constitucionales porque respeta la soberanía de cada Estado; confunde la influencia de los tratados con una imposición interna.",
+     "C": "Sancionar la corrupción no es una función general de la ONU; la lucha contra ese problema se canaliza mediante convenciones que los países suscriben.",
+     "D": "La ONU no tiene un ejército propio: los cascos azules son aportados voluntariamente por los Estados miembros, así que no hay fuerza supranacional ni monopolio militar."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q49",
+   "number": 49,
+   "axis": "Geografía y espacio",
+   "topic": "Población",
+   "stem": "A inicios de la década de 1950 la población chilena bordeaba los 6 millones de habitantes y algunos años después, según datos del Censo de Población de 1960, sobrepasaba los 7,3 millones. Nunca antes el país había registrado ritmos de crecimiento demográfico tan elevados. Lo anterior, sumado a la alta migración rural hacia las principales urbes nacionales, acrecentó el problema de acceso a la vivienda. En este contexto, ¿cuál fue una medida tomada por el Estado para enfrentar estos problemas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Implementó planes nacionales para la construcción de viviendas."
+    },
+    {
+     "key": "B",
+     "text": "Monopolizó la provisión de materiales de construcción de viviendas."
+    },
+    {
+     "key": "C",
+     "text": "Gestionó el financiamiento privado para la construcción de viviendas."
+    },
+    {
+     "key": "D",
+     "text": "Fomentó la ocupación de terrenos para la autoconstrucción de viviendas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El crecimiento de la población y la migración a las ciudades aumentaron la demanda de viviendas, y el Estado respondió con planes nacionales de construcción.",
+    "steps": [
+     "El enunciado señala que la población pasó de «bordeaba los 6 millones» a inicios de los años cincuenta a «sobrepasaba los 7,3 millones» en 1960.",
+     "A ese crecimiento se sumó «la alta migración rural hacia las principales urbes», que «acrecentó el problema de acceso a la vivienda».",
+     "Frente a una demanda que superaba ampliamente la oferta, el Estado creó instituciones y planes nacionales de construcción de viviendas, como la CORVI y la Operación Sitio.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "No existió un monopolio estatal de los materiales de construcción; la política habitacional se concentró en planificar y construir viviendas.",
+     "C": "El financiamiento privado no responde a la demanda masiva de los sectores populares; la respuesta del Estado fue central en la política de vivienda.",
+     "D": "La ocupación de terrenos fue un fenómeno espontáneo de los pobladores (campamentos), no una medida del Estado; confundir ambos aspectos lleva a esta alternativa."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q50",
+   "number": 50,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Movimientos sociales",
+   "stem": "En 1955 se realizó la Conferencia de Bandung en Indonesia, la cual constituyó un antecedente de la conformación del Movimiento de Países No Alineados. En un primer momento, este movimiento reunió a países africanos y asiáticos, a los que se unieron posteriormente países de otras regiones del mundo. Considerando el escenario geopolítico de la época, ¿cuál fue uno de los propósitos de los países que adhirieron a este movimiento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Debilitar la hegemonía militar de las superpotencias emergentes."
+    },
+    {
+     "key": "B",
+     "text": "Rechazar el establecimiento de dictaduras lideradas por militares."
+    },
+    {
+     "key": "C",
+     "text": "Crear una institucionalidad alternativa al orden político predominante."
+    },
+    {
+     "key": "D",
+     "text": "Recuperar el sistema mundial existente en el periodo de entreguerras."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Bandung reunió a países que buscaban una vía propia frente a la rivalidad entre Estados Unidos y la Unión Soviética, creando una alternativa al orden bipolar.",
+    "steps": [
+     "En 1955, los países asiáticos y africanos reunidos en Bandung, Indonesia, buscaron evitar alinearse con los bloques de la Guerra Fría.",
+     "La bipolaridad dividía al mundo entre el bloque occidental liderado por Estados Unidos y el bloque soviético.",
+     "Los países que adhirieron al movimiento querían construir una institucionalidad alternativa que les diera autonomía y permitiera el desarrollo sin depender de las superpotencias.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Las superpotencias ya estaban consolidadas en 1955; el movimiento no buscaba debilitar su poder militar, sino mantenerse fuera de sus bloques.",
+     "B": "El rechazo a las dictaduras militares no fue el propósito del movimiento, cuyo eje era la autonomía frente a las potencias.",
+     "D": "El movimiento no buscaba restaurar el sistema de entreguerras, que ya había colapsado tras la Segunda Guerra Mundial y el inicio de la descolonización."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q51",
+   "number": 51,
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "stem": "Lee la siguiente entrevista al historiador Gabriel Salazar sobre su opinión respecto de las causas del Golpe de Estado de 1973:\n\n«Para EE.UU. era muy importante que Allende no triunfara, y no porque fuera marxista, sino porque la fórmula de Allende era un gobierno de reformas profundas desde el Estado liberal, y sin cambiar la Constitución. Si esa fórmula contaba con el apoyo del centro político, o sea la DC, el triunfo de Allende era seguro y ese proyecto podía propagarse por toda América Latina. Ese era el peligro: la fórmula de Allende. […] El programa de la Unidad Popular, que es lo que temía EE.UU., consistía en intentar hacer la revolución a partir de la Constitución de 1925, sin cambiarla. Ese era el problema. ¿Por qué? Porque se quería la reforma agraria, nacionalizar el cobre, estatizar la banca, etcétera... pero desde un Estado liberal, que no está hecho para destruirse a sí mismo».\n\nRomero, M. (2013). ¿Cómo debe ser contado el 11 de Septiembre? El “GOLPE” a la cátedra de cuatro historiadores.\n\nConsiderando la época, y la opinión manifestada por este historiador, ¿cuál es uno de los factores que contribuyó a desencadenar el Golpe de Estado según su interpretación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La intervención extranjera en contra de la Unidad Popular."
+    },
+    {
+     "key": "B",
+     "text": "La insurrección propiciada por autoridades de la Unidad Popular."
+    },
+    {
+     "key": "C",
+     "text": "La supresión de la Constitución de 1925 por parte de la Unidad Popular."
+    },
+    {
+     "key": "D",
+     "text": "La exclusión de la Democracia Cristiana del gobierno de la Unidad Popular."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q51.webp",
+    "width": 907,
+    "height": 699,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según Salazar, Estados Unidos vio como un peligro el proyecto de la Unidad Popular y buscó impedir su avance, por lo que la intervención extranjera es el factor destacado.",
+    "steps": [
+     "Salazar afirma que «para EE.UU. era muy importante que Allende no triunfara», no por ser marxista, sino por el proyecto de reformas profundas.",
+     "Advierte que ese proyecto podía «propagarse por toda América Latina», por lo que el temor de Washington tenía alcance regional.",
+     "El historiador sostiene que el programa de la Unidad Popular «es lo que temía EE.UU.», lo que implica una presión externa contra el gobierno.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El texto no habla de una insurrección impulsada por la Unidad Popular; según el historiador, el gobierno buscaba cambios dentro de la Constitución de 1925.",
+     "C": "El texto dice que el programa se intentó «sin cambiarla», así que la supresión de la Constitución de 1925 no es un factor según el historiador.",
+     "D": "Confunde la falta de apoyo de la Democracia Cristiana con una causa del golpe; según Salazar, ese apoyo habría asegurado el triunfo electoral, no explica la ruptura."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q52",
+   "number": 52,
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "stem": "Lee el siguiente texto sobre el Golpe de Estado de 1973 en Chile:\n\n«Las tensiones una vez más irían en aumento, tanto más cuanto las elecciones parlamentarias de marzo de 1973 representaban para la derecha la última esperanza de terminar legalmente con el presidente Allende. […] Aunque no consiguió la mayoría, el gobierno restringió el espacio de maniobra de la oposición, a la que no le quedó otro camino que la sedición abierta y el llamado a la insubordinación militar. […] La intervención del general Carlos Prats, comandante en jefe del Ejército, quien impidió la extensión de la rebelión a otros cuarteles y detuvo el motín, no dejó otra solución a Allende que insistir en su método de enfrentar la situación apoyándose en los últimos elementos leales de las Fuerzas Armadas».\n\nGuillaudat, P. y Mouterde, P. (1998). *Los movimientos sociales en Chile. 1973-1993*.\n\nDe acuerdo con el texto, ¿qué rol tuvieron las Fuerzas Armadas en la preparación del Golpe de Estado de 1973?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Lideraron las críticas sobre la implementación de políticas públicas."
+    },
+    {
+     "key": "B",
+     "text": "Participaron en la gestación de un ambiente de inestabilidad política."
+    },
+    {
+     "key": "C",
+     "text": "Actuaron como centro político frente a la polarización de la sociedad."
+    },
+    {
+     "key": "D",
+     "text": "Promovieron una solución constitucional como salida a la crisis política."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q52.webp",
+    "width": 907,
+    "height": 600,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según el texto, sectores de las Fuerzas Armadas participaron en la sedición y el motín que generaron inestabilidad política, y el general Prats logró frenarlos.",
+    "steps": [
+     "El texto indica que la oposición, sin «otro camino», recurrió a «la sedición abierta y el llamado a la insubordinación militar».",
+     "Luego menciona un motín, cuyo avance fue detenido por el general Carlos Prats, lo que muestra que hubo sectores militares rebelados.",
+     "Esa rebelión dejó a Allende apoyándose «en los últimos elementos leales de las Fuerzas Armadas», lo que revela que las Fuerzas Armadas no eran un bloque unido.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Las críticas a políticas públicas no aparecen en el texto, que trata de la sedición, el motín y la lealtad al gobierno.",
+     "C": "El texto no presenta a las Fuerzas Armadas como centro político; la polarización es la fuente de la crisis, no la solución.",
+     "D": "El texto dice que la oposición no tuvo otro camino que la sedición; la salida constitucional no fue la que promovieron las Fuerzas Armadas."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q53",
+   "number": 53,
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "stem": "Tras el Golpe de Estado de 1973 la Junta Militar se autoproclamó como un gobierno de carácter refundacional, lo que implicaba llevar a cabo reformas de tipo estructural. En el plano económico, ¿cuál fue uno de los principios que sustentaron estas reformas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El mayor énfasis en la autorregulación del mercado."
+    },
+    {
+     "key": "B",
+     "text": "El corporativismo estatal para disminuir la presión sindical."
+    },
+    {
+     "key": "C",
+     "text": "La supresión de las políticas de redistribución de la riqueza."
+    },
+    {
+     "key": "D",
+     "text": "La ampliación del gasto público en áreas sociales prioritarias."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Junta impulsó un modelo de libre mercado en el que el Estado reduce su intervención y deja la asignación de recursos a la autorregulación del mercado.",
+    "steps": [
+     "La Junta se propuso reformas estructurales, lo que implicó abandonar el Estado interventor que existía hasta 1973.",
+     "En lo económico se aplicó un modelo de libre mercado, con apertura comercial, privatizaciones y reducción de aranceles.",
+     "El principio central fue dejar que los precios, la oferta y la demanda se autorregulen, con un Estado subsidiario.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El corporativismo estatal es el modelo contrario: el régimen reprimió a los sindicatos, pero no organizó la economía bajo un Estado corporativo.",
+     "C": "La reducción de la redistribución fue una consecuencia del modelo, no el principio que lo sustentó; por eso no es la respuesta más general.",
+     "D": "La ampliación del gasto público contradice la lógica de reducir el Estado que sustentó las reformas; confundir el rol social del Estado con el modelo económico lleva a esta opción."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q54",
+   "number": 54,
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "stem": "Lee el siguiente texto sobre la Dictadura Militar en Chile:\n\n«El general Pinochet era el jefe de Estado, es decir, la autoridad suprema del Estado, y los servicios de información […] le rendían cuentas directamente. Estaba plenamente al mando y estaba perfectamente enterado de lo que hacían los servicios de información. Esto quedó confirmado en febrero de 1998 cuando el ex jefe de la DINA manifestó ante la Corte Suprema de Justicia de Chile que Augusto Pinochet estaba al mando del conjunto de las operaciones de la DINA».\n\nAmnistía Internacional España (2023). 50 años del golpe de Estado encabezado por Pinochet en Chile.\n\n¿Qué característica de las violaciones a los derechos humanos ocurridas durante la Dictadura se relaciona con el texto anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La desobediencia que hubo en los niveles inferiores del Ejército."
+    },
+    {
+     "key": "B",
+     "text": "La realización de las operaciones en situación de clandestinidad."
+    },
+    {
+     "key": "C",
+     "text": "El carácter selectivo con que se desarrollaron los apremios ilegítimos."
+    },
+    {
+     "key": "D",
+     "text": "El conocimiento de los actos represivos por las autoridades del régimen."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q54.webp",
+    "width": 907,
+    "height": 523,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto muestra que el jefe de Estado dirigía y conocía los servicios de inteligencia responsables de la represión, lo que evidencia el conocimiento de los actos represivos por las autoridades.",
+    "steps": [
+     "El texto dice que Pinochet era «la autoridad suprema del Estado» y que los servicios de información «le rendían cuentas directamente».",
+     "Además, «estaba perfectamente enterado de lo que hacían los servicios de información», según la cita.",
+     "En 1998, el ex jefe de la DINA declaró ante la Corte Suprema que Pinochet estaba «al mando del conjunto de las operaciones de la DINA».",
+     "Esto demuestra que la cúpula del régimen conocía los actos represivos que ejecutaba su aparato de inteligencia.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El texto muestra un mando centralizado y sin desobediencia; la cadena de mando iba directamente hacia Pinochet.",
+     "B": "La clandestinidad existió en la DINA, pero el texto no trata de cómo se ejecutaban las operaciones, sino de quién las conocía y dirigía.",
+     "C": "El texto no habla de selectividad en los apremios; se enfoca en el conocimiento y el mando de las operaciones."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q55",
+   "number": 55,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "En la década de 1970 se introdujo el modelo neoliberal en Chile, que transformó la economía, promoviendo la libertad de comercio y potenciando la inversión por medio de la baja de aranceles. En este contexto, ¿cuál fue el rol del Estado en este sistema económico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Controlar los indicadores macroeconómicos."
+    },
+    {
+     "key": "B",
+     "text": "Promover la ampliación de los servicios sociales."
+    },
+    {
+     "key": "C",
+     "text": "Sustituir a los privados en la producción industrial."
+    },
+    {
+     "key": "D",
+     "text": "Fijar los precios para las transacciones de bienes."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el modelo neoliberal el Estado deja la producción en manos de los privados y asume un rol subsidiario, velando por los equilibrios macroeconómicos.",
+    "steps": [
+     "El enunciado describe un modelo que promueve «la libertad de comercio» y potencia la inversión por medio de «la baja de aranceles».",
+     "Si el mercado asigna los recursos, el Estado no produce ni fija precios, sino que mantiene reglas y equilibrios generales.",
+     "Por eso su rol es controlar los indicadores macroeconómicos, como la inflación, el gasto fiscal y la estabilidad de la moneda.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Ampliar los servicios sociales implica más gasto estatal, algo contrario a la reducción del Estado que caracteriza al modelo.",
+     "C": "Sustituir a los privados en la producción es lo contrario de lo que hizo el modelo, que privatizó empresas estatales.",
+     "D": "Fijar precios es propio de economías planificadas; el modelo dejó que los precios se determinaran en el mercado."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q56",
+   "number": 56,
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "stem": "Durante la primera mitad de la década de 1980 en Chile se desarrollaron numerosas jornadas de protesta en todo el país. ¿Por qué estas protestas son consideradas un factor que permitió el retorno a la democracia en Chile?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque consolidaron el rol mediador de la Iglesia Católica."
+    },
+    {
+     "key": "B",
+     "text": "Porque lograron captar el apoyo de los gobiernos sudamericanos."
+    },
+    {
+     "key": "C",
+     "text": "Porque validaron la nueva institucionalidad de la Constitución de 1980."
+    },
+    {
+     "key": "D",
+     "text": "Porque permitieron la rearticulación de las fuerzas opositoras al régimen."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las jornadas de protesta reactivaron a los partidos y organizaciones opositoras, que se reorganizaron y presionaron por un cambio político hacia la democracia.",
+    "steps": [
+     "El enunciado señala que, a comienzos de los años ochenta, hubo «numerosas jornadas de protesta en todo el país».",
+     "Tras años de represión y restricciones a la actividad política, las protestas permitieron que partidos, sindicatos y organizaciones sociales recuperaran espacios públicos.",
+     "Esa rearticulación de la oposición dio paso a acuerdos políticos que presionaron al régimen hasta llegar al plebiscito de 1988.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La Iglesia tuvo un rol mediador en el diálogo, pero las protestas no consolidaron ese rol; la pregunta busca el aporte de las protestas a la democracia.",
+     "B": "Algunos gobiernos sudamericanos criticaron al régimen, pero el factor directo fue la movilización interna y no el apoyo externo.",
+     "C": "La oposición cuestionaba la Constitución de 1980; las protestas no la validaban, sino que buscaban terminar con el régimen que la había impuesto."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q57",
+   "number": 57,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "Los procesos deflacionarios ocurren cuando los precios de los bienes disminuyen en un tiempo prolongado, lo cual genera problemas en las economías donde estos se presentan. Al respecto, ¿cuál es un impacto que genera este fenómeno en el sistema económico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La disminución de la contratación de mano de obra."
+    },
+    {
+     "key": "B",
+     "text": "La expansión del gasto estatal en programas sociales."
+    },
+    {
+     "key": "C",
+     "text": "El descenso del poder adquisitivo de los consumidores."
+    },
+    {
+     "key": "D",
+     "text": "El aumento de la tasa de interés a los créditos de consumo."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La deflación reduce las ventas y los ingresos de las empresas, por lo que estas contratan menos trabajadores.",
+    "steps": [
+     "Según el enunciado, la deflación ocurre cuando «los precios de los bienes disminuyen en un tiempo prolongado».",
+     "Con precios a la baja, los ingresos de las empresas se reducen y, con márgenes menores, también disminuye la producción.",
+     "Las empresas responden postergando inversiones y reduciendo personal, por lo que baja la contratación de mano de obra.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Un mayor gasto estatal es una respuesta de política económica, no un efecto natural de la deflación.",
+     "C": "Confunde la deflación con una pérdida de poder adquisitivo: con precios más bajos, un mismo ingreso alcanza para comprar más.",
+     "D": "Un alza de tasas es una medida contra la inflación; ante la deflación el banco central tiende a bajarlas, así que esta opción invierte el efecto."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q58",
+   "number": 58,
+   "axis": "Sistema económico",
+   "topic": "Oferta y demanda",
+   "stem": "De acuerdo con la teoría económica, la cantidad demandada de un bien disminuye cuando el precio de ese bien aumenta. Para que esta formulación sea válida, se requiere que se cumplan ciertas condiciones. Al respecto, ¿qué condición se debe cumplir para que la demanda tenga este comportamiento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los consumidores deben actuar según sus preferencias."
+    },
+    {
+     "key": "B",
+     "text": "Las empresas deben diversificar la oferta de sus productos."
+    },
+    {
+     "key": "C",
+     "text": "El comercio debe ser controlado por los organismos del Estado."
+    },
+    {
+     "key": "D",
+     "text": "El resto de elementos del mercado deben mantenerse constantes."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q58.webp",
+    "width": 907,
+    "height": 255,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ley de la demanda se cumple solo si los demás elementos del mercado permanecen constantes, porque así se aísla el efecto del precio sobre la cantidad demandada.",
+    "steps": [
+     "El enunciado afirma que la cantidad demandada disminuye cuando el precio aumenta: $P \\uparrow \\Rightarrow Q_d \\downarrow$.",
+     "Para aislar esa relación, el análisis supone que otros factores, como el ingreso de los consumidores o el precio de bienes sustitutos, no cambian.",
+     "Si esos factores cambian al mismo tiempo que el precio, no se puede atribuir la caída de la demanda solo al alza del precio.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Actuar según las preferencias es un supuesto del consumidor racional, pero no es la condición que aísla el efecto del precio.",
+     "B": "La diversificación de la oferta se refiere a la oferta, no a la demanda, y la ley de la demanda no depende de ella.",
+     "C": "Controlar el comercio desde el Estado contradice el funcionamiento de un mercado en que la demanda responde libremente al precio."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q59",
+   "number": 59,
+   "axis": "Sistema económico",
+   "topic": "Mercado",
+   "stem": "En una situación de mercado, una empresa concentra gran parte de la oferta de un bien, mientras que los otros oferentes obtienen una participación minoritaria en el mercado del bien. ¿Qué fenómeno produce esta situación de mercado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La distribución homogénea de la demanda."
+    },
+    {
+     "key": "B",
+     "text": "El estancamiento en el nivel de los precios."
+    },
+    {
+     "key": "C",
+     "text": "La disminución de los costos de producción."
+    },
+    {
+     "key": "D",
+     "text": "El debilitamiento de la competitividad del sector."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cuando una empresa concentra la oferta, la competencia se debilita porque los demás oferentes tienen poca participación y poca capacidad para disputar precios y clientes.",
+    "steps": [
+     "El enunciado describe una empresa que «concentra gran parte de la oferta», mientras los otros oferentes tienen «una participación minoritaria».",
+     "Esta concentración es propia de situaciones de monopolio u oligopolio, donde pocos actores dominan el mercado.",
+     "Al tener poco contrapeso, la empresa dominante puede imponer condiciones y los competidores pierden capacidad de disputar clientes y precios.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Confunde la concentración de la oferta con una distribución pareja de la demanda; la situación describe justamente lo contrario.",
+     "B": "El estancamiento de precios no es el fenómeno propio de la concentración, que más bien permite que el dominante controle los precios.",
+     "C": "La concentración puede generar economías de escala, pero el fenómeno que describe la situación es la pérdida de competitividad, no la reducción de costos."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q60",
+   "number": 60,
+   "axis": "Sistema económico",
+   "topic": "Mercado",
+   "stem": "Un oligopolio es una situación de mercado donde un grupo reducido de actores controla la oferta de bienes y servicios. En un sistema de libre mercado, ¿por qué un oligopolio representa una amenaza para la competencia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque reduce las atribuciones fiscalizadoras del Estado."
+    },
+    {
+     "key": "B",
+     "text": "Porque provoca la sobreproducción de artículos innovadores."
+    },
+    {
+     "key": "C",
+     "text": "Porque dificulta el ingreso de empresas interesadas en invertir."
+    },
+    {
+     "key": "D",
+     "text": "Porque genera alzas permanentes en el precio de los productos."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un oligopolio amenaza la competencia porque sus integrantes controlan el mercado y dificultan que nuevas empresas entren a competir.",
+    "steps": [
+     "El enunciado indica que un grupo reducido de actores controla la oferta de bienes y servicios.",
+     "En un libre mercado la competencia depende de que nuevas empresas puedan entrar y disputar a los oferentes actuales.",
+     "Como el oligopolio controla la oferta, puede dificultar el ingreso de empresas interesadas en invertir, y así se reduce la competencia.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La fiscalización estatal es un tema regulatorio distinto; el problema competitivo viene de la concentración del mercado, no de las atribuciones del Estado.",
+     "B": "Un oligopolio suele reducir la presión por innovar, así que esta opción invierte el efecto.",
+     "D": "Las alzas de precio son una consecuencia posible del poder de mercado, pero no explican por qué el oligopolio amenaza la competencia."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q61",
+   "number": 61,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "Lee el siguiente extracto de una noticia sobre la economía China en 2023:\n\n«El sector del consumo chino entró en deflación y los precios de fábrica siguieron bajando en julio, mientras la segunda economía mundial (China) se esforzaba por reactivar la demanda y aumentaban las presiones para que Pekín aplicara medidas de estímulo más directas».\n\nAgencia Reuters (2023). China entra en deflación pese a los esfuerzos del gobierno por estimular la economía. *La Tercera*. Adaptado.\n\nDe acuerdo con el funcionamiento del mercado, ¿cuál es un efecto que provocará en la economía china la situación descrita en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El desincentivo a la inversión del sector privado."
+    },
+    {
+     "key": "B",
+     "text": "El incremento en la creación de nuevos empleos."
+    },
+    {
+     "key": "C",
+     "text": "El aumento sostenido del crecimiento económico."
+    },
+    {
+     "key": "D",
+     "text": "El descenso del poder adquisitivo de la población."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q61.webp",
+    "width": 907,
+    "height": 475,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La deflación lleva a las empresas a ganar menos y a postergar proyectos, lo que desincentiva la inversión del sector privado.",
+    "steps": [
+     "El texto dice que el consumo entró en deflación, porque «los precios de fábrica siguieron bajando» en julio.",
+     "Con precios a la baja, los ingresos de las empresas disminuyen y la rentabilidad de nuevos proyectos se vuelve incierta.",
+     "Además, los consumidores tienden a postergar compras esperando precios más bajos, lo que profundiza la caída de la demanda.",
+     "En ese escenario el sector privado tiene menos incentivos para invertir, por lo que el efecto esperado es el desincentivo a la inversión privada.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Crear empleo es lo opuesto: la caída de precios y de ventas tiende a frenar la contratación.",
+     "C": "El texto muestra que China se esfuerza por reactivar la demanda, señal de que la deflación frena el crecimiento y no lo sostiene.",
+     "D": "Confunde el efecto: con precios a la baja el poder adquisitivo tiende a subir, no a bajar; el problema es la caída del consumo y la inversión."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q62",
+   "number": 62,
+   "axis": "Geografía y espacio",
+   "topic": "Medio ambiente",
+   "stem": "Lee el siguiente texto acerca de distintas acciones de intervención ambiental llevadas a cabo en Chile:\n\n«Ejemplos de situaciones de injusticia ambiental en Chile abundan. Tales son, por nombrar algunos, la construcción de autopistas urbanas en Santiago, la localización de vertederos y plantas de tratamientos de aguas servidas en la Novena Región de La Araucanía, la ubicación de las plantas de la industria salmonera en la Décima Región de Los Lagos, o la zona de la Quinta Región correspondiente al complejo industrial de Ventanas y Puchuncaví. Todos estos casos reflejan […] la ausencia de reconocimiento de la identidad de ciertas comunidades, la falta de acceso de las mismas comunidades a instancias públicas de participación […] y una marcada falta de valorización de la integridad de los ecosistemas».\n\nEspejo, D. (2010). Noción y elementos de la justicia ambiental: directrices para su aplicación en la planificación territorial y en la evaluación ambiental estratégica.\n\n¿Por qué la situación descrita en el texto constituye una contradicción a los fundamentos del modelo de desarrollo sostenible?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque restringe la priorización de las actividades productivas con innovación ambiental."
+    },
+    {
+     "key": "B",
+     "text": "Porque dificulta la conciliación de la protección ambiental con el crecimiento económico."
+    },
+    {
+     "key": "C",
+     "text": "Porque limita el financiamiento de las áreas de conservación ambiental con fondos fiscales."
+    },
+    {
+     "key": "D",
+     "text": "Porque desincentiva el diseño de políticas públicas orientadas al cuidado medioambiental."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q62.webp",
+    "width": 907,
+    "height": 741,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El desarrollo sostenible busca conciliar crecimiento económico, equidad social y protección ambiental; los casos descritos muestran que el ambiente y las comunidades quedan postergados frente al crecimiento.",
+    "steps": [
+     "El modelo de desarrollo sostenible busca equilibrar el crecimiento económico con la protección del medioambiente y la equidad social.",
+     "El texto describe autopistas urbanas, vertederos, salmoneras y un complejo industrial que se instalan sin considerar la identidad de las comunidades ni la integridad de los ecosistemas.",
+     "Esto muestra que la producción se impone sobre la protección ambiental, en lugar de compatibilizarse con ella.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La innovación ambiental no aparece en el texto; el problema es la falta de participación y de valoración ambiental, no la falta de priorizar productos innovadores.",
+     "C": "El financiamiento de áreas de conservación es un tema distinto que no aparece en el texto; la contradicción está en la instalación de proyectos.",
+     "D": "El texto no dice que se desincentive el diseño de políticas, sino que las decisiones territoriales ignoran a las comunidades y a los ecosistemas."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q63",
+   "number": 63,
+   "axis": "Sistema económico",
+   "topic": "Precios",
+   "stem": "Lee la siguiente situación ficticia de mercado:\n\nTe encuentras acampando en un sector cordillerano con malas condiciones de accesibilidad, donde hay tres negocios cuya propiedad es de distintas personas. Quieres comprar una bebida de 2 litros. Vas al negocio más cercano y su precio es de \\$3.200. Consideras que es caro, así que vas al segundo negocio. Ahí la bebida cuesta \\$3.550. Como es aún más cara, decides seguir hasta el tercer negocio, donde cuesta \\$3.500. Le reclamas al vendedor, expresándole tu molestia y él te responde ¡es que estamos en la montaña!\n\nEn el contexto de una economía de mercado, ¿cuál de las siguientes afirmaciones permite explicar la situación descrita en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El aislamiento geográfico provoca desinformación sobre el precio de los productos."
+    },
+    {
+     "key": "B",
+     "text": "La baja demanda del producto en el sector eleva su precio respecto de otras localidades."
+    },
+    {
+     "key": "C",
+     "text": "Los negocios forman parte de una misma cadena comercial que fija el mismo precio."
+    },
+    {
+     "key": "D",
+     "text": "Las condiciones del lugar generan una baja competencia que permite establecer precios altos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q63.webp",
+    "width": 907,
+    "height": 594,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La falta de competencia en un sector aislado permite que los negocios cobren precios altos, aunque tengan dueños distintos.",
+    "steps": [
+     "Los tres negocios tienen dueños distintos, por lo que no pertenecen a una misma cadena comercial.",
+     "Sus precios para una bebida de 2 litros son 3.200 pesos, 3.550 pesos y 3.500 pesos, lo que descarta un precio fijado de manera uniforme.",
+     "El vendedor responde «¡es que estamos en la montaña!», lo que sugiere que la ubicación aislada limita la presencia de competidores.",
+     "En ese sector, con pocos oferentes y mala accesibilidad, la competencia es baja, y eso les permite a los negocios cobrar precios altos.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El viajero sí conoce los precios de cada negocio porque los compara; la falta de información no explica que los precios sean altos.",
+     "B": "Una baja demanda suele presionar los precios a la baja, no al alza; la clave de la situación es la escasa competencia.",
+     "C": "Las distintas tarifas contradicen que los negocios pertenezcan a una misma cadena con el mismo precio."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q64",
+   "number": 64,
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "stem": "En una economía de libre mercado, la iniciativa privada tiene un rol protagónico en el comportamiento de la oferta de bienes y servicios en el mercado. No obstante, los Estados también tienen una participación relevante en estos sistemas económicos. Al respecto, ¿cuál de las siguientes opciones corresponde a uno de los roles del Estado en este tipo de economía?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Establecer las normas que regulan la actividad productiva."
+    },
+    {
+     "key": "B",
+     "text": "Definir cuotas de venta en artículos de primera necesidad."
+    },
+    {
+     "key": "C",
+     "text": "Fijar las técnicas de explotación de los recursos naturales."
+    },
+    {
+     "key": "D",
+     "text": "Determinar una banda de precios en productos suntuarios."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una economía de libre mercado, el Estado cumple un rol regulador al establecer las normas que ordenan la actividad productiva.",
+    "steps": [
+     "El enunciado señala que la iniciativa privada tiene un rol protagónico, pero que el Estado también tiene una participación relevante.",
+     "Esa participación corresponde a la regulación: fijar reglas del juego que permitan competir de forma justa y proteger a consumidores y trabajadores.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Definir cuotas de venta es una intervención directa que limita el mercado; no es un rol típico de una economía de libre mercado.",
+     "C": "Fijar las técnicas de explotación es una decisión técnica específica, no el rol general del Estado; la regulación ambiental establece límites, pero no define cada técnica.",
+     "D": "Fijar bandas de precios en productos suntuarios es una intervención directa en los precios, contraria a la libre formación de precios."
+    }
+   }
+  },
+  {
+   "id": "historia-2026-invierno-q65",
+   "number": 65,
+   "axis": "Geografía y espacio",
+   "topic": "Medio ambiente",
+   "stem": "Una agroindustria ha proyectado instalar un sistema de extracción de agua desde las napas subterráneas y ha solicitado a las autoridades iniciar la etapa de factibilidad ambiental para acceder al agua. Considerando la aplicación en Chile del modelo de desarrollo sostenible, ¿por qué este proyecto debe ser sometido a una evaluación de impacto ambiental?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque provoca un conjunto de variaciones en los costos de producción."
+    },
+    {
+     "key": "B",
+     "text": "Porque produce algunas distorsiones en la competitividad a escala local."
+    },
+    {
+     "key": "C",
+     "text": "Porque representa una amenaza a la calidad de los productos obtenidos."
+    },
+    {
+     "key": "D",
+     "text": "Porque implica posibles riesgos a la disponibilidad futura de este recurso."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La evaluación de impacto ambiental se exige porque extraer agua subterránea puede comprometer la disponibilidad futura del recurso.",
+    "steps": [
+     "El proyecto busca extraer agua desde las napas subterráneas, un recurso que puede agotarse o degradarse si se usa en exceso.",
+     "El modelo de desarrollo sostenible exige que el crecimiento productivo no comprometa los recursos de las generaciones futuras.",
+     "Por eso, cuando un proyecto puede afectar el recurso a futuro, debe someterse a una evaluación de impacto ambiental.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Los costos de producción son un asunto económico privado; la evaluación ambiental se justifica por los efectos sobre el medioambiente.",
+     "B": "La competitividad local es un efecto económico que no motiva la evaluación ambiental, que se enfoca en el impacto físico sobre el recurso.",
+     "C": "La calidad del producto no es el motivo central; la preocupación de la evaluación está en el recurso natural y su disponibilidad."
+    }
+   }
+  }
+ ]
+}

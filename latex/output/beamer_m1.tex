@@ -1,0 +1,854 @@
+% =============================================================================
+%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
+%  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Comandos:
+%    \alternativa{A}{texto}       alternativa
+%    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
+%    \paso{n}{texto}      paso numerado del desarrollo
+%    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
+%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
+% =============================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+
+% ── Paleta Zinc ──────────────────────────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+
+\newcommand{\sen}{\operatorname{sen}}
+
+% ── Tema mínimo ──────────────────────────────────────────────────────────────
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=zinc900}
+\setbeamercolor{structure}{fg=zinc900}
+\setbeamercolor{alerted text}{fg=zinc950}
+\setbeamercolor{item}{fg=zinc500}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{itemize items}{\raisebox{0.15ex}{\color{zinc500}\scriptsize$\bullet$}}
+\setbeamertemplate{enumerate items}{\color{zinc500}\insertenumlabel.}
+\setbeamersize{text margin left=1.6cm,text margin right=1.6cm}
+
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.9em}%
+  {\usebeamerfont{frametitle}\color{zinc950}\insertframetitle}\par
+  \ifx\insertframesubtitle\@empty\else{\small\color{zinc500}\insertframesubtitle}\par\fi
+  \vspace{0.25em}{\color{zinc200}\rule{\textwidth}{0.4pt}}%
+}
+\makeatother
+\setbeamertemplate{footline}{%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+}
+\setbeamertemplate{title page}{%
+  \vfill
+  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
+  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
+  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
+  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc500}\insertdate}\par
+  \vfill
+}
+
+% ── Componentes ──────────────────────────────────────────────────────────────
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\bfseries\color{white}}
+\newtcolorbox{opcion}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=zinc300,
+  left=6pt, right=6pt, top=3pt, bottom=3pt, before skip=3pt, after skip=3pt, #1}
+\newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
+\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+  borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
+\newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
+  borderline west={2pt}{0pt}{rosa}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=white, titlerule=0pt, title={#1}}
+\newenvironment{lineatiempo}
+  {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
+  {\end{tabular}}
+\newlength{\anchobarra}
+\newcommand{\ejebarra}[3]{%
+  \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
+  \setlength{\anchobarra}{0.5\linewidth}%
+  \makebox[\anchobarra][l]{{\color{zinc200}\rule[0.2ex]{\anchobarra}{1.1ex}}\hspace*{-\anchobarra}{\color{zinc900}\rule[0.2ex]{#2\anchobarra}{1.1ex}}}%
+  \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
+
+%%<META>%%
+\title[Repaso PAES: Competencia Matemática 1]{Repaso PAES}
+\subtitle{Competencia Matemática 1 (M1)}
+\date{1 de noviembre de 2026}
+%%</META>%%
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+%%<CONTENIDO>%%
+\begin{frame}{Contenidos}
+
+  \framesubtitle{4 ejes, en el orden del temario}
+
+  \begin{enumerate}\small
+
+    \item \textbf{Números}: Números enteros y racionales, Porcentajes y problemas con dinero, Potencias y raíces, Razones y proporcionalidad
+
+    \item \textbf{Álgebra y funciones}: Expresiones algebraicas y factorización, Ecuaciones e inecuaciones lineales, Sistemas de ecuaciones lineales, Función lineal y afín, Función cuadrática
+
+    \item \textbf{Geometría}: Perímetros, áreas y volúmenes, Triángulos, Pitágoras y semejanza, Plano cartesiano, vectores y transformaciones
+
+    \item \textbf{Probabilidad y estadística}: Tablas, gráficos y medidas de tendencia central, Medidas de posición y dispersión, Probabilidad y conteo
+
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Qué evalúa la prueba}
+
+  \framesubtitle{Distribución por eje en 7 ensayos (390 preguntas)}
+
+  \vspace{0.8em}
+
+  \ejebarra{Números}{0.456}{46 \%}
+
+  \ejebarra{Probabilidad y estadística}{0.241}{24 \%}
+
+  \ejebarra{Geometría}{0.203}{20 \%}
+
+  \ejebarra{Álgebra y funciones}{0.100}{10 \%}
+
+\end{frame}
+
+\section{Números}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Números}\par\vspace{0.6em}
+  {\color{zinc700} Operatoria en los conjuntos numéricos, porcentajes, potencias, raíces y proporcionalidad.}\par\vspace{1em}
+  {\small\color{zinc500} Números enteros y racionales, Porcentajes y problemas con dinero, Potencias y raíces, Razones y proporcionalidad}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Números enteros y racionales}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Prioridad: paréntesis, potencias, $\times$ y $\div$, $+$ y $-$.
+    \item Restar un negativo es sumar: $a-(-b)=a+b$.
+    \item Todo decimal finito o periódico es racional.
+    \item Para comparar fracciones, iguala denominadores o pásalas a decimal.
+  \end{itemize}
+  \begin{cajaclave}[Operatoria con fracciones]\footnotesize
+\begin{gather*}
+\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd} \\
+\frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd} \\
+\frac{a}{b}:\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}
+\end{gather*}
+
+Decimal periódico: $0{,}\overline{3}=\dfrac{3}{9}=\dfrac{1}{3}$ y $0{,}1\overline{6}=\dfrac{16-1}{90}=\dfrac{1}{6}$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Números enteros y racionales}
+  {\small ¿Cuál es el valor de $-2 + 3\cdot(-4) - (-5)$?}
+  \vspace{0.4em}
+  \alternativa{A}{$-19$}
+  \alternativa{B}{$-9$}
+  \alternativa{C}{$1$}
+  \alternativa{D}{$9$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Primero la multiplicación; después sumas y restas, cuidando el doble signo.}
+  {\small
+  \paso{1}{$3\cdot(-4)=-12$.}
+  \paso{2}{$-(-5)=+5$.}
+  \paso{3}{$-2-12+5=-9$.}
+  }
+  \alternativaok{B}{$-9$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Sumar numeradores y denominadores: $\frac{1}{2}+\frac{1}{3}\neq\frac{2}{5}$.
+    \item Resolver de izquierda a derecha ignorando que la multiplicación va antes que la resta.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Porcentajes y problemas con dinero}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item El 25 \% de 80 es $0{,}25\cdot 80=20$.
+    \item Subir 10 \% y luego bajar 10 \% deja el valor un 1 \% más bajo: $1{,}1\cdot 0{,}9=0{,}99$.
+    \item La variación porcentual siempre se calcula sobre el valor inicial.
+    \item Precio con IVA (19 \%) $=1{,}19\cdot$ precio neto.
+  \end{itemize}
+  \begin{cajaclave}[Factores de variación]\footnotesize
+\begin{gather*}
+\text{aumento de } p\,\%:\ x\left(1+\tfrac{p}{100}\right) \\
+\text{descuento de } p\,\%:\ x\left(1-\tfrac{p}{100}\right)
+\end{gather*}
+
+\[\text{variación porcentual}=\frac{\text{valor final}-\text{valor inicial}}{\text{valor inicial}}\cdot 100\]
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Porcentajes y problemas con dinero}
+  {\small Un producto cuesta \$12 000 sin IVA. Si el IVA es del 19 \%, ¿cuál es su precio final?}
+  \vspace{0.4em}
+  \alternativa{A}{\$2280}
+  \alternativa{B}{\$12 190}
+  \alternativa{C}{\$14 280}
+  \alternativa{D}{\$15 600}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El precio final es el neto más el 19 \% del neto, es decir, el neto multiplicado por 1,19.}
+  {\small
+  \paso{1}{IVA: $0{,}19\cdot 12\,000=2280$.}
+  \paso{2}{Precio final: $12\,000+2280=14\,280$, o directamente $12\,000\cdot 1{,}19$.}
+  }
+  \alternativaok{C}{\$14 280}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Sumar porcentajes sucesivos: $+20\,\%$ y $-20\,\%$ no se anulan.
+    \item Calcular la variación porcentual sobre el valor final.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Potencias y raíces}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Lleva todo a la misma base antes de operar: $8=2^3$, $27=3^3$.
+    \item El exponente negativo invierte, no cambia el signo: $2^{-3}=\frac{1}{8}$.
+    \item $\sqrt{a+b}\neq\sqrt{a}+\sqrt{b}$.
+    \item Notación científica: $0{,}00034=3{,}4\cdot 10^{-4}$.
+  \end{itemize}
+  \begin{cajaclave}[Propiedades]\footnotesize
+\begin{gather*}
+a^m\cdot a^n=a^{m+n} \\
+\frac{a^m}{a^n}=a^{m-n} \\
+(a^m)^n=a^{mn} \\
+(ab)^n=a^nb^n
+\end{gather*}
+
+\begin{gather*}
+\sqrt[n]{ab}=\sqrt[n]{a}\,\sqrt[n]{b} \\
+\sqrt[n]{a^m}=a^{m/n} \\
+\sqrt{72}=\sqrt{36\cdot 2}=6\sqrt{2}
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Potencias y raíces}
+  {\small ¿Cuál es el valor de $\dfrac{9^{2}\cdot 3^{-1}}{27}$?}
+  \vspace{0.4em}
+  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
+  \alternativa{A}{$\dfrac{1}{3}$}
+  \alternativa{B}{$1$}
+  \alternativa{C}{$3$}
+  \alternativa{D}{$9$}
+  \end{tcbraster}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Todo se puede escribir en base 3.}
+  {\small
+  \paso{1}{$9^2=(3^2)^2=3^4$ y $27=3^3$.}
+  \paso{2}{Numerador: $3^4\cdot 3^{-1}=3^{3}$.}
+  \paso{3}{$\dfrac{3^3}{3^3}=1$.}
+  }
+  \alternativaok{B}{$1$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Multiplicar las bases: $2^3\cdot 2^4\neq 4^7$ (es $2^7$).
+    \item Sumar exponentes al elevar una potencia: $(2^3)^2=2^6$, no $2^5$.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Razones y proporcionalidad}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Pregúntate: si una magnitud aumenta, ¿la otra aumenta o disminuye?
+    \item Reparto proporcional: total $\div$ suma de las partes.
+    \item Escala 1:50 000: 1 cm en el mapa son 50 000 cm = 500 m reales.
+  \end{itemize}
+  \begin{cajaclave}[Igualdades clave]\footnotesize
+\begin{gather*}
+\text{directa: } \frac{y_1}{x_1}=\frac{y_2}{x_2} \\
+\text{inversa: } x_1\,y_1=x_2\,y_2
+\end{gather*}
+  \end{cajaclave}
+\begin{center}\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Directa} & \textbf{Inversa} \\
+\midrule
+Constante & $\frac{y}{x}=k$ & $x\cdot y=k$ \\
+Gráfico & recta que pasa por el origen & hipérbola \\
+Ejemplo & kilos comprados y precio & trabajadores y días de obra \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Razones y proporcionalidad}
+  {\small Se reparten \$60 000 entre Ana y Beto en la razón $2:3$. ¿Cuánto recibe Beto?}
+  \vspace{0.4em}
+  \alternativa{A}{\$24 000}
+  \alternativa{B}{\$30 000}
+  \alternativa{C}{\$36 000}
+  \alternativa{D}{\$40 000}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La razón $2:3$ divide el total en 5 partes iguales.}
+  {\small
+  \paso{1}{Cada parte vale $\dfrac{60\,000}{2+3}=12\,000$.}
+  \paso{2}{Beto recibe 3 partes: $3\cdot 12\,000=36\,000$.}
+  }
+  \alternativaok{C}{\$36 000}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Tratar como directa una relación inversa (más trabajadores, menos días).
+    \item En un reparto, dividir el total por el número de personas en vez de por la suma de las partes.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Álgebra y funciones}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Álgebra y funciones}\par\vspace{0.6em}
+  {\color{zinc700} Expresiones algebraicas, ecuaciones, sistemas y funciones afín y cuadrática.}\par\vspace{1em}
+  {\small\color{zinc500} Expresiones algebraicas y factorización, Ecuaciones e inecuaciones lineales, Sistemas de ecuaciones lineales, Función lineal y afín, Función cuadrática}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Expresiones algebraicas y factorización}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Primero el factor común: $6x^2-9x=3x(2x-3)$.
+    \item Diferencia de cuadrados: $x^2-49=(x+7)(x-7)$.
+    \item $(a+b)^2\neq a^2+b^2$: falta el término $2ab$.
+  \end{itemize}
+  \begin{cajaclave}[Productos notables]\footnotesize
+\begin{gather*}
+(a\pm b)^2=a^2\pm 2ab+b^2 \\
+(a+b)(a-b)=a^2-b^2 \\
+(x+p)(x+q)=x^2+(p+q)x+pq
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Expresiones algebraicas y factorización}
+  {\small ¿Cuál de las siguientes expresiones es equivalente a $4x^2-25$?}
+  \vspace{0.4em}
+  \alternativa{A}{$(2x-5)^2$}
+  \alternativa{B}{$(2x+5)(2x-5)$}
+  \alternativa{C}{$(4x-5)(x+5)$}
+  \alternativa{D}{$(2x-25)(2x+1)$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Son dos cuadrados perfectos restados: $(2x)^2-5^2$.}
+  {\small
+  \paso{1}{$4x^2=(2x)^2$ y $25=5^2$.}
+  \paso{2}{Diferencia de cuadrados: $(2x)^2-5^2=(2x+5)(2x-5)$.}
+  }
+  \alternativaok{B}{$(2x+5)(2x-5)$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Olvidar el doble producto en $(a+b)^2$.
+    \item Equivocar los signos al sacar un factor negativo: $-x+3=-(x-3)$.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Ecuaciones e inecuaciones lineales}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Si $-2x\le 6$, entonces $x\ge -3$ (se invierte la desigualdad).
+    \item Para eliminar denominadores, multiplica \textbf{todos} los términos por el m.c.m.
+    \item Revisa qué pide la pregunta: a veces no es $x$, sino otra cantidad.
+  \end{itemize}
+  \begin{cajaclave}[Notación de intervalos (DEMRE)]\footnotesize
+\begin{gather*}
+[a,b]=\{x: a\le x\le b\} \\
+]a,b[=\{x: a<x<b\} \\
+[a,+\infty[=\{x: x\ge a\}
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Ecuaciones e inecuaciones lineales}
+  {\small La suma de tres números enteros consecutivos es 72. ¿Cuál es el mayor de ellos?}
+  \vspace{0.4em}
+  \alternativa{A}{23}
+  \alternativa{B}{24}
+  \alternativa{C}{25}
+  \alternativa{D}{26}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Llama $x$ al menor; los otros son $x+1$ y $x+2$. Ojo: se pregunta por el mayor.}
+  {\small
+  \paso{1}{$x+(x+1)+(x+2)=72 \Rightarrow 3x+3=72 \Rightarrow x=23$.}
+  \paso{2}{Los números son 23, 24 y 25; el mayor es 25.}
+  }
+  \alternativaok{C}{25}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item No invertir la desigualdad al dividir por un número negativo.
+    \item Multiplicar por el m.c.m. solo algunos términos.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Sistemas de ecuaciones lineales}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Reducción: elige la incógnita con coeficientes fáciles de igualar.
+    \item Comprueba la solución en \textbf{ambas} ecuaciones.
+    \item En problemas, define claramente qué representa cada variable.
+  \end{itemize}
+  \begin{cajaclave}[Cantidad de soluciones de $ax+by=c,\textbackslash\{\} dx+ey=f$]\footnotesize
+Única si $\dfrac{a}{d}\neq\dfrac{b}{e}$; ninguna si $\dfrac{a}{d}=\dfrac{b}{e}\neq\dfrac{c}{f}$; infinitas si $\dfrac{a}{d}=\dfrac{b}{e}=\dfrac{c}{f}$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Sistemas de ecuaciones lineales}
+  {\small En una librería, 2 cuadernos y 3 lápices cuestan \$5400, y 1 cuaderno y 2 lápices cuestan \$3000. ¿Cuánto cuesta un cuaderno?}
+  \vspace{0.4em}
+  \alternativa{A}{\$600}
+  \alternativa{B}{\$1200}
+  \alternativa{C}{\$1800}
+  \alternativa{D}{\$2400}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Sean $c$ y $\ell$ los precios: $2c+3\ell=5400$ y $c+2\ell=3000$.}
+  {\small
+  \paso{1}{De la segunda: $c=3000-2\ell$.}
+  \paso{2}{Sustituye: $2(3000-2\ell)+3\ell=5400 \Rightarrow 6000-\ell=5400 \Rightarrow \ell=600$.}
+  \paso{3}{$c=3000-1200=1800$. Comprobación: $2\cdot 1800+3\cdot 600=5400$.}
+  }
+  \alternativaok{C}{\$1800}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Reemplazar el valor en la misma ecuación de la que se despejó (siempre se cumple).
+    \item Responder la variable que no se pedía.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Función lineal y afín}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item $m>0$: creciente; $m<0$: decreciente; $m=0$: constante.
+    \item Evaluar $f(2)$ es reemplazar $x=2$; resolver $f(x)=2$ es buscar $x$.
+    \item Cargo fijo + tarifa por unidad $\Rightarrow f(x)=\text{tarifa}\cdot x+\text{fijo}$.
+  \end{itemize}
+  \begin{cajaclave}[Pendiente y ecuación]\footnotesize
+\begin{gather*}
+m=\frac{y_2-y_1}{x_2-x_1} \\
+f(x)=m(x-x_1)+y_1
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Función lineal y afín}
+  {\small Un taxi cobra \$400 de bajada de bandera y \$150 por cada 200 m recorridos. ¿Qué función entrega el cobro $C$, en pesos, de un viaje de $x$ metros?}
+  \vspace{0.4em}
+  \alternativa{A}{$C(x)=150x+400$}
+  \alternativa{B}{$C(x)=0{,}75x+400$}
+  \alternativa{C}{$C(x)=400x+150$}
+  \alternativa{D}{$C(x)=200x+150$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La tarifa por metro es $\frac{150}{200}=0{,}75$ pesos; el cargo fijo es 400.}
+  {\small
+  \paso{1}{Tarifa por metro: $150:200=0{,}75$.}
+  \paso{2}{$C(x)=0{,}75x+400$. Control: 200 m cuestan $150+400=550$.}
+  }
+  \alternativaok{B}{$C(x)=0{,}75x+400$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Restar en distinto orden en el numerador y en el denominador de la pendiente.
+    \item Confundir el cargo fijo con la tarifa por unidad.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Función cuadrática}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item El signo de $a$ decide si hay máximo o mínimo.
+    \item El valor máximo o mínimo es la \textbf{ordenada} del vértice.
+    \item Dos puntos simétricos tienen la misma altura: el vértice queda al medio.
+  \end{itemize}
+  \begin{cajaclave}[Vértice y ceros]\footnotesize
+\begin{gather*}
+x_v=-\frac{b}{2a},\quad y_v=f(x_v) \\
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Función cuadrática}
+  {\small La altura, en metros, de una pelota lanzada hacia arriba es $h(t)=-5t^2+20t$, con $t$ en segundos. ¿Cuál es la altura máxima?}
+  \vspace{0.4em}
+  \alternativa{A}{2 m}
+  \alternativa{B}{15 m}
+  \alternativa{C}{20 m}
+  \alternativa{D}{40 m}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{$a=-5<0$: la parábola tiene un máximo en el vértice.}
+  {\small
+  \paso{1}{$t_v=-\dfrac{20}{2\cdot(-5)}=2$ s.}
+  \paso{2}{$h(2)=-5\cdot 4+20\cdot 2=20$ m.}
+  }
+  \alternativaok{C}{20 m}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Usar $\frac{b}{2a}$ sin el signo menos.
+    \item Responder $x_v$ cuando se pide el valor máximo de la función.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Geometría}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Geometría}\par\vspace{0.6em}
+  {\color{zinc700} Medición, teorema de Pitágoras, semejanza y transformaciones en el plano.}\par\vspace{1em}
+  {\small\color{zinc500} Perímetros, áreas y volúmenes, Triángulos, Pitágoras y semejanza, Plano cartesiano, vectores y transformaciones}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Perímetros, áreas y volúmenes}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Descompón figuras compuestas antes de calcular.
+    \item Revisa unidades: $1\ \text{m}^3=1000$ litros.
+    \item Diámetro $=2\cdot$ radio.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+Rectángulo: $A=b\cdot h$. Triángulo: $A=\dfrac{b\cdot h}{2}$. Círculo: $A=\pi r^2$, $P=2\pi r$.
+
+Prisma y cilindro: $V=A_{\text{base}}\cdot h$ (cilindro: $V=\pi r^2h$). Cubo: $V=a^3$. Cono: $V=\dfrac{\pi r^2h}{3}$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Perímetros, áreas y volúmenes}
+  {\small Un estanque cilíndrico tiene 2 m de radio y 1,5 m de altura. Considerando $\pi\approx 3$, ¿cuál es su volumen?}
+  \vspace{0.4em}
+  \alternativa{A}{$9\ \text{m}^3$}
+  \alternativa{B}{$12\ \text{m}^3$}
+  \alternativa{C}{$18\ \text{m}^3$}
+  \alternativa{D}{$36\ \text{m}^3$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Volumen del cilindro: área de la base por la altura.}
+  {\small
+  \paso{1}{Base: $\pi r^2\approx 3\cdot 4=12\ \text{m}^2$.}
+  \paso{2}{$V\approx 12\cdot 1{,}5=18\ \text{m}^3$.}
+  }
+  \alternativaok{C}{$18\ \text{m}^3$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Usar el diámetro como radio.
+    \item Confundir área con perímetro.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Triángulos, Pitágoras y semejanza}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item La hipotenusa es el lado mayor.
+    \item Los múltiplos de un trío pitagórico también lo son: (6, 8, 10).
+    \item Sombras a la misma hora $\Rightarrow$ triángulos semejantes.
+  \end{itemize}
+  \begin{cajaclave}[Relaciones clave]\footnotesize
+\begin{gather*}
+a^2+b^2=c^2 \\
+\text{tríos: } (3,4,5),\ (5,12,13),\ (8,15,17)
+\end{gather*}
+
+Si la razón de semejanza es $k$, las áreas están en razón $k^2$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Triángulos, Pitágoras y semejanza}
+  {\small Un rectángulo mide 9 cm de ancho y 12 cm de largo. ¿Cuánto mide su diagonal?}
+  \vspace{0.4em}
+  \alternativa{A}{13 cm}
+  \alternativa{B}{15 cm}
+  \alternativa{C}{21 cm}
+  \alternativa{D}{$\sqrt{63}$ cm}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La diagonal es la hipotenusa del triángulo rectángulo de catetos 9 y 12.}
+  {\small
+  \paso{1}{$d^2=9^2+12^2=81+144=225$.}
+  \paso{2}{$d=15$ cm (es el trío $3,4,5$ multiplicado por 3).}
+  }
+  \alternativaok{B}{15 cm}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Sumar los cuadrados cuando la incógnita es un cateto.
+    \item Emparejar lados que no se corresponden en la semejanza.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Plano cartesiano, vectores y transformaciones}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Reflejar respecto del eje $Y$ cambia el signo de la abscisa.
+    \item Una rotación de $180^\circ$ equivale a la simetría respecto del origen.
+    \item Vector entre dos puntos: $\overrightarrow{AB}=B-A$.
+  \end{itemize}
+  \begin{cajaclave}[Reglas en coordenadas]\footnotesize
+Traslación: $(x,y)\mapsto(x+a,\,y+b)$. Reflexión eje $X$: $(x,-y)$. Reflexión eje $Y$: $(-x,y)$.
+
+Rotación en $90^\circ$ antihoraria: $(-y,x)$. Rotación en $180^\circ$: $(-x,-y)$.
+  \end{cajaclave}
+\begin{center}\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+\textbf{Transformación} & \textbf{Regla} & \textbf{Conserva} \\
+\midrule
+Traslación por $(a,b)$ & $(x+a,\,y+b)$ & forma, tamaño y orientación \\
+Reflexión eje $Y$ & $(-x,\,y)$ & forma y tamaño \\
+Rotación $180^\circ$ & $(-x,\,-y)$ & forma y tamaño \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Plano cartesiano, vectores y transformaciones}
+  {\small El punto $P(3,1)$ se rota en $90^\circ$ en sentido antihorario con centro en el origen. ¿Cuáles son las coordenadas de su imagen?}
+  \vspace{0.4em}
+  \alternativa{A}{$(1,-3)$}
+  \alternativa{B}{$(-1,3)$}
+  \alternativa{C}{$(-3,-1)$}
+  \alternativa{D}{$(3,-1)$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Rotación de $90^\circ$ antihoraria: $(x,y)\mapsto(-y,x)$.}
+  {\small
+  \paso{1}{$(3,1)\mapsto(-1,3)$.}
+  \paso{2}{Comprobación: el punto pasa del primer al segundo cuadrante, como corresponde a un giro de un cuarto de vuelta antihorario.}
+  }
+  \alternativaok{B}{$(-1,3)$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir la reflexión en el eje $X$ con la del eje $Y$.
+    \item Restar el vector de traslación en vez de sumarlo.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Probabilidad y estadística}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Probabilidad y estadística}\par\vspace{0.6em}
+  {\color{zinc700} Tablas y gráficos, medidas estadísticas y probabilidad.}\par\vspace{1em}
+  {\small\color{zinc500} Tablas, gráficos y medidas de tendencia central, Medidas de posición y dispersión, Probabilidad y conteo}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Tablas, gráficos y medidas de tendencia central}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Para la mediana, \textbf{ordena} primero los datos.
+    \item Con $n$ par, la mediana es el promedio de los dos datos centrales.
+    \item Un dato extremo mueve la media, pero casi no mueve la mediana.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+\bar{x}=\frac{\sum x_i\,f_i}{n} \\
+\text{posición de la mediana}=\frac{n+1}{2} \\
+f_r=\frac{f}{n}
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Tablas, gráficos y medidas de tendencia central}
+  {\small Las notas de un curso se resumen en la tabla:
+
+\begin{center}\small
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll@{}}
+\toprule
+\textbf{Nota} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} \\
+\midrule
+Estudiantes & 3 & 5 & 8 & 4 \\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+¿Cuál es la mediana de las notas?}
+  \vspace{0.4em}
+  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
+  \alternativa{A}{5}
+  \alternativa{B}{5,65}
+  \alternativa{C}{6}
+  \alternativa{D}{6,5}
+  \end{tcbraster}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Hay 20 datos: la mediana es el promedio de los datos en las posiciones 10 y 11.}
+  {\small
+  \paso{1}{Frecuencias acumuladas: 3, 8, 16, 20.}
+  \paso{2}{Las posiciones 10 y 11 caen en la nota 6 (posiciones 9 a 16).}
+  \paso{3}{Mediana $=\dfrac{6+6}{2}=6$. (La media sería $\frac{113}{20}=5{,}65$.)}
+  }
+  \alternativaok{C}{6}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Calcular la mediana sin ordenar los datos.
+    \item Promediar los valores de la tabla sin considerar sus frecuencias.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Medidas de posición y dispersión}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Percentil alto no significa nota alta, sino posición relativa alta.
+    \item En un diagrama de caja, la caja contiene el 50 \% central de los datos.
+    \item Dos grupos pueden tener igual media y distinta dispersión.
+  \end{itemize}
+  \begin{cajaclave}[Definiciones]\footnotesize
+Rango $=\text{máx}-\text{mín}$. Rango intercuartílico $=Q_3-Q_1$. Percentil 80: el 80 \% de los datos es menor o igual que él.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Medidas de posición y dispersión}
+  {\small Ana obtuvo un puntaje ubicado en el percentil 80 de su curso. ¿Qué significa este resultado?}
+  \vspace{0.4em}
+  \alternativa{A}{Ana respondió correctamente el 80 \% de la prueba.}
+  \alternativa{B}{Ana obtuvo 80 puntos.}
+  \alternativa{C}{Aproximadamente el 80 \% del curso obtuvo un puntaje menor o igual que el de Ana.}
+  \alternativa{D}{Solo el 20 \% del curso aprobó la prueba.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El percentil describe la posición de un dato respecto de los demás, no la cantidad de aciertos.}
+  {\small
+  \paso{1}{Percentil 80: el 80 \% de los datos es menor o igual que ese valor.}
+  \paso{2}{Por eso la alternativa C describe el resultado; A y B confunden posición con puntaje.}
+  }
+  \alternativaok{C}{Aproximadamente el 80 \% del curso obtuvo un puntaje menor o igual que el de Ana.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Interpretar el percentil 80 como «obtuvo el 80 \% del puntaje».
+    \item Leer el largo de la caja como el rango total.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Probabilidad y conteo}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item «Al menos uno» $=1-P(\text{ninguno})$.
+    \item Con dos dados hay $6\cdot 6=36$ resultados ordenados.
+    \item Eventos independientes: se multiplican sus probabilidades.
+  \end{itemize}
+  \begin{cajaclave}[Reglas]\footnotesize
+\begin{gather*}
+P(A)=\frac{\text{casos favorables}}{\text{casos posibles}} \\
+P(A^c)=1-P(A)
+\end{gather*}
+
+\begin{gather*}
+P(A\cup B)=P(A)+P(B)-P(A\cap B) \\
+\text{independientes: } P(A\cap B)=P(A)\cdot P(B)
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Probabilidad y conteo}
+  {\small Se lanza una moneda dos veces. ¿Cuál es la probabilidad de obtener al menos una cara?}
+  \vspace{0.4em}
+  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
+  \alternativa{A}{$\dfrac{1}{4}$}
+  \alternativa{B}{$\dfrac{1}{2}$}
+  \alternativa{C}{$\dfrac{2}{3}$}
+  \alternativa{D}{$\dfrac{3}{4}$}
+  \end{tcbraster}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Usa el complemento: «al menos una cara» es lo contrario de «ninguna cara».}
+  {\small
+  \paso{1}{$P(\text{ninguna cara})=P(\text{SS})=\dfrac{1}{4}$.}
+  \paso{2}{$P(\text{al menos una})=1-\dfrac{1}{4}=\dfrac{3}{4}$.}
+  }
+  \alternativaok{D}{$\dfrac{3}{4}$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Contar pares no ordenados en experimentos con orden, como dos dados.
+    \item Suponer equiprobables resultados que no lo son, como las sumas de dos dados.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+%%</CONTENIDO>%%
+
+\end{document}

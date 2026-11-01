@@ -1,0 +1,165 @@
+% =============================================================================
+%  PAES Studio: guía de síntesis (plantilla)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Formato: A4, dos columnas, cajas tcolorbox con la paleta Zinc de la app.
+%  Entornos disponibles:
+%    definicion, formula, ley, mecanismo, ideasclave, metodo, ejemplo,
+%    errorfrecuente, dato, lineatiempo   (título opcional en [])
+%  Comandos:
+%    \alternativa{A}{texto}   alternativa con su tecla (igual que en la app)
+%    \clave{C}        marca la alternativa correcta
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%. Fuera de ellos, edita libremente.
+% =============================================================================
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=1.5cm,top=1.9cm,bottom=1.9cm,columnsep=0.75cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ── Paleta Zinc (misma que la app) ───────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc100}{HTML}{F4F4F5}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+\definecolor{ambar}{HTML}{B45309}
+
+% ── Tipografía: texto con serifa, estructura en sans ─────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.08}
+\color{zinc900}
+\newcommand{\sen}{\operatorname{sen}}
+\renewcommand{\arraystretch}{1.18}
+
+\titleformat{\section}{\sffamily\bfseries\large\color{zinc950}}{\thesection}{0.6em}{}
+  [{\color{zinc300}\titlerule[0.4pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{zinc900}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.3em}
+
+\setlist{leftmargin=1.2em,itemsep=0.15em,topsep=0.3em}
+\setlist[itemize]{label={\color{zinc500}\textbullet}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\scriptsize\color{zinc500}\guiaAsignatura}
+\fancyfoot[R]{\sffamily\scriptsize\color{zinc500}\thepage}
+
+% ── Cajas ────────────────────────────────────────────────────────────────────
+\tcbset{
+  paes/.style={
+    enhanced, breakable, sharp corners=south, arc=1.5pt,
+    boxrule=0.4pt, colback=white, colframe=zinc300,
+    colbacktitle=white, coltitle=zinc900, titlerule=0pt,
+    fonttitle=\sffamily\bfseries\footnotesize,
+    toptitle=3pt, bottomtitle=0pt,
+    left=7pt, right=7pt, top=2pt, bottom=6pt,
+    before skip=7pt, after skip=7pt,
+  },
+  acento/.style={borderline west={2pt}{0pt}{#1}},
+}
+\newtcolorbox{definicion}[1][Definición]{paes, acento=zinc900, title={#1}}
+\newtcolorbox{formula}[1][Fórmula clave]{paes, colback=zinc50, colbacktitle=zinc50, title={#1}}
+\newtcolorbox{ejemplo}[1][Ejemplo resuelto]{paes, title={#1}}
+\newtcolorbox{errorfrecuente}[1][Error frecuente]{paes, colframe=rosa!35, acento=rosa, title={#1}}
+\newtcolorbox{dato}[1][Dato PAES]{paes, colframe=ambar!40, acento=ambar, title={#1}}
+\newtcolorbox{mecanismo}[1][Mecanismo]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc700, title={#1}}
+\newtcolorbox{ley}[1][Ley]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc900, title={#1}}
+\newtcolorbox{ideasclave}[1][Ideas clave]{paes, title={#1}}
+\newtcolorbox{metodo}[1][Cómo abordarlo en la PAES]{paes, acento=esmeralda, title={#1}}
+% Línea de tiempo: filas «fecha & hecho \\».
+\newenvironment{lineatiempo}[1][Línea de tiempo]
+  {\begin{tcolorbox}[paes, acento=zinc700, title={#1}]\small\renewcommand{\arraystretch}{1.25}%
+   \begin{tabular}{@{}>{\leavevmode\sffamily\bfseries\color{zinc700}}p{0.24\linewidth}p{\dimexpr0.76\linewidth-2\tabcolsep\relax}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+
+% Alternativa con su tecla (eco de la anatomía A–E de la app).
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\bfseries\color{white}}
+\newcommand{\alternativa}[2]{\par\noindent\hangindent=1.6em\hangafter=1\makebox[1.6em][l]{\tecla{#1}}#2\par}
+\newcommand{\clave}[1]{\par\smallskip{\sffamily\footnotesize\color{esmeralda} Clave \teclaok{#1}}\par}
+
+% Barra horizontal proporcional (para tablas de frecuencia).
+\newcommand{\barra}[1]{{\color{zinc900}\rule[0.15ex]{#1\linewidth}{0.9ex}}}
+
+%%<META>%%
+\newcommand{\guiaTitulo}{Guía de síntesis}
+\newcommand{\guiaAsignatura}{Competencia Matemática 1 (M1)}
+\newcommand{\guiaDescripcion}{Conceptos, fórmulas y errores frecuentes de los ejes más evaluados.}
+\newcommand{\guiaFuente}{Ejemplo de plantilla. Genera la versión completa con \texttt{npm run latex}.}
+%%</META>%%
+
+\begin{document}
+
+\twocolumn[{%
+  \begin{tcolorbox}[enhanced, frame hidden, colback=white, left=0pt, right=0pt, top=0pt, bottom=6pt,
+      borderline south={0.4pt}{0pt}{zinc300}]
+    {\sffamily\footnotesize\color{zinc500} PAES Studio}\par\vspace{0.2em}
+    {\sffamily\bfseries\LARGE\color{zinc950} \guiaTitulo: \guiaAsignatura}\par\vspace{0.35em}
+    {\normalsize\color{zinc700} \guiaDescripcion}\par\vspace{0.25em}
+    {\sffamily\scriptsize\color{zinc500} \guiaFuente}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}]
+
+%%<CONTENIDO>%%
+\section{Cómo usar esta guía}
+Cada sección corresponde a un eje temático, ordenado según su frecuencia en los ensayos.
+Lee primero las cajas de definición y fórmula; luego resuelve el ejemplo antes de mirar el desarrollo.
+
+\begin{definicion}[Potencias de igual base]
+Para $a \neq 0$ y $m, n \in \mathbb{Z}$: $a^m \cdot a^n = a^{m+n}$ y $\dfrac{a^m}{a^n} = a^{m-n}$.
+\end{definicion}
+
+\begin{formula}
+\[ (a^m)^n = a^{m\cdot n} \qquad a^{-n} = \frac{1}{a^n} \]
+\end{formula}
+
+\begin{ejemplo}
+¿Cuál es el valor de $\dfrac{2^{5}\cdot 4^{3}}{8^{3}}$?
+\alternativa{A}{$2$}
+\alternativa{B}{$8$}
+\alternativa{C}{$4$}
+\alternativa{D}{$16$}
+\clave{C}
+\begin{enumerate}
+  \item $4^3 = 2^6$ y $8^3 = 2^9$.
+  \item $\dfrac{2^{5}\cdot 2^{6}}{2^{9}} = 2^{11-9} = 2^2 = 4$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{errorfrecuente}
+Sumar los exponentes al elevar una potencia: $(2^2)^3 = 2^6$, no $2^5$.
+\end{errorfrecuente}
+
+\begin{dato}
+En la PAES no se descuenta puntaje por respuestas incorrectas: responde todas las preguntas.
+\end{dato}
+%%</CONTENIDO>%%
+
+\end{document}

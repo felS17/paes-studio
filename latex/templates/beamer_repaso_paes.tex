@@ -1,0 +1,147 @@
+% =============================================================================
+%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
+%  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Comandos:
+%    \alternativa{A}{texto}       alternativa
+%    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
+%    \paso{n}{texto}      paso numerado del desarrollo
+%    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
+%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
+% =============================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+
+% ── Paleta Zinc ──────────────────────────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+
+\newcommand{\sen}{\operatorname{sen}}
+
+% ── Tema mínimo ──────────────────────────────────────────────────────────────
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=zinc900}
+\setbeamercolor{structure}{fg=zinc900}
+\setbeamercolor{alerted text}{fg=zinc950}
+\setbeamercolor{item}{fg=zinc500}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{itemize items}{\raisebox{0.15ex}{\color{zinc500}\scriptsize$\bullet$}}
+\setbeamertemplate{enumerate items}{\color{zinc500}\insertenumlabel.}
+\setbeamersize{text margin left=1.6cm,text margin right=1.6cm}
+
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.9em}%
+  {\usebeamerfont{frametitle}\color{zinc950}\insertframetitle}\par
+  \ifx\insertframesubtitle\@empty\else{\small\color{zinc500}\insertframesubtitle}\par\fi
+  \vspace{0.25em}{\color{zinc200}\rule{\textwidth}{0.4pt}}%
+}
+\makeatother
+\setbeamertemplate{footline}{%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+}
+\setbeamertemplate{title page}{%
+  \vfill
+  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
+  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
+  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
+  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc500}\insertdate}\par
+  \vfill
+}
+
+% ── Componentes ──────────────────────────────────────────────────────────────
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\bfseries\color{white}}
+\newtcolorbox{opcion}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=zinc300,
+  left=6pt, right=6pt, top=3pt, bottom=3pt, before skip=3pt, after skip=3pt, #1}
+\newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
+\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+  borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
+\newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
+  borderline west={2pt}{0pt}{rosa}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=white, titlerule=0pt, title={#1}}
+\newenvironment{lineatiempo}
+  {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
+  {\end{tabular}}
+\newlength{\anchobarra}
+\newcommand{\ejebarra}[3]{%
+  \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
+  \setlength{\anchobarra}{0.5\linewidth}%
+  \makebox[\anchobarra][l]{{\color{zinc200}\rule[0.2ex]{\anchobarra}{1.1ex}}\hspace*{-\anchobarra}{\color{zinc900}\rule[0.2ex]{#2\anchobarra}{1.1ex}}}%
+  \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
+
+%%<META>%%
+\title[Repaso PAES: Matemática M1]{Repaso PAES}
+\subtitle{Competencia Matemática 1 (M1)}
+\date{Plantilla de ejemplo}
+%%</META>%%
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+%%<CONTENIDO>%%
+\begin{frame}{Qué evalúa la prueba}
+  \framesubtitle{Distribución de preguntas por eje en los ensayos analizados}
+  \vspace{0.8em}
+  \ejebarra{Números}{0.34}{34 \%}
+  \ejebarra{Álgebra y funciones}{0.28}{28 \%}
+  \ejebarra{Geometría}{0.20}{20 \%}
+  \ejebarra{Probabilidad y estadística}{0.18}{18 \%}
+\end{frame}
+
+\begin{frame}{Pregunta}
+  \framesubtitle{Números: potencias}
+  ¿Cuál es el valor de $\dfrac{2^{5}\cdot 4^{3}}{8^{3}}$?
+  \vspace{0.6em}
+  \alternativa{A}{$2$}
+  \alternativa{B}{$8$}
+  \alternativa{C}{$4$}
+  \alternativa{D}{$16$}
+\end{frame}
+
+\begin{frame}{Desarrollo}
+  \framesubtitle{Escribe todo en base 2 y opera con los exponentes}
+  \vspace{0.4em}
+  \paso{1}{$4^3 = (2^2)^3 = 2^6$ y $8^3 = (2^3)^3 = 2^9$.}
+  \paso{2}{$2^5\cdot 2^6 = 2^{11}$.}
+  \paso{3}{$\dfrac{2^{11}}{2^{9}} = 2^2 = 4$.}
+  \vspace{0.4em}
+  \alternativaok{C}{$4$}
+\end{frame}
+%%</CONTENIDO>%%
+
+\end{document}

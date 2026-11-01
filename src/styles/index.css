@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Geist Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Newsreader Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --color-canvas: #fafafa;
+  --color-canvas-dark: #09090b;
+  --color-surface: #ffffff;
+  --color-surface-dark: #121215;
+
+  --animate-fade-in: fade-in 160ms ease-out;
+  --animate-pop: pop 180ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(2px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes pop {
+    from { transform: scale(0.96); }
+    to { transform: scale(1); }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'ss01', 'cv11';
+    color-scheme: light;
+  }
+  html.dark { color-scheme: dark; }
+  body {
+    @apply bg-[#FAFAFA] font-sans text-[14px] text-zinc-900 dark:bg-[#09090B] dark:text-zinc-100;
+  }
+  ::selection { @apply bg-zinc-900/10 dark:bg-zinc-100/20; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-zinc-900 dark:outline-zinc-100; }
+  button, [role='button'] { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 1ms !important;
+      transition-duration: 1ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Texto híbrido Markdown + LaTeX (MathText). */
+  .mt-prose { @apply text-pretty; }
+  .mt-prose > * + * { margin-top: 0.85em; }
+  .mt-prose strong { @apply font-semibold text-zinc-950 dark:text-white; }
+  .mt-prose em { font-style: italic; }
+  .mt-prose ul { @apply list-disc space-y-1 pl-5; }
+  .mt-prose ol { @apply list-decimal space-y-1 pl-5; }
+  .mt-prose h3 { @apply text-[1.05em] font-semibold tracking-tight; }
+  .mt-prose blockquote { @apply border-l-2 border-zinc-300 pl-3.5 text-zinc-600 dark:border-zinc-700 dark:text-zinc-400; }
+  .mt-prose table { @apply w-full border-collapse text-[0.92em] tabular-nums; }
+  .mt-prose th { @apply border-b border-zinc-300 px-2.5 py-1.5 text-left font-medium dark:border-zinc-700; }
+  .mt-prose td { @apply border-b border-zinc-200/80 px-2.5 py-1.5 dark:border-zinc-800/80; }
+  .mt-prose .mt-table { @apply overflow-x-auto rounded-lg border border-zinc-200/80 dark:border-zinc-800/80; }
+  .mt-prose .mt-table table td:first-child, .mt-prose .mt-table table th:first-child { @apply pl-3; }
+  .mt-prose .katex { font-size: 1.06em; }
+  .mt-prose .katex-display { @apply my-3 overflow-x-auto overflow-y-hidden py-1; }
+  .mt-prose figure img { @apply mx-auto h-auto max-w-full; }
+  .mt-prose figcaption { @apply mt-2 text-center font-sans text-xs text-zinc-500 dark:text-zinc-400; }
+
+  /* Recortes en escala de grises: se invierten en modo oscuro para no encandilar. */
+  .snapshot-mono { @apply dark:[filter:invert(0.93)_hue-rotate(180deg)]; }
+}
+
+/* KaTeX hereda el color del texto. */
+.katex { color: inherit; }

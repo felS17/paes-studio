@@ -1,0 +1,1385 @@
+% =============================================================================
+%  PAES Studio: guía de síntesis (plantilla)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Formato: A4, dos columnas, cajas tcolorbox con la paleta Zinc de la app.
+%  Entornos disponibles:
+%    definicion, formula, ley, mecanismo, ideasclave, metodo, ejemplo,
+%    errorfrecuente, dato, lineatiempo   (título opcional en [])
+%  Comandos:
+%    \alternativa{A}{texto}   alternativa con su tecla (igual que en la app)
+%    \clave{C}        marca la alternativa correcta
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%. Fuera de ellos, edita libremente.
+% =============================================================================
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=1.5cm,top=1.9cm,bottom=1.9cm,columnsep=0.75cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ── Paleta Zinc (misma que la app) ───────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc100}{HTML}{F4F4F5}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+\definecolor{ambar}{HTML}{B45309}
+
+% ── Tipografía: texto con serifa, estructura en sans ─────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.08}
+\color{zinc900}
+\newcommand{\sen}{\operatorname{sen}}
+\renewcommand{\arraystretch}{1.18}
+
+\titleformat{\section}{\sffamily\bfseries\large\color{zinc950}}{\thesection}{0.6em}{}
+  [{\color{zinc300}\titlerule[0.4pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{zinc900}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.3em}
+
+\setlist{leftmargin=1.2em,itemsep=0.15em,topsep=0.3em}
+\setlist[itemize]{label={\color{zinc500}\textbullet}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\scriptsize\color{zinc500}\guiaAsignatura}
+\fancyfoot[R]{\sffamily\scriptsize\color{zinc500}\thepage}
+
+% ── Cajas ────────────────────────────────────────────────────────────────────
+\tcbset{
+  paes/.style={
+    enhanced, breakable, sharp corners=south, arc=1.5pt,
+    boxrule=0.4pt, colback=white, colframe=zinc300,
+    colbacktitle=white, coltitle=zinc900, titlerule=0pt,
+    fonttitle=\sffamily\bfseries\footnotesize,
+    toptitle=3pt, bottomtitle=0pt,
+    left=7pt, right=7pt, top=2pt, bottom=6pt,
+    before skip=7pt, after skip=7pt,
+  },
+  acento/.style={borderline west={2pt}{0pt}{#1}},
+}
+\newtcolorbox{definicion}[1][Definición]{paes, acento=zinc900, title={#1}}
+\newtcolorbox{formula}[1][Fórmula clave]{paes, colback=zinc50, colbacktitle=zinc50, title={#1}}
+\newtcolorbox{ejemplo}[1][Ejemplo resuelto]{paes, title={#1}}
+\newtcolorbox{errorfrecuente}[1][Error frecuente]{paes, colframe=rosa!35, acento=rosa, title={#1}}
+\newtcolorbox{dato}[1][Dato PAES]{paes, colframe=ambar!40, acento=ambar, title={#1}}
+\newtcolorbox{mecanismo}[1][Mecanismo]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc700, title={#1}}
+\newtcolorbox{ley}[1][Ley]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc900, title={#1}}
+\newtcolorbox{ideasclave}[1][Ideas clave]{paes, title={#1}}
+\newtcolorbox{metodo}[1][Cómo abordarlo en la PAES]{paes, acento=esmeralda, title={#1}}
+% Línea de tiempo: filas «fecha & hecho \\».
+\newenvironment{lineatiempo}[1][Línea de tiempo]
+  {\begin{tcolorbox}[paes, acento=zinc700, title={#1}]\small\renewcommand{\arraystretch}{1.25}%
+   \begin{tabular}{@{}>{\leavevmode\sffamily\bfseries\color{zinc700}}p{0.24\linewidth}p{\dimexpr0.76\linewidth-2\tabcolsep\relax}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+
+% Alternativa con su tecla (eco de la anatomía A–E de la app).
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\bfseries\color{white}}
+\newcommand{\alternativa}[2]{\par\noindent\hangindent=1.6em\hangafter=1\makebox[1.6em][l]{\tecla{#1}}#2\par}
+\newcommand{\clave}[1]{\par\smallskip{\sffamily\footnotesize\color{esmeralda} Clave \teclaok{#1}}\par}
+
+% Barra horizontal proporcional (para tablas de frecuencia).
+\newcommand{\barra}[1]{{\color{zinc900}\rule[0.15ex]{#1\linewidth}{0.9ex}}}
+
+%%<META>%%
+\newcommand{\guiaTitulo}{Compendio de estudio}
+\newcommand{\guiaAsignatura}{Competencia Matemática 1 (M1)}
+\newcommand{\guiaDescripcion}{La prueba M1 evalúa la resolución de problemas, la modelación, la representación y la argumentación con los contenidos de 7.º básico a 2.º medio. Tiene 65 preguntas de 4 alternativas y dura 2 h 20 min.}
+\newcommand{\guiaFuente}{4 ejes y 15 subtemas. Frecuencias calculadas sobre 7 ensayos (6 oficiales DEMRE), 390 preguntas. Generado el 1 de noviembre de 2026.}
+%%</META>%%
+
+\begin{document}
+
+\twocolumn[{%
+  \begin{tcolorbox}[enhanced, frame hidden, colback=white, left=0pt, right=0pt, top=0pt, bottom=6pt,
+      borderline south={0.4pt}{0pt}{zinc300}]
+    {\sffamily\footnotesize\color{zinc500} PAES Studio}\par\vspace{0.2em}
+    {\sffamily\bfseries\LARGE\color{zinc950} \guiaTitulo: \guiaAsignatura}\par\vspace{0.35em}
+    {\normalsize\color{zinc700} \guiaDescripcion}\par\vspace{0.25em}
+    {\sffamily\scriptsize\color{zinc500} \guiaFuente}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}]
+
+%%<CONTENIDO>%%
+\section*{Cómo usar este compendio}
+
+Cada subtema sigue el mismo orden: teoría, recuadro con las fórmulas, leyes o mecanismos centrales, ideas clave, método para responder en la PAES, trampas frecuentes y ejemplos resueltos paso a paso. Resuelve cada ejemplo antes de leer su desarrollo.
+
+\section*{Qué se evalúa}
+
+Distribución de las preguntas por eje en los ensayos disponibles en PAES Studio.
+
+\begin{center}\small
+
+\begin{tabular}{@{}p{0.42\linewidth}rrp{0.22\linewidth}@{}}
+
+\toprule Eje & Preg. & \% & \\ \midrule
+
+Números & 178 & 46 & \barra{0.100} \\
+
+Probabilidad y estadística & 94 & 24 & \barra{0.053} \\
+
+Geometría & 79 & 20 & \barra{0.045} \\
+
+Álgebra y funciones & 39 & 10 & \barra{0.022} \\
+
+\bottomrule
+
+\end{tabular}
+
+\end{center}
+
+\begin{dato}Números y Probabilidad y estadística concentran el 70 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
+
+\section{Números}
+
+{\itshape\color{zinc700} Operatoria en los conjuntos numéricos, porcentajes, potencias, raíces y proporcionalidad.}
+
+\subsection{Números enteros y racionales}
+
+Los números enteros ($\mathbb{Z}$) incluyen los naturales, el cero y los negativos. Los racionales ($\mathbb{Q}$) son los que pueden escribirse como $\frac{a}{b}$ con $a$ y $b$ enteros y $b \neq 0$: todo decimal finito o periódico es racional.
+
+Para operar se respeta la prioridad: primero paréntesis, luego potencias, después multiplicaciones y divisiones (de izquierda a derecha) y al final sumas y restas. Para sumar fracciones se iguala el denominador; para multiplicarlas se multiplican numeradores y denominadores; dividir es multiplicar por el recíproco.
+
+En la recta numérica, un número es mayor mientras más a la derecha está. Sumar un negativo equivale a desplazarse a la izquierda; restar un negativo, a la derecha.
+
+\begin{formula}[Operatoria con fracciones]
+\begin{gather*}
+\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd} \\
+\frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd} \\
+\frac{a}{b}:\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}
+\end{gather*}
+
+Decimal periódico: $0{,}\overline{3}=\dfrac{3}{9}=\dfrac{1}{3}$ y $0{,}1\overline{6}=\dfrac{16-1}{90}=\dfrac{1}{6}$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Prioridad: paréntesis, potencias, $\times$ y $\div$, $+$ y $-$.
+  \item Restar un negativo es sumar: $a-(-b)=a+b$.
+  \item Todo decimal finito o periódico es racional.
+  \item Para comparar fracciones, iguala denominadores o pásalas a decimal.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el orden de las operaciones antes de calcular.
+  \item Simplifica las fracciones en cada paso para trabajar con números pequeños.
+  \item Controla los signos: multiplica primero los signos y luego los valores absolutos.
+  \item Estima el resultado (signo y tamaño) para descartar alternativas imposibles.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Sumar numeradores y denominadores: $\frac{1}{2}+\frac{1}{3}\neq\frac{2}{5}$.
+  \item Resolver de izquierda a derecha ignorando que la multiplicación va antes que la resta.
+  \item Confundir $-3^2=-9$ con $(-3)^2=9$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es el valor de $-2 + 3\cdot(-4) - (-5)$?
+\alternativa{A}{$-19$}
+\alternativa{B}{$-9$}
+\alternativa{C}{$1$}
+\alternativa{D}{$9$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Primero la multiplicación; después sumas y restas, cuidando el doble signo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $3\cdot(-4)=-12$.
+  \item $-(-5)=+5$.
+  \item $-2-12+5=-9$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Operatoria con fracciones]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es el valor de $\dfrac{2}{3} - \dfrac{1}{4}\cdot\dfrac{8}{9}$?
+\alternativa{A}{$\dfrac{4}{9}$}
+\alternativa{B}{$\dfrac{10}{27}$}
+\alternativa{C}{$\dfrac{2}{9}$}
+\alternativa{D}{$\dfrac{8}{9}$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Respeta la prioridad de operaciones: primero la multiplicación y después la resta.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Multiplica: $\dfrac{1}{4}\cdot\dfrac{8}{9} = \dfrac{8}{36} = \dfrac{2}{9}$.
+  \item Escribe $\dfrac{2}{3}$ con denominador 9: $\dfrac{2}{3} = \dfrac{6}{9}$.
+  \item Resta: $\dfrac{6}{9} - \dfrac{2}{9} = \dfrac{4}{9}$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Potencias]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es el valor de $\dfrac{2^{5}\cdot 4^{3}}{8^{3}}$?
+\alternativa{A}{$2$}
+\alternativa{B}{$8$}
+\alternativa{C}{$4$}
+\alternativa{D}{$16$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Escribe todas las potencias en la misma base (2) y opera con los exponentes.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Como $4 = 2^2$ y $8 = 2^3$: $4^3 = (2^2)^3 = 2^6$ y $8^3 = (2^3)^3 = 2^9$.
+  \item Multiplicación de igual base, se suman exponentes: $2^5\cdot 2^6 = 2^{11}$.
+  \item División de igual base, se restan exponentes: $\dfrac{2^{11}}{2^{9}} = 2^{2} = 4$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Porcentajes y problemas con dinero}
+
+Un porcentaje es una razón con denominador 100: el $p\,\%$ de $x$ es $\frac{p}{100}\cdot x$. Aumentar un valor en un $p\,\%$ equivale a multiplicarlo por $\left(1+\frac{p}{100}\right)$, y disminuirlo, por $\left(1-\frac{p}{100}\right)$.
+
+Los porcentajes sucesivos se multiplican, porque cada uno se aplica sobre el valor ya modificado. En problemas con dinero conviene ordenar los datos (precio unitario, cantidad, total) y revisar las unidades.
+
+\begin{formula}[Factores de variación]
+\begin{gather*}
+\text{aumento de } p\,\%:\ x\left(1+\tfrac{p}{100}\right) \\
+\text{descuento de } p\,\%:\ x\left(1-\tfrac{p}{100}\right)
+\end{gather*}
+
+\[\text{variación porcentual}=\frac{\text{valor final}-\text{valor inicial}}{\text{valor inicial}}\cdot 100\]
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item El 25 \% de 80 es $0{,}25\cdot 80=20$.
+  \item Subir 10 \% y luego bajar 10 \% deja el valor un 1 \% más bajo: $1{,}1\cdot 0{,}9=0{,}99$.
+  \item La variación porcentual siempre se calcula sobre el valor inicial.
+  \item Precio con IVA (19 \%) $=1{,}19\cdot$ precio neto.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica sobre qué cantidad (base) se aplica cada porcentaje.
+  \item Convierte cada cambio en un factor multiplicativo.
+  \item Multiplica los factores en orden y aplícalos a la base.
+  \item Compara con las alternativas y verifica con un cálculo aproximado.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Sumar porcentajes sucesivos: $+20\,\%$ y $-20\,\%$ no se anulan.
+  \item Calcular la variación porcentual sobre el valor final.
+  \item Confundir «el 30 \% de» con «un 30 \% más que».
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un producto cuesta \$12 000 sin IVA. Si el IVA es del 19 \%, ¿cuál es su precio final?
+\alternativa{A}{\$2280}
+\alternativa{B}{\$12 190}
+\alternativa{C}{\$14 280}
+\alternativa{D}{\$15 600}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El precio final es el neto más el 19 \% del neto, es decir, el neto multiplicado por 1,19.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item IVA: $0{,}19\cdot 12\,000=2280$.
+  \item Precio final: $12\,000+2280=14\,280$, o directamente $12\,000\cdot 1{,}19$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Porcentajes sucesivos]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una zapatilla cuesta \$40 000. En marzo su precio sube un 20 \% y en abril el nuevo precio baja un 20 \%.
+
+¿Cuál es el precio de la zapatilla después de ambos cambios?
+\alternativa{A}{\$40 000}
+\alternativa{B}{\$38 400}
+\alternativa{C}{\$32 000}
+\alternativa{D}{\$48 000}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Los porcentajes sucesivos se aplican sobre el precio vigente en cada momento, por eso se multiplican sus factores.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Subir un 20 \% equivale a multiplicar por $1{,}2$: $40\,000\cdot 1{,}2 = 48\,000$.
+  \item Bajar un 20 \% equivale a multiplicar por $0{,}8$: $48\,000\cdot 0{,}8 = 38\,400$.
+  \item En una sola cuenta: $40\,000\cdot 1{,}2\cdot 0{,}8 = 40\,000\cdot 0{,}96 = 38\,400$. El precio final es un 4 \% menor que el inicial.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Potencias y raíces}
+
+Una potencia $a^n$ abrevia la multiplicación de $a$ por sí mismo $n$ veces. Con exponentes enteros se cumple $a^0=1$ (si $a\neq 0$) y $a^{-n}=\frac{1}{a^n}$. La notación científica escribe un número como $k\cdot 10^n$ con $1\le k<10$.
+
+La raíz $\sqrt[n]{a}$ es el número que elevado a $n$ da $a$; equivale a la potencia $a^{1/n}$. Solo se suman o restan raíces semejantes (mismo índice y misma cantidad subradical), por eso primero se simplifican extrayendo factores.
+
+\begin{formula}[Propiedades]
+\begin{gather*}
+a^m\cdot a^n=a^{m+n} \\
+\frac{a^m}{a^n}=a^{m-n} \\
+(a^m)^n=a^{mn} \\
+(ab)^n=a^nb^n
+\end{gather*}
+
+\begin{gather*}
+\sqrt[n]{ab}=\sqrt[n]{a}\,\sqrt[n]{b} \\
+\sqrt[n]{a^m}=a^{m/n} \\
+\sqrt{72}=\sqrt{36\cdot 2}=6\sqrt{2}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Lleva todo a la misma base antes de operar: $8=2^3$, $27=3^3$.
+  \item El exponente negativo invierte, no cambia el signo: $2^{-3}=\frac{1}{8}$.
+  \item $\sqrt{a+b}\neq\sqrt{a}+\sqrt{b}$.
+  \item Notación científica: $0{,}00034=3{,}4\cdot 10^{-4}$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Descompón las bases en factores primos para igualarlas.
+  \item Aplica una propiedad por paso y escríbelo.
+  \item En raíces, extrae los factores cuadrados perfectos antes de sumar o restar.
+  \item Comprueba el signo y el orden de magnitud del resultado.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Multiplicar las bases: $2^3\cdot 2^4\neq 4^7$ (es $2^7$).
+  \item Sumar exponentes al elevar una potencia: $(2^3)^2=2^6$, no $2^5$.
+  \item Restar radicandos: $\sqrt{50}-\sqrt{18}\neq\sqrt{32}$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es el valor de $\dfrac{9^{2}\cdot 3^{-1}}{27}$?
+\alternativa{A}{$\dfrac{1}{3}$}
+\alternativa{B}{$1$}
+\alternativa{C}{$3$}
+\alternativa{D}{$9$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Todo se puede escribir en base 3.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $9^2=(3^2)^2=3^4$ y $27=3^3$.
+  \item Numerador: $3^4\cdot 3^{-1}=3^{3}$.
+  \item $\dfrac{3^3}{3^3}=1$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Raíces]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es el resultado de $\sqrt{50} - \sqrt{18}$?
+\alternativa{A}{$\sqrt{32}$}
+\alternativa{B}{$4$}
+\alternativa{C}{$8\sqrt{2}$}
+\alternativa{D}{$2\sqrt{2}$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Solo se pueden restar raíces semejantes (mismo índice y misma cantidad subradical), así que primero se simplifican.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Descompón: $\sqrt{50} = \sqrt{25\cdot 2} = 5\sqrt{2}$ y $\sqrt{18} = \sqrt{9\cdot 2} = 3\sqrt{2}$.
+  \item Resta los coeficientes de las raíces semejantes: $5\sqrt{2} - 3\sqrt{2} = 2\sqrt{2}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Razones y proporcionalidad}
+
+Dos magnitudes son directamente proporcionales si su cociente es constante ($\frac{y}{x}=k$): al duplicar una, la otra se duplica. Son inversamente proporcionales si su producto es constante ($xy=k$): al duplicar una, la otra se reduce a la mitad.
+
+Una razón $a:b$ compara dos cantidades por cociente. Repartir una cantidad en la razón $a:b:c$ es dividirla en $a+b+c$ partes iguales y asignar $a$, $b$ y $c$ de esas partes.
+
+\begin{formula}[Igualdades clave]
+\begin{gather*}
+\text{directa: } \frac{y_1}{x_1}=\frac{y_2}{x_2} \\
+\text{inversa: } x_1\,y_1=x_2\,y_2
+\end{gather*}
+\end{formula}
+
+{\sffamily\footnotesize\color{zinc500} Esquema comparativo}
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Directa} & \textbf{Inversa} \\
+\midrule
+Constante & $\frac{y}{x}=k$ & $x\cdot y=k$ \\
+Gráfico & recta que pasa por el origen & hipérbola \\
+Ejemplo & kilos comprados y precio & trabajadores y días de obra \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Pregúntate: si una magnitud aumenta, ¿la otra aumenta o disminuye?
+  \item Reparto proporcional: total $\div$ suma de las partes.
+  \item Escala 1:50 000: 1 cm en el mapa son 50 000 cm = 500 m reales.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Decide con sentido común si la relación es directa o inversa.
+  \item Plantea la igualdad de cocientes (directa) o de productos (inversa).
+  \item Despeja la incógnita y revisa que el resultado tenga sentido.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Tratar como directa una relación inversa (más trabajadores, menos días).
+  \item En un reparto, dividir el total por el número de personas en vez de por la suma de las partes.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se reparten \$60 000 entre Ana y Beto en la razón $2:3$. ¿Cuánto recibe Beto?
+\alternativa{A}{\$24 000}
+\alternativa{B}{\$30 000}
+\alternativa{C}{\$36 000}
+\alternativa{D}{\$40 000}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La razón $2:3$ divide el total en 5 partes iguales.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Cada parte vale $\dfrac{60\,000}{2+3}=12\,000$.
+  \item Beto recibe 3 partes: $3\cdot 12\,000=36\,000$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Proporcionalidad inversa]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Si 6 personas pintan una casa en 10 días, ¿cuántos días tardarían 4 personas trabajando al mismo ritmo?
+\alternativa{A}{$\dfrac{20}{3}$ días}
+\alternativa{B}{12 días}
+\alternativa{C}{15 días}
+\alternativa{D}{20 días}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Menos personas tardan más días: es una proporcionalidad inversa, donde el producto se mantiene constante.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El trabajo total es $6\cdot 10 = 60$ días-persona.
+  \item Con 4 personas: $4\cdot d = 60 \Rightarrow d = 15$ días.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Álgebra y funciones}
+
+{\itshape\color{zinc700} Expresiones algebraicas, ecuaciones, sistemas y funciones afín y cuadrática.}
+
+\subsection{Expresiones algebraicas y factorización}
+
+Una expresión algebraica combina números y letras con operaciones. Los términos semejantes (misma parte literal) se suman sumando sus coeficientes. Los productos notables permiten desarrollar rápido y, leídos al revés, factorizar.
+
+Factorizar es escribir una expresión como producto. Primero se busca un factor común; después se reconoce un producto notable o un trinomio $x^2+bx+c$, que se factoriza buscando dos números cuyo producto sea $c$ y cuya suma sea $b$.
+
+\begin{formula}[Productos notables]
+\begin{gather*}
+(a\pm b)^2=a^2\pm 2ab+b^2 \\
+(a+b)(a-b)=a^2-b^2 \\
+(x+p)(x+q)=x^2+(p+q)x+pq
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Primero el factor común: $6x^2-9x=3x(2x-3)$.
+  \item Diferencia de cuadrados: $x^2-49=(x+7)(x-7)$.
+  \item $(a+b)^2\neq a^2+b^2$: falta el término $2ab$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Busca un factor común numérico y literal.
+  \item Cuenta los términos: dos sugieren diferencia de cuadrados; tres, cuadrado de binomio o trinomio $x^2+bx+c$.
+  \item Comprueba multiplicando los factores obtenidos.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Olvidar el doble producto en $(a+b)^2$.
+  \item Equivocar los signos al sacar un factor negativo: $-x+3=-(x-3)$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes expresiones es equivalente a $4x^2-25$?
+\alternativa{A}{$(2x-5)^2$}
+\alternativa{B}{$(2x+5)(2x-5)$}
+\alternativa{C}{$(4x-5)(x+5)$}
+\alternativa{D}{$(2x-25)(2x+1)$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Son dos cuadrados perfectos restados: $(2x)^2-5^2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $4x^2=(2x)^2$ y $25=5^2$.
+  \item Diferencia de cuadrados: $(2x)^2-5^2=(2x+5)(2x-5)$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Factorización]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes expresiones es equivalente a $x^2 - 9x + 20$?
+\alternativa{A}{$(x-4)(x-5)$}
+\alternativa{B}{$(x+4)(x+5)$}
+\alternativa{C}{$(x-2)(x-10)$}
+\alternativa{D}{$(x+2)(x-10)$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Para factorizar $x^2 + bx + c$ se buscan dos números que multiplicados den $c$ y sumados den $b$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Se buscan dos números cuyo producto sea $20$ y cuya suma sea $-9$: son $-4$ y $-5$.
+  \item Por lo tanto $x^2 - 9x + 20 = (x-4)(x-5)$.
+  \item Comprobación: $(x-4)(x-5) = x^2 - 5x - 4x + 20 = x^2 - 9x + 20$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Ecuaciones e inecuaciones lineales}
+
+Una ecuación lineal se resuelve aplicando la misma operación a ambos lados hasta aislar la incógnita. En los problemas con enunciado lo central es traducir: «el doble de» es $2x$, «excede en 5» es $+5$, «la mitad de la suma» es $\frac{a+b}{2}$.
+
+En una inecuación se procede igual, con una excepción: al multiplicar o dividir por un número negativo se invierte el sentido de la desigualdad. La solución es un intervalo.
+
+\begin{formula}[Notación de intervalos (DEMRE)]
+\begin{gather*}
+[a,b]=\{x: a\le x\le b\} \\
+]a,b[=\{x: a<x<b\} \\
+[a,+\infty[=\{x: x\ge a\}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Si $-2x\le 6$, entonces $x\ge -3$ (se invierte la desigualdad).
+  \item Para eliminar denominadores, multiplica \textbf{todos} los términos por el m.c.m.
+  \item Revisa qué pide la pregunta: a veces no es $x$, sino otra cantidad.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Traduce el enunciado a una ecuación indicando qué representa la incógnita.
+  \item Elimina paréntesis y denominadores.
+  \item Agrupa términos y despeja; si divides por un negativo, invierte la desigualdad.
+  \item Reemplaza la solución en el enunciado original para comprobar.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item No invertir la desigualdad al dividir por un número negativo.
+  \item Multiplicar por el m.c.m. solo algunos términos.
+  \item Responder el valor de $x$ cuando se pregunta por otra cantidad.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+La suma de tres números enteros consecutivos es 72. ¿Cuál es el mayor de ellos?
+\alternativa{A}{23}
+\alternativa{B}{24}
+\alternativa{C}{25}
+\alternativa{D}{26}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Llama $x$ al menor; los otros son $x+1$ y $x+2$. Ojo: se pregunta por el mayor.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $x+(x+1)+(x+2)=72 \Rightarrow 3x+3=72 \Rightarrow x=23$.
+  \item Los números son 23, 24 y 25; el mayor es 25.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Inecuaciones]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es el conjunto solución de la inecuación $5 - 2x \le 11$?
+\alternativa{A}{$x \le -3$}
+\alternativa{B}{$x \ge -3$}
+\alternativa{C}{$x \ge 3$}
+\alternativa{D}{$x \le 3$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Al multiplicar o dividir una desigualdad por un número negativo, el sentido de la desigualdad se invierte.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Resta 5 a ambos lados: $-2x \le 6$.
+  \item Divide por $-2$ e invierte el signo: $x \ge -3$.
+  \item Comprobación con $x = 0$ (que cumple $x \ge -3$): $5 - 0 = 5 \le 11$. Verdadero.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Sistemas de ecuaciones lineales}
+
+Un sistema de dos ecuaciones lineales con dos incógnitas representa dos rectas: tiene solución única si se cortan, ninguna si son paralelas e infinitas si son la misma recta.
+
+Se resuelve por sustitución (despejar una incógnita y reemplazarla), igualación o reducción (amplificar y sumar o restar las ecuaciones para eliminar una incógnita).
+
+\begin{formula}[Cantidad de soluciones de $ax+by=c,\textbackslash\{\} dx+ey=f$]
+Única si $\dfrac{a}{d}\neq\dfrac{b}{e}$; ninguna si $\dfrac{a}{d}=\dfrac{b}{e}\neq\dfrac{c}{f}$; infinitas si $\dfrac{a}{d}=\dfrac{b}{e}=\dfrac{c}{f}$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Reducción: elige la incógnita con coeficientes fáciles de igualar.
+  \item Comprueba la solución en \textbf{ambas} ecuaciones.
+  \item En problemas, define claramente qué representa cada variable.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Define las variables y plantea una ecuación por cada condición.
+  \item Elimina una variable por reducción o sustitución.
+  \item Calcula la otra variable y comprueba en las dos ecuaciones.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Reemplazar el valor en la misma ecuación de la que se despejó (siempre se cumple).
+  \item Responder la variable que no se pedía.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En una librería, 2 cuadernos y 3 lápices cuestan \$5400, y 1 cuaderno y 2 lápices cuestan \$3000. ¿Cuánto cuesta un cuaderno?
+\alternativa{A}{\$600}
+\alternativa{B}{\$1200}
+\alternativa{C}{\$1800}
+\alternativa{D}{\$2400}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Sean $c$ y $\ell$ los precios: $2c+3\ell=5400$ y $c+2\ell=3000$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item De la segunda: $c=3000-2\ell$.
+  \item Sustituye: $2(3000-2\ell)+3\ell=5400 \Rightarrow 6000-\ell=5400 \Rightarrow \ell=600$.
+  \item $c=3000-1200=1800$. Comprobación: $2\cdot 1800+3\cdot 600=5400$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Ecuaciones lineales]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es la solución de la ecuación $3(x-2) = 2x + 5$?
+\alternativa{A}{$x = 3$}
+\alternativa{B}{$x = 7$}
+\alternativa{C}{$x = -1$}
+\alternativa{D}{$x = 11$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Distribuye el 3 en el paréntesis y luego agrupa los términos con $x$ en un lado.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Distribuye: $3x - 6 = 2x + 5$.
+  \item Resta $2x$ a ambos lados: $x - 6 = 5$.
+  \item Suma 6: $x = 11$. Comprobación: $3(11-2) = 27$ y $2\cdot 11 + 5 = 27$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Sistemas de ecuaciones]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En un taller de robótica hay 12 estudiantes. Si hay 4 mujeres más que hombres, ¿cuántas mujeres hay en el taller?
+\alternativa{A}{4}
+\alternativa{B}{6}
+\alternativa{C}{8}
+\alternativa{D}{10}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Dos condiciones, dos incógnitas: plantea un sistema y resuélvelo por reducción.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Sean $m$ las mujeres y $h$ los hombres: $m + h = 12$ y $m - h = 4$.
+  \item Suma ambas ecuaciones: $2m = 16 \Rightarrow m = 8$.
+  \item Entonces $h = 12 - 8 = 4$; efectivamente hay 4 mujeres más que hombres.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Función lineal y afín}
+
+Una función asigna a cada elemento del dominio un único valor. La función afín $f(x)=mx+n$ tiene como gráfico una recta: $m$ es la pendiente (cuánto cambia $f$ cuando $x$ aumenta en 1) y $n$ es el coeficiente de posición (corte con el eje $Y$). Si $n=0$ es lineal y modela una proporcionalidad directa.
+
+En contexto, la pendiente es una tasa (pesos por kilómetro, litros por minuto) y $n$ es el valor inicial o cargo fijo.
+
+\begin{formula}[Pendiente y ecuación]
+\begin{gather*}
+m=\frac{y_2-y_1}{x_2-x_1} \\
+f(x)=m(x-x_1)+y_1
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item $m>0$: creciente; $m<0$: decreciente; $m=0$: constante.
+  \item Evaluar $f(2)$ es reemplazar $x=2$; resolver $f(x)=2$ es buscar $x$.
+  \item Cargo fijo + tarifa por unidad $\Rightarrow f(x)=\text{tarifa}\cdot x+\text{fijo}$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el valor inicial (cuando la variable es 0) y la tasa de cambio.
+  \item Calcula la pendiente con dos puntos, restando en el mismo orden.
+  \item Escribe la función y verifícala con un punto conocido.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Restar en distinto orden en el numerador y en el denominador de la pendiente.
+  \item Confundir el cargo fijo con la tarifa por unidad.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un taxi cobra \$400 de bajada de bandera y \$150 por cada 200 m recorridos. ¿Qué función entrega el cobro $C$, en pesos, de un viaje de $x$ metros?
+\alternativa{A}{$C(x)=150x+400$}
+\alternativa{B}{$C(x)=0{,}75x+400$}
+\alternativa{C}{$C(x)=400x+150$}
+\alternativa{D}{$C(x)=200x+150$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La tarifa por metro es $\frac{150}{200}=0{,}75$ pesos; el cargo fijo es 400.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Tarifa por metro: $150:200=0{,}75$.
+  \item $C(x)=0{,}75x+400$. Control: 200 m cuestan $150+400=550$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Función cuadrática}
+
+La función $f(x)=ax^2+bx+c$ ($a\neq 0$) tiene como gráfico una parábola. Si $a>0$ abre hacia arriba y tiene un mínimo; si $a<0$ abre hacia abajo y tiene un máximo. Corta el eje $Y$ en $(0,c)$.
+
+El vértice está en $x_v=-\frac{b}{2a}$ y la recta $x=x_v$ es el eje de simetría. Los ceros (cortes con el eje $X$) son las soluciones de $ax^2+bx+c=0$.
+
+\begin{formula}[Vértice y ceros]
+\begin{gather*}
+x_v=-\frac{b}{2a},\quad y_v=f(x_v) \\
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item El signo de $a$ decide si hay máximo o mínimo.
+  \item El valor máximo o mínimo es la \textbf{ordenada} del vértice.
+  \item Dos puntos simétricos tienen la misma altura: el vértice queda al medio.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica $a$, $b$ y $c$ con su signo.
+  \item Calcula $x_v=-\frac{b}{2a}$ y evalúa la función para obtener $y_v$.
+  \item Lee qué pide el problema: ¿el instante (abscisa) o el valor máximo (ordenada)?
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar $\frac{b}{2a}$ sin el signo menos.
+  \item Responder $x_v$ cuando se pide el valor máximo de la función.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+La altura, en metros, de una pelota lanzada hacia arriba es $h(t)=-5t^2+20t$, con $t$ en segundos. ¿Cuál es la altura máxima?
+\alternativa{A}{2 m}
+\alternativa{B}{15 m}
+\alternativa{C}{20 m}
+\alternativa{D}{40 m}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $a=-5<0$: la parábola tiene un máximo en el vértice.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $t_v=-\dfrac{20}{2\cdot(-5)}=2$ s.
+  \item $h(2)=-5\cdot 4+20\cdot 2=20$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Función afín]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+El gráfico de la función $f(x) = mx + n$ pasa por los puntos $(1, 3)$ y $(3, 7)$. ¿Cuál es el valor de $f(5)$?
+\alternativa{A}{$9$}
+\alternativa{B}{$11$}
+\alternativa{C}{$13$}
+\alternativa{D}{$15$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con dos puntos se calcula la pendiente; con ella y un punto, el coeficiente de posición.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Pendiente: $m = \dfrac{7-3}{3-1} = \dfrac{4}{2} = 2$.
+  \item Usando $(1,3)$: $3 = 2\cdot 1 + n \Rightarrow n = 1$. Así, $f(x) = 2x + 1$.
+  \item Evalúa: $f(5) = 2\cdot 5 + 1 = 11$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Función cuadrática]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuáles son las coordenadas del vértice de la parábola $f(x) = x^2 - 4x + 3$?
+\alternativa{A}{$(2, 3)$}
+\alternativa{B}{$(4, 3)$}
+\alternativa{C}{$(-2, 15)$}
+\alternativa{D}{$(2, -1)$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La abscisa del vértice de $ax^2 + bx + c$ es $x_v = -\dfrac{b}{2a}$; la ordenada se obtiene evaluando la función en ese valor.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Aquí $a = 1$ y $b = -4$: $x_v = -\dfrac{-4}{2\cdot 1} = 2$.
+  \item $f(2) = 2^2 - 4\cdot 2 + 3 = 4 - 8 + 3 = -1$.
+  \item El vértice es $(2, -1)$. Como $a > 0$, es el punto mínimo de la parábola.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Geometría}
+
+{\itshape\color{zinc700} Medición, teorema de Pitágoras, semejanza y transformaciones en el plano.}
+
+\subsection{Perímetros, áreas y volúmenes}
+
+El perímetro es la longitud del contorno; el área, la medida de la superficie; el volumen, el espacio que ocupa un cuerpo. Las figuras compuestas se descomponen en figuras conocidas, sumando o restando sus áreas.
+
+Al multiplicar todas las longitudes por $k$, el perímetro se multiplica por $k$, el área por $k^2$ y el volumen por $k^3$.
+
+\begin{formula}[Fórmulas]
+Rectángulo: $A=b\cdot h$. Triángulo: $A=\dfrac{b\cdot h}{2}$. Círculo: $A=\pi r^2$, $P=2\pi r$.
+
+Prisma y cilindro: $V=A_{\text{base}}\cdot h$ (cilindro: $V=\pi r^2h$). Cubo: $V=a^3$. Cono: $V=\dfrac{\pi r^2h}{3}$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Descompón figuras compuestas antes de calcular.
+  \item Revisa unidades: $1\ \text{m}^3=1000$ litros.
+  \item Diámetro $=2\cdot$ radio.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Dibuja o marca las medidas conocidas.
+  \item Elige la fórmula según la figura o cuerpo y verifica las unidades.
+  \item Suma o resta las partes de la figura compuesta.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar el diámetro como radio.
+  \item Confundir área con perímetro.
+  \item Olvidar dividir por 2 el área del triángulo.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un estanque cilíndrico tiene 2 m de radio y 1,5 m de altura. Considerando $\pi\approx 3$, ¿cuál es su volumen?
+\alternativa{A}{$9\ \text{m}^3$}
+\alternativa{B}{$12\ \text{m}^3$}
+\alternativa{C}{$18\ \text{m}^3$}
+\alternativa{D}{$36\ \text{m}^3$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Volumen del cilindro: área de la base por la altura.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Base: $\pi r^2\approx 3\cdot 4=12\ \text{m}^2$.
+  \item $V\approx 12\cdot 1{,}5=18\ \text{m}^3$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Áreas compuestas]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+A un rectángulo de 8 cm de largo y 5 cm de ancho se le recorta un semicírculo cuyo diámetro es uno de los lados de 8 cm. ¿Cuál es el área, en $\text{cm}^2$, de la figura que queda?
+\alternativa{A}{$40 - 4\pi$}
+\alternativa{B}{$40 - 16\pi$}
+\alternativa{C}{$26 - 8\pi$}
+\alternativa{D}{$40 - 8\pi$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Área de la figura = área del rectángulo $-$ área del semicírculo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Rectángulo: $8\cdot 5 = 40\ \text{cm}^2$.
+  \item El diámetro mide 8 cm, así que el radio es $r = 4$ cm (cabe dentro del ancho de 5 cm).
+  \item Semicírculo: $\dfrac{\pi r^2}{2} = \dfrac{16\pi}{2} = 8\pi\ \text{cm}^2$.
+  \item Área restante: $40 - 8\pi\ \text{cm}^2$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Triángulos, Pitágoras y semejanza}
+
+Los ángulos interiores de un triángulo suman $180^\circ$. En un triángulo rectángulo, el lado opuesto al ángulo recto es la hipotenusa y cumple el teorema de Pitágoras.
+
+Dos triángulos son semejantes si tienen sus ángulos iguales; entonces sus lados correspondientes son proporcionales. El teorema de Thales permite calcular longitudes cuando hay rectas paralelas cortadas por secantes.
+
+\begin{formula}[Relaciones clave]
+\begin{gather*}
+a^2+b^2=c^2 \\
+\text{tríos: } (3,4,5),\ (5,12,13),\ (8,15,17)
+\end{gather*}
+
+Si la razón de semejanza es $k$, las áreas están en razón $k^2$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item La hipotenusa es el lado mayor.
+  \item Los múltiplos de un trío pitagórico también lo son: (6, 8, 10).
+  \item Sombras a la misma hora $\Rightarrow$ triángulos semejantes.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el ángulo recto y la hipotenusa.
+  \item Plantea Pitágoras o la proporción entre lados correspondientes.
+  \item Verifica que la hipotenusa resulte mayor que los catetos.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Sumar los cuadrados cuando la incógnita es un cateto.
+  \item Emparejar lados que no se corresponden en la semejanza.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un rectángulo mide 9 cm de ancho y 12 cm de largo. ¿Cuánto mide su diagonal?
+\alternativa{A}{13 cm}
+\alternativa{B}{15 cm}
+\alternativa{C}{21 cm}
+\alternativa{D}{$\sqrt{63}$ cm}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La diagonal es la hipotenusa del triángulo rectángulo de catetos 9 y 12.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $d^2=9^2+12^2=81+144=225$.
+  \item $d=15$ cm (es el trío $3,4,5$ multiplicado por 3).
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Teorema de Pitágoras]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una escalera de 5 m de largo está apoyada en una pared vertical y su extremo superior alcanza una altura de 4 m. ¿A qué distancia de la pared está el pie de la escalera?
+\alternativa{A}{$\sqrt{41}$ m}
+\alternativa{B}{1 m}
+\alternativa{C}{9 m}
+\alternativa{D}{3 m}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Pared, suelo y escalera forman un triángulo rectángulo cuya hipotenusa es la escalera.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Por Pitágoras: $d^2 + 4^2 = 5^2$.
+  \item $d^2 = 25 - 16 = 9 \Rightarrow d = 3$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Semejanza]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+A cierta hora, una persona de 1,5 m de estatura proyecta una sombra de 2 m. A la misma hora, un árbol proyecta una sombra de 12 m. ¿Cuál es la altura del árbol?
+\alternativa{A}{8 m}
+\alternativa{B}{9 m}
+\alternativa{C}{10,5 m}
+\alternativa{D}{16 m}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Los rayos del sol llegan paralelos: persona y árbol forman triángulos semejantes, así que la razón altura/sombra es la misma.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Plantea la proporción: $\dfrac{h}{12} = \dfrac{1{,}5}{2}$.
+  \item Despeja: $h = 12\cdot\dfrac{1{,}5}{2} = 12\cdot 0{,}75 = 9$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Plano cartesiano, vectores y transformaciones}
+
+Las transformaciones isométricas (traslación, reflexión y rotación) cambian la posición de una figura sin alterar su forma ni su tamaño.
+
+Trasladar un punto según un vector $\vec{v}=(a,b)$ es sumar las coordenadas. Las reflexiones y rotaciones con centro en el origen siguen reglas fijas sobre las coordenadas.
+
+\begin{ley}[Reglas en coordenadas]
+Traslación: $(x,y)\mapsto(x+a,\,y+b)$. Reflexión eje $X$: $(x,-y)$. Reflexión eje $Y$: $(-x,y)$.
+
+Rotación en $90^\circ$ antihoraria: $(-y,x)$. Rotación en $180^\circ$: $(-x,-y)$.
+\end{ley}
+
+{\sffamily\footnotesize\color{zinc500} Esquema comparativo}
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+\textbf{Transformación} & \textbf{Regla} & \textbf{Conserva} \\
+\midrule
+Traslación por $(a,b)$ & $(x+a,\,y+b)$ & forma, tamaño y orientación \\
+Reflexión eje $Y$ & $(-x,\,y)$ & forma y tamaño \\
+Rotación $180^\circ$ & $(-x,\,-y)$ & forma y tamaño \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Reflejar respecto del eje $Y$ cambia el signo de la abscisa.
+  \item Una rotación de $180^\circ$ equivale a la simetría respecto del origen.
+  \item Vector entre dos puntos: $\overrightarrow{AB}=B-A$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el tipo de transformación y su elemento (vector, eje o centro).
+  \item Aplica la regla de coordenadas.
+  \item Verifica con un dibujo rápido en el plano.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir la reflexión en el eje $X$ con la del eje $Y$.
+  \item Restar el vector de traslación en vez de sumarlo.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+El punto $P(3,1)$ se rota en $90^\circ$ en sentido antihorario con centro en el origen. ¿Cuáles son las coordenadas de su imagen?
+\alternativa{A}{$(1,-3)$}
+\alternativa{B}{$(-1,3)$}
+\alternativa{C}{$(-3,-1)$}
+\alternativa{D}{$(3,-1)$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Rotación de $90^\circ$ antihoraria: $(x,y)\mapsto(-y,x)$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $(3,1)\mapsto(-1,3)$.
+  \item Comprobación: el punto pasa del primer al segundo cuadrante, como corresponde a un giro de un cuarto de vuelta antihorario.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Transformaciones isométricas]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuáles son las coordenadas de la imagen del punto $P(2, -3)$ al reflejarlo respecto del eje $Y$?
+\alternativa{A}{$(-2, -3)$}
+\alternativa{B}{$(2, 3)$}
+\alternativa{C}{$(-2, 3)$}
+\alternativa{D}{$(3, 2)$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Una reflexión respecto del eje $Y$ cambia el signo de la abscisa y conserva la ordenada: $(x, y) \mapsto (-x, y)$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Aplica la regla a $P(2,-3)$: $(-2, -3)$.
+  \item Interpretación: el punto queda a la misma distancia del eje $Y$, pero al otro lado.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Vectores y traslaciones]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+El punto $A(1, 4)$ se traslada según el vector $\vec{v} = (-3, 2)$. ¿Cuáles son las coordenadas del punto trasladado?
+\alternativa{A}{$(4, 2)$}
+\alternativa{B}{$(-3, 8)$}
+\alternativa{C}{$(-2, 6)$}
+\alternativa{D}{$(2, -6)$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Trasladar un punto según un vector es sumar sus coordenadas componente a componente.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Suma las abscisas: $1 + (-3) = -2$ (el punto se mueve 3 unidades a la izquierda).
+  \item Suma las ordenadas: $4 + 2 = 6$ (el punto sube 2 unidades).
+  \item El punto trasladado es $A' = (-2, 6)$.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Probabilidad y estadística}
+
+{\itshape\color{zinc700} Tablas y gráficos, medidas estadísticas y probabilidad.}
+
+\subsection{Tablas, gráficos y medidas de tendencia central}
+
+La media aritmética reparte el total en partes iguales; la mediana es el dato central de los datos ordenados; la moda, el dato más frecuente. La media es sensible a valores extremos; la mediana no.
+
+En una tabla de frecuencias, la frecuencia absoluta cuenta cuántas veces aparece un dato; la relativa es esa cantidad dividida por el total, y la acumulada suma las frecuencias hasta ese dato.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+\bar{x}=\frac{\sum x_i\,f_i}{n} \\
+\text{posición de la mediana}=\frac{n+1}{2} \\
+f_r=\frac{f}{n}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Para la mediana, \textbf{ordena} primero los datos.
+  \item Con $n$ par, la mediana es el promedio de los dos datos centrales.
+  \item Un dato extremo mueve la media, pero casi no mueve la mediana.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Calcula el total de datos $n$ sumando las frecuencias.
+  \item Usa la frecuencia acumulada para ubicar la posición de la mediana.
+  \item Para la media, multiplica cada dato por su frecuencia antes de sumar.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Calcular la mediana sin ordenar los datos.
+  \item Promediar los valores de la tabla sin considerar sus frecuencias.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Las notas de un curso se resumen en la tabla:
+
+\begin{center}\small
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lllll@{}}
+\toprule
+\textbf{Nota} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} \\
+\midrule
+Estudiantes & 3 & 5 & 8 & 4 \\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+¿Cuál es la mediana de las notas?
+\alternativa{A}{5}
+\alternativa{B}{5,65}
+\alternativa{C}{6}
+\alternativa{D}{6,5}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Hay 20 datos: la mediana es el promedio de los datos en las posiciones 10 y 11.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Frecuencias acumuladas: 3, 8, 16, 20.
+  \item Las posiciones 10 y 11 caen en la nota 6 (posiciones 9 a 16).
+  \item Mediana $=\dfrac{6+6}{2}=6$. (La media sería $\frac{113}{20}=5{,}65$.)
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Medidas de tendencia central]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Los puntajes de un estudiante en cinco controles fueron:
+
+\[4,\ 7,\ 7,\ 8,\ 9\]
+
+Si agrega un sexto control con nota 13, ¿cuál es el nuevo promedio (media aritmética)?
+\alternativa{A}{$7$}
+\alternativa{B}{$7{,}5$}
+\alternativa{C}{$8$}
+\alternativa{D}{$8{,}5$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La media es la suma de todos los datos dividida por la cantidad de datos.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Suma original: $4 + 7 + 7 + 8 + 9 = 35$.
+  \item Con el sexto dato: $35 + 13 = 48$.
+  \item Nueva media: $\dfrac{48}{6} = 8$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Tablas de frecuencia]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En un curso se preguntó a cada estudiante cuántos hermanos tiene. Los resultados se muestran en la tabla:
+
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Número de hermanos} & \textbf{Frecuencia} \\
+\midrule
+0 & 5 \\
+1 & 9 \\
+2 & 4 \\
+3 & 2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+¿Qué porcentaje del curso tiene \textbf{al menos} 2 hermanos?
+\alternativa{A}{20 \%}
+\alternativa{B}{30 \%}
+\alternativa{C}{45 \%}
+\alternativa{D}{75 \%}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par «Al menos 2» significa 2 o más. Suma esas frecuencias y compáralas con el total.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Total de estudiantes: $5 + 9 + 4 + 2 = 20$.
+  \item Con al menos 2 hermanos: $4 + 2 = 6$.
+  \item Porcentaje: $\dfrac{6}{20}\cdot 100 = 30\,\%$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Medidas de posición y dispersión}
+
+Los cuartiles dividen los datos ordenados en cuatro partes con igual cantidad de datos: $Q_2$ es la mediana. El percentil $k$ es el valor bajo el cual queda aproximadamente el $k\,\%$ de los datos.
+
+El rango (máximo menos mínimo) y el rango intercuartílico ($Q_3-Q_1$) miden la dispersión. El diagrama de caja muestra mínimo, $Q_1$, mediana, $Q_3$ y máximo.
+
+\begin{definicion}[Definiciones]
+Rango $=\text{máx}-\text{mín}$. Rango intercuartílico $=Q_3-Q_1$. Percentil 80: el 80 \% de los datos es menor o igual que él.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Percentil alto no significa nota alta, sino posición relativa alta.
+  \item En un diagrama de caja, la caja contiene el 50 \% central de los datos.
+  \item Dos grupos pueden tener igual media y distinta dispersión.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ordena los datos.
+  \item Ubica la medida pedida por su posición (mediana, cuartil o percentil).
+  \item Interpreta en el contexto: qué porcentaje de los datos queda por debajo.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Interpretar el percentil 80 como «obtuvo el 80 \% del puntaje».
+  \item Leer el largo de la caja como el rango total.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Ana obtuvo un puntaje ubicado en el percentil 80 de su curso. ¿Qué significa este resultado?
+\alternativa{A}{Ana respondió correctamente el 80 \% de la prueba.}
+\alternativa{B}{Ana obtuvo 80 puntos.}
+\alternativa{C}{Aproximadamente el 80 \% del curso obtuvo un puntaje menor o igual que el de Ana.}
+\alternativa{D}{Solo el 20 \% del curso aprobó la prueba.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El percentil describe la posición de un dato respecto de los demás, no la cantidad de aciertos.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Percentil 80: el 80 \% de los datos es menor o igual que ese valor.
+  \item Por eso la alternativa C describe el resultado; A y B confunden posición con puntaje.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Probabilidad clásica]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una bolsa contiene 3 bolitas rojas, 5 azules y 2 verdes, todas del mismo tamaño. Si se extrae una bolita al azar, ¿cuál es la probabilidad de que \textbf{no} sea azul?
+\alternativa{A}{$\dfrac{1}{2}$}
+\alternativa{B}{$\dfrac{3}{10}$}
+\alternativa{C}{$\dfrac{1}{5}$}
+\alternativa{D}{$\dfrac{2}{3}$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Regla de Laplace: casos favorables dividido por casos posibles, cuando todos los resultados son equiprobables.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Casos posibles: $3 + 5 + 2 = 10$ bolitas.
+  \item Casos favorables (no azul): $3 + 2 = 5$.
+  \item $P = \dfrac{5}{10} = \dfrac{1}{2}$. También: $P(\text{no azul}) = 1 - \dfrac{5}{10}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Probabilidad y conteo}
+
+Si todos los resultados de un experimento son equiprobables, la probabilidad de un evento es la razón entre casos favorables y casos posibles (regla de Laplace). Toda probabilidad está entre 0 y 1.
+
+Para contar casos se usa el principio multiplicativo o un diagrama de árbol. La probabilidad del complemento suele simplificar los problemas de «al menos uno».
+
+\begin{formula}[Reglas]
+\begin{gather*}
+P(A)=\frac{\text{casos favorables}}{\text{casos posibles}} \\
+P(A^c)=1-P(A)
+\end{gather*}
+
+\begin{gather*}
+P(A\cup B)=P(A)+P(B)-P(A\cap B) \\
+\text{independientes: } P(A\cap B)=P(A)\cdot P(B)
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item «Al menos uno» $=1-P(\text{ninguno})$.
+  \item Con dos dados hay $6\cdot 6=36$ resultados ordenados.
+  \item Eventos independientes: se multiplican sus probabilidades.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Describe el espacio muestral y verifica que sus resultados sean equiprobables.
+  \item Cuenta los casos favorables (directamente o con el complemento).
+  \item Simplifica la fracción y compárala con las alternativas.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Contar pares no ordenados en experimentos con orden, como dos dados.
+  \item Suponer equiprobables resultados que no lo son, como las sumas de dos dados.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se lanza una moneda dos veces. ¿Cuál es la probabilidad de obtener al menos una cara?
+\alternativa{A}{$\dfrac{1}{4}$}
+\alternativa{B}{$\dfrac{1}{2}$}
+\alternativa{C}{$\dfrac{2}{3}$}
+\alternativa{D}{$\dfrac{3}{4}$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Usa el complemento: «al menos una cara» es lo contrario de «ninguna cara».
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $P(\text{ninguna cara})=P(\text{SS})=\dfrac{1}{4}$.
+  \item $P(\text{al menos una})=1-\dfrac{1}{4}=\dfrac{3}{4}$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Probabilidad con dos dados]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se lanzan dos dados comunes. ¿Cuál es la probabilidad de que la suma de los puntos obtenidos sea 7?
+\alternativa{A}{$\dfrac{1}{6}$}
+\alternativa{B}{$\dfrac{1}{12}$}
+\alternativa{C}{$\dfrac{7}{36}$}
+\alternativa{D}{$\dfrac{1}{11}$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El espacio muestral tiene $6\cdot 6 = 36$ pares ordenados equiprobables.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Pares con suma 7: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, es decir, 6 casos.
+  \item $P(\text{suma } 7) = \dfrac{6}{36} = \dfrac{1}{6}$.
+\end{enumerate}
+\end{ejemplo}
+%%</CONTENIDO>%%
+
+\end{document}

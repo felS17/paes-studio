@@ -1,0 +1,1149 @@
+% =============================================================================
+%  PAES Studio: guía de síntesis (plantilla)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Formato: A4, dos columnas, cajas tcolorbox con la paleta Zinc de la app.
+%  Entornos disponibles:
+%    definicion, formula, ley, mecanismo, ideasclave, metodo, ejemplo,
+%    errorfrecuente, dato, lineatiempo   (título opcional en [])
+%  Comandos:
+%    \alternativa{A}{texto}   alternativa con su tecla (igual que en la app)
+%    \clave{C}        marca la alternativa correcta
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%. Fuera de ellos, edita libremente.
+% =============================================================================
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=1.5cm,top=1.9cm,bottom=1.9cm,columnsep=0.75cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ── Paleta Zinc (misma que la app) ───────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc100}{HTML}{F4F4F5}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+\definecolor{ambar}{HTML}{B45309}
+
+% ── Tipografía: texto con serifa, estructura en sans ─────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.08}
+\color{zinc900}
+\newcommand{\sen}{\operatorname{sen}}
+\renewcommand{\arraystretch}{1.18}
+
+\titleformat{\section}{\sffamily\bfseries\large\color{zinc950}}{\thesection}{0.6em}{}
+  [{\color{zinc300}\titlerule[0.4pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{zinc900}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.3em}
+
+\setlist{leftmargin=1.2em,itemsep=0.15em,topsep=0.3em}
+\setlist[itemize]{label={\color{zinc500}\textbullet}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\scriptsize\color{zinc500}\guiaAsignatura}
+\fancyfoot[R]{\sffamily\scriptsize\color{zinc500}\thepage}
+
+% ── Cajas ────────────────────────────────────────────────────────────────────
+\tcbset{
+  paes/.style={
+    enhanced, breakable, sharp corners=south, arc=1.5pt,
+    boxrule=0.4pt, colback=white, colframe=zinc300,
+    colbacktitle=white, coltitle=zinc900, titlerule=0pt,
+    fonttitle=\sffamily\bfseries\footnotesize,
+    toptitle=3pt, bottomtitle=0pt,
+    left=7pt, right=7pt, top=2pt, bottom=6pt,
+    before skip=7pt, after skip=7pt,
+  },
+  acento/.style={borderline west={2pt}{0pt}{#1}},
+}
+\newtcolorbox{definicion}[1][Definición]{paes, acento=zinc900, title={#1}}
+\newtcolorbox{formula}[1][Fórmula clave]{paes, colback=zinc50, colbacktitle=zinc50, title={#1}}
+\newtcolorbox{ejemplo}[1][Ejemplo resuelto]{paes, title={#1}}
+\newtcolorbox{errorfrecuente}[1][Error frecuente]{paes, colframe=rosa!35, acento=rosa, title={#1}}
+\newtcolorbox{dato}[1][Dato PAES]{paes, colframe=ambar!40, acento=ambar, title={#1}}
+\newtcolorbox{mecanismo}[1][Mecanismo]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc700, title={#1}}
+\newtcolorbox{ley}[1][Ley]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc900, title={#1}}
+\newtcolorbox{ideasclave}[1][Ideas clave]{paes, title={#1}}
+\newtcolorbox{metodo}[1][Cómo abordarlo en la PAES]{paes, acento=esmeralda, title={#1}}
+% Línea de tiempo: filas «fecha & hecho \\».
+\newenvironment{lineatiempo}[1][Línea de tiempo]
+  {\begin{tcolorbox}[paes, acento=zinc700, title={#1}]\small\renewcommand{\arraystretch}{1.25}%
+   \begin{tabular}{@{}>{\leavevmode\sffamily\bfseries\color{zinc700}}p{0.24\linewidth}p{\dimexpr0.76\linewidth-2\tabcolsep\relax}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+
+% Alternativa con su tecla (eco de la anatomía A–E de la app).
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\bfseries\color{white}}
+\newcommand{\alternativa}[2]{\par\noindent\hangindent=1.6em\hangafter=1\makebox[1.6em][l]{\tecla{#1}}#2\par}
+\newcommand{\clave}[1]{\par\smallskip{\sffamily\footnotesize\color{esmeralda} Clave \teclaok{#1}}\par}
+
+% Barra horizontal proporcional (para tablas de frecuencia).
+\newcommand{\barra}[1]{{\color{zinc900}\rule[0.15ex]{#1\linewidth}{0.9ex}}}
+
+%%<META>%%
+\newcommand{\guiaTitulo}{Compendio de estudio}
+\newcommand{\guiaAsignatura}{Competencia Matemática 2 (M2)}
+\newcommand{\guiaDescripcion}{M2 profundiza los contenidos de M1 y agrega los de 3.º y 4.º medio: números reales, logaritmos, matemática financiera, funciones exponenciales e inversas, trigonometría, homotecia, probabilidad condicional y modelos de probabilidad. Tiene 55 preguntas y dura 2 h 20 min.}
+\newcommand{\guiaFuente}{5 ejes y 13 subtemas. Frecuencias calculadas sobre 7 ensayos (6 oficiales DEMRE), 326 preguntas. Generado el 1 de noviembre de 2026.}
+%%</META>%%
+
+\begin{document}
+
+\twocolumn[{%
+  \begin{tcolorbox}[enhanced, frame hidden, colback=white, left=0pt, right=0pt, top=0pt, bottom=6pt,
+      borderline south={0.4pt}{0pt}{zinc300}]
+    {\sffamily\footnotesize\color{zinc500} PAES Studio}\par\vspace{0.2em}
+    {\sffamily\bfseries\LARGE\color{zinc950} \guiaTitulo: \guiaAsignatura}\par\vspace{0.35em}
+    {\normalsize\color{zinc700} \guiaDescripcion}\par\vspace{0.25em}
+    {\sffamily\scriptsize\color{zinc500} \guiaFuente}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}]
+
+%%<CONTENIDO>%%
+\section*{Cómo usar este compendio}
+
+Cada subtema sigue el mismo orden: teoría, recuadro con las fórmulas, leyes o mecanismos centrales, ideas clave, método para responder en la PAES, trampas frecuentes y ejemplos resueltos paso a paso. Resuelve cada ejemplo antes de leer su desarrollo.
+
+\section*{Qué se evalúa}
+
+Distribución de las preguntas por eje en los ensayos disponibles en PAES Studio.
+
+\begin{center}\small
+
+\begin{tabular}{@{}p{0.42\linewidth}rrp{0.22\linewidth}@{}}
+
+\toprule Eje & Preg. & \% & \\ \midrule
+
+Álgebra y funciones & 126 & 39 & \barra{0.085} \\
+
+Geometría & 77 & 24 & \barra{0.052} \\
+
+Probabilidad y estadística & 67 & 21 & \barra{0.045} \\
+
+Números & 56 & 17 & \barra{0.038} \\
+
+\bottomrule
+
+\end{tabular}
+
+\end{center}
+
+\begin{dato}Álgebra y funciones y Geometría concentran el 62 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
+
+\section{Números}
+
+{\itshape\color{zinc700} Números reales, logaritmos y matemática financiera.}
+
+\subsection{Números reales y racionalización}
+
+Los números reales ($\mathbb{R}$) reúnen los racionales y los irracionales. Un irracional, como $\sqrt{2}$ o $\pi$, tiene infinitas cifras decimales no periódicas y no puede escribirse como fracción.
+
+Racionalizar es eliminar las raíces del denominador amplificando por una expresión adecuada: por la misma raíz si es un monomio, o por el conjugado si es un binomio, aprovechando $(a+b)(a-b)=a^2-b^2$.
+
+\begin{formula}[Racionalización]
+\begin{gather*}
+\frac{k}{\sqrt{a}}=\frac{k\sqrt{a}}{a} \\
+\frac{k}{\sqrt{a}-\sqrt{b}}=\frac{k(\sqrt{a}+\sqrt{b})}{a-b}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item $\sqrt{2}\cdot\sqrt{8}=\sqrt{16}=4$ es racional: el producto de irracionales puede ser racional.
+  \item El conjugado de $\sqrt{5}-1$ es $\sqrt{5}+1$.
+  \item Para ordenar raíces, compara sus cuadrados.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Simplifica las raíces extrayendo factores.
+  \item Identifica el tipo de denominador y amplifica por la raíz o el conjugado.
+  \item Simplifica el resultado y verifica con una aproximación decimal.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Amplificar solo el denominador.
+  \item Suponer que la suma o el producto de irracionales siempre es irracional.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes expresiones es igual a $\dfrac{6}{\sqrt{3}}$?
+\alternativa{A}{$2\sqrt{3}$}
+\alternativa{B}{$3\sqrt{2}$}
+\alternativa{C}{$\sqrt{2}$}
+\alternativa{D}{$6\sqrt{3}$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Amplifica por $\sqrt{3}$ para eliminar la raíz del denominador.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\dfrac{6}{\sqrt{3}}\cdot\dfrac{\sqrt{3}}{\sqrt{3}}=\dfrac{6\sqrt{3}}{3}$.
+  \item Simplifica: $2\sqrt{3}$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Racionalización]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes expresiones es igual a $\dfrac{4}{\sqrt{5} - 1}$?
+\alternativa{A}{$\sqrt{5} - 1$}
+\alternativa{B}{$\sqrt{5} + 1$}
+\alternativa{C}{$4\sqrt{5} + 4$}
+\alternativa{D}{$\dfrac{\sqrt{5} + 1}{4}$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Para racionalizar un denominador binomial se amplifica por su conjugado y se usa $(a-b)(a+b) = a^2 - b^2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Amplifica por $\sqrt{5}+1$: $\dfrac{4(\sqrt{5}+1)}{(\sqrt{5}-1)(\sqrt{5}+1)}$.
+  \item Denominador: $(\sqrt{5})^2 - 1^2 = 5 - 1 = 4$.
+  \item Simplifica: $\dfrac{4(\sqrt{5}+1)}{4} = \sqrt{5} + 1$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Logaritmos}
+
+El logaritmo en base $b$ de $a$ es el exponente al que hay que elevar $b$ para obtener $a$: $\log_b a=c \iff b^c=a$, con $b>0$, $b\neq 1$ y $a>0$. El logaritmo decimal ($\log$) tiene base 10.
+
+Las propiedades transforman productos en sumas y potencias en productos, lo que permite despejar exponentes en ecuaciones exponenciales.
+
+\begin{formula}[Propiedades]
+\begin{gather*}
+\log_b(xy)=\log_b x+\log_b y \\
+\log_b\frac{x}{y}=\log_b x-\log_b y \\
+\log_b x^n=n\log_b x
+\end{gather*}
+
+\begin{gather*}
+\log_b b=1 \\
+\log_b 1=0 \\
+\log_b a=\frac{\log a}{\log b}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item $\log_2 32=5$ porque $2^5=32$.
+  \item Si el argumento está entre 0 y 1, el logaritmo es negativo.
+  \item $\log(x+y)\neq\log x+\log y$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Escribe el argumento como potencia de la base o como producto de factores conocidos.
+  \item Aplica las propiedades una por una.
+  \item Verifica con la definición: base elevada al resultado.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Distribuir el logaritmo sobre una suma.
+  \item Olvidar que el argumento debe ser positivo.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Si $\log 2\approx 0{,}301$, ¿cuál es el valor aproximado de $\log 50$?
+\alternativa{A}{$0{,}602$}
+\alternativa{B}{$1{,}398$}
+\alternativa{C}{$1{,}699$}
+\alternativa{D}{$2{,}301$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $50=\dfrac{100}{2}$, y $\log 100=2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\log 50=\log 100-\log 2$.
+  \item $2-0{,}301=1{,}699$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Logaritmos]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es el valor de $\log_2 32 + \log_3 \dfrac{1}{9}$?
+\alternativa{A}{$3$}
+\alternativa{B}{$7$}
+\alternativa{C}{$-3$}
+\alternativa{D}{$-7$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $\log_b a = c$ significa $b^c = a$: busca a qué exponente hay que elevar cada base.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\log_2 32 = 5$, porque $2^5 = 32$.
+  \item $\log_3 \dfrac{1}{9} = -2$, porque $3^{-2} = \dfrac{1}{3^2} = \dfrac{1}{9}$.
+  \item Suma: $5 + (-2) = 3$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Propiedades de logaritmos]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Si $\log 2 \approx 0{,}301$ y $\log 3 \approx 0{,}477$, ¿cuál es el valor aproximado de $\log 12$?
+\alternativa{A}{$0{,}778$}
+\alternativa{B}{$0{,}954$}
+\alternativa{C}{$1{,}079$}
+\alternativa{D}{$1{,}204$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Descompón 12 en factores primos y usa $\log(ab) = \log a + \log b$ y $\log a^n = n\log a$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $12 = 2^2\cdot 3$.
+  \item $\log 12 = \log 2^2 + \log 3 = 2\log 2 + \log 3$.
+  \item $2\cdot 0{,}301 + 0{,}477 = 0{,}602 + 0{,}477 = 1{,}079$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Matemática financiera}
+
+En el interés simple, el interés se calcula siempre sobre el capital inicial; en el compuesto, sobre el capital acumulado, por lo que crece de forma exponencial.
+
+La tasa debe expresarse en la misma unidad de tiempo que los períodos: una tasa mensual con períodos mensuales.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+\text{simple: } C_n=C_0(1+n\,i) \\
+\text{compuesto: } C_n=C_0(1+i)^n
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Con 2 \% mensual, en 3 meses: simple $\cdot 1{,}06$; compuesto $\cdot 1{,}02^3\approx 1{,}0612$.
+  \item El compuesto supera al simple desde el segundo período.
+  \item Depreciación de $p\,\%$ anual: $V_n=V_0(1-p/100)^n$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica si el interés es simple o compuesto.
+  \item Iguala las unidades de la tasa y de los períodos.
+  \item Reemplaza en la fórmula y calcula; distingue interés ganado de monto final.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar interés simple cuando el problema dice compuesto.
+  \item Responder el monto final cuando se pide solo el interés ganado.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se invierten \$500 000 a un interés compuesto del 10 \% anual. ¿Cuánto interés se habrá ganado al cabo de 2 años?
+\alternativa{A}{\$100 000}
+\alternativa{B}{\$105 000}
+\alternativa{C}{\$110 000}
+\alternativa{D}{\$605 000}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Calcula el monto final y réstale el capital.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $C_2=500\,000\cdot 1{,}1^2=500\,000\cdot 1{,}21=605\,000$.
+  \item Interés ganado: $605\,000-500\,000=105\,000$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Interés compuesto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se depositan \$1 000 000 a un interés compuesto del 2 \% mensual. ¿Cuál es el monto acumulado al cabo de 3 meses?
+\alternativa{A}{\$1 020 000}
+\alternativa{B}{\$1 061 208}
+\alternativa{C}{\$1 060 000}
+\alternativa{D}{\$1 080 000}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con interés compuesto, cada mes se gana interés sobre el monto acumulado: $C_n = C_0(1 + i)^n$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Datos: $C_0 = 1\,000\,000$, $i = 0{,}02$ y $n = 3$.
+  \item $(1{,}02)^2 = 1{,}0404$ y $(1{,}02)^3 = 1{,}0404\cdot 1{,}02 = 1{,}061208$.
+  \item $C_3 = 1\,000\,000\cdot 1{,}061208 = 1\,061\,208$.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Álgebra y funciones}
+
+{\itshape\color{zinc700} Ecuaciones cuadráticas, funciones exponencial, logarítmica, compuesta e inversa.}
+
+\subsection{Ecuación cuadrática y discriminante}
+
+Una ecuación $ax^2+bx+c=0$ se resuelve factorizando o con la fórmula general. El discriminante $\Delta=b^2-4ac$ indica cuántas soluciones reales tiene, sin necesidad de calcularlas.
+
+Las soluciones cumplen $x_1+x_2=-\frac{b}{a}$ y $x_1x_2=\frac{c}{a}$, relaciones útiles para construir ecuaciones o verificar resultados.
+
+\begin{formula}[Discriminante]
+$\Delta>0$: dos soluciones reales distintas. $\Delta=0$: una solución real (doble). $\Delta<0$: ninguna solución real.
+
+\begin{gather*}
+x=\frac{-b\pm\sqrt{\Delta}}{2a} \\
+x_1+x_2=-\frac{b}{a} \\
+x_1x_2=\frac{c}{a}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.
+  \item «Una única solución» $\iff \Delta=0$.
+  \item La parábola no corta el eje $X$ cuando $\Delta<0$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ordena la ecuación igualando a cero.
+  \item Calcula el discriminante o factoriza.
+  \item Interpreta el resultado según lo pedido (número de soluciones, valores, parámetro).
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Olvidar el factor 4 en $4ac$.
+  \item Perder una solución al dividir por $x$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Para qué valores de $k$ la ecuación $x^2-4x+k=0$ no tiene soluciones reales?
+\alternativa{A}{$k<4$}
+\alternativa{B}{$k=4$}
+\alternativa{C}{$k>4$}
+\alternativa{D}{$k>16$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par No hay soluciones reales cuando el discriminante es negativo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\Delta=(-4)^2-4\cdot 1\cdot k=16-4k$.
+  \item $16-4k<0 \Rightarrow k>4$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Discriminante]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Para qué valores de $k$ la ecuación $x^2 + kx + 9 = 0$ tiene exactamente una solución real?
+\alternativa{A}{$k = 3$}
+\alternativa{B}{$k = 3$ o $k = -3$}
+\alternativa{C}{$k = 9$}
+\alternativa{D}{$k = 6$ o $k = -6$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Una ecuación cuadrática tiene una única solución real (doble) cuando su discriminante es cero: $\Delta = b^2 - 4ac = 0$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Aquí $a = 1$, $b = k$ y $c = 9$: $\Delta = k^2 - 4\cdot 1\cdot 9 = k^2 - 36$.
+  \item $k^2 - 36 = 0 \Rightarrow k^2 = 36 \Rightarrow k = 6$ o $k = -6$.
+  \item Comprobación con $k = 6$: $x^2 + 6x + 9 = (x+3)^2$, cuya única solución es $x = -3$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Funciones exponencial y logarítmica}
+
+La función exponencial $f(x)=a\cdot b^x$ ($b>0$, $b\neq 1$) modela crecimientos ($b>1$) o decrecimientos ($0<b<1$) en que la cantidad cambia en un mismo porcentaje por período: poblaciones, contagios, interés compuesto, decaimiento radiactivo.
+
+La función logarítmica $g(x)=\log_b x$ es su inversa: su dominio son los reales positivos y su gráfico es el reflejo del exponencial respecto de la recta $y=x$.
+
+\begin{formula}[Modelos]
+\begin{gather*}
+N(t)=N_0\cdot 2^{t/T}\ \text{(duplicación cada } T\text{)} \\
+N(t)=N_0\left(\tfrac{1}{2}\right)^{t/T}\ \text{(vida media } T\text{)}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item $f(0)=a$: el valor inicial.
+  \item Crecimiento de $r\,\%$ por período: $b=1+\frac{r}{100}$.
+  \item $\log_b x$ solo existe para $x>0$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el valor inicial y el factor de cambio por período.
+  \item Cuenta cuántos períodos transcurren.
+  \item Evalúa la función o despeja el exponente con logaritmos.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Contar mal los períodos (incluir el instante inicial).
+  \item Modelar con una función lineal un crecimiento porcentual.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una sustancia tiene una vida media de 5 años. Si hoy hay 80 g, ¿cuánta quedará en 15 años?
+\alternativa{A}{40 g}
+\alternativa{B}{20 g}
+\alternativa{C}{10 g}
+\alternativa{D}{5 g}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Cada 5 años la cantidad se reduce a la mitad.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item En 15 años hay $\frac{15}{5}=3$ vidas medias.
+  \item $80\cdot\left(\tfrac{1}{2}\right)^3=10$ g.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Función exponencial]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una colonia de bacterias tiene 500 individuos y duplica su población cada 3 horas. ¿Cuántas bacterias habrá al cabo de 12 horas?
+\alternativa{A}{2000}
+\alternativa{B}{4000}
+\alternativa{C}{8000}
+\alternativa{D}{16 000}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Crecimiento exponencial: $N(t) = N_0\cdot 2^{t/T}$, donde $T$ es el tiempo de duplicación.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item En 12 horas hay $\dfrac{12}{3} = 4$ duplicaciones.
+  \item $N(12) = 500\cdot 2^4 = 500\cdot 16 = 8000$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Composición de funciones]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Sean $f(x) = 2x + 1$ y $g(x) = x^2$. ¿Cuál es el valor de $(f\circ g)(3)$?
+\alternativa{A}{$19$}
+\alternativa{B}{$49$}
+\alternativa{C}{$21$}
+\alternativa{D}{$36$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $(f\circ g)(x) = f(g(x))$: primero se aplica $g$ y luego $f$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $g(3) = 3^2 = 9$.
+  \item $f(9) = 2\cdot 9 + 1 = 19$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Composición e inversa de funciones}
+
+La composición $(f\circ g)(x)=f(g(x))$ aplica primero $g$ y luego $f$; en general $f\circ g\neq g\circ f$.
+
+La inversa $f^{-1}$ deshace lo que hace $f$: $f(f^{-1}(x))=x$. Existe solo si $f$ es biyectiva. Para encontrarla se despeja $x$ en $y=f(x)$ y se intercambian las variables.
+
+\begin{formula}[Procedimiento]
+\[y=f(x) \ \Rightarrow\ x=\text{(despeje)} \ \Rightarrow\ f^{-1}(x)=\text{(intercambio)}\]
+
+El gráfico de $f^{-1}$ es simétrico al de $f$ respecto de la recta $y=x$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item $(f\circ g)(3)$: evalúa primero $g(3)$.
+  \item $f^{-1}(x)\neq\frac{1}{f(x)}$.
+  \item Comprueba la inversa componiendo: debe dar $x$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el orden de aplicación de las funciones.
+  \item Para la inversa, despeja y luego intercambia variables.
+  \item Verifica con un valor numérico.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Aplicar las funciones en el orden de lectura (de izquierda a derecha).
+  \item Confundir la inversa con el recíproco.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Si $f(x)=3x-2$, ¿cuál es $f^{-1}(7)$?
+\alternativa{A}{$19$}
+\alternativa{B}{$3$}
+\alternativa{C}{$\dfrac{1}{19}$}
+\alternativa{D}{$\dfrac{5}{3}$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $f^{-1}(7)$ es el valor de $x$ tal que $f(x)=7$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $3x-2=7 \Rightarrow x=3$.
+  \item Por lo tanto $f^{-1}(7)=3$ (19 sería $f(7)$).
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Función inversa]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Si $f(x) = \dfrac{x - 3}{2}$, ¿cuál es la función inversa $f^{-1}(x)$?
+\alternativa{A}{$2x - 3$}
+\alternativa{B}{$\dfrac{x + 3}{2}$}
+\alternativa{C}{$2x + 3$}
+\alternativa{D}{$\dfrac{2}{x - 3}$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Para invertir: escribe $y = f(x)$, despeja $x$ y luego intercambia los nombres de las variables.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $y = \dfrac{x-3}{2} \Rightarrow 2y = x - 3 \Rightarrow x = 2y + 3$.
+  \item Intercambia variables: $f^{-1}(x) = 2x + 3$.
+  \item Comprobación: $f(f^{-1}(x)) = \dfrac{(2x+3)-3}{2} = x$.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Geometría}
+
+{\itshape\color{zinc700} Trigonometría, homotecia y geometría analítica.}
+
+\subsection{Trigonometría en el triángulo rectángulo}
+
+En un triángulo rectángulo, las razones trigonométricas de un ángulo agudo relacionan sus lados: seno (opuesto/hipotenusa), coseno (adyacente/hipotenusa) y tangente (opuesto/adyacente).
+
+Se usan para calcular alturas y distancias inaccesibles a partir de un ángulo de elevación o depresión y un lado conocido.
+
+\begin{formula}[Razones y valores notables]
+\begin{gather*}
+\operatorname{sen}\alpha=\frac{\text{op}}{\text{hip}} \\
+\cos\alpha=\frac{\text{ady}}{\text{hip}} \\
+\tan\alpha=\frac{\text{op}}{\text{ady}} \\
+\operatorname{sen}^2\alpha+\cos^2\alpha=1
+\end{gather*}
+
+$\operatorname{sen}30^\circ=\cos 60^\circ=\frac{1}{2}$, $\operatorname{sen}60^\circ=\cos 30^\circ=\frac{\sqrt{3}}{2}$, $\tan 45^\circ=1$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Identifica qué lado es opuesto y cuál adyacente \textbf{respecto del ángulo dado}.
+  \item Ningún cateto es mayor que la hipotenusa.
+  \item $\tan\alpha=\frac{\operatorname{sen}\alpha}{\cos\alpha}$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Dibuja el triángulo y marca el ángulo conocido.
+  \item Elige la razón que relaciona el dato con la incógnita.
+  \item Despeja y verifica que el resultado sea razonable.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar el coseno cuando corresponde el seno (o viceversa).
+  \item Dividir en vez de multiplicar al despejar.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Desde un punto del suelo a 20 m de un edificio, se ve su azotea con un ángulo de elevación de $45^\circ$. ¿Cuál es la altura del edificio?
+\alternativa{A}{10 m}
+\alternativa{B}{20 m}
+\alternativa{C}{$20\sqrt{2}$ m}
+\alternativa{D}{40 m}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La altura es el cateto opuesto y la distancia, el adyacente: se usa la tangente.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\tan 45^\circ=\dfrac{h}{20}$.
+  \item $h=20\cdot 1=20$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Trigonometría en el triángulo rectángulo]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una rampa de 10 m de largo forma un ángulo de $30^\circ$ con el suelo horizontal. ¿Qué altura alcanza su extremo superior?
+\alternativa{A}{5 m}
+\alternativa{B}{$5\sqrt{3}$ m}
+\alternativa{C}{$\dfrac{10\sqrt{3}}{3}$ m}
+\alternativa{D}{20 m}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La rampa es la hipotenusa y la altura es el cateto opuesto al ángulo: se usa el seno.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\operatorname{sen} 30^\circ = \dfrac{h}{10}$.
+  \item Como $\operatorname{sen} 30^\circ = \dfrac{1}{2}$: $h = 10\cdot\dfrac{1}{2} = 5$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Razones trigonométricas]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Si $\alpha$ es un ángulo agudo y $\operatorname{sen}\alpha = \dfrac{3}{5}$, ¿cuál es el valor de $\tan\alpha$?
+\alternativa{A}{$\dfrac{4}{5}$}
+\alternativa{B}{$\dfrac{3}{4}$}
+\alternativa{C}{$\dfrac{4}{3}$}
+\alternativa{D}{$\dfrac{5}{3}$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Construye un triángulo rectángulo con cateto opuesto 3 e hipotenusa 5 y encuentra el cateto adyacente.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Cateto adyacente: $\sqrt{5^2 - 3^2} = \sqrt{16} = 4$.
+  \item $\tan\alpha = \dfrac{\text{opuesto}}{\text{adyacente}} = \dfrac{3}{4}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Homotecia y semejanza}
+
+Una homotecia de centro $O$ y razón $k$ transforma cada punto $P$ en $P'$ sobre la recta $OP$ con $OP'=|k|\cdot OP$. Si $k<0$, la imagen queda al otro lado del centro e invertida.
+
+Si $|k|>1$ la figura se amplía, si $|k|<1$ se reduce. La imagen es semejante a la original: los ángulos se conservan y las longitudes se multiplican por $|k|$.
+
+\begin{formula}[Efecto de la razón]
+Longitudes $\times|k|$, áreas $\times k^2$, volúmenes $\times|k|^3$. Con centro en el origen: $(x,y)\mapsto(kx,\,ky)$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item El signo de $k$ solo cambia el sentido, no el tamaño.
+  \item Razón $-1$: equivale a una rotación de $180^\circ$.
+  \item Un área nunca resulta negativa.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el centro y la razón.
+  \item Multiplica las distancias al centro por $k$.
+  \item Para áreas, usa $k^2$.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Multiplicar el área por $k$ en vez de $k^2$.
+  \item Arrastrar el signo de $k$ a las medidas.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Con centro en el origen y razón $k=3$, el punto $A(2,-1)$ se transforma en:
+\alternativa{A}{$(5,2)$}
+\alternativa{B}{$(6,-3)$}
+\alternativa{C}{$(-6,3)$}
+\alternativa{D}{$\left(\tfrac{2}{3},-\tfrac{1}{3}\right)$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con centro en el origen, se multiplican ambas coordenadas por $k$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $(3\cdot 2,\ 3\cdot(-1))=(6,-3)$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Homotecia]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una figura de área $12\ \text{cm}^2$ se transforma mediante una homotecia de razón $k = -2$. ¿Cuál es el área de la figura homotética?
+\alternativa{A}{$24\ \text{cm}^2$}
+\alternativa{B}{$48\ \text{cm}^2$}
+\alternativa{C}{$-24\ \text{cm}^2$}
+\alternativa{D}{$144\ \text{cm}^2$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En una homotecia de razón $k$, las longitudes se multiplican por $|k|$ y las áreas por $k^2$. El signo solo indica que la figura queda invertida respecto del centro.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Factor de área: $k^2 = (-2)^2 = 4$.
+  \item Área homotética: $12\cdot 4 = 48\ \text{cm}^2$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Rectas y distancias en el plano}
+
+La ecuación de una recta puede escribirse como $y=mx+n$ (principal) o $ax+by+c=0$ (general). Dos rectas son paralelas si tienen igual pendiente y perpendiculares si el producto de sus pendientes es $-1$.
+
+La distancia entre dos puntos se obtiene con Pitágoras, y el punto medio promediando coordenadas.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \\
+M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)
+\end{gather*}
+
+Paralelas: $m_1=m_2$. Perpendiculares: $m_1\cdot m_2=-1$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Pendiente perpendicular: invierte y cambia el signo.
+  \item De $ax+by+c=0$: $m=-\frac{a}{b}$.
+  \item Comprueba que el punto dado satisfaga la ecuación.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Calcula la pendiente requerida (igual o recíproca opuesta).
+  \item Usa la forma punto–pendiente $y-y_1=m(x-x_1)$.
+  \item Reemplaza el punto para verificar.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Solo invertir o solo cambiar el signo de la pendiente para la perpendicular.
+  \item Leer mal la pendiente de la forma general.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es la distancia entre los puntos $A(1,2)$ y $B(4,6)$?
+\alternativa{A}{3}
+\alternativa{B}{4}
+\alternativa{C}{5}
+\alternativa{D}{7}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Aplica la fórmula de distancia (Pitágoras con las diferencias de coordenadas).
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\Delta x=3$, $\Delta y=4$.
+  \item $d=\sqrt{3^2+4^2}=\sqrt{25}=5$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Ecuación de la recta]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es la ecuación de la recta que pasa por el punto $(1, 2)$ y es perpendicular a la recta $y = 2x + 5$?
+\alternativa{A}{$y = 2x$}
+\alternativa{B}{$y = -2x + 4$}
+\alternativa{C}{$y = \dfrac{1}{2}x + \dfrac{3}{2}$}
+\alternativa{D}{$y = -\dfrac{1}{2}x + \dfrac{5}{2}$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Dos rectas son perpendiculares si el producto de sus pendientes es $-1$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Pendiente dada: $2$. Pendiente perpendicular: $m = -\dfrac{1}{2}$.
+  \item Punto-pendiente: $y - 2 = -\dfrac{1}{2}(x - 1)$.
+  \item Despeja: $y = -\dfrac{1}{2}x + \dfrac{1}{2} + 2 = -\dfrac{1}{2}x + \dfrac{5}{2}$.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Probabilidad y estadística}
+
+{\itshape\color{zinc700} Probabilidad condicional, modelos binomial y normal, dispersión y combinatoria.}
+
+\subsection{Probabilidad condicional y modelo binomial}
+
+La probabilidad condicional $P(A\mid B)$ es la probabilidad de $A$ sabiendo que ocurrió $B$: el espacio muestral se reduce a $B$. Las tablas de doble entrada y los diagramas de árbol ordenan estos cálculos.
+
+El modelo binomial describe el número de éxitos en $n$ ensayos independientes con probabilidad de éxito $p$ constante.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+P(A\mid B)=\frac{P(A\cap B)}{P(B)} \\
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
+\end{gather*}
+
+Esperanza binomial: $E(X)=np$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item La condición indica el denominador.
+  \item $P(A\mid B)\neq P(B\mid A)$ en general.
+  \item En el binomial, $\binom{n}{k}$ cuenta las ubicaciones de los éxitos.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica qué se sabe (condición) y qué se pregunta.
+  \item Construye una tabla o árbol con las probabilidades.
+  \item Divide la intersección por la probabilidad de la condición.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Invertir la condición.
+  \item Olvidar el coeficiente binomial.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En un curso de 40 estudiantes, 25 practican deporte; de ellos, 10 también tocan un instrumento. Si se elige al azar un estudiante que practica deporte, ¿cuál es la probabilidad de que toque un instrumento?
+\alternativa{A}{$\dfrac{1}{4}$}
+\alternativa{B}{$\dfrac{2}{5}$}
+\alternativa{C}{$\dfrac{5}{8}$}
+\alternativa{D}{$\dfrac{3}{5}$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La condición «practica deporte» reduce el espacio muestral a 25 estudiantes.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Casos posibles: los 25 que practican deporte.
+  \item Favorables: 10. $P=\dfrac{10}{25}=\dfrac{2}{5}$.
+  \item $\frac{1}{4}=\frac{10}{40}$ usa el curso completo como espacio muestral, ignorando la condición.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Probabilidad condicional]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En un curso, el 60 \% son mujeres. El 30 \% de las mujeres y el 20 \% de los hombres usa lentes. Se elige al azar a una persona del curso y se observa que usa lentes.
+
+¿Cuál es la probabilidad de que sea mujer?
+\alternativa{A}{$\dfrac{9}{50}$}
+\alternativa{B}{$\dfrac{13}{50}$}
+\alternativa{C}{$\dfrac{3}{10}$}
+\alternativa{D}{$\dfrac{9}{13}$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Se pide $P(M \mid L) = \dfrac{P(M\cap L)}{P(L)}$: la información de que usa lentes reduce el espacio muestral.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $P(M\cap L) = 0{,}6\cdot 0{,}3 = 0{,}18$.
+  \item $P(H\cap L) = 0{,}4\cdot 0{,}2 = 0{,}08$, así que $P(L) = 0{,}18 + 0{,}08 = 0{,}26$.
+  \item $P(M\mid L) = \dfrac{0{,}18}{0{,}26} = \dfrac{18}{26} = \dfrac{9}{13}$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Modelo binomial]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se lanza una moneda equilibrada 4 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras?
+\alternativa{A}{$\dfrac{1}{2}$}
+\alternativa{B}{$\dfrac{1}{4}$}
+\alternativa{C}{$\dfrac{3}{8}$}
+\alternativa{D}{$\dfrac{1}{16}$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Cuenta de cuántas maneras pueden ubicarse 2 caras en 4 lanzamientos y multiplica por la probabilidad de cada secuencia.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Número de secuencias con 2 caras: $\binom{4}{2} = \dfrac{4!}{2!\,2!} = 6$.
+  \item Cada secuencia tiene probabilidad $\left(\dfrac{1}{2}\right)^4 = \dfrac{1}{16}$.
+  \item $P = 6\cdot\dfrac{1}{16} = \dfrac{6}{16} = \dfrac{3}{8}$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Dispersión y distribución normal}
+
+La desviación estándar mide cuánto se alejan, en promedio, los datos de la media. Si se suma una constante a todos los datos no cambia; si se multiplican por $k$, queda multiplicada por $|k|$.
+
+En una distribución normal, los datos se concentran simétricamente alrededor de la media: cerca del 68 \% está a una desviación estándar de ella y cerca del 95 \%, a dos.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+\sigma=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n}} \\
+z=\frac{x-\mu}{\sigma}
+\end{gather*}
+
+$P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0{,}95$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Igual media no implica igual dispersión.
+  \item Sumar 5 puntos a todos no cambia $\sigma$.
+  \item $z$ mide a cuántas desviaciones está un dato de la media.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Compara las distancias de los datos a la media.
+  \item Aplica las propiedades ante transformaciones de los datos.
+  \item En la normal, estandariza con $z$ y usa los porcentajes de referencia.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Creer que sumar una constante cambia la desviación estándar.
+  \item Confundir variedad de datos con dispersión.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Los puntajes de una prueba tienen media 60 y desviación estándar 8. Si a todos se les suman 5 puntos, ¿cuál es la nueva desviación estándar?
+\alternativa{A}{3}
+\alternativa{B}{8}
+\alternativa{C}{13}
+\alternativa{D}{40}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Sumar una constante desplaza los datos sin cambiar sus distancias a la media.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La media pasa a 65, pero cada dato sigue a la misma distancia de ella.
+  \item La desviación estándar se mantiene en 8.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Dispersión de datos]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Los cuatro conjuntos de datos siguientes tienen media 5. ¿Cuál tiene la \textbf{mayor} desviación estándar?
+\alternativa{A}{$\{5, 5, 5, 5\}$}
+\alternativa{B}{$\{3, 4, 6, 7\}$}
+\alternativa{C}{$\{2, 5, 5, 8\}$}
+\alternativa{D}{$\{1, 5, 5, 9\}$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La desviación estándar mide cuánto se alejan los datos de la media: con igual media y cantidad de datos, basta comparar la suma de los cuadrados de las desviaciones.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\{5,5,5,5\}$: todas las desviaciones son 0.
+  \item $\{3,4,6,7\}$: $4 + 1 + 1 + 4 = 10$.
+  \item $\{2,5,5,8\}$: $9 + 0 + 0 + 9 = 18$.
+  \item $\{1,5,5,9\}$: $16 + 0 + 0 + 16 = 32$, la mayor.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Combinatoria]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+De un grupo de 8 personas se elegirá una directiva con presidente, secretario y tesorero (cargos distintos, sin repetir personas). ¿Cuántas directivas distintas se pueden formar?
+\alternativa{A}{$336$}
+\alternativa{B}{$56$}
+\alternativa{C}{$512$}
+\alternativa{D}{$24$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Como los cargos son distintos, el orden importa: son variaciones de 8 elementos tomados de 3 en 3.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Presidente: 8 opciones; secretario: 7 (no se repite); tesorero: 6.
+  \item Principio multiplicativo: $8\cdot 7\cdot 6 = 336$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Técnicas de conteo}
+
+El principio multiplicativo cuenta las formas de realizar etapas sucesivas. Si importa el orden se usan permutaciones o variaciones; si no importa, combinaciones.
+
+Elegir 3 personas para cargos distintos (presidente, secretario, tesorero) es una variación; elegir un comité de 3 sin cargos, una combinación.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+P_n=n! \\
+V^n_k=\frac{n!}{(n-k)!} \\
+\binom{n}{k}=\frac{n!}{k!\,(n-k)!}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item ¿Importa el orden? Sí $\Rightarrow$ variación; no $\Rightarrow$ combinación.
+  \item $\binom{n}{k}=\binom{n}{n-k}$.
+  \item Con repetición: $n^k$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Decide si importa el orden y si hay repetición.
+  \item Aplica el principio multiplicativo o la fórmula correspondiente.
+  \item Comprueba con un caso pequeño.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar combinaciones cuando los cargos son distintos.
+  \item Permitir repeticiones que el problema prohíbe.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuántos comités de 2 personas se pueden formar con un grupo de 6 personas?
+\alternativa{A}{12}
+\alternativa{B}{15}
+\alternativa{C}{30}
+\alternativa{D}{36}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En un comité no importa el orden: es una combinación.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\binom{6}{2}=\dfrac{6\cdot 5}{2}=15$.
+  \item 30 contaría cada par dos veces (con orden).
+\end{enumerate}
+\end{ejemplo}
+
+\section{Habilidades transversales}
+
+{\itshape\color{zinc700} Formatos de pregunta que exigen razonamiento más que cálculo.}
+
+\subsection{Evaluación de suficiencia de datos}
+
+En estas preguntas no se pide el valor, sino decidir si la información de las afirmaciones (1) y (2) basta para obtenerlo. Las alternativas son siempre las mismas: (1) por sí sola, (2) por sí sola, ambas juntas, cada una por sí sola, o se requiere información adicional.
+
+Una afirmación es suficiente si permite determinar un \textbf{único} valor. No es necesario terminar el cálculo: basta saber que puede hacerse.
+
+\begin{definicion}[Orden de análisis]
+1) Analiza (1) sola. 2) Analiza (2) sola. 3) Solo si ninguna basta, analiza ambas juntas.
+
+Si las dos bastan por separado, la respuesta es «cada una por sí sola».
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Suficiente = determina un valor único.
+  \item No mezcles la información de (1) al analizar (2).
+  \item «Ambas juntas» solo cuando ninguna basta sola.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Escribe qué se necesita para responder la pregunta.
+  \item Evalúa la afirmación (1) por sí sola y luego la (2) por sí sola.
+  \item Si ninguna basta, evalúa ambas juntas; si aún no basta, se requiere información adicional.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar sin darse cuenta datos de (1) al evaluar (2).
+  \item Elegir «ambas juntas» cuando una sola ya era suficiente.
+  \item Calcular todo cuando solo se pide decidir si es posible.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se puede determinar el valor de $x$ si:
+
+(1) $x^2=9$.
+
+(2) $x>0$.
+\alternativa{A}{(1) por sí sola}
+\alternativa{B}{(2) por sí sola}
+\alternativa{C}{Ambas juntas, (1) y (2)}
+\alternativa{D}{Se requiere información adicional}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con (1) hay dos valores posibles; con (2) infinitos; juntas, uno solo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item (1): $x=3$ o $x=-3$. No es único.
+  \item (2): cualquier positivo. No basta.
+  \item Juntas: $x=3$. Son suficientes ambas juntas.
+\end{enumerate}
+\end{ejemplo}
+%%</CONTENIDO>%%
+
+\end{document}

@@ -1,0 +1,731 @@
+{
+ "id": "m2-curado-1",
+ "subject": "m2",
+ "title": "Ensayo curado 1",
+ "description": "Dieciséis preguntas originales de los contenidos propios de M2: logaritmos, interés compuesto, funciones exponencial, compuesta e inversa, trigonometría, homotecia, probabilidad condicional, binomial y combinatoria. Cada una incluye desarrollo paso a paso.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 40,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   161,
+   192,
+   220,
+   245,
+   268,
+   289,
+   308,
+   326,
+   344,
+   362,
+   378,
+   392,
+   405,
+   418,
+   432,
+   448,
+   462,
+   475,
+   486,
+   495,
+   506,
+   519,
+   533,
+   547,
+   560,
+   571,
+   580,
+   590,
+   601,
+   614,
+   629,
+   643,
+   656,
+   667,
+   678,
+   690,
+   704,
+   719,
+   735,
+   750,
+   765,
+   780,
+   797,
+   816,
+   836,
+   857,
+   879,
+   903,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-curado-1-q01",
+   "number": 1,
+   "axis": "Números",
+   "topic": "Logaritmos",
+   "difficulty": "baja",
+   "stem": "¿Cuál es el valor de $\\log_2 32 + \\log_3 \\dfrac{1}{9}$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$3$"
+    },
+    {
+     "key": "B",
+     "text": "$7$"
+    },
+    {
+     "key": "C",
+     "text": "$-3$"
+    },
+    {
+     "key": "D",
+     "text": "$-7$"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "$\\log_b a = c$ significa $b^c = a$: busca a qué exponente hay que elevar cada base.",
+    "steps": [
+     "$\\log_2 32 = 5$, porque $2^5 = 32$.",
+     "$\\log_3 \\dfrac{1}{9} = -2$, porque $3^{-2} = \\dfrac{1}{3^2} = \\dfrac{1}{9}$.",
+     "Suma: $5 + (-2) = 3$."
+    ],
+    "distractors": {
+     "B": "Toma $\\log_3\\frac{1}{9}$ como $+2$; el argumento es menor que 1, así que el logaritmo debe ser negativo."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Propiedades de logaritmos",
+   "difficulty": "media",
+   "stem": "Si $\\log 2 \\approx 0{,}301$ y $\\log 3 \\approx 0{,}477$, ¿cuál es el valor aproximado de $\\log 12$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$0{,}778$"
+    },
+    {
+     "key": "B",
+     "text": "$0{,}954$"
+    },
+    {
+     "key": "C",
+     "text": "$1{,}079$"
+    },
+    {
+     "key": "D",
+     "text": "$1{,}204$"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Descompón 12 en factores primos y usa $\\log(ab) = \\log a + \\log b$ y $\\log a^n = n\\log a$.",
+    "steps": [
+     "$12 = 2^2\\cdot 3$.",
+     "$\\log 12 = \\log 2^2 + \\log 3 = 2\\log 2 + \\log 3$.",
+     "$2\\cdot 0{,}301 + 0{,}477 = 0{,}602 + 0{,}477 = 1{,}079$."
+    ],
+    "distractors": {
+     "A": "Es $\\log 6 = \\log 2 + \\log 3$: falta el segundo factor 2.",
+     "D": "Es $\\log 16 = 4\\log 2$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q03",
+   "number": 3,
+   "axis": "Números",
+   "topic": "Interés compuesto",
+   "difficulty": "media",
+   "stem": "Se depositan \\$1 000 000 a un interés compuesto del 2 % mensual. ¿Cuál es el monto acumulado al cabo de 3 meses?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$1 020 000"
+    },
+    {
+     "key": "B",
+     "text": "\\$1 061 208"
+    },
+    {
+     "key": "C",
+     "text": "\\$1 060 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$1 080 000"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Con interés compuesto, cada mes se gana interés sobre el monto acumulado: $C_n = C_0(1 + i)^n$.",
+    "steps": [
+     "Datos: $C_0 = 1\\,000\\,000$, $i = 0{,}02$ y $n = 3$.",
+     "$(1{,}02)^2 = 1{,}0404$ y $(1{,}02)^3 = 1{,}0404\\cdot 1{,}02 = 1{,}061208$.",
+     "$C_3 = 1\\,000\\,000\\cdot 1{,}061208 = 1\\,061\\,208$."
+    ],
+    "distractors": {
+     "C": "Es el monto con interés **simple**: $1\\,000\\,000\\,(1 + 3\\cdot 0{,}02)$.",
+     "A": "Es el monto después de un solo mes."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Racionalización",
+   "difficulty": "media",
+   "stem": "¿Cuál de las siguientes expresiones es igual a $\\dfrac{4}{\\sqrt{5} - 1}$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$\\sqrt{5} - 1$"
+    },
+    {
+     "key": "B",
+     "text": "$\\sqrt{5} + 1$"
+    },
+    {
+     "key": "C",
+     "text": "$4\\sqrt{5} + 4$"
+    },
+    {
+     "key": "D",
+     "text": "$\\dfrac{\\sqrt{5} + 1}{4}$"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Para racionalizar un denominador binomial se amplifica por su conjugado y se usa $(a-b)(a+b) = a^2 - b^2$.",
+    "steps": [
+     "Amplifica por $\\sqrt{5}+1$: $\\dfrac{4(\\sqrt{5}+1)}{(\\sqrt{5}-1)(\\sqrt{5}+1)}$.",
+     "Denominador: $(\\sqrt{5})^2 - 1^2 = 5 - 1 = 4$.",
+     "Simplifica: $\\dfrac{4(\\sqrt{5}+1)}{4} = \\sqrt{5} + 1$."
+    ],
+    "distractors": {
+     "C": "Es el numerador $4(\\sqrt5+1)$ sin dividir por el nuevo denominador 4."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q05",
+   "number": 5,
+   "axis": "Álgebra y funciones",
+   "topic": "Discriminante",
+   "difficulty": "media",
+   "stem": "¿Para qué valores de $k$ la ecuación $x^2 + kx + 9 = 0$ tiene exactamente una solución real?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$k = 3$"
+    },
+    {
+     "key": "B",
+     "text": "$k = 3$ o $k = -3$"
+    },
+    {
+     "key": "C",
+     "text": "$k = 9$"
+    },
+    {
+     "key": "D",
+     "text": "$k = 6$ o $k = -6$"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Una ecuación cuadrática tiene una única solución real (doble) cuando su discriminante es cero: $\\Delta = b^2 - 4ac = 0$.",
+    "steps": [
+     "Aquí $a = 1$, $b = k$ y $c = 9$: $\\Delta = k^2 - 4\\cdot 1\\cdot 9 = k^2 - 36$.",
+     "$k^2 - 36 = 0 \\Rightarrow k^2 = 36 \\Rightarrow k = 6$ o $k = -6$.",
+     "Comprobación con $k = 6$: $x^2 + 6x + 9 = (x+3)^2$, cuya única solución es $x = -3$."
+    ],
+    "distractors": {
+     "B": "Iguala $k^2 = 9$, olvidando el factor $4ac = 36$ del discriminante."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q06",
+   "number": 6,
+   "axis": "Álgebra y funciones",
+   "topic": "Función exponencial",
+   "difficulty": "baja",
+   "stem": "Una colonia de bacterias tiene 500 individuos y duplica su población cada 3 horas. ¿Cuántas bacterias habrá al cabo de 12 horas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2000"
+    },
+    {
+     "key": "B",
+     "text": "4000"
+    },
+    {
+     "key": "C",
+     "text": "8000"
+    },
+    {
+     "key": "D",
+     "text": "16 000"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Crecimiento exponencial: $N(t) = N_0\\cdot 2^{t/T}$, donde $T$ es el tiempo de duplicación.",
+    "steps": [
+     "En 12 horas hay $\\dfrac{12}{3} = 4$ duplicaciones.",
+     "$N(12) = 500\\cdot 2^4 = 500\\cdot 16 = 8000$."
+    ],
+    "distractors": {
+     "D": "Cuenta 5 duplicaciones ($500\\cdot 2^5$), incluyendo el instante inicial como si fuera una duplicación."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q07",
+   "number": 7,
+   "axis": "Álgebra y funciones",
+   "topic": "Composición de funciones",
+   "difficulty": "media",
+   "stem": "Sean $f(x) = 2x + 1$ y $g(x) = x^2$. ¿Cuál es el valor de $(f\\circ g)(3)$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$19$"
+    },
+    {
+     "key": "B",
+     "text": "$49$"
+    },
+    {
+     "key": "C",
+     "text": "$21$"
+    },
+    {
+     "key": "D",
+     "text": "$36$"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "$(f\\circ g)(x) = f(g(x))$: primero se aplica $g$ y luego $f$.",
+    "steps": [
+     "$g(3) = 3^2 = 9$.",
+     "$f(9) = 2\\cdot 9 + 1 = 19$."
+    ],
+    "distractors": {
+     "B": "Es $(g\\circ f)(3) = g(7) = 49$: el orden de la composición importa."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q08",
+   "number": 8,
+   "axis": "Álgebra y funciones",
+   "topic": "Función inversa",
+   "difficulty": "media",
+   "stem": "Si $f(x) = \\dfrac{x - 3}{2}$, ¿cuál es la función inversa $f^{-1}(x)$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$2x - 3$"
+    },
+    {
+     "key": "B",
+     "text": "$\\dfrac{x + 3}{2}$"
+    },
+    {
+     "key": "C",
+     "text": "$2x + 3$"
+    },
+    {
+     "key": "D",
+     "text": "$\\dfrac{2}{x - 3}$"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Para invertir: escribe $y = f(x)$, despeja $x$ y luego intercambia los nombres de las variables.",
+    "steps": [
+     "$y = \\dfrac{x-3}{2} \\Rightarrow 2y = x - 3 \\Rightarrow x = 2y + 3$.",
+     "Intercambia variables: $f^{-1}(x) = 2x + 3$.",
+     "Comprobación: $f(f^{-1}(x)) = \\dfrac{(2x+3)-3}{2} = x$."
+    ],
+    "distractors": {
+     "D": "Confunde la función inversa con el recíproco $\\dfrac{1}{f(x)}$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q09",
+   "number": 9,
+   "axis": "Geometría",
+   "topic": "Trigonometría en el triángulo rectángulo",
+   "difficulty": "media",
+   "stem": "Una rampa de 10 m de largo forma un ángulo de $30^\\circ$ con el suelo horizontal. ¿Qué altura alcanza su extremo superior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 m"
+    },
+    {
+     "key": "B",
+     "text": "$5\\sqrt{3}$ m"
+    },
+    {
+     "key": "C",
+     "text": "$\\dfrac{10\\sqrt{3}}{3}$ m"
+    },
+    {
+     "key": "D",
+     "text": "20 m"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La rampa es la hipotenusa y la altura es el cateto opuesto al ángulo: se usa el seno.",
+    "steps": [
+     "$\\operatorname{sen} 30^\\circ = \\dfrac{h}{10}$.",
+     "Como $\\operatorname{sen} 30^\\circ = \\dfrac{1}{2}$: $h = 10\\cdot\\dfrac{1}{2} = 5$ m."
+    ],
+    "distractors": {
+     "B": "Usa el coseno: $10\\cos 30^\\circ = 5\\sqrt3$ es la distancia horizontal que cubre la rampa, no su altura.",
+     "D": "Divide por el seno en vez de multiplicar; un cateto nunca es mayor que la hipotenusa."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q10",
+   "number": 10,
+   "axis": "Geometría",
+   "topic": "Razones trigonométricas",
+   "difficulty": "media",
+   "stem": "Si $\\alpha$ es un ángulo agudo y $\\operatorname{sen}\\alpha = \\dfrac{3}{5}$, ¿cuál es el valor de $\\tan\\alpha$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$\\dfrac{4}{5}$"
+    },
+    {
+     "key": "B",
+     "text": "$\\dfrac{3}{4}$"
+    },
+    {
+     "key": "C",
+     "text": "$\\dfrac{4}{3}$"
+    },
+    {
+     "key": "D",
+     "text": "$\\dfrac{5}{3}$"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Construye un triángulo rectángulo con cateto opuesto 3 e hipotenusa 5 y encuentra el cateto adyacente.",
+    "steps": [
+     "Cateto adyacente: $\\sqrt{5^2 - 3^2} = \\sqrt{16} = 4$.",
+     "$\\tan\\alpha = \\dfrac{\\text{opuesto}}{\\text{adyacente}} = \\dfrac{3}{4}$."
+    ],
+    "distractors": {
+     "A": "Es $\\cos\\alpha$.",
+     "C": "Es la cotangente (adyacente sobre opuesto)."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q11",
+   "number": 11,
+   "axis": "Geometría",
+   "topic": "Homotecia",
+   "difficulty": "media",
+   "stem": "Una figura de área $12\\ \\text{cm}^2$ se transforma mediante una homotecia de razón $k = -2$. ¿Cuál es el área de la figura homotética?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$24\\ \\text{cm}^2$"
+    },
+    {
+     "key": "B",
+     "text": "$48\\ \\text{cm}^2$"
+    },
+    {
+     "key": "C",
+     "text": "$-24\\ \\text{cm}^2$"
+    },
+    {
+     "key": "D",
+     "text": "$144\\ \\text{cm}^2$"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "En una homotecia de razón $k$, las longitudes se multiplican por $|k|$ y las áreas por $k^2$. El signo solo indica que la figura queda invertida respecto del centro.",
+    "steps": [
+     "Factor de área: $k^2 = (-2)^2 = 4$.",
+     "Área homotética: $12\\cdot 4 = 48\\ \\text{cm}^2$."
+    ],
+    "distractors": {
+     "A": "Multiplica el área por $|k|$, que es el factor de las longitudes.",
+     "C": "Un área nunca es negativa: el signo de $k$ no afecta las medidas."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q12",
+   "number": 12,
+   "axis": "Geometría",
+   "topic": "Ecuación de la recta",
+   "difficulty": "alta",
+   "stem": "¿Cuál es la ecuación de la recta que pasa por el punto $(1, 2)$ y es perpendicular a la recta $y = 2x + 5$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$y = 2x$"
+    },
+    {
+     "key": "B",
+     "text": "$y = -2x + 4$"
+    },
+    {
+     "key": "C",
+     "text": "$y = \\dfrac{1}{2}x + \\dfrac{3}{2}$"
+    },
+    {
+     "key": "D",
+     "text": "$y = -\\dfrac{1}{2}x + \\dfrac{5}{2}$"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Dos rectas son perpendiculares si el producto de sus pendientes es $-1$.",
+    "steps": [
+     "Pendiente dada: $2$. Pendiente perpendicular: $m = -\\dfrac{1}{2}$.",
+     "Punto-pendiente: $y - 2 = -\\dfrac{1}{2}(x - 1)$.",
+     "Despeja: $y = -\\dfrac{1}{2}x + \\dfrac{1}{2} + 2 = -\\dfrac{1}{2}x + \\dfrac{5}{2}$."
+    ],
+    "distractors": {
+     "A": "Pasa por $(1,2)$, pero es paralela a la recta dada (misma pendiente).",
+     "B": "Pasa por $(1,2)$ y cambia el signo de la pendiente, pero no la invierte.",
+     "C": "Pasa por $(1,2)$ e invierte la pendiente, pero sin cambiarle el signo."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q13",
+   "number": 13,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad condicional",
+   "difficulty": "alta",
+   "stem": "En un curso, el 60 % son mujeres. El 30 % de las mujeres y el 20 % de los hombres usa lentes. Se elige al azar a una persona del curso y se observa que usa lentes.\n\n¿Cuál es la probabilidad de que sea mujer?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$\\dfrac{9}{50}$"
+    },
+    {
+     "key": "B",
+     "text": "$\\dfrac{13}{50}$"
+    },
+    {
+     "key": "C",
+     "text": "$\\dfrac{3}{10}$"
+    },
+    {
+     "key": "D",
+     "text": "$\\dfrac{9}{13}$"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Se pide $P(M \\mid L) = \\dfrac{P(M\\cap L)}{P(L)}$: la información de que usa lentes reduce el espacio muestral.",
+    "steps": [
+     "$P(M\\cap L) = 0{,}6\\cdot 0{,}3 = 0{,}18$.",
+     "$P(H\\cap L) = 0{,}4\\cdot 0{,}2 = 0{,}08$, así que $P(L) = 0{,}18 + 0{,}08 = 0{,}26$.",
+     "$P(M\\mid L) = \\dfrac{0{,}18}{0{,}26} = \\dfrac{18}{26} = \\dfrac{9}{13}$."
+    ],
+    "distractors": {
+     "A": "Es $P(M\\cap L)$: la probabilidad de ser mujer **y** usar lentes, sin condicionar.",
+     "B": "Es $P(L)$, la probabilidad total de usar lentes.",
+     "C": "Es $P(L\\mid M)$: la condición está invertida."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q14",
+   "number": 14,
+   "axis": "Probabilidad y estadística",
+   "topic": "Modelo binomial",
+   "difficulty": "media",
+   "stem": "Se lanza una moneda equilibrada 4 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$\\dfrac{1}{2}$"
+    },
+    {
+     "key": "B",
+     "text": "$\\dfrac{1}{4}$"
+    },
+    {
+     "key": "C",
+     "text": "$\\dfrac{3}{8}$"
+    },
+    {
+     "key": "D",
+     "text": "$\\dfrac{1}{16}$"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Cuenta de cuántas maneras pueden ubicarse 2 caras en 4 lanzamientos y multiplica por la probabilidad de cada secuencia.",
+    "steps": [
+     "Número de secuencias con 2 caras: $\\binom{4}{2} = \\dfrac{4!}{2!\\,2!} = 6$.",
+     "Cada secuencia tiene probabilidad $\\left(\\dfrac{1}{2}\\right)^4 = \\dfrac{1}{16}$.",
+     "$P = 6\\cdot\\dfrac{1}{16} = \\dfrac{6}{16} = \\dfrac{3}{8}$."
+    ],
+    "distractors": {
+     "A": "Intuición frecuente («la mitad de las veces»): 2 caras es el resultado más probable, pero 10 de las 16 secuencias posibles no tienen exactamente 2 caras.",
+     "D": "Es la probabilidad de **una** secuencia particular, como CCSS."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q15",
+   "number": 15,
+   "axis": "Probabilidad y estadística",
+   "topic": "Dispersión de datos",
+   "difficulty": "media",
+   "stem": "Los cuatro conjuntos de datos siguientes tienen media 5. ¿Cuál tiene la **mayor** desviación estándar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$\\{5, 5, 5, 5\\}$"
+    },
+    {
+     "key": "B",
+     "text": "$\\{3, 4, 6, 7\\}$"
+    },
+    {
+     "key": "C",
+     "text": "$\\{2, 5, 5, 8\\}$"
+    },
+    {
+     "key": "D",
+     "text": "$\\{1, 5, 5, 9\\}$"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La desviación estándar mide cuánto se alejan los datos de la media: con igual media y cantidad de datos, basta comparar la suma de los cuadrados de las desviaciones.",
+    "steps": [
+     "$\\{5,5,5,5\\}$: todas las desviaciones son 0.",
+     "$\\{3,4,6,7\\}$: $4 + 1 + 1 + 4 = 10$.",
+     "$\\{2,5,5,8\\}$: $9 + 0 + 0 + 9 = 18$.",
+     "$\\{1,5,5,9\\}$: $16 + 0 + 0 + 16 = 32$, la mayor."
+    ],
+    "distractors": {
+     "B": "Tiene más valores distintos, pero todos cercanos a la media: lo que importa es la distancia a la media, no la variedad."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-1-q16",
+   "number": 16,
+   "axis": "Probabilidad y estadística",
+   "topic": "Combinatoria",
+   "difficulty": "media",
+   "stem": "De un grupo de 8 personas se elegirá una directiva con presidente, secretario y tesorero (cargos distintos, sin repetir personas). ¿Cuántas directivas distintas se pueden formar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$336$"
+    },
+    {
+     "key": "B",
+     "text": "$56$"
+    },
+    {
+     "key": "C",
+     "text": "$512$"
+    },
+    {
+     "key": "D",
+     "text": "$24$"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Como los cargos son distintos, el orden importa: son variaciones de 8 elementos tomados de 3 en 3.",
+    "steps": [
+     "Presidente: 8 opciones; secretario: 7 (no se repite); tesorero: 6.",
+     "Principio multiplicativo: $8\\cdot 7\\cdot 6 = 336$."
+    ],
+    "distractors": {
+     "B": "Es $\\binom{8}{3} = 56$: cuenta grupos de 3 personas sin asignar cargos.",
+     "C": "Es $8^3$: permite que una misma persona ocupe varios cargos."
+    }
+   }
+  }
+ ]
+}

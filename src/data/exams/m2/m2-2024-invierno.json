@@ -1,0 +1,2014 @@
+{
+ "id": "m2-2024-invierno",
+ "subject": "m2",
+ "title": "PAES Invierno 2024",
+ "description": "Prueba oficial completa de Competencia Matemática 2 (M2): 55 preguntas, aplicada el 19-06-2023 (Admisión 2024). Claves del clavijero oficial DEMRE.",
+ "year": 2024,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "191",
+ "appliedOn": "2023-06-19",
+ "durationMinutes": 140,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   167,
+   197,
+   224,
+   249,
+   272,
+   292,
+   311,
+   329,
+   347,
+   364,
+   379,
+   393,
+   406,
+   419,
+   434,
+   449,
+   463,
+   475,
+   486,
+   495,
+   506,
+   518,
+   532,
+   547,
+   560,
+   570,
+   580,
+   589,
+   599,
+   612,
+   626,
+   641,
+   654,
+   665,
+   675,
+   686,
+   699,
+   715,
+   730,
+   745,
+   760,
+   774,
+   790,
+   808,
+   827,
+   847,
+   867,
+   889,
+   914,
+   1000
+  ],
+  "officialQuestionCount": 55,
+  "officialScorableCount": 50
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-2024-invierno-q01",
+   "number": 1,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "3600 · n = Considera la igualdad p 10 . ,0 0003\n\n¿Cuál es el valor de n si p = 2,1 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "7"
+    },
+    {
+     "key": "B",
+     "text": "6"
+    },
+    {
+     "key": "C",
+     "text": "0"
+    },
+    {
+     "key": "D",
+     "text": "1 −"
+    },
+    {
+     "key": "E",
+     "text": "− 2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q01.webp",
+    "width": 903,
+    "height": 322,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Números decimales",
+   "stem": "Se necesita un modelo que permita trabajar con los decimales que se requieran de un número. Esto se consigue mediante la función T la que entrega el número x n truncado en el n-ésimo decimal, tal como se ejemplifica en la siguiente tabla:\n\nT⁰ (4,56891921) = 4\n\nT¹ (4,56891921) = 4,5\n\nT⁴ (4,56891921) = 4,5689\n\nT⁷ (4,56891921) = 4,5689192\n\nSi () π = ,3 1415926535 , ¿cuál de las siguientes expresiones es igual a 2? T10\n\n7 ( () () )",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 · T π − T π 7 6 ( ))"
+    },
+    {
+     "key": "B",
+     "text": "10 · T ( π ) − T ( π 1 0 6"
+    },
+    {
+     "key": "C",
+     "text": "10 · ( T () π − T () π ) 6 5 5"
+    },
+    {
+     "key": "D",
+     "text": "10 · ( T () π − T () π ) 5 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q02.webp",
+    "width": 903,
+    "height": 627,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q03",
+   "number": 3,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "Considera un círculo de radio R cm , un cuadrado de lado P cm y un triángulo que tiene un lado de medida P cm y la altura correspondiente a este lado es H cm .\n\nSi las áreas de estas figuras son iguales, ¿cuál de las siguientes relaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "H < P < R"
+    },
+    {
+     "key": "B",
+     "text": "H < R < P"
+    },
+    {
+     "key": "C",
+     "text": "R < H < P"
+    },
+    {
+     "key": "D",
+     "text": "P < H < R"
+    },
+    {
+     "key": "E",
+     "text": "R < P < H"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q03.webp",
+    "width": 903,
+    "height": 389,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Números irracionales",
+   "stem": "Considera los números irracionales P y Q y el número racional R.\n\n¿Cuál de las siguientes expresiones representa **siempre** un número irracional?",
+   "options": [
+    {
+     "key": "A",
+     "text": "P + Q"
+    },
+    {
+     "key": "B",
+     "text": "R ( P + Q )"
+    },
+    {
+     "key": "C",
+     "text": "P + Q"
+    },
+    {
+     "key": "D",
+     "text": "P + R Q + R"
+    },
+    {
+     "key": "E",
+     "text": "P"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q04.webp",
+    "width": 903,
+    "height": 377,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q05",
+   "number": 5,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "El largo de un rectángulo se aumenta en su 30 % y el ancho se disminuye en su 20 % obteniéndose un nuevo rectángulo.\n\n¿En qué porcentaje varió el área del nuevo rectángulo con respecto al área del rectángulo original?",
+   "options": [
+    {
+     "key": "A",
+     "text": "50 %"
+    },
+    {
+     "key": "B",
+     "text": "10 %"
+    },
+    {
+     "key": "C",
+     "text": "4 %"
+    },
+    {
+     "key": "D",
+     "text": "6 %"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q05.webp",
+    "width": 903,
+    "height": 348,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q06",
+   "number": 6,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "La media geométrica de 5 números es la raíz quinta del producto de los números.\n\n¿Cuál es la media geométrica de los números a, a 2, a 4, a 8 y 16 a , con a > 0 ?\n\n1 5 5",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 10a 5 a"
+    },
+    {
+     "key": "B",
+     "text": "2· 5 10"
+    },
+    {
+     "key": "C",
+     "text": "a· 2 1 5"
+    },
+    {
+     "key": "D",
+     "text": "2 10a"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q06.webp",
+    "width": 903,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q07",
+   "number": 7,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Considera dos esferas A y B de volúmenes V y V, y de radios r y Br, A B A respectivamente.\n\nLos volúmenes y los radios de cada esfera están relacionados de la siguiente manera:\n\n3 3 r = 3 V y r = 3 V A A B B 4 π 4 π\n\n¿Cuál de las siguientes afirmaciones es **siempre** verdadera?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "El diámetro de la esfera A es ³ V . A π 3"
+    },
+    {
+     "key": "B",
+     "text": "La suma de ambos radios es ³ ( V + V ) . A B 4 π r V A A"
+    },
+    {
+     "key": "C",
+     "text": "El cociente entre los radios es = 3 . r V B B 2 3 3"
+    },
+    {
+     "key": "D",
+     "text": "El producto de ambos radios es V A V · . B 4 π"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q07.webp",
+    "width": 903,
+    "height": 639,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q08",
+   "number": 8,
+   "axis": "Números",
+   "topic": "Números reales",
+   "stem": "Considera el número real positivo p.\n\n¿Cuál de las siguientes expresiones equivale a 24 p + 3 · 150 p ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3· 174 p"
+    },
+    {
+     "key": "B",
+     "text": "522 p"
+    },
+    {
+     "key": "C",
+     "text": "1 374 p"
+    },
+    {
+     "key": "D",
+     "text": "17 · 6 p"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q08.webp",
+    "width": 903,
+    "height": 333,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q09",
+   "number": 9,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "¿Cuál es el valor de log 9 · log 2 ? 3 8",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 2"
+    },
+    {
+     "key": "B",
+     "text": "3"
+    },
+    {
+     "key": "C",
+     "text": "log11 18"
+    },
+    {
+     "key": "D",
+     "text": "log24 18"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q09.webp",
+    "width": 903,
+    "height": 277,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q10",
+   "number": 10,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "En un laboratorio se cultivan bacterias que se triplican en cada día transcurrido.\n\nSi el experimento comienza con una cantidad de p bacterias y el comportamiento de estas se mantiene en el tiempo, ¿cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Al término del segundo día la cantidad de bacterias será 6 veces más que la cantidad inicial."
+    },
+    {
+     "key": "B",
+     "text": "Al término del tercer día la cantidad de bacterias aumenta en 27 unidades."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de bacterias al término del cuarto día será de 81. p"
+    },
+    {
+     "key": "D",
+     "text": "La cantidad de bacterias al término del quinto día será de ( 3 p )⁵ ."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q10.webp",
+    "width": 903,
+    "height": 391,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q11",
+   "number": 11,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "p y b son números reales que cumplen la condición 0 < p < b .\n\n2 2 ¿Cuál de las siguientes expresiones es igual a log b − p ?\n\n( )",
+   "options": [
+    {
+     "key": "A",
+     "text": "log b − p"
+    },
+    {
+     "key": "B",
+     "text": "log b − log p b"
+    },
+    {
+     "key": "C",
+     "text": "log p ² − 2 log b log p"
+    },
+    {
+     "key": "D",
+     "text": "2 log ( p + b ) + log ( b − p )"
+    },
+    {
+     "key": "E",
+     "text": "2"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q11.webp",
+    "width": 903,
+    "height": 451,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q12",
+   "number": 12,
+   "axis": "Álgebra y funciones",
+   "topic": "Función lineal y afín",
+   "stem": "El nivel de intensidad acústica medido en decibelios ( dB se puede calcular ) I mediante la expresión B = 10 · log , en la que I es la intensidad acústica en la dB I 0 W e escala lineal medida en 0Ies la iⁿteⁿsidad acústica más baja que puede 2 m W 10⁻ 12 percibir el oído humano cuyo valor es . 2 m\n\nSi la conversación entre dos personas tiene una intensidad acústica en la escala W 10⁻ 7 lineal de , ¿cuál es el nivel de intensidad acústica de esa conversación, 2 m en dB?\n\n7",
+   "options": [
+    {
+     "key": "A",
+     "text": "10· log 12"
+    },
+    {
+     "key": "B",
+     "text": "50"
+    },
+    {
+     "key": "C",
+     "text": "− 50 7"
+    },
+    {
+     "key": "D",
+     "text": "− 10 · log 12"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q12.webp",
+    "width": 903,
+    "height": 630,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q13",
+   "number": 13,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Si ( 2 ) logm p = 3 , ¿cuál es el valor de log p mp ?\n\n8",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 7"
+    },
+    {
+     "key": "B",
+     "text": "3 2"
+    },
+    {
+     "key": "C",
+     "text": "3 1"
+    },
+    {
+     "key": "D",
+     "text": "5"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q13.webp",
+    "width": 903,
+    "height": 371,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q14",
+   "number": 14,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Si − 3 < a < 3 y 1 < b < 8 , ¿cuál es el conjunto que contiene a todos y únicamente a? a los posibles valores de b",
+   "options": [
+    {
+     "key": "A",
+     "text": "] − ,3 [3"
+    },
+    {
+     "key": "B",
+     "text": "] − ,2 11 [ 3 −"
+    },
+    {
+     "key": "C",
+     "text": ",3 8 3"
+    },
+    {
+     "key": "D",
+     "text": ",3 8"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q14.webp",
+    "width": 903,
+    "height": 368,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q15",
+   "number": 15,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "El ojo humano utiliza la pupila como un lente y las imágenes proyectadas se forman en la retina. La altura de la imagen que se forma en la retina h, cumple la relación 1 d · h 1 0 h = , tal que h es la altura original del objeto observado, d es la 1 0 1 d 0 distancia entre la pupila y la retina, y d 0 es la distancia entre el objeto y la pupila.\n\nUna persona observa una botella de 25 cm de alto y un tarro de café de 10 cm de alto, estos se encuentran a una distancia de 200 y 250 centímetros de la pupila de la persona, respectivamente. La altura de la imagen de la botella formada en la retina es h , mientras que la altura de la imagen del tarro de café formada en la B retina es h . T\n\nSi al mirar ambos objetos, la distancia entre la pupila y la retina se mantiene constante, ¿cuál de las siguientes igualdades relaciona h con h? B T\n\n5",
+   "options": [
+    {
+     "key": "A",
+     "text": "h = · h B T 2 25"
+    },
+    {
+     "key": "B",
+     "text": "h = · h B T 8 1"
+    },
+    {
+     "key": "C",
+     "text": "h = · h B T 2"
+    },
+    {
+     "key": "D",
+     "text": "h = 2 · h B T"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q15.webp",
+    "width": 903,
+    "height": 705,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q16",
+   "number": 16,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Considera la ecuación − px − qx = r , en x.\n\n¿Cuál de las siguientes condiciones garantiza que la ecuación tiene solución en el conjunto de los números reales positivos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "p < 0 y q < 0"
+    },
+    {
+     "key": "B",
+     "text": "r > 0"
+    },
+    {
+     "key": "C",
+     "text": "− p − q > 0"
+    },
+    {
+     "key": "D",
+     "text": "− pr > qr"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q16.webp",
+    "width": 903,
+    "height": 318,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q17",
+   "number": 17,
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "stem": "Considera el sistema, en x e y. 30x + qy = 12 px − 3y = 2\n\nSi el sistema tiene infinitas soluciones, ¿cuál de los siguientes son los valores de p y q, respectivamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "30 y 3"
+    },
+    {
+     "key": "B",
+     "text": "30 y − 3"
+    },
+    {
+     "key": "C",
+     "text": "5 y 18 −"
+    },
+    {
+     "key": "D",
+     "text": "− 5 y 18"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q17.webp",
+    "width": 903,
+    "height": 358,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q18",
+   "number": 18,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Isabel compró cierta cantidad de bandejas y de huevos. Al colocar n huevos en cada bandeja, le sobraban m huevos y si colocaba p huevos en cada bandeja, le sobraban q bandejas.\n\nSi x representa la cantidad de bandejas de huevos e y la cantidad de huevos comprados por Isabel, ¿cuál de los siguientes sistemas de ecuaciones representa la situación planteada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "nx + m = y p(x – q) = y"
+    },
+    {
+     "key": "B",
+     "text": "nx – m = y p(x – q) = y"
+    },
+    {
+     "key": "C",
+     "text": "nx + m = y p(x + q) = y"
+    },
+    {
+     "key": "D",
+     "text": "nx + m = y px – q = y"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q18.webp",
+    "width": 903,
+    "height": 1022,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q19",
+   "number": 19,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "¿Cuál de las siguientes ecuaciones forma un sistema sin solución con la 1 ecuación y = x + 5 ? 2\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "y = x + 5 2 1"
+    },
+    {
+     "key": "B",
+     "text": "y = x + 8 2"
+    },
+    {
+     "key": "C",
+     "text": "y = 2 x + 5"
+    },
+    {
+     "key": "D",
+     "text": "y = − 2 x + 8"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q19.webp",
+    "width": 903,
+    "height": 353,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q20",
+   "number": 20,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "¿Cuál debe ser el valor de la constante kpara que la gráfica de la función f ( x ) = kx + 4 forme con los semiejes positivos del sistema coordenado una región cuya área sea igual a 12?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 2 2"
+    },
+    {
+     "key": "B",
+     "text": "3 4"
+    },
+    {
+     "key": "C",
+     "text": "− 3 2"
+    },
+    {
+     "key": "D",
+     "text": "− 3"
+    },
+    {
+     "key": "E",
+     "text": "6"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q20.webp",
+    "width": 903,
+    "height": 457,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q21",
+   "number": 21,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Dos automóviles, A y B, que están simultáneamente en el punto P tienen que realizar un viaje en línea recta, el automóvil A lo hace con una rapidez constante kilómetros kilómetros de 60 y el automóvil B con una rapidez constante de 80 , lo hora hora que se representa en la figura adjunta.\n\nSi ambos parten al mismo tiempo, ¿cuál de las siguientes funciones modela la relación de la distancia entre A y B, en kilómetros, en función del tiempo t, en horas, tal que t pertenece al intervalo [ ,0 ∞ [ ?\n\n()",
+   "options": [
+    {
+     "key": "A",
+     "text": "m t = 10 t ()"
+    },
+    {
+     "key": "B",
+     "text": "g t = 100 t () 2t"
+    },
+    {
+     "key": "C",
+     "text": "n t = 100 ()"
+    },
+    {
+     "key": "D",
+     "text": "p t = 1000 t ()"
+    },
+    {
+     "key": "E",
+     "text": "q t = 140 t"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q21.webp",
+    "width": 903,
+    "height": 938,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q22",
+   "number": 22,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Bajo ciertas condiciones un automóvil recorre M kilómetros por cada litro de bencina.\n\nSi estas condiciones se mantienen, ¿cuál de las siguientes funciones permite determinar el consumo de bencina del automóvil, en litros, y en términos de la cantidad x de kilómetros recorridos?\n\nx",
+   "options": [
+    {
+     "key": "A",
+     "text": "g ( x ) = M"
+    },
+    {
+     "key": "B",
+     "text": "f ( x ) = Mx M"
+    },
+    {
+     "key": "C",
+     "text": "h ( x ) = x x"
+    },
+    {
+     "key": "D",
+     "text": "p ( x ) = M M"
+    },
+    {
+     "key": "E",
+     "text": "q ( x ) = x"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q22.webp",
+    "width": 903,
+    "height": 475,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q23",
+   "number": 23,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "2 Considera un triángulo cuya área es 39 cm y su altura es 7 cm mayor que la medida de su base respectiva.\n\nSi b representa la medida de la base, en cm, ¿cuál de las siguientes ecuaciones permite determinar su valor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "b² − 7 b + 78 = 0"
+    },
+    {
+     "key": "B",
+     "text": "b² + 7 b + 78 = 0"
+    },
+    {
+     "key": "C",
+     "text": "b² − 7 b − 78 = 0"
+    },
+    {
+     "key": "D",
+     "text": "b² + 7 b − 78 = 0"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q23.webp",
+    "width": 903,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q24",
+   "number": 24,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En un laboratorio, bajo ciertas condiciones, se estudia un cultivo de bacterias cuya 2 cantidad se puede modelar mediante la función f )t( = − t + 2 t + 120 , en la cual f )t( es la cantidad de bacterias que existen transcurridas t horas del inicio del cultivo.\n\n¿En cuántas horas el cultivo deja de tener bacterias?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "10"
+    },
+    {
+     "key": "C",
+     "text": "12"
+    },
+    {
+     "key": "D",
+     "text": "120"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q24.webp",
+    "width": 903,
+    "height": 370,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q25",
+   "number": 25,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En la siguiente tabla se presentan algunos puntos que pertenecen a la gráfica de una función cuadrática.\n\nx y\n\n0 0\n\n1 5\n\n2 20\n\nSi el punto ( ,p 80 ) es un punto de la gráfica de esta función, ¿cuál de los siguientes valores podría corresponder a p?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4"
+    },
+    {
+     "key": "B",
+     "text": "6 − 5 + 89"
+    },
+    {
+     "key": "C",
+     "text": "2"
+    },
+    {
+     "key": "D",
+     "text": "32 000"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q25.webp",
+    "width": 903,
+    "height": 554,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q26",
+   "number": 26,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "¿Qué valor o valores debe tomar k para que la ecuación x² + kx + 9 = 0 , en x, tenga una única solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 o − 6"
+    },
+    {
+     "key": "B",
+     "text": "3 o − 3"
+    },
+    {
+     "key": "C",
+     "text": "Solo 36"
+    },
+    {
+     "key": "D",
+     "text": "Solo 6"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q26.webp",
+    "width": 903,
+    "height": 259,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q27",
+   "number": 27,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Si las raíces (o soluciones) de la ecuación 2 2 x + kx − k = 0 son x y x, 1 2 con k ≠ 0 , ¿cuál de las siguientes expresiones es igual a ( x + 1 )( x + )1 ? 1 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "1 − k"
+    },
+    {
+     "key": "C",
+     "text": "1 + k k"
+    },
+    {
+     "key": "D",
+     "text": "1 − 2 k"
+    },
+    {
+     "key": "E",
+     "text": "2"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q27.webp",
+    "width": 903,
+    "height": 377,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q28",
+   "number": 28,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En un experimento, se modela la temperatura T en grados Celsius de un objeto () 2 mediante la función T t = − 4 t + 24 t + 40 , tal que t es el tiempo transcurrido desde que se inició el experimento, en minutos.\n\n¿A partir de los cuántos minutos la temperatura baja de 40 ° C ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "3"
+    },
+    {
+     "key": "D",
+     "text": "6"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q28.webp",
+    "width": 903,
+    "height": 342,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q29",
+   "number": 29,
+   "axis": "Números",
+   "topic": "Raíces",
+   "stem": "Considera la ecuación qx² + ( q − 2 ) x − 2 q − 1 = 0 , en x.\n\n¿Para qué valor de q el producto de sus raíces es − 4 ?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 3 2"
+    },
+    {
+     "key": "B",
+     "text": "⁵ 1"
+    },
+    {
+     "key": "C",
+     "text": "⁴ 1"
+    },
+    {
+     "key": "D",
+     "text": "²"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q29.webp",
+    "width": 903,
+    "height": 433,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q30",
+   "number": 30,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f con dominio el conjunto de los números reales, definida por 2 f ( x ) = ax + bx + c , tal que ,a b y c son números reales y a ≠ 0 .\n\nSi f ( p ) < 0 y f ( q ) > 0 , tal que p y q son números reales, ¿cuál de las siguientes relaciones es **siempre** verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "b² − 4 ac = 0"
+    },
+    {
+     "key": "B",
+     "text": "b² − 4 ac > 0"
+    },
+    {
+     "key": "C",
+     "text": "a < 0"
+    },
+    {
+     "key": "D",
+     "text": "q > p"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q30.webp",
+    "width": 903,
+    "height": 377,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q31",
+   "number": 31,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función cuadrática f cuyo dominio es el conjunto de los números = ² − reales, definida por f ( x ) bx 4 .\n\n¿Cuál de los siguientes intervalos contiene a todos y únicamente los posibles valores de b, para los cuales la distancia entre los puntos de intersección de la parábola asociada a f con el eje X sea mayor que 4?\n\n] [1",
+   "options": [
+    {
+     "key": "A",
+     "text": "− ∞ , ] [1"
+    },
+    {
+     "key": "B",
+     "text": ",0 1"
+    },
+    {
+     "key": "C",
+     "text": ",0 4 1 ∞"
+    },
+    {
+     "key": "D",
+     "text": "− , 4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q31.webp",
+    "width": 903,
+    "height": 454,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q32",
+   "number": 32,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Considera las rectas L, L, L, L y L, tal que L // L // L , A, B, C, D, 1 2 3 4 5 1 2 3 E, F y O son los puntos de intersección de estas, BE = 2 AD y CF = 3 AD , como se presenta en la figura adjunta.\n\n¿Cuál de las siguientes relaciones es **siempre** verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "AO : AE = DO : DB"
+    },
+    {
+     "key": "B",
+     "text": "AD : AO = EB : BO"
+    },
+    {
+     "key": "C",
+     "text": "OB : BC = 2 : 3"
+    },
+    {
+     "key": "D",
+     "text": "AO : OE = 2 : 1"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q32.webp",
+    "width": 903,
+    "height": 663,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q33",
+   "number": 33,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "En el triángulo ABC de la figura adjunta los puntos D y E pertenecen a los lados AB y AC, respectivamente, DE // BC , BC = p , DE = m y AD = n .\n\nC\n\nE\n\nA D B\n\nSi se consideran todas las medidas de los segmentos en centímetros, ¿cuál de las siguientes expresiones representa **siempre** la medida de DB?\n\nnp",
+   "options": [
+    {
+     "key": "A",
+     "text": "m n ( p − m )"
+    },
+    {
+     "key": "B",
+     "text": "m n ( m − p )"
+    },
+    {
+     "key": "C",
+     "text": "m 2 pm − n"
+    },
+    {
+     "key": "D",
+     "text": "m n² − pm"
+    },
+    {
+     "key": "E",
+     "text": "n"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q33.webp",
+    "width": 903,
+    "height": 890,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q34",
+   "number": 34,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "El triángulo ABC de la figura adjunta es rectángulo en C, BC = 9 cm y AB = 15 cm . R\n\nB\n\nα Q P\n\nα C A\n\nSi los triángulos ABC y PQR son semejantes y PR = 3 cm , ¿cuánto mide la hipotenusa del triángulo PQR?",
+   "options": [
+    {
+     "key": "A",
+     "text": ",2 25 cm"
+    },
+    {
+     "key": "B",
+     "text": ",3 75 cm"
+    },
+    {
+     "key": "C",
+     "text": "4 cm"
+    },
+    {
+     "key": "D",
+     "text": "5 cm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q34.webp",
+    "width": 903,
+    "height": 624,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q35",
+   "number": 35,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "2 En la figura los rectángulos ABCD y EFGH son semejantes y AD = . EH 3\n\nH G\n\nD C a cm 2 A 5b cm B E F\n\n¿Cuál de las siguientes expresiones representa el área del rectángulo EFGH?\n\n15 ab 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "cm 4 10 ab 2"
+    },
+    {
+     "key": "B",
+     "text": "cm 9 45 ab 2"
+    },
+    {
+     "key": "C",
+     "text": "cm 2 5 ab 2"
+    },
+    {
+     "key": "D",
+     "text": "cm 3 45 ab 2"
+    },
+    {
+     "key": "E",
+     "text": "cm 8"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q35.webp",
+    "width": 903,
+    "height": 717,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q36",
+   "number": 36,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Una persona construye un tipo de caja en forma de prisma recto con base 2 rectangular. El área total de la caja es A cm .\n\nEsta persona quiere construir un nuevo tipo de caja, de tal forma que sus caras sean semejantes a las caras de la caja original con razón de semejanza k.\n\n¿Cuál de las siguientes expresiones representa el área de la caja nueva?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "k · A cm 2"
+    },
+    {
+     "key": "B",
+     "text": "k · A cm"
+    },
+    {
+     "key": "C",
+     "text": "( 2 cm ) 2 A + 6 k 2 2"
+    },
+    {
+     "key": "D",
+     "text": "k · A cm"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q36.webp",
+    "width": 903,
+    "height": 434,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q37",
+   "number": 37,
+   "axis": "Geometría",
+   "topic": "Homotecia",
+   "stem": "La relación de homotecia entre la altura de la sombra de una lámina de metal proyectada en una pared y la altura de la lámina de metal se modela por la expresión H = kh , con k la razón de homotecia, tal como se representa en la figura adjunta.\n\nSi la razón de homotecia es 5,2 y la altura de la sombra es de 500 cm , ¿cuál es la altura de la lámina de metal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1250 cm"
+    },
+    {
+     "key": "B",
+     "text": "200 cm"
+    },
+    {
+     "key": "C",
+     "text": "150 cm"
+    },
+    {
+     "key": "D",
+     "text": "100 cm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q37.webp",
+    "width": 903,
+    "height": 694,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q38",
+   "number": 38,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "Considera un triángulo ABC tal que las coordenadas del vértice A son ( ,3 − 4 ) .\n\nAl triángulo ABC se le aplica una homotecia con centro en el punto ( ,1 − )1 y razón − 2 obteniéndose el triángulo PQR, tal que P es la imagen de A y Q es la imagen de B.\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las coordenadas de P son ( − ,1 6 ) ."
+    },
+    {
+     "key": "B",
+     "text": "El área del triángulo PQR es el doble del área del triángulo ABC."
+    },
+    {
+     "key": "C",
+     "text": "El segmento AB es paralelo al segmento PQ."
+    },
+    {
+     "key": "D",
+     "text": "El triángulo PQR está en el cuarto cuadrante."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q38.webp",
+    "width": 903,
+    "height": 401,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q39",
+   "number": 39,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "A un cuadrado ubicado en el primer cuadrante del plano cartesiano se le aplica una homotecia de razón r, con centro en el origen del plano cartesiano, obteniéndose un cuadrado en el primer cuadrante.\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La razón de homotecia es positiva."
+    },
+    {
+     "key": "B",
+     "text": "El perímetro del nuevo cuadrado es mayor que el original."
+    },
+    {
+     "key": "C",
+     "text": "El área del nuevo cuadrado es mayor que el original."
+    },
+    {
+     "key": "D",
+     "text": "Los perímetros de ambas figuras no pueden ser iguales."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q39.webp",
+    "width": 903,
+    "height": 320,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q40",
+   "number": 40,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Considera los vectores u y v = ( ,p q ) en un plano cartesiano tal que\n\nc u + v = ( ,5 3 ) , con c un número real mayor que uno.\n\n¿Cuáles son las coordenadas de u, en función de p, q y c?",
+   "options": [
+    {
+     "key": "A",
+     "text": "( 5 − cp , 3 − cq ) 5 3"
+    },
+    {
+     "key": "B",
+     "text": "− ,p − q c c"
+    },
+    {
+     "key": "C",
+     "text": "( 5 c − ,p 3 c − q ) 5"
+    },
+    {
+     "key": "D",
+     "text": "− ,p 3 c − q c 5 − p 3 − q"
+    },
+    {
+     "key": "E",
+     "text": ", c c"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q40.webp",
+    "width": 903,
+    "height": 489,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q41",
+   "number": 41,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Una empresa dedicada a la producción de elementos para el deporte ha diseñado un nuevo modelo de mancuerna. Cada mancuerna tiene un cilindro central de r y dos cilindros laterales de radio r, como se presenta en la imagen diámetro 4 adjunta: h cm\n\nr cm\n\nr cm 4\n\n2 h cm\n\n¿Cuál es la expresión que representa el volumen de la mancuerna?\n\n2 5π r h 3",
+   "options": [
+    {
+     "key": "A",
+     "text": "cm 2 2 65π r h 3"
+    },
+    {
+     "key": "B",
+     "text": "cm 32 2 33π r h 3"
+    },
+    {
+     "key": "C",
+     "text": "cm 16 2 9π r h 3"
+    },
+    {
+     "key": "D",
+     "text": "cm 4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q41.webp",
+    "width": 903,
+    "height": 857,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q42",
+   "number": 42,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "Considera el triángulo ABC y la tabla con algunos valores aproximados de razones trigonométricas de la figura adjunta.\n\nC Valor 70 ° aproximado sen 55 ° 0,81 tan 55 ° 1,42 sen 20 ° 0,34 55 ° A D 10 cm B\n\nPara aproximar la medida del lado AB con los datos de la tabla, se realizan los siguientes pasos, cometiendo un error:\n\n**Paso 1:** se calcula la medida del segmento CD resolviendo la ecuación CD ,1 42 = , obteniendo CD = 14 2, cm . 10\n\n**Paso 2:** se calcula la medida del segmento CB resolviendo la ecuación 14 2, ,0 81 = , obteniendo aproximadamente 17 , 53 cm . CB\n\n**Paso 3:** se calcula la medida de BAC resolviendo la ecuación BAC + 70 ° = 90 ° , obteniendo BAC =20 ° .\n\n**Paso 4:** se calcula la medida del segmento AB resolviendo la ecuación 17 , 53 ,0 34 = , obteniendo aproximadamente 51 , 55 cm . AB\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el paso 4"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q42.webp",
+    "width": 903,
+    "height": 1021,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q43",
+   "number": 43,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "En la siguiente tabla se presentan ordenados los puntajes obtenidos en una prueba de inglés por un grupo de estudiantes que buscaban eximirse de esa asignatura.\n\n33 34 35 38 43 43 43 45 47 47\n\n51 51 51 57 58 63 63 63 63 68\n\n73 75 80 85 91 92 93 95 97 97\n\n98 98 98 98 100 100 100 100 100 100\n\nSi para eximirse de inglés se requiere al menos 90 puntos en la prueba, ¿cuál de los siguientes diagramas de cajón representa mejor los puntajes de los estudiantes que no lograron eximirse?",
+   "options": [
+    {
+     "key": "A",
+     "text": "33 47 68 97 100"
+    },
+    {
+     "key": "B",
+     "text": "33 43 51 63 85"
+    },
+    {
+     "key": "C",
+     "text": "33 43 51 63 63 100"
+    },
+    {
+     "key": "D",
+     "text": "33 43 63 73 85"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q43.webp",
+    "width": 903,
+    "height": 1078,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q44",
+   "number": 44,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Considera los datos 1 g, g, g, g y g cuyo rango es cero. 2 3 4 5\n\n¿Cuál es la desviación estándar de los datos g1 − 2 , g2 − 2 , g, 3 g⁴ + 1 y g5 + 3 ?\n\n18",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 8"
+    },
+    {
+     "key": "B",
+     "text": "5 2"
+    },
+    {
+     "key": "C",
+     "text": "3· 5 2"
+    },
+    {
+     "key": "D",
+     "text": "2· 5"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q44.webp",
+    "width": 903,
+    "height": 467,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q45",
+   "number": 45,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Una baraja de naipes posee 4 tipos distintos de cartas (A, B, C, D) con la misma cantidad de cartas de cada tipo.\n\nSi en la baraja de m cartas en total se extrae al azar solo dos de ellas, una después de la otra sin devolución, ¿cuál es la probabilidad de que estas sean del tipo B?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "16 m − 1 1 4"
+    },
+    {
+     "key": "B",
+     "text": "+ 4 m − 1 1"
+    },
+    {
+     "key": "C",
+     "text": "2 m − 1 1 4"
+    },
+    {
+     "key": "D",
+     "text": "· 4 m − 1"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q45.webp",
+    "width": 903,
+    "height": 569,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q46",
+   "number": 46,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Se tienen dos urnas, A y B, las cuales contienen bolitas del mismo tipo. La urna A contiene x bolitas en total, de las cuales m bolitas son azules, mientras que la urna B, contiene y bolitas en total, de las cuales n son azules.\n\nSi se extrae una bolita al azar de cada urna, ¿cuál de las siguientes expresiones representa la probabilidad de que ninguna de las bolitas sea de color azul?\n\n( x − m )( y − n )",
+   "options": [
+    {
+     "key": "A",
+     "text": "· x y m n"
+    },
+    {
+     "key": "B",
+     "text": "1 − · x y 1 1"
+    },
+    {
+     "key": "C",
+     "text": "1 − · m n 1 − m 1 − n"
+    },
+    {
+     "key": "D",
+     "text": "· x y"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q46.webp",
+    "width": 903,
+    "height": 496,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q47",
+   "number": 47,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Paulina compró un candado para asegurar el casillero que le ofrecieron en su colegio. El candado tiene tres casillas y en cada una de ellas se puede escoger entre los dígitos de cero a nueve para formar una clave numérica.\n\n¿Cuál de las siguientes expresiones representa la cantidad total de claves numéricas, entre las que Paulina puede escoger?\n\n10 ( 10 ) ()",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 10"
+    },
+    {
+     "key": "B",
+     "text": "3"
+    },
+    {
+     "key": "C",
+     "text": "3 · 10 3"
+    },
+    {
+     "key": "D",
+     "text": "10"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q47.webp",
+    "width": 903,
+    "height": 425,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q48",
+   "number": 48,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En una empresa los productos que son devueltos por defectuosos se separan en dos: los que tienen menos de una semana de uso y los que se devuelven después de la semana de uso. Los dos tipos de productos se mandan a áreas de reparación distintas.\n\nLa gerencia de la empresa quiere saber cuál es la probabilidad de que el producto devuelto lo haya sido antes de la primera semana de uso y que este tenga reparación.\n\nPara ello se sabe que:\n\n- La probabilidad de que el producto devuelto lo haya sido antes de la primera semana de uso es N.\n\n- La probabilidad de que el producto tenga reparación, dado que fue devuelto antes de la primera semana de uso es M.\n\n¿Cuál de los siguientes modelos tiene que usar la gerencia para calcular la probabilidad que busca?\n\nM",
+   "options": [
+    {
+     "key": "A",
+     "text": "N"
+    },
+    {
+     "key": "B",
+     "text": "M· N N"
+    },
+    {
+     "key": "C",
+     "text": "M"
+    },
+    {
+     "key": "D",
+     "text": "M+ N"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q48.webp",
+    "width": 903,
+    "height": 742,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q49",
+   "number": 49,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Considera los dígitos 0, 1, 2 y 4.\n\n¿Cuántos números de tres cifras en total que sean múltiplo de 5 se pueden formar con estos dígitos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 · 3 · 2"
+    },
+    {
+     "key": "B",
+     "text": "3 · 4 · 4"
+    },
+    {
+     "key": "C",
+     "text": "4 · 4 · 1"
+    },
+    {
+     "key": "D",
+     "text": "3 · 4 · 1"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q49.webp",
+    "width": 903,
+    "height": 318,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q50",
+   "number": 50,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Un niño tiene 6 dulces, todos de distintos sabores.\n\n¿Cuántos grupos de dos dulces puede formar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "11"
+    },
+    {
+     "key": "B",
+     "text": "12"
+    },
+    {
+     "key": "C",
+     "text": "15"
+    },
+    {
+     "key": "D",
+     "text": "36"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q50.webp",
+    "width": 903,
+    "height": 273,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q51",
+   "number": 51,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Considera 5 cartas numeradas del 1 al 5 que están boca abajo. Se revuelven y se forma una fila.\n\nSi se dan vuelta las cartas de una en una, desde la izquierda a la derecha, ¿cuál es la probabilidad de que aparezca el 1 antes que el 5?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "20 3"
+    },
+    {
+     "key": "B",
+     "text": "20 1"
+    },
+    {
+     "key": "C",
+     "text": "120 1"
+    },
+    {
+     "key": "D",
+     "text": "2 1"
+    },
+    {
+     "key": "E",
+     "text": "5"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q51.webp",
+    "width": 903,
+    "height": 522,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q52",
+   "number": 52,
+   "axis": "Números",
+   "topic": "Números racionales",
+   "stem": "Considera a, b y c números racionales, con a y c distintos de cero.\n\nb b Se puede determinar que a · c = 1 , si se sabe que:\n\n(1) b es cero.\n\n(2) a es el inverso multiplicativo de c.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q52.webp",
+    "width": 903,
+    "height": 427,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q53",
+   "number": 53,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Una persona va a comprar 2 relojes del mismo tipo y 3 novelas iguales. Dos tiendas tienen los mismos precios, tanto para estas novelas como para este tipo de reloj, pero con distintas promociones: la primera tienda tiene un 20 % de descuento en el precio de este tipo de reloj y un 10 % de descuento en el precio de estas novelas, mientras que la segunda tienda ofrece un descuento de un 25 % en el precio de este tipo de reloj y un 5,2 % de descuento en el precio de estas novelas.\n\nSe puede determinar el valor sin descuento de dos de estos relojes y el valor sin descuento de tres de estas novelas, si se sabe que:\n\n(1) el total de la compra sin descuento sería de \\$ 75 000 .\n\n(2) en ambas tiendas pagaría lo mismo con los descuentos incluidos.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q53.webp",
+    "width": 903,
+    "height": 635,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q54",
+   "number": 54,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de posición",
+   "stem": "En Chile existe el registro social de hogares que clasifica a los hogares en tramos que van de menor a mayor ingreso per cápita por hogar.\n\nEn el tramo uno está el 40 % de los hogares con menor ingreso, en el tramo dos se agrupa al 10 % siguiente con menores ingresos, el tramo tres son los que están en el siguiente 10 % y así hasta llegar al tramo siete, en el que está el 10 % de los hogares que tienen mayores ingresos.\n\nSe puede conocer el tramo de un hogar en particular, si se sabe que:\n\n(1) el ingreso del hogar está sobre el percentil 10.\n\n(2) el ingreso del hogar está por debajo del cuartil 1.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q54.webp",
+    "width": 903,
+    "height": 580,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2024-invierno-q55",
+   "number": 55,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Los estudiantes de un cuarto medio compuesto por hombres y mujeres, seleccionarán una comisión para integrar el grupo de debate que representará al colegio en una competencia. Dicha comisión debe estar conformada por M personas, de tal manera que exactamente P de ellas deben ser mujeres y exactamente Q deben ser hombres.\n\nSe puede determinar la cantidad de comisiones que se pueden formar con los estudiantes de este cuarto medio, si se sabe:\n\n(1) el valor de M y el total de mujeres del cuarto medio.\n\n(2) el valor de P y Q.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2024-invierno/q55.webp",
+    "width": 903,
+    "height": 531,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}

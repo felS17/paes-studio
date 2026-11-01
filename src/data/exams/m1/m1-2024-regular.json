@@ -1,0 +1,2300 @@
+{
+ "id": "m1-2024-regular",
+ "subject": "m1",
+ "title": "PAES Regular 2024",
+ "description": "Prueba oficial completa de Competencia Matemática 1 (M1): 65 preguntas, aplicada el 29-11-2023 (Admisión 2024). Claves del clavijero oficial DEMRE.",
+ "year": 2024,
+ "modality": "regular",
+ "source": "demre",
+ "form": "113",
+ "appliedOn": "2023-11-29",
+ "durationMinutes": 140,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   173,
+   199,
+   222,
+   243,
+   264,
+   283,
+   300,
+   316,
+   330,
+   346,
+   362,
+   378,
+   392,
+   403,
+   413,
+   424,
+   436,
+   450,
+   465,
+   478,
+   489,
+   498,
+   505,
+   513,
+   523,
+   535,
+   549,
+   563,
+   575,
+   585,
+   593,
+   599,
+   607,
+   616,
+   628,
+   642,
+   657,
+   669,
+   679,
+   688,
+   696,
+   705,
+   717,
+   731,
+   746,
+   761,
+   773,
+   785,
+   797,
+   811,
+   827,
+   844,
+   861,
+   879,
+   897,
+   917,
+   939,
+   963,
+   989,
+   1000
+  ],
+  "officialQuestionCount": 65,
+  "officialScorableCount": 60
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m1-2024-regular-q01",
+   "number": 1,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el resultado de 3 − ( − 1 )( − 1 − 5 ) ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 −"
+    },
+    {
+     "key": "B",
+     "text": "− 3"
+    },
+    {
+     "key": "C",
+     "text": "− 12"
+    },
+    {
+     "key": "D",
+     "text": "− 24"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q01.webp",
+    "width": 903,
+    "height": 229,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q02",
+   "number": 2,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Un diario tiene una colilla recortable para un concurso, la que se presenta a continuación:\n\nCUADRADO MÁGICO Manda el resultado correcto de 1 ♥ ♪ ♥ + ☻ + ♪ 3 2 a la casilla postal de este diario para entrar al 3 ☻ concurso de una bicicleta\n\n1 Resultado\n\nCada fila, cada columna y cada diagonal Nombre deben contener los números 1, 2, 3 y 4 sin que se repitan. Número contacto\n\n¿Cuál es el resultado que permite entrar al concurso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "8"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q02.webp",
+    "width": 903,
+    "height": 638,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q03",
+   "number": 3,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Si al quíntuplo de 10 − se le resta el triple de 12 − , ¿qué número se obtiene?",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 86"
+    },
+    {
+     "key": "B",
+     "text": "− 14"
+    },
+    {
+     "key": "C",
+     "text": "2"
+    },
+    {
+     "key": "D",
+     "text": "34"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q03.webp",
+    "width": 903,
+    "height": 225,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿En cuál de las siguientes opciones se representa la frase “el doble de la tercera parte de la diferencia entre 8 y 6 ”?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 · · 8 − 6 3 1"
+    },
+    {
+     "key": "B",
+     "text": "2 · · ( 8 − 6 ) 3"
+    },
+    {
+     "key": "C",
+     "text": "2 · 3 · 8 − 6"
+    },
+    {
+     "key": "D",
+     "text": "2 · 3 · ( 8 − 6 )"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q04.webp",
+    "width": 903,
+    "height": 324,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q05",
+   "number": 5,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "En la siguiente tabla se presentan las fechas de algunos hechos históricos:\n\nHecho histórico Año\n\nConstrucción de la Gran Pirámide de Guiza 2570 a.C.\n\nNacimiento de Cleopatra 69 a.C.\n\n¿Cuántos años pasaron desde el año de la construcción de la Gran Pirámide de Guiza hasta el año del nacimiento de Cleopatra?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2640"
+    },
+    {
+     "key": "B",
+     "text": "2639"
+    },
+    {
+     "key": "C",
+     "text": "2501"
+    },
+    {
+     "key": "D",
+     "text": "2499"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q05.webp",
+    "width": 903,
+    "height": 492,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q06",
+   "number": 6,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Un juego consiste en lanzar un dardo a un tablero como el de la figura adjunta.\n\nC\n\nB\n\nA\n\nSe obtienen 10 puntos si el dardo cae en el sector A, 5 puntos si cae en el sector B y ningún punto si cae en el sector C.\n\nEn la tabla adjunta se presenta la cantidad de aciertos en cada sector de tres tiradores en los 10 lanzamientos que cada uno realizó.\n\nSectores\n\nA B C\n\nPedro 4 2 4\n\nSandra 3 5 2\n\nRoberta 2 8 0\n\n¿Cuál tirador obtuvo el mayor puntaje y cuál obtuvo el menor puntaje, respectivamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Roberta y Sandra"
+    },
+    {
+     "key": "B",
+     "text": "Roberta y Pedro"
+    },
+    {
+     "key": "C",
+     "text": "Sandra y Roberta"
+    },
+    {
+     "key": "D",
+     "text": "Pedro y Sandra"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q06.webp",
+    "width": 903,
+    "height": 925,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q07",
+   "number": 7,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Una persona realiza un viaje al exterior y lleva consigo su tarjeta de débito, la que\n\nfunciona fuera del país. En su tarjeta tiene un saldo inicial de \\$ 300 000 y decide hacer algunas actividades turísticas, por lo que realizó los siguientes movimientos en su tarjeta:\n\n- Un pago de \\$ 15 000 para pagar la entrada a una obra de teatro.\n\n- Un pago de \\$ 35 000 para pagar el ingreso al parque de diversiones y algo de comida dentro del parque.\n\nSi por cada pago que realiza con su tarjeta el banco le cobra una comisión de \\$ 2000 iⁿdepeⁿdieⁿtemeⁿte del moⁿto, ¿cuál es su saldo fiⁿal luego de realizados los pagos de ese día?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 254 000"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 244 000"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 248 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 246 000"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q07.webp",
+    "width": 903,
+    "height": 570,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q08",
+   "number": 8,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Un colegio de enseñanza media tiene 180 estudiantes en total y un sexto de ellos pertenece al segundo medio B.\n\nEl día en que el segundo medio B realizó la elección de su directiva, faltó la décima parte de los estudiantes de dicho curso. Quienes asistieron votaron entre Fernando y Josefina para la presidencia.\n\n1 de los estudiantes votaron por Josefina y no hubo votos nulos ni blancos, Si 3 ¿cuántos estudiantes votaron por Fernando?",
+   "options": [
+    {
+     "key": "A",
+     "text": "20"
+    },
+    {
+     "key": "B",
+     "text": "¹⁸"
+    },
+    {
+     "key": "C",
+     "text": "2"
+    },
+    {
+     "key": "D",
+     "text": "1"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q08.webp",
+    "width": 903,
+    "height": 455,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q09",
+   "number": 9,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En la figura se presenta un cartel con los precios de las impresiones en blanco y negro de un centro de impresión.\n\nUn curso de Química Orgánica requiere de un libro de tres capítulos de 150, 130 y 85 hojas, en ese orden. Una persona imprimió primero solo el primer capítulo, luego solo el segundo y por último solo el tercero, a medida que avanzaba en el curso.\n\n¿Cuánto dinero gastó la persona en imprimir el libro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 7300"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 8150"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 8800"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 9450"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q09.webp",
+    "width": 903,
+    "height": 822,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q10",
+   "number": 10,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Considera la siguiente secuencia de figuras, formadas por cuadrados y triángulos, que se va formando con palitos de fósforo.\n\n¿Cuál es la cantidad de palitos que se utilizan en la figura 25?",
+   "options": [
+    {
+     "key": "A",
+     "text": "7 · 25"
+    },
+    {
+     "key": "B",
+     "text": "5 · 25 + 2"
+    },
+    {
+     "key": "C",
+     "text": "3 · 25 + 4"
+    },
+    {
+     "key": "D",
+     "text": "2 · 25"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q10.webp",
+    "width": 903,
+    "height": 629,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q11",
+   "number": 11,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes expresiones representa el 20 % del 20 % del 20 % de un número P?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8,0 % de P"
+    },
+    {
+     "key": "B",
+     "text": "8 000 % de P"
+    },
+    {
+     "key": "C",
+     "text": "6,0 % de P"
+    },
+    {
+     "key": "D",
+     "text": "60 % de P"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q11.webp",
+    "width": 903,
+    "height": 270,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q12",
+   "number": 12,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "¿A qué porcentaje corresponde 25 de 125?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un 5 %"
+    },
+    {
+     "key": "B",
+     "text": "A un 20 %"
+    },
+    {
+     "key": "C",
+     "text": "A un 25 %"
+    },
+    {
+     "key": "D",
+     "text": "A un 500 %"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q12.webp",
+    "width": 903,
+    "height": 245,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q13",
+   "number": 13,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Helena va en segundo básico de un colegio de 1000 estudiantes, de los cuales el 10 % participa en el taller de patinaje. De este taller, el 10 % compite en un torneo y Helena es una de las competidoras.\n\n¿Cuál de los siguientes argumentos es válido?",
+   "options": [
+    {
+     "key": "A",
+     "text": "90 estudiantes del taller no compiten, porque solo 10 estudiantes son del curso de Helena."
+    },
+    {
+     "key": "B",
+     "text": "Helena es parte del % 1 del colegio que compite, porque el 99 % restante no practica patinaje."
+    },
+    {
+     "key": "C",
+     "text": "10 estudiantes compiten en el torneo, porque son el 10 % del total de 100 estudiantes que participan en el taller de patinaje."
+    },
+    {
+     "key": "D",
+     "text": "El 90 % del estudiantado del colegio no practica patinaje, porque no son parte del 10 % que compite en el torneo."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q13.webp",
+    "width": 903,
+    "height": 459,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q14",
+   "number": 14,
+   "axis": "Probabilidad y estadística",
+   "topic": "Distribución normal",
+   "stem": "Una persona recibirá un bono del 20 % de su sueldo mensual por los próximos 6 meses por ser parte de un equipo que cumplió las metas de productividad.\n\nLa persona calcula que su sueldo mensual normal equivale a recibir \\$ 28 000 por cada jornada de trabajo.\n\n¿Cuánto dinero tendría que recibir por jornada de trabajo para que este equivalga al nuevo sueldo con bono?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 33 600"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 29 400"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 28 560"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 28 020"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q14.webp",
+    "width": 903,
+    "height": 448,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q15",
+   "number": 15,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Un comerciante compra planchas de volcanita a 6000 \\$ cada una y las vende para obtener un 75 % de ganancia. Luego de un tiempo, decide rebajar el precio de venta de cada plancha de volcanita en un 25 % , obteniendo un nuevo precio de venta.\n\n¿Cuál es el nuevo precio de venta de cada plancha de volcanita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 7125"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 7875"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 9000"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 9375"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q15.webp",
+    "width": 903,
+    "height": 371,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q16",
+   "number": 16,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Un hotel tiene 200 habitaciones y para un fin de semana largo tiene reservadas 140 habitaciones.\n\n¿Cuál es el porcentaje de habitaciones que aún están disponibles ese fin de semana?",
+   "options": [
+    {
+     "key": "A",
+     "text": "30 %"
+    },
+    {
+     "key": "B",
+     "text": "43 %"
+    },
+    {
+     "key": "C",
+     "text": "60 %"
+    },
+    {
+     "key": "D",
+     "text": "70 %"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q16.webp",
+    "width": 903,
+    "height": 348,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q17",
+   "number": 17,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "1 2 ¿Cuál es el valor de 14 + ? − 2 5\n\n195",
+   "options": [
+    {
+     "key": "A",
+     "text": "25 4899"
+    },
+    {
+     "key": "B",
+     "text": "25"
+    },
+    {
+     "key": "C",
+     "text": "221"
+    },
+    {
+     "key": "D",
+     "text": "171"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q17.webp",
+    "width": 903,
+    "height": 311,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q18",
+   "number": 18,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes opciones representa al número ( 888 )² ?\n\n6 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 · 111 2⁶ ·"
+    },
+    {
+     "key": "B",
+     "text": "111 5 2"
+    },
+    {
+     "key": "C",
+     "text": "2 · 111 2⁵ ·"
+    },
+    {
+     "key": "D",
+     "text": "111"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q18.webp",
+    "width": 903,
+    "height": 288,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q19",
+   "number": 19,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Considera el número mtp de tres dígitos, tal que m es el de la centena, t es el de la decena y es el de la unidad. p\n\n¿Cuál de las siguientes expresiones representa a este número?\n\n2 1 0",
+   "options": [
+    {
+     "key": "A",
+     "text": "m · 10 · t · 10 · p · 10 3 2 1"
+    },
+    {
+     "key": "B",
+     "text": "m · 10 · t · 10 · p · 10 3 2 1"
+    },
+    {
+     "key": "C",
+     "text": "m · 10 + t · 10 + p · 10 2 1 0"
+    },
+    {
+     "key": "D",
+     "text": "m · 10 + t · 10 + p · 10"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q19.webp",
+    "width": 903,
+    "height": 361,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q20",
+   "number": 20,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "2 · 2 ¿Cuál es el valor de ? 2\n\n1 − 6",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 9 2"
+    },
+    {
+     "key": "B",
+     "text": "2 5 2"
+    },
+    {
+     "key": "C",
+     "text": "2 1"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q20.webp",
+    "width": 903,
+    "height": 337,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q21",
+   "number": 21,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el valor de ( )( )1 5 + 1 5 − ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "6"
+    },
+    {
+     "key": "D",
+     "text": "2 5"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q21.webp",
+    "width": 903,
+    "height": 251,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q22",
+   "number": 22,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La cantidad de bacterias de cierto cultivo aumenta en un 20 % cada 40 minutos.\n\nSi la cantidad inicial era 250 bacterias, ¿en cuánto aumentó la cantidad de bacterias transcurridas dos horas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "60"
+    },
+    {
+     "key": "C",
+     "text": "182"
+    },
+    {
+     "key": "D",
+     "text": "250"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q22.webp",
+    "width": 903,
+    "height": 350,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q23",
+   "number": 23,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Los antiguos dispositivos de almacenamiento de datos tenían una capacidad máxima de 1 megabyte y, actualmente, existen dispositivos que almacenan 1 terabyte.\n\n12 Si un terabyte equivale a 10 bytes y un megabyte equivale a 1 000 000 bytes, ¿cuántas veces cabe el almacenamiento de un dispositivo antiguo en un dispositivo actual?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 5"
+    },
+    {
+     "key": "B",
+     "text": "10 6"
+    },
+    {
+     "key": "C",
+     "text": "10 12"
+    },
+    {
+     "key": "D",
+     "text": "10"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q23.webp",
+    "width": 903,
+    "height": 427,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q24",
+   "number": 24,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes expresiones es igual a ( 2 x − 3 )² ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 ² x − 12 x + 9"
+    },
+    {
+     "key": "B",
+     "text": "4 ² x − 6 x − 9"
+    },
+    {
+     "key": "C",
+     "text": "4 ² x − 12 x + 9 4 ² −"
+    },
+    {
+     "key": "D",
+     "text": "x 9"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q24.webp",
+    "width": 903,
+    "height": 289,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q25",
+   "number": 25,
+   "axis": "Geometría",
+   "topic": "Semejanza",
+   "stem": ")( 2 ) A continuación se realiza la multiplicación ( 3 x + 4 · x − 6 x + 5 , en la cual se comete un error.\n\n**Paso 1:** se aplica distributividad, obteniéndose: ( 2 ) ( 2 ) 3 x · x − 6 x + 5 + 4 · x − 6 x + 5\n\n**Paso 2:** se desarrollan las multiplicaciones, obteniéndose: ( 2 )( 2 ) 3 x − 18 x + 15 + 4 x − 24 x + 20\n\n**Paso 3:** se ordena la expresión por términos semejantes, obteniéndose:\n\n2 2 3 x + 4 x − 18 x − 24 x + 15 + 20\n\n**Paso 4:** se suman los términos semejantes, obteniéndose:\n\n2 7 x − 42 x + 35\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q25.webp",
+    "width": 903,
+    "height": 665,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q26",
+   "number": 26,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "¿Cuál de las siguientes expresiones representa a “el doble del cubo de un número x, disminuido en un tercio del mismo número”?\n\nx",
+   "options": [
+    {
+     "key": "A",
+     "text": "( ) 3 − 2 x 3 1 2 ³ −"
+    },
+    {
+     "key": "B",
+     "text": "x 3 1 3"
+    },
+    {
+     "key": "C",
+     "text": "2 x − 3 x 2 ³ −"
+    },
+    {
+     "key": "D",
+     "text": "x 3"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q26.webp",
+    "width": 903,
+    "height": 399,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q27",
+   "number": 27,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes expresiones es igual a − y − 2 ( y − 2 )² ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 3 y − 4"
+    },
+    {
+     "key": "B",
+     "text": "− 2 ² y − y − 4"
+    },
+    {
+     "key": "C",
+     "text": "− 2 ² y − y + 8"
+    },
+    {
+     "key": "D",
+     "text": "− 2 ² y + 7 y − 8"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q27.webp",
+    "width": 903,
+    "height": 279,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q28",
+   "number": 28,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una receta indica usar 325 gramos de harina, entre otros ingredientes, para hacer 20 galletas.\n\nSi se sigue esa receta, ¿cuál de las siguientes fórmulas permite determinar la cantidad de gramos de harina que se necesitan para hacer n galletas?\n\n325 ·",
+   "options": [
+    {
+     "key": "A",
+     "text": "n 20"
+    },
+    {
+     "key": "B",
+     "text": "325 · n"
+    },
+    {
+     "key": "C",
+     "text": "325 + n 20 ·"
+    },
+    {
+     "key": "D",
+     "text": "n 325"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q28.webp",
+    "width": 903,
+    "height": 406,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q29",
+   "number": 29,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "En una tienda de perfumería empacan jabones en cajas. En la figura adjunta se representa la relación entre la cantidad de jabones y la cantidad de cajas que se necesitan para empacar dicha cantidad de jabones.\n\nSi esta relación se puede modelar mediante la función f definida por (f x ) = 20 · x , ¿qué representa el número 20?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La constante de proporcionalidad directa."
+    },
+    {
+     "key": "B",
+     "text": "La constante de proporcionalidad inversa."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad total de jabones."
+    },
+    {
+     "key": "D",
+     "text": "La cantidad total de cajas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q29.webp",
+    "width": 903,
+    "height": 912,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q30",
+   "number": 30,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Carmen tiene 13 lápices más que Ariel y entre las dos tienen a lo más 49 lápices.\n\n¿Cuál es la máxima cantidad de lápices que puede tener Ariel?",
+   "options": [
+    {
+     "key": "A",
+     "text": "17"
+    },
+    {
+     "key": "B",
+     "text": "18"
+    },
+    {
+     "key": "C",
+     "text": "30"
+    },
+    {
+     "key": "D",
+     "text": "31"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q30.webp",
+    "width": 903,
+    "height": 287,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q31",
+   "number": 31,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "En una frutería se llenan cajas de dos tipos. Un tipo de caja, cuando está llena de fruta, pesa M kg y el otro tipo de caja, cuando está llena de fruta, pesa P kg . La capacidad del camión donde se llevarán las cajas no puede superar los 2 100 kg .\n\nSe sabe que la cantidad de cajas de los dos tipos que se colocarán en el camión es la misma.\n\n¿Cuál de las siguientes inecuaciones permite determinar la cantidad máxima de cajas x de cada tipo que se pueden colocar en el camión?",
+   "options": [
+    {
+     "key": "A",
+     "text": "( M + P ) · x ≤ 2 100"
+    },
+    {
+     "key": "B",
+     "text": "M + P + x ≤ 2 100"
+    },
+    {
+     "key": "C",
+     "text": "( M + P ) · x < 2 100"
+    },
+    {
+     "key": "D",
+     "text": "( M + P ) · 2 x < 2 100"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q31.webp",
+    "width": 903,
+    "height": 449,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q32",
+   "number": 32,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "En una oficina de encomiendas se desea enviar cinco regalos idénticos y un frasco de medio kilogramo de miel.\n\nPara determinar la masa de estos regalos se colocan en una balanza dos regalos y el frasco de miel y en la otra balanza se colocan tres regalos, como se representa en la figura adjunta.\n\nLa balanza de la izquierda marca menos que la balanza de la derecha.\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cada regalo tiene una masa de 100 gramos."
+    },
+    {
+     "key": "B",
+     "text": "Cada regalo tiene una masa de 500 gramos."
+    },
+    {
+     "key": "C",
+     "text": "Cada regalo tiene una masa mayor que 500 gramos."
+    },
+    {
+     "key": "D",
+     "text": "Cada regalo tiene una masa menor que 500 gramos."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q32.webp",
+    "width": 903,
+    "height": 669,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q33",
+   "number": 33,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "En la tabla adjunta se indica la temperatura que alcanza cierto líquido en determinado tiempo, a partir de los 0 ° C .\n\nTemperatura (C ° ) Tiempo (min)\n\n100 8\n\n50 4\n\nSi la temperatura alcanzada por el líquido es directamente proporcional al tiempo que ha sido calentado, en ese orden, ¿cuál es la constante de proporcionalidad?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "25 25"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "50"
+    },
+    {
+     "key": "D",
+     "text": "400"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q33.webp",
+    "width": 903,
+    "height": 591,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q34",
+   "number": 34,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Raúl y Teresa arman bolsas de dulces distribuyendo en total 1000 dulces en 300 bolsas y cada uno arma bolsas distintas. Raúl pone tres dulces en cada una y Teresa pone cinco dulces en cada una.\n\nSi no sobra ningún dulce, ¿cuántas bolsas armó Raúl?",
+   "options": [
+    {
+     "key": "A",
+     "text": "250"
+    },
+    {
+     "key": "B",
+     "text": "180"
+    },
+    {
+     "key": "C",
+     "text": "125"
+    },
+    {
+     "key": "D",
+     "text": "50"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q34.webp",
+    "width": 903,
+    "height": 361,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q35",
+   "number": 35,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "La fábrica de bicicletas “MTB” utiliza aluminio y titanio en la elaboración de dos de sus modelos llamados Sport y Cross Country. La cantidad de estos metales en kg, usados en cada modelo se presenta en la tabla adjunta.\n\nModelo Sport Modelo Cross Country\n\nAluminio (kg) 1 2\n\nTitanio (kg) 3 1\n\nSi la fábrica disponía de 100 kg de aluminio y 80 kg de titanio, y utilizó todo el material, ¿cuántas bicicletas del modelo Cross Country fabricó?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12"
+    },
+    {
+     "key": "B",
+     "text": "24"
+    },
+    {
+     "key": "C",
+     "text": "28"
+    },
+    {
+     "key": "D",
+     "text": "44"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q35.webp",
+    "width": 903,
+    "height": 530,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q36",
+   "number": 36,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "En la figura adjunta se presentan las medidas de tres segmentos con los que, para algún valor de x, se puede construir un triángulo rectángulo.\n\n(2x + 15) cm x cm\n\n(2x + 10) cm\n\n¿Cuál de las siguientes ecuaciones permite calcular el valor de x?",
+   "options": [
+    {
+     "key": "A",
+     "text": "x² + 20 x + 125 = 0 2"
+    },
+    {
+     "key": "B",
+     "text": "7 x + 100 x + 325 = 0"
+    },
+    {
+     "key": "C",
+     "text": "9 ² x + 100 x + 325 = 0"
+    },
+    {
+     "key": "D",
+     "text": "x² − 20 x − 125 = 0"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q36.webp",
+    "width": 903,
+    "height": 535,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q37",
+   "number": 37,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una compañía de teatro desea aumentar la cantidad de público en sus obras y para esto ofrece un plan mensual en el que hay que pagar un monto fijo de 9000 \\$ cada mes, más 1000 \\$ por cada entrada, valor que corresponde al 20 % del precio de una entrada sin contratar el plan.\n\nSi una persona contrató el plan mensual por 6 meses, ¿cuánto dinero ahorró si compró 18 entradas en esos 6 meses?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 60 000"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 45 000"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 18 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 15 000"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q37.webp",
+    "width": 903,
+    "height": 422,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q38",
+   "number": 38,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Una psicóloga considera la función f definida por () f x = 30 000 x como su modelo de cobro por paciente, tal que x es la cantidad de sesiones que tuvo en un mes y f () x es el total mensual que cobra por ellas, en pesos.\n\nLa psicóloga quiere hacer un ajuste a su modelo de cobro, considerando una tarifa fija inicial y una tarifa por sesión de manera que la primera sesión del mes tenga el mismo valor que en el modelo anterior, pero que el resto de las sesiones del mes tengan un valor de un 20 % más económico que en el modelo anterior.\n\n¿Cuál de las siguientes funciones es el nuevo modelo de cobro de la psicóloga?\n\n()",
+   "options": [
+    {
+     "key": "A",
+     "text": "g x = 24 000 x ()"
+    },
+    {
+     "key": "B",
+     "text": "h x = 24 000 x + 6000 ()"
+    },
+    {
+     "key": "C",
+     "text": "p x = 18 000 x + 12 000 ()"
+    },
+    {
+     "key": "D",
+     "text": "r x = 12 000 x + 18 000"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q38.webp",
+    "width": 903,
+    "height": 509,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q39",
+   "number": 39,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En una empresa lechera, el costo, en pesos, de procesar x litros de leche se modela mediante la función f definida por (f x ) = 300 x + 500 . La empresa\n\nencontró una forma de reducir ese costo un 25 % .\n\n¿Cuál de las siguientes funciones modela el nuevo costo, en pesos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "m ( x ) = 300 x + 475"
+    },
+    {
+     "key": "B",
+     "text": "g ( x ) = 225 x + 500"
+    },
+    {
+     "key": "C",
+     "text": "h ( x ) = 225 x + 375"
+    },
+    {
+     "key": "D",
+     "text": "(p x ) = 75 x + 475"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q39.webp",
+    "width": 903,
+    "height": 377,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q40",
+   "number": 40,
+   "axis": "Números",
+   "topic": "Números reales",
+   "stem": "Considera la función definida por () 2 f f n = 10 + 25 n − 5 n , tal que n es un número real.\n\n¿Cuál es el valor de () f 1 + f () 2 + f () 3 + f () 4 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "120"
+    },
+    {
+     "key": "B",
+     "text": "140"
+    },
+    {
+     "key": "C",
+     "text": "195"
+    },
+    {
+     "key": "D",
+     "text": "440"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q40.webp",
+    "width": 903,
+    "height": 324,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q41",
+   "number": 41,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Una empresa está estudiando los efectos de cambiar su forma de producción a una nueva. Con ambas formas de producción, el costo por unidad de producir x unidades se modela a través de una función cuadrática.\n\nEn el siguiente gráfico se representa el costo de producción por unidad de ambas formas de producción:\n\nCosto por unidad\n\nForma de producción antigua\n\nForma de producción nueva\n\n100 Cantidad producida\n\n¿Cuál de las siguientes afirmaciones es verdadera al comparar ambas formas de producción?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Siempre es más conveniente cambiar a la forma de producción nueva."
+    },
+    {
+     "key": "B",
+     "text": "El costo de producir cero productos es igual en ambas formas de producción."
+    },
+    {
+     "key": "C",
+     "text": "Cuando se producen más de cien unidades, la forma de producción antigua genera un menor costo por unidad."
+    },
+    {
+     "key": "D",
+     "text": "El menor costo por unidad posible de la forma de producción antigua es menor que el menor costo por unidad posible de la forma de producción nueva."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q41.webp",
+    "width": 903,
+    "height": 972,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q42",
+   "number": 42,
+   "axis": "Álgebra y funciones",
+   "topic": "Función cuadrática",
+   "stem": "La altura que alcanza el salto de un tipo de grillo puede representarse por medio de la siguiente parábola:\n\nAltura (cm)\n\n40\n\n30\n\n20\n\n10\n\n0,5 1 1,5 2 Tiempo (s)\n\n¿Cuál de las siguientes afirmaciones se puede deducir del gráfico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En ,0 75 s , el grillo está a 30 cm de altura."
+    },
+    {
+     "key": "B",
+     "text": "En 1 s , el grillo alcanza su mayor altura."
+    },
+    {
+     "key": "C",
+     "text": "Solo a los 5,1 s , el grillo alcanza una altura de 30 cm ."
+    },
+    {
+     "key": "D",
+     "text": "A los 3 s , el grillo está bajo tierra."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q42.webp",
+    "width": 903,
+    "height": 653,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q43",
+   "number": 43,
+   "axis": "Álgebra y funciones",
+   "topic": "Función lineal y afín",
+   "stem": "Una empresa necesita realizar un logo compuesto por una letra N y una letra X, con 50 metros lineales de acero. Las dimensiones de las letras se presentan a continuación:\n\n¿Cuántos logos se pueden construir con las medidas anteriores?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "2"
+    },
+    {
+     "key": "D",
+     "text": "1"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q43.webp",
+    "width": 903,
+    "height": 578,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q44",
+   "number": 44,
+   "axis": "Geometría",
+   "topic": "Ángulos",
+   "stem": "Una fábrica hace sillas de escritorio de distinto tamaño, las cuales se pueden reclinar hasta en un ángulo de 135 ° , tal como se representa en la figura adjunta.\n\nA\n\nO B\n\nPara cualquier tamaño de silla, ¿cuál de las siguientes fórmulas permite determinar la distancia entre A y B ( D ) AB de maⁿera que el respaldo quede perpeⁿdicular al asiento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "DAB = AO + BO 2 2"
+    },
+    {
+     "key": "B",
+     "text": "D = AO + BO AB 2"
+    },
+    {
+     "key": "C",
+     "text": "D = 2 AO AB 2"
+    },
+    {
+     "key": "D",
+     "text": "D = 2 AO − BO AB"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q44.webp",
+    "width": 903,
+    "height": 830,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q45",
+   "number": 45,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "En una tienda tienen distintos tamaños de cajas de regalo de forma cúbica, las que tienen en la cara superior una cinta pegada en su diagonal (de vértice a vértice). Algunas de estas cajas se representan en la figura adjunta.\n\nSi la altura de cada caja se representa por h cm , ¿cuál de las siguientes expresiones permite determinar el largo, en cm, de la cinta a usar en cada caja?",
+   "options": [
+    {
+     "key": "A",
+     "text": "h 2"
+    },
+    {
+     "key": "B",
+     "text": "2 h"
+    },
+    {
+     "key": "C",
+     "text": "2 h 2"
+    },
+    {
+     "key": "D",
+     "text": "2 h"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q45.webp",
+    "width": 903,
+    "height": 683,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q46",
+   "number": 46,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Se tiene una circunferencia P de radio 3 cm . Si el área de una circunferencia Q es un cuarto del área de P, ¿cuál es el radio de Q?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "cm 4"
+    },
+    {
+     "key": "B",
+     "text": "6 cm 3"
+    },
+    {
+     "key": "C",
+     "text": "cm 2"
+    },
+    {
+     "key": "D",
+     "text": "12 cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q46.webp",
+    "width": 903,
+    "height": 329,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q47",
+   "number": 47,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "Una profesora dejó como tarea hacer un vaso milimetrado de capacidad máxima 3 600 cm , sellando cualquier tubo con forma cilíndrica en su parte inferior, no importando la medida del radio, como se representa en la siguiente figura:\n\nSi la profesora dijo que consideren π aproximado a 3 y Axel realizará el trabajo con un tubo con forma cilíndrica de 4 cm de radio, ¿cuánto debe medir de altura el vaso milimetrado de Axel?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 cm"
+    },
+    {
+     "key": "B",
+     "text": "12 5, cm"
+    },
+    {
+     "key": "C",
+     "text": "25 cm"
+    },
+    {
+     "key": "D",
+     "text": "37 5, cm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q47.webp",
+    "width": 903,
+    "height": 722,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q48",
+   "number": 48,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "En la siguiente figura se presentan las medidas, en metros, de las aristas de un edificio con forma de paralelepípedo recto, en términos de x, sin considerar subterráneo ni balcones.\n\n2 x 2 x\n\n2³ x\n\n¿Cuál es el área del edificio, considerando solo las superficies laterales y el techo, en metros cuadrados?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "32 x 2"
+    },
+    {
+     "key": "B",
+     "text": "36 x 2"
+    },
+    {
+     "key": "C",
+     "text": "68 x 2"
+    },
+    {
+     "key": "D",
+     "text": "512 x"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q48.webp",
+    "width": 903,
+    "height": 894,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q49",
+   "number": 49,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Considera los vectores en el plano cartesiano = ( ,2 − )1 , = ( − ,3 2 ) , F1 F2 ( ,a b ) y ( ,4 )3 . F3 = F 4 =\n\nSi F + F + F + F = ( ,6 5 ) , ¿cuál es el valor de y respectivamente? a b 1 2 3 4",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 y 4"
+    },
+    {
+     "key": "B",
+     "text": "3 y 9"
+    },
+    {
+     "key": "C",
+     "text": "3 y 1"
+    },
+    {
+     "key": "D",
+     "text": "4 y 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q49.webp",
+    "width": 903,
+    "height": 357,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q50",
+   "number": 50,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "En la figura adjunta se presentan los puntos A ( ,1 1 ) , B ( ,4 2 ) y C ( ,5 − 1 ) , y los vectores uρ, vρ y wρ.\n\nY\n\nB uρ A vρ wρ\n\nX\n\nC\n\n¿Cuál de las siguientes condiciones permite asegurar que el triángulo es ABC rectángulo?\n\nQue el vector wρ es la suma de los vectores uρ y vρ.",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": "Que el perímetro del triángulo ABC es igual a 20 + 2 10 ."
+    },
+    {
+     "key": "C",
+     "text": "Que los módulos de los vectores uρ y vρ son iguales. AB· BC"
+    },
+    {
+     "key": "D",
+     "text": "Que el área del triángulo ABC es igual a . 2"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q50.webp",
+    "width": 903,
+    "height": 731,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q51",
+   "number": 51,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Considera un punto A, tal que este es cualquier punto que se ubica en el primer o tercer cuadrante, de tal manera que al reflejarlo respecto al eje Y se obtiene el punto B.\n\nSi x es la distancia del punto A al eje Y , ¿cuál de las siguientes expresiones permite determinar la distancia entre los puntos A y B?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 x 2"
+    },
+    {
+     "key": "B",
+     "text": "x"
+    },
+    {
+     "key": "C",
+     "text": "2 x"
+    },
+    {
+     "key": "D",
+     "text": "3 x"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q51.webp",
+    "width": 903,
+    "height": 376,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q52",
+   "number": 52,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Una persona lleva a cabo los siguientes pasos para realizar cuatro transformaciones isométricas consecutivas al punto ( − ,5 5 ) , cometiendo un error.\n\n**Paso 1:** el punto ( − ,5 5 ) se traslada segúⁿ el vector⁽ ,5 − 2 ) , obteniendo el punto ( ,0 7 ) .\n\n**Paso 2:** el punto ( ,0 7 ) se rota en 90 con centro en el origen del plano cartesiano ° y en sentido horario, obteniendo el punto ( ,7 )0 .\n\n**Paso 3:** el punto ( ,7 )0 se refleja con respecto al eje Y , obteniendo el punto ( − ,7 0 ) .\n\n**Paso 4:** el punto ( − ,7 0 ) eje X se refleja coⁿ respecto al , obteniendo el punto ( − ,7 0 ) .\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q52.webp",
+    "width": 903,
+    "height": 683,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q53",
+   "number": 53,
+   "axis": "Geometría",
+   "topic": "Plano cartesiano",
+   "stem": "Para llegar a la casa de Diego, Juan desde su casa debe caminar 2 cuadras hacia el este y 5 cuadras hacia el sur. Luego, para llegar a la casa de Pedro, desde la casa de Diego, Juan debe caminar una cuadra hacia el este y una cuadra hacia el sur. Considera que todas las cuadras son del mismo tamaño.\n\nSe grafica en un plano cartesiano el recorrido realizado, considerando la casa de Juan en el punto de origen del plano cartesiano, como el que se representa en la figura adjunta. Norte (eje Y)\n\nOeste Este (eje X)\n\nSur\n\nEn el gráfico realizado en el plano cartesiano, ¿cuál de los siguientes es el vector de traslación que permite trasladarse de la casa de Juan a la casa de Pedro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "( − ,3 − 6 )"
+    },
+    {
+     "key": "B",
+     "text": "( − ,3 6 )"
+    },
+    {
+     "key": "C",
+     "text": "( ,3 − 6 )"
+    },
+    {
+     "key": "D",
+     "text": "( ,3 6 )"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q53.webp",
+    "width": 903,
+    "height": 679,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q54",
+   "number": 54,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "En la oficina administrativa de una empresa se les preguntó, a las personas que allí trabajan, cuántas horas extraordinarias de trabajo habían realizado en el mes anterior, registrándose las respuestas en la tabla adjunta.\n\nHoras extraordinarias Frecuencia\n\n1 5\n\n2 3\n\n3 2\n\n¿Cuál de los siguientes gráficos representa correctamente la información entregada en la tabla?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Frecuencia 3 2 1 0 2 3 5 Horas extraordinarias"
+    },
+    {
+     "key": "B",
+     "text": "Frecuencia 5 3 2 0 1 2 3 Horas extraordinarias"
+    },
+    {
+     "key": "C",
+     "text": "Frecuencia 6 5 0 1 2 3 Horas extraordinarias"
+    },
+    {
+     "key": "D",
+     "text": "Frecuencia 5 3 2 0 1 2 3 Horas extraordinarias"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q54.webp",
+    "width": 903,
+    "height": 1081,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "Una empresa realiza una investigación sobre los sueldos de las personas de las distintas áreas que esta empresa tiene, y agrupa la información en el siguiente histograma, en el que los sueldos están en millones de pesos.\n\nFrecuencia\n\n7\n\n5\n\n2 1\n\n[ ,1 2 [ [ ,2 [3 [ ,3 4 [ [ ,4 5 [ Sueldo de las personas de distintas áreas\n\n¿Cuál de las siguientes tablas representa los sueldos de las personas de la empresa, en millones de pesos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sueldos Frecuencia 1,5 7 2,5 12 3,5 14 4,5 15"
+    },
+    {
+     "key": "B",
+     "text": "Sueldos Frecuencia [1, 2[ 7 [2, 3[ 12 [3, 4[ 14 [4, 5[ 15"
+    },
+    {
+     "key": "C",
+     "text": "Sueldos Frecuencia [1, 2[ 7 [2, 3[ 5 [3, 4[ 2 [4, 5[ 1"
+    },
+    {
+     "key": "D",
+     "text": "Sueldos Frecuencia 1,5 7 2,5 5 3,5 2 4,5 1"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q55.webp",
+    "width": 903,
+    "height": 1070,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q56",
+   "number": 56,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Considera el siguiente grupo de datos 12,, 14, 12 y 16. 6\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El rango del grupo de datos es 4."
+    },
+    {
+     "key": "B",
+     "text": "El promedio de los datos es 12."
+    },
+    {
+     "key": "C",
+     "text": "La mediana de los datos es 14."
+    },
+    {
+     "key": "D",
+     "text": "La moda de los datos es 16."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q56.webp",
+    "width": 903,
+    "height": 272,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q57",
+   "number": 57,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "En la siguiente tabla se presenta información sobre el total de unidades vendidas, por una persona, durante un periodo de cinco semanas, de cuatro productos distintos.\n\nProducto Cantidad de unidades vendidas\n\n1 120\n\n2 200\n\n3 200\n\n4 250\n\nUna semana después, los productos 1 y 2 registraron ventas de 80 unidades cada uno, el producto 3 registró ventas de 100 unidades y el producto 4 registró ventas de 40 unidades.\n\nEn consideración de estas seis semanas, ¿cuál producto registró un mayor promedio de ventas semanal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El producto 1"
+    },
+    {
+     "key": "B",
+     "text": "El producto 2"
+    },
+    {
+     "key": "C",
+     "text": "El producto 3"
+    },
+    {
+     "key": "D",
+     "text": "El producto 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q57.webp",
+    "width": 903,
+    "height": 684,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q58",
+   "number": 58,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de dispersión",
+   "stem": "En las tablas adjuntas se presentan las distribuciones de la edad, en años, de dos grupos de personas, A y B:\n\nGrupo A Grupo B\n\nEdad en años Frecuencia Edad en años Frecuencia\n\n10 5 8 3\n\n14 2 13 1\n\n17 1 17 2\n\n25 4 25 4\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El rango de la edad en el grupo A es mayor que el rango de la edad en el grupo B."
+    },
+    {
+     "key": "B",
+     "text": "La moda de la edad del grupo A es 15 años menor que la del grupo B."
+    },
+    {
+     "key": "C",
+     "text": "La mediana de la edad del grupo A es mayor que la mediana de la edad del grupo B."
+    },
+    {
+     "key": "D",
+     "text": "El rango de la edad de ambos grupos es 25 años."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q58.webp",
+    "width": 903,
+    "height": 657,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q59",
+   "number": 59,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Se encuestó a doce familias respecto a la cantidad de familiares que tienen en el extranjero. En la tabla adjunta se registran los resultados obtenidos.\n\nCantidad de familiares 4 1 1 0 3 2 2 3 0 1 1 6 en el extranjero\n\n¿Cuál es el promedio de la cantidad de familiares en el extranjero que tienen estas familias?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "4,2"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q59.webp",
+    "width": 903,
+    "height": 421,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q60",
+   "number": 60,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de posición",
+   "stem": "Una municipalidad ofrece un subsidio para mejoramiento de infraestructura del hogar a todos los habitantes de la comuna que pertenecen al 60 % de menores ingresos de la población del país.\n\n¿Cuál de las siguientes afirmaciones respecto del ingreso de una vecina de la comuna asegura que puede optar a este subsidio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que sea mayor que el percentil 20 de los ingresos de la población del país."
+    },
+    {
+     "key": "B",
+     "text": "Que sea menor que el percentil 40 de los ingresos de la población del país."
+    },
+    {
+     "key": "C",
+     "text": "Que sea igual que el percentil 50 de los ingresos de la población de la comuna."
+    },
+    {
+     "key": "D",
+     "text": "Que sea igual que el percentil 60 de los ingresos de la población de la comuna."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q60.webp",
+    "width": 903,
+    "height": 398,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q61",
+   "number": 61,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "En la figura adjunta se resumen las temperaturas del aire cerca de la superficie de cinco ciudades en cierto año.\n\nAdaptado de *Plot temperature distribution as box plots for a defined set of cities, por Climate Change* *Service*, 2020, (https://cds.climate.copernicus.eu/toolbox/doc/gallery/54_box_plots.html).\n\n¿Cuál es la ciudad que tuvo la menor diferencia entre la temperatura máxima y mínima registrada, según la figura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tombuctú"
+    },
+    {
+     "key": "B",
+     "text": "Reikiavik"
+    },
+    {
+     "key": "C",
+     "text": "Calama"
+    },
+    {
+     "key": "D",
+     "text": "La Habana"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q61.webp",
+    "width": 903,
+    "height": 827,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q62",
+   "number": 62,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Los siguientes datos corresponden a la masa de los tomates cosechados en un huerto de una escuela: 75 g , 77 g , 84 g , 98 g , 101 g , 116 g , 129 g , 132 g , 145 g , 152 g , 163 g y 176 g .\n\n¿Cuál de los siguientes percentiles supera los 100 g ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10"
+    },
+    {
+     "key": "B",
+     "text": "20"
+    },
+    {
+     "key": "C",
+     "text": "30"
+    },
+    {
+     "key": "D",
+     "text": "40"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q62.webp",
+    "width": 903,
+    "height": 338,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q63",
+   "number": 63,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Una caja contiene en total 5 fichas del mismo tipo numeradas correlativamente del 1 al 5 y otra caja contiene en total 5 fichas del mismo tipo numeradas correlativamente del 6 al 10.\n\nSi se selecciona una ficha al azar de cada caja, ¿cuál es la probabilidad de que la suma de los números de las fichas sea un número par?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "12 1"
+    },
+    {
+     "key": "B",
+     "text": "4 12"
+    },
+    {
+     "key": "C",
+     "text": "25 4"
+    },
+    {
+     "key": "D",
+     "text": "25"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q63.webp",
+    "width": 903,
+    "height": 481,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q64",
+   "number": 64,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "A una reunión internacional asistirán personas que hablan francés, inglés y español. Se sabe que, del total de ellas, seis solo hablan francés, diez solo hablan inglés, tres personas hablan los tres idiomas y se encargarán de ser los traductores.\n\nSi se considera a x como la cantidad de personas que solo hablan español y no hay personas que hablen dos idiomas, ¿cuál de las siguientes expresiones permite calcular la probabilidad de que al elegir a una persona al azar esta hable español?\n\nx",
+   "options": [
+    {
+     "key": "A",
+     "text": "19 + x 1"
+    },
+    {
+     "key": "B",
+     "text": "x + 3 x + 3"
+    },
+    {
+     "key": "C",
+     "text": "19 x + 3"
+    },
+    {
+     "key": "D",
+     "text": "x + 19"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q64.webp",
+    "width": 903,
+    "height": 553,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-regular-q65",
+   "number": 65,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Un curso vende una rifa para juntar dinero para un paseo. La rifa tiene 250 números distintos, todos con la misma probabilidad de ser sorteados. El profesor le dice a un estudiante, que compró números de la rifa, que tiene una 1 de ganarla. probabilidad de 50\n\n¿Cuántos números de la rifa compró ese estudiante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "5"
+    },
+    {
+     "key": "C",
+     "text": "50"
+    },
+    {
+     "key": "D",
+     "text": "51"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-regular/q65.webp",
+    "width": 903,
+    "height": 379,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}

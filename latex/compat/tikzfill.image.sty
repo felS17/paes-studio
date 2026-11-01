@@ -1,0 +1,8 @@
+%% Sustituto mínimo de tikzfill.image para TeX Live locales sin el paquete tikzfill.
+%% tcolorbox (librería skins) solo lo usa para rellenos con imágenes (watermark, *style image),
+%% que las guías y presentaciones de PAES Studio no usan. Si el paquete real está instalado,
+%% scripts/pipeline/build_pdfs.py no agrega esta carpeta a TEXINPUTS.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tikzfill.image}[2026/11/01 sustituto local de PAES Studio]
+\RequirePackage{tikz}
+\endinput

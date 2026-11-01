@@ -1,0 +1,2671 @@
+{
+ "id": "m2-2026-invierno",
+ "subject": "m2",
+ "title": "PAES Invierno 2026",
+ "description": "Prueba oficial completa de Competencia Matemática 2 (M2): 54 preguntas (1 anulada por el DEMRE), aplicada el 16-06-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2026,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "191",
+ "appliedOn": "2025-06-16",
+ "durationMinutes": 135,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   174,
+   204,
+   231,
+   256,
+   278,
+   298,
+   317,
+   336,
+   354,
+   371,
+   386,
+   400,
+   413,
+   427,
+   443,
+   458,
+   471,
+   482,
+   493,
+   503,
+   515,
+   529,
+   544,
+   557,
+   569,
+   578,
+   588,
+   599,
+   611,
+   626,
+   640,
+   654,
+   665,
+   676,
+   687,
+   701,
+   716,
+   732,
+   747,
+   762,
+   776,
+   793,
+   811,
+   830,
+   850,
+   871,
+   894,
+   919,
+   1000
+  ],
+  "officialQuestionCount": 55,
+  "officialScorableCount": 49
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-2026-invierno-q01",
+   "number": 1,
+   "axis": "Números",
+   "topic": "Números racionales",
+   "stem": "Considera el número racional x ubicado en la recta numérica entre ⁴ y ³ , tal que la 7 5 distancia entre x y ⁴ es el doble de la distancia entre ³ y x. 7 5\n\n¿Cuál es el valor de x?\n\n61",
+   "options": [
+    {
+     "key": "A",
+     "text": "105 41"
+    },
+    {
+     "key": "B",
+     "text": "70 62"
+    },
+    {
+     "key": "C",
+     "text": "105 21"
+    },
+    {
+     "key": "D",
+     "text": "35"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q01.webp",
+    "width": 907,
+    "height": 510,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La distancia de x a 4/7 es el doble de la distancia de 3/5 a x, lo que lleva a una ecuación lineal simple en x.",
+    "steps": [
+     "Los extremos son $\\frac{4}{7}\\approx 0{,}571$ y $\\frac{3}{5}=0{,}6$, así que $x$ está entre ambos. Las distancias son $x-\\frac{4}{7}$ y $\\frac{3}{5}-x$.",
+     "La condición del enunciado es $x-\\frac{4}{7}=2\\left(\\frac{3}{5}-x\\right)$.",
+     "Desarrollando: $x-\\frac{4}{7}=\\frac{6}{5}-2x$, de donde $3x=\\frac{6}{5}+\\frac{4}{7}=\\frac{42+20}{35}=\\frac{62}{35}$.",
+     "Despejando: $x=\\frac{62}{105}$, y como $\\frac{62}{105}\\approx 0{,}590$ está entre $0{,}571$ y $0{,}6$, el valor es válido. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{61}{105}$ aparece si se duplica la distancia equivocada: $2\\left(x-\\frac{4}{7}\\right)=\\frac{3}{5}-x$.",
+     "B": "$\\frac{41}{70}$ es el punto medio entre $\\frac{4}{7}$ y $\\frac{3}{5}$, que no cumple la condición de distancia doble."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Se desea pintar el interior de una vivienda, de la cual se deben cubrir 130 m² con\n\ndos capas de pintura.\n\nPara esto se comprarán galones de pintura que tienen un rendimiento entre 35 m² y 45 m² y un precio unitario de \\$29 200.\n\nSi se decide comprar la mínima cantidad de galones que asegure que no faltará\n\npintura, ¿cuánto dinero se gastará?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$146 000"
+    },
+    {
+     "key": "B",
+     "text": "\\$175 200"
+    },
+    {
+     "key": "C",
+     "text": "\\$204 400"
+    },
+    {
+     "key": "D",
+     "text": "\\$233 600"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q02.webp",
+    "width": 907,
+    "height": 485,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que cubrir 260 m² y, para no quedar corto, se calcula con el rendimiento mínimo de 35 m² por galón, redondeando hacia arriba.",
+    "steps": [
+     "Superficie total con dos capas: $2\\cdot 130=260\\ \\mathrm{m^2}$.",
+     "Con el rendimiento mínimo garantizado de $35\\ \\mathrm{m^2}$ por galón: $\\frac{260}{35}\\approx 7{,}43$.",
+     "Como no se compran fracciones de galón, se necesitan **8 galones**. Con 7 galones solo se cubririan $7\\cdot 35=245\\ \\mathrm{m^2}$ en el peor caso, insuficiente.",
+     "Costo: $8\\cdot 29\\,200=233\\,600$ pesos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "175 200 pesos corresponden a 6 galones: usa el rendimiento máximo de 45 m² ($\\frac{260}{45}\\approx 5{,}8$), que no asegura cubrir en el caso de 35 m².",
+     "C": "204 400 pesos corresponden a 7 galones, que cubren solo 245 m² en el peor caso; redondear 7,43 hacia abajo deja pintura sin cubrir."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q03",
+   "number": 3,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "El Rol Único Tributario (RUT) se compone de dos partes separadas por un guion:\n\nun número de siete u ocho dígitos y un dígito verificador.\n\nEl dígito verificador puede ser un dígito o la letra K y se obtiene mediante el siguiente\n\nalgoritmo:\n\nConsidera que el RUT es AB.CDE.FGH – V (en el caso de tener siete dígitos,\n\nse considera A = 0).\n\n1. Se debe calcular la siguiente suma:\n\n3 · A + 2 · B + 7 · C + 6 · D + 5 · E + 4 · F + 3 · G + 2 · H\n\n2. Se debe dividir la suma calculada por 11 para encontrar el resto n.\n\n3. Según el valor del resto n, el dígito verificador V es:\n\n- 11 −n, si (11 −n) ≤9\n\n- K, si (11 −n) = 10\n\n- 0, si (11 −n) = 11\n\n¿Cuál es el dígito verificador del RUT 60.910.000 – □?",
+   "options": [
+    {
+     "key": "A",
+     "text": "K"
+    },
+    {
+     "key": "B",
+     "text": "0"
+    },
+    {
+     "key": "C",
+     "text": "1"
+    },
+    {
+     "key": "D",
+     "text": "7"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q03.webp",
+    "width": 907,
+    "height": 843,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se aplica el algoritmo del dígito verificador a los dígitos de 60.910.000 y se obtiene que $11-n=1$.",
+    "steps": [
+     "Los dígitos del RUT son $A=6$, $B=0$, $C=9$, $D=1$ y $E=F=G=H=0$.",
+     "Suma: $3\\cdot 6+2\\cdot 0+7\\cdot 9+6\\cdot 1+5\\cdot 0+4\\cdot 0+3\\cdot 0+2\\cdot 0=18+63+6=87$.",
+     "Resto al dividir por 11: $87=11\\cdot 7+10$, luego $n=10$.",
+     "Como $11-n=1\\le 9$, el dígito verificador es $V=1$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "K corresponde a $11-n=10$; se elige si se usa $n=10$ directamente en lugar de $11-n$.",
+     "B": "0 aparece si se toma el resto como 0, por confundir 87 con 88, que sí es múltiplo de 11.",
+     "D": "7 aparece si se omite el término $6\\cdot D$: $18+63=81$, resto 4, y $11-4=7$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Si el 25 % de M es N, ¿qué porcentaje de N es M?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 %"
+    },
+    {
+     "key": "B",
+     "text": "25 %"
+    },
+    {
+     "key": "C",
+     "text": "75 %"
+    },
+    {
+     "key": "D",
+     "text": "400 %"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q04.webp",
+    "width": 907,
+    "height": 253,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si $\\frac{1}{4}M=N$, entonces $M=4N$, así que M es el 400 % de N.",
+    "steps": [
+     "La condición es $25\\,\\%$ de $M$ igual a $N$, es decir, $\\frac{1}{4}M=N$.",
+     "Despejando: $M=4N$.",
+     "Como porcentaje de N: $\\frac{M}{N}=4=\\frac{400}{100}$, es decir, M es el 400 % de N. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "25 % repite el porcentaje del enunciado sin invertir la relación; el 25 % es de M, no de N.",
+     "C": "75 % resulta de calcular 100 % − 25 %, que mide una diferencia y no la proporción entre M y N."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q05",
+   "number": 5,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Considera que 1200 se aumenta en su 15 % y el número que se obtiene se disminuye\n\nen su 5 %.\n\n¿Cuál de las siguientes expresiones representa el número final que se obtiene?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1200 · 1,15 · 0,95"
+    },
+    {
+     "key": "B",
+     "text": "1200 · 0,15 · 0,05"
+    },
+    {
+     "key": "C",
+     "text": "1200 · 1,15 −1200 · 0,95"
+    },
+    {
+     "key": "D",
+     "text": "1200 · 0,15 −1200 · 0,05"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q05.webp",
+    "width": 907,
+    "height": 352,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Aumentar en 15 % equivale a multiplicar por 1,15 y disminuir en 5 % a multiplicar por 0,95; los factores se encadenan.",
+    "steps": [
+     "Aumentar 1200 en su 15 %: $1200\\cdot(1+0{,}15)=1200\\cdot 1{,}15$.",
+     "Disminuir ese resultado en su 5 %: se multiplica por $1-0{,}05=0{,}95$.",
+     "El número final es $1200\\cdot 1{,}15\\cdot 0{,}95$. Las opciones C y D restan cantidades, lo que no representa una cadena de porcentajes. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "$1200\\cdot 1{,}15-1200\\cdot 0{,}95$ resta dos valores parciales en vez de encadenar los factores.",
+     "D": "$1200\\cdot 0{,}15-1200\\cdot 0{,}05$ usa los porcentajes 0,15 y 0,05 como factores, en vez de $1+0{,}15$ y $1-0{,}05$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q06",
+   "number": 6,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Para medir la popularidad de un artista en redes sociales, se analizó la cantidad de\n\nbúsquedas diarias que tuvo durante tres días seguidos. Se detectó que el artista\n\ndescendió un 4 % cada día respecto al día anterior, presentando 276 480 búsquedas\n\nel último día.\n\n¿Cuál es la cantidad de búsquedas que se realizaron de este artista el primer día?\n\n276 480",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,96² 276 480"
+    },
+    {
+     "key": "B",
+     "text": "0,04²"
+    },
+    {
+     "key": "C",
+     "text": "276 480 · 0,96²"
+    },
+    {
+     "key": "D",
+     "text": "276 480 · 0,04²"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q06.webp",
+    "width": 907,
+    "height": 498,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada día es 0,96 veces el anterior, así que para hallar el primer día se divide el último por $0{,}96^{2}$.",
+    "steps": [
+     "Cada día la cantidad es el 96 % del día anterior, es decir, se multiplica por 0,96.",
+     "Si $x$ son las búsquedas del primer día, el segundo día hay $0{,}96x$ y el tercero $0{,}96^{2}x=276\\,480$.",
+     "Despejando: $x=\\frac{276\\,480}{0{,}96^{2}}$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{276\\,480}{0{,}04^{2}}$ usa 0,04 como factor, cuando la baja es del 4 % y el factor es 0,96.",
+     "C": "$276\\,480\\cdot 0{,}96^{2}$ multiplica en vez de dividir; así se obtendría un valor menor que el último día, lo que es imposible para un primer día con búsquedas en descenso."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q07",
+   "number": 7,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Al terminar cada día trabajado en una obra de construcción, se calcula el porcentaje\n\nde la obra que queda por realizar, usando la siguiente expresión:\n\n100 · (1 −k) %\n\n¿Qué representa k en esta expresión?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El porcentaje de avance de la obra durante el último día trabajado, escrito en decimal."
+    },
+    {
+     "key": "B",
+     "text": "El porcentaje de avance de la obra hasta el último día trabajado, escrito en decimal."
+    },
+    {
+     "key": "C",
+     "text": "El porcentaje de avance de la obra de cada uno de los días de trabajo, escrito en decimal."
+    },
+    {
+     "key": "D",
+     "text": "El porcentaje que queda por realizar de la obra al término del último día de trabajo, escrito en decimal."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q07.webp",
+    "width": 907,
+    "height": 527,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La expresión $100\\cdot(1-k)$ da el porcentaje que queda, así que k es la fracción de la obra ya realizada hasta el último día.",
+    "steps": [
+     "El porcentaje que queda es $100\\cdot(1-k)\\,\\%$, luego $1-k$ es la fracción de la obra que falta.",
+     "Por lo tanto $k$ es la fracción de la obra que ya está hecha.",
+     "Como el cálculo se hace al terminar cada día, $k$ cambia día a día y acumula todo el trabajo previo, no solo el de un día. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Confunde el avance acumulado con el avance de un solo día; el porcentaje que queda se calcula sobre toda la obra.",
+     "D": "Describe el porcentaje pendiente, que ya es $100\\cdot(1-k)$; por eso invierte el significado de k."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q08",
+   "number": 8,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "En la tabla adjunta se presenta la masa de dos partículas.\n\nPartícula Masa\n\n1,67 · 10⁻²⁷ kg Protón\n\n9,11 · 10⁻³¹ kg Electrón\n\n¿Cuál es la diferencia positiva entre las masas de las partículas?\n\n(9,11 −1,67) · 10⁻⁵⁸ kg",
+   "options": [
+    {
+     "key": "A",
+     "text": "(9,11 −1,67) · 10⁻⁴ kg"
+    },
+    {
+     "key": "B",
+     "text": "�1,67 −9,11 · 10−⁴�· 10−²⁷ kg"
+    },
+    {
+     "key": "C",
+     "text": "�1,67 −9,11 · 10−⁴�· 10−³¹ kg"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q08.webp",
+    "width": 907,
+    "height": 542,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La diferencia positiva es $1{,}67\\cdot 10^{-27}-9{,}11\\cdot 10^{-31}$; factorizando $10^{-27}$ se obtiene la forma de la alternativa C.",
+    "steps": [
+     "Protón: $1{,}67\\cdot 10^{-27}$ kg. Electrón: $9{,}11\\cdot 10^{-31}$ kg. El protón es más masivo, así que la diferencia positiva es $1{,}67\\cdot 10^{-27}-9{,}11\\cdot 10^{-31}$.",
+     "Como $10^{-31}=10^{-4}\\cdot 10^{-27}$, se factoriza $10^{-27}$: $\\left(1{,}67-9{,}11\\cdot 10^{-4}\\right)\\cdot 10^{-27}$.",
+     "Comprobación: $9{,}11\\cdot 10^{-4}\\cdot 10^{-27}=9{,}11\\cdot 10^{-31}$, luego la expresión coincide con la diferencia. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$(9{,}11-1{,}67)\\cdot 10^{-58}$ resta los coeficientes en lugar de las masas y multiplica las potencias de 10.",
+     "D": "$(1{,}67-9{,}11\\cdot 10^{-4})\\cdot 10^{-31}$ usa la potencia del electrón como factor común, lo que da un orden de magnitud incorrecto."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q09",
+   "number": 9,
+   "axis": "Números",
+   "topic": "Potencias",
+   "stem": "ä³ Para expresar 8 · 16 − 2 como la multiplicación de dos números, se realiza\n\nel siguiente procedimiento, en el cual se comete un error.\n\nÄ√ √ ä³ **Paso 1:** se resuelve la potencia 2 , obteniéndose 2 2.\n\nÄ√ ³√ ⁶√ ä **Paso 2:** se realiza la multiplicación de raíces 8 · 16, obteniéndose 128.\n\n⁶√ ⁶√ **Paso 3:** se descompone y reduce la raíz 128, obteniéndose 2 2.\n\n⁶√ √ ⁶√ √ Ä ä **Paso 4:** se factoriza la resta 2 2 −2 2, obteniéndose 2 2 − 2 .\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q09.webp",
+    "width": 907,
+    "height": 629,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El error está en el Paso 2: $\\sqrt{8}\\cdot\\sqrt[3]{16}$ tiene índices distintos y no es igual a $\\sqrt[6]{8\\cdot 16}$.",
+    "steps": [
+     "El Paso 1 es correcto: $(\\sqrt{2})^{3}=2\\sqrt{2}$.",
+     "En el Paso 2 no se puede juntar $\\sqrt{8}\\cdot\\sqrt[3]{16}$ bajo una sola raíz de $8\\cdot 16$, porque los índices son distintos. Para igualar índices: $\\sqrt{8}=\\sqrt[6]{512}$ y $\\sqrt[3]{16}=\\sqrt[6]{256}$.",
+     "Entonces el producto es $\\sqrt[6]{512\\cdot 256}=\\sqrt[6]{2^{17}}$, y no $\\sqrt[6]{128}=\\sqrt[6]{2^{7}}$ como se indica.",
+     "Los Pasos 3 y 4 operan correctamente con el valor $\\sqrt[6]{128}$, así que el error de origen está en el Paso 2. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Creer que $(\\sqrt{2})^{3}$ está mal resuelto; $2\\sqrt{2}$ sí es correcto.",
+     "C": "Creer que $\\sqrt[6]{128}=2\\sqrt[6]{2}$ es incorrecto; en realidad $128=2\\cdot 2^{6}$ lo confirma."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q10",
+   "number": 10,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "Si log 2 ≈0,30 y log 3 ≈0,48, ¿cuál de las siguientes expresiones corresponde a\n\nuna aproximación de log² 15?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,70 + 0,48 4,8 + 0,30"
+    },
+    {
+     "key": "B",
+     "text": "0,30 1 + 0,48"
+    },
+    {
+     "key": "C",
+     "text": "2 · 0,30 0,70 + 0,48"
+    },
+    {
+     "key": "D",
+     "text": "0,30"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q10.webp",
+    "width": 907,
+    "height": 408,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se usa $\\log_{2}15=\\frac{\\log 15}{\\log 2}$ con $\\log 15=\\log 3+\\log 5$ y $\\log 5=1-\\log 2$.",
+    "steps": [
+     "Cambio de base: $\\log_{2}15=\\frac{\\log 15}{\\log 2}$.",
+     "Se descompone $\\log 15=\\log 3+\\log 5$, y $\\log 5=\\log\\frac{10}{2}=1-\\log 2\\approx 1-0{,}30=0{,}70$.",
+     "Así $\\log 15\\approx 0{,}48+0{,}70$ y $\\log_{2}15\\approx\\frac{0{,}70+0{,}48}{0{,}30}\\approx 3{,}9$.",
+     "Esa es la expresión de la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$0{,}70+0{,}48$ es $\\log 15$ en base 10, pero falta dividir por $\\log 2$.",
+     "C": "$\\frac{1+0{,}48}{2\\cdot 0{,}30}$ toma $\\log 30\\approx 1{,}48$ en lugar de $\\log 15$ y duplica $\\log 2$ sin justificación."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q11",
+   "number": 11,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "En un laboratorio se estudiaron dos cultivos de bacterias, para los cuales se registraron\n\nlos siguientes datos:\n\nCantidad inicial de bacterias Minutos que tardan en duplicarse\n\nCultivo A 100 10\n\nCultivo B 200 20\n\n¿Cuántas bacterias en total tendrán los dos cultivos transcurridos 40 minutos desde\n\nel inicio del estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "400"
+    },
+    {
+     "key": "B",
+     "text": "800"
+    },
+    {
+     "key": "C",
+     "text": "2400"
+    },
+    {
+     "key": "D",
+     "text": "4800"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q11.webp",
+    "width": 907,
+    "height": 536,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada cultivo se duplica en su propio tiempo; se calcula el número de duplicaciones en 40 minutos para cada uno y se suman.",
+    "steps": [
+     "Cultivo A: duplica cada 10 min, así que en 40 min hay $\\frac{40}{10}=4$ duplicaciones: $100\\cdot 2^{4}=1600$ bacterias.",
+     "Cultivo B: duplica cada 20 min, así que hay $\\frac{40}{20}=2$ duplicaciones: $200\\cdot 2^{2}=800$ bacterias.",
+     "Total: $1600+800=2400$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "400 corresponde a $100\\cdot 2^{2}$: usa 2 duplicaciones para el cultivo A.",
+     "D": "4800 resulta de usar 4 duplicaciones para el cultivo B ($200\\cdot 2^{4}=3200$) y sumar 1600."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q12",
+   "number": 12,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "El nivel de intensidad sonora β, en dB, y la intensidad acústica I, en W m², se relacionan mediante la expresión β = 10 · log(I) + 120, tal que β ≥0.\n\nEn la siguiente tabla se presentan los niveles máximos permisibles de intensidad\n\nsonora en zonas residenciales durante el día según la legislación chilena.\n\nDe 7:00 a 21:00 De 21:00 a 7:00\n\n55 dB 45 dB\n\n¿Cuál es el máximo permisible de intensidad acústica en zonas residenciales a las\n\n23:00?\n\n10⁻⁶,⁵ W",
+   "options": [
+    {
+     "key": "A",
+     "text": "m² 10⁻⁷,⁵ W"
+    },
+    {
+     "key": "B",
+     "text": "m² 10⁷,⁵ W"
+    },
+    {
+     "key": "C",
+     "text": "m² 10¹⁶,⁵ W"
+    },
+    {
+     "key": "D",
+     "text": "m²"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q12.webp",
+    "width": 907,
+    "height": 776,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "A las 23:00 rige el límite nocturno de 45 dB; se despeja I de $\\beta=10\\log I+120$ y se obtiene $\\log I=-7{,}5$.",
+    "steps": [
+     "Entre las 21:00 y las 7:00 el límite es 45 dB, y las 23:00 pertenece a ese tramo.",
+     "Se reemplaza en la expresión: $45=10\\cdot\\log I+120$.",
+     "Despejando: $10\\cdot\\log I=-75$, luego $\\log I=-7{,}5$, y por lo tanto $I=10^{-7{,}5}\\ \\frac{\\mathrm{W}}{\\mathrm{m^2}}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$10^{-6{,}5}$ usa el límite diurno de 55 dB: $55=10\\log I+120$ da $\\log I=-6{,}5$.",
+     "C": "$10^{7{,}5}$ es un error de signo al despejar $-7{,}5$.",
+     "D": "$10^{16{,}5}$ suma 45 y 120 en vez de restarlos: $\\frac{45+120}{10}=16{,}5$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q13",
+   "number": 13,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "n» ¿Cuál de las siguientes expresiones es igual a (3ⁿ)² · 6⁽ⁿ²⁾ · 4ⁿ?\n\n²ⁿ²",
+   "options": [
+    {
+     "key": "A",
+     "text": "6."
+    },
+    {
+     "key": "B",
+     "text": "6. ⁿ⁺² ⁿ· 6ⁿ· 4"
+    },
+    {
+     "key": "C",
+     "text": "3. ²· 6²ⁿ· 4"
+    },
+    {
+     "key": "D",
+     "text": "3."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q13.webp",
+    "width": 907,
+    "height": 286,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La raíz de índice n divide cada exponente por n; luego $3^{2}\\cdot 4=36=6^{2}$ permite juntar todo en potencia de 6.",
+    "steps": [
+     "Se escribe la raíz como potencia: $\\left((3^{n})^{2}\\cdot 6^{n^{2}}\\cdot 4^{n}\\right)^{\\frac{1}{n}}$.",
+     "Se distribuye el exponente $\\frac{1}{n}$: $(3^{n})^{2/n}=3^{2}$, $\\left(6^{n^{2}}\\right)^{1/n}=6^{n}$ y $\\left(4^{n}\\right)^{1/n}=4$.",
+     "El resultado es $3^{2}\\cdot 6^{n}\\cdot 4=36\\cdot 6^{n}=6^{2}\\cdot 6^{n}=6^{n+2}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$6^{2n^{2}}$ multiplica en lugar de dividir los exponentes por n.",
+     "D": "$3^{2}\\cdot 6^{2n}\\cdot 4$ divide mal el exponente $n^{2}$ por n, obteniendo $2n$ en vez de $n$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q14",
+   "number": 14,
+   "axis": "Números",
+   "topic": "Interés",
+   "stem": "En cierto tipo de cuenta de ahorro, una institución financiera ofrece un interés\n\ncompuesto mensual de 1,5 % al capital que se deposite.\n\nUna persona abre una de estas cuentas de ahorro y deposita un capital inicial de\n\n\\$350 000 y lo tiene tres meses sin realizar retiros ni depósitos.\n\n¿Cuál de las siguientes expresiones representa el interés que se produce en ese\n\nperiodo de tiempo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$350 000 · 0,015³"
+    },
+    {
+     "key": "B",
+     "text": "\\$350 000 · 1,15³ \\$350 000 · (1,015³ −1)"
+    },
+    {
+     "key": "C",
+     "text": "\\$350 000 · (1,15³ −1)"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q14.webp",
+    "width": 907,
+    "height": 512,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El interés es el monto final menos el capital, con 1,5 % mensual compuesto durante 3 meses.",
+    "steps": [
+     "1,5 % equivale a $0{,}015$, así que el factor de crecimiento mensual es $1{,}015$.",
+     "Monto tras 3 meses: $350\\,000\\cdot 1{,}015^{3}$ pesos.",
+     "Interés = monto − capital $=350\\,000\\cdot 1{,}015^{3}-350\\,000=350\\,000\\cdot(1{,}015^{3}-1)$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$350\\,000\\cdot 0{,}015^{3}$ eleva la tasa al cubo en vez de capitalizar; no corresponde a interés compuesto.",
+     "D": "$350\\,000\\cdot(1{,}15^{3}-1)$ usa 15 % en vez de 1,5 %, un error de posición decimal."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q15",
+   "number": 15,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "¿Cuál de las siguientes expresiones es igual a (3a + 5b)(5b −3a) −(5b −3a)²?",
+   "options": [
+    {
+     "key": "A",
+     "text": "−30ab"
+    },
+    {
+     "key": "B",
+     "text": "6a (5b −3a)"
+    },
+    {
+     "key": "C",
+     "text": "10b (3a −5b) 2 (9a² −25b² −15ab)"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q15.webp",
+    "width": 907,
+    "height": 282,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $u=5b-3a$, la expresión es $u(3a+5b)-u^{2}=u\\cdot 6a$; basta sacar factor común $(5b-3a)$.",
+    "steps": [
+     "El factor $(5b-3a)$ aparece en ambos términos: $(3a+5b)(5b-3a)-(5b-3a)^{2}$.",
+     "Se saca factor común: $(5b-3a)\\left[(3a+5b)-(5b-3a)\\right]$.",
+     "Dentro del corchete: $3a+5b-5b+3a=6a$, así que la expresión es $6a\\,(5b-3a)$.",
+     "Comprobación: $(3a+5b)(5b-3a)=25b^{2}-9a^{2}$ y $(5b-3a)^{2}=25b^{2}-30ab+9a^{2}$; la diferencia es $30ab-18a^{2}=6a(5b-3a)$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$-30ab$ toma solo el término cruzado del cuadrado y pierde los demás términos.",
+     "C": "$10b(3a-5b)$ se queda con $30ab$ y reemplaza $-18a^{2}$ por $-50b^{2}$ al confundir los cuadrados."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q16",
+   "number": 16,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "Una persona compró un marco de p cm de largo para colocar una foto cuyos\n\nlados están en razón 16: 9 y que aún no imprime. Debe dejarle un paspartú de\n\ntres centímetros, el cual corresponde a un espacio en blanco entre el marco y la foto,\n\ntal como se representa en la siguiente figura:\n\nPara imprimir la foto del tamaño correcto y sin perder su proporción, le piden la medida\n\nde la diagonal que tiene que tener la foto en pulgadas.\n\nSi una pulgada es equivalente a 2,54 centímetros, ¿cuál de las siguientes expresiones\n\nrepresenta la medida de la diagonal que tiene que entregar, en pulgadas?\n\n…337",
+   "options": [
+    {
+     "key": "A",
+     "text": "p · 256 …337"
+    },
+    {
+     "key": "B",
+     "text": "2,54 · (p −6) · 256 …337 (p −6) · 256"
+    },
+    {
+     "key": "C",
+     "text": "2,54 …337 p · 256"
+    },
+    {
+     "key": "D",
+     "text": "2,54"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q16.webp",
+    "width": 907,
+    "height": 1122,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La foto mide $p-6$ cm de ancho; con razón 16:9 la diagonal es $\\frac{(p-6)\\sqrt{337}}{16}$ cm, y se divide por 2,54 para pasar a pulgadas.",
+    "steps": [
+     "El paspartú de 3 cm ocupa ambos lados, así que el ancho de la foto es $p-2\\cdot 3=p-6$ cm.",
+     "Con razón 16:9, si el ancho es $16k$ el alto es $9k$; de $16k=p-6$ se obtiene $k=\\frac{p-6}{16}$.",
+     "La diagonal es $k\\sqrt{16^{2}+9^{2}}=k\\sqrt{337}=\\frac{(p-6)\\sqrt{337}}{16}$ cm.",
+     "Como $\\frac{\\sqrt{337}}{16}=\\sqrt{\\frac{337}{256}}$, la diagonal en cm es $(p-6)\\cdot\\sqrt{\\frac{337}{256}}$; dividiendo por 2,54 se obtiene la medida en pulgadas.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "$2{,}54\\cdot(p-6)\\cdot\\sqrt{\\frac{337}{256}}$ multiplica por 2,54 en vez de dividir, al revés de la conversión.",
+     "D": "$\\frac{p\\cdot\\sqrt{337/256}}{2{,}54}$ usa el ancho del marco como si fuera el de la foto y olvida el paspartú."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q17",
+   "number": 17,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "En la siguiente figura se representa la gráfica de una relación de proporcionalidad\n\ninversa y la gráfica de una relación de proporcionalidad directa.\n\n¿Cuál de las siguientes expresiones es igual a m , en términos de b y q? c\n\nq",
+   "options": [
+    {
+     "key": "A",
+     "text": "b q²"
+    },
+    {
+     "key": "B",
+     "text": "b² b"
+    },
+    {
+     "key": "C",
+     "text": "q b"
+    },
+    {
+     "key": "D",
+     "text": "q²"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q17.webp",
+    "width": 907,
+    "height": 959,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las dos gráficas se cruzan en $(p,q)$; la recta directa y la hipérbola inversa dan $\\frac{m}{c}=\\frac{q^{2}}{b^{2}}$.",
+    "steps": [
+     "La recta directa pasa por el origen y por $(p,q)$ y $(c,b)$, luego $\\frac{q}{p}=\\frac{b}{c}$, es decir, $p=\\frac{qc}{b}$.",
+     "La hipérbola inversa cumple $xy=\\text{cte}$ y pasa por $(m,b)$ y $(p,q)$, así que $mb=pq$ y $m=\\frac{pq}{b}$.",
+     "Reemplazando $p$: $m=\\frac{q}{b}\\cdot\\frac{qc}{b}=\\frac{q^{2}c}{b^{2}}$, luego $\\frac{m}{c}=\\frac{q^{2}}{b^{2}}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{q}{b}$ confunde $m$ con $p$ y usa la razón de la recta, $\\frac{p}{c}=\\frac{q}{b}$, sin el paso de la hipérbola.",
+     "C": "$\\frac{b}{q}$ invierte la razón entre las coordenadas b y q."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q18",
+   "number": 18,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "El volumen y la presión de un gas se comportan de manera inversamente proporcional\n\ncuando la temperatura es constante.\n\nEn el siguiente gráfico se presentan algunos valores del comportamiento de un gas\n\nen particular.\n\nSi se considera que el gas tiene una presión de p atmósferas, ¿cuál de las siguientes\n\nexpresiones representa la variación absoluta en el volumen del gas, en litros, cuando\n\nla presión disminuye en dos atmósferas?\n\n20",
+   "options": [
+    {
+     "key": "A",
+     "text": "p ⁻²"
+    },
+    {
+     "key": "B",
+     "text": "2 20"
+    },
+    {
+     "key": "C",
+     "text": "p −2 40"
+    },
+    {
+     "key": "D",
+     "text": "p(p −2)"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q18.webp",
+    "width": 907,
+    "height": 1061,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La proporcionalidad inversa da $V\\cdot p=20$; al bajar la presión en 2 atmósferas, la variación del volumen es $\\frac{40}{p(p-2)}$.",
+    "steps": [
+     "De la gráfica: $2\\cdot 10=20$, $4\\cdot 5=20$ y $10\\cdot 2=20$, así que $V\\cdot p=20$ y $V=\\frac{20}{p}$.",
+     "Con presión $p-2$ el volumen es $\\frac{20}{p-2}$, y con presión $p$ es $\\frac{20}{p}$.",
+     "Variación absoluta (final menos inicial): $\\frac{20}{p-2}-\\frac{20}{p}=\\frac{20p-20(p-2)}{p(p-2)}=\\frac{40}{p(p-2)}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{20}{p}-2$ resta 2 litros al volumen en vez de restar 2 atmósferas a la presión.",
+     "C": "$\\frac{20}{p-2}$ es el volumen final, no la variación; falta restar el volumen inicial."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q19",
+   "number": 19,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "La densidad ρ de un cuerpo, en gramos por centímetro cúbico, se calcula como ρ = m , tal que m es la masa del cuerpo, en gramos, y V es su volumen, V en centímetros cúbicos.\n\ng Considera dos esferas macizas, una de plata de densidad ρplata = 10,5 cm³ y la g otra de piedra de alabastro de densidad ρalabastro = 2,7 cm³.\n\nSi ambas esferas tienen un volumen de 81 cm³, ¿cuál es la diferencia positiva de\n\nsus masas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1069,2 g"
+    },
+    {
+     "key": "B",
+     "text": "850,5 g"
+    },
+    {
+     "key": "C",
+     "text": "631,8 g"
+    },
+    {
+     "key": "D",
+     "text": "218,7 g"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q19.webp",
+    "width": 907,
+    "height": 537,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la densidad es $\\rho = \\frac{m}{V}$, la masa es $m = \\rho \\cdot V$; con el mismo volumen, la diferencia de masas es $(\\rho_{\\mathrm{plata}} - \\rho_{\\mathrm{alabastro}}) \\cdot V$.",
+    "steps": [
+     "Se despeja la masa de $\\rho = \\frac{m}{V}$: $m = \\rho \\cdot V$.",
+     "Masa de la esfera de plata: $m_{\\mathrm{plata}} = 10{,}5 \\cdot 81 = 850{,}5$ g.",
+     "Masa de la esfera de alabastro: $m_{\\mathrm{alabastro}} = 2{,}7 \\cdot 81 = 218{,}7$ g.",
+     "Diferencia positiva: $850{,}5 - 218{,}7 = 631{,}8$ g. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "1069,2 g es la suma de ambas masas; la pregunta pide la diferencia.",
+     "B": "850,5 g es solo la masa de la plata, sin restar la masa del alabastro.",
+     "D": "218,7 g es la masa del alabastro, no la diferencia entre las dos."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q20",
+   "number": 20,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "Considera la inecuación 2 (5 −3x) *≥−*¹ . 2\n\n¿Cuál de los siguientes gráficos representa el conjunto solución de la inecuación?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q20.webp",
+    "width": 907,
+    "height": 496,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al resolver la inecuación se obtiene $x \\le \\frac{7}{4}$: un conjunto que va hacia la izquierda con extremo cerrado en $\\frac{7}{4}$.",
+    "steps": [
+     "Se distribuye el 2: $10 - 6x \\ge -\\frac{1}{2}$.",
+     "Se pasa el 10 al lado derecho: $-6x \\ge -\\frac{21}{2}$.",
+     "Se divide por $-6$ e invierte la desigualdad: $x \\le \\frac{21}{12} = \\frac{7}{4}$.",
+     "El conjunto solución es $\\left(-\\infty, \\frac{7}{4}\\right]$: semirrecta hacia la izquierda con punto cerrado en $\\frac{7}{4}$, porque la desigualdad no es estricta. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Muestra la semirrecta hacia la derecha desde 7/4: olvida invertir la desigualdad al dividir por −6.",
+     "D": "Muestra el extremo en 2: lee mal la fracción y toma −1/2 como −2, con lo que obtiene $10 - 6x \\ge -2$ y $x \\le 2$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q21",
+   "number": 21,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "El costo de producción de un artículo es de \\$14 000 por unidad, además de un\n\ncosto fijo de \\$260 000.\n\nSi se venden todos los artículos producidos a \\$25 000 cada uno, ¿cuál de las\n\nsiguientes inecuaciones permite determinar el intervalo de las cantidades x de\n\nartículos que se deben producir para obtener una ganancia de al menos \\$3 000 000?",
+   "options": [
+    {
+     "key": "A",
+     "text": "25 000x −14 000x ≤3 000 000 −260 000"
+    },
+    {
+     "key": "B",
+     "text": "25 000x −14 000x ≤3 000 000 + 260 000"
+    },
+    {
+     "key": "C",
+     "text": "25 000x −14 000x ≥3 000 000 −260 000"
+    },
+    {
+     "key": "D",
+     "text": "25 000x −14 000x ≥3 000 000 + 260 000"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q21.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ganancia es el ingreso menos el costo total, y el costo fijo de 260 000 pesos debe restarse como parte del costo; luego la ganancia debe ser al menos 3 000 000 pesos.",
+    "steps": [
+     "Ingreso por x artículos: $25\\,000x$ pesos.",
+     "Costo total: $14\\,000x + 260\\,000$ pesos, porque el costo fijo no depende de la cantidad producida.",
+     "Ganancia: $25\\,000x - (14\\,000x + 260\\,000) \\ge 3\\,000\\,000$, es decir, $25\\,000x - 14\\,000x - 260\\,000 \\ge 3\\,000\\,000$.",
+     "Al pasar el $-260\\,000$ al lado derecho cambia a $+260\\,000$: $25\\,000x - 14\\,000x \\ge 3\\,000\\,000 + 260\\,000$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Usa «≤» y resta el costo fijo al lado derecho: invierte el sentido de la desigualdad y el signo del costo fijo.",
+     "C": "Mantiene «≥» pero resta el costo fijo al lado derecho, cuando al pasarlo debe sumarse."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q22",
+   "number": 22,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "Considera la inecuación ² 3x ⁺ r 4 < x 6 ⁻⁵ , en x, tal que su conjunto solución es 12 ò ï *−∞*, −¹ y r es un número real. 3\n\n¿Cuál es el valor de r?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 2"
+    },
+    {
+     "key": "B",
+     "text": "3 −¹"
+    },
+    {
+     "key": "C",
+     "text": "2"
+    },
+    {
+     "key": "D",
+     "text": "−1"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q22.webp",
+    "width": 907,
+    "height": 459,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al multiplicar por 12 y despejar x se obtiene un extremo $\\frac{-5 - 3r}{6}$, que debe ser igual a $-\\frac{1}{3}$; de allí sale $r = -1$.",
+    "steps": [
+     "Se multiplica la inecuación por 12: $8x + 3r < 2x - 5$.",
+     "Se agrupan las x: $6x < -5 - 3r$, es decir, $x < \\frac{-5 - 3r}{6}$.",
+     "El intervalo del enunciado es $\\left(-\\infty, -\\frac{1}{3}\\right)$, así que $\\frac{-5 - 3r}{6} = -\\frac{1}{3}$.",
+     "Se multiplica por 6: $-5 - 3r = -2$, luego $-3r = 3$ y $r = -1$. Comprobación: $\\frac{-5 + 3}{6} = -\\frac{1}{3}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "r = 1: al pasar el término 3r al otro lado se cambia mal el signo y se escribe $6x < -5 + 3r$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q23",
+   "number": 23,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Para medir la temperatura se utilizan comúnmente las escalas Celsius, Fahrenheit y\n\nKelvin.\n\nConsidera que la relación entre grados Celsius (c) y grados Fahrenheit (f) está dada\n\npor la ecuación c = ⁵ 9 ·⁽f⁻³²⁾.\n\nPara transformar de grados Celsius a Kelvin (k) hay que sumar 273,15 a la magnitud\n\nen grados Celsius.\n\n¿Cuál de las siguientes ecuaciones relaciona correctamente la temperatura en Kelvin\n\ncon la temperatura en grados Fahrenheit?\n\nf = ⁹",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 ·⁽k ⁺ ²⁷³,¹⁵⁾ ⁺ ³² f = ⁹"
+    },
+    {
+     "key": "B",
+     "text": "5 ·⁽k⁻²⁷³,¹⁵⁾ ⁺ ³² f = ⁹"
+    },
+    {
+     "key": "C",
+     "text": "5 ·k ⁺ ²⁷³,¹⁵ ⁺ ³² f = ⁹"
+    },
+    {
+     "key": "D",
+     "text": "5 ·k⁻²⁷³,¹⁵ ⁺ ³²"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q23.webp",
+    "width": 907,
+    "height": 735,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "De la relación dada y de $k = c + 273{,}15$ se obtiene $c = k - 273{,}15$; al reemplazar y despejar f aparece el paréntesis $(k - 273{,}15)$.",
+    "steps": [
+     "De Kelvin a Celsius se resta 273,15: $c = k - 273{,}15$.",
+     "Se reemplaza en la relación dada: $k - 273{,}15 = \\frac{5}{9}\\cdot(f - 32)$.",
+     "Se multiplica por $\\frac{9}{5}$: $f - 32 = \\frac{9}{5}\\cdot(k - 273{,}15)$.",
+     "Se suma 32: $f = \\frac{9}{5}\\cdot(k - 273{,}15) + 32$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Usa $k + 273{,}15$: suma el ajuste en lugar de restarlo al pasar de Kelvin a Celsius.",
+     "C": "Omite el paréntesis: escribe $\\frac{9}{5}\\cdot k + 273{,}15 + 32$, sin multiplicar el ajuste de 273,15 por $\\frac{9}{5}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q24",
+   "number": 24,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Una persona viajó en vehículo a la playa recorriendo dos tramos de igual longitud.\n\nEl primer tramo lo recorrió con una rapidez media de 120 km y el segundo tramo, h con una rapidez media de 80 km , recorriendo ambos tramos en un total de 6 horas. h\n\n¿Cuánto tiempo más demoró en recorrer el segundo tramo en comparación con\n\nel primero?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 h 50 min"
+    },
+    {
+     "key": "B",
+     "text": "2 h 30 min"
+    },
+    {
+     "key": "C",
+     "text": "1 h 20 min"
+    },
+    {
+     "key": "D",
+     "text": "1 h 12 min"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q24.webp",
+    "width": 907,
+    "height": 456,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como los tramos miden lo mismo, el tiempo de cada uno es distancia dividida por rapidez; con el tiempo total de 6 h se obtiene la distancia de cada tramo.",
+    "steps": [
+     "Sea d la longitud de cada tramo. Tiempo del primero: $\\frac{d}{120}$ h; tiempo del segundo: $\\frac{d}{80}$ h.",
+     "Tiempo total: $\\frac{d}{120} + \\frac{d}{80} = 6$. Con mínimo común múltiplo 240: $\\frac{2d + 3d}{240} = 6$, luego $5d = 1440$ y $d = 288$ km.",
+     "Tiempo del primer tramo: $\\frac{288}{120} = 2{,}4$ h = 2 h 24 min.",
+     "Tiempo del segundo tramo: $\\frac{288}{80} = 3{,}6$ h = 3 h 36 min. La diferencia es $3{,}6 - 2{,}4 = 1{,}2$ h = 1 h 12 min. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "1 h 20 min: se obtiene al leer 1,2 h como 1 h y 20 min, es decir, pasar los 0,2 h a 20 min en vez de 12 min."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q25",
+   "number": 25,
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "stem": "Una persona tiene 50 monedas, algunas de \\$500 y otras de \\$100, tal que todas juntas\n\nmasan 375 g. Para determinar cuánto dinero tiene, establece lo siguiente:\n\nEsta persona añade cinco monedas de \\$500 a lo que ya tenía, y plantea un nuevo\n\nsistema de ecuaciones, en el que x e y reflejan la cantidad actual de monedas\n\nde cada tipo que tiene.\n\n¿Cuál de los siguientes sistemas permite determinar los valores de x e y actualizados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(x + 5) + y = 50 6,5x + 9y = 375 + 5 · 6,5"
+    },
+    {
+     "key": "B",
+     "text": "x + (y + 5) = 50 6,5x + 9y = 375 + 5 · 9"
+    },
+    {
+     "key": "C",
+     "text": "x + y = 50 + 5 6,5x + 9y = 375 + 5 · 6,5"
+    },
+    {
+     "key": "D",
+     "text": "x + y = 50 + 5 6,5x + 9y = 375 + 5 · 9"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q25.webp",
+    "width": 907,
+    "height": 1036,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con x e y como cantidades actuales, el total de monedas sube en 5 y la masa total aumenta en la masa de las 5 monedas de 500 pesos añadidas, que pesan 6,5 g cada una.",
+    "steps": [
+     "Antes de agregar monedas, el sistema es $x + y = 50$ y $6{,}5x + 9y = 375$, donde x es el número de monedas de 500 pesos e y el de monedas de 100 pesos.",
+     "Como x ahora es la cantidad actual de monedas de 500 pesos, el total actual de monedas es $x + y = 50 + 5$.",
+     "La masa actual es la masa anterior más la de las 5 monedas añadidas, que son de 500 pesos y pesan 6,5 g cada una:$6{,}5x + 9y = 375 + 5 \\cdot 6{,}5$.",
+     "Con ambas ecuaciones se obtiene el sistema $x + y = 50 + 5$ y $6{,}5x + 9y = 375 + 5 \\cdot 6{,}5$, cuya solución es x = 35 e y = 20. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Suma las 5 monedas a y en vez de a x, y usa $5 \\cdot 9$ como masa de las añadidas, cuando son monedas de 500 pesos.",
+     "D": "Plantea bien el total de monedas, pero asigna a las monedas añadidas la masa de la moneda de 100 pesos (9 g) en lugar de 6,5 g."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q26",
+   "number": 26,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En una panadería, el precio de venta del kilogramo de pan es de \\$p, el cual se calcula\n\npara obtener un 25 % de ganancia sobre el costo de producción.\n\nSi el costo de producción aumenta en \\$q y se quiere seguir obteniendo un 25 % de\n\nganancia sobre este, ¿cuál de las siguientes funciones modela el nuevo precio de\n\nventa de x kilogramos de pan?",
+   "options": [
+    {
+     "key": "A",
+     "text": "h(x) = (p + 1,25q) · x"
+    },
+    {
+     "key": "B",
+     "text": "g(x) = (p + q) · 1,25x"
+    },
+    {
+     "key": "C",
+     "text": "p(x) = (0,75p + q) · x"
+    },
+    {
+     "key": "D",
+     "text": "m(x) = (0,25p + q) · x"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q26.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si el precio es 1,25 veces el costo, el costo por kilogramo es $0{,}8p$; al subir el costo en q, el nuevo precio por kilogramo es $p + 1{,}25q$.",
+    "steps": [
+     "El precio cubre el costo más un 25 % de ganancia sobre el costo: $p = 1{,}25 \\cdot c$, donde c es el costo por kilogramo.",
+     "Se despeja el costo: $c = \\frac{p}{1{,}25} = 0{,}8p$.",
+     "Con el nuevo costo $0{,}8p + q$, el nuevo precio por kilogramo es $1{,}25\\,(0{,}8p + q) = p + 1{,}25q$.",
+     "Para x kilogramos, el precio total es $(p + 1{,}25q) \\cdot x$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Aplica el 25 % sobre $p + q$ en lugar de sobre el costo: escribe $(p + q) \\cdot 1{,}25x$.",
+     "C": "Toma el costo como $0{,}75p$, es decir, usa el 25 % del precio como ganancia, cuando la ganancia es sobre el costo."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q27",
+   "number": 27,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f definida por f(x) = ax² + bx + c, tal que a, b y c son números\n\nreales distintos de cero.\n\n¿Cuál de las siguientes funciones representa la gráfica de la función f reflejada con\n\nrespecto al eje X?\n\np(x) = −ax² + bx + c",
+   "options": [
+    {
+     "key": "A",
+     "text": "q(x) = −ax² −bx −c"
+    },
+    {
+     "key": "B",
+     "text": "s(x) = −ax² + bx −c"
+    },
+    {
+     "key": "C",
+     "text": "t(x) = ax² −bx + c"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q27.webp",
+    "width": 907,
+    "height": 386,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La reflexión respecto del eje X cambia el signo de todo f(x), así que la función buscada es $-f(x) = -ax^{2} - bx - c$.",
+    "steps": [
+     "Una reflexión respecto del eje X transforma cada punto $(x, y)$ en $(x, -y)$, por lo que la nueva función es $-f(x)$.",
+     "Se calcula: $-f(x) = -(ax^{2} + bx + c) = -ax^{2} - bx - c$.",
+     "Esta expresión coincide con la alternativa B, $q(x) = -ax^{2} - bx - c$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$p(x) = -ax^{2} + bx + c$ solo cambia el signo del término cuadrático y deja b y c sin cambio.",
+     "C": "$s(x) = -ax^{2} + bx - c$ cambia el signo de a y de c, pero no el de b."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q28",
+   "number": 28,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la gráfica de la función cuadrática f, con dominio el conjunto de los números reales, de la forma f(x) = ax² + bx + c.\n\n¿Cuál de las siguientes expresiones es igual a b?",
+   "options": [
+    {
+     "key": "A",
+     "text": "−3a −³"
+    },
+    {
+     "key": "B",
+     "text": "2a 3"
+    },
+    {
+     "key": "C",
+     "text": "2a"
+    },
+    {
+     "key": "D",
+     "text": "3a"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q28.webp",
+    "width": 907,
+    "height": 780,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La gráfica tiene f(0) = f(3) = 1,5, así que el eje de simetría es $x = \\frac{3}{2}$; con $-\\frac{b}{2a} = \\frac{3}{2}$ se despeja b.",
+    "steps": [
+     "La gráfica pasa por $(0, 1{,}5)$, luego $c = 1{,}5$, y el punto de abscisa 3 tiene la misma ordenada: $f(3) = 1{,}5$.",
+     "Como $f(0) = f(3)$, el eje de simetría está en el punto medio: $x_v = \\frac{0 + 3}{2} = \\frac{3}{2}$.",
+     "La abscisa del vértice es $x_v = -\\frac{b}{2a}$, por lo tanto $\\frac{3}{2} = -\\frac{b}{2a}$.",
+     "Se multiplica por $2a$: $3a = -b$, es decir, $b = -3a$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$-\\frac{3}{2}a$: al despejar olvida el factor 2 del denominador y escribe $-\\frac{b}{a} = \\frac{3}{2}$.",
+     "D": "$3a$: olvida el signo menos de la fórmula $-\\frac{b}{2a}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q29",
+   "number": 29,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f definida por f(x) = 2x² + (2k + 1)x + k + ⁹ , tal que k es 8 un número real.\n\nSi la coordenada x del vértice es −⁵ , ¿cuál es la coordenada y del vértice? 4",
+   "options": [
+    {
+     "key": "A",
+     "text": "−8 −¹⁷"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "0 25"
+    },
+    {
+     "key": "D",
+     "text": "4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q29.webp",
+    "width": 907,
+    "height": 449,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El valor de k sale de la abscisa del vértice, y la ordenada del vértice es el valor de f en esa abscisa, que resulta ser 0.",
+    "steps": [
+     "Para $f(x) = 2x^{2} + (2k+1)x + k + \\frac{9}{8}$, la abscisa del vértice es $x_v = -\\frac{2k+1}{2 \\cdot 2} = -\\frac{2k+1}{4}$.",
+     "Igualando a $-\\frac{5}{4}$: $2k + 1 = 5$, luego $k = 2$.",
+     "Entonces $f(x) = 2x^{2} + 5x + \\frac{25}{8}$, porque $2 + \\frac{9}{8} = \\frac{25}{8}$.",
+     "Evaluando en $x = -\\frac{5}{4}$: $2 \\cdot \\frac{25}{16} - \\frac{25}{4} + \\frac{25}{8} = \\frac{25}{8} - \\frac{50}{8} + \\frac{25}{8} = 0$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "$\\frac{25}{4}$: suma $\\frac{b^{2}}{4a}$ en lugar de restarla, es decir, calcula $\\frac{25}{8} + \\frac{25}{8}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q30",
+   "number": 30,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En las especificaciones de un cohete en miniatura, se registra una función que modela\n\nla altura que alcanzaría el cohete desde su lanzamiento hasta que toca el suelo.\n\nLa función registrada es h(x) = −5x² + 80x, tal que h representa la altura,\n\nen metros, con respecto al tiempo x transcurrido desde que fue lanzado el cohete,\n\nen segundos.\n\n¿Cuál es la altura máxima que alcanzaría este cohete?",
+   "options": [
+    {
+     "key": "A",
+     "text": "320 metros"
+    },
+    {
+     "key": "B",
+     "text": "560 metros"
+    },
+    {
+     "key": "C",
+     "text": "700 metros"
+    },
+    {
+     "key": "D",
+     "text": "960 metros"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q30.webp",
+    "width": 907,
+    "height": 482,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La altura máxima se alcanza en el vértice de la parábola, cuya abscisa es $x = -\\frac{b}{2a}$; luego se evalúa h en ese tiempo.",
+    "steps": [
+     "El coeficiente principal es $-5 < 0$, así que la parábola abre hacia abajo y tiene un máximo.",
+     "Tiempo del máximo: $x_v = -\\frac{80}{2 \\cdot (-5)} = 8$ s.",
+     "Altura máxima: $h(8) = -5 \\cdot 8^{2} + 80 \\cdot 8 = -320 + 640 = 320$ metros. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "D": "960 metros: si se toma $a = 5$ positivo al calcular $-\\frac{b}{2a}$, se obtiene $x = -8$ y $h(-8) = -960$; al quitar el signo queda 960."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q31",
+   "number": 31,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f, con dominio el conjunto de los números reales, definida por f(x) = x² −bx + c. La gráfica de f pasa por los puntos (−p, 0) y (2p, 0), con\n\np > 0.\n\n¿En qué cuadrante se encuentra el vértice de la parábola?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el primer cuadrante"
+    },
+    {
+     "key": "B",
+     "text": "En el segundo cuadrante"
+    },
+    {
+     "key": "C",
+     "text": "En el tercer cuadrante"
+    },
+    {
+     "key": "D",
+     "text": "En el cuarto cuadrante"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q31.webp",
+    "width": 907,
+    "height": 382,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los ceros −p y 2p dan $b = p$ y $c = -2p^{2}$; así el vértice tiene abscisa positiva y ordenada negativa.",
+    "steps": [
+     "Como las raíces son −p y 2p, $f(x) = (x + p)(x - 2p) = x^{2} - px - 2p^{2}$. Al comparar con $x^{2} - bx + c$: $b = p$ y $c = -2p^{2}$.",
+     "Abscisa del vértice: $x_v = \\frac{b}{2} = \\frac{p}{2} > 0$, porque $p > 0$.",
+     "Ordenada del vértice: $f\\left(\\frac{p}{2}\\right) = \\frac{p^{2}}{4} - \\frac{p^{2}}{2} - 2p^{2} = -\\frac{9p^{2}}{4} < 0$.",
+     "El vértice $\\left(\\frac{p}{2}, -\\frac{9p^{2}}{4}\\right)$ tiene x positivo e y negativo. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Olvida el signo negativo de c y toma $+2p^{2}$: obtiene $f\\left(\\frac{p}{2}\\right) = \\frac{7p^{2}}{4} > 0$, lo que lleva al primer cuadrante.",
+     "C": "Confunde el signo de la abscisa y usa $x_v = -\\frac{b}{2} = -\\frac{p}{2}$; con y negativa, el vértice quedaría en el tercer cuadrante."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q32",
+   "number": 32,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "La radiación emitida por un cuerpo negro, en W m², se puede calcular como σ · T⁴,\n\ntal que T es su temperatura en Kelvin (K) y σ es una constante.\n\nUn cuerpo negro que emite una radiación de 5,678 W m² tieⁿe uⁿa temperatura de 100 K.\n\n¿Cuál es la radiación de un cuerpo negro que tiene una temperatura de 200 K?\n\n11,356 W",
+   "options": [
+    {
+     "key": "A",
+     "text": "m² 34,068 W"
+    },
+    {
+     "key": "B",
+     "text": "m² 45,424 W"
+    },
+    {
+     "key": "C",
+     "text": "m² 90,848 W"
+    },
+    {
+     "key": "D",
+     "text": "m²"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q32.webp",
+    "width": 907,
+    "height": 620,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La radiación es proporcional a T⁴, así que al duplicar la temperatura de 100 K a 200 K la radiación se multiplica por $2^{4} = 16$.",
+    "steps": [
+     "Con $R = \\sigma \\cdot T^{4}$ y T = 100 K se tiene $R = 5{,}678$ W/m², que fija el valor de la constante.",
+     "Para T = 200 K: $R = \\sigma \\cdot (2 \\cdot 100)^{4} = 2^{4} \\cdot \\sigma \\cdot 100^{4} = 16 \\cdot 5{,}678$.",
+     "$16 \\cdot 5{,}678 = 90{,}848$ W/m². Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "11,356 W/m²: supone que la radiación es proporcional a T (factor 2) en lugar de T⁴.",
+     "C": "45,424 W/m²: usa exponente 3 en lugar de 4, con lo que multiplica por $2^{3} = 8$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q33",
+   "number": 33,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "Considera el triángulo rectángulo ABC de la figura adjunta, al que se le ha trazado su\n\naltura CD.\n\nPara calcular la medida de CD, se realiza el siguiente procedimiento, en el cual se\n\ncomete un error.\n\n√ **Paso 1:** se calcula la medida de AB como 3² + 4² y se obtiene que mide 5 cm.\n\n**Paso 2:** se aplica el teorema de Pitágoras en los triángulos ADC y CDB y se obtienen las igualdades 4² + AD² = CD² y 3² + (5 −AD)² = CD²,\n\nrespectivamente.\n\n**Paso 3:** se igualan las ecuaciones obtenidas en el Paso 2 y, al resolver la ecuación 4² + AD² = 3² + (5 −AD)², se obtiene que AD = ⁹ 5 cm.\n\n**Paso 4:** se reemplaza el valor de AD en la igualdad 4² + AD² = CD² y, al √ 481 despejar, se obtiene que CD = cm. 5\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q33.webp",
+    "width": 907,
+    "height": 1131,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El error está en el Paso 2: en los triángulos ADC y CDB las hipotenusas son AC y CB, no CD, así que las igualdades correctas son $AD^{2} + CD^{2} = 4^{2}$ y $CD^{2} + (5 - AD)^{2} = 3^{2}$.",
+    "steps": [
+     "El Paso 1 es correcto: el ángulo en C es recto y los catetos miden 3 cm y 4 cm, así que $AB = \\sqrt{3^{2} + 4^{2}} = 5$ cm.",
+     "En el triángulo ADC, el ángulo en D es recto y la hipotenusa es AC = 4 cm, por lo tanto $AD^{2} + CD^{2} = 4^{2}$. En el triángulo CDB la hipotenusa es CB = 3 cm, por lo tanto $CD^{2} + (5 - AD)^{2} = 3^{2}$.",
+     "El Paso 2 escribe $4^{2} + AD^{2} = CD^{2}$ y $3^{2} + (5 - AD)^{2} = CD^{2}$, es decir, pone CD como hipotenusa, lo que no corresponde en ninguno de los dos triángulos.",
+     "Los Pasos 3 y 4 son aritmética correcta sobre esas igualdades erradas, por eso dan $AD = \\frac{9}{5}$ y $CD = \\frac{\\sqrt{481}}{5}$. Con las igualdades correctas se obtiene $AD = \\frac{16}{5}$ y $CD = \\frac{12}{5}$ cm. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Paso 3: parece sospechoso porque ahí aparece $\\frac{9}{5}$, pero el despeje es correcto a partir de las igualdades del Paso 2; el error es anterior.",
+     "D": "Paso 4: la raíz de 481 parece complicada, pero la sustitución y el despeje están bien hechos; el error de origen está en el Paso 2."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q34",
+   "number": 34,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Sobre un cuadrado de lado L cm y centro O, se dibuja otro cuadrado de centro O, cuyo lado es a del lado del cuadrado anterior, con a y b números enteros positivos. b Luego, se pinta de color gris la superficie delimitada por los contornos de estos dos\n\ncuadrados, tal como se representa a continuación:\n\nLuego, sobre esta figura, se dibuja otro cuadrado de centro O cuyo lado es a del lado b del último cuadrado dibujado y se pinta la superficie delimitada por los contornos de\n\nestos cuadrados, tal como se representa a continuación:\n\nSi se repite cinco veces el proceso de pintar la superficie delimitada entre los cuadrados, ¿cuál es el área, en cm², de la última superficie pintada?\n\nÅ�a �⁴ �a �⁵ã",
+   "options": [
+    {
+     "key": "A",
+     "text": "L² − b b Å�a �⁵ �a �⁴ã"
+    },
+    {
+     "key": "B",
+     "text": "L² − b b Å�a �¹⁰ �a �⁸ã"
+    },
+    {
+     "key": "C",
+     "text": "L² − b b Å�a �⁸ �a �¹⁰ã"
+    },
+    {
+     "key": "D",
+     "text": "L² − b b"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q34.webp",
+    "width": 907,
+    "height": 1136,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada superficie pintada es la diferencia entre dos cuadrados consecutivos; la quinta tiene área $L^{2}\\left(\\left(\\frac{a}{b}\\right)^{8} - \\left(\\frac{a}{b}\\right)^{10}\\right)$.",
+    "steps": [
+     "Sea $r = \\frac{a}{b}$. Los lados de los cuadrados son $L$, $rL$, $r^{2}L$, $r^{3}L$, …, y cada cuadrado nuevo tiene lado r veces el anterior.",
+     "La quinta superficie pintada es la región entre el cuadrado de lado $r^{4}L$ y el de lado $r^{5}L$.",
+     "Su área es $(r^{4}L)^{2} - (r^{5}L)^{2} = L^{2}\\left(r^{8} - r^{10}\\right)$, es decir, $L^{2}\\left(\\left(\\frac{a}{b}\\right)^{8} - \\left(\\frac{a}{b}\\right)^{10}\\right)$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$L^{2}\\left(\\left(\\frac{a}{b}\\right)^{4} - \\left(\\frac{a}{b}\\right)^{5}\\right)$: usa los lados $r^{4}$ y $r^{5}$ sin elevarlos al cuadrado, como si fueran áreas.",
+     "C": "$L^{2}\\left(\\left(\\frac{a}{b}\\right)^{10} - \\left(\\frac{a}{b}\\right)^{8}\\right)$: tiene los mismos exponentes, pero invierte la resta y da un área negativa."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q35",
+   "number": 35,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Julieta compró un espejo con forma de hexágono regular, el cual está inscrito en una\n\nbase circular de madera de 40 cm de diámetro, tal como se representa en la siguiente\n\nfigura.\n\nPara que el espejo combine con la decoración de su baño, cubrirá las partes visibles\n\nde la base de madera con un mosaico de cerámicas.\n\n¿Cuál es el área de la base de madera que debe cubrir Julieta con el mosaico de cerámicas, en cm²?\n\n√",
+   "options": [
+    {
+     "key": "A",
+     "text": "400π −600 3 √"
+    },
+    {
+     "key": "B",
+     "text": "400π −100 3 √"
+    },
+    {
+     "key": "C",
+     "text": "1600π −1200 3 √"
+    },
+    {
+     "key": "D",
+     "text": "1600π −600 3"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q35.webp",
+    "width": 907,
+    "height": 841,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El área pedida es la del círculo menos la del hexágono regular inscrito, cuyo lado es igual al radio.",
+    "steps": [
+     "El diámetro es 40 cm, así que el radio es $R = 20$ cm. El lado del hexágono regular inscrito es igual al radio, es decir, 20 cm.",
+     "Área del círculo: $\\pi \\cdot 20^{2} = 400\\pi$ cm².",
+     "Área del hexágono: seis triángulos equiláteros de lado 20 cm, cada uno de área $\\frac{\\sqrt{3}}{4} \\cdot 20^{2} = 100\\sqrt{3}$; total $600\\sqrt{3}$ cm².",
+     "Área a cubrir: $400\\pi - 600\\sqrt{3}$ cm². Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$400\\pi - 100\\sqrt{3}$: calcula el hexágono como un solo triángulo equilátero de lado 20 cm y olvida multiplicar por 6.",
+     "D": "$1600\\pi - 600\\sqrt{3}$: usa el diámetro de 40 cm como radio en la fórmula del área del círculo."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q37",
+   "number": 37,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "→u, →v y →w. En el gráfico de la figura adjunta se representan los vectores\n\n→v − Ä→u +2 →w ä ¿Cuáles son las coordenadas del vector ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(−6, 1)"
+    },
+    {
+     "key": "B",
+     "text": "(0, 5)"
+    },
+    {
+     "key": "C",
+     "text": "(0, −1)"
+    },
+    {
+     "key": "D",
+     "text": "(0, 7)"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q37.webp",
+    "width": 907,
+    "height": 802,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Desde el gráfico se leen $\\vec{u} = (4, 0)$, $\\vec{v} = (0, 3)$ y $\\vec{w} = (-2, -2)$; luego $\\vec{v} - (\\vec{u} + 2\\vec{w}) = (0, 7)$.",
+    "steps": [
+     "Lectura del gráfico: $\\vec{u} = (4, 0)$, $\\vec{v} = (0, 3)$ y $\\vec{w} = (-2, -2)$, pues el extremo de $\\vec{w}$ está en x = −2 e y = −2.",
+     "Se calcula $\\vec{u} + 2\\vec{w} = (4, 0) + (-4, -4) = (0, -4)$.",
+     "Luego $\\vec{v} - (\\vec{u} + 2\\vec{w}) = (0, 3) - (0, -4) = (0, 7)$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "(0, −1): suma en lugar de restar, es decir, calcula $\\vec{v} + (\\vec{u} + 2\\vec{w}) = (0, 3) + (0, -4)$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q38",
+   "number": 38,
+   "axis": "Geometría",
+   "topic": "Circunferencia y círculo",
+   "stem": "Se simula un sistema planetario, en dos dimensiones, compuesto por un planeta\n\n(circunferencia grande) y una luna (circunferencia pequeña) en un plano cartesiano.\n\nCada minuto, el planeta rota en torno al origen del sistema cartesiano y en sentido\n\nantihorario y la luna rota en torno al centro del planeta y en sentido horario, tal como\n\nse ejemplifica en la siguiente figura:\n\nConsidera la posición del planeta transcurridos 5 minutos.\n\n¿Cuál de las siguientes imágenes representa mejor la posición de la luna con respecto\n\nal planeta en ese momento?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q38.webp",
+    "width": 907,
+    "height": 1056,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La posición de la luna depende solo de su giro en torno al centro del planeta, no de la posición absoluta del planeta, así que basta con contar los 45° que avanza la luna cada minuto.",
+    "steps": [
+     "El planeta gira en sentido antihorario: tras un minuto está en la diagonal superior derecha, tras dos minutos sobre el eje $Y$ (es decir, $90^\\circ$). Avanza $45^\\circ$ por minuto.",
+     "La luna gira en sentido horario en torno al centro del planeta. En la posición inicial está a la derecha del centro ($0^\\circ$), tras un minuto a $-45^\\circ$ (abajo a la derecha) y tras dos minutos justo debajo del centro ($-90^\\circ$).",
+     "Tras 5 minutos la luna lleva girados $5 \\cdot 45^\\circ = 225^\\circ$ en sentido horario, es decir, un ángulo de $-225^\\circ$, que equivale a $135^\\circ$ medido en sentido antihorario desde el centro del planeta.",
+     "Un ángulo de $135^\\circ$ deja la luna arriba a la izquierda del centro del planeta, que es la imagen de la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Muestra la luna abajo a la derecha, que es la posición tras un solo minuto ($-45^\\circ$): se olvida acumular los cinco minutos de giro."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q39",
+   "number": 39,
+   "axis": "Geometría",
+   "topic": "Perímetros",
+   "stem": "Se dibuja un triángulo en el primer cuadrante del plano cartesiano.\n\nSi a este triángulo se le aplica una homotecia de razón −p con centro en el origen del 2 plano cartesiano, ¿cuál de las siguientes afirmaciones se puede deducir en relación\n\ncon el triángulo homotético?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cuando p = 4, su perímetro es el doble del perímetro del original."
+    },
+    {
+     "key": "B",
+     "text": "Cuando p = 2, su área es mayor que el área del original."
+    },
+    {
+     "key": "C",
+     "text": "Cuando p < 0, su perímetro es menor que el perímetro del original."
+    },
+    {
+     "key": "D",
+     "text": "Cuando p > 0, se ubica en el primer cuadrante."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q39.webp",
+    "width": 907,
+    "height": 392,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una homotecia de razón $k$ con centro en el origen multiplica las longitudes por $|k|$, y si $k<0$ la figura queda al lado opuesto del origen; con $k=-\\frac{p}{2}$ el perímetro cambia por el factor $\\frac{|p|}{2}$.",
+    "steps": [
+     "La razón de la homotecia es $k=-\\frac{p}{2}$, según el enunciado.",
+     "Las longitudes se multiplican por $|k|=\\frac{|p|}{2}$, así que el perímetro del triángulo homotético es $\\frac{|p|}{2}$ veces el perímetro del original.",
+     "Para $p=4$ se tiene $k=-2$ y el perímetro se duplica exactamente, como afirma la alternativa A.",
+     "Para $p=2$ la razón es $-1$: el triángulo homotético es congruente al original y tiene la misma área. Para $p<0$ el factor $\\frac{|p|}{2}$ puede ser mayor o menor que $1$, así que no se deduce nada. Para $p>0$ cada punto $(x,y)$ pasa a $\\left(-\\frac{p}{2}x,-\\frac{p}{2}y\\right)$, con coordenadas negativas: el triángulo queda en el tercer cuadrante. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Creer que con $p=2$ el área aumenta: la razón $-1$ solo refleja el triángulo por el origen, sin cambiar su área.",
+     "C": "Suponer que $p<0$ implica perímetro menor: con $p=-4$ la razón vale $2$ en valor absoluto y el perímetro se duplica.",
+     "D": "Pensar que el signo negativo deja el triángulo en el mismo cuadrante: con $k<0$ los puntos se reflejan a través del origen."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q40",
+   "number": 40,
+   "axis": "Geometría",
+   "topic": "Circunferencia y círculo",
+   "stem": "El diámetro del sol se puede estimar con una homotecia usando una caja con un\n\norificio como se representa en la siguiente figura:\n\nLa proyección del sol en la caja es un círculo que tiene diámetro d centímetros,\n\n¿cuál de las siguientes expresiones representa el diámetro del sol, en kilómetros?\n\nL",
+   "options": [
+    {
+     "key": "A",
+     "text": "D ·d L"
+    },
+    {
+     "key": "B",
+     "text": "d ·D d"
+    },
+    {
+     "key": "C",
+     "text": "L ·D d"
+    },
+    {
+     "key": "D",
+     "text": "L"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q40.webp",
+    "width": 907,
+    "height": 872,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El orificio es el centro de una homotecia: el diámetro del sol y el de su proyección están en la misma razón que sus distancias al orificio, así que el diámetro real es $\\frac{d\\cdot D}{L}$.",
+    "steps": [
+     "Los rayos que van desde los extremos del sol hasta el orificio y luego hasta los extremos de la proyección forman dos triángulos semejantes con vértice en el orificio.",
+     "Del lado del sol, de diámetro $S$ km, a distancia $D$ km del orificio. Del lado de la caja, de diámetro $d$ cm, a distancia $L$ cm del orificio.",
+     "Por semejanza se cumple $$\\frac{S}{D}=\\frac{d}{L}$$ (ambos cocientes son adimensionales, así que las unidades de $d$ y $L$ no afectan el resultado).",
+     "Despejando, $S=\\frac{d}{L}\\cdot D$ km. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{L}{D}\\cdot d$: invierte la razón de distancias, como si la proyección fuera mayor que el sol.",
+     "B": "$\\frac{L}{d}\\cdot D$: invierte la razón de diámetros, usando $\\frac{L}{d}$ en lugar de $\\frac{d}{L}$.",
+     "D": "$\\frac{d}{L}$: olvida la distancia $D$ del sol, y el resultado no está en kilómetros."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q41",
+   "number": 41,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Un cuadrado de lado L ubicado sobre los ejes del plano cartesiano se rota en sentido\n\nhorario en torno a uno de sus vértices, tal como se representa en la siguiente figura:\n\n¿Cuál es la coordenada x del punto P luego de la rotación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "L · cos(θ)"
+    },
+    {
+     "key": "B",
+     "text": "L · sen(θ)"
+    },
+    {
+     "key": "C",
+     "text": "L −L · cos(θ)"
+    },
+    {
+     "key": "D",
+     "text": "L −L · sen(θ)"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q41.webp",
+    "width": 907,
+    "height": 674,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El vértice $Q$ queda fijo sobre el eje $X$ en $x=L$, y la coordenada $x$ de $P$ es $L$ menos la proyección horizontal del lado $PQ$, que vale $L\\cdot\\mathrm{sen}(\\theta)$.",
+    "steps": [
+     "En la figura final, $Q$ está sobre el eje $X$ con abscisa $L$, y el lado $PQ$ mide $L$.",
+     "El ángulo $\\theta$ está en $P$, entre la vertical punteada y el segmento $PQ$. Por eso la componente horizontal de $PQ$ es $L\\cdot\\mathrm{sen}(\\theta)$ y la vertical es $L\\cdot\\cos(\\theta)$.",
+     "Como $P$ queda a la izquierda de $Q$ por esa componente horizontal, $x_P = L - L\\cdot\\mathrm{sen}(\\theta)$.",
+     "Control: con $\\theta=0$ el lado $PQ$ es vertical y $P=(L,L)$, que es el punto que se obtiene al girar $(0,0)$ en 90° en sentido horario alrededor de $(L,0)$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$L\\cdot\\cos(\\theta)$: es la coordenada $y$ de $P$ (la altura), no la coordenada $x$.",
+     "B": "$L\\cdot\\mathrm{sen}(\\theta)$: es la proyección horizontal de $PQ$, pero la coordenada $x$ de $P$ se mide desde el origen, a partir de $Q$ hacia la izquierda.",
+     "C": "$L-L\\cdot\\cos(\\theta)$: cambia seno por coseno, aunque $\\theta$ está medido desde la vertical y la componente horizontal usa seno."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q42",
+   "number": 42,
+   "axis": "Geometría",
+   "topic": "Ángulos",
+   "stem": "Cuando un rayo de luz pasa de un medio a otro, el ángulo de incidencia θ¹ en el primer medio y el ángulo de refracción θ² con el que entra al otro medio son distintos. Este cambio de ángulo depende de los índices de refracción (n¹ y n²) de ambos medios, y está dado por la ecuación n¹ · sen(θ¹) = n² · sen(θ²).\n\nLa siguiente figura representa esta situación:\n\nConsidera un rayo que pasa de un medio de índice de refracción m a otro de índice\n\nde refracción p, tal que la medida del ángulo de incidencia es el doble de la medida\n\ndel ángulo de refracción.\n\nSi para todo ángulo α se cumple que sen(2α) = 2 · sen(α) · cos(α), ¿cuál de las\n\nsiguientes expresiones representa al coseno del ángulo de refracción?\n\n2p",
+   "options": [
+    {
+     "key": "A",
+     "text": "m 2m"
+    },
+    {
+     "key": "B",
+     "text": "p m"
+    },
+    {
+     "key": "C",
+     "text": "2p p"
+    },
+    {
+     "key": "D",
+     "text": "2m"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q42.webp",
+    "width": 907,
+    "height": 1142,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $\\theta_1=2\\theta_2$, la ley de Snell da $m\\cdot\\mathrm{sen}(2\\theta_2)=p\\cdot\\mathrm{sen}(\\theta_2)$, y usando la identidad del seno del doble se despeja $\\cos(\\theta_2)=\\frac{p}{2m}$.",
+    "steps": [
+     "El medio de índice $m$ es el primero ($n_1=m$) y el de índice $p$ es el segundo ($n_2=p$), con $\\theta_1=2\\theta_2$.",
+     "Reemplazando en la ley: $m\\cdot\\mathrm{sen}(2\\theta_2)=p\\cdot\\mathrm{sen}(\\theta_2)$.",
+     "Por la identidad dada, $\\mathrm{sen}(2\\theta_2)=2\\,\\mathrm{sen}(\\theta_2)\\cos(\\theta_2)$, así que $2m\\,\\mathrm{sen}(\\theta_2)\\cos(\\theta_2)=p\\,\\mathrm{sen}(\\theta_2)$.",
+     "Como $\\mathrm{sen}(\\theta_2)\\neq 0$ (hay refracción), se divide por ese valor y queda $\\cos(\\theta_2)=\\frac{p}{2m}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{2p}{m}$: al despejar de $2m\\cos(\\theta_2)=p$ multiplica $p$ por 2 en lugar de dividir por $2m$.",
+     "C": "$\\frac{m}{2p}$: invierte los índices y usa $n_2/n_1$ en lugar de $n_1/n_2$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q43",
+   "number": 43,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "En el siguiente histograma se representan los resultados de una encuesta en la que\n\nse le preguntó a un grupo de 400 estudiantes cuántas horas estudian semanalmente.\n\n¿Cuál de las siguientes tablas de frecuencia representa los resultados de la encuesta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Horas de Cantidad de estudio semanal estudiantes [1, 2[ 16 [2, 3[ 32 [3, 4[ 40 [4, 5[ 60 [5, 6[ 80 [6, 7] 100"
+    },
+    {
+     "key": "B",
+     "text": "Horas de Cantidad de estudio semanal estudiantes [1, 2[ 16 [2, 3[ 16 [3, 4[ 8 [4, 5[ 20 [5, 6[ 20 [6, 7] 20"
+    },
+    {
+     "key": "C",
+     "text": "Horas de Cantidad de estudio semanal estudiantes [1, 2[ 64 [2, 3[ 128 [3, 4[ 160 [4, 5[ 240 [5, 6[ 320 [6,7] 400"
+    },
+    {
+     "key": "D",
+     "text": "Horas de Cantidad de estudio semanal estudiantes [1, 2[ 64 [2, 3[ 64 [3, 4[ 32 [4, 5[ 80 [5, 6[ 80 [6, 7] 80"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q43.webp",
+    "width": 907,
+    "height": 1115,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El histograma muestra porcentajes acumulados: la cantidad de estudiantes de cada intervalo es la diferencia entre porcentajes consecutivos por 400.",
+    "steps": [
+     "Los porcentajes acumulados son $16\\,\\%$, $32\\,\\%$, $40\\,\\%$, $60\\,\\%$, $80\\,\\%$ y $100\\,\\%$ para los intervalos $[1,2[$, $[2,3[$, $[3,4[$, $[4,5[$, $[5,6[$ y $[6,7]$.",
+     "Los porcentajes de cada intervalo son las diferencias: $16\\,\\%$, $16\\,\\%$ ($32-16$), $8\\,\\%$ ($40-32$), $20\\,\\%$ ($60-40$), $20\\,\\%$ ($80-60$) y $20\\,\\%$ ($100-80$).",
+     "Cantidades: $0{,}16\\cdot 400=64$, $64$, $0{,}08\\cdot 400=32$, $0{,}20\\cdot 400=80$, $80$ y $80$. Su suma es $64+64+32+80+80+80=400$, lo que confirma la tabla.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Muestra los porcentajes escritos directamente como cantidades (16, 16, 8, 20, 20, 20); su suma es 100, no 400.",
+     "C": "Muestra las frecuencias acumuladas (64, 128, 160, 240, 320, 400), no las de cada intervalo."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q44",
+   "number": 44,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Una prueba tiene un puntaje máximo de 60 puntos. La calificación, en términos del\n\npuntaje P obtenido, se calcula mediante las siguientes expresiones:\n\n- Para puntajes menores o iguales que 36 puntos: P⁻³⁶ + 4 12\n\n- Para puntajes mayores que 36 puntos: P⁻⁶⁰ + 7 8\n\nConsidera que los estudiantes de un curso que obtuvieron la menor y mayor\n\ncalificación en la prueba lograron un 40 % y un 80 % del puntaje máximo,\n\nrespectivamente.\n\n¿Cuál es la diferencia entre la calificación mayor y la calificación menor de los\n\nestudiantes de este curso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,0"
+    },
+    {
+     "key": "B",
+     "text": "2,5"
+    },
+    {
+     "key": "C",
+     "text": "3,0"
+    },
+    {
+     "key": "D",
+     "text": "4,5"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q44.webp",
+    "width": 907,
+    "height": 649,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La calificación depende del tramo del puntaje: hay que calcular el puntaje de cada extremo (24 y 48 puntos) y aplicar la fórmula que corresponde a cada uno.",
+    "steps": [
+     "Menor calificación: $40\\,\\%$ de $60$ son $24$ puntos, que es menor o igual que $36$. Se usa $\\frac{P-36}{12}+4$: $\\frac{24-36}{12}+4=-1+4=3$.",
+     "Mayor calificación: $80\\,\\%$ de $60$ son $48$ puntos, que es mayor que $36$. Se usa $\\frac{P-60}{8}+7$: $\\frac{48-60}{8}+7=-\\frac{3}{2}+7=5{,}5$.",
+     "Control: en $P=36$ ambas fórmulas dan $4$, así que la calificación es continua en ese punto.",
+     "La diferencia es $5{,}5-3=2{,}5$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$2{,}0$: si se usa la fórmula del tramo bajo también para $48$ puntos, la calificación mayor sería $\\frac{48-36}{12}+4=5$ y la diferencia $2$.",
+     "C": "$3{,}0$: si se usa la fórmula del tramo alto para $24$ puntos, $\\frac{24-60}{8}+7=2{,}5$, y luego $5{,}5-2{,}5=3{,}0$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q45",
+   "number": 45,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "En la siguiente figura se presentan los diagramas de cajón de una característica para\n\ntres grupos de datos, A, B y C.\n\n¿Cuál de los siguientes argumentos justifica que el rango intercuartílico de los datos\n\ndel grupo C es menor que el rango intercuartílico de los datos del grupo A y que el\n\nrango intercuartílico de los datos del grupo B?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que la diferencia entre el valor máximo y mínimo de C es menor que la diferencia entre el valor máximo y mínimo de A y de B."
+    },
+    {
+     "key": "B",
+     "text": "Que el cuartil 1 es el mismo para los tres grupos de datos y el cuartil 3 de C es menor que el cuartil 3 de A y de B."
+    },
+    {
+     "key": "C",
+     "text": "Que la diferencia entre el percentil 75 y el valor máximo de C es menor que la de A y de B."
+    },
+    {
+     "key": "D",
+     "text": "Que el cuartil 3 de C es menor que el cuartil 3 de A y de B y el cuartil 2 es el mismo para los tres grupos de datos."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q45.webp",
+    "width": 907,
+    "height": 864,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El rango intercuartílico es $Q_3-Q_1$: para justificar que es menor en $C$ hay que mostrar que el primer cuartil es común a los tres grupos y que el tercer cuartil de $C$ es el menor.",
+    "steps": [
+     "En los diagramas, las cajas de $A$, $B$ y $C$ empiezan en el mismo valor, así que $Q_1$ es igual en los tres grupos.",
+     "Los extremos derechos de las cajas ($Q_3$) están en valores distintos: el de $A$ es el más lejano, luego el de $B$, y el de $C$ es el más cercano.",
+     "Como $Q_1$ es común, $\\mathrm{RIC}(C)=Q_3(C)-Q_1<Q_3(A)-Q_1=\\mathrm{RIC}(A)$, y lo mismo con $B$.",
+     "La mediana coincide en los tres grupos, pero no interviene en el rango intercuartílico. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Compara el rango total (máximo menos mínimo): $C$ tiene el rango total menor, pero el rango intercuartílico solo mide la dispersión entre $Q_1$ y $Q_3$.",
+     "D": "Afirma algo verdadero sobre $Q_3$ y la mediana, pero omite que $Q_1$ es igual en los tres grupos, y sin ese dato no se puede concluir sobre el rango intercuartílico."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q46",
+   "number": 46,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Considera los datos 4, 8, 5, p y q, cuyo promedio es 5.\n\n¿Cuál de las siguientes condiciones permite asegurar que su desviación estándar es\n\nmenor que 5?",
+   "options": [
+    {
+     "key": "A",
+     "text": "p = q"
+    },
+    {
+     "key": "B",
+     "text": "pq < 100"
+    },
+    {
+     "key": "C",
+     "text": "p + q = 8"
+    },
+    {
+     "key": "D",
+     "text": "p < 8 −q"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q46.webp",
+    "width": 907,
+    "height": 352,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con promedio $5$ la suma de los datos es $25$, así que $p+q=8$; la desviación estándar depende de cuán separados estén $p$ y $q$ de $5$, y con $p=q=4$ la dispersión es mínima.",
+    "steps": [
+     "Promedio igual a $5$: $\\frac{4+8+5+p+q}{5}=5$, luego $p+q=8$.",
+     "La varianza es $\\sigma^2=\\frac{(4-5)^2+(8-5)^2+(5-5)^2+(p-5)^2+(q-5)^2}{5}=\\frac{10+(p-5)^2+(q-5)^2}{5}$.",
+     "Para que $\\sigma<5$ se necesita $\\sigma^2<25$, es decir, $(p-5)^2+(q-5)^2<115$.",
+     "Con $p=q$ y $p+q=8$ se obtiene $p=q=4$: $\\sigma^2=\\frac{10+1+1}{5}=2{,}4$ y $\\sigma\\approx 1{,}55<5$. Esta condición sí asegura lo pedido. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$pq<100$ parece acotar los datos, pero con $p=100$ y $q=-92$ se cumple y la desviación es enorme.",
+     "C": "$p+q=8$ ya se cumple por el promedio, así que no aporta información sobre la dispersión."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q47",
+   "number": 47,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Se dibujaron varias figuras siguiendo una secuencia de puntos, tal como se representa\n\nen la siguiente imagen:\n\nSi se dibujaron 1000 figuras siguiendo esta secuencia y se selecciona una de ellas al\n\nazar, ¿cuál es la probabilidad de que esta tenga dibujados al menos 32 puntos?\n\n30",
+   "options": [
+    {
+     "key": "A",
+     "text": "1000 31"
+    },
+    {
+     "key": "B",
+     "text": "1000 969"
+    },
+    {
+     "key": "C",
+     "text": "1000 970"
+    },
+    {
+     "key": "D",
+     "text": "1000"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q47.webp",
+    "width": 907,
+    "height": 681,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La figura $n$ tiene $n+1$ puntos, así que tener al menos $32$ puntos equivale a $n\\ge 31$, y de las 1000 figuras cumplen $970$.",
+    "steps": [
+     "Figura 1: $2$ puntos; figura 2: $3$; figura 3: $4$; figura 4: $5$. El patrón es que la figura $n$ tiene $n+1$ puntos.",
+     "Tener al menos $32$ puntos significa $n+1\\ge 32$, es decir, $n\\ge 31$.",
+     "Las figuras que cumplen van de la $31$ a la $1000$, ambas incluidas: $1000-31+1=970$ figuras.",
+     "La probabilidad es $\\frac{970}{1000}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{30}{1000}$: es la probabilidad del complemento (menos de $32$ puntos, es decir $n\\le 30$).",
+     "C": "$\\frac{969}{1000}$: cuenta «al menos 32» como «más de 32» y pierde la figura 31, que tiene exactamente $32$ puntos."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q48",
+   "number": 48,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En un juego se tiene una bolsa con seis bolas numeradas del 1 al 6, todas del mismo\n\ntipo. Para su desarrollo se dejan caer al azar las bolas por un tubo, llegando hasta un\n\ntope que determina el orden final, tal como se representa a continuación:\n\nSe gana el juego si se obtiene una secuencia que comience y termine con un\n\nnúmero par.\n\n¿Cuál es la probabilidad de ganar en el juego?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 1"
+    },
+    {
+     "key": "B",
+     "text": "5 1"
+    },
+    {
+     "key": "C",
+     "text": "4 1"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q48.webp",
+    "width": 907,
+    "height": 867,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con seis bolas, tres de ellas pares ($2$, $4$ y $6$), la secuencia gana si la primera y la última son pares: $P=\\frac{3}{6}\\cdot\\frac{2}{5}=\\frac{1}{5}$.",
+    "steps": [
+     "Los números pares son $2$, $4$ y $6$: hay tres de seis bolas.",
+     "La probabilidad de que la primera bola sea par es $\\frac{3}{6}=\\frac{1}{2}$.",
+     "Si la primera es par, quedan $5$ bolas, de las cuales $2$ son pares. La última bola es una de esas $5$, así que la probabilidad de que sea par es $\\frac{2}{5}$.",
+     "$P=\\frac{1}{2}\\cdot\\frac{2}{5}=\\frac{1}{5}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{1}{6}$: resulta de multiplicar $\\frac{1}{2}$ por $\\frac{1}{3}$, como si la última bola fuera par con probabilidad $\\frac{1}{3}$ sin descontar la bola ya salida.",
+     "C": "$\\frac{1}{4}$: usa $\\frac{1}{2}\\cdot\\frac{1}{2}$, sin considerar que quedan dos pares entre cinco bolas."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q49",
+   "number": 49,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En un juego de lotería cada cartón tiene tres números del 1 al 99, los cuales no se\n\nrepiten. Este juego se gana si los tres números que se sortean coinciden con los\n\nnúmeros del cartón.\n\nUna persona compró un cartón que tiene los siguientes números:\n\nSi los números ganadores se eligen al azar, no se repiten y no importa el orden en\n\nque estos se saquen, ¿cuál es la probabilidad de que la persona gane?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "99³ 1"
+    },
+    {
+     "key": "B",
+     "text": "99 · 98 · 97 3"
+    },
+    {
+     "key": "C",
+     "text": "99 · 98 · 97 6"
+    },
+    {
+     "key": "D",
+     "text": "99 · 98 · 97"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q49.webp",
+    "width": 907,
+    "height": 788,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El cartón tiene un único conjunto ganador, y como el orden no importa, hay $\\binom{99}{3}=\\frac{99\\cdot 98\\cdot 97}{6}$ conjuntos equiprobables.",
+    "steps": [
+     "El cartón gana solo si salen exactamente los números $11$, $19$ y $54$: un único conjunto favorable.",
+     "Como los números no se repiten y el orden no importa, los resultados posibles son los conjuntos de tres números distintos entre $1$ y $99$: $\\binom{99}{3}=\\frac{99\\cdot 98\\cdot 97}{3!}$.",
+     "Todos los conjuntos son igualmente probables, así que $P=\\frac{1}{\\binom{99}{3}}=\\frac{3!}{99\\cdot 98\\cdot 97}=\\frac{6}{99\\cdot 98\\cdot 97}$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "$\\frac{1}{99\\cdot 98\\cdot 97}$: cuenta solo un orden del cartón, cuando los $3!=6$ órdenes del mismo conjunto son favorables.",
+     "C": "$\\frac{3}{99\\cdot 98\\cdot 97}$: considera $3$ órdenes favorables en lugar de $3!=6$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q50",
+   "number": 50,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Se encuestó a un grupo de estudiantes para conocer qué sabor de helados les gusta\n\nentre vainilla y chocolate, y todos ellos señalaron al menos uno de estos sabores.\n\nDe acuerdo con los resultados de la encuesta, se sabe que si se escoge a un\n\nestudiante del grupo al azar, la probabilidad de que le guste el helado de vainilla y\n\nel helado de chocolate es 0,15, y la probabilidad de que le guste solo el helado de\n\nchocolate es 0,70.\n\nSi se escoge al azar a un estudiante del grupo, ¿cuál es la probabilidad de que le\n\nguste el helado de chocolate dado que le gusta el helado de vainilla?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "20 3"
+    },
+    {
+     "key": "B",
+     "text": "14 1"
+    },
+    {
+     "key": "C",
+     "text": "15 1"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q50.webp",
+    "width": 907,
+    "height": 675,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como todos señalaron al menos un sabor, la probabilidad de solo vainilla sale por complemento, y luego $P(C\\mid V)=\\frac{P(V\\cap C)}{P(V)}$.",
+    "steps": [
+     "Como todos señalaron al menos un sabor, $P(V\\cup C)=1$.",
+     "Solo vainilla: $P(\\text{solo }V)=1-P(V\\cap C)-P(\\text{solo }C)=1-0{,}15-0{,}70=0{,}15$.",
+     "Vainilla en total: $P(V)=P(\\text{solo }V)+P(V\\cap C)=0{,}15+0{,}15=0{,}30$.",
+     "Entonces $P(C\\mid V)=\\frac{P(V\\cap C)}{P(V)}=\\frac{0{,}15}{0{,}30}=\\frac{1}{2}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{3}{20}$ (0,15): es la probabilidad de la intersección, sin dividir por $P(V)$.",
+     "B": "$\\frac{3}{14}$: divide $0{,}15$ por $0{,}70$, que es la probabilidad de solo chocolate y no el denominador correcto."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q51",
+   "number": 51,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En un grupo de 100 hombres y 100 mujeres, cada uno de ellos tiene un piercing o\n\ntatuajes, pero no ambos. De los hombres, 25 indican tener piercing y el resto tener\n\ntatuajes; de las mujeres, 35 indican tener piercing y el resto declara tener tatuajes.\n\nSi se selecciona al azar a una persona de las entrevistadas, ¿cuál es la probabilidad\n\nde que esta persona sea hombre dado que tiene tatuajes?\n\n75",
+   "options": [
+    {
+     "key": "A",
+     "text": "200 75"
+    },
+    {
+     "key": "B",
+     "text": "140 100"
+    },
+    {
+     "key": "C",
+     "text": "140 75"
+    },
+    {
+     "key": "D",
+     "text": "100"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q51.webp",
+    "width": 907,
+    "height": 545,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La condición «tiene tatuajes» reduce el espacio muestral a las personas con tatuajes: $75$ hombres y $65$ mujeres, de un total de $140$.",
+    "steps": [
+     "Hombres con tatuajes: $100-25=75$.",
+     "Mujeres con tatuajes: $100-35=65$.",
+     "Total con tatuajes: $75+65=140$ personas.",
+     "$P(\\text{hombre}\\mid\\text{tatuajes})=\\frac{75}{140}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{75}{200}$: divide entre las $200$ personas, lo que da la probabilidad de ser hombre con tatuajes sin condicionar.",
+     "D": "$\\frac{75}{100}$: divide entre los $100$ hombres, lo que da la probabilidad de tener tatuajes siendo hombre."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q52",
+   "number": 52,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Considera la igualdad z = log a b ⁵ ⁺ log b a.\n\nSe puede determinar el valor de z, si se conoce el valor de:\n\n(1) ab a (2) b",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q52.webp",
+    "width": 907,
+    "height": 495,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Ambos logaritmos dependen solo del cociente $\\frac{a}{b}$, porque $\\frac{b}{a}$ es su inverso; por eso el dato (2) basta y el dato (1) no.",
+    "steps": [
+     "Como $\\log\\frac{b}{a}=-\\log\\frac{a}{b}$, se tiene $z=\\log_{\\frac{a}{b}}5-\\log\\frac{a}{b}$, que depende solo de $u=\\frac{a}{b}$.",
+     "Con (2) se conoce $u=\\frac{a}{b}$, así que $z$ queda determinado.",
+     "Con (1) se conoce el producto $ab$, pero no el cociente: con $ab=4$, los pares $(a,b)=(4,1)$ y $(a,b)=(1,4)$ dan cocientes $4$ y $\\frac{1}{4}$, con valores de $z$ opuestos en signo.",
+     "Solo (2) basta. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: el producto $ab$ parece suficiente, pero $z$ depende del cociente, no del producto.",
+     "D": "Cada una por sí sola: (1) no basta, por el contraejemplo $ab=4$ con cocientes $4$ y $\\frac{1}{4}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q53",
+   "number": 53,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Considera los números reales x e y, con x̸ = y y x̸ = −y.\n\n�x² −y²�² Se puede determinar el número que representa la expresión (x + y)², si se sabe que:\n\n(1) x −y = 10\n\n(2) x + y = 6",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q53.webp",
+    "width": 907,
+    "height": 542,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La expresión se simplifica a $(x-y)^2$ porque $(x^2-y^2)^2=(x+y)^2(x-y)^2$, así que basta conocer $x-y$, que da el dato (1).",
+    "steps": [
+     "Como $x^2-y^2=(x+y)(x-y)$, la expresión es $\\frac{(x+y)^2(x-y)^2}{(x+y)^2}$.",
+     "Como $x\\neq -y$, $x+y\\neq 0$ y se puede simplificar: la expresión vale $(x-y)^2$.",
+     "Con (1), $x-y=10$, luego la expresión vale $10^2=100$: basta.",
+     "Con (2) solo se conoce $x+y=6$, y $x-y$ no queda fijo: $x=4$, $y=2$ da $(x-y)^2=4$, mientras que $x=5$, $y=1$ da $16$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "(2) por sí sola: creer que la expresión depende de $x+y$, cuando el numerador y el denominador se cancelan y queda solo $x-y$.",
+     "D": "Cada una por sí sola: (2) no basta, como muestran los contraejemplos anteriores."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q54",
+   "number": 54,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Una persona forrará por completo un cofre utilizando un tipo de tela llamada arpillera.\n\nEl cofre tiene la forma de un prisma recto de base cuadrada y su tapa tiene la forma\n\nde la mitad de un cilindro, tal como se representa a continuación:\n\nConsidera que la arpillera tiene un costo de \\$3500 por metro cuadrado. Se puede\n\ndeterminar cuánto le costará forrar el cofre, si se conoce:\n\n(1) la medida del radio del cilindro.\n\n(2) la medida del ancho, alto y largo del cofre.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q54.webp",
+    "width": 907,
+    "height": 870,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El costo depende del área total de la superficie del cofre, que necesita el radio y también el largo; con las tres dimensiones del cofre el área queda completamente determinada.",
+    "steps": [
+     "El costo es $3500$ pesos por metro cuadrado multiplicado por el área total: caras del prisma, caras frontales (cuadrado más semicírculo) y superficie curva de la tapa.",
+     "Con (1) solo se conoce el radio $r$, que fija el ancho de la tapa y su semicírculo, pero no el largo del cofre, que interviene en las caras laterales y en la superficie curva. Falta una medida.",
+     "Con (2) se conocen ancho, alto y largo. Como la tapa cubre todo el ancho del cofre, el radio es la mitad del ancho, así que el área total queda determinada. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: el radio define la forma de la tapa, pero se olvida que sin el largo del cofre no se puede calcular la superficie del prisma.",
+     "C": "Ambas juntas: sumar (1) no agrega nada, porque (2) ya basta."
+    }
+   }
+  },
+  {
+   "id": "m2-2026-invierno-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En una urna se tienen 5 bolitas entre bolitas azules y rojas, todas del mismo tipo.\n\nAl extraer dos bolitas sin reposición, se puede determinar la probabilidad de que la\n\nsegunda sea azul dado que la primera fue roja, si:\n\n(1) al sacar cinco bolitas con reposición se conoce la probabilidad de que\n\ntodas sean azules.\n\n(2) al sacar dos bolitas sin reposición se conoce la probabilidad de que\n\nuna sea azul y la otra sea roja.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q55.webp",
+    "width": 907,
+    "height": 582,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si la primera bolita es roja, la segunda es azul con probabilidad $\\frac{a}{4}$, donde $a$ es el número de bolitas azules; el dato (1) permite obtener $a$, pero el dato (2) no.",
+    "steps": [
+     "Sea $a$ el número de bolitas azules (y $5-a$ las rojas). Si la primera es roja, quedan $4$ bolitas con las $a$ azules, así que $P(\\text{2.ª azul}\\mid\\text{1.ª roja})=\\frac{a}{4}$.",
+     "Con (1): $P(\\text{5 azules con reposición})=\\left(\\frac{a}{5}\\right)^{5}$. Esta función es estrictamente creciente en $a$, así que el valor determina $a$ y, por tanto, $\\frac{a}{4}$. (1) basta.",
+     "Con (2): $P(\\text{una azul y una roja})=2\\cdot\\frac{a}{5}\\cdot\\frac{5-a}{4}=\\frac{a(5-a)}{10}$.",
+     "Para $a=2$ o $a=3$ esta probabilidad vale $\\frac{6}{10}$, pero con $a=2$ se tiene $\\frac{2}{4}$ y con $a=3$, $\\frac{3}{4}$: (2) no determina la respuesta. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "(2) por sí sola: parece suficiente, pero $a=2$ y $a=3$ dan la misma probabilidad de un azul y un rojo y respuestas distintas.",
+     "C": "Ambas juntas: como (1) ya basta, agregar (2) no cambia el resultado. El error está en pensar que (2) aporta algo nuevo, cuando no es necesario."
+    }
+   }
+  }
+ ]
+}

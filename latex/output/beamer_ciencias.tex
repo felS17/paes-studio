@@ -1,0 +1,937 @@
+% =============================================================================
+%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
+%  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Comandos:
+%    \alternativa{A}{texto}       alternativa
+%    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
+%    \paso{n}{texto}      paso numerado del desarrollo
+%    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
+%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
+% =============================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+
+% ── Paleta Zinc ──────────────────────────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+
+\newcommand{\sen}{\operatorname{sen}}
+
+% ── Tema mínimo ──────────────────────────────────────────────────────────────
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=zinc900}
+\setbeamercolor{structure}{fg=zinc900}
+\setbeamercolor{alerted text}{fg=zinc950}
+\setbeamercolor{item}{fg=zinc500}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{itemize items}{\raisebox{0.15ex}{\color{zinc500}\scriptsize$\bullet$}}
+\setbeamertemplate{enumerate items}{\color{zinc500}\insertenumlabel.}
+\setbeamersize{text margin left=1.6cm,text margin right=1.6cm}
+
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.9em}%
+  {\usebeamerfont{frametitle}\color{zinc950}\insertframetitle}\par
+  \ifx\insertframesubtitle\@empty\else{\small\color{zinc500}\insertframesubtitle}\par\fi
+  \vspace{0.25em}{\color{zinc200}\rule{\textwidth}{0.4pt}}%
+}
+\makeatother
+\setbeamertemplate{footline}{%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+}
+\setbeamertemplate{title page}{%
+  \vfill
+  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
+  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
+  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
+  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc500}\insertdate}\par
+  \vfill
+}
+
+% ── Componentes ──────────────────────────────────────────────────────────────
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\bfseries\color{white}}
+\newtcolorbox{opcion}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=zinc300,
+  left=6pt, right=6pt, top=3pt, bottom=3pt, before skip=3pt, after skip=3pt, #1}
+\newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
+\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+  borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
+\newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
+  borderline west={2pt}{0pt}{rosa}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=white, titlerule=0pt, title={#1}}
+\newenvironment{lineatiempo}
+  {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
+  {\end{tabular}}
+\newlength{\anchobarra}
+\newcommand{\ejebarra}[3]{%
+  \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
+  \setlength{\anchobarra}{0.5\linewidth}%
+  \makebox[\anchobarra][l]{{\color{zinc200}\rule[0.2ex]{\anchobarra}{1.1ex}}\hspace*{-\anchobarra}{\color{zinc900}\rule[0.2ex]{#2\anchobarra}{1.1ex}}}%
+  \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
+
+%%<META>%%
+\title[Repaso PAES: Ciencias]{Repaso PAES}
+\subtitle{Ciencias}
+\date{1 de noviembre de 2026}
+%%</META>%%
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+%%<CONTENIDO>%%
+\begin{frame}{Contenidos}
+
+  \framesubtitle{4 ejes, en el orden del temario}
+
+  \begin{enumerate}\small
+
+    \item \textbf{Biología}: Organización celular, Biomoléculas, enzimas y metabolismo, División celular y herencia, Evolución y biodiversidad, Sistemas del organismo y homeostasis, Organismo y ambiente
+
+    \item \textbf{Física}: Ondas y sonido, Luz y óptica, Movimiento (cinemática), Fuerzas y leyes de Newton, Energía, trabajo y calor, Electricidad y magnetismo
+
+    \item \textbf{Química}: Estructura atómica y tabla periódica, Enlace químico y moléculas, Química orgánica, Reacciones químicas y estequiometría, Disoluciones y pH
+
+    \item \textbf{Habilidades científicas}: Habilidades de pensamiento científico
+
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Qué evalúa la prueba}
+
+  \framesubtitle{Distribución por eje en 18 ensayos (1306 preguntas)}
+
+  \vspace{0.8em}
+
+  \ejebarra{Biología}{0.337}{34 \%}
+
+  \ejebarra{Física}{0.337}{34 \%}
+
+  \ejebarra{Química}{0.326}{33 \%}
+
+\end{frame}
+
+\section{Biología}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Biología}\par\vspace{0.6em}
+  {\color{zinc700} Organización celular, procesos y funciones biológicas, herencia y evolución, organismo y ambiente.}\par\vspace{1em}
+  {\small\color{zinc500} Organización celular, Biomoléculas, enzimas y metabolismo, División celular y herencia, Evolución y biodiversidad, Sistemas del organismo y homeostasis, Organismo y ambiente}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Organización celular}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Célula vegetal: pared celular, cloroplastos y vacuola grande.
+    \item Osmosis: el agua pasa hacia el medio más concentrado en solutos.
+    \item Los virus no son células.
+  \end{itemize}
+  \begin{cajaclave}[Organelos y función]\footnotesize
+Núcleo: material genético. Mitocondria: respiración celular (ATP). Cloroplasto: fotosíntesis (solo vegetales). Ribosoma: síntesis de proteínas. Retículo endoplasmático y aparato de Golgi: síntesis, modificación y transporte. Lisosoma: digestión celular.
+  \end{cajaclave}
+\begin{center}\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Procarionte} & \textbf{Eucarionte} \\
+\midrule
+Núcleo & no (nucleoide) & sí \\
+Organelos con membrana & no & sí \\
+Ejemplos & bacterias & animales, plantas, hongos \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Organización celular}
+  {\small Un glóbulo rojo se coloca en agua destilada. ¿Qué ocurrirá con la célula?}
+  \vspace{0.4em}
+  \alternativa{A}{Se deshidrata, porque el agua sale de ella.}
+  \alternativa{B}{Se hincha y puede estallar, porque el agua entra en ella.}
+  \alternativa{C}{No cambia, porque la membrana es impermeable al agua.}
+  \alternativa{D}{Pierde sus sales hacia el agua por transporte activo.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El agua destilada es hipotónica respecto del interior celular.}
+  {\small
+  \paso{1}{El interior del glóbulo rojo tiene más solutos que el agua destilada.}
+  \paso{2}{Por osmosis, el agua entra hacia el medio más concentrado: la célula se hincha (hemólisis).}
+  }
+  \alternativaok{B}{Se hincha y puede estallar, porque el agua entra en ella.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Atribuir cloroplastos o pared celular a células animales.
+    \item Pensar que en la osmosis se mueve el soluto (se mueve el agua).
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Biomoléculas, enzimas y metabolismo}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Enzima: específica, reutilizable, sensible a temperatura y pH.
+    \item El $\mathrm{O_2}$ de la fotosíntesis proviene del agua.
+    \item Fotosíntesis y respiración son procesos complementarios.
+  \end{itemize}
+  \begin{cajaclave}[Ecuaciones globales]\footnotesize
+\[\text{Fotosíntesis: } 6\,\mathrm{CO_2}+6\,\mathrm{H_2O}\xrightarrow{\text{luz}}\mathrm{C_6H_{12}O_6}+6\,\mathrm{O_2}\]
+
+\[\text{Respiración: } \mathrm{C_6H_{12}O_6}+6\,\mathrm{O_2}\rightarrow 6\,\mathrm{CO_2}+6\,\mathrm{H_2O}+\text{ATP}\]
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Biomoléculas, enzimas y metabolismo}
+  {\small Una enzima del estómago humano tiene su máxima actividad a pH 2. ¿Qué ocurrirá si se la coloca a pH 8?}
+  \vspace{0.4em}
+  \alternativa{A}{Su actividad aumentará.}
+  \alternativa{B}{Su actividad disminuirá, porque se aleja de su pH óptimo.}
+  \alternativa{C}{Se transformará en otra enzima.}
+  \alternativa{D}{Su actividad no cambiará, porque el pH no afecta a las proteínas.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Cada enzima tiene un pH óptimo; lejos de él cambia su forma y pierde actividad.}
+  {\small
+  \paso{1}{pH 8 está lejos del óptimo (pH 2).}
+  \paso{2}{Cambia la estructura del sitio activo y la actividad disminuye.}
+  }
+  \alternativaok{B}{Su actividad disminuirá, porque se aleja de su pH óptimo.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Decir que las enzimas se consumen en la reacción.
+    \item Creer que las plantas no respiran (respiran siempre; fotosintetizan con luz).
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{División celular y herencia}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Mitosis: 2 células, mismo número de cromosomas.
+    \item Meiosis: 4 células, la mitad de cromosomas.
+    \item Rasgo recesivo: solo se expresa en $aa$.
+  \end{itemize}
+  \begin{cajaclave}[Proporciones mendelianas]\footnotesize
+$Aa\times Aa \Rightarrow$ genotipos $1\,AA : 2\,Aa : 1\,aa$; fenotipos $3$ dominante $: 1$ recesivo.
+
+$Aa\times aa \Rightarrow 1\,Aa : 1\,aa$. Humanos: $2n=46$ (células somáticas), $n=23$ (gametos).
+  \end{cajaclave}
+\begin{center}\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Mitosis} & \textbf{Meiosis} \\
+\midrule
+Células hijas & 2 & 4 \\
+Cromosomas & igual a la madre ($2n$) & la mitad ($n$) \\
+Función & crecimiento y reparación & formar gametos \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{División celular y herencia}
+  {\small Una planta de flores rojas ($Rr$) se cruza con una de flores blancas ($rr$). Si el rojo es dominante, ¿qué proporción de la descendencia tendrá flores blancas?}
+  \vspace{0.4em}
+  \alternativa{A}{0 \%}
+  \alternativa{B}{25 \%}
+  \alternativa{C}{50 \%}
+  \alternativa{D}{75 \%}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Cruce de prueba: heterocigoto por homocigoto recesivo.}
+  {\small
+  \paso{1}{Gametos: $R$ o $r$ por un lado; solo $r$ por el otro.}
+  \paso{2}{Descendencia: $Rr$ y $rr$ en igual proporción.}
+  \paso{3}{Flores blancas ($rr$): 50 \%.}
+  }
+  \alternativaok{C}{50 \%}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir genotipo con fenotipo.
+    \item Atribuir a la mitosis la variabilidad genética.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Evolución y biodiversidad}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Evolucionan las poblaciones, no los individuos.
+    \item Las mutaciones ocurren al azar; la selección no es azarosa.
+    \item Lamarck (caracteres adquiridos) fue descartado.
+  \end{itemize}
+  \begin{cajaclave}[Selección natural]\footnotesize
+Variabilidad $\rightarrow$ presión del ambiente $\rightarrow$ supervivencia y reproducción diferencial $\rightarrow$ cambio en la frecuencia de los rasgos en la población.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Evolución y biodiversidad}
+  {\small Tras usar un antibiótico por años, en un hospital predominan bacterias resistentes. ¿Cuál es la mejor explicación?}
+  \vspace{0.4em}
+  \alternativa{A}{El antibiótico produjo mutaciones dirigidas a la resistencia.}
+  \alternativa{B}{Las bacterias resistentes ya existían y sobrevivieron y se reprodujeron más.}
+  \alternativa{C}{Las bacterias aprendieron a resistir el antibiótico.}
+  \alternativa{D}{El antibiótico perdió su efecto por el paso del tiempo.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Es un ejemplo clásico de selección natural.}
+  {\small
+  \paso{1}{La resistencia surgió por variación previa (mutaciones al azar).}
+  \paso{2}{El antibiótico eliminó a las sensibles y las resistentes dejaron más descendencia.}
+  }
+  \alternativaok{B}{Las bacterias resistentes ya existían y sobrevivieron y se reprodujeron más.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Pensar que el individuo cambia «para adaptarse».
+    \item Explicar con herencia de caracteres adquiridos.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Sistemas del organismo y homeostasis}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Insulina baja la glicemia; glucagón la sube.
+    \item Las vacunas generan memoria inmunológica sin enfermar.
+    \item Retroalimentación negativa: la respuesta se opone al cambio.
+  \end{itemize}
+  \begin{cajaclave}[Regulación de la glicemia]\footnotesize
+Glicemia alta $\rightarrow$ páncreas libera \textbf{insulina} $\rightarrow$ las células captan glucosa y el hígado la almacena como glucógeno $\rightarrow$ glicemia baja.
+
+Glicemia baja $\rightarrow$ páncreas libera \textbf{glucagón} $\rightarrow$ el hígado libera glucosa $\rightarrow$ glicemia sube.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Sistemas del organismo y homeostasis}
+  {\small ¿Qué efecto tiene una vacuna en el organismo?}
+  \vspace{0.4em}
+  \alternativa{A}{Mata directamente al patógeno ya presente.}
+  \alternativa{B}{Estimula la producción de anticuerpos y células de memoria.}
+  \alternativa{C}{Reemplaza los glóbulos blancos.}
+  \alternativa{D}{Actúa como antibiótico.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La vacuna presenta un antígeno inofensivo que entrena al sistema inmune adaptativo.}
+  {\small
+  \paso{1}{El antígeno de la vacuna activa linfocitos que producen anticuerpos.}
+  \paso{2}{Quedan células de memoria que responden rápido ante una infección futura.}
+  }
+  \alternativaok{B}{Estimula la producción de anticuerpos y células de memoria.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir los efectos de insulina y glucagón.
+    \item Creer que los antibióticos sirven contra virus.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Organismo y ambiente}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item La energía fluye; la materia se recicla.
+    \item Mutualismo: ambas especies se benefician.
+    \item Las cadenas tróficas rara vez superan cuatro o cinco niveles.
+  \end{itemize}
+  \begin{cajaclave}[Flujo de energía]\footnotesize
+Productores $\rightarrow$ consumidores primarios $\rightarrow$ secundarios $\rightarrow$ terciarios. Regla del 10 \%: $E_{n+1}\approx 0{,}1\cdot E_n$.
+
+Los descomponedores devuelven los nutrientes al suelo.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Organismo y ambiente}
+  {\small En una cadena trófica pasto $\rightarrow$ conejo $\rightarrow$ zorro, desaparecen los zorros. ¿Qué es lo más probable a corto plazo?}
+  \vspace{0.4em}
+  \alternativa{A}{La población de conejos disminuye.}
+  \alternativa{B}{La población de conejos aumenta y luego el pasto disminuye.}
+  \alternativa{C}{El pasto aumenta de inmediato.}
+  \alternativa{D}{No hay cambios en la cadena.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Sin su depredador, los conejos aumentan y consumen más pasto.}
+  {\small
+  \paso{1}{Desaparece la presión de depredación sobre los conejos.}
+  \paso{2}{Más conejos consumen más pasto, que disminuye.}
+  }
+  \alternativaok{B}{La población de conejos aumenta y luego el pasto disminuye.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Decir que la energía se recicla.
+    \item Confundir comensalismo con mutualismo.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Física}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Física}\par\vspace{0.6em}
+  {\color{zinc700} Ondas, mecánica, energía, electricidad y magnetismo.}\par\vspace{1em}
+  {\small\color{zinc500} Ondas y sonido, Luz y óptica, Movimiento (cinemática), Fuerzas y leyes de Newton, Energía, trabajo y calor, Electricidad y magnetismo}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Ondas y sonido}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Al cambiar de medio, la frecuencia no cambia.
+    \item El sonido no se propaga en el vacío.
+    \item Tono depende de la frecuencia; intensidad, de la amplitud.
+  \end{itemize}
+  \begin{cajaclave}[Relaciones]\footnotesize
+\begin{gather*}
+v=\lambda\,f \\
+T=\frac{1}{f}
+\end{gather*}
+
+Rapidez del sonido: unos 340 m/s en el aire, mayor en líquidos y aún mayor en sólidos.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Ondas y sonido}
+  {\small Una onda de 5 Hz tiene una longitud de onda de 2 m. ¿Cuál es su rapidez?}
+  \vspace{0.4em}
+  \alternativa{A}{0,4 m/s}
+  \alternativa{B}{2,5 m/s}
+  \alternativa{C}{7 m/s}
+  \alternativa{D}{10 m/s}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{$v=\lambda f$.}
+  {\small
+  \paso{1}{$v=2\cdot 5=10$ m/s.}
+  }
+  \alternativaok{D}{10 m/s}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Pensar que la frecuencia cambia al pasar a otro medio.
+    \item Confundir tono con intensidad.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Luz y óptica}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Los ángulos se miden respecto de la normal.
+    \item El arcoíris se explica por refracción y dispersión.
+    \item La miopía se corrige con lentes divergentes.
+  \end{itemize}
+  \begin{cajaclave}[Leyes]\footnotesize
+Reflexión: $\theta_i=\theta_r$. Refracción: al pasar a un medio donde la luz es más lenta, el rayo se acerca a la normal.
+
+Índice de refracción: $n=\dfrac{c}{v}$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Luz y óptica}
+  {\small Un rayo de luz incide sobre un espejo plano formando $35^\circ$ con la normal. ¿Qué ángulo forma el rayo reflejado con la normal?}
+  \vspace{0.4em}
+  \alternativa{A}{$35^\circ$}
+  \alternativa{B}{$55^\circ$}
+  \alternativa{C}{$70^\circ$}
+  \alternativa{D}{$145^\circ$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Ley de reflexión: el ángulo de incidencia es igual al de reflexión.}
+  {\small
+  \paso{1}{$\theta_r=\theta_i=35^\circ$ (ambos medidos desde la normal).}
+  }
+  \alternativaok{A}{$35^\circ$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Medir los ángulos respecto de la superficie y no de la normal.
+    \item Pensar que en la refracción cambia la frecuencia.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Movimiento (cinemática)}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Pendiente de $x$–$t$ = velocidad.
+    \item Área bajo $v$–$t$ = desplazamiento.
+    \item 72 km/h = 20 m/s (divide por 3,6).
+  \end{itemize}
+  \begin{cajaclave}[Ecuaciones]\footnotesize
+\begin{gather*}
+\text{MRU: } x=x_0+vt \\
+\text{MRUA: } v=v_0+at,\quad x=x_0+v_0t+\tfrac{1}{2}at^2
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Movimiento (cinemática)}
+  {\small Un ciclista recorre 18 km en 45 minutos. ¿Cuál es su rapidez media?}
+  \vspace{0.4em}
+  \alternativa{A}{0,4 km/h}
+  \alternativa{B}{2,5 km/h}
+  \alternativa{C}{24 km/h}
+  \alternativa{D}{40 km/h}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Rapidez media = distancia / tiempo, con unidades coherentes.}
+  {\small
+  \paso{1}{45 min = 0,75 h.}
+  \paso{2}{$v=\dfrac{18}{0{,}75}=24$ km/h.}
+  }
+  \alternativaok{C}{24 km/h}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Mezclar km/h con m/s.
+    \item Olvidar el factor $\frac{1}{2}$ en $\frac{1}{2}at^2$.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Fuerzas y leyes de Newton}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Acción y reacción actúan sobre cuerpos distintos: no se anulan.
+    \item Velocidad constante $\Rightarrow$ fuerza neta nula.
+    \item En la Luna cambia el peso, no la masa.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+F_{\text{neta}}=m\,a \\
+P=m\,g \\
+p=\frac{F}{A} \\
+\rho=\frac{m}{V}
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Fuerzas y leyes de Newton}
+  {\small Un auto avanza en línea recta a 60 km/h constantes. ¿Qué se puede afirmar de la fuerza neta sobre él?}
+  \vspace{0.4em}
+  \alternativa{A}{Es nula.}
+  \alternativa{B}{Apunta en el sentido del movimiento.}
+  \alternativa{C}{Apunta en sentido contrario al movimiento.}
+  \alternativa{D}{Es igual a su peso.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Velocidad constante significa aceleración cero.}
+  {\small
+  \paso{1}{Si $a=0$, por la segunda ley $F_{\text{neta}}=m\cdot 0=0$.}
+  \paso{2}{La fuerza del motor se equilibra con los roces.}
+  }
+  \alternativaok{A}{Es nula.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Creer que se necesita una fuerza para mantener la velocidad constante.
+    \item Sumar acción y reacción como si actuaran sobre el mismo cuerpo.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Energía, trabajo y calor}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Sin roce: $E_c+E_p$ constante.
+    \item Calor y temperatura no son lo mismo.
+    \item El agua tiene un calor específico alto: $1\ \text{cal}/(\text{g}\cdot{}^\circ\text{C})$.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+E_c=\tfrac{1}{2}mv^2 \\
+E_p=mgh \\
+W=F\,d \\
+P=\frac{W}{t} \\
+Q=m\,c\,\Delta T
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Energía, trabajo y calor}
+  {\small Un cuerpo de 4 kg se mueve a 3 m/s. ¿Cuál es su energía cinética?}
+  \vspace{0.4em}
+  \alternativa{A}{6 J}
+  \alternativa{B}{12 J}
+  \alternativa{C}{18 J}
+  \alternativa{D}{36 J}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{$E_c=\frac{1}{2}mv^2$.}
+  {\small
+  \paso{1}{$E_c=\tfrac{1}{2}\cdot 4\cdot 3^2=2\cdot 9=18$ J.}
+  }
+  \alternativaok{C}{18 J}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Olvidar elevar la rapidez al cuadrado en la energía cinética.
+    \item Confundir calor con temperatura.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Electricidad y magnetismo}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Las casas conectan los artefactos en paralelo (mismo voltaje).
+    \item Cargas de igual signo se repelen.
+    \item La resistencia equivalente en paralelo es menor que la menor de ellas.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+V=I\,R \\
+P=V\,I \\
+R_{\text{serie}}=R_1+R_2 \\
+\frac{1}{R_{\text{paralelo}}}=\frac{1}{R_1}+\frac{1}{R_2}
+\end{gather*}
+  \end{cajaclave}
+\begin{center}\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+ & \textbf{Serie} & \textbf{Paralelo} \\
+\midrule
+Corriente & igual en todas & se reparte \\
+Voltaje & se reparte & igual en todas \\
+$R$ equivalente & $R_1+R_2$ & menor que cada una \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Electricidad y magnetismo}
+  {\small Un hervidor funciona con 220 V y por él circulan 10 A. ¿Cuál es su potencia?}
+  \vspace{0.4em}
+  \alternativa{A}{22 W}
+  \alternativa{B}{230 W}
+  \alternativa{C}{2200 W}
+  \alternativa{D}{22 000 W}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{$P=VI$.}
+  {\small
+  \paso{1}{$P=220\cdot 10=2200$ W.}
+  }
+  \alternativaok{C}{2200 W}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Sumar resistencias en paralelo como si estuvieran en serie.
+    \item Confundir corriente con voltaje.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Química}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Química}\par\vspace{0.6em}
+  {\color{zinc700} Estructura atómica, química orgánica, reacciones y estequiometría, disoluciones.}\par\vspace{1em}
+  {\small\color{zinc500} Estructura atómica y tabla periódica, Enlace químico y moléculas, Química orgánica, Reacciones químicas y estequiometría, Disoluciones y pH}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Estructura atómica y tabla periódica}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Un catión perdió electrones; un anión los ganó.
+    \item Isótopos: mismo elemento, distinta masa.
+    \item Grupo 1: metales alcalinos; grupo 17: halógenos; grupo 18: gases nobles.
+  \end{itemize}
+  \begin{cajaclave}[Relaciones]\footnotesize
+\begin{gather*}
+n=A-Z \\
+e^-=Z-\text{carga}
+\end{gather*}
+
+Modelos: Dalton (esfera indivisible) $\rightarrow$ Thomson (electrones incrustados) $\rightarrow$ Rutherford (núcleo pequeño y denso) $\rightarrow$ Bohr (niveles de energía).
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Estructura atómica y tabla periódica}
+  {\small El ion ${}^{32}_{16}\mathrm{S}^{2-}$ tiene:}
+  \vspace{0.4em}
+  \alternativa{A}{16 protones y 16 electrones.}
+  \alternativa{B}{16 protones y 18 electrones.}
+  \alternativa{C}{18 protones y 16 electrones.}
+  \alternativa{D}{32 protones y 18 electrones.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La carga $2-$ indica que ganó dos electrones.}
+  {\small
+  \paso{1}{Protones: $Z=16$.}
+  \paso{2}{Electrones: $16+2=18$.}
+  }
+  \alternativaok{B}{16 protones y 18 electrones.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Tomar $A$ como número de neutrones.
+    \item Olvidar ajustar los electrones según la carga del ion.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Enlace químico y moléculas}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Metal + no metal $\Rightarrow$ iónico.
+    \item Los compuestos iónicos conducen la electricidad fundidos o disueltos.
+    \item Una molécula con enlaces polares puede ser apolar si es simétrica ($\mathrm{CO_2}$).
+  \end{itemize}
+  \begin{cajaclave}[Tipos de enlace]\footnotesize
+Iónico: $\mathrm{NaCl}$. Covalente polar: $\mathrm{H_2O}$. Covalente apolar: $\mathrm{O_2}$, $\mathrm{CH_4}$ (molécula apolar).
+
+Regla del octeto: los átomos tienden a completar 8 electrones de valencia.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Enlace químico y moléculas}
+  {\small ¿Qué tipo de enlace une los átomos del cloruro de sodio, $\mathrm{NaCl}$?}
+  \vspace{0.4em}
+  \alternativa{A}{Covalente apolar}
+  \alternativa{B}{Covalente polar}
+  \alternativa{C}{Iónico}
+  \alternativa{D}{Metálico}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Sodio es metal y cloro, no metal.}
+  {\small
+  \paso{1}{El sodio cede un electrón al cloro: se forman $\mathrm{Na^+}$ y $\mathrm{Cl^-}$.}
+  \paso{2}{La atracción entre iones es un enlace iónico.}
+  }
+  \alternativaok{C}{Iónico}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Suponer que toda molécula con enlaces polares es polar.
+    \item Confundir enlace iónico con covalente polar.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Química orgánica}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Cada doble enlace aporta un enlace pi ($\pi$).
+    \item Carbono con doble enlace: $sp^2$.
+    \item Alcanos: solo enlaces simples ($\mathrm{C_nH_{2n+2}}$).
+  \end{itemize}
+  \begin{cajaclave}[Grupos funcionales]\footnotesize
+Alcohol: $\mathrm{R{-}OH}$. Aldehído: $\mathrm{R{-}CHO}$. Cetona: $\mathrm{R{-}CO{-}R'}$. Ácido: $\mathrm{R{-}COOH}$. Éter: $\mathrm{R{-}O{-}R'}$. Éster: $\mathrm{R{-}COO{-}R'}$. Amina: $\mathrm{R{-}NH_2}$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Química orgánica}
+  {\small ¿Cuál es la fórmula molecular del propano, un alcano de 3 carbonos?}
+  \vspace{0.4em}
+  \alternativa{A}{$\mathrm{C_3H_4}$}
+  \alternativa{B}{$\mathrm{C_3H_6}$}
+  \alternativa{C}{$\mathrm{C_3H_8}$}
+  \alternativa{D}{$\mathrm{C_3H_{10}}$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Alcanos: $\mathrm{C_nH_{2n+2}}$.}
+  {\small
+  \paso{1}{$n=3$: $2\cdot 3+2=8$ hidrógenos.}
+  \paso{2}{$\mathrm{C_3H_8}$.}
+  }
+  \alternativaok{C}{$\mathrm{C_3H_8}$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir aldehído (carbonilo en el extremo) con cetona (carbonilo interno).
+    \item Contar mal los enlaces pi.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Reacciones químicas y estequiometría}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Balancea antes de calcular.
+    \item Los coeficientes relacionan moles, no gramos.
+    \item Masa total de reactantes = masa total de productos.
+  \end{itemize}
+  \begin{cajaclave}[Relaciones]\footnotesize
+\begin{gather*}
+n=\frac{m}{M} \\
+N=n\cdot 6{,}02\cdot 10^{23} \\
+\text{gas ideal: } PV=nRT
+\end{gather*}
+
+A condiciones normales, 1 mol de gas ocupa 22,4 L.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Reacciones químicas y estequiometría}
+  {\small En la reacción balanceada $\mathrm{N_2}+3\,\mathrm{H_2}\rightarrow 2\,\mathrm{NH_3}$, ¿cuántos moles de $\mathrm{NH_3}$ se forman a partir de 6 mol de $\mathrm{H_2}$ con exceso de $\mathrm{N_2}$?}
+  \vspace{0.4em}
+  \alternativa{A}{2 mol}
+  \alternativa{B}{3 mol}
+  \alternativa{C}{4 mol}
+  \alternativa{D}{6 mol}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La proporción entre $\mathrm{H_2}$ y $\mathrm{NH_3}$ es $3:2$.}
+  {\small
+  \paso{1}{$6\ \text{mol H}_2\cdot\dfrac{2\ \text{mol NH}_3}{3\ \text{mol H}_2}=4$ mol de $\mathrm{NH_3}$.}
+  }
+  \alternativaok{C}{4 mol}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Usar las proporciones de coeficientes directamente con gramos.
+    \item Olvidar balancear la ecuación.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Disoluciones y pH}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Diluir no cambia los moles de soluto.
+    \item Cada unidad de pH es un factor 10 en $[\mathrm{H^+}]$.
+    \item Agregar sal al agua baja su punto de congelación.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+M=\frac{n_{\text{soluto}}}{V_{\text{disolución}}\,(\text{L})} \\
+C_1V_1=C_2V_2 \\
+\mathrm{pH}=-\log[\mathrm{H^+}] \\
+\mathrm{pH}+\mathrm{pOH}=14
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Disoluciones y pH}
+  {\small Se diluyen 100 mL de una disolución 2 mol/L hasta 400 mL. ¿Cuál es la nueva concentración?}
+  \vspace{0.4em}
+  \alternativa{A}{0,5 mol/L}
+  \alternativa{B}{1 mol/L}
+  \alternativa{C}{4 mol/L}
+  \alternativa{D}{8 mol/L}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Los moles de soluto se conservan: $C_1V_1=C_2V_2$.}
+  {\small
+  \paso{1}{$2\cdot 100=C_2\cdot 400$.}
+  \paso{2}{$C_2=0{,}5$ mol/L.}
+  }
+  \alternativaok{A}{0,5 mol/L}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Usar mililitros en vez de litros en la molaridad.
+    \item Pensar que un pH 4 es el doble de ácido que uno 5 (es 10 veces).
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Habilidades científicas}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Habilidades científicas}\par\vspace{0.6em}
+  {\color{zinc700} Pensamiento científico: variables, hipótesis, procedimientos y conclusiones.}\par\vspace{1em}
+  {\small\color{zinc500} Habilidades de pensamiento científico}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Habilidades de pensamiento científico}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Independiente: lo que yo cambio. Dependiente: lo que mido.
+    \item Una conclusión solo puede afirmar lo que los datos muestran.
+    \item El grupo control permite comparar el efecto de la variable.
+  \end{itemize}
+  \begin{cajaclave}[Esquema de una investigación]\footnotesize
+Observación $\rightarrow$ pregunta de investigación $\rightarrow$ hipótesis $\rightarrow$ diseño experimental (variables y grupo control) $\rightarrow$ resultados $\rightarrow$ conclusión.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Habilidades de pensamiento científico}
+  {\small Una estudiante riega cuatro plantas iguales con distinta cantidad de agua y mide su altura después de un mes. ¿Cuál es la variable dependiente?}
+  \vspace{0.4em}
+  \alternativa{A}{La cantidad de agua.}
+  \alternativa{B}{El tipo de planta.}
+  \alternativa{C}{La altura de las plantas.}
+  \alternativa{D}{El tiempo de un mes.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La dependiente es la que se mide como respuesta.}
+  {\small
+  \paso{1}{Manipula: cantidad de agua (independiente).}
+  \paso{2}{Mide: altura (dependiente). Tipo de planta y tiempo son controladas.}
+  }
+  \alternativaok{C}{La altura de las plantas.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir la variable que se mide con la que se manipula.
+    \item Elegir una conclusión que generaliza más allá de los datos.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+%%</CONTENIDO>%%
+
+\end{document}

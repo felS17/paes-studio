@@ -1,0 +1,2300 @@
+{
+ "id": "m1-2024-invierno",
+ "subject": "m1",
+ "title": "PAES Invierno 2024",
+ "description": "Prueba oficial completa de Competencia Matemática 1 (M1): 65 preguntas, aplicada el 22-06-2023 (Admisión 2024). Claves del clavijero oficial DEMRE.",
+ "year": 2024,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "111",
+ "appliedOn": "2023-06-22",
+ "durationMinutes": 140,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   174,
+   200,
+   223,
+   244,
+   265,
+   284,
+   301,
+   317,
+   331,
+   347,
+   363,
+   379,
+   392,
+   403,
+   413,
+   424,
+   436,
+   450,
+   465,
+   478,
+   489,
+   497,
+   504,
+   512,
+   521,
+   532,
+   546,
+   561,
+   573,
+   583,
+   591,
+   597,
+   604,
+   612,
+   623,
+   637,
+   651,
+   665,
+   676,
+   684,
+   692,
+   700,
+   711,
+   723,
+   738,
+   753,
+   767,
+   778,
+   790,
+   802,
+   817,
+   834,
+   851,
+   869,
+   886,
+   905,
+   926,
+   949,
+   974,
+   1000
+  ],
+  "officialQuestionCount": 65,
+  "officialScorableCount": 60
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m1-2024-invierno-q01",
+   "number": 1,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Una persona selecciona un número de dos dígitos, luego resta este número a 200 y, finalmente, duplica el resultado.\n\n¿Cuál es el mayor número que puede obtener mediante esta serie de operaciones?",
+   "options": [
+    {
+     "key": "A",
+     "text": "220"
+    },
+    {
+     "key": "B",
+     "text": "301"
+    },
+    {
+     "key": "C",
+     "text": "380"
+    },
+    {
+     "key": "D",
+     "text": "398"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q01.webp",
+    "width": 903,
+    "height": 300,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": ",0 002 )( ,0 02 ) ¿Cuál es el valor de ⁽ ? ,0 01",
+   "options": [
+    {
+     "key": "A",
+     "text": ",0 04"
+    },
+    {
+     "key": "B",
+     "text": ",0 004"
+    },
+    {
+     "key": "C",
+     "text": ",0 0004"
+    },
+    {
+     "key": "D",
+     "text": ",0 000004"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q02.webp",
+    "width": 903,
+    "height": 260,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q03",
+   "number": 3,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "2 2 2 ¿Cuál es el valor de 1 + ( − )1 + ( )1,0 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": ",0 01"
+    },
+    {
+     "key": "B",
+     "text": ",0 2"
+    },
+    {
+     "key": "C",
+     "text": ",2 01"
+    },
+    {
+     "key": "D",
+     "text": "1,2"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q03.webp",
+    "width": 903,
+    "height": 230,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "Si la suma de 3 números enteros consecutivos es igual a p, ¿cuál de las siguientes afirmaciones es **siempre** verdadera respecto al valor de p?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Es un número impar."
+    },
+    {
+     "key": "B",
+     "text": "Es un múltiplo de 3."
+    },
+    {
+     "key": "C",
+     "text": "Es un número positivo."
+    },
+    {
+     "key": "D",
+     "text": "Es un número distinto de cero."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q04.webp",
+    "width": 903,
+    "height": 255,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q05",
+   "number": 5,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una aplicación de celular dispone al usuario una rutina de ejercicios distinta cada día. Esta aplicación es gratuita por un mes, pero luego se debe pagar una suscripción. Para esta aplicación existen dos formas de pago:\n\n- Suscripción mensual: \\$ 10 000 al inicio de cada mes\n\n- Suscripción por 12 meses: \\$ 96 000\n\nSi una persona escogió la suscripción mensual, ¿cuántos meses como máximo puede pagar para que esta sea económicamente más conveniente que la suscripción por 12 meses?",
+   "options": [
+    {
+     "key": "A",
+     "text": "9 meses"
+    },
+    {
+     "key": "B",
+     "text": "10 meses"
+    },
+    {
+     "key": "C",
+     "text": "11 meses"
+    },
+    {
+     "key": "D",
+     "text": "13 meses"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q05.webp",
+    "width": 903,
+    "height": 462,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q06",
+   "number": 6,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "En la tabla adjunta se presenta la cantidad de metros cuadrados recomendados para la crianza de cerdo de acuerdo con su masa.\n\nCantidad mínima de metros cuadrados por Masa del cerdo cerdo\n\nMenos de 10 kg ,0 15\n\nEntre 10 kg y 20 kg ,0 2\n\nEntre 20 kg y 30 kg 3,0\n\nEntre 30 kg y 50 kg ,0 4\n\nEntre 50 kg y 85 kg ,0 55\n\nEntre 85 kg y 110 kg ,0 65\n\n110 kg o más 1\n\nSi se quiere hacer un chiquero para 12 cerdos del tipo Göttingen, que llegan a tener una masa de entre 35 kg y 45 kg en edad adulta, ¿cuál es la cantidad mínima de metros cuadrados que debe tener el chiquero para cumplir con la recomendación?",
+   "options": [
+    {
+     "key": "A",
+     "text": ",2 4"
+    },
+    {
+     "key": "B",
+     "text": ",3 6"
+    },
+    {
+     "key": "C",
+     "text": "8,4"
+    },
+    {
+     "key": "D",
+     "text": "6,6"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q06.webp",
+    "width": 903,
+    "height": 825,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q07",
+   "number": 7,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una empresa decide registrar mensualmente la variación de la masa total de los metales almacenados en su bodega. El primer mes aumentó en 2 toneladas la masa almacenada, en el segundo mes disminuyó en 4 toneladas la masa almacenada, el tercer mes aumentó en 3 toneladas la masa almacenada y el cuarto mes aumentó en 1 tonelada la masa almacenada. Al finalizar el cuarto mes la masa total de los metales en la bodega es de 70 toneladas.\n\nDel departamento de ventas de la empresa necesitan saber la cantidad de toneladas de metal que había antes de comenzar los registros para completar el registro.\n\n¿Cuántas toneladas de metal habían almacenadas inicialmente en la bodega?",
+   "options": [
+    {
+     "key": "A",
+     "text": "66 toneladas"
+    },
+    {
+     "key": "B",
+     "text": "68 toneladas"
+    },
+    {
+     "key": "C",
+     "text": "70 toneladas"
+    },
+    {
+     "key": "D",
+     "text": "74 toneladas"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q07.webp",
+    "width": 903,
+    "height": 495,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q08",
+   "number": 8,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La temperatura en una cámara de frigorífico es de 12 ° C . Se necesita variar esta temperatura hasta alcanzar los − 36 ° C .\n\nSi la temperatura desciende 3 ° C cada cinco minutos, ¿cuánto tiempo se tardará en alcanzar dicha temperatura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "85 minutos"
+    },
+    {
+     "key": "B",
+     "text": "80 minutos"
+    },
+    {
+     "key": "C",
+     "text": "60 minutos"
+    },
+    {
+     "key": "D",
+     "text": "48 minutos"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q08.webp",
+    "width": 903,
+    "height": 345,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q09",
+   "number": 9,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "Una estudiante dedica en total 6 h a estudiar los primeros cinco días de la semana y las distribuye de la siguiente manera:\n\nLunes Martes Miércoles Jueves Viernes\n\nMatemática Física Lenguaje Física Historia\n\n1 h 1 h 2 h 1 h 1 h\n\nEl sábado estudiará 3 h dividiendo ese tiempo en estudiar Matemática, Física y Lenguaje. Esa división del tiempo la hace de modo que sea proporcional a las horas de estudio de los días lunes, martes y miércoles.\n\n¿Cuánto tiempo estudiará Matemática el día sábado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "20 min"
+    },
+    {
+     "key": "B",
+     "text": "30 min"
+    },
+    {
+     "key": "C",
+     "text": "45 min"
+    },
+    {
+     "key": "D",
+     "text": "60 min"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q09.webp",
+    "width": 903,
+    "height": 623,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q10",
+   "number": 10,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "Una pelota se deja caer desde una altura de 100 cm . Después de cada rebote la 4 de la altura anterior. altura máxima alcanzada por la pelota es 5\n\nEn el tercer rebote, ¿cuál es la altura máxima que alcanzará la pelota, aproximada al entero más cercano?",
+   "options": [
+    {
+     "key": "A",
+     "text": "51 cm"
+    },
+    {
+     "key": "B",
+     "text": "64 cm"
+    },
+    {
+     "key": "C",
+     "text": "80 cm"
+    },
+    {
+     "key": "D",
+     "text": "96 cm"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q10.webp",
+    "width": 903,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q11",
+   "number": 11,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el % 1 del 200 % de 200?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4,0"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "40"
+    },
+    {
+     "key": "D",
+     "text": "400"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q11.webp",
+    "width": 903,
+    "height": 227,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q12",
+   "number": 12,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Considera los números enteros positivos menores o iguales que 50.\n\n¿Cuál es el porcentaje de estos números que son múltiplos de 8?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 %"
+    },
+    {
+     "key": "B",
+     "text": "12 %"
+    },
+    {
+     "key": "C",
+     "text": "12 5, %"
+    },
+    {
+     "key": "D",
+     "text": "16 5, %"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q12.webp",
+    "width": 903,
+    "height": 295,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q13",
+   "number": 13,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una empresa de bebidas dispone de 2000 litros de agua para la producción de sus productos. Esta agua tiene que ser purificada y en este proceso se pierde un 12 % del agua.\n\n¿Cuál es la cantidad de litros de agua que quedan luego de ser purificada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "168"
+    },
+    {
+     "key": "B",
+     "text": "²⁴⁰"
+    },
+    {
+     "key": "C",
+     "text": "1760"
+    },
+    {
+     "key": "D",
+     "text": "1988"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q13.webp",
+    "width": 903,
+    "height": 329,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q14",
+   "number": 14,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Una radio que transmite 24 horas al día clasifica su tiempo al aire de la siguiente manera:\n\nTiempo al aire Porcentaje\n\nProgramas de conversación en vivo 35 %\n\nComerciales de los auspiciadores 15 %\n\nMúsica envasada 50 %\n\nPor falta de presupuesto, se aumenta el tiempo de comerciales de los auspiciadores en 2 horas.\n\n¿Cuál es el nuevo porcentaje de las 24 horas al día destinado a comerciales de los auspiciadores?",
+   "options": [
+    {
+     "key": "A",
+     "text": "15 8, 3 %"
+    },
+    {
+     "key": "B",
+     "text": "17 %"
+    },
+    {
+     "key": "C",
+     "text": "23 , 3 %"
+    },
+    {
+     "key": "D",
+     "text": "70 %"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q14.webp",
+    "width": 903,
+    "height": 647,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q15",
+   "number": 15,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En una tienda de artículos de aseo, un producto tiene un precio de \\$ 1 500 . El dueño de la tienda decide aplicarle un 20 % de descuento.\n\nA la semana siguiente, el dueño de la tienda aplica otra rebaja al precio ya rebajado del producto, de un 30 % .\n\n¿Cuál es el precio final del producto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 1 410"
+    },
+    {
+     "key": "B",
+     "text": "840 \\$"
+    },
+    {
+     "key": "C",
+     "text": "750 \\$"
+    },
+    {
+     "key": "D",
+     "text": "600 \\$"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q15.webp",
+    "width": 903,
+    "height": 405,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q16",
+   "number": 16,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En una panadería, un kilogramo de pan cuesta actualmente 1800 \\$ , pero su precio subirá un 20 % .\n\nSi se compraran x kilogramos de pan después del aumento del precio, ¿cuál de las siguientes expresiones correspondería al monto total, en pesos, que se pagaría?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 800 + 20 · x"
+    },
+    {
+     "key": "B",
+     "text": "1 800 + 2,0 · x"
+    },
+    {
+     "key": "C",
+     "text": "1 820 · x"
+    },
+    {
+     "key": "D",
+     "text": "2 160 · x"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q16.webp",
+    "width": 903,
+    "height": 372,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q17",
+   "number": 17,
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "stem": "En la tabla adjunta se presentan algunas unidades de distancia utilizadas en el Sistema Internacional y su equivalencia en metros.\n\n**Unidad Símbolo Equivalencia en metros**\n\nYottametro Ym 1 000 000 000 000 000 000 000 000 m\n\nZettametro Zm 1 000 000 000 000 000 000 000 m\n\nExámetro Em 1 000 000 000 000 000 000 m\n\nPetámetro Pm 1 000 000 000 000 000 m\n\nTerámetro Tm 1 000 000 000 000 m\n\nGigámetro Gm 1 000 000 000 m\n\nMegámetro Mm 1 000 000 m\n\nKilómetro Km 1 000 m\n\n1 Ym 1 Em ¿Cuál es el resultado de la operación · ? 1 Zm 1 Pm\n\n6",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 · 10 3"
+    },
+    {
+     "key": "B",
+     "text": "2 · 10 9"
+    },
+    {
+     "key": "C",
+     "text": "1 · 10 48 35"
+    },
+    {
+     "key": "D",
+     "text": "1 · 10"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q17.webp",
+    "width": 903,
+    "height": 845,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q18",
+   "number": 18,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "2 ¿Cuál es el resultado de ? 8 2\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 2 3"
+    },
+    {
+     "key": "B",
+     "text": "4 14"
+    },
+    {
+     "key": "C",
+     "text": "2 2"
+    },
+    {
+     "key": "D",
+     "text": "2 5 2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q18.webp",
+    "width": 903,
+    "height": 622,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q19",
+   "number": 19,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "3 Considera la expresión E = . 3 8 15\n\n¿Cuál de las siguientes expresiones representa un número entero menor que 200?",
+   "options": [
+    {
+     "key": "A",
+     "text": "288 · E"
+    },
+    {
+     "key": "B",
+     "text": "125 · E"
+    },
+    {
+     "key": "C",
+     "text": "250 · E"
+    },
+    {
+     "key": "D",
+     "text": "144 · E"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q19.webp",
+    "width": 903,
+    "height": 353,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q20",
+   "number": 20,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Camilo le propone a su mamá que cada día ella le deposite en una alcancía el doble de la cantidad depositada el día anterior. La mamá acepta la propuesta, pero solo hasta haberle depositado diez veces.\n\nSi la mamá comienza depositándole 20 \\$ , ¿cuánto le depositará al décimo día?",
+   "options": [
+    {
+     "key": "A",
+     "text": "180 \\$"
+    },
+    {
+     "key": "B",
+     "text": "200 \\$"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 10 240"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 20 480"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q20.webp",
+    "width": 903,
+    "height": 340,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q21",
+   "number": 21,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "El tiempo máximo en microsegundos que tarda un programa de computador en ordenar alfabéticamente una lista con n nombres se puede modelar mediante la\n\nexpresión ,0 001 · n · n .\n\nSi una lista tiene 10 000 nombres, ¿cuántos microsegundos tardará como máximo el programa en ordenar alfabéticamente los nombres de esta lista?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10"
+    },
+    {
+     "key": "B",
+     "text": "1000"
+    },
+    {
+     "key": "C",
+     "text": "10 000"
+    },
+    {
+     "key": "D",
+     "text": "50 000"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q21.webp",
+    "width": 903,
+    "height": 377,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q22",
+   "number": 22,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "Una persona diseña un programa computacional que crea una copia de todos los archivos del computador cada una hora.\n\nLa persona ejecuta el programa en su computador y al cabo de m horas este m posee un total de k · 2 archivos, con m y k números enteros positivos.\n\nSi la persona durante ese tiempo no elimina ni adiciona archivos, ¿cuál de las siguientes afirmaciones es **siempre** verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "k es el tiempo que el programa tarda en llenar totalmente el disco duro del computador. m"
+    },
+    {
+     "key": "B",
+     "text": "2 representa la cantidad de veces que el programa copia todos los archivos. m − 1"
+    },
+    {
+     "key": "C",
+     "text": "k · 2 representa el total de archivos nuevos que se crearon con el programa."
+    },
+    {
+     "key": "D",
+     "text": "k corresponde a la cantidad inicial de archivos que posee el computador antes de ejecutar el programa."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q22.webp",
+    "width": 903,
+    "height": 530,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q23",
+   "number": 23,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una persona compró cierta cantidad de un mismo artículo con \\$ 350 000 , sin ningún tipo de descuento y no le sobró dinero.\n\nSi cada artículo tiene precio A \\$ , ¿cuántos artículos compró?\n\n350 000",
+   "options": [
+    {
+     "key": "A",
+     "text": "A"
+    },
+    {
+     "key": "B",
+     "text": "350 000 A"
+    },
+    {
+     "key": "C",
+     "text": "350 000 − A A"
+    },
+    {
+     "key": "D",
+     "text": "350 000"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q23.webp",
+    "width": 903,
+    "height": 380,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q24",
+   "number": 24,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes expresiones representa la tercera parte del sucesor de p?\n\np +",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 3 ( )1"
+    },
+    {
+     "key": "B",
+     "text": "3 p + 1"
+    },
+    {
+     "key": "C",
+     "text": "p + 3 p + 1"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q24.webp",
+    "width": 903,
+    "height": 336,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q25",
+   "number": 25,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Para envasar cierta cantidad de agua mineral se necesitan 80 contenedores de 200 litros de capacidad cada uno.\n\n¿Cuántos contenedores de 50 litros de capacidad se necesitarán para envasar la misma cantidad de agua?",
+   "options": [
+    {
+     "key": "A",
+     "text": "20"
+    },
+    {
+     "key": "B",
+     "text": "125"
+    },
+    {
+     "key": "C",
+     "text": "320"
+    },
+    {
+     "key": "D",
+     "text": "12 000"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q25.webp",
+    "width": 903,
+    "height": 331,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q26",
+   "number": 26,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una persona gastó ( \\$ a + 1600 ) en ocho días.\n\nSi todos los días gastó lo mismo, ¿cuál de las siguientes expresiones representa lo que gastó la persona en dos días?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ a +400 4 1"
+    },
+    {
+     "key": "B",
+     "text": "\\$ a +1600 4 ( )"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 2 a + 400 ( )"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 2 a + 200"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q26.webp",
+    "width": 903,
+    "height": 391,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q27",
+   "number": 27,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "Considera el siguiente gráfico en el que se presenta un modelo para la relación entre la cantidad de kilogramos de lentejas que se venden a granel en un almacén y su monto total a pagar.\n\n¿Cuántos kilogramos de lentejas compró en total una persona que pagó 3300 \\$ ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 kg"
+    },
+    {
+     "key": "B",
+     "text": "2,2 kg"
+    },
+    {
+     "key": "C",
+     "text": "3,2 kg"
+    },
+    {
+     "key": "D",
+     "text": "5,2 kg"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q27.webp",
+    "width": 903,
+    "height": 953,
+    "mono": false
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q28",
+   "number": 28,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "Bajo ciertas condiciones, la cantidad de kilómetros recorridos por un automóvil es directamente proporcional a la cantidad de litros de combustible que consume.\n\nSi un automóvil que cumple estas condiciones recorre 90 kilómetros con 15 litros de bencina, ¿cuántos kilómetros puede recorrer este automóvil con 25 litros de bencina?",
+   "options": [
+    {
+     "key": "A",
+     "text": "54"
+    },
+    {
+     "key": "B",
+     "text": "60"
+    },
+    {
+     "key": "C",
+     "text": "135"
+    },
+    {
+     "key": "D",
+     "text": "150"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q28.webp",
+    "width": 903,
+    "height": 349,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q29",
+   "number": 29,
+   "axis": "Números",
+   "topic": "Razones",
+   "stem": "En una carrera se reparte un total de 12 000 dólares a las primeras cuatro personas que lleguen a la meta. Este reparto se realiza a razón de 6 : 3 : 2 : 1 de modo que mientras mejor haya sido la posición de llegada, más dinero se gana.\n\n¿Cuál es la cantidad que le corresponde a la persona que llegó en segundo lugar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2000 dólares"
+    },
+    {
+     "key": "B",
+     "text": "3000 dólares"
+    },
+    {
+     "key": "C",
+     "text": "4000 dólares"
+    },
+    {
+     "key": "D",
+     "text": "6000 dólares"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q29.webp",
+    "width": 903,
+    "height": 342,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q30",
+   "number": 30,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "2 3 ¿Cuál es la solución de la ecuación + x = ? 3 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "⁰ 1"
+    },
+    {
+     "key": "B",
+     "text": "⁶"
+    },
+    {
+     "key": "C",
+     "text": "− 1 5"
+    },
+    {
+     "key": "D",
+     "text": "6"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q30.webp",
+    "width": 903,
+    "height": 312,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q31",
+   "number": 31,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Al finalizar un trayecto, la cantidad L de litros de combustible que quedan en el estanque de cierto vehículo, está dada por la expresión:\n\nL = c − 1,0 · x\n\nen la que c es la cantidad de litros que tenía el estanque de este vehículo al iniciar el trayecto, x es la cantidad de kilómetros que recorrió el vehículo y 1,0 es una constante medida en litros por kilómetro.\n\nEste vehículo, al iniciar el trayecto tenía en el estanque 50 litros y al finalizarlo tenía 30 litros.\n\n¿Cuántos kilómetros recorrió el vehículo en ese trayecto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "800"
+    },
+    {
+     "key": "B",
+     "text": "250"
+    },
+    {
+     "key": "C",
+     "text": "200"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q31.webp",
+    "width": 903,
+    "height": 541,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q32",
+   "number": 32,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una torta está formada por capas alternadas de bizcocho y de manjar, de modo que la capa inferior y la capa superior tienen que ser de bizcocho.\n\nSi cada capa de bizcocho tiene una masa de 100 g y cada capa de manjar tiene una masa de 150 g , ¿cuántas capas de manjar, como máximo, puede tener una torta para que esta no supere los 700 g de masa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "4"
+    },
+    {
+     "key": "D",
+     "text": "5"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q32.webp",
+    "width": 903,
+    "height": 366,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q33",
+   "number": 33,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Al organizar un seminario, una persona recibe dos ofertas de dos centros de eventos. El primero, cobra 2000 \\$ por invitado, más un cargo fijo de \\$ 520 000 . El segundo, cobra 5000 \\$ por invitado, más un cargo fijo de \\$ 310 000 .\n\n¿Cuántos invitados como mínimo deberían asistir al evento, para que el segundo centro de eventos sea más caro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "70"
+    },
+    {
+     "key": "B",
+     "text": "71"
+    },
+    {
+     "key": "C",
+     "text": "118"
+    },
+    {
+     "key": "D",
+     "text": "119"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q33.webp",
+    "width": 903,
+    "height": 364,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q34",
+   "number": 34,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Se hace una colecta para recaudar fondos, logrando recaudar \\$ 30 000 con 150 monedas de dos valores distintos.\n\nEl siguiente sistema de ecuaciones es un modelo para determinar la cantidad de monedas de cada tipo:\n\nx + y = 150 500 x + 50 y = 30 000\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "x e y corresponden a la cantidad de monedas de \\$ 500 y de \\$ 50 , respectivamente."
+    },
+    {
+     "key": "B",
+     "text": "Hay exactamente 500 monedas del tipo x y 50 monedas del tipo y."
+    },
+    {
+     "key": "C",
+     "text": "Al considerar una moneda de cada tipo el valor total es 150 \\$ ."
+    },
+    {
+     "key": "D",
+     "text": "Considerando solo las monedas de 500 \\$ se juntan 5000 \\$ ."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q34.webp",
+    "width": 903,
+    "height": 511,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q35",
+   "number": 35,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En una tienda de ropa se necesita incorporar las ventas por Internet con reparto a domicilio para aumentar sus ventas. Para el reparto se necesita contratar los servicios de una empresa de vehículos de transporte y la tienda recibe dos cotizaciones:\n\n4000\n\n- Cobro empresa A en un mes: C )t( = · t + 4000 3\n\n- Cobro empresa B en un mes: C )t( = 2000 · t\n\ncon t el tiempo de uso del servicio, en horas, y C )t( el costo del servicio, en pesos.\n\n¿Cuánto tiempo se debe usar el servicio en cada empresa para que el costo sea el mismo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,1 horas"
+    },
+    {
+     "key": "B",
+     "text": "2 horas"
+    },
+    {
+     "key": "C",
+     "text": "6 horas"
+    },
+    {
+     "key": "D",
+     "text": "12 horas"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q35.webp",
+    "width": 903,
+    "height": 561,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q36",
+   "number": 36,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "El Índice de Masa Corporal (IMC) de una persona se relaciona con su masa, medida en kilogramos, y su estatura, medida en metros, a través de la expresión:\n\n= ² · masa estatura IMC\n\nSi una persona tiene una masa de 54 kg y tiene un IMC = 24 , ¿cuál es su estatura según este modelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": ",1 05 m"
+    },
+    {
+     "key": "B",
+     "text": ",1 125 m"
+    },
+    {
+     "key": "C",
+     "text": "5,1 m"
+    },
+    {
+     "key": "D",
+     "text": ",2 25 m"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q36.webp",
+    "width": 903,
+    "height": 411,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q37",
+   "number": 37,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "1 Una empresa ha desarrollado la fórmula = − ( − ) ² + U ( x ) x 12 1 000 000 que le 2 permite conocer la utilidad que tendrá, en pesos, al vender x unidades de un artículo.\n\n¿Cuántos artículos se deben vender para que la utilidad de la empresa sea de \\$ 1 000 000 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "12"
+    },
+    {
+     "key": "C",
+     "text": "13"
+    },
+    {
+     "key": "D",
+     "text": "14"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q37.webp",
+    "width": 903,
+    "height": 377,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q38",
+   "number": 38,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "En el siguiente gráfico se representa la rapidez de un automóvil a control remoto a medida que transcurre el tiempo.\n\nTiempo en segundos\n\n¿Cuál de las siguientes afirmaciones se puede deducir del gráfico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Entre los 3 s y 7 s el automóvil está detenido."
+    },
+    {
+     "key": "B",
+     "text": "El automóvil cambia de dirección cuatro veces."
+    },
+    {
+     "key": "C",
+     "text": "La distancia total recorrida por el automóvil es 20 km ."
+    },
+    {
+     "key": "D",
+     "text": "Entre los 8 s y 10 s el automóvil disminuye su rapidez."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q38.webp",
+    "width": 903,
+    "height": 698,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q39",
+   "number": 39,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La relación entre el puntaje que una persona obtiene en cierta prueba y su nota puntaje está dada por la siguiente expresión: NOTA = + 2 . 14\n\n¿Cuál de las siguientes afirmaciones es verdadera respecto a esta prueba?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Para una nota 5,3 se necesita obtener un puntaje de 35 puntos."
+    },
+    {
+     "key": "B",
+     "text": "Con 50 puntos se obtiene una nota superior a 6."
+    },
+    {
+     "key": "C",
+     "text": "Cuando el puntaje aumenta en un punto, la nota aumenta en 2."
+    },
+    {
+     "key": "D",
+     "text": "La mínima nota que se puede obtener en la prueba es un 2."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q39.webp",
+    "width": 903,
+    "height": 339,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q40",
+   "number": 40,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Enun computadorse simula el lanzamiento de un objeto desde una altura de 8 cm . La altura, en cm , que alcanza dicho objeto se modela por la función f 2 definida por f )t( = − t + t2 + 8 , tal que t representa el tiempo transcurrido desde el lanzamiento, en s.\n\n¿A qué altura se encontraría el objeto a los 3 s de ser lanzado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 cm"
+    },
+    {
+     "key": "B",
+     "text": "8 cm"
+    },
+    {
+     "key": "C",
+     "text": "13 cm"
+    },
+    {
+     "key": "D",
+     "text": "23 cm"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q40.webp",
+    "width": 903,
+    "height": 395,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q41",
+   "number": 41,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Una persona necesita medir la altura de un árbol, para lo cual usa un medidor de distancia láser de la siguiente manera:\n\n- primero, se aleja del árbol 12 m en un tramo de camino recto y perfectamente horizontal.\n\n- segundo, utiliza el medidor de distancia láser a ras del suelo apuntando al extremo superior del árbol el cual registra una distancia de 15 m .\n\nEn la figura adjunta se representa la situación anterior.\n\n12 m\n\n¿Cuál es la altura del árbol?",
+   "options": [
+    {
+     "key": "A",
+     "text": "9 m"
+    },
+    {
+     "key": "B",
+     "text": "13 5, m"
+    },
+    {
+     "key": "C",
+     "text": "15 m"
+    },
+    {
+     "key": "D",
+     "text": "369 m"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q41.webp",
+    "width": 903,
+    "height": 871,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q42",
+   "number": 42,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "La medida d del diámetro de un círculo inscrito en un triángulo rectángulo se puede determinar con la fórmula de Poncelet:\n\na + b = c + d\n\nen la cual y b son las medidas de los catetos del triángulo y c es la medida de la a hipotenusa.\n\nSi las medidas de los catetos de un triángulo rectángulo son 8 cm y 6 cm , ¿cuál es el perímetro del círculo inscrito en él?",
+   "options": [
+    {
+     "key": "A",
+     "text": "π cm"
+    },
+    {
+     "key": "B",
+     "text": "2 π cm"
+    },
+    {
+     "key": "C",
+     "text": "4 π cm"
+    },
+    {
+     "key": "D",
+     "text": "8 π cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q42.webp",
+    "width": 903,
+    "height": 478,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q43",
+   "number": 43,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "Una fábrica de espejos recibe un pedido para elaborar varios tamaños de espejos, con la particularidad de que todos deben ser cuadrados y que en las esquinas se sobrepongan triángulos rectángulos de madera iguales entre sí, como el que se representa en la figura adjunta.\n\nConsidera m y n como las distintas medidas que pueden tener los catetos de los triángulos de madera y p como las distintas medidas que puede tener el lado del espejo.\n\nSi todas las medidas están en cm, ¿cuál de las siguientes fórmulas permite determinar el área () 2 S que ocupa el vidrio que se ve en cada espejo, en cm?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "S = p + 4 · m · n 2"
+    },
+    {
+     "key": "B",
+     "text": "S = p − 4 · m · n 2"
+    },
+    {
+     "key": "C",
+     "text": "S = p + 2 · m · n 2"
+    },
+    {
+     "key": "D",
+     "text": "S = p − 2 · m · n"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q43.webp",
+    "width": 903,
+    "height": 773,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q44",
+   "number": 44,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "Se tiene un paralelepípedo recto de base cuadrada de lado 5 cm y altura 8 cm .\n\nSi se aumentan al doble las medidas de sus aristas, ¿cuál es el volumen del nuevo prisma?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "400 cm 3"
+    },
+    {
+     "key": "B",
+     "text": "800 cm 3"
+    },
+    {
+     "key": "C",
+     "text": "1600 cm 3"
+    },
+    {
+     "key": "D",
+     "text": "40 000 cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q44.webp",
+    "width": 903,
+    "height": 354,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q45",
+   "number": 45,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "En la siguiente imagen se presenta un diseño de un módulo formado por bloques de vidrio y un bloque de cemento. Los módulos se utilizan para hacer una pared decorativa.\n\nCada bloque de vidrio tiene una cara con forma cuadrada con lado de 20 cm . La durabilidad de este módulo depende de su densidad y, para obtenerla, se requiere conocer el volumen del bloque de vidrio que tiene.\n\n¿Cuál es el volumen de los bloques de vidrio en cada módulo?\n\n3 38 400 cm",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 35 200 cm"
+    },
+    {
+     "key": "B",
+     "text": "3 32 000 cm"
+    },
+    {
+     "key": "C",
+     "text": "3 12 800 cm"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q45.webp",
+    "width": 903,
+    "height": 778,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q46",
+   "number": 46,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "3 4 π R El volumen de una esfera y de un cono están dados por las expresiones 3 π r² h y , respectivamente, con R el radio de la esfera, r el radio basal del cono 3 y h la altura del cono.\n\nSi se designa por M al volumen de la esfera, ¿cuál de las siguientes expresiones representa al volumen de un cono cuya altura y radio basal tienen la misma medida que el radio de la esfera?\n\nM",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 3 M"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "M"
+    },
+    {
+     "key": "D",
+     "text": "4 M"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q46.webp",
+    "width": 903,
+    "height": 502,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q47",
+   "number": 47,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "El punto ( ,2 − 3 ) es un vértice común de cuatro cuadrados cuyos lados miden 2 unidades y son paralelos a los ejes coordenados del plano cartesiano.\n\n¿Cuál de las siguientes coordenadas podría corresponder a un vértice de alguno de los cuadrados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "( ,2 − 2 )"
+    },
+    {
+     "key": "B",
+     "text": "( ,4 − 5 )"
+    },
+    {
+     "key": "C",
+     "text": "( − ,1 − 3 )"
+    },
+    {
+     "key": "D",
+     "text": "( ,2 )1"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q47.webp",
+    "width": 903,
+    "height": 356,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q48",
+   "number": 48,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Una figura se mueve con las siguientes transformaciones isométricas desde su posición inicial hasta su posición final como se presenta en la figura adjunta.\n\n1) La figura en la posición inicial se rota en 90 en sentido horario con centro de ° rotación el centro de la figura. 2) Luego, se traslada 2 metros hacia el sur y 6 metros al este. 3) Por último, se vuelve a rotar en 90 en sentido horario con centro de rotación el ° centro de la figura, resultando la figura en la posición final.\n\n¿Cuál de las siguientes secuencias de transformaciones isométricas permite volver a dejar la figura en la posición inicial?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Rotar en 180 en sentido horario con centro de rotación el centro de la ° figura y luego trasladar 2 metros al norte y 6 metros al oeste."
+    },
+    {
+     "key": "B",
+     "text": "Rotar en 180 en sentido horario con centro de rotación el centro de la ° figura y luego trasladar 2 metros al sur y 6 metros al este."
+    },
+    {
+     "key": "C",
+     "text": "Rotar en 90 en sentido antihorario con centro de rotación el centro de la ° figura y luego trasladar 2 metros al sur y 6 metros al este."
+    },
+    {
+     "key": "D",
+     "text": "Rotar en 90 en sentido antihorario con centro de rotación el centro de la ° figura y trasladar 2 metros al norte y 6 metros al oeste."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q48.webp",
+    "width": 903,
+    "height": 1014,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q49",
+   "number": 49,
+   "axis": "Geometría",
+   "topic": "Transformaciones isométricas",
+   "stem": "Se quiere obtener el punto ( 12 , )1 a partir del punto (− ,3 5 ) mediante cuatro transformaciones isométricas. Para esto se efectuaron los siguientes pasos, cometiendo un error en uno de ellos.\n\n**Paso 1**: al punto (− ,3 5 ) se le aplica una reflexión con respecto al eje Y ,\n\nobteniendo el punto ( ,3 5 ) .\n\n**Paso 2**: al punto ( ,3 5 ) se le aplica una traslación según el vector (− ,2 7 ) ,\n\nobteniendo el punto ,1( 12 ) .\n\n**Paso 3**: al punto ,1( 12 ) se le aplica una rotación en 90 en sentido antihorario ° con centro en el origen, obteniendo el punto ( 12 , − )1 .\n\n**Paso 4**: al punto ( 12 , − )1 se le aplica una reflexión con respecto al eje X ,\n\nobteniendo el punto ( 12 , )1 .\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q49.webp",
+    "width": 903,
+    "height": 657,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q50",
+   "number": 50,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La siguiente imagen corresponde a un aparato que se usa para copiar dibujos, pues refleja el dibujo original de modo que el usuario logra realizar el dibujo en otro papel, de manera invertida.\n\n¿Cuál de las siguientes letras se lee igual al ser copiada en papel con este aparato si se coloca al lado izquierdo del papel?",
+   "options": [
+    {
+     "key": "A",
+     "text": "S"
+    },
+    {
+     "key": "B",
+     "text": "M"
+    },
+    {
+     "key": "C",
+     "text": "b"
+    },
+    {
+     "key": "D",
+     "text": "Q"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q50.webp",
+    "width": 903,
+    "height": 754,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q51",
+   "number": 51,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "En un juego se sacan tarjetas al azar de un mazo que incluyen dos movimientos que debe realizar una ficha en un tablero cuadriculado. En la figura adjunta se presenta un ejemplo de un movimiento realizado con una de las tarjetas.\n\nLa ficha de un jugador se encuentra en la casilla inicial que se encuentra en el centro del tablero y se mueve según la siguiente secuencia de tarjetas:\n\nAl sacar otra tarjeta, y realizar el movimiento correspondiente, la ficha del jugador vuelve a la casilla inicial.\n\n¿Cuál fue la cuarta tarjeta que sacó?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q51.webp",
+    "width": 903,
+    "height": 1058,
+    "mono": false
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q52",
+   "number": 52,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Ingrid representa las medidas de su casa en un plano a una escala en 1 : 100 .\n\n¿Cuál de las siguientes fórmulas permitió a Ingrid llevar las medidas de su casa a las medidas en el plano?\n\n100",
+   "options": [
+    {
+     "key": "A",
+     "text": "Medidas en el plano = medida en la realidad ( )100"
+    },
+    {
+     "key": "B",
+     "text": "Medidas en el plano = medida en la realidad · medida en la realidad"
+    },
+    {
+     "key": "C",
+     "text": "Medidas en el plano = 2 100 medida en la realidad"
+    },
+    {
+     "key": "D",
+     "text": "Medidas en el plano = 100"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q52.webp",
+    "width": 903,
+    "height": 414,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q53",
+   "number": 53,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En un taller de instrumentos se construirá una guitarra utilizando un plano que está en escala 1 : 8 . En el plano, el largo del mástil de la guitarra es de 95 mm .\n\n¿Cuál debe ser el largo del mástil de la guitarra que se construirá?",
+   "options": [
+    {
+     "key": "A",
+     "text": "103 cm"
+    },
+    {
+     "key": "B",
+     "text": "85 5, cm"
+    },
+    {
+     "key": "C",
+     "text": "76 cm ,8 55 cm"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q53.webp",
+    "width": 903,
+    "height": 332,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q54",
+   "number": 54,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Un edificio vertical al suelo da una sombra de 12 metros, mientras que a la misma hora un árbol, que está en una posición vertical al suelo, y cuya altura es de 4 metros proyecta una sombra de 3 metros.\n\n¿Cuál de las siguientes igualdades permite determinar la altura x, en metros, del edificio?\n\n12 3 =",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 x x 3 ="
+    },
+    {
+     "key": "B",
+     "text": "4 12 9 3 ="
+    },
+    {
+     "key": "C",
+     "text": "4 x x 3 ="
+    },
+    {
+     "key": "D",
+     "text": "4 9"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q54.webp",
+    "width": 903,
+    "height": 441,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q55",
+   "number": 55,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Un carpintero construye una estantería triangular con repisas paralelas entre sí y de diferentes longitudes, tal como se representa en la figura adjunta.\n\n12 cm\n\n24 cm\n\nx\n\n12 cm 28 cm\n\n¿Cuál es la medida x en la repisa de la estantería que el carpintero debe construir?",
+   "options": [
+    {
+     "key": "A",
+     "text": "14 cm"
+    },
+    {
+     "key": "B",
+     "text": "16 cm"
+    },
+    {
+     "key": "C",
+     "text": "21 cm"
+    },
+    {
+     "key": "D",
+     "text": "56 cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q55.webp",
+    "width": 903,
+    "height": 657,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q56",
+   "number": 56,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "En el taller de literatura de un colegio, se les preguntó a los 25 estudiantes cuántos días tardaron en leer un libro. En base a las respuestas de los estudiantes se armó la siguiente tabla que está incompleta:\n\nCantidad de días Frecuencia Frecuencia relativa\n\n1 2 ,0 08\n\n2 4 ,0 16\n\n3\n\n4 9 ,0 36\n\n5 ,0 12\n\nTotal 25 1\n\n¿Cuántos estudiantes se demoraron tres días en leer el libro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "8"
+    },
+    {
+     "key": "D",
+     "text": "10"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q56.webp",
+    "width": 903,
+    "height": 666,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q57",
+   "number": 57,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "En la siguiente tabla se presenta la cantidad de hijos que tienen las familias que viven en un edificio:\n\nCantidad de hijos Frecuencia\n\n0 6\n\n1 3\n\n2 2\n\n3 3\n\n4 1\n\n¿Cuántas familias viven en total en ese edificio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5"
+    },
+    {
+     "key": "B",
+     "text": "10"
+    },
+    {
+     "key": "C",
+     "text": "15"
+    },
+    {
+     "key": "D",
+     "text": "20"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q57.webp",
+    "width": 903,
+    "height": 569,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q58",
+   "number": 58,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "Las calificaciones obtenidas por cinco estudiantes en una evaluación de matemática están registradas en la siguiente tabla:\n\nEstudiante Calificación\n\nIsabel ,5 0\n\nGaspar 0,4\n\nBaltazar 0,4\n\nCamila ,3 0\n\nClaudia 0,4\n\nEl profesor ajusta las calificaciones obtenidas por cada estudiante de modo que la 6 calificación máxima sea 0,6 , para ello utilizará la relación N = p , tal que N es 5 la nueva calificación y p es la calificación actual obtenida por cada estudiante en la tabla.\n\n¿Cuál es el nuevo promedio de las calificaciones de estos estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,6"
+    },
+    {
+     "key": "B",
+     "text": "8,4"
+    },
+    {
+     "key": "C",
+     "text": ",4 0"
+    },
+    {
+     "key": "D",
+     "text": "0,2"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q58.webp",
+    "width": 903,
+    "height": 782,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q59",
+   "number": 59,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "En el gráfico adjunto se representan los resultados de una encuesta aplicada a los 50 estudiantes de dos cuartos medios de un colegio. Dicha encuesta tenía relación con la creación de un taller literario.\n\n**4 %**\n\n**8 %**\n\n**30 %** Totalmente en desacuerdo\n\nEn desacuerdo\n\n**8 %**\n\nNi de acuerdo ni en desacuerdo\n\nDe acuerdo\n\n**50 %** Totalmente de acuerdo\n\nSi cada estudiante marcó una sola opción en la encuesta, ¿cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Más de la cuarta parte de los estudiantes están “totalmente en desacuerdo” con la creación del taller."
+    },
+    {
+     "key": "B",
+     "text": "Más de la mitad de los estudiantes respondieron “en desacuerdo” en la encuesta."
+    },
+    {
+     "key": "C",
+     "text": "Las tres quintas partes de los estudiantes están “totalmente en desacuerdo” con la creación del taller."
+    },
+    {
+     "key": "D",
+     "text": "La octava parte de los estudiantes respondieron “ni de acuerdo ni en desacuerdo” con la creación del taller."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q59.webp",
+    "width": 903,
+    "height": 828,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q60",
+   "number": 60,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Un grupo de adolescentes se inscribió para recibir un regalo de Navidad. La entidad encargada de comprar los regalos necesita saber la cantidad de adolescentes que hay por cada una de las edades para hacerles regalos distintos por edad. Para ello, les preguntan qué edad tienen, registrando la siguiente lista:\n\n15, 15, 14, 14, 15, 15, 15, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 12, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14 y 12.\n\n¿Para qué adolescentes se debe comprar una mayor cantidad de regalos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Para adolescentes de 12 años."
+    },
+    {
+     "key": "B",
+     "text": "Para adolescentes de 13 años."
+    },
+    {
+     "key": "C",
+     "text": "Para adolescentes de 14 años."
+    },
+    {
+     "key": "D",
+     "text": "Para adolescentes de 15 años."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q60.webp",
+    "width": 903,
+    "height": 426,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q61",
+   "number": 61,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Una institución proyectó un aumento del porcentaje del Producto Interno Bruto (PIB) en un país, de la forma que indica el siguiente gráfico: Porcentaje de aumento\n\n3 %\n\n2 %\n\n2024 2025 2026 2027 Años Un economista considera que la proyección realizada es poco realista, por lo que recomienda modificar la proyección, disminuyendo el porcentaje a partir del segundo año en un punto porcentual menos al propuesto en la proyección.\n\n¿Cuál de los siguientes gráficos es el más adecuado para representar lo propuesto por el economista?\n\nPorcentaje de aumento Porcentaje de aumento",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 % 2 % 1 % 1 % 2024 2025 2026 2027 2024 2025 2026 2027 Años Años Porcentaje de aumento Porcentaje de aumento"
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": "D) 3 % 2 % 1 % 1 % 2024 2025 2026 2027 2024 2025 2026 2027 Años Años"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q61.webp",
+    "width": 903,
+    "height": 1058,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q62",
+   "number": 62,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de posición",
+   "stem": "Durante el año 2023 una fundación focalizará su ayuda al 25 % de los hogares con menores ingresos de una comuna.\n\n¿Cuál de las siguientes medidas de posición permite determinar el ingreso máximo que debe tener un hogar de la comuna para ser beneficiado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El segundo cuartil de los ingresos."
+    },
+    {
+     "key": "B",
+     "text": "El percentil 75 de los ingresos."
+    },
+    {
+     "key": "C",
+     "text": "El percentil 4 de los ingresos."
+    },
+    {
+     "key": "D",
+     "text": "El primer cuartil de los ingresos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q62.webp",
+    "width": 903,
+    "height": 323,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q63",
+   "number": 63,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En el curso de Francisca se vende una rifa para financiar la gira de estudios en la que el premio es una bicicleta. Francisca quiere ganar la bicicleta y solo pudo comprar 8 números de la lista que ella vendió.\n\nSi se vendieron 100 listas completas y cada una con 20 números, ¿cuál es la probabilidad que tiene Francisca de ganarse la bicicleta si solo compró de una lista?\n\n8",
+   "options": [
+    {
+     "key": "A",
+     "text": "¹²⁰ 8"
+    },
+    {
+     "key": "B",
+     "text": "⁸⁰⁰ 8"
+    },
+    {
+     "key": "C",
+     "text": "²⁰ 8"
+    },
+    {
+     "key": "D",
+     "text": "2000"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q63.webp",
+    "width": 903,
+    "height": 499,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q64",
+   "number": 64,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Se realizó una encuesta sobre las preferencias de un grupo de personas respecto a su pasatiempo favorito, tal que cada persona eligió solo un pasatiempo. En esta encuesta 30 personas indicaron que su pasatiempo favorito es leer, 48 personas indicaron que es hacer deporte y n personas indicaron que es ver películas.\n\nAl elegir una persona al azar de este grupo, la probabilidad de que su pasatiempo favorito no sea hacer deporte es 6,0 .\n\n¿Cuál es la cantidad de personas que indicaron ver películas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "22"
+    },
+    {
+     "key": "B",
+     "text": "42"
+    },
+    {
+     "key": "C",
+     "text": "52"
+    },
+    {
+     "key": "D",
+     "text": "117"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q64.webp",
+    "width": 903,
+    "height": 427,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2024-invierno-q65",
+   "number": 65,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Un grupo de estudiantes quiere calcular la probabilidad de que al lanzar tres monedas resulten las tres caras o las tres sellos, realizando el siguiente procedimiento en el cual cometen un error.\n\n**Paso 1:** anotan todos los resultados posibles, obteniendo ,c( ,c )c , ,c( )s,c , ,c( ,s )c , ,c( ,s )s , ,s( ,c )c , ,s( ,c )s , ,s( ,s )c y ,s( ,s )s .\n\n**Paso 2:** eligen los resultados favorables, ,c( ,c )c y ,s( ,s )s .\n\n**Paso 3:** calculan las probabilidades de cada resultado favorable por separado, 3 3 P ( ,c( ,c )c ) = y ( P ,s( ,s )s ) = . 8 8 3 **Paso 4:** calculan P ( tres caras o tres sellos ) = P ( ,s( ,s )s ) + P ( ,c( ,c )c ) = . 4\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2024-invierno/q65.webp",
+    "width": 903,
+    "height": 647,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}

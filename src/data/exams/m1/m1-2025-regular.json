@@ -1,0 +1,1620 @@
+{
+ "id": "m1-2025-regular",
+ "subject": "m1",
+ "title": "PAES Regular 2025",
+ "description": "Selección oficial de 45 de las 65 preguntas de Competencia Matemática 1 (M1), aplicada el 04-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
+ "year": 2025,
+ "modality": "regular",
+ "source": "demre",
+ "form": "113",
+ "appliedOn": "2024-12-04",
+ "durationMinutes": 95,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   173,
+   199,
+   222,
+   244,
+   265,
+   284,
+   301,
+   316,
+   331,
+   346,
+   362,
+   378,
+   391,
+   402,
+   412,
+   422,
+   434,
+   447,
+   462,
+   476,
+   487,
+   496,
+   503,
+   510,
+   518,
+   529,
+   542,
+   557,
+   570,
+   581,
+   589,
+   596,
+   602,
+   610,
+   621,
+   634,
+   648,
+   662,
+   674,
+   683,
+   691,
+   700,
+   710,
+   723,
+   738,
+   753,
+   767,
+   779,
+   792,
+   805,
+   821,
+   838,
+   856,
+   875,
+   894,
+   915,
+   938,
+   964,
+   992,
+   1000
+  ],
+  "officialQuestionCount": 65,
+  "officialScorableCount": 60
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m1-2025-regular-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Recta numérica",
+   "stem": "Considera la siguiente recta numérica:\n\n−1 0 1\n\n¿Cuál de los siguientes procedimientos representa la operación − 5 + ( − 8 ) usando la recta numérica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ubicarse en el − 5 y desplazarse 8 unidades a la izquierda."
+    },
+    {
+     "key": "B",
+     "text": "Ubicarse en el − 5 y desplazarse 8 unidades a la derecha."
+    },
+    {
+     "key": "C",
+     "text": "Ubicarse en el − 8 y desplazarse 5 unidades a la derecha."
+    },
+    {
+     "key": "D",
+     "text": "Ubicarse en el − 8 y desplazarse 3 unidades a la derecha."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q02.webp",
+    "width": 903,
+    "height": 403,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q03",
+   "number": 3,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "4 5 Para encontrar el resultado de · ( 4 · 3 − 6 ) : · ( 12 − 2 · 4 , se realiza el ) 5 3 siguiente procedimiento, cometiéndose un error.\n\n**Paso 1:** se resuelven las operaciones de los paréntesis internos, obteniéndose 4 5 · ( − 12 ) : · 40 . 5 3\n\n48 200 **Paso 2:** se resuelven las multiplicaciones, obteniéndose − : . 5 3\n\n3 48 · **Paso 3:** se resuelve la división como − . 5 200\n\n18 **Paso 4:** se resuelve la multiplicación, obteniéndose − . 125\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q03.webp",
+    "width": 903,
+    "height": 707,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una persona necesita comprar 60 kg de alimento de cierta marca para sus perros.\n\nEn una tienda para mascotas, ese alimento tiene los siguientes precios:\n\n- El saco de 20 kg se vende a \\$ 33 500 .\n\n- El saco de 15 kg se vende a \\$ 25 000 .\n\n- El saco de 12 kg se vende a \\$ 20 000 .\n\n- El saco de 5 kg se vende a \\$ 10 000 .\n\nSi la persona requiere priorizar en primer lugar el menor precio a pagar y luego la menor cantidad de sacos, ¿cuál de las siguientes opciones le conviene a la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Comprar doce sacos de 5 kg ."
+    },
+    {
+     "key": "B",
+     "text": "Comprar cinco sacos de 12 kg ."
+    },
+    {
+     "key": "C",
+     "text": "Comprar cuatro sacos de 15 kg ."
+    },
+    {
+     "key": "D",
+     "text": "Comprar tres sacos de 20 kg ."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q04.webp",
+    "width": 903,
+    "height": 571,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q06",
+   "number": 6,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Dos personas se juntan a realizar ejercicios, pero cada una tiene su propia rutina, las que se detallan a continuación:\n\n- La primera persona realiza ejercicios durante 2 minutos y luego se toma 30 segundos de descanso, repitiendo esta serie ocho veces.\n\n- La segunda persona realiza ejercicios durante 1 minuto y 30 segundos y luego se toma 15 segundos de descanso, repitiendo esta serie doce veces.\n\nSi las dos personas comienzan sus rutinas al mismo tiempo, ¿cuál de los siguientes argumentos garantiza que una de las personas termina la rutina antes que la otra?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que la cantidad de repeticiones de las series de ambas personas es distinta."
+    },
+    {
+     "key": "B",
+     "text": "Que el tiempo de descanso de ambas personas es distinto."
+    },
+    {
+     "key": "C",
+     "text": "Que la suma entre el tiempo de ejercicio, el descanso y las repeticiones de las series es distinta en cada persona."
+    },
+    {
+     "key": "D",
+     "text": "Que la suma entre el tiempo de ejercicio y el descanso, multiplicada por las repeticiones de las series, es distinta en cada persona."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q06.webp",
+    "width": 903,
+    "height": 542,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q07",
+   "number": 7,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una persona recorrió en bicicleta una ruta de 30 km en 3 días.\n\n3 de lo que le faltaba 1 de la ruta, el segundo día recorrió 5 El primer día recorrió 3 y el tercer día recorrió el resto.\n\n¿Cuántos kilómetros recorrió el tercer día?",
+   "options": [
+    {
+     "key": "A",
+     "text": "15"
+    },
+    {
+     "key": "B",
+     "text": "10"
+    },
+    {
+     "key": "C",
+     "text": "8"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q07.webp",
+    "width": 903,
+    "height": 385,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q09",
+   "number": 9,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Para conocer el equivalente en centímetros de una distancia medida en millas, se utiliza el siguiente modelo:\n\nC = 160 934 · x ,\n\ntal que x es la distancia en millas y C es el equivalente en centímetros.\n\nSi un kilómetro es equivalente a 100 000 centímetros, ¿cuál de las siguientes igualdades representa la equivalencia en kilómetros k de una distancia de x millas?\n\n100 000 · x",
+   "options": [
+    {
+     "key": "A",
+     "text": "k = 160 934"
+    },
+    {
+     "key": "B",
+     "text": "k = 160 934 · x · 100 000 160 934 · x"
+    },
+    {
+     "key": "C",
+     "text": "k = 100 000"
+    },
+    {
+     "key": "D",
+     "text": "k = 160 934 · x − 100 000"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q09.webp",
+    "width": 903,
+    "height": 542,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q10",
+   "number": 10,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "La regla de Naegele es un método que permite determinar la fecha probable de parto de una mujer, determinando el día, mes y año tal como se representa en el siguiente diagrama:\n\nSi la fecha de la última menstruación de una mujer embarazada fue el 19/04/2022, ¿cuál será la probable fecha de parto de esta mujer según la regla de Naegele?",
+   "options": [
+    {
+     "key": "A",
+     "text": "26/01/2023"
+    },
+    {
+     "key": "B",
+     "text": "19/01/2023"
+    },
+    {
+     "key": "C",
+     "text": "12/01/2023"
+    },
+    {
+     "key": "D",
+     "text": "16/01/2023"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q10.webp",
+    "width": 903,
+    "height": 754,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q11",
+   "number": 11,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Si 30 corresponde al 20 % de una cantidad, ¿cuál es dicha cantidad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "50"
+    },
+    {
+     "key": "C",
+     "text": "150"
+    },
+    {
+     "key": "D",
+     "text": "600"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q11.webp",
+    "width": 903,
+    "height": 230,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q13",
+   "number": 13,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Si p aumentado en su 40 % es 150, ¿cuál de las siguientes expresiones corresponde a p?",
+   "options": [
+    {
+     "key": "A",
+     "text": "150 − 40 100 · 150"
+    },
+    {
+     "key": "B",
+     "text": "140 150"
+    },
+    {
+     "key": "C",
+     "text": "140 40"
+    },
+    {
+     "key": "D",
+     "text": "150 − 100"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q13.webp",
+    "width": 903,
+    "height": 363,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q15",
+   "number": 15,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "En los departamentos de Administración y de Talleres de una empresa se necesitaba contratar a 150 personas entre ambos departamentos. Se presentaron 500 postulantes, según el detalle de la tabla adjunta.\n\nDepartamento Postulantes Contratados\n\nHombres 200 20 Administración Mujeres 50 5\n\nHombres 50 25 Talleres Mujeres 200 100\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Del total de los hombres que postularon, exactamente un 9 % fue contratado."
+    },
+    {
+     "key": "B",
+     "text": "En Administración se contrató al 20 % del total de quienes postularon a ese departamento."
+    },
+    {
+     "key": "C",
+     "text": "Exactamente un 5 % de las mujeres que fueron contratadas corresponden al departamento de Administración."
+    },
+    {
+     "key": "D",
+     "text": "En Talleres se contrató al 50 % de los hombres y al 50 % de las mujeres postulantes a ese departamento."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q15.webp",
+    "width": 903,
+    "height": 684,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q17",
+   "number": 17,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Una tienda ofrece un 20 % de descuento en el precio por la compra de cualquier camisa. Una persona quiere comprar tres camisas que tienen un valor de \\$ 30 000 cada una sin descuento.\n\n¿Cuál de las siguientes expresiones representa el valor total que pagará la persona?\n\n20",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 3 · 30 000 · 100 80"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 3 · 30 000 · 100 60"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 3 · 30 000 · 100 40"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 3 · 30 000 · 100"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q17.webp",
+    "width": 903,
+    "height": 507,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q21",
+   "number": 21,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de los siguientes números es igual a 2? 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 2"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "2"
+    },
+    {
+     "key": "D",
+     "text": "2 − 2"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q21.webp",
+    "width": 903,
+    "height": 266,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q23",
+   "number": 23,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En un estudio sobre cierto insecticida, se determinó que, después de cada 2 de la cantidad de semana de uso, la cantidad de insectos disminuye a 5 insectos que había al comienzo de dicha semana.\n\nPara acabar con una plaga de 1000 insectos, se utilizará este insecticida y cuando solo queden 64 individuos o menos, se requerirá de un día más para acabar con la plaga.\n\nSi se asume que los insectos no se reproducen durante el periodo de aplicación del insecticida, ¿cuántos días se necesitarán para acabar con la plaga?",
+   "options": [
+    {
+     "key": "A",
+     "text": "21"
+    },
+    {
+     "key": "B",
+     "text": "22"
+    },
+    {
+     "key": "C",
+     "text": "42"
+    },
+    {
+     "key": "D",
+     "text": "43"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q23.webp",
+    "width": 903,
+    "height": 489,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q24",
+   "number": 24,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Si ( ) 2 x + 5 · P = x − x − 30 , con x ≠ − 5 , ¿cuál de las siguientes expresiones es igual a P?",
+   "options": [
+    {
+     "key": "A",
+     "text": "x − 35 x² −"
+    },
+    {
+     "key": "B",
+     "text": "6"
+    },
+    {
+     "key": "C",
+     "text": "x + 6"
+    },
+    {
+     "key": "D",
+     "text": "x − 6"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q24.webp",
+    "width": 903,
+    "height": 280,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q25",
+   "number": 25,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes expresiones es igual a b − 3 ( b − )1 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 2 b + 3"
+    },
+    {
+     "key": "B",
+     "text": "− 2 b − 1"
+    },
+    {
+     "key": "C",
+     "text": "− 2 b + 1"
+    },
+    {
+     "key": "D",
+     "text": "− 2 b − 3"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q25.webp",
+    "width": 903,
+    "height": 253,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q26",
+   "number": 26,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una persona compró 20 kg de naranjas en \\$ 16 000 y 20 kg de manzanas en \\$ 18 000 .\n\nSi la cantidad de kilogramos de frutas y su precio se modelan por medio de una relación lineal, ¿cuál de las siguientes expresiones representa el precio total, en pesos, al comprar x kg de cada fruta?\n\n16 000 18 000",
+   "options": [
+    {
+     "key": "A",
+     "text": "+ · x 20 20 20 · 16 000 20 · 18 000"
+    },
+    {
+     "key": "B",
+     "text": "+ x x ( )"
+    },
+    {
+     "key": "C",
+     "text": "16 000 · x + 18 000 · x 16 000 + 18 000"
+    },
+    {
+     "key": "D",
+     "text": "x"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q26.webp",
+    "width": 903,
+    "height": 489,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q27",
+   "number": 27,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una persona va a comprar 18 yogures y el precio de cada uno es M \\$ . Para ello lleva un monto de P \\$, el cual es suficiente para comprar.\n\n¿Cuál de las siguientes expresiones corresponde al dinero que le sobra?\n\n( )",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ P − 18 · M 18 · M"
+    },
+    {
+     "key": "B",
+     "text": "\\$ P ( )"
+    },
+    {
+     "key": "C",
+     "text": "\\$ P − M P − 18"
+    },
+    {
+     "key": "D",
+     "text": "\\$ M"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q27.webp",
+    "width": 903,
+    "height": 390,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q28",
+   "number": 28,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "Una persona mide la longitud de un objeto con una huincha, obteniendo que este mide 43 2, centímetros.\n\nConsidera que 2 pulgadas son aproximadamente 1,5 centímetros, ¿cuál es la medida del objeto, en pulgadas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 pulgadas"
+    },
+    {
+     "key": "B",
+     "text": "5 pulgadas"
+    },
+    {
+     "key": "C",
+     "text": "17 pulgadas"
+    },
+    {
+     "key": "D",
+     "text": "108 pulgadas"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q28.webp",
+    "width": 903,
+    "height": 331,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q29",
+   "number": 29,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "Una persona quiere desinfectar un sector de juegos. Para ello utilizará un líquido desinfectante que trae la siguiente información en la etiqueta:\n\nTabla de dilución líquido desinfectante\n\nCantidad de Diluir en: desinfectante\n\n5 mL un cuarto litro de agua\n\n10 mL medio litro de agua\n\n20 mL un litro de agua\n\nSi la persona usa una jeringa de 5 mL para añadir el desinfectante en un balde con cinco litros de agua, ¿cuántas veces tiene que vaciar el contenido de la jeringa llena en el agua?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5"
+    },
+    {
+     "key": "B",
+     "text": "20"
+    },
+    {
+     "key": "C",
+     "text": "25"
+    },
+    {
+     "key": "D",
+     "text": "100"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q29.webp",
+    "width": 903,
+    "height": 594,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q31",
+   "number": 31,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Para una fiesta se compraron tres botellas de jugo del mismo precio y tres botellas de bebidas del mismo precio, gastándose en total \\$ 16 770 .\n\nUna botella de bebida es 390 \\$ más cara que una botella de jugo.\n\n¿Cuál de las siguientes ecuaciones permite determinar el precio x de una botella de jugo, en pesos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 x + 390 = 16 770"
+    },
+    {
+     "key": "B",
+     "text": "6 x + 390 = 16 770 ( )"
+    },
+    {
+     "key": "C",
+     "text": "3 x + 3 x + 390 = 16 770 ( )"
+    },
+    {
+     "key": "D",
+     "text": "3 x + 3 x − 390 = 16 770"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q31.webp",
+    "width": 903,
+    "height": 400,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q32",
+   "number": 32,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "La figura adjunta corresponde a una representación del triángulo de Pascal. En esta representación, el número en cada casilla blanca corresponde a la suma de las dos casillas inmediatamente superiores.\n\nEjemplo\n\n¿Cuál de las siguientes expresiones representa a x en términos de p?",
+   "options": [
+    {
+     "key": "A",
+     "text": "p − 15"
+    },
+    {
+     "key": "B",
+     "text": "p − 10"
+    },
+    {
+     "key": "C",
+     "text": "p + 10"
+    },
+    {
+     "key": "D",
+     "text": "p + 15"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q32.webp",
+    "width": 903,
+    "height": 729,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q33",
+   "number": 33,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "En un partido de básquetbol, un jugador tiene la posibilidad de hacer anotaciones que valen dos o tres puntos, dependiendo del lugar desde el que lanzó el balón al anotar.\n\nUn jugador marcó 37 puntos en el último partido haciendo cinco anotaciones de dos puntos y x anotaciones de tres puntos.\n\n¿Cuál de las siguientes ecuaciones permite determinar la cantidad de anotaciones de tres puntos que hizo el jugador?",
+   "options": [
+    {
+     "key": "A",
+     "text": "x + 5 = 37"
+    },
+    {
+     "key": "B",
+     "text": "x + 10 = 37"
+    },
+    {
+     "key": "C",
+     "text": "3 x + 5 = 37"
+    },
+    {
+     "key": "D",
+     "text": "3 x + 10 = 37"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q33.webp",
+    "width": 903,
+    "height": 436,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q34",
+   "number": 34,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Tomás y cuatro de sus amigos van a un parque de diversiones. El parque cobra una entrada a todos los asistentes y un gasto adicional por entrar a cierta atracción. Tomás decide pagar el total de estos gastos y luego cobrar a cada quien su parte. Escribe lo siguiente en el chat del grupo de amigos que fueron al parque.\n\nSi Tomás pagó un total de \\$ 31 000 en su visita al parque, ¿cuál de las siguientes ecuaciones permite calcular el precio x que se pagó por cada entrada al parque?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4000 · 4 + 5 x = 31 000"
+    },
+    {
+     "key": "B",
+     "text": "4000 · 4 + 3 x = 31 000"
+    },
+    {
+     "key": "C",
+     "text": "4000 · 5 + 4 x = 31 000"
+    },
+    {
+     "key": "D",
+     "text": "4000 · 5 + 5 x = 31 000"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q34.webp",
+    "width": 903,
+    "height": 829,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q35",
+   "number": 35,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "La cantidad n de chirridos por minuto que emite un grillo se relaciona con la n − 40 temperatura ambiental mediante la ecuación T = 10 + , tal que T es la 7 temperatura ambiental en C ° .\n\n¿Cuántos chirridos por minuto emitirá un grillo si la temperatura ambiental es de 20 ° C ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8"
+    },
+    {
+     "key": "B",
+     "text": "30"
+    },
+    {
+     "key": "C",
+     "text": "110"
+    },
+    {
+     "key": "D",
+     "text": "170"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q35.webp",
+    "width": 903,
+    "height": 394,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q36",
+   "number": 36,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "Una persona vende plantas por internet a 3500 \\$ cada una. Un mes necesita realizar ventas por un monto superior a \\$ 500 000 .\n\nA mediados del mes, ha vendido solo 40 plantas y teme que no alcance su meta de ventas, por lo que decide comenzar a vender las plantas a 4500 \\$ cada una por el resto del mes.\n\n¿Cuál de las siguientes inecuaciones permite calcular la cantidad x de plantas que tiene que vender la segunda mitad del mes para alcanzar su meta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "40 · 3500 x + 4500 < 500 000"
+    },
+    {
+     "key": "B",
+     "text": "40 · 3500 x + 4500 > 500 000"
+    },
+    {
+     "key": "C",
+     "text": "40 · 3500 + 4500 x < 500 000"
+    },
+    {
+     "key": "D",
+     "text": "40 · 3500 + 4500 x > 500 000"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q36.webp",
+    "width": 903,
+    "height": 446,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q38",
+   "number": 38,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una empresa distribuye bidones de agua de 20 L por un valor de 2200 \\$ cada uno. Esta empresa tiene un plan en el que cobra una suscripción mensual de \\$ 2000 , con lo cual el precio de cada uno de esos bidones comprados en el mes se reduce a 1800 \\$ .\n\nOtra empresa tiene un servicio similar, pero cobra una suscripción mensual de \\$ 2500 para que el precio de cada bidón del mismo tipo se reduzca a 1600 \\$ .\n\nSi una persona se suscribe a alguna de estas empresas, ¿cuál es la cantidad mínima de bidones que tiene que comprar para que le convenga económicamente la segunda empresa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "3"
+    },
+    {
+     "key": "D",
+     "text": "4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q38.webp",
+    "width": 903,
+    "height": 477,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q42",
+   "number": 42,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función cuadrática f, cuyo dominio es el conjunto de los números reales, definida por () 2 f x = ax + bx + c .\n\nSi los coeficientes b y c son cero, ¿cuál de los siguientes gráficos podría corresponder a la gráfica asociada a f?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Y X"
+    },
+    {
+     "key": "B",
+     "text": "Y X Y D)"
+    },
+    {
+     "key": "C",
+     "text": "Y X X"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q42.webp",
+    "width": 903,
+    "height": 763,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q44",
+   "number": 44,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Un estudiante debe rendir cuatro pruebas en un semestre, de las cuales ya tiene tres notas, estas son 5, 6 y 4.\n\n¿Cuál de las siguientes expresiones permite determinar el promedio que tendría el estudiante con su cuarta nota x?\n\n15 + x",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 15 + x"
+    },
+    {
+     "key": "B",
+     "text": "2 5 + x"
+    },
+    {
+     "key": "C",
+     "text": "2 15 + x"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q44.webp",
+    "width": 903,
+    "height": 462,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q47",
+   "number": 47,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "Los resultados de las elecciones del centro de estudiantes de un colegio estarán muy estrechos. Para tratar de predecir el resultado, se encuesta a algunos estudiantes por su intención de voto. En los gráficos adjuntos se presentan los resultados.\n\nPor quién votarán las mujeres Por quién votarán los hombres\n\nFrecuencia Ana Carlos 45 16 % 38 24 % 35 32 Juan\n\n24 % Sofía 36 % Ana Juan Sofía Carlos\n\nSi la cantidad de hombres y mujeres que respondieron la encuesta es la misma, ¿cuál de las siguientes tablas presenta la intención de todos los votos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "B) Frecuencia Frecuencia Ana 61 Ana 46 Juan 62 Juan 49 Sofía 71 Sofía 59 Carlos 56 Carlos 45 C) D) Frecuencia Frecuencia Ana 69 Ana 69 Juan 143 Juan 74 Sofía 232 Sofía 89 Carlos 300 Carlos 68"
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q47.webp",
+    "width": 903,
+    "height": 1064,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q48",
+   "number": 48,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Los números 68,x,75,80 y70 tienen un promedio de 73.\n\n¿Cuál es el valor de x?",
+   "options": [
+    {
+     "key": "A",
+     "text": "73 , 25"
+    },
+    {
+     "key": "B",
+     "text": "73"
+    },
+    {
+     "key": "C",
+     "text": "72"
+    },
+    {
+     "key": "D",
+     "text": "58 6,"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q48.webp",
+    "width": 903,
+    "height": 278,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q49",
+   "number": 49,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "En la tabla adjunta se presenta la distribución de la cantidad de videojuegos que tiene un grupo de jóvenes de un colegio.\n\nCantidad de videojuegos Frecuencia\n\n1 10\n\n2 8\n\n3 5\n\n4 5\n\n5 8\n\n6 10\n\n¿Cuál de los siguientes argumentos es verdadero?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El promedio de la cantidad de videojuegos es 5,3 , porque es el promedio de los datos centrales."
+    },
+    {
+     "key": "B",
+     "text": "El rango de la cantidad de videojuegos es 5, porque la resta entre la frecuencia mayor y la frecuencia menor es 5."
+    },
+    {
+     "key": "C",
+     "text": "El promedio de la cantidad de videojuegos es 5,3 , porque es el promedio entre la mayor y la menor cantidad de videojuegos."
+    },
+    {
+     "key": "D",
+     "text": "La moda de la cantidad de videojuegos es 1 y 6, porque son los dos datos que más se repiten."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q49.webp",
+    "width": 903,
+    "height": 718,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q51",
+   "number": 51,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "En una encuesta, las personas indicaron su preferencia de estilo musical, eligiendo solo una de entre las opciones rock, pop, rap y reguetón, obteniéndose las respuestas que se presentan en la siguiente tabla:\n\nEstilo Musical Frecuencia\n\nRock 7\n\nPop 4\n\nRap 3\n\nReguetón 6\n\nSi se selecciona al azar a una persona de las encuestadas, ¿cuál es la probabilidad de que prefiera el rock?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "7 7"
+    },
+    {
+     "key": "B",
+     "text": "13 13"
+    },
+    {
+     "key": "C",
+     "text": "20 7"
+    },
+    {
+     "key": "D",
+     "text": "20"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q51.webp",
+    "width": 903,
+    "height": 727,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q52",
+   "number": 52,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "En la tabla adjunta se presentan los resultados obtenidos al consultar a un grupo de personas sobre la preferencia de estudiar una de las cuatro carreras profesionales propuestas, tal que cada persona escogió solo una carrera.\n\nCarrera profesional Frecuencia\n\nIngeniería civil 900\n\nPeriodismo 300\n\nMedicina 700\n\nEnfermería 400\n\nSi se escoge a una de estas personas al azar, ¿cuál de las siguientes expresiones permite determinar la probabilidad de que esta prefiera una carrera del área de la salud?\n\nFrecuencia medicina + Frecuencia enfermería",
+   "options": [
+    {
+     "key": "A",
+     "text": "1100 Frecuencia medicina + Frecuencia enfermería"
+    },
+    {
+     "key": "B",
+     "text": "2300 Frecuencia medicina + Frecuencia enfermería"
+    },
+    {
+     "key": "C",
+     "text": "1 − 2300 Frecuencia medicina + Frecuencia enfermería"
+    },
+    {
+     "key": "D",
+     "text": "1 − 1100"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q52.webp",
+    "width": 903,
+    "height": 743,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q53",
+   "number": 53,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Considera las siguientes cajas con sus respectivas bolitas grises y blancas.\n\nCaja 1 Caja 2 Caja 3 Caja 4\n\n¿En cuál de las cajas, al extraer al azar una bolita, la probabilidad de que sea gris es mayor que 5,0 y menor que 1?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En la Caja 1"
+    },
+    {
+     "key": "B",
+     "text": "En la Caja 2"
+    },
+    {
+     "key": "C",
+     "text": "En la Caja 3"
+    },
+    {
+     "key": "D",
+     "text": "En la Caja 4"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q53.webp",
+    "width": 903,
+    "height": 445,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q54",
+   "number": 54,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En la tabla adjunta se presentan los resultados de una encuesta realizada a 50 personas sobre su fruta preferida.\n\nFruta Cantidad de personas\n\nUva 13\n\nPera 6\n\nManzana 12\n\nNaranja 8\n\nFrutilla 11\n\nSi se elige a una de estas personas al azar, ¿cuál es la probabilidad de que la persona elegida tenga como fruta preferida la pera o la naranja?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "14 7"
+    },
+    {
+     "key": "B",
+     "text": "25 7"
+    },
+    {
+     "key": "C",
+     "text": "24 1"
+    },
+    {
+     "key": "D",
+     "text": "7"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q54.webp",
+    "width": 903,
+    "height": 752,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "El Fondo Nacional de Salud (Fonasa) es un tipo de previsión de salud, junto con las Isapres y otras instituciones.\n\nLas personas solo pueden tener un tipo de previsión y las que tienen Fonasa se categorizan en los tramos A, B, C y D, según su nivel socioeconómico.\n\nEn los gráficos adjuntos se presenta la distribución de la población de acuerdo con los tipos de previsión y la distribución de la población con Fonasa en los distintos tramos en 2021.\n\nAdaptado de: Fonasa (2022). Cuenta Pública Participativa 2022.\n\nSi se escogía al azar a una persona de la población nacional en 2021, ¿cuál es la probabilidad de que hubiera estado clasificada en el tramo A de Fonasa?",
+   "options": [
+    {
+     "key": "A",
+     "text": ",0 154"
+    },
+    {
+     "key": "B",
+     "text": "2,0"
+    },
+    {
+     "key": "C",
+     "text": ",0 25"
+    },
+    {
+     "key": "D",
+     "text": ",0 97"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q55.webp",
+    "width": 903,
+    "height": 961,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q57",
+   "number": 57,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Una empresa de repostería usa un diseño de bandejas desmontables de forma circular que se apilan una sobre otra para ir colocando diferentes dulces, tal como se representa en la figura adjunta.\n\nPrimer piso\n\nPara determinar el diámetro de la bandeja que va ubicada en el piso k, la k − 1 empresa usa la expresión 1 − · p , tal que n representa la cantidad 2 ( n − 1 ) de bandejas desmontables que se usarán y p es el diámetro de la bandeja del primer piso, en centímetros.\n\nLa empresa tiene que preparar un diseño de cinco pisos tal que el diámetro de la bandeja del primer piso mida 40 cm .\n\n¿Cuál será el área de la bandeja del tercer piso donde irán los dulces?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "225π cm 2"
+    },
+    {
+     "key": "B",
+     "text": "240π cm 2"
+    },
+    {
+     "key": "C",
+     "text": "300π cm 2"
+    },
+    {
+     "key": "D",
+     "text": "900π cm"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q57.webp",
+    "width": 903,
+    "height": 912,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q58",
+   "number": 58,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "En el patio de un colegio hay dibujados cuatro círculos de perímetros 12π m , 10π m , 8π m y 4π m , que se desean pintar de un color diferente para una actividad extraescolar.\n\nSe necesita conocer el área total de estos cuatro círculos para estimar la cantidad de pintura a comprar.\n\n¿Cuál es el área que se necesita conocer?\n\n2 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "( 17 ) π m 2"
+    },
+    {
+     "key": "B",
+     "text": "81π m 2"
+    },
+    {
+     "key": "C",
+     "text": "34π m 2"
+    },
+    {
+     "key": "D",
+     "text": "17π m"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q58.webp",
+    "width": 903,
+    "height": 454,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q59",
+   "number": 59,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "Una piscina con forma de paralelepípedo recto, cuyas medidas son 8 m de ancho por 20 m de largo y una profundidad de 7,1 m , tiene agua hasta una marca ubicada 20 cm antes del borde superior.\n\nPara aplicar un producto limpiador, una persona desea conocer la cantidad de agua en la piscina.\n\n¿Cuál es el volumen de agua contenido en la piscina?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "240 m 3"
+    },
+    {
+     "key": "B",
+     "text": "265 2, m 3"
+    },
+    {
+     "key": "C",
+     "text": "269 , 28 m 3"
+    },
+    {
+     "key": "D",
+     "text": "272 m"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q59.webp",
+    "width": 903,
+    "height": 460,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q60",
+   "number": 60,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "Una maestranza produce piezas metálicas uniendo dos cilindros sólidos de la misma altura, tal como se representa en la siguiente figura:\n\n¿Cuál es el volumen de material que se necesita para fabricar esta pieza?\n\n3",
+   "options": [
+    {
+     "key": "A",
+     "text": "5000π cm 3"
+    },
+    {
+     "key": "B",
+     "text": "2500π cm 3"
+    },
+    {
+     "key": "C",
+     "text": "1250π cm 3"
+    },
+    {
+     "key": "D",
+     "text": "560π cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q60.webp",
+    "width": 903,
+    "height": 637,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q61",
+   "number": 61,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Considera un perfil rectangular de 6 m de largo hecho de aluminio de 8,4 mm de grosor, tal como el que se representa a continuación:\n\n¿Por cuál de los siguientes números hay que multiplicar el largo del perfil, en mm, para obtener la cantidad de aluminio necesaria para confeccionar uno de 3 estos perfiles, en mm?\n\n( )( )",
+   "options": [
+    {
+     "key": "A",
+     "text": "101 6, · 50 8, − 101 6, − 8,4 50 8, − 8,4 ( )( )"
+    },
+    {
+     "key": "B",
+     "text": "101 6, · 50 8, − 101 6, − 8,4 50 8, − 2 · 8,4 ( )( )"
+    },
+    {
+     "key": "C",
+     "text": "101 6, · 50 8, − 101 6, − 2 · 8,4 50 8, − 8,4 ( )( )"
+    },
+    {
+     "key": "D",
+     "text": "101 6, · 50 8, − 101 6, − 2 · 8,4 50 8, − 2 · 8,4"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q61.webp",
+    "width": 903,
+    "height": 647,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q62",
+   "number": 62,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "En la siguiente imagen se representa una figura sobre una hoja de papel cuadriculado con dos posiciones marcadas:\n\n¿Cuál de los siguientes movimientos se le debe aplicar a la figura en la posición 1 para que quede en la posición 2?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Trasladar la figura cuatro unidades a la izquierda y cuatro unidades hacia abajo."
+    },
+    {
+     "key": "B",
+     "text": "Trasladar la figura cuatro unidades a la izquierda y cinco unidades hacia abajo."
+    },
+    {
+     "key": "C",
+     "text": "Trasladar la figura tres unidades a la izquierda y tres unidades hacia abajo."
+    },
+    {
+     "key": "D",
+     "text": "Trasladar la figura cinco unidades a la izquierda y cuatro unidades hacia abajo."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q62.webp",
+    "width": 903,
+    "height": 803,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q63",
+   "number": 63,
+   "axis": "Geometría",
+   "topic": "Transformaciones isométricas",
+   "stem": "Considera el siguiente dibujo de un velero en el agua:\n\n¿En cuál de las siguientes opciones se representa el velero y su traslación en el agua?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q63.webp",
+    "width": 903,
+    "height": 1121,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q64",
+   "number": 64,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En el siguiente tablero de ajedrez, el rey se ubica inicialmente en la casilla e2.\n\nEl rey puede moverse en cualquier dirección y sentido, una casilla a la vez. Cada uno de estos movimientos se puede representar con una flecha que indica la dirección del movimiento con respecto al tablero anterior, por ejemplo, a la flecha le corresponde el siguiente movimiento:\n\n¿Cuál de las siguientes series de movimientos permite que la pieza quede ubicada en la casilla c7, partiendo de e2?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q64.webp",
+    "width": 903,
+    "height": 1131,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m1-2025-regular-q65",
+   "number": 65,
+   "axis": "Geometría",
+   "topic": "Ángulos",
+   "stem": "En la figura adjunta, el punto B es el simétrico del punto A con respecto a la recta L, el punto D es el simétrico del punto C con respecto a la recta L y CDB =50 ° .\n\n¿Cuánto mide uno de los ángulos formados por las rectas DB y CA?",
+   "options": [
+    {
+     "key": "A",
+     "text": "40 °"
+    },
+    {
+     "key": "B",
+     "text": "45 °"
+    },
+    {
+     "key": "C",
+     "text": "50 °"
+    },
+    {
+     "key": "D",
+     "text": "80 °"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q65.webp",
+    "width": 903,
+    "height": 765,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}

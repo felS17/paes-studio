@@ -1,0 +1,819 @@
+% =============================================================================
+%  PAES Studio: guía de síntesis (plantilla)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Formato: A4, dos columnas, cajas tcolorbox con la paleta Zinc de la app.
+%  Entornos disponibles:
+%    definicion, formula, ley, mecanismo, ideasclave, metodo, ejemplo,
+%    errorfrecuente, dato, lineatiempo   (título opcional en [])
+%  Comandos:
+%    \alternativa{A}{texto}   alternativa con su tecla (igual que en la app)
+%    \clave{C}        marca la alternativa correcta
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%. Fuera de ellos, edita libremente.
+% =============================================================================
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=1.5cm,top=1.9cm,bottom=1.9cm,columnsep=0.75cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ── Paleta Zinc (misma que la app) ───────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc100}{HTML}{F4F4F5}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+\definecolor{ambar}{HTML}{B45309}
+
+% ── Tipografía: texto con serifa, estructura en sans ─────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.08}
+\color{zinc900}
+\newcommand{\sen}{\operatorname{sen}}
+\renewcommand{\arraystretch}{1.18}
+
+\titleformat{\section}{\sffamily\bfseries\large\color{zinc950}}{\thesection}{0.6em}{}
+  [{\color{zinc300}\titlerule[0.4pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{zinc900}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.3em}
+
+\setlist{leftmargin=1.2em,itemsep=0.15em,topsep=0.3em}
+\setlist[itemize]{label={\color{zinc500}\textbullet}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\scriptsize\color{zinc500}\guiaAsignatura}
+\fancyfoot[R]{\sffamily\scriptsize\color{zinc500}\thepage}
+
+% ── Cajas ────────────────────────────────────────────────────────────────────
+\tcbset{
+  paes/.style={
+    enhanced, breakable, sharp corners=south, arc=1.5pt,
+    boxrule=0.4pt, colback=white, colframe=zinc300,
+    colbacktitle=white, coltitle=zinc900, titlerule=0pt,
+    fonttitle=\sffamily\bfseries\footnotesize,
+    toptitle=3pt, bottomtitle=0pt,
+    left=7pt, right=7pt, top=2pt, bottom=6pt,
+    before skip=7pt, after skip=7pt,
+  },
+  acento/.style={borderline west={2pt}{0pt}{#1}},
+}
+\newtcolorbox{definicion}[1][Definición]{paes, acento=zinc900, title={#1}}
+\newtcolorbox{formula}[1][Fórmula clave]{paes, colback=zinc50, colbacktitle=zinc50, title={#1}}
+\newtcolorbox{ejemplo}[1][Ejemplo resuelto]{paes, title={#1}}
+\newtcolorbox{errorfrecuente}[1][Error frecuente]{paes, colframe=rosa!35, acento=rosa, title={#1}}
+\newtcolorbox{dato}[1][Dato PAES]{paes, colframe=ambar!40, acento=ambar, title={#1}}
+\newtcolorbox{mecanismo}[1][Mecanismo]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc700, title={#1}}
+\newtcolorbox{ley}[1][Ley]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc900, title={#1}}
+\newtcolorbox{ideasclave}[1][Ideas clave]{paes, title={#1}}
+\newtcolorbox{metodo}[1][Cómo abordarlo en la PAES]{paes, acento=esmeralda, title={#1}}
+% Línea de tiempo: filas «fecha & hecho \\».
+\newenvironment{lineatiempo}[1][Línea de tiempo]
+  {\begin{tcolorbox}[paes, acento=zinc700, title={#1}]\small\renewcommand{\arraystretch}{1.25}%
+   \begin{tabular}{@{}>{\leavevmode\sffamily\bfseries\color{zinc700}}p{0.24\linewidth}p{\dimexpr0.76\linewidth-2\tabcolsep\relax}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+
+% Alternativa con su tecla (eco de la anatomía A–E de la app).
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\bfseries\color{white}}
+\newcommand{\alternativa}[2]{\par\noindent\hangindent=1.6em\hangafter=1\makebox[1.6em][l]{\tecla{#1}}#2\par}
+\newcommand{\clave}[1]{\par\smallskip{\sffamily\footnotesize\color{esmeralda} Clave \teclaok{#1}}\par}
+
+% Barra horizontal proporcional (para tablas de frecuencia).
+\newcommand{\barra}[1]{{\color{zinc900}\rule[0.15ex]{#1\linewidth}{0.9ex}}}
+
+%%<META>%%
+\newcommand{\guiaTitulo}{Compendio de estudio}
+\newcommand{\guiaAsignatura}{Competencia Lectora}
+\newcommand{\guiaDescripcion}{La prueba evalúa tres habilidades sobre textos literarios y no literarios, continuos y discontinuos: localizar información, interpretar el sentido y evaluar la forma y el contenido. Tiene 65 preguntas de 4 alternativas y dura 2 h 30 min.}
+\newcommand{\guiaFuente}{3 ejes y 9 subtemas. Frecuencias calculadas sobre 7 ensayos (6 oficiales DEMRE), 388 preguntas. Generado el 1 de noviembre de 2026.}
+%%</META>%%
+
+\begin{document}
+
+\twocolumn[{%
+  \begin{tcolorbox}[enhanced, frame hidden, colback=white, left=0pt, right=0pt, top=0pt, bottom=6pt,
+      borderline south={0.4pt}{0pt}{zinc300}]
+    {\sffamily\footnotesize\color{zinc500} PAES Studio}\par\vspace{0.2em}
+    {\sffamily\bfseries\LARGE\color{zinc950} \guiaTitulo: \guiaAsignatura}\par\vspace{0.35em}
+    {\normalsize\color{zinc700} \guiaDescripcion}\par\vspace{0.25em}
+    {\sffamily\scriptsize\color{zinc500} \guiaFuente}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}]
+
+%%<CONTENIDO>%%
+\section*{Cómo usar este compendio}
+
+Cada subtema sigue el mismo orden: teoría, recuadro con las fórmulas, leyes o mecanismos centrales, ideas clave, método para responder en la PAES, trampas frecuentes y ejemplos resueltos paso a paso. Resuelve cada ejemplo antes de leer su desarrollo.
+
+\section*{Qué se evalúa}
+
+Distribución de las preguntas por eje en los ensayos disponibles en PAES Studio.
+
+\begin{center}\small
+
+\begin{tabular}{@{}p{0.42\linewidth}rrp{0.22\linewidth}@{}}
+
+\toprule Eje & Preg. & \% & \\ \midrule
+
+Interpretar & 314 & 81 & \barra{0.178} \\
+
+Evaluar & 47 & 12 & \barra{0.027} \\
+
+Localizar & 27 & 7 & \barra{0.015} \\
+
+\bottomrule
+
+\end{tabular}
+
+\end{center}
+
+\begin{dato}Interpretar y Evaluar concentran el 93 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
+
+\section{Localizar}
+
+{\itshape\color{zinc700} Encontrar información explícita y reconocer cómo se presenta.}
+
+\subsection{Información explícita}
+
+Localizar es encontrar en el texto un dato que está dicho, aunque la alternativa lo exprese con otras palabras (paráfrasis). La respuesta correcta debe poder señalarse con el dedo en el texto.
+
+Las preguntas suelen indicar el párrafo o la sección («Según el tercer párrafo\ldots{}»). Lee esa zona completa: la información puede estar repartida en más de una oración.
+
+\begin{definicion}[Cómo reconocer la correcta]
+La alternativa correcta \textbf{reformula} lo que dice el texto sin agregar, quitar ni cambiar el alcance. Desconfía de las que generalizan («siempre», «todos») o que usan las mismas palabras del texto con otro sentido.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Busca palabras clave del enunciado en el texto.
+  \item La correcta es una paráfrasis fiel, no una copia literal.
+  \item Una alternativa verdadera en la realidad pero ausente del texto es incorrecta.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica qué dato se pide y en qué parte del texto se ubica.
+  \item Relee esa parte completa, no solo la oración con la palabra clave.
+  \item Contrasta cada alternativa con el texto y descarta las que agregan o distorsionan.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir una alternativa con palabras copiadas del texto pero con otro sentido.
+  \item Elegir información correcta según tus conocimientos, pero que el texto no dice.
+  \item Confundir lo que dice el emisor con lo que dice una voz citada.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+«Las abejas visitan cerca de un tercio de los cultivos que consumimos. Sin embargo, el uso de ciertos plaguicidas ha reducido sus colonias en varias regiones del país.»
+
+Según el fragmento, ¿qué ha provocado la disminución de las colonias de abejas?
+\alternativa{A}{La disminución de los cultivos.}
+\alternativa{B}{El uso de ciertos plaguicidas.}
+\alternativa{C}{El cambio climático.}
+\alternativa{D}{La sobreexplotación de la miel.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La causa está explícita en la segunda oración.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Ubica la oración que habla de la reducción de colonias.
+  \item «El uso de ciertos plaguicidas ha reducido sus colonias»: es la alternativa B.
+  \item C es plausible en la realidad, pero el fragmento no lo menciona.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Información explícita]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Según el tercer párrafo, ¿qué sostienen quienes consideran obsoletas a las bibliotecas?
+\alternativa{A}{Que los textos están disponibles de manera inmediata gracias a la digitalización.}
+\alternativa{B}{Que el presupuesto municipal debería destinarse a otros espacios públicos.}
+\alternativa{C}{Que las nuevas generaciones ya no tienen interés por la lectura en papel.}
+\alternativa{D}{Que los catálogos de las bibliotecas se encuentran desactualizados.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La respuesta está explícita: «la digitalización volvió obsoletas a las bibliotecas, porque cualquier texto está a un clic de distancia».
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Ubica el párrafo que presenta la objeción: comienza con «Se suele objetar\ldots{}».
+  \item La razón de la objeción aparece introducida por «porque»: cualquier texto está a un clic de distancia.
+  \item «A un clic de distancia» equivale a disponibilidad inmediata, que es lo que expresa la alternativa A.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Información explícita]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+De acuerdo con el texto, ¿qué condición desencadena el desierto florido?
+\alternativa{A}{Lluvias de otoño e invierno claramente superiores al promedio.}
+\alternativa{B}{Temperaturas más bajas de lo normal durante la primavera.}
+\alternativa{C}{La llegada de insectos polinizadores desde otras regiones.}
+\alternativa{D}{El aumento de visitantes que transportan semillas al desierto.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El segundo párrafo establece la condición: «Cuando las lluvias de otoño e invierno superan con claridad el promedio\ldots{}».
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Busca el conector que introduce la condición: «Cuando\ldots{}».
+  \item Lo que sigue a ese «cuando» es la causa; la consecuencia es que «el sur del desierto se cubre de flores».
+\end{enumerate}
+\end{ejemplo}
+
+\section{Interpretar}
+
+{\itshape\color{zinc700} Comprender el sentido global y local, inferir y relacionar.}
+
+\subsection{Vocabulario contextual}
+
+Estas preguntas piden el significado de una palabra \textbf{en ese contexto}, que puede diferir de su definición más común. La palabra aparece en mayúsculas en el enunciado.
+
+La mejor estrategia es sustituir: reemplaza la palabra por cada alternativa y lee la oración completa. La correcta mantiene el sentido y la coherencia con el resto del párrafo.
+
+\begin{definicion}[Prueba de sustitución]
+1) Lee la oración y la siguiente. 2) Formula con tus palabras qué quiere decir. 3) Reemplaza por cada alternativa. 4) Elige la que conserva el sentido exacto, no solo uno parecido.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Importa el sentido en el texto, no el del diccionario.
+  \item La correcta debe funcionar gramaticalmente en la oración.
+  \item Cuidado con los sinónimos de otra acepción de la palabra.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ubica la palabra y lee el contexto (oración anterior y posterior).
+  \item Formula su sentido con tus propias palabras.
+  \item Sustituye por cada alternativa y elige la que conserva el sentido.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir el sinónimo de otra acepción («grave» como «serio» y no como «de tono bajo»).
+  \item Elegir una palabra con matiz más fuerte o más débil que el original.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+«El ministro intentó ZANJAR la discusión con un anuncio inesperado, pero los parlamentarios siguieron debatiendo hasta la medianoche.»
+
+¿Cuál de las siguientes palabras puede reemplazar a ZANJAR sin que cambie el sentido del texto?
+\alternativa{A}{Excavar}
+\alternativa{B}{Iniciar}
+\alternativa{C}{Terminar}
+\alternativa{D}{Postergar}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par «Zanjar una discusión» es darla por concluida; el «pero» confirma que no lo logró.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Contexto: tras el intento, los parlamentarios \textbf{siguieron} debatiendo.
+  \item El contraste indica que el ministro quería ponerle fin.
+  \item «Terminar la discusión» conserva el sentido; «excavar» es otra acepción de «zanjar».
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Vocabulario contextual]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En el contexto del cuarto párrafo, ¿cuál de las siguientes palabras puede reemplazar a MIOPE sin que cambie el sentido del texto?
+\alternativa{A}{Lejana}
+\alternativa{B}{Apresurada}
+\alternativa{C}{Estrecha}
+\alternativa{D}{Borrosa}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par «Miope» se usa en sentido figurado: una lectura que solo ve lo cercano y no alcanza a captar el problema completo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El emisor llama «miope» al argumento de la digitalización, que considera solo el acceso a la información.
+  \item A continuación enumera lo que ese argumento no ve: silencio, una mesa, conexión estable, orientación.
+  \item Una lectura que deja fuera parte del problema es una lectura \textbf{estrecha}, limitada.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Tesis]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es la tesis que defiende el emisor de la columna?
+\alternativa{A}{Las bibliotecas deben modernizarse incorporando más tecnología digital.}
+\alternativa{B}{El préstamo de libros es el mejor indicador del éxito de una biblioteca.}
+\alternativa{C}{La digitalización ha vuelto innecesarias las salas de lectura tradicionales.}
+\alternativa{D}{La biblioteca pública es un espacio comunitario cuyo valor excede el préstamo de libros.}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La tesis es la postura que el texto completo defiende; aquí se formula en el segundo párrafo y se retoma en la conclusión.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Segundo párrafo: la biblioteca es «una plaza pública bajo techo».
+  \item Quinto párrafo: el éxito debería medirse por «la cantidad de personas que encuentran en ella un motivo para quedarse», no por los préstamos.
+  \item Ambas ideas se resumen en D: el valor de la biblioteca va más allá de prestar libros.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Tema, idea central y síntesis}
+
+El tema responde «¿de qué trata?» en pocas palabras; la idea central responde «¿qué se dice sobre ese tema?» en una oración. Una síntesis abarca todo el texto o párrafo, no un detalle.
+
+Para un párrafo, busca la oración que las demás desarrollan o ejemplifican. Para el texto completo, relaciona las ideas centrales de cada párrafo.
+
+\begin{definicion}[Criterio de amplitud]
+La idea central no puede ser demasiado específica (un ejemplo o dato) ni demasiado general (aplicable a cualquier texto del tema). Debe cubrir todo lo que el párrafo o texto plantea.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Tema: frase nominal. Idea central: afirmación completa.
+  \item Los ejemplos y datos apoyan la idea central; no lo son.
+  \item El título suele anticipar el tema.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Resume cada párrafo en una frase.
+  \item Identifica qué idea agrupa a las demás.
+  \item Descarta alternativas demasiado específicas o demasiado generales.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir un detalle llamativo como idea central.
+  \item Elegir una afirmación tan general que serviría para cualquier texto.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+«Muchos creen que los murciélagos son plagas. Sin embargo, una sola colonia puede consumir toneladas de insectos al año, y varias especies polinizan plantas como el agave. Además, su guano se ha usado por siglos como fertilizante.»
+
+¿Cuál es la idea central del fragmento?
+\alternativa{A}{Los murciélagos polinizan el agave.}
+\alternativa{B}{Los murciélagos son beneficiosos, pese a la mala fama que tienen.}
+\alternativa{C}{El guano de murciélago es un fertilizante.}
+\alternativa{D}{Los animales suelen ser incomprendidos.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Cada oración aporta un beneficio que contradice la creencia inicial.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La primera oración plantea la creencia; «Sin embargo» introduce la postura del texto.
+  \item Insectos, polinización y guano son ejemplos de beneficios.
+  \item A y C son detalles; D es demasiado general.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Propósito y función de fragmentos}
+
+El propósito es para qué el emisor escribe o usa un recurso: informar, persuadir, explicar, ejemplificar, contrastar, criticar, introducir un tema. Se pregunta con «¿con qué propósito\ldots{}?» o «¿qué función cumple\ldots{}?».
+
+Para responder, relaciona el fragmento con lo que viene antes y después: un ejemplo suele ilustrar la idea anterior; una anécdota inicial suele introducir el tema; una cita de autoridad, respaldar una afirmación.
+
+\begin{definicion}[Verbos de propósito]
+Ilustrar o ejemplificar, introducir, contrastar, concluir, justificar, refutar, describir, advertir. La alternativa correcta combina el verbo adecuado con el contenido correcto.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Propósito = intención, no contenido.
+  \item Mira el lugar del fragmento en el texto (inicio, desarrollo, cierre).
+  \item Revisa los conectores que lo rodean.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ubica el fragmento y lee qué hay antes y después.
+  \item Pregúntate qué hace ese fragmento por la idea vecina (la ilustra, la contradice, la introduce).
+  \item Elige la alternativa cuyo verbo y contenido coincidan con esa relación.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir una alternativa que resume el fragmento en vez de explicar para qué está.
+  \item Acertar el verbo pero no el contenido (ilustrar, sí, pero otra idea).
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+«Los hábitos pequeños transforman la salud. Pedro, por ejemplo, comenzó a caminar diez minutos al día y, al cabo de un año, había bajado su presión arterial.»
+
+¿Qué función cumple la mención de Pedro?
+\alternativa{A}{Introducir un tema nuevo.}
+\alternativa{B}{Contradecir la idea anterior.}
+\alternativa{C}{Ejemplificar la afirmación previa.}
+\alternativa{D}{Concluir el texto.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El conector «por ejemplo» anuncia la función.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La primera oración afirma que los hábitos pequeños transforman la salud.
+  \item El caso de Pedro muestra esa afirmación en una situación concreta: la ejemplifica.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Propósito de un recurso]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Con qué propósito el emisor relata lo que observó en la biblioteca durante un sábado (primer párrafo)?
+\alternativa{A}{Para denunciar el escaso interés de los vecinos por la lectura de libros.}
+\alternativa{B}{Para ilustrar la variedad de usos que las personas dan hoy a la biblioteca.}
+\alternativa{C}{Para criticar que la biblioteca destine sus salas a actividades no literarias.}
+\alternativa{D}{Para demostrar que los préstamos de libros han desaparecido por completo.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La anécdota funciona como ejemplo concreto que prepara la tesis del segundo párrafo: la biblioteca se transformó en un espacio de usos diversos.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Identifica qué enumera el párrafo: estudiar con wifi, leer el diario, aprender español, escuchar un cuento. Son usos distintos del préstamo de libros.
+  \item Relaciona con lo que sigue: el segundo párrafo afirma que eso «no es una señal de decadencia, sino de transformación». La anécdota anticipa y respalda esa idea.
+  \item Por lo tanto, el propósito es ilustrar la diversidad de usos.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Inferencias y relaciones entre ideas}
+
+Inferir es obtener una conclusión que no está escrita pero que se deduce necesariamente de lo que sí lo está. Una buena inferencia se puede justificar con datos del texto.
+
+Las relaciones entre ideas (causa–efecto, problema–solución, contraste, comparación) suelen marcarse con conectores: «porque», «por lo tanto», «sin embargo», «en cambio», «del mismo modo».
+
+\begin{definicion}[Conectores frecuentes]
+Causa: porque, ya que, debido a. Consecuencia: por lo tanto, así, en consecuencia. Contraste: sin embargo, pero, no obstante, en cambio. Adición: además, asimismo.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item La inferencia correcta se apoya en el texto, no en suposiciones.
+  \item Descarta alternativas que exageran o generalizan.
+  \item El conector revela la relación lógica.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Reúne los datos del texto relacionados con la pregunta.
+  \item Pregúntate qué se sigue necesariamente de ellos.
+  \item Elige la alternativa que puedas justificar con una cita.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir una conclusión posible, pero no necesaria.
+  \item Confundir causa con consecuencia.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+«Desde que la biblioteca amplió su horario hasta las 22:00, la sala de estudio se llena cada noche, sobre todo en época de exámenes.»
+
+¿Qué se puede inferir del fragmento?
+\alternativa{A}{Antes la biblioteca cerraba antes de las 22:00.}
+\alternativa{B}{La biblioteca tiene más libros que antes.}
+\alternativa{C}{Los estudiantes prefieren estudiar de noche que de día.}
+\alternativa{D}{La biblioteca abre solo en época de exámenes.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par «Amplió su horario hasta las 22:00» implica que antes cerraba más temprano.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Ampliar significa extender: el horario anterior terminaba antes.
+  \item C exagera: el texto no compara preferencias de día y de noche.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Relación entre párrafos]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué relación existe entre el tercer párrafo y el segundo?
+\alternativa{A}{El tercero plantea una objeción a lo afirmado en el segundo.}
+\alternativa{B}{El tercero describe las consecuencias económicas del fenómeno del segundo.}
+\alternativa{C}{El tercero explica el mecanismo biológico del fenómeno presentado en el segundo.}
+\alternativa{D}{El tercero compara el desierto de Atacama con otros desiertos del mundo.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El segundo párrafo presenta el fenómeno (el desierto florece) y el tercero responde cómo ocurre.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El tercer párrafo abre con una pregunta: «¿De dónde salen esas flores\ldots{}?».
+  \item Responde con un proceso: latencia de semillas y bulbos, germinación con agua y temperatura adecuadas, floración y producción de semillas.
+  \item Explicar cómo ocurre un fenómeno es describir su mecanismo.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Inferencia]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+A partir del tercer párrafo, ¿qué se puede inferir sobre las plantas del desierto florido?
+\alternativa{A}{Solo pueden sobrevivir en años en que se presenta El Niño.}
+\alternativa{B}{Su ciclo de vida está adaptado para aprovechar periodos breves de humedad.}
+\alternativa{C}{Necesitan ser sembradas por las personas para volver a florecer.}
+\alternativa{D}{Florecen todos los años, aunque solo en algunos se vuelven visibles.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Una inferencia se apoya en el texto sin estar dicha literalmente: crecer, florecer y producir semillas «en pocas semanas» es una adaptación a la escasez de agua.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Datos del texto: las semillas esperan años en latencia y, cuando llueve, el ciclo completo ocurre en pocas semanas.
+  \item Conclusión: completar el ciclo rápido permite aprovechar una humedad que dura poco. Eso es una adaptación.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Textos literarios}
+
+En los textos literarios se pregunta por el narrador (protagonista, testigo u omnisciente), los personajes (qué los caracteriza según lo que hacen y dicen), el conflicto, el ambiente y el lenguaje figurado.
+
+El lenguaje figurado dice algo distinto de su sentido literal: la comparación usa «como», la metáfora identifica dos elementos, la personificación atribuye rasgos humanos a cosas o animales y la hipérbole exagera.
+
+\begin{definicion}[Figuras frecuentes]
+Comparación: «sonó como una respiración». Metáfora: «la ciudad es un hormiguero». Personificación: «el viento susurraba». Hipérbole: «te lo dije mil veces».
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Caracteriza a un personaje por sus acciones y palabras.
+  \item El narrador en primera persona solo conoce lo que vive.
+  \item Interpreta la figura según el contexto del relato.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica quién narra y desde qué perspectiva.
+  \item Reúne las acciones y palabras del personaje o el contexto de la figura.
+  \item Elige la interpretación que se sostiene en todo el texto.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Atribuir al narrador ideas de un personaje.
+  \item Interpretar literalmente una expresión figurada.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+«Mi abuelo era un roble: había resistido dos guerras, tres mudanzas y la muerte de su mejor amigo sin que nadie lo viera llorar.»
+
+¿Qué se destaca del abuelo con la expresión «era un roble»?
+\alternativa{A}{Su gran estatura.}
+\alternativa{B}{Su fortaleza ante la adversidad.}
+\alternativa{C}{Su amor por la naturaleza.}
+\alternativa{D}{Su edad avanzada.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La metáfora se explica en lo que sigue: resistió hechos duros sin quebrarse.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Identifica la metáfora: el abuelo es un roble (árbol resistente).
+  \item Los ejemplos que siguen (guerras, mudanzas, pérdidas) apuntan a la fortaleza.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Sentido de un símbolo]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué representaba el reloj detenido para la abuela, según se desprende de la frase «Así no se me escapa»?
+\alternativa{A}{Una manera de retener el recuerdo del último momento con el abuelo.}
+\alternativa{B}{Una forma de castigar al abuelo por haberse marchado.}
+\alternativa{C}{Un objeto valioso que temía que le robaran.}
+\alternativa{D}{Una costumbre que heredó de su propia familia.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Detener el reloj a la hora de la partida «congela» ese instante: lo que no quiere que se escape es el último momento compartido.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Relaciona la hora detenida (cinco y diez) con el hecho que ocurrió a esa hora (la partida del abuelo).
+  \item «Así no se me escapa» sugiere conservar algo que el paso del tiempo alejaría: ese momento y su recuerdo.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Caracterización de personajes]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes opciones caracteriza mejor a la madre en el relato?
+\alternativa{A}{Indiferente ante el dolor de su hija.}
+\alternativa{B}{Autoritaria, pues obliga a reparar el reloj.}
+\alternativa{C}{Práctica, aunque respetuosa de los tiempos de su hija.}
+\alternativa{D}{Nostálgica, porque se aferra al pasado familiar.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Se infiere de sus palabras y acciones: valora la utilidad del reloj, pero no impone su opinión.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Rasgo práctico: «Un reloj que no da la hora es un adorno caro».
+  \item Rasgo respetuoso: «Mi mamá no insistió»; solo deja una observación al pasar.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Textos discontinuos e infografías}
+
+Infografías, tablas, afiches y gráficos combinan texto e imagen. La información se organiza en bloques, y la relación entre ellos (títulos, flechas, colores) también comunica.
+
+Lee primero el título y las etiquetas, luego los datos. Las preguntas suelen pedir integrar información de dos partes del texto o reconocer qué aporta un elemento visual.
+
+\begin{definicion}[Orden de lectura]
+Título $\rightarrow$ subtítulos y leyendas $\rightarrow$ datos destacados $\rightarrow$ notas y fuentes. Pregunta: ¿qué relación muestra el gráfico o la imagen con el texto?
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item El título dice qué representa el gráfico.
+  \item Fíjate en las unidades y en la fuente.
+  \item Integra la información de dos bloques cuando la pregunta lo pide.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el tema y la organización de la infografía.
+  \item Ubica los bloques relevantes para la pregunta.
+  \item Integra la información y contrasta con las alternativas.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Leer un dato de la columna o fila equivocada.
+  \item Ignorar las notas o la fuente, que pueden cambiar la interpretación.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una infografía titulada «Agua que no ves» indica: «1 kg de carne de vacuno: 15 000 L de agua. 1 kg de trigo: 1500 L. 1 taza de café: 140 L».
+
+¿Qué propósito tiene presentar estas cifras?
+\alternativa{A}{Mostrar cuánta agua se usa al producir alimentos.}
+\alternativa{B}{Recomendar no consumir café.}
+\alternativa{C}{Comparar precios de alimentos.}
+\alternativa{D}{Explicar cómo se cultiva el trigo.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El título («Agua que no ves») y las cifras apuntan al agua usada en la producción.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Las cifras son litros de agua asociados a cada alimento.
+  \item El título destaca que esa agua no es visible para el consumidor: informa sobre el agua usada al producir.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Evaluar}
+
+{\itshape\color{zinc700} Valorar argumentos, recursos y la relación entre forma, contenido y propósito.}
+
+\subsection{Evaluar argumentos y postura}
+
+En un texto argumentativo, la tesis es la postura del emisor y los argumentos son las razones que la sostienen. Se pregunta qué afirmación apoya o debilita la tesis, qué estrategia usa el emisor o si un argumento es pertinente.
+
+Un dato debilita una tesis si muestra que su razón principal es falsa o que su conclusión no se sigue; la refuerza si aporta evidencia a favor de esa misma razón.
+
+\begin{definicion}[Estrategias argumentativas]
+Ejemplificación, cita de autoridad, datos o estadísticas, analogía, concesión («es cierto que\ldots{} pero\ldots{}»), contraargumentación y apelación a valores.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Primero identifica la tesis; después evalúa cada alternativa contra ella.
+  \item La concesión reconoce algo del adversario antes de refutarlo.
+  \item «Debilita» exige que el dato afecte directamente el argumento central.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Formula la tesis del emisor en una oración.
+  \item Identifica el argumento central que la sostiene.
+  \item Evalúa qué alternativa afecta (apoya o debilita) directamente ese argumento.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir una alternativa sobre el tema que no toca el argumento central.
+  \item Confundir la opinión del emisor con la de una voz citada.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+«Las ciudades deberían reemplazar los estacionamientos del centro por ciclovías: así se reduce la congestión, porque más personas dejarían el auto.»
+
+¿Cuál de las siguientes afirmaciones, de ser verdadera, DEBILITA el argumento?
+\alternativa{A}{Las ciclovías son más baratas que los estacionamientos.}
+\alternativa{B}{En ciudades que lo hicieron, la cantidad de autos en el centro no varió.}
+\alternativa{C}{Andar en bicicleta mejora la salud.}
+\alternativa{D}{Muchas personas ya usan bicicleta en el centro.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El argumento supone que más personas dejarían el auto; B muestra que no ocurre.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Tesis: reemplazar estacionamientos por ciclovías reduce la congestión.
+  \item Razón: más personas dejarían el auto.
+  \item B contradice esa razón con evidencia; A y C hablan de otros beneficios.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Estrategia argumentativa]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En el tercer y cuarto párrafo, ¿qué estrategia utiliza el emisor para responder a quienes consideran obsoletas a las bibliotecas?
+\alternativa{A}{Cita la opinión de expertos que contradicen esa postura.}
+\alternativa{B}{Presenta estadísticas sobre el uso de bibliotecas en distintas comunas.}
+\alternativa{C}{Descalifica a quienes sostienen esa postura por desconocer la realidad local.}
+\alternativa{D}{Reconoce parcialmente el argumento y luego muestra que confunde dos tipos de acceso.}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Es una concesión seguida de refutación: se admite una parte del argumento contrario y luego se muestra su límite.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Concesión: «El argumento tiene algo de cierto: buscar un dato ya no exige desplazarse\ldots{}».
+  \item Refutación: «Pero confunde el acceso a la información con el acceso a un lugar», idea que el cuarto párrafo desarrolla con ejemplos.
+  \item El texto no incluye citas de expertos ni datos estadísticos, y no ataca a las personas, sino a su razonamiento.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Función de un párrafo]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál es la función del último párrafo dentro del texto?
+\alternativa{A}{Advertir sobre las amenazas al fenómeno y proponer conductas para protegerlo.}
+\alternativa{B}{Resumir las características biológicas del desierto florido.}
+\alternativa{C}{Refutar la idea de que el desierto florido tiene valor biológico.}
+\alternativa{D}{Narrar una experiencia personal de visita al desierto florido.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El párrafo final pasa de explicar a orientar la conducta del lector.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Identifica las amenazas que nombra: vehículos fuera de los caminos y extracción de flores o bulbos.
+  \item Identifica las recomendaciones: circular por rutas habilitadas, no extraer plantas y llevarse la basura.
+  \item Amenazas más recomendaciones equivalen a advertir y proponer conductas de protección.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Evaluar forma, recursos y pertinencia}
+
+Evaluar la forma es juzgar si un recurso (un título, una imagen, una cita, un ejemplo, el registro) es adecuado para el propósito y el público del texto.
+
+Estas preguntas piden aplicar un criterio: un recurso es pertinente si contribuye al propósito; es adecuado si corresponde al destinatario y la situación.
+
+\begin{definicion}[Criterios]
+Pertinencia: ¿aporta al propósito? Adecuación: ¿corresponde al destinatario y la situación? Coherencia: ¿es consistente con el resto del texto?
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Identifica primero el propósito y el destinatario.
+  \item Juzga el recurso por su aporte, no por tu gusto.
+  \item Un título adecuado anticipa el tema y la intención.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el propósito del texto y su destinatario.
+  \item Describe qué aporta el recurso evaluado.
+  \item Elige la alternativa que justifica el juicio con ese aporte.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir una valoración subjetiva sin respaldo en el texto.
+  \item Ignorar el destinatario al evaluar el registro.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un afiche municipal para niños sobre el lavado de manos usa dibujos coloridos y la frase «¡Jabón y agua, y los bichos se van a casa!».
+
+¿Por qué el lenguaje del afiche es adecuado?
+\alternativa{A}{Porque usa términos científicos precisos.}
+\alternativa{B}{Porque es simple y lúdico, acorde a su público infantil.}
+\alternativa{C}{Porque está escrito en un registro formal.}
+\alternativa{D}{Porque presenta estadísticas de enfermedades.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La adecuación se juzga respecto del destinatario: niños.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Destinatario: niños; propósito: promover el lavado de manos.
+  \item La rima y los «bichos» simplifican el mensaje y lo vuelven memorable.
+\end{enumerate}
+\end{ejemplo}
+%%</CONTENIDO>%%
+
+\end{document}

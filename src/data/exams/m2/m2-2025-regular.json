@@ -1,0 +1,1422 @@
+{
+ "id": "m2-2025-regular",
+ "subject": "m2",
+ "title": "PAES Regular 2025",
+ "description": "Selección oficial de 38 de las 55 preguntas de Competencia Matemática 2 (M2), aplicada el 02-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
+ "year": 2025,
+ "modality": "regular",
+ "source": "demre",
+ "form": "193",
+ "appliedOn": "2024-12-02",
+ "durationMinutes": 95,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   161,
+   192,
+   220,
+   245,
+   268,
+   289,
+   308,
+   326,
+   344,
+   362,
+   378,
+   392,
+   405,
+   418,
+   432,
+   448,
+   462,
+   475,
+   486,
+   495,
+   506,
+   519,
+   533,
+   547,
+   560,
+   571,
+   580,
+   590,
+   601,
+   614,
+   629,
+   643,
+   656,
+   667,
+   678,
+   690,
+   704,
+   719,
+   735,
+   750,
+   765,
+   780,
+   797,
+   816,
+   836,
+   857,
+   879,
+   903,
+   1000
+  ],
+  "officialQuestionCount": 55,
+  "officialScorableCount": 49
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-2025-regular-q01",
+   "number": 1,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "R = R = Si P, Q y R son tres números positivos, tal que ,0 92 y ,1 125 , P Q ¿cuál es el orden creciente de los números?",
+   "options": [
+    {
+     "key": "A",
+     "text": "P < R < Q"
+    },
+    {
+     "key": "B",
+     "text": "Q < R < P"
+    },
+    {
+     "key": "C",
+     "text": "R < Q < P"
+    },
+    {
+     "key": "D",
+     "text": "P < Q < R"
+    },
+    {
+     "key": "E",
+     "text": "R < P < Q"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q01.webp",
+    "width": 903,
+    "height": 330,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "Si m es un número entero mayor que 1 y x es un número real positivo,\n\n¿cuál de las siguientes expresiones es igual a x · m x ?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "m x m + 1"
+    },
+    {
+     "key": "B",
+     "text": "x m m"
+    },
+    {
+     "key": "C",
+     "text": "x m m + 1"
+    },
+    {
+     "key": "D",
+     "text": "x m 3"
+    },
+    {
+     "key": "E",
+     "text": "x"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q02.webp",
+    "width": 903,
+    "height": 359,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q03",
+   "number": 3,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "Para calcular el área A de un triángulo cuyos lados miden a, b y c, se puede a + b + c utilizar la expresión A = S ( S − a )( S − b )( S − c ) , tal que S = . 2\n\nPara determinar el área de un triángulo en el que dos de sus lados miden L y el 3 otro mide L , se realiza el siguiente procedimiento, en el cual se comete un 2 error.\n\n**Paso 1:** se reemplaza S en la expresión para calcular A, obteniéndose\n\na + b + c a + b + c a + b + c a + b + c A = − a − b − c . 2 2 2 2\n\n**Paso 2:** se reemplazan las medidas de los lados del triángulo, obteniéndose\n\n7 L 3 L 3 L L A = . 4 4 4 4\n\n**Paso 3:** se expresa el radicando utilizando potencias, obteniéndose 2 2 3 L A = 7 . 16\n\n**Paso 4:** se aplica la propiedad de la raíz y de la potencia, obteniéndose 2 21 L A = . 16\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q03.webp",
+    "width": 903,
+    "height": 958,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Números racionales",
+   "stem": "Si a y b son números racionales, tal que 0 < a < 1 < b , ¿cuál de las siguientes expresiones representa **siempre** a un número mayor que 1?\n\na + 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "b + 2 a + b"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "ab a +"
+    },
+    {
+     "key": "D",
+     "text": ",0 9 b ( )²"
+    },
+    {
+     "key": "E",
+     "text": "b − a"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q04.webp",
+    "width": 903,
+    "height": 404,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q05",
+   "number": 5,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "En un laboratorio, una balanza digital registra de manera automática la masa de un cultivo bacteriano. La masa del cultivo se cuadruplica cada 24 horas tal como se representa en la siguiente tabla:\n\nMasa ( kg ) Días transcurridos\n\n− 8 1 4,6 · 10 − 7 2 ,2 56 · 10 − 6 3 ,1 024 · 10\n\n¿Cuánta masa registrará la balanza transcurridos cuatro días?\n\n− 6",
+   "options": [
+    {
+     "key": "A",
+     "text": ",4 096 · 10 kg − 6"
+    },
+    {
+     "key": "B",
+     "text": ",8 192 · 10 kg − 5"
+    },
+    {
+     "key": "C",
+     "text": ",2 048 · 10 kg − 5"
+    },
+    {
+     "key": "D",
+     "text": ",4 096 · 10 kg"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q05.webp",
+    "width": 903,
+    "height": 565,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q06",
+   "number": 6,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Si P = 3 + a , Q = 3 + a y R = 3 + a , con a > 0 , ¿cuál de las siguientes relaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Q < P < R"
+    },
+    {
+     "key": "B",
+     "text": "Q = P < R"
+    },
+    {
+     "key": "C",
+     "text": "Q < R < P"
+    },
+    {
+     "key": "D",
+     "text": "P < R < Q"
+    },
+    {
+     "key": "E",
+     "text": "R < P = Q"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q06.webp",
+    "width": 903,
+    "height": 312,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q09",
+   "number": 9,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "x y , ¿cuál de las siguientes expresiones es igual a ( ) Si p = 3 y b = 3 x + y , en términos de p y b?\n\n( )",
+   "options": [
+    {
+     "key": "A",
+     "text": "log3 p · b ( )"
+    },
+    {
+     "key": "B",
+     "text": "log3 p + b"
+    },
+    {
+     "key": "C",
+     "text": "log p · log b 3 3 ( )"
+    },
+    {
+     "key": "D",
+     "text": "log p · b"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q09.webp",
+    "width": 903,
+    "height": 284,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q13",
+   "number": 13,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En el siguiente gráfico se representa el precio de un producto durante sus primeros cuatro meses en el mercado.\n\nSi se considera el mes con mayor crecimiento porcentual con respecto al mes anterior de los meses presentados en el gráfico, ¿cuál tiene que ser el precio del producto en mayo para que ese mes tenga el mismo crecimiento porcentual con respecto al mes anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$ 160 000"
+    },
+    {
+     "key": "B",
+     "text": "\\$ 168 000"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 192 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$ 200 000"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q13.webp",
+    "width": 903,
+    "height": 875,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q14",
+   "number": 14,
+   "axis": "Números",
+   "topic": "Números decimales",
+   "stem": "Fer recibió una herencia H de \\$ 5 000 000 que se entregará repartida en pagos mensuales e iguales.\n\nPara determinar el monto mensual P, en pesos, que se le entregará a Fer, la institución encargada le otorga una tasa de interés c de un 5,0 % mensual en un plazo de n meses, y utiliza el modelo:\n\ncH P = , − 1 − ( 1 + c )ⁿ\n\ntal que c está escrito en su forma decimal.\n\nSi Fer ha decidido recibir la herencia en un plazo de 60 meses, ¿cuál de las siguientes expresiones representa el monto, en pesos, que recibirá mensualmente?\n\n250 000 000",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 1 − ()⁶⁰ 51 2 500 000"
+    },
+    {
+     "key": "B",
+     "text": "− 1 − ( 5,1 )⁶⁰ 250 000"
+    },
+    {
+     "key": "C",
+     "text": "− 1 − ( ,1 05 )⁶⁰ 25 000"
+    },
+    {
+     "key": "D",
+     "text": "− 1 − ( ,1 005 )⁶⁰"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q14.webp",
+    "width": 903,
+    "height": 751,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q15",
+   "number": 15,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "¿Cuál de las siguientes expresiones es igual a ( ) 3 ( )² p − 2 − p p + 1 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 8 − p"
+    },
+    {
+     "key": "B",
+     "text": "− 8 ² p + 11 p − 8"
+    },
+    {
+     "key": "C",
+     "text": "− 4 ² p + 3 p − 8"
+    },
+    {
+     "key": "D",
+     "text": "− 6 − 2 p"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q15.webp",
+    "width": 903,
+    "height": 263,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q18",
+   "number": 18,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "¿Cuál es el conjunto solución de la inecuación − 3 x + 2 < 0 ?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "− , ∞ 3 2"
+    },
+    {
+     "key": "B",
+     "text": ", ∞ 3 2"
+    },
+    {
+     "key": "C",
+     "text": "− ∞ , − 3 2 ∞"
+    },
+    {
+     "key": "D",
+     "text": "− , 3"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q18.webp",
+    "width": 903,
+    "height": 391,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q19",
+   "number": 19,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "La edad actual de Raúl es ( x − )1 años y la de su hermana Paulina es ( px − 3 ) años.\n\nSi S corresponde a la suma de las edades actuales de Raúl y Paulina, ¿cuál de las siguientes expresiones representa la edad de Raúl hace 3 años?\n\nS − 4 p",
+   "options": [
+    {
+     "key": "A",
+     "text": "p + 1 S + 4"
+    },
+    {
+     "key": "B",
+     "text": "p + 1 S"
+    },
+    {
+     "key": "C",
+     "text": "p + 1 S − p + 3"
+    },
+    {
+     "key": "D",
+     "text": "p + 1 S − 3 p + 1"
+    },
+    {
+     "key": "E",
+     "text": "p + 1"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q19.webp",
+    "width": 903,
+    "height": 557,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q20",
+   "number": 20,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "La aceleración de gravedad g en un planeta, en m, se puede calcular 2 s G · M mediante la expresión g = , tal que G es una constante, M es la masa 2 R del planeta en kilogramos, R es su radio en metros y la aceleración de m gravedad de la Tierra es aproximadamente 10 . 2 s\n\nConsidera que el radio de Marte mide aproximadamente la mitad del radio de la Tierra, y que su masa equivale a 1,0 veces la masa de la Tierra.\n\n¿Cuál es aproximadamente la aceleración de gravedad en Marte?\n\nm",
+   "options": [
+    {
+     "key": "A",
+     "text": ",0 25 2 s m"
+    },
+    {
+     "key": "B",
+     "text": "5,0 2 s m"
+    },
+    {
+     "key": "C",
+     "text": "2 2 s m"
+    },
+    {
+     "key": "D",
+     "text": "4 2 s"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q20.webp",
+    "width": 903,
+    "height": 662,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q24",
+   "number": 24,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Una persona contestó correctamente las 18 preguntas de una prueba que tiene preguntas de 1, 2 y 3 puntos, obteniendo un total de 35 puntos. Solo seis de las preguntas de la prueba valían 1 punto.\n\nSi x corresponde al total de puntos obtenidos en las preguntas que valen 2 puntos e y corresponde al total de puntos obtenidos en las preguntas que valen 3 puntos, ¿cuál de los siguientes sistemas de ecuaciones representa la situación planteada?\n\nx y",
+   "options": [
+    {
+     "key": "A",
+     "text": "x + y = 18 2 x + 3 y = 35"
+    },
+    {
+     "key": "B",
+     "text": "+ = 12 2 3 x + y = 29 x y D)"
+    },
+    {
+     "key": "C",
+     "text": "x + y = 12 + = 18 2 3 2 x + 3 y = 29 x + y = 35"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q24.webp",
+    "width": 903,
+    "height": 536,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q26",
+   "number": 26,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f, cuyo dominio es el conjunto de los números reales, definida por () 2 f x = x − 4 x + 5 .\n\n¿Cuál de las siguientes funciones tiene como gráfica la parábola asociada a f, pero trasladada en 5 unidades hacia la derecha?\n\n() 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "g x = x + 6 x + 5 () 2 −"
+    },
+    {
+     "key": "B",
+     "text": "h x = x 4 x () 2"
+    },
+    {
+     "key": "C",
+     "text": "p x = x + x + 5 () 2"
+    },
+    {
+     "key": "D",
+     "text": "q x = x − 14 x + 50"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q26.webp",
+    "width": 903,
+    "height": 389,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q27",
+   "number": 27,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Un estudiante de Artes pintará un cuadro de forma rectangular, este tendrá una sección de dibujo y por fuera se dejará un margen con un ancho uniforme que 2 . ocupará 81 cm\n\nSi la sección de dibujo tendrá 15 cm de largo y 9 cm de ancho, ¿cuál es el ancho correspondiente al margen?",
+   "options": [
+    {
+     "key": "A",
+     "text": "13 5, cm"
+    },
+    {
+     "key": "B",
+     "text": "5,7 cm"
+    },
+    {
+     "key": "C",
+     "text": "5,4 cm"
+    },
+    {
+     "key": "D",
+     "text": "5,1 cm"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q27.webp",
+    "width": 903,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q28",
+   "number": 28,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f, cuyo dominio es el conjunto de los números reales, definida por () 2 f x = ax + bx + c , con a < 0 , ¿cuál de las siguientes afirmaciones es **siempre** verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La ordenada del vértice de la parábola asociada a la función f es el máximo de esta."
+    },
+    {
+     "key": "B",
+     "text": "La gráfica de la función f no interseca al eje X."
+    },
+    {
+     "key": "C",
+     "text": "La gráfica de la función f interseca al eje Y por debajo del origen."
+    },
+    {
+     "key": "D",
+     "text": "El recorrido de la función son todos los números reales negativos."
+    },
+    {
+     "key": "E",
+     "text": "El eje de simetría de la parábola asociada a f es el eje Y."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q28.webp",
+    "width": 903,
+    "height": 350,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q30",
+   "number": 30,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "2 x Considera la función f, definida por () f x = + 2 x − 1 , cuyo dominio es el k conjunto de los números reales, con k un número real distinto de cero.\n\nSi la segunda coordenada del vértice de la parábola asociada a f es mayor que 1, ¿qué condición debe cumplir k?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Debe ser mayor que 2."
+    },
+    {
+     "key": "B",
+     "text": "Debe ser menor que 2 y mayor que 0."
+    },
+    {
+     "key": "C",
+     "text": "Debe ser menor que 0 y mayor que − 2 ."
+    },
+    {
+     "key": "D",
+     "text": "Debe ser menor que − 2 ."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q30.webp",
+    "width": 903,
+    "height": 345,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q31",
+   "number": 31,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f, definida por () 3 2 f t = t − 25 t + 150 t + 3 , con dominio el conjunto de los números reales.\n\n¿Cuál de las siguientes opciones representa todos los valores de t para los que f () t = 3 ?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0, 10 y 15"
+    },
+    {
+     "key": "B",
+     "text": "0, 10 − y 15 −"
+    },
+    {
+     "key": "C",
+     "text": "3, − 7 y 12 −"
+    },
+    {
+     "key": "D",
+     "text": "0"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q31.webp",
+    "width": 903,
+    "height": 336,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q32",
+   "number": 32,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Al aplicar una homotecia con centro en el origen del sistema coordenado al vector ( ,2 − 3 ) , se obtiene el vector ( − ,4 6 ) .\n\nSi se aplica esta misma homotecia al vector ( ,3 4 ) , entonces se obtiene n.\n\n¿Cuál es el módulo de n?",
+   "options": [
+    {
+     "key": "A",
+     "text": "50 unidades"
+    },
+    {
+     "key": "B",
+     "text": "10 unidades"
+    },
+    {
+     "key": "C",
+     "text": "15 unidades"
+    },
+    {
+     "key": "D",
+     "text": "5,2 unidades"
+    },
+    {
+     "key": "E",
+     "text": "10 unidades"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q32.webp",
+    "width": 903,
+    "height": 405,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q34",
+   "number": 34,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Para la construcción de las casas de una villa, se deben construir los cimientos de cada una de ellas. Estos cimientos deben tener 80 cm de profundidad y 50 cm de ancho.\n\nEn el siguiente diagrama, la parte gris representa la forma de la excavación que se realizará para confeccionar los cimientos de cada casa, mirado desde arriba.\n\nEl metro cúbico de hormigón que se utilizará para confeccionar el cimiento de las casas tiene un valor de \\$ 95 000 .\n\n¿Cuál de las siguientes expresiones corresponde al precio total, en pesos, que se debe pagar por los cimientos de x casas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "95 000 · 5,0 · 8,0 · 24 · x"
+    },
+    {
+     "key": "B",
+     "text": "95 000 · 5,0 · 8,0 · 31 · x"
+    },
+    {
+     "key": "C",
+     "text": "95 000 · 5,0 · 8,0 · 34 · x"
+    },
+    {
+     "key": "D",
+     "text": "95 000 · 5,0 · 8,0 · 40 · x"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q34.webp",
+    "width": 903,
+    "height": 817,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q35",
+   "number": 35,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Considera el siguiente cuadrilátero:\n\n¿Cuánto mide su área?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "12 cm 2"
+    },
+    {
+     "key": "B",
+     "text": "18 cm 2"
+    },
+    {
+     "key": "C",
+     "text": "21 cm 2"
+    },
+    {
+     "key": "D",
+     "text": "24 cm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q35.webp",
+    "width": 903,
+    "height": 637,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q36",
+   "number": 36,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "El área de una figura geométrica llamada elipse se puede calcular como ab π , en centímetros cuadrados, tal que a corresponde a la medida del semieje mayor, en centímetros, y b corresponde a la medida del semieje menor, en centímetros, tal como se representa a continuación:\n\nConsidera un trozo rectangular de madera al que se le hará un corte con forma de elipse para luego pintar la parte superior y ser utilizado como cubierta de un lavamanos. Las medidas se presentan en la siguiente figura:\n\n¿Cuál es el área de la madera que se pintará para ser utilizada como cubierta de ese lavamanos?\n\n( ) 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "2640 − 1500 π cm ( ) 2"
+    },
+    {
+     "key": "B",
+     "text": "212 − 40 π cm ( ) 2"
+    },
+    {
+     "key": "C",
+     "text": "2640 − 375 π cm ( ) 2"
+    },
+    {
+     "key": "D",
+     "text": "212 − 160 π cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q36.webp",
+    "width": 903,
+    "height": 1052,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q37",
+   "number": 37,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Dos barcos ubicados en el mismo lugar comienzan a navegar al mismo tiempo. El primero lo hace hacia el norte a una rapidez constante de v nudos y el segundo lo hace hacia el este a una rapidez constante de w nudos.\n\nkm Si un nudo equivale a una rapidez de ,1 852 , ¿cuál de las siguientes h expresiones representa la distancia a la que se encuentran los barcos, en kilómetros, después de dos horas?\n\n2 2",
+   "options": [
+    {
+     "key": "A",
+     "text": ",1 852 · v + w 2 2"
+    },
+    {
+     "key": "B",
+     "text": "2 · ,1 852 · v + w ( 2 2 )"
+    },
+    {
+     "key": "C",
+     "text": ",1 852 · v + w ( 2 2 )"
+    },
+    {
+     "key": "D",
+     "text": "2 · ,1 852 · v + w"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q37.webp",
+    "width": 903,
+    "height": 470,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q39",
+   "number": 39,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "En una comunidad se quieren cambiar los botes de basura cilíndricos por otros con forma de cubo que son más fáciles de manipular por los camiones recolectores de basura. Actualmente hay 30 botes de basura cilíndricos, como el que se presenta en la figura adjunta.\n\n2 de la altura Los botes de basura con forma de cubo tendrán una altura que es 3 de los botes cilíndricos.\n\nSi se quiere mantener la capacidad de contención total de basura de los 30 botes cilíndricos, ¿cuál de las siguientes expresiones permite calcular la cantidad de botes con forma de cubo que se necesitan?\n\n2 45π r",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 4 h 2 π r · 5,1"
+    },
+    {
+     "key": "B",
+     "text": "2 h 2 45π r"
+    },
+    {
+     "key": "C",
+     "text": "2 h 2 h"
+    },
+    {
+     "key": "D",
+     "text": "2 45 π r"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q39.webp",
+    "width": 903,
+    "height": 960,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q40",
+   "number": 40,
+   "axis": "Geometría",
+   "topic": "Transformaciones isométricas",
+   "stem": "( )1 ( 2 ) Al punto A ,3 se le aplica una traslación según el vector v = k − ,1 k , con k un número entero.\n\n¿En cuál de las siguientes gráficas el punto P **no** corresponde a una posible traslación de A según v?",
+   "options": [
+    {
+     "key": "A",
+     "text": "B) Y Y 5 P P 2 A 1 A 1 1 3 X 3 X C) D) Y Y P 5 P 2 A 1 A 3 4 X 1 3 4 X"
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q40.webp",
+    "width": 903,
+    "height": 784,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q42",
+   "number": 42,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "En una empresa, las proyecciones de ventas de febrero ( V ) y marzo ( V ) , F M en miles de pesos, están definidas por las siguientes condiciones:\n\nV\n\n- Si F = 8,0 VF > 1000 , entonces . V M\n\nV\n\n- Si F = 2,1 VF < 1000 , entonces . V M\n\n¿Cuál de los siguientes gráficos podría representar las proyecciones de ventas de esta empresa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "B) Ventas en miles Ventas en miles de pesos de pesos Mes Mes C) D) Ventas en miles Ventas en miles de pesos de pesos Mes Mes"
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q42.webp",
+    "width": 903,
+    "height": 1127,
+    "mono": false
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q43",
+   "number": 43,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "Considera el siguiente diagrama de cajón elaborado a partir de 100 datos:\n\n¿Cuál de los siguientes gráficos podría representar la distribución de estos datos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Frecuencia"
+    },
+    {
+     "key": "B",
+     "text": "Frecuencia"
+    },
+    {
+     "key": "C",
+     "text": "Frecuencia"
+    },
+    {
+     "key": "D",
+     "text": "Frecuencia"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q43.webp",
+    "width": 903,
+    "height": 1153,
+    "mono": false
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q45",
+   "number": 45,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Los 40 estudiantes de un curso compraron dos números de rifa cada uno para un sorteo de 80 números.\n\n1. Sin embargo, debido a que Pablo sabe que la probabilidad de que gane es 40 el día del sorteo faltaron varios estudiantes a clases y el sorteo se realiza solo 1. entre los presentes, la probabilidad de que Pablo gane cambia a b\n\n¿Cuál de las siguientes expresiones permite determinar la cantidad de estudiantes que faltaron a clases el día del sorteo?\n\nb",
+   "options": [
+    {
+     "key": "A",
+     "text": "40 − 2"
+    },
+    {
+     "key": "B",
+     "text": "40 − b"
+    },
+    {
+     "key": "C",
+     "text": "40 − 2 b 40 − b"
+    },
+    {
+     "key": "D",
+     "text": "40 b"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q45.webp",
+    "width": 903,
+    "height": 577,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q47",
+   "number": 47,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En una ciudad de 6000 personas, 200 miden más de 8,1 metros.\n\nSi se escogen dos personas al azar, ¿cuál es la probabilidad de que ninguna de ellas mida más de 8,1 metros?\n\n2 1",
+   "options": [
+    {
+     "key": "A",
+     "text": "5800 5799 5800 ·"
+    },
+    {
+     "key": "B",
+     "text": "6000 5999 200 200 ·"
+    },
+    {
+     "key": "C",
+     "text": "6000 6000 5800"
+    },
+    {
+     "key": "D",
+     "text": "6000 5800"
+    },
+    {
+     "key": "E",
+     "text": "2 · 6000"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q47.webp",
+    "width": 903,
+    "height": 517,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q48",
+   "number": 48,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Se dispone de dos cajas A y B, en A hay en total 3 fichas blancas, 2 rojas y 6 negras, en B hay en total 2 fichas blancas y 3 rojas, todas del mismo tipo.\n\nSe define el siguiente experimento: se lanza un dado común, si el número obtenido es menor que 3, se extrae al azar una ficha de la caja A; en caso contrario, se extrae al azar una ficha de la caja B.\n\nSi se realiza este experimento, ¿cuál es la probabilidad de extraer una ficha negra?\n\n6",
+   "options": [
+    {
+     "key": "A",
+     "text": "11 1"
+    },
+    {
+     "key": "B",
+     "text": "8 2"
+    },
+    {
+     "key": "C",
+     "text": "11 3"
+    },
+    {
+     "key": "D",
+     "text": "11 3"
+    },
+    {
+     "key": "E",
+     "text": "8"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q48.webp",
+    "width": 903,
+    "height": 621,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q49",
+   "number": 49,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Cada estudiante que asistió a una reunión saluda con un apretón de manos a todos los demás estudiantes solo una vez.\n\nSi se contabilizaron en total 105 apretones de manos y n es la cantidad total de estudiantes que asistió a la reunión, ¿cuál de las siguientes relaciones es verdadera?\n\nn ( n − 2 )",
+   "options": [
+    {
+     "key": "A",
+     "text": "= 105 2 ( )"
+    },
+    {
+     "key": "B",
+     "text": "n n − 1 = 105 n ( n − 1 )"
+    },
+    {
+     "key": "C",
+     "text": "= 105 2 n · n"
+    },
+    {
+     "key": "D",
+     "text": "= 105 2"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q49.webp",
+    "width": 903,
+    "height": 453,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q50",
+   "number": 50,
+   "axis": "Geometría",
+   "topic": "Circunferencia y círculo",
+   "stem": "Considera una circunferencia, en ella se irán ubicando puntos equidistantes entre sí, para luego calcular la cantidad de trazos que se necesitan para unir a cualquier par de puntos.\n\nEn la siguiente imagen se dan dos ejemplos de la situación planteada.\n\nSi se ubican n puntos en la circunferencia, ¿cuál de las siguientes expresiones permite determinar la cantidad de trazos necesarios para unir a cualquier par de puntos?\n\nn",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 n"
+    },
+    {
+     "key": "B",
+     "text": "+ 2 3 ( )"
+    },
+    {
+     "key": "C",
+     "text": "3 n − 2 ( )!"
+    },
+    {
+     "key": "D",
+     "text": "3 · n − 2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q50.webp",
+    "width": 903,
+    "height": 853,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q51",
+   "number": 51,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Una persona desarrolla un test de 10 preguntas, el cual solo tiene preguntas de verdadero o falso.\n\nSi esta persona contestó todas las preguntas al azar y el test se aprueba al obtener al menos 7 respuestas correctas, ¿cuál es la probabilidad de que la persona apruebe el test?\n\n7",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 2 3 7 10 1 1"
+    },
+    {
+     "key": "B",
+     "text": "· · 7 2 2 3 7 2 8 9 10 1 1 1 1 1 1 1"
+    },
+    {
+     "key": "C",
+     "text": "· + · + · + 2 2 2 2 2 2 2 3 7 2 8 9 10 10 1 1 10 1 1 10 1 1 1"
+    },
+    {
+     "key": "D",
+     "text": "· · + · · + · · + 7 2 2 8 2 2 9 2 2 2"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q51.webp",
+    "width": 903,
+    "height": 526,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q52",
+   "number": 52,
+   "axis": "Números",
+   "topic": "Números racionales",
+   "stem": "x, si se sabe que: Se puede determinar el valor del número racional y\n\n(1) y es la cuarta parte de x.\n\n(2) x + y = 5",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q52.webp",
+    "width": 903,
+    "height": 395,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q53",
+   "number": 53,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f, cuyo dominio es el conjunto de los números reales, definida por () 2 y que () y () . f x = ax + bx + c f 13 = p f 14 = q\n\nSe pueden determinar los valores de p y q, si se conoce el valor de:\n\n(1) a y b\n\n(2) f () 0",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q53.webp",
+    "width": 903,
+    "height": 461,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q54",
+   "number": 54,
+   "axis": "Geometría",
+   "topic": "Perímetros",
+   "stem": "En un país se está pensando implementar el aforo en recintos cerrados como forma de controlar el avance de una enfermedad, y se propone la siguiente manera de calcularlo:\n\nEl aforo de un recinto se calcula como la aproximación a la unidad de la división 2 entre la superficie del recinto en metros cuadrados y 5,1 m .\n\nSe puede calcular la cantidad máxima de personas permitidas en un recinto con piso rectangular, si se sabe que:\n\n(1) su perímetro es 28 m .\n\n(2) un lado mide 4 m más que el otro.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q54.webp",
+    "width": 903,
+    "height": 581,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "m2-2025-regular-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Se consultó a un grupo de personas sobre su edad. De acuerdo con los resultados obtenidos, las edades van desde los 60 años hasta los 90 años.\n\nSe puede determinar la mediana de las edades de las personas, si se conoce:\n\n(1) la cantidad de personas que se consultó.\n\n(2) el percentil 49 y 51 de las edades.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q55.webp",
+    "width": 903,
+    "height": 435,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}

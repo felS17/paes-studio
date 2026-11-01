@@ -1,0 +1,3784 @@
+{
+ "id": "ciencias-fisica-2026-invierno",
+ "subject": "ciencias",
+ "area": "fisica",
+ "title": "PAES Invierno 2026",
+ "description": "Prueba oficial completa de Ciencias (Física): 80 preguntas, aplicada el 17-06-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2026,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "161",
+ "appliedOn": "2025-06-17",
+ "durationMinutes": 160,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   142,
+   164,
+   185,
+   205,
+   223,
+   238,
+   253,
+   268,
+   283,
+   298,
+   311,
+   321,
+   331,
+   340,
+   350,
+   363,
+   376,
+   389,
+   399,
+   407,
+   413,
+   419,
+   425,
+   433,
+   444,
+   456,
+   469,
+   480,
+   488,
+   494,
+   498,
+   502,
+   507,
+   513,
+   521,
+   533,
+   545,
+   557,
+   568,
+   575,
+   580,
+   584,
+   588,
+   592,
+   599,
+   608,
+   619,
+   632,
+   644,
+   654,
+   661,
+   667,
+   672,
+   677,
+   685,
+   695,
+   707,
+   720,
+   732,
+   743,
+   751,
+   760,
+   769,
+   780,
+   794,
+   809,
+   823,
+   837,
+   851,
+   866,
+   884,
+   903,
+   924,
+   946,
+   1000
+  ],
+  "officialQuestionCount": 80,
+  "officialScorableCount": 75
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-fisica-2026-invierno-q01",
+   "number": 1,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "Un grupo de estudiantes hace incidir un rayo luminoso desde el aire hacia el vidrio y mide la frecuencia del rayo incidente, reflejado y refractado, los cuales se representan en la siguiente figura:\n\nA partir de lo anterior, ¿cuál de los siguientes objetivos de investigación se relaciona directamente con el procedimiento realizado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Comprobar si en el instante de la incidencia hay reflexión y refracción simultáneamente."
+    },
+    {
+     "key": "B",
+     "text": "Comprobar si en el instante de la incidencia hay absorción de color del rayo incidente."
+    },
+    {
+     "key": "C",
+     "text": "Comprobar si los rayos incidente, reflejado y refractado, están en mismo plano."
+    },
+    {
+     "key": "D",
+     "text": "Comprobar si los rayos incidente, reflejado y refractado, tienen el mismo color."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q01.webp",
+    "width": 907,
+    "height": 610,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El procedimiento mide la frecuencia de los tres rayos, magnitud asociada al color de la luz, por lo que el objetivo es comprobar si los rayos tienen el mismo color.",
+    "steps": [
+     "El grupo mide la frecuencia del rayo incidente, del reflejado y del refractado.",
+     "La frecuencia es la propiedad que determina el color de la luz; si las tres frecuencias coinciden, los rayos tienen el mismo color.",
+     "Medir frecuencias no informa sobre el plano en que se encuentran los rayos ni sobre si la reflexión y la refracción ocurren a la vez.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Reflexión y refracción simultáneas: la figura muestra ambos fenómenos, pero la medición de frecuencia no prueba que ocurran al mismo tiempo.",
+     "B": "Absorción de color: una absorción alteraría la intensidad, y el procedimiento no mide intensidad.",
+     "C": "Mismo plano: se confunde la geometría de la figura con la medición de frecuencia; el procedimiento no mide ángulos ni posiciones."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q02",
+   "number": 2,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "Una investigación reciente demostró que un nuevo material, diseñado específicamente para bloquear un espectro muy amplio de ondas electromagnéticas, logró una eficiencia del 99,9 %. Al respecto, ¿qué producto tecnológico podría diseñarse a partir de este material?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un recubrimiento para trajes de astronautas"
+    },
+    {
+     "key": "B",
+     "text": "Un recubrimiento para antenas parabólicas"
+    },
+    {
+     "key": "C",
+     "text": "Un aislante para materiales de construcción"
+    },
+    {
+     "key": "D",
+     "text": "Un amplificador de señal para dispositivos inalámbricos"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un material que bloquea un amplio espectro de ondas electromagnéticas sirve como protección frente a radiación, por ejemplo, en un recubrimiento para trajes espaciales.",
+    "steps": [
+     "El texto dice que el material está diseñado para bloquear un espectro muy amplio de ondas electromagnéticas, con una eficiencia de 99,9 %.",
+     "Un producto derivado debe aprovechar esa propiedad de bloqueo, es decir, proteger frente a radiaciones.",
+     "Un traje espacial necesita protección frente a radiación electromagnética en el espacio, así que un recubrimiento de este material cumple esa función.",
+     "Las demás opciones no usan el bloqueo: una antena parabólica necesita recibir señales, un aislante de construcción es térmico y un amplificador aumenta señales en lugar de bloquearlas.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Recubrimiento para antenas parabólicas: bloquear las ondas impediría que la antena capte señales.",
+     "C": "Aislante para construcción: el aislante suele ser térmico o acústico; confundirlo con bloqueo electromagnético es el error.",
+     "D": "Amplificador de señal: el material bloquea ondas y no las amplifica; el error es asociar lo inalámbrico con amplificación."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q03",
+   "number": 3,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un grupo de estudiantes encuentra, en el informe de 2021 del Ministerio del Medio Ambiente, la siguiente información sobre las características de dos tipos de luz led con sus respectivos colores:\n\nA partir del análisis de los gráficos, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La intensidad relativa para longitudes de onda de 550 nm es mayor en luces led de mayor temperatura."
+    },
+    {
+     "key": "B",
+     "text": "La intensidad relativa para longitudes de onda de 450 nm es menor en luces led de menor temperatura."
+    },
+    {
+     "key": "C",
+     "text": "La intensidad relativa es directamente proporcional a la longitud de onda en ambos tipos de luz led."
+    },
+    {
+     "key": "D",
+     "text": "La intensidad relativa de la luz determina la temperatura y el color de la luz led."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q03.webp",
+    "width": 907,
+    "height": 715,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La intensidad relativa en 450 nm distingue ambos LED: la luz de 5000 K tiene un pico alto en esa longitud de onda, mientras que la de 3000 K casi no emite allí.",
+    "steps": [
+     "En la «Luz blanca fría 5000 (K)», la intensidad relativa en 450 nm alcanza su máximo, cercano a 1,0.",
+     "En la «Luz blanca cálida 3000 (K)», cerca de 450 nm la curva está en un valle, con intensidad relativa de alrededor de 0,2.",
+     "En 550 nm, la luz de 5000 K tiene intensidad cercana a 0,4 y la de 3000 K cercana a 0,8, lo que descarta la alternativa A.",
+     "La alternativa C supone una proporcionalidad que los gráficos no muestran, y la D invierte la relación: la forma del espectro describe el color, no lo que determina la temperatura.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Compara solo el pico de la luz fría en 550 nm y olvida que la curva de 3000 K está más alta en esa longitud de onda: invierte la relación entre temperatura e intensidad.",
+     "D": "Confunde una correlación visual con una causa: el gráfico muestra cómo se distribuye la intensidad, pero no que la intensidad determine la temperatura del LED."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q04",
+   "number": 4,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "Cuatro jóvenes se encuentran estudiando el perfil de tres ondas electromagnéticas (onda X, Y y Z) que se propagan en un mismo medio, graficados todos a una misma escala, tal como se representa en la siguiente figura:\n\nConsiderando el análisis de los perfiles de las ondas X, Y y Z, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El periodo de las ondas X, Y y Z es el mismo."
+    },
+    {
+     "key": "B",
+     "text": "La longitud de onda de las ondas X, Y y Z es la misma."
+    },
+    {
+     "key": "C",
+     "text": "La velocidad de la onda Y es mayor que la velocidad de la onda Z."
+    },
+    {
+     "key": "D",
+     "text": "La frecuencia de la onda X es mayor que la frecuencia de la onda Z."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q04.webp",
+    "width": 907,
+    "height": 911,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frecuencia es el inverso del periodo, y el periodo se lee como la duración de un ciclo: la onda X tiene el ciclo más corto, por lo que su frecuencia es la mayor.",
+    "steps": [
+     "La onda X muestra unos 5 ciclos en 5 s, así que su periodo es de aproximadamente 1 s.",
+     "La onda Z completa un ciclo entre un máximo cercano a 0,6 s y el siguiente cercano a 3,8 s, es decir, un periodo de unos 3 s.",
+     "La onda Y completa un ciclo en unos 5 s, con su máximo cerca de 1 s y su mínimo cerca de 4 s.",
+     "Como $f = \\frac{1}{T}$, la frecuencia de X ($\\approx 1$ Hz) es mayor que la de Z ($\\approx 0{,}3$ Hz); las alternativas A y C no coinciden con los periodos leídos.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Supone que las tres ondas tienen el mismo periodo porque se dibujan a la misma escala; en el gráfico el ciclo de X es mucho más corto que el de Y.",
+     "B": "Deduce igual longitud de onda por el aspecto general de las curvas, pero las frecuencias son distintas y, en un mismo medio, la longitud de onda depende de la frecuencia."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q05",
+   "number": 5,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Durante una actividad experimental, un grupo de estudiantes observa las imágenes que distintos tipos de espejos forman de un mismo objeto, manteniendo fija la distancia entre el objeto y cada espejo. Luego, registran los cambios de altura y orientación observadas en las imágenes respecto al objeto, tal como se indica en la siguiente tabla:\n\nAltura de la imagen con Orientación vertical de la Espejo respecto al objeto imagen con respecto al objeto 1 Igual Derecha\n\n2 Más grande Derecha\n\n3 Igual Invertida\n\n4 Más pequeña Derecha\n\nA partir de la información de la tabla, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los espejos 1 y 4 corresponden a espejos curvos con idéntica distancia focal."
+    },
+    {
+     "key": "B",
+     "text": "Los espejos 1 y 3 corresponden a espejos planos con las mismas dimensiones."
+    },
+    {
+     "key": "C",
+     "text": "Los espejos 2 y 3 corresponden a un mismo tipo de espejo curvo con diferente distancia focal."
+    },
+    {
+     "key": "D",
+     "text": "Los espejos 1 y 2 corresponden a un mismo tipo de espejo curvo con la misma distancia focal."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q05.webp",
+    "width": 907,
+    "height": 687,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según altura y orientación de la imagen, el espejo 1 es plano, el 4 es convexo y los espejos 2 y 3 son cóncavos; los dos cóncavos tienen distinta distancia focal porque el objeto está en posiciones distintas respecto de cada uno.",
+    "steps": [
+     "El espejo 1 forma una imagen igual al objeto y derecha: es un espejo plano, que da imágenes virtuales del mismo tamaño.",
+     "El espejo 4 forma una imagen derecha y más pequeña: es convexo, que siempre da imágenes virtuales y reducidas.",
+     "El espejo 2 forma una imagen derecha y más grande: es cóncavo, con el objeto entre el foco y el espejo.",
+     "El espejo 3 forma una imagen invertida del mismo tamaño: es cóncavo, con el objeto en el centro de curvatura, a una distancia $d = R = 2f_{3}$, es decir, $f_{3} = \\frac{d}{2}$; en el espejo 2, $d < f_{2}$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Trata el espejo 1 como curvo: una imagen del mismo tamaño no basta para asegurarlo, y el espejo 1 es plano, sin distancia focal.",
+     "B": "Asume que el espejo 3 es plano porque la imagen tiene igual altura, pero su imagen invertida indica un espejo cóncavo.",
+     "D": "Clasifica el espejo 1 como curvo y el 2 como su mismo tipo; al ser el espejo 1 plano, no puede tener la misma distancia focal que el 2."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q06",
+   "number": 6,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un grupo de estudiantes desea determinar experimentalmente si el tamaño de una imagen generada por una lente divergente está relacionado con el radio de curvatura del lente. Parte del procedimiento consiste en ubicar el objeto frente a una lente y detrás de ella una cámara digital, con la cual toman una foto y luego con una regla miden el tamaño de la imagen en la pantalla de su cámara. A partir de lo anterior, ¿cuál de las siguientes acciones complementa de mejor forma el procedimiento experimental realizado por el grupo de estudiantes para lograr el objetivo planteado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reemplazar la lente por otra diferente y volver a tomar una foto."
+    },
+    {
+     "key": "B",
+     "text": "Reemplazar el objeto por otro diferente y volver a tomar una foto."
+    },
+    {
+     "key": "C",
+     "text": "Ubicar la cámara entre la lente y el objeto, y volver a tomar una foto."
+    },
+    {
+     "key": "D",
+     "text": "Aumentar la distancia entre la lente y el objeto, y volver a tomar una foto."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para ver cómo influye el radio de curvatura de la lente, hay que cambiar la lente y mantener fijos el objeto, la distancia y la cámara.",
+    "steps": [
+     "La variable de interés es el radio de curvatura de la lente, así que debe ser la única que cambie entre mediciones.",
+     "Reemplazar la lente por otra de distinto radio y tomar una nueva foto permite comparar el tamaño de la imagen para radios diferentes.",
+     "Con la misma distancia objeto-lente y la misma cámara, las diferencias de tamaño de la imagen se deben solo al radio de curvatura.",
+     "Las opciones B, C y D cambian el objeto, la posición de la cámara o la distancia objeto-lente, por lo que no responden a la pregunta del radio.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Cambia el objeto, que es otra variable: el tamaño de la imagen dependería del objeto y no del radio de la lente.",
+     "C": "Ubicar la cámara entre la lente y el objeto cambia la configuración óptica y dónde se forma la imagen, no el radio de la lente.",
+     "D": "Cambiar la distancia objeto-lente altera la imagen, pero se sigue usando la misma lente, así que no se prueba el efecto del radio."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q07",
+   "number": 7,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Durante una actividad experimental, una estudiante fija un globo desinflado a los bordes de un plato hondo, cubriéndolo completamente hasta dejar tenso el globo, simulando una cama elástica. Luego deja caer, desde cierta altura, una canica sobre el globo tenso, observando que el globo se hunde levemente y que la canica rebota. Al respecto, ¿cuál de los siguientes hechos explica correctamente lo observado por la estudiante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La fuerza que la canica ejerce sobre el globo es proporcional a la altura desde donde se suelta la canica."
+    },
+    {
+     "key": "B",
+     "text": "La fuerza que ejerce la canica sobre el globo depende de cuan tenso esté el globo en la superficie del plato."
+    },
+    {
+     "key": "C",
+     "text": "La canica ejerce una fuerza sobre el globo en sentido contrario a la fuerza que el globo ejerce sobre la misma."
+    },
+    {
+     "key": "D",
+     "text": "La altura que alcanza la canica luego de rebotar sobre el globo se relaciona directamente con la tensión que el globo tiene en el plato."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al caer sobre el globo, la canica ejerce una fuerza sobre él, y el globo ejerce a su vez una fuerza igual y opuesta sobre la canica: es el par acción-reacción de la tercera ley de Newton.",
+    "steps": [
+     "Mientras la canica cae sobre el globo, lo empuja hacia abajo, y por eso el globo se hunde levemente.",
+     "El globo tenso responde con una fuerza hacia arriba sobre la canica, que hace que esta rebote.",
+     "Según la tercera ley de Newton, ambas fuerzas tienen igual magnitud y sentidos opuestos, y actúan sobre cuerpos distintos.",
+     "La altura del hundimiento y la del rebote solo describen el resultado del movimiento; no cambian la relación entre las dos fuerzas.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Relaciona la fuerza con la altura de caída, pero la fuerza de impacto depende de la rapidez y del tiempo de contacto; no es una proporcionalidad con la altura.",
+     "B": "Atribuye la fuerza a la tensión del globo; la fuerza que la canica ejerce sobre el globo no cambia con cuán tenso esté, pues el par de fuerzas se cumple siempre.",
+     "D": "Asocia la altura del rebote con la tensión del globo; el rebote depende de la energía con que llega la canica, no de una relación que explique la tercera ley."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q08",
+   "number": 8,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "A un bloque que se encuentra inicialmente en reposo sobre una superficie horizontal rugosa se le aplica una fuerza de manera horizontal variable. El gráfico I muestra cómo varía la fuerza de roce en función de la fuerza aplicada, por otra parte el gráfico II muestra cómo varía su rapidez mientras se le aplica dicha fuerza.\n\nEn relación con el análisis de los gráficos, ¿cuál de las siguientes opciones es una conclusión correcta respecto al movimiento del bloque?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Entre P y Q, el cuerpo se encuentra en reposo dado que la fuerza aplicada tiene la misma magnitud que la fuerza de roce."
+    },
+    {
+     "key": "B",
+     "text": "Entre Q y R, el cuerpo se encuentra en reposo dado que la fuerza de roce es siempre la misma."
+    },
+    {
+     "key": "C",
+     "text": "Entre Q y R, el cuerpo se encuentra en movimiento bajo roce estático dado que la fuerza de roce es siempre la misma."
+    },
+    {
+     "key": "D",
+     "text": "Entre P y Q, el cuerpo se encuentra en movimiento bajo roce cinético dado que, a medida que aumenta la fuerza aplicada, aumenta también la fuerza de roce."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q08.webp",
+    "width": 907,
+    "height": 803,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Mientras la fuerza aplicada no supera la máxima fuerza de roce estático (entre P y Q), la fuerza de roce iguala a la aplicada y el bloque no se mueve.",
+    "steps": [
+     "En el gráfico I, entre P (origen) y Q, la fuerza de roce crece igual que la fuerza aplicada: ambas valen lo mismo hasta 10 N.",
+     "En el gráfico II, la rapidez se mantiene en cero desde P hasta Q, por lo que el bloque permanece en reposo en ese tramo.",
+     "Entre P y Q el roce es estático y equilibra la fuerza aplicada; desde Q la fuerza de roce baja a un valor casi constante, cercano a 8 N.",
+     "Desde Q, la rapidez comienza a aumentar, así que el bloque se mueve entre Q y R con roce cinético.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Confunde una fuerza de roce constante con reposo: entre Q y R la rapidez aumenta, así que el bloque sí se mueve.",
+     "C": "Asigna roce estático a un movimiento: entre Q y R el bloque se mueve, por lo que el roce es cinético y no estático.",
+     "D": "Asigna movimiento al tramo P-Q, donde la rapidez es cero; además, en ese tramo el roce es estático y no cinético."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q09",
+   "number": 9,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un grupo de estudiantes forma un sistema de dos bloques de masas idénticas unidos entre sí, y los ubica sobre una superficie horizontal. Unen un dinamómetro a uno de estos bloques para registrar la fuerza que se aplica al sistema, mientras son arrastrados con una rapidez constante, tal como se representa en la siguiente figura:\n\nUna vez obtenidos los resultados, el mismo grupo de estudiantes repite el procedimiento, pero esta vez superponiendo el bloque 2 sobre el bloque 1. Finalmente, comparan los resultados de las fuerzas aplicadas para ambos experimentos, observando que existe una diferencia despreciable entre los resultados obtenidos. En su informe, los estudiantes señalan que “la magnitud de la fuerza de roce es independiente del área de contacto entre los bloques y la superficie”. Al respecto, ¿a qué componente de la investigación científica corresponde lo señalado por el grupo de estudiantes en su informe?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un marco conceptual."
+    },
+    {
+     "key": "B",
+     "text": "A un procedimiento."
+    },
+    {
+     "key": "C",
+     "text": "A una conclusión."
+    },
+    {
+     "key": "D",
+     "text": "A una predicción."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q09.webp",
+    "width": 907,
+    "height": 619,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Comparar dos montajes y afirmar que la fuerza de roce no depende del área de contacto es una conclusión, porque la frase se deriva de los datos obtenidos.",
+    "steps": [
+     "Los estudiantes miden la fuerza con el dinamómetro en dos montajes: los bloques lado a lado y el bloque 2 superpuesto sobre el 1, lo que cambia el área de contacto con la superficie.",
+     "Como la fuerza medida es prácticamente la misma en ambos montajes, los datos respaldan que el roce no depende del área de contacto.",
+     "La frase resume y generaliza lo observado en el experimento, es decir, es un resultado interpretado: una conclusión.",
+     "Un marco conceptual, un procedimiento o una predicción no corresponden: la frase no describe la teoría previa, ni cómo se hizo el montaje, ni lo que se esperaba antes de medir.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Un marco conceptual es la teoría de base, como las leyes de Newton; la frase no la presenta, sino que la deduce de datos.",
+     "B": "El procedimiento describe las acciones realizadas, como arrastrar los bloques y medir con el dinamómetro; la frase es el resultado de esas acciones.",
+     "D": "Una predicción se formula antes del experimento; esta afirmación proviene de datos ya obtenidos."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q10",
+   "number": 10,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Una persona plantea que la magnitud de la fuerza transmitida por una cuerda depende del lugar de la cuerda donde esta fuerza se mida. Para probar su hipótesis, cuelga del techo un bloque grande, del cual se cuelgan otros dos bloques pequeños, utilizando tres trozos de cuerda inextensibles y de masa despreciable (1, 2 y 3). El sistema se representa en la siguiente figura:\n\nA continuación, para probar su hipótesis, la persona va a intercalar un mismo dinamómetro en el sistema en dos ocasiones, ¿dónde debe intercalar el dinamómetro en cada ocasión?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Primero en la unión del techo con la cuerda 1 y luego, en la unión de la cuerda 3 con el bloque pequeño."
+    },
+    {
+     "key": "B",
+     "text": "Primero en la unión de la cuerda 2 con el bloque grande y luego, en la unión de la cuerda 2 con el bloque pequeño."
+    },
+    {
+     "key": "C",
+     "text": "Primero en la unión de la cuerda 3 con el bloque grande y luego, en la unión de la cuerda 2 con el bloque grande."
+    },
+    {
+     "key": "D",
+     "text": "Primero en la unión de la cuerda 1 con el bloque grande y luego, nuevamente en la unión de la cuerda 1 con el bloque grande."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q10.webp",
+    "width": 907,
+    "height": 696,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la cuerda es de masa despreciable e inextensible, la tensión es la misma en todos sus puntos; para probar que depende del lugar hay que medir en dos extremos de una misma cuerda.",
+    "steps": [
+     "La hipótesis habla del «lugar de la cuerda» donde se mide la fuerza, por lo que la comparación debe hacerse dentro de una misma cuerda.",
+     "La cuerda 2 une el bloque grande con un bloque pequeño; intercalar el dinamómetro en cada uno de sus extremos permite comparar dos puntos de una misma cuerda.",
+     "Como la cuerda es de masa despreciable, la tensión en un extremo es igual a la del otro; si las lecturas coinciden, la hipótesis no se sostiene.",
+     "Las demás opciones comparan cuerdas distintas o repiten el mismo punto, así que no aíslan el efecto del lugar.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Compara la cuerda 1, que sostiene todo el sistema, con la cuerda 3; la diferencia de tensión se debe a la masa que cada cuerda sostiene, no al lugar dentro de una misma cuerda.",
+     "C": "Compara dos cuerdas distintas unidas al bloque grande; sus tensiones pueden coincidir o diferir por la carga que soportan, no por el lugar de medición.",
+     "D": "Mide dos veces en el mismo punto, por lo que no puede detectar ninguna diferencia y no pone a prueba la hipótesis."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q11",
+   "number": 11,
+   "axis": "Física",
+   "topic": "Presión y fluidos",
+   "stem": "Una persona estudia la presión que ejercen los líquidos. Para ello, llena una botella con agua, que tiene pequeños orificios en diferentes posiciones, como se representa en la figura. Luego, registra el alcance del agua que sale por cada orificio.\n\nSi otra persona desea replicar los resultados de las mediciones realizadas, pero no posee la misma botella, ¿qué precaución debe tener al repetir el procedimiento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que los orificios se encuentren a las mismas profundidades que en la botella original, por debajo del nivel del agua."
+    },
+    {
+     "key": "B",
+     "text": "Que el recipiente a utilizar tenga el mismo volumen que la botella original, aunque su forma sea diferente."
+    },
+    {
+     "key": "C",
+     "text": "Que el agua contenida en el recipiente a utilizar llegue hasta la misma altura que en la botella original."
+    },
+    {
+     "key": "D",
+     "text": "Que el área basal del recipiente a utilizar sea igual al área basal de la botella original."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q11.webp",
+    "width": 907,
+    "height": 692,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La presión de un líquido depende de la profundidad, así que los orificios deben quedar a las mismas profundidades bajo el nivel del agua, aunque el recipiente cambie.",
+    "steps": [
+     "Por la presión hidrostática, $P = \\rho g h$, la presión en cada orificio depende de la profundidad $h$ bajo la superficie, y no de la forma ni del volumen del recipiente.",
+     "El alcance del chorro crece con la presión en el orificio, así que los alcances solo son comparables si cada orificio está a la misma profundidad que en la botella original.",
+     "Si el nuevo recipiente tiene otra forma o área basal, hay que ubicar los orificios a las mismas profundidades bajo el agua.",
+     "Igualar el volumen, la altura del agua o el área basal no garantiza que los orificios tengan la profundidad correcta.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Igualar el volumen no asegura la profundidad de cada orificio; la presión depende de la profundidad, no del volumen total.",
+     "C": "Igualar la altura del agua fija el nivel superior, pero no la profundidad de cada orificio, que es lo que determina el alcance.",
+     "D": "El área basal no influye en la presión a una profundidad dada, así que igualarla no soluciona la comparación entre orificios."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q12",
+   "number": 12,
+   "axis": "Física",
+   "topic": "Presión y fluidos",
+   "stem": "Un grupo de estudiantes que investiga respecto a la presión, cuenta con un recipiente cilíndrico que contiene un líquido de densidad conocida y está provisto de un émbolo. En el costado del cilindro realizan tres orificios de igual diámetro, a diferente profundidad, y en cada uno de ellos conectan un tubo en forma de U por el cual asciende una pequeña cantidad del líquido hasta una cierta altura en función de h. Luego, presionan el émbolo y observan que el líquido en los tubos con forma de U aumenta su altura. La siguiente figura representa el experimento realizado por el grupo de estudiantes, en la tabla se muestra la altura del líquido en los tubos antes y después de presionar el émbolo:\n\nAltura Altura antes después Tubo 1 1,0 h 1,5 h Tubo 2 2,0 h 2,5 h Tubo 3 3,0 h 3,5 h\n\nConsiderando el procedimiento y mediciones realizadas por los estudiantes, ¿cuál de las siguientes preguntas de investigación se buscaba responder?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuál es la relación que existe entre la densidad de un líquido y la presión que ejerce?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuál es la relación que existe entre la presión que ejerce un líquido y el área donde la ejerce?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cómo cambia la presión en diferentes puntos de un líquido cuando se varía la densidad del mismo?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cómo cambia la presión en diferentes puntos de un líquido cuando se varía la presión sobre su superficie?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q12.webp",
+    "width": 907,
+    "height": 837,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al presionar el émbolo, el líquido de los tres tubos sube la misma cantidad: la presión sobre la superficie se transmite por igual a todos los puntos, y el experimento busca responder cómo cambia la presión en distintos puntos al variar la presión sobre la superficie.",
+    "steps": [
+     "Los tres tubos se conectan a orificios de igual diámetro a distintas profundidades, así que se mide la presión en distintos puntos del líquido.",
+     "La variable que el grupo cambia es la presión sobre la superficie, al presionar el émbolo.",
+     "En los tres tubos el líquido sube exactamente 0,5 h tras presionar (de 1,0 h a 1,5 h, de 2,0 h a 2,5 h y de 3,0 h a 3,5 h): el aumento de presión es el mismo en todos los puntos.",
+     "La densidad del líquido y el área de los orificios no se varían, así que la pregunta no busca relacionar la presión con esos factores.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Supone que se varía la densidad del líquido, pero el montaje usa un único líquido de densidad conocida, que no se modifica.",
+     "B": "Confunde el área del orificio con la presión: los tres orificios tienen igual diámetro, así que el área no cambia entre ellos.",
+     "C": "Piensa que la densidad se varía entre mediciones; en el experimento solo cambia la presión que ejerce el émbolo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q13",
+   "number": 13,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "En un océano que no presenta fosas oceánicas, pero que sí tiene una dorsal oceánica que pasa por su centro, existen dos islas que se ubican en sus costas opuestas. Al respecto, ¿cuál de las siguientes opciones es una predicción consistente con lo planteado por la Teoría de Tectónica de Placas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ambas islas se debiesen estar alejando entre sí."
+    },
+    {
+     "key": "B",
+     "text": "Nuevas islas debiesen surgir en el océano."
+    },
+    {
+     "key": "C",
+     "text": "Debiese existir una gran sismicidad en ambas islas."
+    },
+    {
+     "key": "D",
+     "text": "Ambas islas debiesen mantenerse en la misma posición."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una dorsal oceánica el fondo se expande: se forma corteza nueva y las placas se alejan, así que las islas ubicadas a cada lado deberían separarse.",
+    "steps": [
+     "La dorsal del centro del océano es un límite divergente, donde el magma asciende y forma corteza oceánica nueva.",
+     "Como la corteza nueva empuja hacia afuera, las placas a ambos lados de la dorsal se separan de forma continua.",
+     "Las dos islas, ubicadas en costas opuestas, están sobre placas que se alejan entre sí; la predicción es que se separen.",
+     "Las alternativas B y C no se siguen de la teoría en este escenario, y la D contradice el movimiento de las placas.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Nuevas islas no se predicen: la dorsal forma corteza nueva en el fondo, pero no necesariamente emerge como islas.",
+     "C": "La gran sismicidad se asocia con fosas y zonas de subducción, que este océano no tiene; las dorsales presentan sismos de menor magnitud.",
+     "D": "Mantener la posición contradice el movimiento de placas que indica la dorsal; confunde la ausencia de fosas con ausencia de movimiento."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q14",
+   "number": 14,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Un grupo de estudiantes de meteorología desean estudiar las posibles relaciones entre presión atmosférica, temperatura, densidad del aire y altura por sobre el nivel del mar. Para esto, utilizan un globo meteorológico con un instrumento que registra los datos que se presentan en la siguiente tabla:\n\nPresión atmosférica Densidad del aire Altitud (km) Temperatura (°C) (mbar) (kg/m³) 0 1013 17 1,23 2,5 746 -1 0,96 5,0 540 -18 0,71 7,5 382 -34 0,54 10,0 264 -50 0,42\n\nA partir de lo anterior, ¿cuál de las siguientes opciones presenta una conclusión correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La temperatura aumenta cuando la altitud disminuye."
+    },
+    {
+     "key": "B",
+     "text": "La densidad del aire disminuye cuando la altitud disminuye."
+    },
+    {
+     "key": "C",
+     "text": "La temperatura aumenta cuando la densidad del aire disminuye."
+    },
+    {
+     "key": "D",
+     "text": "La presión atmosférica disminuye cuando la temperatura aumenta."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q14.webp",
+    "width": 907,
+    "height": 529,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En los datos, la temperatura baja a medida que aumenta la altitud, y junto con ella bajan la densidad y la presión: la temperatura sube cuando la altitud disminuye.",
+    "steps": [
+     "Al subir de 0 a 10 km, la temperatura pasa de 17 °C a -50 °C: aumenta cuando la altitud disminuye, como indica la alternativa A.",
+     "La densidad del aire pasa de 1,23 a 0,42 kg/m³ al subir, por lo que aumenta cuando la altitud baja.",
+     "Cuando la densidad baja de 1,23 a 0,42, la temperatura también baja de 17 a -50 °C; la temperatura no aumenta al disminuir la densidad.",
+     "La presión baja de 1013 a 264 mbar al mismo tiempo que la temperatura baja; por eso la presión no disminuye cuando la temperatura aumenta.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Invierte la tendencia de la densidad: el aire es más denso a menor altitud, y la tabla muestra que la densidad aumenta cuando la altitud baja.",
+     "C": "Supone una relación causal inversa: en la tabla, la temperatura y la densidad disminuyen juntas al aumentar la altitud.",
+     "D": "Confunde la presión con la temperatura: ambas disminuyen con la altitud, así que la presión no baja cuando la temperatura sube."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q15",
+   "number": 15,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Habitualmente, se habla de una ola de calor cuando en un periodo de al menos tres días seguidos la temperatura alcanza valores anormalmente altos, comparados con el promedio de las temperaturas máximas del lugar para el mismo periodo. Si una persona piensa que efectivamente durante la semana anterior hubo una ola de calor, conociendo el promedio de la temperatura máxima del lugar, ¿qué información necesita para corroborarlo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El promedio de las temperaturas máximas y mínimas en los días más calurosos de la semana."
+    },
+    {
+     "key": "B",
+     "text": "El promedio de la temperatura máxima alcanzada durante la misma semana del año anterior."
+    },
+    {
+     "key": "C",
+     "text": "La variación de la temperatura promedio de la misma semana del año anterior."
+    },
+    {
+     "key": "D",
+     "text": "La temperatura promedio de cada día de la semana por el periodo de un año."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para corroborar una ola de calor hay que comparar las temperaturas máximas de al menos tres días seguidos con un valor de referencia del mismo periodo, por lo que se necesita un dato específico de esa semana.",
+    "steps": [
+     "La definición exige comparar tres o más días seguidos con el promedio de las temperaturas máximas del lugar para el mismo periodo.",
+     "Un promedio general no sirve para decidir si una semana concreta fue anormal, porque las temperaturas cambian a lo largo del año.",
+     "Se necesita un valor de referencia de la misma semana del calendario; la opción B es la única que entrega una temperatura máxima para ese mismo periodo.",
+     "Las opciones A y D usan mínimas, promedios diarios o un año completo, y la C trata variaciones de la temperatura promedio, no de máximas.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Mezcla máximas y mínimas de los días más calurosos: describe la semana, pero no entrega el referente de su mismo periodo.",
+     "C": "Se queda con la variación de la temperatura promedio, que no es la temperatura máxima que define la ola de calor.",
+     "D": "Da un promedio diario de todo el año, que suaviza las estaciones y no sirve para distinguir una ola de calor en una semana."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q16",
+   "number": 16,
+   "axis": "Física",
+   "topic": "Electricidad",
+   "stem": "Si un grupo de personas construye un circuito conectando dos resistencias en paralelo a una batería, ¿cuál de las siguientes opciones es coherente con la ley de Ohm y la configuración del circuito, al comparar la diferencia de potencial y la intensidad de corriente eléctrica en cada resistencia con la suministrada por la batería?\n\nIntensidad de corriente Diferencia de potencial eléctrica",
+   "options": [
+    {
+     "key": "A",
+     "text": "Es menor Es igual"
+    },
+    {
+     "key": "B",
+     "text": "Es igual Es menor"
+    },
+    {
+     "key": "C",
+     "text": "Es menor Es mayor"
+    },
+    {
+     "key": "D",
+     "text": "Es igual Es mayor"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q16.webp",
+    "width": 907,
+    "height": 334,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En un circuito en paralelo, cada resistencia queda sometida a la misma diferencia de potencial de la batería, pero la corriente se reparte entre las ramas, así que cada una transporta menos corriente que la total.",
+    "steps": [
+     "Las dos resistencias están conectadas directamente a los mismos bornes de la batería, por lo que cada una tiene la misma diferencia de potencial que la batería: es igual.",
+     "Según la ley de Ohm, $I = \\frac{V}{R}$ en cada rama; como la corriente se reparte, la intensidad en cada resistencia es menor que la de la batería.",
+     "La corriente total de la batería es la suma de las corrientes de ambas ramas, por lo que cada una es menor que la total.",
+     "Las combinaciones con diferencia de potencial menor o con intensidad mayor no son coherentes con un circuito en paralelo.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Confunde el paralelo con el serie, donde la diferencia de potencial se reparte y no es igual en cada resistencia.",
+     "C": "Supone que la diferencia de potencial disminuye en cada resistencia del paralelo, lo que no ocurre con la batería conectada a ambas.",
+     "D": "Supone que cada rama conserva toda la corriente de la batería; en realidad la corriente se reparte, así que cada rama tiene menos."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q17",
+   "number": 17,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Un estudiante construye un circuito eléctrico utilizando una pila, un amperímetro, una ampolleta y un interruptor conectados en serie. A continuación, cierra el circuito usando el interruptor y comienza a registrar, cada cinco minutos durante media hora, el valor de la intensidad de corriente medida por el amperímetro. A partir del procedimiento realizado por el estudiante, ¿cuál de las siguientes preguntas de investigación guio el procedimiento descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Qué relación existe entre la diferencia de potencial de la pila y la intensidad de corriente del circuito?"
+    },
+    {
+     "key": "B",
+     "text": "¿Qué relación existe entre la diferencia de potencial de la pila y el tiempo de funcionamiento del circuito?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cómo se relaciona el funcionamiento del interruptor con la intensidad de corriente del circuito?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cómo se relaciona la intensidad de corriente con el tiempo de funcionamiento del circuito?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El estudiante fija el circuito y mide la intensidad cada cinco minutos durante media hora, así que la pregunta relaciona la intensidad de corriente con el tiempo de funcionamiento.",
+    "steps": [
+     "La variable que se controla es el tiempo de funcionamiento, ya que el circuito se cierra una vez y se registra cada cinco minutos.",
+     "La variable que se mide es la intensidad de corriente, registrada por el amperímetro.",
+     "El interruptor se cierra una sola vez al comienzo, así que su funcionamiento no es la variable estudiada.",
+     "La diferencia de potencial de la pila no se varía ni se mide, por lo que no es la variable de la pregunta.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Relaciona la intensidad con la diferencia de potencial, que el estudiante no varió ni midió durante el procedimiento.",
+     "B": "Usa la diferencia de potencial de la pila y el tiempo; ninguna de esas variables se midió de manera comparable.",
+     "C": "Pone el interruptor como variable, pero solo se cierra al inicio y no se modifica durante el registro."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q18",
+   "number": 18,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "Una persona está construyendo una cabaña y, para instalar su sistema eléctrico ha comprado cables de cobre, enchufes, interruptores y un medidor eléctrico. Al respecto, ¿cuál de los elementos mencionados anteriormente le permitiría conocer el consumo eléctrico de los artefactos eléctricos que usará en su cabaña?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los enchufes."
+    },
+    {
+     "key": "B",
+     "text": "Los interruptores."
+    },
+    {
+     "key": "C",
+     "text": "El medidor eléctrico."
+    },
+    {
+     "key": "D",
+     "text": "Los cables de cobre."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "pilot": true,
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El medidor eléctrico registra la energía que consumen los artefactos, mientras que los demás elementos solo conducen, conectan o controlan la corriente.",
+    "steps": [
+     "El consumo eléctrico corresponde a la energía que usan los artefactos, y es lo que registra un medidor eléctrico.",
+     "Los cables de cobre conducen la corriente, pero no informan cuánto se consume.",
+     "Los enchufes conectan los artefactos a la red, y los interruptores abren o cierran el circuito; ninguno registra el consumo.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Los enchufes conectan artefactos a la red, pero no registran cuánta energía consumen.",
+     "B": "Los interruptores controlan el paso de la corriente, sin medir su cantidad.",
+     "D": "Los cables de cobre conducen la electricidad, pero no informan del consumo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q19",
+   "number": 19,
+   "axis": "Biología",
+   "topic": "Microorganismos",
+   "stem": "Una investigación comprobó que al mutar genéticamente una estructura de la bacteria *E. coli*, esta le permite adherirse a ciertas superficies y mantenerse rotando constantemente como una hélice. En este contexto, se propone que formar un nanodispositivo con dichas bacterias, dispuestas de forma alineada por el interior de la superficie de un tubo, facilitaría el desplazamiento de fluidos viscosos o difíciles de mover. A continuación, se presenta el esquema de un corte longitudinal de un tubo que se utilizaría en este sistema:\n\nEn relación con la información anterior, ¿cuál de las siguientes opciones señala correctamente la estructura bacteriana que se manipuló para conformar este nanodispositivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El flagelo."
+    },
+    {
+     "key": "B",
+     "text": "La cápsula."
+    },
+    {
+     "key": "C",
+     "text": "La pared celular."
+    },
+    {
+     "key": "D",
+     "text": "La membrana plasmática."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q19.webp",
+    "width": 907,
+    "height": 643,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El movimiento de la bacteria en forma de hélice es la función del flagelo, por lo que el nanodispositivo usa bacterias con flagelos modificados para impulsar el fluido.",
+    "steps": [
+     "El texto dice que la bacteria mutada «se mantiene rotando constantemente como una hélice», y la figura muestra cada E. coli con una prolongación delgada y ondulada, parecida a una cola.",
+     "Esa prolongación es el flagelo, un filamento proteico que gira como hélice y produce el desplazamiento de la célula.",
+     "Alineadas en la pared interna del tubo, las bacterias giran al mismo tiempo y generan una corriente que mueve el fluido viscoso.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La cápsula: es una capa externa que ayuda a adherirse, pero no gira ni impulsa nada; confundir adhesión con movimiento es el error.",
+     "C": "La pared celular: da forma y rigidez a la célula, pero no genera movimiento.",
+     "D": "La membrana plasmática: regula el paso de sustancias; no tiene función motora."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q20",
+   "number": 20,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un estudio en hepatocitos de rata muestra que existen intensidades de radiación infrarroja que generan un efecto sobre la función del retículo endoplásmico liso (REL) de estas células. Para esto, los hepatocitos de distintas ratas son estimulados durante 15 días consecutivos con distintas intensidades de radiación infrarroja, lo que causa modificaciones en el volumen del REL. Al respecto, ¿cuál de las siguientes opciones corresponde a una variable dependiente de este experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La intensidad de radiación infrarroja."
+    },
+    {
+     "key": "B",
+     "text": "El tiempo de irradiación."
+    },
+    {
+     "key": "C",
+     "text": "El volumen del REL."
+    },
+    {
+     "key": "D",
+     "text": "La línea celular utilizada."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable dependiente es la que se mide como respuesta al cambio de la variable independiente; en este experimento, es el volumen del REL.",
+    "steps": [
+     "Los investigadores aplican distintas intensidades de radiación infrarroja a hepatocitos de distintas ratas durante 15 días consecutivos.",
+     "La intensidad de la radiación es lo que el investigador cambia, por lo que es la variable independiente.",
+     "El texto señala que la radiación «causa modificaciones en el volumen del REL»: ese volumen es lo que se mide como resultado.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La intensidad de radiación: es la variable independiente, la que se manipula; confundirla con la respuesta es el error.",
+     "B": "El tiempo de irradiación: el diseño fija la duración en 15 días; no es el resultado medido.",
+     "D": "La línea celular utilizada: es una condición controlada del experimento, no una respuesta."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q21",
+   "number": 21,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Una patología que afecta a las células β pancreáticas es la diabetes tipo 2 (D2), que se caracteriza por una deficiencia en la secreción de insulina, generando un aumento de glucosa en la sangre. Por otra parte, varios estudios han identificado alteraciones estructurales y funcionales de las células δ en personas con D2, las cuales aumentan la secreción de somatostatina, hormona que incrementa el déficit de insulina. Considerando estos antecedentes, un equipo médico plantea un “análisis morfológico de células δ en humanos, en los cuales se aplicarán técnicas de detección de insulina y somatostatina en secciones del páncreas de individuos diabéticos y no diabéticos”. Considerando este caso de estudio, ¿a qué componente de la investigación científica corresponde el texto entre comillas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Al objetivo."
+    },
+    {
+     "key": "B",
+     "text": "Al marco conceptual."
+    },
+    {
+     "key": "C",
+     "text": "Al diseño experimental."
+    },
+    {
+     "key": "D",
+     "text": "Al procedimiento experimental."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto describe qué grupos se comparan, qué técnicas se aplican y sobre qué muestra, lo que corresponde al diseño experimental.",
+    "steps": [
+     "El texto indica que se comparará el páncreas de «individuos diabéticos y no diabéticos», es decir, dos grupos con los que se contrasta la presencia de insulina y somatostatina.",
+     "También define la muestra (células δ en humanos) y las técnicas de medición, que son los elementos que estructuran el diseño.",
+     "El marco conceptual explica la relación entre D2 y somatostatina, y el procedimiento describiría los pasos de laboratorio, que la cita no detalla.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Al objetivo: la cita no declara una meta; el error es confundir el verbo «analizar» con el propósito del estudio.",
+     "B": "Al marco conceptual: la cita no explica antecedentes; esa información aparece antes en el enunciado.",
+     "D": "Al procedimiento experimental: el error es pensar que la cita describe la secuencia de acciones, cuando solo describe cómo se organiza la comparación."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q22",
+   "number": 22,
+   "axis": "Biología",
+   "topic": "Especies",
+   "stem": "En los individuos machos de una especie en peligro de extinción, se ha descrito que existen anomalías en el contenido del acrosoma de sus espermatozoides. Ante esta situación, un grupo de científicas realizó un estudio en donde se probó un nuevo fármaco en uno de estos individuos, resultando en una mejora del contenido acrosomal. Sin embargo, la comisión que revisó el protocolo experimental implementado rechazó la utilización de este fármaco, indicando que dicho protocolo presentaba una baja confiabilidad. En relación con el contexto planteado, ¿cuál de las siguientes opciones presenta una acción que permite superar la deficiencia por la que se rechazó este estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Evaluar el fármaco en individuos de distintas especies."
+    },
+    {
+     "key": "B",
+     "text": "Evaluar el fármaco en individuos sin problemas acrosomales."
+    },
+    {
+     "key": "C",
+     "text": "Evaluar el fármaco en individuos sin problemas de conservación biológica."
+    },
+    {
+     "key": "D",
+     "text": "Evaluar el fármaco en un número mayor de individuos de la misma especie."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q22.webp",
+    "width": 907,
+    "height": 380,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una baja confiabilidad por muestra insuficiente se corrige aumentando el número de individuos de la misma especie, para distinguir el efecto del fármaco de la variación natural.",
+    "steps": [
+     "El texto dice que el fármaco se probó en «uno de estos individuos», es decir, con una muestra de un solo animal, insuficiente para concluir algo sobre el efecto.",
+     "Para mejorar la confiabilidad se necesitan más réplicas: más individuos de la misma especie en peligro, tratados con el mismo protocolo.",
+     "Ensayar en otras especies cambia la población estudiada y no resuelve la falta de datos de la especie que interesa.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Evaluar en distintas especies: cambia la población de estudio y no aumenta el número de individuos de la especie en peligro.",
+     "B": "Evaluar en individuos sin problemas acrosomales: un grupo control puede ser útil, pero la deficiencia señalada es el tamaño de la muestra, que no aumenta.",
+     "C": "Evaluar en individuos sin problemas de conservación: el criterio de conservación no es la causa de la baja confiabilidad."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q23",
+   "number": 23,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un grupo de científicos pretende estudiar el efecto de una droga X sobre la viabilidad de los gametos femeninos. Se sabe que si los ovocitos se exponen a una cierta concentración de X, experimentan una alteración de sus componentes celulares, lo que provoca la fecundación por más de un espermatozoide. A partir de lo anterior, ¿cuál de las siguientes opciones propone un mecanismo de acción correcto para la droga X?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La exposición del ovocito a X provoca la desintegración de la zona pelúcida."
+    },
+    {
+     "key": "B",
+     "text": "La exposición del ovocito a X provoca el engrosamiento de la corona radiada."
+    },
+    {
+     "key": "C",
+     "text": "La exposición del ovocito a X impide la liberación del contenido del acrosoma del espermatozoide."
+    },
+    {
+     "key": "D",
+     "text": "La exposición del ovocito a X inhibe la fusión de la membrana plasmática del ovocito con la del espermatozoide."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La polispermia ocurre cuando falla la barrera que impide la entrada de más de un espermatozoide, y esa barrera es la zona pelúcida del ovocito.",
+    "steps": [
+     "El texto dice que el ovocito expuesto a X sufre una alteración de sus componentes y es fecundado por «más de un espermatozoide».",
+     "Normalmente, la zona pelúcida bloquea la entrada de otros espermatozoides una vez iniciada la fecundación.",
+     "Si X desintegra la zona pelúcida, la barrera desaparece y varios espermatozoides pueden atravesarla.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El engrosamiento de la corona radiada: la corona radiada facilita el acceso inicial del espermatozoide; el error es confundirla con la barrera contra la polispermia.",
+     "C": "Impedir la liberación del acrosoma: bloquea la penetración y reduciría la fecundación, no la multiplicaría.",
+     "D": "Inhibir la fusión de membranas: impide la fecundación por cualquier espermatozoide; es un efecto contrario a la polispermia."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q24",
+   "number": 24,
+   "axis": "Biología",
+   "topic": "Biología",
+   "stem": "Un grupo de investigación está llevando a cabo ensayos clínicos con elagolix, un fármaco propuesto para mejorar la regularidad del ciclo menstrual en mujeres con síndrome de ovario poliquístico (SOP). Para su estudio, seleccionaron un total de 100 mujeres con SOP, divididas en distintos grupos, a los cuales se les administró distintas dosis de elagolix, evaluando posteriormente la aparición del folículo dominante (el que terminará madurando) durante el ciclo, así como la duración de este. En sus resultados, un 3 % de las mujeres presentaron una mejora en la regulación del ciclo menstrual, las cuales correspondían al grupo al que se le administró una dosis de 300 mg/día, mientras que el resto de ellas mantuvo sus periodos irregulares. Considerando estos antecedentes, ¿cuál de las siguientes opciones presenta el objetivo de investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar la dosis óptima de elagolix para promover la ovulación en mujeres con SOP."
+    },
+    {
+     "key": "B",
+     "text": "Investigar el efecto de elagolix sobre el tamaño del folículo dominante en mujeres con SOP."
+    },
+    {
+     "key": "C",
+     "text": "Conocer los efectos secundarios asociados con el uso de elagolix en mujeres que presentan SOP."
+    },
+    {
+     "key": "D",
+     "text": "Evaluar la eficacia de elagolix en el aumento de la tasa de fecundación en mujeres que muestran anovulación crónica."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El objetivo es identificar qué dosis de elagolix mejora la regularidad del ciclo, dado que el estudio comparó distintas dosis.",
+    "steps": [
+     "El estudio compara «distintas dosis de elagolix» en 100 mujeres con SOP, lo que indica que el propósito es encontrar la dosis que funciona.",
+     "El resultado clave es que la mejora se observó solo en el grupo de 300 mg/día, y la maduración del folículo dominante se usa como indicador de ovulación.",
+     "La opción B mide el tamaño del folículo y la C, efectos secundarios; el texto no informa sobre ninguna de las dos.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Efecto sobre el tamaño del folículo: el estudio registra la aparición y la duración del folículo, no su tamaño.",
+     "C": "Efectos secundarios: no aparecen en el texto; el estudio se centra en la regularidad del ciclo.",
+     "D": "Tasa de fecundación en anovulación crónica: el estudio no mide fecundación y la población es de mujeres con SOP."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q25",
+   "number": 25,
+   "axis": "Biología",
+   "topic": "Microorganismos",
+   "stem": "La Organización Mundial de la Salud realizó recientemente un estudio, a través de encuestas personales e informes clínicos, que busca evaluar la capacidad protectora de los preservativos contra las infecciones de transmisión sexual (ITS). Los resultados obtenidos se indican en la siguiente tabla:\n\nITS Porcentaje de protección VIH/SIDA >90 Hepatitis B >90 Gonorrea 80 Sífilis 50 - 80 Herpes 10 - 50\n\nEn relación con los datos del estudio, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los preservativos son más efectivos para impedir la propagación de patógenos de mayor tamaño."
+    },
+    {
+     "key": "B",
+     "text": "Los preservativos son menos efectivos para impedir la propagación de ITS con tiempos de incubación prolongados."
+    },
+    {
+     "key": "C",
+     "text": "Los preservativos son más efectivos para impedir la propagación de los patógenos bacterianos que de los virales."
+    },
+    {
+     "key": "D",
+     "text": "Los preservativos son menos efectivos para impedir la propagación de ITS que producen lesiones que liberan secreción."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q25.webp",
+    "width": 907,
+    "height": 605,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los preservativos protegen menos frente a las ITS que producen lesiones, como herpes y sífilis, que frente a VIH y hepatitis B, transmitidas por fluidos.",
+    "steps": [
+     "La tabla muestra: VIH y hepatitis B sobre 90 %, gonorrea 80 %, sífilis entre 50 % y 80 %, y herpes entre 10 % y 50 %.",
+     "Las ITS con menor protección son herpes y sífilis, que producen lesiones en la piel o mucosas, con líquido que puede liberarse y zonas que pueden quedar fuera de lo cubierto por el preservativo.",
+     "En cambio, VIH y hepatitis B tienen la protección más alta, y la tabla no les atribuye lesiones externas.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Patógenos de mayor tamaño: la tabla no informa tamaños; el VIH, con la mayor protección, es un virus muy pequeño.",
+     "B": "Tiempos de incubación prolongados: la tabla no entrega tiempos de incubación; el error es inventar un dato que no aparece.",
+     "C": "Patógenos bacterianos más protegidos que los virales: el herpes (viral, 10 % a 50 %) queda bajo la sífilis (bacteriana, 50 % a 80 %), y el VIH (viral) supera a la gonorrea (bacteriana)."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q26",
+   "number": 26,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En la década de 1770, un investigador se dedicó a experimentar con muestras seminales, exponiéndolas a diferentes medios como ácido acético, bicarbonato de sodio y distintos alcoholes. El investigador concluyó que, al exponer las células sexuales a distintas concentraciones de estos medios, disminuía e incluso se inhibía la capacidad de fertilización. En este contexto, ¿cuál de las siguientes opciones indica un método anticonceptivo que pudo haber tenido como base el experimento descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Preservativo."
+    },
+    {
+     "key": "B",
+     "text": "Espermicida."
+    },
+    {
+     "key": "C",
+     "text": "Vasectomía."
+    },
+    {
+     "key": "D",
+     "text": "Diafragma."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un espermicida es una sustancia química que inactiva o mata a los espermatozoides, y el experimento con ácido acético, bicarbonato y alcoholes sugiere ese principio.",
+    "steps": [
+     "El investigador expuso muestras seminales a sustancias químicas como ácido acético, bicarbonato de sodio y alcoholes.",
+     "Concluyó que, a ciertas concentraciones, disminuía e incluso se inhibía la capacidad de fertilización, lo que indica un efecto químico sobre las células sexuales.",
+     "Un método que actúe químicamente sobre los espermatozoides, como un espermicida, se basa en ese mismo principio.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Preservativo: es una barrera física que impide el paso de espermatozoides, sin acción química sobre ellos.",
+     "C": "Vasectomía: es una cirugía que interrumpe los conductos deferentes; no usa sustancias.",
+     "D": "Diafragma: es una barrera mecánica en el cuello uterino; aunque a veces se usa con espermicida, no depende por sí solo del efecto químico descrito."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q27",
+   "number": 27,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un hospital estadounidense informó de un caso de posible cura de VIH, correspondiente a una persona VIH+ quien además tenía leucemia. Esta persona estaba en tratamiento convencional para controlar el VIH (antirretrovirales) y además recibió un trasplante de células madre como parte del tratamiento contra la leucemia. Las células de este trasplante provenían del cordón umbilical de un donante que presentaba una mutación genética específica, lo que impedía a estas células ser infectadas por el virus del VIH. Al respecto, ¿cuál de las siguientes opciones corresponde a una evidencia que permitiría corroborar la efectividad del trasplante de células madre como tratamiento para el VIH?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una disminución similar de la carga viral tanto con el tratamiento convencional como con el trasplante."
+    },
+    {
+     "key": "B",
+     "text": "Una disminución de la carga viral volviéndola prácticamente indetectable postrasplante sin usar el tratamiento convencional."
+    },
+    {
+     "key": "C",
+     "text": "Una disminución sostenida de la carga viral usando el tratamiento convencional luego del trasplante."
+    },
+    {
+     "key": "D",
+     "text": "Una disminución de la carga viral antes del trasplante usando el tratamiento convencional."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para atribuir la mejora al trasplante hay que aislar su efecto, es decir, observar la carga viral sin los antirretrovirales que también la reducen.",
+    "steps": [
+     "El caso combina dos intervenciones: los antirretrovirales (tratamiento convencional) y el trasplante de células madre resistentes a la infección por VIH.",
+     "Si ambos tratamientos actúan juntos, cualquier caída de la carga viral podría deberse a los antirretrovirales; por eso la evidencia debe separar los dos efectos.",
+     "La opción B describe una carga viral prácticamente indetectable después del trasplante, sin usar el tratamiento convencional: el único factor que cambia es el trasplante.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Igual disminución con ambos tratamientos: no permite distinguir cuál de los dos produce el efecto.",
+     "C": "Caída sostenida con tratamiento convencional después del trasplante: los antirretrovirales siguen presentes, así que no se aísla el efecto del trasplante.",
+     "D": "Caída antes del trasplante con tratamiento convencional: es un dato previo al trasplante y no muestra su efecto."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q28",
+   "number": 28,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En un laboratorio se ha descubierto una molécula fluorescente que se intercala en el ADN, lo que permite realizar estudios sobre los grados de compactación del material genético. Cuando esta molécula es excitada, emite una señal luminosa cuya intensidad depende de la proximidad entre estas moléculas. Una investigadora decide agregar una pequeña cantidad de esta molécula a células en cultivo, para luego observar la intensidad de la señal luminosa a lo largo de su ciclo celular, tal como se representa en el siguiente gráfico:\n\nCon base en lo anterior, ¿cuál de las siguientes opciones corresponde a la pregunta de investigación que pudo haber guiado este estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuál es el mecanismo por el cual la molécula fluorescente se intercala en el ADN durante el ciclo celular?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cómo se degrada la molécula fluorescente a lo largo del ciclo celular?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cómo la molécula fluorescente modifica los grados de compactación del ADN durante el ciclo celular?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuál es el grado de compactación del ADN a lo largo del ciclo celular?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q28.webp",
+    "width": 907,
+    "height": 789,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El gráfico muestra cómo varía la intensidad de la señal, que refleja el grado de compactación del ADN, a lo largo de las fases del ciclo celular.",
+    "steps": [
+     "La molécula emite más luz cuando está más cerca de otras moléculas dentro del ADN, así que la intensidad de la señal refleja el grado de compactación.",
+     "El gráfico registra la intensidad en las fases G1, S, G2, M y G1 nuevamente, con subidas y bajadas a lo largo del ciclo.",
+     "Esto permite describir cómo cambia la compactación del ADN en cada fase, que es exactamente lo que pregunta la opción D.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Mecanismo de intercalación: el gráfico muestra la señal por fase, no cómo se une la molécula al ADN.",
+     "B": "Degradación de la molécula: sería una pregunta de estabilidad; la caída de la señal no se interpreta como degradación en el estudio.",
+     "C": "Modificación de la compactación por la molécula: la molécula funciona como sonda, no como agente que cambie la compactación."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q29",
+   "number": 29,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un grupo de investigación quiere determinar la mínima concentración a la cual dos nuevos fármacos (X e Y) presentan actividad antiproliferativa, como una nueva estrategia terapéutica antitumoral. Para cumplir con el objetivo, poseen cultivos con la misma cantidad de células tumorales, a los cuales agregan diferentes concentraciones de ambos fármacos en estudio. A pesar de repetir el experimento cuatro veces, bajo las mismas condiciones, los resultados no logran ser concluyentes. Con respecto al protocolo descrito, ¿cuál es un error de procedimiento que impide cumplir con el objetivo de la investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Variar la concentración de los fármacos."
+    },
+    {
+     "key": "B",
+     "text": "Utilizar en un mismo cultivo ambos fármacos al mismo tiempo."
+    },
+    {
+     "key": "C",
+     "text": "Utilizar la misma cantidad inicial de células tumorales."
+    },
+    {
+     "key": "D",
+     "text": "Realizar réplicas del experimento bajo las mismas condiciones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Mezclar ambos fármacos en el mismo cultivo y al mismo tiempo impide saber qué fármaco produce el efecto antiproliferativo y a qué concentración.",
+    "steps": [
+     "El objetivo es hallar la concentración mínima con actividad antiproliferativa para cada fármaco (X e Y).",
+     "Para eso, cada fármaco debe evaluarse por separado, con concentraciones graduadas y cultivos con la misma cantidad inicial de células.",
+     "Al usar X e Y juntos en un mismo cultivo, el efecto observado es una mezcla y no se puede atribuir a cada fármaco; por eso repetir el experimento no vuelve los resultados concluyentes.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Variar la concentración: es necesario para hallar la concentración mínima; el error es tomarlo como fallo.",
+     "C": "Usar la misma cantidad inicial de células: es un control que hace comparables los cultivos.",
+     "D": "Realizar réplicas bajo las mismas condiciones: aumentan la confiabilidad; el problema es la combinación de fármacos, no la repetición."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q30",
+   "number": 30,
+   "axis": "Biología",
+   "topic": "Genética",
+   "stem": "Los complejos sinaptonémicos (CS) son estructuras proteicas específicas que aparecen durante la profase I. En una investigación, se estudió la relación entre estas estructuras con el apareamiento de los cromosomas y la ocurrencia de recombinación genética en meiosis. La correspondencia de estos conceptos en distintas especies animales se resume en la siguiente tabla:\n\nApareamiento Especie CS Recombinación genética cromosomas 1 – + – 2 + + + 3 – + – 4 + + – 5 + + +\n\n(+): presencia (–): ausencia\n\nEn relación con el análisis de los resultados de este estudio, ¿cuál de las siguientes opciones es una inferencia correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Para que se produzca la recombinación genética, se requiere la presencia del CS y el apareamiento de cromosomas durante la profase I."
+    },
+    {
+     "key": "B",
+     "text": "La presencia de CS es uno de los factores que se necesitan para producir la recombinación genética."
+    },
+    {
+     "key": "C",
+     "text": "Las proteínas del CS son indispensables para que ocurra recombinación genética y apareamiento de cromosomas."
+    },
+    {
+     "key": "D",
+     "text": "En profase I, la presencia del CS es una condición imprescindible para la ocurrencia del apareamiento cromosómico."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q30.webp",
+    "width": 907,
+    "height": 707,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El complejo sinaptonémico es necesario para la recombinación, pero no para el apareamiento, y su sola presencia tampoco basta para que ocurra la recombinación.",
+    "steps": [
+     "Las especies 2 y 5 presentan CS y recombinación, mientras que las especies 1 y 3 no tienen CS ni recombinación: el CS aparece en todos los casos con recombinación.",
+     "La especie 4 tiene CS y no presenta recombinación: el CS no basta por sí solo y es solo uno de los factores necesarios.",
+     "Las especies 1 y 3 presentan apareamiento sin CS: el CS no es indispensable para el apareamiento, lo que descarta las opciones C y D.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Requiere CS y apareamiento: la tabla muestra apareamiento en todas las especies, por lo que no hay evidencia de que sea requisito para la recombinación.",
+     "C": "Proteínas del CS indispensables para recombinación y apareamiento: el apareamiento ocurre sin CS, en las especies 1 y 3.",
+     "D": "CS imprescindible para el apareamiento en profase I: las especies 1 y 3 se aparean sin CS."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q31",
+   "number": 31,
+   "axis": "Biología",
+   "topic": "Proteínas",
+   "stem": "Una investigación se ha centrado en el estudio sobre la aneuploidía (número anormal de cromosomas) en gametos provenientes de personas adultas y su relación con una proteína. En particular, se extrajeron ovocitos de mujeres mayores de 35 años y se determinó la cantidad de la proteína SCC1, cuya función es mantener la cohesión entre las cromátidas hermanas durante la meiosis. En relación con lo anterior, ¿cuál de las siguientes opciones corresponde a la hipótesis que guio el estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los ovocitos con un número anormal de cromosomas en mujeres de edad reproductiva avanzada tienen una mayor actividad de la proteína SCC1."
+    },
+    {
+     "key": "B",
+     "text": "La dotación cromosómica de los gametos de humanos mayores a 35 años se ve afectada por la disminución de la proteína SCC1."
+    },
+    {
+     "key": "C",
+     "text": "Las aneuploidías en los ovocitos de mujeres de edad reproductiva avanzada se relacionan con la disminución en la cantidad de proteína SCC1."
+    },
+    {
+     "key": "D",
+     "text": "Las aneuploidías presentes en gametos de humanos mayores a 35 años son causadas por la disminución de la función de la proteína SCC1."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La hipótesis propone una relación entre la edad reproductiva avanzada, la menor cantidad de SCC1 y la aparición de aneuploidías en los ovocitos.",
+    "steps": [
+     "El estudio midió la cantidad de SCC1 en ovocitos de mujeres mayores de 35 años y registró las aneuploidías; la hipótesis debe anticipar la relación entre ambas variables.",
+     "SCC1 mantiene la cohesión entre cromátidas hermanas: si su cantidad disminuye, pueden producirse separaciones anormales y gametos con número anormal de cromosomas.",
+     "La opción B es cercana, pero habla de gametos humanos en general y no de ovocitos, que fue la muestra estudiada.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Mayor actividad de SCC1: invierte la dirección de la relación; el error es pensar que más proteína produce más aneuploidías.",
+     "B": "Disminución de SCC1 en gametos humanos: generaliza a todos los gametos y no al ovocito de mujeres mayores de 35 años.",
+     "D": "Causa directa: afirma que la disminución de SCC1 causa las aneuploidías, cuando el estudio plantea una relación entre variables."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q32",
+   "number": 32,
+   "axis": "Biología",
+   "topic": "Especies",
+   "stem": "En una investigación se propuso obtener evidencia embriológica a favor del parentesco evolutivo entre dos especies de mamíferos (1 y 2) de hábitat cordillerano, separadas por una barrera geográfica. Para tal efecto, se examinaron embriones de ambas especies durante su gestación y se registró el momento exacto en que una estructura corporal X, derivada del mismo grupo celular en ambas especies, aparece en los respectivos embriones. A partir de lo anterior, ¿cuál de las siguientes opciones identifica correctamente las variables de esta investigación?\n\nVariable independiente Variable dependiente",
+   "options": [
+    {
+     "key": "A",
+     "text": "Grado de parentesco Tiempo de aparición de la evolutivo estructura X"
+    },
+    {
+     "key": "B",
+     "text": "Tamaño de la barrera Grado de parentesco geográfica evolutivo"
+    },
+    {
+     "key": "C",
+     "text": "Especie respectiva de Grado de parentesco mamífero cordillerano evolutivo"
+    },
+    {
+     "key": "D",
+     "text": "Especie respectiva de Tiempo de aparición de la mamífero cordillerano estructura X"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q32.webp",
+    "width": 907,
+    "height": 482,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable independiente es la especie mamífera que se compara y la dependiente es el momento en que aparece la estructura X.",
+    "steps": [
+     "La investigación compara dos especies (1 y 2): la especie es la condición que se contrasta, por lo tanto, es la variable independiente.",
+     "Lo que se registra en cada embrión es el momento exacto en que aparece la estructura X, que es la respuesta medida: variable dependiente.",
+     "El grado de parentesco evolutivo es lo que se pretende inferir a partir de la evidencia, no una variable medida directamente.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Grado de parentesco como independiente: confunde la conclusión con la condición manipulada.",
+     "B": "Tamaño de la barrera geográfica como independiente: la barrera es solo el contexto y no se varía ni se mide.",
+     "C": "Grado de parentesco como dependiente: se infiere de la estructura X, no se mide directamente."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q33",
+   "number": 33,
+   "axis": "Biología",
+   "topic": "Especies",
+   "stem": "Una investigadora se encuentra estudiando la historia biológica y geológica de un sector del litoral central de nuestro país. Para eso, en una columna de estratos, observa los restos fósiles de diferentes especies ya extintas comparando las diferentes profundidades en las que se encuentra cada fósil. Los resultados se presentan en el siguiente modelo:\n\nA partir de lo anterior, ¿cuál de las siguientes preguntas de investigación se podría responder directamente con estos resultados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuál de las especies encontradas en la columna es la más antigua y la más reciente?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuál de las especies encontradas en la columna estaría adaptada al ambiente actual?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cuál es la causa por la que las especies encontradas en la columna se extinguieron?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuál es la condición que favoreció la fosilización de las especies encontradas en la columna?"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q33.webp",
+    "width": 907,
+    "height": 788,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una columna de estratos, los niveles más profundos son más antiguos; por eso los fósiles a mayor profundidad indican la especie más antigua y los de menor profundidad, la más reciente.",
+    "steps": [
+     "El modelo muestra la columna desde la superficie (0 m) hasta cerca de 35 m, con bivalvos alrededor de los 10 m y gasterópodos cerca de los 30 m.",
+     "Por el principio de superposición, los estratos inferiores se formaron antes que los superiores; los fósiles a 30 m son más antiguos que los de 10 m.",
+     "Por lo tanto, la pregunta sobre la especie más antigua y la más reciente se responde directamente con la posición de los fósiles.",
+     "Las demás preguntas requieren datos que el modelo no entrega, como la adaptación al ambiente actual o las causas de extinción. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Adaptación al ambiente actual: los fósiles corresponden a especies extintas y no permiten saber qué se adapta hoy.",
+     "C": "Causa de la extinción: el modelo muestra la posición y el tipo de fósiles, no las causas de la extinción.",
+     "D": "Condición de la fosilización: el modelo no describe el proceso de fosilización, sino el registro de los fósiles."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q34",
+   "number": 34,
+   "axis": "Biología",
+   "topic": "Plantas",
+   "stem": "El proceso de la fotosíntesis se resume en la siguiente ecuación:\n\nCO² + H²O C⁶H¹²O⁶ + O²\n\nConsiderando esta ecuación, dos estudiantes evalúan por separado la fotosíntesis, sin embargo, no lograban ponerse de acuerdo sobre el origen del O² producido. Mientras el primero postulaba que provenía del CO², el otro situaba su origen en la molécula de H²O. Según estos antecedentes, ¿cuál de los siguientes procedimientos de investigación contribuye a resolver la problemática entre ambos estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Utilizar dos grupos de plantas, ambos expuestos a abundante luz, y tratarlas con C⁶H¹²O⁶ radiactiva y H²O normal, para luego analizar la presencia de O² radiactivo."
+    },
+    {
+     "key": "B",
+     "text": "Utilizar dos grupos de plantas y tratarlas simultáneamente con moléculas radiactivas de CO²y H²O, para luego evaluar la presencia de O² radiactivo en el medio."
+    },
+    {
+     "key": "C",
+     "text": "Utilizar dos grupos de plantas, uno tratado con CO² radiactivo y H²O normal, y otro con H²O radiactivo y CO² normal, y luego evaluar la presencia de O² radiactivo en cada grupo."
+    },
+    {
+     "key": "D",
+     "text": "Utilizar dos grupos de plantas, uno tratado con H²O radiactivo y O² normal, y el otro con H²O normal y C⁶H¹²O⁶ radiactivo, y luego evaluar la presencia de O² radiactivo de ambos grupos."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Marcar con isótopos radiactivos uno de los reactantes en cada grupo permite rastrear de qué molécula proviene el $\\mathrm{O_2}$ producido.",
+    "steps": [
+     "El problema es determinar si el $\\mathrm{O_2}$ liberado proviene del $\\mathrm{CO_2}$ o del $\\mathrm{H_2O}$.",
+     "Un diseño válido marca un solo reactante por grupo: si aparece $\\mathrm{O_2}$ radiactivo, se identifica el origen.",
+     "En la opción C, un grupo recibe $\\mathrm{CO_2}$ radiactivo con $\\mathrm{H_2O}$ normal, y el otro, $\\mathrm{H_2O}$ radiactivo con $\\mathrm{CO_2}$ normal; luego se mide el $\\mathrm{O_2}$ radiactivo en cada grupo.",
+     "Si el $\\mathrm{O_2}$ radiactivo aparece solo en el grupo con agua marcada, el origen es el agua; si aparece en el otro grupo, el origen es el dióxido de carbono.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Glucosa radiactiva: marcar el producto $\\mathrm{C_6H_{12}O_6}$ no aclara el origen del oxígeno, porque los reactantes no están marcados.",
+     "B": "Marcar ambos reactantes a la vez: si aparece $\\mathrm{O_2}$ radiactivo, no se sabe de cuál reactante proviene.",
+     "D": "Marcar solo el agua: el $\\mathrm{CO_2}$ no queda marcado en ningún grupo, así que la pregunta sobre su origen no se resuelve."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q35",
+   "number": 35,
+   "axis": "Biología",
+   "topic": "Enzimas",
+   "stem": "La fotosíntesis es un proceso que se ve influido por la temperatura, debido a que ciertas enzimas fotosintéticas son sensibles a este parámetro. Para una determinada alga, el rango óptimo es entre 15 °C y 20 °C, y cuando la temperatura desciende bajo los 10 °C o aumenta por sobre los 40 °C, estas enzimas pierden su funcionalidad. En este contexto, un grupo de científicas realizó un experimento para cuantificar la tasa fotosintética de esta alga, ubicándola en una cámara de vidrio con agua a temperatura ambiente (18 °C) y luego midió la cantidad de O² producido. Si un segundo grupo de científicas realizó el experimento mencionado, pero el alga usada no generó O², ¿cuál de las siguientes opciones corresponde a una posible explicación de la diferencia entre ambos experimentos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las algas del segundo experimento fueron sometidas a una temperatura de 14 °C."
+    },
+    {
+     "key": "B",
+     "text": "Las algas del segundo experimento fueron sometidas a una temperatura de 19 °C."
+    },
+    {
+     "key": "C",
+     "text": "Las algas del segundo experimento fueron sometidas a una temperatura de 8 °C."
+    },
+    {
+     "key": "D",
+     "text": "Las algas del segundo experimento fueron sometidas a una temperatura de 23 °C."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si el alga no genera $\\mathrm{O_2}$, su temperatura debe estar fuera del rango funcional; por debajo de $10^\\circ\\mathrm{C}$ las enzimas fotosintéticas pierden su función.",
+    "steps": [
+     "En el primer experimento, el alga está a $18^\\circ\\mathrm{C}$, dentro del rango óptimo de $15^\\circ\\mathrm{C}$ a $20^\\circ\\mathrm{C}$, y sí produce $\\mathrm{O_2}$.",
+     "El texto dice que bajo $10^\\circ\\mathrm{C}$ o sobre $40^\\circ\\mathrm{C}$ las enzimas «pierden su funcionalidad», así que la fotosíntesis no ocurre y no hay $\\mathrm{O_2}$.",
+     "De las opciones, solo $8^\\circ\\mathrm{C}$ está bajo los $10^\\circ\\mathrm{C}$; $14^\\circ\\mathrm{C}$, $19^\\circ\\mathrm{C}$ y $23^\\circ\\mathrm{C}$ siguen dentro del rango funcional.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$14^\\circ\\mathrm{C}$: está fuera del óptimo, pero sobre los $10^\\circ\\mathrm{C}$; las enzimas siguen funcionando, aunque a menor tasa.",
+     "B": "$19^\\circ\\mathrm{C}$: está dentro del rango óptimo; el error es suponer que cualquier cambio detiene la fotosíntesis.",
+     "D": "$23^\\circ\\mathrm{C}$: sigue por debajo de los $40^\\circ\\mathrm{C}$; el error es creer que sobre $20^\\circ\\mathrm{C}$ las enzimas se inactivan."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q36",
+   "number": 36,
+   "axis": "Biología",
+   "topic": "Ecosistemas",
+   "stem": "Una estudiante se encuentra estudiando un diagrama que corresponde al modelo de flujo de energía, medida en Joule (J), en el cual se muestra el ingreso de energía a un ecosistema terrestre, proveniente de tres especies vegetales (E1, E2, E3). A partir de la energía entrante, se produce biomasa vegetal, la que luego es utilizada en la respiración por parte de los organismos de las distintas cadenas tróficas de este ecosistema:\n\nSegún la evidencia presentada, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La eficiencia en la fijación de energía en las tres especies vegetales es similar."
+    },
+    {
+     "key": "B",
+     "text": "El mayor gasto energético del ecosistema se debe a la producción de biomasa vegetal."
+    },
+    {
+     "key": "C",
+     "text": "La principal vía de aporte energético al ecosistema es la respiración realizada por los organismos."
+    },
+    {
+     "key": "D",
+     "text": "La cantidad de energía en el ecosistema se conserva durante las transformaciones."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q36.webp",
+    "width": 907,
+    "height": 720,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La energía que entra al ecosistema ($100 + 50 + 30 = 180\\,\\mathrm{J}$) es igual a la que sale ($18 + 162 = 180\\,\\mathrm{J}$), lo que confirma la conservación de la energía.",
+    "steps": [
+     "La energía que ingresa proviene de E1 ($100\\,\\mathrm{J}$), E2 ($50\\,\\mathrm{J}$) y E3 ($30\\,\\mathrm{J}$), en total $180\\,\\mathrm{J}$.",
+     "La energía que sale corresponde a la biomasa vegetal ($18\\,\\mathrm{J}$) y a la respiración ($162\\,\\mathrm{J}$), en total $180\\,\\mathrm{J}$.",
+     "Entrada y salida coinciden, así que la energía total se conserva durante las transformaciones, aunque cambia de forma.",
+     "Las demás opciones no se sostienen: el diagrama no separa la biomasa de cada especie, la respiración es el mayor gasto y E1 es la mayor entrada.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Eficiencia similar en las tres especies: el diagrama da la energía entrante, pero no la biomasa producida por cada especie.",
+     "B": "Mayor gasto por producir biomasa: la biomasa ($18\\,\\mathrm{J}$) es la menor salida; el mayor gasto es la respiración.",
+     "C": "Respiración como principal aporte energético: es una salida del sistema; la mayor entrada es E1."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q37",
+   "number": 37,
+   "axis": "Química",
+   "topic": "Química general",
+   "stem": "Con respecto a los cambios químicos y físicos ocurridos en la vida cotidiana, ¿cuál de las siguientes opciones corresponde a una situación que se fundamenta en un cambio físico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cuando una señal metálica en la carretera se torna rojiza en el tiempo."
+    },
+    {
+     "key": "B",
+     "text": "Cuando se exhala sobre un espejo empañándolo y se forman minúsculas gotas de agua."
+    },
+    {
+     "key": "C",
+     "text": "Cuando se retira la cáscara de una manzana y esta al cabo de unos minutos se torna de color marrón."
+    },
+    {
+     "key": "D",
+     "text": "Cuando se agrega unas gotas de limón a una pequeña cantidad de bicarbonato de sodio y se produce un burbujeo intenso."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un cambio físico altera el estado o la forma de la materia sin formar sustancias nuevas; la condensación del vapor de agua sobre un espejo es un cambio de estado.",
+    "steps": [
+     "Al exhalar sobre el espejo, el vapor de agua del aliento se enfría al tocar la superficie y pasa a gotas líquidas.",
+     "Ese paso de vapor a líquido es un cambio de estado: el agua sigue siendo agua, sin formar una sustancia nueva.",
+     "En las otras opciones sí se forman sustancias nuevas: óxido en el metal, oxidación de la manzana y gas en la reacción del limón con el bicarbonato.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El color rojizo indica óxido, es decir, una reacción química con el oxígeno que forma una sustancia nueva.",
+     "C": "El pardeamiento de la manzana es una oxidación de sus compuestos, que produce sustancias distintas.",
+     "D": "La reacción del limón con el bicarbonato libera dióxido de carbono; es un cambio químico, aunque el burbujeo lo haga parecer físico."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q38",
+   "number": 38,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "A comienzos del siglo XX, un científico propuso un modelo atómico formado por un núcleo y electrones girando a su alrededor. Este modelo surgió de experimentos donde hizo colisionar partículas positivas alfa contra una lámina delgada de oro, encontrando que la gran mayoría de las partículas alfa que colisionaron con la lámina no modificaron su trayectoria original. Sumado a lo anterior, una cantidad de una en cien mil partículas alfa no logró atravesar la lámina de oro, desviándose en dirección opuesta, y una cantidad aún menor de partículas alfa cambiaron su trayectoria al atravesar la lámina. De acuerdo con lo descrito anteriormente, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El átomo está formado principalmente por espacio vacío."
+    },
+    {
+     "key": "B",
+     "text": "El átomo tiene un núcleo que ocupa todo el volumen atómico."
+    },
+    {
+     "key": "C",
+     "text": "El átomo tiene electrones que se repelen con las partículas alfa."
+    },
+    {
+     "key": "D",
+     "text": "El átomo tiene partículas en su núcleo de carga contraria a las partículas alfa."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si casi todas las partículas alfa atraviesan la lámina sin desviarse, el átomo es en su mayor parte espacio vacío; la escasa cantidad que rebota indica un núcleo muy pequeño y denso.",
+    "steps": [
+     "Casi todas las partículas alfa atraviesan la lámina sin cambiar su trayectoria, lo que indica que la mayor parte del átomo es espacio vacío.",
+     "Solo una de cada cien mil partículas rebota, lo que indica un núcleo muy pequeño y denso que repele directamente a las alfa.",
+     "Una cantidad aún menor se desvía al atravesar la lámina, lo que confirma que la masa y la carga positiva están concentradas en un volumen muy reducido.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Contradice los datos: si el núcleo ocupara todo el volumen, casi ninguna partícula atravesaría la lámina sin desviarse.",
+     "C": "Los electrones tienen muy poca masa y no desvían de forma apreciable a una partícula alfa, así que no explican los rebotes.",
+     "D": "Las partículas alfa son positivas y los rebotes indican que el núcleo también es positivo: su carga no es contraria."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q39",
+   "number": 39,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "En la primera clase de química de Fernando, su profesor le pide elaborar una representación de un átomo neutro con cinco protones, según el conocimiento que ha adquirido previamente. El modelo de Fernando se presenta a continuación:\n\nCuando el profesor observó la representación, notó que era incorrecta. Al respecto, ¿cuál de las siguientes opciones indica el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La ausencia de orbitales."
+    },
+    {
+     "key": "B",
+     "text": "La cantidad de neutrones totales."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de electrones totales."
+    },
+    {
+     "key": "D",
+     "text": "El salto de electrones entre diferentes niveles."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q39.webp",
+    "width": 907,
+    "height": 607,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un átomo neutro tiene tantos electrones como protones; el modelo de Fernando muestra solo cuatro electrones, pero cinco protones exigen cinco.",
+    "steps": [
+     "Un átomo neutro con cinco protones debe tener cinco electrones, porque la carga positiva de los protones se compensa con la carga negativa de los electrones.",
+     "En la representación se cuentan cuatro electrones: dos en el nivel interior y dos en el exterior.",
+     "Como la cantidad de electrones no coincide con la de protones, el modelo es incorrecto en ese aspecto.",
+     "Los orbitales, los neutrones y los saltos entre niveles no determinan la neutralidad del átomo; el error está en el conteo de electrones.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La representación usa órbitas circulares; la falta de orbitales no altera la carga neta ni el número de protones.",
+     "B": "El número de neutrones no fija la neutralidad del átomo y el enunciado no lo especifica, así que no es el error señalado.",
+     "D": "Los saltos entre niveles describen transiciones de energía, que no se evalúan al representar un átomo neutro."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q40",
+   "number": 40,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "Con respecto a los núcleos de los átomos X, Y y Z, simbolizados por:\n\n60 56 59 X Y Z 27 26 27\n\n¿Cuál de las siguientes opciones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "X e Y tienen distinto número de neutrones"
+    },
+    {
+     "key": "B",
+     "text": "Y y Z tienen igual número de neutrones"
+    },
+    {
+     "key": "C",
+     "text": "X y Z son elementos diferentes"
+    },
+    {
+     "key": "D",
+     "text": "X e Y son elementos iguales"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q40.webp",
+    "width": 907,
+    "height": 346,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El número de protones (abajo) define el elemento, y los neutrones son el número de masa menos el número atómico: X e Y tienen 33 y 30 neutrones, por eso son distintos.",
+    "steps": [
+     "Número de neutrones = A − Z: para X, $60 - 27 = 33$; para Y, $56 - 26 = 30$; para Z, $59 - 27 = 32$.",
+     "X y Z tienen Z = 27, así que son el mismo elemento (cobalto), mientras que Y tiene Z = 26 (hierro).",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Y tiene 30 neutrones y Z tiene 32; no son iguales, aunque sus números de masa estén cerca.",
+     "C": "X y Z tienen el mismo número atómico (27), por lo que son el mismo elemento, aunque tengan distinta masa.",
+     "D": "X e Y tienen números atómicos distintos (27 y 26), así que son elementos diferentes; confundir número de masa con número atómico lleva a este error."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q41",
+   "number": 41,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Una estudiante de educación media quiere saber si existe una relación entre la hibridación del átomo de carbono (C) en un compuesto orgánico y su temperatura de ebullición. Para ello, se controlaron dos probables efectos: la longitud de la cadena de C y la presencia de elementos distintos a C e hidrógeno (H). A partir de lo anterior, ¿cuál de los siguientes procedimientos resumidos es adecuado para que la estudiante logre su objetivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar la temperatura de ebullición de tres hidrocarburos formados por una cadena de dos átomos de C, uno que presente un enlace simple, otro un enlace doble y otro un enlace triple."
+    },
+    {
+     "key": "B",
+     "text": "Determinar la temperatura de ebullición de tres hidrocarburos, uno formado por dos átomos de C y enlaces simples, otro por tres átomos de C y un enlace doble, y otro por cuatro átomos de C y un enlace triple."
+    },
+    {
+     "key": "C",
+     "text": "Determinar la temperatura de ebullición de un hidrocarburo formado únicamente por átomos de C e H, y que presente por lo menos un enlace doble y un enlace triple."
+    },
+    {
+     "key": "D",
+     "text": "Determinar la temperatura de ebullición de tres hidrocarburos, uno que presente solo átomos de C con hibridación sp² y otro que presente un átomo de C con hibridación sp."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para aislar el efecto de la hibridación hay que mantener fijo el número de carbonos y variar solo el tipo de enlace; la alternativa A hace exactamente eso con hidrocarburos de dos carbonos.",
+    "steps": [
+     "Las variables a controlar son la longitud de la cadena de C y la presencia de elementos distintos de C e H; la hibridación es la variable que se quiere estudiar.",
+     "Con dos átomos de C se forman el etano (solo enlace simple, carbonos con hibridación $sp^{3}$), el eteno (un enlace doble, $sp^{2}$) y el etino (un enlace triple, $sp$).",
+     "Los tres son hidrocarburos (solo C e H) y tienen la misma longitud de cadena, así que una diferencia en la temperatura de ebullición se puede atribuir al tipo de enlace y a la hibridación.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Varía a la vez la longitud de la cadena (2, 3 y 4 C) y el tipo de enlace, así que no se puede separar el efecto de la hibridación del efecto del tamaño molecular.",
+     "C": "Estudia un único compuesto; sin comparación no se puede establecer ninguna relación con la hibridación.",
+     "D": "No controla la longitud de la cadena: los compuestos con $sp^{2}$ y con $sp$ pueden tener cadenas de distinto largo, y la diferencia no se atribuye con certeza a la hibridación."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q42",
+   "number": 42,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Existen diferentes tipos de hidrocarburos, por ejemplo los usados como combustibles para el funcionamiento de vehículos. La siguiente representación corresponde a uno de ellos:\n\nAl respecto, ¿cuál es el número de átomos de carbono de la cadena principal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "11"
+    },
+    {
+     "key": "B",
+     "text": "10"
+    },
+    {
+     "key": "C",
+     "text": "9"
+    },
+    {
+     "key": "D",
+     "text": "8"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q42.webp",
+    "width": 907,
+    "height": 509,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una representación esquelética cada quiebre o extremo de línea es un carbono, y la cadena principal es la ruta continua más larga que los une, aunque pase por ramas.",
+    "steps": [
+     "Los hidrógenos no se dibujan, así que cada vértice o extremo de línea corresponde a un carbono; la molécula tiene 17 carbonos.",
+     "Hay dos ramificaciones: una en el carbono superior izquierdo, que se une a dos carbonos terminales, y otra en el carbono de la derecha, que tiene un metilo lateral y una prolongación de tres carbonos hacia la derecha.",
+     "La ruta más larga parte del carbono terminal superior izquierdo, pasa por el carbono ramificado, recorre los cinco carbonos de la cadena horizontal central, sube al carbono de la rama derecha y termina en los tres carbonos de la prolongación: $1 + 1 + 5 + 1 + 3 = 11$ carbonos.",
+     "Las rutas alternativas dan menos carbonos: desde el metilo inferior izquierdo hasta el extremo superior derecho hay 10 carbonos, y la cadena que parte del otro terminal superior izquierdo también suma 10.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Se obtiene al elegir la ruta desde el metilo inferior izquierdo hasta el extremo superior derecho, sin usar la rama superior izquierda: cuenta 10 carbonos y no es la cadena más larga.",
+     "C": "Corresponde a la cadena inferior de extremo a extremo (9 carbonos), ignorando la prolongación de la rama derecha."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q43",
+   "number": 43,
+   "axis": "Química",
+   "topic": "Ácidos y bases",
+   "stem": "Para una investigación universitaria, un agrónomo se propuso realizar una plantación de especies frutales que generen frutos con una gran cantidad de vitamina C. Para ello, controló las condiciones de humedad y tipo de suelo. Luego de su investigación, hizo un análisis de sus frutos y procedió a la producción de un solo tipo de especie. En la siguiente tabla se presentan algunos de los datos obtenidos por el agrónomo.\n\nMasa de fruta Cantidad de Fruto Número de utilizada vitamina C analizado frutas (g) (mg) Naranja 4 500 256 Papaya 1 500 320 Kiwi 10 500 465\n\nCon base en los datos recopilados, ¿cuál es la pregunta de investigación correcta que pudo haber guiado esta investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿En qué estructura de la especie frutal hay mayor cantidad de vitamina C?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cómo varía la cantidad de vitamina C presente en diversos tipos de frutas?"
+    },
+    {
+     "key": "C",
+     "text": "¿Qué factores determinan la cantidad de vitamina C presente en diversos tipos de frutas?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuáles son las condiciones de humedad y tipo de suelo para producir frutos con gran cantidad de vitamina C?"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q43.webp",
+    "width": 907,
+    "height": 648,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La pregunta de investigación correcta debe preguntar cómo cambia la vitamina C al comparar distintos tipos de fruta, porque la tabla compara frutas manteniendo fija la masa.",
+    "steps": [
+     "La tabla compara tres frutas (naranja, papaya y kiwi) y mide la cantidad de vitamina C en mg, siempre con la misma masa de fruta utilizada (500 g).",
+     "La cantidad de vitamina C cambia con el tipo de fruta: 256 mg en la naranja, 320 mg en la papaya y 465 mg en el kiwi. El tipo de fruta es, por tanto, la variable que el estudio compara.",
+     "Una pregunta de investigación adecuada debe preguntar por esa variación entre tipos de fruta, sin suponer causas ni preguntar por lo que ya se controló.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Pregunta por los factores que determinan la vitamina C, lo que requiere probar causas; la tabla solo compara tipos de fruta, así que excede los datos.",
+     "A": "Confunde el tipo de fruta con las partes de la fruta: la tabla no separa estructuras del fruto."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q44",
+   "number": 44,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "El siguiente compuesto orgánico,\n\nH³C — O — CH²— CH³\n\npresenta el grupo funcional",
+   "options": [
+    {
+     "key": "A",
+     "text": "cetona."
+    },
+    {
+     "key": "B",
+     "text": "alcohol."
+    },
+    {
+     "key": "C",
+     "text": "éter."
+    },
+    {
+     "key": "D",
+     "text": "éster."
+    },
+    {
+     "key": "E",
+     "text": "aldehído."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un oxígeno unido a dos carbonos, sin hidrógeno ni grupo carbonilo, corresponde a la función éter (R–O–R').",
+    "steps": [
+     "La fórmula se lee como $\\mathrm{CH_3}$–O–$\\mathrm{CH_2}$–$\\mathrm{CH_3}$; los números que aparecen como superíndice en el enunciado son subíndices de la fórmula.",
+     "El oxígeno está entre dos átomos de carbono y no tiene hidrógeno unido ni forma doble enlace con carbono: esa es la unión C–O–C característica de los éteres.",
+     "Descartar las demás funciones: el alcohol necesita un grupo –OH, la cetona y el aldehído un grupo C=O, y el éster un grupo –C(=O)–O–.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Confunde el oxígeno de la molécula con un grupo –OH; en esta estructura el oxígeno no tiene hidrógeno unido.",
+     "D": "Confunde la unión C–O–C con el grupo –C(=O)–O–, que exige un doble enlace con carbono."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q45",
+   "number": 45,
+   "axis": "Química",
+   "topic": "Gases",
+   "stem": "Un grupo de estudiantes se encuentra investigando el comportamiento de un gas que se genera como consecuencia de la descomposición de cierto material orgánico. Mediante ensayos determinan que una cantidad de sustancia fija de este gas, a presión constante, mantiene un comportamiento directamente proporcional entre su volumen y la temperatura a la que es sometido. Al respecto, ¿cuál de los siguientes materiales permitió medir la variable dependiente de este experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un termómetro que registra la temperatura a la que se somete el gas."
+    },
+    {
+     "key": "B",
+     "text": "Una balanza analítica que mide con precisión y exactitud la masa del gas."
+    },
+    {
+     "key": "C",
+     "text": "Un barómetro que mide la presión en tiempo real a la que fue sometido el gas."
+    },
+    {
+     "key": "D",
+     "text": "Un cilindro graduado con un émbolo móvil que se ajusta al volumen del gas."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En este experimento la temperatura es la variable independiente y el volumen la dependiente; el instrumento correcto es el que registra el volumen del gas.",
+    "steps": [
+     "Se trata de la relación directa entre volumen y temperatura a presión constante (ley de Charles): $V \\propto T$. La temperatura se controla y el volumen es la respuesta.",
+     "La pregunta pide el material que permite medir la variable dependiente, es decir, el volumen del gas.",
+     "El cilindro graduado con émbolo móvil se desplaza al expandirse o contraerse el gas, y su escala entrega el volumen directamente.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El termómetro mide la variable independiente, la que se manipula, y no la variable que responde.",
+     "B": "La masa de gas se mantiene constante en el experimento, así que medirla no responde a la pregunta por la variable dependiente."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q46",
+   "number": 46,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un grupo de investigación realizó un estudio en una muestra de personas que se encontraban en estado de reposo y a nivel del mar, en donde se determinaron los niveles de hemoglobina carboxilada después de exposiciones a determinadas concentraciones de CO ambientales durante diferentes períodos de tiempo. Los resultados obtenidos se presentan en la siguiente tabla:\n\nPorcentaje promedio Porcentaje promedio de CO en el de carboxihemoglobina carboxihemoglobina ambiente al cabo de 1 hora al cabo de 8 horas (mg/m³) (%) (%) 12 0,4 1,4 23 0,8 2,8 35 1,3 4,1 58 2,5 7,5 115 3,5 11,3\n\nEn relación con lo anterior, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A medida que aumenta el porcentaje de hemoglobina carboxilada, aumentan los signos y síntomas de las personas expuestas al CO ambiental."
+    },
+    {
+     "key": "B",
+     "text": "A medida que aumenta la concentración de CO ambiental, aumenta el porcentaje de hemoglobina carboxilada en los dos tiempos estudiados."
+    },
+    {
+     "key": "C",
+     "text": "A medida que aumenta el tiempo de exposición de las personas al CO ambiental, la unión de este gas a la hemoglobina se hace irreversible."
+    },
+    {
+     "key": "D",
+     "text": "A medida que aumenta la concentración de O² a nivel del mar, el porcentaje de hemoglobina carboxilada en las personas disminuye en los dos tiempos estudiados."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q46.webp",
+    "width": 907,
+    "height": 724,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La carboxihemoglobina aumenta en ambos tiempos a medida que sube la concentración de CO ambiental; la tabla respalda directamente esa conclusión.",
+    "steps": [
+     "La tabla relaciona el CO ambiental (12, 23, 35, 58 y 115 mg/m³) con el porcentaje de carboxihemoglobina al cabo de 1 hora y de 8 horas.",
+     "A 1 hora el porcentaje sube de 0,4 % a 3,5 %, y a 8 horas sube de 1,4 % a 11,3 %: en las dos columnas los valores crecen de forma continua con la concentración de CO.",
+     "La opción A habla de signos y síntomas, que no se miden; la C habla de irreversibilidad, que no aparece en los datos; la D trata del O$_2$, que no se varió.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Supone que el porcentaje de carboxihemoglobina equivale a síntomas; la tabla solo mide el porcentaje, no los síntomas.",
+     "C": "Confunde que el porcentaje aumente con el tiempo con una unión irreversible; los datos no dicen nada sobre reversibilidad."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q47",
+   "number": 47,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "En una clase de química, una estudiante está analizando la reacción de síntesis de ácido nítrico, HNO³, a partir de óxido de nitrógeno (V), N²O⁵, y agua, H²O. Como desafío, la profesora le pide a la estudiante calcular la cantidad de N²O⁵ necesario para obtener 4,0 mol de HNO³, suponiendo que se tiene la cantidad suficiente de agua. Al respecto, ¿cuál es la respuesta correcta que debe entregar la estudiante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,5 mol."
+    },
+    {
+     "key": "B",
+     "text": "2,0 mol."
+    },
+    {
+     "key": "C",
+     "text": "4,0 mol."
+    },
+    {
+     "key": "D",
+     "text": "8,0 mol."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según la ecuación balanceada, 1 mol de $\\mathrm{N_2O_5}$ produce 2 mol de $\\mathrm{HNO_3}$, así que se necesita la mitad de la cantidad de sustancia del producto.",
+    "steps": [
+     "La ecuación balanceada es $\\mathrm{N_2O_5 + H_2O \\rightarrow 2\\,HNO_3}$.",
+     "Por cada 1 mol de $\\mathrm{N_2O_5}$ se forman 2 mol de $\\mathrm{HNO_3}$, es decir, la relación molar es 1:2.",
+     "Para 4,0 mol de $\\mathrm{HNO_3}$: $n(\\mathrm{N_2O_5}) = \\frac{4{,}0}{2} = 2{,}0$ mol.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Supone una relación 1:1 y olvida el coeficiente 2 del $\\mathrm{HNO_3}$ en la ecuación.",
+     "D": "Multiplica en lugar de dividir ($2 \\cdot 4{,}0$), lo que invierte la relación molar."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q48",
+   "number": 48,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Se ha demostrado que la administración conjunta de ciertas duplas de fármacos contra el cáncer puede mejorar la eficiencia en la muerte de células cancerosas, con respecto a la administración de cada uno por separado. Teniendo esto en cuenta, un grupo de investigadores del área de química farmacológica ha estudiado la administración de una nueva combinación entre los fármacos Dox y Cur, en células sanas y cancerosas, provenientes de una misma línea celular estomacal. Parte de los resultados se muestran en la siguiente tabla:\n\nMuerte de células Muerte de Masa de Masa de Relación entre cancerosas de células sanas de Dox (mg) Cur (mg) Dox/Cur (mol/mol) estómago (%) estómago (%) 0,8 1,1 1:2 50,5 26,6 1,0 0,7 1:1 62,2 16,5 1,5 0,5 2:1 80,1 10,1 3,0 1,0 2:1 80,0 15,7 4,5 1,5 2:1 81,0 25,9\n\nBasado en los resultados informados anteriormente, ¿qué alcance científico puede tener esta investigación para la creación de una nueva terapia farmacológica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Usar una dosis combinada de Dox y Cur permitirá una terapia más efectiva contra diferentes tipos de cáncer."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la masa de ambos fármacos en la dosis aplicada permitirá una terapia más efectiva contra el cáncer de estómago."
+    },
+    {
+     "key": "C",
+     "text": "Disminuir la masa de Cur en la dosis aplicada podría disminuir la muerte de células sanas en pacientes enfermos de cáncer."
+    },
+    {
+     "key": "D",
+     "text": "Aplicar una dosis con el doble, en cantidad de sustancia, de Dox en relación a Cur podría mejorar el tratamiento en pacientes con cáncer de estómago."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q48.webp",
+    "width": 907,
+    "height": 770,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La combinación 2:1 en moles de Dox:Cur, con la dosis más baja de la serie (1,5 mg y 0,5 mg), mata casi el 80 % de las células cancerosas con la menor muerte de células sanas.",
+    "steps": [
+     "La tabla entrega la relación molar Dox/Cur para cada dosis: 1:2, 1:1 y tres veces 2:1.",
+     "Las tres dosis 2:1 dan muerte de células cancerosas de 80,1 %, 80,0 % y 81,0 %, casi igual; en cambio, la muerte de células sanas sube de 10,1 % a 15,7 % y 25,9 % al aumentar las masas.",
+     "Usando el cociente entre muerte de células cancerosas y sanas como medida de selectividad, la dosis de 1,5 mg de Dox con 0,5 mg de Cur da $\\frac{80{,}1}{10{,}1} \\approx 7{,}9$, el valor más alto de la tabla; la de 1:1 da $\\approx 3{,}8$.",
+     "Como el estudio se hizo solo con una línea celular estomacal, el resultado es una pauta para investigar la dosis, no una terapia probada contra todos los cánceres.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Generaliza a «diferentes tipos de cáncer»; el estudio usó una sola línea celular estomacal.",
+     "B": "Aumentar ambas masas no mejora la eficacia: la muerte de células cancerosas casi no cambia (80,0 % a 81,0 %) y la de células sanas sube de 10,1 % a 25,9 %.",
+     "C": "Atribuye a la disminución de Cur la menor muerte de células sanas, pero la masa de Dox también cambia en la tabla; el efecto no está aislado."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q49",
+   "number": 49,
+   "axis": "Química",
+   "topic": "Tabla periódica",
+   "stem": "En el contexto de un estudio para verificar las proporciones en que se unen los elementos X e Y para formar dos compuestos, se hacen reaccionar distintas masas del elemento Y con una misma masa del elemento X, a una temperatura de 25 °C y 1 atm de presión. Los resultados del estudio se muestran en la tabla siguiente:\n\nMasa del elemento X Masa del elemento Y Masa de compuesto (g) (g) (g) 2 1,5 3,5 2 3 5\n\n¿Cuál de las siguientes opciones identifica correctamente las variables de este estudio?\n\nVariable dependiente Variable independiente",
+   "options": [
+    {
+     "key": "A",
+     "text": "Masa del elemento X Masa del elemento Y"
+    },
+    {
+     "key": "B",
+     "text": "Masa del compuesto Masa del elemento X"
+    },
+    {
+     "key": "C",
+     "text": "Masa del compuesto Masa del elemento Y"
+    },
+    {
+     "key": "D",
+     "text": "Masa del elemento Y Masa del elemento X"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q49.webp",
+    "width": 907,
+    "height": 564,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable independiente es la que el investigador varía (la masa de Y) y la dependiente es la que resulta de la reacción (la masa del compuesto).",
+    "steps": [
+     "El estudio hace reaccionar distintas masas de Y con una misma masa de X (2 g). La masa de X se mantiene fija, así que es una variable controlada.",
+     "La masa del compuesto formado (3,5 g y 5 g) es el resultado que se obtiene según la cantidad de Y utilizada.",
+     "Entonces, la variable dependiente es la masa del compuesto y la independiente es la masa del elemento Y.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Toma la masa de X como variable independiente, pero esa masa se mantuvo fija (2 g) en todas las pruebas.",
+     "D": "Invierte las variables: trata la masa de Y como respuesta y la de X como la que se varía."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q50",
+   "number": 50,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "Dos sustancias, X e Y, reaccionan para formar el compuesto Z, de acuerdo a las siguientes condiciones:\n\nMasas iniciales Masas finales Masa de X (g) Masa de Y (g) Masa de Z (g) Exceso 28 6 34 0 14 6 17 3 g de Y 30 6 34 2 g de X\n\nA partir de los datos anteriores, ¿cuál de las siguientes opciones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las masas iniciales de las sustancias X e Y son iguales a la masa final de Z."
+    },
+    {
+     "key": "B",
+     "text": "7 g de la sustancia X reaccionan exactamente con 2,5 g de la sustancia Y."
+    },
+    {
+     "key": "C",
+     "text": "Para formar Z, las sustancias X e Y se unen en una proporción en masa de 14:3."
+    },
+    {
+     "key": "D",
+     "text": "30 g de la sustancia X reaccionan exactamente con 6 g de la sustancia Y."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q50.webp",
+    "width": 907,
+    "height": 515,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los tres ensayos muestran que X e Y reaccionan siempre en la misma proporción de masa, $\\frac{14}{3}$, y el exceso indica qué sustancia sobra.",
+    "steps": [
+     "Ensayo 1: con 28 g de X y 6 g de Y no hay exceso y se forman 34 g de Z; además $\\frac{28}{6} = \\frac{14}{3}$.",
+     "Ensayo 2: con 14 g de X y 6 g de Y sobran 3 g de Y, así reaccionan 14 g de X con 3 g de Y, que dan 17 g de Z; la razón vuelve a ser $\\frac{14}{3}$.",
+     "Ensayo 3: con 30 g de X y 6 g de Y sobran 2 g de X, así reaccionan 28 g de X con 6 g de Y, que dan 34 g de Z; de nuevo $\\frac{28}{6} = \\frac{14}{3}$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Solo se cumple en el primer ensayo ($28 + 6 = 34$); en el segundo hay exceso y $14 + 6 = 20$ no es 17.",
+     "B": "Error de proporción: 7 g de X necesitan $\\frac{7 \\cdot 3}{14} = 1{,}5$ g de Y, no 2,5 g.",
+     "D": "Tomar 30 g de X como si reaccionaran todos: solo reaccionan 28 g, porque sobran 2 g de X."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q51",
+   "number": 51,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Un grupo de estudiantes se encuentra analizando una reacción de precipitación representada mediante la siguiente ecuación:\n\nBaCl² (ac) + Na²SO⁴ (ac) 2 NaCl (ac) + BaSO⁴ (s)\n\nPara llevar a cabo la reacción, utilizaron una gradilla donde colocaron 5 tubos de ensayo y agregaron a cada uno un determinado volumen de BaCl² y Na²SO⁴, calculando la cantidad de sustancia agregada para ambos reactivos. Luego, determinaron la cantidad en mol de precipitado (BaSO⁴) formado en cada uno de los tubos de ensayo. Los resultados se muestran en la siguiente tabla:\n\nTubo de Cantidad de Cantidad de Cantidad de ensayo BaCl²(mol) Na²SO⁴(mol) BaSO⁴(mol) 1 0,0001 0,0009 0,0001 2 0,0002 0,0008 0,0002 3 0,0003 0,0007 0,0003 4 0,0004 0,0006 0,0004 5 0,0005 0,0005 0,0005\n\nEn relación con el análisis de estos resultados, ¿cuál de las siguientes conclusiones es correcta sobre la cantidad en mol obtenida de precipitado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cantidad depende del reactivo en exceso, que corresponde al BaCl²"
+    },
+    {
+     "key": "B",
+     "text": "La cantidad depende del reactivo en exceso, que corresponde al Na²SO⁴"
+    },
+    {
+     "key": "C",
+     "text": "La cantidad depende del reactivo limitante, que corresponde al Na²SO⁴"
+    },
+    {
+     "key": "D",
+     "text": "La cantidad depende del reactivo limitante, que corresponde al BaCl²"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q51.webp",
+    "width": 907,
+    "height": 737,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cantidad de precipitado en cada tubo queda limitada por el $\\mathrm{BaCl_2}$, que se consume primero, porque la reacción es 1:1 y el $\\mathrm{Na_2SO_4}$ está en exceso en la mayoría de los tubos.",
+    "steps": [
+     "La ecuación balanceada muestra una relación 1:1 entre $\\mathrm{BaCl_2}$, $\\mathrm{Na_2SO_4}$ y $\\mathrm{BaSO_4}$.",
+     "En el tubo 1 hay 0,0001 mol de $\\mathrm{BaCl_2}$ y 0,0009 mol de $\\mathrm{Na_2SO_4}$: el $\\mathrm{BaCl_2}$ se acaba primero y el precipitado es 0,0001 mol, igual a la cantidad de $\\mathrm{BaCl_2}$.",
+     "Lo mismo ocurre en los tubos 2, 3 y 4: el precipitado coincide con la cantidad de $\\mathrm{BaCl_2}$ (0,0002; 0,0003 y 0,0004 mol), mientras el $\\mathrm{Na_2SO_4}$ sobra.",
+     "En el tubo 5 ambos reactivos están en igual cantidad (0,0005 mol), así que el precipitado es el mismo y la cantidad formada sigue dependiendo del reactivo limitante, el $\\mathrm{BaCl_2}$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Invierte el concepto: el $\\mathrm{BaCl_2}$ es el reactivo limitante, no el reactivo en exceso, en los tubos 1 a 4.",
+     "C": "Identifica bien que la cantidad depende del limitante, pero señala al $\\mathrm{Na_2SO_4}$, que es el reactivo en exceso en los tubos 1 a 4."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q52",
+   "number": 52,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Para ayudar a combatir una epidemia provocada por un virus, un grupo de investigadores en microbiología desea evaluar el poder desinfectante de soluciones que puedan ser fácilmente preparadas en el hogar. Para cumplir con esto, extraen un cierto volumen de un recipiente que contiene una solución de cloro comercial y agregan agua destilada hasta alcanzar un determinado volumen de solución. Los volúmenes utilizados se muestran en la siguiente tabla:\n\nVolumen de solución comercial Volumen de solución final (mL) (mL) 2,0 20 2,0 100 0,1 100\n\nConsiderando el procedimiento realizado por los investigadores, ¿cuál de las siguientes opciones corresponde a una variable fija?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El volumen de solución final."
+    },
+    {
+     "key": "B",
+     "text": "El volumen de solución comercial."
+    },
+    {
+     "key": "C",
+     "text": "La concentración de cloro en la solución final."
+    },
+    {
+     "key": "D",
+     "text": "La concentración de cloro en la solución comercial."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q52.webp",
+    "width": 907,
+    "height": 611,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una variable fija es la que se mantiene igual en todos los ensayos; aquí, la concentración de la solución comercial de partida no cambia, porque siempre se usa la misma solución.",
+    "steps": [
+     "Los investigadores usan siempre la misma solución comercial de cloro, así que su concentración es la misma en todos los ensayos.",
+     "El volumen final cambia (20 mL y 100 mL), el volumen comercial cambia (2,0; 2,0 y 0,1 mL) y la concentración de la solución final también cambia, porque cada dilución tiene un factor distinto (10, 50 y 1000 veces).",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El volumen de solución final es una variable: toma valores de 20 mL y de 100 mL.",
+     "C": "La concentración de la solución final cambia con cada dilución, así que es una variable, no un valor fijo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q53",
+   "number": 53,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Realizando una investigación sobre la química del vino, un grupo de estudiantes recopiló la siguiente información:\n\n- Estudiante 1: la escala Brix, creada en el siglo XIX por el matemático e ingeniero alemán Adolf Brix, se usa hasta el día de hoy en la industria alimentaria para medir el contenido aproximado de azúcar presente en alimentos como frutas y hortalizas.\n\n- Estudiante 2: un grado Brix (°Bx) corresponde a un gramo de azúcar disuelto en 100 gramos de solución.\n\n- Estudiante 3: en la industria del vino, los grados Brix se miden antes de la cosecha de la uva para determinar el contenido de azúcar del jugo de uva y, por lo tanto, el contenido de alcohol que tendría el vino una vez fermentado el azúcar.\n\n- Estudiante 4: durante la etapa de fermentación, se deben medir los grados Brix al menos una vez al día, y ajustarlo si es necesario, para obtener una densidad aproximada de 1 g/mL y un valor de 18 a 24 °Bx.\n\nCon respecto a la información recopilada, ¿qué opción clasifica correctamente el componente de la investigación descrito por los estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El estudiante 1 informó una hipótesis."
+    },
+    {
+     "key": "B",
+     "text": "El estudiante 2 informó una conclusión."
+    },
+    {
+     "key": "C",
+     "text": "El estudiante 3 informó un modelo."
+    },
+    {
+     "key": "D",
+     "text": "El estudiante 4 informó un procedimiento."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q53.webp",
+    "width": 907,
+    "height": 625,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada estudiante informa un componente distinto de la investigación; el que describe una secuencia de acciones para medir y ajustar es el procedimiento.",
+    "steps": [
+     "El estudiante 1 entrega antecedentes históricos y contexto (la escala creada en el siglo XIX y su uso actual), no una hipótesis que deba ponerse a prueba.",
+     "El estudiante 2 entrega una definición (1 °Bx equivale a 1 g de azúcar en 100 g de solución), que es un concepto, no una conclusión obtenida de datos.",
+     "El estudiante 3 explica la relación entre el azúcar del jugo y el alcohol del vino, como aplicación del contexto; no presenta una representación del sistema.",
+     "El estudiante 4 describe acciones ordenadas (medir al menos una vez al día, ajustar si es necesario y alcanzar entre 18 y 24 °Bx): eso es un procedimiento.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El estudiante 1 no propone una relación que se pueda contrastar; solo presenta antecedentes.",
+     "B": "El estudiante 2 da una definición de la unidad °Bx, no una conclusión obtenida de datos."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q54",
+   "number": 54,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Se mezclan las siguientes disoluciones acuosas de HCl:\n\n10,0 mL de HCl 1,00 mol/L. 20,0 mL de HCl 0,50 mol/L. 50,0 mL de HCl 0,20 mol/L.\n\n¿Cuál es la concentración de la disolución resultante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,250 mol/L"
+    },
+    {
+     "key": "B",
+     "text": "0,300 mol/L"
+    },
+    {
+     "key": "C",
+     "text": "0,375 mol/L"
+    },
+    {
+     "key": "D",
+     "text": "1,700 mol/L"
+    },
+    {
+     "key": "E",
+     "text": "2,670 mol/L"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La concentración de una mezcla es la cantidad total de soluto dividida por el volumen total, no el promedio de las concentraciones.",
+    "steps": [
+     "Cantidad de HCl en cada disolución: $10{,}0 \\cdot 1{,}00 = 10{,}0$ mmol; $20{,}0 \\cdot 0{,}50 = 10{,}0$ mmol; $50{,}0 \\cdot 0{,}20 = 10{,}0$ mmol.",
+     "Cantidad total de soluto: $10{,}0 + 10{,}0 + 10{,}0 = 30{,}0$ mmol.",
+     "Volumen total: $10{,}0 + 20{,}0 + 50{,}0 = 80{,}0$ mL.",
+     "Concentración final: $\\frac{30{,}0 \\ \\mathrm{mmol}}{80{,}0 \\ \\mathrm{mL}} = 0{,}375 \\ \\mathrm{mol/L}$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Divide 30,0 mmol por 100 mL, usando un volumen total erróneo de 100 mL en lugar de 80 mL.",
+     "D": "Suma las concentraciones (1,00 + 0,50 + 0,20 = 1,70 mol/L) sin ponderar por el volumen de cada disolución."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q55",
+   "number": 55,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "El radar es un instrumento tecnológico que se utiliza ampliamente en el ámbito de la aeronáutica, navegación, meteorología y otras actividades, ya que permite determinar la posición de objetos así como sus velocidades y trayectorias. En relación a lo anterior, ¿qué fenómenos asociados a las ondas electromagnéticas explican el funcionamiento del radar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La difracción y la absorción"
+    },
+    {
+     "key": "B",
+     "text": "La refracción y la absorción"
+    },
+    {
+     "key": "C",
+     "text": "La propagación y la difracción"
+    },
+    {
+     "key": "D",
+     "text": "La propagación y la reflexión"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El radar emite ondas electromagnéticas que viajan hasta el objeto y regresan por reflexión; el eco permite determinar posición y velocidad.",
+    "steps": [
+     "El radar emite pulsos de ondas electromagnéticas que se propagan por el aire hasta encontrar un objeto.",
+     "Las ondas que chocan con el objeto se reflejan y vuelven al receptor: el tiempo de ida y vuelta da la distancia, y el cambio de frecuencia del eco da la velocidad.",
+     "Así, los dos fenómenos centrales son la propagación (el viaje de la onda) y la reflexión (el eco).",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Difracción y absorción: la difracción no es lo que devuelve el eco, y la absorción impediría que el objeto devolviera señal.",
+     "C": "Propagación y difracción: la propagación es correcta, pero la difracción no explica el regreso de la onda desde el objeto."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q56",
+   "number": 56,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "Un haz de luz monocromática de frecuencia 14 Hz y longitud de 6× 10 × − 7 onda 5 10 m, se propaga en el vacío. El haz pasa desde el vacío a un medio cuyo índice de refracción es 2. En este segundo medio, el haz tiene\n\nm Longitud de onda (m) Rapidez s",
+   "options": [
+    {
+     "key": "A",
+     "text": "− 7 8 5,2 × 10 3× 10"
+    },
+    {
+     "key": "B",
+     "text": "− 7 8 5,2 × 10 5,1 × 10"
+    },
+    {
+     "key": "C",
+     "text": "− 7 8 5 × 10 5,1 × 10"
+    },
+    {
+     "key": "D",
+     "text": "− 6 8 1 × 10 3× 10"
+    },
+    {
+     "key": "E",
+     "text": "− 6 8 1 × 10 5,1 × 10"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q56.webp",
+    "width": 908,
+    "height": 363,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frecuencia no cambia al pasar de un medio a otro; cambian la rapidez y la longitud de onda, ambas divididas por el índice de refracción.",
+    "steps": [
+     "En el vacío, $v = c = 3 \\times 10^{8}\\ \\mathrm{m/s}$, con $f = 6 \\times 10^{14}$ Hz y $\\lambda = 5 \\times 10^{-7}$ m; se cumple $f\\lambda = 3 \\times 10^{8}$.",
+     "La frecuencia depende solo de la fuente, así que en el segundo medio sigue siendo $6 \\times 10^{14}$ Hz.",
+     "Con $n = \\frac{c}{v}$ se obtiene $v = \\frac{3 \\times 10^{8}}{2} = 1{,}5 \\times 10^{8}\\ \\mathrm{m/s}$.",
+     "La longitud de onda en el medio es $\\lambda' = \\frac{v}{f} = \\frac{1{,}5 \\times 10^{8}}{6 \\times 10^{14}} = 2{,}5 \\times 10^{-7}$ m.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Mantener la rapidez de $3 \\times 10^{8}$ m/s: olvida que la rapidez cambia en un medio con $n = 2$.",
+     "C": "Dejar la longitud de onda del vacío ($5 \\times 10^{-7}$ m) y cambiar solo la rapidez: no se recalcula $\\lambda = \\frac{v}{f}$.",
+     "D": "Multiplicar la longitud de onda por $n$ en vez de dividir, y dejar la rapidez en $3 \\times 10^{8}$ m/s."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q57",
+   "number": 57,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "En la clase de física, una estudiante ubica un espejo plano en forma perpendicular a una superficie de cartón grueso y un alfiler a una distancia conocida, frente al espejo. Luego, observa la imagen del alfiler formada por el espejo, desde las posiciones 1 a la 4, de forma rasante a la superficie, como se representa en la siguiente figura:\n\nEspejo\n\nObjeto\n\nEn cada ocasión traza una recta desde el punto de observación hacia el lugar del espejo donde observa la imagen. Por último, retira el espejo, prolonga las líneas ya dibujadas y encuentra que todas se intersectan en un punto. Si luego la estudiante mide la distancia entre el punto de intersección y la ubicación del espejo, ¿cuál de los siguientes objetivos de investigación puede lograr con esta medición?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar la relación entre la altura de un objeto y la altura de su imagen formada por reflexión en un espejo."
+    },
+    {
+     "key": "B",
+     "text": "Determinar la relación entre la posición de un objeto y la distancia focal de un espejo."
+    },
+    {
+     "key": "C",
+     "text": "Determinar la relación entre el ángulo de incidencia y el ángulo de reflexión en un espejo."
+    },
+    {
+     "key": "D",
+     "text": "Determinar la relación entre la posición de un objeto y la posición de su imagen formada por reflexión en un espejo."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q57.webp",
+    "width": 908,
+    "height": 915,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El punto donde se cruzan las visuales es la posición de la imagen; medir su distancia al espejo permite compararla con la distancia del objeto.",
+    "steps": [
+     "Las visuales trazadas desde las posiciones 1 a 4 hacia la zona del espejo donde se ve la imagen se cruzan en un único punto al prolongarlas.",
+     "Ese punto es donde se forma la imagen del alfiler, detrás del espejo plano, a una distancia $d_i$ del espejo.",
+     "Con la distancia $d_o$ del alfiler al espejo se pueden comparar ambas distancias: esto relaciona la posición del objeto con la posición de su imagen.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Altura: la medición es de distancias, no de tamaños del alfiler ni de su imagen.",
+     "B": "Distancia focal: un espejo plano no tiene distancia focal, así que la medición no la determina.",
+     "C": "Ángulos: para medir el ángulo de incidencia y de reflexión habría que medir inclinaciones, no la distancia al espejo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q58",
+   "number": 58,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un grupo de personas analiza la luz proveniente de un cúmulo de galaxias, para indagar si hay relación entre el movimiento del cúmulo respecto del Sistema Solar y su distancia a este. Al respecto, ¿cuál de las siguientes opciones representa un objetivo de investigación que se ajusta a la investigación del grupo de personas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar la relación entre la rapidez de propagación de la luz emitida por el cúmulo de galaxias, y la posición del Sol."
+    },
+    {
+     "key": "B",
+     "text": "Determinar la relación entre la frecuencia de la luz percibida, proveniente del cúmulo de galaxias, y la distancia entre ellas y el Sol."
+    },
+    {
+     "key": "C",
+     "text": "Determinar la relación entre la rapidez de propagación de la luz emitida por el cúmulo de galaxias, y la velocidad relativa de este cúmulo de galaxias y el Sol."
+    },
+    {
+     "key": "D",
+     "text": "Determinar la relación entre la frecuencia de la luz percibida, proveniente del cúmulo de galaxias, y la rapidez de propagación de la luz emitida por el Sol."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frecuencia de la luz recibida cambia según el movimiento de la fuente, así que sirve para estudiar el movimiento del cúmulo y compararlo con su distancia.",
+    "steps": [
+     "El grupo quiere saber si el movimiento del cúmulo respecto del Sistema Solar se relaciona con su distancia a este.",
+     "El movimiento se estudia a partir de la luz recibida: si la fuente se aleja o se acerca, la frecuencia percibida cambia (corrimiento al rojo o al azul).",
+     "Por lo tanto, la variable asociada al movimiento es la frecuencia percibida y la variable a comparar es la distancia al Sistema Solar.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Mezcla la posición del Sol con la rapidez de la luz, que no tiene relación con el movimiento del cúmulo.",
+     "C": "Compara la rapidez de la luz con la velocidad relativa: la rapidez de la luz en el vacío es la misma para cualquier fuente, así que no es una variable que cambie con el movimiento.",
+     "D": "Compara la frecuencia de la luz del cúmulo con la rapidez de la luz del Sol: no es la relación pedida entre movimiento y distancia."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q59",
+   "number": 59,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un grupo de estudiantes aficionados a la astronomía observa un eclipse lunar total, comúnmente conocido como “Luna de sangre” debido a la tonalidad rojiza adquirida por la Luna. Este fenómeno ocurre cuando la Tierra se interpone entre el Sol y la Luna, tal como se muestra en la imagen:\n\nDurante el eclipse, la luz solar se desvía al pasar a través de la atmósfera terrestre, lo que permite que la Luna sea visible en lugar de quedar completamente oculta. Si los estudiantes desean realizar una investigación para explicar el tono rojizo de la Luna, ¿cuál de las siguientes preguntas de investigación es la que permitiría abordar de mejor forma la situación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cómo afecta el índice de refracción de la atmósfera en la dispersión de la luz proveniente del Sol?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cómo influye la posición de la Luna en la reflexión de la luz proveniente del Sol?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cómo influye el movimiento elíptico de la Tierra alrededor del Sol en el cambio de la longitud de onda de la luz proveniente del Sol?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cómo afectan las condiciones atmosféricas a la visualización de eclipses de diferente origen?"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q59.webp",
+    "width": 908,
+    "height": 782,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tono rojizo se explica porque la atmósfera desvía la luz solar y su índice de refracción depende de la longitud de onda, lo que separa los colores.",
+    "steps": [
+     "La luz que llega a la Luna durante el eclipse atraviesa la atmósfera terrestre, donde se desvía (se refracta) como dice el enunciado.",
+     "El índice de refracción del aire depende de la longitud de onda, así cada color se desvía de manera distinta; los colores de onda corta (azul) se dispersan más y el rojo llega más directo.",
+     "Así, la pregunta que aborda el tono rojizo es la que relaciona el índice de refracción de la atmósfera con la dispersión de la luz solar.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Reflexión según la posición de la Luna: la Luna refleja la luz solar, pero no explica el color por la atmósfera.",
+     "C": "Movimiento elíptico de la Tierra: no cambia la longitud de onda de la luz solar que llega a la Luna.",
+     "D": "Condiciones atmosféricas y visibilidad de eclipses: trata de cuándo se ve el eclipse, no del tono de la luz."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q60",
+   "number": 60,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Una persona estudia el comportamiento de la luz al pasar desde el aire a un prisma. En primera instancia, verifica que un haz de luz blanca al pasar por el prisma se descompone en los colores del arcoíris, donde el violeta es el que más desviación tiene respecto de la trayectoria original. Luego, repite el experimento con un puntero láser de color rojo, y se percata que el haz de luz solo se desvía, manteniendo su color. Al respecto, ¿cuál de las siguientes conclusiones se ajusta a lo observado en este experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Al ingresar al prisma, la luz roja mantiene constante su intensidad."
+    },
+    {
+     "key": "B",
+     "text": "Al ingresar al prisma, la luz roja mantiene constante su rapidez."
+    },
+    {
+     "key": "C",
+     "text": "Al ingresar al prisma, la luz de mayor frecuencia disminuye más su amplitud que la de menor frecuencia."
+    },
+    {
+     "key": "D",
+     "text": "Al ingresar al prisma, la luz de mayor frecuencia disminuye más su rapidez que la de menor frecuencia."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al entrar en el prisma la frecuencia de la luz no cambia, pero su rapidez sí; la luz de mayor frecuencia (violeta) reduce más su rapidez y por eso se desvía más.",
+    "steps": [
+     "La luz blanca se separa en colores y el violeta se desvía más que el rojo, lo que indica que cada color se propaga distinto en el vidrio.",
+     "El láser rojo cambia de dirección pero mantiene su color, es decir, su frecuencia no cambia al entrar al prisma.",
+     "Como $n = \\frac{c}{v}$, un índice mayor implica menor rapidez; el violeta tiene mayor índice y por eso su rapidez baja más que la del rojo.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Intensidad constante: la intensidad no explica por qué los colores se desvían de forma distinta.",
+     "B": "Rapidez constante de la luz roja: la rapidez sí cambia al entrar al vidrio, aunque el color no cambie.",
+     "C": "Mayor disminución de amplitud para el violeta: la amplitud no determina la desviación del haz."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q61",
+   "number": 61,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Una persona estudia la formación de imágenes en espejos parabólicos. Para tal efecto, la persona toma un juguete y lo ubica en cuatro posiciones diferentes con respecto a un espejo parabólico S de distancia focal determinada, registrando si se obtiene o no la imagen del juguete en el espejo en cada caso. Luego, la persona repite el procedimiento utilizando otro espejo parabólico T de distancia focal diferente a la del espejo anterior. Los datos recopilados por la persona son presentados en la siguiente tabla:\n\nPosición del juguete con respecto al espejo\n\nPosición 1 Posición 2 Posición 3 Posición 4 ¿Se forma imagen en Sí No Sí Sí el espejo S? ¿Se forma imagen en Sí Sí No Sí el espejo T?\n\nAl respecto, ¿cuál de las siguientes conclusiones es acorde a los resultados de la tabla?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La formación de la imagen de un objeto en un espejo parabólico depende del tamaño del objeto."
+    },
+    {
+     "key": "B",
+     "text": "La formación de la imagen de un objeto en un espejo parabólico depende de la curvatura del espejo."
+    },
+    {
+     "key": "C",
+     "text": "El tamaño de la imagen del objeto formada en un espejo parabólico depende de la ubicación del objeto con respecto al espejo."
+    },
+    {
+     "key": "D",
+     "text": "La orientación de la imagen del objeto formada en un espejo parabólico depende de la ubicación del objeto con respecto al espejo."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q61.webp",
+    "width": 908,
+    "height": 780,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El mismo juguete da resultados distintos con los espejos S y T, así que la formación de la imagen depende de la curvatura, es decir, de la distancia focal del espejo.",
+    "steps": [
+     "Con el espejo S no se forma imagen en la posición 2; con el espejo T no se forma imagen en la posición 3.",
+     "El juguete ocupa las mismas posiciones en ambos casos, así que la diferencia proviene del espejo: cada uno tiene una distancia focal distinta.",
+     "Como solo cambió el espejo, la formación de la imagen depende de su curvatura.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Tamaño del objeto: el juguete es el mismo en todas las posiciones; la tabla no registra variaciones de tamaño.",
+     "C": "Tamaño de la imagen: la tabla solo registra si hay imagen (Sí o No), no su tamaño.",
+     "D": "Orientación de la imagen: la tabla tampoco registra la orientación, solo la presencia de imagen."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q62",
+   "number": 62,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Una persona quiere verificar lo que dice su libro de óptica sobre la formación de imágenes en espejos cóncavos. Para ello, ubica una manzana frente a un espejo cóncavo, en un punto igual a la distancia focal del espejo, y espera que no se forme imagen. Al realizar el procedimiento se percata que en el espejo aparece una imagen distorsionada de la manzana. ¿Cuál es la razón por la cual se observa imagen?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La superficie del objeto es rugosa."
+    },
+    {
+     "key": "B",
+     "text": "El objeto es demasiado grande."
+    },
+    {
+     "key": "C",
+     "text": "El espejo es más grande que el objeto."
+    },
+    {
+     "key": "D",
+     "text": "La superficie del espejo no refleja toda la luz que recibe."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El objeto está en el foco, pero como tiene tamaño, sus partes quedan a distintas distancias del espejo; las partes más cercanas que el foco forman una imagen.",
+    "steps": [
+     "En un espejo cóncavo, un punto colocado exactamente en el foco no forma imagen, porque los rayos reflejados salen paralelos.",
+     "La manzana no es un punto: tiene volumen, así que sus partes están a distintas distancias del espejo.",
+     "Las partes que quedan a menos de la distancia focal forman una imagen virtual, aumentada y deformada, que es la imagen distorsionada que se observa.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Rugosidad del objeto: una superficie rugosa dispersa la luz, pero el enunciado trata el caso de un objeto con la distancia focal exacta.",
+     "C": "Espejo más grande que el objeto: el tamaño del espejo no cambia la posición del foco ni la formación de la imagen.",
+     "D": "Reflexión parcial: el espejo refleja casi toda la luz; esto no explica por qué aparece la imagen."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q63",
+   "number": 63,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "Una persona empuja una caja que contiene 10 kg de manzanas por una superficie horizontal de cemento, aplicándole una fuerza horizontal constante, de forma que recorre una determinada distancia con velocidad constante. Luego, la persona vuelve a empujar la caja recorriendo la misma distancia con velocidad constante, pero ahora con 8 kg de manzanas. ¿Cuál de las opciones corresponde a una variable controlada en su procedimiento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El coeficiente de roce entre la caja y la superficie."
+    },
+    {
+     "key": "B",
+     "text": "La fuerza ejercida sobre la caja por la persona."
+    },
+    {
+     "key": "C",
+     "text": "El peso sobre la caja y su contenido."
+    },
+    {
+     "key": "D",
+     "text": "La masa de la caja y su contenido."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con velocidad constante la fuerza aplicada iguala al roce; como la superficie no cambia, el coeficiente de roce se mantiene constante y es la variable controlada.",
+    "steps": [
+     "Con velocidad constante la fuerza neta es cero: la fuerza horizontal aplicada iguala a la fuerza de roce cinético.",
+     "El roce cinético es $f = \\mu N$, y $N$ depende del peso de la caja con su contenido, que cambia al pasar de 10 kg a 8 kg de manzanas.",
+     "La superficie de cemento es la misma en ambas pruebas, así que el coeficiente de roce $\\mu$ se mantiene constante.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La fuerza aplicada por la persona: cambia al cambiar la masa, así que es una variable que responde, no una controlada.",
+     "C": "El peso sobre la caja y su contenido: es una variable que se modifica al cambiar de 10 kg a 8 kg.",
+     "D": "La masa de la caja y su contenido: es precisamente lo que se cambia en el experimento."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q64",
+   "number": 64,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "A dos resortes idénticos se le cuelgan pesos de 220 N y 400 N. Un puntero, fijo a cada resorte, señala que el primer peso estiró el resorte hasta los 36 cm de una regla junto a él, y el otro peso estiró el resorte hasta los 45 cm en la misma regla, tal como se representa en la siguiente figura:\n\n220 N\n\n400 N\n\nLuego de quitar los pesos de ambos resortes y de que estos hayan vuelto a su longitud natural, ¿cuál es la medida que señalará cada puntero en la regla?",
+   "options": [
+    {
+     "key": "A",
+     "text": "11 cm"
+    },
+    {
+     "key": "B",
+     "text": "20 cm"
+    },
+    {
+     "key": "C",
+     "text": "25 cm"
+    },
+    {
+     "key": "D",
+     "text": "34 cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q64.webp",
+    "width": 908,
+    "height": 767,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como los resortes son idénticos, su constante es la misma; con los dos pesos se calcula la posición sin carga, que es la lectura que marcará el puntero al quitar los pesos.",
+    "steps": [
+     "Para ambos resortes, $F = k\\,(x - L_0)$, donde $x$ es la lectura del puntero con peso y $L_0$ es la lectura sin peso.",
+     "Con $220 = k(36 - L_0)$ y $400 = k(45 - L_0)$, al dividir se obtiene $\\frac{220}{400} = \\frac{36 - L_0}{45 - L_0}$.",
+     "Resolviendo: $0{,}55(45 - L_0) = 36 - L_0$, es decir, $24{,}75 - 0{,}55\\,L_0 = 36 - L_0$, luego $L_0 = 25$ cm.",
+     "Comprobación: $k = \\frac{220}{36 - 25} = 20$ N/cm y $\\frac{400}{45 - 25} = 20$ N/cm, valores iguales.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "11 cm: es la elongación del primer resorte ($36 - 25$), no la lectura del puntero sin peso.",
+     "B": "20 cm: es la elongación del segundo resorte ($45 - 25$), no la posición que marca el puntero."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q65",
+   "number": 65,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un grupo de ingenieras pretende diseñar nuevos cascos de fútbol americano. Para estudiar el impacto que podría recibir tal casco, deciden modelar su amortiguación interna a través de dos sistemas, 1 y 2, compuestos de resortes. El objetivo es estudiar la compresión efectiva de tales sistemas en función de la magnitud de la fuerza aplicada. El grupo obtiene los resultados que se aprecian en la siguiente tabla:\n\nMagnitud de la fuerza Compresión en el Compresión en el aplicada (N) sistema 1 (cm) sistema 2 (cm) 50 1,7 0,4 60 2,1 0,5 70 2,4 0,6 80 2,6 0,7\n\n¿Qué puede inferir el grupo a partir de estos resultados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El sistema 1 es más flexible que el sistema 2."
+    },
+    {
+     "key": "B",
+     "text": "El sistema 1 es más inseguro que el sistema 2."
+    },
+    {
+     "key": "C",
+     "text": "El sistema 1 es más compacto que el sistema 2."
+    },
+    {
+     "key": "D",
+     "text": "El sistema 1 soporta más fuerza que el sistema 2."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q65.webp",
+    "width": 908,
+    "height": 530,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "A igual fuerza, el sistema 1 se comprime bastante más que el sistema 2, así que es menos rígido, es decir, más flexible.",
+    "steps": [
+     "Compresión por newton en el sistema 1: $\\frac{1{,}7}{50} = 0{,}034$ cm/N; en el sistema 2: $\\frac{0{,}4}{50} = 0{,}008$ cm/N.",
+     "Con 80 N se mantiene la diferencia: $\\frac{2{,}6}{80} = 0{,}0325$ cm/N en el sistema 1 y $\\frac{0{,}7}{80} \\approx 0{,}009$ cm/N en el sistema 2.",
+     "El sistema 1 se comprime unas cuatro veces más que el sistema 2 con la misma fuerza.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Inseguro: la tabla solo entrega compresiones; no entrega información sobre seguridad.",
+     "D": "Soporta más fuerza: la menor compresión del sistema 2 indica que es más rígido, no que el sistema 1 soporte más fuerza."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q66",
+   "number": 66,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "En el interior de un ascensor en reposo, se cuelga un objeto desde uno de los N, elongándose 6 cm extremos de un resorte ideal, cuya constante elástica es 4 cm respecto a su posición de equilibrio. Posteriormente el ascensor se eleva con una m. rapidez constante de 2 s\n\ngρ\n\nm Considerando que la magnitud de la aceleración de gravedad g es 10 ²¿cuál es , s la masa del objeto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,4 kg"
+    },
+    {
+     "key": "B",
+     "text": "3,0 kg"
+    },
+    {
+     "key": "C",
+     "text": "12,0 kg"
+    },
+    {
+     "key": "D",
+     "text": "15,0 kg"
+    },
+    {
+     "key": "E",
+     "text": "48,0 kg"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q66.webp",
+    "width": 908,
+    "height": 570,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con rapidez constante no hay aceleración, así que el peso del objeto equilibra la fuerza elástica: $mg = kx$.",
+    "steps": [
+     "La constante es $k = 4\\ \\frac{\\mathrm{N}}{\\mathrm{cm}}$ y la elongación es $x = 6$ cm, luego la fuerza elástica es $F = kx = 4 \\cdot 6 = 24$ N.",
+     "Como el ascensor sube con rapidez constante, la aceleración es nula y la fuerza neta sobre el objeto es cero.",
+     "Entonces $F = mg$, de donde $m = \\frac{F}{g} = \\frac{24\\ \\mathrm{N}}{10\\ \\mathrm{m/s^{2}}} = 2{,}4$ kg.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "12,0 kg: divide la fuerza por la rapidez ($24 / 2$) en vez de dividir por g.",
+     "E": "48,0 kg: multiplica la fuerza por la rapidez ($24 \\cdot 2$) en vez de dividir por g."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q67",
+   "number": 67,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un grupo de personas realiza una investigación sobre la fuerza de roce entre un bloque y una superficie horizontal y rugosa. En principio, se le ejerce una fuerza horizontal 𝐹, que aumenta progresivamente desde 0 s hasta 5 s, instante en el que el bloque comienza a moverse. Finalmente, a los 8 s el bloque se detiene. El siguiente gráfico representa la fuerza aplicada al bloque, en función del tiempo.\n\nFuerza aplicada (N) 20\n\n0 5 7 8 Tiempo (s)\n\nConsiderando la información que se expone en este procedimiento, ¿cuál de las siguientes afirmaciones representa una conclusión de esta investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Entre 0 s y 5 s, la fuerza de roce sobre el bloque tiene magnitud nula."
+    },
+    {
+     "key": "B",
+     "text": "A los 5 s, el sentido de la fuerza aplicada sobre el bloque cambia."
+    },
+    {
+     "key": "C",
+     "text": "Entre 7 s y 8 s, el sentido de la fuerza neta es contrario al del movimiento."
+    },
+    {
+     "key": "D",
+     "text": "A los 7 s, la magnitud de la aceleración del bloque es mínima."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q67.webp",
+    "width": 908,
+    "height": 670,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Entre 7 s y 8 s solo actúa el roce, que se opone al movimiento; por eso la fuerza neta en ese tramo va en sentido contrario al del movimiento.",
+    "steps": [
+     "Entre 0 s y 5 s la fuerza aplicada crece de 0 a 20 N, pero el bloque no se mueve: el roce estático iguala a la fuerza aplicada, así que no es nulo.",
+     "Entre 5 s y 7 s la fuerza aplicada se mantiene en 20 N y el bloque se mueve; entre 7 s y 8 s la fuerza aplicada es cero y el bloque se detiene.",
+     "Entre 7 s y 8 s la única fuerza horizontal es el roce, que se opone al movimiento; la fuerza neta va en sentido contrario al del movimiento.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Roce nulo entre 0 s y 5 s: el bloque no se mueve, así que el roce estático iguala a la fuerza aplicada.",
+     "B": "Cambio de sentido de la fuerza a los 5 s: el gráfico muestra que la fuerza aplicada siempre es positiva; a los 5 s solo deja de crecer.",
+     "D": "Aceleración mínima a los 7 s: el gráfico no permite afirmar eso, porque en ese instante cambia la fuerza neta, no su mínimo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q68",
+   "number": 68,
+   "axis": "Física",
+   "topic": "Masa y peso",
+   "stem": "Para estudiar los efectos que provoca la presión en un sistema, una persona utiliza un balde al que le agrega un poco de arena en su interior para aumentar la masa de este, para luego medir la profundidad de la huella que deja el balde al colocarlo en una mezcla de barro, que tiene la consistencia adecuada para llevar a cabo su estudio. Luego, agrega más arena al balde y repite el proceso. ¿Cuál de las siguientes opciones es una variable controlada del experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La profundidad de la huella producida en la mezcla de barro"
+    },
+    {
+     "key": "B",
+     "text": "El área de contacto del balde con la mezcla de barro"
+    },
+    {
+     "key": "C",
+     "text": "El peso de la arena que contiene el balde"
+    },
+    {
+     "key": "D",
+     "text": "La masa del balde y su contenido"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El balde es el mismo en todas las pruebas, así que su área de contacto con el barro se mantiene y es la variable controlada.",
+    "steps": [
+     "En el experimento se cambia la masa del balde al agregar arena, y con ello cambia el peso de la arena contenida.",
+     "La profundidad de la huella es la variable que se mide después de cada cambio.",
+     "El área de contacto del balde con la mezcla no cambia entre pruebas: es la variable controlada.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Profundidad de la huella: es la variable que se mide, no la que se mantiene constante.",
+     "C": "Peso de la arena: es la variable que se cambia en cada prueba.",
+     "D": "Masa del balde y su contenido: también cambia al agregar arena."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q69",
+   "number": 69,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "En el siguiente esquema, utilizado por un profesor para explicar que, P y Q representan dos placas tectónicas y 1, 2, 3, 4 y 5 representan estaciones de monitoreo que registran movimientos muy pequeños de cada placa tectónica:\n\n**Q**\n\n**P**\n\n1 5 2\n\n4 3\n\nConsiderando este esquema, ¿cuál de los siguientes procedimientos es el que mejor se enfoca en determinar si entre las placas tectónicas P y Q hay un límite convergente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Registrar la distancia entre las estaciones de monitoreo 4 y 3 por una década."
+    },
+    {
+     "key": "B",
+     "text": "Registrar la distancia entre las estaciones de monitoreo 5 y 4 cada un minuto durante 24 horas."
+    },
+    {
+     "key": "C",
+     "text": "Registrar la distancia entre las estaciones de monitoreo 1 y 2 por una década."
+    },
+    {
+     "key": "D",
+     "text": "Registrar la distancia entre las estaciones de monitoreo 3 y 5 cada un minuto durante 24 horas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q69.webp",
+    "width": 908,
+    "height": 719,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un límite convergente se reconoce porque la distancia entre estaciones de placas distintas disminuye con el tiempo; las estaciones 4 y 3, cercanas a la frontera, permiten medirlo.",
+    "steps": [
+     "La estación 4 está en P y la estación 3 está en Q, cerca de la frontera entre ambas placas.",
+     "Las estaciones 1 y 2 pertenecen a Q, y 5 y 4 pertenecen a P: medir su distancia no dice nada sobre el acercamiento entre placas.",
+     "Los movimientos tectónicos son de centímetros por año, así que se necesita registrar por una década y no cada minuto durante 24 horas.",
+     "Si la distancia entre 4 y 3 disminuye durante la década, las placas se acercan, lo que corresponde a un límite convergente.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Medir 5 y 4, ambas en P, cada minuto durante 24 horas: no involucra dos placas y la escala de tiempo es demasiado corta.",
+     "C": "Medir 1 y 2 por una década: ambas están en Q, así que no detectan el acercamiento entre P y Q.",
+     "D": "Medir 3 y 5 cada minuto durante 24 horas: cruza la frontera, pero 24 horas es insuficiente para detectar un acercamiento de centímetros."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q70",
+   "number": 70,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "Una persona revisa diversas fuentes bibliográficas, deteniendo su atención en la siguiente relación entre la magnitud física M de una placa tectónica en función del tiempo t:\n\nA partir de la información anterior, la persona afirma que a medida que transcurre el tiempo la magnitud física M disminuye. ¿A qué componente de la investigación científica corresponde lo afirmado por la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A una ley"
+    },
+    {
+     "key": "B",
+     "text": "A una teoría"
+    },
+    {
+     "key": "C",
+     "text": "A una variable"
+    },
+    {
+     "key": "D",
+     "text": "A una inferencia"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q70.webp",
+    "width": 908,
+    "height": 523,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frase describe la tendencia de una gráfica a partir de datos bibliográficos; eso es una inferencia, no una ley ni una teoría.",
+    "steps": [
+     "La gráfica muestra que M es máxima al inicio, disminuye con el tiempo y tiende a estabilizarse.",
+     "La persona observa ese comportamiento en las fuentes y concluye que M disminuye con el tiempo.",
+     "Esa conclusión se deduce desde los datos, así que es una inferencia; no es una relación general verificada (ley) ni un marco explicativo (teoría).",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Una ley: una ley es una relación universal y comprobada; la afirmación se limita a una placa y un gráfico.",
+     "B": "Una teoría: una teoría entrega una explicación del fenómeno, y aquí no se entrega ninguna.",
+     "C": "Una variable: M es la variable medida; la afirmación es la conclusión que se saca de ella."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q71",
+   "number": 71,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Según nuevos datos climáticos de la Organización Meteorológica Mundial (OMM), hay aproximadamente un 40 % de probabilidades de que, por lo menos en uno de los próximos 5 años, la temperatura media anual del planeta supere en 1,5 °C los niveles preindustriales. En este contexto, ¿cuál es uno de los hechos que se puede esperar como consecuencia de este aumento en 1,5 °C?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una disminución de la concentración de gases de efecto invernadero"
+    },
+    {
+     "key": "B",
+     "text": "Una disminución del volumen de nieve acumulada en las montañas"
+    },
+    {
+     "key": "C",
+     "text": "Una disminución de la masa total del agua a nivel global"
+    },
+    {
+     "key": "D",
+     "text": "Una disminución en el agujero de la capa de ozono"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un aumento de 1,5 °C derrite más nieve y hielo en las montañas, por lo que disminuye el volumen de nieve acumulada.",
+    "steps": [
+     "El dato indica que la temperatura media anual podría superar en $1{,}5\\ ^\\circ$C los niveles preindustriales.",
+     "Un aumento de temperatura derrite más nieve y hielo, especialmente en zonas de montaña.",
+     "Así, se espera una disminución del volumen de nieve acumulada en las montañas.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Disminución de gases de efecto invernadero: el calentamiento es consecuencia del aumento de esos gases, no su causa.",
+     "C": "Disminución de la masa total de agua: el calentamiento cambia el agua de estado, pero no la hace desaparecer del planeta.",
+     "D": "Menos agujero en la capa de ozono: el ozono se daña por gases como los clorofluorocarbonos, no por el aumento de temperatura."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q72",
+   "number": 72,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "Un inventor crea un tazón eléctrico capaz de hervir agua en su interior. El tazón posee un mecanismo que detecta la cantidad y temperatura inicial del agua incorporada, y con estos datos calcula el tiempo que debe calentar el agua para hacerla hervir. Tras algunas pruebas, el inventor detecta que el aparato funciona sin problemas en el sector cordillerano, pero en el sector costero se apaga antes de que el agua hierva. ¿Qué sensor se debería incorporar para que el tazón corrija el tiempo calculado y asegure el hervor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Uno de velocidad del viento."
+    },
+    {
+     "key": "B",
+     "text": "Uno de presión atmosférica."
+    },
+    {
+     "key": "C",
+     "text": "Uno de humedad ambiental."
+    },
+    {
+     "key": "D",
+     "text": "Uno de densidad."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "A mayor altitud la presión atmosférica es menor y el agua hierve antes; en la costa la presión es mayor, así que el sensor debe medir la presión atmosférica.",
+    "steps": [
+     "En la cordillera la presión atmosférica es menor, así el agua hierve a menos de $100\\ ^\\circ$C y el tiempo calculado alcanza.",
+     "En la costa la presión atmosférica es mayor, así el agua necesita más energía para hervir y el tiempo calculado resulta corto: el tazón se apaga antes.",
+     "Un sensor de presión atmosférica permite corregir el tiempo de calentamiento según la presión del lugar.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Velocidad del viento: el viento no cambia el punto de ebullición del agua en el tazón.",
+     "C": "Humedad ambiental: su efecto sobre el punto de ebullición es mínimo; el problema está en la presión.",
+     "D": "Densidad: la densidad del agua prácticamente no determina cuándo hierve; el problema es el punto de ebullición."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q73",
+   "number": 73,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Un estudiante realiza una presentación sobre los diferentes climas que existen en las regiones de nuestro país. Si en una sección de la presentación el estudiante desea mostrar cuáles son los factores no atmosféricos que definen el clima de dichas regiones, ¿cuál de las siguientes opciones permitiría mostrar dichos factores?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un mapa físico de cada región."
+    },
+    {
+     "key": "B",
+     "text": "Una serie de fotos de cielos nublados de cada región."
+    },
+    {
+     "key": "C",
+     "text": "Un gráfico con la humedad relativa diaria de cada región."
+    },
+    {
+     "key": "D",
+     "text": "Una tabla con las temperaturas medias mensuales de cada región."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los factores no atmosféricos del clima (latitud, altitud, relieve y cercanía al mar) pertenecen a la geografía del territorio, por lo que se muestran en un mapa físico y no en datos del aire.",
+    "steps": [
+     "Los factores atmosféricos son los que forman parte del aire y sus fenómenos, como la nubosidad, la humedad y la temperatura del aire.",
+     "La opción B («una serie de fotos de cielos nublados»), la C («humedad relativa diaria») y la D («temperaturas medias mensuales») muestran variables atmosféricas, así que no sirven para mostrar los factores pedidos.",
+     "Un mapa físico representa el relieve, la altitud, las cordilleras y la proximidad al mar, que son factores geográficos no atmosféricos que definen el clima de cada región.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "D": "Una tabla de temperaturas medias confunde un dato del clima con el factor que lo causa; la temperatura es atmosférica, no geográfica."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q74",
+   "number": 74,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "Un grupo de científicos lleva 10 años estudiando el derretimiento de los glaciares en el mar. ¿Cuál es la variable del agua de mar que debe haber medido el grupo de científicos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Salinidad."
+    },
+    {
+     "key": "B",
+     "text": "Viscosidad."
+    },
+    {
+     "key": "C",
+     "text": "Transparencia."
+    },
+    {
+     "key": "D",
+     "text": "Tasa de evaporación."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El derretimiento de glaciares en el mar aporta agua dulce, que diluye la sal del agua de mar; por eso la variable que debe medir el grupo es la salinidad.",
+    "steps": [
+     "Un glaciar derretido es agua dulce, sin sales disueltas, que se incorpora al mar durante diez años de estudio.",
+     "Al agregarse agua dulce, la cantidad de sales disueltas por litro de agua de mar disminuye, es decir, cambia la salinidad.",
+     "Si el objetivo es seguir el efecto del aporte de agua dulce sobre el mar, la variable que registra directamente esa dilución es la salinidad.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La viscosidad es la resistencia del líquido a fluir; asociarla al agua dulce es un error, porque el efecto principal del derretimiento es la dilución de sales.",
+     "D": "La tasa de evaporación podría parecer relacionada con el clima marino, pero el derretimiento de glaciares no altera de forma directa la evaporación del agua de mar."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q75",
+   "number": 75,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Un foco industrial tiene un desperfecto en su resistencia eléctrica, por lo cual debe ser reemplazada. Si en la etiqueta del foco aparecen sus características, las cuales son 220 V y 4 A, ¿qué valor tiene la resistencia eléctrica a reemplazar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4,0 Ω"
+    },
+    {
+     "key": "B",
+     "text": "13,7 Ω"
+    },
+    {
+     "key": "C",
+     "text": "55,0 Ω"
+    },
+    {
+     "key": "D",
+     "text": "220,0 Ω"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La resistencia del foco se obtiene con la ley de Ohm, R = V/I, usando el voltaje y la intensidad de la etiqueta.",
+    "steps": [
+     "Datos de la etiqueta: $V = 220\\ \\mathrm{V}$ e $I = 4\\ \\mathrm{A}$.",
+     "Por la ley de Ohm, $V = I \\cdot R$, de donde $R = \\frac{V}{I}$.",
+     "Reemplazando: $R = \\frac{220\\ \\mathrm{V}}{4\\ \\mathrm{A}} = 55\\ \\Omega$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Toma la intensidad de 4 A como si fuera la resistencia, es decir, no aplica la relación V/I.",
+     "B": "Divide dos veces por la intensidad ($\\frac{220}{4^{2}} \\approx 13{,}7$), en lugar de dividir una sola vez."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q76",
+   "number": 76,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Una persona construye cuatro circuitos eléctricos, cada uno de ellos con tres ampolletas de igual resistencia conectadas a una batería de voltaje constante, tal como se indica en las figuras. ¿Cuál de los circuitos construidos posee la mayor potencia disipada?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q76.webp",
+    "width": 908,
+    "height": 664,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La potencia es $P = \\frac{V^{2}}{R_{eq}}$ con voltaje constante, así que es máxima cuando la resistencia equivalente es mínima, lo que ocurre cuando los tres focos están en paralelo directamente sobre la batería.",
+    "steps": [
+     "Cada foco tiene resistencia R y la batería entrega un voltaje V constante; por lo tanto, la potencia total es $P = \\frac{V^{2}}{R_{eq}}$, y conviene el menor $R_{eq}$.",
+     "Circuito A: el par en paralelo da $\\frac{R}{2}$, y en serie con el tercer foco resulta $R_{eq} = \\frac{3R}{2}$, con $P = \\frac{2V^{2}}{3R}$.",
+     "Circuito B: el foco superior está en paralelo con dos focos en serie ($2R$), así que $R_{eq} = \\frac{2R}{3}$ y $P = \\frac{3V^{2}}{2R}$.",
+     "Circuito C: los tres focos están en serie, $R_{eq} = 3R$ y $P = \\frac{V^{2}}{3R}$. Circuito D: los tres focos están en paralelo directamente sobre la batería, $R_{eq} = \\frac{R}{3}$ y $P = \\frac{3V^{2}}{R}$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Cree que tener un tramo en serie dentro de una rama no baja tanto la resistencia como conectar todos los focos en paralelo, y no compara bien $R_{eq} = \\frac{2R}{3}$ con $\\frac{R}{3}$.",
+     "C": "Supone que más focos en serie aumentan la potencia; en serie el voltaje se reparte y cada foco recibe menos corriente, así que la potencia total es la menor."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q77",
+   "number": 77,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Un grupo de estudiantes registra cuánto tiempo tarda en hervir una misma cantidad de agua que estaba a temperatura ambiente, usando dos hervidores eléctricos conectados al circuito eléctrico domiciliario. Si el tiempo que demora en hervir el agua es distinto en cada hervidor, ¿qué factor podría explicar lo anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El voltaje aplicado a cada hervidor presenta variaciones."
+    },
+    {
+     "key": "B",
+     "text": "Las potencias eléctricas de ambos hervidores son distintas."
+    },
+    {
+     "key": "C",
+     "text": "La temperatura inicial del agua en cada hervidor era distinta."
+    },
+    {
+     "key": "D",
+     "text": "Los hervidores fueron conectados a distintos enchufes."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los dos hervidores tienen la misma masa de agua y están conectados a la misma red, así que el tiempo de ebullición depende de la potencia eléctrica de cada uno.",
+    "steps": [
+     "La energía necesaria para llevar la misma cantidad de agua desde temperatura ambiente hasta ebullición es la misma en ambos casos.",
+     "La energía entregada en un tiempo $t$ es $E = P \\cdot t$, así que a mayor potencia, menor tiempo de calentamiento.",
+     "Como ambos hervidores se conectan al mismo circuito domiciliario, la diferencia de tiempo se explica porque sus potencias eléctricas son distintas.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Un voltaje variable podría afectar, pero la red domiciliaria es la misma para ambos y la diferencia del enunciado se explica mejor por las potencias.",
+     "C": "La temperatura inicial del agua se midió igual: el enunciado pide agua a temperatura ambiente, así que no explica la diferencia de forma sistemática."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q78",
+   "number": 78,
+   "axis": "Física",
+   "topic": "Electricidad",
+   "stem": "Algunos de los artefactos tecnológicos que se conectan al sistema eléctrico domiciliario requieren de un voltaje menor al que este proporciona, por lo que generalmente se utilizan con un dispositivo externo que adecua la intensidad de corriente que circula por estos. ¿Cuál de los siguientes aparatos cumple la función del dispositivo externo mencionado anteriormente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El medidor eléctrico."
+    },
+    {
+     "key": "B",
+     "text": "Los cables de corriente."
+    },
+    {
+     "key": "C",
+     "text": "El interruptor automático."
+    },
+    {
+     "key": "D",
+     "text": "El transformador eléctrico."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El dispositivo que adecúa el voltaje de la red para un artefacto es el transformador eléctrico.",
+    "steps": [
+     "El enunciado pide el aparato que reduce el voltaje que entrega el sistema domiciliario para que el artefacto trabaje con un voltaje menor.",
+     "El medidor eléctrico registra el consumo de energía de la casa; no modifica el voltaje.",
+     "Los cables de corriente solo transportan la electricidad, y el interruptor automático solo corta el circuito si la intensidad supera un límite.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El medidor eléctrico registra el consumo de energía y no cambia el voltaje; confundirlo con un regulador es el error típico.",
+     "C": "El interruptor automático protege el circuito contra sobrecargas, pero no adecúa el voltaje de los artefactos."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q79",
+   "number": 79,
+   "axis": "Física",
+   "topic": "Electricidad",
+   "stem": "Una persona necesita conectar tres aparatos en uno de los circuitos de su hogar. El tostador funciona con una intensidad de corriente eléctrica de 8 A, el calefactor lo hace con 4 A, y el microondas con 10 A. Por otro lado, el interruptor automático que protege a este circuito soporta 20 A. Si la persona conecta inicialmente el tostador, luego el calefactor en un instante t²; y finalmente el microondas en t³, ¿cuál de los siguientes gráficos de intensidad de corriente 𝐼, que circula por el interruptor automático en función del tiempo 𝑡, representa de mejor manera la situación descrita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "𝐼 0 t² t³ 𝑡"
+    },
+    {
+     "key": "B",
+     "text": "𝐼 0 t² t³ 𝑡"
+    },
+    {
+     "key": "C",
+     "text": "𝐼 0 t² t³ 𝑡"
+    },
+    {
+     "key": "D",
+     "text": "𝐼 0 t² t³ 𝑡"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q79.webp",
+    "width": 908,
+    "height": 864,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al sumarse las corrientes, la intensidad total sube por escalones; al superar los 20 A el interruptor automático se dispara y la corriente cae a cero.",
+    "steps": [
+     "Con el tostador solo, la intensidad es $I = 8\\ \\mathrm{A}$ para $0 \\le t < t_{2}$.",
+     "Al conectar el calefactor en $t_{2}$, la intensidad total pasa a $8\\ \\mathrm{A} + 4\\ \\mathrm{A} = 12\\ \\mathrm{A}$, un escalón hacia arriba que se mantiene hasta $t_{3}$.",
+     "Al conectar el microondas en $t_{3}$, la suma sería $12\\ \\mathrm{A} + 10\\ \\mathrm{A} = 22\\ \\mathrm{A}$, que supera los $20\\ \\mathrm{A}$ que soporta el interruptor.",
+     "El interruptor se dispara y la corriente que lo atraviesa cae a $0$ después de $t_{3}$, lo que corresponde al último tramo casi nulo del gráfico.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Una recta creciente supone que la corriente aumenta de forma continua, algo que no ocurre: al conectar cada aparato la intensidad salta.",
+     "C": "Muestra tres escalones crecientes (8, 12 y 22 A) sin considerar que el interruptor se dispara sobre 20 A."
+    }
+   }
+  },
+  {
+   "id": "ciencias-fisica-2026-invierno-q80",
+   "number": 80,
+   "axis": "Física",
+   "topic": "Energía",
+   "stem": "Se presentan las siguientes etiquetas de dos secadoras de ropa, las que han sido recopiladas para llevar a cabo una investigación.\n\nAl respecto, ¿cuál es un objetivo de investigación que se puede responder directamente con la información contenida en las etiquetas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar la diferencia de energía utilizada en un año por cada secadora."
+    },
+    {
+     "key": "B",
+     "text": "Comparar la duración máxima y mínima de un ciclo para cada secadora."
+    },
+    {
+     "key": "C",
+     "text": "Comparar el consumo de energía en función de la capacidad de carga."
+    },
+    {
+     "key": "D",
+     "text": "Determinar la eficiencia promedio de las secadoras."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q80.webp",
+    "width": 908,
+    "height": 815,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las etiquetas entregan, para cada secadora, el consumo de energía por ciclo y la capacidad de carga, que son justamente las dos variables que se pueden comparar directamente.",
+    "steps": [
+     "Secadora VD SK7P: consumo de 3,39 kWh por ciclo y capacidad de 4,0 kg de algodón. Secadora DW1678740BV: consumo de 1,53 kWh por ciclo y capacidad de 8,5 kg de algodón.",
+     "La pregunta pide un objetivo que se pueda responder directamente con las etiquetas, y eso exige relacionar el consumo con la capacidad de carga de cada secadora, sin cálculos adicionales.",
+     "La opción A requiere la cantidad de ciclos al año, dato que no aparece; la opción B pide máximos y mínimos de duración, pero cada etiqueta entrega un solo valor; y la opción D pide una eficiencia promedio, lo que no se obtiene de las clases A a G de dos etiquetas.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Supone que el consumo por ciclo permite calcular la energía de un año sin conocer cuántos ciclos se realizan.",
+     "B": "Confunde la duración de un ciclo con un rango de máximo y mínimo, cuando cada secadora tiene un único valor de duración."
+    }
+   }
+  }
+ ]
+}

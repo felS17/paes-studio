@@ -1,0 +1,1085 @@
+% =============================================================================
+%  PAES Studio: guía de síntesis (plantilla)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Formato: A4, dos columnas, cajas tcolorbox con la paleta Zinc de la app.
+%  Entornos disponibles:
+%    definicion, formula, ley, mecanismo, ideasclave, metodo, ejemplo,
+%    errorfrecuente, dato, lineatiempo   (título opcional en [])
+%  Comandos:
+%    \alternativa{A}{texto}   alternativa con su tecla (igual que en la app)
+%    \clave{C}        marca la alternativa correcta
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%. Fuera de ellos, edita libremente.
+% =============================================================================
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=1.5cm,top=1.9cm,bottom=1.9cm,columnsep=0.75cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ── Paleta Zinc (misma que la app) ───────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc100}{HTML}{F4F4F5}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+\definecolor{ambar}{HTML}{B45309}
+
+% ── Tipografía: texto con serifa, estructura en sans ─────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.08}
+\color{zinc900}
+\newcommand{\sen}{\operatorname{sen}}
+\renewcommand{\arraystretch}{1.18}
+
+\titleformat{\section}{\sffamily\bfseries\large\color{zinc950}}{\thesection}{0.6em}{}
+  [{\color{zinc300}\titlerule[0.4pt]}]
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{zinc900}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.3em}
+
+\setlist{leftmargin=1.2em,itemsep=0.15em,topsep=0.3em}
+\setlist[itemize]{label={\color{zinc500}\textbullet}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\scriptsize\color{zinc500}\guiaAsignatura}
+\fancyfoot[R]{\sffamily\scriptsize\color{zinc500}\thepage}
+
+% ── Cajas ────────────────────────────────────────────────────────────────────
+\tcbset{
+  paes/.style={
+    enhanced, breakable, sharp corners=south, arc=1.5pt,
+    boxrule=0.4pt, colback=white, colframe=zinc300,
+    colbacktitle=white, coltitle=zinc900, titlerule=0pt,
+    fonttitle=\sffamily\bfseries\footnotesize,
+    toptitle=3pt, bottomtitle=0pt,
+    left=7pt, right=7pt, top=2pt, bottom=6pt,
+    before skip=7pt, after skip=7pt,
+  },
+  acento/.style={borderline west={2pt}{0pt}{#1}},
+}
+\newtcolorbox{definicion}[1][Definición]{paes, acento=zinc900, title={#1}}
+\newtcolorbox{formula}[1][Fórmula clave]{paes, colback=zinc50, colbacktitle=zinc50, title={#1}}
+\newtcolorbox{ejemplo}[1][Ejemplo resuelto]{paes, title={#1}}
+\newtcolorbox{errorfrecuente}[1][Error frecuente]{paes, colframe=rosa!35, acento=rosa, title={#1}}
+\newtcolorbox{dato}[1][Dato PAES]{paes, colframe=ambar!40, acento=ambar, title={#1}}
+\newtcolorbox{mecanismo}[1][Mecanismo]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc700, title={#1}}
+\newtcolorbox{ley}[1][Ley]{paes, colback=zinc50, colbacktitle=zinc50, acento=zinc900, title={#1}}
+\newtcolorbox{ideasclave}[1][Ideas clave]{paes, title={#1}}
+\newtcolorbox{metodo}[1][Cómo abordarlo en la PAES]{paes, acento=esmeralda, title={#1}}
+% Línea de tiempo: filas «fecha & hecho \\».
+\newenvironment{lineatiempo}[1][Línea de tiempo]
+  {\begin{tcolorbox}[paes, acento=zinc700, title={#1}]\small\renewcommand{\arraystretch}{1.25}%
+   \begin{tabular}{@{}>{\leavevmode\sffamily\bfseries\color{zinc700}}p{0.24\linewidth}p{\dimexpr0.76\linewidth-2\tabcolsep\relax}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+
+% Alternativa con su tecla (eco de la anatomía A–E de la app).
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=2.2pt, right=2.2pt, top=0.6pt, bottom=0.6pt, fontupper=\ttfamily\scriptsize\bfseries\color{white}}
+\newcommand{\alternativa}[2]{\par\noindent\hangindent=1.6em\hangafter=1\makebox[1.6em][l]{\tecla{#1}}#2\par}
+\newcommand{\clave}[1]{\par\smallskip{\sffamily\footnotesize\color{esmeralda} Clave \teclaok{#1}}\par}
+
+% Barra horizontal proporcional (para tablas de frecuencia).
+\newcommand{\barra}[1]{{\color{zinc900}\rule[0.15ex]{#1\linewidth}{0.9ex}}}
+
+%%<META>%%
+\newcommand{\guiaTitulo}{Compendio de estudio}
+\newcommand{\guiaAsignatura}{Historia y Ciencias Sociales}
+\newcommand{\guiaDescripcion}{La prueba evalúa historia de Chile y el mundo (énfasis en los siglos XIX y XX), formación ciudadana, sistema económico y geografía, junto con habilidades de pensamiento histórico: análisis de fuentes, multicausalidad, continuidad y cambio. Tiene 65 preguntas y dura 2 horas.}
+\newcommand{\guiaFuente}{5 ejes y 12 subtemas. Frecuencias calculadas sobre 7 ensayos (6 oficiales DEMRE), 386 preguntas. Generado el 1 de noviembre de 2026.}
+%%</META>%%
+
+\begin{document}
+
+\twocolumn[{%
+  \begin{tcolorbox}[enhanced, frame hidden, colback=white, left=0pt, right=0pt, top=0pt, bottom=6pt,
+      borderline south={0.4pt}{0pt}{zinc300}]
+    {\sffamily\footnotesize\color{zinc500} PAES Studio}\par\vspace{0.2em}
+    {\sffamily\bfseries\LARGE\color{zinc950} \guiaTitulo: \guiaAsignatura}\par\vspace{0.35em}
+    {\normalsize\color{zinc700} \guiaDescripcion}\par\vspace{0.25em}
+    {\sffamily\scriptsize\color{zinc500} \guiaFuente}
+  \end{tcolorbox}
+  \vspace{0.6em}
+}]
+
+%%<CONTENIDO>%%
+\section*{Cómo usar este compendio}
+
+Cada subtema sigue el mismo orden: teoría, recuadro con las fórmulas, leyes o mecanismos centrales, ideas clave, método para responder en la PAES, trampas frecuentes y ejemplos resueltos paso a paso. Resuelve cada ejemplo antes de leer su desarrollo.
+
+\section*{Qué se evalúa}
+
+Distribución de las preguntas por eje en los ensayos disponibles en PAES Studio.
+
+\begin{center}\small
+
+\begin{tabular}{@{}p{0.42\linewidth}rrp{0.22\linewidth}@{}}
+
+\toprule Eje & Preg. & \% & \\ \midrule
+
+Formación ciudadana & 169 & 44 & \barra{0.096} \\
+
+Historia: mundo, América y Chile & 95 & 25 & \barra{0.054} \\
+
+Sistema económico & 88 & 23 & \barra{0.050} \\
+
+Geografía y espacio & 34 & 9 & \barra{0.019} \\
+
+\bottomrule
+
+\end{tabular}
+
+\end{center}
+
+\begin{dato}Formación ciudadana y Historia: mundo, América y Chile concentran el 68 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
+
+\section{Historia: mundo, América y Chile}
+
+{\itshape\color{zinc700} Procesos políticos, económicos y sociales de los siglos XIX y XX.}
+
+\subsection{Revoluciones y siglo XIX en Europa}
+
+La Revolución Francesa (1789) puso fin al Antiguo Régimen: reemplazó la sociedad estamental y la monarquía absoluta por los principios de soberanía nacional, igualdad ante la ley y derechos individuales. Sus ideas se difundieron por Europa y América.
+
+La Revolución Industrial, iniciada en Inglaterra en la segunda mitad del siglo XVIII, mecanizó la producción (máquina de vapor, fábricas), aceleró la urbanización y originó el proletariado y la burguesía industrial. En el siglo XIX se expandieron el liberalismo, el nacionalismo (unificaciones de Italia y Alemania) y el imperialismo europeo en África y Asia.
+
+\begin{definicion}[Ideas clave del liberalismo]
+Soberanía nacional, separación de poderes, derechos individuales (libertad, propiedad, igualdad ante la ley), constitución escrita y libre mercado.
+\end{definicion}
+
+\begin{lineatiempo}
+1789 & Revolución Francesa y Declaración de los Derechos del Hombre \\
+c. 1760–1840 & Primera Revolución Industrial en Inglaterra \\
+1815 & Congreso de Viena \\
+1848 & Revoluciones liberales en Europa \\
+1871 & Unificación alemana \\
+1884–1885 & Conferencia de Berlín \\
+\end{lineatiempo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item 1789: fin del Antiguo Régimen en Francia.
+  \item Industrialización $\rightarrow$ urbanización y cuestión obrera.
+  \item Imperialismo: reparto de África en la Conferencia de Berlín (1884–1885).
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ubica el proceso en el tiempo y el espacio.
+  \item Identifica sus causas (políticas, económicas, sociales, ideológicas).
+  \item Relaciona sus consecuencias con procesos posteriores.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Atribuir a la Revolución Francesa el sufragio universal femenino.
+  \item Confundir liberalismo político con socialismo.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál fue una consecuencia social directa de la Revolución Industrial en Inglaterra?
+\alternativa{A}{El fortalecimiento de los gremios artesanales.}
+\alternativa{B}{La formación de una clase obrera concentrada en ciudades.}
+\alternativa{C}{La desaparición de la burguesía.}
+\alternativa{D}{El retorno de la población al campo.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Las fábricas concentraron trabajadores asalariados en las ciudades.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La producción fabril requería mano de obra cercana.
+  \item La migración campo–ciudad formó el proletariado urbano.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Revolución Francesa]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Lee el siguiente fragmento de la Declaración de los Derechos del Hombre y del Ciudadano (Francia, 1789):
+
+\begin{quote}\itshape «Artículo 1. Los hombres nacen y permanecen libres e iguales en derechos. Las distinciones sociales solo pueden fundarse en la utilidad común».\end{quote}
+
+¿Qué principio se opone directamente a la organización del Antiguo Régimen en este artículo?
+\alternativa{A}{La soberanía del monarca por derecho divino.}
+\alternativa{B}{La igualdad de derechos frente a los privilegios estamentales.}
+\alternativa{C}{La separación entre la Iglesia y el Estado.}
+\alternativa{D}{El sufragio universal de hombres y mujeres.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El Antiguo Régimen se organizaba en estamentos con derechos distintos según el nacimiento; el artículo 1 declara la igualdad de derechos.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Identifica el contraste: en el Antiguo Régimen, clero y nobleza tenían privilegios (por ejemplo, exenciones tributarias) que el tercer estado no tenía.
+  \item El artículo afirma que todos «nacen y permanecen\ldots{} iguales en derechos» y que las diferencias solo pueden justificarse por la «utilidad común», no por el origen.
+  \item Eso es el principio de igualdad ante la ley, opuesto al privilegio estamental.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Revolución Industrial]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes fue una consecuencia social de la Revolución Industrial en Europa durante el siglo XIX?
+\alternativa{A}{La disminución de la población de las ciudades.}
+\alternativa{B}{El fortalecimiento de los gremios artesanales medievales.}
+\alternativa{C}{El surgimiento del proletariado industrial y el crecimiento urbano acelerado.}
+\alternativa{D}{La desaparición de las diferencias sociales entre empresarios y trabajadores.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La industrialización concentró la producción en fábricas urbanas, lo que atrajo población del campo y creó una nueva clase de trabajadores asalariados.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Las fábricas necesitaban mano de obra concentrada: la migración campo–ciudad hizo crecer rápidamente las ciudades industriales.
+  \item Surgió el proletariado: trabajadores que solo poseían su fuerza de trabajo y la vendían a cambio de un salario.
+  \item Sus duras condiciones de vida y trabajo dieron origen a movimientos obreros y a nuevas ideologías como el socialismo.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Chile en el siglo XIX: independencia, república y expansión}
+
+La crisis de la monarquía española (invasión napoleónica, 1808) llevó a formar la Primera Junta Nacional de Gobierno (1810). Tras la Patria Vieja, la Reconquista y la Patria Nueva, la independencia se proclamó en 1818.
+
+Luego de los ensayos constitucionales, la Constitución de 1833 organizó un Estado centralizado y presidencialista. En la segunda mitad del siglo, Chile expandió su territorio: ocupación de la Araucanía, Guerra del Pacífico (1879–1884), que incorporó Tarapacá y Antofagasta e inició el ciclo del salitre, e incorporación de Rapa Nui (1888).
+
+\begin{mecanismo}[Ciclo del salitre]
+Exportación de salitre $\rightarrow$ impuestos de exportación $\rightarrow$ grandes ingresos fiscales $\rightarrow$ obras públicas, educación y ferrocarriles. Gran parte de las oficinas eran de capitales extranjeros.
+\end{mecanismo}
+
+\begin{lineatiempo}
+1810 & Primera Junta Nacional de Gobierno \\
+1814 & Desastre de Rancagua: Reconquista \\
+1818 & Proclamación de la independencia y batalla de Maipú \\
+1833 & Constitución de 1833 \\
+1879–1884 & Guerra del Pacífico \\
+1888 & Incorporación de Rapa Nui \\
+1891 & Guerra Civil \\
+\end{lineatiempo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item 1810: Primera Junta, en nombre de Fernando VII.
+  \item 1833: Constitución de orden conservador y presidencialista.
+  \item Guerra del Pacífico $\rightarrow$ riqueza salitrera para el Estado.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ordena los hechos y ubica el período de la república.
+  \item Relaciona el hecho con su causa y sus consecuencias.
+  \item Distingue lo político, lo económico y lo territorial.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Creer que la Junta de 1810 declaró la independencia.
+  \item Pensar que el Estado explotó directamente las salitreras.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué hecho desencadenó la formación de juntas de gobierno en América en 1810?
+\alternativa{A}{La Revolución Industrial.}
+\alternativa{B}{La invasión napoleónica a España y la captura de Fernando VII.}
+\alternativa{C}{La Guerra del Pacífico.}
+\alternativa{D}{La Constitución de 1833.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Sin rey legítimo, surgió la pregunta por quién gobernaba en su nombre.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item 1808: Napoleón invade España y Fernando VII queda cautivo.
+  \item Los cabildos americanos forman juntas que gobiernan en nombre del rey.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Independencia de Chile]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué acontecimiento europeo desencadenó la crisis de la monarquía española que llevó a la formación de juntas de gobierno en América, como la de Chile en 1810?
+\alternativa{A}{La invasión napoleónica a España y la prisión del rey Fernando VII.}
+\alternativa{B}{El fin de la Guerra de los Treinta Años.}
+\alternativa{C}{La Revolución Industrial en Inglaterra.}
+\alternativa{D}{La unificación de Italia.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Sin rey legítimo en el trono, se discutió quién debía gobernar en su nombre; en América, los cabildos formaron juntas que asumieron ese rol.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item En 1808, Napoleón invadió España, obtuvo la abdicación de los reyes y mantuvo cautivo a Fernando VII.
+  \item Se abrió una crisis de legitimidad: según la idea de que la soberanía vuelve al pueblo en ausencia del rey, surgieron juntas en España y en América.
+  \item En Chile, el cabildo abierto del 18 de septiembre de 1810 formó la Primera Junta Nacional de Gobierno, que juró fidelidad a Fernando VII.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Ciclo salitrero]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Tras la Guerra del Pacífico (1879–1884), el salitre se convirtió en el principal producto de exportación de Chile. ¿Cuál fue una consecuencia directa de este ciclo económico para el Estado chileno?
+\alternativa{A}{Un fuerte aumento de los ingresos fiscales gracias a los impuestos a la exportación del salitre.}
+\alternativa{B}{La eliminación de los impuestos al comercio exterior.}
+\alternativa{C}{La nacionalización de todas las oficinas salitreras en manos extranjeras.}
+\alternativa{D}{La disminución de la población en las regiones del norte.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El Estado no explotó directamente la mayoría de las oficinas, pero gravó la exportación del salitre, lo que le dio enormes recursos.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Con la guerra, Chile incorporó las provincias salitreras de Tarapacá y Antofagasta.
+  \item Gran parte de las oficinas quedó en manos de capitales privados, muchos extranjeros (especialmente británicos).
+  \item El Estado obtuvo sus ingresos mediante impuestos a la exportación y los invirtió en obras públicas, educación y ferrocarriles.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Cuestión social y crisis del parlamentarismo}
+
+Entre fines del siglo XIX y comienzos del XX, la urbanización y las duras condiciones laborales generaron la cuestión social: hacinamiento en conventillos, enfermedades, bajos salarios y ausencia de leyes laborales. Surgieron mancomunales, sociedades de resistencia, sindicatos y partidos obreros.
+
+El período parlamentario (1891–1925) mostró un Congreso dominante y gobiernos inestables. La crisis se resolvió con las leyes sociales de 1924 y la Constitución de 1925, que restableció el presidencialismo y separó la Iglesia del Estado.
+
+\begin{definicion}[Respuestas a la cuestión social]
+Movimiento obrero (huelgas, organización), Iglesia (encíclica \emph{Rerum Novarum}, 1891), Estado (leyes sociales de 1924) y partidos políticos de base popular.
+\end{definicion}
+
+\begin{lineatiempo}
+1891–1925 & República parlamentaria \\
+1907 & Matanza de la Escuela Santa María de Iquique \\
+1920 & Ley de Instrucción Primaria Obligatoria \\
+1924 & Leyes sociales \\
+1925 & Constitución de 1925 \\
+\end{lineatiempo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item 1907: matanza de la Escuela Santa María de Iquique.
+  \item 1924: leyes sociales; 1925: nueva Constitución.
+  \item Conventillo = símbolo de la vivienda popular urbana.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica las condiciones de vida y trabajo descritas.
+  \item Relaciónalas con sus causas (urbanización, industrialización).
+  \item Reconoce las respuestas de los distintos actores.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Ubicar la cuestión social en la segunda mitad del siglo XX.
+  \item Confundir el período parlamentario con el presidencial.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué cambio institucional introdujo la Constitución de 1925 en Chile?
+\alternativa{A}{Estableció el parlamentarismo.}
+\alternativa{B}{Fortaleció el presidencialismo y separó la Iglesia del Estado.}
+\alternativa{C}{Creó la monarquía constitucional.}
+\alternativa{D}{Suprimió el Congreso Nacional.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La Constitución de 1925 respondió a la crisis del parlamentarismo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Devolvió atribuciones al Presidente frente al Congreso.
+  \item Estableció la separación entre la Iglesia y el Estado.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Cuestión social]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Lee la siguiente descripción de las condiciones de vida en Santiago a comienzos del siglo XX:
+
+\begin{quote}\itshape «Familias completas vivían en una sola pieza de conventillo, sin ventilación, compartiendo con decenas de personas un único pozo de agua y una acequia como servicio higiénico. Las epidemias se propagaban con rapidez».\end{quote}
+
+¿Con qué proceso histórico se relaciona esta situación?
+\alternativa{A}{La cuestión social, derivada de la urbanización y de las precarias condiciones de los trabajadores.}
+\alternativa{B}{La reforma agraria, que expulsó a los campesinos de sus tierras.}
+\alternativa{C}{La crisis de 1982, que provocó un alto desempleo urbano.}
+\alternativa{D}{La Guerra Civil de 1891, que destruyó las viviendas populares.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Se llamó «cuestión social» al conjunto de problemas de vivienda, salud y trabajo que afectaron a los sectores populares entre fines del siglo XIX y comienzos del XX.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Ubica la época: comienzos del siglo XX, en la ciudad.
+  \item Reconoce los rasgos: conventillos, hacinamiento, falta de higiene y epidemias.
+  \item Esos rasgos son característicos de la cuestión social, que impulsó movimientos obreros y, más tarde, leyes sociales como las de 1924.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Guerras mundiales y crisis de 1929}
+
+La Primera Guerra Mundial (1914–1918) se explica por el imperialismo, el nacionalismo, la carrera armamentista y el sistema de alianzas. Terminó con el Tratado de Versalles (1919), que impuso duras condiciones a Alemania.
+
+La crisis de 1929, iniciada con la caída de la bolsa de Nueva York, provocó desempleo masivo y favoreció el ascenso de regímenes totalitarios. La Segunda Guerra Mundial (1939–1945) terminó con la derrota del Eje, el uso de la bomba atómica y la creación de la ONU (1945).
+
+\begin{mecanismo}[Multicausalidad de la Primera Guerra Mundial]
+Causas estructurales: imperialismo, nacionalismo, paz armada, alianzas. Detonante: asesinato del archiduque Francisco Fernando en Sarajevo (1914).
+\end{mecanismo}
+
+\begin{lineatiempo}
+1914–1918 & Primera Guerra Mundial \\
+1917 & Revolución Rusa \\
+1919 & Tratado de Versalles \\
+1929 & Caída de la bolsa de Nueva York \\
+1939–1945 & Segunda Guerra Mundial \\
+1945 & Creación de la ONU \\
+\end{lineatiempo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Causa estructural $\neq$ detonante.
+  \item La crisis de 1929 golpeó fuertemente a Chile por la caída de sus exportaciones.
+  \item 1945: fin de la guerra y fundación de la ONU.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Distingue causas de largo plazo y hechos detonantes.
+  \item Relaciona las consecuencias económicas con las políticas.
+  \item Ubica a Chile dentro del proceso mundial.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Presentar el detonante como la única causa de la guerra.
+  \item Confundir los bandos de ambas guerras.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué efecto tuvo la crisis de 1929 en la economía chilena?
+\alternativa{A}{Un auge de las exportaciones de salitre.}
+\alternativa{B}{Una fuerte caída de las exportaciones y alto desempleo.}
+\alternativa{C}{La inmediata industrialización del país.}
+\alternativa{D}{No tuvo efectos por el aislamiento de Chile.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Chile dependía de exportar materias primas, cuya demanda se desplomó.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La contracción mundial redujo la demanda de cobre y salitre.
+  \item Cayeron los ingresos y aumentó el desempleo.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Guerra Fría y América Latina}
+
+La Guerra Fría (1947–1991) enfrentó a Estados Unidos (capitalismo, democracia liberal) y la Unión Soviética (socialismo, economía planificada) sin guerra directa entre ambos. Se expresó en carreras armamentista y espacial, propaganda, alianzas militares (OTAN y Pacto de Varsovia) y conflictos indirectos (Corea, Vietnam).
+
+En América Latina, la Revolución Cubana (1959) intensificó la influencia de la Guerra Fría: reformas, movimientos revolucionarios y, en varios países, dictaduras militares inspiradas en la doctrina de seguridad nacional.
+
+\begin{definicion}[Bloques]
+Occidental: Estados Unidos, OTAN (1949), Plan Marshall. Oriental: URSS, Pacto de Varsovia (1955). Fin: caída del Muro de Berlín (1989) y disolución de la URSS (1991).
+\end{definicion}
+
+\begin{lineatiempo}
+1947 & Doctrina Truman y Plan Marshall \\
+1949 & Creación de la OTAN \\
+1959 & Revolución Cubana \\
+1961 & Construcción del Muro de Berlín \\
+1962 & Crisis de los misiles \\
+1989 & Caída del Muro de Berlín \\
+1991 & Disolución de la URSS \\
+\end{lineatiempo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Guerra «fría»: sin enfrentamiento directo entre superpotencias.
+  \item 1962: crisis de los misiles en Cuba.
+  \item 1989: caída del Muro de Berlín.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica los bloques y su ideología.
+  \item Reconoce cómo se expresó el conflicto en cada región.
+  \item Relaciónalo con procesos de Chile y América Latina.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Describir la Guerra Fría como un enfrentamiento militar directo entre EE. UU. y la URSS.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué característica define a la Guerra Fría?
+\alternativa{A}{Un enfrentamiento armado directo entre EE. UU. y la URSS.}
+\alternativa{B}{La rivalidad entre dos bloques que evitaron una guerra directa.}
+\alternativa{C}{La alianza entre EE. UU. y la URSS contra el fascismo.}
+\alternativa{D}{El conflicto entre Francia e Inglaterra por colonias.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La disuasión nuclear evitó la guerra directa.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item El conflicto se libró con propaganda, carreras armamentista y espacial y guerras indirectas.
+  \item La alternativa C describe la Segunda Guerra Mundial.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Chile en el siglo XX: del Estado de compromiso a la transición}
+
+Desde 1938 el Estado asumió un rol central en la economía mediante la industrialización por sustitución de importaciones (CORFO, 1939) y amplió derechos sociales. En los años sesenta se impulsaron reformas estructurales: reforma agraria, chilenización (1966) y nacionalización del cobre (1971).
+
+La polarización política culminó con el golpe de Estado del 11 de septiembre de 1973. La dictadura militar violó sistemáticamente los derechos humanos e impuso un modelo económico neoliberal y la Constitución de 1980. El plebiscito de 1988 abrió la transición a la democracia, con la asunción de Patricio Aylwin en 1990.
+
+\begin{definicion}[Modelos económicos]
+ISI (1938–1973): Estado empresario y protección arancelaria. Neoliberal (desde 1975): apertura comercial, privatizaciones y rol subsidiario del Estado.
+\end{definicion}
+
+\begin{lineatiempo}
+1938 & Frente Popular: gobierno de Pedro Aguirre Cerda \\
+1939 & Creación de la CORFO \\
+1967 & Ley de reforma agraria \\
+1971 & Nacionalización del cobre \\
+1973 & Golpe de Estado \\
+1980 & Constitución de 1980 \\
+1988 & Plebiscito: triunfo del «No» \\
+1990 & Inicio de la transición: gobierno de Patricio Aylwin \\
+\end{lineatiempo}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item 1939: CORFO, símbolo del Estado empresario.
+  \item 1971: nacionalización del cobre, aprobada por unanimidad en el Congreso.
+  \item 1988: triunfo del «No» en el plebiscito.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ubica el hecho en su período (Estado de compromiso, reformas, dictadura, transición).
+  \item Identifica el modelo económico y político vigente.
+  \item Relaciona continuidades y cambios entre períodos.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir chilenización (1966) con nacionalización (1971) del cobre.
+  \item Atribuir la Constitución de 1980 a la transición.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué política económica caracterizó a Chile entre 1938 y comienzos de los años setenta?
+\alternativa{A}{La apertura comercial irrestricta.}
+\alternativa{B}{La industrialización por sustitución de importaciones con un Estado empresario.}
+\alternativa{C}{La privatización de las empresas estatales.}
+\alternativa{D}{La economía basada exclusivamente en el salitre.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Tras la crisis de 1929, el Estado impulsó la industria nacional.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La CORFO (1939) creó y financió industrias.
+  \item Se protegió la producción nacional con aranceles.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Transición a la democracia]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué resultado tuvo el plebiscito del 5 de octubre de 1988 en Chile?
+\alternativa{A}{Se aprobó la continuidad de Augusto Pinochet en el poder hasta 1997.}
+\alternativa{B}{Triunfó la opción «No», lo que llevó a elecciones presidenciales y parlamentarias en 1989.}
+\alternativa{C}{Se aprobó una nueva Constitución redactada por una asamblea constituyente.}
+\alternativa{D}{Se restableció la Constitución de 1925 sin modificaciones.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El plebiscito, previsto en la Constitución de 1980, decidía si el candidato propuesto por la Junta Militar continuaba en el poder; ganó el «No».
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La opción «Sí» implicaba que Augusto Pinochet gobernara por un nuevo período de ocho años.
+  \item El triunfo del «No» activó lo dispuesto para ese caso: convocar a elecciones presidenciales y parlamentarias para diciembre de 1989.
+  \item En 1990 asumió Patricio Aylwin, inicio del período conocido como transición a la democracia.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Formación ciudadana}
+
+{\itshape\color{zinc700} Estado, Constitución, democracia, derechos humanos y participación.}
+
+\subsection{Estado, Constitución y poderes del Estado}
+
+El Estado es la organización política de una población en un territorio, con poder soberano. La Constitución es la norma de mayor jerarquía: organiza los poderes y reconoce derechos.
+
+En Chile, el Poder Ejecutivo lo ejerce el Presidente de la República; el Legislativo, el Congreso Nacional (Cámara de Diputadas y Diputados y Senado), y el Judicial, los tribunales encabezados por la Corte Suprema. Existen además órganos autónomos, como la Contraloría General de la República, el Banco Central, el Ministerio Público, el Tribunal Constitucional y el Servicio Electoral.
+
+\begin{mecanismo}[Formación de la ley]
+Iniciativa (mensaje del Presidente o moción parlamentaria) $\rightarrow$ discusión y aprobación en ambas cámaras $\rightarrow$ sanción (o veto) del Presidente $\rightarrow$ promulgación $\rightarrow$ publicación en el Diario Oficial.
+\end{mecanismo}
+
+{\sffamily\footnotesize\color{zinc500} Esquema comparativo}
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+\textbf{Poder} & \textbf{Órgano} & \textbf{Función principal} \\
+\midrule
+Ejecutivo & Presidente de la República & gobernar y administrar el Estado \\
+Legislativo & Congreso Nacional & legislar; la Cámara fiscaliza \\
+Judicial & Tribunales de justicia & resolver conflictos aplicando la ley \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Fiscalizar los actos del Gobierno es atribución exclusiva de la Cámara.
+  \item La Contraloría controla la legalidad de los actos de la administración.
+  \item El Tribunal Constitucional vela por que las leyes respeten la Constitución.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica la función descrita (legislar, ejecutar, juzgar, fiscalizar, controlar).
+  \item Asóciala al órgano que la ejerce.
+  \item Verifica si es una atribución exclusiva o compartida.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Atribuir al Senado la fiscalización del Gobierno.
+  \item Confundir el Tribunal Constitucional con la Corte Suprema.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué órgano controla la legalidad de los actos de la administración del Estado en Chile?
+\alternativa{A}{El Senado.}
+\alternativa{B}{La Contraloría General de la República.}
+\alternativa{C}{El Banco Central.}
+\alternativa{D}{El Servicio Electoral.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La Contraloría es un órgano autónomo de control.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Revisa que los actos de la administración se ajusten a la ley (toma de razón).
+  \item No legisla ni juzga: controla legalidad.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Poderes del Estado]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En Chile, ¿qué órgano tiene la atribución exclusiva de fiscalizar los actos del Gobierno, por ejemplo, mediante comisiones investigadoras e interpelaciones a ministros?
+\alternativa{A}{El Senado.}
+\alternativa{B}{La Corte Suprema.}
+\alternativa{C}{El Tribunal Constitucional.}
+\alternativa{D}{La Cámara de Diputadas y Diputados.}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La Constitución entrega la fiscalización política del Gobierno a la Cámara de Diputadas y Diputados.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Fiscalizar es controlar políticamente la acción del Poder Ejecutivo.
+  \item Entre las atribuciones exclusivas de la Cámara están crear comisiones investigadoras, citar a ministros (interpelación) y presentar acusaciones constitucionales.
+  \item El Senado, en cambio, actúa como jurado en las acusaciones constitucionales, pero no fiscaliza los actos del Gobierno.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Democracia, derechos humanos y participación}
+
+La democracia es un régimen político en que la soberanía reside en el pueblo, que la ejerce mediante elecciones periódicas y otros mecanismos. Requiere Estado de derecho, separación de poderes, pluralismo y respeto a los derechos humanos.
+
+Los derechos humanos son universales, inalienables, indivisibles e interdependientes; la Declaración Universal de 1948 es su referente. La participación ciudadana incluye votar, organizarse (juntas de vecinos, sindicatos, partidos), informarse y ejercer el control ciudadano.
+
+\begin{definicion}[Democracia directa y representativa]
+Representativa: la ciudadanía elige autoridades que deciden. Directa: la ciudadanía decide por sí misma (plebiscito, iniciativa popular, consulta).
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Estado de derecho: todos, incluidas las autoridades, se someten a la ley.
+  \item Universalidad: los DD. HH. corresponden a toda persona.
+  \item Plebiscito = mecanismo de democracia directa.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el principio o mecanismo descrito.
+  \item Distingue entre democracia directa y representativa.
+  \item Evalúa si la situación respeta o vulnera derechos.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir la elección de representantes con democracia directa.
+  \item Creer que los Estados deciden qué derechos humanos reconocer.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Que los derechos humanos sean inalienables significa que:
+\alternativa{A}{Solo los reconocen algunos países.}
+\alternativa{B}{No se puede renunciar a ellos ni ser privado de ellos.}
+\alternativa{C}{Se adquieren al cumplir 18 años.}
+\alternativa{D}{Pueden venderse o transferirse.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par «Inalienable» significa que no se puede enajenar ni perder.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Nadie puede renunciar a sus derechos humanos ni ser despojado de ellos legítimamente.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Derechos humanos]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Que los derechos humanos sean \textbf{universales} significa que:
+\alternativa{A}{Pertenecen a todas las personas, sin distinción de nacionalidad, sexo, origen u otra condición.}
+\alternativa{B}{Solo pueden ser ejercidos por quienes tienen nacionalidad de algún Estado.}
+\alternativa{C}{Cada país puede decidir cuáles de ellos reconoce.}
+\alternativa{D}{Se adquieren al cumplir la mayoría de edad.}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La universalidad es una de las características de los derechos humanos, junto con ser inalienables, indivisibles e interdependientes.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Universales: corresponden a todo ser humano por el solo hecho de serlo.
+  \item Por eso no dependen de la nacionalidad, la edad ni del reconocimiento de cada Estado: los Estados tienen el deber de respetarlos y garantizarlos.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Estado de derecho]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes situaciones es propia de un Estado de derecho?
+\alternativa{A}{El Presidente puede dictar leyes sin intervención del Congreso cuando lo estime necesario.}
+\alternativa{B}{Las autoridades pueden detener a una persona sin una orden ni un procedimiento legal.}
+\alternativa{C}{Las autoridades actúan dentro de las atribuciones que les otorgan la Constitución y las leyes.}
+\alternativa{D}{Los tribunales resuelven según las preferencias del Gobierno de turno.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En un Estado de derecho, el poder está limitado por normas: gobernantes y gobernados se someten a la Constitución y a las leyes.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Principio de legalidad: una autoridad solo puede hacer lo que la ley le permite.
+  \item A esto se suman la separación de poderes y el respeto a los derechos de las personas.
+  \item Las alternativas A, B y D describen ejercicios del poder sin límites legales.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Sistema económico}
+
+{\itshape\color{zinc700} Problema económico, mercado, macroeconomía y finanzas personales.}
+
+\subsection{Problema económico y mercado}
+
+El problema económico surge de la escasez: las necesidades son ilimitadas y los recursos, limitados, por lo que hay que elegir. El costo de oportunidad es el valor de la mejor alternativa a la que se renuncia.
+
+En el mercado, la demanda disminuye cuando sube el precio y la oferta aumenta. El precio de equilibrio iguala cantidad ofrecida y demandada. Un aumento de la demanda (con oferta constante) sube el precio; un aumento de la oferta lo baja.
+
+\begin{ley}[Desplazamientos]
+Demanda $\uparrow$ $\Rightarrow$ precio $\uparrow$ y cantidad $\uparrow$. Oferta $\uparrow$ $\Rightarrow$ precio $\downarrow$ y cantidad $\uparrow$.
+
+Factores de la demanda: ingreso, gustos, precio de bienes relacionados. De la oferta: costos, tecnología, clima.
+\end{ley}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Escasez: razón de ser de la economía.
+  \item Costo de oportunidad: lo que dejas de ganar al elegir.
+  \item Agentes económicos: familias, empresas y Estado.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica qué cambió: la demanda o la oferta.
+  \item Determina la dirección del desplazamiento.
+  \item Deduce el efecto sobre el precio y la cantidad.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Confundir un cambio de precio (movimiento a lo largo de la curva) con un desplazamiento de la curva.
+  \item Creer que lo gratuito no tiene costo de oportunidad.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una helada destruye gran parte de la cosecha de paltas. Según el modelo de oferta y demanda, ¿qué ocurrirá?
+\alternativa{A}{El precio de la palta baja.}
+\alternativa{B}{El precio de la palta sube.}
+\alternativa{C}{La demanda de paltas aumenta.}
+\alternativa{D}{No hay cambios en el precio.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La helada reduce la oferta.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Menos paltas disponibles: la oferta disminuye.
+  \item Con la misma demanda, el precio de equilibrio sube.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Oferta y demanda]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Durante el invierno aumenta la demanda de leña en una ciudad del sur de Chile, mientras la cantidad ofrecida por los productores se mantiene prácticamente igual. Según el modelo de oferta y demanda, ¿qué ocurrirá con el precio de la leña?
+\alternativa{A}{Bajará, porque hay más compradores.}
+\alternativa{B}{Se mantendrá, porque la oferta no cambia.}
+\alternativa{C}{Bajará, porque los productores venden más.}
+\alternativa{D}{Subirá, porque hay más compradores para una oferta similar.}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Si la demanda aumenta y la oferta no cambia, se genera escasez relativa al precio anterior y el precio de equilibrio sube.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Al precio anterior, ahora hay más personas dispuestas a comprar que leña disponible (exceso de demanda).
+  \item Los compradores compiten por el producto y el precio sube hasta que la cantidad demandada vuelve a igualar la ofrecida.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 3: Costo de oportunidad]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Camila tiene libre el sábado y debe elegir entre trabajar en una feria, donde ganaría \$25 000, o asistir a un taller gratuito de programación. Si elige el taller, ¿cuál es su costo de oportunidad?
+\alternativa{A}{Nada, porque el taller es gratuito.}
+\alternativa{B}{El valor de mercado de un curso de programación.}
+\alternativa{C}{Los \$25 000 que deja de ganar en la feria.}
+\alternativa{D}{El tiempo que dedicará a estudiar después del taller.}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El costo de oportunidad es el valor de la mejor alternativa a la que se renuncia al tomar una decisión.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Las alternativas son excluyentes: el mismo sábado no puede trabajar y asistir al taller.
+  \item Al elegir el taller, renuncia a los \$25 000 de la feria. Ese es su costo de oportunidad, aunque el taller no tenga precio.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Macroeconomía y finanzas personales}
+
+La inflación es el alza sostenida y generalizada de los precios; reduce el poder adquisitivo del dinero. En Chile se mide con el IPC (INE). El Banco Central, autónomo, la controla con la política monetaria: si sube la tasa de política monetaria, el crédito se encarece y el gasto se modera.
+
+La política fiscal (gasto público e impuestos) la conduce el Gobierno. El PIB mide el valor de los bienes y servicios finales producidos en un período. En finanzas personales, conviene comparar créditos por su costo total (CAE) y conocer los derechos del consumidor (SERNAC).
+
+\begin{definicion}[Instrumentos]
+Política monetaria (Banco Central): tasa de interés, meta de inflación de 3 \%. Política fiscal (Gobierno): presupuesto, gasto e impuestos.
+
+Balanza comercial = exportaciones $-$ importaciones.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Subir la tasa de interés frena la inflación.
+  \item Inflación alta perjudica a quienes tienen ingresos fijos.
+  \item La CAE permite comparar créditos con distintos plazos y cargos.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el fenómeno (inflación, crecimiento, desempleo).
+  \item Reconoce el instrumento y quién lo aplica.
+  \item Deduce el efecto esperado sobre el gasto y los precios.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Atribuir al Banco Central decisiones de gasto público.
+  \item Confundir alza de un precio con inflación.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Para controlar una inflación alta, el Banco Central de Chile suele:
+\alternativa{A}{Bajar la tasa de política monetaria.}
+\alternativa{B}{Subir la tasa de política monetaria.}
+\alternativa{C}{Aumentar el gasto público.}
+\alternativa{D}{Fijar los precios por ley.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Una tasa más alta encarece el crédito y modera el gasto.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Menos crédito y más ahorro reducen la demanda agregada.
+  \item Con menor demanda, los precios suben más lento.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Política monetaria]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Ante un alza persistente de la inflación, el Banco Central de Chile decide subir la tasa de política monetaria. ¿Cuál es el efecto que busca esta medida?
+\alternativa{A}{Abaratar los créditos para aumentar el consumo.}
+\alternativa{B}{Encarecer el crédito para moderar el gasto y, con ello, el alza de precios.}
+\alternativa{C}{Aumentar el gasto fiscal en programas sociales.}
+\alternativa{D}{Fijar por ley los precios de los productos básicos.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Una tasa de interés más alta hace más caro endeudarse y más atractivo ahorrar, lo que reduce el gasto y la presión sobre los precios.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La inflación es el alza sostenida y generalizada de los precios; reduce el poder adquisitivo del dinero.
+  \item Al subir la tasa de referencia, los bancos encarecen sus créditos: las personas y empresas piden menos préstamos y gastan menos.
+  \item Con menor demanda agregada, los precios suben más lento.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Geografía y espacio}
+
+{\itshape\color{zinc700} Población, territorio, ambiente y riesgos.}
+
+\subsection{Población, territorio y ambiente}
+
+Chile tiene una población mayoritariamente urbana y concentrada en la Región Metropolitana (más del 40 \% según el Censo 2017). Las migraciones internas y, en la última década, la inmigración internacional han transformado la composición de la población.
+
+Por ubicarse en el Cinturón de Fuego del Pacífico, Chile enfrenta sismos, tsunamis y erupciones; también aluviones, sequías e incendios forestales. El riesgo combina la amenaza natural con la vulnerabilidad de la población.
+
+\begin{definicion}[Riesgo]
+\[\text{riesgo}=\text{amenaza}\times\text{vulnerabilidad}\]
+
+Reducir la vulnerabilidad (planificación urbana, normas de construcción, educación) reduce el riesgo, aunque la amenaza no cambie.
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Macrocefalia: concentración de población en la capital.
+  \item Amenaza natural $\neq$ desastre.
+  \item Migración: factores de expulsión y de atracción.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Lee los datos (tablas, mapas, gráficos) con atención a unidades y fuentes.
+  \item Identifica patrones (concentración, tendencia, contraste).
+  \item Concluye solo lo que los datos permiten.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Concluir más de lo que muestran los datos.
+  \item Confundir amenaza con riesgo.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Qué acción reduce el riesgo de desastre ante un tsunami en una ciudad costera?
+\alternativa{A}{Impedir que ocurran sismos submarinos.}
+\alternativa{B}{Educar a la población y señalizar vías de evacuación.}
+\alternativa{C}{Construir más viviendas en la línea de costa.}
+\alternativa{D}{Eliminar los sistemas de alerta.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par No se puede controlar la amenaza, pero sí la vulnerabilidad.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La educación y la señalización reducen la vulnerabilidad.
+  \item Menor vulnerabilidad implica menor riesgo.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Distribución de la población]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+La tabla muestra la población de algunas regiones de Chile según el Censo 2017 (total país: 17,6 millones de habitantes).
+
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+\textbf{Región} & \textbf{Habitantes} & \textbf{Porcentaje del total} \\
+\midrule
+Metropolitana & 7 112 808 & 40,5 \% \\
+Valparaíso & 1 815 902 & 10,3 \% \\
+Biobío & 1 556 805 & 8,9 \% \\
+Aysén & 103 158 & 0,6 \% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+¿Qué afirmación se desprende correctamente de los datos?
+\alternativa{A}{La población de Chile se distribuye de manera homogénea entre sus regiones.}
+\alternativa{B}{Aysén es la región con menor superficie del país.}
+\alternativa{C}{Biobío concentra más población que Valparaíso.}
+\alternativa{D}{Cerca de cuatro de cada diez habitantes del país viven en la Región Metropolitana.}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Al interpretar una tabla, la conclusión debe apoyarse solo en los datos que muestra.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La Región Metropolitana reúne el 40,5 \% de la población, es decir, cerca de 4 de cada 10 habitantes.
+  \item Esa concentración en torno a la capital es un rasgo de la distribución de la población chilena (macrocefalia urbana).
+  \item Las demás afirmaciones contradicen la tabla o requieren información que no está en ella.
+\end{enumerate}
+\end{ejemplo}
+
+\section{Habilidades de pensamiento histórico}
+
+{\itshape\color{zinc700} Análisis de fuentes, multicausalidad, continuidad y cambio.}
+
+\subsection{Análisis de fuentes y pensamiento histórico}
+
+Una fuente primaria fue producida en la época estudiada (documentos, fotografías, testimonios); una secundaria es una interpretación posterior (textos de historiadores). Al analizarla se considera su autor, contexto, propósito y destinatario.
+
+Los procesos históricos son multicausales: tienen causas políticas, económicas, sociales y culturales, de corto y largo plazo. También combinan continuidades (lo que permanece) y cambios (lo que se transforma).
+
+\begin{definicion}[Preguntas para una fuente]
+¿Quién la produjo? ¿Cuándo y dónde? ¿Con qué propósito y para quién? ¿Qué afirma explícitamente? ¿Qué se puede inferir? ¿Qué no permite concluir?
+\end{definicion}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item La respuesta debe sostenerse en la fuente, no en conocimientos externos.
+  \item Una fuente refleja la perspectiva de su autor.
+  \item Multicausalidad: evita explicaciones de una sola causa.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el tipo de fuente y su contexto.
+  \item Resume qué afirma o muestra.
+  \item Elige la alternativa que la fuente respalda, sin agregar información externa.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Elegir una afirmación verdadera históricamente, pero que la fuente no respalda.
+  \item Tomar la opinión del autor como un hecho comprobado.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un historiador analiza una carta escrita por un soldado durante la Guerra del Pacífico. ¿Qué tipo de fuente es?
+\alternativa{A}{Secundaria, porque la analiza un historiador.}
+\alternativa{B}{Primaria, porque fue producida en la época estudiada.}
+\alternativa{C}{Secundaria, porque es un texto escrito.}
+\alternativa{D}{Primaria, porque la escribió un militar de alto rango.}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El criterio es la época de producción, no quién la analiza.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La carta se escribió durante el hecho estudiado: es primaria.
+  \item El análisis del historiador sería una fuente secundaria.
+\end{enumerate}
+\end{ejemplo}
+%%</CONTENIDO>%%
+
+\end{document}

@@ -1,0 +1,860 @@
+{
+ "id": "ciencias-curado-1",
+ "subject": "ciencias",
+ "title": "Ensayo curado 1",
+ "description": "Dieciocho preguntas originales del módulo común: seis de Biología, seis de Física y seis de Química, con desarrollo paso a paso y análisis de los errores más frecuentes.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 35,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   108,
+   132,
+   153,
+   173,
+   191,
+   209,
+   225,
+   240,
+   253,
+   267,
+   281,
+   296,
+   309,
+   320,
+   329,
+   337,
+   347,
+   358,
+   371,
+   385,
+   396,
+   405,
+   411,
+   417,
+   423,
+   430,
+   440,
+   452,
+   465,
+   477,
+   486,
+   493,
+   497,
+   502,
+   506,
+   512,
+   521,
+   532,
+   545,
+   557,
+   567,
+   575,
+   580,
+   585,
+   589,
+   595,
+   602,
+   613,
+   625,
+   638,
+   649,
+   658,
+   665,
+   670,
+   676,
+   684,
+   694,
+   706,
+   720,
+   732,
+   743,
+   752,
+   761,
+   772,
+   784,
+   798,
+   813,
+   828,
+   842,
+   857,
+   874,
+   893,
+   913,
+   934,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-curado-1-q01",
+   "number": 1,
+   "axis": "Biología",
+   "topic": "División celular",
+   "difficulty": "baja",
+   "stem": "Una célula humana con 46 cromosomas ($2n = 46$) completa una meiosis. ¿Qué se obtiene al final del proceso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 células con 23 cromosomas cada una."
+    },
+    {
+     "key": "B",
+     "text": "2 células con 46 cromosomas cada una."
+    },
+    {
+     "key": "C",
+     "text": "4 células con 46 cromosomas cada una."
+    },
+    {
+     "key": "D",
+     "text": "2 células con 23 cromosomas cada una."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La meiosis consta de dos divisiones sucesivas y reduce a la mitad el número de cromosomas: de una célula diploide se obtienen cuatro haploides.",
+    "steps": [
+     "Meiosis I separa los cromosomas homólogos: de $2n = 46$ se pasa a dos células con $n = 23$.",
+     "Meiosis II separa las cromátidas hermanas de esas dos células: resultan 4 células con $n = 23$.",
+     "Estas células haploides son los gametos; en la fecundación se recupera $2n = 46$."
+    ],
+    "distractors": {
+     "B": "Es el resultado de una mitosis, que conserva el número de cromosomas.",
+     "D": "Corresponde al final de la meiosis I, no del proceso completo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q02",
+   "number": 2,
+   "axis": "Biología",
+   "topic": "Enzimas",
+   "difficulty": "media",
+   "stem": "Un grupo de estudiantes mide la actividad de una enzima digestiva humana a distintas temperaturas. Observan que la actividad aumenta hasta un máximo cerca de 37 °C y que sobre 45 °C cae bruscamente hasta casi desaparecer.\n\n¿Qué explica la caída de la actividad sobre 45 °C?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La enzima se consume a medida que cataliza la reacción."
+    },
+    {
+     "key": "B",
+     "text": "La enzima pierde su estructura tridimensional y con ello su sitio activo funcional."
+    },
+    {
+     "key": "C",
+     "text": "El sustrato se transforma en enzima a altas temperaturas."
+    },
+    {
+     "key": "D",
+     "text": "Las moléculas se mueven más lento y chocan con menos frecuencia."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Las enzimas son proteínas: el calor excesivo rompe las interacciones que mantienen su forma (desnaturalización) y el sitio activo deja de reconocer al sustrato.",
+    "steps": [
+     "Hasta 37 °C, el aumento de temperatura acelera las moléculas y aumentan los choques efectivos: la actividad sube.",
+     "Sobre la temperatura óptima, la energía térmica rompe enlaces débiles (puentes de hidrógeno, interacciones iónicas) de la estructura terciaria.",
+     "Sin su forma, el sitio activo ya no es complementario al sustrato y la actividad cae."
+    ],
+    "distractors": {
+     "A": "Las enzimas son catalizadores: no se consumen en la reacción.",
+     "D": "A mayor temperatura las moléculas se mueven **más** rápido; eso explica el aumento inicial, no la caída."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q03",
+   "number": 3,
+   "axis": "Biología",
+   "topic": "Fotosíntesis",
+   "difficulty": "alta",
+   "stem": "Se riega una planta con agua cuyo oxígeno es el isótopo $^{18}\\mathrm{O}$ y se la ilumina para que realice fotosíntesis. ¿Dónde se detectará principalmente el $^{18}\\mathrm{O}$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En la glucosa producida."
+    },
+    {
+     "key": "B",
+     "text": "En el $\\mathrm{CO_2}$ absorbido por las hojas."
+    },
+    {
+     "key": "C",
+     "text": "En la clorofila de los cloroplastos."
+    },
+    {
+     "key": "D",
+     "text": "En el $\\mathrm{O_2}$ liberado a la atmósfera."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "En la fase dependiente de la luz, el agua se rompe (fotólisis) y su oxígeno se libera como $\\mathrm{O_2}$.",
+    "steps": [
+     "Ecuación global: $6\\,\\mathrm{CO_2} + 6\\,\\mathrm{H_2O} \\xrightarrow{\\text{luz}} \\mathrm{C_6H_{12}O_6} + 6\\,\\mathrm{O_2}$.",
+     "La fotólisis del agua ($2\\,\\mathrm{H_2O} \\rightarrow 4\\,\\mathrm{H^+} + 4\\,e^- + \\mathrm{O_2}$) aporta electrones y libera el oxígeno del agua como $\\mathrm{O_2}$.",
+     "El oxígeno de la glucosa proviene del $\\mathrm{CO_2}$ fijado en el ciclo de Calvin. Por eso el isótopo aparece en el $\\mathrm{O_2}$."
+    ],
+    "distractors": {
+     "A": "Los átomos de oxígeno de la glucosa provienen del $\\mathrm{CO_2}$, no del agua."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q04",
+   "number": 4,
+   "axis": "Biología",
+   "topic": "Herencia mendeliana",
+   "difficulty": "baja",
+   "stem": "El albinismo se hereda como un rasgo autosómico recesivo. Si una pareja de padres no albinos tiene ambos el genotipo heterocigoto $Aa$, ¿cuál es la probabilidad de que un hijo sea albino?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0 %"
+    },
+    {
+     "key": "B",
+     "text": "25 %"
+    },
+    {
+     "key": "C",
+     "text": "50 %"
+    },
+    {
+     "key": "D",
+     "text": "75 %"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Un rasgo recesivo solo se expresa en homocigotos $aa$; el cruce $Aa\\times Aa$ se resuelve con un cuadro de Punnett.",
+    "steps": [
+     "Gametos de cada progenitor: $A$ o $a$, con probabilidad $\\frac{1}{2}$ cada uno.",
+     "Combinaciones: $AA$ (1/4), $Aa$ (2/4) y $aa$ (1/4).",
+     "Solo $aa$ es albino: $P = \\frac{1}{4} = 25\\,\\%$."
+    ],
+    "distractors": {
+     "D": "Es la probabilidad de un hijo **no** albino (fenotipo dominante).",
+     "C": "Es la probabilidad de un hijo portador ($Aa$)."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q05",
+   "number": 5,
+   "axis": "Biología",
+   "topic": "Regulación de la glicemia",
+   "difficulty": "media",
+   "stem": "Después de una comida rica en carbohidratos, la concentración de glucosa en la sangre aumenta. ¿Qué hormona libera el páncreas en respuesta y qué efecto produce?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Glucagón, que aumenta la glucosa en la sangre."
+    },
+    {
+     "key": "B",
+     "text": "Glucagón, que disminuye la glucosa en la sangre."
+    },
+    {
+     "key": "C",
+     "text": "Insulina, que aumenta la glucosa en la sangre."
+    },
+    {
+     "key": "D",
+     "text": "Insulina, que disminuye la glucosa en la sangre."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La glicemia se regula por retroalimentación negativa: un aumento de glucosa provoca una respuesta que la hace bajar.",
+    "steps": [
+     "Las células beta del páncreas detectan el alza y secretan insulina.",
+     "La insulina favorece la entrada de glucosa a las células (músculo, tejido adiposo) y su almacenamiento como glucógeno en el hígado.",
+     "Resultado: la glucosa en la sangre vuelve a su rango normal."
+    ],
+    "distractors": {
+     "A": "El glucagón actúa en la situación contraria (ayuno), liberando glucosa al torrente sanguíneo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q06",
+   "number": 6,
+   "axis": "Biología",
+   "topic": "Flujo de energía",
+   "difficulty": "media",
+   "stem": "En un ecosistema, los productores fijan 20 000 kJ de energía. Si en cada nivel trófico se transfiere aproximadamente el 10 % de la energía al nivel siguiente, ¿cuánta energía llega a los consumidores terciarios?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 kJ"
+    },
+    {
+     "key": "B",
+     "text": "20 kJ"
+    },
+    {
+     "key": "C",
+     "text": "200 kJ"
+    },
+    {
+     "key": "D",
+     "text": "2000 kJ"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Cada paso de un nivel trófico al siguiente conserva cerca del 10 %; el resto se pierde principalmente como calor en la respiración celular.",
+    "steps": [
+     "Consumidores primarios: $20\\,000\\cdot 0{,}1 = 2000$ kJ.",
+     "Consumidores secundarios: $2000\\cdot 0{,}1 = 200$ kJ.",
+     "Consumidores terciarios: $200\\cdot 0{,}1 = 20$ kJ."
+    ],
+    "distractors": {
+     "D": "Es la energía de los consumidores primarios.",
+     "A": "Agrega un nivel de más: serían consumidores cuaternarios."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q07",
+   "number": 7,
+   "axis": "Física",
+   "topic": "Movimiento rectilíneo uniformemente acelerado",
+   "difficulty": "baja",
+   "stem": "Un automóvil parte del reposo y acelera de manera constante a $2\\ \\mathrm{m/s^2}$ durante 5 s. ¿Qué distancia recorre en ese tiempo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 m"
+    },
+    {
+     "key": "B",
+     "text": "10 m"
+    },
+    {
+     "key": "C",
+     "text": "25 m"
+    },
+    {
+     "key": "D",
+     "text": "50 m"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Con velocidad inicial cero y aceleración constante: $d = v_0 t + \\tfrac{1}{2}at^2$.",
+    "steps": [
+     "$v_0 = 0$, $a = 2\\ \\mathrm{m/s^2}$, $t = 5$ s.",
+     "$d = \\tfrac{1}{2}\\cdot 2\\cdot 5^2 = 25$ m.",
+     "Control: la rapidez final es $v = at = 10$ m/s y la rapidez media es $5$ m/s; $5\\cdot 5 = 25$ m."
+    ],
+    "distractors": {
+     "B": "Es la rapidez final ($v = at$), no la distancia.",
+     "D": "Omite el factor $\\tfrac{1}{2}$ de la fórmula."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q08",
+   "number": 8,
+   "axis": "Física",
+   "topic": "Segunda ley de Newton",
+   "difficulty": "media",
+   "stem": "Sobre una caja de 4 kg que se desliza por el suelo actúa una fuerza horizontal de 20 N. La fuerza de roce cinético con el suelo es de 4 N. ¿Cuál es la magnitud de la aceleración de la caja?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$4\\ \\mathrm{m/s^2}$"
+    },
+    {
+     "key": "B",
+     "text": "$5\\ \\mathrm{m/s^2}$"
+    },
+    {
+     "key": "C",
+     "text": "$6\\ \\mathrm{m/s^2}$"
+    },
+    {
+     "key": "D",
+     "text": "$16\\ \\mathrm{m/s^2}$"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La aceleración depende de la fuerza **neta**: $F_{\\text{neta}} = m\\,a$.",
+    "steps": [
+     "El roce se opone al movimiento: $F_{\\text{neta}} = 20 - 4 = 16$ N.",
+     "$a = \\dfrac{F_{\\text{neta}}}{m} = \\dfrac{16}{4} = 4\\ \\mathrm{m/s^2}$."
+    ],
+    "distractors": {
+     "B": "Ignora el roce: $\\dfrac{20}{4}$.",
+     "C": "Suma el roce como si actuara a favor del movimiento.",
+     "D": "Es la fuerza neta en newtons, no la aceleración."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q09",
+   "number": 9,
+   "axis": "Física",
+   "topic": "Ondas",
+   "difficulty": "baja",
+   "stem": "Un sonido de 680 Hz se propaga en el aire con una rapidez de 340 m/s. ¿Cuál es su longitud de onda?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,5 m"
+    },
+    {
+     "key": "B",
+     "text": "2 m"
+    },
+    {
+     "key": "C",
+     "text": "1020 m"
+    },
+    {
+     "key": "D",
+     "text": "231 200 m"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Para cualquier onda: $v = \\lambda\\, f$.",
+    "steps": [
+     "Despeja: $\\lambda = \\dfrac{v}{f} = \\dfrac{340}{680}$.",
+     "$\\lambda = 0{,}5$ m."
+    ],
+    "distractors": {
+     "B": "Calcula $\\dfrac{f}{v}$, es decir, la fórmula invertida.",
+     "D": "Multiplica $v\\cdot f$."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q10",
+   "number": 10,
+   "axis": "Física",
+   "topic": "Conservación de la energía",
+   "difficulty": "media",
+   "stem": "Una pelota de 2 kg se deja caer desde 5 m de altura. Si se desprecia el roce con el aire y $g = 10\\ \\mathrm{m/s^2}$, ¿con qué rapidez llega al suelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 m/s"
+    },
+    {
+     "key": "B",
+     "text": "50 m/s"
+    },
+    {
+     "key": "C",
+     "text": "100 m/s"
+    },
+    {
+     "key": "D",
+     "text": "10 m/s"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Sin roce, la energía mecánica se conserva: la energía potencial inicial se transforma en energía cinética.",
+    "steps": [
+     "$E_p = mgh = 2\\cdot 10\\cdot 5 = 100$ J.",
+     "Al llegar al suelo: $\\tfrac{1}{2}mv^2 = 100 \\Rightarrow v^2 = \\dfrac{2\\cdot 100}{2} = 100$.",
+     "$v = 10$ m/s. La masa se simplifica: $v = \\sqrt{2gh}$ no depende de ella."
+    ],
+    "distractors": {
+     "C": "Es la energía en joules (o $v^2$), no la rapidez."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q11",
+   "number": 11,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "difficulty": "media",
+   "stem": "Dos resistencias de $4\\ \\Omega$ y $6\\ \\Omega$ se conectan en serie a una batería de 20 V. ¿Cuál es el voltaje entre los extremos de la resistencia de $6\\ \\Omega$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 V"
+    },
+    {
+     "key": "B",
+     "text": "8 V"
+    },
+    {
+     "key": "C",
+     "text": "12 V"
+    },
+    {
+     "key": "D",
+     "text": "20 V"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "En serie, la corriente es la misma en ambas resistencias y el voltaje se reparte en proporción a cada resistencia.",
+    "steps": [
+     "Resistencia equivalente: $R = 4 + 6 = 10\\ \\Omega$.",
+     "Corriente: $I = \\dfrac{V}{R} = \\dfrac{20}{10} = 2$ A.",
+     "Voltaje en la de $6\\ \\Omega$: $V = I\\,R = 2\\cdot 6 = 12$ V (y $8$ V en la de $4\\ \\Omega$; suman 20 V)."
+    ],
+    "distractors": {
+     "A": "Es la corriente en amperes.",
+     "B": "Es el voltaje en la resistencia de $4\\ \\Omega$."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q12",
+   "number": 12,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "difficulty": "baja",
+   "stem": "¿Cuánto calor se necesita para elevar la temperatura de 500 g de agua desde 20 °C hasta 60 °C? Considera que el calor específico del agua es $1\\ \\mathrm{cal/(g\\cdot °C)}$.",
+   "options": [
+    {
+     "key": "A",
+     "text": "2000 cal"
+    },
+    {
+     "key": "B",
+     "text": "10 000 cal"
+    },
+    {
+     "key": "C",
+     "text": "20 000 cal"
+    },
+    {
+     "key": "D",
+     "text": "30 000 cal"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "El calor sensible se calcula con $Q = m\\,c\\,\\Delta T$.",
+    "steps": [
+     "$\\Delta T = 60 - 20 = 40$ °C.",
+     "$Q = 500\\cdot 1\\cdot 40 = 20\\,000$ cal."
+    ],
+    "distractors": {
+     "D": "Usa la temperatura final (60 °C) como si fuera la variación.",
+     "B": "Usa la temperatura inicial (20 °C) como si fuera la variación."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q13",
+   "number": 13,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "difficulty": "media",
+   "stem": "¿Cuántos protones, neutrones y electrones tiene el ion ${}^{23}_{11}\\mathrm{Na}^{+}$?",
+   "options": [
+    {
+     "key": "A",
+     "text": "11 protones, 12 neutrones y 11 electrones."
+    },
+    {
+     "key": "B",
+     "text": "11 protones, 12 neutrones y 10 electrones."
+    },
+    {
+     "key": "C",
+     "text": "12 protones, 11 neutrones y 10 electrones."
+    },
+    {
+     "key": "D",
+     "text": "11 protones, 23 neutrones y 10 electrones."
+    },
+    {
+     "key": "E",
+     "text": "10 protones, 12 neutrones y 11 electrones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "$Z$ (abajo) da los protones, $A$ (arriba) es protones + neutrones, y la carga indica cuántos electrones se ganaron o perdieron.",
+    "steps": [
+     "Protones: $Z = 11$.",
+     "Neutrones: $A - Z = 23 - 11 = 12$.",
+     "Electrones: el átomo neutro tiene 11; la carga $+1$ indica que perdió uno: $11 - 1 = 10$."
+    ],
+    "distractors": {
+     "A": "Corresponde al átomo neutro, no al catión.",
+     "D": "Toma el número másico como cantidad de neutrones."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q14",
+   "number": 14,
+   "axis": "Química",
+   "topic": "Configuración electrónica y tabla periódica",
+   "difficulty": "media",
+   "stem": "Un elemento tiene número atómico $Z = 17$. ¿Cuál de las siguientes opciones describe correctamente su ubicación en la tabla periódica y su comportamiento químico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Período 3, grupo 17; tiende a ganar un electrón."
+    },
+    {
+     "key": "B",
+     "text": "Período 3, grupo 7; tiende a perder siete electrones."
+    },
+    {
+     "key": "C",
+     "text": "Período 2, grupo 17; tiende a ganar un electrón."
+    },
+    {
+     "key": "D",
+     "text": "Período 3, grupo 1; tiende a perder un electrón."
+    },
+    {
+     "key": "E",
+     "text": "Período 4, grupo 17; tiende a compartir un electrón."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La configuración electrónica indica el período (nivel más externo) y los electrones de valencia (grupo).",
+    "steps": [
+     "Configuración: $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^5$.",
+     "Nivel más externo $n = 3$: período 3. Electrones de valencia: $2 + 5 = 7$, grupo 17 (halógenos).",
+     "Le falta un electrón para completar el octeto, por eso tiende a ganarlo y formar el anión $\\mathrm{Cl^-}$ (es el cloro)."
+    ],
+    "distractors": {
+     "B": "Perder siete electrones requiere mucha más energía que ganar uno."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q15",
+   "number": 15,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "difficulty": "media",
+   "stem": "Considera la reacción balanceada:\n\n$$2\\,\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\,\\mathrm{H_2O}$$\n\nSi reaccionan por completo 4 g de $\\mathrm{H_2}$ con la cantidad exacta de $\\mathrm{O_2}$, ¿qué masa de agua se forma? (Masas molares: H = 1 g/mol; O = 16 g/mol.)",
+   "options": [
+    {
+     "key": "A",
+     "text": "18 g"
+    },
+    {
+     "key": "B",
+     "text": "34 g"
+    },
+    {
+     "key": "C",
+     "text": "36 g"
+    },
+    {
+     "key": "D",
+     "text": "72 g"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Convierte la masa a moles, usa la proporción de la ecuación y vuelve a masa.",
+    "steps": [
+     "Moles de $\\mathrm{H_2}$: $\\dfrac{4\\ \\text{g}}{2\\ \\text{g/mol}} = 2$ mol.",
+     "Según la ecuación, 2 mol de $\\mathrm{H_2}$ forman 2 mol de $\\mathrm{H_2O}$.",
+     "Masa: $2\\ \\text{mol}\\cdot 18\\ \\text{g/mol} = 36$ g.",
+     "Control por conservación de la masa: 4 g de $\\mathrm{H_2}$ + 32 g de $\\mathrm{O_2}$ (1 mol) = 36 g."
+    ],
+    "distractors": {
+     "A": "Es la masa de **un** mol de agua.",
+     "D": "Usa 4 mol de agua: confunde la masa de $\\mathrm{H_2}$ (4 g) con su cantidad en moles."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q16",
+   "number": 16,
+   "axis": "Química",
+   "topic": "Concentración molar",
+   "difficulty": "baja",
+   "stem": "Se disuelven 20 g de hidróxido de sodio ($\\mathrm{NaOH}$, masa molar 40 g/mol) en agua hasta completar 500 mL de solución. ¿Cuál es la concentración molar de la solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,04 mol/L"
+    },
+    {
+     "key": "B",
+     "text": "0,5 mol/L"
+    },
+    {
+     "key": "C",
+     "text": "1 mol/L"
+    },
+    {
+     "key": "D",
+     "text": "2 mol/L"
+    },
+    {
+     "key": "E",
+     "text": "40 mol/L"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Molaridad = moles de soluto / litros de solución.",
+    "steps": [
+     "Moles: $\\dfrac{20}{40} = 0{,}5$ mol.",
+     "Volumen: $500$ mL $= 0{,}5$ L.",
+     "$M = \\dfrac{0{,}5\\ \\text{mol}}{0{,}5\\ \\text{L}} = 1$ mol/L."
+    ],
+    "distractors": {
+     "B": "Son los moles de soluto, sin dividir por el volumen.",
+     "A": "Divide gramos por mililitros: $\\dfrac{20}{500}$.",
+     "E": "Divide gramos por litros: $\\dfrac{20}{0{,}5}$, sin pasar a moles."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q17",
+   "number": 17,
+   "axis": "Química",
+   "topic": "pH",
+   "difficulty": "baja",
+   "stem": "Una solución tiene una concentración de iones hidrógeno $[\\mathrm{H^+}] = 1\\cdot 10^{-3}$ mol/L a 25 °C. ¿Cuál es su pH y cómo se clasifica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "pH = 11; básica"
+    },
+    {
+     "key": "B",
+     "text": "pH = 3; básica"
+    },
+    {
+     "key": "C",
+     "text": "pH = −3; ácida"
+    },
+    {
+     "key": "D",
+     "text": "pH = 3; ácida"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "$\\mathrm{pH} = -\\log[\\mathrm{H^+}]$. A 25 °C, pH menor que 7 indica solución ácida.",
+    "steps": [
+     "$\\mathrm{pH} = -\\log(10^{-3}) = 3$.",
+     "Como $3 < 7$, la solución es ácida."
+    ],
+    "distractors": {
+     "A": "Es el pOH ($14 - 3$) interpretado como pH.",
+     "C": "Olvida el signo negativo de la definición de pH."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-1-q18",
+   "number": 18,
+   "axis": "Química",
+   "topic": "Grupos funcionales",
+   "difficulty": "media",
+   "stem": "¿Cuál de los siguientes compuestos orgánicos es una cetona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "$\\mathrm{CH_3{-}CH_2{-}OH}$"
+    },
+    {
+     "key": "B",
+     "text": "$\\mathrm{CH_3{-}COOH}$"
+    },
+    {
+     "key": "C",
+     "text": "$\\mathrm{CH_3{-}CHO}$"
+    },
+    {
+     "key": "D",
+     "text": "$\\mathrm{CH_3{-}O{-}CH_3}$"
+    },
+    {
+     "key": "E",
+     "text": "$\\mathrm{CH_3{-}CO{-}CH_3}$"
+    }
+   ],
+   "answer": "E",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Una cetona tiene un grupo carbonilo ($\\mathrm{C{=}O}$) unido a **dos** carbonos, es decir, en medio de la cadena.",
+    "steps": [
+     "En $\\mathrm{CH_3{-}CO{-}CH_3}$ (propanona o acetona), el carbonilo está entre dos grupos metilo: es una cetona.",
+     "Reconoce las demás: A es un alcohol (etanol), B un ácido carboxílico (ácido acético), C un aldehído (etanal) y D un éter (dimetiléter)."
+    ],
+    "distractors": {
+     "C": "El aldehído también tiene carbonilo, pero en el extremo de la cadena, unido a un hidrógeno."
+    }
+   }
+  }
+ ]
+}

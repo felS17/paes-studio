@@ -1,0 +1,737 @@
+{
+ "id": "historia-curado-1",
+ "subject": "historia",
+ "title": "Ensayo curado 1",
+ "description": "Dieciséis preguntas originales de historia de Chile y el mundo, formación ciudadana, economía y geografía, con fuentes para analizar y la fundamentación de cada respuesta.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 30,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   106,
+   135,
+   161,
+   184,
+   206,
+   227,
+   248,
+   266,
+   282,
+   297,
+   311,
+   327,
+   344,
+   360,
+   374,
+   385,
+   395,
+   404,
+   415,
+   429,
+   444,
+   460,
+   473,
+   484,
+   492,
+   499,
+   506,
+   515,
+   527,
+   542,
+   557,
+   572,
+   583,
+   591,
+   598,
+   605,
+   614,
+   625,
+   639,
+   655,
+   670,
+   683,
+   693,
+   703,
+   712,
+   724,
+   739,
+   756,
+   772,
+   788,
+   802,
+   817,
+   834,
+   853,
+   873,
+   895,
+   917,
+   941,
+   968,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "historia-curado-1-q01",
+   "number": 1,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Revolución Francesa",
+   "difficulty": "media",
+   "stem": "Lee el siguiente fragmento de la Declaración de los Derechos del Hombre y del Ciudadano (Francia, 1789):\n\n> «Artículo 1. Los hombres nacen y permanecen libres e iguales en derechos. Las distinciones sociales solo pueden fundarse en la utilidad común».\n\n¿Qué principio se opone directamente a la organización del Antiguo Régimen en este artículo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La soberanía del monarca por derecho divino."
+    },
+    {
+     "key": "B",
+     "text": "La igualdad de derechos frente a los privilegios estamentales."
+    },
+    {
+     "key": "C",
+     "text": "La separación entre la Iglesia y el Estado."
+    },
+    {
+     "key": "D",
+     "text": "El sufragio universal de hombres y mujeres."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "El Antiguo Régimen se organizaba en estamentos con derechos distintos según el nacimiento; el artículo 1 declara la igualdad de derechos.",
+    "steps": [
+     "Identifica el contraste: en el Antiguo Régimen, clero y nobleza tenían privilegios (por ejemplo, exenciones tributarias) que el tercer estado no tenía.",
+     "El artículo afirma que todos «nacen y permanecen… iguales en derechos» y que las diferencias solo pueden justificarse por la «utilidad común», no por el origen.",
+     "Eso es el principio de igualdad ante la ley, opuesto al privilegio estamental."
+    ],
+    "distractors": {
+     "A": "Es un rasgo del Antiguo Régimen, no un principio que el artículo afirme.",
+     "D": "El sufragio femenino no se estableció en la Revolución Francesa; en Francia llegó en 1944."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q02",
+   "number": 2,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Revolución Industrial",
+   "difficulty": "baja",
+   "stem": "¿Cuál de las siguientes fue una consecuencia social de la Revolución Industrial en Europa durante el siglo XIX?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La disminución de la población de las ciudades."
+    },
+    {
+     "key": "B",
+     "text": "El fortalecimiento de los gremios artesanales medievales."
+    },
+    {
+     "key": "C",
+     "text": "El surgimiento del proletariado industrial y el crecimiento urbano acelerado."
+    },
+    {
+     "key": "D",
+     "text": "La desaparición de las diferencias sociales entre empresarios y trabajadores."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La industrialización concentró la producción en fábricas urbanas, lo que atrajo población del campo y creó una nueva clase de trabajadores asalariados.",
+    "steps": [
+     "Las fábricas necesitaban mano de obra concentrada: la migración campo–ciudad hizo crecer rápidamente las ciudades industriales.",
+     "Surgió el proletariado: trabajadores que solo poseían su fuerza de trabajo y la vendían a cambio de un salario.",
+     "Sus duras condiciones de vida y trabajo dieron origen a movimientos obreros y a nuevas ideologías como el socialismo."
+    ],
+    "distractors": {
+     "B": "La producción fabril desplazó al trabajo artesanal organizado en gremios."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q03",
+   "number": 3,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Independencia de Chile",
+   "difficulty": "baja",
+   "stem": "¿Qué acontecimiento europeo desencadenó la crisis de la monarquía española que llevó a la formación de juntas de gobierno en América, como la de Chile en 1810?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La invasión napoleónica a España y la prisión del rey Fernando VII."
+    },
+    {
+     "key": "B",
+     "text": "El fin de la Guerra de los Treinta Años."
+    },
+    {
+     "key": "C",
+     "text": "La Revolución Industrial en Inglaterra."
+    },
+    {
+     "key": "D",
+     "text": "La unificación de Italia."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Sin rey legítimo en el trono, se discutió quién debía gobernar en su nombre; en América, los cabildos formaron juntas que asumieron ese rol.",
+    "steps": [
+     "En 1808, Napoleón invadió España, obtuvo la abdicación de los reyes y mantuvo cautivo a Fernando VII.",
+     "Se abrió una crisis de legitimidad: según la idea de que la soberanía vuelve al pueblo en ausencia del rey, surgieron juntas en España y en América.",
+     "En Chile, el cabildo abierto del 18 de septiembre de 1810 formó la Primera Junta Nacional de Gobierno, que juró fidelidad a Fernando VII."
+    ],
+    "distractors": {
+     "B": "Terminó en 1648, mucho antes del proceso de independencia.",
+     "D": "La unificación italiana ocurrió entre 1859 y 1871, después de la independencia de Chile."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q04",
+   "number": 4,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Ciclo salitrero",
+   "difficulty": "media",
+   "stem": "Tras la Guerra del Pacífico (1879–1884), el salitre se convirtió en el principal producto de exportación de Chile. ¿Cuál fue una consecuencia directa de este ciclo económico para el Estado chileno?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un fuerte aumento de los ingresos fiscales gracias a los impuestos a la exportación del salitre."
+    },
+    {
+     "key": "B",
+     "text": "La eliminación de los impuestos al comercio exterior."
+    },
+    {
+     "key": "C",
+     "text": "La nacionalización de todas las oficinas salitreras en manos extranjeras."
+    },
+    {
+     "key": "D",
+     "text": "La disminución de la población en las regiones del norte."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "El Estado no explotó directamente la mayoría de las oficinas, pero gravó la exportación del salitre, lo que le dio enormes recursos.",
+    "steps": [
+     "Con la guerra, Chile incorporó las provincias salitreras de Tarapacá y Antofagasta.",
+     "Gran parte de las oficinas quedó en manos de capitales privados, muchos extranjeros (especialmente británicos).",
+     "El Estado obtuvo sus ingresos mediante impuestos a la exportación y los invirtió en obras públicas, educación y ferrocarriles."
+    ],
+    "distractors": {
+     "C": "No hubo nacionalización; la propiedad extranjera predominó durante el ciclo.",
+     "D": "Ocurrió lo contrario: el norte atrajo una gran migración de trabajadores."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q05",
+   "number": 5,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Cuestión social",
+   "difficulty": "baja",
+   "stem": "Lee la siguiente descripción de las condiciones de vida en Santiago a comienzos del siglo XX:\n\n> «Familias completas vivían en una sola pieza de conventillo, sin ventilación, compartiendo con decenas de personas un único pozo de agua y una acequia como servicio higiénico. Las epidemias se propagaban con rapidez».\n\n¿Con qué proceso histórico se relaciona esta situación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cuestión social, derivada de la urbanización y de las precarias condiciones de los trabajadores."
+    },
+    {
+     "key": "B",
+     "text": "La reforma agraria, que expulsó a los campesinos de sus tierras."
+    },
+    {
+     "key": "C",
+     "text": "La crisis de 1982, que provocó un alto desempleo urbano."
+    },
+    {
+     "key": "D",
+     "text": "La Guerra Civil de 1891, que destruyó las viviendas populares."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Se llamó «cuestión social» al conjunto de problemas de vivienda, salud y trabajo que afectaron a los sectores populares entre fines del siglo XIX y comienzos del XX.",
+    "steps": [
+     "Ubica la época: comienzos del siglo XX, en la ciudad.",
+     "Reconoce los rasgos: conventillos, hacinamiento, falta de higiene y epidemias.",
+     "Esos rasgos son característicos de la cuestión social, que impulsó movimientos obreros y, más tarde, leyes sociales como las de 1924."
+    ],
+    "distractors": {
+     "B": "La reforma agraria ocurrió en la década de 1960.",
+     "C": "Es un hecho de fines del siglo XX, no de sus comienzos."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q06",
+   "number": 6,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Guerra Fría",
+   "difficulty": "media",
+   "stem": "¿Cuál de las siguientes características define mejor a la Guerra Fría (1947–1991)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una guerra mundial con combates directos entre Estados Unidos y la Unión Soviética."
+    },
+    {
+     "key": "B",
+     "text": "Un conflicto entre las potencias del Eje y los Aliados."
+    },
+    {
+     "key": "C",
+     "text": "La alianza económica y militar entre Estados Unidos y la Unión Soviética."
+    },
+    {
+     "key": "D",
+     "text": "La rivalidad entre dos bloques ideológicos que evitaron enfrentarse militarmente de manera directa."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Fue una competencia ideológica, política, económica y tecnológica entre el bloque capitalista y el socialista, sin guerra directa entre las superpotencias.",
+    "steps": [
+     "Los dos polos, Estados Unidos y la URSS, encabezaban modelos opuestos (capitalismo y democracia liberal frente a socialismo y economía planificada).",
+     "La disuasión nuclear hacía demasiado riesgoso un enfrentamiento directo; la tensión se expresó en carreras armamentista y espacial, propaganda y conflictos en otros países (Corea, Vietnam).",
+     "La crisis de los misiles en Cuba (1962) es el momento en que más cerca estuvieron de un choque directo, y aun así se resolvió por negociación."
+    ],
+    "distractors": {
+     "B": "Describe la Segunda Guerra Mundial (1939–1945)."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q07",
+   "number": 7,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Reforma agraria",
+   "difficulty": "media",
+   "stem": "¿Cuál era el objetivo central de la reforma agraria impulsada en Chile durante los gobiernos de Eduardo Frei Montalva y Salvador Allende?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Privatizar las empresas agrícolas del Estado."
+    },
+    {
+     "key": "B",
+     "text": "Fomentar la migración de campesinos hacia las ciudades."
+    },
+    {
+     "key": "C",
+     "text": "Redistribuir la propiedad de la tierra y terminar con el latifundio."
+    },
+    {
+     "key": "D",
+     "text": "Aumentar los impuestos a la exportación de cobre."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La reforma agraria buscó cambiar la estructura de propiedad rural, concentrada en grandes haciendas, y mejorar la situación del campesinado.",
+    "steps": [
+     "Hasta mediados del siglo XX, una pequeña cantidad de propietarios concentraba la mayor parte de la tierra cultivable (latifundio), con baja productividad.",
+     "La ley de reforma agraria de 1967 (gobierno de Frei Montalva) permitió expropiar predios para entregarlos a campesinos; el proceso se profundizó con Allende.",
+     "El mismo año se legalizó la sindicalización campesina, ampliando la organización de los trabajadores rurales."
+    ],
+    "distractors": {
+     "D": "Se relaciona con la política del cobre (chilenización y nacionalización), no con la tierra."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q08",
+   "number": 8,
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Transición a la democracia",
+   "difficulty": "baja",
+   "stem": "¿Qué resultado tuvo el plebiscito del 5 de octubre de 1988 en Chile?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Se aprobó la continuidad de Augusto Pinochet en el poder hasta 1997."
+    },
+    {
+     "key": "B",
+     "text": "Triunfó la opción «No», lo que llevó a elecciones presidenciales y parlamentarias en 1989."
+    },
+    {
+     "key": "C",
+     "text": "Se aprobó una nueva Constitución redactada por una asamblea constituyente."
+    },
+    {
+     "key": "D",
+     "text": "Se restableció la Constitución de 1925 sin modificaciones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "El plebiscito, previsto en la Constitución de 1980, decidía si el candidato propuesto por la Junta Militar continuaba en el poder; ganó el «No».",
+    "steps": [
+     "La opción «Sí» implicaba que Augusto Pinochet gobernara por un nuevo período de ocho años.",
+     "El triunfo del «No» activó lo dispuesto para ese caso: convocar a elecciones presidenciales y parlamentarias para diciembre de 1989.",
+     "En 1990 asumió Patricio Aylwin, inicio del período conocido como transición a la democracia."
+    ],
+    "distractors": {
+     "A": "Era lo que habría ocurrido si ganaba el «Sí»."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q09",
+   "number": 9,
+   "axis": "Formación ciudadana",
+   "topic": "Poderes del Estado",
+   "difficulty": "media",
+   "stem": "En Chile, ¿qué órgano tiene la atribución exclusiva de fiscalizar los actos del Gobierno, por ejemplo, mediante comisiones investigadoras e interpelaciones a ministros?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El Senado."
+    },
+    {
+     "key": "B",
+     "text": "La Corte Suprema."
+    },
+    {
+     "key": "C",
+     "text": "El Tribunal Constitucional."
+    },
+    {
+     "key": "D",
+     "text": "La Cámara de Diputadas y Diputados."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La Constitución entrega la fiscalización política del Gobierno a la Cámara de Diputadas y Diputados.",
+    "steps": [
+     "Fiscalizar es controlar políticamente la acción del Poder Ejecutivo.",
+     "Entre las atribuciones exclusivas de la Cámara están crear comisiones investigadoras, citar a ministros (interpelación) y presentar acusaciones constitucionales.",
+     "El Senado, en cambio, actúa como jurado en las acusaciones constitucionales, pero no fiscaliza los actos del Gobierno."
+    ],
+    "distractors": {
+     "A": "Participa en la acusación constitucional como jurado, pero la fiscalización es de la Cámara.",
+     "C": "Controla que las leyes se ajusten a la Constitución; no fiscaliza políticamente al Gobierno."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q10",
+   "number": 10,
+   "axis": "Formación ciudadana",
+   "topic": "Derechos humanos",
+   "difficulty": "baja",
+   "stem": "Que los derechos humanos sean **universales** significa que:",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pertenecen a todas las personas, sin distinción de nacionalidad, sexo, origen u otra condición."
+    },
+    {
+     "key": "B",
+     "text": "Solo pueden ser ejercidos por quienes tienen nacionalidad de algún Estado."
+    },
+    {
+     "key": "C",
+     "text": "Cada país puede decidir cuáles de ellos reconoce."
+    },
+    {
+     "key": "D",
+     "text": "Se adquieren al cumplir la mayoría de edad."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "La universalidad es una de las características de los derechos humanos, junto con ser inalienables, indivisibles e interdependientes.",
+    "steps": [
+     "Universales: corresponden a todo ser humano por el solo hecho de serlo.",
+     "Por eso no dependen de la nacionalidad, la edad ni del reconocimiento de cada Estado: los Estados tienen el deber de respetarlos y garantizarlos."
+    ],
+    "distractors": {
+     "C": "Contradice la universalidad: los derechos no dependen de la voluntad de cada Estado."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q11",
+   "number": 11,
+   "axis": "Formación ciudadana",
+   "topic": "Estado de derecho",
+   "difficulty": "media",
+   "stem": "¿Cuál de las siguientes situaciones es propia de un Estado de derecho?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El Presidente puede dictar leyes sin intervención del Congreso cuando lo estime necesario."
+    },
+    {
+     "key": "B",
+     "text": "Las autoridades pueden detener a una persona sin una orden ni un procedimiento legal."
+    },
+    {
+     "key": "C",
+     "text": "Las autoridades actúan dentro de las atribuciones que les otorgan la Constitución y las leyes."
+    },
+    {
+     "key": "D",
+     "text": "Los tribunales resuelven según las preferencias del Gobierno de turno."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "En un Estado de derecho, el poder está limitado por normas: gobernantes y gobernados se someten a la Constitución y a las leyes.",
+    "steps": [
+     "Principio de legalidad: una autoridad solo puede hacer lo que la ley le permite.",
+     "A esto se suman la separación de poderes y el respeto a los derechos de las personas.",
+     "Las alternativas A, B y D describen ejercicios del poder sin límites legales."
+    ],
+    "distractors": {
+     "D": "Vulnera la independencia del Poder Judicial, otro pilar del Estado de derecho."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q12",
+   "number": 12,
+   "axis": "Formación ciudadana",
+   "topic": "Participación ciudadana",
+   "difficulty": "baja",
+   "stem": "¿Cuál de los siguientes es un mecanismo de democracia **directa**?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La elección de diputadas y diputados."
+    },
+    {
+     "key": "B",
+     "text": "El plebiscito."
+    },
+    {
+     "key": "C",
+     "text": "La designación de ministros por el Presidente."
+    },
+    {
+     "key": "D",
+     "text": "La votación de un proyecto de ley en el Senado."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "En la democracia directa, la ciudadanía decide por sí misma un asunto; en la representativa, elige a quienes deciden.",
+    "steps": [
+     "En un plebiscito, la ciudadanía vota directamente sobre una decisión (por ejemplo, aprobar o rechazar un texto constitucional).",
+     "Elegir representantes (A) es democracia representativa; C y D son decisiones de autoridades, no de la ciudadanía."
+    ]
+   }
+  },
+  {
+   "id": "historia-curado-1-q13",
+   "number": 13,
+   "axis": "Sistema económico",
+   "topic": "Oferta y demanda",
+   "difficulty": "baja",
+   "stem": "Durante el invierno aumenta la demanda de leña en una ciudad del sur de Chile, mientras la cantidad ofrecida por los productores se mantiene prácticamente igual. Según el modelo de oferta y demanda, ¿qué ocurrirá con el precio de la leña?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bajará, porque hay más compradores."
+    },
+    {
+     "key": "B",
+     "text": "Se mantendrá, porque la oferta no cambia."
+    },
+    {
+     "key": "C",
+     "text": "Bajará, porque los productores venden más."
+    },
+    {
+     "key": "D",
+     "text": "Subirá, porque hay más compradores para una oferta similar."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Si la demanda aumenta y la oferta no cambia, se genera escasez relativa al precio anterior y el precio de equilibrio sube.",
+    "steps": [
+     "Al precio anterior, ahora hay más personas dispuestas a comprar que leña disponible (exceso de demanda).",
+     "Los compradores compiten por el producto y el precio sube hasta que la cantidad demandada vuelve a igualar la ofrecida."
+    ],
+    "distractors": {
+     "B": "Aunque la oferta no cambie, el desplazamiento de la demanda basta para mover el precio."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q14",
+   "number": 14,
+   "axis": "Sistema económico",
+   "topic": "Política monetaria",
+   "difficulty": "media",
+   "stem": "Ante un alza persistente de la inflación, el Banco Central de Chile decide subir la tasa de política monetaria. ¿Cuál es el efecto que busca esta medida?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Abaratar los créditos para aumentar el consumo."
+    },
+    {
+     "key": "B",
+     "text": "Encarecer el crédito para moderar el gasto y, con ello, el alza de precios."
+    },
+    {
+     "key": "C",
+     "text": "Aumentar el gasto fiscal en programas sociales."
+    },
+    {
+     "key": "D",
+     "text": "Fijar por ley los precios de los productos básicos."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Una tasa de interés más alta hace más caro endeudarse y más atractivo ahorrar, lo que reduce el gasto y la presión sobre los precios.",
+    "steps": [
+     "La inflación es el alza sostenida y generalizada de los precios; reduce el poder adquisitivo del dinero.",
+     "Al subir la tasa de referencia, los bancos encarecen sus créditos: las personas y empresas piden menos préstamos y gastan menos.",
+     "Con menor demanda agregada, los precios suben más lento."
+    ],
+    "distractors": {
+     "A": "Es el efecto de **bajar** la tasa, que se usa cuando se quiere estimular la economía.",
+     "C": "Es una decisión de política fiscal del Gobierno, no del Banco Central."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q15",
+   "number": 15,
+   "axis": "Sistema económico",
+   "topic": "Costo de oportunidad",
+   "difficulty": "baja",
+   "stem": "Camila tiene libre el sábado y debe elegir entre trabajar en una feria, donde ganaría \\$25 000, o asistir a un taller gratuito de programación. Si elige el taller, ¿cuál es su costo de oportunidad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Nada, porque el taller es gratuito."
+    },
+    {
+     "key": "B",
+     "text": "El valor de mercado de un curso de programación."
+    },
+    {
+     "key": "C",
+     "text": "Los \\$25 000 que deja de ganar en la feria."
+    },
+    {
+     "key": "D",
+     "text": "El tiempo que dedicará a estudiar después del taller."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "El costo de oportunidad es el valor de la mejor alternativa a la que se renuncia al tomar una decisión.",
+    "steps": [
+     "Las alternativas son excluyentes: el mismo sábado no puede trabajar y asistir al taller.",
+     "Al elegir el taller, renuncia a los \\$25 000 de la feria. Ese es su costo de oportunidad, aunque el taller no tenga precio."
+    ],
+    "distractors": {
+     "A": "Confunde precio con costo: algo gratuito puede tener un costo de oportunidad alto."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-1-q16",
+   "number": 16,
+   "axis": "Geografía y espacio",
+   "topic": "Distribución de la población",
+   "difficulty": "media",
+   "stem": "La tabla muestra la población de algunas regiones de Chile según el Censo 2017 (total país: 17,6 millones de habitantes).\n\n| Región | Habitantes | Porcentaje del total |\n| --- | --- | --- |\n| Metropolitana | 7 112 808 | 40,5 % |\n| Valparaíso | 1 815 902 | 10,3 % |\n| Biobío | 1 556 805 | 8,9 % |\n| Aysén | 103 158 | 0,6 % |\n\n¿Qué afirmación se desprende correctamente de los datos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La población de Chile se distribuye de manera homogénea entre sus regiones."
+    },
+    {
+     "key": "B",
+     "text": "Aysén es la región con menor superficie del país."
+    },
+    {
+     "key": "C",
+     "text": "Biobío concentra más población que Valparaíso."
+    },
+    {
+     "key": "D",
+     "text": "Cerca de cuatro de cada diez habitantes del país viven en la Región Metropolitana."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "textQuality": "clean",
+   "explanation": {
+    "kind": "desarrollo",
+    "summary": "Al interpretar una tabla, la conclusión debe apoyarse solo en los datos que muestra.",
+    "steps": [
+     "La Región Metropolitana reúne el 40,5 % de la población, es decir, cerca de 4 de cada 10 habitantes.",
+     "Esa concentración en torno a la capital es un rasgo de la distribución de la población chilena (macrocefalia urbana).",
+     "Las demás afirmaciones contradicen la tabla o requieren información que no está en ella."
+    ],
+    "distractors": {
+     "A": "La tabla muestra lo contrario: un 40,5 % frente a un 0,6 %.",
+     "B": "La tabla no informa superficies; poca población no implica poca superficie (de hecho, Aysén es una de las regiones más extensas).",
+     "C": "Valparaíso (10,3 %) supera a Biobío (8,9 %)."
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+%% Reimplementación mínima de pdfcol (oberdiek) para pdfTeX, para TeX Live locales sin el paquete.
+%% tcolorbox (librería breakable) usa una pila de colores propia para que el color del texto
+%% continúe bien cuando una caja se parte entre columnas o páginas. Solo se usa al compilar con
+%% scripts/pipeline/build_pdfs.py y únicamente si el pdfcol real no está instalado.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pdfcol}[2026/11/01 sustituto local de PAES Studio (API de pdfcol 1.7)]
+\newif\ifpdfcolAvailable
+\ifx\pdfcolorstackinit\@undefined
+  \pdfcolAvailablefalse
+  \def\pdfcolInitStack#1{}
+  \def\pdfcolIfStackExists#1#2#3{#3}
+  \def\pdfcolSwitchStack#1{}
+  \def\pdfcolSetCurrentColor{}
+  \def\pdfcolSetCurrent#1{}
+\else
+  \pdfcolAvailabletrue
+  \@ifundefined{main@pdfcolorstack}{\chardef\main@pdfcolorstack=0 }{}
+  \def\pdfcolInitStack#1{%
+    \@ifundefined{pdfcol@Stack@#1}{%
+      \expandafter\xdef\csname pdfcol@Stack@#1\endcsname{\pdfcolorstackinit page direct{0 g 0 G}}%
+    }{}%
+  }
+  \def\pdfcolIfStackExists#1{\@ifundefined{pdfcol@Stack@#1}\@secondoftwo\@firstoftwo}
+  \def\pdfcolSwitchStack#1{%
+    \@ifundefined{pdfcol@Stack@#1}{%
+      \PackageWarning{pdfcol}{Pila de colores `#1' sin inicializar}%
+    }{\edef\@pdfcolorstack{\csname pdfcol@Stack@#1\endcsname}}%
+  }
+  \def\pdfcolSetCurrentColor{\pdfcolorstack\@pdfcolorstack set{\current@color}}
+  \def\pdfcolSetCurrent#1{%
+    \begingroup
+      \edef\pdfcol@tmp{#1}%
+      \ifx\pdfcol@tmp\@empty
+        \def\@pdfcolorstack{\main@pdfcolorstack}%
+      \else
+        \pdfcolSwitchStack{#1}%
+      \fi
+      \pdfcolSetCurrentColor
+    \endgroup
+  }
+\fi
+\endinput

@@ -1,0 +1,537 @@
+% =============================================================================
+%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
+%  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Comandos:
+%    \alternativa{A}{texto}       alternativa
+%    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
+%    \paso{n}{texto}      paso numerado del desarrollo
+%    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
+%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
+% =============================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+
+% ── Paleta Zinc ──────────────────────────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+
+\newcommand{\sen}{\operatorname{sen}}
+
+% ── Tema mínimo ──────────────────────────────────────────────────────────────
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=zinc900}
+\setbeamercolor{structure}{fg=zinc900}
+\setbeamercolor{alerted text}{fg=zinc950}
+\setbeamercolor{item}{fg=zinc500}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{itemize items}{\raisebox{0.15ex}{\color{zinc500}\scriptsize$\bullet$}}
+\setbeamertemplate{enumerate items}{\color{zinc500}\insertenumlabel.}
+\setbeamersize{text margin left=1.6cm,text margin right=1.6cm}
+
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.9em}%
+  {\usebeamerfont{frametitle}\color{zinc950}\insertframetitle}\par
+  \ifx\insertframesubtitle\@empty\else{\small\color{zinc500}\insertframesubtitle}\par\fi
+  \vspace{0.25em}{\color{zinc200}\rule{\textwidth}{0.4pt}}%
+}
+\makeatother
+\setbeamertemplate{footline}{%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+}
+\setbeamertemplate{title page}{%
+  \vfill
+  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
+  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
+  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
+  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc500}\insertdate}\par
+  \vfill
+}
+
+% ── Componentes ──────────────────────────────────────────────────────────────
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\bfseries\color{white}}
+\newtcolorbox{opcion}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=zinc300,
+  left=6pt, right=6pt, top=3pt, bottom=3pt, before skip=3pt, after skip=3pt, #1}
+\newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
+\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+  borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
+\newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
+  borderline west={2pt}{0pt}{rosa}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=white, titlerule=0pt, title={#1}}
+\newenvironment{lineatiempo}
+  {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
+  {\end{tabular}}
+\newlength{\anchobarra}
+\newcommand{\ejebarra}[3]{%
+  \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
+  \setlength{\anchobarra}{0.5\linewidth}%
+  \makebox[\anchobarra][l]{{\color{zinc200}\rule[0.2ex]{\anchobarra}{1.1ex}}\hspace*{-\anchobarra}{\color{zinc900}\rule[0.2ex]{#2\anchobarra}{1.1ex}}}%
+  \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
+
+%%<META>%%
+\title[Repaso PAES: Competencia Lectora]{Repaso PAES}
+\subtitle{Competencia Lectora}
+\date{1 de noviembre de 2026}
+%%</META>%%
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+%%<CONTENIDO>%%
+\begin{frame}{Contenidos}
+
+  \framesubtitle{3 ejes, en el orden del temario}
+
+  \begin{enumerate}\small
+
+    \item \textbf{Localizar}: Información explícita
+
+    \item \textbf{Interpretar}: Vocabulario contextual, Tema, idea central y síntesis, Propósito y función de fragmentos, Inferencias y relaciones entre ideas, Textos literarios, Textos discontinuos e infografías
+
+    \item \textbf{Evaluar}: Evaluar argumentos y postura, Evaluar forma, recursos y pertinencia
+
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Qué evalúa la prueba}
+
+  \framesubtitle{Distribución por eje en 7 ensayos (388 preguntas)}
+
+  \vspace{0.8em}
+
+  \ejebarra{Interpretar}{0.809}{81 \%}
+
+  \ejebarra{Evaluar}{0.121}{12 \%}
+
+  \ejebarra{Localizar}{0.070}{7 \%}
+
+\end{frame}
+
+\section{Localizar}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Localizar}\par\vspace{0.6em}
+  {\color{zinc700} Encontrar información explícita y reconocer cómo se presenta.}\par\vspace{1em}
+  {\small\color{zinc500} Información explícita}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Información explícita}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Busca palabras clave del enunciado en el texto.
+    \item La correcta es una paráfrasis fiel, no una copia literal.
+    \item Una alternativa verdadera en la realidad pero ausente del texto es incorrecta.
+  \end{itemize}
+  \begin{cajaclave}[Cómo reconocer la correcta]\footnotesize
+La alternativa correcta \textbf{reformula} lo que dice el texto sin agregar, quitar ni cambiar el alcance. Desconfía de las que generalizan («siempre», «todos») o que usan las mismas palabras del texto con otro sentido.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Información explícita}
+  {\small «Las abejas visitan cerca de un tercio de los cultivos que consumimos. Sin embargo, el uso de ciertos plaguicidas ha reducido sus colonias en varias regiones del país.»
+
+Según el fragmento, ¿qué ha provocado la disminución de las colonias de abejas?}
+  \vspace{0.4em}
+  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
+  \alternativa{A}{La disminución de los cultivos.}
+  \alternativa{B}{El uso de ciertos plaguicidas.}
+  \alternativa{C}{El cambio climático.}
+  \alternativa{D}{La sobreexplotación de la miel.}
+  \end{tcbraster}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La causa está explícita en la segunda oración.}
+  {\small
+  \paso{1}{Ubica la oración que habla de la reducción de colonias.}
+  \paso{2}{«El uso de ciertos plaguicidas ha reducido sus colonias»: es la alternativa B.}
+  \paso{3}{C es plausible en la realidad, pero el fragmento no lo menciona.}
+  }
+  \alternativaok{B}{El uso de ciertos plaguicidas.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir una alternativa con palabras copiadas del texto pero con otro sentido.
+    \item Elegir información correcta según tus conocimientos, pero que el texto no dice.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Interpretar}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Interpretar}\par\vspace{0.6em}
+  {\color{zinc700} Comprender el sentido global y local, inferir y relacionar.}\par\vspace{1em}
+  {\small\color{zinc500} Vocabulario contextual, Tema, idea central y síntesis, Propósito y función de fragmentos, Inferencias y relaciones entre ideas, Textos literarios, Textos discontinuos e infografías}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Vocabulario contextual}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Importa el sentido en el texto, no el del diccionario.
+    \item La correcta debe funcionar gramaticalmente en la oración.
+    \item Cuidado con los sinónimos de otra acepción de la palabra.
+  \end{itemize}
+  \begin{cajaclave}[Prueba de sustitución]\footnotesize
+1) Lee la oración y la siguiente. 2) Formula con tus palabras qué quiere decir. 3) Reemplaza por cada alternativa. 4) Elige la que conserva el sentido exacto, no solo uno parecido.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Vocabulario contextual}
+  {\small «El ministro intentó ZANJAR la discusión con un anuncio inesperado, pero los parlamentarios siguieron debatiendo hasta la medianoche.»
+
+¿Cuál de las siguientes palabras puede reemplazar a ZANJAR sin que cambie el sentido del texto?}
+  \vspace{0.4em}
+  \alternativa{A}{Excavar}
+  \alternativa{B}{Iniciar}
+  \alternativa{C}{Terminar}
+  \alternativa{D}{Postergar}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{«Zanjar una discusión» es darla por concluida; el «pero» confirma que no lo logró.}
+  {\small
+  \paso{1}{Contexto: tras el intento, los parlamentarios \textbf{siguieron} debatiendo.}
+  \paso{2}{El contraste indica que el ministro quería ponerle fin.}
+  \paso{3}{«Terminar la discusión» conserva el sentido; «excavar» es otra acepción de «zanjar».}
+  }
+  \alternativaok{C}{Terminar}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir el sinónimo de otra acepción («grave» como «serio» y no como «de tono bajo»).
+    \item Elegir una palabra con matiz más fuerte o más débil que el original.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Tema, idea central y síntesis}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Tema: frase nominal. Idea central: afirmación completa.
+    \item Los ejemplos y datos apoyan la idea central; no lo son.
+    \item El título suele anticipar el tema.
+  \end{itemize}
+  \begin{cajaclave}[Criterio de amplitud]\footnotesize
+La idea central no puede ser demasiado específica (un ejemplo o dato) ni demasiado general (aplicable a cualquier texto del tema). Debe cubrir todo lo que el párrafo o texto plantea.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Tema, idea central y síntesis}
+  {\small «Muchos creen que los murciélagos son plagas. Sin embargo, una sola colonia puede consumir toneladas de insectos al año, y varias especies polinizan plantas como el agave. Además, su guano se ha usado por siglos como fertilizante.»
+
+¿Cuál es la idea central del fragmento?}
+  \vspace{0.4em}
+  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
+  \alternativa{A}{Los murciélagos polinizan el agave.}
+  \alternativa{B}{Los murciélagos son beneficiosos, pese a la mala fama que tienen.}
+  \alternativa{C}{El guano de murciélago es un fertilizante.}
+  \alternativa{D}{Los animales suelen ser incomprendidos.}
+  \end{tcbraster}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Cada oración aporta un beneficio que contradice la creencia inicial.}
+  {\small
+  \paso{1}{La primera oración plantea la creencia; «Sin embargo» introduce la postura del texto.}
+  \paso{2}{Insectos, polinización y guano son ejemplos de beneficios.}
+  \paso{3}{A y C son detalles; D es demasiado general.}
+  }
+  \alternativaok{B}{Los murciélagos son beneficiosos, pese a la mala fama que tienen.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir un detalle llamativo como idea central.
+    \item Elegir una afirmación tan general que serviría para cualquier texto.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Propósito y función de fragmentos}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Propósito = intención, no contenido.
+    \item Mira el lugar del fragmento en el texto (inicio, desarrollo, cierre).
+    \item Revisa los conectores que lo rodean.
+  \end{itemize}
+  \begin{cajaclave}[Verbos de propósito]\footnotesize
+Ilustrar o ejemplificar, introducir, contrastar, concluir, justificar, refutar, describir, advertir. La alternativa correcta combina el verbo adecuado con el contenido correcto.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Propósito y función de fragmentos}
+  {\small «Los hábitos pequeños transforman la salud. Pedro, por ejemplo, comenzó a caminar diez minutos al día y, al cabo de un año, había bajado su presión arterial.»
+
+¿Qué función cumple la mención de Pedro?}
+  \vspace{0.4em}
+  \alternativa{A}{Introducir un tema nuevo.}
+  \alternativa{B}{Contradecir la idea anterior.}
+  \alternativa{C}{Ejemplificar la afirmación previa.}
+  \alternativa{D}{Concluir el texto.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El conector «por ejemplo» anuncia la función.}
+  {\small
+  \paso{1}{La primera oración afirma que los hábitos pequeños transforman la salud.}
+  \paso{2}{El caso de Pedro muestra esa afirmación en una situación concreta: la ejemplifica.}
+  }
+  \alternativaok{C}{Ejemplificar la afirmación previa.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir una alternativa que resume el fragmento en vez de explicar para qué está.
+    \item Acertar el verbo pero no el contenido (ilustrar, sí, pero otra idea).
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Inferencias y relaciones entre ideas}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item La inferencia correcta se apoya en el texto, no en suposiciones.
+    \item Descarta alternativas que exageran o generalizan.
+    \item El conector revela la relación lógica.
+  \end{itemize}
+  \begin{cajaclave}[Conectores frecuentes]\footnotesize
+Causa: porque, ya que, debido a. Consecuencia: por lo tanto, así, en consecuencia. Contraste: sin embargo, pero, no obstante, en cambio. Adición: además, asimismo.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Inferencias y relaciones entre ideas}
+  {\small «Desde que la biblioteca amplió su horario hasta las 22:00, la sala de estudio se llena cada noche, sobre todo en época de exámenes.»
+
+¿Qué se puede inferir del fragmento?}
+  \vspace{0.4em}
+  \alternativa{A}{Antes la biblioteca cerraba antes de las 22:00.}
+  \alternativa{B}{La biblioteca tiene más libros que antes.}
+  \alternativa{C}{Los estudiantes prefieren estudiar de noche que de día.}
+  \alternativa{D}{La biblioteca abre solo en época de exámenes.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{«Amplió su horario hasta las 22:00» implica que antes cerraba más temprano.}
+  {\small
+  \paso{1}{Ampliar significa extender: el horario anterior terminaba antes.}
+  \paso{2}{C exagera: el texto no compara preferencias de día y de noche.}
+  }
+  \alternativaok{A}{Antes la biblioteca cerraba antes de las 22:00.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir una conclusión posible, pero no necesaria.
+    \item Confundir causa con consecuencia.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Textos literarios}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Caracteriza a un personaje por sus acciones y palabras.
+    \item El narrador en primera persona solo conoce lo que vive.
+    \item Interpreta la figura según el contexto del relato.
+  \end{itemize}
+  \begin{cajaclave}[Figuras frecuentes]\footnotesize
+Comparación: «sonó como una respiración». Metáfora: «la ciudad es un hormiguero». Personificación: «el viento susurraba». Hipérbole: «te lo dije mil veces».
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Textos literarios}
+  {\small «Mi abuelo era un roble: había resistido dos guerras, tres mudanzas y la muerte de su mejor amigo sin que nadie lo viera llorar.»
+
+¿Qué se destaca del abuelo con la expresión «era un roble»?}
+  \vspace{0.4em}
+  \alternativa{A}{Su gran estatura.}
+  \alternativa{B}{Su fortaleza ante la adversidad.}
+  \alternativa{C}{Su amor por la naturaleza.}
+  \alternativa{D}{Su edad avanzada.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La metáfora se explica en lo que sigue: resistió hechos duros sin quebrarse.}
+  {\small
+  \paso{1}{Identifica la metáfora: el abuelo es un roble (árbol resistente).}
+  \paso{2}{Los ejemplos que siguen (guerras, mudanzas, pérdidas) apuntan a la fortaleza.}
+  }
+  \alternativaok{B}{Su fortaleza ante la adversidad.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Atribuir al narrador ideas de un personaje.
+    \item Interpretar literalmente una expresión figurada.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Textos discontinuos e infografías}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item El título dice qué representa el gráfico.
+    \item Fíjate en las unidades y en la fuente.
+    \item Integra la información de dos bloques cuando la pregunta lo pide.
+  \end{itemize}
+  \begin{cajaclave}[Orden de lectura]\footnotesize
+Título $\rightarrow$ subtítulos y leyendas $\rightarrow$ datos destacados $\rightarrow$ notas y fuentes. Pregunta: ¿qué relación muestra el gráfico o la imagen con el texto?
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Textos discontinuos e infografías}
+  {\small Una infografía titulada «Agua que no ves» indica: «1 kg de carne de vacuno: 15 000 L de agua. 1 kg de trigo: 1500 L. 1 taza de café: 140 L».
+
+¿Qué propósito tiene presentar estas cifras?}
+  \vspace{0.4em}
+  \alternativa{A}{Mostrar cuánta agua se usa al producir alimentos.}
+  \alternativa{B}{Recomendar no consumir café.}
+  \alternativa{C}{Comparar precios de alimentos.}
+  \alternativa{D}{Explicar cómo se cultiva el trigo.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El título («Agua que no ves») y las cifras apuntan al agua usada en la producción.}
+  {\small
+  \paso{1}{Las cifras son litros de agua asociados a cada alimento.}
+  \paso{2}{El título destaca que esa agua no es visible para el consumidor: informa sobre el agua usada al producir.}
+  }
+  \alternativaok{A}{Mostrar cuánta agua se usa al producir alimentos.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Leer un dato de la columna o fila equivocada.
+    \item Ignorar las notas o la fuente, que pueden cambiar la interpretación.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Evaluar}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Evaluar}\par\vspace{0.6em}
+  {\color{zinc700} Valorar argumentos, recursos y la relación entre forma, contenido y propósito.}\par\vspace{1em}
+  {\small\color{zinc500} Evaluar argumentos y postura, Evaluar forma, recursos y pertinencia}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Evaluar argumentos y postura}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Primero identifica la tesis; después evalúa cada alternativa contra ella.
+    \item La concesión reconoce algo del adversario antes de refutarlo.
+    \item «Debilita» exige que el dato afecte directamente el argumento central.
+  \end{itemize}
+  \begin{cajaclave}[Estrategias argumentativas]\footnotesize
+Ejemplificación, cita de autoridad, datos o estadísticas, analogía, concesión («es cierto que\ldots{} pero\ldots{}»), contraargumentación y apelación a valores.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Evaluar argumentos y postura}
+  {\small «Las ciudades deberían reemplazar los estacionamientos del centro por ciclovías: así se reduce la congestión, porque más personas dejarían el auto.»
+
+¿Cuál de las siguientes afirmaciones, de ser verdadera, DEBILITA el argumento?}
+  \vspace{0.4em}
+  \alternativa{A}{Las ciclovías son más baratas que los estacionamientos.}
+  \alternativa{B}{En ciudades que lo hicieron, la cantidad de autos en el centro no varió.}
+  \alternativa{C}{Andar en bicicleta mejora la salud.}
+  \alternativa{D}{Muchas personas ya usan bicicleta en el centro.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El argumento supone que más personas dejarían el auto; B muestra que no ocurre.}
+  {\small
+  \paso{1}{Tesis: reemplazar estacionamientos por ciclovías reduce la congestión.}
+  \paso{2}{Razón: más personas dejarían el auto.}
+  \paso{3}{B contradice esa razón con evidencia; A y C hablan de otros beneficios.}
+  }
+  \alternativaok{B}{En ciudades que lo hicieron, la cantidad de autos en el centro no varió.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir una alternativa sobre el tema que no toca el argumento central.
+    \item Confundir la opinión del emisor con la de una voz citada.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Evaluar forma, recursos y pertinencia}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Identifica primero el propósito y el destinatario.
+    \item Juzga el recurso por su aporte, no por tu gusto.
+    \item Un título adecuado anticipa el tema y la intención.
+  \end{itemize}
+  \begin{cajaclave}[Criterios]\footnotesize
+Pertinencia: ¿aporta al propósito? Adecuación: ¿corresponde al destinatario y la situación? Coherencia: ¿es consistente con el resto del texto?
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Evaluar forma, recursos y pertinencia}
+  {\small Un afiche municipal para niños sobre el lavado de manos usa dibujos coloridos y la frase «¡Jabón y agua, y los bichos se van a casa!».
+
+¿Por qué el lenguaje del afiche es adecuado?}
+  \vspace{0.4em}
+  \alternativa{A}{Porque usa términos científicos precisos.}
+  \alternativa{B}{Porque es simple y lúdico, acorde a su público infantil.}
+  \alternativa{C}{Porque está escrito en un registro formal.}
+  \alternativa{D}{Porque presenta estadísticas de enfermedades.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La adecuación se juzga respecto del destinatario: niños.}
+  {\small
+  \paso{1}{Destinatario: niños; propósito: promover el lavado de manos.}
+  \paso{2}{La rima y los «bichos» simplifican el mensaje y lo vuelven memorable.}
+  }
+  \alternativaok{B}{Porque es simple y lúdico, acorde a su público infantil.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir una valoración subjetiva sin respaldo en el texto.
+    \item Ignorar el destinatario al evaluar el registro.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+%%</CONTENIDO>%%
+
+\end{document}

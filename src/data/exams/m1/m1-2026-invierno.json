@@ -1,0 +1,3173 @@
+{
+ "id": "m1-2026-invierno",
+ "subject": "m1",
+ "title": "PAES Invierno 2026",
+ "description": "Prueba oficial completa de Competencia Matemática 1 (M1): 65 preguntas, aplicada el 18-06-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2026,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "111",
+ "appliedOn": "2025-06-18",
+ "durationMinutes": 140,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   170,
+   194,
+   216,
+   236,
+   256,
+   275,
+   292,
+   307,
+   321,
+   335,
+   350,
+   365,
+   380,
+   393,
+   403,
+   412,
+   422,
+   433,
+   446,
+   460,
+   474,
+   486,
+   495,
+   502,
+   509,
+   516,
+   527,
+   539,
+   554,
+   568,
+   579,
+   588,
+   595,
+   602,
+   609,
+   619,
+   632,
+   647,
+   661,
+   673,
+   683,
+   692,
+   701,
+   712,
+   726,
+   741,
+   756,
+   771,
+   784,
+   798,
+   813,
+   831,
+   850,
+   870,
+   890,
+   912,
+   937,
+   965,
+   996,
+   1000
+  ],
+  "officialQuestionCount": 65,
+  "officialScorableCount": 60
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m1-2026-invierno-q01",
+   "number": 1,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el valor de 1 −(−3)(−2 −6)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "−32"
+    },
+    {
+     "key": "B",
+     "text": "−23"
+    },
+    {
+     "key": "C",
+     "text": "−16"
+    },
+    {
+     "key": "D",
+     "text": "−4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q01.webp",
+    "width": 907,
+    "height": 241,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que respetar la jerarquía de operaciones: primero el paréntesis, luego el producto de negativos y por último la resta.",
+    "steps": [
+     "Dentro del paréntesis, $-2-6 = -8$, así que la expresión queda $1-(-3)(-8)$.",
+     "El producto de dos números negativos es positivo: $(-3)(-8) = 24$.",
+     "Luego, $1 - 24 = -23$.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$-32$ se obtiene si se calcula primero $1-(-3)=4$ y después $4\\cdot(-8)=-32$, ignorando la prioridad de la multiplicación sobre la resta."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Consuelo y dos amigas comieron en un restaurante. A continuación se presenta la\n\nboleta de todo lo consumido por las tres amigas.\n\nAcordaron que cada una de ellas pagará lo que consumió y, además, la promoción\n\nde sopaipillas la dividirán en tres partes iguales y cada una pagará una de esas tres\n\npartes.\n\nSi Consuelo consumió un sándwich y una bebida, ¿cuánto tiene que pagar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$8900"
+    },
+    {
+     "key": "B",
+     "text": "\\$9000"
+    },
+    {
+     "key": "C",
+     "text": "\\$12 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$22 200"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q02.webp",
+    "width": 907,
+    "height": 839,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada amiga paga lo que consumió más un tercio de la promoción de sopaipillas, así que hay que separar los costos individuales de los compartidos.",
+    "steps": [
+     "Cada sándwich cuesta $18\\,000 \\div 3 = 6000$ pesos, así que el de Consuelo vale 6000 pesos.",
+     "Cada bebida cuesta $2600 \\div 2 = 1300$ pesos, así que la bebida de Consuelo vale 1300 pesos.",
+     "Lo que consumió suma $6000 + 1300 = 7300$ pesos.",
+     "La promoción de sopaipillas cuesta 4800 pesos y se reparte en tres partes iguales: $4800 \\div 3 = 1600$ pesos.",
+     "Total a pagar: $7300 + 1600 = 8900$ pesos. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "D": "22\\,200 pesos corresponde a $18\\,000 + 2600 + 1600$: suma el costo total de los tres sándwiches y de las dos bebidas, sin dividirlos entre las tres amigas."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q03",
+   "number": 3,
+   "axis": "Números",
+   "topic": "Fracciones",
+   "stem": "Para representar una fracción se pueden utilizar gráficos circulares.\n\nPor ejemplo, en la siguiente imagen se han representado los números ⁵ y 1 ¹ . 6 6\n\n�1 � ¿En cuál de las siguientes opciones se representa el resultado de 3 · 6 ⁺ ³ 2 · ⁴ ? 6",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q03.webp",
+    "width": 907,
+    "height": 1047,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se opera primero el paréntesis con fracciones y luego se multiplica por 3, de modo que el resultado es $\\frac{7}{2}$, es decir, tres círculos completos y medio.",
+    "steps": [
+     "La expresión es $3 \\cdot \\left(\\frac{1}{6} + \\frac{3}{2} \\cdot \\frac{4}{6}\\right)$.",
+     "Primero el producto: $\\frac{3}{2} \\cdot \\frac{4}{6} = \\frac{12}{12} = 1$.",
+     "Luego la suma: $\\frac{1}{6} + 1 = \\frac{7}{6}$.",
+     "Finalmente, $3 \\cdot \\frac{7}{6} = \\frac{21}{6} = \\frac{7}{2} = 3\\frac{1}{2}$, que se representa con tres círculos completamente sombreados y medio círculo sombreado. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Un medio círculo ($\\frac{1}{2}$) se obtiene si se calcula solo $3 \\cdot \\frac{1}{6}$ y se descarta el segundo término del paréntesis."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Fracciones",
+   "stem": "Para calcular el valor de la expresión ⁻²⁽⁴·⁵⁾⁻⁽³⁰⁻²·³⁾ , se realizan los 12 siguientes pasos, cometiéndose un error.\n\n**Paso 1:** se reescribe −2(4 · 5) como (−8) · (−10), obteniéndose\n\n(−8) · (−10) −(30 −2 · 3) . 12 **Paso 2:** se resuelve (30 −2 · 3), obteniéndose ⁽⁻⁸⁾·⁽⁻¹⁰⁾⁻²⁴ . 12\n\n**Paso 3:** se resuelve el numerador, obteniéndose ⁵⁶ . 12\n\n**Paso 4:** se simplifica la fracción del paso anterior, obteniéndose ¹⁴ . 3\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q04.webp",
+    "width": 907,
+    "height": 720,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El error está en el paso 1: el factor $-2$ se aplica dos veces, una a cada factor del producto, cuando en realidad se aplica una sola vez.",
+    "steps": [
+     "En la expresión original, $-2(4\\cdot 5) = -2 \\cdot 20 = -40$.",
+     "En el paso 1 se escribe $(-8)\\cdot(-10) = 80$, que es distinto de $-40$. Es decir, el $-2$ se multiplicó por 4 y también por 5.",
+     "A partir de ese paso, los pasos 2, 3 y 4 son aritméticamente correctos ($80-24=56$, $\\frac{56}{12}=\\frac{14}{3}$), pero parten de un numerador equivocado. Con el valor correcto, el numerador sería $-40-24=-64$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "En el paso 3, $80-24=56$ está bien calculado. El problema es el dato que llega desde el paso 1, no la operación del paso 3."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q05",
+   "number": 5,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "En el gráfico adjunto se representa la percepción ciudadana en relación con los\n\natributos de un candidato. Esta percepción se presenta en un puntaje que va de −20 a 20 puntos.\n\n¿Cuál de los atributos presentó una mayor variación en su puntaje según la\n\npercepción ciudadana, entre agosto y noviembre?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Liderazgo"
+    },
+    {
+     "key": "B",
+     "text": "Cercanía"
+    },
+    {
+     "key": "C",
+     "text": "Honestidad"
+    },
+    {
+     "key": "D",
+     "text": "Capacidad de diálogo"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q05.webp",
+    "width": 907,
+    "height": 797,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que comparar la diferencia entre el puntaje de agosto y el de noviembre para cada atributo, sin fijarse en la posición de los puntos ni en el valor final.",
+    "steps": [
+     "La variación de cada atributo es $|\\text{noviembre} - \\text{agosto}|$.",
+     "Liderazgo: de 6 a 12, variación $6$. Honestidad: de $-3$ a $-10$, variación $7$.",
+     "Cercanía: de 3 a $-9$, variación $|-9-3| = 12$.",
+     "Flexibilidad: de 6 a $-3$, variación $9$. Capacidad de diálogo: de 6 a 15, variación $9$.",
+     "La mayor variación es de 12 puntos, en Cercanía. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "D": "Capacidad de diálogo tiene el valor final más alto (15), pero su variación es $15-6=9$, menor que la de Cercanía.",
+     "A": "Liderazgo llama la atención por su valor final positivo (12), pero su variación es solo $12-6=6$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q06",
+   "number": 6,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En un juego, en cada partida un jugador debe responder 10 preguntas de cultura\n\ngeneral y tiene la opción de no contestar en 4 oportunidades.\n\n- Cuando el jugador da una respuesta correcta gana una ficha blanca que vale\n\n1 punto,\n\n- y cuando da una respuesta incorrecta gana una ficha negra que vale −1 punto.\n\nLuego de tres partidas completas, una persona que jugó este juego, quedó con las\n\nsiguientes fichas:\n\n¿Cuál de las siguientes expresiones representa el puntaje final de este jugador luego\n\nde estas tres partidas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(5 · 1 −(5 *· −*1)) + (5 · 1 −(4 *· −*1)) + (4 · 1 −(2 *· −*1))"
+    },
+    {
+     "key": "B",
+     "text": "(5 · 1 + 5 *· −*1) + (5 · 1 + 4 *· −*1) + (4 · 1 + 2 *· −*1)"
+    },
+    {
+     "key": "C",
+     "text": "(5 *· −*1 + 5 · 1) + (5 *· −*1 + 4 · 1) + (4 *· −*1 + 2 · 1)"
+    },
+    {
+     "key": "D",
+     "text": "(5 · 1 + 5 · 1) + (5 · 1 + 4 · 1) + (4 · 1 + 2 · 1)"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q06.webp",
+    "width": 907,
+    "height": 931,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada ficha blanca suma 1 y cada negra resta 1, así que el puntaje de cada partida es la cantidad de blancas menos la cantidad de negras, y luego se suman las tres partidas.",
+    "steps": [
+     "Partida 1: 5 fichas blancas y 5 negras, con puntaje $5\\cdot 1 + 5\\cdot(-1)$.",
+     "Partida 2: 5 fichas blancas y 4 negras, con puntaje $5\\cdot 1 + 4\\cdot(-1)$. Una pregunta quedó sin responder.",
+     "Partida 3: 4 fichas blancas y 2 negras, con puntaje $4\\cdot 1 + 2\\cdot(-1)$.",
+     "El puntaje final es la suma de las tres partidas, que coincide exactamente con la expresión de la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Resta en vez de sumar las fichas negras: $5\\cdot 1-(5\\cdot(-1)) = 10$, lo que convierte las negras en puntos positivos.",
+     "D": "Asigna +1 también a las fichas negras, por lo que cuenta todas las fichas como positivas."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q07",
+   "number": 7,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una persona tiene una caja con 12 huevos y realiza lo siguiente:\n\n- aparta ¹ y ¹ del total de los huevos de la caja para la preparación de una tortilla 3 6 y huevos revueltos, respectivamente,\n\n- utiliza la mitad de los huevos restantes para preparar un queque y\n\n- al guardar la caja se le rompe un huevo y lo elimina.\n\n¿Cuántos huevos le quedan a la persona en la caja para ser utilizados en otra\n\npreparación?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q07.webp",
+    "width": 907,
+    "height": 1139,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que descontar en orden: primero lo que se aparta, luego la mitad de lo restante y, por último, el huevo roto.",
+    "steps": [
+     "Para la tortilla se aparta $\\frac{1}{3}\\cdot 12 = 4$ huevos y para los revueltos $\\frac{1}{6}\\cdot 12 = 2$ huevos.",
+     "Quedan $12-4-2 = 6$ huevos.",
+     "Para el queque se usa la mitad de los restantes, $\\frac{1}{2}\\cdot 6 = 3$ huevos, y quedan 3.",
+     "Se rompe un huevo y se elimina: $3-1 = 2$ huevos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "3 huevos: olvida descontar el huevo que se rompió al guardar la caja."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q08",
+   "number": 8,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Se prepararán 200 copas de un cóctel para un evento, utilizando bebida gaseosa y\n\njugo de limón. Cada copa del cóctel y sus medidas se representan en la siguiente\n\nimagen:\n\nSi se considera que 1 onza es 30 mL, ¿cuántos mL de jugo de limón se necesitarán\n\npara preparar las copas del cóctel?",
+   "options": [
+    {
+     "key": "A",
+     "text": "300 mL"
+    },
+    {
+     "key": "B",
+     "text": "7500 mL"
+    },
+    {
+     "key": "C",
+     "text": "9000 mL"
+    },
+    {
+     "key": "D",
+     "text": "21 000 mL"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q08.webp",
+    "width": 907,
+    "height": 615,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como se pide solo el jugo de limón, hay que calcular cuánto jugo tiene una copa, convertirlo a mL y multiplicar por las 200 copas.",
+    "steps": [
+     "Por copa, la mezcla tiene 2 onzas de bebida gaseosa y $1\\frac{1}{2}$ onzas de jugo de limón. Solo interesa el jugo.",
+     "Convirtiendo a mL: $1\\frac{1}{2}\\cdot 30 = 45$ mL de jugo por copa.",
+     "Para 200 copas: $200 \\cdot 45 = 9000$ mL. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "300 mL: usa las $1\\frac{1}{2}$ onzas como si fueran mL, sin convertir, y multiplica por 200.",
+     "D": "21\\,000 mL: usa el volumen total de la copa, $2+1\\frac{1}{2}=3\\frac{1}{2}$ onzas (105 mL por copa), en vez de solo el jugo."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q09",
+   "number": 9,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La masa molar de un compuesto químico se calcula sumando las masas molares de\n\ntodos los átomos que lo conforman.\n\nConsidera el compuesto denominado ácido sulfúrico y la información que se presenta\n\na continuación:\n\nÁcido sulfúrico �g � H²SO⁴ Átomo Masa molar mol\n\n4 átomos de H 1 2 átomos de oxígeno S 32 hidrógeno 1 átomo de O 16 azufre\n\n¿Cuál de las siguientes expresiones representa la masa molar del ácido sulfúrico?\n\ng",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1 + 32 + 16) mol g"
+    },
+    {
+     "key": "B",
+     "text": "(2 + 4) · (32 + 16) mol g"
+    },
+    {
+     "key": "C",
+     "text": "(2 · 1 + 1 · 32 + 4 · 16) mol g"
+    },
+    {
+     "key": "D",
+     "text": "(1 + 2 + 4) · (1 + 32 + 16) mol"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q09.webp",
+    "width": 907,
+    "height": 779,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La masa molar del compuesto es la suma de la masa de cada átomo, multiplicando la cantidad de átomos de cada elemento por su masa molar.",
+    "steps": [
+     "En $\\mathrm{H_2SO_4}$ hay 2 átomos de hidrógeno, 1 de azufre y 4 de oxígeno.",
+     "Según la tabla, la masa molar es 1 g/mol para el H, 32 g/mol para el S y 16 g/mol para el O.",
+     "Se multiplica la cantidad de cada átomo por su masa molar y se suman: $2\\cdot 1 + 1\\cdot 32 + 4\\cdot 16$.",
+     "El resultado es $2+32+64 = 98$ g/mol. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$1+32+16$ suma una sola vez la masa de cada elemento, sin considerar cuántos átomos hay de cada uno.",
+     "D": "$(1+2+4)\\cdot(1+32+16)$ multiplica sumas de cantidades por sumas de masas, en vez de multiplicar cada cantidad por su propia masa molar."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q10",
+   "number": 10,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Considera una hoja de papel de 20 cm de ancho y 30 cm de largo. Esta hoja se\n\ndobla sucesivamente por la mitad del lado más largo, formando en cada doblez un\n\nrectángulo, como se representa en la figura.\n\n¿Cuántos dobleces se le deben hacer a la hoja de papel para conseguir un rectángulo\n\nde 2,5 cm de ancho y 3,75 cm de largo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "5"
+    },
+    {
+     "key": "D",
+     "text": "6"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q10.webp",
+    "width": 907,
+    "height": 825,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada doblez reduce a la mitad el lado más largo, así que hay que seguir el proceso hasta llegar a las medidas pedidas.",
+    "steps": [
+     "Al doblar por la mitad el lado más largo, las medidas del rectángulo van así: $20\\times 30 \\to 20\\times 15 \\to 10\\times 15 \\to 10\\times 7{,}5 \\to 5\\times 7{,}5 \\to 5\\times 3{,}75 \\to 2{,}5\\times 3{,}75$.",
+     "Cuenta los dobleces: son seis flechas.",
+     "Tras 6 dobleces se obtiene un rectángulo de $2{,}5$ cm de ancho y $3{,}75$ cm de largo, que es la medida pedida. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "5 dobleces dan $5\\times 3{,}75$ cm: se olvida el último doblez, que reduce el lado de 5 cm a 2,5 cm.",
+     "A": "3 dobleces dan $10\\times 7{,}5$ cm, todavía muy lejos de la medida pedida."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q11",
+   "number": 11,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes afirmaciones permite justificar que 5 es el 25 % de 20?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que 20 + 5 = 25."
+    },
+    {
+     "key": "B",
+     "text": "Que 5, 20 y 25 son múltiplos de 5."
+    },
+    {
+     "key": "C",
+     "text": "Que 5 es divisor de 20."
+    },
+    {
+     "key": "D",
+     "text": "Que 5 es la cuarta parte de 20."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q11.webp",
+    "width": 907,
+    "height": 253,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El 25 % equivale a un cuarto, y la cuarta parte de 20 es 5; por eso la afirmación que justifica el resultado es que 5 es la cuarta parte de 20.",
+    "steps": [
+     "$25\\,\\% = \\frac{25}{100} = \\frac{1}{4}$.",
+     "La cuarta parte de 20 es $20 \\div 4 = 5$, luego 5 es el 25 % de 20.",
+     "La alternativa D expresa exactamente esa relación. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "Que 5 sea divisor de 20 es verdadero, pero no permite saber qué porcentaje de 20 es 5.",
+     "A": "$20+5=25$ es una suma correcta, pero no relaciona el 5 con un porcentaje de 20."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q12",
+   "number": 12,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "El círculo de la figura adjunta está dividido en nueve partes iguales y algunas de estas\n\nse pintaron de color gris.\n\n¿Qué porcentaje de la figura se pintó de color gris?",
+   "options": [
+    {
+     "key": "A",
+     "text": "11,1 %"
+    },
+    {
+     "key": "B",
+     "text": "12,5 %"
+    },
+    {
+     "key": "C",
+     "text": "80 %"
+    },
+    {
+     "key": "D",
+     "text": "88,8 %"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q12.webp",
+    "width": 907,
+    "height": 610,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como el círculo está dividido en 9 partes iguales, el porcentaje pintado es la fracción $\\frac{8}{9}$ expresada en porcentaje.",
+    "steps": [
+     "El círculo tiene 9 partes iguales y solo una está sin pintar (la blanca).",
+     "Partes grises: $9-1 = 8$.",
+     "Porcentaje: $\\frac{8}{9}\\cdot 100\\,\\% = 88{,}\\overline{8}\\,\\%$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$11{,}\\overline{1}\\,\\%$ corresponde a $\\frac{1}{9}$, es decir, a la única parte sin pintar. Es el porcentaje que no se pintó.",
+     "C": "$80\\,\\%$ corresponde a 8 de 10 partes: se trata el círculo como si tuviera 10 partes iguales."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q13",
+   "number": 13,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Existen estándares para las medidas de las casillas de un tablero de ajedrez y sus\n\npiezas. Uno de estos es la relación entre la base circular de la pieza llamada rey y el\n\ntamaño de las casillas. El diámetro de la base debe medir entre un 75 % y un 80 %\n\ndel lado de la casilla.\n\nEl tablero y la pieza del rey se representa en la siguiente figura:\n\nSi en un tablero de ajedrez las casillas tienen de lado 5 cm y se quieren seguir los\n\nestándares, ¿cuánto debe medir el diámetro de la base del rey?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Entre 15 cm y 16 cm"
+    },
+    {
+     "key": "B",
+     "text": "Entre 4,2 cm y 4,25 cm"
+    },
+    {
+     "key": "C",
+     "text": "Entre 3,75 cm y 4 cm"
+    },
+    {
+     "key": "D",
+     "text": "Entre 1,875 cm y 2 cm"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q13.webp",
+    "width": 907,
+    "height": 835,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El diámetro debe quedar entre el 75 % y el 80 % de 5 cm, y ambos extremos se calculan multiplicando por el lado de la casilla.",
+    "steps": [
+     "La base debe medir entre el 75 % y el 80 % del lado, que mide 5 cm.",
+     "Mínimo: $0{,}75 \\cdot 5 = 3{,}75$ cm.",
+     "Máximo: $0{,}80 \\cdot 5 = 4$ cm. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "1,875 cm y 2 cm corresponden al 37,5 % y al 40 % de 5 cm: se toma la mitad del lado, como si se usara el radio y no el diámetro.",
+     "B": "4,2 cm y 4,25 cm equivalen al 84 % y al 85 % del lado, valores que quedan fuera del rango permitido."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q14",
+   "number": 14,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Una cafetería ofrece la siguiente promoción:\n\nUn grupo de cinco personas asiste a la cafetería a comprar esta promoción y desean\n\ndividir el total a pagar en partes iguales.\n\n¿Qué porcentaje de descuento obtuvo cada persona al pagar por su café?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 %"
+    },
+    {
+     "key": "B",
+     "text": "5 %"
+    },
+    {
+     "key": "C",
+     "text": "20 %"
+    },
+    {
+     "key": "D",
+     "text": "25 %"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q14.webp",
+    "width": 907,
+    "height": 701,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al comprar cinco cafés, el grupo paga solo cuatro, así que cada persona paga cuatro quintos de un café, lo que equivale a un descuento del 20 %.",
+    "steps": [
+     "Si el café cuesta $p$, por cada cuatro se paga $4p$ y el quinto es gratis. El grupo paga entonces $4p$.",
+     "Dividido en 5 partes iguales, cada persona paga $\\frac{4p}{5}$.",
+     "Sin promoción cada café costaría $p$, así que el descuento es $p-\\frac{4p}{5} = \\frac{p}{5}$.",
+     "Porcentaje de descuento: $\\frac{p/5}{p} = \\frac{1}{5} = 20\\,\\%$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "25 %: compara el café gratis con los cuatro pagados ($\\frac{1}{4}$), en vez de compararlo con el precio total de los cinco."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q15",
+   "number": 15,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "En una elección, el 45 % de los electores no votó y el candidato ganador obtuvo\n\n6 de cada 10 votos.\n\n¿Qué porcentaje de los electores votó por el candidato ganador?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,7 %"
+    },
+    {
+     "key": "B",
+     "text": "3,3 %"
+    },
+    {
+     "key": "C",
+     "text": "27 %"
+    },
+    {
+     "key": "D",
+     "text": "33 %"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q15.webp",
+    "width": 907,
+    "height": 333,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Primero hay que calcular qué porcentaje de electores votó y luego tomar los 6 de cada 10 votos de ese porcentaje.",
+    "steps": [
+     "Votaron $100\\,\\% - 45\\,\\% = 55\\,\\%$ de los electores.",
+     "El candidato ganador obtuvo $\\frac{6}{10} = 0{,}6$ de esos votos.",
+     "Sobre el total de electores: $0{,}6 \\cdot 55\\,\\% = 33\\,\\%$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "27 %: calcula $0{,}6 \\cdot 45\\,\\%$, usando el porcentaje de electores que no votó en vez del que sí votó."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q16",
+   "number": 16,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "En el gráfico circular adjunto se presenta la cantidad de personas que han\n\nseleccionado cada alternativa de una pregunta en un test de personalidad.\n\nConsiderando que todas las personas marcaron solo una alternativa, ¿cuál de las\n\nsiguientes afirmaciones es verdadera, en relación con los datos del gráfico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Más del 50 % de las personas marcó las alternativas C o D."
+    },
+    {
+     "key": "B",
+     "text": "Exactamente un 25 % de las personas marcó la alternativa C."
+    },
+    {
+     "key": "C",
+     "text": "Exactamente un 4 % de las personas marcó la alternativa B."
+    },
+    {
+     "key": "D",
+     "text": "Menos del 25 % de las personas marcó las alternativas B o C."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q16.webp",
+    "width": 907,
+    "height": 663,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con 36 personas en total se revisa cada afirmación calculando el porcentaje exacto de cada grupo de alternativas.",
+    "steps": [
+     "Total de personas: $12+12+8+4 = 36$.",
+     "Alternativas C o D: $8+12 = 20$ personas, es decir, $\\frac{20}{36} \\approx 55{,}6\\,\\% > 50\\,\\%$. Esta afirmación es verdadera.",
+     "La alternativa B: $\\frac{8}{36} \\approx 22{,}2\\,\\%$, no el 25 %. La C: $\\frac{4}{36} \\approx 11{,}1\\,\\%$, no el 4 %. La D: $\\frac{4+8}{36} \\approx 33{,}3\\,\\%$, que no es menor que el 25 %.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "25 % correspondería a 9 de 36 personas, pero la alternativa C tiene 8, es decir, un 22,2 %. Confunde el valor del gráfico con una cifra redonda.",
+     "D": "Menos del 25 %: la suma de B y C es $4+8 = 12$, que equivale al 33,3 % del total. Se supone sin verificar."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q17",
+   "number": 17,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una persona tiene un emprendimiento de bizcochuelos. Para prepararlos compra\n\n5 cajas de huevos, tal que cada caja contiene 6 bandejas y cada bandeja tiene\n\n30 huevos.\n\nProducto de la mala manipulación de las cajas se quebraron el 1 % de los huevos\n\ncomprados, los cuales no se utilizarán en la preparación de bizcochuelos.\n\nSi para cada bizcochuelo la persona ocupa 6 huevos, ¿cuántos de estos bizcochuelos\n\npuede preparar con los huevos que le quedaron?",
+   "options": [
+    {
+     "key": "A",
+     "text": "150"
+    },
+    {
+     "key": "B",
+     "text": "149"
+    },
+    {
+     "key": "C",
+     "text": "148"
+    },
+    {
+     "key": "D",
+     "text": "135"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q17.webp",
+    "width": 907,
+    "height": 513,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Primero se calcula el total de huevos, luego se descuentan los quebrados y por último se divide entre 6, quedándose solo con bizcochuelos completos.",
+    "steps": [
+     "Huevos comprados: $5\\cdot 6\\cdot 30 = 900$.",
+     "Se quiebra el 1 %: $0{,}01\\cdot 900 = 9$ huevos, así que quedan $900-9 = 891$.",
+     "Cada bizcochuelo usa 6 huevos: $891\\div 6 = 148{,}5$.",
+     "Solo se pueden hacer bizcochuelos completos, así que son 148. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "150: no descuenta los huevos quebrados, pues $900\\div 6 = 150$.",
+     "B": "149: redondea 148,5 hacia arriba, pero el último bizcochuelo no alcanza a completarse.",
+     "D": "135: descuenta el 10 % de los huevos en vez del 1 %."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q18",
+   "number": 18,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Se comienza un cultivo con 100 bacterias que duplican su cantidad cada hora.\n\n¿Cuántas bacterias habrá en el cultivo en 24 h?",
+   "options": [
+    {
+     "key": "A",
+     "text": "200²⁵"
+    },
+    {
+     "key": "B",
+     "text": "200²⁴"
+    },
+    {
+     "key": "C",
+     "text": "100 · 2²⁴"
+    },
+    {
+     "key": "D",
+     "text": "100 · 2²⁵"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q18.webp",
+    "width": 907,
+    "height": 336,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la cantidad se duplica cada hora, después de $n$ horas hay $100\\cdot 2^{n}$ bacterias.",
+    "steps": [
+     "Después de 1 hora hay $100\\cdot 2 = 200$ bacterias, y después de 2 horas hay $100\\cdot 2^{2} = 400$.",
+     "Así, después de $n$ horas hay $100\\cdot 2^{n}$ bacterias.",
+     "Para $n = 24$, se obtienen $100\\cdot 2^{24}$ bacterias. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "$100\\cdot 2^{25}$ corresponde a una hora de más: cuenta 25 duplicaciones en vez de 24.",
+     "B": "$200^{24}$ multiplica 200 por sí mismo 24 veces, en lugar de multiplicar 100 por 2 veinticuatro veces."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q19",
+   "number": 19,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el valor de 2 · 2 5?\n\n√",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 10 √"
+    },
+    {
+     "key": "B",
+     "text": "4 5"
+    },
+    {
+     "key": "C",
+     "text": "10 √"
+    },
+    {
+     "key": "D",
+     "text": "4 10"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q19.webp",
+    "width": 907,
+    "height": 267,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se multiplican los números que están fuera de la raíz y el radical $\\sqrt{5}$ se mantiene.",
+    "steps": [
+     "Se escribe $2\\cdot 2\\sqrt{5}$. Los factores que están fuera de la raíz son ambos 2.",
+     "Su producto es $2\\cdot 2 = 4$, y el radical $\\sqrt{5}$ no cambia.",
+     "El resultado es $4\\sqrt{5}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$2\\sqrt{10}$ aparece si el 2 que multiplica se toma como $\\sqrt{2}$ y se combina con $\\sqrt{5}$ para obtener $\\sqrt{10}$. Pero $2 = \\sqrt{4}$, no $\\sqrt{2}$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q20",
+   "number": 20,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el valor de ²³·³⁴ ? 2 · 9",
+   "options": [
+    {
+     "key": "A",
+     "text": "36"
+    },
+    {
+     "key": "B",
+     "text": "72"
+    },
+    {
+     "key": "C",
+     "text": "625"
+    },
+    {
+     "key": "D",
+     "text": "1296"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q20.webp",
+    "width": 907,
+    "height": 256,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Conviene descomponer todo en potencias de 2 y 3, simplificar exponente con exponente y luego multiplicar.",
+    "steps": [
+     "La expresión es $\\frac{2^{3}\\cdot 3^{4}}{2\\cdot 3^{2}}$, porque $9 = 3^{2}$.",
+     "Se simplifica el 2: $\\frac{2^{3}}{2} = 2^{2} = 4$.",
+     "Se simplifica el 3: $\\frac{3^{4}}{3^{2}} = 3^{2} = 9$.",
+     "Luego $4\\cdot 9 = 36$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "72 se obtiene si se simplifica el 3 pero no el 2 del denominador, es decir, $2^{3}\\cdot 3^{2} = 8\\cdot 9 = 72$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q21",
+   "number": 21,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el valor de (−2)⁶?",
+   "options": [
+    {
+     "key": "A",
+     "text": "−64"
+    },
+    {
+     "key": "B",
+     "text": "−12"
+    },
+    {
+     "key": "C",
+     "text": "12"
+    },
+    {
+     "key": "D",
+     "text": "64 √"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q21.webp",
+    "width": 907,
+    "height": 430,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como el exponente 6 es par, la potencia de un número negativo es positiva.",
+    "steps": [
+     "$(-2)^{6}$ significa seis factores de $-2$.",
+     "Se agrupan en tres pares: $(-2)(-2) = 4$, y $4\\cdot 4\\cdot 4 = 64$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$-64$ corresponde a $-2^{6}$, donde la potencia se aplica solo al 2. Así se pierde el signo positivo del exponente par.",
+     "C": "12 multiplica el exponente por la base ($6\\cdot 2$), en vez de elevar la base a la potencia."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q22",
+   "number": 22,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "La diagonal de un prisma recto de base rectangular se calcula como a² + b² + c²,\n\ncon a, b y c las medidas de sus aristas.\n\n√ Considera que la diagonal de un prisma recto de base rectangular mide 83 cm y\n\nque dos de sus aristas miden 3 cm y 5 cm.\n\n¿Cuánto mide la arista faltante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 cm"
+    },
+    {
+     "key": "B",
+     "text": "7 cm"
+    },
+    {
+     "key": "C",
+     "text": "19 cm"
+    },
+    {
+     "key": "D",
+     "text": "49 cm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q22.webp",
+    "width": 907,
+    "height": 455,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al elevar la diagonal al cuadrado se obtiene una ecuación simple en la arista faltante, y su raíz cuadrada da la medida.",
+    "steps": [
+     "Con $d=\\sqrt{83}$, se cumple $d^{2} = 83 = a^{2}+b^{2}+c^{2}$.",
+     "Con $a=3$ y $b=5$: $83 = 9+25+c^{2} = 34+c^{2}$.",
+     "Entonces $c^{2} = 83-34 = 49$, y $c = \\sqrt{49} = 7$ cm. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "D": "49 cm corresponde a $c^{2}$: se olvida aplicar la raíz cuadrada para obtener la arista."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q23",
+   "number": 23,
+   "axis": "Números",
+   "topic": "Potencias",
+   "stem": "Se representará la expresión (4 · 125)³ como producto de potencias de base 2 y 5,\n\npara lo cual se realiza el siguiente procedimiento, cometiéndose un error.\n\n�2² · 5³�³. **Paso 1:** se reescriben los factores de la base, obteniéndose\n\n**Paso 2:** se aplica la propiedad de la multiplicación de potencias con igual exponente, �2²�³ · �5³�³. obteniéndose\n\n**Paso 3:** se aplica la propiedad de la potencia de una potencia, obteniéndose 2⁽² ⁺ ³⁾ · 5⁽³ ⁺ ³⁾.\n\n**Paso 4:** se resuelve la suma de los exponentes, obteniéndose 2⁵ · 5⁶.\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q23.webp",
+    "width": 907,
+    "height": 679,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El error está en la regla de la potencia de una potencia: al elevar $(2^{2})^{3}$ hay que multiplicar los exponentes, no sumarlos.",
+    "steps": [
+     "Paso 1 correcto: $4 = 2^{2}$ y $125 = 5^{3}$, así que $(4 \\cdot 125)^{3} = (2^{2} \\cdot 5^{3})^{3}$.",
+     "Paso 2 correcto: $(a \\cdot b)^{n} = a^{n} \\cdot b^{n}$, por lo que $(2^{2} \\cdot 5^{3})^{3} = (2^{2})^{3} \\cdot (5^{3})^{3}$.",
+     "Paso 3 incorrecto: $(a^{m})^{n} = a^{m \\cdot n}$, luego $(2^{2})^{3} = 2^{6}$ y $(5^{3})^{3} = 5^{9}$, y no $2^{(2+3)}$ ni $5^{(3+3)}$.",
+     "Comprobación: $2^{6} \\cdot 5^{9} = 64 \\cdot 1\\,953\\,125 = 125\\,000\\,000 = 500^{3}$, mientras que $2^{5} \\cdot 5^{6}$ es mucho menor.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Se elige el Paso 1 si se cree que escribir $4 = 2^{2}$ y $125 = 5^{3}$ no es válido; sí lo es, así que el error no está ahí.",
+     "B": "Se elige el Paso 2 por la sensación de que separar el producto en dos potencias es ilegal; la propiedad $(a \\cdot b)^{n} = a^{n} \\cdot b^{n}$ sí se cumple."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q24",
+   "number": 24,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En el año 2020, la capacidad mundial de almacenamiento alcanzó los 6,7 zettabytes.\n\nDe acuerdo con algunas estimaciones, la capacidad mundial de almacenamiento,\n\nen zettabytes, aumentará a un ritmo del 20 % anualmente entre los años 2020 y 2025.\n\nDada esta información, la capacidad mundial de almacenamiento, en zettabytes en el año 2025 se puede proyectar por el modelo 6,7 · (1,2)N.\n\n¿Qué representa el parámetro N en este modelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Al cociente entre 2025 y 2020."
+    },
+    {
+     "key": "B",
+     "text": "La diferencia entre 2025 y 2020."
+    },
+    {
+     "key": "C",
+     "text": "La capacidad en que aumentó el almacenamiento entre 2020 y 2025."
+    },
+    {
+     "key": "D",
+     "text": "La capacidad en que aumentó el almacenamiento entre 2020 y 2021."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q24.webp",
+    "width": 907,
+    "height": 504,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La capacidad crece de forma exponencial con factor 1,2 por año, así que el exponente $N$ cuenta los años transcurridos desde 2020.",
+    "steps": [
+     "La capacidad inicial, en 2020, es 6,7 zettabytes y cada año se multiplica por $1{,}2$ (un aumento del 20 %).",
+     "El modelo $6{,}7 \\cdot (1{,}2)^{N}$ aplica el factor $1{,}2$ tantas veces como años pasen desde 2020.",
+     "Entre 2020 y 2025 pasan $2025 - 2020 = 5$ años, así que para 2025 se tiene $N = 5$ y la capacidad es $6{,}7 \\cdot 1{,}2^{5} \\approx 16{,}7$ zettabytes.",
+     "Por lo tanto, $N$ representa la diferencia entre 2025 y 2020, y la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Se elige esta opción si se confunde el exponente con un cociente; $\\frac{2025}{2020}$ es casi 1 y no mide el número de años.",
+     "C": "Se elige esta opción si se piensa que $N$ es un monto de capacidad; $N$ es un número de años, no zettabytes."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q25",
+   "number": 25,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Si la edad actual de Pedro es m años, ¿cuál de las siguientes expresiones representa\n\nla expresión “la edad de Pedro hace n años disminuida en 3 años”?\n\nm −n",
+   "options": [
+    {
+     "key": "A",
+     "text": "3"
+    },
+    {
+     "key": "B",
+     "text": "m −n −3"
+    },
+    {
+     "key": "C",
+     "text": "m −(n −3)"
+    },
+    {
+     "key": "D",
+     "text": "(m + n) −3"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q25.webp",
+    "width": 907,
+    "height": 322,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Restar $n$ años a la edad actual $m$ da la edad de hace $n$ años; luego la disminución de 3 años se resta a ese resultado.",
+    "steps": [
+     "La edad actual de Pedro es $m$ años, así que hace $n$ años tenía $m - n$ años.",
+     "Disminuida en 3 años: a esa edad se le restan 3 años, es decir, $(m - n) - 3$.",
+     "Simplificando, la expresión es $m - n - 3$, que corresponde a la alternativa B.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Se elige la C al restar el 3 dentro del paréntesis: $m - (n - 3) = m - n + 3$, lo que cambia el signo del 3.",
+     "D": "Se elige la D al sumar $n$ en vez de restarlo: $(m + n) - 3$ corresponde a la edad dentro de $n$ años, no hace $n$ años."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q26",
+   "number": 26,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "En los meses de menor demanda, el metro traslada aproximadamente\n\n2 600 000 personas cada día, recibiendo un total de \\$2 000 000 000 diarios\n\npor concepto de pasaje.\n\nEn los meses de mayor demanda, el metro traslada diariamente 100 000 personas\n\nmás que en los meses de menor demanda.\n\nSi el precio del pasaje es igual todo el año, ¿cuánto dinero recibe diariamente el\n\nmetro en los meses de mayor demanda, en pesos?\n\n2 000 100 000",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 600 000 2 700 000"
+    },
+    {
+     "key": "B",
+     "text": "2 600 000 ·² ⁰⁰⁰ ⁰⁰⁰ ⁰⁰⁰ 2 000 000 000"
+    },
+    {
+     "key": "C",
+     "text": "+ 100 000 2 600 000"
+    },
+    {
+     "key": "D",
+     "text": "2 600 000 · 2 000 000 000 + 100 000"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q26.webp",
+    "width": 907,
+    "height": 610,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El ingreso diario es el número de pasajeros de mayor demanda por el precio fijo por pasajero, y el precio por pasajero sale de dividir el ingreso del mes de menor demanda por sus pasajeros.",
+    "steps": [
+     "En mayor demanda hay $2\\,600\\,000 + 100\\,000 = 2\\,700\\,000$ pasajeros diarios.",
+     "Con menor demanda, $2\\,000\\,000\\,000$ pesos se reparten entre $2\\,600\\,000$ personas, así que cada pasaje cuesta $\\frac{2\\,000\\,000\\,000}{2\\,600\\,000}$ pesos.",
+     "El ingreso diario en mayor demanda es $2\\,700\\,000 \\cdot \\frac{2\\,000\\,000\\,000}{2\\,600\\,000}$ pesos, que equivale a $\\frac{2\\,700\\,000}{2\\,600\\,000} \\cdot 2\\,000\\,000\\,000$.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Se elige la A al sumar 100 000 pesos al ingreso total en vez de sumar 100 000 personas a los pasajeros.",
+     "C": "Se elige la C al sumar 100 000 al cociente, es decir, al precio o a la cantidad de personas, en lugar de multiplicar por el número de pasajeros."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q27",
+   "number": 27,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál de las siguientes expresiones es igual a (2x −3)² −(2x −3)(2x + 3)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "18"
+    },
+    {
+     "key": "B",
+     "text": "0"
+    },
+    {
+     "key": "C",
+     "text": "−6x + 18"
+    },
+    {
+     "key": "D",
+     "text": "−12x + 18"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q27.webp",
+    "width": 907,
+    "height": 256,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al desarrollar el cuadrado y el producto notable, las expresiones con $4x^{2}$ se cancelan y queda una expresión lineal en $x$.",
+    "steps": [
+     "Cuadrado de binomio: $(2x - 3)^{2} = 4x^{2} - 12x + 9$.",
+     "Suma por diferencia: $(2x - 3)(2x + 3) = 4x^{2} - 9$.",
+     "Restando: $(4x^{2} - 12x + 9) - (4x^{2} - 9) = -12x + 18$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Se elige la B al pensar que $(2x - 3)^{2} = (2x - 3)(2x + 3)$, lo que daría 0; el cuadrado no es igual al producto por la suma.",
+     "C": "Se elige la C al calcular mal el doble producto: $2 \\cdot 2x \\cdot 3 = 12x$, no $6x$. Con $-6x$ se obtendría $-6x + 18$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q28",
+   "number": 28,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "En la siguiente imagen se presentan las instrucciones para preparar un cereal\n\ninstantáneo para bebé que viene con una cuchara de capacidad 5 gramos.\n\nSe quiere preparar este cereal instantáneo usando solo 120 mL de leche tibia.\n\nSi se mantienen las proporciones de las instrucciones, ¿cuántas cucharadas se\n\ndeben agregar a la leche?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "6"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q28.webp",
+    "width": 907,
+    "height": 1081,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La proporción de leche y cucharadas es constante: 180 mL corresponden a 6 cucharadas, así que 120 mL corresponden a 4.",
+    "steps": [
+     "Con 180 mL se usan 6 cucharadas, es decir, cada cucharada corresponde a $\\frac{180}{6} = 30$ mL de leche.",
+     "Con 120 mL, la cantidad de cucharadas es $\\frac{120}{30} = 4$, o bien $6 \\cdot \\frac{120}{180} = 4$.",
+     "La cuchara de 5 gramos no altera el cálculo, porque la proporción se mide con la leche.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Se elige la C al no ajustar las cucharadas a la nueva cantidad de leche; mantener las 6 cucharadas ignora la proporción.",
+     "D": "Se elige la D al invertir la proporción: $6 \\cdot \\frac{180}{120} = 9$, lo que aumentaría las cucharadas al disminuir la leche."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q29",
+   "number": 29,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En un estacionamiento se cobra de manera proporcional al tiempo en que un vehículo\n\nse encuentra estacionado. Algunos valores se presentan en la tabla adjunta.\n\nTiempo en minutos Precio en pesos\n\n1 12\n\n2 24\n\n3 36\n\n4 48\n\n¿Cuál de las siguientes expresiones representa el precio por pagar, en pesos, de un\n\nvehículo que está estacionado x minutos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12x 12"
+    },
+    {
+     "key": "B",
+     "text": "x"
+    },
+    {
+     "key": "C",
+     "text": "x + 11"
+    },
+    {
+     "key": "D",
+     "text": "x + 12"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q29.webp",
+    "width": 907,
+    "height": 657,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El precio es proporcional al tiempo: cada minuto cuesta 12 pesos, por lo que el precio es $12x$.",
+    "steps": [
+     "De la tabla, 1 minuto cuesta 12 pesos, 2 minutos cuestan 24 pesos, 3 minutos cuestan 36 pesos y 4 minutos cuestan 48 pesos.",
+     "El cociente $\\frac{\\text{precio}}{\\text{tiempo}}$ es constante: $\\frac{24}{2} = \\frac{36}{3} = \\frac{48}{4} = 12$.",
+     "Con $x$ minutos, el precio por pagar es $12 \\cdot x = 12x$ pesos.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Se elige la B al invertir la relación y dividir el precio por el tiempo, $\\frac{12}{x}$, que disminuiría al aumentar el tiempo.",
+     "D": "Se elige la D al tratar la tarifa como un monto fijo que se suma una vez, $x + 12$; eso no respeta que cada minuto cueste 12 pesos."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q30",
+   "number": 30,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "Javier y David compraron una bolsa de 24 dulces a un precio total de \\$2100, tal que\n\nJavier aportó \\$1400 y David aportó el resto del dinero.\n\nEllos deciden vender cada dulce a \\$200 y repartirse el dinero obtenido de forma\n\nproporcional a lo que aportó cada uno en la compra.\n\n¿Cuánto dinero recibirá Javier luego de vender todos los dulces?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$1600"
+    },
+    {
+     "key": "B",
+     "text": "\\$2400"
+    },
+    {
+     "key": "C",
+     "text": "\\$2700"
+    },
+    {
+     "key": "D",
+     "text": "\\$3200"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q30.webp",
+    "width": 907,
+    "height": 432,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se vende todo el lote, se reparte el dinero en la razón de los aportes y Javier recibe $\\frac{2}{3}$ del total de ventas.",
+    "steps": [
+     "Venta total: $24 \\cdot 200 = 4800$ pesos.",
+     "Aportes: Javier 1400 pesos y David $2100 - 1400 = 700$ pesos, en total 2100 pesos.",
+     "La parte de Javier es $\\frac{1400}{2100} = \\frac{2}{3}$ del dinero obtenido.",
+     "Reparto de Javier: $\\frac{2}{3} \\cdot 4800 = 3200$ pesos.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Se elige la A al calcular la parte de David, $\\frac{700}{2100} \\cdot 4800 = 1600$, o al invertir la razón.",
+     "C": "Se elige la C al restar el costo de la bolsa de la venta, $4800 - 2100 = 2700$; eso es la ganancia total y no se reparte según los aportes."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q31",
+   "number": 31,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Para juntar dinero para un viaje, Pedro ahorró durante solo 8 semanas el dinero\n\nque su abuela le daba semanalmente, el cual siempre era el mismo monto. Luego,\n\nen los dos meses siguientes, recibió una mesada de \\$10 000 cada mes y trabajó\n\n6 sábados, en los que ganó \\$15 000 diarios.\n\nSi Pedro logró juntar en total \\$210 000 para el viaje, ¿cuánto dinero le dio la abuela\n\nsemanalmente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$12 500"
+    },
+    {
+     "key": "B",
+     "text": "\\$15 000"
+    },
+    {
+     "key": "C",
+     "text": "\\$23 125"
+    },
+    {
+     "key": "D",
+     "text": "\\$26 250"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q31.webp",
+    "width": 907,
+    "height": 443,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se plantea una ecuación con los tres ingresos de Pedro (ahorros semanales de la abuela, mesadas y sábados) igualada a 210 000 pesos.",
+    "steps": [
+     "Sea $w$ el dinero semanal que daba la abuela. En 8 semanas juntó $8w$ pesos.",
+     "Mesadas de los dos meses: $2 \\cdot 10\\,000 = 20\\,000$ pesos.",
+     "Sábados trabajados: $6 \\cdot 15\\,000 = 90\\,000$ pesos.",
+     "La ecuación es $8w + 20\\,000 + 90\\,000 = 210\\,000$, es decir, $8w = 100\\,000$ y $w = 12\\,500$ pesos.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Se elige la B al confundir el pago diario de 15 000 pesos del sábado con el monto semanal de la abuela.",
+     "D": "Se elige la D al dividir los 210 000 pesos entre 8 semanas e ignorar las mesadas y los sábados, $210\\,000 / 8 = 26\\,250$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q32",
+   "number": 32,
+   "axis": "Álgebra y funciones",
+   "topic": "Intervalos",
+   "stem": "La solución de una inecuación se representa en el intervalo de la figura adjunta.\n\n¿Cuál de los siguientes intervalos representa este gráfico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "[1, 3]"
+    },
+    {
+     "key": "B",
+     "text": "]1, 3["
+    },
+    {
+     "key": "C",
+     "text": "[1, 3["
+    },
+    {
+     "key": "D",
+     "text": "]1, 3]"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q32.webp",
+    "width": 907,
+    "height": 452,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un punto relleno indica que el extremo pertenece al intervalo y un círculo blanco indica que no; por eso el 1 se incluye y el 3 se excluye.",
+    "steps": [
+     "En el gráfico, el 1 tiene un punto negro (relleno): el 1 pertenece al conjunto solución, así que se usa corchete.",
+     "En el 3 hay un círculo blanco (abierto): el 3 no pertenece, así que se usa paréntesis.",
+     "El intervalo es el conjunto de números desde 1 hasta 3, incluido el 1 y excluido el 3: $[1, 3[$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Se elige la A al ignorar que el círculo del 3 es blanco y escribir $[1, 3]$ como si el 3 estuviera incluido.",
+     "B": "Se elige la B al excluir el 1 con paréntesis, aunque en el gráfico el 1 está relleno y sí pertenece al conjunto."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q33",
+   "number": 33,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La dosis de un medicamento solo es efectiva si se suministran como mínimo 25 mg\n\npor kilogramo una vez al día, pero la dosis diaria no puede ser mayor que 2000 mg.\n\n¿Cuántos kilogramos, como máximo, debe tener un paciente para que este\n\nmedicamento sea efectivo y no supere la dosis diaria?",
+   "options": [
+    {
+     "key": "A",
+     "text": "25 kg"
+    },
+    {
+     "key": "B",
+     "text": "55 kg"
+    },
+    {
+     "key": "C",
+     "text": "80 kg"
+    },
+    {
+     "key": "D",
+     "text": "105 kg"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q33.webp",
+    "width": 907,
+    "height": 382,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La dosis mínima es 25 mg por kilogramo y no puede superar 2000 mg, así que el peso máximo es $\\frac{2000}{25}$ kilogramos.",
+    "steps": [
+     "Si el paciente pesa $x$ kg, la dosis mínima es $25x$ mg.",
+     "Esa dosis no puede superar la dosis diaria máxima: $25x \\le 2000$.",
+     "Despejando, $x \\le \\frac{2000}{25} = 80$ kg.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Se elige la A al confundir el valor de 25 mg por kilogramo con el peso del paciente.",
+     "B": "Se elige la B al restar 25 a 80 en vez de dividir 2000 entre 25, obteniendo $80 - 25 = 55$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q34",
+   "number": 34,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "El índice HOMA-IR es un modelo que sirve para evaluar la resistencia a la insulina y se\n\nmide utilizando la insulinemia y la glucemia, ambas medidas en ayunas, de acuerdo\n\ncon la siguiente igualdad:\n\n�µU � �mmol � insulinemia · glucemia mL L HOMA-IR = 22,5\n\nEn la siguiente tabla se presenta la interpretación de los distintos valores del índice\n\nHOMA-IR:\n\nValores Interpretación\n\nInferiores a 1,96 Sin resistencia a la insulina\n\nEntre 1,96 a 3 Sospecha de resistencia a la insulina\n\nSuperiores que 3 Resistencia a la insulina\n\nSi una persona tiene una glucemia de 5,6 mmol , ¿cuál de las siguientes L desigualdades representa la condición que debe tener su insulinemia (x), medida en µU , para que la interpretación de su índice HOMA-IR sea sin resistencia a la mL\n\ninsulina?\n\nx < ¹,⁹⁶·²²,⁵",
+   "options": [
+    {
+     "key": "A",
+     "text": "5,6 x < ¹,⁹⁶·⁵,⁶"
+    },
+    {
+     "key": "B",
+     "text": "22,5 x > ¹,⁹⁶·²²,⁵"
+    },
+    {
+     "key": "C",
+     "text": "5,6 x > ¹,⁹⁶·⁵,⁶"
+    },
+    {
+     "key": "D",
+     "text": "22,5"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q34.webp",
+    "width": 907,
+    "height": 1115,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la condición es HOMA-IR menor que 1,96, al despejar la insulinemia se multiplica por 22,5 y se divide por 5,6.",
+    "steps": [
+     "Sin resistencia significa HOMA-IR $< 1{,}96$.",
+     "Con glucemia $5{,}6$ mmol/L: $\\frac{x \\cdot 5{,}6}{22{,}5} < 1{,}96$.",
+     "Despejando: $x \\cdot 5{,}6 < 1{,}96 \\cdot 22{,}5$, por lo que $x < \\frac{1{,}96 \\cdot 22{,}5}{5{,}6}$, que es aproximadamente 7,9 µU/mL.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Se elige la B al intercambiar 5,6 y 22,5 en el despeje, dividiendo por 22,5 en vez de por 5,6.",
+     "C": "Se elige la C al cambiar el sentido de la desigualdad; un índice menor que 1,96 corresponde a «sin resistencia», no a un valor mayor."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q35",
+   "number": 35,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una persona compró una camisa y un pantalón, pagando en total \\$50 000.\n\nLa camisa costó un 30 % del total pagado, mientras que el pantalón tenía ya un\n\ndescuento de un 20 % sobre su precio original.\n\nEn el siguiente sistema de ecuaciones se modela la situación anterior:\n\nA 50 000 = ³⁰ 100 B · ⁸⁰ 100 ⁺ A = ⁵⁰ ⁰⁰⁰\n\n¿Qué representa B en el sistema de ecuaciones?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El precio original del pantalón"
+    },
+    {
+     "key": "B",
+     "text": "El precio final del pantalón"
+    },
+    {
+     "key": "C",
+     "text": "La suma del precio original de ambas prendas"
+    },
+    {
+     "key": "D",
+     "text": "La suma del precio final de ambas prendas"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q35.webp",
+    "width": 907,
+    "height": 635,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La segunda ecuación suma el precio final del pantalón y el precio de la camisa; por eso B es el precio original del pantalón, antes del descuento.",
+    "steps": [
+     "Primera ecuación: $\\frac{A}{50\\,000} = \\frac{30}{100}$, así que la camisa cuesta $A = 15\\,000$ pesos.",
+     "El pantalón tiene un descuento del 20 %, por lo que se paga el 80 % de su precio original: $B \\cdot \\frac{80}{100}$.",
+     "Segunda ecuación: $B \\cdot \\frac{80}{100} + A = 50\\,000$, con $A = 15\\,000$ se obtiene $B = 43\\,750$ pesos, que es el precio original.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Se elige la B al confundir $B$ con el precio final; el precio final es $B \\cdot \\frac{80}{100}$, que da 35 000 pesos.",
+     "D": "Se elige la D al leer el lado izquierdo de la ecuación completa como si fuera la variable $B$; la suma de precios finales es todo el lado izquierdo."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q36",
+   "number": 36,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "Una empresa dedicada a la venta de poleras ofrece a sus clientes dos opciones de\n\ndiseño: personalizado o de catálogo.\n\nEl precio por polera con diseño personalizado es \\$8500 y con diseño de catálogo\n\nes \\$7500. Adicionalmente, se hace un cobro por envío a domicilio de \\$2500.\n\nEn un día de trabajo se vendió un total de 18 poleras en diez envíos y se recaudó\n\n\\$146 000 solo por las poleras.\n\nLa persona encargada de verificar las ventas debe determinar la cantidad de poleras\n\ncon diseño personalizado que se vendieron. Para calcular, realiza el siguiente\n\nprocedimiento, cometiendo un error.\n\n**Paso 1:** representa con la letra x la cantidad de poleras con diseño personalizado\n\ny con la letra y la cantidad de poleras con diseño de catálogo. Luego,\n\nestablece el sistema\n\nx + y = 18 8500x + 7500y = 146 000 + 25 000\n\n**Paso 2:** despeja la variable y de la primera ecuación, obteniendo y = 18 −x.\n\n**Paso 3:** reemplaza y en la segunda ecuación, obteniendo\n\n8500x −7500x = 146 000 + 25 000 −7500 · 18.\n\n**Paso 4:** resuelve la igualdad anterior y determina que la cantidad de poleras con\n\ndiseño personalizado es 36.\n\n¿En cuál de los pasos la persona cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q36.webp",
+    "width": 907,
+    "height": 1127,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El error está en el Paso 1: los 25 000 pesos de envío se suman al ingreso de las poleras, que se indicó que fueron 146 000 pesos.",
+    "steps": [
+     "El planteamiento $x + y = 18$ es correcto: son 18 poleras en total.",
+     "El ingreso «solo por las poleras» es 146 000 pesos, así que la ecuación correcta es $8500x + 7500y = 146\\,000$; sumar 25 000 pesos de envío es un error.",
+     "Con $y = 18 - x$: $8500x + 7500(18 - x) = 146\\,000$, luego $1000x = 146\\,000 - 135\\,000 = 11\\,000$, y $x = 11$.",
+     "Comprobación: $8500 \\cdot 11 + 7500 \\cdot 7 = 93\\,500 + 52\\,500 = 146\\,000$ pesos.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Se elige el Paso 2 por creer que despejar $y = 18 - x$ está mal; el despeje es correcto y el error viene antes.",
+     "C": "Se elige el Paso 3 por creer que reemplazar en la segunda ecuación es incorrecto; el reemplazo es válido sobre la ecuación ya mal planteada."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q37",
+   "number": 37,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función g definida por g(x) = 8x −5, con dominio el conjunto de los\n\nnúmeros reales.\n\nSi g(x) = 35, ¿cuál es el valor de x?\n\n15",
+   "options": [
+    {
+     "key": "A",
+     "text": "4"
+    },
+    {
+     "key": "B",
+     "text": "5"
+    },
+    {
+     "key": "C",
+     "text": "240"
+    },
+    {
+     "key": "D",
+     "text": "275"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q37.webp",
+    "width": 907,
+    "height": 406,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para hallar $x$ se resuelve la ecuación lineal $8x - 5 = 35$: se suma 5 a ambos lados y luego se divide por 8.",
+    "steps": [
+     "Por definición, $g(x) = 35$ significa $8x - 5 = 35$.",
+     "Sumando 5 a ambos lados: $8x = 40$.",
+     "Dividiendo por 8: $x = 5$.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Se elige la A al restar 5 en el lado derecho en vez de sumarlo: $8x = 35 - 5 = 30$, de donde $x = \\frac{15}{4}$.",
+     "C": "Se elige la C al multiplicar por 8 en vez de dividir, calculando $8 \\cdot (35 - 5) = 240$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q38",
+   "number": 38,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "Para pintar las líneas blancas de una carretera se utilizaron máquinas idénticas que\n\npintan una misma cantidad de kilómetros de la línea cada hora. El trabajo se realizó\n\nen 6 horas, las primeras 4 horas trabajó solo una máquina, pero durante las 2 horas\n\nsiguientes trabajaron dos máquinas en forma simultánea.\n\n¿Cuál de los siguientes gráficos representa mejor la relación entre el tiempo en que\n\ntrabajaron las máquinas y la cantidad de kilómetros de la línea pintada?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q38.webp",
+    "width": 907,
+    "height": 1040,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como las máquinas pintan a rapidez constante, la gráfica debe cambiar de pendiente a las 4 horas, cuando se agrega una segunda máquina.",
+    "steps": [
+     "Sea $r$ los km que pinta una máquina por hora.",
+     "En las primeras 4 horas, con una máquina, se pintan $4r$ km y la gráfica es una recta de pendiente $r$.",
+     "En las 2 horas siguientes, con dos máquinas, la pendiente es $2r$ y el total llega a $4r + 4r = 8r$ km a las 6 horas.",
+     "Solo la gráfica B tiene un quiebre en la hora 4 y la pendiente se duplica después de ese punto.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Se elige la A al ubicar el quiebre en la hora 2 en vez de la hora 4, cuando empieza el trabajo con dos máquinas.",
+     "C": "Se elige la C al tener el quiebre en la hora 4 pero con pendiente menor después; eso sugiere que la segunda máquina pinta más lento, y no es el caso."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q39",
+   "number": 39,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En una imprenta ofrecen un servicio de empastado para tesis universitarias, cobrando\n\nun valor de \\$115 por página, más una tarifa fija de \\$27 000 por el servicio.\n\n¿Cuál de las siguientes funciones modela el precio, en pesos, que debe pagar una\n\npersona por empastar su tesis de x páginas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "f(x) = 115x"
+    },
+    {
+     "key": "B",
+     "text": "g(x) = 115x + 27 000"
+    },
+    {
+     "key": "C",
+     "text": "h(x) = (115 + 27 000)x"
+    },
+    {
+     "key": "D",
+     "text": "k(x) = 115 + 27 000x"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q39.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El precio tiene una parte proporcional al número de páginas, 115 por página, y una tarifa fija de 27 000 pesos que no depende de las páginas.",
+    "steps": [
+     "Costo por páginas: $115 \\cdot x$ pesos.",
+     "Tarifa fija del servicio: 27 000 pesos, independiente de $x$.",
+     "Precio total: $115x + 27\\,000$ pesos, que corresponde a $g(x) = 115x + 27\\,000$.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Se elige la A al olvidar la tarifa fija de 27 000 pesos.",
+     "C": "Se elige la C al multiplicar también la tarifa fija por el número de páginas: $(115 + 27\\,000)x$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q40",
+   "number": 40,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "La distancia de reacción es la distancia recorrida por un vehículo desde que el\n\nconductor se percata de un obstáculo hasta que comienza a pisar el pedal de freno.\n\nLa distancia de reacción f y la rapidez del vehículo se relacionan mediante una\n\nfunción de la forma f(x) = ax, con a constante.\n\nEn la siguiente tabla se presentan algunos ejemplos:\n\nRapidez del vehículo Distancia de reacción\n\n110 km 33 m h\n\n70 km 21 m h\n\n¿Cuál es la distancia de reacción de un vehículo que tiene una rapidez de 30 km ? h",
+   "options": [
+    {
+     "key": "A",
+     "text": "15 m"
+    },
+    {
+     "key": "B",
+     "text": "10 m"
+    },
+    {
+     "key": "C",
+     "text": "9 m"
+    },
+    {
+     "key": "D",
+     "text": "1 m"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q40.webp",
+    "width": 907,
+    "height": 794,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La distancia de reacción es proporcional a la rapidez, con constante $a = 0{,}3$ metros por km/h, y se usa para estimar el caso de 30 km/h.",
+    "steps": [
+     "Con $f(x) = ax$ y el dato de 110 km/h y 33 m: $a = \\frac{33}{110} = 0{,}3$.",
+     "Comprobación con 70 km/h: $0{,}3 \\cdot 70 = 21$ m, lo que coincide con la tabla.",
+     "Para 30 km/h: $f(30) = 0{,}3 \\cdot 30 = 9$ m.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Se elige la B al aproximar $a$ como $\\frac{1}{3}$ en vez de $0{,}3$, lo que da $30 \\cdot \\frac{1}{3} = 10$ m.",
+     "A": "Se elige la A al tomar la mitad de la rapidez como distancia, $\\frac{30}{2} = 15$ m, sin usar la constante de la tabla."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q41",
+   "number": 41,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En el año 2021 se produjeron 57,4 millones de toneladas de basura tecnológica y en\n\nel año 2022 se produjeron 59,4 millones.\n\nSi se considera que el aumento de producción de basura tecnológica será el mismo\n\ncada año, ¿cuántos millones de toneladas de basura tecnológica se producirían en\n\nel año 2030?",
+   "options": [
+    {
+     "key": "A",
+     "text": "77,4"
+    },
+    {
+     "key": "B",
+     "text": "75,4"
+    },
+    {
+     "key": "C",
+     "text": "73,4"
+    },
+    {
+     "key": "D",
+     "text": "71,4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q41.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si el aumento anual es constante, la producción crece en una progresión aritmética de 2 millones de toneladas por año.",
+    "steps": [
+     "Aumento anual: $59{,}4 - 57{,}4 = 2$ millones de toneladas.",
+     "Desde 2021 hasta 2030 hay 9 aumentos anuales: $57{,}4 + 9 \\cdot 2 = 75{,}4$ millones de toneladas.",
+     "Comprobación desde 2022: $59{,}4 + 8 \\cdot 2 = 75{,}4$ millones de toneladas.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Se elige la A al contar 10 aumentos en vez de 9, $57{,}4 + 10 \\cdot 2 = 77{,}4$, lo que equivale a empezar desde 2020.",
+     "C": "Se elige la C al contar solo 8 aumentos desde 2021, $57{,}4 + 8 \\cdot 2 = 73{,}4$, lo que deja el año 2030 un año antes."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q42",
+   "number": 42,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "La empresa CIELOS construye diferentes tipos de casas en terrenos rectangulares\n\nde distintas áreas, cumpliéndose siempre que el largo de cada terreno mida 5 m más\n\nque su ancho.\n\nSi el área de uno de los terrenos es 104 m², ¿cuál es el perímetro del terreno?",
+   "options": [
+    {
+     "key": "A",
+     "text": "62 m"
+    },
+    {
+     "key": "B",
+     "text": "42 m"
+    },
+    {
+     "key": "C",
+     "text": "31 m"
+    },
+    {
+     "key": "D",
+     "text": "21 m"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q42.webp",
+    "width": 907,
+    "height": 382,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El área conduce a una ecuación cuadrática cuya raíz positiva da el ancho; con el ancho y el largo se calcula el perímetro.",
+    "steps": [
+     "Sea $w$ el ancho en metros, el largo es $w + 5$ y el área $w(w + 5) = 104$.",
+     "Ordenando: $w^{2} + 5w - 104 = 0$, y factorizando $(w + 13)(w - 8) = 0$.",
+     "Como las longitudes son positivas, $w = 8$ m y el largo es $13$ m.",
+     "Perímetro: $2(8 + 13) = 42$ m.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "D": "Se elige la D al calcular solo el semiperímetro, $8 + 13 = 21$ m, sin multiplicar por 2."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q43",
+   "number": 43,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "La siguiente gráfica de una función cuadrática representa la altura que alcanza un\n\nchorro de agua en términos de la distancia horizontal recorrida desde el punto en que\n\nemerge el chorro.\n\n¿Cuál de las siguientes afirmaciones es verdadera respecto al gráfico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La distancia horizontal máxima recorrida por el chorro de agua es 25 cm."
+    },
+    {
+     "key": "B",
+     "text": "La altura máxima alcanzada por el chorro de agua es 60 cm."
+    },
+    {
+     "key": "C",
+     "text": "La altura alcanzada por el chorro de agua, luego de recorrer 10 cm horizontales es igual a la altura alcanzada a los 50 cm."
+    },
+    {
+     "key": "D",
+     "text": "La altura máxima del chorro de agua se alcanza cuando este ha recorrido 60 cm horizontalmente."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q43.webp",
+    "width": 907,
+    "height": 765,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La parábola tiene vértice en (30, 25) y cruza el suelo en 0 y 60 cm, así que es simétrica respecto de 30 cm; por eso 10 y 50 cm tienen la misma altura.",
+    "steps": [
+     "El vértice está en (30 cm, 25 cm): la altura máxima es 25 cm y se alcanza a los 30 cm horizontales.",
+     "El chorro vuelve al suelo a los 60 cm; así que la distancia horizontal máxima es 60 cm, no 25 cm.",
+     "Simetría respecto de $x = 30$: $30 - 20 = 10$ y $30 + 20 = 50$, por lo que la altura en 10 cm y en 50 cm es la misma.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Se elige la B al confundir la distancia final de 60 cm con la altura máxima, que es 25 cm.",
+     "D": "Se elige la D al confundir el punto donde el chorro cae, a 60 cm, con el vértice, donde la altura máxima se alcanza a los 30 cm."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q44",
+   "number": 44,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Una malla rectangular está formada por cuadrados de lado 2 cm. La malla tiene\n\n100 cuadrados de alto y 200 cuadrados de largo.\n\n¿Cuál es el perímetro de la malla?",
+   "options": [
+    {
+     "key": "A",
+     "text": "600 cm"
+    },
+    {
+     "key": "B",
+     "text": "1200 cm"
+    },
+    {
+     "key": "C",
+     "text": "40 000 cm"
+    },
+    {
+     "key": "D",
+     "text": "160 000 cm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q44.webp",
+    "width": 907,
+    "height": 333,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que convertir la cantidad de cuadrados en centímetros antes de calcular el perímetro del rectángulo.",
+    "steps": [
+     "Largo de la malla: $200 \\cdot 2 = 400$ cm.",
+     "Alto de la malla: $100 \\cdot 2 = 200$ cm.",
+     "Perímetro: $2(400 + 200) = 1200$ cm.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Se elige la A al sumar la cantidad de cuadrados sin multiplicar por el lado de 2 cm: $2(200 + 100) = 600$ cm."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q45",
+   "number": 45,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "El área de la siguiente figura, formada por 10 cuadrados congruentes entre sí, es 160 cm².\n\nSe realiza el siguiente procedimiento para determinar el perímetro de la figura,\n\ncometiéndose un error.\n\n**Paso 1:** se determina el área de cada cuadrado dividiendo el área total por la cantidad de cuadrados, obteniéndose 16 cm².\n\n**Paso 2:** se determina la medida del lado de un cuadrado calculando la raíz cuadrada\n\nde la medida de su área, obteniéndose 4 cm.\n\n**Paso 3:** se determina que el perímetro es la suma de la medida de todos los lados de\n\nlos cuadrados que conforman la figura, concluyéndose que se debe sumar\n\nla medida de 29 lados.\n\n**Paso 4:** se calcula el perímetro multiplicando 29 · 4, obteniéndose 116 cm.\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q45.webp",
+    "width": 907,
+    "height": 1075,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El área total dividida entre los 10 cuadrados y la raíz del área de cada uno son correctas; el error está en contar 29 lados para el perímetro, cuando el contorno de la figura tiene 18 lados.",
+    "steps": [
+     "El área total es 160 cm² y la figura tiene 10 cuadrados congruentes, así que cada uno mide $\\frac{160}{10}=16$ cm²: el Paso 1 es correcto.",
+     "Como $\\sqrt{16}=4$, el lado de cada cuadrado mide 4 cm: el Paso 2 también es correcto.",
+     "Para el perímetro se cuentan solo los lados exteriores: 7 en la fila superior, 2 en el cuadrado central, 4 en la fila intermedia (los dos extremos superiores y sus laterales) y 5 en la fila inferior (tres bases y dos laterales). Son 18 lados, no 29, porque los lados compartidos entre cuadrados no forman parte del contorno.",
+     "El perímetro real es $18 \\cdot 4 = 72$ cm, así que el Paso 4 hereda el error del Paso 3. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Paso 2: quien revisa solo la raíz cuadrada puede sospechar del lado, pero $\\sqrt{16}=4$ está bien calculado.",
+     "D": "Paso 4: la multiplicación $29 \\cdot 4 = 116$ está bien hecha; el error es el número de lados que se multiplica, no la operación."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q46",
+   "number": 46,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una persona debe confeccionar una repisa con dos tensores, tal como se representan\n\nen la imagen.\n\nSi la persona quiere calcular la medida que debe tener cada uno de los tensores,\n\nen centímetros, ¿cuál de las siguientes expresiones debe utilizar?\n\n√ 200² −150²",
+   "options": [
+    {
+     "key": "A",
+     "text": "200² −150²"
+    },
+    {
+     "key": "B",
+     "text": "√ 200² + 150²"
+    },
+    {
+     "key": "C",
+     "text": "200² + 150²"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q46.webp",
+    "width": 907,
+    "height": 686,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada tensor es la diagonal de un rectángulo de 200 cm de alto y 150 cm de base, y se calcula con el teorema de Pitágoras.",
+    "steps": [
+     "En la imagen, cada tensor une dos vértices opuestos del rectángulo de la pared: uno de sus lados mide 200 cm (la altura) y el otro 150 cm (la base).",
+     "El tensor es la hipotenusa de un triángulo rectángulo, por lo que su medida $t$ cumple $t^{2}=200^{2}+150^{2}$.",
+     "Como $200^{2}+150^{2}=40000+22500=62500$, la medida es $t=\\sqrt{200^{2}+150^{2}}=250$ cm. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\sqrt{200^{2}-150^{2}}$: restar en vez de sumar da una medida menor que el cateto de 200 cm, imposible para la hipotenusa.",
+     "D": "$200^{2}+150^{2}$ sin raíz: da 62500, que es el cuadrado de la medida y no la medida en cm."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q47",
+   "number": 47,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Un carpintero restaurará el siguiente mueble con forma de prisma recto de base\n\nrectangular.\n\nPara la restauración, debe pintar el exterior de la estructura, sin incluir la base inferior.\n\n¿Cuál es la medida de la superficie por pintar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "24 800 cm²"
+    },
+    {
+     "key": "B",
+     "text": "28 000 cm²"
+    },
+    {
+     "key": "C",
+     "text": "46 400 cm²"
+    },
+    {
+     "key": "D",
+     "text": "49 600 cm²"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q47.webp",
+    "width": 907,
+    "height": 953,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para pintar el exterior sin la base inferior hay que sumar la tapa superior y las cuatro caras laterales del prisma.",
+    "steps": [
+     "El mueble tiene base rectangular de 80 cm por 40 cm y altura de 180 cm.",
+     "Las dos caras de 80 cm por 180 cm suman $2 \\cdot 14400 = 28800$ cm², y las dos de 40 cm por 180 cm suman $2 \\cdot 7200 = 14400$ cm²; en total, $43200$ cm² en los laterales.",
+     "La tapa superior mide $80 \\cdot 40 = 3200$ cm².",
+     "Total a pintar: $43200 + 3200 = 46400$ cm², sin incluir la base inferior. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "49600 cm²: incluye también la base inferior de 3200 cm², que el enunciado excluye, porque $46400+3200=49600$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q48",
+   "number": 48,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Considera la siguiente técnica para hacer figuras con una hoja de papel:\n\n- Se dobla la hoja de papel a la mitad.\n\n- Se marca la mitad de la figura, se recorta y por último se desdobla el papel.\n\n¿Cuál de las siguientes figuras se puede hacer utilizando esta técnica?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q48.webp",
+    "width": 907,
+    "height": 1136,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El doblez produce figuras simétricas respecto de la línea del pliegue, así que la única letra que sirve es la que tiene eje de simetría vertical.",
+    "steps": [
+     "Al doblar la hoja a la mitad y recortar un dibujo junto al pliegue, al desdoblar aparece el reflejo exacto de esa mitad respecto de la línea del doblez.",
+     "En el ejemplo del corazón, el dibujo se recorta desde el pliegue (línea punteada) y el resultado queda simétrico a ambos lados de esa línea vertical.",
+     "La F tiene sus brazos solo hacia un lado, la J es asimétrica y la Z solo tiene simetría de giro de 180°, que un doblez no puede producir.",
+     "La M se divide en dos mitades iguales por su eje vertical, por lo que es la única que se puede obtener con esta técnica. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "Z: tiene simetría de giro en el centro, pero el doblez solo produce reflexión; quien la elige confunde ambos tipos de simetría.",
+     "B": "J: el trazo inferior curvo puede parecer simétrico, pero la figura completa queda desplazada hacia un lado del eje."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q49",
+   "number": 49,
+   "axis": "Álgebra y funciones",
+   "topic": "Dominio y recorrido",
+   "stem": "Un barco que inicia un recorrido realiza los siguientes movimientos:\n\n5 kilómetros al oeste 4 kilómetros al norte 3 kilómetros al este 9 kilómetros al sur 6 kilómetros al oeste\n\n¿Cuál es la ubicación final del barco con respecto a su ubicación inicial?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8 kilómetros al oeste y 5 kilómetros al sur"
+    },
+    {
+     "key": "B",
+     "text": "14 kilómetros al oeste y 13 kilómetros al norte"
+    },
+    {
+     "key": "C",
+     "text": "8 kilómetros al este y 5 kilómetros al norte"
+    },
+    {
+     "key": "D",
+     "text": "14 kilómetros al este y 13 kilómetros al sur"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q49.webp",
+    "width": 907,
+    "height": 568,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que sumar los desplazamientos con signo en cada eje y describir el resultado respecto del punto inicial.",
+    "steps": [
+     "Eje horizontal, con el este positivo: $-5+3-6=-8$, es decir, 8 km al oeste.",
+     "Eje vertical, con el norte positivo: $4-9=-5$, es decir, 5 km al sur.",
+     "La ubicación final respecto del inicio es 8 km al oeste y 5 km al sur. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "8 km al este y 5 km al norte: es el vector opuesto. Se produce al describir la posición del inicio respecto del barco en lugar de la del barco respecto del inicio."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q50",
+   "number": 50,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Helena creó una obra de arte moderno. Realizó un dibujo sobre el cuadrado ABCD,\n\ncomo se presenta en la siguiente figura, donde O es el centro del cuadrado:\n\nCreó otras tres figuras distintas y las unió, donde la primera es obtenida por una\n\nreflexión con respecto al lado BC, la segunda por una reflexión con respecto al punto O, y la tercera por una rotación en torno al punto O, en 90◦, en sentido\n\nantihorario.\n\nSi la primera figura la posicionó a la izquierda, la segunda al centro y la tercera a la\n\nderecha, ¿cuál de las siguientes figuras muestra la obra de arte de Helena?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q50.webp",
+    "width": 907,
+    "height": 1119,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada operación cambia la curva de forma distinta: el reflejo en BC la deja abombada hacia la izquierda arriba, la simetría central en O la invierte y la rotación de 90° la deja casi horizontal.",
+    "steps": [
+     "La curva parte del lado superior un poco a la derecha del punto medio, se abomba hacia la derecha a la altura de O y termina en el lado inferior, casi en el centro.",
+     "Reflexión en el lado BC (figura de la izquierda): cada punto queda a la misma distancia de BC, pero al otro lado. La curva empieza un poco a la izquierda del centro y se abomba hacia la izquierda en la mitad superior.",
+     "Simetría central en O (figura del centro): el punto $(x,y)$ pasa a $(1-x,\\,1-y)$ en el cuadrado unitario. La curva queda invertida, abombada hacia la izquierda en la mitad inferior.",
+     "Rotación de 90° en sentido antihorario en torno a O (figura de la derecha): $(x,y)$ pasa a $(1-y,\\,x)$. La curva vertical se vuelve casi horizontal, entra por el borde izquierdo a media altura, sube a una cresta y sale por el borde derecho.",
+     "Solo la alternativa D muestra, en orden, el reflejo abombado hacia la izquierda y arriba, la simetría central al centro y la rotación horizontal a la derecha. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Intercambia las dos primeras figuras: pone la simetría central a la izquierda y el reflejo en BC al centro.",
+     "B": "Usa la simetría central también en la figura de la izquierda, en lugar del reflejo en el lado BC.",
+     "C": "Deja la figura de la izquierda con la curva original, abombada hacia la derecha; no aplica el reflejo."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q51",
+   "number": 51,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Considera la siguiente figura:\n\n¿Cuáles son las coordenadas del vector de traslación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(−12, 6)"
+    },
+    {
+     "key": "B",
+     "text": "(−12, −6)"
+    },
+    {
+     "key": "C",
+     "text": "(12, 6)"
+    },
+    {
+     "key": "D",
+     "text": "(12, −6)"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q51.webp",
+    "width": 907,
+    "height": 833,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El vector de traslación se obtiene restando las coordenadas de un punto de la figura original a las de su imagen trasladada.",
+    "steps": [
+     "La figura original ocupa desde $x=4$ hasta $x=9$ y desde $y=10$ hasta $y=14$.",
+     "La figura trasladada ocupa desde $x=16$ hasta $x=21$ y desde $y=4$ hasta $y=8$.",
+     "El desplazamiento horizontal es $16-4=12$ hacia la derecha, y el vertical es $4-10=-6$, es decir, 6 unidades hacia abajo. Por lo tanto, el vector es $(12,\\,-6)$ y la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "$(12,\\,6)$: lee el desplazamiento vertical hacia arriba, cuando la figura baja.",
+     "B": "$(-12,\\,-6)$: invierte el signo horizontal y hace que la figura se mueva a la izquierda."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q52",
+   "number": 52,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "A una figura se le aplica una reflexión y luego una traslación. La imagen del vértice (x, y) es (x + 2, 6 −y).\n\nA otra figura se le aplican las mismas transformaciones isométricas y en el mismo\n\norden.\n\nSi (−1, −2) es un vértice de la figura, ¿cuáles son las coordenadas de la imagen de\n\neste vértice?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1, 8)"
+    },
+    {
+     "key": "B",
+     "text": "(1, −8)"
+    },
+    {
+     "key": "C",
+     "text": "(−1, −8)"
+    },
+    {
+     "key": "D",
+     "text": "(−1, 8)"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q52.webp",
+    "width": 907,
+    "height": 482,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La transformación compuesta es $(x,y)\\to(x+2,\\,6-y)$, así que basta con aplicarla al vértice $(-1,-2)$.",
+    "steps": [
+     "La reflexión respecto del eje X lleva $(x,y)$ a $(x,-y)$, y la traslación lleva eso a $(x+2,\\,-y+6)$, es decir, $(x+2,\\,6-y)$.",
+     "Con $x=-1$ e $y=-2$: $x+2=-1+2=1$ y $6-y=6-(-2)=8$.",
+     "La imagen del vértice es $(1,\\,8)$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "D": "$(-1,\\,8)$: olvida el desplazamiento horizontal de 2 unidades y solo cambia la coordenada $y$.",
+     "B": "$(1,\\,-8)$: ignora la reflexión y aplica una traslación vertical de $-6$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q53",
+   "number": 53,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "En la siguiente tabla se resume la distribución de los puntajes de una prueba en un\n\ncurso.\n\nPuntaje Frecuencia\n\n1 2\n\n2 4\n\n3 4\n\n4 5\n\n5 7\n\n6 3\n\n7 5\n\n¿Cuál es el total de estudiantes del curso que rindió la prueba?",
+   "options": [
+    {
+     "key": "A",
+     "text": "7"
+    },
+    {
+     "key": "B",
+     "text": "21"
+    },
+    {
+     "key": "C",
+     "text": "30"
+    },
+    {
+     "key": "D",
+     "text": "63"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q53.webp",
+    "width": 907,
+    "height": 684,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El total de estudiantes es la suma de todas las frecuencias de la tabla.",
+    "steps": [
+     "Las frecuencias para los puntajes del 1 al 7 son 2, 4, 4, 5, 7, 3 y 5.",
+     "Suma total: $2+4+4+5+7+3+5=30$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "7: cuenta solo la cantidad de puntajes distintos (7 valores) y no las personas de cada puntaje."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q54",
+   "number": 54,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "En el siguiente gráfico se representan las cantidades de celulares vendidos\n\ndiariamente en una tienda, por cuatro personas de esta área, durante una semana\n\nde trabajo.\n\nLa meta propuesta por la tienda es que cada persona logre vender al menos\n\n5 celulares en un día de trabajo.\n\n¿Cuál es la persona que cumplió la meta más veces durante la semana de trabajo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Gonzalo"
+    },
+    {
+     "key": "B",
+     "text": "Camilo"
+    },
+    {
+     "key": "C",
+     "text": "Antonia"
+    },
+    {
+     "key": "D",
+     "text": "Fabiola"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q54.webp",
+    "width": 907,
+    "height": 914,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que contar, para cada persona, los días en que su barra llega a 5 o más celulares, que es la meta de la tienda.",
+    "steps": [
+     "Gonzalo se mantiene en 4 celulares todos los días: 0 días cumplidos.",
+     "Camilo llega a 5 o más solo el lunes (8) y el martes (9): 2 días.",
+     "Antonia cumple el lunes (5), el miércoles (6), el jueves (7) y el viernes (7): 4 días. Fabiola cumple el jueves (5) y el viernes (7): 2 días.",
+     "Antonia es la que más veces cumplió la meta. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "Camilo: tiene las barras más altas de la semana (8 y 9), pero solo supera la meta dos días.",
+     "D": "Fabiola: cumple la meta los dos últimos días, pero solo dos veces en total."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "Los artículos de una tienda de jardinería están clasificados en cinco categorías:\n\nflores, árboles, semillas, tierra y arbustos.\n\nLa cantidad de artículos vendidos en cierta semana se presenta en el siguiente\n\ngráfico:\n\n¿Cuál fue el total de artículos vendidos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "500"
+    },
+    {
+     "key": "B",
+     "text": "340"
+    },
+    {
+     "key": "C",
+     "text": "300"
+    },
+    {
+     "key": "D",
+     "text": "200"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q55.webp",
+    "width": 907,
+    "height": 967,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Todas las categorías del gráfico de radar usan la misma escala de 0 a 100, y el total se obtiene sumando los cinco valores leídos.",
+    "steps": [
+     "Lectura de cada categoría: flores 60, árboles 60, semillas 80, tierra 40 y arbustos 100.",
+     "Suma total: $60+60+80+40+100=340$ artículos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "300: si se lee arbustos como 60 en vez de 100 (el vértice está en el borde exterior del gráfico), la suma da 300."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q56",
+   "number": 56,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "En las tablas adjuntas se presenta la cantidad de estudiantes que poseen “baja” y\n\n“no baja” asistencia en los distintos niveles de un colegio, durante un semestre.\n\nPrimeros medios Segundos medios\n\nAsistencia Frecuencia Asistencia Frecuencia\n\nBaja 20 Baja 25\n\nNo baja 60 No baja 100\n\nTerceros medios Cuartos medios\n\nAsistencia Frecuencia Asistencia Frecuencia\n\nBaja 20 Baja 25\n\nNo baja 100 No baja 150\n\nEn el colegio se elegirá el nivel que tenga mayor porcentaje de sus estudiantes con\n\n“baja” asistencia para ser el primero al que se le realizará un seguimiento.\n\n¿Con cuál de los niveles se comenzará?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Con los primeros medios"
+    },
+    {
+     "key": "B",
+     "text": "Con los segundos medios"
+    },
+    {
+     "key": "C",
+     "text": "Con los terceros medios"
+    },
+    {
+     "key": "D",
+     "text": "Con los cuartos medios"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q56.webp",
+    "width": 907,
+    "height": 821,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que calcular el porcentaje de baja asistencia de cada nivel, dividiendo los estudiantes con baja asistencia entre el total del nivel.",
+    "steps": [
+     "Primeros medios: $\\frac{20}{20+60}=\\frac{20}{80}=25\\,\\%$.",
+     "Segundos medios: $\\frac{25}{25+100}=\\frac{25}{125}=20\\,\\%$.",
+     "Terceros medios: $\\frac{20}{20+100}=\\frac{20}{120}\\approx 16{,}7\\,\\%$. Cuartos medios: $\\frac{25}{25+150}=\\frac{25}{175}\\approx 14{,}3\\,\\%$.",
+     "El mayor porcentaje es el de primeros medios. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "D": "Cuartos medios: junto con segundos medios tiene 25 estudiantes con baja asistencia, la mayor cantidad absoluta, pero el porcentaje depende del total de cada nivel."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q57",
+   "number": 57,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "En los siguientes gráficos se presenta el porcentaje de alimentos orgánicos a la venta\n\ndurante tres años en dos supermercados.\n\nLos gráficos presentan un aspecto en su construcción que dificulta la comparación\n\nde los porcentajes de venta de alimentos orgánicos entre los supermercados.\n\n¿Cuál de los siguientes argumentos justifica esta afirmación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que los gráficos están graduados en distintas escalas."
+    },
+    {
+     "key": "B",
+     "text": "Que los porcentajes están escritos sobre las barras a distintas alturas."
+    },
+    {
+     "key": "C",
+     "text": "Que los porcentajes de ambos supermercados aumentaron en el tiempo."
+    },
+    {
+     "key": "D",
+     "text": "Que las barras se encuentran juntas, una a continuación de otra."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q57.webp",
+    "width": 907,
+    "height": 983,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las dos gráficas usan escalas distintas (A va de 0 % a 15 % y B de 0 % a 9 %), así que las alturas de las barras no son comparables directamente.",
+    "steps": [
+     "El supermercado A tiene el eje vertical de 0 % a 15 % con marcas cada 5 %, y el supermercado B de 0 % a 9 % con marcas cada 3 %.",
+     "Por eso la barra de 9 % del supermercado B se ve tan alta como la de 14 % del supermercado A, aunque el porcentaje real es menor.",
+     "El problema está en la graduación de los ejes, no en los datos. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Que los porcentajes estén a distinta altura es un detalle de rotulado y no impide comparar las barras.",
+     "C": "Que los porcentajes aumenten en el tiempo es cierto en ambos casos, pero no explica la dificultad de comparar."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q58",
+   "number": 58,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "En el mundial de fútbol del 2022 participaron 32 países. La edad promedio de los\n\nfutbolistas fue de 26,95 años.\n\nEn el siguiente gráfico se presenta la distribución de las edades de los futbolistas de\n\ncuatro países que participaron en el mundial.\n\n¿Cuál de estos cuatro países tiene el mayor promedio de edad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Irán"
+    },
+    {
+     "key": "B",
+     "text": "España"
+    },
+    {
+     "key": "C",
+     "text": "EE.UU."
+    },
+    {
+     "key": "D",
+     "text": "Ghana"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q58.webp",
+    "width": 907,
+    "height": 891,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El promedio más alto corresponde al país cuyos puntos se concentran por sobre la línea de 26,95 años, el promedio del mundial.",
+    "steps": [
+     "La línea horizontal marca el promedio general del mundial, 26,95 años.",
+     "Irán tiene la mayoría de sus futbolistas entre 27 y 30 años, con los puntos ubicados por sobre la línea, y casi ninguno bajo los 24 años.",
+     "España, EE.UU. y Ghana tienen gran parte de sus puntos entre 18 y 24 años, bajo la línea. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "EE.UU.: tiene el punto más alto de todo el gráfico (35 años), pero un valor extremo no determina el promedio del grupo."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q59",
+   "number": 59,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "En la tabla adjunta se presentan los milímetros de precipitaciones en cada mes en\n\ncierta ciudad de Chile.\n\nMes ene feb mar abr may jun jul ago sep oct nov dic\n\nPrecipitaciones 0 1 2 13 42 54 47 36 16 7 2 1 (mm)\n\n¿Cuál es el promedio de precipitaciones de junio, julio, agosto y septiembre?",
+   "options": [
+    {
+     "key": "A",
+     "text": "20,09 mm"
+    },
+    {
+     "key": "B",
+     "text": "38,25 mm"
+    },
+    {
+     "key": "C",
+     "text": "41,50 mm"
+    },
+    {
+     "key": "D",
+     "text": "76,50 mm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q59.webp",
+    "width": 907,
+    "height": 511,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El promedio de cuatro meses se calcula sumando sus precipitaciones y dividiendo por 4.",
+    "steps": [
+     "Precipitaciones: junio 54 mm, julio 47 mm, agosto 36 mm y septiembre 16 mm.",
+     "Suma: $54+47+36+16=153$ mm.",
+     "Promedio: $\\frac{153}{4}=38{,}25$ mm. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "D": "76,50 mm: divide la suma entre 2 en vez de entre 4, porque $\\frac{153}{2}=76{,}5$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q60",
+   "number": 60,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "La distribución de seguidores, en redes sociales de internet, que tiene un grupo de\n\nestudiantes de cuarto año medio está representada en el diagrama de cajón adjunto.\n\n¿Cuál de las siguientes afirmaciones se puede deducir a partir de este diagrama?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El promedio de la cantidad de seguidores en el grupo de estudiantes es de 270."
+    },
+    {
+     "key": "B",
+     "text": "La mitad de estudiantes del grupo tiene 270 seguidores."
+    },
+    {
+     "key": "C",
+     "text": "Hay 60 estudiantes en el grupo que tienen entre 80 y 140 seguidores."
+    },
+    {
+     "key": "D",
+     "text": "Al menos un 25 % de los estudiantes del grupo tiene desde 140 hasta 270 seguidores."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q60.webp",
+    "width": 907,
+    "height": 603,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El diagrama de cajón muestra mínimo, cuartiles, mediana y máximo; solo permite afirmar cuántos estudiantes caen en un rango de cuartiles, no promedios ni cantidades exactas.",
+    "steps": [
+     "Del gráfico: mínimo 80, primer cuartil 140, mediana 270, tercer cuartil 320 y máximo 580.",
+     "Entre el primer cuartil (140) y la mediana (270) queda el 25 % de los estudiantes. Por eso es cierto que al menos un 25 % tiene entre 140 y 270 seguidores.",
+     "Las otras afirmaciones no se deducen: 270 es la mediana y no el promedio, la mediana indica que la mitad tiene 270 o menos, y el diagrama no informa cuántos estudiantes hay. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Promedio de 270: confunde la mediana con el promedio, que no aparece en el diagrama.",
+     "B": "La mitad tiene 270 seguidores: confunde «la mitad tiene 270 o menos» con «la mitad tiene exactamente 270»."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q61",
+   "number": 61,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Considera el siguiente grupo de datos: 18, 19, 20, 21, 21, 27, 30, 30, 31, 34 y 35.\n\n¿Cuál de los siguientes diagramas de cajón representa a este grupo de datos?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q61.webp",
+    "width": 907,
+    "height": 986,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con 11 datos, la mediana es el sexto valor ordenado, y los cuartiles son las medianas de cada mitad.",
+    "steps": [
+     "Datos ordenados: 18, 19, 20, 21, 21, 27, 30, 30, 31, 34, 35.",
+     "Mediana: el sexto dato es 27. Primer cuartil: mediana de 18, 19, 20, 21, 21, que es 20. Tercer cuartil: mediana de 30, 30, 31, 34, 35, que es 31.",
+     "Mínimo 18 y máximo 35. El diagrama debe tener caja de 20 a 31, línea en 27 y bigotes hasta 18 y 35, que es la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Caja hasta 34: toma como tercer cuartil el dato 34 en vez de 31, el centro de la mitad superior.",
+     "B": "Mediana 26: no corresponde a ningún dato del conjunto; se obtiene promediando 21 y 31, que no son los datos centrales."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q62",
+   "number": 62,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En la tabla adjunta se presentan los resultados de una encuesta realizada a un grupo\n\nde estudiantes sobre el área de preferencia para realizar sus estudios superiores.\n\nÁrea de preferencia Hombre Mujer\n\nCientífica 7 10\n\nHumanista 4 6\n\nMatemática 8 9\n\nArtística 3 5\n\nSi se selecciona al azar a una persona del grupo de estudiantes, ¿cuál es la\n\nprobabilidad de que sea mujer y que escoja el área artística?\n\n5",
+   "options": [
+    {
+     "key": "A",
+     "text": "52 1"
+    },
+    {
+     "key": "B",
+     "text": "5 5"
+    },
+    {
+     "key": "C",
+     "text": "8 5"
+    },
+    {
+     "key": "D",
+     "text": "30"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q62.webp",
+    "width": 907,
+    "height": 771,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Es una probabilidad conjunta: el numerador es la casilla «mujer y artística» y el denominador es el total de estudiantes encuestados.",
+    "steps": [
+     "Total de hombres: $7+4+8+3=22$. Total de mujeres: $10+6+9+5=30$. Total general: $22+30=52$.",
+     "Mujeres que prefieren el área artística: 5.",
+     "La probabilidad es $\\frac{5}{52}$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "D": "$\\frac{5}{30}$: usa solo el total de mujeres como denominador, lo que da la probabilidad de ser artística dado que es mujer, no la conjunta."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q63",
+   "number": 63,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Un grupo de personas está jugando a un juego que consiste en:\n\n- escoger un número entre el 2 y el 12, ambos valores incluidos,\n\n- después debe lanzar dos dados comunes y calcular la suma de los puntos en\n\nlos dados.\n\nSi la suma obtenida coincide con el número escogido, entonces se obtiene un punto.\n\nFinalmente, gana el juego la persona que primero consiga 20 puntos.\n\n¿Cuál de los siguientes números debería escoger una persona para tener mayor\n\nprobabilidad de ganar el juego?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12"
+    },
+    {
+     "key": "B",
+     "text": "10"
+    },
+    {
+     "key": "C",
+     "text": "7"
+    },
+    {
+     "key": "D",
+     "text": "6"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q63.webp",
+    "width": 907,
+    "height": 608,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Gana el número cuya suma de dos dados tiene más resultados favorables, y esa es la suma 7, con 6 de 36 casos.",
+    "steps": [
+     "Al lanzar dos dados hay $6 \\cdot 6 = 36$ resultados posibles.",
+     "Casos por suma: 12 se obtiene de 1 forma, 10 de 3 formas, 6 de 5 formas y 7 de 6 formas.",
+     "El 7 tiene la mayor cantidad de casos favorables, así que es el número que da la mayor probabilidad. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "6: tiene 5 de 36 casos, la cifra más cercana a la del 7, pero sigue siendo menor."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q64",
+   "number": 64,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En la siguiente tabla se presenta la probabilidad de obtener cada cara de un dado\n\ncargado al lanzarlo.\n\nNúmero de la cara Probabilidad 1 0,2 2 0,1 3 0,1 4 0,1 5 0,4 6 0,1\n\n¿Cuál de las siguientes afirmaciones es verdadera con respecto a la información\n\nentregada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La probabilidad de obtener un 1 o un 2 al lanzar este dado es la misma que se obtiene al lanzar un dado común."
+    },
+    {
+     "key": "B",
+     "text": "La probabilidad de obtener un 6 al lanzar este dado es la misma que se obtiene al lanzar un dado común."
+    },
+    {
+     "key": "C",
+     "text": "La probabilidad de obtener un número mayor que 4 al lanzar este dado es 0,5."
+    },
+    {
+     "key": "D",
+     "text": "La probabilidad de obtener un número par al lanzar este dado es 0,1."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q64.webp",
+    "width": 907,
+    "height": 706,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como las probabilidades de las seis caras suman 1, cada afirmación se verifica sumando las probabilidades de las caras que corresponden.",
+    "steps": [
+     "Probabilidades: $P(1)=0{,}2$, $P(2)=P(3)=P(4)=P(6)=0{,}1$ y $P(5)=0{,}4$; suman $1$.",
+     "Caras mayores que 4: 5 y 6, con $0{,}4+0{,}1=0{,}5$, lo que coincide con la afirmación C.",
+     "Las demás fallan: $P(1\\text{ o }2)=0{,}3$, distinto de $\\frac{1}{3}$; $P(6)=0{,}1$, distinto de $\\frac{1}{6}$; y $P(\\text{par})=0{,}1+0{,}1+0{,}1=0{,}3$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Obtener 1 o 2 tiene probabilidad $0{,}3$, mientras que con un dado común es $\\frac{1}{3}$; no son iguales.",
+     "D": "Número par con probabilidad $0{,}1$: toma solo la probabilidad de una cara, cuando las caras 2, 4 y 6 suman $0{,}3$."
+    }
+   }
+  },
+  {
+   "id": "m1-2026-invierno-q65",
+   "number": 65,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Un juego de azar consiste en lanzar tres monedas simultáneamente. El puntaje obtenido por un jugador está dado por la expresión c −2s, tal que c y s corresponden\n\na la cantidad de caras y de sellos, respectivamente, obtenidos en el lanzamiento.\n\n¿Cuál es la probabilidad de que un jugador obtenga un puntaje negativo en un\n\nlanzamiento?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "8 1"
+    },
+    {
+     "key": "B",
+     "text": "4 3"
+    },
+    {
+     "key": "C",
+     "text": "8 1"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q65.webp",
+    "width": 907,
+    "height": 545,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con tres monedas hay cuatro resultados posibles según la cantidad de caras, y el puntaje $c-2s$ es negativo solo si hay menos de dos caras.",
+    "steps": [
+     "Con $c$ caras y $s=3-c$ sellos, el puntaje es $c-2(3-c)=3c-6$.",
+     "El puntaje es negativo si $3c-6<0$, es decir, si $c<2$, o sea, 0 o 1 caras.",
+     "$P(c=0)=\\frac{1}{8}$ (tres sellos) y $P(c=1)=\\frac{3}{8}$ (una cara). Suma: $\\frac{1}{8}+\\frac{3}{8}=\\frac{1}{2}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{1}{8}$: considera solo el caso de tres sellos y olvida el caso de una cara.",
+     "C": "$\\frac{3}{8}$: considera solo el caso de una cara y olvida el caso de tres sellos."
+    }
+   }
+  }
+ ]
+}

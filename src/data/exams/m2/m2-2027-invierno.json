@@ -1,0 +1,2672 @@
+{
+ "id": "m2-2027-invierno",
+ "subject": "m2",
+ "title": "PAES Invierno 2027",
+ "description": "Prueba oficial completa de Competencia Matemática 2 (M2): 54 preguntas (1 anulada por el DEMRE), aplicada el 15-06-2026 (Admisión 2027). Claves del clavijero oficial DEMRE.",
+ "year": 2027,
+ "modality": "invierno",
+ "source": "demre",
+ "form": "191",
+ "appliedOn": "2026-06-15",
+ "durationMinutes": 135,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   204,
+   231,
+   255,
+   278,
+   298,
+   317,
+   336,
+   354,
+   371,
+   386,
+   399,
+   412,
+   426,
+   441,
+   456,
+   470,
+   481,
+   491,
+   501,
+   512,
+   525,
+   540,
+   553,
+   565,
+   574,
+   583,
+   592,
+   603,
+   616,
+   630,
+   644,
+   656,
+   666,
+   676,
+   687,
+   699,
+   714,
+   729,
+   744,
+   757,
+   770,
+   785,
+   801,
+   819,
+   837,
+   856,
+   876,
+   898,
+   1000
+  ],
+  "officialQuestionCount": 55,
+  "officialScorableCount": 49
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-2027-invierno-q01",
+   "number": 1,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "Considera los números enteros positivos que tienen resto 2 al dividirlos por 5 y\n\nresto 4 al dividirlos por 7.\n\nSi los números anteriores se ordenan en una lista de manera creciente, ¿cuál es el\n\nsegundo número de esa lista?",
+   "options": [
+    {
+     "key": "A",
+     "text": "17"
+    },
+    {
+     "key": "B",
+     "text": "32"
+    },
+    {
+     "key": "C",
+     "text": "67"
+    },
+    {
+     "key": "D",
+     "text": "137"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q01.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que hallar los números que cumplen las dos condiciones de resto a la vez y luego usar que el patrón se repite cada $5 \\cdot 7 = 35$ unidades.",
+    "steps": [
+     "Los números buscados son de la forma $n = 5k + 2$ y, además, deben dejar resto 4 al dividirlos por 7.",
+     "Probando los números que dejan resto 4 al dividir por 7 (4, 11, 18, 25, 32, ...), el primero que también deja resto 2 al dividir por 5 es el 32, porque $32 = 5 \\cdot 6 + 2$ y $32 = 7 \\cdot 4 + 4$.",
+     "Como las dos condiciones se repiten cada $35$ unidades, el siguiente número de la lista es $32 + 35 = 67$. Comprobación: $67 = 5 \\cdot 13 + 2$ y $67 = 7 \\cdot 9 + 4$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Elige 17 por ser el primer número con resto 2 al dividir por 5 ($17 = 5 \\cdot 3 + 2$), sin revisar que $17 = 7 \\cdot 2 + 3$ no deja resto 4.",
+     "B": "Entrega el primer número de la lista (32), en vez del segundo.",
+     "D": "137 es el cuarto número de la lista (32, 67, 102, 137), no el segundo."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q02",
+   "number": 2,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "En un cumpleaños hay 13 asistentes, entre los cuales se reparte de manera\n\nequitativa el contenido de una bolsa abierta de 100 caramelos a la que ya le habían\n\nsacado algunos. En esta repartición sobró 1 caramelo.\n\nSi se hubiesen repartido los caramelos de manera equitativa entre 11 asistentes\n\nno hubiese sobrado ningún caramelo.\n\n¿Cuántos caramelos recibió cada uno de los 13 asistentes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "6"
+    },
+    {
+     "key": "D",
+     "text": "5"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q02.webp",
+    "width": 907,
+    "height": 482,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los caramelos que quedaron en la bolsa deben ser un múltiplo de 11 que, al repartirlo entre 13, deje resto 1.",
+    "steps": [
+     "Sea $m$ la cantidad de caramelos que quedan en la bolsa. Al repartirlos entre 11 no sobra nada, así que $m$ es múltiplo de 11.",
+     "Al repartirlos entre 13 sobra 1, es decir, $m = 13k + 1$. Como $m \\le 100$, se prueban los múltiplos de 11: 11, 22, 33, 44, 55, 66, 77, 88 y 99.",
+     "El único que deja resto 1 al dividirlo por 13 es el 66, porque $66 = 13 \\cdot 5 + 1$. Así, se habían sacado $100 - 66 = 34$ caramelos.",
+     "Cada asistente recibe $\\frac{66 - 1}{13} = \\frac{65}{13} = 5$ caramelos, porque el caramelo que sobra no se reparte. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Olvida los caramelos ya sacados y reparte 100 entre 13: $100 = 13 \\cdot 7 + 9$, lo que da 7.",
+     "C": "Divide los 66 caramelos entre 11 asistentes en vez de 13, lo que da 6."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q03",
+   "number": 3,
+   "axis": "Números",
+   "topic": "Números decimales",
+   "stem": "Considera el número A = pq, tal que p es el dígito de las decenas y q es el dígito\n\nde las unidades; y el número B = p,q, tal que p es el dígito de las unidades y q es\n\nel dígito decimal periódico.\n\n¿Cuál de las siguientes expresiones representa al número A −B?\n\n79p + 10q",
+   "options": [
+    {
+     "key": "A",
+     "text": "9 81p + 8q"
+    },
+    {
+     "key": "B",
+     "text": "9 100p + 9q"
+    },
+    {
+     "key": "C",
+     "text": "9 30p + 11q"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q03.webp",
+    "width": 907,
+    "height": 500,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que expresar cada número en forma algebraica y transformar el decimal periódico $p,\\overline{q}$ en una fracción antes de restar.",
+    "steps": [
+     "Como $A = pq$ y p es el dígito de las decenas, $A = 10p + q$.",
+     "El número $B = p,\\overline{q}$ tiene parte entera p y parte decimal periódica $0,\\overline{q} = \\frac{q}{9}$, por lo que $B = p + \\frac{q}{9}$.",
+     "Entonces $A - B = 10p + q - p - \\frac{q}{9} = 9p + \\frac{8q}{9}$.",
+     "Llevando a común denominador: $9p + \\frac{8q}{9} = \\frac{81p}{9} + \\frac{8q}{9} = \\frac{81p + 8q}{9}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Error de aritmética en el término de p: escribe $\\frac{79p}{9}$ en vez de $9p = \\frac{81p}{9}$.",
+     "C": "Al pasar $10p$ a una fracción de denominador 9, usa $100p$ en vez de $90p$, lo que da el numerador $100p + 9q$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q04",
+   "number": 4,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "El 2015, la cantidad de turistas extranjeros que ingresaron a Chile en la temporada\n\nde verano fue 1 333 532, lo que significó un aumento del 18,7 % con respecto a los\n\nturistas extranjeros que ingresaron a Chile en la temporada de verano del 2014.\n\n¿Cuál de las siguientes expresiones representa la cantidad de turistas extranjeros\n\nque llegaron a Chile en la temporada de verano del 2014?\n\n1 333 532",
+   "options": [
+    {
+     "key": "A",
+     "text": "118,7 1 333 532"
+    },
+    {
+     "key": "B",
+     "text": "0,187 1 333 532"
+    },
+    {
+     "key": "C",
+     "text": "18,7 1 333 532"
+    },
+    {
+     "key": "D",
+     "text": "1,187"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q04.webp",
+    "width": 907,
+    "height": 544,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un aumento del 18,7 % significa que la cifra de 2015 es 1,187 veces la de 2014, así que hay que dividir por 1,187 para obtener la de 2014.",
+    "steps": [
+     "Sea $x$ la cantidad de turistas extranjeros de la temporada de verano de 2014.",
+     "Un aumento del 18,7 % significa que la cifra de 2015 es $x + 0{,}187\\,x = 1{,}187\\,x$.",
+     "Entonces $1\\,333\\,532 = 1{,}187 \\cdot x$, de donde $x = \\frac{1\\,333\\,532}{1{,}187}$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Divide por $0{,}187$, que es solo el aumento y no el factor $1{,}187$; confunde la variación con la cifra total.",
+     "C": "Divide por $18{,}7$ sin pasar el porcentaje a decimal, lo que da una cifra mucho menor que la de 2015, algo imposible si hubo un aumento."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q05",
+   "number": 5,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En una tienda comercial, el precio de cierto artículo es de \\$100 000, el cual se rebaja\n\npor error en un p %. Alguien lo nota y da aviso, por lo que se intenta volver al precio\n\noriginal aumentando el precio rebajado en un p %.\n\nLuego de aumentar el precio, se dieron cuenta de que la diferencia entre el precio\n\noriginal y el precio final es de \\$4000.\n\n¿Cuál de las siguientes ecuaciones permite determinar el porcentaje p de rebaja?\n\n� �� � 1 −p 1 + p",
+   "options": [
+    {
+     "key": "A",
+     "text": "100 000 −100 000 = 4000 100 100 � �� � 1 −p 1 + p"
+    },
+    {
+     "key": "B",
+     "text": "100 000 − = 4000 100 100 �p ��p �"
+    },
+    {
+     "key": "C",
+     "text": "100 000 −100 000 = 4000 100 100 � �� � 1 −p 1 + p"
+    },
+    {
+     "key": "D",
+     "text": "100 000 = 4000 100 100"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q05.webp",
+    "width": 907,
+    "height": 624,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al rebajar y luego subir el precio en el mismo porcentaje, el precio final queda por debajo del original, y la diferencia de 4000 pesos se escribe como ecuación.",
+    "steps": [
+     "El precio rebajado es $100\\,000\\left(1 - \\frac{p}{100}\\right)$ pesos.",
+     "Al subirlo en p % se multiplica por $\\left(1 + \\frac{p}{100}\\right)$, así que el precio final es $100\\,000\\left(1 - \\frac{p}{100}\\right)\\left(1 + \\frac{p}{100}\\right)$ pesos.",
+     "La diferencia entre el precio original y el final es 4000 pesos: $100\\,000 - 100\\,000\\left(1 - \\frac{p}{100}\\right)\\left(1 + \\frac{p}{100}\\right) = 4000$.",
+     "Con $p = 20$ se comprueba: $100\\,000 \\cdot 0{,}8 \\cdot 1{,}2 = 96\\,000$ y $100\\,000 - 96\\,000 = 4000$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Escribe $100\\,000 - \\left(1 - \\frac{p}{100}\\right)\\left(1 + \\frac{p}{100}\\right) = 4000$, es decir, olvida multiplicar el producto por 100 000.",
+     "D": "Iguala el precio final (y no la diferencia) a 4000 pesos: $100\\,000\\left(1 - \\frac{p}{100}\\right)\\left(1 + \\frac{p}{100}\\right) = 4000$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q06",
+   "number": 6,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "En una tienda se aplica un descuento del 20 % al precio original de un producto.\n\nAl notar que las ventas no aumentaron, se volvió a aplicar un descuento del 20 %\n\nsobre el nuevo precio.\n\n¿Por qué factor se debe multiplicar el precio original para obtener el precio final del\n\nproducto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Por 0,04"
+    },
+    {
+     "key": "B",
+     "text": "Por 0,40"
+    },
+    {
+     "key": "C",
+     "text": "Por 0,60"
+    },
+    {
+     "key": "D",
+     "text": "Por 0,64"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q06.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Dos descuentos sucesivos del 20 % no equivalen a un descuento del 40 %, porque el segundo se aplica sobre el precio ya rebajado.",
+    "steps": [
+     "Tras el primer descuento del 20 % queda el 80 % del precio: si el precio original es $P$, queda $0{,}8\\,P$.",
+     "El segundo descuento del 20 % se aplica sobre el nuevo precio: $0{,}8\\,P \\cdot 0{,}8 = 0{,}64\\,P$.",
+     "Por lo tanto, el factor que multiplica al precio original es $0{,}8 \\cdot 0{,}8 = 0{,}64$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Suma los descuentos ($20\\,\\% + 20\\,\\% = 40\\,\\%$) y multiplica por $0{,}40$, lo que ignora que el segundo descuento se aplica sobre el precio ya rebajado.",
+     "C": "Resta dos veces el 20 % del precio original, $1 - 0{,}2 - 0{,}2 = 0{,}6$, en vez de aplicar el segundo descuento sobre el nuevo precio."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q07",
+   "number": 7,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Considera un litro de una mezcla que está formada por un 80 % de agua y un 20 %\n\nde otros líquidos.\n\nSi a la mezcla se le saca el 50 % del agua, ¿qué porcentaje de agua tendrá la nueva\n\nmezcla?",
+   "options": [
+    {
+     "key": "A",
+     "text": "30 %"
+    },
+    {
+     "key": "B",
+     "text": "40 %"
+    },
+    {
+     "key": "C",
+     "text": "42 %"
+    },
+    {
+     "key": "D",
+     "text": "66,¯6 %"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q07.webp",
+    "width": 907,
+    "height": 382,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al sacar agua la mezcla pierde volumen, así que el porcentaje de agua se calcula sobre el nuevo total de 600 mL y no sobre el litro original.",
+    "steps": [
+     "En un litro hay $0{,}8 \\cdot 1000 = 800$ mL de agua y $200$ mL de otros líquidos.",
+     "Al sacar el 50 % del agua se retiran $400$ mL, quedando $800 - 400 = 400$ mL de agua.",
+     "El nuevo volumen total es $400 + 200 = 600$ mL, por lo que el porcentaje de agua es $\\frac{400}{600} = \\frac{2}{3} = 66{,}\\overline{6}\\,\\%$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Divide los 400 mL de agua por el litro original (1000 mL), sin considerar que la mezcla quedó con 600 mL, y obtiene 40 %."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q08",
+   "number": 8,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "En la siguiente tabla se presentan las emisiones aproximadas del contaminante\n\nMP10 provenientes de fuentes fijas de algunas regiones en los años 2021 y 2022.\n\n�ton � Emisión de MP10 año\n\nRegión 2021 2022\n\nValparaíso 96 210\n\nÑuble 175 218\n\nBiobío 499 341\n\nMagallanes 58 94\n\nAdaptado de: Instituto Nacional de Estadísticas (INE). (2024). Informe anual de estadísticas del medio ambiente 2024.\n\n¿En qué región se produjo una variación porcentual anual de contaminante MP10\n\nmás cercana a 0?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En Valparaíso"
+    },
+    {
+     "key": "B",
+     "text": "En Ñuble"
+    },
+    {
+     "key": "C",
+     "text": "En Biobío"
+    },
+    {
+     "key": "D",
+     "text": "En Magallanes ⁶√ ⁶√ 2⁴ · 2²"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q08.webp",
+    "width": 907,
+    "height": 808,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variación porcentual es $\\frac{E_{2022} - E_{2021}}{E_{2021}} \\cdot 100$, y la región cuya variación queda más cerca de 0 es Ñuble.",
+    "steps": [
+     "Para cada región se calcula $\\frac{E_{2022} - E_{2021}}{E_{2021}} \\cdot 100\\,\\%$, donde E es la emisión de MP10.",
+     "Valparaíso: $\\frac{210 - 96}{96} \\cdot 100 \\approx 118{,}8\\,\\%$. Magallanes: $\\frac{94 - 58}{58} \\cdot 100 \\approx 62{,}1\\,\\%$.",
+     "Ñuble: $\\frac{218 - 175}{175} \\cdot 100 \\approx 24{,}6\\,\\%$. Biobío: $\\frac{341 - 499}{499} \\cdot 100 \\approx -31{,}7\\,\\%$.",
+     "El valor absoluto más pequeño es $24{,}6\\,\\%$, así que la variación más cercana a 0 es la de Ñuble. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Compara las diferencias absolutas en toneladas y se queda con Biobío, que tiene la mayor diferencia (158 ton), en vez de la variación porcentual.",
+     "D": "Elige Magallanes por tener la menor diferencia en toneladas (36 ton), sin dividir por la cifra de 2021 para obtener la variación porcentual."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q09",
+   "number": 9,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "¿Cuál es el valor de √ ? 2\n\n⁵√",
+   "options": [
+    {
+     "key": "A",
+     "text": "2² ⁹√"
+    },
+    {
+     "key": "B",
+     "text": "2⁴ √"
+    },
+    {
+     "key": "C",
+     "text": "2 √"
+    },
+    {
+     "key": "D",
+     "text": "2³"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q09.webp",
+    "width": 907,
+    "height": 267,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Todas las raíces son de índice 6, así que el numerador se reduce a $\\sqrt[6]{2^{6}} = 2$ y el resultado es $\\frac{2}{\\sqrt{2}}$.",
+    "steps": [
+     "Como ambas raíces tienen índice 6, se pueden juntar: $\\sqrt[6]{2^{4}} \\cdot \\sqrt[6]{2^{2}} = \\sqrt[6]{2^{4} \\cdot 2^{2}} = \\sqrt[6]{2^{6}}$.",
+     "Por lo tanto, el numerador es $\\sqrt[6]{2^{6}} = 2$.",
+     "La expresión queda $\\frac{2}{\\sqrt{2}} = \\frac{2\\sqrt{2}}{2} = \\sqrt{2}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Confunde el índice de la raíz (5 en vez de 6) y no simplifica bien, quedando en $\\sqrt[5]{2^{2}}$.",
+     "D": "Multiplica por $\\sqrt{2}$ en vez de dividir: $2 \\cdot \\sqrt{2} = \\sqrt{2^{3}}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q10",
+   "number": 10,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Considera un cubo cuya arista mide 4² cm.\n\nSi su arista aumenta a cuatro veces su longitud, ¿cuál es volumen del nuevo cubo?\n\n4⁶ cm³",
+   "options": [
+    {
+     "key": "A",
+     "text": "4⁷ cm³"
+    },
+    {
+     "key": "B",
+     "text": "4⁸ cm³"
+    },
+    {
+     "key": "C",
+     "text": "4⁹ cm³"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q10.webp",
+    "width": 907,
+    "height": 340,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al aumentar la arista cuatro veces, el volumen se multiplica por $4^{3} = 64$, no por 4.",
+    "steps": [
+     "La arista original es $4^{2}$ cm, así que el volumen original es $(4^{2})^{3} = 4^{6}$ cm³.",
+     "Al cuadruplicar la arista, la nueva arista es $4 \\cdot 4^{2} = 4^{3}$ cm.",
+     "El nuevo volumen es $(4^{3})^{3} = 4^{9}$ cm³. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Deja el volumen original, $4^{6}$ cm³, sin actualizar la arista.",
+     "B": "Multiplica el volumen por 4 en vez de por $4^{3} = 64$: $4^{6} \\cdot 4 = 4^{7}$.",
+     "C": "Multiplica el volumen por $4^{2}$ en vez de por $4^{3}$: $4^{6} \\cdot 4^{2} = 4^{8}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q11",
+   "number": 11,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Considera que cada día se realizan 1 600 000 viajes en bicicleta en el país.\n\n¿Cuál de las siguientes expresiones representa la cantidad de viajes realizados en\n\nbicicleta durante 365 días?\n\n16 · 10⁵",
+   "options": [
+    {
+     "key": "A",
+     "text": "365 1,6 · 10⁵"
+    },
+    {
+     "key": "B",
+     "text": "3,65"
+    },
+    {
+     "key": "C",
+     "text": "5,84 · 10⁷"
+    },
+    {
+     "key": "D",
+     "text": "5,84 · 10⁸"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q11.webp",
+    "width": 907,
+    "height": 445,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que multiplicar los viajes diarios por 365 días y expresar el resultado en notación científica.",
+    "steps": [
+     "En un día se realizan $1\\,600\\,000 = 1{,}6 \\cdot 10^{6}$ viajes.",
+     "En 365 días se realizan $365 \\cdot 1{,}6 \\cdot 10^{6} = 584 \\cdot 10^{6}$ viajes.",
+     "Normalizando: $584 \\cdot 10^{6} = 5{,}84 \\cdot 10^{2} \\cdot 10^{6} = 5{,}84 \\cdot 10^{8}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Divide por 365 en vez de multiplicar: $\\frac{16 \\cdot 10^{5}}{365}$.",
+     "C": "Ajusta mal la potencia de diez al normalizar y escribe $5{,}84 \\cdot 10^{7}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q12",
+   "number": 12,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "El volumen V de una esfera se modela en función de su radio r de acuerdo con la función potencia V(r) = ⁴π 3 r³.\n\nPara “linealizar” la función anterior, se aplica la función logaritmo y se grafica log V(r)\n\nversus log r, como se representa a continuación:\n\n� � 0, log ⁴π ¿Qué valor debe tomar el radio de la esfera para obtener el punto en 3 el gráfico “linealizado”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0 log ⁴π"
+    },
+    {
+     "key": "B",
+     "text": "3"
+    },
+    {
+     "key": "C",
+     "text": "1 4π"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q12.webp",
+    "width": 907,
+    "height": 1099,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El punto $\\left(0, \\log \\frac{4\\pi}{3}\\right)$ tiene abscisa $\\log r = 0$, y el radio que corresponde a ese valor es $r = 1$.",
+    "steps": [
+     "En el gráfico linealizado el eje horizontal es $\\log r$ y el vertical es $\\log V(r)$; el punto dado tiene abscisa 0.",
+     "Por lo tanto, $\\log r = 0$, y como el logaritmo de 1 es 0, el radio es $r = 1$.",
+     "Comprobación: $V(1) = \\frac{4\\pi}{3}$, cuyo logaritmo es la ordenada $\\log \\frac{4\\pi}{3}$ del punto. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Toma la abscisa 0 directamente como radio, sin deshacer el logaritmo; $r = 0$ no tiene sentido para una esfera.",
+     "B": "Toma la ordenada $\\log \\frac{4\\pi}{3}$ como si fuera el radio, confundiendo los ejes.",
+     "D": "Confunde el valor del intercepto con el radio: $\\frac{4\\pi}{3}$ es la constante de $V(r)$, no el radio del punto."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q13",
+   "number": 13,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "El nivel de la intensidad acústica, en decibeles, se calcula mediante la siguiente\n\nexpresión:\n\n�I � 10 · log , I⁰\n\ntal que I corresponde a la intensidad acústica, en W m², eI⁰ correspoⁿde al umbral de audición y su valor es de 10⁻¹² W m².\n\nSegún cierta normativa, el nivel de exposición a ruidos debe ser menor o igual que\n\n65 decibeles.\n\n¿Cuál es la intensidad acústica máxima, en W m², que permite cumplir coⁿ la normativa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10⁶,⁵"
+    },
+    {
+     "key": "B",
+     "text": "10⁻⁵,⁵"
+    },
+    {
+     "key": "C",
+     "text": "10⁻¹²·⁶,⁵"
+    },
+    {
+     "key": "D",
+     "text": "10¹⁸,⁵"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q13.webp",
+    "width": 907,
+    "height": 723,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se traduce la condición $10 \\cdot \\log\\left(\\frac{I}{I_0}\\right) \\le 65$ a una desigualdad sobre I y luego se despeja la potencia de 10.",
+    "steps": [
+     "La condición es $10 \\cdot \\log\\left(\\frac{I}{I_0}\\right) \\le 65$, es decir, $\\log\\left(\\frac{I}{I_0}\\right) \\le 6{,}5$.",
+     "Como el logaritmo es creciente, $\\frac{I}{I_0} \\le 10^{6{,}5}$, y por tanto $I \\le I_0 \\cdot 10^{6{,}5}$.",
+     "Con $I_0 = 10^{-12}$: $I \\le 10^{-12} \\cdot 10^{6{,}5} = 10^{-12 + 6{,}5} = 10^{-5{,}5}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Olvida multiplicar por el umbral $I_0$ y deja $I \\le 10^{6{,}5}$.",
+     "C": "Multiplica los exponentes ($-12 \\cdot 6{,}5$) en vez de sumarlos.",
+     "D": "Trata $I_0$ como $10^{12}$ (cambia el signo del exponente), lo que da $10^{18{,}5}$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q14",
+   "number": 14,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "A una persona, producto de una dolencia, se le administra cierto tipo de medicamento.\n\nSe sabe que la cantidad C, en miligramos, de este medicamento en la sangre va\n\ndisminuyendo a medida que transcurre el tiempo t, en horas, de acuerdo a la relación log² C = 3 −0,4 · t.\n\nSi a las 6: 00 se le administró el medicamento a la persona y este se debe\n\nadministrar nuevamente cuando tenga 0,5 mg en la sangre, ¿a qué hora se le debe\n\nadministrar nuevamente la dosis?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10: 00"
+    },
+    {
+     "key": "B",
+     "text": "11: 00"
+    },
+    {
+     "key": "C",
+     "text": "13: 30"
+    },
+    {
+     "key": "D",
+     "text": "16: 00"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q14.webp",
+    "width": 907,
+    "height": 474,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se reemplaza C = 0,5 mg en la relación logarítmica para obtener el tiempo transcurrido y luego se suma a las 6:00.",
+    "steps": [
+     "La relación es $\\log_{2} C = 3 - 0{,}4\\,t$, y se busca $t$ para $C = 0{,}5$ mg.",
+     "Como $\\log_{2}(0{,}5) = \\log_{2}(2^{-1}) = -1$, queda $-1 = 3 - 0{,}4\\,t$.",
+     "Despejando: $0{,}4\\,t = 4$, luego $t = 10$ horas.",
+     "A las 6:00 más 10 horas son las 16:00. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Toma $\\log_{2}(0{,}5) = +1$ por un error de signo, lo que da $t = 5$ horas y las 11:00.",
+     "C": "Confunde 0,5 mg con 1 mg (ya que $\\log_{2} 1 = 0$), lo que da $t = 7{,}5$ horas y las 13:30."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q15",
+   "number": 15,
+   "axis": "Números",
+   "topic": "Interés",
+   "stem": "Una entidad bancaria ofrece dos opciones para depósitos:\n\n- Opción 1: una tasa de interés compuesto semestral del 2 %\n\n- Opción 2: una tasa de interés compuesto trimestral del 1 %\n\nSi un cliente quiere invertir \\$1 000 000, ¿cuál de las siguientes alternativas de\n\ninversión es económicamente más conveniente en un mismo periodo de tiempo y\n\nsuperior a tres meses?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Invertir todo el dinero en la opción 1 es más conveniente."
+    },
+    {
+     "key": "B",
+     "text": "Invertir todo el dinero en la opción 2 es más conveniente."
+    },
+    {
+     "key": "C",
+     "text": "Invertir la mitad del dinero en la opción 1 y el resto en la opción 2 es más conveniente."
+    },
+    {
+     "key": "D",
+     "text": "Invertir todo el dinero en la opción 1 o en la opción 2 es igual de conveniente."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q15.webp",
+    "width": 907,
+    "height": 521,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al comparar los dos depósitos en periodos de seis meses, el interés compuesto trimestral del 1 % rinde un poco más que el semestral del 2 %.",
+    "steps": [
+     "Opción 1 en 6 meses (un periodo semestral): $1\\,000\\,000 \\cdot 1{,}02 = 1\\,020\\,000$ pesos.",
+     "Opción 2 en 6 meses (dos periodos trimestrales): $1\\,000\\,000 \\cdot 1{,}01^{2} = 1\\,000\\,000 \\cdot 1{,}0201 = 1\\,020\\,100$ pesos.",
+     "Como $1{,}0201 > 1{,}02$, la opción 2 entrega más dinero. En 12 meses se confirma: $1{,}02^{2} = 1{,}0404$ frente a $1{,}01^{4} \\approx 1{,}0406$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Compara solo las tasas nominales (2 % es mayor que 1 %) sin considerar que son de periodos distintos.",
+     "D": "Supone que dos trimestres al 1 % equivalen exactamente al 2 % del semestre, ignorando el interés compuesto."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q16",
+   "number": 16,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "Un objeto macizo flota si su densidad es menor que la del fluido en el que se\n\nencuentra.\n\nConsidera que la densidad es el cociente entre la masa y el volumen de un objeto y que la densidad del agua es 1000 kg m³.\n\nSi un objeto macizo tiene una masa de p kg y un volumen de 730 000 cm³, ¿cuál de\n\nlas siguientes inecuaciones representa únicamente todos los posibles valores de p\n\nque permiten que el objeto flote en el agua?\n\n100p",
+   "options": [
+    {
+     "key": "A",
+     "text": "730 000 <¹⁰⁰⁰ 1000p"
+    },
+    {
+     "key": "B",
+     "text": "730 000 <¹⁰⁰⁰ 10 000p"
+    },
+    {
+     "key": "C",
+     "text": "730 000 <¹⁰⁰⁰ 1 000 000p"
+    },
+    {
+     "key": "D",
+     "text": "< 1000 730 000"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q16.webp",
+    "width": 907,
+    "height": 655,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para que el objeto flote, su densidad en kg/m³ debe ser menor que 1000 kg/m³, y para eso hay que pasar 730 000 cm³ a m³.",
+    "steps": [
+     "Con masa $p$ kg y volumen $730\\,000$ cm³ $= 0{,}73$ m³, la densidad del objeto es $\\frac{p}{0{,}73}$ kg/m³.",
+     "La condición de flotación es $\\frac{p}{0{,}73} < 1000$, lo que equivale a $p < 730$.",
+     "En la forma de la alternativa D, $\\frac{1\\,000\\,000\\,p}{730\\,000} < 1000$, la conversión ya está incluida, porque $1\\,000\\,000$ cm³ = 1 m³. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Multiplica por 100 en vez de por $10^{6}$ al convertir cm³ a m³, lo que da $p < 7300$.",
+     "C": "Usa $1\\ \\text{m}^{3} = 10\\,000$ cm³ en vez de $1\\,000\\,000$ cm³, lo que da $p < 73$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q17",
+   "number": 17,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "El triángulo de Sierpinski es un fractal que se puede construir uniendo sucesivamente\n\nlos puntos medios de los lados de un triángulo equilátero sombreado. Se pinta de\n\nblanco el triángulo central y se repite el mismo procedimiento sobre los nuevos\n\ntriángulos sombreados que se generan.\n\nLa siguiente imagen representa el procedimiento antes mencionado hasta la tercera\n\nfigura:\n\nSi A es el área del triángulo de la Figura 1, ¿cuál de las siguientes expresiones\n\npermite calcular la suma del área de todos los triángulos en blanco de la Figura 3?\n\n�² �1",
+   "options": [
+    {
+     "key": "A",
+     "text": "A 4 �² �1"
+    },
+    {
+     "key": "B",
+     "text": "3 · A 4 1 � � 1 + ³"
+    },
+    {
+     "key": "C",
+     "text": "A 4 4 � �²� 1 �3 1 + ³"
+    },
+    {
+     "key": "D",
+     "text": "A 4 ⁺ 4 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q17.webp",
+    "width": 907,
+    "height": 966,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Figura 3 tiene un triángulo blanco de área $\\frac{A}{4}$ y tres de área $\\frac{A}{16}$, cuya suma es $\\frac{A}{4}\\left(1 + \\frac{3}{4}\\right)$.",
+    "steps": [
+     "En la Figura 1 el triángulo tiene área A. Al unir los puntos medios, el triángulo central tiene lados de la mitad y área $\\frac{A}{4}$; ese es el primer triángulo blanco.",
+     "La Figura 2 deja 3 triángulos sombreados de área $\\frac{A}{4}$ cada uno. En cada uno, el triángulo central blanco tiene área $\\frac{1}{4} \\cdot \\frac{A}{4} = \\frac{A}{16}$.",
+     "En la Figura 3 hay un blanco de área $\\frac{A}{4}$ y tres blancos de área $\\frac{A}{16}$, así que la suma es $\\frac{A}{4} + 3 \\cdot \\frac{A}{16} = \\frac{A}{4}\\left(1 + \\frac{3}{4}\\right)$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Considera un solo triángulo blanco pequeño de área $\\frac{A}{16}$, olvidando el triángulo central de la Figura 2.",
+     "B": "Multiplica por 3 el área de un blanco pequeño, $3 \\cdot \\frac{A}{16}$, y omite el triángulo central grande.",
+     "D": "Agrega un término $\\left(\\frac{3}{4}\\right)^{2}$ dentro del paréntesis, como si la Figura 3 tuviera un nivel más de iteraciones."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q18",
+   "number": 18,
+   "axis": "Números",
+   "topic": "Números enteros",
+   "stem": "Considera la secuencia de números a¹ = 5, a² = 8, a³ = 13 y para todo número entero n mayor que 3, an = n² + 4.\n\nCon la secuencia anterior se forma una nueva secuencia de la siguiente manera:\n\n- el primer término es a² −a¹,\n\n- el segundo término es a³ −a²,\n\n- para todo número entero n mayor que 3, el n-ésimo término es an+1 −an.\n\n¿Cuál es el término 2020 de la nueva secuencia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4041"
+    },
+    {
+     "key": "B",
+     "text": "2021"
+    },
+    {
+     "key": "C",
+     "text": "5"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q18.webp",
+    "width": 907,
+    "height": 569,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La nueva secuencia es $b_n = a_{n+1} - a_n = 2n + 1$, así que el término 2020 es $2 \\cdot 2020 + 1 = 4041$.",
+    "steps": [
+     "Con $a_n = n^{2} + 4$ (válido también para $n = 1, 2, 3$, pues da 5, 8 y 13), el término n-ésimo de la nueva secuencia es $b_n = a_{n+1} - a_n$.",
+     "Entonces $b_n = \\left((n+1)^{2} + 4\\right) - \\left(n^{2} + 4\\right) = n^{2} + 2n + 1 + 4 - n^{2} - 4 = 2n + 1$.",
+     "Verificación: $b_1 = a_2 - a_1 = 8 - 5 = 3 = 2 \\cdot 1 + 1$ y $b_2 = a_3 - a_2 = 13 - 8 = 5 = 2 \\cdot 2 + 1$.",
+     "Así, $b_{2020} = 2 \\cdot 2020 + 1 = 4041$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Toma $b_n = n + 1$, con lo que $b_{2020} = 2021$.",
+     "C": "Confunde el término 2020 con el de posición 2, cuyo valor es $b_2 = 5$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q19",
+   "number": 19,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Considera un rectángulo de largo 4x(x + 1) metros y ancho 2x(x −1) metros.\n\n¿Cuál de las siguientes expresiones representa la cantidad de cuadrados de lado\n\n2x metros que se necesitan como mínimo para cubrir este rectángulo? 5\n\n20x(x² + 1)",
+   "options": [
+    {
+     "key": "A",
+     "text": "20x(x² −1)"
+    },
+    {
+     "key": "B",
+     "text": "50(x² + 1)"
+    },
+    {
+     "key": "C",
+     "text": "50(x² −1)"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q19.webp",
+    "width": 907,
+    "height": 386,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cantidad de cuadrados es el área del rectángulo dividida por el área de un cuadrado de lado $\\frac{2x}{5}$, y el factor $x^{2}$ se cancela.",
+    "steps": [
+     "El área del rectángulo es $4x(x+1)\\cdot 2x(x-1)=8x^{2}(x+1)(x-1)=8x^{2}(x^{2}-1)$ metros cuadrados.",
+     "Cada cuadrado tiene lado $\\frac{2x}{5}$ metros, así que su área es $\\left(\\frac{2x}{5}\\right)^{2}=\\frac{4x^{2}}{25}$ metros cuadrados.",
+     "La cantidad de cuadrados es $\\frac{8x^{2}(x^{2}-1)}{\\frac{4x^{2}}{25}}=\\frac{8\\cdot 25}{4}(x^{2}-1)=50(x^{2}-1)$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "$50(x^{2}+1)$: al multiplicar $(x+1)(x-1)$ escribe $x^{2}+1$, es decir, se equivoca de signo.",
+     "B": "$20x(x^{2}-1)$: al dividir por $\\left(\\frac{2x}{5}\\right)^{2}$ calcula mal el factor numérico y deja una $x$ sin cancelar."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q20",
+   "number": 20,
+   "axis": "Números",
+   "topic": "Fracciones",
+   "stem": "Una llave llena un estanque vacío en 4 horas a caudal constante, otra llave llena el\n\nmismo estanque vacío en 3 horas a caudal constante y una tercera llave llena el\n\nmismo estanque vacío en 4,5 horas a caudal constante.\n\nSi las tres llaves se abren simultáneamente para llenar este mismo estanque vacío,\n\ntal que cada una mantiene su caudal constante, ¿qué fracción del estanque queda\n\npor llenar luego de haber transcurrido una hora?\n\n10",
+   "options": [
+    {
+     "key": "A",
+     "text": "115 4"
+    },
+    {
+     "key": "B",
+     "text": "36 7"
+    },
+    {
+     "key": "C",
+     "text": "36 105"
+    },
+    {
+     "key": "D",
+     "text": "135"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q20.webp",
+    "width": 907,
+    "height": 575,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada llave aporta una fracción del estanque por hora; se suman las tres tasas y lo que falta es 1 menos esa suma.",
+    "steps": [
+     "Tasas por hora: la primera llave llena $\\frac{1}{4}$ del estanque, la segunda $\\frac{1}{3}$ y la tercera $\\frac{1}{4{,}5}=\\frac{2}{9}$.",
+     "Entre las tres llenan $\\frac{1}{4}+\\frac{1}{3}+\\frac{2}{9}=\\frac{9}{36}+\\frac{12}{36}+\\frac{8}{36}=\\frac{29}{36}$ del estanque en una hora.",
+     "Por lo tanto, la fracción que queda por llenar es $1-\\frac{29}{36}=\\frac{7}{36}$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "$\\frac{105}{135}=\\frac{7}{9}$: es $1-\\frac{2}{9}$, o sea, resta solo el aporte de la llave de 4,5 horas y olvida las otras dos."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q21",
+   "number": 21,
+   "axis": "Números",
+   "topic": "Proporcionalidad",
+   "stem": "Los trabajadores de cierta empresa tienen derecho a 15 días de vacaciones anuales,\n\nlas cuales se pueden calcular proporcionalmente, considerando doce meses de un\n\naño y que cada mes trabajado otorga al trabajador 1,25 días de vacaciones.\n\nLuego de diez años de trabajo, se agrega un día de vacaciones anuales por cada\n\naño adicional a los diez años de trabajo, los cuales también se pueden calcular\n\nproporcionalmente a los meses del año.\n\nUn trabajador necesita calcular la cantidad de días de vacaciones que le\n\ncorresponden luego de (10 + n) años, con n un número positivo.\n\n¿Cuál de las siguientes expresiones permite calcular la cantidad de días de\n\nvacaciones que le corresponden por cada mes trabajado?\n\n1,25 + ⁿ",
+   "options": [
+    {
+     "key": "A",
+     "text": "12 1,25 + ⁿ ⁺ ¹⁰"
+    },
+    {
+     "key": "B",
+     "text": "12 n + 10"
+    },
+    {
+     "key": "C",
+     "text": "12 n"
+    },
+    {
+     "key": "D",
+     "text": "12"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q21.webp",
+    "width": 907,
+    "height": 765,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los 15 días base se reparten en 12 meses y cada año adicional suma un día que también se reparte por mes, así que cada mes aporta $\\frac{n}{12}$ días extra.",
+    "steps": [
+     "Doce meses de $1{,}25$ días dan $12\\cdot 1{,}25=15$ días, que es la base anual.",
+     "Después de 10 años se agrega un día por cada año adicional; con $n$ años adicionales son $n$ días extra al año.",
+     "Esos $n$ días se reparten proporcionalmente en los 12 meses, así que cada mes trabajado aporta $\\frac{n}{12}$ días adicionales.",
+     "Por mes la cantidad de días es $1{,}25+\\frac{n}{12}$, y el total anual es $12\\left(1{,}25+\\frac{n}{12}\\right)=15+n$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$1{,}25+\\frac{n+10}{12}$: vuelve a sumar los 10 años que ya están en la base; los años que se agregan son solo $n$.",
+     "D": "$\\frac{n}{12}$: olvida los $1{,}25$ días que cada mes trabajado otorga."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q22",
+   "number": 22,
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "stem": "Considera el siguiente sistema de ecuaciones en x e y, con a, b, c y d números\n\nreales.\n\nax + by = c\n\nx + y = d\n\n¿Cuál de las siguientes condiciones garantiza que este sistema tiene solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que a sea distinto de b."
+    },
+    {
+     "key": "B",
+     "text": "Que a + b sea distinto de c."
+    },
+    {
+     "key": "C",
+     "text": "Que c sea distinto de d."
+    },
+    {
+     "key": "D",
+     "text": "Que a sea proporcional a b."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q22.webp",
+    "width": 907,
+    "height": 450,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un sistema lineal de dos ecuaciones con dos incógnitas tiene solución única cuando el determinante de sus coeficientes, $a-b$, es distinto de cero.",
+    "steps": [
+     "Los coeficientes son $a$, $b$ en la primera ecuación y $1$, $1$ en la segunda; su determinante es $a\\cdot 1-b\\cdot 1=a-b$.",
+     "Si $a-b\\neq 0$, al despejar se obtiene $x=\\frac{c-bd}{a-b}$ e $y=\\frac{ad-c}{a-b}$, valores únicos.",
+     "Por lo tanto, la condición que garantiza solución es $a\\neq b$, es decir, que $a$ sea distinto de $b$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "Que $c\\neq d$: las constantes del lado derecho no intervienen en el determinante, así que no garantizan nada.",
+     "D": "Que $a$ sea proporcional a $b$: eso ocurre cuando $a=b$, justo el caso en que el determinante es cero y no hay solución única."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q23",
+   "number": 23,
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "stem": "Una empresa láctea produce queso y crema. Para fabricar un kilogramo de queso,\n\nla empresa requiere 12 litros de leche y para fabricar un kilogramo de crema\n\nrequiere 10 litros de leche. Además, en una hora de procesamiento se pueden\n\nfabricar 3 kilogramos de queso o 2 kilogramos de crema.\n\nSi se ocuparán 9200 litros de leche y 300 horas para el procesamiento de esta leche,\n\n¿cuál de los siguientes sistemas permite calcular la cantidad x de kilogramos de\n\nqueso y la cantidad y de kilogramos de crema que se pueden fabricar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6x + 5y = 4600 3x + 2y = 300"
+    },
+    {
+     "key": "B",
+     "text": "6x + 5y = 9200 3x + 2y = 300"
+    },
+    {
+     "key": "C",
+     "text": "6x + 5y = 4600 1 3x ⁺ ¹ 2y = ³⁰⁰"
+    },
+    {
+     "key": "D",
+     "text": "6x + 5y = 9200 1 3x ⁺ ¹ 2y = ³⁰⁰"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q23.webp",
+    "width": 907,
+    "height": 903,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay dos restricciones lineales: la leche usada en litros y el tiempo de procesamiento en horas, cada una igualada a su total.",
+    "steps": [
+     "Leche: con $x$ kilogramos de queso (12 litros cada uno) e $y$ kilogramos de crema (10 litros cada uno), $12x+10y=9200$, que al dividir por 2 queda $6x+5y=4600$.",
+     "Procesamiento: en una hora se fabrican 3 kilogramos de queso, así que $x$ kilogramos demandan $\\frac{x}{3}$ horas; en una hora se fabrican 2 kilogramos de crema, así que $y$ kilogramos demandan $\\frac{y}{2}$ horas.",
+     "Como se dispone de 300 horas: $\\frac{1}{3}x+\\frac{1}{2}y=300$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "$6x+5y=9200$ con $\\frac{1}{3}x+\\frac{1}{2}y=300$: olvida dividir la ecuación de la leche por 2.",
+     "A": "$3x+2y=300$: usa las tasas de producción (3 y 2 kilogramos por hora) como coeficientes, en lugar de sus inversas."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q24",
+   "number": 24,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una persona venderá 20 prendas entre faldas y jeans, y venderá cada tipo de prenda\n\na un precio fijo.\n\nSe sabe que si vende todas las prendas ganará en total \\$134 000 y que hay más\n\nfaldas que jeans.\n\nEl siguiente modelo representa la situación anterior:\n\nr · x + s · (20 −x) = 134 000\n\nSi x > 10, ¿qué representa s en el modelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cantidad de jeans"
+    },
+    {
+     "key": "B",
+     "text": "Cantidad de faldas"
+    },
+    {
+     "key": "C",
+     "text": "Precio de cada jean"
+    },
+    {
+     "key": "D",
+     "text": "Precio de cada falda"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q24.webp",
+    "width": 907,
+    "height": 565,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el modelo, $s$ multiplica la cantidad de jeans y el resultado está en pesos, así que $s$ es el precio de cada jean.",
+    "steps": [
+     "Son 20 prendas en total, así que $x$ son faldas y $20-x$ son jeans.",
+     "Como hay más faldas que jeans, $x>10$ es coherente con que $x$ cuente faldas.",
+     "El término $s\\cdot(20-x)$ es la cantidad de jeans $(20-x)$ multiplicada por $s$, y el total está en pesos; por lo tanto $s$ es el precio de cada jean.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Cantidad de jeans: $20-x$ es la cantidad de jeans, pero $s$ es el factor que la multiplica y aporta pesos, no unidades.",
+     "D": "Precio de cada falda: eso es $r$, que acompaña a $x$ (las faldas)."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q25",
+   "number": 25,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En el siguiente gráfico se presentan los costos de arriendo de un vehículo\n\ndependiendo de la cantidad de días x que se arrienda.\n\n¿Cuál de las siguientes funciones modela el costo de arriendo de un vehículo en\n\nfunción de los días de arriendo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "h(x) = 88 200x g(x) = ⁹⁷⁰ ²⁰⁰x"
+    },
+    {
+     "key": "B",
+     "text": "10"
+    },
+    {
+     "key": "C",
+     "text": "p(x) = 88 200x + 88 200 t(x) = ⁸⁸ ²⁰⁰x"
+    },
+    {
+     "key": "D",
+     "text": "+ 88 200 10"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q25.webp",
+    "width": 907,
+    "height": 950,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La recta parte en el cargo inicial de $88\\,200$ pesos y su pendiente se obtiene con el segundo punto $(10, 970\\,200)$.",
+    "steps": [
+     "En $x=0$ el costo es $88\\,200$ pesos, así que el término independiente es $88\\,200$.",
+     "En $x=10$ el costo es $970\\,200$ pesos. La pendiente es $\\frac{970\\,200-88\\,200}{10}=\\frac{882\\,000}{10}=88\\,200$.",
+     "Luego la función es $p(x)=88\\,200x+88\\,200$.",
+     "Verificación: $88\\,200\\cdot 10+88\\,200=970\\,200$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "$\\frac{88\\,200x}{10}+88\\,200$: divide la pendiente por 10, cuando el costo por día es $88\\,200$ pesos.",
+     "B": "$\\frac{970\\,200x}{10}$: usa $970\\,200$ como factor de proporcionalidad, con pendiente $97\\,020$, y omite el cargo inicial."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q26",
+   "number": 26,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En el mercado de un determinado producto, su demanda y oferta se modelan\n\nmediante funciones de la forma f(x) = ax + b, tal como se representa en el gráfico\n\nadjunto.\n\nSi el precio del producto se fija en 40 dólares, ¿cuál será la diferencia entre la\n\ncantidad de la demanda y la cantidad de la oferta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "100"
+    },
+    {
+     "key": "B",
+     "text": "120"
+    },
+    {
+     "key": "C",
+     "text": "140"
+    },
+    {
+     "key": "D",
+     "text": "160"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q26.webp",
+    "width": 907,
+    "height": 724,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se escriben las ecuaciones de demanda y de oferta a partir de los puntos del gráfico y luego se evalúan en el precio de 40 dólares.",
+    "steps": [
+     "Demanda: pasa por $(0,110)$ y por el equilibrio $(80,70)$, así que su pendiente es $\\frac{70-110}{80}=-\\frac{1}{2}$ y la ecuación es $p=110-\\frac{1}{2}q$.",
+     "Oferta: pasa por $(40,40)$ y $(80,70)$, con pendiente $\\frac{70-40}{80-40}=\\frac{3}{4}$, así que $p=\\frac{3}{4}q+10$.",
+     "Con $p=40$: en la demanda, $40=110-\\frac{1}{2}q$ da $q=140$; en la oferta, $40=\\frac{3}{4}q+10$ da $q=40$.",
+     "La diferencia es $140-40=100$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "$140$: es solo la cantidad demandada; olvida restar la cantidad ofertada de 40 unidades."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q27",
+   "number": 27,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "El precio P por pagar por el consumo de agua depende de la cantidad x de metros\n\ncúbicos consumidos en el mes. En cierta ciudad, el cobro se realiza de la siguiente\n\nforma:\n\n- Si se consume una cantidad menor o igual que 64 m³, entonces el precio total\n\npor pagar se calcula mediante la ecuación P = 1800x + 1000.\n\n- Si se consume una cantidad mayor que 64 m³, entonces el precio total por pagar se calcula mediante la ecuación P = 3500x −104 300.\n\nConsidera que por solamente llenar una piscina hasta ⁴ de su capacidad máxima se 5 debe pagar \\$116 200.\n\n¿Cuánto se debe pagar por llenar a su máxima capacidad una piscina de igual\n\nvolumen que la anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$119 700"
+    },
+    {
+     "key": "B",
+     "text": "\\$145 000"
+    },
+    {
+     "key": "C",
+     "text": "\\$145 250"
+    },
+    {
+     "key": "D",
+     "text": "\\$175 700"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q27.webp",
+    "width": 907,
+    "height": 693,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El límite de 64 m³ separa los tramos; con el pago de $116\\,200$ pesos se obtiene el volumen total de la piscina y luego se aplica el tramo que corresponde.",
+    "steps": [
+     "Con $x=64$ m³, la primera ecuación da $1800\\cdot 64+1000=116\\,200$ pesos, exactamente lo que se paga por $\\frac{4}{5}$ de la piscina.",
+     "La segunda ecuación daría $3500x-104\\,300=116\\,200$, es decir $x=63$, que no cumple $x>64$; por eso el consumo de $\\frac{4}{5}$ de la piscina es de 64 m³.",
+     "Así, $\\frac{4}{5}V=64$ m³, luego el volumen total es $V=80$ m³, que está en el tramo mayor que 64 m³.",
+     "Con la segunda ecuación: $P=3500\\cdot 80-104\\,300=280\\,000-104\\,300=175\\,700$ pesos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "$145\\,000$ pesos: aplica la primera ecuación a 80 m³ ($1800\\cdot 80+1000$), ignorando que el consumo supera los 64 m³.",
+     "A": "$119\\,700$ pesos: es la segunda ecuación evaluada en 64 m³, pero ese no es el volumen total de la piscina."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q28",
+   "number": 28,
+   "axis": "Números",
+   "topic": "Potencias",
+   "stem": "La rapidez de escape terrestre ve de un objeto se define como aquella rapidez inicial que necesita un objeto para lograr escapar de la gravedad terrestre.\n\nLa ve se obtiene de la siguiente relación entre la energía cinética Ec y la energía potencial Ep.\n\nEc + Ep = 0\n\nSi Ec = ¹ y Ep = −G · Mm , ¿cuál de las siguientes expresiones permite 2mv² e r calcular ve?\n\n−2GM",
+   "options": [
+    {
+     "key": "A",
+     "text": "r √ GM"
+    },
+    {
+     "key": "B",
+     "text": "2r � 2GM"
+    },
+    {
+     "key": "C",
+     "text": "r �² �2GM"
+    },
+    {
+     "key": "D",
+     "text": "r"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q28.webp",
+    "width": 907,
+    "height": 738,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La condición $E_c+E_p=0$ lleva a $v_e^{2}=\\frac{2GM}{r}$, y luego se saca raíz cuadrada para despejar $v_e$.",
+    "steps": [
+     "Con $E_c=\\frac{1}{2}mv_e^{2}$ y $E_p=-\\frac{GMm}{r}$, la condición es $\\frac{1}{2}mv_e^{2}-\\frac{GMm}{r}=0$.",
+     "Se divide por $m$ (distinto de cero) y se multiplica por 2: $v_e^{2}=\\frac{2GM}{r}$.",
+     "La velocidad es positiva, así que $v_e=\\sqrt{\\frac{2GM}{r}}$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "$\\left(\\frac{2GM}{r}\\right)^{2}$: eleva al cuadrado en lugar de sacar raíz cuadrada.",
+     "A": "$-\\frac{2GM}{r}$: es $v_e^{2}$ con el signo de $E_p$ sin tratar, y no tiene raíz cuadrada."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q29",
+   "number": 29,
+   "axis": "Álgebra y funciones",
+   "topic": "Función cuadrática",
+   "stem": "Una parábola que es tangente al eje X se rota en 180◦y se traslada obteniéndose\n\nuna parábola cuyo vértice está en el origen. Luego se dibuja un cuadrado de\n\nlado 18 unidades de modo que:\n\n- uno de los lados del cuadrado interseca al eje Y en el mismo punto que lo hace\n\nla parábola,\n\n- ambas parábolas pasan por un vértice del cuadrado.\n\nEn la figura adjunta se representa esta situación:\n\n¿Cuál de las siguientes funciones tiene como gráfica la parábola original?\n\nf(x) = (x −6)² + 45",
+   "options": [
+    {
+     "key": "A",
+     "text": "g(x) = ³"
+    },
+    {
+     "key": "B",
+     "text": "2 ⁽x⁻⁶⁾²"
+    },
+    {
+     "key": "C",
+     "text": "h(x) = x (x −6) + 9 m(x) = ¹"
+    },
+    {
+     "key": "D",
+     "text": "4 ⁽x⁻⁶⁾²"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q29.webp",
+    "width": 907,
+    "height": 1123,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al rotar 180° la parábola conserva el valor de $|a|$; el vértice se obtiene con los puntos del cuadrado y el corte con el eje Y.",
+    "steps": [
+     "La parábola rotada tiene vértice $(0,0)$ y pasa por el vértice inferior $(-6,-9)$ del cuadrado: $-9=-a\\cdot 36$, luego $a=\\frac{1}{4}$.",
+     "La original tiene vértice $(h,0)$ y, al rotar, conserva $a=\\frac{1}{4}$. Pasa por $(0,9)$: $\\frac{1}{4}h^{2}=9$, luego $h=\\pm 6$.",
+     "Pasa también por el vértice $(12,9)$ del cuadrado: $\\frac{1}{4}(12-h)^{2}=9$, luego $(12-h)^{2}=36$ y $h=6$ (el valor $h=-6$ no cumple).",
+     "Por lo tanto, la parábola original es $\\frac{1}{4}(x-6)^{2}$, y la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "$\\frac{3}{2}(x-6)^{2}$: el coeficiente sale de dividir $9$ por $6$ en vez de por $36$.",
+     "C": "$x(x-6)+9=(x-3)^{2}$: pasa por $(0,9)$ y es tangente al eje X, pero su vértice está en $x=3$ y su coeficiente es 1."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q30",
+   "number": 30,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En la siguiente figura se representa la gráfica de una función cuadrática f, cuyo vértice\n\nestá en el origen del plano cartesiano.\n\n¿Cuál es el valor de f(10)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4"
+    },
+    {
+     "key": "B",
+     "text": "50"
+    },
+    {
+     "key": "C",
+     "text": "100"
+    },
+    {
+     "key": "D",
+     "text": "200"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q30.webp",
+    "width": 907,
+    "height": 573,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con el vértice en el origen la función es $f(x)=ax^{2}$, y el punto $(2,8)$ permite obtener $a$.",
+    "steps": [
+     "Como el vértice está en el origen, $f(x)=ax^{2}$.",
+     "El punto $(2,8)$ pertenece a la gráfica: $8=a\\cdot 2^{2}=4a$, luego $a=2$.",
+     "Así $f(x)=2x^{2}$ y $f(10)=2\\cdot 10^{2}=200$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "$100$: calcula $10^{2}$ y olvida el coeficiente $a=2$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q31",
+   "number": 31,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Las siguientes tablas presentan puntos de dos funciones cuadráticas, f y g, tal\n\nque g(x) corresponde a una variación de uno de los parámetros h o k de f(x) = (x + h)² + k.\n\nx f(x) x g(x)\n\n−1 6 −1 5\n\n0 3 0 2\n\n1 2 1 1\n\n2 3 2 2\n\n¿Cuál fue el cambio en los parámetros que se reflejó en las tablas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Se aumentó en 1 el valor de h."
+    },
+    {
+     "key": "B",
+     "text": "Se aumentó en 1 el valor de k."
+    },
+    {
+     "key": "C",
+     "text": "Se disminuyó en 1 el valor de h."
+    },
+    {
+     "key": "D",
+     "text": "Se disminuyó en 1 el valor de k."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q31.webp",
+    "width": 907,
+    "height": 538,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El vértice de cada parábola se lee en la tabla por su simetría, y comparar los dos vértices muestra qué parámetro cambió.",
+    "steps": [
+     "En la tabla de $f$, $f(0)=f(2)=3$ y el mínimo está en $x=1$ con $f(1)=2$. El vértice es $(1,2)$, así que $f(x)=(x-1)^{2}+2$; comprobación: $f(-1)=4+2=6$.",
+     "En la tabla de $g$ el mínimo también está en $x=1$, con $g(1)=1$. El vértice es $(1,1)$, así que $g(x)=(x-1)^{2}+1$; comprobación: $g(-1)=4+1=5$ y $g(0)=2$.",
+     "El vértice no se movió en $x$, así que $h$ no cambió; el valor de $k$ pasó de 2 a 1, es decir, disminuyó en 1. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "Se aumentó en 1 el valor de k: es el signo invertido, porque k bajó de 2 a 1.",
+     "C": "Se disminuyó en 1 el valor de h: el vértice sigue en $x=1$ en ambas tablas, así que h no cambió."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q32",
+   "number": 32,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En un laboratorio, la función cuadrática f modela la altura alcanzada por una pelota\n\nlanzada verticalmente hacia arriba en función del tiempo. En la figura adjunta se\n\npresenta la gráfica de f.\n\nSi la altura máxima alcanzada por la pelota es q metros, ¿cuál de las siguientes\n\nafirmaciones es verdadera?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cantidad de metros que recorre la pelota desde que es lanzada hasta alcanzar su altura máxima es q metros."
+    },
+    {
+     "key": "B",
+     "text": "La altura alcanzada por la pelota a los 2 segundos es p metros."
+    },
+    {
+     "key": "C",
+     "text": "Desde su altura máxima, la pelota demoró 8 segundos en llegar al suelo."
+    },
+    {
+     "key": "D",
+     "text": "La cantidad total de metros que recorrió la pelota fue q + 4."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q32.webp",
+    "width": 907,
+    "height": 1010,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La parábola es simétrica respecto de $t=3$, así que los tiempos 2 y 4 tienen la misma altura, que es $p$.",
+    "steps": [
+     "La gráfica pasa por $(0,4)$ y $(8,0)$, y su vértice está en $t=3$ con altura $q$: $f(t)=a(t-3)^{2}+q$, luego $9a+q=4$ y $25a+q=0$.",
+     "Restando se obtiene $16a=-4$, así que $a=-\\frac{1}{4}$ y $q=4+\\frac{9}{4}=\\frac{25}{4}=6{,}25$ metros.",
+     "Por simetría, $f(2)=f(4)=-\\frac{1}{4}+\\frac{25}{4}=6$, que es la altura $p$ marcada en el gráfico.",
+     "La afirmación B es verdadera. A confunde la altura máxima con una distancia; C es falsa porque desde el máximo ($t=3$) hasta el suelo ($t=8$) pasan 5 segundos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "Dice 8 segundos desde el máximo: confunde el tiempo total de vuelo, de 8 segundos desde el lanzamiento, con el tiempo de caída, que es $8-3=5$ segundos.",
+     "A": "Dice que la distancia recorrida hasta el máximo es q: confunde la altura máxima, que es un valor vertical, con una distancia recorrida."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q33",
+   "number": 33,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En la siguiente figura se representa la gráfica de una función trigonométrica.\n\n¿Cuál de las siguientes funciones corresponde a esta gráfica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "f(x) = 6 · sen(x) + 1"
+    },
+    {
+     "key": "B",
+     "text": "f(x) = 7 · sen(x) + 1 �x �"
+    },
+    {
+     "key": "C",
+     "text": "f(x) = 6 · sen + 1 2"
+    },
+    {
+     "key": "D",
+     "text": "f(x) = 6 · sen(x + 4) + 1"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q33.webp",
+    "width": 907,
+    "height": 958,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La amplitud y la línea media dan $6$ y $1$; el periodo, medido entre el máximo en $x=\\pi$ y el mínimo en $x=3\\pi$, fija el valor de $k$.",
+    "steps": [
+     "Amplitud: máximo $7$ y mínimo $-5$, así que la amplitud es $\\frac{7-(-5)}{2}=6$. La línea media es $\\frac{7+(-5)}{2}=1$.",
+     "La función tiene la forma $f(x)=6\\cdot \\mathrm{sen}(kx)+1$, y en $x=0$ vale 1 y crece.",
+     "El máximo está en $x=\\pi$, donde $\\mathrm{sen}(k\\pi)=1$, así que $k\\pi=\\frac{\\pi}{2}$ y $k=\\frac{1}{2}$. Con eso el periodo es $4\\pi$, el mínimo queda en $x=3\\pi$ y el corte con la línea media en $x=2\\pi$, como muestra el gráfico.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$6\\cdot \\mathrm{sen}(x)+1$: tiene bien la amplitud y la línea media, pero su periodo es $2\\pi$ y no $4\\pi$.",
+     "B": "$7\\cdot \\mathrm{sen}(x)+1$: usa el máximo 7 como amplitud y mantiene el periodo de $2\\pi$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q34",
+   "number": 34,
+   "axis": "Geometría",
+   "topic": "Homotecia",
+   "stem": "Al triángulo de vértices A(1, 2), B(4, 3) y C(1, 4) se le aplica una homotecia, de manera que las imágenes de los vértices A, B y C son D(−5, 5), E(−11, 3) y F(−5, 1), respectivamente.\n\n¿Cuáles son las coordenadas del centro de homotecia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1, −1)"
+    },
+    {
+     "key": "B",
+     "text": "(−2, 2)"
+    },
+    {
+     "key": "C",
+     "text": "(−1, 3)"
+    },
+    {
+     "key": "D",
+     "text": "(−2, 3)"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q34.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una homotecia $P'=O+k(P-O)$; la razón sale de las distancias entre vértices y el centro se despeja con ella.",
+    "steps": [
+     "$C-A=(0,2)$ y $F-D=(0,-4)$, así que la razón es $k=-2$.",
+     "Con $k=-2$, cada imagen cumple $P'=3O-2P$. Para $A$: $D=3O-2A$, luego $3O=D+2A=(-5,5)+(2,4)=(-3,9)$ y $O=(-1,3)$.",
+     "Comprobación con $B$: $3O-2B=(-3,9)-(8,6)=(-11,3)=E$; con $C$: $3O-2C=(-3,9)-(2,8)=(-5,1)=F$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "D": "$(-2,3)$: la coordenada $y$ es correcta, pero la $x$ sale de promediar $1$ y $-5$, $\\frac{1+(-5)}{2}=-2$, lo que no corresponde a la razón de homotecia."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q35",
+   "number": 35,
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "stem": "Al triángulo ABC se le aplica una homotecia H, obteniéndose el triángulo A′B′C′, tal que A′ es la imagen de A y B′ es la imagen de B, tal como se representa en la figura\n\nadjunta. Luego, al triángulo ABC se le aplica otra homotecia con la misma razón de homotecia de H, pero con centro el punto (−1, 2), obteniéndose el triángulo PQR,\n\ntal que R es la imagen de C.\n\n¿Cuál de las siguientes coordenadas corresponde al punto R?\n\n� � −⁷",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,³ 2 � � 1, ⁷"
+    },
+    {
+     "key": "B",
+     "text": "2 � � −3, ¹"
+    },
+    {
+     "key": "C",
+     "text": "2 � � −⁵"
+    },
+    {
+     "key": "D",
+     "text": "2,⁻³ 2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q35.webp",
+    "width": 907,
+    "height": 1009,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con la figura se determinan el centro y la razón de $H$; luego se aplica la misma razón desde el nuevo centro $(-1,2)$.",
+    "steps": [
+     "En la figura, $A(0,3)\\to A'(0,-\\frac{3}{2})$ y $B(4,0)\\to B'(-2,0)$. Con centro en el origen, $k=-\\frac{1}{2}$: $-\\frac{1}{2}A=(0,-\\frac{3}{2})$ y $-\\frac{1}{2}B=(-2,0)$, y también $-\\frac{1}{2}C=(-2,-\\frac{3}{2})=C'$.",
+     "La segunda homotecia tiene la misma razón $k=-\\frac{1}{2}$ y centro $O'=(-1,2)$, así que $R=O'+k(C-O')$.",
+     "Con $C-O'=(4,3)-(-1,2)=(5,1)$: $R=(-1,2)+\\left(-\\frac{1}{2}\\right)(5,1)=\\left(-\\frac{7}{2},\\frac{3}{2}\\right)$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "C": "$\\left(-3,\\frac{1}{2}\\right)$: calcula $O'+k\\cdot C$ sin restar el centro, es decir, $(-1,2)+\\left(-2,-\\frac{3}{2}\\right)$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q36",
+   "number": 36,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "En un partido de fútbol, la pelota está ubicada en un lugar llamado punto penal, tal\n\ncomo se representa a continuación.\n\nLa altura del arco de fútbol es h metros y la distancia entre el punto penal y el punto\n\nmedio entre ambos postes es d metros.\n\nSi un jugador patea la pelota de manera que su trayectoria hasta que pasa 1 m\n\nsobre el centro del travesaño es una línea recta, ¿cuál de las siguientes expresiones\n\nrepresenta la distancia recorrida por la pelota hasta que pasa por sobre el travesaño,\n\nen metros?\n\n√ d² + h²",
+   "options": [
+    {
+     "key": "A",
+     "text": "√ d² + h² + 1"
+    },
+    {
+     "key": "B",
+     "text": "√ d² + 2d + 1 + h²"
+    },
+    {
+     "key": "C",
+     "text": "√ d² + h² + 2h + 1"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q36.webp",
+    "width": 907,
+    "height": 984,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La distancia recorrida es la hipotenusa de un triángulo rectángulo con catetos $d$ (horizontal) y $h+1$ (altura).",
+    "steps": [
+     "Se toma el origen en el punto medio de los postes, sobre el suelo. El punto penal está a $d$ metros de ese origen en el suelo, y el punto que pasa 1 metro sobre el centro del travesaño está a $h+1$ metros de altura sobre el mismo origen.",
+     "Por el teorema de Pitágoras, la distancia es $\\sqrt{d^{2}+(h+1)^{2}}$.",
+     "Desarrollando, $(h+1)^{2}=h^{2}+2h+1$, así que la distancia es $\\sqrt{d^{2}+h^{2}+2h+1}$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\sqrt{d^{2}+h^{2}}$: es la distancia al centro del travesaño mismo, sin el metro extra por sobre él.",
+     "C": "$\\sqrt{d^{2}+2d+1+h^{2}}$: expande $(d+1)^{2}$ en lugar de $(h+1)^{2}$, sumando el metro a la distancia horizontal y no a la altura."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q37",
+   "number": 37,
+   "axis": "Geometría",
+   "topic": "Circunferencia y círculo",
+   "stem": "Considera siete círculos, cuyos radios miden r, 2r, 3r, 4r, 5r, 6r y 7r, con todas las\n\nmedidas en centímetros.\n\nSi la suma del área de todos los círculos es 35πx² cm², ¿cuál de las siguientes\n\nexpresiones es igual a x?",
+   "options": [
+    {
+     "key": "A",
+     "text": "r"
+    },
+    {
+     "key": "B",
+     "text": "2r"
+    },
+    {
+     "key": "C",
+     "text": "7r"
+    },
+    {
+     "key": "D",
+     "text": "28r"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q37.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las áreas de círculos son proporcionales a $r^{2}$, así que el área total se factoriza como $\\pi r^{2}$ por la suma de los cuadrados de 1 a 7.",
+    "steps": [
+     "Las áreas son $\\pi r^{2}$, $\\pi (2r)^{2}$, ..., $\\pi (7r)^{2}$, es decir, $\\pi r^{2} \\cdot k^{2}$ con $k = 1, 2, \\ldots, 7$.",
+     "La suma de los cuadrados es $1 + 4 + 9 + 16 + 25 + 36 + 49 = 140$, así que el área total es $140\\pi r^{2}$ cm².",
+     "Igualando con el dato: $140\\pi r^{2} = 35\\pi x^{2}$, luego $x^{2} = 4r^{2}$.",
+     "Como $x$ y $r$ son positivos, $x = 2r$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$x = r$: se obtiene al suponer $x^{2} = r^{2}$, es decir, al no notar que $140 : 35 = 4$.",
+     "C": "$7r$: toma el radio mayor sin hacer la comparación de áreas.",
+     "D": "$28r$: multiplica el cociente $140 : 35 = 4$ por $7r$, sin sacar la raíz cuadrada de 4."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q38",
+   "number": 38,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Un atleta entrena dando vueltas perimetrales en un parque circular, realizando:\n\ncuatro en la mañana y seis en la tarde.\n\nSi el parque tiene un diámetro de 400 metros, ¿cuál de las siguientes expresiones\n\nrepresenta la diferencia entre las distancias, en metros, recorridas en la tarde y en la\n\nmañana?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6(2 · π · 200) −4(2 · π · 200)"
+    },
+    {
+     "key": "B",
+     "text": "6(2 · π · 400) −4(2 · π · 400) 6π(200)² −4π(200)²"
+    },
+    {
+     "key": "C",
+     "text": "6π(400)² −4π(400)²"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q38.webp",
+    "width": 907,
+    "height": 428,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La distancia de una vuelta perimetral es la longitud de la circunferencia, $2 \\cdot \\pi \\cdot r$, y con diámetro 400 m el radio es 200 m.",
+    "steps": [
+     "El diámetro es 400 m, luego el radio es $r = 200$ m.",
+     "Una vuelta perimetral recorre la circunferencia completa: $2 \\cdot \\pi \\cdot 200$ m.",
+     "En la mañana recorre $4 \\cdot (2 \\cdot \\pi \\cdot 200)$ m y en la tarde $6 \\cdot (2 \\cdot \\pi \\cdot 200)$ m.",
+     "La diferencia (tarde menos mañana) es $6(2 \\cdot \\pi \\cdot 200) - 4(2 \\cdot \\pi \\cdot 200)$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Usa el diámetro 400 en lugar del radio 200 dentro de la longitud de la circunferencia.",
+     "C": "Usa áreas $\\pi r^{2}$ en vez de longitudes: mide superficie y no distancia recorrida.",
+     "D": "Combina el error de la alternativa C con el diámetro: eleva al cuadrado 400 y cambia la unidad de longitud por área."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q39",
+   "number": 39,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Considera los vectores de la forma vn = ¹ 2 ⁽¹⁻⁽⁻¹⁾ⁿ,¹ ⁺ ⁽⁻¹⁾ⁿ⁾, tal que ⁿ es un número entero positivo.\n\n¿Cuál es la magnitud del vector v¹ + v² + v³ + v⁴ + v⁵ + v⁶?\n\n√",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 √"
+    },
+    {
+     "key": "B",
+     "text": "3 2 √"
+    },
+    {
+     "key": "C",
+     "text": "3 5 √"
+    },
+    {
+     "key": "D",
+     "text": "6 2"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q39.webp",
+    "width": 907,
+    "height": 375,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los vectores $v_n$ alternan entre $(1, 0)$ y $(0, 1)$ según la paridad de $n$, así que la suma de seis términos es un vector fijo cuya magnitud sale con Pitágoras.",
+    "steps": [
+     "Si $n$ es impar, $(-1)^{n} = -1$ y $v_n = \\frac{1}{2}(2, 0) = (1, 0)$.",
+     "Si $n$ es par, $(-1)^{n} = 1$ y $v_n = \\frac{1}{2}(0, 2) = (0, 1)$.",
+     "Entre $n = 1$ y $n = 6$ hay tres impares y tres pares, así que la suma es $3(1, 0) + 3(0, 1) = (3, 3)$.",
+     "Su magnitud es $\\sqrt{3^{2} + 3^{2}} = \\sqrt{18} = 3\\sqrt{2}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\sqrt{6}$: suma las componentes ($3 + 3 = 6$) en vez de sumar sus cuadrados.",
+     "D": "$6\\sqrt{2}$: olvida el factor $\\frac{1}{2}$, con lo que cada componente se duplica y la suma queda $(6, 6)$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q41",
+   "number": 41,
+   "axis": "Álgebra y funciones",
+   "topic": "Pendiente de una recta",
+   "stem": "Un funicular es un tipo especial de ferrocarril usado para subir caminos con\n\npendientes pronunciadas.\n\nEl funicular de la figura adjunta recorre 60 m en línea recta entre la estación inferior y\n\nsuperior.\n\n¿Cuál de las siguientes expresiones representa la diferencia de altura, en metros,\n\nentre ambas estaciones?\n\nsen(20◦)",
+   "options": [
+    {
+     "key": "A",
+     "text": "60 cos(20◦)"
+    },
+    {
+     "key": "B",
+     "text": "60"
+    },
+    {
+     "key": "C",
+     "text": "60 sen(20◦)"
+    },
+    {
+     "key": "D",
+     "text": "60 cos(20◦)"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q41.webp",
+    "width": 907,
+    "height": 984,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El recorrido de 60 m es la hipotenusa de un triángulo rectángulo, y la diferencia de altura es el cateto opuesto al ángulo de $70^\\circ$.",
+    "steps": [
+     "En la figura, el ángulo de $70^\\circ$ está en la estación inferior, entre el recorrido y la horizontal; la diferencia de altura es el cateto opuesto a ese ángulo.",
+     "Por definición, $\\operatorname{sen}(70^\\circ) = \\frac{h}{60}$, luego $h = 60 \\cdot \\operatorname{sen}(70^\\circ)$.",
+     "Como $\\operatorname{sen}(70^\\circ) = \\cos(90^\\circ - 70^\\circ) = \\cos(20^\\circ)$, se tiene $h = 60\\cos(20^\\circ)$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "B": "$60$: entrega la longitud del recorrido, no la diferencia de altura.",
+     "C": "$60\\,\\operatorname{sen}(20^\\circ)$: usa el ángulo de $20^\\circ$ sin complementarlo, como si fuera el ángulo que da la altura."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q42",
+   "number": 42,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "stem": "En la tabla adjunta se presenta la frecuencia acumulada para un grupo de datos.\n\nDato Frecuencia acumulada\n\n1 5\n\n2 7\n\n3 9\n\n4 12\n\n¿Cuál de los siguientes gráficos representa de mejor manera la frecuencia de los\n\ndatos?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q42.webp",
+    "width": 907,
+    "height": 937,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tabla entrega frecuencias acumuladas, así que la frecuencia de cada dato es la diferencia con el valor anterior, y el gráfico correcto debe mostrar 5, 2, 2 y 3.",
+    "steps": [
+     "La frecuencia acumulada suma las frecuencias hasta cada dato, así que $f_k$ es la acumulada del dato $k$ menos la del dato $k-1$.",
+     "Dato 1: $f_1 = 5$. Dato 2: $f_2 = 7 - 5 = 2$. Dato 3: $f_3 = 9 - 7 = 2$. Dato 4: $f_4 = 12 - 9 = 3$.",
+     "El total es $5 + 2 + 2 + 3 = 12$, que coincide con la última acumulada.",
+     "El gráfico B muestra barras de altura 5, 2, 2 y 3 para los datos 1, 2, 3 y 4. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Grafica directamente las acumuladas 5, 7, 9 y 12 como frecuencias, sin restar.",
+     "D": "Usa las acumuladas como alturas y los valores de la tabla como rótulos del eje horizontal, sin relación con la tabla original."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q43",
+   "number": 43,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "El cuarto medio B tiene 25 estudiantes, pero uno de ellos está con su promedio final\n\npendiente.\n\nEn el sistema de registro de notas se presenta el promedio final de este curso\n\nconsiderando los 24 estudiantes que tienen sus notas al día. El promedio registrado\n\nes exactamente 6,0.\n\nPosteriormente, se agregó el promedio final del estudiante que estaba pendiente, el\n\ncual corresponde a un 4,5.\n\n¿Cuál es el promedio del cuarto medio B luego de incorporar el promedio final del\n\nestudiante que estaba pendiente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5,25"
+    },
+    {
+     "key": "B",
+     "text": "5,76"
+    },
+    {
+     "key": "C",
+     "text": "5,94"
+    },
+    {
+     "key": "D",
+     "text": "6,18"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q43.webp",
+    "width": 907,
+    "height": 612,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las 24 notas con promedio 6,0 suman 144; al incorporar el 4,5 y dividir entre 25 estudiantes se obtiene el nuevo promedio.",
+    "steps": [
+     "Suma de los 24 promedios registrados: $24 \\cdot 6{,}0 = 144$.",
+     "Se agrega el promedio pendiente: $144 + 4{,}5 = 148{,}5$.",
+     "Ahora son 25 estudiantes, así que el nuevo promedio es $\\frac{148{,}5}{25} = 5{,}94$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$5{,}25$: promedia simplemente 6,0 y 4,5, ignorando que el primer promedio corresponde a 24 estudiantes.",
+     "B": "$5{,}76$: divide $144$ entre 25, es decir, olvida sumar el promedio del estudiante pendiente."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q44",
+   "number": 44,
+   "axis": "Probabilidad y estadística",
+   "topic": "Muestreo",
+   "stem": "Para comparar la dispersión de dos muestras distintas, se puede usar el coeficiente\n\nde dispersión por cuartiles, el cual se calcula mediante la siguiente expresión: Q³ −Q¹ , Q³ + Q¹ tal que Q¹ y Q³ corresponden al primer y al tercer cuartil, respectivamente.\n\nConsidera una muestra de datos con el siguiente diagrama de cajón:\n\n¿Cuál de los siguientes diagramas de cajón representa una muestra de datos con\n\nmenor coeficiente de dispersión por cuartiles que la muestra anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q44.webp",
+    "width": 907,
+    "height": 1089,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El coeficiente es $\\frac{Q_3 - Q_1}{Q_3 + Q_1}$; hay que encontrar una caja cuyos cuartiles den un cociente menor que el de la muestra original.",
+    "steps": [
+     "En el diagrama original, $Q_1 = 7$ y $Q_3 = 13$, luego el coeficiente es $\\frac{13 - 7}{13 + 7} = \\frac{6}{20} = 0{,}3$.",
+     "Se busca un diagrama con $\\frac{Q_3 - Q_1}{Q_3 + Q_1} < 0{,}3$.",
+     "Alternativa A: $Q_1 = 7$ y $Q_3 = 13$ da $0{,}3$, igual y no menor. Alternativa B: $Q_1 = 2$ y $Q_3 = 8$ da $\\frac{6}{10} = 0{,}6$. Alternativa C: $Q_1 = 3$ y $Q_3 = 18$ da $\\frac{15}{21} \\approx 0{,}71$.",
+     "Alternativa D: $Q_1 = 11$ y $Q_3 = 15$ da $\\frac{4}{26} \\approx 0{,}15$, menor que $0{,}3$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Tiene los mismos cuartiles 7 y 13 que la muestra original, así que da el mismo coeficiente, $0{,}3$, y no uno menor.",
+     "C": "Tiene el rango de la caja muy amplio ($Q_1 = 3$, $Q_3 = 18$): el numerador crece más que el denominador."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q45",
+   "number": 45,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de posición",
+   "stem": "En el diagrama de cajón de la figura adjunta se representan los resultados de una\n\nprueba que mide los tiempos de reacción de un grupo de personas frente a un\n\nestímulo visual.\n\nEn una nueva prueba, todos los participantes que tuvieron resultados menores o\n\niguales que el tercer cuartil aumentaron su tiempo de reacción en 50 ms, y todos\n\nquienes obtuvieron resultados mayores que el tercer cuartil mantuvieron su tiempo\n\nde reacción original.\n\n¿Cuál de las siguientes afirmaciones es verdadera en relación con los tiempos de\n\nreacción de esta nueva prueba?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El promedio aumenta."
+    },
+    {
+     "key": "B",
+     "text": "El rango intercuartílico aumenta en 50 ms."
+    },
+    {
+     "key": "C",
+     "text": "El nuevo mínimo es mayor que el nuevo primer cuartil."
+    },
+    {
+     "key": "D",
+     "text": "El segundo cuartil se mantiene en 350 ms."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q45.webp",
+    "width": 907,
+    "height": 927,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Sumar 50 ms a todos los tiempos menores o iguales que $Q_3$, que son al menos el 75% de los participantes, aumenta el promedio; las otras afirmaciones fallan con el mínimo, el primer cuartil y la mediana.",
+    "steps": [
+     "Del diagrama, aproximadamente: $Q_1 \\approx 325$ ms, mediana $\\approx 350$ ms, $Q_3 \\approx 420$ ms, mínimo $\\approx 300$ ms y máximo $\\approx 500$ ms.",
+     "Los tiempos menores o iguales que $Q_3$ suman 50 ms, y los mayores no cambian. La suma total crece en al menos $0{,}75 \\cdot n \\cdot 50 > 0$, así que el promedio aumenta.",
+     "Alternativa B: el primer cuartil sube 50 ms, pero el tercer cuartil sube entre 0 y 50 ms, así que el rango intercuartílico cambia entre $-50$ y $0$ ms, no aumenta 50 ms.",
+     "Alternativa C: el nuevo mínimo es $300 + 50 = 350$ ms y el nuevo primer cuartil es $325 + 50 = 375$ ms, así que el mínimo sigue siendo menor. Alternativa D: la mediana, que está bajo $Q_3$, sube a $400$ ms.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Supone que el rango intercuartílico sube 50 ms por aplicar el aumento solo al primer cuartil y no al tercero.",
+     "D": "Supone que la mediana no cambia porque se mantiene el valor de la caja, sin notar que está por debajo de $Q_3$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q46",
+   "number": 46,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "Una cadena de gimnasios decidió realizar un estudio para obtener información\n\nque permita mejorar sus futuras campañas de marketing. Dentro del estudio, se\n\nseleccionó una de las sucursales del gimnasio y se registró la asistencia de 5 de sus\n\nclientes en el último mes. Los resultados obtenidos se presentan en la siguiente tabla:\n\nCliente Cantidad de veces que asistió\n\nRodrigo 0\n\nMarcela 8\n\nEsteban 12\n\nCatalina 6\n\nRosario 4\n\n¿Cuál es la desviación estándar de la cantidad de veces que asistieron estos clientes\n\nal gimnasio en el último mes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3,2"
+    },
+    {
+     "key": "B",
+     "text": "4,0"
+    },
+    {
+     "key": "C",
+     "text": "6,0"
+    },
+    {
+     "key": "D",
+     "text": "16,0"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q46.webp",
+    "width": 907,
+    "height": 696,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La desviación estándar mide la dispersión de las cinco asistencias respecto de su media de 6 veces; se calcula con la varianza poblacional.",
+    "steps": [
+     "La media es $\\bar{x} = \\frac{0 + 8 + 12 + 6 + 4}{5} = \\frac{30}{5} = 6$.",
+     "Las desviaciones al cuadrado son $(0-6)^{2} = 36$, $(8-6)^{2} = 4$, $(12-6)^{2} = 36$, $(6-6)^{2} = 0$ y $(4-6)^{2} = 4$.",
+     "Su suma es $80$, así que la varianza es $\\sigma^{2} = \\frac{80}{5} = 16$.",
+     "La desviación estándar es $\\sigma = \\sqrt{16} = 4$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "C": "$6{,}0$: es la media aritmética, no la desviación estándar.",
+     "D": "$16{,}0$: es la varianza; se olvida sacar la raíz cuadrada."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q47",
+   "number": 47,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "En una superficie de área S, la probabilidad de que un dardo acierte en una región totalmente incluida en la región de área S se puede calcular como A , tal que A es el S área de la región incluida.\n\nConsidera dos círculos, cada uno de área M, de modo que la superficie de la\n\nintersección tiene un área Q, tal como se representa en la figura adjunta.\n\nEn la superficie formada por los dos círculos, ¿cuál es la probabilidad de que un\n\ndardo no acierte en la intersección?\n\nM −Q",
+   "options": [
+    {
+     "key": "A",
+     "text": "M �M −Q �"
+    },
+    {
+     "key": "B",
+     "text": "2 · M �M −Q �"
+    },
+    {
+     "key": "C",
+     "text": "2 · 2M −Q �M −Q �"
+    },
+    {
+     "key": "D",
+     "text": "2 · 2M −2Q"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q47.webp",
+    "width": 907,
+    "height": 961,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La superficie total tiene área $2M - Q$ y la zona que no es intersección tiene área $2M - 2Q$; la probabilidad es el cociente entre ambas áreas.",
+    "steps": [
+     "Cada círculo tiene área $M$ y la intersección se cuenta una sola vez, así que la superficie total es $M + M - Q = 2M - Q$.",
+     "La zona que no es intersección tiene área $(2M - Q) - Q = 2M - 2Q = 2(M - Q)$.",
+     "Según la regla dada, la probabilidad es $\\frac{A}{S} = \\frac{2(M - Q)}{2M - Q}$, que se escribe como $2 \\cdot \\frac{M - Q}{2M - Q}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{M - Q}{M}$: usa el área de un solo círculo como total, sin considerar el área de la superficie completa.",
+     "D": "$2 \\cdot \\frac{M - Q}{2M - 2Q}$: usa como total la zona no intersectada, lo que da siempre $1$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q48",
+   "number": 48,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "La probabilidad de que un trabajador llegue tarde a una empresa un día de lluvia es\n\n0,3, mientras que en un día sin lluvia esa probabilidad es 0,1.\n\nSi la probabilidad de que llueva cierto día es 0,4, ¿cuál es la probabilidad de que un\n\ntrabajador llegue tarde ese día?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,3"
+    },
+    {
+     "key": "B",
+     "text": "0,7"
+    },
+    {
+     "key": "C",
+     "text": "0,12"
+    },
+    {
+     "key": "D",
+     "text": "0,18"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q48.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La probabilidad total se obtiene sumando la probabilidad de llegar tarde en cada escenario (con lluvia y sin lluvia), ponderada por la probabilidad de cada escenario.",
+    "steps": [
+     "La probabilidad de lluvia es $0{,}4$, y la de no lluvia es $1 - 0{,}4 = 0{,}6$.",
+     "Llegar tarde con lluvia: $0{,}4 \\cdot 0{,}3 = 0{,}12$.",
+     "Llegar tarde sin lluvia: $0{,}6 \\cdot 0{,}1 = 0{,}06$.",
+     "Sumando ambos casos: $0{,}12 + 0{,}06 = 0{,}18$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$0{,}3$: copia la probabilidad de llegar tarde en un día de lluvia, sin ponderarla por la probabilidad de lluvia.",
+     "C": "$0{,}12$: considera solo el caso de lluvia y olvida el caso de día sin lluvia."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q49",
+   "number": 49,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "El centro de estudiantes de un colegio quiere tener un comité conformado por dos\n\npersonas, escogiéndolas de entre todas las personas que forman parte del centro de\n\nestudiantes.\n\nSi se sabe que se pueden formar en total 21 comités diferentes, ¿cuántas personas\n\nen total conforman el centro de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "210"
+    },
+    {
+     "key": "B",
+     "text": "42"
+    },
+    {
+     "key": "C",
+     "text": "7"
+    },
+    {
+     "key": "D",
+     "text": "6"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q49.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un comité de dos personas es una combinación, así que el número de comités entre $n$ personas es $\\binom{n}{2}$, que se iguala a 21.",
+    "steps": [
+     "Como el orden no importa, el número de comités es $\\binom{n}{2} = \\frac{n(n-1)}{2}$.",
+     "Se iguala $\\frac{n(n-1)}{2} = 21$, luego $n(n-1) = 42$.",
+     "Probando, $7 \\cdot 6 = 42$, así que $n = 7$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "B": "$42$: confunde el número de comités con el número de personas; $n(n-1) = 42$ no es $n$.",
+     "D": "$6$: con $n = 6$ se obtiene $\\binom{6}{2} = 15$, no 21."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q50",
+   "number": 50,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Un grupo de cinco personas está compuesto por tres niños y dos adultos. Este grupo\n\nse quiere tomar una fotografía en alguna de las siguientes poses:\n\n¿De cuántas formas distintas se pueden ordenar para tomarse la fotografía?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 · 3!"
+    },
+    {
+     "key": "B",
+     "text": "4 · 3!"
+    },
+    {
+     "key": "C",
+     "text": "2 · 6!"
+    },
+    {
+     "key": "D",
+     "text": "4 · 6!"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q50.webp",
+    "width": 907,
+    "height": 647,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay dos poses distintas, y en cada una los adultos y los niños ocupan posiciones que se pueden permutar; cada pose da $2 \\cdot 3!$ ordenaciones.",
+    "steps": [
+     "La pose 1 tiene los dos adultos en los extremos y los tres niños al centro: los adultos se intercambian de $2$ formas y los niños se ordenan de $3!$ formas, es decir, $2 \\cdot 3!$.",
+     "La pose 2 tiene el orden niño, adulto, niño, adulto, niño: los adultos se ordenan de $2!$ formas y los niños de $3!$ formas, es decir, otra vez $2 \\cdot 3!$.",
+     "Como las poses son alternativas distintas, el total es $2 \\cdot 3! + 2 \\cdot 3! = 4 \\cdot 3!$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$2 \\cdot 3!$: considera solo una de las dos poses.",
+     "C": "$2 \\cdot 6!$: usa $6!$ como si hubiera seis personas, y multiplica por 2 poses."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q51",
+   "number": 51,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Un laboratorio lleva a cabo el proceso de extracción de ADN en plantas chilenas. El\n\nproceso de extracción se considera exitoso si el ADN cumple con ciertos criterios de\n\ncalidad luego de su extracción.\n\nSi se realizan 10 extracciones independientes entre sí y la probabilidad de que\n\nuna extracción de ADN **no** cumpla con los criterios de calidad durante la extracción\n\nes 0,2, ¿cuál es la probabilidad de obtener exactamente 7 extracciones exitosas?\n\n� � 10 0,2⁷ · 0,8³",
+   "options": [
+    {
+     "key": "A",
+     "text": "7 � � 10 7⁰,² · 3⁰,⁸"
+    },
+    {
+     "key": "B",
+     "text": "7 � � 10 0,8⁷ · 0,2³"
+    },
+    {
+     "key": "C",
+     "text": "7 � � 10 7⁰,⁸ · 3⁰,²"
+    },
+    {
+     "key": "D",
+     "text": "7"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q51.webp",
+    "width": 907,
+    "height": 653,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada extracción es exitosa con probabilidad $1 - 0{,}2 = 0{,}8$, y la probabilidad de exactamente 7 éxitos en 10 ensayos independientes es una probabilidad binomial.",
+    "steps": [
+     "Éxito es cumplir los criterios de calidad, luego $p = 0{,}8$; el fracaso, que es no cumplir, tiene probabilidad $0{,}2$.",
+     "Se trata de una distribución binomial con $n = 10$ ensayos independientes.",
+     "Exactamente 7 éxitos y 3 fracasos da $\\binom{10}{7}(0{,}8)^{7}(0{,}2)^{3}$.",
+     "Esta expresión coincide con la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\binom{10}{7}(0{,}2)^{7}(0{,}8)^{3}$: intercambia el papel de éxito y fracaso, tomando 0,2 como probabilidad de éxito."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q52",
+   "number": 52,
+   "axis": "Números",
+   "topic": "Números irracionales",
+   "stem": "n√x representa un número irracional, si se sabe que: Se puede determinar que\n\n(1) x es un número primo y n es un número entero positivo mayor que 1.\n\n(2) x · n es un número impar.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q52.webp",
+    "width": 907,
+    "height": 435,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La raíz $n$-ésima de un primo $p$ es irracional para todo $n \\ge 2$, así que la condición (1) basta por sí sola, mientras que la (2) no basta.",
+    "steps": [
+     "Con (1): $x = p$ es primo y $n \\ge 2$. La potencia $n$-ésima de un número racional tiene todos sus exponentes primos múltiplos de $n$, y $p$ tiene exponente 1; por eso $\\sqrt[n]{p}$ es irracional.",
+     "Con (2): $x \\cdot n$ impar implica que $x$ y $n$ son impares. Si $x = 1$ y $n = 3$, el producto es 3 (impar), pero $\\sqrt[3]{1} = 1$ es racional, así que (2) no basta.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "(2) por sí sola: cree que un producto impar garantiza irracionalidad, sin considerar que $x = 1$ da una raíz racional.",
+     "C": "Ambas juntas: piensa que (2) aporta algo a (1), pero (1) ya basta por sí sola."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q53",
+   "number": 53,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "La altura h de un proyectil en función de los segundos transcurridos x desde que es lanzado, se modela mediante una función h de la forma h(x) = ax² + bx + c, con\n\na < 0, c > 0 y b distinto de cero.\n\nSe puede asegurar que el proyectil se mantendrá por más de 3 segundos en el aire,\n\nsi se sabe que:\n\n(1) el único cero positivo de h es 6 segundos.\n\n(2) el máximo de h se alcanza a los 2 segundos.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q53.webp",
+    "width": 907,
+    "height": 562,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como $a < 0$ y $c > 0$, la parábola tiene una raíz positiva y otra negativa, y el tiempo en el aire es la raíz positiva; hay que ver si esa raíz supera 3.",
+    "steps": [
+     "Como $h(0) = c > 0$, el proyectil parte sobre el suelo y el tiempo en el aire es la raíz positiva de $h$.",
+     "Con (1): el único cero positivo es 6 s, luego $h > 0$ entre 0 y 6 s, y el proyectil permanece más de 3 s en el aire. (1) basta.",
+     "Con (2): el vértice está en $x = -\\frac{b}{2a} = 2$. Escribiendo $h(x) = a(x-2)^{2} + k$ con $k = h(2)$, se tiene $h(0) = 4a + k = c > 0$, así que $k > -4a = 4|a|$.",
+     "La raíz positiva es $x = 2 + \\sqrt{\\frac{k}{|a|}}$ y como $\\frac{k}{|a|} > 4$, resulta $x > 4$. Por lo tanto, (2) también basta y la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "Ambas juntas: cree que cada dato por separado es insuficiente, porque no relaciona el vértice con el cero.",
+     "E": "Se requiere información adicional: no nota que el signo de $a$ y de $c$ fija una raíz positiva y otra negativa."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q54",
+   "number": 54,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "En la figura adjunta se representa la red de un paralelepípedo recto de base cuadrada.\n\nSe puede determinar el volumen del cuerpo generado por la red, si se conoce:\n\n(1) el área de la base y el perímetro de la red.\n\n(2) el área lateral del cuerpo y el perímetro de la base.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q54.webp",
+    "width": 907,
+    "height": 972,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La red forma un prisma recto de base cuadrada, con lado $a$ y altura $h$, y volumen $a^{2}h$; cada dato permite obtener $a$ y $h$ por separado.",
+    "steps": [
+     "La red tiene dos cuadrados (base y tapa) y cuatro rectángulos de lados $a$ y $h$, así que el volumen es $V = a^{2}h$.",
+     "Con (1): el área de la base da $a^{2}$, luego $a$. El perímetro de la red suma $12a + 2h$, así que se despeja $h$ y el volumen queda determinado. (1) basta.",
+     "Con (2): el área lateral es $4ah$ y el perímetro de la base es $4a$, así que $a$ es conocido y $h = \\frac{\\text{área lateral}}{4a}$. (2) también basta. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "C": "Ambas juntas: cree que cada dato es insuficiente por separado y que se necesitan los dos.",
+     "E": "Se requiere información adicional: olvida que el área de la base da $a$ y que el perímetro de la red depende de $h$."
+    }
+   }
+  },
+  {
+   "id": "m2-2027-invierno-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de posición",
+   "stem": "Para un estudio se registraron las masas de un grupo de 83 personas. En la siguiente\n\ntabla se presentan algunos datos de los resultados parciales del estudio:\n\nMasa mínima Percentil 50 Masa máxima\n\n45 kg 65 kg 92 kg\n\nLuego, en este registro se agregaron las masas de 11 personas que faltaba\n\nconsiderar.\n\nSe puede determinar el percentil 50 de las masas de las 94 personas, si se sabe que:\n\n(1) de las 11 personas que faltaba considerar exactamente 5 tienen una\n\nmasa menor que 65 kg.\n\n(2) de las 94 personas exactamente 46 tienen una masa de más de 65 kg\n\ny solo 2 tienen una masa de 65 kg.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q55.webp",
+    "width": 907,
+    "height": 759,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si de los 94 datos exactamente 46 superan 65 kg y 2 valen 65 kg, los lugares 47 y 48 quedan ocupados por 65 kg, así que la mediana es 65 kg.",
+    "steps": [
+     "La mediana de 94 datos es el promedio de los valores que ocupan los lugares 47 y 48 al ordenarlos.",
+     "Con (1): de las 11 nuevas hay 5 menores que 65 kg, pero no se sabe cómo se distribuyen las 83 originales ni las 6 restantes; el lugar 47 y el 48 pueden valer 65 o más, así que la mediana no queda fija.",
+     "Con (2): hay 46 valores mayores que 65, 2 iguales a 65 y, por suma, $94 - 48 = 46$ menores que 65. Los lugares 47 y 48 son ambos 65 kg, así que la mediana es 65 kg.",
+     "(2) basta por sí sola. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: supone que la mediana no cambia porque hay 5 personas bajo 65 kg, sin ver que las restantes pueden ser de 65 kg o más.",
+     "E": "Se requiere información adicional: descarta la (2), aunque fija exactamente cuántos datos quedan a cada lado de 65 kg."
+    }
+   }
+  }
+ ]
+}

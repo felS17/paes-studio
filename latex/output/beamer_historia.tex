@@ -1,0 +1,738 @@
+% =============================================================================
+%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
+%
+%  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
+%  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Comandos:
+%    \alternativa{A}{texto}       alternativa
+%    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
+%    \paso{n}{texto}      paso numerado del desarrollo
+%    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
+%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%
+%  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
+%  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
+% =============================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage{lmodern}        % antes de fontenc/babel: no depende de las fuentes EC
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\spanishplainpercent        % \% sin espaciado automático (evita choques en modo matemático)
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+
+% ── Paleta Zinc ──────────────────────────────────────────────────────────────
+\definecolor{zinc950}{HTML}{09090B}
+\definecolor{zinc900}{HTML}{18181B}
+\definecolor{zinc700}{HTML}{3F3F46}
+\definecolor{zinc500}{HTML}{71717A}
+\definecolor{zinc300}{HTML}{D4D4D8}
+\definecolor{zinc200}{HTML}{E4E4E7}
+\definecolor{zinc50}{HTML}{FAFAFA}
+\definecolor{esmeralda}{HTML}{047857}
+\definecolor{rosa}{HTML}{BE123C}
+
+\newcommand{\sen}{\operatorname{sen}}
+
+% ── Tema mínimo ──────────────────────────────────────────────────────────────
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=zinc900}
+\setbeamercolor{structure}{fg=zinc900}
+\setbeamercolor{alerted text}{fg=zinc950}
+\setbeamercolor{item}{fg=zinc500}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamertemplate{itemize items}{\raisebox{0.15ex}{\color{zinc500}\scriptsize$\bullet$}}
+\setbeamertemplate{enumerate items}{\color{zinc500}\insertenumlabel.}
+\setbeamersize{text margin left=1.6cm,text margin right=1.6cm}
+
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.9em}%
+  {\usebeamerfont{frametitle}\color{zinc950}\insertframetitle}\par
+  \ifx\insertframesubtitle\@empty\else{\small\color{zinc500}\insertframesubtitle}\par\fi
+  \vspace{0.25em}{\color{zinc200}\rule{\textwidth}{0.4pt}}%
+}
+\makeatother
+\setbeamertemplate{footline}{%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+}
+\setbeamertemplate{title page}{%
+  \vfill
+  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
+  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
+  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
+  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc500}\insertdate}\par
+  \vfill
+}
+
+% ── Componentes ──────────────────────────────────────────────────────────────
+\newtcbox{\tecla}{on line, boxrule=0.4pt, arc=1.5pt, colback=zinc50, colframe=zinc300,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\color{zinc700}}
+\newtcbox{\teclaok}{on line, boxrule=0.4pt, arc=1.5pt, colback=esmeralda, colframe=esmeralda,
+  left=3pt, right=3pt, top=1pt, bottom=1pt, fontupper=\ttfamily\footnotesize\bfseries\color{white}}
+\newtcolorbox{opcion}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=zinc300,
+  left=6pt, right=6pt, top=3pt, bottom=3pt, before skip=3pt, after skip=3pt, #1}
+\newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
+\newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
+\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+  borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
+\newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
+  borderline west={2pt}{0pt}{rosa}, left=7pt, right=7pt, top=3pt, bottom=4pt,
+  fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=white, titlerule=0pt, title={#1}}
+\newenvironment{lineatiempo}
+  {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
+  {\end{tabular}}
+\newlength{\anchobarra}
+\newcommand{\ejebarra}[3]{%
+  \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
+  \setlength{\anchobarra}{0.5\linewidth}%
+  \makebox[\anchobarra][l]{{\color{zinc200}\rule[0.2ex]{\anchobarra}{1.1ex}}\hspace*{-\anchobarra}{\color{zinc900}\rule[0.2ex]{#2\anchobarra}{1.1ex}}}%
+  \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
+
+%%<META>%%
+\title[Repaso PAES: Historia y Ciencias Sociales]{Repaso PAES}
+\subtitle{Historia y Ciencias Sociales}
+\date{1 de noviembre de 2026}
+%%</META>%%
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+%%<CONTENIDO>%%
+\begin{frame}{Contenidos}
+
+  \framesubtitle{5 ejes, en el orden del temario}
+
+  \begin{enumerate}\small
+
+    \item \textbf{Historia: mundo, América y Chile}: Revoluciones y siglo XIX en Europa, Chile en el siglo XIX: independencia, república y expansión, Cuestión social y crisis del parlamentarismo, Guerras mundiales y crisis de 1929, Guerra Fría y América Latina, Chile en el siglo XX: del Estado de compromiso a la transición
+
+    \item \textbf{Formación ciudadana}: Estado, Constitución y poderes del Estado, Democracia, derechos humanos y participación
+
+    \item \textbf{Sistema económico}: Problema económico y mercado, Macroeconomía y finanzas personales
+
+    \item \textbf{Geografía y espacio}: Población, territorio y ambiente
+
+    \item \textbf{Habilidades de pensamiento histórico}: Análisis de fuentes y pensamiento histórico
+
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Qué evalúa la prueba}
+
+  \framesubtitle{Distribución por eje en 7 ensayos (386 preguntas)}
+
+  \vspace{0.8em}
+
+  \ejebarra{Formación ciudadana}{0.438}{44 \%}
+
+  \ejebarra{Historia: mundo, América y Chile}{0.246}{25 \%}
+
+  \ejebarra{Sistema económico}{0.228}{23 \%}
+
+  \ejebarra{Geografía y espacio}{0.088}{9 \%}
+
+\end{frame}
+
+\section{Historia: mundo, América y Chile}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Historia: mundo, América y Chile}\par\vspace{0.6em}
+  {\color{zinc700} Procesos políticos, económicos y sociales de los siglos XIX y XX.}\par\vspace{1em}
+  {\small\color{zinc500} Revoluciones y siglo XIX en Europa, Chile en el siglo XIX: independencia, república y expansión, Cuestión social y crisis del parlamentarismo, Guerras mundiales y crisis de 1929, Guerra Fría y América Latina, Chile en el siglo XX: del Estado de compromiso a la transición}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Revoluciones y siglo XIX en Europa}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item 1789: fin del Antiguo Régimen en Francia.
+    \item Industrialización $\rightarrow$ urbanización y cuestión obrera.
+    \item Imperialismo: reparto de África en la Conferencia de Berlín (1884–1885).
+  \end{itemize}
+  \begin{cajaclave}[Ideas clave del liberalismo]\footnotesize
+Soberanía nacional, separación de poderes, derechos individuales (libertad, propiedad, igualdad ante la ley), constitución escrita y libre mercado.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Revoluciones y siglo XIX en Europa}
+  \framesubtitle{Línea de tiempo}
+  \begin{lineatiempo}
+  1789 & Revolución Francesa y Declaración de los Derechos del Hombre \\
+  c. 1760–1840 & Primera Revolución Industrial en Inglaterra \\
+  1815 & Congreso de Viena \\
+  1848 & Revoluciones liberales en Europa \\
+  1871 & Unificación alemana \\
+  1884–1885 & Conferencia de Berlín \\
+  \end{lineatiempo}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Revoluciones y siglo XIX en Europa}
+  {\small ¿Cuál fue una consecuencia social directa de la Revolución Industrial en Inglaterra?}
+  \vspace{0.4em}
+  \alternativa{A}{El fortalecimiento de los gremios artesanales.}
+  \alternativa{B}{La formación de una clase obrera concentrada en ciudades.}
+  \alternativa{C}{La desaparición de la burguesía.}
+  \alternativa{D}{El retorno de la población al campo.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Las fábricas concentraron trabajadores asalariados en las ciudades.}
+  {\small
+  \paso{1}{La producción fabril requería mano de obra cercana.}
+  \paso{2}{La migración campo–ciudad formó el proletariado urbano.}
+  }
+  \alternativaok{B}{La formación de una clase obrera concentrada en ciudades.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Atribuir a la Revolución Francesa el sufragio universal femenino.
+    \item Confundir liberalismo político con socialismo.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Chile en el siglo XIX: independencia, república y expansión}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item 1810: Primera Junta, en nombre de Fernando VII.
+    \item 1833: Constitución de orden conservador y presidencialista.
+    \item Guerra del Pacífico $\rightarrow$ riqueza salitrera para el Estado.
+  \end{itemize}
+  \begin{cajaclave}[Ciclo del salitre]\footnotesize
+Exportación de salitre $\rightarrow$ impuestos de exportación $\rightarrow$ grandes ingresos fiscales $\rightarrow$ obras públicas, educación y ferrocarriles. Gran parte de las oficinas eran de capitales extranjeros.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Chile en el siglo XIX: independencia, república y expansión}
+  \framesubtitle{Línea de tiempo}
+  \begin{lineatiempo}
+  1810 & Primera Junta Nacional de Gobierno \\
+  1814 & Desastre de Rancagua: Reconquista \\
+  1818 & Proclamación de la independencia y batalla de Maipú \\
+  1833 & Constitución de 1833 \\
+  1879–1884 & Guerra del Pacífico \\
+  1888 & Incorporación de Rapa Nui \\
+  1891 & Guerra Civil \\
+  \end{lineatiempo}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Chile en el siglo XIX: independencia, república y expansión}
+  {\small ¿Qué hecho desencadenó la formación de juntas de gobierno en América en 1810?}
+  \vspace{0.4em}
+  \alternativa{A}{La Revolución Industrial.}
+  \alternativa{B}{La invasión napoleónica a España y la captura de Fernando VII.}
+  \alternativa{C}{La Guerra del Pacífico.}
+  \alternativa{D}{La Constitución de 1833.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Sin rey legítimo, surgió la pregunta por quién gobernaba en su nombre.}
+  {\small
+  \paso{1}{1808: Napoleón invade España y Fernando VII queda cautivo.}
+  \paso{2}{Los cabildos americanos forman juntas que gobiernan en nombre del rey.}
+  }
+  \alternativaok{B}{La invasión napoleónica a España y la captura de Fernando VII.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Creer que la Junta de 1810 declaró la independencia.
+    \item Pensar que el Estado explotó directamente las salitreras.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Cuestión social y crisis del parlamentarismo}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item 1907: matanza de la Escuela Santa María de Iquique.
+    \item 1924: leyes sociales; 1925: nueva Constitución.
+    \item Conventillo = símbolo de la vivienda popular urbana.
+  \end{itemize}
+  \begin{cajaclave}[Respuestas a la cuestión social]\footnotesize
+Movimiento obrero (huelgas, organización), Iglesia (encíclica \emph{Rerum Novarum}, 1891), Estado (leyes sociales de 1924) y partidos políticos de base popular.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Cuestión social y crisis del parlamentarismo}
+  \framesubtitle{Línea de tiempo}
+  \begin{lineatiempo}
+  1891–1925 & República parlamentaria \\
+  1907 & Matanza de la Escuela Santa María de Iquique \\
+  1920 & Ley de Instrucción Primaria Obligatoria \\
+  1924 & Leyes sociales \\
+  1925 & Constitución de 1925 \\
+  \end{lineatiempo}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Cuestión social y crisis del parlamentarismo}
+  {\small ¿Qué cambio institucional introdujo la Constitución de 1925 en Chile?}
+  \vspace{0.4em}
+  \alternativa{A}{Estableció el parlamentarismo.}
+  \alternativa{B}{Fortaleció el presidencialismo y separó la Iglesia del Estado.}
+  \alternativa{C}{Creó la monarquía constitucional.}
+  \alternativa{D}{Suprimió el Congreso Nacional.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La Constitución de 1925 respondió a la crisis del parlamentarismo.}
+  {\small
+  \paso{1}{Devolvió atribuciones al Presidente frente al Congreso.}
+  \paso{2}{Estableció la separación entre la Iglesia y el Estado.}
+  }
+  \alternativaok{B}{Fortaleció el presidencialismo y separó la Iglesia del Estado.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Ubicar la cuestión social en la segunda mitad del siglo XX.
+    \item Confundir el período parlamentario con el presidencial.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Guerras mundiales y crisis de 1929}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Causa estructural $\neq$ detonante.
+    \item La crisis de 1929 golpeó fuertemente a Chile por la caída de sus exportaciones.
+    \item 1945: fin de la guerra y fundación de la ONU.
+  \end{itemize}
+  \begin{cajaclave}[Multicausalidad de la Primera Guerra Mundial]\footnotesize
+Causas estructurales: imperialismo, nacionalismo, paz armada, alianzas. Detonante: asesinato del archiduque Francisco Fernando en Sarajevo (1914).
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Guerras mundiales y crisis de 1929}
+  \framesubtitle{Línea de tiempo}
+  \begin{lineatiempo}
+  1914–1918 & Primera Guerra Mundial \\
+  1917 & Revolución Rusa \\
+  1919 & Tratado de Versalles \\
+  1929 & Caída de la bolsa de Nueva York \\
+  1939–1945 & Segunda Guerra Mundial \\
+  1945 & Creación de la ONU \\
+  \end{lineatiempo}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Guerras mundiales y crisis de 1929}
+  {\small ¿Qué efecto tuvo la crisis de 1929 en la economía chilena?}
+  \vspace{0.4em}
+  \alternativa{A}{Un auge de las exportaciones de salitre.}
+  \alternativa{B}{Una fuerte caída de las exportaciones y alto desempleo.}
+  \alternativa{C}{La inmediata industrialización del país.}
+  \alternativa{D}{No tuvo efectos por el aislamiento de Chile.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Chile dependía de exportar materias primas, cuya demanda se desplomó.}
+  {\small
+  \paso{1}{La contracción mundial redujo la demanda de cobre y salitre.}
+  \paso{2}{Cayeron los ingresos y aumentó el desempleo.}
+  }
+  \alternativaok{B}{Una fuerte caída de las exportaciones y alto desempleo.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Presentar el detonante como la única causa de la guerra.
+    \item Confundir los bandos de ambas guerras.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Guerra Fría y América Latina}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Guerra «fría»: sin enfrentamiento directo entre superpotencias.
+    \item 1962: crisis de los misiles en Cuba.
+    \item 1989: caída del Muro de Berlín.
+  \end{itemize}
+  \begin{cajaclave}[Bloques]\footnotesize
+Occidental: Estados Unidos, OTAN (1949), Plan Marshall. Oriental: URSS, Pacto de Varsovia (1955). Fin: caída del Muro de Berlín (1989) y disolución de la URSS (1991).
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Guerra Fría y América Latina}
+  \framesubtitle{Línea de tiempo}
+  \begin{lineatiempo}
+  1947 & Doctrina Truman y Plan Marshall \\
+  1949 & Creación de la OTAN \\
+  1959 & Revolución Cubana \\
+  1961 & Construcción del Muro de Berlín \\
+  1962 & Crisis de los misiles \\
+  1989 & Caída del Muro de Berlín \\
+  1991 & Disolución de la URSS \\
+  \end{lineatiempo}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Guerra Fría y América Latina}
+  {\small ¿Qué característica define a la Guerra Fría?}
+  \vspace{0.4em}
+  \alternativa{A}{Un enfrentamiento armado directo entre EE. UU. y la URSS.}
+  \alternativa{B}{La rivalidad entre dos bloques que evitaron una guerra directa.}
+  \alternativa{C}{La alianza entre EE. UU. y la URSS contra el fascismo.}
+  \alternativa{D}{El conflicto entre Francia e Inglaterra por colonias.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La disuasión nuclear evitó la guerra directa.}
+  {\small
+  \paso{1}{El conflicto se libró con propaganda, carreras armamentista y espacial y guerras indirectas.}
+  \paso{2}{La alternativa C describe la Segunda Guerra Mundial.}
+  }
+  \alternativaok{B}{La rivalidad entre dos bloques que evitaron una guerra directa.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Describir la Guerra Fría como un enfrentamiento militar directo entre EE. UU. y la URSS.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Chile en el siglo XX: del Estado de compromiso a la transición}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item 1939: CORFO, símbolo del Estado empresario.
+    \item 1971: nacionalización del cobre, aprobada por unanimidad en el Congreso.
+    \item 1988: triunfo del «No» en el plebiscito.
+  \end{itemize}
+  \begin{cajaclave}[Modelos económicos]\footnotesize
+ISI (1938–1973): Estado empresario y protección arancelaria. Neoliberal (desde 1975): apertura comercial, privatizaciones y rol subsidiario del Estado.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Chile en el siglo XX: del Estado de compromiso a la transición}
+  \framesubtitle{Línea de tiempo}
+  \begin{lineatiempo}
+  1938 & Frente Popular: gobierno de Pedro Aguirre Cerda \\
+  1939 & Creación de la CORFO \\
+  1967 & Ley de reforma agraria \\
+  1971 & Nacionalización del cobre \\
+  1973 & Golpe de Estado \\
+  1980 & Constitución de 1980 \\
+  1988 & Plebiscito: triunfo del «No» \\
+  1990 & Inicio de la transición: gobierno de Patricio Aylwin \\
+  \end{lineatiempo}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Chile en el siglo XX: del Estado de compromiso a la transición}
+  {\small ¿Qué política económica caracterizó a Chile entre 1938 y comienzos de los años setenta?}
+  \vspace{0.4em}
+  \alternativa{A}{La apertura comercial irrestricta.}
+  \alternativa{B}{La industrialización por sustitución de importaciones con un Estado empresario.}
+  \alternativa{C}{La privatización de las empresas estatales.}
+  \alternativa{D}{La economía basada exclusivamente en el salitre.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Tras la crisis de 1929, el Estado impulsó la industria nacional.}
+  {\small
+  \paso{1}{La CORFO (1939) creó y financió industrias.}
+  \paso{2}{Se protegió la producción nacional con aranceles.}
+  }
+  \alternativaok{B}{La industrialización por sustitución de importaciones con un Estado empresario.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir chilenización (1966) con nacionalización (1971) del cobre.
+    \item Atribuir la Constitución de 1980 a la transición.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Formación ciudadana}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Formación ciudadana}\par\vspace{0.6em}
+  {\color{zinc700} Estado, Constitución, democracia, derechos humanos y participación.}\par\vspace{1em}
+  {\small\color{zinc500} Estado, Constitución y poderes del Estado, Democracia, derechos humanos y participación}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Estado, Constitución y poderes del Estado}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Fiscalizar los actos del Gobierno es atribución exclusiva de la Cámara.
+    \item La Contraloría controla la legalidad de los actos de la administración.
+    \item El Tribunal Constitucional vela por que las leyes respeten la Constitución.
+  \end{itemize}
+  \begin{cajaclave}[Formación de la ley]\footnotesize
+Iniciativa (mensaje del Presidente o moción parlamentaria) $\rightarrow$ discusión y aprobación en ambas cámaras $\rightarrow$ sanción (o veto) del Presidente $\rightarrow$ promulgación $\rightarrow$ publicación en el Diario Oficial.
+  \end{cajaclave}
+\begin{center}\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
+\toprule
+\textbf{Poder} & \textbf{Órgano} & \textbf{Función principal} \\
+\midrule
+Ejecutivo & Presidente de la República & gobernar y administrar el Estado \\
+Legislativo & Congreso Nacional & legislar; la Cámara fiscaliza \\
+Judicial & Tribunales de justicia & resolver conflictos aplicando la ley \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Estado, Constitución y poderes del Estado}
+  {\small ¿Qué órgano controla la legalidad de los actos de la administración del Estado en Chile?}
+  \vspace{0.4em}
+  \alternativa{A}{El Senado.}
+  \alternativa{B}{La Contraloría General de la República.}
+  \alternativa{C}{El Banco Central.}
+  \alternativa{D}{El Servicio Electoral.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La Contraloría es un órgano autónomo de control.}
+  {\small
+  \paso{1}{Revisa que los actos de la administración se ajusten a la ley (toma de razón).}
+  \paso{2}{No legisla ni juzga: controla legalidad.}
+  }
+  \alternativaok{B}{La Contraloría General de la República.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Atribuir al Senado la fiscalización del Gobierno.
+    \item Confundir el Tribunal Constitucional con la Corte Suprema.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Democracia, derechos humanos y participación}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Estado de derecho: todos, incluidas las autoridades, se someten a la ley.
+    \item Universalidad: los DD. HH. corresponden a toda persona.
+    \item Plebiscito = mecanismo de democracia directa.
+  \end{itemize}
+  \begin{cajaclave}[Democracia directa y representativa]\footnotesize
+Representativa: la ciudadanía elige autoridades que deciden. Directa: la ciudadanía decide por sí misma (plebiscito, iniciativa popular, consulta).
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Democracia, derechos humanos y participación}
+  {\small Que los derechos humanos sean inalienables significa que:}
+  \vspace{0.4em}
+  \alternativa{A}{Solo los reconocen algunos países.}
+  \alternativa{B}{No se puede renunciar a ellos ni ser privado de ellos.}
+  \alternativa{C}{Se adquieren al cumplir 18 años.}
+  \alternativa{D}{Pueden venderse o transferirse.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{«Inalienable» significa que no se puede enajenar ni perder.}
+  {\small
+  \paso{1}{Nadie puede renunciar a sus derechos humanos ni ser despojado de ellos legítimamente.}
+  }
+  \alternativaok{B}{No se puede renunciar a ellos ni ser privado de ellos.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir la elección de representantes con democracia directa.
+    \item Creer que los Estados deciden qué derechos humanos reconocer.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Sistema económico}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Sistema económico}\par\vspace{0.6em}
+  {\color{zinc700} Problema económico, mercado, macroeconomía y finanzas personales.}\par\vspace{1em}
+  {\small\color{zinc500} Problema económico y mercado, Macroeconomía y finanzas personales}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Problema económico y mercado}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Escasez: razón de ser de la economía.
+    \item Costo de oportunidad: lo que dejas de ganar al elegir.
+    \item Agentes económicos: familias, empresas y Estado.
+  \end{itemize}
+  \begin{cajaclave}[Desplazamientos]\footnotesize
+Demanda $\uparrow$ $\Rightarrow$ precio $\uparrow$ y cantidad $\uparrow$. Oferta $\uparrow$ $\Rightarrow$ precio $\downarrow$ y cantidad $\uparrow$.
+
+Factores de la demanda: ingreso, gustos, precio de bienes relacionados. De la oferta: costos, tecnología, clima.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Problema económico y mercado}
+  {\small Una helada destruye gran parte de la cosecha de paltas. Según el modelo de oferta y demanda, ¿qué ocurrirá?}
+  \vspace{0.4em}
+  \alternativa{A}{El precio de la palta baja.}
+  \alternativa{B}{El precio de la palta sube.}
+  \alternativa{C}{La demanda de paltas aumenta.}
+  \alternativa{D}{No hay cambios en el precio.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La helada reduce la oferta.}
+  {\small
+  \paso{1}{Menos paltas disponibles: la oferta disminuye.}
+  \paso{2}{Con la misma demanda, el precio de equilibrio sube.}
+  }
+  \alternativaok{B}{El precio de la palta sube.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Confundir un cambio de precio (movimiento a lo largo de la curva) con un desplazamiento de la curva.
+    \item Creer que lo gratuito no tiene costo de oportunidad.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Macroeconomía y finanzas personales}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Subir la tasa de interés frena la inflación.
+    \item Inflación alta perjudica a quienes tienen ingresos fijos.
+    \item La CAE permite comparar créditos con distintos plazos y cargos.
+  \end{itemize}
+  \begin{cajaclave}[Instrumentos]\footnotesize
+Política monetaria (Banco Central): tasa de interés, meta de inflación de 3 \%. Política fiscal (Gobierno): presupuesto, gasto e impuestos.
+
+Balanza comercial = exportaciones $-$ importaciones.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Macroeconomía y finanzas personales}
+  {\small Para controlar una inflación alta, el Banco Central de Chile suele:}
+  \vspace{0.4em}
+  \alternativa{A}{Bajar la tasa de política monetaria.}
+  \alternativa{B}{Subir la tasa de política monetaria.}
+  \alternativa{C}{Aumentar el gasto público.}
+  \alternativa{D}{Fijar los precios por ley.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{Una tasa más alta encarece el crédito y modera el gasto.}
+  {\small
+  \paso{1}{Menos crédito y más ahorro reducen la demanda agregada.}
+  \paso{2}{Con menor demanda, los precios suben más lento.}
+  }
+  \alternativaok{B}{Subir la tasa de política monetaria.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Atribuir al Banco Central decisiones de gasto público.
+    \item Confundir alza de un precio con inflación.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Geografía y espacio}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Geografía y espacio}\par\vspace{0.6em}
+  {\color{zinc700} Población, territorio, ambiente y riesgos.}\par\vspace{1em}
+  {\small\color{zinc500} Población, territorio y ambiente}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Población, territorio y ambiente}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Macrocefalia: concentración de población en la capital.
+    \item Amenaza natural $\neq$ desastre.
+    \item Migración: factores de expulsión y de atracción.
+  \end{itemize}
+  \begin{cajaclave}[Riesgo]\footnotesize
+\[\text{riesgo}=\text{amenaza}\times\text{vulnerabilidad}\]
+
+Reducir la vulnerabilidad (planificación urbana, normas de construcción, educación) reduce el riesgo, aunque la amenaza no cambie.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Población, territorio y ambiente}
+  {\small ¿Qué acción reduce el riesgo de desastre ante un tsunami en una ciudad costera?}
+  \vspace{0.4em}
+  \alternativa{A}{Impedir que ocurran sismos submarinos.}
+  \alternativa{B}{Educar a la población y señalizar vías de evacuación.}
+  \alternativa{C}{Construir más viviendas en la línea de costa.}
+  \alternativa{D}{Eliminar los sistemas de alerta.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{No se puede controlar la amenaza, pero sí la vulnerabilidad.}
+  {\small
+  \paso{1}{La educación y la señalización reducen la vulnerabilidad.}
+  \paso{2}{Menor vulnerabilidad implica menor riesgo.}
+  }
+  \alternativaok{B}{Educar a la población y señalizar vías de evacuación.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Concluir más de lo que muestran los datos.
+    \item Confundir amenaza con riesgo.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\section{Habilidades de pensamiento histórico}
+
+\begin{frame}[plain]
+  \vfill
+  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Habilidades de pensamiento histórico}\par\vspace{0.6em}
+  {\color{zinc700} Análisis de fuentes, multicausalidad, continuidad y cambio.}\par\vspace{1em}
+  {\small\color{zinc500} Análisis de fuentes y pensamiento histórico}
+  \vfill
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Análisis de fuentes y pensamiento histórico}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item La respuesta debe sostenerse en la fuente, no en conocimientos externos.
+    \item Una fuente refleja la perspectiva de su autor.
+    \item Multicausalidad: evita explicaciones de una sola causa.
+  \end{itemize}
+  \begin{cajaclave}[Preguntas para una fuente]\footnotesize
+¿Quién la produjo? ¿Cuándo y dónde? ¿Con qué propósito y para quién? ¿Qué afirma explícitamente? ¿Qué se puede inferir? ¿Qué no permite concluir?
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Análisis de fuentes y pensamiento histórico}
+  {\small Un historiador analiza una carta escrita por un soldado durante la Guerra del Pacífico. ¿Qué tipo de fuente es?}
+  \vspace{0.4em}
+  \alternativa{A}{Secundaria, porque la analiza un historiador.}
+  \alternativa{B}{Primaria, porque fue producida en la época estudiada.}
+  \alternativa{C}{Secundaria, porque es un texto escrito.}
+  \alternativa{D}{Primaria, porque la escribió un militar de alto rango.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El criterio es la época de producción, no quién la analiza.}
+  {\small
+  \paso{1}{La carta se escribió durante el hecho estudiado: es primaria.}
+  \paso{2}{El análisis del historiador sería una fuente secundaria.}
+  }
+  \alternativaok{B}{Primaria, porque fue producida en la época estudiada.}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Elegir una afirmación verdadera históricamente, pero que la fuente no respalda.
+    \item Tomar la opinión del autor como un hecho comprobado.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+%%</CONTENIDO>%%
+
+\end{document}

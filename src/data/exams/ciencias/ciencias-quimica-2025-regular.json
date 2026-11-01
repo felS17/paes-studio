@@ -1,0 +1,1855 @@
+{
+ "id": "ciencias-quimica-2025-regular",
+ "subject": "ciencias",
+ "area": "quimica",
+ "title": "PAES Regular 2025",
+ "description": "Selección oficial de 56 de las 80 preguntas de Ciencias (Química), aplicada el 03-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
+ "year": 2025,
+ "modality": "regular",
+ "source": "demre",
+ "form": "173",
+ "appliedOn": "2024-12-03",
+ "durationMinutes": 110,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   102,
+   125,
+   146,
+   166,
+   184,
+   202,
+   219,
+   233,
+   246,
+   259,
+   273,
+   287,
+   301,
+   313,
+   323,
+   331,
+   339,
+   349,
+   361,
+   374,
+   387,
+   398,
+   406,
+   412,
+   417,
+   423,
+   431,
+   441,
+   453,
+   466,
+   477,
+   486,
+   493,
+   498,
+   502,
+   507,
+   513,
+   521,
+   533,
+   545,
+   558,
+   568,
+   575,
+   581,
+   585,
+   590,
+   596,
+   604,
+   614,
+   627,
+   640,
+   651,
+   659,
+   666,
+   672,
+   679,
+   687,
+   698,
+   711,
+   724,
+   737,
+   747,
+   757,
+   766,
+   778,
+   792,
+   807,
+   822,
+   837,
+   852,
+   869,
+   888,
+   908,
+   930,
+   1000
+  ],
+  "officialQuestionCount": 80,
+  "officialScorableCount": 75
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-10-31",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-quimica-2025-regular-q02",
+   "number": 2,
+   "axis": "Química",
+   "topic": "Propiedades coligativas",
+   "stem": "Un grupo de estudiantes realiza una serie de mediciones en el laboratorio, reportando sus resultados en la siguiente tabla:\n\nMasa de agua Presión atmosférica Temperatura de ebullición (g) (mmHg) (°C) 100 526 90 100 760 100 200 760 100 400 760 100 200 879 104 200 983 107\n\nPosteriormente, su profesor les consulta qué condiciones de experimentación deberían variar para que el agua ebulla a una temperatura inferior a 90 °C. De acuerdo con los resultados reportados en la tabla, ¿cuál de las siguientes acciones permite obtener correctamente las condiciones que posibilitan obtener lo indicado por el profesor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Disminuir la presión atmosférica a menos de 526 mmHg."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la presión atmosférica a más de 983 mmHg."
+    },
+    {
+     "key": "C",
+     "text": "Aumentar la masa de agua al doble."
+    },
+    {
+     "key": "D",
+     "text": "Disminuir la masa de agua a la mitad."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q02.webp",
+    "width": 907,
+    "height": 573,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q03",
+   "number": 3,
+   "axis": "Química",
+   "topic": "Óxido-reducción",
+   "stem": "Una persona investigando sobre los cambios químicos, realiza el siguiente experimento en su casa: le quita la cáscara a una manzana, corta cuatro trozos de igual masa y forma. Luego, toma tres trozos y cada uno de ellos es sumergido en tres recipientes que contienen diferentes solventes: uno es sumergido en vinagre, otro en limón y otro en agua. Posteriormente, deja el cuarto trozo de manzana en un recipiente al aire libre y sin tapa. Finalmente, deja transcurrir 1 hora y observa el cambio de color de cada trozo de manzana, los cuales adquirieron una coloración oscura con diferente intensidad. Los datos obtenidos se registran en la siguiente tabla:\n\nCondición experimental Vinagre Limón Agua Aire libre Intensidad de la coloración Baja Baja Media Alta del trozo de manzana\n\nConsiderando que la intensidad de la coloración es una medida directa del nivel de oxidación de la manzana, ¿cuál de las siguientes opciones muestra correctamente la variable que manipula la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Nivel de oxidación de la manzana"
+    },
+    {
+     "key": "B",
+     "text": "Tiempo de exposición de la manzana"
+    },
+    {
+     "key": "C",
+     "text": "Condición al que se expone el trozo de manzana"
+    },
+    {
+     "key": "D",
+     "text": "Intensidad de la coloración del trozo de manzana"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q03.webp",
+    "width": 907,
+    "height": 593,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q04",
+   "number": 4,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Rutherford inicia su estudio del átomo experimentando con el bombardeo de rayos alfa sobre una lámina muy delgada de oro. El resultado fue que del total de partículas alfa proyectadas, la gran mayoría pasó sin problemas, otras experimentaron una leve desviación y muy pocas se devolvieron en trayectoria de línea recta. Debido a estos resultados, Rutherford estableció que “el átomo no tiene una estructura compacta, salvo una diminuta parte donde rebotan los rayos alfa”. Comprobó que la mayor parte de la masa del átomo estaba en esa diminuta parte, al centro del átomo y la llamó núcleo. Este estaba formado por protones y, a su alrededor, se encontraban girando los electrones separados por una distancia tal, que las partículas alfa pasaban sin problemas. ¿A qué componente de una investigación científica corresponde la oración entre comillas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A una conclusión"
+    },
+    {
+     "key": "B",
+     "text": "A una hipótesis"
+    },
+    {
+     "key": "C",
+     "text": "A una teoría"
+    },
+    {
+     "key": "D",
+     "text": "A un procedimiento experimental"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q05",
+   "number": 5,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "¿Cuál de las siguientes estructuras contiene 3 enlaces del tipo pi (π) y dos átomos de carbono con hibridación sp²?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q05.webp",
+    "width": 907,
+    "height": 543,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q06",
+   "number": 6,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un docente comenta en clase que los carbohidratos son biomoléculas presentes en diferentes alimentos y que algunos de estos pueden ser detectados poniendo en contacto el alimento con una solución al 1% m/m de KI y I² (lugol), cuyo cambio de coloración indica la presencia de carbohidratos. En base a lo expuesto, un estudiante se plantea la siguiente interrogante, “¿Cómo varía la coloración del lugol en relación a la cantidad de carbohidratos en los alimentos?”. De acuerdo con lo anterior, ¿cuál de las siguientes opciones señala correctamente las variables que el estudiante debería manipular y constatar para poder contestar su interrogante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Masa de alimento y cantidad de lugol"
+    },
+    {
+     "key": "B",
+     "text": "Masa de alimento y tipo de alimento"
+    },
+    {
+     "key": "C",
+     "text": "Tipo de alimento y coloración de lugol"
+    },
+    {
+     "key": "D",
+     "text": "Coloración de lugol y cantidad de lugol"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q07",
+   "number": 7,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Uno de los agentes terapéuticos que fueron usados en el tratamiento clínico de la tuberculosis en los años 60 fue un derivado de tiourea conocido como tiocarlida (molécula líder) THC cuya estructura se presenta a continuación:\n\nLos laboratorios farmacéuticos en un intento por mejorar el valor terapéutico de la tiocarlida, sintetizaron una serie de derivados de esta molécula las cuales presentaron diferente actividad inhibitoria contra *Mycobacterium tuberculosis* (el microorganismo causante de la tuberculosis), al ser evaluadas en las mismas condiciones experimentales. Las modificaciones realizadas a la THC se muestran a continuación:\n\nI II III\n\nEn relación con lo anterior, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las diferencias en la actividad inhibitoria contra *Mycobacterium tuberculosis* se deben a la disposición de los grupos hidroxilo presentes en el radical de la THC."
+    },
+    {
+     "key": "B",
+     "text": "Las diferencias en la actividad inhibitoria contra *Mycobacterium tuberculosis* se deben a la cantidad de átomos de carbono presentes en el radical de la THC."
+    },
+    {
+     "key": "C",
+     "text": "Las diferencias en la actividad inhibitoria contra *Mycobacterium tuberculosis* se deben a la cantidad de los grupos hidroxilo presentes en el radical de la THC."
+    },
+    {
+     "key": "D",
+     "text": "Las diferencias en la actividad inhibitoria contra *Mycobacterium tuberculosis* se deben a la cantidad de átomos de oxígeno presentes en el radical de la THC."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q07.webp",
+    "width": 907,
+    "height": 1082,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q08",
+   "number": 8,
+   "axis": "Química",
+   "topic": "Ácidos y bases",
+   "stem": "La fórmula estructural de la valina es:\n\nAl respecto, ¿qué funciones orgánicas se encuentran en este compuesto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Alcohol y amina"
+    },
+    {
+     "key": "B",
+     "text": "Cetona y alcohol"
+    },
+    {
+     "key": "C",
+     "text": "Amina y ácido carboxílico"
+    },
+    {
+     "key": "D",
+     "text": "Amida y ácido carboxílico"
+    },
+    {
+     "key": "E",
+     "text": "Alcohol y amida"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q08.webp",
+    "width": 907,
+    "height": 430,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q09",
+   "number": 9,
+   "axis": "Química",
+   "topic": "Gases",
+   "stem": "Un estudiante toma tres esferas de metal, de igual volumen, que contienen la misma cantidad de aire en su interior. Cada una de las esferas tiene un sensor que permite medir la presión interna. El estudiante agrega las esferas, por separado, en tres vasos de precipitados que contienen igual volumen de agua, a diferentes temperaturas en un rango que no dilate las esferas. El diseño experimental se muestra en la siguiente imagen:\n\nAl respecto y sabiendo que el procedimiento realizado por el estudiante es correcto, ¿cuál de las siguientes hipótesis desea someter a prueba el estudiante con el diseño experimental implementado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La temperatura afecta la presión del aire al interior de la esfera de acero a volumen constante."
+    },
+    {
+     "key": "B",
+     "text": "El volumen afecta la presión del gas al interior de la esfera de acero a temperatura constante."
+    },
+    {
+     "key": "C",
+     "text": "La temperatura de las esferas de acero determina cambios en los vasos de precipitados."
+    },
+    {
+     "key": "D",
+     "text": "La presión del aire al interior de la esfera determina el volumen de la esfera de acero."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q09.webp",
+    "width": 907,
+    "height": 783,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q10",
+   "number": 10,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Si 1 mol del elemento X reacciona completamente con hidrógeno, se producen 34,0 g de producto, de acuerdo a la siguiente ecuación no balanceada:\n\nX² + H² XH³\n\n¿Cuál es la masa molar, en g/mol, del elemento X?",
+   "options": [
+    {
+     "key": "A",
+     "text": "31,0"
+    },
+    {
+     "key": "B",
+     "text": "17,0"
+    },
+    {
+     "key": "C",
+     "text": "16,0"
+    },
+    {
+     "key": "D",
+     "text": "15,5"
+    },
+    {
+     "key": "E",
+     "text": "14,0"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "pilot": true
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q12",
+   "number": 12,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "La combustión completa de un hidrocarburo de fórmula desconocida produce únicamente 132 g de CO² (masa molar = 44 g/mol) y 72 g de agua (masa molar = 18 g/mol), de acuerdo a la siguiente reacción:\n\nCxHy + O² CO² + H²O\n\nAl respecto, ¿cuál es la fórmula empírica del hidrocarburo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "C³H⁵"
+    },
+    {
+     "key": "B",
+     "text": "C³H⁴"
+    },
+    {
+     "key": "C",
+     "text": "C⁴H⁷"
+    },
+    {
+     "key": "D",
+     "text": "C³H⁸"
+    },
+    {
+     "key": "E",
+     "text": "C⁴H⁹"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q13",
+   "number": 13,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "En la siguiente ecuación se muestra la formación de hidróxido de magnesio, Mg(OH)², a partir de la reacción entre un hidruro de magnesio, MgH², y agua:\n\nMgH² + 2 H²O Mg(OH)² + 2 H²\n\nSi la reacción se lleva a cabo con 4 mol de MgH² y un exceso de H²O, ¿qué masa de H² se forma?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4 g"
+    },
+    {
+     "key": "B",
+     "text": "8 g"
+    },
+    {
+     "key": "C",
+     "text": "12 g"
+    },
+    {
+     "key": "D",
+     "text": "16 g"
+    },
+    {
+     "key": "E",
+     "text": "20 g"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q14",
+   "number": 14,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un grupo de investigadores ha observado que un lago cercano a su laboratorio recibe una descarga de residuos industriales líquidos (RILES) con contenido de metales pesados, compuestos solubles en agua que afectan negativamente la vida de los peces. A partir de lo anterior, el grupo de investigadores midió la concentración de metales pesados en muestras de agua del lago, en ausencia y presencia de precipitaciones intensas, realizando muestreos en las 4 estaciones durante un año. En relación con lo anterior, y considerando que el procedimiento experimental se realizó correctamente, ¿cuál de las siguientes opciones corresponde a la hipótesis que dio origen al procedimiento llevado a cabo por los investigadores?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La temperatura aumenta la capacidad de eliminar metales pesados de las aguas del lago."
+    },
+    {
+     "key": "B",
+     "text": "La concentración de metales pesados en el lago disminuye en períodos de lluvia intensa."
+    },
+    {
+     "key": "C",
+     "text": "La solubilidad de los metales pesados en el lago disminuye en períodos de lluvia intensa."
+    },
+    {
+     "key": "D",
+     "text": "La cantidad de metales pesados está determinada por el tiempo que transcurre desde la descarga de RILES hacia el lago."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q16",
+   "number": 16,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Para preparar 200 mL de una solución 1 mol/L de NaOH (masa molar = 40 g/mol), a partir de una solución 20% m/v, de esta última se debe extraer y medir",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 mL y agregar 199 mL de agua."
+    },
+    {
+     "key": "B",
+     "text": "20 mL y agregar 180 mL de agua."
+    },
+    {
+     "key": "C",
+     "text": "1 mL y agregar agua hasta 200 mL."
+    },
+    {
+     "key": "D",
+     "text": "20 mL y agregar agua hasta 200 mL."
+    },
+    {
+     "key": "E",
+     "text": "40 mL y agregar agua hasta 200 mL."
+    }
+   ],
+   "answer": "E",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q17",
+   "number": 17,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "¿Qué masa de solvente hay en 300 g de una disolución al 20% masa/masa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "20 g"
+    },
+    {
+     "key": "B",
+     "text": "60 g"
+    },
+    {
+     "key": "C",
+     "text": "80 g"
+    },
+    {
+     "key": "D",
+     "text": "240 g"
+    },
+    {
+     "key": "E",
+     "text": "280 g"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q21",
+   "number": 21,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "Una persona limpia un piso de baldosas, y se percata que la parte mojada parece más oscura que la parte seca, tal como se muestra en la siguiente imagen:\n\nEn relación con lo anterior, ¿qué pregunta de investigación surge directamente de la observación realizada por la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuáles longitudes de onda se reflejan en las baldosas?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuáles longitudes de onda son absorbidas por el agua?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cuáles longitudes de onda se refractan en las baldosas?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuáles longitudes de onda inciden en el agua?"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q21.webp",
+    "width": 907,
+    "height": 573,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q22",
+   "number": 22,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "Un grupo de estudiantes observa que, al hacer incidir dos rayos luminosos distintos entre sí con un mismo ángulo de incidencia sobre la superficie del agua, estos se refractan con ángulos distintos. Luego, repiten el experimento con otros rayos luminosos, observando el mismo comportamiento de los rayos refractados del experimento anterior. Al respecto, ¿cuál de las siguientes opciones corresponde a una pregunta de investigación relacionada directamente con lo observado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cómo influye el ángulo de incidencia en el ángulo de reflexión?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cómo influyen los medios de transmisión en el ángulo refractado?"
+    },
+    {
+     "key": "C",
+     "text": "¿Qué relación hay entre la frecuencia del rayo incidente con el ángulo de reflexión?"
+    },
+    {
+     "key": "D",
+     "text": "¿Qué relación hay entre la frecuencia del rayo incidente con el ángulo de refracción?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q23",
+   "number": 23,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un rayo de luz monocromática incide sobre una placa de vidrio de caras paralelas, como indica la figura. La línea segmentada indica la dirección que originalmente tenía el rayo de luz.\n\nAire\n\nVidrio\n\nAire\n\nEl rayo atraviesa la placa y emerge al otro lado. De los esquemas presentados en las opciones, ¿cuál representa mejor la trayectoria del rayo de luz?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    },
+    {
+     "key": "E",
+     "text": ""
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q23.webp",
+    "width": 907,
+    "height": 1095,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q24",
+   "number": 24,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Frente a un espejo plano se coloca uno convexo, de modo que sus ejes ópticos coinciden. A igual distancia de ambos espejos, se ubica un objeto sobre el eje óptico. En esta situación, se puede afirmar correctamente que",
+   "options": [
+    {
+     "key": "A",
+     "text": "se formarán solo imágenes reales."
+    },
+    {
+     "key": "B",
+     "text": "se formarán solo imágenes virtuales."
+    },
+    {
+     "key": "C",
+     "text": "se formará una imagen real y una imagen virtual."
+    },
+    {
+     "key": "D",
+     "text": "se formará una imagen virtual y múltiples imágenes reales."
+    },
+    {
+     "key": "E",
+     "text": "se formará una imagen real y múltiples imágenes virtuales."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q27",
+   "number": 27,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Tres bloques de 1 kg, 2 kg y 3 kg, se conectan y cuelgan mediante cuerdas inextensibles y de masas despreciables. Las fuerzas en las cuerdas tienen magnitudes T¹, T² y T³, como se representa en la siguiente figura:\n\ng\n\nAl respecto, ¿cuál de las siguientes expresiones para T³en función de T¹ es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "T³ = T¹"
+    },
+    {
+     "key": "B",
+     "text": "T³ = 2T¹"
+    },
+    {
+     "key": "C",
+     "text": "T³ = 3T¹"
+    },
+    {
+     "key": "D",
+     "text": "T³ = 6T¹"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q27.webp",
+    "width": 907,
+    "height": 622,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q30",
+   "number": 30,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un resorte de longitud natural 50 cm, tiene un extremo fijo a una pared vertical y el otro libre. El resorte permanece en la dirección del eje x horizontal, como muestra la figura.\n\n0 40 50 80 x (cm)\n\nSi para mantener el extremo libre en la posición x = 80 cm hay que ejercer una fuerza, paralela al eje x, de magnitud 24 N, entonces para mantener el extremo libre en la posición x = 40 cm hay que ejercer una fuerza, paralela al eje x, de magnitud",
+   "options": [
+    {
+     "key": "A",
+     "text": "8 N"
+    },
+    {
+     "key": "B",
+     "text": "12 N"
+    },
+    {
+     "key": "C",
+     "text": "16 N"
+    },
+    {
+     "key": "D",
+     "text": "24 N"
+    },
+    {
+     "key": "E",
+     "text": "32 N"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q30.webp",
+    "width": 907,
+    "height": 493,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q31",
+   "number": 31,
+   "axis": "Física",
+   "topic": "Sismos",
+   "stem": "Un grupo de geólogas monitorea la sismicidad de un volcán ante la sospecha de que su actividad ha aumentado. Para ello, primeramente, realizan un estudio geográfico del sector donde se emplaza el volcán con el fin de instalar sensores sismográficos. Con los sensores ya instalados y en funcionamiento comienza un periodo de mediciones que son procesadas y analizadas. “Finalmente, a partir de los resultados obtenidos, el grupo de geólogas reporta que la sismicidad está dentro de los parámetros normales”. Al respecto, ¿a qué componente de la investigación científica se asocia la frase entre comillas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Al planteamiento del problema."
+    },
+    {
+     "key": "B",
+     "text": "A la formulación de la hipótesis."
+    },
+    {
+     "key": "C",
+     "text": "A la presentación de una conclusión."
+    },
+    {
+     "key": "D",
+     "text": "A la recolección de los datos experimentales."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q33",
+   "number": 33,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Un grupo de personas pretende realizar una investigación para comparar la máxima temperatura del aire en un mismo día y en distintos lugares del planeta, de acuerdo a la distancia que los separa de la línea del Ecuador. En base a los antecedentes presentados, ¿cuál de las siguientes hipótesis pudo haber dado origen a esta investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La temperatura es constante en todos los puntos de la línea del Ecuador."
+    },
+    {
+     "key": "B",
+     "text": "La temperatura disminuye conforme aumenta la altura de un lugar."
+    },
+    {
+     "key": "C",
+     "text": "La temperatura aumenta conforme aumenta la latitud de un lugar."
+    },
+    {
+     "key": "D",
+     "text": "La temperatura depende de la presión atmosférica."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q34",
+   "number": 34,
+   "axis": "Física",
+   "topic": "Electricidad",
+   "stem": "Una lámpara saldrá al mercado pronto, la cual consiste en dos ampolletas conectadas en serie. Respecto de este tipo de conexión, ¿qué opción señala correctamente la información que debiese contener el manual para evitar problemas de funcionamiento de esta lámpara?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La corriente eléctrica medida en ambas ampolletas tiene la misma intensidad."
+    },
+    {
+     "key": "B",
+     "text": "El encendido de la lámpara dependerá de que ambas ampolletas estén en buen estado."
+    },
+    {
+     "key": "C",
+     "text": "El voltaje en los extremos de cada ampolleta es distinto al voltaje suministrado por el enchufe."
+    },
+    {
+     "key": "D",
+     "text": "La resistencia interna de la lámpara equivale a la suma de las resistencias de las ampolletas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q36",
+   "number": 36,
+   "axis": "Física",
+   "topic": "Electricidad",
+   "stem": "Una persona está en un local comercial y pretende comprar un refrigerador cuyo uso implique el menor gasto económico posible. La persona compara el etiquetado de distintos refrigeradores, uno de los cuales se representa en la siguiente imagen:\n\nEn relación con lo anterior, ¿qué información de la etiqueta debe considerar la persona para tomar su decisión?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El consumo mensual del refrigerador"
+    },
+    {
+     "key": "B",
+     "text": "El voltaje que se debe suministrar al refrigerador"
+    },
+    {
+     "key": "C",
+     "text": "La temperatura del compartimiento congelado del refrigerador"
+    },
+    {
+     "key": "D",
+     "text": "El volumen útil total de ambos compartimientos del refrigerador"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q36.webp",
+    "width": 907,
+    "height": 1073,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q37",
+   "number": 37,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "La diabetes tipo I es causada por la destrucción de células beta pancreáticas, las cuales tienen como función secretar insulina permitiendo regular los niveles de glucosa en la sangre. Con el fin de abordar este problema, un equipo de investigación ha desarrollado un tratamiento que implica la producción de células beta funcionales a partir de células troncales. Los resultados preliminares *in vitro* indican que las células transformadas son capaces de liberar insulina en respuesta a la exposición a la glucosa. En base a estos antecedentes, ¿qué hipótesis podría validarse a través de la implementación de esta estrategia por parte del equipo de investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El trasplante de células troncales transformadas disminuye significativamente el ingreso de glucosa al interior de la célula."
+    },
+    {
+     "key": "B",
+     "text": "La transformación de células troncales es fundamental para el trasplante de páncreas en personas con diabetes tipo I."
+    },
+    {
+     "key": "C",
+     "text": "Altos niveles de glucosa disminuyen la probabilidad de liberación de insulina en células beta pancreáticas transformadas."
+    },
+    {
+     "key": "D",
+     "text": "Las células beta pancreáticas formadas a partir de células troncales son un posible tratamiento para la diabetes tipo I."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q41",
+   "number": 41,
+   "axis": "Biología",
+   "topic": "Biología",
+   "stem": "Un estudio realizado en adolescentes determinó la edad de aparición de algunas características sexuales asociadas a la pubertad. Los resultados se resumen en la siguiente figura, donde las líneas negras indican el rango etario de aparición de estas características y las flechas su promedio:\n\nCambio de voz\n\nVello púbico\n\nVello facial\n\nVello axilar\n\n10 11 12 13 14 15 16 17 18\n\nEdad (años)\n\nAnalizando los datos presentados, ¿cuál de las siguientes opciones corresponde a una conclusión correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El vello púbico corresponde a la característica sexual que se manifiesta más tardíamente."
+    },
+    {
+     "key": "B",
+     "text": "El cambio de voz y el vello facial son las características sexuales que se manifiestan, en promedio, a más temprana edad."
+    },
+    {
+     "key": "C",
+     "text": "El vello púbico es la característica sexual que, en promedio, se manifiesta más tempranamente durante el desarrollo."
+    },
+    {
+     "key": "D",
+     "text": "El cambio de voz y el vello axilar son las características sexuales que se manifiestan más tardíamente."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q41.webp",
+    "width": 907,
+    "height": 664,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q42",
+   "number": 42,
+   "axis": "Biología",
+   "topic": "Biología",
+   "stem": "Una científica evaluó *in vitro* el efecto inhibitorio de la molécula Z en la afinidad de los gametos masculinos (espermatozoides) con la superficie de los gametos femeninos (ovocitos). El diseño experimental consistió en cuantificar los espermatozoides presentes en la superficie de ovocitos bajo cuatro concentraciones crecientes de Z. Para estos fines, trabajó con una muestra de 100 espermatozoides y 25 ovocitos provenientes de ratones de laboratorio. Sus resultados sugieren que el efecto inhibitorio depende directamente de la concentración de la molécula Z. En este contexto, ¿cuál de las siguientes opciones representa de manera correcta los posibles resultados obtenidos por la científica?\n\nB)",
+   "options": [
+    {
+     "key": "A",
+     "text": "100- Número de Número Espermatozoides Molécula Z espermatozoides de 75unidos ovocitos Número de gametos Ausente 80 15 50- Presente 20 10 25- Ovocitos 0- 1 2 3 4 Concentración de Z (u.a.) C) D) Concentración Número de Porcentaje 80de Z (u.a.) espermatozoides 1 40 40 60- 2 10 10 Espermatozoides unidos (N) 3 20 20 40- 4 30 30 20- 0- 1 2 3 4 Concentración de Z (u.a.)"
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q42.webp",
+    "width": 907,
+    "height": 1010,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q45",
+   "number": 45,
+   "axis": "Biología",
+   "topic": "Poblaciones",
+   "stem": "El lupus es una enfermedad autoinmune, es decir, corresponde a una enfermedad donde el propio sistema inmunológico ataca a las células sanas de la persona. La evidencia internacional muestra que la prevalencia de lupus es mayor en las mujeres. Considerando que un grupo de científicas desea saber si ocurre lo mismo en la población chilena, ¿cuál de las siguientes opciones señala una pregunta de investigación pertinente al problema planteado por las científicas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuál es el rango de edad de las mujeres que presentan lupus en Chile?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuál es la probabilidad que una mujer chilena desarrolle lupus?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cuál es la frecuencia de lupus en la población total chilena?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuál es el porcentaje de mujeres y hombres con lupus en Chile?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q46",
+   "number": 46,
+   "axis": "Biología",
+   "topic": "Sistema inmune",
+   "stem": "En los inicios de la inmunología, existían investigadores que proponían como teoría que la respuesta inmunológica es humoral, es decir, mediada por secreciones de sustancias liberadas por los glóbulos blancos. A partir de lo anterior, ¿cuál de las siguientes opciones corresponde a una evidencia que apoya dicha propuesta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La disminución de la cantidad de macrófagos en las zonas de la piel afectadas por una infección micótica."
+    },
+    {
+     "key": "B",
+     "text": "El aumento de temperatura corporal producido por la presencia de una sustancia irritante."
+    },
+    {
+     "key": "C",
+     "text": "El aumento en la cantidad de anticuerpos en la sangre de un individuo afectado por un agente infeccioso."
+    },
+    {
+     "key": "D",
+     "text": "La disminución en la cantidad de linfocitos T citotóxicos presentes en el plasma sanguíneo producida por una infección viral."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q47",
+   "number": 47,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un equipo de investigación está probando dos compuestos químicos (1 y 2), que afectan la viabilidad celular, como posibles fármacos que actúen contra el cáncer de mamas. Para ello, generaron tres cultivos con la misma cantidad de células (cultivos iniciales), extraídas del tejido mamario de una persona diagnosticada con cáncer de mama. Dos de los cultivos fueron tratados individualmente con los compuestos 1 y 2, y el cultivo restante quedó como control. Los resultados obtenidos se representan en la siguiente figura:\n\nExperimento tras 72 horas Cultivos Cultivo Cultivo con Cultivo con iniciales control compuesto 1 compuesto 2\n\nEn base a lo anterior, ¿cuál de las siguientes opciones corresponde a una inferencia correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El compuesto 1 aumentó el número de células viables cancerosas."
+    },
+    {
+     "key": "B",
+     "text": "El compuesto 1 aumentó el volumen de las células viables cancerosas."
+    },
+    {
+     "key": "C",
+     "text": "El compuesto 2 disminuyó la tasa de proliferación de las células viables cancerosas."
+    },
+    {
+     "key": "D",
+     "text": "El compuesto 2 transformó las células viables cancerosas en células viables normales."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q47.webp",
+    "width": 907,
+    "height": 713,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q48",
+   "number": 48,
+   "axis": "Biología",
+   "topic": "Genética",
+   "stem": "El arroz dorado es una variedad de arroz genéticamente modificado para producir betacaroteno, un precursor de la vitamina A. En el siguiente gráfico, se presenta una comparación de los niveles de betacaroteno entre el arroz dorado y el arroz no modificado genéticamente a lo largo del tiempo:\n\n3\n\nArroz dorado 2 Niveles de betacaroteno (u.a.) Arroz no modificado 1 genéticamente\n\n0 0 1 2 3 4 5 Tiempo (Semanas)\n\nEn relación con el análisis del gráfico, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los niveles de betacaroteno en el arroz dorado son siempre más altos que en el arroz no modificado genéticamente."
+    },
+    {
+     "key": "B",
+     "text": "Los niveles de betacaroteno en el arroz dorado son siempre más bajos que en el arroz no modificado genéticamente."
+    },
+    {
+     "key": "C",
+     "text": "Los niveles de betacaroteno en el arroz no modificado genéticamente aumentan de manera constante a lo largo del tiempo."
+    },
+    {
+     "key": "D",
+     "text": "Los niveles de betacaroteno en el arroz dorado aumentan con el transcurso de las semanas."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q48.webp",
+    "width": 907,
+    "height": 710,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q49",
+   "number": 49,
+   "axis": "Biología",
+   "topic": "Genética",
+   "stem": "El algodón transgénico Bt ha sido modificado genéticamente para que sea resistente a insectos. Experimentalmente, a esta planta se le introducen genes provenientes de la bacteria *Bacillus thuringiensis*, los cuales codifican para proteínas que resultan ser tóxicas para las larvas de polillas que atacan el algodón. A partir de estos antecedentes, ¿cuál de las siguientes opciones corresponde a la hipótesis asociada con el procedimiento de generación del algodón Bt?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las proteínas sintetizadas por la planta de algodón transgénico Bt provocaron toxicidad en las larvas de polilla."
+    },
+    {
+     "key": "B",
+     "text": "Determinar el efecto defensivo del algodón transgénico Bt frente al ataque de larvas de polillas."
+    },
+    {
+     "key": "C",
+     "text": "Mediante la inserción de genes de *Bacillus thuringiensis*, el algodón consigue protección frente al ataque de insectos."
+    },
+    {
+     "key": "D",
+     "text": "Mediante la inserción de genes de *Bacillus thuringiensis,* el algodón presentó una menor resistencia a insectos de lo que se postulaba."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q50",
+   "number": 50,
+   "axis": "Biología",
+   "topic": "Genética",
+   "stem": "La fermentación de bebidas, la fabricación de quesos y la producción de pan, corresponden a procesos basados en el metabolismo de las levaduras, los cuales pueden ser optimizados por medio de la manipulación genética. Lo anterior se puede lograr gracias al avance en la identificación de genes, sus funciones y los mecanismos del funcionamiento celular. Considerando la información entregada, ¿cuál de las siguientes opciones corresponde a una aplicación científica de la manipulación genética en el funcionamiento celular?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La manipulación genética permite la síntesis de nuevos organelos celulares con nuevas funciones."
+    },
+    {
+     "key": "B",
+     "text": "La manipulación genética permite identificar nuevas especies unicelulares con potencial para ser utilizadas en procesos industriales."
+    },
+    {
+     "key": "C",
+     "text": "La manipulación genética permite aumentar la actividad metabólica de los organelos celulares de los organismos."
+    },
+    {
+     "key": "D",
+     "text": "La manipulación genética permite mantener las funciones celulares inalteradas en las especies de interés productivo."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q52",
+   "number": 52,
+   "axis": "Biología",
+   "topic": "Plantas",
+   "stem": "Una estudiante tomó una botella, la cortó y colocó un tipo de tierra. Posteriormente dispuso una capa de lentejas de la misma variedad a germinar cerca de la ventana (1). Tras algunos días observó el germinado (2) y decidió girarlo en 180° (3). Luego de un tiempo, determinó que las plántulas están listas para consumir (4).\n\n(1) (2)\n\n(3) (4)\n\nEn relación con lo anterior, ¿cuál podría ser la pregunta de la estudiante considerando el cambio de condiciones que ha realizado en el procedimiento experimental?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuál es el efecto del ángulo de incidencia de la luz solar sobre el crecimiento de la planta?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuál es el efecto de la evaporación del agua en el crecimiento de las plántulas?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cuál es el efecto de la brisa en la ventana, respecto de la tasa de crecimiento de las plántulas?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuál es el efecto del tipo de tierra utilizada en la tasa de crecimiento de las plántulas?"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q52.webp",
+    "width": 907,
+    "height": 917,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q55",
+   "number": 55,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "En relación a las mezclas de arena con agua, arena con gravilla y etanol con agua, ¿qué opción presenta la técnica más adecuada para separar los componentes de cada una de estas mezclas?\n\nArena con agua Arena con gravilla Etanol con agua",
+   "options": [
+    {
+     "key": "A",
+     "text": "Filtración simple Destilación simple Filtración simple"
+    },
+    {
+     "key": "B",
+     "text": "Filtración simple Tamización Destilación simple"
+    },
+    {
+     "key": "C",
+     "text": "Tamización Filtración simple Filtración simple"
+    },
+    {
+     "key": "D",
+     "text": "Tamización Destilación simple Tamización"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q55.webp",
+    "width": 907,
+    "height": 332,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q57",
+   "number": 57,
+   "axis": "Química",
+   "topic": "Tabla periódica",
+   "stem": "Considerando que la temperatura de fusión del elemento argón es –189 °C y la temperatura de ebullición es –186 °C, ¿cuál de las siguientes opciones es posible inferir correctamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A –150 °C el elemento es gas."
+    },
+    {
+     "key": "B",
+     "text": "A –186 °C el elemento congela."
+    },
+    {
+     "key": "C",
+     "text": "A –189 °C el elemento hierve."
+    },
+    {
+     "key": "D",
+     "text": "A –200 °C el elemento es líquido."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q58",
+   "number": 58,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "E. Rutherford, estudiando el comportamiento de la radiación alfa, realizó un experimento en el cual bombardeó una lámina de oro con estas partículas, descubriendo que un pequeño número de ellas se desviaba y que el resto pasaba sin experimentar ninguna variación en su trayectoria. De esta experiencia pudo postular que el átomo está formado, en su mayoría, por espacio vacío y en el centro tiene una diminuta zona compacta. Al respecto, ¿cuál de las siguientes opciones corresponde a otra pregunta que podría haber planteado y respondido E. Rutherford al realizar este experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Qué partículas se encuentran presentes en el átomo?"
+    },
+    {
+     "key": "B",
+     "text": "¿Qué comportamiento del oro es semejante al de otros metales?"
+    },
+    {
+     "key": "C",
+     "text": "¿Cómo se distribuyen las partículas positivas y negativas en el átomo?"
+    },
+    {
+     "key": "D",
+     "text": "¿Qué características eléctricas presenta la lámina de oro?"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q59",
+   "number": 59,
+   "axis": "Química",
+   "topic": "Tabla periódica",
+   "stem": "Un grupo de estudiantes encuentra el siguiente extracto de la tabla periódica:\n\n24 28 34 Cr … Ni … Se Simbología 52 59 79 24 número atómico 42 46 52 Cr símbolo Mo … **Pd** … Te 52 masa atómica 96 (masa atómica) 128 74 78 84 W … Pt … Po 184 195 (209) 106 110 116 Sg … Ds … Lv 269 281 293\n\nConsiderando la información anterior, ¿cuál de las siguientes opciones es una inferencia correcta para el valor de la masa atómica, aproximada, de **Pd**?",
+   "options": [
+    {
+     "key": "A",
+     "text": "80 u"
+    },
+    {
+     "key": "B",
+     "text": "106 u"
+    },
+    {
+     "key": "C",
+     "text": "130 u"
+    },
+    {
+     "key": "D",
+     "text": "180 u"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q59.webp",
+    "width": 907,
+    "height": 520,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q61",
+   "number": 61,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Un profesor presenta el siguiente modelo atómico que representa a un ion, donde p son los protones y son los electrones.\n\nRespecto al modelo presentado, ¿cuál de las siguientes representaciones corresponde a su átomo neutro?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q61.webp",
+    "width": 907,
+    "height": 1161,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q62",
+   "number": 62,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "Una profesora dibuja en la pizarra el siguiente esquema de un modelo atómico:\n\np⁺ = 20 A = 39\n\nPosteriormente, la profesora pide al curso que analicen el modelo y escriban una inferencia que se desprenda de él. ¿Cuál de las siguientes opciones es una inferencia correcta planteada por el curso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tiene número atómico 39"
+    },
+    {
+     "key": "B",
+     "text": "Tiene número másico 20"
+    },
+    {
+     "key": "C",
+     "text": "Es un catión del tipo M²⁺"
+    },
+    {
+     "key": "D",
+     "text": "Es un anión del tipo X–"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q62.webp",
+    "width": 907,
+    "height": 589,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q63",
+   "number": 63,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "En una clase se presenta la siguiente estructura de un compuesto orgánico:\n\nCH2 CH CH2 C C H\n\nConsiderando la estructura, la profesora pregunta sobre los enlaces sigma presentes en la molécula. Al respecto, ¿cuál de las siguientes opciones presenta el número total de enlaces sigma que se encuentran en una molécula de este compuesto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "10"
+    },
+    {
+     "key": "D",
+     "text": "13"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "pilot": true
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q64",
+   "number": 64,
+   "axis": "Química",
+   "topic": "Ácidos y bases",
+   "stem": "El ácido retinoico corresponde a la forma ácida de la vitamina A, usado para tratamientos de acné por su efecto irritante, que estimula el recambio celular de la piel, su fórmula es la siguiente:\n\nCon respecto a la estructura de este ácido, ¿cuál de las siguientes opciones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Su fórmula empírica es CHO."
+    },
+    {
+     "key": "B",
+     "text": "Se clasifica como un alquino."
+    },
+    {
+     "key": "C",
+     "text": "Es un compuesto aromático."
+    },
+    {
+     "key": "D",
+     "text": "Su fórmula molecular es C²⁰H²⁸O²."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q64.webp",
+    "width": 907,
+    "height": 511,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q65",
+   "number": 65,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Una farmacéutica se encuentra realizando una investigación sobre un medicamento, cuyo principio activo es un compuesto orgánico formado por C, H, N y O. La estructura molecular de dicho compuesto es la siguiente:\n\nH N O O\n\nHN\n\nO\n\nConsiderando la estructura molecular presentada anteriormente, ¿cuántos átomos de hidrógeno tiene la molécula?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12"
+    },
+    {
+     "key": "B",
+     "text": "8"
+    },
+    {
+     "key": "C",
+     "text": "10"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q65.webp",
+    "width": 907,
+    "height": 589,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q66",
+   "number": 66,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "¿Cuál es la fórmula molecular del ácido 2-etil-3-hidroxibutanoico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "C⁴H¹²O²"
+    },
+    {
+     "key": "B",
+     "text": "C⁴H¹²O³"
+    },
+    {
+     "key": "C",
+     "text": "C⁵H¹²O²"
+    },
+    {
+     "key": "D",
+     "text": "C⁶H¹⁰O²"
+    },
+    {
+     "key": "E",
+     "text": "C⁶H¹²O³"
+    }
+   ],
+   "answer": "E",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q67",
+   "number": 67,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Un tipo de combustible para automóviles es la gasolina de 97 octanos, que se caracteriza por tener un 97 % del 2,2,4-trimetilpentano. Al respecto, ¿cuál de las siguientes fórmulas moleculares corresponde a este compuesto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "C⁵H¹⁰"
+    },
+    {
+     "key": "B",
+     "text": "C⁵H¹²"
+    },
+    {
+     "key": "C",
+     "text": "C⁸H¹⁶"
+    },
+    {
+     "key": "D",
+     "text": "C⁸H¹⁸"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q68",
+   "number": 68,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "En un laboratorio se pretende modificar y comparar las propiedades de un fármaco en forma libre (1) y combinado con aminas (2 y 3). A continuación se presentan los resultados:\n\n1 2 3\n\nMasa molar 250,33 339,47 355,47 (g/mol)\n\nDensidad 1,09 1,12 1,18 (g/mL)\n\nA partir de los datos de la tabla y con una nueva modificación en la estructura del fármaco combinado con aminas, se obtiene:\n\n¿cuál de las siguientes opciones es una predicción correcta para el compuesto modificado?\n\nMasa molar Densidad (g/mol) (g/mL)",
+   "options": [
+    {
+     "key": "A",
+     "text": "371,47 1,20"
+    },
+    {
+     "key": "B",
+     "text": "380,33 1,18"
+    },
+    {
+     "key": "C",
+     "text": "345,47 1,20"
+    },
+    {
+     "key": "D",
+     "text": "245,33 1,19"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q68.webp",
+    "width": 907,
+    "height": 1079,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q70",
+   "number": 70,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "Un estudiante se encuentra investigando cómo transformar un alcano en un aldehído, ¿cuál de los siguientes grupos funcionales debe incluir el compuesto obtenido?",
+   "options": [
+    {
+     "key": "A",
+     "text": "–OH"
+    },
+    {
+     "key": "B",
+     "text": "–COOH"
+    },
+    {
+     "key": "C",
+     "text": "–CHO"
+    },
+    {
+     "key": "D",
+     "text": "–COR"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q71",
+   "number": 71,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "El gas licuado que se utiliza como combustible doméstico para algunas estufas y cocinas, está compuesto de una mezcla de butano y propano. La característica que los hace adecuados para este uso es su rápida combustión. A continuación se presenta la ecuación química que representa la reacción de combustión de butano, en donde se han dejado dos coeficientes estequiométricos simbolizados por las letras X e Y:\n\n2 C⁴H¹⁰ + X O² Y CO² + 10 H²O\n\nConsiderando la ecuación balanceada, ¿cuál de las siguientes opciones es correcta para los coeficientes estequiométricos faltantes, X e Y, respectivamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 y 10"
+    },
+    {
+     "key": "B",
+     "text": "8 y 5"
+    },
+    {
+     "key": "C",
+     "text": "10 y 4"
+    },
+    {
+     "key": "D",
+     "text": "13 y 8"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q72",
+   "number": 72,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Se tiene una solución de glucosa 0,2 molal. ¿Qué cantidad de glucosa hay por cada 100 g de agua?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,01 mol"
+    },
+    {
+     "key": "B",
+     "text": "0,02 mol"
+    },
+    {
+     "key": "C",
+     "text": "0,10 mol"
+    },
+    {
+     "key": "D",
+     "text": "0,20 mol"
+    },
+    {
+     "key": "E",
+     "text": "2,00 mol"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q73",
+   "number": 73,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Algunos metales (M) reaccionan con una solución de ácido clorhídrico (HCl) para producir hidrógeno gaseoso (H²) y la respectiva sal metálica (MCl²), de acuerdo con el siguiente esquema:\n\nConociendo esta información, se solicita a un estudiante que identifique tres muestras metálicas, denominadas X, Y y Z, sabiendo que una de ellas es magnesio (masa molar = 24,3 g/mol), otra de zinc (masa molar = 65,4 g/mol) y otra de calcio (masa molar = 40,0 g/mol). El estudiante dispone de 3 láminas metálicas de 4,0 g cada una, las cuales introduce en diferentes matraces que contienen un exceso de HCl. Por último, registra la cantidad de hidrógeno gaseoso (en mol) formado.\n\nCantidad de H² Masa de metal Metal producido (g) (mol) X 4,0 0,100 Y 4,0 0,061 Z 4,0 0,165\n\nA partir de esta información, ¿cuál de las siguientes opciones muestra una identificación correcta de los metales por parte del estudiante?\n\nX Y Z",
+   "options": [
+    {
+     "key": "A",
+     "text": "Calcio Magnesio Zinc"
+    },
+    {
+     "key": "B",
+     "text": "Magnesio Zinc Calcio"
+    },
+    {
+     "key": "C",
+     "text": "Calcio Zinc Magnesio"
+    },
+    {
+     "key": "D",
+     "text": "Zinc Magnesio Calcio"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q73.webp",
+    "width": 907,
+    "height": 947,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q74",
+   "number": 74,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "A nivel industrial el amoníaco se obtiene mediante el proceso Haber, que se representa mediante la ecuación:\n\nN² (g) + 3 H² (g) 2 NH³ (g)\n\nAl respecto, ¿cuál es la cantidad máxima de amoníaco que se puede obtener a partir de 12 mol de N² y 12 mol de H²?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,0 mol"
+    },
+    {
+     "key": "B",
+     "text": "4,0 mol"
+    },
+    {
+     "key": "C",
+     "text": "8,0 mol"
+    },
+    {
+     "key": "D",
+     "text": "12,0 mol"
+    },
+    {
+     "key": "E",
+     "text": "24,0 mol"
+    }
+   ],
+   "answer": "C",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q75",
+   "number": 75,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Se realiza el siguiente experimento con una serie de mezclas de agua y soluto X, determinándose la propiedad Q, tal como se presenta a continuación:\n\nVaso 1 Vaso 2 Vaso 3 Vaso 4\n\nComposición Composición Composición Composición 100 mL de agua 100 mL de agua 100 mL de agua 100 mL de agua 10 g de soluto X 20 g de soluto X 30 g de soluto X\n\nPropiedad Q (°C) Propiedad Q (°C) Propiedad Q (°C) Propiedad Q (°C)\n\n0 –2 –5 –10\n\nA partir de los datos de la tabla, ¿cuál de las siguientes opciones es una conclusión correcta que se puede extraer del experimento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La propiedad Q depende únicamente del volumen del solvente."
+    },
+    {
+     "key": "B",
+     "text": "La propiedad Q depende de los componentes presentes en la mezcla."
+    },
+    {
+     "key": "C",
+     "text": "La propiedad Q depende del tipo de soluto utilizado."
+    },
+    {
+     "key": "D",
+     "text": "La propiedad Q depende de la masa del soluto X."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q75.webp",
+    "width": 907,
+    "height": 691,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q76",
+   "number": 76,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Para un experimento, una estudiante necesita preparar una solución acuosa de HNO³ al 10 % m/v. ¿Cuál de las siguientes preparaciones le permitirá obtener esa concentración?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 g de HNO³ disueltos en 1 L de agua"
+    },
+    {
+     "key": "B",
+     "text": "5 g de HNO³ disueltos en 50 mL de solución"
+    },
+    {
+     "key": "C",
+     "text": "5 g de HNO³ disueltos en 0,5 L de agua"
+    },
+    {
+     "key": "D",
+     "text": "10 g de HNO³ disueltos en 10 mL de solución"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q77",
+   "number": 77,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Si una solución al 2 % m/m tiene una densidad de 0,5 g/mL, ¿cuál será el valor de su % m/v?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1"
+    },
+    {
+     "key": "B",
+     "text": "2"
+    },
+    {
+     "key": "C",
+     "text": "4"
+    },
+    {
+     "key": "D",
+     "text": "5"
+    },
+    {
+     "key": "E",
+     "text": "10"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text"
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q78",
+   "number": 78,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Una persona compra una botella de 1 L de “cloro” que en su etiqueta informa que, entre sus componentes, tiene 50 g de hipoclorito de sodio por 1 L de solución. Si a partir de la información de la etiqueta, la persona quiere preparar una solución de concentración menor a la de la botella, ¿cuál de las siguientes soluciones es factible que pueda preparar en casa a partir de este “cloro”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una solución al 1 % m/v de hipoclorito de sodio"
+    },
+    {
+     "key": "B",
+     "text": "Una solución al 5 % m/v de hipoclorito de sodio"
+    },
+    {
+     "key": "C",
+     "text": "Una solución al 10 % m/v de hipoclorito de sodio"
+    },
+    {
+     "key": "D",
+     "text": "Una solución al 50 % m/v de hipoclorito de sodio"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "pilot": true
+  },
+  {
+   "id": "ciencias-quimica-2025-regular-q80",
+   "number": 80,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "La siguiente tabla muestra información sobre la concentración de hipoclorito de sodio, agente desinfectante, presente en cuatro muestras de “cloro” doméstico. Además, se indica el volumen de cada muestra que se debe diluir con agua, hasta completar 1 L, para preparar soluciones al 0,1 % m/v:\n\nConcentración de Volumen de cloro a diluir con agua Muestra de “cloro” hipoclorito de sodio (mL) (% m/v) 1 4,8 – 5,0 20 2 2,5 – 2,6 40 3 2,0 – 2,2 50 4 2,1 80\n\nConsiderando la información de la tabla, ¿cuál de las siguientes opciones es una conclusión correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mientras mayor es la concentración del cloro, se usa mayor cantidad de agua para diluir."
+    },
+    {
+     "key": "B",
+     "text": "Mientras mayor es la concentración del cloro, mayor es el volumen del mismo que se diluye."
+    },
+    {
+     "key": "C",
+     "text": "Mientras menor es la concentración del cloro, se usa mayor cantidad de agua para diluir."
+    },
+    {
+     "key": "D",
+     "text": "Mientras menor es la concentración del cloro, menor es el volumen de este que se diluye."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-regular/q80.webp",
+    "width": 907,
+    "height": 640,
+    "mono": true
+   },
+   "textQuality": "approximate"
+  }
+ ]
+}
