@@ -50,7 +50,7 @@ export function ExamIntro({ exam }: { exam: Exam }) {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <Button variant="ghost" size="sm" asChild className="-ml-2">
-        <Link to="/"><ArrowLeft />Ensayos</Link>
+        <Link to="/ensayos"><ArrowLeft />Ensayos</Link>
       </Button>
       <div className="mt-6">
         <SubjectTag subject={exam.subject} label={subjectLabel(exam.subject, exam.area)} />

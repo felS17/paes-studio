@@ -32,9 +32,11 @@ export interface Explanation {
   kind?: 'desarrollo' | 'solucion'
   /** Idea clave en una o dos oraciones. */
   summary: string
-  /** Desarrollo paso a paso (Markdown + LaTeX). */
+  /** Planteamiento: qué pide exactamente el enunciado y qué datos (o fragmento clave) entrega. */
+  planteamiento?: string
+  /** Desarrollo paso a paso (Markdown + LaTeX); la interfaz los numera «Paso 1, Paso 2…». */
   steps: string[]
-  /** Por qué fallan las alternativas incorrectas más tentadoras. */
+  /** Análisis de distractores: por qué falla cada alternativa incorrecta (la trampa típica del DEMRE). */
   distractors?: Partial<Record<OptionKey, string>>
 }
 
@@ -44,6 +46,8 @@ export interface Question {
   /** Eje temático (Matemática/Historia), área (Ciencias) o habilidad (Lectora). */
   axis: string
   topic: string
+  /** Subtema del temario DEMRE (uno de los 67; ver src/data/temario/index.json). */
+  subtopic?: string
   skill?: string
   difficulty?: 'baja' | 'media' | 'alta'
   passageId?: string
@@ -114,14 +118,21 @@ export interface ExamMeta {
   axes: string[]
   /** Números de pregunta por eje (para armar prácticas por eje sin cargar el ensayo). */
   axisQuestions: Record<string, number[]>
+  /** Números de pregunta por subtema del temario (explorador, drills y Zettelkasten). */
+  subtopicQuestions: Record<string, number[]>
+  /** Números de las preguntas que traen solución paso a paso. */
+  explainedQuestions: number[]
   /** Ruta relativa a src/data/exams (p. ej. `m1/m1-curado-1.json`). */
   file: string
 }
 
-/** Práctica personalizada: preguntas de distintos ensayos (por eje o «revancha» de errores). */
+/**
+ * Práctica personalizada: preguntas de distintos ensayos. Por eje, «revancha» de errores, drill de un subtema
+ * (explorador y Zettelkasten) o Desafío Diario.
+ */
 export interface PracticeSet {
   id: string
-  kind: 'eje' | 'revancha'
+  kind: 'eje' | 'revancha' | 'subtema' | 'diario'
   subject: SubjectId
   title: string
   description: string

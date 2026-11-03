@@ -7,7 +7,7 @@ const data = JSON.parse(readFileSync(process.argv[2], 'utf8'))
 const macros = { '\\sen': '\\operatorname{sen}', '\\R': '\\mathbb{R}' }
 let bad = 0
 for (const s of data) {
-  const texts = [s.summary ?? '', ...(s.steps ?? []), ...Object.values(s.distractors ?? {})]
+  const texts = [s.summary ?? '', s.planteamiento ?? '', ...(s.steps ?? []), ...Object.values(s.distractors ?? {})]
   for (const t of texts) {
     for (const m of String(t).matchAll(/(?<!\\)\$\$([\s\S]+?)(?<!\\)\$\$|(?<!\\)\$([^$]+?)(?<!\\)\$/g)) {
       try { katex.renderToString(m[1] ?? m[2], { throwOnError: true, displayMode: Boolean(m[1]), macros: { ...macros }, strict: 'ignore' }) }

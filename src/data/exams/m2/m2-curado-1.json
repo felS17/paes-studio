@@ -95,16 +95,22 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "$\\log_b a = c$ significa $b^c = a$: busca a qué exponente hay que elevar cada base.",
+    "summary": "Un logaritmo $\\log_b a$ es el exponente al que hay que elevar $b$ para obtener $a$; con esa definición cada término se calcula por separado y luego se suman.",
+    "planteamiento": "Se pide $\\log_2 32 + \\log_3 \\dfrac{1}{9}$. Datos: las bases son $2$ y $3$, y los argumentos $32$ y $\\dfrac{1}{9}$ son potencias de esas bases.",
     "steps": [
-     "$\\log_2 32 = 5$, porque $2^5 = 32$.",
-     "$\\log_3 \\dfrac{1}{9} = -2$, porque $3^{-2} = \\dfrac{1}{3^2} = \\dfrac{1}{9}$.",
-     "Suma: $5 + (-2) = 3$."
+     "Recuerda la definición: $\\log_b a = c$ equivale a $b^c = a$.",
+     "Calcula $\\log_2 32$: se busca el exponente $c$ con $2^c = 32$. Como $2^5 = 32$, se obtiene $\\log_2 32 = 5$.",
+     "Calcula $\\log_3 \\dfrac{1}{9}$: se busca $c$ con $3^c = \\dfrac{1}{9}$. Como $\\dfrac{1}{9} = \\dfrac{1}{3^2} = 3^{-2}$, por la propiedad de las potencias con exponente negativo, $\\log_3 \\dfrac{1}{9} = -2$.",
+     "Verifica el signo: el argumento $\\dfrac{1}{9}$ es menor que $1$, así que el logaritmo debe ser negativo, y $-2$ lo cumple.",
+     "Suma los dos resultados: $5 + (-2) = 3$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Toma $\\log_3\\frac{1}{9}$ como $+2$; el argumento es menor que 1, así que el logaritmo debe ser negativo."
+     "B": "$7$ toma $\\log_3\\dfrac{1}{9}$ como $+2$, olvidando que el argumento es menor que $1$ y que el logaritmo debe ser negativo. Así se obtiene $5 + 2 = 7$.",
+     "C": "$-3$ resulta de cambiar el signo del primer logaritmo: $-5 + 2 = -3$. El primer término es positivo porque $2^5 = 32$.",
+     "D": "$-7$ resulta de restar ambos logaritmos en vez de sumarlos, con signos cambiados: $-5 - 2 = -7$. Un argumento mayor que $1$ da un logaritmo positivo, y eso no se invierte."
     }
-   }
+   },
+   "subtopic": "m2-logaritmos"
   },
   {
    "id": "m2-curado-1-q02",
@@ -136,17 +142,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Descompón 12 en factores primos y usa $\\log(ab) = \\log a + \\log b$ y $\\log a^n = n\\log a$.",
+    "summary": "Se descompone $12$ en factores primos y se aplican las propiedades del logaritmo del producto y de la potencia.",
+    "planteamiento": "Se pide un valor aproximado de $\\log 12$. Datos: $\\log 2 \\approx 0{,}301$ y $\\log 3 \\approx 0{,}477$; el número $12$ se escribe como producto de esos factores primos.",
     "steps": [
-     "$12 = 2^2\\cdot 3$.",
-     "$\\log 12 = \\log 2^2 + \\log 3 = 2\\log 2 + \\log 3$.",
-     "$2\\cdot 0{,}301 + 0{,}477 = 0{,}602 + 0{,}477 = 1{,}079$."
+     "Descompón $12$ en factores primos: $12 = 2^2\\cdot 3$.",
+     "Aplica el logaritmo del producto, $\\log(ab) = \\log a + \\log b$: $\\log 12 = \\log(2^2\\cdot 3) = \\log 2^2 + \\log 3$.",
+     "Aplica la propiedad de la potencia, $\\log a^n = n\\log a$, al primer término: $\\log 2^2 = 2\\log 2$. Así, $\\log 12 = 2\\log 2 + \\log 3$.",
+     "Reemplaza los valores aproximados: $2\\cdot 0{,}301 + 0{,}477$.",
+     "Efectúa la multiplicación y la suma: $2\\cdot 0{,}301 = 0{,}602$, y luego $0{,}602 + 0{,}477 = 1{,}079$.",
+     "Comprobación: el valor exacto es $\\log 12 \\approx 1{,}0792$, así que la aproximación coincide con la alternativa. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Es $\\log 6 = \\log 2 + \\log 3$: falta el segundo factor 2.",
-     "D": "Es $\\log 16 = 4\\log 2$."
+     "A": "$0{,}778$ es $\\log 6 = \\log 2 + \\log 3 = 0{,}301 + 0{,}477$: falta el segundo factor $2$ de $12 = 2^2\\cdot 3$, que se pierde al no aplicar la potencia.",
+     "B": "$0{,}954$ es $\\log 9 = 2\\log 3$: toma los factores equivocados. El $12$ no es $9$, y su factor primo $2$ no aparece en este cálculo.",
+     "D": "$1{,}204$ es $\\log 16 = 4\\log 2 = 4\\cdot 0{,}301$: usa $16 = 2^4$ en lugar de $12 = 2^2\\cdot 3$, olvidando el factor $3$."
     }
-   }
+   },
+   "subtopic": "m2-logaritmos"
   },
   {
    "id": "m2-curado-1-q03",
@@ -178,17 +190,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Con interés compuesto, cada mes se gana interés sobre el monto acumulado: $C_n = C_0(1 + i)^n$.",
+    "summary": "En interés compuesto cada período se calcula sobre el monto acumulado, por lo que el capital se multiplica por $(1+i)$ en cada mes: $C_n = C_0(1+i)^n$.",
+    "planteamiento": "Se pide el monto acumulado a 3 meses. Datos: capital inicial $C_0 = 1\\,000\\,000$ pesos, tasa mensual $i = 0{,}02$ y $n = 3$ meses; el interés se capitaliza cada mes.",
     "steps": [
-     "Datos: $C_0 = 1\\,000\\,000$, $i = 0{,}02$ y $n = 3$.",
-     "$(1{,}02)^2 = 1{,}0404$ y $(1{,}02)^3 = 1{,}0404\\cdot 1{,}02 = 1{,}061208$.",
-     "$C_3 = 1\\,000\\,000\\cdot 1{,}061208 = 1\\,061\\,208$."
+     "Identifica la fórmula del interés compuesto: $C_n = C_0(1+i)^n$, con $C_0 = 1\\,000\\,000$, $i = 0{,}02$ y $n = 3$.",
+     "Calcula el factor de crecimiento: $1 + i = 1{,}02$, lo que indica que cada mes el monto queda multiplicado por $1{,}02$.",
+     "Calcula los dos primeros meses: $(1{,}02)^2 = 1{,}0404$.",
+     "Multiplica por $1{,}02$ para el tercer mes: $(1{,}02)^3 = 1{,}0404\\cdot 1{,}02 = 1{,}061208$.",
+     "Multiplica el capital por este factor: $C_3 = 1\\,000\\,000\\cdot 1{,}061208 = 1\\,061\\,208$ pesos.",
+     "Comprobación mes a mes: $1\\,000\\,000\\cdot 1{,}02 = 1\\,020\\,000$; luego $1\\,020\\,000\\cdot 1{,}02 = 1\\,040\\,400$; y finalmente $1\\,040\\,400\\cdot 1{,}02 = 1\\,061\\,208$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "C": "Es el monto con interés **simple**: $1\\,000\\,000\\,(1 + 3\\cdot 0{,}02)$.",
-     "A": "Es el monto después de un solo mes."
+     "A": "$1\\,020\\,000$ pesos es el monto después de un solo mes ($1\\,000\\,000\\cdot 1{,}02$). Ignora los dos meses restantes de capitalización.",
+     "C": "$1\\,060\\,000$ pesos es el monto con interés **simple**: $1\\,000\\,000\\,(1+3\\cdot 0{,}02) = 1\\,060\\,000$. Con interés simple el interés de cada mes se calcula siempre sobre el capital inicial, sin sumar interés sobre interés.",
+     "D": "$1\\,080\\,000$ pesos equivale a sumar un $8\\,\\%$ sobre el capital. Se obtiene al sumar el $2\\,\\%$ cuatro veces sobre el capital inicial, un conteo de períodos erróneo que además no es compuesto."
     }
-   }
+   },
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-curado-1-q04",
@@ -221,15 +239,22 @@
    "explanation": {
     "kind": "desarrollo",
     "summary": "Para racionalizar un denominador binomial se amplifica por su conjugado y se usa $(a-b)(a+b) = a^2 - b^2$.",
+    "planteamiento": "Se pide la expresión igual a $\\dfrac{4}{\\sqrt{5} - 1}$. Datos: el denominador es el binomio $\\sqrt{5} - 1$, cuyo conjugado es $\\sqrt{5} + 1$.",
     "steps": [
-     "Amplifica por $\\sqrt{5}+1$: $\\dfrac{4(\\sqrt{5}+1)}{(\\sqrt{5}-1)(\\sqrt{5}+1)}$.",
-     "Denominador: $(\\sqrt{5})^2 - 1^2 = 5 - 1 = 4$.",
-     "Simplifica: $\\dfrac{4(\\sqrt{5}+1)}{4} = \\sqrt{5} + 1$."
+     "El denominador $\\sqrt{5} - 1$ tiene una raíz, así que se elimina multiplicando numerador y denominador por el conjugado $\\sqrt{5} + 1$.",
+     "Amplifica por $\\dfrac{\\sqrt{5}+1}{\\sqrt{5}+1} = 1$, lo que no altera la fracción: $\\dfrac{4}{\\sqrt{5}-1}\\cdot\\dfrac{\\sqrt{5}+1}{\\sqrt{5}+1} = \\dfrac{4(\\sqrt{5}+1)}{(\\sqrt{5}-1)(\\sqrt{5}+1)}$.",
+     "Desarrolla el denominador con la identidad $(a-b)(a+b) = a^2 - b^2$, con $a = \\sqrt{5}$ y $b = 1$: $(\\sqrt{5})^2 - 1^2 = 5 - 1 = 4$.",
+     "Reemplaza el denominador: $\\dfrac{4(\\sqrt{5}+1)}{4}$.",
+     "Simplifica el factor $4$ del numerador con el denominador: $\\dfrac{4(\\sqrt{5}+1)}{4} = \\sqrt{5} + 1$.",
+     "Comprobación numérica: $\\dfrac{4}{\\sqrt{5}-1}\\approx \\dfrac{4}{1{,}236}\\approx 3{,}236$, y $\\sqrt{5} + 1 \\approx 3{,}236$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "C": "Es el numerador $4(\\sqrt5+1)$ sin dividir por el nuevo denominador 4."
+     "A": "$\\sqrt{5} - 1$ es el denominador original, $\\approx 1{,}236$, y la fracción no es igual a él: $\\dfrac{4}{\\sqrt{5}-1}\\approx 3{,}236$. Cancelar el denominador sin amplificar no cambia la expresión.",
+     "C": "$4\\sqrt{5} + 4$ es el numerador $4(\\sqrt{5}+1)$ sin dividir por el nuevo denominador $4$: se olvida la última simplificación.",
+     "D": "$\\dfrac{\\sqrt{5} + 1}{4}\\approx 0{,}809$ divide por $4$ de más: aparece al usar el $4$ como divisor en lugar de multiplicador, y da un valor mucho menor que la fracción original."
     }
-   }
+   },
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-curado-1-q05",
@@ -261,16 +286,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Una ecuación cuadrática tiene una única solución real (doble) cuando su discriminante es cero: $\\Delta = b^2 - 4ac = 0$.",
+    "summary": "Una ecuación cuadrática tiene una única solución real cuando su discriminante es cero: $\\Delta = b^2 - 4ac = 0$.",
+    "planteamiento": "Se pide el valor de $k$ para que $x^2 + kx + 9 = 0$ tenga exactamente una solución real. Datos: $a = 1$, $b = k$ y $c = 9$.",
     "steps": [
-     "Aquí $a = 1$, $b = k$ y $c = 9$: $\\Delta = k^2 - 4\\cdot 1\\cdot 9 = k^2 - 36$.",
-     "$k^2 - 36 = 0 \\Rightarrow k^2 = 36 \\Rightarrow k = 6$ o $k = -6$.",
-     "Comprobación con $k = 6$: $x^2 + 6x + 9 = (x+3)^2$, cuya única solución es $x = -3$."
+     "Identifica los coeficientes de $x^2 + kx + 9 = 0$: $a = 1$, $b = k$ y $c = 9$.",
+     "Recuerda que una ecuación cuadrática $ax^2+bx+c=0$ tiene una única solución real (raíz doble) cuando $\\Delta = b^2 - 4ac = 0$.",
+     "Calcula el discriminante: $\\Delta = k^2 - 4\\cdot 1\\cdot 9 = k^2 - 36$.",
+     "Iguala a cero: $k^2 - 36 = 0$, de donde $k^2 = 36$.",
+     "Extrae la raíz cuadrada en ambos lados, considerando los dos signos: $k = 6$ o $k = -6$.",
+     "Comprobación con $k = 6$: $x^2 + 6x + 9 = (x+3)^2$, que tiene la única solución $x = -3$; con $k = -6$ se obtiene $(x-3)^2$, con solución $x = 3$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "B": "Iguala $k^2 = 9$, olvidando el factor $4ac = 36$ del discriminante."
+     "A": "$k = 3$ toma la raíz de $9$ como solución única, confundiendo la condición de raíz doble con $b = \\sqrt{c}$. Con $k = 3$, $\\Delta = 9 - 36 = -27 \\neq 0$.",
+     "B": "$k = 3$ o $k = -3$ iguala $k^2 = 9$, olvidando el factor $4ac = 36$ del discriminante. Con $k = 3$, $\\Delta = -27$, que no es cero.",
+     "C": "$k = 9$ confunde el coeficiente $c$ con el valor de $k$. Con $k = 9$, $\\Delta = 81 - 36 = 45 \\neq 0$, así que habría dos soluciones reales distintas."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-curado-1-q06",
@@ -302,15 +334,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Crecimiento exponencial: $N(t) = N_0\\cdot 2^{t/T}$, donde $T$ es el tiempo de duplicación.",
+    "summary": "En crecimiento exponencial la población se multiplica por $2$ en cada período de duplicación; basta contar cuántos períodos caben en el tiempo transcurrido.",
+    "planteamiento": "Se pide la población a las 12 horas. Datos: $N_0 = 500$ individuos y la población se duplica cada $T = 3$ horas.",
     "steps": [
-     "En 12 horas hay $\\dfrac{12}{3} = 4$ duplicaciones.",
-     "$N(12) = 500\\cdot 2^4 = 500\\cdot 16 = 8000$."
+     "Recuerda el modelo de duplicación: $N(t) = N_0\\cdot 2^{t/T}$, donde $t$ es el tiempo transcurrido y $T$ el tiempo de duplicación.",
+     "Calcula el número de duplicaciones: $\\dfrac{t}{T} = \\dfrac{12}{3} = 4$. Cada intervalo de 3 horas duplica la población.",
+     "Reemplaza en el modelo: $N(12) = 500\\cdot 2^{4}$.",
+     "Calcula la potencia: $2^4 = 16$.",
+     "Multiplica: $500\\cdot 16 = 8\\,000$.",
+     "Comprobación por etapas: $500 \\to 1\\,000$ (3 h), $\\to 2\\,000$ (6 h), $\\to 4\\,000$ (9 h) y $\\to 8\\,000$ (12 h). Son 4 duplicaciones. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "Cuenta 5 duplicaciones ($500\\cdot 2^5$), incluyendo el instante inicial como si fuera una duplicación."
+     "A": "$2\\,000$ corresponde a solo 2 duplicaciones ($500\\cdot 2^{2}$), es decir, a las 6 horas. Cuenta mal los períodos y se detiene antes de llegar a las 12 horas.",
+     "B": "$4\\,000$ corresponde a $500\\cdot 2^{3}$, es decir, 3 duplicaciones, que equivalen a 9 horas. Cuenta un período menos que el tiempo pedido.",
+     "D": "$16\\,000$ cuenta 5 duplicaciones ($500\\cdot 2^{5}$), incluyendo un período de más. Con 12 horas solo caben 4 períodos de 3 horas."
     }
-   }
+   },
+   "subtopic": "m2-exponencial"
   },
   {
    "id": "m2-curado-1-q07",
@@ -342,15 +382,22 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "$(f\\circ g)(x) = f(g(x))$: primero se aplica $g$ y luego $f$.",
+    "summary": "$(f\\circ g)(x) = f(g(x))$: primero se aplica $g$ al valor dado y después $f$ al resultado.",
+    "planteamiento": "Se pide $(f\\circ g)(3)$. Datos: $f(x) = 2x + 1$ y $g(x) = x^2$; el valor de entrada es $x = 3$.",
     "steps": [
-     "$g(3) = 3^2 = 9$.",
-     "$f(9) = 2\\cdot 9 + 1 = 19$."
+     "Recuerda la definición de composición: $(f\\circ g)(x) = f(g(x))$, por lo que primero actúa $g$ y su resultado entra en $f$.",
+     "Calcula $g(3) = 3^2 = 9$.",
+     "Usa ese resultado como entrada de $f$: $f(9) = 2\\cdot 9 + 1$.",
+     "Efectúa la multiplicación y la suma: $2\\cdot 9 = 18$ y $18 + 1 = 19$.",
+     "Comprobación: $f(g(3)) = f(9) = 19$, que coincide con el resultado. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Es $(g\\circ f)(3) = g(7) = 49$: el orden de la composición importa."
+     "B": "$49$ es $(g\\circ f)(3) = g(f(3)) = g(7) = 49$: el orden de la composición importa. Ahí se aplicó $f$ primero, contrario a lo que indica $(f\\circ g)$.",
+     "C": "$21$ se obtiene al sumar $3$ en vez de $1$ en $f$: $2\\cdot 9 + 3 = 21$. El término independiente de $f$ es $+1$.",
+     "D": "$36$ es $g(6)$: toma $2\\cdot 3 = 6$ como si fuera la imagen de $f$, sin sumar $1$, y luego eleva al cuadrado. Omite el $+1$ de $f$ y cambia el orden de las funciones."
     }
-   }
+   },
+   "subtopic": "m2-inversa"
   },
   {
    "id": "m2-curado-1-q08",
@@ -382,16 +429,22 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Para invertir: escribe $y = f(x)$, despeja $x$ y luego intercambia los nombres de las variables.",
+    "summary": "Para invertir una función se escribe $y = f(x)$, se despeja $x$ en función de $y$ y luego se intercambian las variables.",
+    "planteamiento": "Se pide la inversa de $f(x) = \\dfrac{x-3}{2}$. Datos: $f$ resta $3$ y luego divide por $2$; la inversa debe deshacer esas operaciones en orden contrario.",
     "steps": [
-     "$y = \\dfrac{x-3}{2} \\Rightarrow 2y = x - 3 \\Rightarrow x = 2y + 3$.",
-     "Intercambia variables: $f^{-1}(x) = 2x + 3$.",
-     "Comprobación: $f(f^{-1}(x)) = \\dfrac{(2x+3)-3}{2} = x$."
+     "Escribe $y = \\dfrac{x-3}{2}$.",
+     "Multiplica ambos lados por $2$ para eliminar el denominador: $2y = x - 3$.",
+     "Despeja $x$ sumando $3$ en ambos lados: $x = 2y + 3$.",
+     "Intercambia los nombres de las variables ($x$ por $y$ e $y$ por $x$): $y = 2x + 3$, es decir, $f^{-1}(x) = 2x + 3$.",
+     "Comprobación: $f^{-1}(f(x)) = 2\\cdot\\dfrac{x-3}{2} + 3 = x - 3 + 3 = x$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "Confunde la función inversa con el recíproco $\\dfrac{1}{f(x)}$."
+     "A": "$2x - 3$ multiplica por $2$ pero no revierte la resta de $3$: deshace la operación con el signo equivocado. Al verificar, $f(2x-3) = \\dfrac{2x-6}{2} = x-3 \\neq x$.",
+     "B": "$\\dfrac{x+3}{2}$ cambia el signo del $3$ y no deshace la división por $2$. Al evaluar $f\\!\\left(\\dfrac{x+3}{2}\\right) = \\dfrac{x-3}{4}$, no se obtiene $x$.",
+     "D": "$\\dfrac{2}{x-3}$ es el recíproco de $f(x)$, es decir, $\\dfrac{1}{f(x)}$. La inversa no es el recíproco: confunde $f^{-1}$ con $\\dfrac{1}{f}$, que es otra función."
     }
-   }
+   },
+   "subtopic": "m2-inversa"
   },
   {
    "id": "m2-curado-1-q09",
@@ -423,16 +476,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "La rampa es la hipotenusa y la altura es el cateto opuesto al ángulo: se usa el seno.",
+    "summary": "La rampa es la hipotenusa y la altura es el cateto opuesto al ángulo de $30^\\circ$, por lo que se usa el seno.",
+    "planteamiento": "Se pide la altura del extremo superior. Datos: la rampa (hipotenusa) mide $10$ m y forma $30^\\circ$ con la horizontal; la altura es el cateto opuesto a ese ángulo.",
     "steps": [
-     "$\\operatorname{sen} 30^\\circ = \\dfrac{h}{10}$.",
-     "Como $\\operatorname{sen} 30^\\circ = \\dfrac{1}{2}$: $h = 10\\cdot\\dfrac{1}{2} = 5$ m."
+     "Dibuja el triángulo rectángulo: la rampa es la hipotenusa de $10$ m, el suelo es el cateto adyacente al ángulo de $30^\\circ$ y la altura $h$ es el cateto opuesto.",
+     "Elige la razón trigonométrica: $\\operatorname{sen}\\alpha = \\dfrac{\\text{cateto opuesto}}{\\text{hipotenusa}}$, que relaciona justo $h$ con la hipotenusa.",
+     "Plantea la ecuación: $\\operatorname{sen} 30^\\circ = \\dfrac{h}{10}$.",
+     "Usa el valor exacto $\\operatorname{sen} 30^\\circ = \\dfrac{1}{2}$, que se obtiene del triángulo especial de $30^\\circ$-$60^\\circ$-$90^\\circ$.",
+     "Despeja $h$ multiplicando por $10$: $h = 10\\cdot\\dfrac{1}{2} = 5$ m.",
+     "Comprobación: la altura debe ser menor que la hipotenusa, y $5 < 10$. Además, $\\cos 30^\\circ \\approx 0{,}866$ daría una distancia horizontal de $8{,}66$ m, y $5^2 + 8{,}66^2 = 25 + 75 = 100 = 10^2$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Usa el coseno: $10\\cos 30^\\circ = 5\\sqrt3$ es la distancia horizontal que cubre la rampa, no su altura.",
-     "D": "Divide por el seno en vez de multiplicar; un cateto nunca es mayor que la hipotenusa."
+     "B": "$5\\sqrt{3}$ m usa el coseno: $10\\cos 30^\\circ = 5\\sqrt{3}$ es la distancia horizontal que cubre la rampa, no su altura. Confunde el cateto adyacente con el opuesto.",
+     "C": "$\\dfrac{10\\sqrt{3}}{3}$ m usa la tangente de forma incorrecta: $10\\tan 30^\\circ \\approx 5{,}77$ m. La tangente relaciona los catetos, y aquí el dato es la hipotenusa.",
+     "D": "$20$ m divide por el seno en vez de multiplicar: $\\dfrac{10}{1/2} = 20$. Un cateto nunca puede ser mayor que la hipotenusa, así que $20$ m es imposible."
     }
-   }
+   },
+   "subtopic": "m2-inversa"
   },
   {
    "id": "m2-curado-1-q10",
@@ -464,16 +524,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Construye un triángulo rectángulo con cateto opuesto 3 e hipotenusa 5 y encuentra el cateto adyacente.",
+    "summary": "Con $\\operatorname{sen}\\alpha$ conocido, se encuentra el cateto adyacente por Pitágoras y luego se calcula $\\tan\\alpha$ como cociente de catetos.",
+    "planteamiento": "Se pide $\\tan\\alpha$ con $\\alpha$ agudo y $\\operatorname{sen}\\alpha = \\dfrac{3}{5}$. Datos: el seno es el cociente entre el cateto opuesto y la hipotenusa, así que el opuesto es $3$ y la hipotenusa es $5$.",
     "steps": [
-     "Cateto adyacente: $\\sqrt{5^2 - 3^2} = \\sqrt{16} = 4$.",
-     "$\\tan\\alpha = \\dfrac{\\text{opuesto}}{\\text{adyacente}} = \\dfrac{3}{4}$."
+     "Interpreta el dato: en un triángulo rectángulo, $\\operatorname{sen}\\alpha = \\dfrac{\\text{opuesto}}{\\text{hipotenusa}} = \\dfrac{3}{5}$, así que se toma un cateto opuesto $3$ y una hipotenusa $5$.",
+     "Calcula el cateto adyacente con el teorema de Pitágoras: $\\text{adyacente}^2 = 5^2 - 3^2 = 25 - 9 = 16$.",
+     "Extrae la raíz cuadrada positiva, porque es una longitud: $\\text{adyacente} = \\sqrt{16} = 4$.",
+     "Aplica la definición de tangente: $\\tan\\alpha = \\dfrac{\\text{opuesto}}{\\text{adyacente}}$.",
+     "Reemplaza: $\\tan\\alpha = \\dfrac{3}{4}$.",
+     "Comprobación: $\\cos\\alpha = \\dfrac{4}{5}$ y $\\dfrac{\\operatorname{sen}\\alpha}{\\cos\\alpha} = \\dfrac{3/5}{4/5} = \\dfrac{3}{4}$, valor que coincide. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Es $\\cos\\alpha$.",
-     "C": "Es la cotangente (adyacente sobre opuesto)."
+     "A": "$\\dfrac{4}{5}$ es $\\cos\\alpha$, es decir, adyacente sobre hipotenusa. Se toma la razón equivocada: la tangente no usa la hipotenusa.",
+     "C": "$\\dfrac{4}{3}$ es la cotangente, adyacente sobre opuesto. Invierte el cociente de catetos, un error frecuente al recordar la definición de tangente.",
+     "D": "$\\dfrac{5}{3}$ es la cosecante, $\\dfrac{1}{\\operatorname{sen}\\alpha}$: toma la hipotenusa sobre el cateto opuesto, lo que invierte la razón del seno."
     }
-   }
+   },
+   "subtopic": "m2-trigonometria"
   },
   {
    "id": "m2-curado-1-q11",
@@ -505,16 +572,22 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "En una homotecia de razón $k$, las longitudes se multiplican por $|k|$ y las áreas por $k^2$. El signo solo indica que la figura queda invertida respecto del centro.",
+    "summary": "En una homotecia de razón $k$, las longitudes se multiplican por $|k|$ y las áreas por $k^2$; el signo de $k$ solo indica que la figura queda al otro lado del centro.",
+    "planteamiento": "Se pide el área de la figura homotética de una figura de $12\\ \\text{cm}^2$ con razón $k = -2$. Datos: $|k| = 2$ y el área original es $12\\ \\text{cm}^2$.",
     "steps": [
-     "Factor de área: $k^2 = (-2)^2 = 4$.",
-     "Área homotética: $12\\cdot 4 = 48\\ \\text{cm}^2$."
+     "Recuerda cómo cambian las áreas en una homotecia: si las longitudes se multiplican por $|k|$, las áreas se multiplican por $k^2$, porque el área depende de dos longitudes.",
+     "Calcula el factor de área: $k^2 = (-2)^2 = 4$.",
+     "Aplica el factor al área original: $12\\ \\text{cm}^2\\cdot 4 = 48\\ \\text{cm}^2$.",
+     "Interpreta el signo: $k = -2$ invierte la figura respecto del centro de homotecia, pero no cambia su tamaño ni su área.",
+     "Comprobación: si un cuadrado tiene lado $2$ cm, su área es $4\\ \\text{cm}^2$; con $k = -2$ el lado queda en $4$ cm y el área en $16\\ \\text{cm}^2$, cuatro veces mayor. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Multiplica el área por $|k|$, que es el factor de las longitudes.",
-     "C": "Un área nunca es negativa: el signo de $k$ no afecta las medidas."
+     "A": "$24\\ \\text{cm}^2$ multiplica el área por $|k| = 2$, que es el factor de las longitudes y no el de las áreas. Se aplica el factor una sola vez a una magnitud que depende de dos dimensiones.",
+     "C": "$-24\\ \\text{cm}^2$ asigna signo negativo al área. Un área nunca es negativa; el signo de $k$ indica la posición de la figura, no su medida.",
+     "D": "$144\\ \\text{cm}^2$ eleva $12$ al cuadrado en lugar de multiplicarlo por $k^2$: confunde el área con el cuadrado de su valor. $12^2 = 144$ no tiene relación con la homotecia."
     }
-   }
+   },
+   "subtopic": "m2-homotecia"
   },
   {
    "id": "m2-curado-1-q12",
@@ -546,18 +619,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Dos rectas son perpendiculares si el producto de sus pendientes es $-1$.",
+    "summary": "Dos rectas perpendiculares tienen pendientes cuyo producto es $-1$; por lo tanto la pendiente buscada es el opuesto del recíproco de la pendiente dada.",
+    "planteamiento": "Se pide la recta que pasa por $(1,2)$ y es perpendicular a $y = 2x + 5$. Datos: la pendiente de la recta dada es $m = 2$; la nueva recta debe pasar por el punto $(1, 2)$.",
     "steps": [
-     "Pendiente dada: $2$. Pendiente perpendicular: $m = -\\dfrac{1}{2}$.",
-     "Punto-pendiente: $y - 2 = -\\dfrac{1}{2}(x - 1)$.",
-     "Despeja: $y = -\\dfrac{1}{2}x + \\dfrac{1}{2} + 2 = -\\dfrac{1}{2}x + \\dfrac{5}{2}$."
+     "Identifica la pendiente de la recta dada: en $y = 2x + 5$, la pendiente es $m_1 = 2$.",
+     "Para que dos rectas sean perpendiculares se cumple $m_1 \\cdot m_2 = -1$, así que $m_2 = -\\dfrac{1}{m_1} = -\\dfrac{1}{2}$.",
+     "Escribe la ecuación punto-pendiente con el punto $(1,2)$: $y - 2 = -\\dfrac{1}{2}(x - 1)$.",
+     "Distribuye el signo: $y - 2 = -\\dfrac{1}{2}x + \\dfrac{1}{2}$.",
+     "Despeja $y$ sumando $2$ en ambos lados: $y = -\\dfrac{1}{2}x + \\dfrac{1}{2} + 2 = -\\dfrac{1}{2}x + \\dfrac{5}{2}$.",
+     "Comprobación: el punto $(1,2)$ cumple la ecuación, pues $-\\dfrac{1}{2} + \\dfrac{5}{2} = 2$. Además $m_1\\cdot m_2 = 2\\cdot\\left(-\\dfrac{1}{2}\\right) = -1$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Pasa por $(1,2)$, pero es paralela a la recta dada (misma pendiente).",
-     "B": "Pasa por $(1,2)$ y cambia el signo de la pendiente, pero no la invierte.",
-     "C": "Pasa por $(1,2)$ e invierte la pendiente, pero sin cambiarle el signo."
+     "A": "$y = 2x$ pasa por $(1,2)$ porque $2 = 2\\cdot 1$, pero es paralela a la recta dada, ya que tiene la misma pendiente $2$. Confunde paralelismo con perpendicularidad.",
+     "B": "$y = -2x + 4$ pasa por $(1,2)$, y cambia el signo de la pendiente, pero no la invierte: $2\\cdot(-2) = -4 \\neq -1$, así que no es perpendicular.",
+     "C": "$y = \\dfrac{1}{2}x + \\dfrac{3}{2}$ pasa por $(1,2)$ e invierte la pendiente, pero sin cambiarle el signo: $2\\cdot\\dfrac{1}{2} = 1 \\neq -1$, así que tampoco es perpendicular."
     }
-   }
+   },
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-curado-1-q13",
@@ -589,18 +667,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Se pide $P(M \\mid L) = \\dfrac{P(M\\cap L)}{P(L)}$: la información de que usa lentes reduce el espacio muestral.",
+    "summary": "Es una probabilidad condicional: el dato «usa lentes» reduce el espacio muestral, y se divide la probabilidad conjunta por la probabilidad de ese dato.",
+    "planteamiento": "Se pide $P(M \\mid L)$, la probabilidad de ser mujer dado que usa lentes. Datos: $P(M) = 0{,}6$; $P(L\\mid M) = 0{,}3$ y $P(L\\mid H) = 0{,}2$, donde $H$ son los hombres.",
     "steps": [
-     "$P(M\\cap L) = 0{,}6\\cdot 0{,}3 = 0{,}18$.",
-     "$P(H\\cap L) = 0{,}4\\cdot 0{,}2 = 0{,}08$, así que $P(L) = 0{,}18 + 0{,}08 = 0{,}26$.",
-     "$P(M\\mid L) = \\dfrac{0{,}18}{0{,}26} = \\dfrac{18}{26} = \\dfrac{9}{13}$."
+     "Plantea la definición de probabilidad condicional: $P(M\\mid L) = \\dfrac{P(M\\cap L)}{P(L)}$.",
+     "Calcula la conjunta de mujeres con lentes, multiplicando la probabilidad de ser mujer por la de usar lentes dado que es mujer: $P(M\\cap L) = 0{,}6\\cdot 0{,}3 = 0{,}18$.",
+     "Calcula la conjunta de hombres con lentes. Los hombres son el $40\\,\\%$, es decir, $1 - 0{,}6 = 0{,}4$, y $P(H\\cap L) = 0{,}4\\cdot 0{,}2 = 0{,}08$.",
+     "Aplica la probabilidad total: $P(L) = P(M\\cap L) + P(H\\cap L) = 0{,}18 + 0{,}08 = 0{,}26$.",
+     "Reemplaza en la definición: $P(M\\mid L) = \\dfrac{0{,}18}{0{,}26}$.",
+     "Simplifica multiplicando por $100$ y dividiendo luego por $2$: $\\dfrac{18}{26} = \\dfrac{9}{13}$. Comprobación: $\\dfrac{9}{13}\\approx 0{,}69$, mayor que $0{,}6$, lo que tiene sentido porque los lentes son más frecuentes entre las mujeres. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Es $P(M\\cap L)$: la probabilidad de ser mujer **y** usar lentes, sin condicionar.",
-     "B": "Es $P(L)$, la probabilidad total de usar lentes.",
-     "C": "Es $P(L\\mid M)$: la condición está invertida."
+     "A": "$\\dfrac{9}{50}$ no responde la pregunta: $0{,}18 = \\dfrac{9}{50}$ es $P(M\\cap L)$, la probabilidad de ser mujer **y** usar lentes sobre el total, sin condicionar a que usa lentes.",
+     "B": "$\\dfrac{13}{50}$ es $P(L) = 0{,}26$, la probabilidad total de usar lentes. Es el denominador de la fórmula, no el resultado que se pide.",
+     "C": "$\\dfrac{3}{10}$ es $P(L\\mid M)$: la probabilidad de usar lentes dado que es mujer. La condición está invertida, porque se pregunta por ser mujer dado que usa lentes."
     }
-   }
+   },
+   "subtopic": "m2-condicional"
   },
   {
    "id": "m2-curado-1-q14",
@@ -632,17 +715,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Cuenta de cuántas maneras pueden ubicarse 2 caras en 4 lanzamientos y multiplica por la probabilidad de cada secuencia.",
+    "summary": "Es un modelo binomial: se cuentan las secuencias con exactamente 2 caras y se multiplica por la probabilidad de cada una.",
+    "planteamiento": "Se pide la probabilidad de exactamente 2 caras en 4 lanzamientos de una moneda equilibrada. Datos: $n = 4$ lanzamientos independientes, $k = 2$ caras y probabilidad $\\dfrac{1}{2}$ de cara en cada lanzamiento.",
     "steps": [
-     "Número de secuencias con 2 caras: $\\binom{4}{2} = \\dfrac{4!}{2!\\,2!} = 6$.",
-     "Cada secuencia tiene probabilidad $\\left(\\dfrac{1}{2}\\right)^4 = \\dfrac{1}{16}$.",
-     "$P = 6\\cdot\\dfrac{1}{16} = \\dfrac{6}{16} = \\dfrac{3}{8}$."
+     "Cuenta las secuencias con exactamente 2 caras entre 4 lanzamientos: se eligen las 2 posiciones de las caras, $\\binom{4}{2} = \\dfrac{4!}{2!\\,2!} = \\dfrac{24}{4} = 6$.",
+     "Lista las 6 secuencias para comprobar: CCSS, CSCS, CSSC, SCCS, SCSC y SSCC.",
+     "Calcula la probabilidad de cada secuencia específica: por independencia se multiplican las probabilidades de cada lanzamiento, $\\left(\\dfrac{1}{2}\\right)^4 = \\dfrac{1}{16}$.",
+     "Suma las probabilidades de las secuencias favorables: son $6$ secuencias disjuntas, todas con probabilidad $\\dfrac{1}{16}$, así que $P = 6\\cdot\\dfrac{1}{16}$.",
+     "Efectúa el cálculo: $P = \\dfrac{6}{16} = \\dfrac{3}{8}$.",
+     "Comprobación: de las 16 secuencias, 1 tiene 0 caras, 4 tienen 1, 6 tienen 2, 4 tienen 3 y 1 tiene 4 caras; la suma $1+4+6+4+1 = 16$ confirma que $6$ es el número correcto. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Intuición frecuente («la mitad de las veces»): 2 caras es el resultado más probable, pero 10 de las 16 secuencias posibles no tienen exactamente 2 caras.",
-     "D": "Es la probabilidad de **una** secuencia particular, como CCSS."
+     "A": "$\\dfrac{1}{2}$ supone que la probabilidad de 2 caras es la mitad, como si «la mitad de las veces» saliera cara. Pero 2 caras es solo el resultado más probable: ocurre en $\\dfrac{6}{16}$ de los casos.",
+     "B": "$\\dfrac{1}{4}$ equivale a $\\dfrac{4}{16}$: es la probabilidad de exactamente 1 o 3 caras, con 4 secuencias cada una. No corresponde a 2 caras, que tienen 6 secuencias.",
+     "D": "$\\dfrac{1}{16}$ es la probabilidad de una sola secuencia particular, como CCSS. Olvida contar las $6$ secuencias que dan exactamente 2 caras."
     }
-   }
+   },
+   "subtopic": "m2-condicional"
   },
   {
    "id": "m2-curado-1-q15",
@@ -674,17 +763,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "La desviación estándar mide cuánto se alejan los datos de la media: con igual media y cantidad de datos, basta comparar la suma de los cuadrados de las desviaciones.",
+    "summary": "Con igual media y cantidad de datos, la desviación estándar es mayor cuanto más se alejan los datos de la media; basta comparar la suma de los cuadrados de las desviaciones.",
+    "planteamiento": "Se pide el conjunto con mayor desviación estándar. Datos: los cuatro conjuntos tienen 4 datos y media $5$, así que la comparación depende solo de cuánto se alejan sus valores de $5$.",
     "steps": [
-     "$\\{5,5,5,5\\}$: todas las desviaciones son 0.",
-     "$\\{3,4,6,7\\}$: $4 + 1 + 1 + 4 = 10$.",
-     "$\\{2,5,5,8\\}$: $9 + 0 + 0 + 9 = 18$.",
-     "$\\{1,5,5,9\\}$: $16 + 0 + 0 + 16 = 32$, la mayor."
+     "Verifica la media de cada conjunto: en todos la suma es $20$ y $\\dfrac{20}{4} = 5$, así que la comparación depende solo de la dispersión.",
+     "Recuerda que la varianza es el promedio de los cuadrados de las desviaciones $(x_i - \\bar{x})^2$; la desviación estándar es su raíz, y ambas crecen con la suma de esos cuadrados.",
+     "Calcula para $\\{5,5,5,5\\}$: todas las desviaciones son $0$, así que la suma de cuadrados es $0$.",
+     "Calcula para $\\{3,4,6,7\\}$: $(3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2 = 4 + 1 + 1 + 4 = 10$.",
+     "Calcula para $\\{2,5,5,8\\}$: $(2-5)^2 + 0 + 0 + (8-5)^2 = 9 + 0 + 0 + 9 = 18$.",
+     "Calcula para $\\{1,5,5,9\\}$: $(1-5)^2 + 0 + 0 + (9-5)^2 = 16 + 0 + 0 + 16 = 32$. Es la suma mayor, así que su desviación estándar también es la mayor. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "B": "Tiene más valores distintos, pero todos cercanos a la media: lo que importa es la distancia a la media, no la variedad."
+     "A": "$\\{5,5,5,5\\}$ no tiene dispersión: todos los datos coinciden con la media, así que su desviación estándar es $0$. Es el mínimo posible.",
+     "B": "$\\{3,4,6,7\\}$ tiene más valores distintos, pero todos cercanos a la media $5$: la suma de sus cuadrados es $10$. Lo que importa es la distancia a la media, no la variedad de valores.",
+     "C": "$\\{2,5,5,8\\}$ tiene dispersión, con suma de cuadrados $18$, pero menor que $32$. Sus valores extremos están a distancia $3$ de la media, mientras que en $\\{1,5,5,9\\}$ están a distancia $4$."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-curado-1-q16",
@@ -716,16 +811,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Como los cargos son distintos, el orden importa: son variaciones de 8 elementos tomados de 3 en 3.",
+    "summary": "Como los cargos son distintos, el orden importa y se trata de variaciones: se multiplican las opciones de cada cargo sin repetir personas.",
+    "planteamiento": "Se pide cuántas directivas distintas se pueden formar. Datos: hay $8$ personas y $3$ cargos distintos (presidente, secretario y tesorero), sin repetir a nadie.",
     "steps": [
-     "Presidente: 8 opciones; secretario: 7 (no se repite); tesorero: 6.",
-     "Principio multiplicativo: $8\\cdot 7\\cdot 6 = 336$."
+     "Identifica el tipo de conteo: como los cargos son distintos, la misma persona en otro cargo forma otra directiva, por lo que el orden importa. Corresponde a variaciones de $8$ elementos tomados de $3$ en $3$.",
+     "Para el presidente hay $8$ opciones, pues cualquiera de las 8 personas puede ocupar el cargo.",
+     "Para el secretario quedan $7$ opciones, porque la persona que es presidente no puede repetirse.",
+     "Para el tesorero quedan $6$ opciones, al descontar a las dos personas ya asignadas.",
+     "Aplica el principio multiplicativo: el total de directivas es $8\\cdot 7\\cdot 6$.",
+     "Efectúa el producto: $8\\cdot 7 = 56$ y $56\\cdot 6 = 336$. Comprobación con la fórmula $\\dfrac{8!}{(8-3)!} = \\dfrac{8!}{5!} = 8\\cdot 7\\cdot 6 = 336$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Es $\\binom{8}{3} = 56$: cuenta grupos de 3 personas sin asignar cargos.",
-     "C": "Es $8^3$: permite que una misma persona ocupe varios cargos."
+     "B": "$56$ es $\\binom{8}{3}$: cuenta grupos de 3 personas sin asignarles cargos. Como los cargos son distintos, cada grupo genera $3! = 6$ directivas: $56\\cdot 6 = 336$.",
+     "C": "$512$ es $8^3$: permite que una misma persona ocupe varios cargos, lo que el enunciado prohíbe al pedir que no se repitan personas.",
+     "D": "$24$ corresponde a $4\\cdot 3\\cdot 2$, es decir, a elegir los cargos entre solo 4 personas. El grupo tiene $8$ personas, no $4$."
     }
-   }
+   },
+   "subtopic": "m2-combinatoria"
   }
  ]
 }

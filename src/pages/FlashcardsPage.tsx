@@ -37,7 +37,7 @@ export function FlashcardsPage() {
     <div className="space-y-8">
       <PageHeader
         title="Flashcards"
-        description="Repaso espaciado para Ciencias e Historia. Cada tarjeta vuelve justo antes de que la olvides, según cómo la calificas (algoritmo SM-2)."
+        description="Repaso espaciado para Matemática M1 y M2, Ciencias e Historia. Cada tarjeta vuelve justo antes de que la olvides, según cómo la calificas (algoritmo SM-2). Dentro de cada mazo puedes estudiar un eje temático a la vez."
       />
       <ul className="grid gap-4 md:grid-cols-2">
         {DECKS.map((meta) => {

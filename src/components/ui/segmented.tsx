@@ -54,7 +54,7 @@ export function Segmented<T extends string>({
             tabIndex={active ? 0 : -1}
             onClick={() => onChange(o.value)}
             className={cn(
-              'rounded-md font-medium transition-colors duration-150',
+              'shrink-0 rounded-md font-medium whitespace-nowrap transition-colors duration-150',
               size === 'sm' ? 'h-6 px-2 text-[11px]' : 'h-7 px-2.5 text-xs',
               active
                 ? 'bg-white text-zinc-900 shadow-[0_0_0_1px_rgba(24,24,27,0.08)] dark:bg-zinc-800 dark:text-zinc-100 dark:shadow-[0_0_0_1px_rgba(255,255,255,0.06)]'

@@ -40,6 +40,9 @@ for (const subject of SUBJECTS) {
     const axes = [...new Set(exam.questions.map((q) => q.axis))]
     const axisQuestions = {}
     for (const q of exam.questions) (axisQuestions[q.axis] ??= []).push(q.number)
+    const subtopicQuestions = {}
+    for (const q of exam.questions) if (q.subtopic) (subtopicQuestions[q.subtopic] ??= []).push(q.number)
+    const explainedQuestions = exam.questions.filter((q) => q.explanation).map((q) => q.number)
     entries.push({
       id: exam.id,
       subject: exam.subject,
@@ -56,6 +59,8 @@ for (const subject of SUBJECTS) {
       snapshotCount: exam.questions.filter((q) => q.snapshot).length,
       axes,
       axisQuestions,
+      subtopicQuestions,
+      explainedQuestions,
       file: relative(examsDir, path).replaceAll('\\', '/'),
     })
   }

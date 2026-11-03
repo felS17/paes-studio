@@ -1,8 +1,10 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { CardState, DeckId, Rating } from '@/types/flashcards'
+import { localDateKey } from '@/utils/daily'
 import { schedule, todayKey } from '@/utils/srs'
 import { persistStorage } from './storage'
+import { useStreakStore } from './useStreakStore'
 
 export const NEW_PER_DAY = 20
 
@@ -29,7 +31,7 @@ export const useFlashcardStore = create<FlashcardState>()(
     (set) => ({
       cards: {},
       daily: {},
-      review: (deck, cardId, rating) =>
+      review: (deck, cardId, rating) => {
         set((s) => {
           const prev = s.cards[cardId]
           const day = dailyOf(s.daily[deck])
@@ -37,7 +39,10 @@ export const useFlashcardStore = create<FlashcardState>()(
             cards: { ...s.cards, [cardId]: schedule(prev, rating) },
             daily: { ...s.daily, [deck]: { ...day, newSeen: day.newSeen + (prev ? 0 : 1), reviews: day.reviews + 1 } },
           }
-        }),
+        })
+        // Repasar flashcards cuenta para la racha de estudio del día.
+        useStreakStore.getState().markFlashcard(localDateKey())
+      },
       allowMoreNew: (deck, amount) =>
         set((s) => {
           const day = dailyOf(s.daily[deck])

@@ -41,28 +41,48 @@ export function SolutionAccordion({ question, defaultOpen = false }: { question:
       {open && (
         <div id={id} className="animate-fade-in border-t border-zinc-200/80 px-3.5 pt-3 pb-4 text-[14px] leading-relaxed dark:border-zinc-800/80">
           <MathText text={ex.summary} className="text-zinc-700 dark:text-zinc-300" />
-          <ol className="mt-4 space-y-3">
-            {ex.steps.map((step, i) => (
-              <li key={i} className="flex gap-3">
-                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border border-zinc-300 font-mono text-[10px] font-medium text-zinc-500 tabular-nums dark:border-zinc-700 dark:text-zinc-400">
-                  {i + 1}
-                </span>
-                <MathText text={step} className="min-w-0 flex-1" />
-              </li>
-            ))}
-          </ol>
+          {ex.planteamiento && (
+            <section className="mt-4" aria-label="Planteamiento">
+              <h3 className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Planteamiento</h3>
+              <MathText text={ex.planteamiento} className="mt-1 text-zinc-800 dark:text-zinc-200" />
+            </section>
+          )}
+          <section className="mt-4" aria-label="Paso a paso">
+            {ex.planteamiento && <h3 className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Paso a paso</h3>}
+            <ol className="mt-2 space-y-0">
+              {ex.steps.map((step, i) => (
+                <li
+                  key={i}
+                  className="relative border-l border-zinc-200 pb-3.5 pl-4 last:border-transparent last:pb-0 dark:border-zinc-800"
+                >
+                  <span
+                    aria-hidden
+                    className="absolute top-[7px] -left-[3.5px] size-1.5 rounded-full bg-zinc-400 dark:bg-zinc-600"
+                  />
+                  <span className="block font-mono text-[11px] leading-5 text-zinc-500 tabular-nums dark:text-zinc-400">
+                    Paso {i + 1}
+                  </span>
+                  <MathText text={step} className="min-w-0" />
+                </li>
+              ))}
+            </ol>
+          </section>
           {ex.distractors && Object.keys(ex.distractors).length > 0 && (
-            <div className="mt-4 border-t border-dashed border-zinc-200 pt-3 dark:border-zinc-800">
-              <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Por qué no las otras</p>
-              <ul className="mt-2 space-y-1.5">
+            <section className="mt-4 border-t border-dashed border-zinc-200 pt-3 dark:border-zinc-800" aria-label="Análisis de distractores">
+              <h3 className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                {ex.planteamiento ? 'Análisis de distractores' : 'Por qué no las otras'}
+              </h3>
+              <ul className="mt-2 space-y-2">
                 {Object.entries(ex.distractors).map(([key, text]) => (
                   <li key={key} className="flex gap-2.5 text-[13px]">
-                    <span className="font-mono text-xs leading-6 text-zinc-500">{key})</span>
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-zinc-200 bg-zinc-50 font-mono text-[11px] font-medium text-zinc-500 dark:border-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-400">
+                      {key}
+                    </span>
                     <MathText text={text ?? ''} className="min-w-0 flex-1 text-zinc-600 dark:text-zinc-400" />
                   </li>
                 ))}
               </ul>
-            </div>
+            </section>
           )}
           {isAI && (
             <p className="mt-3 text-[11.5px] leading-relaxed text-zinc-500 dark:text-zinc-400">

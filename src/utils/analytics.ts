@@ -1,6 +1,17 @@
 import type { AttemptRecord } from '@/types/analytics'
+import { EXAMS_BY_ID } from '@/data/catalog'
 import { SUBJECT_ORDER } from '@/data/subjects'
 import type { SubjectId } from '@/types/exam'
+
+/**
+ * El Desafío Diario mezcla asignaturas y tiene solo 3 preguntas: cuenta para el diagnóstico por pregunta
+ * (acierto, cuaderno de errores, subtemas), pero no como puntaje PAES de una asignatura.
+ */
+export const isScoredAttempt = (a: AttemptRecord) => !a.examId.startsWith('set-diario-')
+
+/** Asignatura real de una pregunta (por su ensayo de origen), aunque venga de una práctica mixta. */
+export const subjectOfQuestion = (questionId: string, fallback: SubjectId): SubjectId =>
+  EXAMS_BY_ID.get(questionId.replace(/-q\d+$/, ''))?.subject ?? fallback
 
 export interface SubjectSummary {
   subject: SubjectId
@@ -14,7 +25,7 @@ export interface SubjectSummary {
 
 export function summarizeBySubject(attempts: AttemptRecord[]): Map<SubjectId, SubjectSummary> {
   const map = new Map<SubjectId, SubjectSummary>()
-  const sorted = [...attempts].sort((a, b) => a.finishedAt - b.finishedAt)
+  const sorted = attempts.filter(isScoredAttempt).sort((a, b) => a.finishedAt - b.finishedAt)
   for (const a of sorted) {
     const s = map.get(a.subject) ?? { subject: a.subject, attempts: 0, latest: null, best: null, average: null, delta: null }
     const prev = s.latest
@@ -56,7 +67,7 @@ export function latestResults(attempts: AttemptRecord[]): Map<string, LatestResu
       if (a.mode === 'practica' && q.selected === null) continue
       map.set(q.id, {
         selected: q.selected, isCorrect: q.isCorrect, correct: q.correct, axis: q.axis, topic: q.topic,
-        subject: a.subject, attemptId: a.id, at: a.finishedAt,
+        subject: subjectOfQuestion(q.id, a.subject), attemptId: a.id, at: a.finishedAt,
       })
     }
   }

@@ -14,8 +14,11 @@ import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import { sessionKey, useExamStore } from '@/store/useExamStore'
 import { useSettingsStore } from '@/store/useSettingsStore'
-import type { Exam, ExamMode, OptionKey } from '@/types/exam'
+import { useStreakStore } from '@/store/useStreakStore'
+import type { Exam, ExamMode } from '@/types/exam'
+import { dateKeyOfDailySet, isDailySetId, localDateKey } from '@/utils/daily'
 import { plural } from '@/utils/format'
+import { cn } from '@/lib/utils'
 import { gradeAttempt } from '@/utils/scoring'
 import { ExamTimer } from './ExamTimer'
 import { PassageViewer } from './PassageViewer'
@@ -29,6 +32,8 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
   const select = useExamStore((s) => s.select)
   const clearAnswer = useExamStore((s) => s.clearAnswer)
   const toggleFlag = useExamStore((s) => s.toggleFlag)
+  const toggleStrike = useExamStore((s) => s.toggleStrike)
+  const markChallenge = useStreakStore((s) => s.markChallenge)
   const check = useExamStore((s) => s.check)
   const goTo = useExamStore((s) => s.goTo)
   const discard = useExamStore((s) => s.discard)
@@ -41,6 +46,8 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
   const asideVisible = useMediaQuery('(min-width: 1280px)')
   const [sheetOpen, setSheetOpen] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
+  /** Aviso breve cuando se intenta marcar con el teclado una alternativa tachada. */
+  const [notice, setNotice] = useState<string | null>(null)
   const panelRef = useRef<HTMLDivElement>(null)
   const finishing = useRef(false)
   const elapsedRef = useRef(0)
@@ -61,6 +68,8 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
   const selected = answers[question.id]
   const checked = session?.checked ?? {}
   const flagged = session?.flagged ?? []
+  const struck = session?.struck?.[question.id] ?? []
+  const isDaily = isDailySetId(exam.id)
   const revealed = mode === 'practica' && Boolean(checked[question.id])
   const answeredCount = questions.filter((q) => answers[q.id]).length
 
@@ -79,13 +88,17 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     })
     if (attempt.answered === 0 && mode === 'practica') {
       discard(key)
-      navigate('/', { replace: true })
+      navigate('/ensayos', { replace: true })
       return
     }
     addAttempt(attempt)
+    // Desafío Diario: cuenta para la racha si respondes las 3 preguntas el mismo día del desafío.
+    if (isDailySetId(exam.id) && attempt.answered === attempt.totalQuestions && dateKeyOfDailySet(exam.id) === localDateKey()) {
+      markChallenge(localDateKey())
+    }
     discard(key)
     navigate(`/resultados/${attempt.id}`, { replace: true })
-  }, [addAttempt, discard, exam, key, mode, navigate])
+  }, [addAttempt, discard, exam, key, markChallenge, mode, navigate])
 
   const { elapsedMs, remainingMs } = useExamTimer({
     sessionKey: key,
@@ -109,8 +122,14 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     panelRef.current?.scrollTo({ top: 0 })
   }, [index])
 
+  useEffect(() => {
+    if (!notice) return
+    const t = window.setTimeout(() => setNotice(null), 3200)
+    return () => window.clearTimeout(t)
+  }, [notice])
+
   const optionKeys = question.options.map((o) => o.key)
-  const shortcuts: Record<string, () => void> = {
+  const shortcuts: Record<string, (event: KeyboardEvent) => void> = {
     arrowleft: () => go(-1),
     arrowright: () => go(1),
     f: () => toggleFlag(key, question.id),
@@ -123,7 +142,21 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
       else go(1)
     },
   }
-  for (const k of optionKeys) shortcuts[k.toLowerCase()] = () => select(key, question.id, k as OptionKey)
+  for (const k of optionKeys) {
+    shortcuts[k.toLowerCase()] = (event) => {
+      // Shift + letra tacha o recupera la alternativa (no aplica una vez verificada).
+      if (event.shiftKey) {
+        if (!revealed) toggleStrike(key, question.id, k)
+        return
+      }
+      // Una alternativa tachada no se marca con el teclado: hay que recuperarla o hacer clic en ella.
+      if (struck.includes(k) && !revealed) {
+        setNotice(`La ${k} está descartada. Recupérala con Shift + ${k} o haz clic en ella para marcarla.`)
+        return
+      }
+      select(key, question.id, k)
+    }
+  }
   useKeyboardShortcuts(shortcuts, Boolean(session) && !confirmOpen && !sheetOpen)
 
   if (!session) return null
@@ -159,6 +192,8 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
         onCheck={() => check(key, question.id)}
         onToggleFlag={() => toggleFlag(key, question.id)}
         showHints={showHints && isWide}
+        struck={struck}
+        onToggleStrike={revealed ? undefined : (k) => toggleStrike(key, question.id, k)}
       />
     </div>
   )
@@ -204,14 +239,14 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     <div className="flex h-dvh flex-col bg-[#FAFAFA] dark:bg-[#09090B]">
       <header className="relative flex h-14 shrink-0 items-center gap-3 border-b border-zinc-200/80 bg-white px-3 sm:px-4 dark:border-zinc-800/80 dark:bg-[#121215]">
         <Button variant="ghost" size="icon" asChild>
-          <Link to="/" aria-label="Salir (tu avance queda guardado)" title="Salir; tu avance queda guardado">
+          <Link to="/ensayos" aria-label="Salir (tu avance queda guardado)" title="Salir; tu avance queda guardado">
             <X />
           </Link>
         </Button>
         <div className="min-w-0 flex-1 overflow-hidden">
           <p className="truncate text-[13px] font-semibold tracking-tight">
-            {subjectLabel(exam.subject, exam.area)}
-            <span className="ml-2 hidden font-normal text-zinc-500 sm:inline dark:text-zinc-400">{exam.title}</span>
+            {isDaily ? exam.title : subjectLabel(exam.subject, exam.area)}
+            {!isDaily && <span className="ml-2 hidden font-normal text-zinc-500 sm:inline dark:text-zinc-400">{exam.title}</span>}
           </p>
           <p className="flex items-center gap-2 truncate text-[11px] text-zinc-500 dark:text-zinc-400">
             <Badge tone={mode === 'ensayo' ? 'solid' : 'outline'} className="py-0">
@@ -250,17 +285,27 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
           <ArrowLeft />
           <span className="hidden sm:inline">Anterior</span>
         </Button>
-        <div className="hidden flex-1 items-center justify-center gap-4 text-[11px] text-zinc-500 md:flex dark:text-zinc-400">
-          {showHints && (
+        <div
+          className={cn(
+            'flex-1 items-center justify-center gap-4 text-[11px] text-zinc-500 dark:text-zinc-400',
+            notice ? 'flex' : 'hidden md:flex',
+          )}
+          role="status"
+          aria-live="polite"
+        >
+          {notice ? (
+            <span className="truncate text-[12px] font-medium text-zinc-900 dark:text-zinc-100">{notice}</span>
+          ) : showHints && (
             <>
               <span className="flex items-center gap-1.5"><Kbd>A</Kbd>–<Kbd>{optionKeys[optionKeys.length - 1]}</Kbd> responder</span>
+              <span className="hidden items-center gap-1.5 lg:flex"><Kbd>Shift</Kbd>+<Kbd>A</Kbd> descartar</span>
               <span className="flex items-center gap-1.5"><Kbd>F</Kbd> duda</span>
               <span className="flex items-center gap-1.5"><Kbd>Enter</Kbd> {mode === 'practica' ? 'verificar' : 'siguiente'}</span>
               <span className="flex items-center gap-1.5"><Kbd>←</Kbd><Kbd>→</Kbd> navegar</span>
             </>
           )}
         </div>
-        <div className="flex-1 md:hidden" />
+        {!notice && <div className="flex-1 md:hidden" />}
         <Button variant="secondary" onClick={() => (index === questions.length - 1 ? setConfirmOpen(true) : go(1))} aria-label="Pregunta siguiente">
           <span className="hidden sm:inline">{index === questions.length - 1 ? (mode === 'ensayo' ? 'Entregar' : 'Terminar') : 'Siguiente'}</span>
           <ArrowRight />

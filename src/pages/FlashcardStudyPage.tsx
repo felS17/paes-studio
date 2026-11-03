@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { QueueCounts } from '@/components/flashcards/QueueCounts'
 import { MathText } from '@/components/math/MathText'
 import { Button } from '@/components/ui/button'
 import { EmptyState } from '@/components/ui/empty-state'
 import { Kbd } from '@/components/ui/kbd'
+import { Select } from '@/components/ui/select'
 import { isDeckId, loadDeck } from '@/data/flashcards'
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
 import { cn } from '@/lib/utils'
@@ -31,6 +32,8 @@ function minutesUntil(ts: number, now: number) {
 
 export function FlashcardStudyPage() {
   const { deckId } = useParams()
+  const [params, setParams] = useSearchParams()
+  const unitParam = params.get('eje')
   const [deck, setDeck] = useState<Deck | null>(null)
   const states = useFlashcardStore((s) => s.cards)
   const dailyRaw = useFlashcardStore((s) => (isDeckId(deckId) ? s.daily[deckId] : undefined))
@@ -54,7 +57,10 @@ export function FlashcardStudyPage() {
     return () => window.clearInterval(id)
   }, [])
 
-  const snap = deck ? deckSnapshot(deck, states, dailyOf(dailyRaw), now) : null
+  // Filtro por eje temático (unidad del mazo): la cola SM-2 se arma solo con esas tarjetas.
+  const unit = deck && unitParam && deck.units.includes(unitParam) ? unitParam : null
+  const view = useMemo(() => (deck && unit ? { ...deck, cards: deck.cards.filter((c) => c.unit === unit) } : deck), [deck, unit])
+  const snap = view ? deckSnapshot(view, states, dailyOf(dailyRaw), now) : null
   const flippedCard = flippedId ? deck?.cards.find((c) => c.id === flippedId) : undefined
   const current = flippedCard ?? snap?.next?.card
   const kind = flippedCard ? (states[flippedCard.id] ? (states[flippedCard.id].phase === 'review' ? 'repaso' : 'aprendizaje') : 'nueva') : snap?.next?.kind
@@ -83,13 +89,13 @@ export function FlashcardStudyPage() {
   if (!isDeckId(deckId)) {
     return (
       <EmptyState title="Este mazo no existe" action={<Button asChild><Link to="/flashcards">Ver mazos</Link></Button>}>
-        Los mazos disponibles son Biología, Física, Química e Historia.
+        Los mazos disponibles son Matemática M1 y M2, Biología, Física, Química e Historia.
       </EmptyState>
     )
   }
   if (!deck || !snap) return <p className="text-[13px] text-zinc-500" role="status">Cargando mazo…</p>
 
-  const consolidated = deck.cards.filter((c) => states[c.id]?.phase === 'review').length
+  const consolidated = (view ?? deck).cards.filter((c) => states[c.id]?.phase === 'review').length
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -107,6 +113,27 @@ export function FlashcardStudyPage() {
         </div>
         <QueueCounts counts={snap.counts} active={current ? kind : undefined} />
       </div>
+      <label className="mt-4 flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+        Eje temático
+        <Select
+          value={unit ?? ''}
+          onChange={(e) => {
+            setFlippedId(null)
+            const p = new URLSearchParams(params)
+            if (e.target.value) p.set('eje', e.target.value)
+            else p.delete('eje')
+            setParams(p, { replace: true })
+          }}
+          className="min-w-48"
+        >
+          <option value="">Todos los ejes ({deck.cards.length})</option>
+          {deck.units.map((u) => (
+            <option key={u} value={u}>
+              {u} ({deck.cards.filter((c) => c.unit === u).length})
+            </option>
+          ))}
+        </Select>
+      </label>
       <div
         className="mt-4 flex h-1.5 overflow-hidden rounded-full bg-zinc-200/70 dark:bg-zinc-800"
         role="progressbar"

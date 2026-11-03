@@ -10,6 +10,8 @@
 - **Fase 3 (2026-11-01):** mini-pautas eliminadas; soluciones específicas para Invierno 2026–2027; rediseño con identidad por asignatura (revertido en la Fase 4).
 - **Fase 4 (2026-11-01):** reversión estética estricta a Zinc monocromático. Se eliminan colores e íconos por asignatura, degradados y adornos; se conservan intactos los datos, las soluciones, el material LaTeX y toda la funcionalidad.
 - **Fase 5 (2026-11-01, cierre):** 10 PDF compilados y servidos desde `public/pdfs/`, Analítica reorganizada con revelación progresiva, `LICENSE` MIT 2026 y footer.
+- **v2.0 (2026-11-03):** Inicio con Desafío Diario determinista, racha de estudio y explorador por los 67 subtemas con drills; tachado de alternativas; Zettelkasten con `react-force-graph-2d`; mazos de flashcards M1 (63) y M2 (51); soluciones paso a paso profundizadas (Planteamiento → Paso N → Análisis de distractores) en las 1.058 explicaciones.
+- **v2.0, Inicio como Hub (2026-11-03):** `/` es ahora un menú principal (presentación, métricas, Desafío Diario, módulos, mapa de los 67 subtemas y contacto); el catálogo pasó a `/ensayos` y el explorador también vive en `/subtemas`.
 
 ---
 
@@ -370,12 +372,128 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - **La comprobación restante** («Abrir PDF» abre una pestaña con la URL del PDF) falla solo porque el Chrome headless no trae visor de PDF. Se verificó aparte que la pestaña nueva pide `/pdfs/guia_m1.pdf` y recibe `200 application/pdf`.
 - `npm run lint` y `npm run build` con 0 errores.
 
+### [2026-11-03] - PAES Studio v2.0
+
+#### 0. Incidente: reinicio del equipo
+- La primera ronda de profundización de soluciones (17 lotes ya validados, con Sonnet) vivía en el scratchpad de `/tmp` y se perdió con un reinicio del equipo, antes de fusionarse. Además, la cuota de 5 horas se agotó a mitad de esa ronda.
+- **Cambios para que no vuelva a ocurrir:** la carpeta de lotes pasó a `scripts/pipeline/solutions/.work/` (dentro del repo, ignorada por git) y cada lote se fusiona en `soluciones.json` apenas valida (`merge_solutions.py --collect-deep`). La segunda ronda usó Haiku, 2 lotes por agente y 6 agentes a la vez, para ahorrar cuota.
+
+#### 1. Temario y subtemas de cada pregunta (`scripts/pipeline/assign_subtopics.py`)
+- Exporta el temario Python a `src/data/temario/index.json` (asignatura → eje → 67 subtemas, con la página de cada subtema en el compendio PDF, leída de los marcadores del PDF con PyMuPDF) y `src/data/temario/notes.json` (teoría, recuadro, ideas clave, método y trampas; ~90 kB, se carga solo en el Zettelkasten).
+- Asigna `subtopic` a las 2.796 preguntas. Candidatos: los subtemas del eje de la pregunta. Puntaje: la etiqueta de tema (`labels` del temario) y palabras clave del enunciado y las alternativas (en Lectora, sobre todo de la pregunta). Reglas transversales: suficiencia de datos (M2), habilidades científicas y análisis de fuentes. Señales inequívocas (logaritmos, homotecia, trigonometría, combinatoria…) corrigen el eje heurístico cuando está mal.
+- Distribución heurística: todos los subtemas tienen preguntas; los más escasos son *Técnicas de conteo* (1), *Textos discontinuos* (1), *Análisis de fuentes* (4) y *Evaluar forma* (4).
+- Se ejecuta al final de `extract_demre.py` y de `build_curated.py`. `build-exam-index.mjs` agrega `subtopicQuestions` y `explainedQuestions` al índice, para armar drills y el desafío sin descargar los ensayos.
+
+#### 2. Inicio: Desafío Diario, racha y explorador por subtemas
+- **Desafío Diario** (`DailyChallenge`): hash FNV-1a de `paes-studio:<YYYY-MM-DD local>:<franja>` sobre el banco de preguntas con solución (ordenado por id). Da 3 preguntas fijas por día: Competencia Lectora, Matemática M1/M2 y Ciencias o Historia. Se arma como práctica con id fijo `set-diario-<fecha>`.
+  - Al terminarlo se muestra el resultado por pregunta (emerald/rose con ícono).
+  - Cuenta para la racha solo si se responden las 3 el mismo día.
+  - No se convierte a puntaje PAES ni entra en la proyección ni en «Cómo vas», porque mezcla asignaturas; sí entra en el diagnóstico por pregunta.
+- **Racha** (`useStreakStore`, campo `streak` de `paes-studio-storage`): días con desafío completado o flashcards calificadas. Muestra la racha actual (sigue viva si ayer hubo actividad) en JetBrains Mono, la mejor racha y una tira de 14 días.
+- **Pestañas** `Ensayos oficiales y curados | Explorar por subtemas`, con la vista en la URL (`?vista=subtemas&materia=m2`).
+- **Explorador** (`SubtopicExplorer`): una asignatura a la vez. Por eje: preguntas del banco y acierto agregado. Por subtema: preguntas, acierto histórico (último intento de cada pregunta, mono `tabular-nums` + barra zinc), errores pendientes, enlace «Compendio p. N» (`/pdfs/guia_<asignatura>.pdf#page=N`) y «Practicar subtema».
+- **Drills:** el diálogo ofrece 10, 20 o Todas (se desactivan las opciones que superan el banco). La práctica reúne preguntas del subtema de todos los ensayos: primero errores pendientes, luego no vistas con solución, luego no vistas y al final las ya acertadas.
+
+#### 3. Tachado de alternativas (`ExamRunner`, `OptionButton`, `AnswerStrip`)
+- Tres formas de tachar o recuperar: clic derecho, `Shift + A–E` y un botón discreto al extremo derecho de cada alternativa (visible al pasar el mouse o con foco, y siempre en pantallas táctiles con `pointer-coarse`).
+- La alternativa tachada se ve con `line-through opacity-35` y se anuncia «descartada».
+- **Reglas:**
+  - tachar la alternativa marcada la desmarca;
+  - la tecla de su letra no la marca (aparece un aviso breve en la barra inferior);
+  - el clic izquierdo explícito la marca y la recupera;
+  - tras verificar, el tachado deja de aplicar.
+- Se guarda por pregunta en la sesión (`struck`). No se agregó temporizador por pregunta: sigue solo el cronómetro global.
+
+#### 4. Zettelkasten / Red de conocimiento (`/zettelkasten`)
+- `react-force-graph-2d@1.29.2` (Canvas 2D), en un chunk diferido de 205 kB.
+- **Nodos y enlaces:**
+  - Asignatura → Eje → Subtema, con 43 enlaces cruzados entre materias (`CROSS_LINKS`, cada uno con su porqué).
+  - Alrededor de cada subtema, tus preguntas respondidas (las 600 más recientes), agrupadas por concepto clave (la etiqueta de tema cuando no es genérica).
+- **Estética:**
+  - fondo `#FAFAFA` / `#09090B` y aristas zinc finas (las cruzadas, punteadas y más tenues);
+  - etiquetas en Geist (preguntas en JetBrains Mono) que aparecen según el zoom y con un halo del color de fondo;
+  - subtemas sin explorar tenues, en progreso en zinc medio y dominados (≥ 80 %, ≥ 3 respondidas, sin errores) en alto contraste; errores pendientes con un anillo punteado;
+  - preguntas: correctas emerald y falladas con anillo rose, con leyenda.
+  - Al pasar el mouse o seleccionar, el resto se atenúa.
+- **Panel lateral** (`NodeDrawer`, no modal: se puede seguir clicando nodos):
+  - métricas del nodo (banco, respondidas, acierto, por repasar);
+  - «Lanzar drill de este nodo» (10 / 20 / Todas, también para ejes y asignaturas);
+  - resumen del concepto con KaTeX (teoría, recuadro, ideas clave, trampas);
+  - enlaces a subtemas afines;
+  - preguntas respondidas desplegables con su `QuestionCard` y la solución.
+- **Accesibilidad:** la misma red como lista de botones («Abrir un subtema»), con el dominio en el contraste del borde.
+
+#### 5. Flashcards de Matemática M1 y M2
+- `src/data/flashcards/m1.ts`: **63 tarjetas** en 4 ejes:
+  - potencias y raíces, notación científica, fracciones, porcentajes y proporcionalidad;
+  - productos notables, factorización, ecuaciones, inecuaciones y sistemas $2\times 2$ (los tres casos de compatibilidad);
+  - funciones afín y cuadrática (vértice, $\Delta$, fórmula general);
+  - Pitágoras, Thales, semejanza, áreas y volúmenes, vectores y transformaciones;
+  - media, mediana, cuartiles, percentiles, diagrama de cajón, Laplace, suma y producto.
+- `src/data/flashcards/m2.ts`: **51 tarjetas** en 5 ejes:
+  - logaritmos y cambio de base, interés simple y compuesto, racionalización;
+  - exponencial, logarítmica, inversa y composición;
+  - trigonometría e identidades, homotecia ($k>0$, $k<0$, efecto en áreas y volúmenes);
+  - varianza y $\sigma$, normal, permutaciones, variaciones, $\binom{n}{k}$, condicional, binomial;
+  - estrategias de **suficiencia de datos**.
+- Mismo motor SM-2 y misma cola. En el estudio se agregó un **filtro por eje temático** (`?eje=`).
+- **KaTeX:** las 392 fórmulas de los dos mazos compilan sin errores.
+
+#### 6. Soluciones paso a paso profundizadas
+- **Esquema:** nuevo campo `Explanation.planteamiento`. `SolutionAccordion` muestra idea clave → **Planteamiento** → **Paso a paso** («Paso 1, Paso 2…» sobre una línea de tiempo) → **Análisis de distractores**.
+- **Pipeline** (`scripts/pipeline/solutions/`):
+  - `prepare_deepen.py` arma 44 lotes con la explicación actual, el recorte y la lectura (844 preguntas únicas; el Módulo Común de Ciencias se deduplica: 214 réplicas);
+  - `INSTRUCCIONES_PROFUNDIZAR.md` fija la estructura;
+  - `validate_deepen.py` exige planteamiento, 3–10 pasos sin «Paso N» escrito, un distractor por **cada** alternativa incorrecta, al menos 1,3 veces el largo anterior y no menos pasos, cierre con la clave oficial, `$` balanceados, sin `\$` y KaTeX compilado;
+  - `merge_solutions.py --collect-deep` fusiona en `soluciones.json` (conserva `kind`: `desarrollo` en curados, `solucion` en oficiales) y lo aplica a los JSON.
+  - `build_curated.py` también reaplica el almacén.
+- **Resultado:** **1.058 de 1.058** explicaciones profundizadas (844 únicas + 214 réplicas del Módulo Común), todas con `verified: true` y validadas lote a lote. Ronda final: 22 agentes Haiku (2 lotes cada uno); revisé muestras de M1, Lectora y Física y son específicas de cada pregunta (citas del texto, datos de la figura y un distractor por alternativa).
+- **Validación final** (`npm run validate:exams`): los 46 JSON parsean; 0 claves cambiadas frente a `HEAD` (2.796 comparadas); 9.435 fórmulas KaTeX compiladas sin errores; las 1.058 soluciones tienen planteamiento y su último paso confirma la clave oficial.
+
+#### Verificación (Chromium headless con `playwright-core`)
+- **40/40 comprobaciones automáticas, sin errores de consola:**
+  - el Desafío Diario es idéntico al recargar y tiene las 3 franjas; la racha va en JetBrains Mono;
+  - el explorador tiene 67 subtemas, enlaces `#page=N` y el diálogo 10 / 20 / Todas, que abre una práctica de 10;
+  - tachado:
+    - el clic derecho aplica `line-through opacity-35`;
+    - la tecla `B` no marca la tachada y muestra el aviso;
+    - `Shift + B` la recupera y `Shift + C` tacha;
+    - el clic izquierdo la marca;
+    - el botón táctil funciona;
+    - un solo reloj;
+    - el tachado persiste;
+  - la solución muestra Planteamiento, «Paso 2» y Análisis de distractores, sin `.katex-error`;
+  - completar el desafío deja la racha en 1 y `streak.days[hoy].challenge`;
+  - Zettelkasten:
+    - fondo `#FAFAFA` y `#09090B`;
+    - un clic real sobre un nodo del canvas abre el panel;
+    - el panel tiene KaTeX sin errores y su drill abre la práctica;
+  - flashcards: mazos M1 y M2, filtro por eje, reverso con KaTeX y calificar suma el día a la racha;
+  - móvil (390 px) sin scroll horizontal en `/`, `/?vista=subtemas`, `/zettelkasten` y `/flashcards`.
+- **Corregido a raíz de la verificación:** desborde horizontal en móvil (filas del desafío sin `min-w-0` y segmentos de asignatura sin scroll propio). Además, el grafo se reajustó: enlaces cruzados más tenues y largos, más repulsión entre asignaturas y etiquetas de eje desde zoom 0,95.
+- `npm run lint` y `npm run build` con 0 errores.
+
+### [2026-11-03] - v2.0: Inicio como Hub central
+- **Rutas:** `/` → `HomePage` (nuevo), `/ensayos` → catálogo (antes en `/`, con su proyección y las pestañas Ensayos | Subtemas), `/subtemas` → `SubtopicsPage`. Los enlaces «Volver/Elegir ensayo», la salida del motor y la portada de cada ensayo apuntan ahora a `/ensayos`.
+- **Navegación** (barra lateral y barra superior móvil): Inicio, Ensayos, Subtemas, Zettelkasten, Flashcards, Material PDF y Analítica.
+- **`HomePage`, en 4 bloques:**
+  - **A. Presentación:** «PAES Studio» con su marca, el titular «Plataforma abierta de entrenamiento de alta precisión para la PAES», un párrafo de propósito y una barra de métricas reales en JetBrains Mono. Las cifras se calculan, no se escriben: 46 ensayos, 2.796 preguntas, 67 subtemas, 255 flashcards (`TOTAL_CARDS` desde `DECKS`) y 10 PDF (`pdfs.json`). Debajo, el Desafío Diario con la racha.
+  - **B. Módulos:** grilla de 6 tarjetas con anchos alternados 2+1, 1+2, 2+1: Catálogo de ensayos, Explorador de subtemas, Flashcards, Zettelkasten, Analítica y Biblioteca. Cada una lleva su ícono de navegación y un dato vivo en mono (intentos, subtemas explorados, dominados, preguntas por repasar).
+  - **C. Mapa de los 67 subtemas:** el mismo `SubtopicExplorer`, por asignatura y con la materia en la URL (`?materia=`), con drills de 10/20/Todas y enlaces al PDF.
+  - **D. Sobre PAES Studio y contacto:** propósito abierto (MIT 2026), progreso local y respaldo; autor, `mailto:felipe.schneeberger@estudiante.uc.cl` y github.com/felS17.
+- **Diferencias con el pedido:** no se muestran 284 flashcards ni un mazo de Lectora (no existe: hay 255 tarjetas en 6 mazos), ni un simulador de ponderaciones en Analítica (no existe). Los textos describen lo que la app hace.
+- **Subtemas escasos** (reglas deterministas en `assign_subtopics.py`, sin IA):
+  - *Técnicas de conteo* pasa de 1 a **6** preguntas (frases como «formas distintas», «se pueden formar», «cuántos grupos/códigos»);
+  - *Textos discontinuos e infografías* pasa de 1 a **5** (preguntas que remiten a una tabla, gráfico, infografía, esquema o imagen).
+- **`.vercelignore`** nuevo: `.work/`, `videos/`, `.agents/`, los PDF del DEMRE y los auxiliares de LaTeX. Los mismos (salvo los auxiliares) ya estaban en `.gitignore`.
+- Sin navegador headless en esta pasada, a pedido del usuario: la revisión visual queda a su cargo. `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+
 ---
 
 ## Comandos
 | Comando | Qué hace |
 | --- | --- |
-| `npm run dev` | Regenera el índice y abre el servidor de desarrollo |
+| `npm run dev` | Regenera el índice y abre el servidor de desarrollo (Inicio en `/`, catálogo en `/ensayos`) |
 | `npm run build` | Regenera el índice, compila TypeScript y genera `dist/` para Vercel |
 | `npm run lint` | ESLint (incluye las reglas de React Compiler de `react-hooks` v7) |
 | `npm run pipeline` | `python3 scripts/pipeline/extract_demre.py`: PDFs → JSON + recortes (`--subject`, `--year`, `--modality`, `--dry-run`, `--list`, `--no-snapshots`) |
@@ -384,6 +502,9 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 | `npm run pdfs` | `python3 scripts/pipeline/build_pdfs.py`: compila los 10 `.tex` a `public/pdfs/` y escribe `src/data/pdfs.json` (`--only guia_m1 …`) |
 | `npm run latex` | `python3 scripts/pipeline/generate_latex_summary.py`: compendios (`guia_*`) y presentaciones (`beamer_*`) en `latex/output/` |
 | `npm run exams:index` | Regenera solo `src/data/exams/index.json` |
+| `npm run validate:exams` | Valida los 46 JSON: parseo, claves (también contra `soluciones.json`), `$` balanceados y KaTeX de cada solución |
+| `python3 scripts/pipeline/assign_subtopics.py` | Temario → `src/data/temario/` y `subtopic` de cada pregunta (`--dry-run`, `--sample <subtema>`) |
+| `python3 scripts/pipeline/solutions/prepare_deepen.py --work <carpeta>` | Lotes para profundizar soluciones; luego `validate_deepen.py <lote>` y `merge_solutions.py --collect-deep <carpeta>` |
 
 Dependencias del pipeline: `pip install -r scripts/pipeline/requirements.txt` (PyMuPDF, Pillow).
 
@@ -406,31 +527,34 @@ APP_PAES/
 │   └── exam-assets/<ensayo>/q01.webp …       ~1.600 recortes de preguntas y figuras
 ├── scripts/
 │   ├── build-exam-index.mjs                   índice + validación del catálogo
+│   ├── validate-exams.mjs                     validación de JSON, claves y KaTeX (npm run validate:exams)
 │   └── pipeline/
 │       ├── extract_demre.py                   CLI del pipeline DEMRE
 │       ├── demre/  catalog · answer_keys · layout · text · snapshots · taxonomy · builder
 │       ├── build_curated.py                   ensayos curados → JSON
 │       ├── curated/  m1 · m2 · lectora · ciencias · historia · tables
 │       ├── temario/  m1 · m2 · lectora · ciencias · historia   67 subtemas (teoría, método, trampas, ejemplos)
-│       ├── solutions/  prepare_batches · validate_batch (+ validate_katex.mjs) · merge_solutions · soluciones.json
+│       ├── solutions/  prepare_batches · validate_batch (+ validate_katex.mjs) · merge_solutions · soluciones.json · prepare_deepen · validate_deepen · INSTRUCCIONES_PROFUNDIZAR.md
+│       ├── assign_subtopics.py                temario → src/data/temario + subtema de cada pregunta
 │       ├── generate_latex_summary.py          temario + ensayos → compendios y Beamer
 │       ├── build_pdfs.py                      .tex → public/pdfs/*.pdf (pdfLaTeX)
 │       └── requirements.txt · last_report.json
 └── src/
     ├── main.tsx · App.tsx · styles/index.css · lib/utils.ts
     ├── types/        exam.ts · analytics.ts · user.ts · flashcards.ts
-    ├── data/         catalog.ts · subjects.ts · exams/{index.json, m1/, …} · flashcards/{biologia, fisica, quimica, historia}.ts
-    ├── store/        storage.ts · useExamStore.ts (sesiones + prácticas) · useAnalyticsStore.ts · useSettingsStore.ts · useFlashcardStore.ts
+    ├── data/         catalog.ts · subjects.ts · temario.ts · temario/{index,notes}.json · exams/{index.json, m1/, …} · flashcards/{m1, m2, biologia, fisica, quimica, historia}.ts
+    ├── store/        storage.ts · useExamStore.ts (sesiones + prácticas + tachado) · useAnalyticsStore.ts · useSettingsStore.ts · useFlashcardStore.ts · useStreakStore.ts
     ├── hooks/        useKeyboardShortcuts · useExamTimer · useTheme · useExam · useMediaQuery · usePracticeSet
-    ├── utils/        scoring.ts · analytics.ts · practice.ts · projection.ts · srs.ts · flashcardQueue.ts · format.ts · markdown.ts · validators.ts
-    ├── pages/        Dashboard · Exam · Results · Analytics · Flashcards · FlashcardStudy · Material · NotFound
+    ├── utils/        scoring.ts · analytics.ts · practice.ts · projection.ts · srs.ts · flashcardQueue.ts · format.ts · markdown.ts · validators.ts · subtopics.ts · daily.ts · streak.ts · knowledgeGraph.ts
+    ├── pages/        Dashboard · Exam · Results · Analytics · Flashcards · FlashcardStudy · Material · Zettelkasten · NotFound
     └── components/
         ├── ui/         button · badge · kbd · dialog (+sheet) · segmented · select · panel · empty-state · subject-tag · tabs
         ├── layout/     AppShell · Sidebar · Navbar · Footer · nav · Logo · ThemeToggle · SplitPane
         ├── exam/       ExamRunner · ExamIntro · QuestionCard · OptionButton · PassageViewer · QuestionNavigator · ExamTimer · SolutionAccordion
         ├── analytics/  ScoreRuler · AxisRadar · DiagnosisPanel · MistakeNotebook · ScoreSummary · BackupActions
         ├── flashcards/ QueueCounts
-        ├── dashboard/  ProjectionChart · ExamFilters · ExamList
+        ├── dashboard/  DailyChallenge · ProjectionChart · ExamFilters · ExamList · SubtopicExplorer
+        ├── zettelkasten/ KnowledgeGraph (react-force-graph-2d) · NodeDrawer
         └── math/       MathText · katex.ts
 ```
 
@@ -445,7 +569,9 @@ APP_PAES/
 - **LaTeX local:** `npm run pdfs` compila con el TeX Live local; si faltan `tikzfill`, `pdfcol` o `listingsutf8`, usa los sustitutos de `latex/compat/`. Instalar los paquetes reales (`texlive-tikzfill`, `texlive-pdfcol`, `texlive-listingsutf8`) hace que se usen esos en su lugar. Tras cambiar el temario: `npm run latex && npm run pdfs`.
 - **Soluciones de Invierno 2026–2027:** están redactadas con IA y validadas para concluir en la clave oficial, pero no tienen revisión docente pregunta a pregunta; la interfaz lo indica. Conviene revisar primero las interpretativas listadas en la Fase 3. Para otros años: `prepare_batches.py` → subagentes → `validate_batch.py` → `merge_solutions.py --collect`.
 - **Alternativas corruptas en el JSON (M1/M2):** no afectan la vista (se usa el recorte), pero sí el texto alternativo; corregirlas requiere ajustar la extracción de alternativas en `demre/text.py`.
-- **Flashcards:** 141 tarjetas iniciales; se agregan nuevas en `src/data/flashcards/*.ts` sin tocar el progreso existente (el estado se guarda por id de tarjeta).
+- **Subtemas de las preguntas (v2.0):** la asignación es heurística (etiqueta de tema + palabras clave); se corrige a mano con el campo `subtopic` del JSON o afinando `KEYWORDS`/`STRONG` en `assign_subtopics.py`. Algunos subtemas tienen pocas preguntas en el banco (conteo, textos discontinuos, análisis de fuentes).
+- **Soluciones profundizadas (v2.0):** redactadas con IA a partir de las soluciones ya validadas y verificadas contra la clave; conviene revisión docente, empezando por las interpretativas listadas en la Fase 3. Los lotes de trabajo quedan en `scripts/pipeline/solutions/.work/` (ignorado por git).
+- **Flashcards:** 141 tarjetas iniciales de Ciencias e Historia más 114 de Matemática (M1 63, M2 51); se agregan nuevas en `src/data/flashcards/*.ts` sin tocar el progreso existente (el estado se guarda por id de tarjeta).
 
 ---
 
@@ -480,3 +606,13 @@ APP_PAES/
 - [x] Analítica con revelación progresiva (resumen + pestañas + maestro-detalle), sin perder funcionalidades.
 - [x] `LICENSE` MIT 2026 y footer con autoría, licencia, correo y GitHub.
 - [x] Lint y build con 0 errores; verificación headless; `CLAUDE.md` y `LOG.md` actualizados.
+
+### v2.0
+- [x] Inicio con pestañas Ensayos | Subtemas: 67 subtemas con preguntas del banco, acierto histórico, compendio PDF en su página y drills de 10 / 20 / Todas.
+- [x] Desafío Diario determinista (hash de la fecha local, 3 franjas) y racha de estudio (desafío o flashcards) en `paes-studio-storage`.
+- [x] Tachado de alternativas (clic derecho, `Shift + A–E`, botón táctil) sin temporizador por pregunta.
+- [x] Zettelkasten con `react-force-graph-2d`: jerarquía, preguntas resueltas, enlaces cruzados, estética zinc y panel lateral con drill.
+- [x] Flashcards M1 (63) y M2 (51) con KaTeX, SM-2 y filtro por eje.
+- [x] Soluciones profundizadas (Planteamiento → Paso N → Distractores) con validación programática; claves intactas.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; verificación headless 40/40; `CLAUDE.md` y `LOG.md` actualizados.
+

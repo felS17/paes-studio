@@ -34,7 +34,7 @@ function InProgress() {
               >
                 <SubjectMono subject={subject} className="mt-px size-5 text-[9px]" />
                 <span className="min-w-0">
-                  <span className="block truncate font-medium">{subjectLabel(subject, meta?.area)}</span>
+                  <span className="block truncate font-medium">{set?.kind === 'diario' ? 'Desafío Diario' : subjectLabel(subject, meta?.area)}</span>
                   <span className="block truncate text-zinc-400 dark:text-zinc-500">
                     {title}, {s.mode === 'ensayo' ? 'ensayo' : 'práctica'}{' '}
                     <span className="tabular-nums">{answered}/{total}</span>

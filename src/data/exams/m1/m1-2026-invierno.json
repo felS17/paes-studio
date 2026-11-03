@@ -116,17 +116,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que respetar la jerarquía de operaciones: primero el paréntesis, luego el producto de negativos y por último la resta.",
+    "summary": "Se respeta la jerarquía de operaciones: primero el paréntesis, después el producto de dos números negativos (que siempre da positivo) y al final la resta.",
+    "planteamiento": "Se pide el valor de $1-(-3)(-2-6)$. Datos: el número $1$, el factor $-3$ y el paréntesis $(-2-6)$; como la expresión combina resta, producto y signos negativos, el orden de las operaciones decide el resultado.",
     "steps": [
-     "Dentro del paréntesis, $-2-6 = -8$, así que la expresión queda $1-(-3)(-8)$.",
-     "El producto de dos números negativos es positivo: $(-3)(-8) = 24$.",
-     "Luego, $1 - 24 = -23$.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Primero se resuelve el paréntesis: $-2-6 = -8$, porque al restar $6$ a $-2$ se avanza seis unidades hacia la izquierda desde $-2$.",
+     "La expresión queda $1-(-3)(-8)$. No hay más paréntesis, así que se realiza el producto antes que la resta.",
+     "Producto de dos negativos: el signo del resultado es positivo, pues $(-)\\cdot(-)=+$. Entonces $(-3)(-8)=3\\cdot 8=24$.",
+     "Se reemplaza en la expresión: $1-24$.",
+     "Resta: $1-24=-23$, porque $24-1=23$ y, como el número que se resta es mayor que $1$, el resultado es negativo.",
+     "Comprobación: $-23+24=1$, que es el primer término de la expresión original. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$-32$ se obtiene si se calcula primero $1-(-3)=4$ y después $4\\cdot(-8)=-32$, ignorando la prioridad de la multiplicación sobre la resta."
+     "A": "$-32$ se obtiene si primero se calcula $1-(-3)=4$ y después $4\\cdot(-8)=-32$. Ignora la prioridad del producto sobre la resta: la resta no debe hacerse antes de multiplicar.",
+     "C": "$-16$ no surge de un paso válido. Aparece al perder el signo de uno de los factores negativos en el producto; al rehacer $(-3)(-8)=24$ con sus dos signos se descarta.",
+     "D": "$-4$ es el valor de $2-6$: se pierde el signo negativo del $-2$ al leer el paréntesis, y además se deja de lado el resto de la expresión."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q02",
@@ -163,18 +169,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada amiga paga lo que consumió más un tercio de la promoción de sopaipillas, así que hay que separar los costos individuales de los compartidos.",
+    "summary": "Hay que separar lo que consume cada una, que se paga completo, de la promoción compartida, que se reparte en tres partes iguales.",
+    "planteamiento": "Se pide cuánto paga Consuelo, que consumió un sándwich y una bebida. Datos de la boleta: 3 sándwiches por 18 000 pesos en total, 2 bebidas por 2600 pesos en total y una promoción de sopaipillas de 4800 pesos, que se divide en tres partes iguales.",
     "steps": [
-     "Cada sándwich cuesta $18\\,000 \\div 3 = 6000$ pesos, así que el de Consuelo vale 6000 pesos.",
-     "Cada bebida cuesta $2600 \\div 2 = 1300$ pesos, así que la bebida de Consuelo vale 1300 pesos.",
-     "Lo que consumió suma $6000 + 1300 = 7300$ pesos.",
-     "La promoción de sopaipillas cuesta 4800 pesos y se reparte en tres partes iguales: $4800 \\div 3 = 1600$ pesos.",
-     "Total a pagar: $7300 + 1600 = 8900$ pesos. Por lo tanto, la alternativa correcta es la A."
+     "Precio de un sándwich: $\\frac{18\\,000}{3}=6000$ pesos, porque los tres sándwiches cuestan en conjunto 18 000 pesos y tienen el mismo precio.",
+     "Precio de una bebida: $\\frac{2600}{2}=1300$ pesos, pues las dos bebidas cuestan 2600 pesos en total.",
+     "Lo que consume Consuelo por sí misma: $6000+1300=7300$ pesos.",
+     "Parte de la promoción: las sopaipillas se reparten en tres partes iguales, así que a cada una le corresponde $\\frac{4800}{3}=1600$ pesos.",
+     "Total a pagar por Consuelo: $7300+1600=8900$ pesos.",
+     "Comprobación: $6000+1300+1600=8900$, que coincide con el total. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "D": "22\\,200 pesos corresponde a $18\\,000 + 2600 + 1600$: suma el costo total de los tres sándwiches y de las dos bebidas, sin dividirlos entre las tres amigas."
+     "B": "9000 pesos exige una parte de la promoción de 1700 pesos, que no corresponde a $4800\\div 3$. Es un valor que aparece al redondear la cuenta sin justificación.",
+     "C": "12 000 pesos equivale a dos sándwiches completos, $2\\cdot 6000$. Es un error al contar los sándwiches y no incluye la bebida ni la promoción.",
+     "D": "22 200 pesos corresponde a $18\\,000+2600+1600$: suma los totales de la boleta sin dividir entre las tres amigas y mezcla totales con partes."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q03",
@@ -211,17 +222,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Se opera primero el paréntesis con fracciones y luego se multiplica por 3, de modo que el resultado es $\\frac{7}{2}$, es decir, tres círculos completos y medio.",
+    "summary": "Se opera primero el paréntesis, con el producto antes que la suma, y luego se multiplica por 3: el resultado es $\\frac{7}{2}$, es decir, tres enteros y medio.",
+    "planteamiento": "Se pide la figura que representa $3\\cdot\\left(\\frac{1}{6}+\\frac{3}{2}\\cdot\\frac{4}{6}\\right)$. Cada círculo está dividido en 6 sectores iguales, así que cada sector vale $\\frac{1}{6}$ del círculo.",
     "steps": [
-     "La expresión es $3 \\cdot \\left(\\frac{1}{6} + \\frac{3}{2} \\cdot \\frac{4}{6}\\right)$.",
-     "Primero el producto: $\\frac{3}{2} \\cdot \\frac{4}{6} = \\frac{12}{12} = 1$.",
-     "Luego la suma: $\\frac{1}{6} + 1 = \\frac{7}{6}$.",
-     "Finalmente, $3 \\cdot \\frac{7}{6} = \\frac{21}{6} = \\frac{7}{2} = 3\\frac{1}{2}$, que se representa con tres círculos completamente sombreados y medio círculo sombreado. Por lo tanto, la alternativa correcta es la D."
+     "Dentro del paréntesis se resuelve primero el producto: $\\frac{3}{2}\\cdot\\frac{4}{6}=\\frac{12}{12}=1$, porque el numerador es $3\\cdot 4=12$ y el denominador es $2\\cdot 6=12$.",
+     "Luego se suma: $\\frac{1}{6}+1=\\frac{1+6}{6}=\\frac{7}{6}$.",
+     "Se multiplica por 3: $3\\cdot\\frac{7}{6}=\\frac{21}{6}$.",
+     "Se simplifica dividiendo numerador y denominador por 3: $\\frac{21}{6}=\\frac{7}{2}=3\\frac{1}{2}$.",
+     "En la figura, un círculo completo son 6 sectores, es decir, $\\frac{6}{6}$. Tres círculos completos suman $\\frac{18}{6}$ y el medio círculo son 3 sectores de un círculo de 6, es decir, $\\frac{3}{6}=\\frac{1}{2}$.",
+     "Comprobación: $3+\\frac{1}{2}=\\frac{7}{2}$, que coincide con el resultado. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Un medio círculo ($\\frac{1}{2}$) se obtiene si se calcula solo $3 \\cdot \\frac{1}{6}$ y se descarta el segundo término del paréntesis."
+     "A": "Muestra medio círculo, $\\frac{1}{2}$, que se obtiene si solo se calcula $3\\cdot\\frac{1}{6}$ y se descarta el término $\\frac{3}{2}\\cdot\\frac{4}{6}$ del paréntesis.",
+     "B": "Muestra un círculo completo, es decir, 1. Se obtiene si se calcula solo el producto $\\frac{3}{2}\\cdot\\frac{4}{6}=1$ y se olvidan el término $\\frac{1}{6}$ y el factor 3.",
+     "C": "Muestra un entero más una fracción pequeña, cercana a $\\frac{7}{6}$. Es el valor del paréntesis, sin multiplicar por 3 como exige la expresión."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q04",
@@ -258,17 +275,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El error está en el paso 1: el factor $-2$ se aplica dos veces, una a cada factor del producto, cuando en realidad se aplica una sola vez.",
+    "summary": "El error está en el paso 1: el factor $-2$ se aplica una sola vez, pero al reescribirlo como $(-8)\\cdot(-10)$ se aplica dos veces y el primer término cambia de valor.",
+    "planteamiento": "Se pide el paso en que se cometió el error al calcular $\\frac{-2(4\\cdot 5)-(30-2\\cdot 3)}{12}$. Datos: $-2(4\\cdot 5)$ vale $-40$; $30-2\\cdot 3=24$; el denominador es $12$.",
     "steps": [
-     "En la expresión original, $-2(4\\cdot 5) = -2 \\cdot 20 = -40$.",
-     "En el paso 1 se escribe $(-8)\\cdot(-10) = 80$, que es distinto de $-40$. Es decir, el $-2$ se multiplicó por 4 y también por 5.",
-     "A partir de ese paso, los pasos 2, 3 y 4 son aritméticamente correctos ($80-24=56$, $\\frac{56}{12}=\\frac{14}{3}$), pero parten de un numerador equivocado. Con el valor correcto, el numerador sería $-40-24=-64$.",
-     "Por lo tanto, la alternativa correcta es la A."
+     "El valor correcto del primer término es $4\\cdot 5=20$ y luego $-2\\cdot 20=-40$. El factor $-2$ multiplica al producto completo una sola vez.",
+     "El paso 1 escribe $-2(4\\cdot 5)$ como $(-8)\\cdot(-10)$, es decir, multiplica $4$ por $-2$ y también $5$ por $-2$. Como $(-8)\\cdot(-10)=80$, el paso 1 cambia $-40$ por $80$.",
+     "Así, el error está en el paso 1, que introduce un valor distinto del original. Los pasos siguientes deben revisarse con ese dato.",
+     "Los pasos 2 y 3 son correctos respecto de lo que reciben: $30-2\\cdot 3=30-6=24$ y luego $80-24=56$.",
+     "Con el valor correcto, el numerador es $-40-24=-64$, de modo que la fracción vale $\\frac{-64}{12}=-\\frac{16}{3}$, y no $\\frac{14}{3}$.",
+     "Comprobación: el paso 4 entrega un resultado positivo, mientras que la expresión correcta es negativa; esa diferencia de signo nace en el paso 1. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "C": "En el paso 3, $80-24=56$ está bien calculado. El problema es el dato que llega desde el paso 1, no la operación del paso 3."
+     "B": "En el paso 2, $30-2\\cdot 3=24$ está bien calculado. Se cree que el error está allí porque el numerador cambia, pero el cambio viene del paso 1.",
+     "C": "En el paso 3, $80-24=56$ está bien calculado. El problema es el dato que llega desde el paso 1, no la operación del paso 3.",
+     "D": "En el paso 4, $\\frac{56}{12}=\\frac{14}{3}$ es una simplificación correcta. El error se arrastra desde el paso 1, así que corregir el paso 4 no soluciona el problema."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q05",
@@ -305,19 +328,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que comparar la diferencia entre el puntaje de agosto y el de noviembre para cada atributo, sin fijarse en la posición de los puntos ni en el valor final.",
+    "summary": "Basta comparar, para cada atributo, el puntaje de agosto con el de noviembre y medir la distancia entre ambos, sin fijarse en el signo ni en el valor final.",
+    "planteamiento": "Se pide el atributo con mayor variación entre agosto (círculo blanco) y noviembre (círculo negro). La variación es $|\\text{noviembre}-\\text{agosto}|$. Escala: de $-20$ a $20$ puntos.",
     "steps": [
-     "La variación de cada atributo es $|\\text{noviembre} - \\text{agosto}|$.",
-     "Liderazgo: de 6 a 12, variación $6$. Honestidad: de $-3$ a $-10$, variación $7$.",
-     "Cercanía: de 3 a $-9$, variación $|-9-3| = 12$.",
-     "Flexibilidad: de 6 a $-3$, variación $9$. Capacidad de diálogo: de 6 a 15, variación $9$.",
-     "La mayor variación es de 12 puntos, en Cercanía. Por lo tanto, la alternativa correcta es la B."
+     "Liderazgo: agosto $6$ y noviembre $12$, variación $|12-6|=6$.",
+     "Cercanía: agosto $3$ y noviembre $-9$, variación $|-9-3|=|-12|=12$. El punto cambia de la zona positiva a la negativa, lo que amplía la distancia.",
+     "Flexibilidad: agosto $6$ y noviembre $-3$, variación $|-3-6|=9$.",
+     "Honestidad: agosto $-3$ y noviembre $-10$, variación $|-10-(-3)|=|-7|=7$.",
+     "Capacidad de diálogo: agosto $6$ y noviembre $15$, variación $|15-6|=9$.",
+     "Comparación: $12>9>7>6$, así que la mayor variación es la de Cercanía. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "D": "Capacidad de diálogo tiene el valor final más alto (15), pero su variación es $15-6=9$, menor que la de Cercanía.",
-     "A": "Liderazgo llama la atención por su valor final positivo (12), pero su variación es solo $12-6=6$."
+     "A": "Liderazgo termina en el valor positivo más alto de la zona positiva (12), pero su variación es solo $12-6=6$. Confunde el valor final con el cambio.",
+     "C": "Honestidad varía 7 puntos y se mueve dentro de la zona negativa. Se elige al fijarse en que sus puntajes son negativos, no en cuánto cambian.",
+     "D": "Capacidad de diálogo llega al valor final más alto del gráfico (15), pero su variación es $15-6=9$, menor que la de Cercanía."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q06",
@@ -354,18 +381,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada ficha blanca suma 1 y cada negra resta 1, así que el puntaje de cada partida es la cantidad de blancas menos la cantidad de negras, y luego se suman las tres partidas.",
+    "summary": "Cada ficha blanca suma 1 y cada ficha negra resta 1: el puntaje de cada partida es la cantidad de blancas menos la cantidad de negras, y el puntaje final es la suma de las tres partidas.",
+    "planteamiento": "Se pide la expresión del puntaje final tras tres partidas. Las fichas blancas valen $+1$ y las negras $-1$. Conteo del gráfico: partida 1 con 5 blancas y 5 negras; partida 2 con 5 blancas y 4 negras; partida 3 con 4 blancas y 2 negras.",
     "steps": [
-     "Partida 1: 5 fichas blancas y 5 negras, con puntaje $5\\cdot 1 + 5\\cdot(-1)$.",
-     "Partida 2: 5 fichas blancas y 4 negras, con puntaje $5\\cdot 1 + 4\\cdot(-1)$. Una pregunta quedó sin responder.",
-     "Partida 3: 4 fichas blancas y 2 negras, con puntaje $4\\cdot 1 + 2\\cdot(-1)$.",
-     "El puntaje final es la suma de las tres partidas, que coincide exactamente con la expresión de la alternativa B. Por lo tanto, la alternativa correcta es la B."
+     "Partida 1: 5 fichas blancas y 5 negras, sin preguntas sin responder. Su aporte es $5\\cdot 1+5\\cdot(-1)$.",
+     "Partida 2: 5 fichas blancas y 4 negras. Queda una pregunta sin responder, que no suma ni resta, y su aporte es $5\\cdot 1+4\\cdot(-1)$.",
+     "Partida 3: 4 fichas blancas y 2 negras, con 4 preguntas sin responder. Su aporte es $4\\cdot 1+2\\cdot(-1)$.",
+     "El puntaje final es la suma de los tres aportes: $(5\\cdot 1+5\\cdot(-1))+(5\\cdot 1+4\\cdot(-1))+(4\\cdot 1+2\\cdot(-1))$.",
+     "Esa expresión coincide con la alternativa B, donde cada partida tiene la forma «blancas más negras por $-1$».",
+     "Valor numérico de comprobación: $0+1+2=3$ puntos. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Resta en vez de sumar las fichas negras: $5\\cdot 1-(5\\cdot(-1)) = 10$, lo que convierte las negras en puntos positivos.",
-     "D": "Asigna +1 también a las fichas negras, por lo que cuenta todas las fichas como positivas."
+     "A": "Resta el término de las negras en vez de sumarlo. Restar $5\\cdot(-1)$ equivale a sumar 5, así que cada ficha negra se vuelve positiva; el total sería 25, no 3.",
+     "C": "Asigna $-1$ a las blancas y $+1$ a las negras, invirtiendo el signo de cada ficha. Su valor es $-3$, no $3$.",
+     "D": "Asigna $+1$ también a las fichas negras, por lo que cuenta todas las fichas como positivas. Da 25 puntos en total."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q07",
@@ -402,17 +434,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que descontar en orden: primero lo que se aparta, luego la mitad de lo restante y, por último, el huevo roto.",
+    "summary": "Hay que descontar en orden: primero lo que se aparta sobre el total, luego la mitad de lo que queda y, por último, el huevo roto.",
+    "planteamiento": "Se pide cuántos huevos quedan en la caja. Datos: 12 huevos en total; se aparta $\\frac{1}{3}$ para la tortilla y $\\frac{1}{6}$ para los revueltos, ambas fracciones del total; luego se usa la mitad de los restantes para un queque, y se rompe y elimina 1 huevo.",
     "steps": [
-     "Para la tortilla se aparta $\\frac{1}{3}\\cdot 12 = 4$ huevos y para los revueltos $\\frac{1}{6}\\cdot 12 = 2$ huevos.",
-     "Quedan $12-4-2 = 6$ huevos.",
-     "Para el queque se usa la mitad de los restantes, $\\frac{1}{2}\\cdot 6 = 3$ huevos, y quedan 3.",
-     "Se rompe un huevo y se elimina: $3-1 = 2$ huevos. Por lo tanto, la alternativa correcta es la B."
+     "Huevos para la tortilla: $\\frac{1}{3}$ de 12 es $\\frac{12}{3}=4$ huevos.",
+     "Huevos para los revueltos: $\\frac{1}{6}$ de 12 es $\\frac{12}{6}=2$ huevos. Las dos fracciones se calculan sobre el total de 12, como indica el enunciado.",
+     "Huevos restantes tras apartar: $12-4-2=6$.",
+     "Para el queque se usa la mitad de los restantes, no del total: $\\frac{1}{2}\\cdot 6=3$ huevos. Quedan $6-3=3$ huevos.",
+     "Al guardar la caja se rompe un huevo y se elimina, así que quedan $3-1=2$ huevos.",
+     "Comprobación: $4+2+3+1+2=12$, es decir, los 12 huevos quedan asignados a un uso o al descarte. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "C": "3 huevos: olvida descontar el huevo que se rompió al guardar la caja."
+     "A": "La caja queda sin huevos. Aparece al usar todos los restantes en el queque, olvidando que solo se usa la mitad de ellos.",
+     "C": "Muestra 3 huevos: olvida descontar el huevo que se rompió al guardar la caja.",
+     "D": "Muestra 4 huevos, que aparecen al tomar la mitad de $12-4=8$ para el queque y omitir el descuento de los revueltos. Es un descuento sobre una base distinta a la pedida."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q08",
@@ -449,17 +487,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como se pide solo el jugo de limón, hay que calcular cuánto jugo tiene una copa, convertirlo a mL y multiplicar por las 200 copas.",
+    "summary": "Como solo interesa el jugo de limón, se calcula su volumen por copa, se convierte a mililitros con 30 mL por onza y se multiplica por las 200 copas.",
+    "planteamiento": "Se pide el volumen total de jugo de limón para 200 copas. Datos: cada copa tiene 2 onzas de bebida gaseosa y $1\\frac{1}{2}$ onzas de jugo de limón; $1$ onza equivale a $30$ mL.",
     "steps": [
-     "Por copa, la mezcla tiene 2 onzas de bebida gaseosa y $1\\frac{1}{2}$ onzas de jugo de limón. Solo interesa el jugo.",
-     "Convirtiendo a mL: $1\\frac{1}{2}\\cdot 30 = 45$ mL de jugo por copa.",
-     "Para 200 copas: $200 \\cdot 45 = 9000$ mL. Por lo tanto, la alternativa correcta es la C."
+     "La bebida gaseosa no interesa para esta pregunta, así que solo se considera el jugo de limón.",
+     "Por copa, el jugo mide $1\\frac{1}{2}=\\frac{3}{2}$ onzas.",
+     "Conversión a mililitros: $\\frac{3}{2}\\cdot 30=45$ mL de jugo por copa.",
+     "Para las 200 copas: $200\\cdot 45=9000$ mL.",
+     "Comprobación por otra vía: $1{,}5$ onzas por copa, multiplicadas por 200 copas, dan 300 onzas; $300\\cdot 30=9000$ mL. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "300 mL: usa las $1\\frac{1}{2}$ onzas como si fueran mL, sin convertir, y multiplica por 200.",
-     "D": "21\\,000 mL: usa el volumen total de la copa, $2+1\\frac{1}{2}=3\\frac{1}{2}$ onzas (105 mL por copa), en vez de solo el jugo."
+     "A": "300 mL usa $1\\frac{1}{2}\\cdot 200=300$ onzas como si fueran mililitros, sin convertir. Falta multiplicar por 30.",
+     "B": "7500 mL equivale a 250 onzas, lo que no corresponde a $1{,}5$ onzas por copa (que dan 300 onzas). Es un error de multiplicación o un valor redondeado sin justificar.",
+     "D": "21 000 mL usa el volumen total de la copa, $2+1\\frac{1}{2}=3\\frac{1}{2}$ onzas, o sea 105 mL por copa. Incluye la bebida gaseosa, que no se pide."
     }
-   }
+   },
+   "subtopic": "m1-probabilidad"
   },
   {
    "id": "m1-2026-invierno-q09",
@@ -496,18 +539,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La masa molar del compuesto es la suma de la masa de cada átomo, multiplicando la cantidad de átomos de cada elemento por su masa molar.",
+    "summary": "La masa molar se calcula átomo por átomo: se multiplica la cantidad de átomos de cada elemento por su masa molar y luego se suman los resultados.",
+    "planteamiento": "Se pide la expresión de la masa molar de $\\mathrm{H_2SO_4}$. Datos: 2 átomos de H (masa molar $1$ g/mol), 1 átomo de S (masa molar $32$ g/mol) y 4 átomos de O (masa molar $16$ g/mol).",
     "steps": [
-     "En $\\mathrm{H_2SO_4}$ hay 2 átomos de hidrógeno, 1 de azufre y 4 de oxígeno.",
-     "Según la tabla, la masa molar es 1 g/mol para el H, 32 g/mol para el S y 16 g/mol para el O.",
-     "Se multiplica la cantidad de cada átomo por su masa molar y se suman: $2\\cdot 1 + 1\\cdot 32 + 4\\cdot 16$.",
-     "El resultado es $2+32+64 = 98$ g/mol. Por lo tanto, la alternativa correcta es la C."
+     "Se cuentan los átomos del compuesto: $\\mathrm{H_2SO_4}$ tiene 2 átomos de hidrógeno, 1 de azufre y 4 de oxígeno.",
+     "Según la tabla, la masa molar es $1$ g/mol para el H, $32$ g/mol para el S y $16$ g/mol para el O.",
+     "Para cada elemento se multiplica la cantidad de átomos por su masa molar: el H aporta $2\\cdot 1$, el S aporta $1\\cdot 32$ y el O aporta $4\\cdot 16$.",
+     "Se suman las tres contribuciones: $2\\cdot 1+1\\cdot 32+4\\cdot 16$.",
+     "Se calcula el resultado: $2+32+64=98\\ \\mathrm{g/mol}$.",
+     "La expresión que tiene esa estructura, con cada cantidad multiplicando a su propia masa molar, es la de la alternativa C. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "$1+32+16$ suma una sola vez la masa de cada elemento, sin considerar cuántos átomos hay de cada uno.",
-     "D": "$(1+2+4)\\cdot(1+32+16)$ multiplica sumas de cantidades por sumas de masas, en vez de multiplicar cada cantidad por su propia masa molar."
+     "A": "$(1+32+16)$ suma la masa molar de cada elemento una sola vez, sin considerar cuántos átomos hay de cada uno. Da 49 g/mol.",
+     "B": "$(2+4)\\cdot(32+16)$ multiplica la suma de cantidades de H y O por la suma de masas de S y O, mezclando elementos y sin respetar la masa de cada átomo.",
+     "D": "$(1+2+4)\\cdot(1+32+16)$ multiplica la suma de cantidades por la suma de masas, dando $7\\cdot 49=343$ g/mol. Cada cantidad debe multiplicar a su propia masa molar."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q10",
@@ -545,17 +593,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada doblez reduce a la mitad el lado más largo, así que hay que seguir el proceso hasta llegar a las medidas pedidas.",
+    "summary": "Cada doblez reduce a la mitad el lado más largo, así que hay que seguir las medidas paso a paso hasta llegar a 2,5 cm por 3,75 cm y contar los dobleces.",
+    "planteamiento": "Se pide cuántos dobleces dan un rectángulo de $2{,}5$ cm de ancho y $3{,}75$ cm de largo a partir de una hoja de $20$ cm por $30$ cm. Cada doblez divide por 2 el lado más largo.",
     "steps": [
-     "Al doblar por la mitad el lado más largo, las medidas del rectángulo van así: $20\\times 30 \\to 20\\times 15 \\to 10\\times 15 \\to 10\\times 7{,}5 \\to 5\\times 7{,}5 \\to 5\\times 3{,}75 \\to 2{,}5\\times 3{,}75$.",
-     "Cuenta los dobleces: son seis flechas.",
-     "Tras 6 dobleces se obtiene un rectángulo de $2{,}5$ cm de ancho y $3{,}75$ cm de largo, que es la medida pedida. Por lo tanto, la alternativa correcta es la D."
+     "Hoja inicial: $20\\times 30$ cm. Primer doblez: el lado más largo es 30 cm y queda $20\\times 15$ cm.",
+     "Segundo doblez: el lado más largo es ahora 20 cm y queda $10\\times 15$ cm.",
+     "Tercer doblez: el lado más largo es 15 cm y queda $10\\times 7{,}5$ cm.",
+     "Cuarto doblez: el lado más largo es 10 cm y queda $5\\times 7{,}5$ cm.",
+     "Quinto doblez: el lado más largo es 7,5 cm y queda $5\\times 3{,}75$ cm.",
+     "Sexto doblez: el lado más largo es 5 cm y queda $2{,}5\\times 3{,}75$ cm, que es la medida pedida. Son 6 dobleces. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "C": "5 dobleces dan $5\\times 3{,}75$ cm: se olvida el último doblez, que reduce el lado de 5 cm a 2,5 cm.",
-     "A": "3 dobleces dan $10\\times 7{,}5$ cm, todavía muy lejos de la medida pedida."
+     "A": "3 dobleces dan $10\\times 7{,}5$ cm, todavía muy lejos de la medida pedida.",
+     "B": "4 dobleces dan $5\\times 7{,}5$ cm: el ancho ya llegó a 5 cm, pero el largo aún mide 7,5 cm.",
+     "C": "5 dobleces dan $5\\times 3{,}75$ cm. Se olvida el último doblez, que reduce el lado de 5 cm a 2,5 cm."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q11",
@@ -592,17 +646,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El 25 % equivale a un cuarto, y la cuarta parte de 20 es 5; por eso la afirmación que justifica el resultado es que 5 es la cuarta parte de 20.",
+    "summary": "El 25 % equivale a un cuarto, y la cuarta parte de 20 es 5; por eso la afirmación que justifica el resultado es la que relaciona 5 con la cuarta parte de 20.",
+    "planteamiento": "Se pide la afirmación que justifica que $5$ es el $25\\,\\%$ de $20$. Datos: $25\\,\\%=\\frac{25}{100}$; el número a justificar es $5$ y la base es $20$.",
     "steps": [
-     "$25\\,\\% = \\frac{25}{100} = \\frac{1}{4}$.",
-     "La cuarta parte de 20 es $20 \\div 4 = 5$, luego 5 es el 25 % de 20.",
-     "La alternativa D expresa exactamente esa relación. Por lo tanto, la alternativa correcta es la D."
+     "Se expresa el porcentaje como fracción: $25\\,\\%=\\frac{25}{100}=\\frac{1}{4}$.",
+     "Se calcula $\\frac{1}{4}$ de 20: $\\frac{1}{4}\\cdot 20=\\frac{20}{4}=5$.",
+     "Por lo tanto, 5 es el 25 % de 20 porque es la cuarta parte de 20. La afirmación correcta debe decir exactamente esa relación.",
+     "Se revisan las cuatro afirmaciones: A calcula una suma, B y C dan propiedades verdaderas pero que no hablan de porcentajes, y D relaciona el 5 con la cuarta parte de 20.",
+     "Comprobación: $\\frac{25}{100}\\cdot 20=5$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "C": "Que 5 sea divisor de 20 es verdadero, pero no permite saber qué porcentaje de 20 es 5.",
-     "A": "$20+5=25$ es una suma correcta, pero no relaciona el 5 con un porcentaje de 20."
+     "A": "$20+5=25$ es una suma correcta, pero no relaciona el 5 con un porcentaje de 20.",
+     "B": "Que 5, 20 y 25 sean múltiplos de 5 es verdadero, pero no permite saber qué porcentaje de 20 es 5; ser múltiplo no entrega una relación de proporción.",
+     "C": "Que 5 sea divisor de 20 es verdadero (porque $20=4\\cdot 5$), pero no indica qué fracción o porcentaje de 20 representa el 5."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q12",
@@ -639,17 +698,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como el círculo está dividido en 9 partes iguales, el porcentaje pintado es la fracción $\\frac{8}{9}$ expresada en porcentaje.",
+    "summary": "El círculo está dividido en 9 partes iguales, así que el porcentaje pintado es la fracción $\\frac{8}{9}$ expresada como porcentaje.",
+    "planteamiento": "Se pide el porcentaje de la figura pintado de gris. Datos: el círculo tiene 9 partes iguales; hay una sola parte sin pintar (la blanca) y las demás están grises.",
     "steps": [
-     "El círculo tiene 9 partes iguales y solo una está sin pintar (la blanca).",
-     "Partes grises: $9-1 = 8$.",
-     "Porcentaje: $\\frac{8}{9}\\cdot 100\\,\\% = 88{,}\\overline{8}\\,\\%$. Por lo tanto, la alternativa correcta es la D."
+     "El círculo tiene 9 sectores iguales.",
+     "Solo hay una parte sin pintar, la blanca.",
+     "Partes grises: $9-1=8$.",
+     "La fracción pintada es $\\frac{8}{9}$. Para pasarla a porcentaje se multiplica por 100: $\\frac{8}{9}\\cdot 100\\,\\%=\\frac{800}{9}\\,\\%\\approx 88{,}\\overline{8}\\,\\%$.",
+     "Comprobación: la parte sin pintar es $\\frac{1}{9}\\cdot 100\\,\\%=11{,}\\overline{1}\\,\\%$, y $11{,}\\overline{1}\\,\\%+88{,}\\overline{8}\\,\\%=100\\,\\%$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$11{,}\\overline{1}\\,\\%$ corresponde a $\\frac{1}{9}$, es decir, a la única parte sin pintar. Es el porcentaje que no se pintó.",
-     "C": "$80\\,\\%$ corresponde a 8 de 10 partes: se trata el círculo como si tuviera 10 partes iguales."
+     "A": "$11{,}\\overline{1}\\,\\%$ corresponde a $\\frac{1}{9}$, que es justamente la parte sin pintar. Es el porcentaje que no se pintó.",
+     "B": "$12{,}5\\,\\%$ equivale a $\\frac{1}{8}$. Trata las 8 partes grises como si el círculo tuviera 8 partes iguales, cuando tiene 9.",
+     "C": "$80\\,\\%$ corresponde a 8 de 10 partes: se trata el círculo como si tuviera 10 partes iguales, lo que no coincide con la figura."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q13",
@@ -686,17 +750,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El diámetro debe quedar entre el 75 % y el 80 % de 5 cm, y ambos extremos se calculan multiplicando por el lado de la casilla.",
+    "summary": "El diámetro debe quedar entre el 75 % y el 80 % del lado de la casilla, que mide 5 cm; basta multiplicar el lado por cada porcentaje para obtener los extremos.",
+    "planteamiento": "Se pide el rango del diámetro de la base del rey. Datos: lado de la casilla de $5$ cm; el diámetro debe estar entre el $75\\,\\%$ y el $80\\,\\%$ del lado.",
     "steps": [
-     "La base debe medir entre el 75 % y el 80 % del lado, que mide 5 cm.",
-     "Mínimo: $0{,}75 \\cdot 5 = 3{,}75$ cm.",
-     "Máximo: $0{,}80 \\cdot 5 = 4$ cm. Por lo tanto, la alternativa correcta es la C."
+     "Se pasan los porcentajes a decimales: $75\\,\\%=0{,}75$ y $80\\,\\%=0{,}80$.",
+     "Límite inferior: $0{,}75\\cdot 5=3{,}75$ cm.",
+     "Límite superior: $0{,}80\\cdot 5=4$ cm.",
+     "Por lo tanto, el diámetro $d$ cumple $3{,}75\\le d\\le 4$ cm, es decir, está entre 3,75 cm y 4 cm.",
+     "Comprobación: $\\frac{3{,}75}{5}=0{,}75$ y $\\frac{4}{5}=0{,}8$, que son justamente los porcentajes del enunciado. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "1,875 cm y 2 cm corresponden al 37,5 % y al 40 % de 5 cm: se toma la mitad del lado, como si se usara el radio y no el diámetro.",
-     "B": "4,2 cm y 4,25 cm equivalen al 84 % y al 85 % del lado, valores que quedan fuera del rango permitido."
+     "A": "Entre 15 cm y 16 cm corresponde al 300 % y al 320 % del lado. Trata el porcentaje como si fuera un número entero, y el diámetro no puede superar el lado de la casilla.",
+     "B": "Entre 4,2 cm y 4,25 cm equivale al 84 % y al 85 % del lado, valores que quedan fuera del rango permitido por el estándar.",
+     "D": "Entre 1,875 cm y 2 cm corresponde al 37,5 % y al 40 % de 5 cm: se toma la mitad del lado, como si se usara el radio y no el diámetro."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q14",
@@ -733,17 +802,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Al comprar cinco cafés, el grupo paga solo cuatro, así que cada persona paga cuatro quintos de un café, lo que equivale a un descuento del 20 %.",
+    "summary": "En cada cuatro cafés pagados, el quinto es gratis; el descuento de cada persona se mide frente al precio sin promoción y da un 20 %.",
+    "planteamiento": "Se pide el porcentaje de descuento que obtiene cada persona. Datos: un grupo de 5 personas compra la promoción «por cada cuatro cafés, el quinto es gratis» y divide el total en partes iguales.",
     "steps": [
-     "Si el café cuesta $p$, por cada cuatro se paga $4p$ y el quinto es gratis. El grupo paga entonces $4p$.",
-     "Dividido en 5 partes iguales, cada persona paga $\\frac{4p}{5}$.",
-     "Sin promoción cada café costaría $p$, así que el descuento es $p-\\frac{4p}{5} = \\frac{p}{5}$.",
-     "Porcentaje de descuento: $\\frac{p/5}{p} = \\frac{1}{5} = 20\\,\\%$. Por lo tanto, la alternativa correcta es la C."
+     "Sea $p$ el precio de un café. Sin promoción, 5 cafés costarían $5p$.",
+     "Con la promoción se pagan solo 4 cafés, así que el grupo paga $4p$.",
+     "Dividido entre 5 personas, cada una paga $\\frac{4p}{5}$, que equivale a los $\\frac{4}{5}$ del precio de un café.",
+     "Sin promoción, cada persona pagaría $p$, así que el descuento en dinero es $p-\\frac{4p}{5}=\\frac{p}{5}$.",
+     "Porcentaje de descuento: $\\frac{p/5}{p}=\\frac{1}{5}=0{,}20=20\\,\\%$.",
+     "Comprobación: si $p=5000$ pesos, cada persona paga $\\frac{4\\cdot 5000}{5}=4000$ pesos, con un descuento de 1000 pesos, que es el 20 % de 5000. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "25 %: compara el café gratis con los cuatro pagados ($\\frac{1}{4}$), en vez de compararlo con el precio total de los cinco."
+     "A": "4 % surge de dividir el descuento entre 25 en vez de comparar con el precio: $\\frac{p}{5}$ dividido entre $5p$ da $\\frac{1}{25}$. Aplica dos veces el número de personas.",
+     "B": "5 % corresponde a $\\frac{1}{20}$. Se toma el número 5 de la promoción como base en vez de comparar con el precio de un café.",
+     "D": "25 % compara el café gratis con los cuatro pagados, $\\frac{1}{4}$, en vez de compararlo con el precio del café sin promoción."
     }
-   }
+   },
+   "subtopic": "m1-porcentajes"
   },
   {
    "id": "m1-2026-invierno-q15",
@@ -780,16 +855,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Primero hay que calcular qué porcentaje de electores votó y luego tomar los 6 de cada 10 votos de ese porcentaje.",
+    "summary": "Primero se obtiene el porcentaje de electores que votó y, sobre ese porcentaje, se toma el 60 % correspondiente al candidato ganador.",
+    "planteamiento": "Se pide qué porcentaje del total de electores votó por el ganador. Datos: el $45\\,\\%$ no votó; el ganador obtuvo $6$ de cada $10$ votos emitidos.",
     "steps": [
-     "Votaron $100\\,\\% - 45\\,\\% = 55\\,\\%$ de los electores.",
-     "El candidato ganador obtuvo $\\frac{6}{10} = 0{,}6$ de esos votos.",
-     "Sobre el total de electores: $0{,}6 \\cdot 55\\,\\% = 33\\,\\%$. Por lo tanto, la alternativa correcta es la D."
+     "Porcentaje de electores que sí votó: $100\\,\\%-45\\,\\%=55\\,\\%$.",
+     "Fracción de los votos emitidos que obtuvo el ganador: $\\frac{6}{10}=0{,}6$.",
+     "Porcentaje de electores que votó por el ganador, sobre el total: $0{,}6\\cdot 55\\,\\%=33\\,\\%$.",
+     "Comprobación: $\\frac{33}{55}=0{,}6$, que recupera la proporción de 6 de cada 10 votos. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "C": "27 %: calcula $0{,}6 \\cdot 45\\,\\%$, usando el porcentaje de electores que no votó en vez del que sí votó."
+     "A": "2,7 % corresponde a $0{,}6\\cdot 4{,}5\\,\\%$: se corre la coma del 45 % que no votó, y además se usa ese porcentaje en lugar del que sí votó.",
+     "B": "3,3 % corresponde a $0{,}6\\cdot 5{,}5\\,\\%$: se corre la coma del 55 %, y el resultado queda demasiado pequeño.",
+     "C": "27 % es $0{,}6\\cdot 45\\,\\%$, es decir, usa el porcentaje que no votó en vez del que sí votó."
     }
-   }
+   },
+   "subtopic": "m1-porcentajes"
   },
   {
    "id": "m1-2026-invierno-q16",
@@ -826,18 +906,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con 36 personas en total se revisa cada afirmación calculando el porcentaje exacto de cada grupo de alternativas.",
+    "summary": "Con 36 personas en total, hay que calcular el porcentaje exacto de cada grupo de alternativas y comprobar cuál de las afirmaciones es verdadera.",
+    "planteamiento": "Se pide la afirmación verdadera entre las cuatro. Datos del gráfico: A = 12, B = 4, C = 8 y D = 12 personas, cada una con una sola alternativa; el total es 36 personas.",
     "steps": [
-     "Total de personas: $12+12+8+4 = 36$.",
-     "Alternativas C o D: $8+12 = 20$ personas, es decir, $\\frac{20}{36} \\approx 55{,}6\\,\\% > 50\\,\\%$. Esta afirmación es verdadera.",
-     "La alternativa B: $\\frac{8}{36} \\approx 22{,}2\\,\\%$, no el 25 %. La C: $\\frac{4}{36} \\approx 11{,}1\\,\\%$, no el 4 %. La D: $\\frac{4+8}{36} \\approx 33{,}3\\,\\%$, que no es menor que el 25 %.",
-     "Por lo tanto, la alternativa correcta es la A."
+     "Total de personas: $12+4+8+12=36$.",
+     "Afirmación A: «más del 50 % marcó C o D». Quienes marcaron C o D son $8+12=20$ personas, y $\\frac{20}{36}\\approx 55{,}6\\,\\%$, que supera el 50 %. Esta afirmación es verdadera.",
+     "Afirmación B: «exactamente un 25 % marcó C». Como C tiene 8 personas, $\\frac{8}{36}\\approx 22{,}2\\,\\%$, no el 25 %.",
+     "Afirmación C: «exactamente un 4 % marcó B». Como B tiene 4 personas, $\\frac{4}{36}\\approx 11{,}1\\,\\%$, no el 4 %.",
+     "Afirmación D: «menos del 25 % marcó B o C». Suman $4+8=12$ personas, es decir, $\\frac{12}{36}\\approx 33{,}3\\,\\%$, que no es menor que el 25 %.",
+     "Solo la afirmación A cumple la condición. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "25 % correspondería a 9 de 36 personas, pero la alternativa C tiene 8, es decir, un 22,2 %. Confunde el valor del gráfico con una cifra redonda.",
-     "D": "Menos del 25 %: la suma de B y C es $4+8 = 12$, que equivale al 33,3 % del total. Se supone sin verificar."
+     "B": "25 % correspondería a 9 de 36 personas, pero la alternativa C tiene 8, es decir, un 22,2 %. Se confunde el valor del gráfico con una cifra redonda parecida.",
+     "C": "4 % es el número de personas de B, no su porcentaje: 4 de 36 personas son un 11,1 %. Se confunde la cantidad de personas con el porcentaje.",
+     "D": "«Menos del 25 %»: la suma de B y C es 12 personas, que equivale al 33,3 % del total. Se supone sin verificar, y la cota no se cumple."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q17",
@@ -874,19 +959,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Primero se calcula el total de huevos, luego se descuentan los quebrados y por último se divide entre 6, quedándose solo con bizcochuelos completos.",
+    "summary": "Se descuentan los huevos quebrados antes de dividir, y solo se cuentan bizcochuelos completos: como un bizcochuelo incompleto no se puede preparar, se toma la parte entera.",
+    "planteamiento": "Se pide la cantidad de bizcochuelos completos que se pueden preparar. Datos: 5 cajas, 6 bandejas por caja y 30 huevos por bandeja; se quiebra el $1\\,\\%$ del total y cada bizcochuelo usa 6 huevos.",
     "steps": [
-     "Huevos comprados: $5\\cdot 6\\cdot 30 = 900$.",
-     "Se quiebra el 1 %: $0{,}01\\cdot 900 = 9$ huevos, así que quedan $900-9 = 891$.",
-     "Cada bizcochuelo usa 6 huevos: $891\\div 6 = 148{,}5$.",
-     "Solo se pueden hacer bizcochuelos completos, así que son 148. Por lo tanto, la alternativa correcta es la C."
+     "Huevos comprados: $5\\cdot 6\\cdot 30=900$ huevos.",
+     "Huevos quebrados: $1\\,\\%\\cdot 900=0{,}01\\cdot 900=9$ huevos.",
+     "Huevos que quedan: $900-9=891$ huevos.",
+     "Bizcochuelos posibles: $891\\div 6=148{,}5$.",
+     "Como un bizcochuelo incompleto no se puede preparar, se toma la parte entera: 148 bizcochuelos.",
+     "Comprobación: $148\\cdot 6=888$ huevos, menos que 891 disponibles, y $149\\cdot 6=894$, que supera los 891 disponibles. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "150: no descuenta los huevos quebrados, pues $900\\div 6 = 150$.",
-     "B": "149: redondea 148,5 hacia arriba, pero el último bizcochuelo no alcanza a completarse.",
-     "D": "135: descuenta el 10 % de los huevos en vez del 1 %."
+     "A": "150 no descuenta los huevos quebrados, pues $900\\div 6=150$. Con 900 huevos sí se alcanzaría, pero 9 se rompieron.",
+     "B": "149 redondea 148,5 hacia arriba, pero con 891 huevos solo se alcanzan 148 bizcochuelos completos; 149 necesitaría 894 huevos.",
+     "D": "135 descuenta el 10 % de los huevos en vez del 1 %: $900\\cdot 0{,}9=810$ y $810\\div 6=135$. Es un error de ubicación de la coma en el porcentaje."
     }
-   }
+   },
+   "subtopic": "m1-porcentajes"
   },
   {
    "id": "m1-2026-invierno-q18",
@@ -923,17 +1012,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como la cantidad se duplica cada hora, después de $n$ horas hay $100\\cdot 2^{n}$ bacterias.",
+    "summary": "Cada hora la cantidad se multiplica por 2, así que después de $n$ horas hay $100\\cdot 2^{n}$ bacterias: el 100 inicial no se eleva a la potencia, solo el factor 2.",
+    "planteamiento": "Se pide el número de bacterias después de 24 horas. Datos: se parte con $100$ bacterias y la cantidad se duplica cada hora, es decir, el factor por hora es $2$.",
     "steps": [
-     "Después de 1 hora hay $100\\cdot 2 = 200$ bacterias, y después de 2 horas hay $100\\cdot 2^{2} = 400$.",
-     "Así, después de $n$ horas hay $100\\cdot 2^{n}$ bacterias.",
-     "Para $n = 24$, se obtienen $100\\cdot 2^{24}$ bacterias. Por lo tanto, la alternativa correcta es la C."
+     "Después de 1 hora: $100\\cdot 2=200$ bacterias.",
+     "Después de 2 horas: $200\\cdot 2=100\\cdot 2^{2}=400$ bacterias.",
+     "En general, cada hora se multiplica por 2, así que tras $n$ horas hay $100\\cdot 2^{n}$ bacterias.",
+     "Para $n=24$ horas: $100\\cdot 2^{24}$ bacterias.",
+     "Comprobación: el exponente cuenta las duplicaciones, y 24 horas dan 24 duplicaciones. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "$100\\cdot 2^{25}$ corresponde a una hora de más: cuenta 25 duplicaciones en vez de 24.",
-     "B": "$200^{24}$ multiplica 200 por sí mismo 24 veces, en lugar de multiplicar 100 por 2 veinticuatro veces."
+     "A": "$200^{25}$ eleva 200 a una potencia y usa 25 duplicaciones: ni la base ni el exponente son correctos.",
+     "B": "$200^{24}$ multiplica 200 por sí mismo 24 veces, en lugar de multiplicar 100 por 2 veinticuatro veces. El crecimiento tiene base 2, no 200.",
+     "D": "$100\\cdot 2^{25}$ cuenta una hora de más: 25 duplicaciones en vez de 24."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q19",
@@ -970,16 +1064,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Se multiplican los números que están fuera de la raíz y el radical $\\sqrt{5}$ se mantiene.",
+    "summary": "Se multiplican los números que están fuera de la raíz y el radical $\\sqrt{5}$ se mantiene sin cambios.",
+    "planteamiento": "Se pide el valor de $2\\cdot 2\\sqrt{5}$. Datos: dos factores de 2 fuera de la raíz y el radical $\\sqrt{5}$.",
     "steps": [
-     "Se escribe $2\\cdot 2\\sqrt{5}$. Los factores que están fuera de la raíz son ambos 2.",
-     "Su producto es $2\\cdot 2 = 4$, y el radical $\\sqrt{5}$ no cambia.",
-     "El resultado es $4\\sqrt{5}$. Por lo tanto, la alternativa correcta es la B."
+     "La expresión es $2\\cdot 2\\sqrt{5}$.",
+     "Se multiplican los factores que están fuera del radical: $2\\cdot 2=4$.",
+     "El radical $\\sqrt{5}$ no cambia, porque 5 no es un cuadrado perfecto y no se puede simplificar. Los 2 que están fuera no se combinan con el radicando.",
+     "Resultado: $4\\sqrt{5}$.",
+     "Comprobación: $2\\cdot 2\\sqrt{5}\\approx 2\\cdot 2\\cdot 2{,}236=8{,}944$, igual que $4\\sqrt{5}\\approx 8{,}944$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$2\\sqrt{10}$ aparece si el 2 que multiplica se toma como $\\sqrt{2}$ y se combina con $\\sqrt{5}$ para obtener $\\sqrt{10}$. Pero $2 = \\sqrt{4}$, no $\\sqrt{2}$."
+     "A": "$2\\sqrt{10}$ aparece si el segundo 2 se escribe como $\\sqrt{2}$ y se combina con $\\sqrt{5}$ para obtener $\\sqrt{10}$. Pero $2=\\sqrt{4}$, no $\\sqrt{2}$.",
+     "C": "10 aparece si se eleva $\\sqrt{5}$ al cuadrado, $(\\sqrt{5})^{2}=5$, y luego se multiplica por 2. Hay un solo radical y no se puede tratar como si fueran dos.",
+     "D": "$4\\sqrt{10}$ multiplica el radicando por 2 ($2\\cdot 5=10$), mezclando el número de afuera con el de adentro de la raíz."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q20",
@@ -1016,17 +1116,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Conviene descomponer todo en potencias de 2 y 3, simplificar exponente con exponente y luego multiplicar.",
+    "summary": "Conviene descomponer todo en potencias de 2 y 3, simplificar las potencias de igual base por división y luego multiplicar los resultados.",
+    "planteamiento": "Se pide el valor de $\\frac{2^{3}\\cdot 3^{4}}{2\\cdot 3^{2}}$. Datos: el denominador es $2\\cdot 9$ y $9=3^{2}$, así que todo puede escribirse con las bases 2 y 3.",
     "steps": [
-     "La expresión es $\\frac{2^{3}\\cdot 3^{4}}{2\\cdot 3^{2}}$, porque $9 = 3^{2}$.",
-     "Se simplifica el 2: $\\frac{2^{3}}{2} = 2^{2} = 4$.",
-     "Se simplifica el 3: $\\frac{3^{4}}{3^{2}} = 3^{2} = 9$.",
-     "Luego $4\\cdot 9 = 36$. Por lo tanto, la alternativa correcta es la A."
+     "Se reescribe el denominador: $2\\cdot 9=2\\cdot 3^{2}$, con lo que la expresión queda $\\frac{2^{3}\\cdot 3^{4}}{2\\cdot 3^{2}}$.",
+     "Para el factor de base 2 se usa la división de potencias de igual base: $\\frac{2^{3}}{2^{1}}=2^{3-1}=2^{2}=4$.",
+     "Para el factor de base 3: $\\frac{3^{4}}{3^{2}}=3^{4-2}=3^{2}=9$.",
+     "Se multiplican los resultados parciales: $4\\cdot 9=36$.",
+     "Comprobación: el numerador es $8\\cdot 81=648$ y el denominador es $2\\cdot 9=18$, luego $\\frac{648}{18}=36$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "72 se obtiene si se simplifica el 3 pero no el 2 del denominador, es decir, $2^{3}\\cdot 3^{2} = 8\\cdot 9 = 72$."
+     "B": "72 se obtiene si se simplifica el 3 pero no el 2 del denominador: $2^{3}\\cdot 3^{2}=8\\cdot 9=72$.",
+     "C": "625 es $5^{4}$. Aparece al sumar las bases ($2+3=5$) y luego elevar a 4: se suman bases en vez de operar con las potencias.",
+     "D": "1296 es $6^{4}$, es decir, $(2\\cdot 3)^{4}$. Se ignora el denominador y se trata el numerador como si todo tuviera el mismo exponente."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q21",
@@ -1063,17 +1168,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como el exponente 6 es par, la potencia de un número negativo es positiva.",
+    "summary": "Un exponente par hace positivo el resultado de elevar un número negativo, así que $(-2)^{6}=2^{6}$.",
+    "planteamiento": "Se pide el valor de $(-2)^{6}$. Datos: la base es $-2$ y el exponente es $6$, que es par. Los paréntesis indican que el signo menos forma parte de la base.",
     "steps": [
-     "$(-2)^{6}$ significa seis factores de $-2$.",
-     "Se agrupan en tres pares: $(-2)(-2) = 4$, y $4\\cdot 4\\cdot 4 = 64$.",
-     "Por lo tanto, la alternativa correcta es la D."
+     "$(-2)^{6}$ significa seis factores de $-2$ multiplicados entre sí.",
+     "Se agrupan en tres pares: $(-2)(-2)=4$ por cada par.",
+     "Luego $4\\cdot 4\\cdot 4=4^{3}=64$.",
+     "Otra forma: como el exponente es par, el signo es positivo y $(-2)^{6}=2^{6}=64$.",
+     "Comprobación: $2^{6}=64$, que coincide con $4^{3}=64$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$-64$ corresponde a $-2^{6}$, donde la potencia se aplica solo al 2. Así se pierde el signo positivo del exponente par.",
-     "C": "12 multiplica el exponente por la base ($6\\cdot 2$), en vez de elevar la base a la potencia."
+     "A": "$-64$ corresponde a $-2^{6}$, donde la potencia se aplica solo al 2 y el signo menos queda fuera. Los paréntesis cambian el resultado.",
+     "B": "$-12$ multiplica el exponente por la base con signo negativo ($6\\cdot(-2)=-12$), confundiendo la potencia con un producto.",
+     "C": "12 multiplica el exponente por la base ($6\\cdot 2$), en vez de elevar la base a la potencia, y además pierde el signo positivo."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q22",
@@ -1110,16 +1220,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Al elevar la diagonal al cuadrado se obtiene una ecuación simple en la arista faltante, y su raíz cuadrada da la medida.",
+    "summary": "Al elevar la fórmula al cuadrado se obtiene una ecuación lineal en $c^{2}$, y luego se toma la raíz cuadrada para hallar la arista.",
+    "planteamiento": "Se pide la arista faltante $c$. Datos: la diagonal es $d=\\sqrt{83}$ cm; las otras dos aristas miden $a=3$ cm y $b=5$ cm; la fórmula es $d=\\sqrt{a^{2}+b^{2}+c^{2}}$.",
     "steps": [
-     "Con $d=\\sqrt{83}$, se cumple $d^{2} = 83 = a^{2}+b^{2}+c^{2}$.",
-     "Con $a=3$ y $b=5$: $83 = 9+25+c^{2} = 34+c^{2}$.",
-     "Entonces $c^{2} = 83-34 = 49$, y $c = \\sqrt{49} = 7$ cm. Por lo tanto, la alternativa correcta es la B."
+     "Se eleva la fórmula al cuadrado para quitar la raíz: $d^{2}=a^{2}+b^{2}+c^{2}$.",
+     "Como $d^{2}=83$, se obtiene $83=a^{2}+b^{2}+c^{2}$.",
+     "Se reemplazan los valores conocidos: $83=3^{2}+5^{2}+c^{2}=9+25+c^{2}=34+c^{2}$.",
+     "Se despeja $c^{2}$: $c^{2}=83-34=49$.",
+     "Se toma la raíz cuadrada positiva, porque es una longitud: $c=\\sqrt{49}=7$ cm.",
+     "Comprobación: $3^{2}+5^{2}+7^{2}=9+25+49=83$, que coincide con $d^{2}$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "D": "49 cm corresponde a $c^{2}$: se olvida aplicar la raíz cuadrada para obtener la arista."
+     "A": "4 cm no cumple la ecuación: $9+25+4^{2}=50\\neq 83$. Es un valor que aparece al restar mal y no volver a verificar con la fórmula.",
+     "C": "19 cm no cumple la ecuación: $9+25+19^{2}=395\\neq 83$. Surge de tratar la suma de las aristas como si fuera la arista buscada.",
+     "D": "49 cm es $c^{2}$: se olvida aplicar la raíz cuadrada para obtener la arista, que es $\\sqrt{49}=7$ cm."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q23",
@@ -1156,19 +1273,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El error está en la regla de la potencia de una potencia: al elevar $(2^{2})^{3}$ hay que multiplicar los exponentes, no sumarlos.",
+    "summary": "El error está en el paso 3: al elevar una potencia a otra potencia se multiplican los exponentes, no se suman.",
+    "planteamiento": "Se pide el paso en que se cometió el error al escribir $(4\\cdot 125)^{3}$ como producto de potencias de base 2 y 5. Datos: $4=2^{2}$ y $125=5^{3}$.",
     "steps": [
-     "Paso 1 correcto: $4 = 2^{2}$ y $125 = 5^{3}$, así que $(4 \\cdot 125)^{3} = (2^{2} \\cdot 5^{3})^{3}$.",
-     "Paso 2 correcto: $(a \\cdot b)^{n} = a^{n} \\cdot b^{n}$, por lo que $(2^{2} \\cdot 5^{3})^{3} = (2^{2})^{3} \\cdot (5^{3})^{3}$.",
-     "Paso 3 incorrecto: $(a^{m})^{n} = a^{m \\cdot n}$, luego $(2^{2})^{3} = 2^{6}$ y $(5^{3})^{3} = 5^{9}$, y no $2^{(2+3)}$ ni $5^{(3+3)}$.",
-     "Comprobación: $2^{6} \\cdot 5^{9} = 64 \\cdot 1\\,953\\,125 = 125\\,000\\,000 = 500^{3}$, mientras que $2^{5} \\cdot 5^{6}$ es mucho menor.",
-     "Por lo tanto, la alternativa correcta es la C."
+     "La reescritura de los factores es correcta: $4=2^{2}$ y $125=5^{3}$, así que $(4\\cdot 125)^{3}=(2^{2}\\cdot 5^{3})^{3}$.",
+     "La distribución de la potencia sobre el producto es correcta: $(a\\cdot b)^{n}=a^{n}\\cdot b^{n}$, por lo que $(2^{2}\\cdot 5^{3})^{3}=(2^{2})^{3}\\cdot(5^{3})^{3}$.",
+     "El error está en la potencia de una potencia: se multiplican los exponentes, $(a^{m})^{n}=a^{m\\cdot n}$. Entonces $(2^{2})^{3}=2^{6}$ y $(5^{3})^{3}=5^{9}$, y no $2^{(2+3)}$ ni $5^{(3+3)}$.",
+     "Comprobación de la potencia: $(2^{2})^{3}=4^{3}=64=2^{6}$, mientras que $2^{5}=32\\neq 64$.",
+     "Con el paso 3 corregido se llega a $2^{6}\\cdot 5^{9}=64\\cdot 1\\,953\\,125=125\\,000\\,000$, que es $500^{3}$, el valor original. El resultado del paso 4 no coincide. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Se elige el Paso 1 si se cree que escribir $4 = 2^{2}$ y $125 = 5^{3}$ no es válido; sí lo es, así que el error no está ahí.",
-     "B": "Se elige el Paso 2 por la sensación de que separar el producto en dos potencias es ilegal; la propiedad $(a \\cdot b)^{n} = a^{n} \\cdot b^{n}$ sí se cumple."
+     "A": "Elegir el paso 1 supone que escribir $4=2^{2}$ y $125=5^{3}$ no es válido. Sí lo es, porque son descomposiciones en potencias de primos, así que el error no está allí.",
+     "B": "Elegir el paso 2 supone que separar el producto en dos potencias es ilegal. La propiedad $(a\\cdot b)^{n}=a^{n}\\cdot b^{n}$ sí se cumple y el paso está bien.",
+     "D": "Elegir el paso 4 es confundir la consecuencia con la causa: la suma de exponentes es correcta respecto de lo que recibe, pero el exponente se fijó mal en el paso 3."
     }
-   }
+   },
+   "subtopic": "m1-potencias"
   },
   {
    "id": "m1-2026-invierno-q24",
@@ -1205,18 +1325,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La capacidad crece de forma exponencial con factor 1,2 por año, así que el exponente $N$ cuenta los años transcurridos desde 2020.",
+    "summary": "El exponente $N$ cuenta cuántos años han pasado desde 2020, porque el factor $1{,}2$ se aplica una vez por cada año.",
+    "planteamiento": "Se pide qué representa $N$ en el modelo $6{,}7\\cdot(1{,}2)^{N}$. Datos: año base 2020 con 6,7 zettabytes y un crecimiento de 20 % anual, es decir, un factor de $1{,}2$ por año, hasta 2025.",
     "steps": [
-     "La capacidad inicial, en 2020, es 6,7 zettabytes y cada año se multiplica por $1{,}2$ (un aumento del 20 %).",
-     "El modelo $6{,}7 \\cdot (1{,}2)^{N}$ aplica el factor $1{,}2$ tantas veces como años pasen desde 2020.",
-     "Entre 2020 y 2025 pasan $2025 - 2020 = 5$ años, así que para 2025 se tiene $N = 5$ y la capacidad es $6{,}7 \\cdot 1{,}2^{5} \\approx 16{,}7$ zettabytes.",
-     "Por lo tanto, $N$ representa la diferencia entre 2025 y 2020, y la alternativa correcta es la B."
+     "Un aumento del 20 % equivale a multiplicar por $1+0{,}20=1{,}2$ cada año.",
+     "Con un año de crecimiento la capacidad es $6{,}7\\cdot 1{,}2$; con dos años, $6{,}7\\cdot 1{,}2\\cdot 1{,}2=6{,}7\\cdot 1{,}2^{2}$. El exponente aumenta de a 1 por año.",
+     "Por lo tanto, el exponente es el número de años transcurridos desde 2020.",
+     "Para 2025: $2025-2020=5$ años, así que $N=5$ y la capacidad es $6{,}7\\cdot 1{,}2^{5}\\approx 16{,}7$ zettabytes.",
+     "Entonces $N$ es la diferencia entre 2025 y 2020, que corresponde a la alternativa B.",
+     "Comprobación: en 2020, $N=0$ y $1{,}2^{0}=1$, por lo que la capacidad es 6,7 zettabytes, el valor inicial. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Se elige esta opción si se confunde el exponente con un cociente; $\\frac{2025}{2020}$ es casi 1 y no mide el número de años.",
-     "C": "Se elige esta opción si se piensa que $N$ es un monto de capacidad; $N$ es un número de años, no zettabytes."
+     "A": "El cociente $\\frac{2025}{2020}$ es casi 1 y no mide el número de años. Se elige al confundir el exponente con una razón entre años.",
+     "C": "$N$ es un número de años, no una capacidad en zettabytes; la capacidad es el resultado de la expresión completa, no del exponente.",
+     "D": "$N=1$ corresponde solo al primer año (2021), no a todo el periodo 2020-2025, así que no representa lo que aumentó entre 2020 y 2021."
     }
-   }
+   },
+   "subtopic": "m1-porcentajes"
   },
   {
    "id": "m1-2026-invierno-q25",
@@ -1253,18 +1378,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Restar $n$ años a la edad actual $m$ da la edad de hace $n$ años; luego la disminución de 3 años se resta a ese resultado.",
+    "summary": "Primero se resta $n$ años a la edad actual y luego se restan 3 años más; como solo hay restas, los signos no cambian al quitar el paréntesis.",
+    "planteamiento": "Se pide la expresión de «la edad de Pedro hace $n$ años disminuida en 3 años». Datos: edad actual $m$ años; hace $n$ años tenía $m-n$ años.",
     "steps": [
-     "La edad actual de Pedro es $m$ años, así que hace $n$ años tenía $m - n$ años.",
-     "Disminuida en 3 años: a esa edad se le restan 3 años, es decir, $(m - n) - 3$.",
-     "Simplificando, la expresión es $m - n - 3$, que corresponde a la alternativa B.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "La edad actual de Pedro es $m$ años.",
+     "Hace $n$ años tenía $m-n$ años, porque cada año transcurrido resta un año a la edad.",
+     "Disminuida en 3 años: a esa edad se restan 3 años, es decir, $(m-n)-3$.",
+     "Al quitar el paréntesis, como solo hay restas, los signos no cambian: $(m-n)-3=m-n-3$.",
+     "Comprobación: si $m=20$ y $n=5$, hace 5 años tenía 15 y, disminuida en 3, queda 12; y $20-5-3=12$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "C": "Se elige la C al restar el 3 dentro del paréntesis: $m - (n - 3) = m - n + 3$, lo que cambia el signo del 3.",
-     "D": "Se elige la D al sumar $n$ en vez de restarlo: $(m + n) - 3$ corresponde a la edad dentro de $n$ años, no hace $n$ años."
+     "A": "$\\frac{m-n}{3}$ divide la diferencia entre 3, en vez de restar 3 años a la edad.",
+     "C": "$m-(n-3)=m-n+3$: al restar el 3 dentro del paréntesis, su signo cambia y la expresión suma 3 años.",
+     "D": "$(m+n)-3$ suma los años en lugar de restarlos: corresponde a la edad dentro de $n$ años, no a la de hace $n$ años."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q26",
@@ -1301,18 +1430,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El ingreso diario es el número de pasajeros de mayor demanda por el precio fijo por pasajero, y el precio por pasajero sale de dividir el ingreso del mes de menor demanda por sus pasajeros.",
+    "summary": "El ingreso diario en los meses de mayor demanda es el número de pasajeros de esos meses multiplicado por el precio del pasaje, que se obtiene a partir del mes de menor demanda.",
+    "planteamiento": "Se pide el ingreso diario en mayor demanda. Datos: en menor demanda hay 2 600 000 pasajeros y 2 000 000 000 pesos diarios; en mayor demanda hay 100 000 pasajeros más, y el precio del pasaje es el mismo todo el año.",
     "steps": [
-     "En mayor demanda hay $2\\,600\\,000 + 100\\,000 = 2\\,700\\,000$ pasajeros diarios.",
-     "Con menor demanda, $2\\,000\\,000\\,000$ pesos se reparten entre $2\\,600\\,000$ personas, así que cada pasaje cuesta $\\frac{2\\,000\\,000\\,000}{2\\,600\\,000}$ pesos.",
-     "El ingreso diario en mayor demanda es $2\\,700\\,000 \\cdot \\frac{2\\,000\\,000\\,000}{2\\,600\\,000}$ pesos, que equivale a $\\frac{2\\,700\\,000}{2\\,600\\,000} \\cdot 2\\,000\\,000\\,000$.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Pasajeros en mayor demanda: $2\\,600\\,000+100\\,000=2\\,700\\,000$.",
+     "Precio por pasaje: los 2 000 000 000 pesos del mes de menor demanda se reparten entre sus 2 600 000 pasajeros, así que cada pasaje cuesta $\\frac{2\\,000\\,000\\,000}{2\\,600\\,000}$ pesos.",
+     "Ingreso en mayor demanda: número de pasajeros por precio, $2\\,700\\,000\\cdot\\frac{2\\,000\\,000\\,000}{2\\,600\\,000}$ pesos.",
+     "Se reagrupa la expresión: $\\frac{2\\,700\\,000}{2\\,600\\,000}\\cdot 2\\,000\\,000\\,000$, que coincide con la alternativa B.",
+     "Estimación de control: $\\frac{2{,}7}{2{,}6}\\approx 1{,}04$, y $1{,}04\\cdot 2\\,000\\,000\\,000\\approx 2\\,077\\,000\\,000$ pesos, un valor mayor que los 2 000 000 000 del mes de menor demanda, como corresponde. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Se elige la A al sumar 100 000 pesos al ingreso total en vez de sumar 100 000 personas a los pasajeros.",
-     "C": "Se elige la C al sumar 100 000 al cociente, es decir, al precio o a la cantidad de personas, en lugar de multiplicar por el número de pasajeros."
+     "A": "$\\frac{2\\,000\\,100\\,000}{2\\,600\\,000}$ suma 100 000 al ingreso total en vez de sumar 100 000 pasajeros. Además el resultado sería cercano a 769 pesos, que no es un ingreso diario.",
+     "C": "$\\frac{2\\,000\\,000\\,000}{2\\,600\\,000}+100\\,000\\approx 100\\,769$ pesos suma 100 000 al precio del pasaje, en lugar de multiplicar por el número de pasajeros.",
+     "D": "$2\\,600\\,000\\cdot 2\\,000\\,000\\,000+100\\,000$ multiplica la cantidad de pasajeros por el ingreso total, con un resultado de orden $5{,}2\\cdot 10^{15}$, absurdo para un ingreso diario."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q27",
@@ -1349,18 +1482,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Al desarrollar el cuadrado y el producto notable, las expresiones con $4x^{2}$ se cancelan y queda una expresión lineal en $x$.",
+    "summary": "Al desarrollar el cuadrado y el producto notable, los términos $4x^{2}$ se cancelan y queda una expresión lineal en $x$.",
+    "planteamiento": "Se pide una expresión equivalente a $(2x-3)^{2}-(2x-3)(2x+3)$. Datos: el primer término es el cuadrado de un binomio y el segundo es el producto de una suma por una diferencia.",
     "steps": [
-     "Cuadrado de binomio: $(2x - 3)^{2} = 4x^{2} - 12x + 9$.",
-     "Suma por diferencia: $(2x - 3)(2x + 3) = 4x^{2} - 9$.",
-     "Restando: $(4x^{2} - 12x + 9) - (4x^{2} - 9) = -12x + 18$.",
-     "Por lo tanto, la alternativa correcta es la D."
+     "Cuadrado de binomio: $(2x-3)^{2}=(2x)^{2}-2\\cdot 2x\\cdot 3+3^{2}=4x^{2}-12x+9$.",
+     "Suma por diferencia: $(2x-3)(2x+3)=(2x)^{2}-3^{2}=4x^{2}-9$.",
+     "Se resta el segundo resultado del primero: $(4x^{2}-12x+9)-(4x^{2}-9)$.",
+     "Se distribuye el signo menos sobre el paréntesis: $4x^{2}-12x+9-4x^{2}+9$.",
+     "Se reducen términos semejantes: $4x^{2}-4x^{2}=0$ y $9+9=18$, así que queda $-12x+18$.",
+     "Comprobación con $x=0$: $(-3)^{2}-(-3)(3)=9+9=18$, y $-12\\cdot 0+18=18$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "B": "Se elige la B al pensar que $(2x - 3)^{2} = (2x - 3)(2x + 3)$, lo que daría 0; el cuadrado no es igual al producto por la suma.",
-     "C": "Se elige la C al calcular mal el doble producto: $2 \\cdot 2x \\cdot 3 = 12x$, no $6x$. Con $-6x$ se obtendría $-6x + 18$."
+     "A": "18 coincide con la expresión solo cuando $x=0$; como la expresión depende de $x$, no es constante. Se obtiene al evaluar en $x=0$ y olvidar la variable.",
+     "B": "0 se obtendría si $(2x-3)^{2}=(2x-3)(2x+3)$, lo que no es cierto: el cuadrado de un binomio no es igual a una suma por diferencia.",
+     "C": "$-6x+18$ calcula mal el doble producto: $2\\cdot 2x\\cdot 3=12x$, no $6x$."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q28",
@@ -1397,18 +1535,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La proporción de leche y cucharadas es constante: 180 mL corresponden a 6 cucharadas, así que 120 mL corresponden a 4.",
+    "summary": "Las proporciones se mantienen: cada cucharada corresponde a la misma cantidad de leche, así que se usa una regla de tres con el volumen de leche.",
+    "planteamiento": "Se pide cuántas cucharadas de cereal se agregan a 120 mL de leche. Datos de la instrucción: 180 mL de leche se combinan con 6 cucharadas de cereal.",
     "steps": [
-     "Con 180 mL se usan 6 cucharadas, es decir, cada cucharada corresponde a $\\frac{180}{6} = 30$ mL de leche.",
-     "Con 120 mL, la cantidad de cucharadas es $\\frac{120}{30} = 4$, o bien $6 \\cdot \\frac{120}{180} = 4$.",
-     "La cuchara de 5 gramos no altera el cálculo, porque la proporción se mide con la leche.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "En las instrucciones, 180 mL de leche se combinan con 6 cucharadas.",
+     "Cantidad de leche por cucharada: $\\frac{180}{6}=30$ mL.",
+     "Con 120 mL de leche: $\\frac{120}{30}=4$ cucharadas.",
+     "Forma alternativa de regla de tres: $6\\cdot\\frac{120}{180}=6\\cdot\\frac{2}{3}=4$, el mismo resultado.",
+     "La cuchara de 5 gramos no altera el cálculo, porque la proporción se establece con el volumen de leche. Comprobación: $4\\cdot 30=120$ mL. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "C": "Se elige la C al no ajustar las cucharadas a la nueva cantidad de leche; mantener las 6 cucharadas ignora la proporción.",
-     "D": "Se elige la D al invertir la proporción: $6 \\cdot \\frac{180}{120} = 9$, lo que aumentaría las cucharadas al disminuir la leche."
+     "A": "3 cucharadas es la mitad de 6, sin relacionar con la cantidad de leche. Como 120 mL no es la mitad de 180 mL, este valor no respeta la proporción.",
+     "C": "6 cucharadas mantiene la receta original y, por tanto, ignora que la leche disminuyó y que la proporción debe ajustarse.",
+     "D": "9 cucharadas invierte la proporción: $6\\cdot\\frac{180}{120}=9$, lo que aumentaría el cereal al disminuir la leche."
     }
-   }
+   },
+   "subtopic": "m1-proporcionalidad"
   },
   {
    "id": "m1-2026-invierno-q29",
@@ -1445,18 +1587,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El precio es proporcional al tiempo: cada minuto cuesta 12 pesos, por lo que el precio es $12x$.",
+    "summary": "El precio es proporcional al tiempo: el cociente precio/tiempo es constante, 12 pesos por minuto, y por eso el precio de $x$ minutos es $12x$.",
+    "planteamiento": "Se pide la expresión del precio a pagar por $x$ minutos. Datos de la tabla: 1 minuto cuesta 12 pesos, 2 minutos cuestan 24 pesos, 3 minutos cuestan 36 pesos y 4 minutos cuestan 48 pesos.",
     "steps": [
-     "De la tabla, 1 minuto cuesta 12 pesos, 2 minutos cuestan 24 pesos, 3 minutos cuestan 36 pesos y 4 minutos cuestan 48 pesos.",
-     "El cociente $\\frac{\\text{precio}}{\\text{tiempo}}$ es constante: $\\frac{24}{2} = \\frac{36}{3} = \\frac{48}{4} = 12$.",
-     "Con $x$ minutos, el precio por pagar es $12 \\cdot x = 12x$ pesos.",
-     "Por lo tanto, la alternativa correcta es la A."
+     "Se calcula el cociente precio/tiempo en cada fila: $\\frac{12}{1}=12$, $\\frac{24}{2}=12$, $\\frac{36}{3}=12$ y $\\frac{48}{4}=12$.",
+     "El cociente es constante, lo que caracteriza una relación proporcional directa de la forma $y=kx$ con $k=12$.",
+     "Cada minuto adicional suma lo mismo: de 1 a 2 minutos el precio sube $24-12=12$ pesos.",
+     "Con $x$ minutos, el precio es $12\\cdot x=12x$ pesos.",
+     "Comprobación: si $x=3$, $12\\cdot 3=36$, que coincide con la tabla. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Se elige la B al invertir la relación y dividir el precio por el tiempo, $\\frac{12}{x}$, que disminuiría al aumentar el tiempo.",
-     "D": "Se elige la D al tratar la tarifa como un monto fijo que se suma una vez, $x + 12$; eso no respeta que cada minuto cueste 12 pesos."
+     "B": "$\\frac{12}{x}$ invierte la relación: el precio debe crecer con el tiempo y $\\frac{12}{x}$ disminuye al aumentar $x$.",
+     "C": "$x+11$ da 12 pesos para $x=1$, pero para $x=2$ da 13, no 24. La tabla exige que cada minuto cueste 12 pesos.",
+     "D": "$x+12$ trata la tarifa como un monto fijo que se suma una vez: para $x=1$ da 13, no 12, y para $x=2$ da 14, no 24."
     }
-   }
+   },
+   "subtopic": "m1-porcentajes"
   },
   {
    "id": "m1-2026-invierno-q30",
@@ -1493,19 +1639,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Se vende todo el lote, se reparte el dinero en la razón de los aportes y Javier recibe $\\frac{2}{3}$ del total de ventas.",
+    "summary": "Se vende todo el lote y el dinero se reparte según la proporción de los aportes: como Javier aportó $\\frac{2}{3}$ del costo total, recibe esa misma fracción de la venta.",
+    "planteamiento": "Se pide cuánto recibe Javier. Datos: 24 dulces vendidos a 200 pesos cada uno; la compra costó 2100 pesos, de los cuales Javier aportó 1400 pesos y David 700 pesos.",
     "steps": [
-     "Venta total: $24 \\cdot 200 = 4800$ pesos.",
-     "Aportes: Javier 1400 pesos y David $2100 - 1400 = 700$ pesos, en total 2100 pesos.",
-     "La parte de Javier es $\\frac{1400}{2100} = \\frac{2}{3}$ del dinero obtenido.",
-     "Reparto de Javier: $\\frac{2}{3} \\cdot 4800 = 3200$ pesos.",
-     "Por lo tanto, la alternativa correcta es la D."
+     "Dinero obtenido por la venta: $24\\cdot 200=4800$ pesos.",
+     "Aporte de David: $2100-1400=700$ pesos. El aporte total es 2100 pesos.",
+     "Proporción de Javier: $\\frac{1400}{2100}=\\frac{2}{3}$, al simplificar por 700.",
+     "Parte de Javier: $\\frac{2}{3}\\cdot 4800=3200$ pesos.",
+     "Comprobación: la parte de David es $\\frac{1}{3}\\cdot 4800=1600$ pesos, y $3200+1600=4800$, que recupera todo el dinero de la venta. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Se elige la A al calcular la parte de David, $\\frac{700}{2100} \\cdot 4800 = 1600$, o al invertir la razón.",
-     "C": "Se elige la C al restar el costo de la bolsa de la venta, $4800 - 2100 = 2700$; eso es la ganancia total y no se reparte según los aportes."
+     "A": "1600 pesos es la parte de David, $\\frac{700}{2100}\\cdot 4800$. Corresponde a invertir la razón de aportes.",
+     "B": "2400 pesos corresponde a repartir la venta por partes iguales, $\\frac{1}{2}\\cdot 4800$, sin considerar que Javier aportó más dinero.",
+     "C": "2700 pesos es la ganancia total, $4800-2100$. Esa resta no se reparte según los aportes, y la pregunta pide la parte de Javier."
     }
-   }
+   },
+   "subtopic": "m1-proporcionalidad"
   },
   {
    "id": "m1-2026-invierno-q31",
@@ -1542,19 +1691,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Se plantea una ecuación con los tres ingresos de Pedro (ahorros semanales de la abuela, mesadas y sábados) igualada a 210 000 pesos.",
+    "summary": "Se plantea una ecuación lineal con los tres ingresos de Pedro: el ahorro de la abuela, las mesadas y los sábados trabajados; su solución da el monto semanal.",
+    "planteamiento": "Se pide el monto semanal $w$ que daba la abuela. Datos: 8 semanas de ahorro con $w$ pesos cada semana, 2 mesadas de 10 000 pesos y 6 sábados trabajados a 15 000 pesos diarios; el total juntado es 210 000 pesos.",
     "steps": [
-     "Sea $w$ el dinero semanal que daba la abuela. En 8 semanas juntó $8w$ pesos.",
-     "Mesadas de los dos meses: $2 \\cdot 10\\,000 = 20\\,000$ pesos.",
-     "Sábados trabajados: $6 \\cdot 15\\,000 = 90\\,000$ pesos.",
-     "La ecuación es $8w + 20\\,000 + 90\\,000 = 210\\,000$, es decir, $8w = 100\\,000$ y $w = 12\\,500$ pesos.",
-     "Por lo tanto, la alternativa correcta es la A."
+     "Dinero de la abuela: en 8 semanas se juntan $8w$ pesos.",
+     "Mesadas: $2\\cdot 10\\,000=20\\,000$ pesos.",
+     "Sábados: $6\\cdot 15\\,000=90\\,000$ pesos, porque cada sábado trabajado paga 15 000 pesos.",
+     "Ecuación: $8w+20\\,000+90\\,000=210\\,000$.",
+     "Se suman las cantidades conocidas: $8w+110\\,000=210\\,000$, luego $8w=100\\,000$.",
+     "Se despeja: $w=\\frac{100\\,000}{8}=12\\,500$ pesos. Comprobación: $8\\cdot 12\\,500=100\\,000$, y sumando 110 000 se obtienen 210 000. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Se elige la B al confundir el pago diario de 15 000 pesos del sábado con el monto semanal de la abuela.",
-     "D": "Se elige la D al dividir los 210 000 pesos entre 8 semanas e ignorar las mesadas y los sábados, $210\\,000 / 8 = 26\\,250$."
+     "B": "15 000 pesos confunde el pago diario de un sábado con el monto semanal de la abuela. El 15 000 se usa en el cálculo de los sábados, no como ahorro semanal.",
+     "C": "23 125 pesos se obtiene al restar solo 25 000 pesos de los 210 000 en vez de 110 000 pesos, y luego dividir entre 8.",
+     "D": "26 250 pesos divide los 210 000 pesos entre 8 sin descontar mesadas ni sábados: $210\\,000\\div 8=26\\,250$."
     }
-   }
+   },
+   "subtopic": "m1-porcentajes"
   },
   {
    "id": "m1-2026-invierno-q32",
@@ -1591,18 +1744,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Un punto relleno indica que el extremo pertenece al intervalo y un círculo blanco indica que no; por eso el 1 se incluye y el 3 se excluye.",
+    "summary": "El punto relleno indica que el extremo pertenece al intervalo y se escribe con corchete; el círculo blanco indica que no pertenece y se escribe con el símbolo de intervalo abierto.",
+    "planteamiento": "Se pide el intervalo que representa la recta. Datos: el extremo 1 es un punto negro (incluido) y el extremo 3 es un círculo blanco (excluido); el sombreado va entre ambos.",
     "steps": [
-     "En el gráfico, el 1 tiene un punto negro (relleno): el 1 pertenece al conjunto solución, así que se usa corchete.",
-     "En el 3 hay un círculo blanco (abierto): el 3 no pertenece, así que se usa paréntesis.",
-     "El intervalo es el conjunto de números desde 1 hasta 3, incluido el 1 y excluido el 3: $[1, 3[$.",
-     "Por lo tanto, la alternativa correcta es la C."
+     "En el extremo izquierdo, el 1, hay un punto negro: el 1 pertenece al conjunto, así que el intervalo comienza con corchete, $[1$.",
+     "En el extremo derecho, el 3, hay un círculo blanco: el 3 no pertenece al conjunto, así que el intervalo termina con el símbolo de extremo abierto, $3[$.",
+     "El intervalo es $[1,\\,3[$, que incluye el 1 y todos los números hasta 3 sin llegar a él.",
+     "Comprobación: el 1 pertenece, el 2 pertenece porque está sombreado y el 3 no pertenece. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Se elige la A al ignorar que el círculo del 3 es blanco y escribir $[1, 3]$ como si el 3 estuviera incluido.",
-     "B": "Se elige la B al excluir el 1 con paréntesis, aunque en el gráfico el 1 está relleno y sí pertenece al conjunto."
+     "A": "$[1,3]$ incluiría también el 3, pero el círculo del 3 es blanco y no pertenece al conjunto.",
+     "B": "$]1,3[$ excluiría el 1, pero el punto del 1 está relleno y sí pertenece al conjunto.",
+     "D": "$]1,3]$ excluye el 1 e incluye el 3, justo al revés de lo que muestra el gráfico."
     }
-   }
+   },
+   "subtopic": "m1-ecuaciones"
   },
   {
    "id": "m1-2026-invierno-q33",
@@ -1639,18 +1795,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La dosis mínima es 25 mg por kilogramo y no puede superar 2000 mg, así que el peso máximo es $\\frac{2000}{25}$ kilogramos.",
+    "summary": "La dosis debe ser de al menos 25 mg por kilogramo y no puede pasar de 2000 mg al día: el peso máximo sale de dividir 2000 entre 25.",
+    "planteamiento": "Se pide el peso máximo del paciente. Datos: dosis mínima de $25$ mg por kilogramo y dosis diaria máxima de $2000$ mg.",
     "steps": [
-     "Si el paciente pesa $x$ kg, la dosis mínima es $25x$ mg.",
-     "Esa dosis no puede superar la dosis diaria máxima: $25x \\le 2000$.",
-     "Despejando, $x \\le \\frac{2000}{25} = 80$ kg.",
-     "Por lo tanto, la alternativa correcta es la C."
+     "Si el paciente pesa $x$ kilogramos, la dosis diaria es $25x$ mg.",
+     "Esa dosis no puede superar 2000 mg: $25x\\le 2000$.",
+     "Se despeja $x$ dividiendo ambos lados entre 25: $x\\le \\frac{2000}{25}$.",
+     "Cálculo: $\\frac{2000}{25}=80$, porque $25\\cdot 80=2000$.",
+     "Comprobación: con $x=80$, la dosis es $25\\cdot 80=2000$ mg, justo el límite; con $x=81$ la dosis superaría los 2000 mg. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Se elige la A al confundir el valor de 25 mg por kilogramo con el peso del paciente.",
-     "B": "Se elige la B al restar 25 a 80 en vez de dividir 2000 entre 25, obteniendo $80 - 25 = 55$."
+     "A": "25 kg confunde el valor de 25 mg por kilogramo con el peso del paciente. La dosis por kilo no es el peso.",
+     "B": "55 kg se obtiene al restar 25 a 80 en vez de dividir 2000 entre 25. Es un error de operación sin relación con la dosis.",
+     "D": "105 kg resulta de sumar 25 a 80, ignorando el límite de 2000 mg: con 105 kg la dosis sería $25\\cdot 105=2625$ mg, que supera el máximo."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q34",
@@ -1688,18 +1848,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como la condición es HOMA-IR menor que 1,96, al despejar la insulinemia se multiplica por 22,5 y se divide por 5,6.",
+    "summary": "Sin resistencia significa que el índice es menor que 1,96; al despejar la insulinemia en la fórmula, el cociente pasa a un lado de la desigualdad con el mismo sentido.",
+    "planteamiento": "Se pide la condición sobre la insulinemia $x$, en µU/mL, para que HOMA-IR sea menor que $1{,}96$. Datos: glucemia de $5{,}6$ mmol/L y constante $22{,}5$ en el denominador.",
     "steps": [
-     "Sin resistencia significa HOMA-IR $< 1{,}96$.",
-     "Con glucemia $5{,}6$ mmol/L: $\\frac{x \\cdot 5{,}6}{22{,}5} < 1{,}96$.",
-     "Despejando: $x \\cdot 5{,}6 < 1{,}96 \\cdot 22{,}5$, por lo que $x < \\frac{1{,}96 \\cdot 22{,}5}{5{,}6}$, que es aproximadamente 7,9 µU/mL.",
-     "Por lo tanto, la alternativa correcta es la A."
+     "La interpretación «sin resistencia» corresponde a HOMA-IR $<1{,}96$.",
+     "Con glucemia $5{,}6$, la fórmula queda $\\frac{x\\cdot 5{,}6}{22{,}5}<1{,}96$.",
+     "Se multiplican ambos lados por 22,5, un número positivo, así que el sentido de la desigualdad no cambia: $x\\cdot 5{,}6<1{,}96\\cdot 22{,}5$.",
+     "Se dividen ambos lados por 5,6, también positivo: $x<\\frac{1{,}96\\cdot 22{,}5}{5{,}6}$.",
+     "Cálculo aproximado: $\\frac{44{,}1}{5{,}6}\\approx 7{,}9$ µU/mL, por lo que la insulinemia debe ser menor que ese valor.",
+     "Comprobación: con $x=7$, $\\frac{7\\cdot 5{,}6}{22{,}5}\\approx 1{,}74<1{,}96$, que corresponde a sin resistencia. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Se elige la B al intercambiar 5,6 y 22,5 en el despeje, dividiendo por 22,5 en vez de por 5,6.",
-     "C": "Se elige la C al cambiar el sentido de la desigualdad; un índice menor que 1,96 corresponde a «sin resistencia», no a un valor mayor."
+     "B": "$x<\\frac{1{,}96\\cdot 5{,}6}{22{,}5}$ intercambia 5,6 y 22,5: divide por 22,5 en vez de por 5,6 y da un límite de unos 0,49 µU/mL.",
+     "C": "$x>\\frac{1{,}96\\cdot 22{,}5}{5{,}6}$ cambia el sentido de la desigualdad; un índice menor que 1,96 corresponde a «sin resistencia», no a un valor mayor.",
+     "D": "$x>\\frac{1{,}96\\cdot 5{,}6}{22{,}5}$ combina el sentido incorrecto con los valores intercambiados, así que no representa la condición pedida."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q35",
@@ -1736,18 +1901,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La segunda ecuación suma el precio final del pantalón y el precio de la camisa; por eso B es el precio original del pantalón, antes del descuento.",
+    "summary": "La segunda ecuación suma el precio final del pantalón y el de la camisa; el término $B$ aparece antes del descuento, así que es el precio original del pantalón.",
+    "planteamiento": "Se pide qué representa $B$ en el sistema. Datos: total pagado de 50 000 pesos; la camisa es el 30 % del total (variable $A$), y el pantalón tiene un descuento de 20 %, por lo que se paga el 80 % de $B$.",
     "steps": [
-     "Primera ecuación: $\\frac{A}{50\\,000} = \\frac{30}{100}$, así que la camisa cuesta $A = 15\\,000$ pesos.",
-     "El pantalón tiene un descuento del 20 %, por lo que se paga el 80 % de su precio original: $B \\cdot \\frac{80}{100}$.",
-     "Segunda ecuación: $B \\cdot \\frac{80}{100} + A = 50\\,000$, con $A = 15\\,000$ se obtiene $B = 43\\,750$ pesos, que es el precio original.",
-     "Por lo tanto, la alternativa correcta es la A."
+     "Primera ecuación: $\\frac{A}{50\\,000}=\\frac{30}{100}$, luego $A=0{,}30\\cdot 50\\,000=15\\,000$ pesos, que es el precio de la camisa.",
+     "En la segunda ecuación, el pantalón se paga con un descuento del 20 %, es decir, al 80 % de su precio: $B\\cdot\\frac{80}{100}$ pesos.",
+     "Segunda ecuación: $B\\cdot\\frac{80}{100}+A=50\\,000$, que dice que el precio final del pantalón más el de la camisa suma 50 000 pesos.",
+     "Se despeja: $0{,}8\\,B=50\\,000-15\\,000=35\\,000$, luego $B=\\frac{35\\,000}{0{,}8}=43\\,750$ pesos.",
+     "Como $B$ es el precio antes del descuento, 43 750 pesos es el precio original del pantalón; su precio final es $0{,}8\\cdot 43\\,750=35\\,000$ pesos. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Se elige la B al confundir $B$ con el precio final; el precio final es $B \\cdot \\frac{80}{100}$, que da 35 000 pesos.",
-     "D": "Se elige la D al leer el lado izquierdo de la ecuación completa como si fuera la variable $B$; la suma de precios finales es todo el lado izquierdo."
+     "B": "El precio final es $B\\cdot\\frac{80}{100}$, es decir, 35 000 pesos. Confunde $B$, que es el valor antes del descuento, con el término multiplicado por 0,8.",
+     "C": "La suma de precios originales sería $43\\,750+15\\,000=58\\,750$ pesos, que no coincide con los 50 000 pesos pagados, porque la camisa no tiene descuento.",
+     "D": "La suma de precios finales es $35\\,000+15\\,000=50\\,000$ pesos, que corresponde al lado izquierdo de la segunda ecuación, no a la variable $B$."
     }
-   }
+   },
+   "subtopic": "m1-sistemas"
   },
   {
    "id": "m1-2026-invierno-q36",
@@ -1785,19 +1954,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El error está en el Paso 1: los 25 000 pesos de envío se suman al ingreso de las poleras, que se indicó que fueron 146 000 pesos.",
+    "summary": "El error está en el paso 1: los 25 000 pesos de envío se suman a los ingresos de las poleras, cuando el enunciado indica que 146 000 pesos corresponden solo a las poleras.",
+    "planteamiento": "Se pide el paso con error al resolver el problema. Datos: 18 poleras en total; 8500 pesos la personalizada y 7500 pesos la de catálogo; 146 000 pesos recaudados solo por las poleras; el envío de 2500 pesos se cobró en diez envíos, es decir, 25 000 pesos que no son ingreso por poleras.",
     "steps": [
-     "El planteamiento $x + y = 18$ es correcto: son 18 poleras en total.",
-     "El ingreso «solo por las poleras» es 146 000 pesos, así que la ecuación correcta es $8500x + 7500y = 146\\,000$; sumar 25 000 pesos de envío es un error.",
-     "Con $y = 18 - x$: $8500x + 7500(18 - x) = 146\\,000$, luego $1000x = 146\\,000 - 135\\,000 = 11\\,000$, y $x = 11$.",
-     "Comprobación: $8500 \\cdot 11 + 7500 \\cdot 7 = 93\\,500 + 52\\,500 = 146\\,000$ pesos.",
-     "Por lo tanto, la alternativa correcta es la A."
+     "El planteamiento $x+y=18$ es correcto, porque son 18 poleras en total, sin importar el diseño.",
+     "El ingreso «solo por las poleras» es 146 000 pesos. Los 25 000 pesos de envío no son ingreso por poleras, así que la segunda ecuación debe ser $8500x+7500y=146\\,000$.",
+     "El paso 1 del procedimiento escribe $146\\,000+25\\,000$, es decir, mezcla un ingreso por poleras con un cobro distinto. Ahí está el error.",
+     "Con los pasos 2 y 3 sobre la ecuación correcta: $y=18-x$ y $8500x+7500(18-x)=146\\,000$.",
+     "Se desarrolla: $8500x+135\\,000-7500x=146\\,000$, luego $1000x=11\\,000$ y $x=11$.",
+     "Comprobación: $8500\\cdot 11+7500\\cdot 7=93\\,500+52\\,500=146\\,000$ pesos. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Se elige el Paso 2 por creer que despejar $y = 18 - x$ está mal; el despeje es correcto y el error viene antes.",
-     "C": "Se elige el Paso 3 por creer que reemplazar en la segunda ecuación es incorrecto; el reemplazo es válido sobre la ecuación ya mal planteada."
+     "B": "Paso 2: despejar $y=18-x$ es correcto, porque de $x+y=18$ se obtiene esa expresión. El error viene antes, en el planteamiento del sistema.",
+     "C": "Paso 3: reemplazar $y$ en la segunda ecuación es válido, pero aquí la ecuación ya tiene el error de los 25 000 pesos y el reemplazo lo arrastra.",
+     "D": "Paso 4: la resolución es coherente con el paso 1 mal planteado y da 36 poleras personalizadas. El resultado está mal solo por el error anterior."
     }
-   }
+   },
+   "subtopic": "m1-ecuaciones"
   },
   {
    "id": "m1-2026-invierno-q37",
@@ -1834,18 +2007,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Para hallar $x$ se resuelve la ecuación lineal $8x - 5 = 35$: se suma 5 a ambos lados y luego se divide por 8.",
+    "summary": "Se trata de resolver la ecuación lineal $8x-5=35$, despejando $x$ después de igualar la función al valor dado.",
+    "planteamiento": "Se pide el valor de $x$ tal que $g(x)=35$. Datos: $g(x)=8x-5$, con dominio en los números reales.",
     "steps": [
-     "Por definición, $g(x) = 35$ significa $8x - 5 = 35$.",
-     "Sumando 5 a ambos lados: $8x = 40$.",
-     "Dividiendo por 8: $x = 5$.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Se iguala la función al valor dado: $8x-5=35$.",
+     "Se suma 5 a ambos lados para aislar el término con $x$: $8x=35+5=40$.",
+     "Se divide entre 8 ambos lados: $x=\\frac{40}{8}=5$.",
+     "Comprobación: $g(5)=8\\cdot 5-5=40-5=35$, que coincide con el valor dado. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Se elige la A al restar 5 en el lado derecho en vez de sumarlo: $8x = 35 - 5 = 30$, de donde $x = \\frac{15}{4}$.",
-     "C": "Se elige la C al multiplicar por 8 en vez de dividir, calculando $8 \\cdot (35 - 5) = 240$."
+     "A": "$\\frac{15}{4}$ resta 5 en vez de sumarlo: $8x=35-5=30$, de donde $x=3{,}75$. El signo del término independiente quedó al revés.",
+     "C": "240 multiplica por 8 en vez de dividir: $8\\cdot(35-5)=240$, es decir, invierte la operación.",
+     "D": "275 calcula $g(35)=8\\cdot 35-5$: evalúa la función en 35 en vez de resolver la ecuación $g(x)=35$, que pide el valor de $x$."
     }
-   }
+   },
+   "subtopic": "m1-funcion-afin"
   },
   {
    "id": "m1-2026-invierno-q38",
@@ -1882,19 +2058,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como las máquinas pintan a rapidez constante, la gráfica debe cambiar de pendiente a las 4 horas, cuando se agrega una segunda máquina.",
+    "summary": "Como las máquinas pintan a rapidez constante, la gráfica cambia de pendiente en la hora 4, cuando se agrega una segunda máquina, y pasa a ser más empinada.",
+    "planteamiento": "Se pide el gráfico que muestra la relación entre el tiempo de trabajo y los kilómetros pintados. Datos: las primeras 4 horas trabajó una máquina y las 2 horas siguientes trabajaron dos, en un total de 6 horas.",
     "steps": [
-     "Sea $r$ los km que pinta una máquina por hora.",
-     "En las primeras 4 horas, con una máquina, se pintan $4r$ km y la gráfica es una recta de pendiente $r$.",
-     "En las 2 horas siguientes, con dos máquinas, la pendiente es $2r$ y el total llega a $4r + 4r = 8r$ km a las 6 horas.",
-     "Solo la gráfica B tiene un quiebre en la hora 4 y la pendiente se duplica después de ese punto.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Sea $r$ los kilómetros que pinta una máquina por hora. En las primeras 4 horas, con una máquina, se pintan $4r$ km: la gráfica es una recta de pendiente $r$.",
+     "Desde la hora 4 hasta la hora 6 trabajan dos máquinas, que pintan $2r$ km por hora: la pendiente se duplica.",
+     "En las 2 horas siguientes se pintan $2\\cdot 2r=4r$ km, así que al llegar a la hora 6 el total es $4r+4r=8r$ km.",
+     "El gráfico correcto debe tener un quiebre en la hora 4, con una pendiente mayor después, y terminar en un total de $8r$ km.",
+     "Solo el gráfico B muestra el quiebre en la hora 4 y una pendiente mayor después de ese punto, así que es el que representa la situación. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Se elige la A al ubicar el quiebre en la hora 2 en vez de la hora 4, cuando empieza el trabajo con dos máquinas.",
-     "C": "Se elige la C al tener el quiebre en la hora 4 pero con pendiente menor después; eso sugiere que la segunda máquina pinta más lento, y no es el caso."
+     "A": "Ubica el quiebre en la hora 2 en vez de la hora 4, es decir, cambia el momento en que se agrega la segunda máquina.",
+     "C": "Tiene el quiebre en la hora 4, pero la pendiente disminuye después. Eso sugeriría que la segunda máquina pinta más lento, lo que no ocurre.",
+     "D": "Tiene un quiebre en la hora 2 y luego una pendiente menor, lo que no corresponde a una disminución de la rapidez en el trabajo con dos máquinas."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q39",
@@ -1931,18 +2110,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El precio tiene una parte proporcional al número de páginas, 115 por página, y una tarifa fija de 27 000 pesos que no depende de las páginas.",
+    "summary": "El precio tiene una parte que depende del número de páginas, 115 pesos cada una, y una tarifa fija de 27 000 pesos que no cambia con las páginas.",
+    "planteamiento": "Se pide la función que modela el precio de empastar $x$ páginas. Datos: 115 pesos por página y una tarifa fija de 27 000 pesos por el servicio.",
     "steps": [
-     "Costo por páginas: $115 \\cdot x$ pesos.",
-     "Tarifa fija del servicio: 27 000 pesos, independiente de $x$.",
-     "Precio total: $115x + 27\\,000$ pesos, que corresponde a $g(x) = 115x + 27\\,000$.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Costo por páginas: $115\\cdot x$ pesos, porque cada página cuesta 115 pesos.",
+     "Tarifa fija: 27 000 pesos, que se paga una sola vez sin importar cuántas páginas tenga la tesis.",
+     "Precio total: la suma de ambas partes, $115x+27\\,000$ pesos.",
+     "Se nombra la función $g$: $g(x)=115x+27\\,000$.",
+     "Comprobación: si $x=0$ el precio es 27 000 pesos, solo la tarifa fija; si $x=100$, el precio es $11\\,500+27\\,000=38\\,500$ pesos. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Se elige la A al olvidar la tarifa fija de 27 000 pesos.",
-     "C": "Se elige la C al multiplicar también la tarifa fija por el número de páginas: $(115 + 27\\,000)x$."
+     "A": "$f(x)=115x$ olvida la tarifa fija de 27 000 pesos, que se cobra por el servicio aunque la tesis tenga pocas páginas.",
+     "C": "$h(x)=(115+27\\,000)x$ multiplica también la tarifa fija por el número de páginas; para 100 páginas daría 2 711 500 pesos.",
+     "D": "$k(x)=115+27\\,000x$ invierte los roles: suma 115 una sola vez y multiplica la tarifa fija por las páginas."
     }
-   }
+   },
+   "subtopic": "m1-funcion-afin"
   },
   {
    "id": "m1-2026-invierno-q40",
@@ -1979,18 +2162,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La distancia de reacción es proporcional a la rapidez, con constante $a = 0{,}3$ metros por km/h, y se usa para estimar el caso de 30 km/h.",
+    "summary": "La distancia de reacción es proporcional a la rapidez: $f(x)=ax$, con $a$ obtenido de la tabla, y luego se evalúa en 30 km/h.",
+    "planteamiento": "Se pide la distancia de reacción para una rapidez de 30 km/h. Datos de la tabla: 110 km/h producen 33 m y 70 km/h producen 21 m; el modelo es $f(x)=ax$.",
     "steps": [
-     "Con $f(x) = ax$ y el dato de 110 km/h y 33 m: $a = \\frac{33}{110} = 0{,}3$.",
-     "Comprobación con 70 km/h: $0{,}3 \\cdot 70 = 21$ m, lo que coincide con la tabla.",
-     "Para 30 km/h: $f(30) = 0{,}3 \\cdot 30 = 9$ m.",
-     "Por lo tanto, la alternativa correcta es la C."
+     "Con el dato 110 km/h y 33 m: $a=\\frac{33}{110}=0{,}3$ metros por km/h.",
+     "Comprobación con el segundo dato: $0{,}3\\cdot 70=21$ m, que coincide con la tabla, así que el modelo es consistente.",
+     "Para una rapidez de 30 km/h: $f(30)=0{,}3\\cdot 30=9$ m.",
+     "Comprobación de proporción: $\\frac{9}{30}=0{,}3=\\frac{33}{110}$, el mismo cociente de la tabla.",
+     "Así, la distancia de reacción para 30 km/h es de 9 metros. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "Se elige la B al aproximar $a$ como $\\frac{1}{3}$ en vez de $0{,}3$, lo que da $30 \\cdot \\frac{1}{3} = 10$ m.",
-     "A": "Se elige la A al tomar la mitad de la rapidez como distancia, $\\frac{30}{2} = 15$ m, sin usar la constante de la tabla."
+     "A": "15 m toma la mitad de la rapidez como distancia, $\\frac{30}{2}=15$, sin usar la constante $a$ que aparece en la tabla.",
+     "B": "10 m aproxima $a$ como $\\frac{1}{3}$ en vez de $0{,}3$, lo que da $30\\cdot\\frac{1}{3}=10$ m. La aproximación no respeta los datos.",
+     "D": "1 m se obtiene al usar $a=\\frac{1}{30}$, de modo que $30\\cdot\\frac{1}{30}=1$. La constante correcta es 0,3, no $\\frac{1}{30}$."
     }
-   }
+   },
+   "subtopic": "m1-funcion-afin"
   },
   {
    "id": "m1-2026-invierno-q41",
@@ -2027,18 +2214,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Si el aumento anual es constante, la producción crece en una progresión aritmética de 2 millones de toneladas por año.",
+    "summary": "Como el aumento anual es constante, la producción forma una progresión aritmética: se suman 2 millones de toneladas por cada año que pasa.",
+    "planteamiento": "Se pide la producción de basura tecnológica en 2030. Datos: 57,4 millones de toneladas en 2021 y 59,4 millones en 2022, con el mismo aumento cada año.",
     "steps": [
-     "Aumento anual: $59{,}4 - 57{,}4 = 2$ millones de toneladas.",
-     "Desde 2021 hasta 2030 hay 9 aumentos anuales: $57{,}4 + 9 \\cdot 2 = 75{,}4$ millones de toneladas.",
-     "Comprobación desde 2022: $59{,}4 + 8 \\cdot 2 = 75{,}4$ millones de toneladas.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Aumento anual: $59{,}4-57{,}4=2$ millones de toneladas.",
+     "Cantidad de aumentos entre 2021 y 2030: $2030-2021=9$.",
+     "Producción en 2030: $57{,}4+9\\cdot 2=57{,}4+18=75{,}4$ millones de toneladas.",
+     "Comprobación desde 2022: hay $2030-2022=8$ aumentos, así que $59{,}4+8\\cdot 2=59{,}4+16=75{,}4$ millones.",
+     "Ambas vías dan el mismo valor. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Se elige la A al contar 10 aumentos en vez de 9, $57{,}4 + 10 \\cdot 2 = 77{,}4$, lo que equivale a empezar desde 2020.",
-     "C": "Se elige la C al contar solo 8 aumentos desde 2021, $57{,}4 + 8 \\cdot 2 = 73{,}4$, lo que deja el año 2030 un año antes."
+     "A": "77,4 corresponde a 10 aumentos desde 2021, lo que llevaría al año 2031: se cuenta un año de más.",
+     "C": "73,4 corresponde a 8 aumentos desde 2021, es decir, al año 2029: se cuenta un año de menos.",
+     "D": "71,4 corresponde a 7 aumentos, o sea, al año 2028. Cuenta mal los años transcurridos."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q42",
@@ -2075,18 +2266,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El área conduce a una ecuación cuadrática cuya raíz positiva da el ancho; con el ancho y el largo se calcula el perímetro.",
+    "summary": "Con el área y la diferencia entre largo y ancho se arma una ecuación cuadrática; su raíz positiva da el ancho, y con él se calcula el perímetro.",
+    "planteamiento": "Se pide el perímetro de un terreno rectangular de área $104$ m², cuyo largo mide 5 m más que su ancho.",
     "steps": [
-     "Sea $w$ el ancho en metros, el largo es $w + 5$ y el área $w(w + 5) = 104$.",
-     "Ordenando: $w^{2} + 5w - 104 = 0$, y factorizando $(w + 13)(w - 8) = 0$.",
-     "Como las longitudes son positivas, $w = 8$ m y el largo es $13$ m.",
-     "Perímetro: $2(8 + 13) = 42$ m.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Sea $w$ el ancho en metros; el largo es $w+5$.",
+     "Área: $w(w+5)=104$, que se ordena como $w^{2}+5w-104=0$.",
+     "Factorización: se buscan dos números cuyo producto sea $-104$ y cuya suma sea $5$; son $13$ y $-8$. Así, $(w+13)(w-8)=0$.",
+     "Las soluciones son $w=-13$ y $w=8$. Como una longitud es positiva, $w=8$ m.",
+     "El largo es $8+5=13$ m. Comprobación del área: $8\\cdot 13=104$ m².",
+     "Perímetro: $2\\,(8+13)=2\\cdot 21=42$ m. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "D": "Se elige la D al calcular solo el semiperímetro, $8 + 13 = 21$ m, sin multiplicar por 2."
+     "A": "62 m corresponde a un rectángulo de 13 m por 18 m, que tiene área 234 m² y no cumple la condición. Se obtiene si se toma 18 m como segundo lado sin verificar el área.",
+     "C": "31 m suma 8 + 13 + 5 + 5, un perímetro mal armado que suma dos veces el excedente de 5 m y no corresponde a un rectángulo de 8 m por 13 m.",
+     "D": "21 m es el semiperímetro, $8+13$. Falta multiplicar por 2."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q43",
@@ -2123,18 +2319,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La parábola tiene vértice en (30, 25) y cruza el suelo en 0 y 60 cm, así que es simétrica respecto de 30 cm; por eso 10 y 50 cm tienen la misma altura.",
+    "summary": "La parábola es simétrica respecto de su vértice, en $x=30$ cm; por eso las alturas a 10 cm y a 50 cm coinciden.",
+    "planteamiento": "Se pide la afirmación verdadera sobre la parábola. Datos del gráfico: vértice en $(30,\\,25)$; la altura vuelve a cero en 0 cm y en 60 cm horizontales; la curva es simétrica respecto de $x=30$.",
     "steps": [
-     "El vértice está en (30 cm, 25 cm): la altura máxima es 25 cm y se alcanza a los 30 cm horizontales.",
-     "El chorro vuelve al suelo a los 60 cm; así que la distancia horizontal máxima es 60 cm, no 25 cm.",
-     "Simetría respecto de $x = 30$: $30 - 20 = 10$ y $30 + 20 = 50$, por lo que la altura en 10 cm y en 50 cm es la misma.",
-     "Por lo tanto, la alternativa correcta es la C."
+     "El vértice, el punto más alto, está en $(30,25)$: la altura máxima es 25 cm y se alcanza a 30 cm horizontales.",
+     "El chorro vuelve al suelo a los 60 cm, por lo que la distancia horizontal total es 60 cm, no 25 cm.",
+     "Como la parábola es simétrica respecto de $x=30$, un punto a 20 cm a la izquierda del vértice tiene la misma altura que uno a 20 cm a la derecha: $30-20=10$ y $30+20=50$.",
+     "Por lo tanto, la altura a 10 cm y la altura a 50 cm son iguales, lo que hace verdadera la afirmación de la alternativa C. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "Se elige la B al confundir la distancia final de 60 cm con la altura máxima, que es 25 cm.",
-     "D": "Se elige la D al confundir el punto donde el chorro cae, a 60 cm, con el vértice, donde la altura máxima se alcanza a los 30 cm."
+     "A": "25 cm es la altura máxima, no la distancia horizontal máxima; esta última es 60 cm, donde el chorro cae al suelo.",
+     "B": "60 cm es la distancia horizontal en que el chorro toca el suelo, no su altura: la altura máxima es 25 cm.",
+     "D": "La altura máxima se alcanza a 30 cm horizontales, no a 60 cm; 60 cm es el punto donde la altura vuelve a cero."
     }
-   }
+   },
+   "subtopic": "m1-cuadratica"
   },
   {
    "id": "m1-2026-invierno-q44",
@@ -2171,17 +2370,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que convertir la cantidad de cuadrados en centímetros antes de calcular el perímetro del rectángulo.",
+    "summary": "Hay que convertir la cantidad de cuadrados en centímetros, multiplicando por el lado de 2 cm, antes de calcular el perímetro del rectángulo.",
+    "planteamiento": "Se pide el perímetro de la malla. Datos: cuadrados de lado 2 cm; la malla tiene 100 cuadrados de alto y 200 cuadrados de largo.",
     "steps": [
-     "Largo de la malla: $200 \\cdot 2 = 400$ cm.",
-     "Alto de la malla: $100 \\cdot 2 = 200$ cm.",
-     "Perímetro: $2(400 + 200) = 1200$ cm.",
-     "Por lo tanto, la alternativa correcta es la B."
+     "Largo de la malla: $200\\cdot 2=400$ cm, porque cada cuadrado mide 2 cm.",
+     "Alto de la malla: $100\\cdot 2=200$ cm.",
+     "Perímetro de un rectángulo: $2\\cdot(\\text{largo}+\\text{alto})$.",
+     "Cálculo: $2\\cdot(400+200)=2\\cdot 600=1200$ cm.",
+     "Comprobación: los cuatro lados suman $400+200+400+200=1200$ cm. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Se elige la A al sumar la cantidad de cuadrados sin multiplicar por el lado de 2 cm: $2(200 + 100) = 600$ cm."
+     "A": "600 cm es el semiperímetro, $400+200$, es decir, no se multiplica por 2. Si además se usan cuadrados como centímetros, $2(200+100)=600$.",
+     "C": "40 000 cm es $200\\cdot 100\\cdot 2$: multiplica las cantidades de cuadrados en vez de sumarlas. El perímetro es una suma de lados, no un producto.",
+     "D": "160 000 cm es $2\\cdot(400\\cdot 200)$, el doble del área de la malla, que es 80 000 cm². Calcula un área y la expresa como perímetro."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q45",
@@ -2218,18 +2422,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El área total dividida entre los 10 cuadrados y la raíz del área de cada uno son correctas; el error está en contar 29 lados para el perímetro, cuando el contorno de la figura tiene 18 lados.",
+    "summary": "Al contar solo los lados del contorno de la figura salen 18 lados, no 29: los lados que dos cuadrados comparten no forman parte del perímetro. El error está en el Paso 3.",
+    "planteamiento": "Se pide en qué paso del procedimiento se cometió el error. Datos: la figura está formada por $10$ cuadrados congruentes con área total $160\\ \\mathrm{cm^2}$; cada cuadrado tiene área $16\\ \\mathrm{cm^2}$ y lado $4\\ \\mathrm{cm}$, según los pasos 1 y 2 del procedimiento.",
     "steps": [
-     "El área total es 160 cm² y la figura tiene 10 cuadrados congruentes, así que cada uno mide $\\frac{160}{10}=16$ cm²: el Paso 1 es correcto.",
-     "Como $\\sqrt{16}=4$, el lado de cada cuadrado mide 4 cm: el Paso 2 también es correcto.",
-     "Para el perímetro se cuentan solo los lados exteriores: 7 en la fila superior, 2 en el cuadrado central, 4 en la fila intermedia (los dos extremos superiores y sus laterales) y 5 en la fila inferior (tres bases y dos laterales). Son 18 lados, no 29, porque los lados compartidos entre cuadrados no forman parte del contorno.",
-     "El perímetro real es $18 \\cdot 4 = 72$ cm, así que el Paso 4 hereda el error del Paso 3. Por lo tanto, la alternativa correcta es la C."
+     "El área de cada cuadrado es $\\frac{160}{10}=16\\ \\mathrm{cm^2}$, porque los 10 cuadrados son congruentes y el área total se reparte en partes iguales. Este resultado es correcto.",
+     "Si $l$ es el lado de un cuadrado, se cumple $l^2=16$. Como el lado es positivo, $l=\\sqrt{16}=4\\ \\mathrm{cm}$, porque $4\\cdot 4=16$. Este resultado también es correcto.",
+     "El perímetro es la suma de los lados exteriores, es decir, los lados que no tocan otro cuadrado. En la fila superior, el cuadrado izquierdo aporta 3 lados (superior, izquierdo e inferior), el central aporta 1 (solo el superior, porque su parte inferior toca el cuadrado de unión) y el derecho aporta 3 (superior, derecho e inferior). Total de la fila superior: $3+1+3=7$ lados.",
+     "El cuadrado de unión, que está bajo el cuadrado central de la fila superior, tiene su lado superior y su lado inferior tocando otros cuadrados. Solo sus dos laterales son exteriores, así que aporta $2$ lados.",
+     "En el bloque inferior de 2 filas por 3 columnas, el cuadrado superior central queda cubierto por el cuadrado de unión y no aporta lados. Los cuadrados superior izquierdo y superior derecho aportan 2 lados cada uno (su superior y su lateral exterior). En la fila inferior, el cuadrado izquierdo aporta 2 (lateral e inferior), el central aporta 1 (solo el inferior) y el derecho aporta 2 (lateral e inferior). Total del bloque: $2+0+2+2+1+2=9$ lados.",
+     "Sumando las tres partes, el contorno tiene $7+2+9=18$ lados, y no 29 como indica el Paso 3. Con lados de $4$ cm, el perímetro correcto es $18\\cdot 4=72$ cm, y no los $116$ cm que resultan del Paso 4.",
+     "El Paso 4 hace bien la multiplicación $29\\cdot 4=116$, por lo que el error está en el número de lados que se usa, es decir, en el Paso 3. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "Paso 2: quien revisa solo la raíz cuadrada puede sospechar del lado, pero $\\sqrt{16}=4$ está bien calculado.",
-     "D": "Paso 4: la multiplicación $29 \\cdot 4 = 116$ está bien hecha; el error es el número de lados que se multiplica, no la operación."
+     "A": "En el Paso 1 no hay error: $\\frac{160}{10}=16$ es el área de cada cuadrado. Quien elige esta alternativa piensa que el reparto del área es el que falla y no revisa el conteo de lados.",
+     "B": "En el Paso 2 tampoco hay error: $\\sqrt{16}=4$ es correcto y el lado de cada cuadrado mide 4 cm. Quien lo elige confunde el lado con el perímetro y busca el error en la raíz cuadrada.",
+     "D": "En el Paso 4, la multiplicación $29\\cdot 4=116$ está bien hecha. El problema es que se multiplica un número de lados incorrecto, y no la operación en sí."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q46",
@@ -2266,17 +2476,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada tensor es la diagonal de un rectángulo de 200 cm de alto y 150 cm de base, y se calcula con el teorema de Pitágoras.",
+    "summary": "Cada tensor es la diagonal de un rectángulo de 200 cm de alto y 150 cm de base. Por el teorema de Pitágoras, su medida es la raíz de la suma de los cuadrados de esos dos lados.",
+    "planteamiento": "Se pide la expresión que da la medida de cada tensor, en centímetros. Datos: el rectángulo de la pared tiene altura $200\\ \\mathrm{cm}$ y base $150\\ \\mathrm{cm}$; el tensor une dos vértices opuestos, es decir, es la diagonal de ese rectángulo.",
     "steps": [
-     "En la imagen, cada tensor une dos vértices opuestos del rectángulo de la pared: uno de sus lados mide 200 cm (la altura) y el otro 150 cm (la base).",
-     "El tensor es la hipotenusa de un triángulo rectángulo, por lo que su medida $t$ cumple $t^{2}=200^{2}+150^{2}$.",
-     "Como $200^{2}+150^{2}=40000+22500=62500$, la medida es $t=\\sqrt{200^{2}+150^{2}}=250$ cm. Por lo tanto, la alternativa correcta es la C."
+     "El tensor une dos vértices opuestos del rectángulo. Al trazar esa diagonal se forma un triángulo rectángulo: sus catetos son la altura de $200\\ \\mathrm{cm}$ y la base de $150\\ \\mathrm{cm}$, y el ángulo recto está en la esquina donde se encuentran.",
+     "El tensor es la hipotenusa de ese triángulo. Si $t$ es su medida, el teorema de Pitágoras dice que $t^2=200^2+150^2$, porque el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos.",
+     "Para obtener $t$ se aplica raíz cuadrada a ambos lados. Como $t$ es positivo, se obtiene $t=\\sqrt{200^2+150^2}$, que es la expresión buscada.",
+     "Se comprueba el valor: $200^2=40\\,000$ y $150^2=22\\,500$, así que $t=\\sqrt{62\\,500}=250\\ \\mathrm{cm}$, porque $250^2=62\\,500$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "$\\sqrt{200^{2}-150^{2}}$: restar en vez de sumar da una medida menor que el cateto de 200 cm, imposible para la hipotenusa.",
-     "D": "$200^{2}+150^{2}$ sin raíz: da 62500, que es el cuadrado de la medida y no la medida en cm."
+     "A": "$\\sqrt{200^2-150^2}$ resta en vez de sumar. Da $\\sqrt{17\\,500}\\approx 132{,}3$ cm, una medida menor que el cateto de 200 cm, lo que es imposible para la hipotenusa.",
+     "B": "$200^2-150^2=17\\,500$ combina la resta con el cuadrado y no tiene raíz. Es un valor que no corresponde a la medida en centímetros del tensor.",
+     "D": "$200^2+150^2=62\\,500$ sin raíz da el cuadrado de la medida, en cm², y no la longitud del tensor en cm."
     }
-   }
+   },
+   "subtopic": "m1-racionales"
   },
   {
    "id": "m1-2026-invierno-q47",
@@ -2313,17 +2527,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Para pintar el exterior sin la base inferior hay que sumar la tapa superior y las cuatro caras laterales del prisma.",
+    "summary": "Como la base inferior no se pinta, hay que sumar la tapa superior y las cuatro caras laterales del prisma, y no el área total del mueble.",
+    "planteamiento": "Se pide la superficie que debe pintarse, en cm², del exterior del mueble sin la base inferior. Datos: prisma recto de base rectangular con lados de $80\\ \\mathrm{cm}$ y $40\\ \\mathrm{cm}$, y altura de $180\\ \\mathrm{cm}$.",
     "steps": [
-     "El mueble tiene base rectangular de 80 cm por 40 cm y altura de 180 cm.",
-     "Las dos caras de 80 cm por 180 cm suman $2 \\cdot 14400 = 28800$ cm², y las dos de 40 cm por 180 cm suman $2 \\cdot 7200 = 14400$ cm²; en total, $43200$ cm² en los laterales.",
-     "La tapa superior mide $80 \\cdot 40 = 3200$ cm².",
-     "Total a pintar: $43200 + 3200 = 46400$ cm², sin incluir la base inferior. Por lo tanto, la alternativa correcta es la C."
+     "Las superficies que se pintan son la tapa superior, de $80\\cdot 40$, y las cuatro caras laterales: dos caras de $80\\cdot 180$ y dos caras de $40\\cdot 180$. La base inferior queda fuera del trabajo.",
+     "Las dos caras de $80\\ \\mathrm{cm}\\times 180\\ \\mathrm{cm}$ suman $2\\cdot 80\\cdot 180=2\\cdot 14\\,400=28\\,800\\ \\mathrm{cm^2}$.",
+     "Las dos caras de $40\\ \\mathrm{cm}\\times 180\\ \\mathrm{cm}$ suman $2\\cdot 40\\cdot 180=2\\cdot 7\\,200=14\\,400\\ \\mathrm{cm^2}$.",
+     "El área lateral total es $28\\,800+14\\,400=43\\,200\\ \\mathrm{cm^2}$.",
+     "La tapa superior mide $80\\cdot 40=3\\,200\\ \\mathrm{cm^2}$.",
+     "Se suma lo que se pinta: $43\\,200+3\\,200=46\\,400\\ \\mathrm{cm^2}$, sin incluir la base inferior. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "49600 cm²: incluye también la base inferior de 3200 cm², que el enunciado excluye, porque $46400+3200=49600$."
+     "A": "24 800 cm² corresponde a una sola cara de 80 × 180 (14 400 cm²), una sola de 40 × 180 (7 200 cm²) y la tapa (3 200 cm²). Quien lo elige olvida la cara repetida de cada par, porque el prisma tiene dos caras de cada tipo.",
+     "B": "28 000 cm² se acerca a las dos caras de 80 × 180 (28 800 cm²), pero ignora las caras de 40 × 180 y la tapa superior. Es un valor que no resulta de ninguna suma exacta de las superficies del mueble.",
+     "D": "49 600 cm² incluye también la base inferior de 3 200 cm², que el enunciado excluye, porque $46\\,400+3\\,200=49\\,600$."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q48",
@@ -2360,18 +2580,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El doblez produce figuras simétricas respecto de la línea del pliegue, así que la única letra que sirve es la que tiene eje de simetría vertical.",
+    "summary": "Al doblar la hoja, el corte se refleja respecto de la línea del pliegue. Por eso solo puede obtenerse una figura con eje de simetría vertical, y la M es la única que lo tiene.",
+    "planteamiento": "Se pide cuál de las letras puede obtenerse doblando el papel a la mitad, recortando una mitad de la figura y desdoblando. Datos: el pliegue actúa como eje de simetría, y la figura final es la mitad recortada más su reflejo respecto de ese eje.",
     "steps": [
-     "Al doblar la hoja a la mitad y recortar un dibujo junto al pliegue, al desdoblar aparece el reflejo exacto de esa mitad respecto de la línea del doblez.",
-     "En el ejemplo del corazón, el dibujo se recorta desde el pliegue (línea punteada) y el resultado queda simétrico a ambos lados de esa línea vertical.",
-     "La F tiene sus brazos solo hacia un lado, la J es asimétrica y la Z solo tiene simetría de giro de 180°, que un doblez no puede producir.",
-     "La M se divide en dos mitades iguales por su eje vertical, por lo que es la única que se puede obtener con esta técnica. Por lo tanto, la alternativa correcta es la C."
+     "Al doblar la hoja a la mitad, el pliegue es la línea sobre la que se superponen las dos mitades. Si se recorta un dibujo junto al pliegue y luego se desdobla, aparece el reflejo exacto de esa parte respecto de la línea del doblez.",
+     "En el ejemplo del corazón, el corte se hace a partir de la línea punteada del pliegue. Al desdoblar, la figura queda con el mismo contorno a ambos lados de esa línea vertical, por lo que el resultado es simétrico respecto de ella.",
+     "Para decidir qué letra sirve hay que buscar un eje de simetría vertical. La F tiene sus brazos solo hacia la derecha, así que no se repite a ningún lado de un eje vertical.",
+     "La J tiene el gancho curvo hacia un solo lado. La figura completa queda desplazada hacia ese lado y no se repite al otro lado del eje.",
+     "La Z tiene simetría de giro de 180° alrededor de su centro, pero no tiene simetría de reflexión respecto de un eje vertical. Como el doblez solo produce reflexiones, la Z no puede obtenerse con esta técnica.",
+     "La M se divide en dos mitades iguales por su eje vertical: el lado izquierdo es el reflejo exacto del lado derecho. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "Z: tiene simetría de giro en el centro, pero el doblez solo produce reflexión; quien la elige confunde ambos tipos de simetría.",
-     "B": "J: el trazo inferior curvo puede parecer simétrico, pero la figura completa queda desplazada hacia un lado del eje."
+     "A": "La F tiene sus brazos hacia un solo lado. Quien la elige busca una parte que se repita, pero no hay un eje vertical que deje las dos mitades iguales.",
+     "B": "La J tiene un trazo inferior curvo que puede parecer simétrico. Sin embargo, la figura completa queda desplazada hacia un lado del eje y no coincide con su reflejo.",
+     "D": "La Z tiene simetría de giro en el centro, pero el doblez solo produce reflexión. Quien la elige confunde ambos tipos de simetría."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q49",
@@ -2408,16 +2633,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que sumar los desplazamientos con signo en cada eje y describir el resultado respecto del punto inicial.",
+    "summary": "Hay que sumar los desplazamientos con su signo en cada eje, tomando el este y el norte como positivos, y luego describir la posición final respecto del punto de partida.",
+    "planteamiento": "Se pide la ubicación final del barco respecto de su punto inicial. Datos: los movimientos son 5 km al oeste, 4 km al norte, 3 km al este, 9 km al sur y 6 km al oeste.",
     "steps": [
-     "Eje horizontal, con el este positivo: $-5+3-6=-8$, es decir, 8 km al oeste.",
-     "Eje vertical, con el norte positivo: $4-9=-5$, es decir, 5 km al sur.",
-     "La ubicación final respecto del inicio es 8 km al oeste y 5 km al sur. Por lo tanto, la alternativa correcta es la A."
+     "Se separan los movimientos por eje. En el eje horizontal, con el este positivo: 5 km al oeste son $-5$, 3 km al este son $+3$ y 6 km al oeste son $-6$.",
+     "Suma horizontal: $-5+3-6=-8$. El barco queda 8 km al oeste del punto inicial.",
+     "En el eje vertical, con el norte positivo: 4 km al norte son $+4$ y 9 km al sur son $-9$.",
+     "Suma vertical: $4-9=-5$. El barco queda 5 km al sur del punto inicial.",
+     "Como ambas componentes son negativas, la posición final es 8 km al oeste y 5 km al sur del inicio. El orden de los tramos no cambia el resultado, porque solo importa la suma de cada eje.",
+     "Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "C": "8 km al este y 5 km al norte: es el vector opuesto. Se produce al describir la posición del inicio respecto del barco en lugar de la del barco respecto del inicio."
+     "B": "14 km al oeste y 13 km al norte mezcla los ejes y no respeta los signos: $5+9=14$ y $4+9=13$. Quien lo elige suma kilómetros sin considerar la dirección de cada tramo.",
+     "C": "8 km al este y 5 km al norte es el vector opuesto al correcto. Se produce al describir la posición del punto inicial respecto del barco, en vez de la posición del barco respecto del inicio.",
+     "D": "14 km al este y 13 km al sur cambia el sentido horizontal y mezcla los valores de los tramos. No corresponde a ninguna suma de los desplazamientos con su signo."
     }
-   }
+   },
+   "subtopic": "m1-funcion-afin"
   },
   {
    "id": "m1-2026-invierno-q50",
@@ -2454,20 +2686,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada operación cambia la curva de forma distinta: el reflejo en BC la deja abombada hacia la izquierda arriba, la simetría central en O la invierte y la rotación de 90° la deja casi horizontal.",
+    "summary": "Hay que aplicar a la curva original cada transformación por separado y luego reconocer el orden de las tres figuras. La reflexión la lleva al lado izquierdo, la simetría central la invierte y la rotación la deja casi horizontal.",
+    "planteamiento": "Se pide la fila de tres cuadrados que muestra, de izquierda a derecha, el reflejo respecto del lado BC, la simetría central en O y la rotación de 90° en sentido antihorario en torno a O. Datos: el cuadrado tiene lado $1$, con $A=(0,0)$, $B=(1,0)$, $C=(1,1)$, $D=(0,1)$ y centro $O=(\\tfrac12,\\tfrac12)$. La curva parte del lado superior cerca de $x\\approx 0{,}6$ y termina en el lado inferior cerca de $x\\approx 0{,}55$.",
     "steps": [
-     "La curva parte del lado superior un poco a la derecha del punto medio, se abomba hacia la derecha a la altura de O y termina en el lado inferior, casi en el centro.",
-     "Reflexión en el lado BC (figura de la izquierda): cada punto queda a la misma distancia de BC, pero al otro lado. La curva empieza un poco a la izquierda del centro y se abomba hacia la izquierda en la mitad superior.",
-     "Simetría central en O (figura del centro): el punto $(x,y)$ pasa a $(1-x,\\,1-y)$ en el cuadrado unitario. La curva queda invertida, abombada hacia la izquierda en la mitad inferior.",
-     "Rotación de 90° en sentido antihorario en torno a O (figura de la derecha): $(x,y)$ pasa a $(1-y,\\,x)$. La curva vertical se vuelve casi horizontal, entra por el borde izquierdo a media altura, sube a una cresta y sale por el borde derecho.",
-     "Solo la alternativa D muestra, en orden, el reflejo abombado hacia la izquierda y arriba, la simetría central al centro y la rotación horizontal a la derecha. Por lo tanto, la alternativa correcta es la D."
+     "Se toman puntos de referencia de la curva: $P_1=(0{,}6;\\,1)$ en el lado superior, $P_2=(0{,}8;\\,0{,}8)$, $P_3=(0{,}7;\\,0{,}5)$ y $P_4=(0{,}55;\\,0)$ en el lado inferior. En la zona de $O$, la curva se abomba hacia la derecha.",
+     "Reflexión respecto de BC, que es el lado derecho ($x=1$): cada punto $(x,y)$ pasa a $(2-x,\\,y)$, fuera del cuadrado. Para dibujarla en la primera posición de la fila se resta 1 a la coordenada $x$, con lo que queda $(1-x,\\,y)$. Así $P_1\\to(0{,}4;\\,1)$, $P_2\\to(0{,}2;\\,0{,}8)$, $P_3\\to(0{,}3;\\,0{,}5)$ y $P_4\\to(0{,}45;\\,0)$: la curva empieza arriba, se abomba hacia la izquierda en la mitad superior y termina abajo.",
+     "Simetría central en O: $(x,y)$ pasa a $(1-x,\\,1-y)$, que deja la figura dentro del mismo cuadrado. Así $P_1\\to(0{,}4;\\,0)$, $P_2\\to(0{,}2;\\,0{,}2)$, $P_3\\to(0{,}3;\\,0{,}5)$ y $P_4\\to(0{,}45;\\,1)$: la curva empieza abajo, se abomba hacia la izquierda en la mitad inferior y termina arriba.",
+     "Rotación de 90° en sentido antihorario en torno a $O$: en coordenadas, $(x,y)\\mapsto(1-y,\\,x)$. Así $P_1\\to(0;\\,0{,}6)$, $P_2\\to(0{,}2;\\,0{,}8)$, $P_3\\to(0{,}5;\\,0{,}7)$ y $P_4\\to(1;\\,0{,}55)$: la curva entra por el borde izquierdo a media altura, sube a una cresta cerca de la parte superior y sale por el borde derecho.",
+     "Al comparar las tres figuras en orden, solo la alternativa D muestra a la izquierda el reflejo abombado hacia la izquierda en la parte superior, al centro la simetría central abombada hacia la izquierda en la parte inferior, y a la derecha la curva casi horizontal con su cresta. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Intercambia las dos primeras figuras: pone la simetría central a la izquierda y el reflejo en BC al centro.",
-     "B": "Usa la simetría central también en la figura de la izquierda, en lugar del reflejo en el lado BC.",
-     "C": "Deja la figura de la izquierda con la curva original, abombada hacia la derecha; no aplica el reflejo."
+     "A": "Intercambia las dos primeras figuras: pone la simetría central a la izquierda y el reflejo en BC al centro. Quien la elige no distingue cuál de las dos transformaciones deja la curva abombada arriba y cuál la deja abombada abajo.",
+     "B": "Usa la simetría central también en la figura de la izquierda, en lugar del reflejo en el lado BC. Esa figura queda abombada hacia la izquierda en la parte inferior, y no en la superior.",
+     "C": "Deja la figura de la izquierda con la curva original, abombada hacia la derecha en la parte superior. No aplica el reflejo, que cambia el lado hacia el que se abomba la curva."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q51",
@@ -2504,17 +2738,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El vector de traslación se obtiene restando las coordenadas de un punto de la figura original a las de su imagen trasladada.",
+    "summary": "El vector de traslación se obtiene restando las coordenadas de un punto de la figura original a las del mismo punto en la figura trasladada.",
+    "planteamiento": "Se pide el vector $(a,b)$ que lleva la figura original a la trasladada. Datos: la figura original ocupa desde $x=4$ hasta $x=9$ y desde $y=10$ hasta $y=14$; la trasladada ocupa desde $x=16$ hasta $x=21$ y desde $y=4$ hasta $y=8$.",
     "steps": [
-     "La figura original ocupa desde $x=4$ hasta $x=9$ y desde $y=10$ hasta $y=14$.",
-     "La figura trasladada ocupa desde $x=16$ hasta $x=21$ y desde $y=4$ hasta $y=8$.",
-     "El desplazamiento horizontal es $16-4=12$ hacia la derecha, y el vertical es $4-10=-6$, es decir, 6 unidades hacia abajo. Por lo tanto, el vector es $(12,\\,-6)$ y la alternativa correcta es la D."
+     "Se comparan bordes homólogos de las dos figuras. El borde izquierdo de la original está en $x=4$ y el de la trasladada en $x=16$, así que el desplazamiento horizontal es $16-4=12$ unidades hacia la derecha.",
+     "El borde superior de la original está en $y=14$ y el de la trasladada en $y=8$. El desplazamiento vertical es $8-14=-6$, es decir, 6 unidades hacia abajo, porque la figura baja.",
+     "Se verifica con otros bordes: el borde derecho pasa de $x=9$ a $x=21$, con $21-9=12$, y el borde inferior pasa de $y=10$ a $y=4$, con $4-10=-6$. Los cuatro bordes dan el mismo desplazamiento.",
+     "El vector de traslación es $(12,\\,-6)$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "C": "$(12,\\,6)$: lee el desplazamiento vertical hacia arriba, cuando la figura baja.",
-     "B": "$(-12,\\,-6)$: invierte el signo horizontal y hace que la figura se mueva a la izquierda."
+     "A": "$(-12,\\,6)$ invierte ambos signos. Es el vector opuesto, y lleva la figura trasladada de vuelta a la izquierda y hacia arriba.",
+     "B": "$(-12,\\,-6)$ invierte el signo horizontal y haría que la figura se mueva a la izquierda, cuando en realidad se desplaza hacia la derecha.",
+     "C": "$(12,\\,6)$ cambia el signo vertical y lee que la figura sube, cuando en realidad baja 6 unidades."
     }
-   }
+   },
+   "subtopic": "m1-transformaciones"
   },
   {
    "id": "m1-2026-invierno-q52",
@@ -2552,17 +2790,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La transformación compuesta es $(x,y)\\to(x+2,\\,6-y)$, así que basta con aplicarla al vértice $(-1,-2)$.",
+    "summary": "La transformación compuesta es $(x,y)\\to(x+2,\\,6-y)$, así que basta con aplicarla a las coordenadas del vértice dado.",
+    "planteamiento": "Se pide la imagen del vértice $(-1,\\,-2)$ tras aplicar la misma reflexión y traslación que transforman $(x,y)$ en $(x+2,\\,6-y)$. Datos: $x=-1$ e $y=-2$.",
     "steps": [
-     "La reflexión respecto del eje X lleva $(x,y)$ a $(x,-y)$, y la traslación lleva eso a $(x+2,\\,-y+6)$, es decir, $(x+2,\\,6-y)$.",
-     "Con $x=-1$ e $y=-2$: $x+2=-1+2=1$ y $6-y=6-(-2)=8$.",
+     "Una reflexión respecto del eje X lleva $(x,y)$ a $(x,-y)$. Luego, una traslación de vector $(2,\\,6)$ lleva ese punto a $(x+2,\\,-y+6)$, es decir, a $(x+2,\\,6-y)$. Esta es la regla que entrega el enunciado.",
+     "Se sustituye $x=-1$ en la primera coordenada: $x+2=-1+2=1$.",
+     "Se sustituye $y=-2$ en la segunda coordenada: $6-y=6-(-2)=6+2=8$, porque restar un número negativo equivale a sumar su valor absoluto.",
      "La imagen del vértice es $(1,\\,8)$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "D": "$(-1,\\,8)$: olvida el desplazamiento horizontal de 2 unidades y solo cambia la coordenada $y$.",
-     "B": "$(1,\\,-8)$: ignora la reflexión y aplica una traslación vertical de $-6$."
+     "B": "$(1,\\,-8)$ ignora la reflexión y aplica una traslación vertical de $-6$, en lugar de calcular $6-y$.",
+     "C": "$(-1,\\,-8)$ deja la coordenada $x$ sin desplazar y calcula la coordenada $y$ como $-(6-y)$. Cambia el signo de toda la expresión, y no solo el de la reflexión.",
+     "D": "$(-1,\\,8)$ olvida el desplazamiento horizontal de 2 unidades y solo calcula la coordenada $y$."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q53",
@@ -2599,15 +2841,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El total de estudiantes es la suma de todas las frecuencias de la tabla.",
+    "summary": "El total de estudiantes es la suma de todas las frecuencias de la tabla, porque cada frecuencia indica cuántas personas obtuvieron ese puntaje.",
+    "planteamiento": "Se pide la cantidad total de estudiantes que rindieron la prueba. Datos: para los puntajes del 1 al 7, las frecuencias son 2, 4, 4, 5, 7, 3 y 5 estudiantes, respectivamente.",
     "steps": [
-     "Las frecuencias para los puntajes del 1 al 7 son 2, 4, 4, 5, 7, 3 y 5.",
-     "Suma total: $2+4+4+5+7+3+5=30$. Por lo tanto, la alternativa correcta es la C."
+     "Cada frecuencia es la cantidad de estudiantes que obtuvo ese puntaje. Por eso el total no es la cantidad de puntajes distintos, sino la suma de todas las frecuencias.",
+     "Se listan las frecuencias: puntaje 1 con 2, puntaje 2 con 4, puntaje 3 con 4, puntaje 4 con 5, puntaje 5 con 7, puntaje 6 con 3 y puntaje 7 con 5.",
+     "Se suman por partes: $2+4=6$, $6+4=10$, $10+5=15$, $15+7=22$, $22+3=25$ y $25+5=30$.",
+     "Como cada estudiante tiene exactamente un puntaje, ningún estudiante se cuenta dos veces. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "7: cuenta solo la cantidad de puntajes distintos (7 valores) y no las personas de cada puntaje."
+     "A": "7 cuenta solo la cantidad de puntajes distintos (7 valores) y no las personas que obtuvieron cada puntaje.",
+     "B": "21 corresponde a sumar solo cuatro filas, $4+5+7+5$, y deja fuera las demás. Quien lo elige no suma toda la columna de frecuencias.",
+     "D": "63 no corresponde a ninguna suma de frecuencias de la tabla. Quien lo elige suma mal los valores o combina puntajes y frecuencias."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q54",
@@ -2644,18 +2892,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que contar, para cada persona, los días en que su barra llega a 5 o más celulares, que es la meta de la tienda.",
+    "summary": "Hay que contar, para cada persona, los días en que su barra llega a 5 o más celulares, porque esa es la meta de la tienda.",
+    "planteamiento": "Se pide la persona que cumplió la meta en más días de la semana. Datos: el gráfico de barras muestra las ventas diarias de cuatro personas de lunes a viernes, y la meta es vender al menos 5 celulares en un día.",
     "steps": [
-     "Gonzalo se mantiene en 4 celulares todos los días: 0 días cumplidos.",
-     "Camilo llega a 5 o más solo el lunes (8) y el martes (9): 2 días.",
-     "Antonia cumple el lunes (5), el miércoles (6), el jueves (7) y el viernes (7): 4 días. Fabiola cumple el jueves (5) y el viernes (7): 2 días.",
-     "Antonia es la que más veces cumplió la meta. Por lo tanto, la alternativa correcta es la C."
+     "Gonzalo vende 4 celulares todos los días, de lunes a viernes. Nunca llega a 5, así que cumple la meta 0 días.",
+     "Camilo vende 8 el lunes, 9 el martes, 2 el miércoles, 2 el jueves y 2 el viernes. Solo cumple la meta el lunes y el martes: 2 días.",
+     "Antonia vende 5 el lunes, 4 el martes, 6 el miércoles, 7 el jueves y 7 el viernes. Cumple la meta el lunes, el miércoles, el jueves y el viernes: 4 días.",
+     "Fabiola vende 1 el lunes, 2 el martes, 3 el miércoles, 5 el jueves y 7 el viernes. Cumple la meta el jueves y el viernes: 2 días.",
+     "Comparando: Gonzalo 0 días, Camilo 2, Antonia 4 y Fabiola 2. El máximo es 4 y corresponde a Antonia. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "Camilo: tiene las barras más altas de la semana (8 y 9), pero solo supera la meta dos días.",
-     "D": "Fabiola: cumple la meta los dos últimos días, pero solo dos veces en total."
+     "A": "Gonzalo mantiene siempre 4 celulares, una cifra constante que queda justo bajo la meta. Es estable, pero nunca cumple la meta.",
+     "B": "Camilo tiene las barras más altas de la semana (8 y 9), pero solo supera la meta dos días. Las barras altas aisladas no cuentan más que la cantidad de días cumplidos.",
+     "D": "Fabiola cumple la meta los dos últimos días, pero solo dos veces en total. Quien la elige se fija en el final de la semana y no en el conteo completo."
     }
-   }
+   },
+   "subtopic": "m1-areas"
   },
   {
    "id": "m1-2026-invierno-q55",
@@ -2692,15 +2944,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Todas las categorías del gráfico de radar usan la misma escala de 0 a 100, y el total se obtiene sumando los cinco valores leídos.",
+    "summary": "El total se obtiene leyendo el valor de cada una de las cinco categorías en la escala radial y luego sumando esos valores.",
+    "planteamiento": "Se pide el total de artículos vendidos en la semana. Datos: el gráfico de radar tiene cinco categorías (flores, árboles, semillas, tierra y arbustos), con una escala de 0 a 100 marcada en anillos de 20 en 20.",
     "steps": [
-     "Lectura de cada categoría: flores 60, árboles 60, semillas 80, tierra 40 y arbustos 100.",
-     "Suma total: $60+60+80+40+100=340$ artículos. Por lo tanto, la alternativa correcta es la B."
+     "Para leer cada categoría se cuentan los anillos desde el centro del gráfico. La escala tiene anillos en 20, 40, 60, 80 y 100, y todas las categorías usan la misma escala.",
+     "Flores: el vértice queda sobre el anillo de 60, por lo que vale 60. Árboles: el vértice también queda sobre el anillo de 60, así que vale 60.",
+     "Semillas: el vértice queda sobre el anillo de 80, que es la lectura más cercana, así que vale 80. Tierra: el vértice queda cerca del anillo de 40, así que vale 40.",
+     "Arbustos: el vértice está sobre el borde exterior, en el anillo de 100, así que vale 100.",
+     "Total: $60+60+80+40+100=340$ artículos. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "C": "300: si se lee arbustos como 60 en vez de 100 (el vértice está en el borde exterior del gráfico), la suma da 300."
+     "A": "500 corresponde a leer las cinco categorías en el borde exterior de 100 cada una, $5\\cdot 100=500$. Quien lo elige ignora la posición real de cada vértice.",
+     "C": "300 se obtiene si se lee arbustos como 60 en vez de 100, porque $60+60+80+40+60=300$. Es un error de lectura en el vértice que está en el borde exterior.",
+     "D": "200 corresponde a leer las cinco categorías en el anillo de 40, $5\\cdot 40=200$. Quien lo elige subestima todos los valores del gráfico."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q56",
@@ -2737,17 +2996,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que calcular el porcentaje de baja asistencia de cada nivel, dividiendo los estudiantes con baja asistencia entre el total del nivel.",
+    "summary": "Hay que calcular el porcentaje de baja asistencia de cada nivel, dividiendo los estudiantes con baja asistencia entre el total de ese nivel, y no comparar las frecuencias absolutas.",
+    "planteamiento": "Se pide el nivel con mayor porcentaje de estudiantes con asistencia baja. Datos: en primeros medios, baja 20 y no baja 60; en segundos medios, baja 25 y no baja 100; en terceros medios, baja 20 y no baja 100; en cuartos medios, baja 25 y no baja 150.",
     "steps": [
-     "Primeros medios: $\\frac{20}{20+60}=\\frac{20}{80}=25\\,\\%$.",
-     "Segundos medios: $\\frac{25}{25+100}=\\frac{25}{125}=20\\,\\%$.",
-     "Terceros medios: $\\frac{20}{20+100}=\\frac{20}{120}\\approx 16{,}7\\,\\%$. Cuartos medios: $\\frac{25}{25+150}=\\frac{25}{175}\\approx 14{,}3\\,\\%$.",
-     "El mayor porcentaje es el de primeros medios. Por lo tanto, la alternativa correcta es la A."
+     "Primeros medios: el total del nivel es $20+60=80$, así que el porcentaje de baja asistencia es $\\frac{20}{80}=0{,}25=25\\,\\%$.",
+     "Segundos medios: el total es $25+100=125$, así que $\\frac{25}{125}=0{,}20=20\\,\\%$.",
+     "Terceros medios: el total es $20+100=120$, así que $\\frac{20}{120}=\\frac{1}{6}\\approx 16{,}7\\,\\%$.",
+     "Cuartos medios: el total es $25+150=175$, así que $\\frac{25}{175}=\\frac{1}{7}\\approx 14{,}3\\,\\%$.",
+     "Comparando los porcentajes: $25\\,\\% > 20\\,\\% > 16{,}7\\,\\% > 14{,}3\\,\\%$. El mayor porcentaje está en primeros medios, así que el seguimiento comienza con ese nivel. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "D": "Cuartos medios: junto con segundos medios tiene 25 estudiantes con baja asistencia, la mayor cantidad absoluta, pero el porcentaje depende del total de cada nivel."
+     "B": "Segundos medios tiene 25 casos de baja asistencia, pero su total de 125 es mayor que el de primeros medios. Su porcentaje es 20 %, menor que el 25 % de primeros medios.",
+     "C": "Terceros medios tiene 20 casos de baja asistencia, igual que primeros medios, pero su total es 120 y el porcentaje baja a 16,7 %. Quien lo elige compara frecuencias absolutas y no porcentajes.",
+     "D": "Cuartos medios tiene, junto con segundos medios, la mayor cantidad absoluta de estudiantes con baja asistencia (25). Pero el porcentaje depende del total de cada nivel, y en cuartos medios ese total es el más grande, así que su porcentaje es el menor."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q57",
@@ -2784,17 +3048,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Las dos gráficas usan escalas distintas (A va de 0 % a 15 % y B de 0 % a 9 %), así que las alturas de las barras no son comparables directamente.",
+    "summary": "Los dos gráficos usan escalas verticales distintas (de 0 % a 15 % en el supermercado A y de 0 % a 9 % en el B), así que la altura de las barras no se puede comparar directamente.",
+    "planteamiento": "Se pide el argumento que justifica por qué los gráficos dificultan comparar los porcentajes de alimentos orgánicos de ambos supermercados. Datos: en A las barras llegan a 11 %, 13 % y 14 %; en B llegan a 2 %, 6 % y 9 %, pero cada gráfico tiene una graduación distinta.",
     "steps": [
-     "El supermercado A tiene el eje vertical de 0 % a 15 % con marcas cada 5 %, y el supermercado B de 0 % a 9 % con marcas cada 3 %.",
-     "Por eso la barra de 9 % del supermercado B se ve tan alta como la de 14 % del supermercado A, aunque el porcentaje real es menor.",
-     "El problema está en la graduación de los ejes, no en los datos. Por lo tanto, la alternativa correcta es la A."
+     "El supermercado A tiene su eje vertical graduado de 0 % a 15 %, con marcas cada 5 %. El supermercado B tiene su eje graduado de 0 % a 9 %, con marcas cada 3 %.",
+     "Como las escalas no son iguales, la misma altura de barra representa porcentajes distintos en cada gráfico. La barra de 9 % del supermercado B y la barra de 14 % del supermercado A se ven casi igual de altas, aunque la diferencia real entre ellas es de 5 puntos porcentuales.",
+     "La dificultad no está en los datos ni en los años, sino en la construcción de los ejes. Son las escalas las que impiden comparar visualmente las alturas de ambos gráficos.",
+     "Se revisan las otras opciones. Que los porcentajes estén a distinta altura es un detalle de rotulado, y que aumenten en el tiempo es cierto en ambos casos pero no explica la dificultad. Que las barras estén juntas no afecta la lectura de los valores. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Que los porcentajes estén a distinta altura es un detalle de rotulado y no impide comparar las barras.",
-     "C": "Que los porcentajes aumenten en el tiempo es cierto en ambos casos, pero no explica la dificultad de comparar."
+     "B": "Que los porcentajes estén a distinta altura es un detalle de rotulado. Cada valor aparece escrito sobre su barra, así que no impide comparar los datos.",
+     "C": "Que los porcentajes aumenten en el tiempo es cierto en ambos supermercados, pero eso describe una tendencia y no explica por qué es difícil comparar los dos gráficos.",
+     "D": "Que las barras estén juntas, una a continuación de otra, es una forma habitual de presentar series por año y no impide la comparación entre supermercados."
     }
-   }
+   },
+   "subtopic": "m1-porcentajes"
   },
   {
    "id": "m1-2026-invierno-q58",
@@ -2831,16 +3099,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El promedio más alto corresponde al país cuyos puntos se concentran por sobre la línea de 26,95 años, el promedio del mundial.",
+    "summary": "El país con mayor promedio es el que tiene la mayoría de sus puntos por sobre la línea de 26,95 años, el promedio mundial, porque sus edades se concentran en valores altos.",
+    "planteamiento": "Se pide el país con mayor promedio de edad entre Irán, España, EE.UU. y Ghana. Datos: el promedio mundial es $26{,}95$ años y la línea horizontal del gráfico marca ese valor; cada punto representa a un futbolista.",
     "steps": [
-     "La línea horizontal marca el promedio general del mundial, 26,95 años.",
-     "Irán tiene la mayoría de sus futbolistas entre 27 y 30 años, con los puntos ubicados por sobre la línea, y casi ninguno bajo los 24 años.",
-     "España, EE.UU. y Ghana tienen gran parte de sus puntos entre 18 y 24 años, bajo la línea. Por lo tanto, la alternativa correcta es la A."
+     "La línea horizontal en $26{,}95$ años funciona como referencia. Un país con la mayoría de sus puntos por sobre la línea tiene un promedio mayor que el mundial, y uno con la mayoría por debajo tiene un promedio menor.",
+     "Irán: la mayoría de sus puntos se ubica entre 27 y 30 años, por sobre la línea, y casi no hay puntos por debajo de 24 años. Sus edades se concentran en valores altos.",
+     "España: la mayor parte de sus puntos está entre 18 y 27 años, por debajo de la línea, y solo algunos quedan por sobre ella. Su promedio queda por debajo del de Irán.",
+     "EE.UU.: tiene un punto muy alto, de 35 años, pero la mayoría de sus puntos se reparte entre 20 y 25 años, bajo la línea. Un valor extremo aislado no alcanza para subir el promedio del grupo.",
+     "Ghana: la mayoría de sus puntos está entre 18 y 24 años, por debajo de la línea. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "C": "EE.UU.: tiene el punto más alto de todo el gráfico (35 años), pero un valor extremo no determina el promedio del grupo."
+     "B": "España tiene algunos puntos altos, de 33 y 34 años, pero la mayor parte de sus edades está por debajo de la línea. Esos pocos valores altos no bastan para superar a Irán.",
+     "C": "EE.UU. tiene el punto más alto de todo el gráfico (35 años), pero un valor extremo no determina el promedio del grupo. La mayoría de sus puntos queda bajo la línea.",
+     "D": "Ghana tiene varios puntos entre 18 y 24 años y algunos más altos, pero su distribución se concentra bajo la línea del promedio mundial."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q59",
@@ -2877,16 +3151,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El promedio de cuatro meses se calcula sumando sus precipitaciones y dividiendo por 4.",
+    "summary": "El promedio de cuatro meses se calcula sumando sus precipitaciones y dividiendo por 4, que es la cantidad de meses considerados.",
+    "planteamiento": "Se pide el promedio de precipitaciones de junio, julio, agosto y septiembre. Datos: según la tabla, junio registra 54 mm, julio 47 mm, agosto 36 mm y septiembre 16 mm.",
     "steps": [
-     "Precipitaciones: junio 54 mm, julio 47 mm, agosto 36 mm y septiembre 16 mm.",
-     "Suma: $54+47+36+16=153$ mm.",
-     "Promedio: $\\frac{153}{4}=38{,}25$ mm. Por lo tanto, la alternativa correcta es la B."
+     "Se ubican los cuatro meses en la tabla: junio tiene 54 mm, julio 47 mm, agosto 36 mm y septiembre 16 mm.",
+     "Suma de las precipitaciones: $54+47=101$; luego $101+36=137$; y finalmente $137+16=153$ mm.",
+     "Son 4 meses, así que el promedio es la suma dividida por 4, porque el promedio es la suma de los datos dividida por la cantidad de datos.",
+     "Promedio: $\\frac{153}{4}=38{,}25$ mm. Comprobación: $38{,}25\\cdot 4=153$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "D": "76,50 mm: divide la suma entre 2 en vez de entre 4, porque $\\frac{153}{2}=76{,}5$."
+     "A": "20,09 mm no coincide con el promedio de estos cuatro meses. Quien lo elige probablemente suma valores de otros meses o divide mal la suma.",
+     "C": "41,50 mm se obtiene si se suma también abril (13 mm), con lo que el total es 166, y luego se divide entre 4. El error está en incluir un mes que no corresponde.",
+     "D": "76,50 mm divide la suma entre 2 en vez de entre 4, porque $\\frac{153}{2}=76{,}5$. Quien lo elige reparte la suma entre la mitad de los meses."
     }
-   }
+   },
+   "subtopic": "m1-tendencia"
   },
   {
    "id": "m1-2026-invierno-q60",
@@ -2923,17 +3202,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El diagrama de cajón muestra mínimo, cuartiles, mediana y máximo; solo permite afirmar cuántos estudiantes caen en un rango de cuartiles, no promedios ni cantidades exactas.",
+    "summary": "El diagrama de cajón muestra mínimo, cuartiles, mediana y máximo. Permite afirmar cuántos estudiantes caen en un rango de cuartiles, pero no el promedio ni cantidades exactas.",
+    "planteamiento": "Se pide la afirmación que se puede deducir del diagrama. Datos: mínimo 80, primer cuartil 140, mediana 270, tercer cuartil 320 y máximo 580 seguidores; el diagrama no indica cuántos estudiantes forman el grupo.",
     "steps": [
-     "Del gráfico: mínimo 80, primer cuartil 140, mediana 270, tercer cuartil 320 y máximo 580.",
-     "Entre el primer cuartil (140) y la mediana (270) queda el 25 % de los estudiantes. Por eso es cierto que al menos un 25 % tiene entre 140 y 270 seguidores.",
-     "Las otras afirmaciones no se deducen: 270 es la mediana y no el promedio, la mediana indica que la mitad tiene 270 o menos, y el diagrama no informa cuántos estudiantes hay. Por lo tanto, la alternativa correcta es la D."
+     "El primer cuartil $Q_1=140$ deja por debajo al 25 % de los estudiantes, y la mediana $Q_2=270$ deja por debajo al 50 %. Entre ambos valores queda el 25 % siguiente de estudiantes.",
+     "Por lo tanto, al menos un 25 % de los estudiantes tiene entre 140 y 270 seguidores. Esa afirmación sí se deduce, porque el tramo entre $Q_1$ y la mediana contiene exactamente ese 25 %.",
+     "La alternativa A habla del promedio, pero el diagrama solo muestra la mediana, 270. No se puede deducir que el promedio sea 270.",
+     "La alternativa B confunde la mediana con un valor exacto: la mediana indica que la mitad de los estudiantes tiene 270 seguidores o menos, no exactamente 270.",
+     "La alternativa C pide una cantidad exacta de estudiantes. El diagrama no informa cuántos estudiantes hay en total, así que no se puede saber cuántos tienen entre 80 y 140 seguidores. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Promedio de 270: confunde la mediana con el promedio, que no aparece en el diagrama.",
-     "B": "La mitad tiene 270 seguidores: confunde «la mitad tiene 270 o menos» con «la mitad tiene exactamente 270»."
+     "A": "Promedio de 270: confunde la mediana con el promedio, que no aparece en el diagrama de cajón.",
+     "B": "La mitad tiene 270 seguidores: confunde «la mitad tiene 270 o menos» con «la mitad tiene exactamente 270».",
+     "C": "60 estudiantes con entre 80 y 140 seguidores: pide una cantidad exacta que el diagrama no entrega, porque no indica el tamaño del grupo."
     }
-   }
+   },
+   "subtopic": "m1-posicion"
   },
   {
    "id": "m1-2026-invierno-q61",
@@ -2970,17 +3254,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con 11 datos, la mediana es el sexto valor ordenado, y los cuartiles son las medianas de cada mitad.",
+    "summary": "Con 11 datos, la mediana es el sexto valor ordenado, y los cuartiles son las medianas de cada mitad de los datos, sin incluir la mediana.",
+    "planteamiento": "Se pide el diagrama de cajón que representa el grupo 18, 19, 20, 21, 21, 27, 30, 30, 31, 34 y 35. Datos: hay $n=11$ valores, ya ordenados, con mínimo 18 y máximo 35.",
     "steps": [
-     "Datos ordenados: 18, 19, 20, 21, 21, 27, 30, 30, 31, 34, 35.",
-     "Mediana: el sexto dato es 27. Primer cuartil: mediana de 18, 19, 20, 21, 21, que es 20. Tercer cuartil: mediana de 30, 30, 31, 34, 35, que es 31.",
-     "Mínimo 18 y máximo 35. El diagrama debe tener caja de 20 a 31, línea en 27 y bigotes hasta 18 y 35, que es la alternativa D. Por lo tanto, la alternativa correcta es la D."
+     "Los 11 datos ya están ordenados. La mediana ocupa el lugar $\\frac{11+1}{2}=6$, es decir, el sexto dato, que es 27.",
+     "Primer cuartil: se toma la mitad inferior, 18, 19, 20, 21 y 21, sin incluir la mediana. Son 5 datos y su mediana, el tercero, es 20.",
+     "Tercer cuartil: se toma la mitad superior, 30, 30, 31, 34 y 35. Son 5 datos y su mediana, el tercero, es 31.",
+     "Resumen de los cinco valores: mínimo 18, $Q_1=20$, mediana 27, $Q_3=31$ y máximo 35. La caja va de 20 a 31 con una línea en 27, y los bigotes llegan a 18 y a 35.",
+     "Al comparar: la alternativa A tiene la caja hasta 34, la B tiene mediana 26 y la C tiene la caja desde 19 con mediana 26. Solo la D coincide con los cinco valores. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Caja hasta 34: toma como tercer cuartil el dato 34 en vez de 31, el centro de la mitad superior.",
-     "B": "Mediana 26: no corresponde a ningún dato del conjunto; se obtiene promediando 21 y 31, que no son los datos centrales."
+     "A": "Caja hasta 34: toma como tercer cuartil el dato 34 en vez de 31, que es el centro de la mitad superior.",
+     "B": "Mediana 26: no corresponde a ningún dato del conjunto. Se obtiene promediando 21 y 31, que no son los datos centrales.",
+     "C": "Caja desde 19 y mediana 26: usa como primer cuartil el dato 19, que no es la mediana de la mitad inferior, y repite la mediana errónea de la alternativa B."
     }
-   }
+   },
+   "subtopic": "m1-posicion"
   },
   {
    "id": "m1-2026-invierno-q62",
@@ -3017,16 +3306,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Es una probabilidad conjunta: el numerador es la casilla «mujer y artística» y el denominador es el total de estudiantes encuestados.",
+    "summary": "Es una probabilidad conjunta: el numerador es la casilla «mujer y artística» y el denominador es el total de estudiantes encuestados, no solo el de mujeres.",
+    "planteamiento": "Se pide la probabilidad de que la persona elegida al azar sea mujer y escoja el área artística. Datos: en la tabla, las mujeres que prefieren el área artística son 5; el total de estudiantes es la suma de todas las casillas.",
     "steps": [
-     "Total de hombres: $7+4+8+3=22$. Total de mujeres: $10+6+9+5=30$. Total general: $22+30=52$.",
-     "Mujeres que prefieren el área artística: 5.",
-     "La probabilidad es $\\frac{5}{52}$. Por lo tanto, la alternativa correcta es la A."
+     "Total de hombres: $7+4+8+3=22$ estudiantes.",
+     "Total de mujeres: $10+6+9+5=30$ estudiantes.",
+     "Total general del grupo: $22+30=52$ estudiantes. Este es el espacio muestral al elegir a una persona al azar.",
+     "Casos favorables: las mujeres que prefieren el área artística, que son 5 según la tabla.",
+     "Probabilidad conjunta: $P(\\text{mujer y artística})=\\frac{5}{52}$, porque el evento se busca sobre todos los estudiantes. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "D": "$\\frac{5}{30}$: usa solo el total de mujeres como denominador, lo que da la probabilidad de ser artística dado que es mujer, no la conjunta."
+     "B": "$\\frac{1}{5}$ no corresponde a ningún cociente entre una casilla y un total de la tabla. Quien lo elige mezcla valores de filas y columnas.",
+     "C": "$\\frac{5}{8}$ es la probabilidad de ser mujer dado que la persona prefiere el área artística: 5 de las 8 personas artísticas son mujeres. Cambia el denominador por el total artístico.",
+     "D": "$\\frac{5}{30}$ usa solo el total de mujeres como denominador, lo que da la probabilidad de ser artística dado que es mujer, y no la probabilidad conjunta."
     }
-   }
+   },
+   "subtopic": "m1-probabilidad"
   },
   {
    "id": "m1-2026-invierno-q63",
@@ -3063,16 +3358,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Gana el número cuya suma de dos dados tiene más resultados favorables, y esa es la suma 7, con 6 de 36 casos.",
+    "summary": "Como cada punto se gana si la suma de los dados coincide con el número escogido, conviene elegir la suma con más resultados favorables: el 7, con 6 de 36 casos.",
+    "planteamiento": "Se pide el número entre 2 y 12 con mayor probabilidad de ganar el juego. Datos: al lanzar dos dados hay $36$ resultados posibles y cada punto depende de que la suma coincida con el número escogido.",
     "steps": [
-     "Al lanzar dos dados hay $6 \\cdot 6 = 36$ resultados posibles.",
-     "Casos por suma: 12 se obtiene de 1 forma, 10 de 3 formas, 6 de 5 formas y 7 de 6 formas.",
-     "El 7 tiene la mayor cantidad de casos favorables, así que es el número que da la mayor probabilidad. Por lo tanto, la alternativa correcta es la C."
+     "Al lanzar dos dados hay $6\\cdot 6=36$ resultados equiprobables, y la suma es el total de puntos de ambos dados.",
+     "Se cuentan las formas de obtener cada suma candidata. La suma 12 se obtiene solo con $(6,6)$, es decir, 1 forma. La suma 10 se obtiene con $(4,6)$, $(5,5)$ y $(6,4)$, es decir, 3 formas. La suma 6 se obtiene con $(1,5)$, $(2,4)$, $(3,3)$, $(4,2)$ y $(5,1)$, es decir, 5 formas.",
+     "La suma 7 se obtiene con $(1,6)$, $(2,5)$, $(3,4)$, $(4,3)$, $(5,2)$ y $(6,1)$, es decir, 6 formas, la mayor cantidad entre todas las sumas.",
+     "Cada punto se obtiene en un lanzamiento si la suma coincide con el número escogido, así que la probabilidad de sumar punto en cada lanzamiento es el número de formas dividido por 36. Mientras más formas tenga, más probable es llegar a 20 puntos antes que los demás.",
+     "Comparando: $P(7)=\\frac{6}{36}$, $P(6)=\\frac{5}{36}$, $P(10)=\\frac{3}{36}$ y $P(12)=\\frac{1}{36}$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "6: tiene 5 de 36 casos, la cifra más cercana a la del 7, pero sigue siendo menor."
+     "A": "12 tiene solo 1 caso favorable, $\\frac{1}{36}$, así que es la suma menos probable de las cuatro opciones.",
+     "B": "10 tiene 3 casos favorables, $\\frac{3}{36}$, así que es menos probable que el 7.",
+     "D": "6 tiene 5 de 36 casos, la cifra más cercana a la del 7, pero sigue siendo menor."
     }
-   }
+   },
+   "subtopic": "m1-probabilidad"
   },
   {
    "id": "m1-2026-invierno-q64",
@@ -3109,17 +3410,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como las probabilidades de las seis caras suman 1, cada afirmación se verifica sumando las probabilidades de las caras que corresponden.",
+    "summary": "Como las probabilidades de las seis caras suman 1, cada afirmación se verifica sumando las probabilidades de las caras que corresponden y comparando con las de un dado común.",
+    "planteamiento": "Se pide la afirmación verdadera con respecto a la tabla. Datos: $P(1)=0{,}2$, $P(2)=0{,}1$, $P(3)=0{,}1$, $P(4)=0{,}1$, $P(5)=0{,}4$ y $P(6)=0{,}1$. En un dado común, cada cara tiene probabilidad $\\frac{1}{6}$.",
     "steps": [
-     "Probabilidades: $P(1)=0{,}2$, $P(2)=P(3)=P(4)=P(6)=0{,}1$ y $P(5)=0{,}4$; suman $1$.",
-     "Caras mayores que 4: 5 y 6, con $0{,}4+0{,}1=0{,}5$, lo que coincide con la afirmación C.",
-     "Las demás fallan: $P(1\\text{ o }2)=0{,}3$, distinto de $\\frac{1}{3}$; $P(6)=0{,}1$, distinto de $\\frac{1}{6}$; y $P(\\text{par})=0{,}1+0{,}1+0{,}1=0{,}3$. Por lo tanto, la alternativa correcta es la C."
+     "Se verifica la tabla: $0{,}2+0{,}1+0{,}1+0{,}1+0{,}4+0{,}1=1$, así que es una distribución de probabilidad válida.",
+     "Alternativa C: las caras mayores que 4 son 5 y 6, con $P(5)+P(6)=0{,}4+0{,}1=0{,}5$. Esto coincide con la afirmación, así que es verdadera.",
+     "Alternativa A: $P(1\\text{ o }2)=0{,}2+0{,}1=0{,}3$. En un dado común es $\\frac{2}{6}=\\frac{1}{3}$, por lo que no son iguales.",
+     "Alternativa B: $P(6)=0{,}1$. En un dado común es $\\frac{1}{6}\\approx 0{,}17$, por lo que tampoco son iguales.",
+     "Alternativa D: las caras pares son 2, 4 y 6, con $0{,}1+0{,}1+0{,}1=0{,}3$, y no $0{,}1$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Obtener 1 o 2 tiene probabilidad $0{,}3$, mientras que con un dado común es $\\frac{1}{3}$; no son iguales.",
-     "D": "Número par con probabilidad $0{,}1$: toma solo la probabilidad de una cara, cuando las caras 2, 4 y 6 suman $0{,}3$."
+     "A": "Obtener 1 o 2 tiene probabilidad $0{,}3$, mientras que en un dado común es $\\frac{1}{3}$. Quien lo elige compara dos cantidades que no son iguales.",
+     "B": "Obtener un 6 tiene probabilidad $0{,}1$ en este dado, y no $\\frac{1}{6}$ como en uno común. Quien lo elige ignora que la tabla está cargada.",
+     "D": "Número par con probabilidad $0{,}1$ toma solo la probabilidad de una cara, cuando las caras 2, 4 y 6 suman $0{,}3$."
     }
-   }
+   },
+   "subtopic": "m1-probabilidad"
   },
   {
    "id": "m1-2026-invierno-q65",
@@ -3157,17 +3463,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con tres monedas hay cuatro resultados posibles según la cantidad de caras, y el puntaje $c-2s$ es negativo solo si hay menos de dos caras.",
+    "summary": "Con tres monedas hay cuatro resultados posibles según la cantidad de caras, y el puntaje $c-2s$ es negativo solo si hay menos de dos caras, es decir, con 0 o 1 cara.",
+    "planteamiento": "Se pide la probabilidad de que el puntaje $c-2s$ sea negativo en un lanzamiento de tres monedas. Datos: $c$ es la cantidad de caras, $s$ la cantidad de sellos y $c+s=3$.",
     "steps": [
-     "Con $c$ caras y $s=3-c$ sellos, el puntaje es $c-2(3-c)=3c-6$.",
-     "El puntaje es negativo si $3c-6<0$, es decir, si $c<2$, o sea, 0 o 1 caras.",
-     "$P(c=0)=\\frac{1}{8}$ (tres sellos) y $P(c=1)=\\frac{3}{8}$ (una cara). Suma: $\\frac{1}{8}+\\frac{3}{8}=\\frac{1}{2}$. Por lo tanto, la alternativa correcta es la D."
+     "Como hay tres monedas, $s=3-c$. Reemplazando en el puntaje: $c-2(3-c)=c-6+2c=3c-6$.",
+     "El puntaje es negativo cuando $3c-6<0$, es decir, $3c<6$, o sea, $c<2$. Esto ocurre con 0 o 1 cara.",
+     "Con 0 caras (tres sellos) hay un solo resultado, y cada moneda tiene probabilidad $\\frac{1}{2}$. Su probabilidad es $\\left(\\frac{1}{2}\\right)^3=\\frac{1}{8}$.",
+     "Con 1 cara hay 3 resultados posibles: la cara sale en la primera, en la segunda o en la tercera moneda. Cada uno tiene probabilidad $\\frac{1}{8}$, así que la probabilidad total es $\\frac{3}{8}$.",
+     "Suma de los casos favorables: $\\frac{1}{8}+\\frac{3}{8}=\\frac{4}{8}=\\frac{1}{2}$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$\\frac{1}{8}$: considera solo el caso de tres sellos y olvida el caso de una cara.",
-     "C": "$\\frac{3}{8}$: considera solo el caso de una cara y olvida el caso de tres sellos."
+     "A": "$\\frac{1}{8}$ considera solo el caso de tres sellos y olvida el caso de una cara, que tiene tres resultados.",
+     "B": "$\\frac{1}{4}$ equivale a 2 de los 8 resultados posibles. Quien lo elige cuenta solo dos casos favorables y no los cuatro que dan puntaje negativo.",
+     "C": "$\\frac{3}{8}$ considera solo el caso de una cara y olvida el caso de tres sellos, que también da puntaje negativo."
     }
-   }
+   },
+   "subtopic": "m1-probabilidad"
   }
  ]
 }

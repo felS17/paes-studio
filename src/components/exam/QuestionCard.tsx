@@ -24,10 +24,14 @@ interface QuestionCardProps {
   onCheck?: () => void
   onToggleFlag?: () => void
   showHints?: boolean
+  /** Alternativas tachadas por el estudiante. */
+  struck?: OptionKey[]
+  onToggleStrike?: (key: OptionKey) => void
 }
 
 export function QuestionCard({
   question, mode, position, total, selected, revealed, flagged, onSelect, onCheck, onToggleFlag, showHints,
+  struck = [], onToggleStrike,
 }: QuestionCardProps) {
   const locked = revealed || mode === 'revision'
   const stateOf = (key: OptionKey): OptionState => {
@@ -95,11 +99,26 @@ export function QuestionCard({
 
       <div className="mt-5" role="radiogroup" aria-label="Alternativas">
         {snapshot ? (
-          <AnswerStrip options={question.options} stateOf={stateOf} locked={locked} onSelect={(k) => onSelect?.(k)} />
+          <AnswerStrip
+            options={question.options}
+            stateOf={stateOf}
+            locked={locked}
+            onSelect={(k) => onSelect?.(k)}
+            struck={struck}
+            onToggleStrike={onToggleStrike}
+          />
         ) : (
           <div className="space-y-2">
             {question.options.map((o) => (
-              <OptionButton key={o.key} option={o} state={stateOf(o.key)} locked={locked} onSelect={(k) => onSelect?.(k)} />
+              <OptionButton
+                key={o.key}
+                option={o}
+                state={stateOf(o.key)}
+                locked={locked}
+                onSelect={(k) => onSelect?.(k)}
+                struck={struck.includes(o.key)}
+                onToggleStrike={onToggleStrike}
+              />
             ))}
           </div>
         )}

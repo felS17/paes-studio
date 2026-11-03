@@ -120,6 +120,8 @@ def main(argv: list[str] | None = None) -> int:
         args.report.write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         # Vuelve a aplicar las soluciones paso a paso guardadas (PAES de Invierno 2026–2027).
         subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "solutions" / "merge_solutions.py")], check=False, cwd=ROOT)
+        # Subtema del temario DEMRE para cada pregunta (explorador por subtemas, drills y Zettelkasten).
+        subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "assign_subtopics.py")], check=False, cwd=ROOT)
         node = shutil.which("node")
         index_script = ROOT / "scripts" / "build-exam-index.mjs"
         if node and index_script.exists():

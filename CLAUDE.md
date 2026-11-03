@@ -9,6 +9,8 @@ Plataforma web estática de estudio para la PAES (Chile) + pipeline de extracci�
 - `npm run lint`: Verificación de código con ESLint
 - `python3 scripts/pipeline/extract_demre.py`: Procesamiento de PDFs oficiales y facsímiles a JSON
 - `npm run latex` / `npm run pdfs`: regenerar los `.tex` de compendios y presentaciones y compilarlos a `public/pdfs/` (pdfLaTeX, dos pasadas)
+- `npm run validate:exams`: valida los 46 JSON (parseo, claves, `$` balanceados y KaTeX de todas las soluciones)
+- `python3 scripts/pipeline/assign_subtopics.py`: asigna a cada pregunta uno de los 67 subtemas del temario y escribe `src/data/temario/`
 
 ## Stack Tecnológico
 - **Frontend:** React 19 + TypeScript + Vite
@@ -30,9 +32,13 @@ Tienes total libertad y mandato para crear una arquitectura modular y bien ramif
 - `/src/components/layout/`: Estructura global (`Navbar`, `Sidebar`, `ThemeToggle`, `SplitPane`).
 - `/src/components/exam/`: Motor de evaluación (`ExamRunner`, `QuestionCard`, `PassageViewer`, `QuestionNavigator`, `ExamTimer`, `SolutionAccordion`).
 - `/src/components/analytics/`: Visualización de progreso (`ScoreHistory`, `AxisRadar`, `WeakTopicsList`, `BackupManager`).
+- `/src/pages/`: `HomePage` (Hub en `/`: presentación, métricas, Desafío Diario, módulos, mapa de subtemas y contacto), `DashboardPage` (catálogo en `/ensayos`), `SubtopicsPage` (`/subtemas`), `ZettelkastenPage` y el resto de vistas.
+- `/src/components/dashboard/`: Inicio (`DailyChallenge`, `ProjectionChart`, `ExamList`, `SubtopicExplorer` con el diálogo de drills 10 / 20 / Todas).
+- `/src/components/zettelkasten/`: Red de conocimiento (`KnowledgeGraph` en Canvas con `react-force-graph-2d`, `NodeDrawer`).
+- `/src/data/temario/` + `src/data/temario.ts`: temario DEMRE (asignatura → eje → 67 subtemas, página en el compendio PDF, notas teóricas bajo demanda y enlaces cruzados del Zettelkasten).
 - `/src/components/math/`: Renderizador `MathText` para texto híbrido Markdown + LaTeX.
 - `/src/hooks/`: Hooks personalizados (`useKeyboardShortcuts`, `useExamTimer`, `useTheme`).
-- `/src/store/`: Stores de Zustand (`useExamStore.ts`, `useAnalyticsStore.ts`).
+- `/src/store/`: Stores de Zustand (`useExamStore.ts` con sesiones, prácticas y alternativas tachadas; `useAnalyticsStore.ts`; `useFlashcardStore.ts`; `useStreakStore.ts` con los días de estudio de la racha).
 - `/src/utils/`: Cálculo de puntajes escala PAES (100-1000), formateadores y validadores.
 - `/scripts/pipeline/`: Scripts en Python para extracción de texto/imágenes desde `/pruebas-oficiales` y cruce con `/facsimiles-oficiales`.
 - `/latex/templates/` y `/latex/output/`: Plantillas `.tex` de guías (`tcolorbox`) y presentaciones Beamer (`16:9`). `/latex/compat/` guarda sustitutos mínimos (`tikzfill.image`, `pdfcol`, `listingsutf8`) que `build_pdfs.py` usa solo si faltan en el TeX Live local.
@@ -51,7 +57,7 @@ Tienes total libertad y mandato para crear una arquitectura modular y bien ramif
   - Nada de acentos de color por asignatura (indigo, violet, amber, sky, etc.), ni íconos de asignatura, ni portadas, barras o tarjetas multicolor. Las asignaturas, ejes y estados se identifican con texto: etiquetas neutras `Tag` / `SubjectTag` / `SubjectMono` (`src/components/ui/subject-tag.tsx`) con `bg-zinc-100 text-zinc-800 dark:bg-zinc-800/80 dark:text-zinc-200 border border-zinc-200/80 dark:border-zinc-700/80`.
   - PROHIBIDO `bg-blue-*` / `bg-indigo-*` y cualquier color de interfaz que no sea Zinc, gradientes (`bg-gradient-to-*`, `linearGradient` en SVG), sombras pesadas (`shadow-lg`, `shadow-xl`) y bordes redondeados exagerados (`rounded-2xl`, `rounded-3xl`). Usa `rounded-lg` o `rounded-xl` y bordes finos de `1px`.
   - Los íconos de Lucide solo se usan con función (navegación, tema, cerrar, flechas, marcar duda, correcto/incorrecto, enlace externo), nunca como adorno.
-- **Únicos colores semánticos permitidos:** `emerald` sutil para respuestas correctas y `rose` sutil para respuestas incorrectas al corregir una pregunta (alternativas, hoja de respuestas y revisión), siempre con ícono o texto. Todo lo demás (alertas del reloj, marcas de duda, prioridades de la analítica, mensajes de respaldo, calificación de flashcards) va en escala Zinc.
+- **Únicos colores semánticos permitidos:** `emerald` sutil para respuestas correctas y `rose` sutil para respuestas incorrectas al corregir una pregunta (alternativas, hoja de respuestas, revisión, resultado del Desafío Diario y nodos de pregunta del Zettelkasten, con leyenda), siempre con ícono o texto. En el grafo, el dominio de un subtema se expresa solo con contraste zinc (tenue → medio → alto) y los errores pendientes con un anillo punteado. Todo lo demás (alertas del reloj, marcas de duda, prioridades de la analítica, mensajes de respaldo, calificación de flashcards) va en escala Zinc.
 - **Gráficos:** trazo monocromático `zinc-900` / `zinc-100` (`currentColor`), sin rellenos ni degradados; barras de progreso en `zinc-900` / `zinc-100` sobre `zinc-200`.
 
 ### 2. Paleta y Superficies (Light & Dark Mode)
@@ -66,7 +72,7 @@ Tienes total libertad y mandato para crear una arquitectura modular y bien ramif
 - **UI:** `Geist` o `Inter` (`tracking-tight` en títulos).
 - **Lecturas Largas:** `Newsreader` o `Source Serif 4`, `text-[16px] leading-[1.75] max-w-[65ch]`, con botón para alternar Serif/Sans.
 - **Reloj, Puntajes y `<kbd>`:** `JetBrains Mono` con `font-mono tabular-nums`.
-- **Atajos de teclado activos:** `A`-`E` para responder, `←`/`→` para navegar, `F` para marcar duda, `Enter` para verificar en Modo Práctica.
+- **Atajos de teclado activos:** `A`-`E` para responder, `Shift + A`-`E` (o clic derecho) para tachar/recuperar una alternativa, `←`/`→` para navegar, `F` para marcar duda, `Enter` para verificar en Modo Práctica. Sin temporizador por pregunta: solo el cronómetro global.
 
 ### 4. Anatomía de las Alternativas (A - E)
 - **Base:** `group flex w-full items-start gap-3.5 rounded-lg border border-zinc-200/90 bg-white p-3.5 text-left transition-all duration-150 hover:border-zinc-300 hover:bg-zinc-50/70 dark:border-zinc-800 dark:bg-[#121215] dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50`
@@ -74,6 +80,7 @@ Tienes total libertad y mandato para crear una arquitectura modular y bien ramif
 - **Seleccionada:** `border-zinc-900 bg-zinc-900/[0.03] ring-1 ring-zinc-900 dark:border-zinc-100 dark:bg-zinc-100/[0.04] dark:ring-zinc-100`
 - **Correcta (Modo Práctica):** `border-emerald-500/40 bg-emerald-500/[0.06] text-emerald-950 dark:text-emerald-100`
 - **Incorrecta (Modo Práctica):** `border-rose-500/40 bg-rose-500/[0.06] text-rose-950 dark:text-rose-100`
+- **Tachada (descartada):** `line-through opacity-35`; no se marca con la tecla de su letra, solo al recuperarla o con clic izquierdo explícito.
 
 ### 5. Arquitectura de información
 - **Revelación progresiva:** las vistas densas muestran primero un resumen y luego una sola sección a la vez (pestañas `Tabs` de `src/components/ui/tabs.tsx`, con la pestaña activa en la URL, p. ej. `/analitica?vista=errores`). Los listados largos usan maestro-detalle en escritorio y acordeón en móvil.

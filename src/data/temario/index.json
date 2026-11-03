@@ -1,0 +1,567 @@
+{
+ "subjects": [
+  {
+   "subject": "m1",
+   "name": "Competencia Matemática 1 (M1)",
+   "pdf": "/pdfs/guia_m1.pdf",
+   "axes": [
+    {
+     "name": "Números",
+     "description": "Operatoria en los conjuntos numéricos, porcentajes, potencias, raíces y proporcionalidad.",
+     "subtopics": [
+      {
+       "id": "m1-racionales",
+       "title": "Números enteros y racionales",
+       "pdfPage": 1,
+       "questionCount": 104
+      },
+      {
+       "id": "m1-porcentajes",
+       "title": "Porcentajes y problemas con dinero",
+       "pdfPage": 2,
+       "questionCount": 51
+      },
+      {
+       "id": "m1-potencias",
+       "title": "Potencias y raíces",
+       "pdfPage": 3,
+       "questionCount": 5
+      },
+      {
+       "id": "m1-proporcionalidad",
+       "title": "Razones y proporcionalidad",
+       "pdfPage": 4,
+       "questionCount": 17
+      }
+     ]
+    },
+    {
+     "name": "Álgebra y funciones",
+     "description": "Expresiones algebraicas, ecuaciones, sistemas y funciones afín y cuadrática.",
+     "subtopics": [
+      {
+       "id": "m1-expresiones",
+       "title": "Expresiones algebraicas y factorización",
+       "pdfPage": 5,
+       "questionCount": 4
+      },
+      {
+       "id": "m1-ecuaciones",
+       "title": "Ecuaciones e inecuaciones lineales",
+       "pdfPage": 5,
+       "questionCount": 14
+      },
+      {
+       "id": "m1-sistemas",
+       "title": "Sistemas de ecuaciones lineales",
+       "pdfPage": 6,
+       "questionCount": 7
+      },
+      {
+       "id": "m1-funcion-afin",
+       "title": "Función lineal y afín",
+       "pdfPage": 7,
+       "questionCount": 12
+      },
+      {
+       "id": "m1-cuadratica",
+       "title": "Función cuadrática",
+       "pdfPage": 7,
+       "questionCount": 5
+      }
+     ]
+    },
+    {
+     "name": "Geometría",
+     "description": "Medición, teorema de Pitágoras, semejanza y transformaciones en el plano.",
+     "subtopics": [
+      {
+       "id": "m1-areas",
+       "title": "Perímetros, áreas y volúmenes",
+       "pdfPage": 8,
+       "questionCount": 54
+      },
+      {
+       "id": "m1-triangulos",
+       "title": "Triángulos, Pitágoras y semejanza",
+       "pdfPage": 9,
+       "questionCount": 13
+      },
+      {
+       "id": "m1-transformaciones",
+       "title": "Plano cartesiano, vectores y transformaciones",
+       "pdfPage": 10,
+       "questionCount": 12
+      }
+     ]
+    },
+    {
+     "name": "Probabilidad y estadística",
+     "description": "Tablas y gráficos, medidas estadísticas y probabilidad.",
+     "subtopics": [
+      {
+       "id": "m1-tendencia",
+       "title": "Tablas, gráficos y medidas de tendencia central",
+       "pdfPage": 11,
+       "questionCount": 57
+      },
+      {
+       "id": "m1-posicion",
+       "title": "Medidas de posición y dispersión",
+       "pdfPage": 12,
+       "questionCount": 9
+      },
+      {
+       "id": "m1-probabilidad",
+       "title": "Probabilidad y conteo",
+       "pdfPage": 13,
+       "questionCount": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "subject": "m2",
+   "name": "Competencia Matemática 2 (M2)",
+   "pdf": "/pdfs/guia_m2.pdf",
+   "axes": [
+    {
+     "name": "Números",
+     "description": "Números reales, logaritmos y matemática financiera.",
+     "subtopics": [
+      {
+       "id": "m2-reales",
+       "title": "Números reales y racionalización",
+       "pdfPage": 1,
+       "questionCount": 26
+      },
+      {
+       "id": "m2-logaritmos",
+       "title": "Logaritmos",
+       "pdfPage": 2,
+       "questionCount": 18
+      },
+      {
+       "id": "m2-financiera",
+       "title": "Matemática financiera",
+       "pdfPage": 3,
+       "questionCount": 22
+      }
+     ]
+    },
+    {
+     "name": "Álgebra y funciones",
+     "description": "Ecuaciones cuadráticas, funciones exponencial, logarítmica, compuesta e inversa.",
+     "subtopics": [
+      {
+       "id": "m2-cuadraticas",
+       "title": "Ecuación cuadrática y discriminante",
+       "pdfPage": 3,
+       "questionCount": 83
+      },
+      {
+       "id": "m2-exponencial",
+       "title": "Funciones exponencial y logarítmica",
+       "pdfPage": 4,
+       "questionCount": 4
+      },
+      {
+       "id": "m2-inversa",
+       "title": "Composición e inversa de funciones",
+       "pdfPage": 5,
+       "questionCount": 16
+      }
+     ]
+    },
+    {
+     "name": "Geometría",
+     "description": "Trigonometría, homotecia y geometría analítica.",
+     "subtopics": [
+      {
+       "id": "m2-trigonometria",
+       "title": "Trigonometría en el triángulo rectángulo",
+       "pdfPage": 5,
+       "questionCount": 25
+      },
+      {
+       "id": "m2-homotecia",
+       "title": "Homotecia y semejanza",
+       "pdfPage": 6,
+       "questionCount": 34
+      },
+      {
+       "id": "m2-analitica",
+       "title": "Rectas y distancias en el plano",
+       "pdfPage": 7,
+       "questionCount": 11
+      }
+     ]
+    },
+    {
+     "name": "Probabilidad y estadística",
+     "description": "Probabilidad condicional, modelos binomial y normal, dispersión y combinatoria.",
+     "subtopics": [
+      {
+       "id": "m2-condicional",
+       "title": "Probabilidad condicional y modelo binomial",
+       "pdfPage": 8,
+       "questionCount": 24
+      },
+      {
+       "id": "m2-dispersion",
+       "title": "Dispersión y distribución normal",
+       "pdfPage": 9,
+       "questionCount": 32
+      },
+      {
+       "id": "m2-combinatoria",
+       "title": "Técnicas de conteo",
+       "pdfPage": 10,
+       "questionCount": 6
+      }
+     ]
+    },
+    {
+     "name": "Habilidades transversales",
+     "description": "Formatos de pregunta que exigen razonamiento más que cálculo.",
+     "subtopics": [
+      {
+       "id": "m2-suficiencia",
+       "title": "Evaluación de suficiencia de datos",
+       "pdfPage": 10,
+       "questionCount": 25
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "subject": "lectora",
+   "name": "Competencia Lectora",
+   "pdf": "/pdfs/guia_lectora.pdf",
+   "axes": [
+    {
+     "name": "Localizar",
+     "description": "Encontrar información explícita y reconocer cómo se presenta.",
+     "subtopics": [
+      {
+       "id": "cl-localizar",
+       "title": "Información explícita",
+       "pdfPage": 1,
+       "questionCount": 27
+      }
+     ]
+    },
+    {
+     "name": "Interpretar",
+     "description": "Comprender el sentido global y local, inferir y relacionar.",
+     "subtopics": [
+      {
+       "id": "cl-vocabulario",
+       "title": "Vocabulario contextual",
+       "pdfPage": 2,
+       "questionCount": 22
+      },
+      {
+       "id": "cl-idea-central",
+       "title": "Tema, idea central y síntesis",
+       "pdfPage": 3,
+       "questionCount": 37
+      },
+      {
+       "id": "cl-proposito",
+       "title": "Propósito y función de fragmentos",
+       "pdfPage": 4,
+       "questionCount": 69
+      },
+      {
+       "id": "cl-inferencia",
+       "title": "Inferencias y relaciones entre ideas",
+       "pdfPage": 4,
+       "questionCount": 157
+      },
+      {
+       "id": "cl-literario",
+       "title": "Textos literarios",
+       "pdfPage": 5,
+       "questionCount": 24
+      },
+      {
+       "id": "cl-multimodal",
+       "title": "Textos discontinuos e infografías",
+       "pdfPage": 6,
+       "questionCount": 5
+      }
+     ]
+    },
+    {
+     "name": "Evaluar",
+     "description": "Valorar argumentos, recursos y la relación entre forma, contenido y propósito.",
+     "subtopics": [
+      {
+       "id": "cl-argumentos",
+       "title": "Evaluar argumentos y postura",
+       "pdfPage": 7,
+       "questionCount": 43
+      },
+      {
+       "id": "cl-forma",
+       "title": "Evaluar forma, recursos y pertinencia",
+       "pdfPage": 8,
+       "questionCount": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "subject": "ciencias",
+   "name": "Ciencias",
+   "pdf": "/pdfs/guia_ciencias.pdf",
+   "axes": [
+    {
+     "name": "Biología",
+     "description": "Organización celular, procesos y funciones biológicas, herencia y evolución, organismo y ambiente.",
+     "subtopics": [
+      {
+       "id": "cs-celula",
+       "title": "Organización celular",
+       "pdfPage": 1,
+       "questionCount": 172
+      },
+      {
+       "id": "cs-biomoleculas",
+       "title": "Biomoléculas, enzimas y metabolismo",
+       "pdfPage": 2,
+       "questionCount": 28
+      },
+      {
+       "id": "cs-genetica",
+       "title": "División celular y herencia",
+       "pdfPage": 3,
+       "questionCount": 62
+      },
+      {
+       "id": "cs-evolucion",
+       "title": "Evolución y biodiversidad",
+       "pdfPage": 4,
+       "questionCount": 27
+      },
+      {
+       "id": "cs-sistemas",
+       "title": "Sistemas del organismo y homeostasis",
+       "pdfPage": 4,
+       "questionCount": 35
+      },
+      {
+       "id": "cs-ecologia",
+       "title": "Organismo y ambiente",
+       "pdfPage": 5,
+       "questionCount": 25
+      }
+     ]
+    },
+    {
+     "name": "Física",
+     "description": "Ondas, mecánica, energía, electricidad y magnetismo.",
+     "subtopics": [
+      {
+       "id": "cs-ondas",
+       "title": "Ondas y sonido",
+       "pdfPage": 6,
+       "questionCount": 48
+      },
+      {
+       "id": "cs-luz",
+       "title": "Luz y óptica",
+       "pdfPage": 7,
+       "questionCount": 62
+      },
+      {
+       "id": "cs-cinematica",
+       "title": "Movimiento (cinemática)",
+       "pdfPage": 7,
+       "questionCount": 25
+      },
+      {
+       "id": "cs-dinamica",
+       "title": "Fuerzas y leyes de Newton",
+       "pdfPage": 8,
+       "questionCount": 101
+      },
+      {
+       "id": "cs-energia",
+       "title": "Energía, trabajo y calor",
+       "pdfPage": 8,
+       "questionCount": 61
+      },
+      {
+       "id": "cs-electricidad",
+       "title": "Electricidad y magnetismo",
+       "pdfPage": 9,
+       "questionCount": 67
+      }
+     ]
+    },
+    {
+     "name": "Química",
+     "description": "Estructura atómica, química orgánica, reacciones y estequiometría, disoluciones.",
+     "subtopics": [
+      {
+       "id": "cs-atomo",
+       "title": "Estructura atómica y tabla periódica",
+       "pdfPage": 10,
+       "questionCount": 85
+      },
+      {
+       "id": "cs-enlace",
+       "title": "Enlace químico y moléculas",
+       "pdfPage": 11,
+       "questionCount": 70
+      },
+      {
+       "id": "cs-organica",
+       "title": "Química orgánica",
+       "pdfPage": 12,
+       "questionCount": 12
+      },
+      {
+       "id": "cs-reacciones",
+       "title": "Reacciones químicas y estequiometría",
+       "pdfPage": 13,
+       "questionCount": 116
+      },
+      {
+       "id": "cs-disoluciones",
+       "title": "Disoluciones y pH",
+       "pdfPage": 13,
+       "questionCount": 79
+      }
+     ]
+    },
+    {
+     "name": "Habilidades científicas",
+     "description": "Pensamiento científico: variables, hipótesis, procedimientos y conclusiones.",
+     "subtopics": [
+      {
+       "id": "cs-habilidades",
+       "title": "Habilidades de pensamiento científico",
+       "pdfPage": 14,
+       "questionCount": 231
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "subject": "historia",
+   "name": "Historia y Ciencias Sociales",
+   "pdf": "/pdfs/guia_historia.pdf",
+   "axes": [
+    {
+     "name": "Historia: mundo, América y Chile",
+     "description": "Procesos políticos, económicos y sociales de los siglos XIX y XX.",
+     "subtopics": [
+      {
+       "id": "hi-revoluciones",
+       "title": "Revoluciones y siglo XIX en Europa",
+       "pdfPage": 1,
+       "questionCount": 26
+      },
+      {
+       "id": "hi-chile-xix",
+       "title": "Chile en el siglo XIX: independencia, república y expansión",
+       "pdfPage": 2,
+       "questionCount": 19
+      },
+      {
+       "id": "hi-cuestion-social",
+       "title": "Cuestión social y crisis del parlamentarismo",
+       "pdfPage": 3,
+       "questionCount": 10
+      },
+      {
+       "id": "hi-guerras",
+       "title": "Guerras mundiales y crisis de 1929",
+       "pdfPage": 4,
+       "questionCount": 25
+      },
+      {
+       "id": "hi-guerra-fria",
+       "title": "Guerra Fría y América Latina",
+       "pdfPage": 5,
+       "questionCount": 6
+      },
+      {
+       "id": "hi-chile-xx",
+       "title": "Chile en el siglo XX: del Estado de compromiso a la transición",
+       "pdfPage": 6,
+       "questionCount": 8
+      }
+     ]
+    },
+    {
+     "name": "Formación ciudadana",
+     "description": "Estado, Constitución, democracia, derechos humanos y participación.",
+     "subtopics": [
+      {
+       "id": "hi-estado",
+       "title": "Estado, Constitución y poderes del Estado",
+       "pdfPage": 7,
+       "questionCount": 90
+      },
+      {
+       "id": "hi-democracia",
+       "title": "Democracia, derechos humanos y participación",
+       "pdfPage": 8,
+       "questionCount": 77
+      }
+     ]
+    },
+    {
+     "name": "Sistema económico",
+     "description": "Problema económico, mercado, macroeconomía y finanzas personales.",
+     "subtopics": [
+      {
+       "id": "hi-mercado",
+       "title": "Problema económico y mercado",
+       "pdfPage": 9,
+       "questionCount": 72
+      },
+      {
+       "id": "hi-macro",
+       "title": "Macroeconomía y finanzas personales",
+       "pdfPage": 9,
+       "questionCount": 15
+      }
+     ]
+    },
+    {
+     "name": "Geografía y espacio",
+     "description": "Población, territorio, ambiente y riesgos.",
+     "subtopics": [
+      {
+       "id": "hi-geografia",
+       "title": "Población, territorio y ambiente",
+       "pdfPage": 10,
+       "questionCount": 34
+      }
+     ]
+    },
+    {
+     "name": "Habilidades de pensamiento histórico",
+     "description": "Análisis de fuentes, multicausalidad, continuidad y cambio.",
+     "subtopics": [
+      {
+       "id": "hi-fuentes",
+       "title": "Análisis de fuentes y pensamiento histórico",
+       "pdfPage": 11,
+       "questionCount": 4
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

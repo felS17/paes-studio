@@ -137,6 +137,11 @@ def main() -> int:
         dest.write_text(json.dumps(exam, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     for p in all_problems:
         print("  ·", p)
+    if not all_problems:
+        # Las explicaciones profundizadas viven en solutions/soluciones.json y el subtema lo asigna el temario.
+        pipeline = Path(__file__).resolve().parent
+        subprocess.run([sys.executable, str(pipeline / "solutions" / "merge_solutions.py")], check=False, cwd=ROOT)
+        subprocess.run([sys.executable, str(pipeline / "assign_subtopics.py")], check=False, cwd=ROOT)
     node = shutil.which("node")
     if node and not all_problems:
         subprocess.run([node, str(ROOT / "scripts" / "build-exam-index.mjs")], check=False, cwd=ROOT)

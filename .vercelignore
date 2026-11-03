@@ -1,0 +1,12 @@
+# Archivos temporales, pesados o con derechos reservados que no forman parte del sitio estático
+scripts/pipeline/solutions/.work/
+videos/
+.agents/
+Pruebas_DEMRE/
+Clavijeros_Pruebas_DEMRE/
+pruebas-oficiales
+facsimiles-oficiales
+latex/output/*.aux
+latex/output/*.log
+latex/output/*.toc
+**/__pycache__/

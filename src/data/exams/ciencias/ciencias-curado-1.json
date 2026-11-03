@@ -121,17 +121,26 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "La meiosis consta de dos divisiones sucesivas y reduce a la mitad el número de cromosomas: de una célula diploide se obtienen cuatro haploides.",
+    "summary": "En la meiosis, dos divisiones sucesivas reducen a la mitad el número de cromosomas: de una célula diploide se obtienen cuatro células haploides.",
+    "planteamiento": "Se pide el resultado final de una meiosis completa en una célula con $2n = 46$. Datos: número diploide $2n = 46$; se pide cuántas células se forman y cuántos cromosomas tiene cada una.",
     "steps": [
-     "Meiosis I separa los cromosomas homólogos: de $2n = 46$ se pasa a dos células con $n = 23$.",
-     "Meiosis II separa las cromátidas hermanas de esas dos células: resultan 4 células con $n = 23$.",
-     "Estas células haploides son los gametos; en la fecundación se recupera $2n = 46$."
+     "La meiosis I separa los cromosomas homólogos. Al final de esta división cada célula hija tiene un juego de cromosomas, es decir, $n = 23$, aunque cada cromosoma aún conserva sus dos cromátidas.",
+     "Así, se obtienen dos células con $n = 23$ cromosomas cada una, y ambas siguen en proceso de división.",
+     "La meiosis II separa las cromátidas hermanas, de manera parecida a una mitosis, pero sobre células haploides. Cada una de las dos células se divide en dos.",
+     "Resultado: $2 \\times 2 = 4$ células, cada una con $n = 23$ cromosomas simples.",
+     "Control: la célula original replicó su ADN antes de la meiosis, por lo que el total de cromosomas simples en las cuatro células es $4 \\cdot 23 = 92$, el doble de los 46 de la célula inicial.",
+     "La alternativa B (2 células con 46 cromosomas) corresponde al resultado de una mitosis, que conserva el número cromosómico y produce dos células.",
+     "La alternativa C mantiene el número de cromosomas de la célula madre, lo que no ocurre en la meiosis, que reduce a la mitad.",
+     "La alternativa D describe el estado al final de la meiosis I, no el producto final del proceso completo.",
+     "Así, al completar la meiosis se obtienen cuatro células haploides con 23 cromosomas cada una. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Es el resultado de una mitosis, que conserva el número de cromosomas.",
-     "D": "Corresponde al final de la meiosis I, no del proceso completo."
+     "B": "Son dos células con 46 cromosomas, resultado de una mitosis, que conserva el número cromosómico. La trampa es olvidar que la meiosis produce cuatro células y reduce el número a la mitad.",
+     "C": "Cuatro células con 46 cromosomas tendrían el doble del material genético que corresponde a un gameto. La trampa es mantener la cantidad de la célula madre y cambiar solo el número de células.",
+     "D": "Dos células con 23 cromosomas corresponden al final de la meiosis I, cuando las cromátidas aún no se han separado. La trampa es detenerse en la primera división."
     }
-   }
+   },
+   "subtopic": "cs-genetica"
   },
   {
    "id": "ciencias-curado-1-q02",
@@ -163,17 +172,25 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Las enzimas son proteínas: el calor excesivo rompe las interacciones que mantienen su forma (desnaturalización) y el sitio activo deja de reconocer al sustrato.",
+    "summary": "El calor excesivo desnaturaliza la enzima: rompe las interacciones que mantienen su forma, el sitio activo deja de encajar con el sustrato y la actividad cae.",
+    "planteamiento": "Se pide la explicación de la caída de la actividad enzimática sobre 45 °C. Datos: la actividad aumenta hasta un máximo cerca de 37 °C y luego cae bruscamente hasta casi desaparecer.",
     "steps": [
-     "Hasta 37 °C, el aumento de temperatura acelera las moléculas y aumentan los choques efectivos: la actividad sube.",
-     "Sobre la temperatura óptima, la energía térmica rompe enlaces débiles (puentes de hidrógeno, interacciones iónicas) de la estructura terciaria.",
-     "Sin su forma, el sitio activo ya no es complementario al sustrato y la actividad cae."
+     "La enzima es una proteína y su función depende de su estructura tridimensional, que se mantiene gracias a enlaces débiles como los puentes de hidrógeno y las interacciones iónicas.",
+     "Hasta la temperatura óptima, cerca de 37 °C, el calor aumenta la energía cinética de las moléculas y la frecuencia de los choques entre enzima y sustrato; por eso la actividad sube.",
+     "Sobre 45 °C la energía térmica supera la estabilidad de esos enlaces y la proteína se desnaturaliza: se despliega y cambia su conformación.",
+     "Al cambiar su forma, el sitio activo deja de ser complementario al sustrato. Los sustratos ya no encajan y la catálisis cae hasta casi desaparecer.",
+     "La alternativa A es falsa: las enzimas son catalizadores y no se consumen en la reacción, así que su caída no se explica por consumo.",
+     "La alternativa C no tiene sustento: el sustrato no se convierte en enzima, pues son moléculas distintas, y el sustrato se transforma en producto.",
+     "La alternativa D describe lo contrario de lo ocurrido: a mayor temperatura las moléculas se mueven más rápido, lo que explica el aumento inicial y no la caída.",
+     "Así, la explicación de la caída es la pérdida de la estructura tridimensional y, con ella, del sitio activo. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Las enzimas son catalizadores: no se consumen en la reacción.",
-     "D": "A mayor temperatura las moléculas se mueven **más** rápido; eso explica el aumento inicial, no la caída."
+     "A": "Las enzimas no se consumen; actúan como catalizadores que se recuperan al terminar la reacción. La trampa es confundir una enzima con un reactivo.",
+     "C": "El sustrato no se transforma en enzima; son moléculas distintas. La trampa es invertir los roles de sustrato y catalizador.",
+     "D": "A altas temperaturas las moléculas se mueven con más energía y chocan más, no menos. La trampa es invertir el efecto de la temperatura sobre la energía cinética."
     }
-   }
+   },
+   "subtopic": "cs-biomoleculas"
   },
   {
    "id": "ciencias-curado-1-q03",
@@ -205,16 +222,23 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "En la fase dependiente de la luz, el agua se rompe (fotólisis) y su oxígeno se libera como $\\mathrm{O_2}$.",
+    "summary": "En la fase luminosa de la fotosíntesis, la fotólisis del agua libera su oxígeno como $\\mathrm{O_2}$; por eso el isótopo marcado aparece en el oxígeno liberado.",
+    "planteamiento": "Se pide dónde se detectará principalmente el $^{18}\\mathrm{O}$ cuando la planta, regada con agua marcada, realiza fotosíntesis a la luz. Datos: el agua contiene $^{18}\\mathrm{O}$ y la planta se ilumina.",
     "steps": [
-     "Ecuación global: $6\\,\\mathrm{CO_2} + 6\\,\\mathrm{H_2O} \\xrightarrow{\\text{luz}} \\mathrm{C_6H_{12}O_6} + 6\\,\\mathrm{O_2}$.",
-     "La fotólisis del agua ($2\\,\\mathrm{H_2O} \\rightarrow 4\\,\\mathrm{H^+} + 4\\,e^- + \\mathrm{O_2}$) aporta electrones y libera el oxígeno del agua como $\\mathrm{O_2}$.",
-     "El oxígeno de la glucosa proviene del $\\mathrm{CO_2}$ fijado en el ciclo de Calvin. Por eso el isótopo aparece en el $\\mathrm{O_2}$."
+     "La ecuación global de la fotosíntesis es $6\\,\\mathrm{CO_2} + 6\\,\\mathrm{H_2O} \\xrightarrow{\\text{luz}} \\mathrm{C_6H_{12}O_6} + 6\\,\\mathrm{O_2}$. El oxígeno que se libera como $\\mathrm{O_2}$ proviene del agua.",
+     "En la fase dependiente de la luz el agua se fotoliza, es decir, se rompe: $2\\,\\mathrm{H_2O} \\rightarrow 4\\,\\mathrm{H^+} + 4\\,e^- + \\mathrm{O_2}$. El oxígeno del agua pasa al $\\mathrm{O_2}$ liberado.",
+     "Por lo tanto, los átomos de oxígeno que quedan como $\\mathrm{O_2}$ provienen del agua, y el isótopo marcado sale a la atmósfera en esa forma.",
+     "El $\\mathrm{CO_2}$ que la planta fija no lleva el isótopo marcado, y los átomos de oxígeno de la glucosa provienen principalmente del $\\mathrm{CO_2}$ fijado en el ciclo de Calvin. Por eso el marcado no se concentra en la glucosa.",
+     "La clorofila es el pigmento que capta la luz; no es un producto de la reacción ni almacena el oxígeno del agua, así que no es el destino del isótopo.",
+     "Así, el $^{18}\\mathrm{O}$ se detecta principalmente en el $\\mathrm{O_2}$ liberado a la atmósfera. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Los átomos de oxígeno de la glucosa provienen del $\\mathrm{CO_2}$, no del agua."
+     "A": "La glucosa se forma con carbono y oxígeno que provienen principalmente del $\\mathrm{CO_2}$ fijado. La trampa es suponer que, como el agua participa en la reacción, su oxígeno queda en el azúcar.",
+     "B": "El $\\mathrm{CO_2}$ es un reactivo que entra sin marca; el isótopo del agua no se transfiere al $\\mathrm{CO_2}$ absorbido. La trampa es pensar que los reactivos se intercambian durante la reacción.",
+     "C": "La clorofila es un pigmento que absorbe la luz y no es un producto de la fotosíntesis. La trampa es asociar la maquinaria de la reacción con la materia que se transforma."
     }
-   }
+   },
+   "subtopic": "cs-biomoleculas"
   },
   {
    "id": "ciencias-curado-1-q04",
@@ -246,17 +270,24 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Un rasgo recesivo solo se expresa en homocigotos $aa$; el cruce $Aa\\times Aa$ se resuelve con un cuadro de Punnett.",
+    "summary": "Un rasgo autosómico recesivo se expresa solo en homocigotos $aa$; el cruce $Aa \\times Aa$ da una probabilidad de $\\frac{1}{4}$ de hijos albinos.",
+    "planteamiento": "Se pide la probabilidad de que un hijo sea albino en un cruce entre dos padres heterocigotos $Aa$. Datos: el albinismo es autosómico recesivo; los padres no son albinos, por lo que cada uno tiene al menos un alelo dominante.",
     "steps": [
-     "Gametos de cada progenitor: $A$ o $a$, con probabilidad $\\frac{1}{2}$ cada uno.",
-     "Combinaciones: $AA$ (1/4), $Aa$ (2/4) y $aa$ (1/4).",
-     "Solo $aa$ es albino: $P = \\frac{1}{4} = 25\\,\\%$."
+     "Los padres son $Aa \\times Aa$. Como el albinismo es recesivo, un individuo solo es albino si tiene genotipo $aa$.",
+     "Cada padre produce gametos $A$ o $a$, con probabilidad $\\frac{1}{2}$ cada uno, pues los alelos se segregan de forma independiente en la meiosis.",
+     "En el cuadro de Punnett, las combinaciones posibles son $AA$, $Aa$, $Aa$ y $aa$, cada una con probabilidad $\\frac{1}{4}$.",
+     "Las combinaciones $AA$ y $Aa$ no son albinas, porque tienen al menos un alelo $A$. Solo la combinación $aa$ es albina.",
+     "Entonces la probabilidad de albinismo es $P = \\frac{1}{4} = 0{,}25$, es decir, $25\\,\\%$.",
+     "Control: $\\frac{1}{4} + \\frac{2}{4} + \\frac{1}{4} = 1$, así que las probabilidades cubren todas las combinaciones posibles.",
+     "Así, un hijo tiene un 25 % de probabilidad de ser albino. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "D": "Es la probabilidad de un hijo **no** albino (fenotipo dominante).",
-     "C": "Es la probabilidad de un hijo portador ($Aa$)."
+     "A": "Un 0 % supondría que ningún hijo puede heredar dos alelos recesivos, lo que no es cierto cuando ambos padres son portadores. La trampa es pensar que la herencia recesiva nunca se expresa.",
+     "C": "Un 50 % es la probabilidad de tener un hijo portador ($Aa$), no de ser albino. La trampa es confundir la probabilidad de heredar un alelo con la de heredar dos.",
+     "D": "Un 75 % es la probabilidad de no ser albino, es decir, de los genotipos $AA$ o $Aa$. La trampa es invertir el evento pedido."
     }
-   }
+   },
+   "subtopic": "cs-genetica"
   },
   {
    "id": "ciencias-curado-1-q05",
@@ -288,16 +319,25 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "La glicemia se regula por retroalimentación negativa: un aumento de glucosa provoca una respuesta que la hace bajar.",
+    "summary": "La insulina, secretada por las células beta del páncreas, favorece la entrada de glucosa a las células y su almacenamiento, con lo que la glicemia vuelve a bajar.",
+    "planteamiento": "Se pide identificar la hormona pancreática que responde al aumento de glucosa después de una comida rica en carbohidratos y su efecto. Dato: tras la comida la concentración de glucosa en la sangre sube.",
     "steps": [
-     "Las células beta del páncreas detectan el alza y secretan insulina.",
-     "La insulina favorece la entrada de glucosa a las células (músculo, tejido adiposo) y su almacenamiento como glucógeno en el hígado.",
-     "Resultado: la glucosa en la sangre vuelve a su rango normal."
+     "La glicemia se regula por retroalimentación negativa: un aumento de glucosa desencadena una respuesta que la devuelve a su rango normal.",
+     "Tras una comida rica en carbohidratos, la digestión libera glucosa a la sangre, lo que estimula a las células beta de los islotes del páncreas.",
+     "Las células beta secretan insulina, que actúa sobre el músculo, el tejido adiposo y el hígado.",
+     "La insulina favorece la entrada de glucosa a las células mediante transportadores y promueve su almacenamiento como glucógeno en el hígado y en el músculo.",
+     "Como resultado, la glucosa sale de la sangre y la glicemia disminuye hasta valores normales.",
+     "Las alternativas A y B mencionan al glucagón, que secretan las células alfa y que se libera en ayuno para aumentar la glucosa; por eso no responde a una comida.",
+     "La alternativa C atribuye a la insulina un efecto contrario: su función es reducir la glucosa sanguínea, no aumentarla.",
+     "Así, la hormona es la insulina y su efecto es disminuir la glucosa en la sangre. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "El glucagón actúa en la situación contraria (ayuno), liberando glucosa al torrente sanguíneo."
+     "A": "El glucagón se libera en ayuno y aumenta la glucosa en sangre, pero no responde a un alza tras una comida. La trampa es elegir un efecto correcto con la hormona equivocada.",
+     "B": "Asocia el glucagón con una disminución de la glucosa, lo cual es falso: el glucagón la eleva. La trampa es memorizar que una hormona pancreática baja la glicemia sin distinguir cuál.",
+     "C": "La insulina disminuye la glucosa; decir que la aumenta invierte su efecto. La trampa es acertar la hormona y equivocar la dirección del efecto."
     }
-   }
+   },
+   "subtopic": "cs-sistemas"
   },
   {
    "id": "ciencias-curado-1-q06",
@@ -329,17 +369,25 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Cada paso de un nivel trófico al siguiente conserva cerca del 10 %; el resto se pierde principalmente como calor en la respiración celular.",
+    "summary": "En cada transferencia entre niveles tróficos se conserva cerca del 10 % de la energía; por eso los consumidores terciarios reciben $20$ kJ de los $20\\,000$ kJ fijados.",
+    "planteamiento": "Se pide la energía que llega a los consumidores terciarios. Datos: los productores fijan $20\\,000$ kJ y en cada nivel trófico se transfiere aproximadamente el $10\\,\\%$ de la energía al nivel siguiente.",
     "steps": [
-     "Consumidores primarios: $20\\,000\\cdot 0{,}1 = 2000$ kJ.",
-     "Consumidores secundarios: $2000\\cdot 0{,}1 = 200$ kJ.",
-     "Consumidores terciarios: $200\\cdot 0{,}1 = 20$ kJ."
+     "Los productores fijan $20\\,000$ kJ; ese es el punto de partida de la cadena.",
+     "Consumidores primarios (herbívoros): $20\\,000 \\cdot 0{,}1 = 2000$ kJ.",
+     "Consumidores secundarios (carnívoros de primer orden): $2000 \\cdot 0{,}1 = 200$ kJ.",
+     "Consumidores terciarios (carnívoros de segundo orden): $200 \\cdot 0{,}1 = 20$ kJ.",
+     "Control: cada paso multiplica la energía por $0{,}1$, así que tres transferencias dan $20\\,000 \\cdot 0{,}1^3 = 20$ kJ.",
+     "La alternativa D (2000 kJ) es la energía de los consumidores primarios; la alternativa C (200 kJ) corresponde a los secundarios.",
+     "La alternativa A (2 kJ) requiere una transferencia más, y corresponde a los consumidores cuaternarios.",
+     "Así, los consumidores terciarios reciben 20 kJ. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "D": "Es la energía de los consumidores primarios.",
-     "A": "Agrega un nivel de más: serían consumidores cuaternarios."
+     "A": "Son 2 kJ, que corresponden a los consumidores cuaternarios, es decir, a un nivel trófico de más. La trampa es contar un nivel de más en la cadena.",
+     "C": "Son 200 kJ, la energía de los consumidores secundarios. La trampa es contar un nivel de menos en la cadena.",
+     "D": "Son 2000 kJ, la energía de los consumidores primarios. La trampa es no aplicar la transferencia del 10 % en los niveles siguientes."
     }
-   }
+   },
+   "subtopic": "cs-ecologia"
   },
   {
    "id": "ciencias-curado-1-q07",
@@ -371,17 +419,25 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Con velocidad inicial cero y aceleración constante: $d = v_0 t + \\tfrac{1}{2}at^2$.",
+    "summary": "En un movimiento uniformemente acelerado desde el reposo, la distancia es $d = \\tfrac{1}{2}at^2$; con $a = 2\\ \\mathrm{m/s^2}$ y $t = 5$ s resulta $25$ m.",
+    "planteamiento": "Se pide la distancia recorrida por un automóvil que parte del reposo. Datos: $v_0 = 0$, $a = 2\\ \\mathrm{m/s^2}$ constante, $t = 5\\ \\mathrm{s}$.",
     "steps": [
-     "$v_0 = 0$, $a = 2\\ \\mathrm{m/s^2}$, $t = 5$ s.",
-     "$d = \\tfrac{1}{2}\\cdot 2\\cdot 5^2 = 25$ m.",
-     "Control: la rapidez final es $v = at = 10$ m/s y la rapidez media es $5$ m/s; $5\\cdot 5 = 25$ m."
+     "Como el auto parte del reposo, $v_0 = 0$, y la aceleración es constante. La distancia recorrida se describe con $d = v_0 t + \\tfrac{1}{2}at^2$.",
+     "Al anular el primer término por ser $v_0 = 0$, queda $d = \\tfrac{1}{2}at^2$.",
+     "Reemplazando: $d = \\tfrac{1}{2}\\cdot 2\\ \\mathrm{m/s^2}\\cdot (5\\ \\mathrm{s})^2 = 1\\ \\mathrm{m/s^2}\\cdot 25\\ \\mathrm{s^2} = 25\\ \\mathrm{m}$.",
+     "Control: la rapidez final es $v = at = 2 \\cdot 5 = 10$ m/s. Como la aceleración es constante, la rapidez media es $\\frac{0 + 10}{2} = 5$ m/s, y $d = \\bar{v}\\,t = 5\\cdot 5 = 25$ m.",
+     "La alternativa B (10 m) es la rapidez final, $v = at$, y no la distancia.",
+     "La alternativa A (5 m) corresponde a $\\tfrac{1}{2}at$, es decir, usar el tiempo en lugar de su cuadrado.",
+     "La alternativa D (50 m) se obtiene al omitir el factor $\\tfrac{1}{2}$ de la fórmula.",
+     "Así, el automóvil recorre 25 m. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "Es la rapidez final ($v = at$), no la distancia.",
-     "D": "Omite el factor $\\tfrac{1}{2}$ de la fórmula."
+     "A": "Corresponde a $\\tfrac{1}{2}at$, es decir, usar el tiempo en lugar de su cuadrado. La trampa es olvidar que la distancia crece con el cuadrado del tiempo.",
+     "B": "Es la rapidez final, $v = at = 10$ m/s, que se expresa en m/s y no en metros. La trampa es confundir velocidad con distancia.",
+     "D": "Se obtiene al omitir el factor $\\tfrac{1}{2}$: $at^2 = 2\\cdot 25 = 50$ m. La trampa es olvidar ese factor de la fórmula."
     }
-   }
+   },
+   "subtopic": "cs-cinematica"
   },
   {
    "id": "ciencias-curado-1-q08",
@@ -413,17 +469,26 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "La aceleración depende de la fuerza **neta**: $F_{\\text{neta}} = m\\,a$.",
+    "summary": "La aceleración depende de la fuerza neta: el roce se opone al movimiento y resta a los 20 N, dejando 16 N para acelerar la masa de 4 kg.",
+    "planteamiento": "Se pide la magnitud de la aceleración de una caja de $4\\ \\mathrm{kg}$. Datos: fuerza horizontal de $20\\ \\mathrm{N}$ en el sentido del movimiento; roce cinético de $4\\ \\mathrm{N}$ opuesto al movimiento.",
     "steps": [
-     "El roce se opone al movimiento: $F_{\\text{neta}} = 20 - 4 = 16$ N.",
-     "$a = \\dfrac{F_{\\text{neta}}}{m} = \\dfrac{16}{4} = 4\\ \\mathrm{m/s^2}$."
+     "Se dibuja el diagrama de fuerzas horizontales: la fuerza aplicada apunta en el sentido del movimiento y el roce cinético apunta en sentido contrario.",
+     "La fuerza neta horizontal es la suma vectorial: $F_{\\text{neta}} = F - f_k = 20\\ \\mathrm{N} - 4\\ \\mathrm{N} = 16\\ \\mathrm{N}$.",
+     "En la vertical, el peso y la normal se equilibran, así que no contribuyen a la aceleración horizontal.",
+     "Se aplica la segunda ley de Newton, $F_{\\text{neta}} = m\\,a$, de donde $a = \\dfrac{F_{\\text{neta}}}{m}$.",
+     "Reemplazando: $a = \\dfrac{16\\ \\mathrm{N}}{4\\ \\mathrm{kg}} = 4\\ \\mathrm{m/s^2}$.",
+     "Control: con $a = 4\\ \\mathrm{m/s^2}$, la fuerza neta es $4\\cdot 4 = 16$ N, que coincide con la diferencia entre 20 N y 4 N.",
+     "La alternativa B (5 m/s²) ignora el roce, pues $20/4 = 5$; la C (6 m/s²) suma el roce en lugar de restarlo, pues $(20 + 4)/4 = 6$.",
+     "La alternativa D (16 m/s²) es la fuerza neta en newtons, no la aceleración.",
+     "Así, la aceleración de la caja es de $4\\ \\mathrm{m/s^2}$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Ignora el roce: $\\dfrac{20}{4}$.",
-     "C": "Suma el roce como si actuara a favor del movimiento.",
-     "D": "Es la fuerza neta en newtons, no la aceleración."
+     "B": "Ignora el roce y divide 20 N entre 4 kg, lo que da 5 m/s². La trampa es olvidar que el roce siempre se opone al movimiento.",
+     "C": "Suma el roce a la fuerza, como si actuara a favor del movimiento: $(20+4)/4 = 6$ m/s². La trampa es un error de signo.",
+     "D": "Entrega la fuerza neta en newtons, no la aceleración. La trampa es no aplicar la segunda ley de Newton hasta el final."
     }
-   }
+   },
+   "subtopic": "cs-cinematica"
   },
   {
    "id": "ciencias-curado-1-q09",
@@ -455,16 +520,25 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Para cualquier onda: $v = \\lambda\\, f$.",
+    "summary": "Para cualquier onda se cumple $v = \\lambda f$; despejando, la longitud de onda es el cociente entre la rapidez y la frecuencia.",
+    "planteamiento": "Se pide la longitud de onda de un sonido. Datos: frecuencia $f = 680\\ \\mathrm{Hz}$; rapidez de propagación en el aire $v = 340\\ \\mathrm{m/s}$.",
     "steps": [
-     "Despeja: $\\lambda = \\dfrac{v}{f} = \\dfrac{340}{680}$.",
-     "$\\lambda = 0{,}5$ m."
+     "La relación fundamental de las ondas es $v = \\lambda\\, f$, donde $\\lambda$ es la longitud de onda y $f$ la frecuencia.",
+     "Se despeja $\\lambda$ dividiendo ambos lados por $f$: $\\lambda = \\dfrac{v}{f}$.",
+     "Se reemplazan los valores: $\\lambda = \\dfrac{340\\ \\mathrm{m/s}}{680\\ \\mathrm{s^{-1}}}$. Las unidades $\\mathrm{m/s}$ divididas entre $\\mathrm{s^{-1}}$ dan metros.",
+     "Simplificando el cociente, $\\frac{340}{680} = \\frac{1}{2}$, así que $\\lambda = 0{,}5\\ \\mathrm{m}$.",
+     "Control: con $\\lambda = 0{,}5$ m y $f = 680$ Hz, la rapidez es $0{,}5 \\cdot 680 = 340$ m/s, que es el valor del enunciado.",
+     "La alternativa B (2 m) invierte el cociente: $f/v = 680/340 = 2$, pero con unidades de $\\mathrm{m^{-1}}$, así que no es una longitud.",
+     "La alternativa C (1020 m) suma $v + f$, y la D (231 200 m) multiplica $v \\cdot f$; ninguna de esas operaciones corresponde a la relación de ondas.",
+     "Así, la longitud de onda es de $0{,}5$ m. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Calcula $\\dfrac{f}{v}$, es decir, la fórmula invertida.",
-     "D": "Multiplica $v\\cdot f$."
+     "B": "Calcula $f/v = 680/340 = 2$, es decir, la fórmula invertida. La trampa es no fijarse en las unidades, pues el resultado tiene unidades de $\\mathrm{m^{-1}}$.",
+     "C": "Suma $v + f = 1020$, operación sin sentido físico. La trampa es combinar magnitudes de distinta naturaleza.",
+     "D": "Multiplica $v \\cdot f = 231\\,200$. La trampa es operar con una fórmula equivocada por apuro."
     }
-   }
+   },
+   "subtopic": "cs-ondas"
   },
   {
    "id": "ciencias-curado-1-q10",
@@ -496,16 +570,26 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Sin roce, la energía mecánica se conserva: la energía potencial inicial se transforma en energía cinética.",
+    "summary": "Sin roce, la energía mecánica se conserva: la energía potencial inicial se transforma en energía cinética, y la masa se cancela al despejar la rapidez.",
+    "planteamiento": "Se pide la rapidez con que llega al suelo una pelota de $2\\ \\mathrm{kg}$ dejada caer desde $5\\ \\mathrm{m}$. Datos: $m = 2\\ \\mathrm{kg}$; $h = 5\\ \\mathrm{m}$; $g = 10\\ \\mathrm{m/s^2}$; se desprecia el roce con el aire y la pelota parte del reposo.",
     "steps": [
-     "$E_p = mgh = 2\\cdot 10\\cdot 5 = 100$ J.",
-     "Al llegar al suelo: $\\tfrac{1}{2}mv^2 = 100 \\Rightarrow v^2 = \\dfrac{2\\cdot 100}{2} = 100$.",
-     "$v = 10$ m/s. La masa se simplifica: $v = \\sqrt{2gh}$ no depende de ella."
+     "En la altura inicial la pelota tiene solo energía potencial gravitatoria, $E_p = mgh$, y parte del reposo, por lo que su energía cinética es cero.",
+     "Sin roce con el aire, la energía mecánica se conserva: la energía potencial inicial se transforma en energía cinética al llegar al suelo.",
+     "Se calcula la energía inicial: $E_p = 2\\ \\mathrm{kg}\\cdot 10\\ \\mathrm{m/s^2}\\cdot 5\\ \\mathrm{m} = 100\\ \\mathrm{J}$.",
+     "Se iguala con la energía cinética final: $\\tfrac{1}{2}mv^2 = 100\\ \\mathrm{J}$, es decir, $\\tfrac{1}{2}\\cdot 2\\cdot v^2 = 100$.",
+     "Simplificando, $v^2 = 100\\ \\mathrm{m^2/s^2}$, y al tomar la raíz positiva resulta $v = 10\\ \\mathrm{m/s}$.",
+     "Control: la fórmula general $v = \\sqrt{2gh} = \\sqrt{2\\cdot 10\\cdot 5} = \\sqrt{100} = 10$ m/s coincide. La masa no aparece porque se cancela en ambos lados.",
+     "La alternativa A (5 m/s) toma la altura en metros como si fuera una rapidez; la alternativa B (50 m/s) no proviene de ninguna relación correcta, como $gh$ o $\\sqrt{2gh}$.",
+     "La alternativa C (100 m/s) corresponde a la energía en joules o al valor de $v^2$, y no a la rapidez.",
+     "Así, la pelota llega al suelo con $10$ m/s. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "C": "Es la energía en joules (o $v^2$), no la rapidez."
+     "A": "Es la altura en metros, 5 m, usada como si fuera una rapidez. La trampa es confundir magnitudes de distinta unidad.",
+     "B": "No corresponde a ninguna relación energética correcta. La trampa es calcular sin igualar la energía potencial con la cinética.",
+     "C": "Es la energía de 100 J expresada como si fuera una rapidez, o bien el valor de $v^2$. La trampa es olvidar sacar la raíz cuadrada."
     }
-   }
+   },
+   "subtopic": "cs-energia"
   },
   {
    "id": "ciencias-curado-1-q11",
@@ -537,17 +621,26 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "En serie, la corriente es la misma en ambas resistencias y el voltaje se reparte en proporción a cada resistencia.",
+    "summary": "En un circuito en serie la corriente es la misma en ambas resistencias; con $I = 2$ A, el voltaje en la de $6\\ \\Omega$ es $12$ V.",
+    "planteamiento": "Se pide el voltaje entre los extremos de la resistencia de $6\\ \\Omega$. Datos: $R_1 = 4\\ \\Omega$ y $R_2 = 6\\ \\Omega$ conectadas en serie a una batería de $20$ V.",
     "steps": [
-     "Resistencia equivalente: $R = 4 + 6 = 10\\ \\Omega$.",
-     "Corriente: $I = \\dfrac{V}{R} = \\dfrac{20}{10} = 2$ A.",
-     "Voltaje en la de $6\\ \\Omega$: $V = I\\,R = 2\\cdot 6 = 12$ V (y $8$ V en la de $4\\ \\Omega$; suman 20 V)."
+     "En serie, las resistencias forman un único camino para la corriente, así que la resistencia equivalente es la suma: $R_{\\text{eq}} = R_1 + R_2$.",
+     "Reemplazando: $R_{\\text{eq}} = 4\\ \\Omega + 6\\ \\Omega = 10\\ \\Omega$.",
+     "Por la ley de Ohm, $V = I\\,R$, así que la corriente total es $I = \\dfrac{V}{R_{\\text{eq}}} = \\dfrac{20\\ \\mathrm{V}}{10\\ \\Omega} = 2\\ \\mathrm{A}$.",
+     "En serie, la misma corriente pasa por ambas resistencias, por lo que la de $6\\ \\Omega$ también es recorrida por $I = 2$ A.",
+     "Se aplica la ley de Ohm a esa resistencia: $V_2 = I\\,R_2 = 2\\ \\mathrm{A}\\cdot 6\\ \\Omega = 12\\ \\mathrm{V}$.",
+     "Control: en la de $4\\ \\Omega$, $V_1 = 2\\cdot 4 = 8$ V; y $8 + 12 = 20$ V, que coincide con la batería, como exige la ley de Kirchhoff de voltajes.",
+     "La alternativa A (2 V) es la corriente en amperes, no el voltaje; la alternativa B (8 V) corresponde a la resistencia de $4\\ \\Omega$.",
+     "La alternativa D (20 V) es el voltaje total de la batería, que se reparte entre las dos resistencias.",
+     "Así, el voltaje en la resistencia de $6\\ \\Omega$ es de $12$ V. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Es la corriente en amperes.",
-     "B": "Es el voltaje en la resistencia de $4\\ \\Omega$."
+     "A": "Es la corriente en amperes, $I = 2$ A, y no el voltaje. La trampa es entregar la magnitud intermedia en lugar de la pedida.",
+     "B": "Es el voltaje en la resistencia de $4\\ \\Omega$, que comparte la corriente pero tiene menor resistencia. La trampa es leer la resistencia equivocada.",
+     "D": "Es el voltaje total de la batería, que se reparte entre las dos resistencias en serie. La trampa es olvidar que el voltaje se divide."
     }
-   }
+   },
+   "subtopic": "cs-electricidad"
   },
   {
    "id": "ciencias-curado-1-q12",
@@ -579,16 +672,26 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "El calor sensible se calcula con $Q = m\\,c\\,\\Delta T$.",
+    "summary": "El calor sensible se calcula con $Q = m\\,c\\,\\Delta T$; como el agua sube $40$ °C, se necesitan $20\\,000$ cal.",
+    "planteamiento": "Se pide el calor necesario para calentar agua. Datos: $m = 500$ g; $c = 1\\ \\mathrm{cal/(g\\cdot °C)}$; temperatura inicial $20$ °C y final $60$ °C.",
     "steps": [
-     "$\\Delta T = 60 - 20 = 40$ °C.",
-     "$Q = 500\\cdot 1\\cdot 40 = 20\\,000$ cal."
+     "Al elevar la temperatura sin cambio de fase, el calor es sensible: $Q = m\\,c\\,\\Delta T$, donde $\\Delta T = T_f - T_i$.",
+     "Se identifican los datos: $m = 500$ g, $c = 1\\ \\mathrm{cal/(g\\cdot °C)}$, $T_i = 20$ °C y $T_f = 60$ °C.",
+     "Se calcula la variación de temperatura: $\\Delta T = 60\\ °\\mathrm{C} - 20\\ °\\mathrm{C} = 40\\ °\\mathrm{C}$.",
+     "Se reemplaza: $Q = 500\\ \\mathrm{g}\\cdot 1\\ \\mathrm{cal/(g\\cdot °C)}\\cdot 40\\ °\\mathrm{C}$.",
+     "Las unidades de gramos y de grados se cancelan, quedando $Q = 20\\,000$ cal.",
+     "Control: una caloría eleva 1 g de agua en 1 °C; para 500 g y 40 °C se necesitan $500\\cdot 40 = 20\\,000$ cal, lo mismo.",
+     "La alternativa A (2000 cal) corresponde a usar 50 g en lugar de 500 g, un error de cifras.",
+     "La alternativa D (30 000 cal) usa la temperatura final, 60 °C, como si fuera la variación; la alternativa B (10 000 cal) hace lo mismo con la inicial, 20 °C.",
+     "Así, se necesitan $20\\,000$ cal. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "Usa la temperatura final (60 °C) como si fuera la variación.",
-     "B": "Usa la temperatura inicial (20 °C) como si fuera la variación."
+     "A": "Corresponde a usar 50 g en lugar de 500 g, un error de cifras. La trampa es no leer bien la masa.",
+     "B": "Usa la temperatura inicial (20 °C) como si fuera la variación: $500\\cdot 20 = 10\\,000$. La trampa es no restar.",
+     "D": "Usa la temperatura final (60 °C) como si fuera la variación: $500\\cdot 60 = 30\\,000$. La trampa es no restar la temperatura inicial."
     }
-   }
+   },
+   "subtopic": "cs-energia"
   },
   {
    "id": "ciencias-curado-1-q13",
@@ -624,17 +727,27 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "$Z$ (abajo) da los protones, $A$ (arriba) es protones + neutrones, y la carga indica cuántos electrones se ganaron o perdieron.",
+    "summary": "En el átomo neutro, $Z$ es el número de protones; el catión $\\mathrm{Na^+}$ perdió un electrón, por lo que tiene 10 electrones y 12 neutrones.",
+    "planteamiento": "Se pide el número de protones, neutrones y electrones del ion ${}^{23}_{11}\\mathrm{Na}^{+}$. Datos: $Z = 11$; $A = 23$; carga $+1$.",
     "steps": [
-     "Protones: $Z = 11$.",
-     "Neutrones: $A - Z = 23 - 11 = 12$.",
-     "Electrones: el átomo neutro tiene 11; la carga $+1$ indica que perdió uno: $11 - 1 = 10$."
+     "El subíndice $Z = 11$ indica el número de protones, que define al elemento sodio.",
+     "El superíndice $A = 23$ es el número másico, la suma de protones y neutrones.",
+     "Neutrones: $N = A - Z = 23 - 11 = 12$.",
+     "El átomo neutro tiene tantos electrones como protones, es decir, 11.",
+     "La carga $+1$ indica que perdió un electrón: $11 - 1 = 10$ electrones.",
+     "Control: la carga neta es $11 - 10 = +1$, igual a la carga indicada en el símbolo.",
+     "La alternativa A corresponde al átomo neutro, pues no considera la pérdida de carga; la C invierte protones y neutrones, con 12 protones, lo que no corresponde a $Z = 11$.",
+     "La alternativa D toma el número másico como cantidad de neutrones, y la E cambia el número de protones a 10, lo que correspondería a otro elemento.",
+     "Así, el ion tiene 11 protones, 12 neutrones y 10 electrones. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Corresponde al átomo neutro, no al catión.",
-     "D": "Toma el número másico como cantidad de neutrones."
+     "A": "Describe el átomo neutro y no considera que el catión perdió un electrón. La trampa es olvidar la carga del ion.",
+     "C": "Intercambia protones y neutrones; el número de protones es $Z = 11$, no 12. La trampa es leer el subíndice como neutrones.",
+     "D": "Toma el número másico como cantidad de neutrones, sin restar $Z$, y da 23 neutrones, lo que es imposible para este átomo. La trampa es confundir $A$ con $N$.",
+     "E": "Cambia el número de protones a 10, lo que correspondería a otro elemento (neón). La trampa es confundir la carga con el número atómico."
     }
-   }
+   },
+   "subtopic": "cs-atomo"
   },
   {
    "id": "ciencias-curado-1-q14",
@@ -670,16 +783,27 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "La configuración electrónica indica el período (nivel más externo) y los electrones de valencia (grupo).",
+    "summary": "Con $Z = 17$ la configuración termina en $3p^5$: el elemento está en el período 3, en el grupo 17, con 7 electrones de valencia, y tiende a ganar un electrón.",
+    "planteamiento": "Se pide la ubicación en la tabla periódica y el comportamiento químico de un elemento con $Z = 17$. Dato: el átomo neutro tiene 17 electrones.",
     "steps": [
-     "Configuración: $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^5$.",
-     "Nivel más externo $n = 3$: período 3. Electrones de valencia: $2 + 5 = 7$, grupo 17 (halógenos).",
-     "Le falta un electrón para completar el octeto, por eso tiende a ganarlo y formar el anión $\\mathrm{Cl^-}$ (es el cloro)."
+     "Con $Z = 17$, el átomo neutro tiene 17 electrones, distribuidos según el principio de Aufbau: $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^5$.",
+     "Se comprueba la suma: $2 + 2 + 6 + 2 + 5 = 17$ electrones.",
+     "El nivel más externo es $n = 3$, así que el elemento pertenece al período 3.",
+     "Los electrones de valencia son los del nivel $n = 3$: $3s^2\\,3p^5$, es decir, $2 + 5 = 7$ electrones.",
+     "Siete electrones de valencia corresponden al grupo 17 (halógenos) en la numeración de 18 grupos.",
+     "Le falta un electrón para completar el octeto, por lo que tiende a ganarlo y formar el anión $\\mathrm{Cl^-}$, con configuración de gas noble.",
+     "La alternativa B confunde el número de grupo con la tendencia y propone perder siete electrones, algo energéticamente inviable; la C indica período 2, cuando el nivel externo es 3.",
+     "La alternativa D indica grupo 1 y perder un electrón, propio de los metales alcalinos; la E indica período 4, y compartir un electrón no es la tendencia típica de este grupo.",
+     "Así, el elemento está en el período 3, grupo 17, y tiende a ganar un electrón. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Perder siete electrones requiere mucha más energía que ganar uno."
+     "B": "Confunde el número de grupo con el de electrones de valencia y propone perder siete electrones, algo energéticamente inviable. La trampa es leer el 7 como grupo.",
+     "C": "Ubica el elemento en el período 2, pero su nivel más externo es $n = 3$. La trampa es ignorar el número del nivel de la configuración.",
+     "D": "Propone grupo 1 y perder un electrón, lo que corresponde a los metales alcalinos. La trampa es fijarse solo en el tipo de tendencia.",
+     "E": "Ubica el elemento en el período 4, cuando su nivel más externo es 3; además, compartir un electrón no describe la tendencia típica de este grupo. La trampa es mezclar período con grupo."
     }
-   }
+   },
+   "subtopic": "cs-atomo"
   },
   {
    "id": "ciencias-curado-1-q15",
@@ -711,18 +835,26 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Convierte la masa a moles, usa la proporción de la ecuación y vuelve a masa.",
+    "summary": "La estequiometría convierte 4 g de hidrógeno en 2 mol de $\\mathrm{H_2}$, que producen 2 mol de agua, es decir, 36 g de $\\mathrm{H_2O}$.",
+    "planteamiento": "Se pide la masa de agua que se forma a partir de 4 g de $\\mathrm{H_2}$ que reaccionan por completo con oxígeno. Datos: masas molares H = 1 g/mol y O = 16 g/mol; ecuación balanceada $2\\,\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\,\\mathrm{H_2O}$.",
     "steps": [
-     "Moles de $\\mathrm{H_2}$: $\\dfrac{4\\ \\text{g}}{2\\ \\text{g/mol}} = 2$ mol.",
-     "Según la ecuación, 2 mol de $\\mathrm{H_2}$ forman 2 mol de $\\mathrm{H_2O}$.",
-     "Masa: $2\\ \\text{mol}\\cdot 18\\ \\text{g/mol} = 36$ g.",
-     "Control por conservación de la masa: 4 g de $\\mathrm{H_2}$ + 32 g de $\\mathrm{O_2}$ (1 mol) = 36 g."
+     "Primero se calcula la masa molar del agua: $M(\\mathrm{H_2O}) = 2\\cdot 1 + 16 = 18$ g/mol.",
+     "Se convierten los 4 g de $\\mathrm{H_2}$ a moles, con $M(\\mathrm{H_2}) = 2$ g/mol: $n = \\dfrac{4\\ \\text{g}}{2\\ \\text{g/mol}} = 2$ mol.",
+     "La ecuación indica la proporción 2 mol de $\\mathrm{H_2}$ : 2 mol de $\\mathrm{H_2O}$, por lo que se forman 2 mol de agua.",
+     "Se convierte a masa: $m = n\\cdot M = 2\\ \\text{mol}\\cdot 18\\ \\text{g/mol} = 36$ g.",
+     "Control por conservación de la masa: los reactivos suman 4 g de $\\mathrm{H_2}$ y 32 g de $\\mathrm{O_2}$ (que son 1 mol según la ecuación), es decir, 36 g, igual a la masa de agua formada.",
+     "La alternativa B (34 g) suma 2 g de hidrógeno (1 mol) a 32 g de oxígeno, como si no se usaran los coeficientes de la ecuación.",
+     "La alternativa A (18 g) es la masa de un mol de agua, pues no se consideró la cantidad de moles formados.",
+     "La alternativa D (72 g) usa 4 mol de agua, lo que confunde la masa de hidrógeno en gramos con su cantidad en moles.",
+     "Así, la masa de agua formada es de 36 g. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "Es la masa de **un** mol de agua.",
-     "D": "Usa 4 mol de agua: confunde la masa de $\\mathrm{H_2}$ (4 g) con su cantidad en moles."
+     "A": "Es la masa de un mol de agua, sin considerar la cantidad de moles que se forman. La trampa es olvidar la estequiometría.",
+     "B": "Suma 2 g de hidrógeno (1 mol) a 32 g de oxígeno, sin usar los coeficientes de la ecuación. La trampa es no balancear la proporción.",
+     "D": "Usa 4 mol de agua, confundiendo la masa de $\\mathrm{H_2}$ (4 g) con su cantidad en moles. La trampa es la confusión entre masa y mol."
     }
-   }
+   },
+   "subtopic": "cs-reacciones"
   },
   {
    "id": "ciencias-curado-1-q16",
@@ -758,18 +890,27 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Molaridad = moles de soluto / litros de solución.",
+    "summary": "La molaridad es moles de soluto sobre litros de solución: 20 g de NaOH equivalen a 0,5 mol disueltos en 0,5 L, es decir, 1 mol/L.",
+    "planteamiento": "Se pide la concentración molar de una solución. Datos: $m = 20$ g de $\\mathrm{NaOH}$; masa molar $M = 40$ g/mol; volumen de solución $V = 500$ mL.",
     "steps": [
-     "Moles: $\\dfrac{20}{40} = 0{,}5$ mol.",
-     "Volumen: $500$ mL $= 0{,}5$ L.",
-     "$M = \\dfrac{0{,}5\\ \\text{mol}}{0{,}5\\ \\text{L}} = 1$ mol/L."
+     "La concentración molar se define como $M = \\dfrac{n}{V}$, con $n$ en mol y $V$ en litros.",
+     "Se calcula la cantidad de soluto: $n = \\dfrac{20\\ \\text{g}}{40\\ \\text{g/mol}} = 0{,}5$ mol.",
+     "Se convierte el volumen a litros: $500\\ \\text{mL}\\cdot \\dfrac{1\\ \\text{L}}{1000\\ \\text{mL}} = 0{,}5$ L.",
+     "Se reemplaza en la definición: $M = \\dfrac{0{,}5\\ \\text{mol}}{0{,}5\\ \\text{L}}$.",
+     "Se simplifica: $M = 1$ mol/L.",
+     "Control: una solución de 1 mol/L contiene 1 mol en cada litro; en medio litro habría 0,5 mol, que es justo lo que se disolvió.",
+     "La alternativa B (0,5 mol/L) entrega los moles de soluto sin dividir por el volumen; la alternativa A (0,04 mol/L) divide gramos entre mililitros, $20/500$.",
+     "La alternativa D (2 mol/L) corresponde a usar 0,25 L como volumen, un error de conversión; la alternativa E (40 mol/L) divide $20$ g entre $0{,}5$ L sin pasar los gramos a moles.",
+     "Así, la concentración molar es de 1 mol/L. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "Son los moles de soluto, sin dividir por el volumen.",
-     "A": "Divide gramos por mililitros: $\\dfrac{20}{500}$.",
-     "E": "Divide gramos por litros: $\\dfrac{20}{0{,}5}$, sin pasar a moles."
+     "A": "Divide gramos entre mililitros, $20/500 = 0{,}04$, sin convertir los gramos a moles ni el volumen a litros. La trampa es omitir las conversiones.",
+     "B": "Son los moles de soluto sin dividir por el volumen. La trampa es olvidar la definición de molaridad.",
+     "D": "Equivale a usar 0,25 L (250 mL) como volumen, en lugar de 500 mL. La trampa es un error en la conversión de mililitros a litros.",
+     "E": "Divide 20 g entre 0,5 L sin pasar los gramos a moles. La trampa es mezclar unidades."
     }
-   }
+   },
+   "subtopic": "cs-disoluciones"
   },
   {
    "id": "ciencias-curado-1-q17",
@@ -801,16 +942,26 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "$\\mathrm{pH} = -\\log[\\mathrm{H^+}]$. A 25 °C, pH menor que 7 indica solución ácida.",
+    "summary": "Con $[\\mathrm{H^+}] = 10^{-3}$ mol/L, el pH es 3; a 25 °C, un pH menor que 7 corresponde a una solución ácida.",
+    "planteamiento": "Se pide el pH y la clasificación de una solución con $[\\mathrm{H^+}] = 1\\cdot 10^{-3}$ mol/L a 25 °C. Dato de referencia: a 25 °C, pH 7 corresponde a una solución neutra.",
     "steps": [
-     "$\\mathrm{pH} = -\\log(10^{-3}) = 3$.",
-     "Como $3 < 7$, la solución es ácida."
+     "El pH se define como $\\mathrm{pH} = -\\log[\\mathrm{H^+}]$, con la concentración expresada en mol/L.",
+     "Se reemplaza: $\\mathrm{pH} = -\\log(1\\cdot 10^{-3})$.",
+     "Como $\\log(10^{-3}) = -3$, resulta $\\mathrm{pH} = -(-3) = 3$.",
+     "Control: con $\\mathrm{pH} = 3$ el $\\mathrm{pOH}$ es $14 - 3 = 11$, lo que implica $[\\mathrm{OH^-}] = 10^{-11}$ mol/L, consistente con una solución muy ácida.",
+     "Clasificación a 25 °C: pH 7 es neutro, pH menor que 7 es ácido y pH mayor que 7 es básico. Como $3 < 7$, la solución es ácida.",
+     "La alternativa A (pH 11, básica) es el pOH calculado como si fuera pH.",
+     "La alternativa B (pH 3, básica) acierta el valor, pero invierte la clasificación: un pH bajo indica acidez.",
+     "La alternativa C (pH −3) olvida el signo negativo de la definición, lo que da un valor que no corresponde a esta concentración.",
+     "Así, la solución tiene pH 3 y es ácida. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Es el pOH ($14 - 3$) interpretado como pH.",
-     "C": "Olvida el signo negativo de la definición de pH."
+     "A": "Es el pOH ($14 - 3 = 11$) interpretado como pH. La trampa es confundir ambos valores.",
+     "B": "Acierta el pH, pero invierte la clasificación: un pH menor que 7 es ácido. La trampa es asociar un valor bajo con basicidad.",
+     "C": "Olvida el signo negativo de la definición, de modo que $\\log(10^{-3}) = -3$ se toma como pH. La trampa es un error de signo."
     }
-   }
+   },
+   "subtopic": "cs-disoluciones"
   },
   {
    "id": "ciencias-curado-1-q18",
@@ -846,15 +997,25 @@
    "textQuality": "clean",
    "explanation": {
     "kind": "desarrollo",
-    "summary": "Una cetona tiene un grupo carbonilo ($\\mathrm{C{=}O}$) unido a **dos** carbonos, es decir, en medio de la cadena.",
+    "summary": "Una cetona tiene el grupo carbonilo unido a dos carbonos; en $\\mathrm{CH_3{-}CO{-}CH_3}$ el carbonilo está entre dos grupos metilo, por lo que es una cetona.",
+    "planteamiento": "Se pide identificar cuál de las fórmulas corresponde a una cetona. Dato clave: la cetona posee un grupo $\\mathrm{C{=}O}$ en el interior de la cadena, unido a dos átomos de carbono.",
     "steps": [
-     "En $\\mathrm{CH_3{-}CO{-}CH_3}$ (propanona o acetona), el carbonilo está entre dos grupos metilo: es una cetona.",
-     "Reconoce las demás: A es un alcohol (etanol), B un ácido carboxílico (ácido acético), C un aldehído (etanal) y D un éter (dimetiléter)."
+     "El grupo carbonilo es $\\mathrm{C{=}O}$. Su posición determina la familia: en un aldehído está al final de la cadena (unido a un hidrógeno); en una cetona está entre dos carbonos.",
+     "La alternativa A, $\\mathrm{CH_3{-}CH_2{-}OH}$, tiene un grupo hidroxilo (-OH) y no carbonilo; corresponde a un alcohol, el etanol.",
+     "La alternativa B, $\\mathrm{CH_3{-}COOH}$, tiene un grupo carboxilo (-COOH), que combina carbonilo e hidroxilo; es un ácido carboxílico, el ácido acético.",
+     "La alternativa C, $\\mathrm{CH_3{-}CHO}$, tiene el carbonilo al final de la cadena, unido a un hidrógeno; es un aldehído, el etanal.",
+     "La alternativa D, $\\mathrm{CH_3{-}O{-}CH_3}$, tiene un oxígeno unido a dos carbonos y no tiene carbonilo; es un éter, el dimetiléter.",
+     "La alternativa E, $\\mathrm{CH_3{-}CO{-}CH_3}$, tiene el carbonilo unido a dos grupos metilo; es una cetona, la propanona o acetona.",
+     "Así, la única fórmula con el carbonilo entre dos carbonos es la de la alternativa E. Por lo tanto, la alternativa correcta es la E."
     ],
     "distractors": {
-     "C": "El aldehído también tiene carbonilo, pero en el extremo de la cadena, unido a un hidrógeno."
+     "A": "Es un alcohol (etanol), con grupo -OH. La trampa es ver un oxígeno y pensar en un carbonilo.",
+     "B": "Es un ácido carboxílico (ácido acético); tiene carbonilo, pero su grupo -OH cambia la familia. La trampa es reconocer el carbonilo sin mirar el grupo completo.",
+     "C": "Es un aldehído (etanal), con el carbonilo al final de la cadena. La trampa es confundirla con una cetona por tener también carbonilo.",
+     "D": "Es un éter (dimetiléter), con un oxígeno entre dos carbonos y sin carbonilo. La trampa es confundir la posición del oxígeno con un carbonilo."
     }
-   }
+   },
+   "subtopic": "cs-organica"
   }
  ]
 }

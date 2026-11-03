@@ -105,18 +105,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La distancia de x a 4/7 es el doble de la distancia de 3/5 a x, lo que lleva a una ecuación lineal simple en x.",
+    "summary": "La condición de distancia convierte el problema en una ecuación lineal, siempre que se verifique que $x$ queda entre los dos extremos.",
+    "planteamiento": "Se pide el valor de $x$ entre $\\frac{4}{7}$ y $\\frac{3}{5}$ tal que su distancia a $\\frac{4}{7}$ sea el doble de su distancia a $\\frac{3}{5}$. Datos: $\\frac{4}{7}\\approx 0{,}571$ y $\\frac{3}{5}=0{,}6$; como $x$ está entre ambos, las distancias son $x-\\frac{4}{7}$ y $\\frac{3}{5}-x$.",
     "steps": [
-     "Los extremos son $\\frac{4}{7}\\approx 0{,}571$ y $\\frac{3}{5}=0{,}6$, así que $x$ está entre ambos. Las distancias son $x-\\frac{4}{7}$ y $\\frac{3}{5}-x$.",
-     "La condición del enunciado es $x-\\frac{4}{7}=2\\left(\\frac{3}{5}-x\\right)$.",
-     "Desarrollando: $x-\\frac{4}{7}=\\frac{6}{5}-2x$, de donde $3x=\\frac{6}{5}+\\frac{4}{7}=\\frac{42+20}{35}=\\frac{62}{35}$.",
-     "Despejando: $x=\\frac{62}{105}$, y como $\\frac{62}{105}\\approx 0{,}590$ está entre $0{,}571$ y $0{,}6$, el valor es válido. Por lo tanto, la alternativa correcta es la C."
+     "Primero se confirma el orden de los extremos: $\\frac{4}{7}=\\frac{20}{35}$ y $\\frac{3}{5}=\\frac{21}{35}$, así que $\\frac{4}{7}<\\frac{3}{5}$. Por eso, un $x$ entre ambos cumple $x-\\frac{4}{7}>0$ y $\\frac{3}{5}-x>0$, y las distancias se pueden escribir sin valor absoluto.",
+     "La condición del enunciado dice que la distancia de $x$ a $\\frac{4}{7}$ es el doble de la distancia de $x$ a $\\frac{3}{5}$: $x-\\frac{4}{7}=2\\left(\\frac{3}{5}-x\\right)$.",
+     "Se aplica la propiedad distributiva en el lado derecho: $x-\\frac{4}{7}=2\\cdot\\frac{3}{5}-2x=\\frac{6}{5}-2x$.",
+     "Se reúnen las incógnitas a la izquierda sumando $2x$ a ambos lados: $3x-\\frac{4}{7}=\\frac{6}{5}$. Luego se suma $\\frac{4}{7}$ a ambos lados: $3x=\\frac{6}{5}+\\frac{4}{7}$.",
+     "Se suman las fracciones con denominador común $35$: $\\frac{6}{5}=\\frac{42}{35}$ y $\\frac{4}{7}=\\frac{20}{35}$, luego $3x=\\frac{42+20}{35}=\\frac{62}{35}$.",
+     "Se divide por $3$: $x=\\frac{62}{35\\cdot 3}=\\frac{62}{105}$. Como $\\frac{62}{105}\\approx 0{,}590$ está entre $0{,}571$ y $0{,}6$, el valor es válido. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "$\\frac{61}{105}$ aparece si se duplica la distancia equivocada: $2\\left(x-\\frac{4}{7}\\right)=\\frac{3}{5}-x$.",
-     "B": "$\\frac{41}{70}$ es el punto medio entre $\\frac{4}{7}$ y $\\frac{3}{5}$, que no cumple la condición de distancia doble."
+     "A": "$\\frac{61}{105}$ aparece si se duplica la distancia equivocada: $2\\left(x-\\frac{4}{7}\\right)=\\frac{3}{5}-x$, que da $3x=\\frac{3}{5}+\\frac{8}{7}=\\frac{61}{35}$. Se cambia el lado al que corresponde el doble y el resultado queda cerca de la respuesta correcta, pero no cumple el enunciado.",
+     "B": "$\\frac{41}{70}$ es el punto medio entre $\\frac{4}{7}$ y $\\frac{3}{5}$, es decir, $\\frac{1}{2}\\left(\\frac{4}{7}+\\frac{3}{5}\\right)$. Esa distancia es igual a ambos lados, por lo que no cumple la condición de que una distancia sea el doble de la otra.",
+     "D": "$\\frac{21}{35}$ es igual a $\\frac{3}{5}$, uno de los extremos del intervalo. Si $x=\\frac{3}{5}$, su distancia a $\\frac{3}{5}$ sería $0$, y no es el doble de la distancia a $\\frac{4}{7}$; además, $x$ debe quedar estrictamente entre ambos extremos."
     }
-   }
+   },
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-invierno-q02",
@@ -153,18 +158,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Hay que cubrir 260 m² y, para no quedar corto, se calcula con el rendimiento mínimo de 35 m² por galón, redondeando hacia arriba.",
+    "summary": "Como el número de galones debe ser entero y debe asegurar la pintura en el peor caso, se usa el rendimiento mínimo de 35 m² por galón y se redondea hacia arriba.",
+    "planteamiento": "Se pide el costo total de la mínima cantidad de galones que asegure cubrir la superficie. Datos: se deben cubrir $130\\ \\mathrm{m}^2$ con dos capas, así que la superficie total es $2\\cdot 130=260\\ \\mathrm{m}^2$; cada galón rinde entre $35\\ \\mathrm{m}^2$ y $45\\ \\mathrm{m}^2$ y cuesta 29 200 pesos.",
     "steps": [
-     "Superficie total con dos capas: $2\\cdot 130=260\\ \\mathrm{m^2}$.",
-     "Con el rendimiento mínimo garantizado de $35\\ \\mathrm{m^2}$ por galón: $\\frac{260}{35}\\approx 7{,}43$.",
-     "Como no se compran fracciones de galón, se necesitan **8 galones**. Con 7 galones solo se cubririan $7\\cdot 35=245\\ \\mathrm{m^2}$ en el peor caso, insuficiente.",
-     "Costo: $8\\cdot 29\\,200=233\\,600$ pesos. Por lo tanto, la alternativa correcta es la D."
+     "Se calcula la superficie total que hay que cubrir: como son dos capas sobre $130\\ \\mathrm{m}^2$, la superficie a pintar es $2\\cdot 130=260\\ \\mathrm{m}^2$.",
+     "Para asegurar que no falte pintura se usa el peor caso, es decir, el rendimiento más bajo de cada galón, $35\\ \\mathrm{m}^2$. Con ese dato, la cantidad de galones $n$ debe cumplir $35\\cdot n\\ge 260$, o sea, $n\\ge\\frac{260}{35}$.",
+     "Se divide: $\\frac{260}{35}\\approx 7{,}43$. Como no se compran fracciones de galón, se necesita un número entero mayor o igual a $7{,}43$, es decir, $n=8$.",
+     "Comprobación con 7 galones: $7\\cdot 35=245\\ \\mathrm{m}^2<260\\ \\mathrm{m}^2$, por lo que en el peor caso queda superficie sin cubrir. Con 8 galones: $8\\cdot 35=280\\ \\mathrm{m}^2\\ge 260\\ \\mathrm{m}^2$, que sí alcanza en cualquier caso.",
+     "Costo total: $8\\cdot 29\\,200=233\\,600$ pesos. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "B": "175 200 pesos corresponden a 6 galones: usa el rendimiento máximo de 45 m² ($\\frac{260}{45}\\approx 5{,}8$), que no asegura cubrir en el caso de 35 m².",
-     "C": "204 400 pesos corresponden a 7 galones, que cubren solo 245 m² en el peor caso; redondear 7,43 hacia abajo deja pintura sin cubrir."
+     "A": "146 000 pesos corresponden a 5 galones. Este valor sale de dividir 260 por el rendimiento máximo de $45\\ \\mathrm{m}^2$ ($\\frac{260}{45}\\approx 5{,}8$) y redondear hacia abajo; con 5 galones solo se cubren $5\\cdot 45=225\\ \\mathrm{m}^2$, insuficientes incluso en el mejor caso.",
+     "B": "175 200 pesos corresponden a 6 galones. Esa cantidad sale de usar el rendimiento máximo de $45\\ \\mathrm{m}^2$ ($\\frac{260}{45}\\approx 5{,}8$, redondeado a 6), pero en el caso de $35\\ \\mathrm{m}^2$ por galón solo se cubren $6\\cdot 35=210\\ \\mathrm{m}^2$.",
+     "C": "204 400 pesos corresponden a 7 galones, que cubren solo $245\\ \\mathrm{m}^2$ en el peor caso. Redondear $7{,}43$ hacia abajo deja pintura sin cubrir, porque no se puede comprar una fracción de galón."
     }
-   }
+   },
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2026-invierno-q03",
@@ -201,19 +210,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Se aplica el algoritmo del dígito verificador a los dígitos de 60.910.000 y se obtiene que $11-n=1$.",
+    "summary": "El dígito verificador se obtiene aplicando la suma ponderada del algoritmo a los dígitos del RUT y luego el resto al dividir por 11.",
+    "planteamiento": "Se pide el dígito verificador $V$ del RUT $60.910.000$. Datos: el RUT tiene 8 dígitos, con $A=6$, $B=0$, $C=9$, $D=1$ y $E=F=G=H=0$; la suma se divide por $11$ para obtener el resto $n$, y $V$ depende de $11-n$.",
     "steps": [
-     "Los dígitos del RUT son $A=6$, $B=0$, $C=9$, $D=1$ y $E=F=G=H=0$.",
-     "Suma: $3\\cdot 6+2\\cdot 0+7\\cdot 9+6\\cdot 1+5\\cdot 0+4\\cdot 0+3\\cdot 0+2\\cdot 0=18+63+6=87$.",
-     "Resto al dividir por 11: $87=11\\cdot 7+10$, luego $n=10$.",
-     "Como $11-n=1\\le 9$, el dígito verificador es $V=1$. Por lo tanto, la alternativa correcta es la C."
+     "Se identifican los dígitos del RUT según la estructura $AB.CDE.FGH$: $A=6$, $B=0$, $C=9$, $D=1$, $E=0$, $F=0$, $G=0$ y $H=0$. Como el RUT tiene ocho dígitos, no se aplica la regla de $A=0$.",
+     "Se calcula la suma ponderada del paso 1 del algoritmo: $3\\cdot A+2\\cdot B+7\\cdot C+6\\cdot D+5\\cdot E+4\\cdot F+3\\cdot G+2\\cdot H=3\\cdot 6+2\\cdot 0+7\\cdot 9+6\\cdot 1+0+0+0+0$.",
+     "Se operan los productos: $18+0+63+6=87$.",
+     "Se divide la suma por $11$ para obtener el resto: $87=11\\cdot 7+10$, luego $n=10$. Como $10<11$, es el resto de la división y no un cociente incompleto.",
+     "Se aplica la regla del dígito verificador: $11-n=11-10=1$. Como $1\\le 9$, corresponde al caso de un dígito, así que $V=1$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "K corresponde a $11-n=10$; se elige si se usa $n=10$ directamente en lugar de $11-n$.",
-     "B": "0 aparece si se toma el resto como 0, por confundir 87 con 88, que sí es múltiplo de 11.",
-     "D": "7 aparece si se omite el término $6\\cdot D$: $18+63=81$, resto 4, y $11-4=7$."
+     "A": "K corresponde a $11-n=10$, es decir, a un resto $n=1$. Se elige si se toma directamente el resto $n=10$ como si fuera $11-n$, sin restarlo de 11.",
+     "B": "0 corresponde a $11-n=11$, es decir, resto $n=0$. Aparece al confundir 87 con 88, que sí es múltiplo de 11 ($88=8\\cdot 11$), pero 87 deja resto 10.",
+     "D": "7 aparece al omitir el término $6\\cdot D$: $18+63=81$, y $81=11\\cdot 7+4$, luego $11-4=7$. Es un error por olvidar un dígito en la suma ponderada."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q04",
@@ -250,17 +262,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Si $\\frac{1}{4}M=N$, entonces $M=4N$, así que M es el 400 % de N.",
+    "summary": "Como la pregunta pide cuánto es M respecto de N, hay que despejar M en función de N y luego expresar el cociente $\\frac{M}{N}$ como porcentaje.",
+    "planteamiento": "Se pide qué porcentaje de $N$ es $M$, es decir, $\\frac{M}{N}$ expresado en porcentaje. Datos: el $25\\,\\%$ de $M$ es $N$, o sea, $\\frac{25}{100}\\cdot M=N$.",
     "steps": [
-     "La condición es $25\\,\\%$ de $M$ igual a $N$, es decir, $\\frac{1}{4}M=N$.",
-     "Despejando: $M=4N$.",
-     "Como porcentaje de N: $\\frac{M}{N}=4=\\frac{400}{100}$, es decir, M es el 400 % de N. Por lo tanto, la alternativa correcta es la D."
+     "Se traduce el enunciado a una ecuación: el $25\\,\\%$ de $M$ es $N$, luego $\\frac{25}{100}\\cdot M=N$, es decir, $\\frac{1}{4}M=N$.",
+     "Se despeja $M$ multiplicando ambos lados por $4$: $M=4N$.",
+     "Se calcula la razón pedida: $\\frac{M}{N}=\\frac{4N}{N}=4$, siempre que $N\\neq 0$ para que la razón exista.",
+     "Comprobación con números: si $N=10$, entonces $M=40$, y el $25\\,\\%$ de $40$ es $10$, que coincide con $N$. Como $\\frac{40}{10}=4$, $M$ es el $400\\,\\%$ de $N$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "B": "25 % repite el porcentaje del enunciado sin invertir la relación; el 25 % es de M, no de N.",
-     "C": "75 % resulta de calcular 100 % − 25 %, que mide una diferencia y no la proporción entre M y N."
+     "A": "4 % proviene de leer la razón $\\frac{M}{N}=4$ como $4\\,\\%$, es decir, de olvidar que hay que multiplicar por 100 para pasar a porcentaje. El error es de escala, no de despeje.",
+     "B": "25 % repite el porcentaje del enunciado sin invertir la relación. El 25 % es de $M$, no de $N$, así que no describe qué fracción de $N$ es $M$.",
+     "C": "75 % resulta de calcular $100\\,\\%-25\\,\\%$, lo que mide una diferencia y no la proporción entre $M$ y $N$. Confunde el porcentaje que falta con el que se pide."
     }
-   }
+   },
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2026-invierno-q05",
@@ -297,17 +313,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Aumentar en 15 % equivale a multiplicar por 1,15 y disminuir en 5 % a multiplicar por 0,95; los factores se encadenan.",
+    "summary": "Aumentar una cantidad en un porcentaje equivale a multiplicarla por $1$ más la tasa, y disminuirla equivale a multiplicar por $1$ menos la tasa; los factores se encadenan.",
+    "planteamiento": "Se pide la expresión del número final tras aumentar 1200 en un $15\\,\\%$ y luego disminuir el resultado en un $5\\,\\%$. Datos: el valor inicial es $1200$, el aumento es $15\\,\\%=0{,}15$ y la disminución es $5\\,\\%=0{,}05$.",
     "steps": [
-     "Aumentar 1200 en su 15 %: $1200\\cdot(1+0{,}15)=1200\\cdot 1{,}15$.",
-     "Disminuir ese resultado en su 5 %: se multiplica por $1-0{,}05=0{,}95$.",
-     "El número final es $1200\\cdot 1{,}15\\cdot 0{,}95$. Las opciones C y D restan cantidades, lo que no representa una cadena de porcentajes. Por lo tanto, la alternativa correcta es la A."
+     "Aumentar 1200 en su $15\\,\\%$ significa sumar $0{,}15\\cdot 1200$ al valor inicial, es decir, $1200+0{,}15\\cdot 1200=1200\\cdot(1+0{,}15)=1200\\cdot 1{,}15$, por la propiedad distributiva.",
+     "El número obtenido es $1200\\cdot 1{,}15=1380$. Ese valor es la base de la segunda operación, por lo que la disminución se calcula sobre 1380 y no sobre 1200.",
+     "Disminuir ese resultado en su $5\\,\\%$ significa restar $0{,}05$ de su valor: $1380-0{,}05\\cdot 1380=1380\\cdot(1-0{,}05)=1380\\cdot 0{,}95$.",
+     "Se encadenan ambos factores: el número final es $1200\\cdot 1{,}15\\cdot 0{,}95$. Comprobación numérica: $1380\\cdot 0{,}95=1311$, que coincide con $1200\\cdot 1{,}15\\cdot 0{,}95$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "C": "$1200\\cdot 1{,}15-1200\\cdot 0{,}95$ resta dos valores parciales en vez de encadenar los factores.",
-     "D": "$1200\\cdot 0{,}15-1200\\cdot 0{,}05$ usa los porcentajes 0,15 y 0,05 como factores, en vez de $1+0{,}15$ y $1-0{,}05$."
+     "B": "$1200\\cdot 0{,}15\\cdot 0{,}05$ usa las tasas de aumento y disminución como factores en vez de $1+0{,}15$ y $1-0{,}05$. El resultado sería 9, un número muy pequeño que no se parece en nada a 1200.",
+     "C": "$1200\\cdot 1{,}15-1200\\cdot 0{,}95$ resta dos valores parciales en vez de encadenar los factores. Da $1380-1140=240$, que mide una diferencia y no el número final.",
+     "D": "$1200\\cdot 0{,}15-1200\\cdot 0{,}05$ usa 0,15 y 0,05 como factores, en vez de $1+0{,}15$ y $1-0{,}05$, y además resta. Da $180-60=120$, que corresponde solo a una parte del porcentaje."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q06",
@@ -344,17 +364,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada día es 0,96 veces el anterior, así que para hallar el primer día se divide el último por $0{,}96^{2}$.",
+    "summary": "Como cada día es el $96\\,\\%$ del anterior, el último día es el primero multiplicado dos veces por $0{,}96$; para recuperar el primero hay que dividir dos veces por $0{,}96$.",
+    "planteamiento": "Se pide la cantidad de búsquedas del primer día. Datos: cada día baja un $4\\,\\%$ respecto del anterior, por lo que el factor diario es $1-0{,}04=0{,}96$, y el último día hay $276\\,480$ búsquedas, después de dos caídas desde el primer día.",
     "steps": [
-     "Cada día la cantidad es el 96 % del día anterior, es decir, se multiplica por 0,96.",
-     "Si $x$ son las búsquedas del primer día, el segundo día hay $0{,}96x$ y el tercero $0{,}96^{2}x=276\\,480$.",
-     "Despejando: $x=\\frac{276\\,480}{0{,}96^{2}}$. Por lo tanto, la alternativa correcta es la A."
+     "Una caída de $4\\,\\%$ deja el $96\\,\\%$ del valor anterior, así que cada día equivale a multiplicar por $1-0{,}04=0{,}96$ el número de búsquedas del día previo.",
+     "Sea $x$ el número de búsquedas del primer día. El segundo día hay $0{,}96x$ y el tercer día, que es el último, hay $0{,}96\\cdot(0{,}96x)=0{,}96^{2}x$.",
+     "Como el último día hay $276\\,480$ búsquedas, se plantea la ecuación $0{,}96^{2}\\cdot x=276\\,480$.",
+     "Se despeja $x$ dividiendo ambos lados por $0{,}96^{2}$: $x=\\frac{276\\,480}{0{,}96^{2}}$. Así la operación se hace sobre el último día, porque el primer día es el valor mayor.",
+     "Comprobación: $0{,}96^{2}=0{,}9216$ y $\\frac{276\\,480}{0{,}9216}=300\\,000$. Luego el primer día hay 300 000 búsquedas, el segundo 288 000 y el tercero 276 480, y cada caída es del $4\\,\\%$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "$\\frac{276\\,480}{0{,}04^{2}}$ usa 0,04 como factor, cuando la baja es del 4 % y el factor es 0,96.",
-     "C": "$276\\,480\\cdot 0{,}96^{2}$ multiplica en vez de dividir; así se obtendría un valor menor que el último día, lo que es imposible para un primer día con búsquedas en descenso."
+     "B": "$\\frac{276\\,480}{0{,}04^{2}}$ usa 0,04 como factor, cuando la baja es del $4\\,\\%$ y el factor que corresponde es $0{,}96$. Dividir por $0{,}04^{2}=0{,}0016$ daría un número enorme y sin relación con la caída.",
+     "C": "$276\\,480\\cdot 0{,}96^{2}$ multiplica en vez de dividir; así se obtendría un valor menor que el último día, lo que es imposible para un primer día con búsquedas en descenso.",
+     "D": "$276\\,480\\cdot 0{,}04^{2}$ usa la caída como factor y además multiplica, por lo que da un valor muy pequeño, cercano a 442 búsquedas. No corresponde a un primer día con búsquedas que bajan un $4\\,\\%$ diario."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q07",
@@ -391,17 +416,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La expresión $100\\cdot(1-k)$ da el porcentaje que queda, así que k es la fracción de la obra ya realizada hasta el último día.",
+    "summary": "La expresión $100\\cdot(1-k)$ da el porcentaje pendiente, así que $k$ debe ser la fracción ya realizada, medida sobre toda la obra y no solo sobre un día.",
+    "planteamiento": "Se pide el significado de $k$ en la expresión $100\\cdot(1-k)\\,\\%$, que da el porcentaje de la obra que queda por realizar al terminar cada día trabajado. Datos: la expresión depende de $k$, y el cálculo se repite al final de cada día.",
     "steps": [
-     "El porcentaje que queda es $100\\cdot(1-k)\\,\\%$, luego $1-k$ es la fracción de la obra que falta.",
-     "Por lo tanto $k$ es la fracción de la obra que ya está hecha.",
-     "Como el cálculo se hace al terminar cada día, $k$ cambia día a día y acumula todo el trabajo previo, no solo el de un día. Por lo tanto, la alternativa correcta es la B."
+     "El porcentaje que queda por realizar es $100\\cdot(1-k)\\,\\%$. Si se divide por 100, la fracción que queda es $1-k$.",
+     "Si $1-k$ es la parte pendiente, $k$ es la parte que ya se completó, porque las dos suman el total de la obra: $k+(1-k)=1$, es decir, el $100\\,\\%$.",
+     "Por otro lado, el cálculo se hace al terminar cada día, y el avance ya hecho incluye todos los días anteriores. Por eso $k$ es un valor acumulado que cambia día a día, y no el avance de un solo día.",
+     "Como $k$ mide el avance hasta el último día trabajado, el porcentaje que queda es el complemento de todo el avance acumulado. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Confunde el avance acumulado con el avance de un solo día; el porcentaje que queda se calcula sobre toda la obra.",
-     "D": "Describe el porcentaje pendiente, que ya es $100\\cdot(1-k)$; por eso invierte el significado de k."
+     "A": "Confunde el avance acumulado con el avance de un solo día. El porcentaje que queda se calcula sobre toda la obra, así que $k$ debe incluir todo el trabajo previo y no solo el del último día.",
+     "C": "Describe un avance diario que se repite, pero la expresión se calcula al terminar cada día sobre el total de la obra; por eso no es el avance de cada día por separado.",
+     "D": "Describe el porcentaje pendiente, que ya es $100\\cdot(1-k)$; por eso invierte el significado de $k$. Si $k$ fuera lo pendiente, la expresión daría el avance y no el porcentaje que queda."
     }
-   }
+   },
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2026-invierno-q08",
@@ -438,17 +467,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La diferencia positiva es $1{,}67\\cdot 10^{-27}-9{,}11\\cdot 10^{-31}$; factorizando $10^{-27}$ se obtiene la forma de la alternativa C.",
+    "summary": "La diferencia positiva se obtiene restando la masa menor a la mayor, y factorizando $10^{-27}$ se escribe como un número multiplicado por esa potencia.",
+    "planteamiento": "Se pide la diferencia positiva entre las masas del protón, $1{,}67\\cdot 10^{-27}\\ \\mathrm{kg}$, y del electrón, $9{,}11\\cdot 10^{-31}\\ \\mathrm{kg}$. Datos: el protón es más masivo, así que la diferencia es protón menos electrón.",
     "steps": [
-     "Protón: $1{,}67\\cdot 10^{-27}$ kg. Electrón: $9{,}11\\cdot 10^{-31}$ kg. El protón es más masivo, así que la diferencia positiva es $1{,}67\\cdot 10^{-27}-9{,}11\\cdot 10^{-31}$.",
-     "Como $10^{-31}=10^{-4}\\cdot 10^{-27}$, se factoriza $10^{-27}$: $\\left(1{,}67-9{,}11\\cdot 10^{-4}\\right)\\cdot 10^{-27}$.",
-     "Comprobación: $9{,}11\\cdot 10^{-4}\\cdot 10^{-27}=9{,}11\\cdot 10^{-31}$, luego la expresión coincide con la diferencia. Por lo tanto, la alternativa correcta es la C."
+     "Se identifica el mayor valor: $1{,}67\\cdot 10^{-27}$ es mucho mayor que $9{,}11\\cdot 10^{-31}$, porque su potencia de 10 es $-27$ y no $-31$. Entonces la diferencia positiva es $1{,}67\\cdot 10^{-27}-9{,}11\\cdot 10^{-31}$.",
+     "Para factorizar la potencia común, se expresa $10^{-31}$ como $10^{-4}\\cdot 10^{-27}$, porque $-4+(-27)=-31$: así, $9{,}11\\cdot 10^{-31}=9{,}11\\cdot 10^{-4}\\cdot 10^{-27}$.",
+     "Se aplica la propiedad distributiva sobre la potencia común: $1{,}67\\cdot 10^{-27}-9{,}11\\cdot 10^{-4}\\cdot 10^{-27}=\\left(1{,}67-9{,}11\\cdot 10^{-4}\\right)\\cdot 10^{-27}$.",
+     "Comprobación: $9{,}11\\cdot 10^{-4}\\cdot 10^{-27}=9{,}11\\cdot 10^{-31}$, luego la expresión coincide con la diferencia de masas. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "$(9{,}11-1{,}67)\\cdot 10^{-58}$ resta los coeficientes en lugar de las masas y multiplica las potencias de 10.",
-     "D": "$(1{,}67-9{,}11\\cdot 10^{-4})\\cdot 10^{-31}$ usa la potencia del electrón como factor común, lo que da un orden de magnitud incorrecto."
+     "A": "$(9{,}11-1{,}67)\\cdot 10^{-58}$ resta los coeficientes en lugar de las masas y multiplica las potencias de 10 en vez de factorizarlas, pues $-27+(-31)=-58$. El orden de magnitud resultante es incorrecto.",
+     "B": "$(9{,}11-1{,}67)\\cdot 10^{-4}$ resta los coeficientes sin considerar las potencias de 10. Da $7{,}44\\cdot 10^{-4}$ kg, que está muy lejos de la masa del protón, del orden de $10^{-27}$ kg.",
+     "D": "$(1{,}67-9{,}11\\cdot 10^{-4})\\cdot 10^{-31}$ usa la potencia del electrón como factor común, lo que da un orden de magnitud incorrecto: el resultado sería cercano a $1{,}67\\cdot 10^{-31}$ kg, unas 10 000 veces menor que la masa del protón."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q09",
@@ -485,18 +518,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El error está en el Paso 2: $\\sqrt{8}\\cdot\\sqrt[3]{16}$ tiene índices distintos y no es igual a $\\sqrt[6]{8\\cdot 16}$.",
+    "summary": "El error está en el Paso 2: no se puede multiplicar $\\sqrt{8}$ y $\\sqrt[3]{16}$ como si tuvieran el mismo índice, porque el producto de raíces de distinto índice no es una única raíz de $8\\cdot 16$.",
+    "planteamiento": "Se pide identificar el paso con el error en el procedimiento para expresar $\\sqrt{8}\\cdot\\sqrt[3]{16}-(\\sqrt{2})^{3}$ como producto de dos números. Datos: se revisan los pasos uno a uno para encontrar el primero que no es válido.",
     "steps": [
-     "El Paso 1 es correcto: $(\\sqrt{2})^{3}=2\\sqrt{2}$.",
-     "En el Paso 2 no se puede juntar $\\sqrt{8}\\cdot\\sqrt[3]{16}$ bajo una sola raíz de $8\\cdot 16$, porque los índices son distintos. Para igualar índices: $\\sqrt{8}=\\sqrt[6]{512}$ y $\\sqrt[3]{16}=\\sqrt[6]{256}$.",
-     "Entonces el producto es $\\sqrt[6]{512\\cdot 256}=\\sqrt[6]{2^{17}}$, y no $\\sqrt[6]{128}=\\sqrt[6]{2^{7}}$ como se indica.",
-     "Los Pasos 3 y 4 operan correctamente con el valor $\\sqrt[6]{128}$, así que el error de origen está en el Paso 2. Por lo tanto, la alternativa correcta es la B."
+     "Se verifica el Paso 1: $(\\sqrt{2})^{3}=(\\sqrt{2})^{2}\\cdot\\sqrt{2}=2\\sqrt{2}$, que es correcto.",
+     "Se revisa el Paso 2: $\\sqrt{8}=8^{\\frac{1}{2}}=2^{\\frac{3}{2}}$ y $\\sqrt[3]{16}=16^{\\frac{1}{3}}=2^{\\frac{4}{3}}$. El producto de potencias de igual base da $2^{\\frac{3}{2}+\\frac{4}{3}}=2^{\\frac{17}{6}}$.",
+     "Como $\\frac{17}{6}$ no es $\\frac{7}{6}$, el resultado correcto es $\\sqrt[6]{2^{17}}$, mientras que el procedimiento escribe $\\sqrt[6]{128}=\\sqrt[6]{2^{7}}$. Por eso el error está en el Paso 2, al escribir $\\sqrt{8}\\cdot\\sqrt[3]{16}=\\sqrt[6]{8\\cdot 16}$.",
+     "Para comprobarlo con índices iguales: $\\sqrt{8}=\\sqrt[6]{8^{3}}=\\sqrt[6]{512}$ y $\\sqrt[3]{16}=\\sqrt[6]{16^{2}}=\\sqrt[6]{256}$, luego $\\sqrt[6]{512}\\cdot\\sqrt[6]{256}=\\sqrt[6]{131\\,072}$. Este valor no es 128, así que el paso no es válido.",
+     "Los Pasos 3 y 4 operan correctamente sobre $\\sqrt[6]{128}$: $\\sqrt[6]{2^{7}}=2\\sqrt[6]{2}$, y luego $2\\sqrt[6]{2}-2\\sqrt{2}=2\\left(\\sqrt[6]{2}-\\sqrt{2}\\right)$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Creer que $(\\sqrt{2})^{3}$ está mal resuelto; $2\\sqrt{2}$ sí es correcto.",
-     "C": "Creer que $\\sqrt[6]{128}=2\\sqrt[6]{2}$ es incorrecto; en realidad $128=2\\cdot 2^{6}$ lo confirma."
+     "A": "Creer que el Paso 1 está mal, al pensar que $(\\sqrt{2})^{3}$ debe ser $2^{3}=8$. En realidad $(\\sqrt{2})^{3}=2\\sqrt{2}$, porque el exponente 3 se reparte sobre el factor $\\sqrt{2}$ como $(\\sqrt{2})^{2}\\cdot\\sqrt{2}$.",
+     "C": "Creer que el Paso 3 está mal, porque $\\sqrt[6]{128}=2\\sqrt[6]{2}$ parece raro. En realidad $128=2\\cdot 2^{6}$, así que el paso es correcto y el error que lo origina está antes, en el Paso 2.",
+     "D": "Creer que el Paso 4 está mal al factorizar. La expresión $2\\sqrt[6]{2}-2\\sqrt{2}=2(\\sqrt[6]{2}-\\sqrt{2})$ es una factorización válida; el problema viene de los índices mal combinados en el Paso 2."
     }
-   }
+   },
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-invierno-q10",
@@ -533,18 +570,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Se usa $\\log_{2}15=\\frac{\\log 15}{\\log 2}$ con $\\log 15=\\log 3+\\log 5$ y $\\log 5=1-\\log 2$.",
+    "summary": "Se usa el cambio de base $\\log_{2}15=\\frac{\\log 15}{\\log 2}$, luego se descompone $\\log 15$ en $\\log 3+\\log 5$ con $\\log 5=1-\\log 2$.",
+    "planteamiento": "Se pide la expresión que aproxima $\\log_{2}15$. Datos: $\\log 2\\approx 0{,}30$ y $\\log 3\\approx 0{,}48$; con ellos se obtienen $\\log 5$ y $\\log 15$, y luego se divide por $\\log 2$ para cambiar de base.",
     "steps": [
-     "Cambio de base: $\\log_{2}15=\\frac{\\log 15}{\\log 2}$.",
-     "Se descompone $\\log 15=\\log 3+\\log 5$, y $\\log 5=\\log\\frac{10}{2}=1-\\log 2\\approx 1-0{,}30=0{,}70$.",
-     "Así $\\log 15\\approx 0{,}48+0{,}70$ y $\\log_{2}15\\approx\\frac{0{,}70+0{,}48}{0{,}30}\\approx 3{,}9$.",
-     "Esa es la expresión de la alternativa D. Por lo tanto, la alternativa correcta es la D."
+     "Se aplica el cambio de base a logaritmo decimal: $\\log_{2}15=\\frac{\\log 15}{\\log 2}$, porque el logaritmo en base 2 se escribe como cociente de logaritmos en base 10.",
+     "Se descompone el numerador con la propiedad del producto de logaritmos: $15=3\\cdot 5$, luego $\\log 15=\\log 3+\\log 5$.",
+     "Como $\\log 5=\\log\\frac{10}{2}=\\log 10-\\log 2=1-\\log 2$, se reemplaza: $\\log 5\\approx 1-0{,}30=0{,}70$.",
+     "Se reemplazan los valores: $\\log 15=\\log 3+\\log 5\\approx 0{,}48+0{,}70$, y el denominador es $\\log 2\\approx 0{,}30$. Entonces $\\log_{2}15\\approx\\frac{0{,}70+0{,}48}{0{,}30}$.",
+     "Se verifica el orden de magnitud: $\\frac{1{,}18}{0{,}30}\\approx 3{,}9$, lo que es coherente porque $2^{3}=8<15<16=2^{4}$, y el resultado debe estar entre 3 y 4. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$0{,}70+0{,}48$ es $\\log 15$ en base 10, pero falta dividir por $\\log 2$.",
-     "C": "$\\frac{1+0{,}48}{2\\cdot 0{,}30}$ toma $\\log 30\\approx 1{,}48$ en lugar de $\\log 15$ y duplica $\\log 2$ sin justificación."
+     "A": "$0{,}70+0{,}48$ es $\\log 15$ en base 10, aproximadamente $1{,}18$, pero falta dividir por $\\log 2$ para cambiar de base. Con este valor el resultado sería $1{,}18$, que no es el exponente al que hay que elevar 2 para obtener 15.",
+     "B": "$\\frac{4{,}8+0{,}30}{0{,}30}$ desplaza la coma de $0{,}48$ a $4{,}8$, un error de posición decimal que multiplica por 10 el valor de $\\log 3$. El resultado, cercano a 17, es mucho mayor que el exponente correcto.",
+     "C": "$\\frac{1+0{,}48}{2\\cdot 0{,}30}$ equivale a $\\log_{4}30$, porque $\\log 30=1+\\log 3\\approx 1{,}48$ y $2\\cdot\\log 2=\\log 4$. Usa 30 en lugar de 15 y base 4 en lugar de base 2."
     }
-   }
+   },
+   "subtopic": "m2-logaritmos"
   },
   {
    "id": "m2-2026-invierno-q11",
@@ -581,17 +622,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada cultivo se duplica en su propio tiempo; se calcula el número de duplicaciones en 40 minutos para cada uno y se suman.",
+    "summary": "Cada cultivo se duplica en su propio periodo, así que el número de duplicaciones es el tiempo total dividido por el tiempo de duplicación, y cada cultivo se calcula por separado.",
+    "planteamiento": "Se pide la cantidad total de bacterias de ambos cultivos a los 40 minutos. Datos: el cultivo A parte con 100 bacterias y se duplica cada 10 minutos; el cultivo B parte con 200 bacterias y se duplica cada 20 minutos.",
     "steps": [
-     "Cultivo A: duplica cada 10 min, así que en 40 min hay $\\frac{40}{10}=4$ duplicaciones: $100\\cdot 2^{4}=1600$ bacterias.",
-     "Cultivo B: duplica cada 20 min, así que hay $\\frac{40}{20}=2$ duplicaciones: $200\\cdot 2^{2}=800$ bacterias.",
-     "Total: $1600+800=2400$. Por lo tanto, la alternativa correcta es la C."
+     "Para el cultivo A, en 40 minutos hay $\\frac{40}{10}=4$ duplicaciones, porque cada periodo de 10 minutos duplica la cantidad.",
+     "La cantidad final del cultivo A es $100\\cdot 2^{4}=100\\cdot 16=1600$ bacterias. Cada duplicación multiplica por 2, así que se usa la potencia de 2.",
+     "Para el cultivo B, en 40 minutos hay $\\frac{40}{20}=2$ duplicaciones, porque cada periodo de 20 minutos duplica la cantidad.",
+     "La cantidad final del cultivo B es $200\\cdot 2^{2}=200\\cdot 4=800$ bacterias.",
+     "El total de ambos cultivos es $1600+800=2400$ bacterias. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "400 corresponde a $100\\cdot 2^{2}$: usa 2 duplicaciones para el cultivo A.",
-     "D": "4800 resulta de usar 4 duplicaciones para el cultivo B ($200\\cdot 2^{4}=3200$) y sumar 1600."
+     "A": "400 corresponde a $100\\cdot 2^{2}$: usa solo 2 duplicaciones para el cultivo A, como si se duplicara cada 20 minutos. Confunde el tiempo de duplicación del cultivo A con el del cultivo B.",
+     "B": "800 corresponde solo al cultivo B, $200\\cdot 2^{2}$. Omite el cultivo A, por lo que no suma las bacterias de los dos cultivos que pide el enunciado.",
+     "D": "4800 resulta de usar 4 duplicaciones para el cultivo B, $200\\cdot 2^{4}=3200$, y sumar 1600 del cultivo A. Confunde el tiempo de duplicación del cultivo B con 10 minutos."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q12",
@@ -628,18 +674,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "A las 23:00 rige el límite nocturno de 45 dB; se despeja I de $\\beta=10\\log I+120$ y se obtiene $\\log I=-7{,}5$.",
+    "summary": "A las 23:00 rige el límite nocturno de 45 dB; luego se reemplaza en la expresión dada, se despeja $\\log I$ y se obtiene $I$ como potencia de 10.",
+    "planteamiento": "Se pide la intensidad acústica máxima permisible a las 23:00 en zona residencial. Datos: el tramo de 21:00 a 7:00 tiene un límite de $45$ dB, y la relación es $\\beta=10\\cdot\\log(I)+120$ con $\\beta\\ge 0$.",
     "steps": [
-     "Entre las 21:00 y las 7:00 el límite es 45 dB, y las 23:00 pertenece a ese tramo.",
-     "Se reemplaza en la expresión: $45=10\\cdot\\log I+120$.",
-     "Despejando: $10\\cdot\\log I=-75$, luego $\\log I=-7{,}5$, y por lo tanto $I=10^{-7{,}5}\\ \\frac{\\mathrm{W}}{\\mathrm{m^2}}$. Por lo tanto, la alternativa correcta es la B."
+     "A las 23:00 se está dentro del tramo de 21:00 a 7:00, así que el límite es $\\beta=45$ dB y no los 55 dB del día.",
+     "Se reemplaza $\\beta=45$ en la expresión: $45=10\\cdot\\log(I)+120$.",
+     "Se resta 120 a ambos lados: $45-120=10\\cdot\\log(I)$, es decir, $-75=10\\cdot\\log(I)$.",
+     "Se divide por 10: $\\log(I)=-7{,}5$.",
+     "Como $\\log(I)=-7{,}5$ en base 10, se despeja $I=10^{-7{,}5}\\ \\frac{\\mathrm{W}}{\\mathrm{m}^{2}}$. El valor $\\beta=45$ cumple la condición $\\beta\\ge 0$, así que el límite es válido. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$10^{-6{,}5}$ usa el límite diurno de 55 dB: $55=10\\log I+120$ da $\\log I=-6{,}5$.",
-     "C": "$10^{7{,}5}$ es un error de signo al despejar $-7{,}5$.",
-     "D": "$10^{16{,}5}$ suma 45 y 120 en vez de restarlos: $\\frac{45+120}{10}=16{,}5$."
+     "A": "$10^{-6{,}5}$ usa el límite diurno de 55 dB: $55=10\\cdot\\log(I)+120$ da $\\log(I)=-6{,}5$. Ese es el límite de 7:00 a 21:00, que no corresponde a las 23:00.",
+     "C": "$10^{7{,}5}$ es un error de signo al despejar: al pasar $-75$ se toma $+75$ y se obtiene $\\log(I)=+7{,}5$. Una intensidad mayor no es coherente con un límite nocturno más estricto.",
+     "D": "$10^{16{,}5}$ suma 45 y 120 en vez de restarlos: $\\frac{45+120}{10}=16{,}5$. Confunde el despeje del término constante de la expresión."
     }
-   }
+   },
+   "subtopic": "m2-logaritmos"
   },
   {
    "id": "m2-2026-invierno-q13",
@@ -676,17 +726,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La raíz de índice n divide cada exponente por n; luego $3^{2}\\cdot 4=36=6^{2}$ permite juntar todo en potencia de 6.",
+    "summary": "Una raíz de índice $n$ equivale a elevar a $\\frac{1}{n}$; al dividir cada exponente por $n$ y usar $3^{2}\\cdot 4=36=6^{2}$, todo queda como potencia de 6.",
+    "planteamiento": "Se pide la expresión equivalente a $\\sqrt[n]{(3^{n})^{2}\\cdot 6^{n^{2}}\\cdot 4^{n}}$. Datos: la base de la raíz es $(3^{n})^{2}\\cdot 6^{n^{2}}\\cdot 4^{n}$ y el índice de la raíz es $n$, distinto de cero.",
     "steps": [
-     "Se escribe la raíz como potencia: $\\left((3^{n})^{2}\\cdot 6^{n^{2}}\\cdot 4^{n}\\right)^{\\frac{1}{n}}$.",
-     "Se distribuye el exponente $\\frac{1}{n}$: $(3^{n})^{2/n}=3^{2}$, $\\left(6^{n^{2}}\\right)^{1/n}=6^{n}$ y $\\left(4^{n}\\right)^{1/n}=4$.",
-     "El resultado es $3^{2}\\cdot 6^{n}\\cdot 4=36\\cdot 6^{n}=6^{2}\\cdot 6^{n}=6^{n+2}$. Por lo tanto, la alternativa correcta es la B."
+     "Se escribe la raíz como potencia: $\\sqrt[n]{X}=X^{\\frac{1}{n}}$, con $X=(3^{n})^{2}\\cdot 6^{n^{2}}\\cdot 4^{n}$.",
+     "Se usa la propiedad de potencia de una potencia en el primer factor: $(3^{n})^{2}=3^{2n}$. Luego se eleva a $\\frac{1}{n}$: $\\left(3^{2n}\\right)^{\\frac{1}{n}}=3^{\\frac{2n}{n}}=3^{2}$.",
+     "Para el segundo factor, $\\left(6^{n^{2}}\\right)^{\\frac{1}{n}}=6^{\\frac{n^{2}}{n}}=6^{n}$, porque $\\frac{n^{2}}{n}=n$.",
+     "Para el tercer factor, $\\left(4^{n}\\right)^{\\frac{1}{n}}=4^{\\frac{n}{n}}=4$. Así el resultado es $3^{2}\\cdot 6^{n}\\cdot 4$.",
+     "Se reúnen las constantes: $3^{2}\\cdot 4=9\\cdot 4=36=6^{2}$, por lo que la expresión queda $6^{2}\\cdot 6^{n}=6^{n+2}$, usando el producto de potencias de igual base. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$6^{2n^{2}}$ multiplica en lugar de dividir los exponentes por n.",
-     "D": "$3^{2}\\cdot 6^{2n}\\cdot 4$ divide mal el exponente $n^{2}$ por n, obteniendo $2n$ en vez de $n$."
+     "A": "$6^{2n^{2}}$ aparece al tratar $6^{2}\\cdot 6^{n^{2}}$ como si los exponentes se multiplicaran, $2\\cdot n^{2}$, en vez de sumarse en el producto de potencias de igual base. Además no divide el exponente $n^{2}$ por $n$.",
+     "C": "$3^{n}\\cdot 6^{n}\\cdot 4$ aparece al ignorar el exponente 2 de $(3^{n})^{2}$ al aplicar la raíz y escribir $(3^{n})^{\\frac{2}{n}}$ como $3^{n}$. Lo correcto es $(3^{n})^{\\frac{2}{n}}=3^{2}$, que sí conserva el exponente 2.",
+     "D": "$3^{2}\\cdot 6^{2n}\\cdot 4$ aparece al calcular mal $\\frac{n^{2}}{n}$ y obtener $2n$, como si el exponente se duplicara al dividirlo. Lo correcto es $\\frac{n^{2}}{n}=n$."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q14",
@@ -723,17 +778,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El interés es el monto final menos el capital, con 1,5 % mensual compuesto durante 3 meses.",
+    "summary": "El interés es el monto final menos el capital inicial, y el monto se calcula con el factor de crecimiento $1{,}015$ durante 3 meses.",
+    "planteamiento": "Se pide la expresión del interés ganado en tres meses por un capital de 350 000 pesos con interés compuesto mensual de $1{,}5\\,\\%$. Datos: la tasa mensual es $0{,}015$ y el número de periodos de capitalización es $3$.",
     "steps": [
-     "1,5 % equivale a $0{,}015$, así que el factor de crecimiento mensual es $1{,}015$.",
-     "Monto tras 3 meses: $350\\,000\\cdot 1{,}015^{3}$ pesos.",
-     "Interés = monto − capital $=350\\,000\\cdot 1{,}015^{3}-350\\,000=350\\,000\\cdot(1{,}015^{3}-1)$. Por lo tanto, la alternativa correcta es la C."
+     "Un interés de $1{,}5\\,\\%$ equivale a $0{,}015$ por mes, así que cada mes el saldo se multiplica por $1+0{,}015=1{,}015$, porque el interés se capitaliza y pasa a generar interés.",
+     "Después del primer mes el saldo es $350\\,000\\cdot 1{,}015$. Después del segundo es $350\\,000\\cdot 1{,}015^{2}$ y después del tercero es $350\\,000\\cdot 1{,}015^{3}$.",
+     "El monto final es $M=350\\,000\\cdot 1{,}015^{3}$ pesos, que incluye el capital inicial y los intereses acumulados.",
+     "El interés es la diferencia entre el monto final y el capital inicial: $I=M-C=350\\,000\\cdot 1{,}015^{3}-350\\,000$.",
+     "Se saca factor común $350\\,000$: $I=350\\,000\\cdot\\left(1{,}015^{3}-1\\right)$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "$350\\,000\\cdot 0{,}015^{3}$ eleva la tasa al cubo en vez de capitalizar; no corresponde a interés compuesto.",
-     "D": "$350\\,000\\cdot(1{,}15^{3}-1)$ usa 15 % en vez de 1,5 %, un error de posición decimal."
+     "A": "$350\\,000\\cdot 0{,}015^{3}$ eleva la tasa al cubo en vez de capitalizar; no corresponde a interés compuesto, porque $0{,}015^{3}$ es un número casi nulo, del orden de $0{,}000003$.",
+     "B": "$350\\,000\\cdot 1{,}15^{3}$ usa un factor de crecimiento del $15\\,\\%$ en vez de $1{,}5\\,\\%$, y además da el monto y no el interés, porque no se resta el capital inicial.",
+     "D": "$350\\,000\\cdot(1{,}15^{3}-1)$ tiene la forma correcta de interés, pero usa $15\\,\\%$ en vez de $1{,}5\\,\\%$, un error de posición decimal al pasar el porcentaje a decimal."
     }
-   }
+   },
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2026-invierno-q15",
@@ -770,18 +830,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con $u=5b-3a$, la expresión es $u(3a+5b)-u^{2}=u\\cdot 6a$; basta sacar factor común $(5b-3a)$.",
+    "summary": "Como $(5b-3a)$ aparece en ambos términos, se factoriza y queda un producto, sin necesidad de desarrollar los cuadrados.",
+    "planteamiento": "Se pide la expresión equivalente a $(3a+5b)(5b-3a)-(5b-3a)^{2}$. Datos: el factor común es $(5b-3a)$, que aparece en el producto y en el cuadrado.",
     "steps": [
-     "El factor $(5b-3a)$ aparece en ambos términos: $(3a+5b)(5b-3a)-(5b-3a)^{2}$.",
-     "Se saca factor común: $(5b-3a)\\left[(3a+5b)-(5b-3a)\\right]$.",
-     "Dentro del corchete: $3a+5b-5b+3a=6a$, así que la expresión es $6a\\,(5b-3a)$.",
-     "Comprobación: $(3a+5b)(5b-3a)=25b^{2}-9a^{2}$ y $(5b-3a)^{2}=25b^{2}-30ab+9a^{2}$; la diferencia es $30ab-18a^{2}=6a(5b-3a)$. Por lo tanto, la alternativa correcta es la B."
+     "Se reconoce que $(5b-3a)^{2}=(5b-3a)\\cdot(5b-3a)$, por lo que el término común de ambos sumandos es $(5b-3a)$.",
+     "Se saca factor común $(5b-3a)$: $(3a+5b)(5b-3a)-(5b-3a)(5b-3a)=(5b-3a)\\left[(3a+5b)-(5b-3a)\\right]$.",
+     "Dentro del corchete se restan los términos: $(3a+5b)-(5b-3a)=3a+5b-5b+3a=6a$. Se cancelan $5b$ con $-5b$ y se suman $3a+3a$.",
+     "La expresión queda $(5b-3a)\\cdot 6a=6a\\,(5b-3a)$. Comprobación: $(3a+5b)(5b-3a)=25b^{2}-9a^{2}$ y $(5b-3a)^{2}=25b^{2}-30ab+9a^{2}$; su diferencia es $-9a^{2}+30ab-9a^{2}=30ab-18a^{2}=6a(5b-3a)$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$-30ab$ toma solo el término cruzado del cuadrado y pierde los demás términos.",
-     "C": "$10b(3a-5b)$ se queda con $30ab$ y reemplaza $-18a^{2}$ por $-50b^{2}$ al confundir los cuadrados."
+     "A": "$-30ab$ aparece al expandir el cuadrado con el signo cambiado en el término cruzado: $-(5b-3a)^{2}$ tiene $+30ab$, no $-30ab$. Además pierde los términos en $a^{2}$ y $b^{2}$, que no se cancelan.",
+     "C": "$10b(3a-5b)=30ab-50b^{2}$ coincide con el término cruzado $30ab$, pero reemplaza $-18a^{2}$ por $-50b^{2}$ al confundir los cuadrados. No es equivalente a $30ab-18a^{2}$.",
+     "D": "$2(9a^{2}-25b^{2}-15ab)$ no es equivalente: al desarrollar, los términos en $a^{2}$ y $b^{2}$ tienen signos invertidos respecto de la expresión correcta, y aparece un factor 2 sin justificación."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q16",
@@ -818,19 +881,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La foto mide $p-6$ cm de ancho; con razón 16:9 la diagonal es $\\frac{(p-6)\\sqrt{337}}{16}$ cm, y se divide por 2,54 para pasar a pulgadas.",
+    "summary": "La foto mide el ancho del marco menos el paspartú en ambos lados; su diagonal se obtiene con la razón $16:9$ y luego se convierte a pulgadas dividiendo por $2{,}54$.",
+    "planteamiento": "Se pide la diagonal de la foto, en pulgadas, para imprimirla. Datos: el marco tiene un largo de $p$ cm, el paspartú mide 3 cm por cada lado, la razón de los lados de la foto es $16:9$ y una pulgada equivale a $2{,}54$ cm.",
     "steps": [
-     "El paspartú de 3 cm ocupa ambos lados, así que el ancho de la foto es $p-2\\cdot 3=p-6$ cm.",
-     "Con razón 16:9, si el ancho es $16k$ el alto es $9k$; de $16k=p-6$ se obtiene $k=\\frac{p-6}{16}$.",
-     "La diagonal es $k\\sqrt{16^{2}+9^{2}}=k\\sqrt{337}=\\frac{(p-6)\\sqrt{337}}{16}$ cm.",
-     "Como $\\frac{\\sqrt{337}}{16}=\\sqrt{\\frac{337}{256}}$, la diagonal en cm es $(p-6)\\cdot\\sqrt{\\frac{337}{256}}$; dividiendo por 2,54 se obtiene la medida en pulgadas.",
-     "Por lo tanto, la alternativa correcta es la C."
+     "El paspartú de 3 cm ocupa ambos lados del marco, así que el ancho de la foto es $p-2\\cdot 3=p-6$ cm.",
+     "Con razón $16:9$, si el ancho de la foto es $16k$ entonces el alto es $9k$. Como $16k=p-6$, se obtiene $k=\\frac{p-6}{16}$.",
+     "La diagonal es la hipotenusa de un rectángulo de lados $16k$ y $9k$: $d=\\sqrt{(16k)^{2}+(9k)^{2}}=k\\sqrt{16^{2}+9^{2}}=k\\sqrt{337}$, porque $256+81=337$.",
+     "Se reemplaza $k$: $d=\\frac{p-6}{16}\\sqrt{337}$ cm. Como $\\frac{\\sqrt{337}}{16}=\\sqrt{\\frac{337}{256}}$, se escribe $d=(p-6)\\sqrt{\\frac{337}{256}}$ cm.",
+     "Para pasar a pulgadas se divide por la equivalencia, 1 pulgada $=2{,}54$ cm: $d_{\\mathrm{pulg}}=\\frac{(p-6)\\cdot\\sqrt{\\frac{337}{256}}}{2{,}54}$. Esta expresión coincide con la alternativa C. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "$2{,}54\\cdot(p-6)\\cdot\\sqrt{\\frac{337}{256}}$ multiplica por 2,54 en vez de dividir, al revés de la conversión.",
-     "D": "$\\frac{p\\cdot\\sqrt{337/256}}{2{,}54}$ usa el ancho del marco como si fuera el de la foto y olvida el paspartú."
+     "A": "$p\\cdot\\sqrt{\\frac{337}{256}}$ usa $p$ como ancho de la foto, sin descontar el paspartú de 3 cm por cada lado. Además no convierte a pulgadas, así que la medida queda en centímetros.",
+     "B": "$2{,}54\\cdot(p-6)\\cdot\\sqrt{\\frac{337}{256}}$ multiplica por $2{,}54$ en vez de dividir, al revés de la conversión. Como una pulgada es más grande que un centímetro, la medida en pulgadas debe ser menor que en centímetros.",
+     "D": "$\\frac{p\\cdot\\sqrt{\\frac{337}{256}}}{2{,}54}$ usa el ancho del marco como si fuera el de la foto y olvida el paspartú de 3 cm por cada lado."
     }
-   }
+   },
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-invierno-q17",
@@ -867,17 +933,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Las dos gráficas se cruzan en $(p,q)$; la recta directa y la hipérbola inversa dan $\\frac{m}{c}=\\frac{q^{2}}{b^{2}}$.",
+    "summary": "La recta directa relaciona $p$ con $q$ y la hipérbola inversa (producto $xy$ constante) relaciona $m$ con $p$ y $q$; al combinar ambas relaciones se obtiene $\\frac{m}{c}$.",
+    "planteamiento": "Se pide $\\frac{m}{c}$ en términos de $b$ y $q$. Datos: la recta directa pasa por el origen y por los puntos $(p,q)$ y $(c,b)$; la hipérbola inversa pasa por $(m,b)$ y por $(p,q)$, que es el punto de intersección de ambas gráficas.",
     "steps": [
-     "La recta directa pasa por el origen y por $(p,q)$ y $(c,b)$, luego $\\frac{q}{p}=\\frac{b}{c}$, es decir, $p=\\frac{qc}{b}$.",
-     "La hipérbola inversa cumple $xy=\\text{cte}$ y pasa por $(m,b)$ y $(p,q)$, así que $mb=pq$ y $m=\\frac{pq}{b}$.",
-     "Reemplazando $p$: $m=\\frac{q}{b}\\cdot\\frac{qc}{b}=\\frac{q^{2}c}{b^{2}}$, luego $\\frac{m}{c}=\\frac{q^{2}}{b^{2}}$. Por lo tanto, la alternativa correcta es la B."
+     "La recta directa pasa por el origen, así que todos sus puntos tienen el mismo cociente $\\frac{y}{x}$. Usando $(p,q)$ y $(c,b)$: $\\frac{q}{p}=\\frac{b}{c}$.",
+     "De $\\frac{q}{p}=\\frac{b}{c}$ se despeja $p$ multiplicando en cruz: $qc=bp$, luego $p=\\frac{qc}{b}$, o equivalentemente $\\frac{p}{c}=\\frac{q}{b}$.",
+     "La hipérbola inversa cumple $x\\cdot y=\\text{cte}$. Usando los puntos $(m,b)$ y $(p,q)$ en esa hipérbola: $m\\cdot b=p\\cdot q$, luego $m=\\frac{pq}{b}$.",
+     "Se reemplaza $p=\\frac{qc}{b}$ en $m=\\frac{pq}{b}$: $m=\\frac{q}{b}\\cdot\\frac{qc}{b}=\\frac{q^{2}c}{b^{2}}$.",
+     "Se divide por $c$: $\\frac{m}{c}=\\frac{q^{2}}{b^{2}}$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$\\frac{q}{b}$ confunde $m$ con $p$ y usa la razón de la recta, $\\frac{p}{c}=\\frac{q}{b}$, sin el paso de la hipérbola.",
-     "C": "$\\frac{b}{q}$ invierte la razón entre las coordenadas b y q."
+     "A": "$\\frac{q}{b}$ confunde $m$ con $p$ y usa la razón de la recta, $\\frac{p}{c}=\\frac{q}{b}$, sin aplicar la relación de la hipérbola. Esa razón sirve para $p$, no para $m$.",
+     "C": "$\\frac{b}{q}$ invierte la razón entre las coordenadas $b$ y $q$, es decir, pone en el numerador lo que debía estar en el denominador. Confunde la dirección de la proporcionalidad.",
+     "D": "$\\frac{b}{q^{2}}$ invierte la razón de $b$ y $q$ y además pone $q^{2}$ en el denominador. Del desarrollo se ve que $q^{2}$ va en el numerador y $b^{2}$ en el denominador."
     }
-   }
+   },
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-invierno-q18",
@@ -914,17 +985,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La proporcionalidad inversa da $V\\cdot p=20$; al bajar la presión en 2 atmósferas, la variación del volumen es $\\frac{40}{p(p-2)}$.",
+    "summary": "La proporcionalidad inversa da $V\\cdot p=20$ constante; la variación del volumen se obtiene restando el volumen inicial del final, con presión $p-2$ en el estado final.",
+    "planteamiento": "Se pide la variación absoluta del volumen, en litros, cuando la presión baja de $p$ a $p-2$ atmósferas. Datos: de la gráfica, los pares presión-volumen $(2,10)$, $(4,5)$ y $(10,2)$ cumplen $V\\cdot p=20$.",
     "steps": [
-     "De la gráfica: $2\\cdot 10=20$, $4\\cdot 5=20$ y $10\\cdot 2=20$, así que $V\\cdot p=20$ y $V=\\frac{20}{p}$.",
-     "Con presión $p-2$ el volumen es $\\frac{20}{p-2}$, y con presión $p$ es $\\frac{20}{p}$.",
-     "Variación absoluta (final menos inicial): $\\frac{20}{p-2}-\\frac{20}{p}=\\frac{20p-20(p-2)}{p(p-2)}=\\frac{40}{p(p-2)}$. Por lo tanto, la alternativa correcta es la D."
+     "De la gráfica se obtiene la constante de proporcionalidad: $2\\cdot 10=20$, $4\\cdot 5=20$ y $10\\cdot 2=20$, luego $V\\cdot p=20$ y $V=\\frac{20}{p}$.",
+     "Al disminuir la presión en 2 atmósferas, la nueva presión es $p-2$ y el nuevo volumen es $\\frac{20}{p-2}$. El volumen inicial, con presión $p$, es $\\frac{20}{p}$.",
+     "La variación absoluta es el volumen final menos el inicial: $\\frac{20}{p-2}-\\frac{20}{p}$.",
+     "Se suma en común denominador $p(p-2)$: $\\frac{20p-20(p-2)}{p(p-2)}=\\frac{20p-20p+40}{p(p-2)}=\\frac{40}{p(p-2)}$. Como la presión baja, el volumen aumenta y la variación es positiva, lo que se confirma con el signo de 40. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$\\frac{20}{p}-2$ resta 2 litros al volumen en vez de restar 2 atmósferas a la presión.",
-     "C": "$\\frac{20}{p-2}$ es el volumen final, no la variación; falta restar el volumen inicial."
+     "A": "$\\frac{20}{p}-2$ resta 2 litros al volumen en vez de restar 2 atmósferas a la presión. Mezcla unidades: las atmósferas no se restan de litros.",
+     "B": "2 es un valor constante que no depende de $p$. Confunde la disminución de la presión en 2 atmósferas con la variación del volumen, que sí depende de $p$ por ser inversamente proporcional a la presión.",
+     "C": "$\\frac{20}{p-2}$ es el volumen final, no la variación. Falta restar el volumen inicial $\\frac{20}{p}$ para obtener cuánto cambia el volumen."
     }
-   }
+   },
+   "subtopic": "m2-homotecia"
   },
   {
    "id": "m2-2026-invierno-q19",
@@ -961,19 +1036,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como la densidad es $\\rho = \\frac{m}{V}$, la masa es $m = \\rho \\cdot V$; con el mismo volumen, la diferencia de masas es $(\\rho_{\\mathrm{plata}} - \\rho_{\\mathrm{alabastro}}) \\cdot V$.",
+    "summary": "La densidad relaciona masa y volumen mediante $\\rho=\\frac{m}{V}$, así que la masa es $m=\\rho\\cdot V$; con el mismo volumen, la diferencia de masas depende solo de la diferencia de densidades.",
+    "planteamiento": "Se pide la diferencia positiva entre las masas de dos esferas macizas del mismo volumen. Datos: $\\rho_{\\mathrm{plata}}=10{,}5\\ \\frac{\\mathrm{g}}{\\mathrm{cm}^{3}}$, $\\rho_{\\mathrm{alabastro}}=2{,}7\\ \\frac{\\mathrm{g}}{\\mathrm{cm}^{3}}$ y $V=81\\ \\mathrm{cm}^{3}$ para ambas esferas.",
     "steps": [
-     "Se despeja la masa de $\\rho = \\frac{m}{V}$: $m = \\rho \\cdot V$.",
-     "Masa de la esfera de plata: $m_{\\mathrm{plata}} = 10{,}5 \\cdot 81 = 850{,}5$ g.",
-     "Masa de la esfera de alabastro: $m_{\\mathrm{alabastro}} = 2{,}7 \\cdot 81 = 218{,}7$ g.",
-     "Diferencia positiva: $850{,}5 - 218{,}7 = 631{,}8$ g. Por lo tanto, la alternativa correcta es la C."
+     "Se despeja la masa de la definición de densidad: $\\rho=\\frac{m}{V}$; multiplicando ambos lados por $V$ se obtiene $m=\\rho\\cdot V$. Las unidades quedan en gramos, porque $\\frac{\\mathrm{g}}{\\mathrm{cm}^{3}}\\cdot\\mathrm{cm}^{3}=\\mathrm{g}$.",
+     "Masa de la esfera de plata: $m_{\\mathrm{plata}}=10{,}5\\cdot 81$. Se calcula $10\\cdot 81=810$ y $0{,}5\\cdot 81=40{,}5$, luego $m_{\\mathrm{plata}}=850{,}5$ g.",
+     "Masa de la esfera de alabastro: $m_{\\mathrm{alabastro}}=2{,}7\\cdot 81$. Se calcula $2\\cdot 81=162$ y $0{,}7\\cdot 81=56{,}7$, luego $m_{\\mathrm{alabastro}}=218{,}7$ g.",
+     "Como ambas esferas tienen el mismo volumen, la diferencia también se puede escribir como $(\\rho_{\\mathrm{plata}}-\\rho_{\\mathrm{alabastro}})\\cdot V=(10{,}5-2{,}7)\\cdot 81=7{,}8\\cdot 81=631{,}8$ g, que coincide con la resta directa de las masas.",
+     "Diferencia positiva: $850{,}5-218{,}7=631{,}8$ g. La plata es la más masiva, así que la resta se hace en ese orden. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "1069,2 g es la suma de ambas masas; la pregunta pide la diferencia.",
-     "B": "850,5 g es solo la masa de la plata, sin restar la masa del alabastro.",
-     "D": "218,7 g es la masa del alabastro, no la diferencia entre las dos."
+     "A": "1069,2 g es la suma de ambas masas, $850{,}5+218{,}7$. La pregunta pide la diferencia y no el total de las dos esferas.",
+     "B": "850,5 g es solo la masa de la esfera de plata, sin restar la masa de la de alabastro. Ignora la segunda esfera y por eso no responde la diferencia.",
+     "D": "218,7 g es la masa de la esfera de alabastro, no la diferencia entre las dos. Confunde la masa de una esfera con el resultado de comparar ambas."
     }
-   }
+   },
+   "subtopic": "m2-homotecia"
   },
   {
    "id": "m2-2026-invierno-q20",
@@ -1010,18 +1088,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Al resolver la inecuación se obtiene $x \\le \\frac{7}{4}$: un conjunto que va hacia la izquierda con extremo cerrado en $\\frac{7}{4}$.",
+    "summary": "Al resolver la inecuación se obtiene $x\\le\\frac{7}{4}$, una semirrecta hacia la izquierda con extremo cerrado; el gráfico debe mostrar el sentido de la desigualdad y si el punto está incluido.",
+    "planteamiento": "Se pide identificar el gráfico que representa el conjunto solución de $2(5-3x)\\ge-\\frac{1}{2}$. Datos: al desarrollar aparece el coeficiente $-6$ de $x$, por lo que la desigualdad cambia de sentido al despejar, y la relación es «mayor o igual», así que el extremo está incluido.",
     "steps": [
-     "Se distribuye el 2: $10 - 6x \\ge -\\frac{1}{2}$.",
-     "Se pasa el 10 al lado derecho: $-6x \\ge -\\frac{21}{2}$.",
-     "Se divide por $-6$ e invierte la desigualdad: $x \\le \\frac{21}{12} = \\frac{7}{4}$.",
-     "El conjunto solución es $\\left(-\\infty, \\frac{7}{4}\\right]$: semirrecta hacia la izquierda con punto cerrado en $\\frac{7}{4}$, porque la desigualdad no es estricta. Por lo tanto, la alternativa correcta es la B."
+     "Se distribuye el 2 en el paréntesis: $2\\cdot 5-2\\cdot 3x=10-6x$, luego la inecuación queda $10-6x\\ge-\\frac{1}{2}$.",
+     "Se pasa el 10 al lado derecho restando 10 a ambos lados: $-6x\\ge-\\frac{1}{2}-10=-\\frac{21}{2}$.",
+     "Se divide ambos lados por $-6$. Como se divide por un número negativo, la desigualdad se invierte: $x\\le\\frac{21}{2\\cdot 6}=\\frac{21}{12}=\\frac{7}{4}$.",
+     "El conjunto solución es $\\left(-\\infty,\\frac{7}{4}\\right]$: una semirrecta que va hacia la izquierda desde $\\frac{7}{4}$. El punto $\\frac{7}{4}$ se marca cerrado porque la desigualdad incluye la igualdad.",
+     "Comprobación: con $x=0$, $2(5-0)=10\\ge-\\frac{1}{2}$, que es verdadero y está en la semirrecta izquierda; con $x=3$, $2(5-9)=-8\\ge-\\frac{1}{2}$, que es falso y queda fuera. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Muestra la semirrecta hacia la derecha desde 7/4: olvida invertir la desigualdad al dividir por −6.",
-     "D": "Muestra el extremo en 2: lee mal la fracción y toma −1/2 como −2, con lo que obtiene $10 - 6x \\ge -2$ y $x \\le 2$."
+     "A": "Muestra la semirrecta hacia la derecha desde $\\frac{7}{4}$: olvida invertir la desigualdad al dividir por $-6$ y obtiene $x\\ge\\frac{7}{4}$. Con ese conjunto, $x=0$ no cumpliría la inecuación.",
+     "C": "Muestra la semirrecta hacia la derecha desde 2: combina dos errores, toma $-\\frac{1}{2}$ como $-2$ y olvida invertir el sentido al dividir por $-6$. Con $10-6x\\ge-2$ y sin invertir, se obtiene $x\\ge 2$.",
+     "D": "Muestra el extremo en 2 hacia la izquierda: lee mal la fracción y toma $-\\frac{1}{2}$ como $-2$, con lo que obtiene $10-6x\\ge-2$ y, al invertir bien, $x\\le 2$. El sentido es correcto, pero el extremo es incorrecto."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q21",
@@ -1058,18 +1140,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La ganancia es el ingreso menos el costo total, y el costo fijo de 260 000 pesos debe restarse como parte del costo; luego la ganancia debe ser al menos 3 000 000 pesos.",
+    "summary": "La ganancia es el ingreso menos el costo total, donde el costo fijo se suma al costo variable; al despejar, el costo fijo pasa al lado derecho con signo positivo.",
+    "planteamiento": "Se pide la inecuación que describe las cantidades $x$ con las que se obtiene una ganancia de al menos 3 000 000 pesos. Datos: costo variable de 14 000 pesos por unidad, costo fijo de 260 000 pesos y precio de venta de 25 000 pesos por unidad.",
     "steps": [
-     "Ingreso por x artículos: $25\\,000x$ pesos.",
-     "Costo total: $14\\,000x + 260\\,000$ pesos, porque el costo fijo no depende de la cantidad producida.",
-     "Ganancia: $25\\,000x - (14\\,000x + 260\\,000) \\ge 3\\,000\\,000$, es decir, $25\\,000x - 14\\,000x - 260\\,000 \\ge 3\\,000\\,000$.",
-     "Al pasar el $-260\\,000$ al lado derecho cambia a $+260\\,000$: $25\\,000x - 14\\,000x \\ge 3\\,000\\,000 + 260\\,000$. Por lo tanto, la alternativa correcta es la D."
+     "El ingreso por vender $x$ artículos a 25 000 pesos cada uno es $25\\,000x$ pesos.",
+     "El costo total es el costo variable más el costo fijo: $14\\,000x+260\\,000$ pesos, porque el costo fijo se paga aunque se produzca poco o nada.",
+     "La ganancia es el ingreso menos el costo total: $25\\,000x-\\left(14\\,000x+260\\,000\\right)$. Esa ganancia debe ser al menos 3 000 000 pesos, así que se usa «mayor o igual»: $25\\,000x-\\left(14\\,000x+260\\,000\\right)\\ge 3\\,000\\,000$.",
+     "Se elimina el paréntesis con cuidado: $25\\,000x-14\\,000x-260\\,000\\ge 3\\,000\\,000$, porque el signo menos afecta a los dos términos del costo.",
+     "Se pasa el $-260\\,000$ al lado derecho sumando $260\\,000$ a ambos lados: $25\\,000x-14\\,000x\\ge 3\\,000\\,000+260\\,000$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Usa «≤» y resta el costo fijo al lado derecho: invierte el sentido de la desigualdad y el signo del costo fijo.",
-     "C": "Mantiene «≥» pero resta el costo fijo al lado derecho, cuando al pasarlo debe sumarse."
+     "A": "Usa «≤» en vez de «≥», por lo que describe ganancias menores o iguales a 3 000 000 pesos; además resta el costo fijo al lado derecho, cuando al pasarlo debe sumarse.",
+     "B": "Usa «≤» y suma el costo fijo al lado derecho. El sentido de la desigualdad está invertido, porque la ganancia debe ser al menos 3 000 000 pesos y no a lo más.",
+     "C": "Mantiene «≥», pero resta el costo fijo al lado derecho, cuando al pasarlo debe sumarse. Así la cota queda 260 000 pesos más baja que la correcta."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q22",
@@ -1106,17 +1192,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Al multiplicar por 12 y despejar x se obtiene un extremo $\\frac{-5 - 3r}{6}$, que debe ser igual a $-\\frac{1}{3}$; de allí sale $r = -1$.",
+    "summary": "Multiplicando por 12 y despejando $x$ se obtiene un extremo que debe coincidir con $-\\frac{1}{3}$; esa igualdad determina el valor de $r$.",
+    "planteamiento": "Se pide el valor de $r$ en la inecuación $\\frac{2}{3}x+\\frac{r}{4}<\\frac{x}{6}-\\frac{5}{12}$, sabiendo que su conjunto solución es $\\left(-\\infty,-\\frac{1}{3}\\right)$. Datos: la desigualdad es estricta y el extremo del intervalo es $-\\frac{1}{3}$.",
     "steps": [
-     "Se multiplica la inecuación por 12: $8x + 3r < 2x - 5$.",
-     "Se agrupan las x: $6x < -5 - 3r$, es decir, $x < \\frac{-5 - 3r}{6}$.",
-     "El intervalo del enunciado es $\\left(-\\infty, -\\frac{1}{3}\\right)$, así que $\\frac{-5 - 3r}{6} = -\\frac{1}{3}$.",
-     "Se multiplica por 6: $-5 - 3r = -2$, luego $-3r = 3$ y $r = -1$. Comprobación: $\\frac{-5 + 3}{6} = -\\frac{1}{3}$. Por lo tanto, la alternativa correcta es la D."
+     "Se multiplica toda la inecuación por 12 para eliminar denominadores: $12\\cdot\\frac{2}{3}x+12\\cdot\\frac{r}{4}<12\\cdot\\frac{x}{6}-12\\cdot\\frac{5}{12}$, es decir, $8x+3r<2x-5$.",
+     "Se agrupan las $x$ a la izquierda restando $2x$ a ambos lados: $6x+3r<-5$. Luego se resta $3r$ a ambos lados: $6x<-5-3r$.",
+     "Se divide por 6, que es positivo, así que el sentido no cambia: $x<\\frac{-5-3r}{6}$. Como la solución es $x<-\\frac{1}{3}$, el extremo debe coincidir: $\\frac{-5-3r}{6}=-\\frac{1}{3}$.",
+     "Se multiplica por 6: $-5-3r=-2$. Luego se suma 5: $-3r=3$, y por último se divide por $-3$: $r=-1$.",
+     "Comprobación: con $r=-1$, el extremo es $\\frac{-5-3(-1)}{6}=\\frac{-2}{6}=-\\frac{1}{3}$, que coincide con el intervalo dado. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "r = 1: al pasar el término 3r al otro lado se cambia mal el signo y se escribe $6x < -5 + 3r$."
+     "A": "$r=1$ se obtiene al cambiar mal el signo del término $3r$ al pasarlo al otro lado, escribiendo $6x<-5+3r$. Con esa ecuación errónea, $\\frac{-5+3r}{6}=-\\frac{1}{3}$ da $r=1$; pero con la ecuación correcta, $r=1$ da el extremo $-\\frac{4}{3}$.",
+     "B": "$r=\\frac{2}{3}$ no cumple: reemplazado en la inecuación, el extremo sería $\\frac{-5-2}{6}=-\\frac{7}{6}$, que no es $-\\frac{1}{3}$. Aparece al confundir el coeficiente $\\frac{2}{3}$ de $x$ con el valor de $r$.",
+     "C": "$r=-\\frac{1}{2}$ da el extremo $\\frac{-5+\\frac{3}{2}}{6}=-\\frac{7}{12}$, que no coincide con $-\\frac{1}{3}$. Es el error de multiplicar mal el término $\\frac{r}{4}$ al amplificar por 12; el término correcto es $3r$."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q23",
@@ -1153,18 +1244,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "De la relación dada y de $k = c + 273{,}15$ se obtiene $c = k - 273{,}15$; al reemplazar y despejar f aparece el paréntesis $(k - 273{,}15)$.",
+    "summary": "Se reemplaza $c=k-273{,}15$ en la relación dada y se despeja $f$; el ajuste de 273,15 queda multiplicado por $\\frac{9}{5}$ dentro del paréntesis.",
+    "planteamiento": "Se pide la ecuación que relaciona la temperatura en kelvin, $k$, con la temperatura en grados Fahrenheit, $f$. Datos: $c=\\frac{5}{9}\\cdot(f-32)$ y $k=c+273{,}15$, por lo que $c=k-273{,}15$.",
     "steps": [
-     "De Kelvin a Celsius se resta 273,15: $c = k - 273{,}15$.",
-     "Se reemplaza en la relación dada: $k - 273{,}15 = \\frac{5}{9}\\cdot(f - 32)$.",
-     "Se multiplica por $\\frac{9}{5}$: $f - 32 = \\frac{9}{5}\\cdot(k - 273{,}15)$.",
-     "Se suma 32: $f = \\frac{9}{5}\\cdot(k - 273{,}15) + 32$. Por lo tanto, la alternativa correcta es la B."
+     "De la conversión de Celsius a Kelvin, $k=c+273{,}15$, se despeja Celsius: $c=k-273{,}15$. Se resta 273,15 porque Kelvin es la temperatura en Celsius más ese ajuste.",
+     "Se reemplaza $c$ en la relación entre Celsius y Fahrenheit: $k-273{,}15=\\frac{5}{9}\\cdot(f-32)$.",
+     "Se multiplica ambos lados por $\\frac{9}{5}$ para despejar $f-32$: $\\frac{9}{5}\\cdot(k-273{,}15)=f-32$.",
+     "Se suma 32 a ambos lados: $f=\\frac{9}{5}\\cdot(k-273{,}15)+32$. El paréntesis es necesario porque el factor $\\frac{9}{5}$ multiplica a todo $(k-273{,}15)$.",
+     "Comprobación: con $k=273{,}15$ (0 °C), $f=\\frac{9}{5}\\cdot 0+32=32$, que coincide con el punto de congelación del agua en Fahrenheit. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Usa $k + 273{,}15$: suma el ajuste en lugar de restarlo al pasar de Kelvin a Celsius.",
-     "C": "Omite el paréntesis: escribe $\\frac{9}{5}\\cdot k + 273{,}15 + 32$, sin multiplicar el ajuste de 273,15 por $\\frac{9}{5}$."
+     "A": "$f=\\frac{9}{5}\\cdot(k+273{,}15)+32$ suma el ajuste en lugar de restarlo al pasar de Kelvin a Celsius. Con $k=273{,}15$ daría unos 1015 °F, muy por encima del cero Celsius.",
+     "C": "$f=\\frac{9}{5}\\cdot k+273{,}15+32$ omite el paréntesis: el ajuste de 273,15 no se multiplica por $\\frac{9}{5}$. Con $k=273{,}15$ daría unos 796,8 °F, un valor incorrecto.",
+     "D": "$f=\\frac{9}{5}\\cdot k-273{,}15+32$ también omite el paréntesis y resta 273,15 sin multiplicarlo por $\\frac{9}{5}$. Con $k=273{,}15$ daría unos 250,5 °F, que tampoco coincide con 32 °F."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q24",
@@ -1201,17 +1296,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como los tramos miden lo mismo, el tiempo de cada uno es distancia dividida por rapidez; con el tiempo total de 6 h se obtiene la distancia de cada tramo.",
+    "summary": "Como los tramos tienen la misma longitud, el tiempo de cada uno es distancia dividida por rapidez; con el tiempo total de 6 h se obtiene la distancia y luego la diferencia de tiempos.",
+    "planteamiento": "Se pide cuánto tiempo más demoró el segundo tramo que el primero. Datos: ambos tramos tienen la misma longitud $d$, las rapideces medias son $120\\ \\frac{\\mathrm{km}}{\\mathrm{h}}$ y $80\\ \\frac{\\mathrm{km}}{\\mathrm{h}}$, y el tiempo total del viaje es de 6 h.",
     "steps": [
-     "Sea d la longitud de cada tramo. Tiempo del primero: $\\frac{d}{120}$ h; tiempo del segundo: $\\frac{d}{80}$ h.",
-     "Tiempo total: $\\frac{d}{120} + \\frac{d}{80} = 6$. Con mínimo común múltiplo 240: $\\frac{2d + 3d}{240} = 6$, luego $5d = 1440$ y $d = 288$ km.",
-     "Tiempo del primer tramo: $\\frac{288}{120} = 2{,}4$ h = 2 h 24 min.",
-     "Tiempo del segundo tramo: $\\frac{288}{80} = 3{,}6$ h = 3 h 36 min. La diferencia es $3{,}6 - 2{,}4 = 1{,}2$ h = 1 h 12 min. Por lo tanto, la alternativa correcta es la D."
+     "Se define $d$ como la longitud de cada tramo. Con $t=\\frac{d}{v}$, el tiempo del primer tramo es $t_1=\\frac{d}{120}$ h y el del segundo es $t_2=\\frac{d}{80}$ h.",
+     "El tiempo total es $t_1+t_2=6$, es decir, $\\frac{d}{120}+\\frac{d}{80}=6$. El mínimo común múltiplo de 120 y 80 es 240, por lo que $\\frac{d}{120}=\\frac{2d}{240}$ y $\\frac{d}{80}=\\frac{3d}{240}$.",
+     "Se suman las fracciones: $\\frac{2d+3d}{240}=6$, luego $\\frac{5d}{240}=6$. Se multiplica por 240: $5d=1440$, y se divide por 5: $d=288$ km.",
+     "Tiempo del primer tramo: $t_1=\\frac{288}{120}=2{,}4$ h, es decir, 2 h 24 min. Tiempo del segundo tramo: $t_2=\\frac{288}{80}=3{,}6$ h, es decir, 3 h 36 min.",
+     "Comprobación de la suma: $2{,}4+3{,}6=6$ h, que coincide con el tiempo total del enunciado.",
+     "La diferencia es $t_2-t_1=3{,}6-2{,}4=1{,}2$ h. Como $0{,}2$ h equivale a $0{,}2\\cdot 60=12$ min, $1{,}2$ h equivale a 1 h 12 min. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "C": "1 h 20 min: se obtiene al leer 1,2 h como 1 h y 20 min, es decir, pasar los 0,2 h a 20 min en vez de 12 min."
+     "A": "2 h 50 min equivale a $2{,}83$ h, que no coincide con la diferencia de tiempos, $1{,}2$ h, ni con los tiempos individuales de cada tramo. No surge de ningún paso correcto con los datos del enunciado.",
+     "B": "2 h 30 min equivale a $2{,}5$ h, que tampoco es la diferencia de $1{,}2$ h. Además, el tiempo del segundo tramo, $3{,}6$ h, no coincide con esta cantidad, así que la alternativa no responde la pregunta.",
+     "C": "1 h 20 min se obtiene al leer 1,2 h como 1 h y 20 min, es decir, al pasar los 0,2 h a 20 min en vez de 12 min. Es un error de conversión de decimales a minutos."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q25",
@@ -1248,18 +1349,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con x e y como cantidades actuales, el total de monedas sube en 5 y la masa total aumenta en la masa de las 5 monedas de 500 pesos añadidas, que pesan 6,5 g cada una.",
+    "summary": "Al añadir monedas, el total de monedas sube en 5 y la masa total sube en la masa de esas 5 monedas, que son de 500 pesos y pesan 6,5 g cada una.",
+    "planteamiento": "Se pide el sistema que determina las cantidades actualizadas $x$ e $y$ de monedas de 500 y de 100 pesos. Datos del cuadro: antes había $x+y=50$ monedas con masa total $6{,}5x+9y=375$ g, donde 6,5 g es la masa de una moneda de 500 pesos y 9 g la de una de 100 pesos.",
     "steps": [
-     "Antes de agregar monedas, el sistema es $x + y = 50$ y $6{,}5x + 9y = 375$, donde x es el número de monedas de 500 pesos e y el de monedas de 100 pesos.",
-     "Como x ahora es la cantidad actual de monedas de 500 pesos, el total actual de monedas es $x + y = 50 + 5$.",
-     "La masa actual es la masa anterior más la de las 5 monedas añadidas, que son de 500 pesos y pesan 6,5 g cada una:$6{,}5x + 9y = 375 + 5 \\cdot 6{,}5$.",
-     "Con ambas ecuaciones se obtiene el sistema $x + y = 50 + 5$ y $6{,}5x + 9y = 375 + 5 \\cdot 6{,}5$, cuya solución es x = 35 e y = 20. Por lo tanto, la alternativa correcta es la C."
+     "Antes de añadir monedas, el sistema original es $x+y=50$ y $6{,}5x+9y=375$. Con esos valores, la cantidad inicial de monedas de 500 pesos es 30 y la de 100 pesos es 20, pues $6{,}5\\cdot 30+9\\cdot 20=195+180=375$.",
+     "Una vez añadidas las monedas, $x$ representa la cantidad actual de monedas de 500 pesos, que ya incluye las 5 nuevas. El total actual de monedas es $x+y=50+5$, porque antes eran 50 y se añadieron 5.",
+     "La masa actual es la masa anterior más la de las 5 monedas añadidas. Esas monedas son de 500 pesos y cada una pesa 6,5 g, así que suman $5\\cdot 6{,}5$ g: $6{,}5x+9y=375+5\\cdot 6{,}5$.",
+     "Con ambas ecuaciones se forma el sistema $x+y=50+5$ y $6{,}5x+9y=375+5\\cdot 6{,}5$. Su solución es $x=35$ e $y=20$: se verifica con $35+20=55$ y con $6{,}5\\cdot 35+9\\cdot 20=227{,}5+180=407{,}5=375+32{,}5$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "B": "Suma las 5 monedas a y en vez de a x, y usa $5 \\cdot 9$ como masa de las añadidas, cuando son monedas de 500 pesos.",
-     "D": "Plantea bien el total de monedas, pero asigna a las monedas añadidas la masa de la moneda de 100 pesos (9 g) en lugar de 6,5 g."
+     "A": "$(x+5)+y=50$ suma las 5 monedas a $x$, pero $x$ ya es la cantidad actual, y el total debe ser 55 y no 50. La segunda ecuación sí está bien planteada, pero el sistema es incorrecto por la primera.",
+     "B": "$x+(y+5)=50$ suma las 5 monedas a $y$ en vez de a $x$, y usa $5\\cdot 9$ como masa de las añadidas, cuando son monedas de 500 pesos que pesan 6,5 g. Son dos errores: la moneda añadida y su masa.",
+     "D": "$x+y=50+5$ plantea bien el total, pero asigna a las monedas añadidas la masa de la moneda de 100 pesos, $5\\cdot 9$, en lugar de $5\\cdot 6{,}5$. Como son de 500 pesos, su masa es 6,5 g."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q26",
@@ -1296,18 +1400,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Si el precio es 1,25 veces el costo, el costo por kilogramo es $0{,}8p$; al subir el costo en q, el nuevo precio por kilogramo es $p + 1{,}25q$.",
+    "summary": "Si el precio es el costo más el 25 % del costo, el precio es $1{,}25$ veces el costo; al subir el costo en $q$, el nuevo precio por kilogramo es $p+1{,}25q$.",
+    "planteamiento": "Se pide la función que modela el nuevo precio de venta de $x$ kilogramos de pan. Datos: el precio actual por kilogramo es $p$, con una ganancia del $25\\,\\%$ sobre el costo de producción, y el costo de producción sube en $q$ pesos por kilogramo.",
     "steps": [
-     "El precio cubre el costo más un 25 % de ganancia sobre el costo: $p = 1{,}25 \\cdot c$, donde c es el costo por kilogramo.",
-     "Se despeja el costo: $c = \\frac{p}{1{,}25} = 0{,}8p$.",
-     "Con el nuevo costo $0{,}8p + q$, el nuevo precio por kilogramo es $1{,}25\\,(0{,}8p + q) = p + 1{,}25q$.",
-     "Para x kilogramos, el precio total es $(p + 1{,}25q) \\cdot x$. Por lo tanto, la alternativa correcta es la A."
+     "La ganancia es el $25\\,\\%$ sobre el costo, así que el precio es el costo más esa ganancia: $p=c+0{,}25c=1{,}25\\,c$, donde $c$ es el costo por kilogramo.",
+     "Se despeja el costo: $c=\\frac{p}{1{,}25}=\\frac{4p}{5}=0{,}8\\,p$.",
+     "Con el nuevo costo $0{,}8p+q$, el nuevo precio por kilogramo debe dar la misma ganancia del $25\\,\\%$ sobre ese costo: $1{,}25\\,(0{,}8p+q)$.",
+     "Se distribuye el $1{,}25$: $1{,}25\\cdot 0{,}8p+1{,}25\\cdot q=p+1{,}25q$, porque $1{,}25\\cdot 0{,}8=1$. Así el nuevo precio por kilogramo es $p+1{,}25q$.",
+     "Para $x$ kilogramos, el precio total es el precio por kilogramo multiplicado por $x$: $h(x)=(p+1{,}25q)\\cdot x$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Aplica el 25 % sobre $p + q$ en lugar de sobre el costo: escribe $(p + q) \\cdot 1{,}25x$.",
-     "C": "Toma el costo como $0{,}75p$, es decir, usa el 25 % del precio como ganancia, cuando la ganancia es sobre el costo."
+     "B": "$g(x)=(p+q)\\cdot 1{,}25x$ aplica el $25\\,\\%$ sobre $p+q$ en lugar de sobre el costo. Además, el factor 1,25 multiplica a $x$ y no al costo, así que la ganancia queda mal calculada.",
+     "C": "$p(x)=(0{,}75p+q)\\cdot x$ toma el costo como $0{,}75p$, es decir, usa el $25\\,\\%$ del precio como ganancia, cuando la ganancia debe calcularse sobre el costo y no sobre el precio.",
+     "D": "$m(x)=(0{,}25p+q)\\cdot x$ suma la ganancia $0{,}25p$ al aumento $q$, en vez de calcular la ganancia del $25\\,\\%$ sobre el nuevo costo. El resultado no deja la ganancia del $25\\,\\%$ sobre el costo."
     }
-   }
+   },
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2026-invierno-q27",
@@ -1345,17 +1453,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La reflexión respecto del eje X cambia el signo de todo f(x), así que la función buscada es $-f(x) = -ax^{2} - bx - c$.",
+    "summary": "Reflejar una gráfica respecto del eje X cambia el signo de todo $f(x)$, así que la función buscada es $-f(x)=-ax^{2}-bx-c$.",
+    "planteamiento": "Se pide la función cuya gráfica es la de $f(x)=ax^{2}+bx+c$ reflejada respecto del eje X. Datos: $a$, $b$ y $c$ son reales distintos de cero, y la reflexión lleva cada punto $(x,y)$ a $(x,-y)$.",
     "steps": [
-     "Una reflexión respecto del eje X transforma cada punto $(x, y)$ en $(x, -y)$, por lo que la nueva función es $-f(x)$.",
-     "Se calcula: $-f(x) = -(ax^{2} + bx + c) = -ax^{2} - bx - c$.",
-     "Esta expresión coincide con la alternativa B, $q(x) = -ax^{2} - bx - c$. Por lo tanto, la alternativa correcta es la B."
+     "Una reflexión respecto del eje X transforma cada punto $(x,y)$ en $(x,-y)$. Como $y=f(x)$, la nueva función es $-f(x)$.",
+     "Se calcula: $-f(x)=-(ax^{2}+bx+c)$. Por la propiedad distributiva, el signo menos cambia todos los términos: $-ax^{2}-bx-c$.",
+     "Se revisa el signo de cada coeficiente: $a$ pasa a $-a$, $b$ pasa a $-b$ y $c$ pasa a $-c$. No conviene cambiar solo algunos términos.",
+     "La expresión $-ax^{2}-bx-c$ coincide con $q(x)=-ax^{2}-bx-c$, que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$p(x) = -ax^{2} + bx + c$ solo cambia el signo del término cuadrático y deja b y c sin cambio.",
-     "C": "$s(x) = -ax^{2} + bx - c$ cambia el signo de a y de c, pero no el de b."
+     "A": "$p(x)=-ax^{2}+bx+c$ solo cambia el signo del término cuadrático y deja $b$ y $c$ sin cambio. Una reflexión respecto del eje X debe cambiar el signo de todos los términos.",
+     "C": "$s(x)=-ax^{2}+bx-c$ cambia el signo de $a$ y de $c$, pero no el de $b$. Es un error al aplicar el signo menos a la expresión completa.",
+     "D": "$t(x)=ax^{2}-bx+c$ corresponde a la reflexión respecto del eje Y, es decir, $f(-x)$, que cambia el signo de $b$ y deja $a$ y $c$ igual. No es una reflexión respecto del eje X."
     }
-   }
+   },
+   "subtopic": "m2-inversa"
   },
   {
    "id": "m2-2026-invierno-q28",
@@ -1392,18 +1504,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La gráfica tiene f(0) = f(3) = 1,5, así que el eje de simetría es $x = \\frac{3}{2}$; con $-\\frac{b}{2a} = \\frac{3}{2}$ se despeja b.",
+    "summary": "La gráfica muestra que $f(0)=f(3)$, así que el eje de simetría está en $x=\\frac{3}{2}$; con $x_v=-\\frac{b}{2a}$ se despeja $b$.",
+    "planteamiento": "Se pide la expresión de $b$ en función de $a$. Datos: en la gráfica, la curva pasa por $(0,\\,1{,}5)$ y el punto de abscisa 3 tiene la misma ordenada, $f(3)=1{,}5$; el vértice está entre ambos puntos.",
     "steps": [
-     "La gráfica pasa por $(0, 1{,}5)$, luego $c = 1{,}5$, y el punto de abscisa 3 tiene la misma ordenada: $f(3) = 1{,}5$.",
-     "Como $f(0) = f(3)$, el eje de simetría está en el punto medio: $x_v = \\frac{0 + 3}{2} = \\frac{3}{2}$.",
-     "La abscisa del vértice es $x_v = -\\frac{b}{2a}$, por lo tanto $\\frac{3}{2} = -\\frac{b}{2a}$.",
-     "Se multiplica por $2a$: $3a = -b$, es decir, $b = -3a$. Por lo tanto, la alternativa correcta es la A."
+     "Del gráfico se lee que $f(0)=1{,}5$, luego $c=1{,}5$, porque el término independiente es el punto de corte con el eje Y.",
+     "Como el punto de abscisa 3 tiene la misma ordenada que el de abscisa 0, $f(3)=f(0)$, y ambos puntos son simétricos respecto del eje de la parábola.",
+     "El eje de simetría es la recta vertical que pasa por el punto medio de las abscisas: $x_v=\\frac{0+3}{2}=\\frac{3}{2}$.",
+     "La abscisa del vértice de una parábola es $x_v=-\\frac{b}{2a}$, así que $-\\frac{b}{2a}=\\frac{3}{2}$.",
+     "Se multiplica por $2a$: $-b=\\frac{3}{2}\\cdot 2a=3a$, luego $b=-3a$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "$-\\frac{3}{2}a$: al despejar olvida el factor 2 del denominador y escribe $-\\frac{b}{a} = \\frac{3}{2}$.",
-     "D": "$3a$: olvida el signo menos de la fórmula $-\\frac{b}{2a}$."
+     "B": "$-\\frac{3}{2}a$ aparece al olvidar el factor 2 del denominador: se escribe $-\\frac{b}{a}=\\frac{3}{2}$, lo que da $b=-\\frac{3}{2}a$. El denominador de $x_v$ es $2a$.",
+     "C": "$\\frac{3}{2}a$ no se obtiene del despeje: al multiplicar por $2a$ se obtiene $-b=3a$, sin fracción. Aparece al confundir el $\\frac{3}{2}$ de la abscisa del vértice con el coeficiente de $b$.",
+     "D": "$3a$ olvida el signo menos de la fórmula $-\\frac{b}{2a}$. Con $b=3a$ la abscisa del vértice sería $-\\frac{3}{2}$, que no corresponde a la gráfica, donde el vértice está a la derecha del eje Y."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q29",
@@ -1440,17 +1556,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El valor de k sale de la abscisa del vértice, y la ordenada del vértice es el valor de f en esa abscisa, que resulta ser 0.",
+    "summary": "La abscisa del vértice permite despejar $k$; luego la ordenada del vértice es el valor de $f$ en esa abscisa, que resulta ser 0.",
+    "planteamiento": "Se pide la coordenada $y$ del vértice de $f(x)=2x^{2}+(2k+1)x+k+\\frac{9}{8}$ cuando la coordenada $x$ del vértice es $-\\frac{5}{4}$. Datos: $a=2$, $b=2k+1$ y $c=k+\\frac{9}{8}$.",
     "steps": [
-     "Para $f(x) = 2x^{2} + (2k+1)x + k + \\frac{9}{8}$, la abscisa del vértice es $x_v = -\\frac{2k+1}{2 \\cdot 2} = -\\frac{2k+1}{4}$.",
-     "Igualando a $-\\frac{5}{4}$: $2k + 1 = 5$, luego $k = 2$.",
-     "Entonces $f(x) = 2x^{2} + 5x + \\frac{25}{8}$, porque $2 + \\frac{9}{8} = \\frac{25}{8}$.",
-     "Evaluando en $x = -\\frac{5}{4}$: $2 \\cdot \\frac{25}{16} - \\frac{25}{4} + \\frac{25}{8} = \\frac{25}{8} - \\frac{50}{8} + \\frac{25}{8} = 0$. Por lo tanto, la alternativa correcta es la C."
+     "La abscisa del vértice es $x_v=-\\frac{b}{2a}=-\\frac{2k+1}{2\\cdot 2}=-\\frac{2k+1}{4}$.",
+     "Se iguala a $-\\frac{5}{4}$: $-\\frac{2k+1}{4}=-\\frac{5}{4}$. Se multiplica por $-4$ y se obtiene $2k+1=5$, luego $k=2$.",
+     "Con $k=2$, la función queda $f(x)=2x^{2}+5x+2+\\frac{9}{8}=2x^{2}+5x+\\frac{25}{8}$, porque $2+\\frac{9}{8}=\\frac{16}{8}+\\frac{9}{8}=\\frac{25}{8}$.",
+     "La ordenada del vértice es $y_v=f\\left(-\\frac{5}{4}\\right)$. Se calcula cada término: $2\\cdot\\frac{25}{16}=\\frac{25}{8}$, $5\\cdot\\left(-\\frac{5}{4}\\right)=-\\frac{25}{4}=-\\frac{50}{8}$, y el término constante es $\\frac{25}{8}$.",
+     "Se suma: $\\frac{25}{8}-\\frac{50}{8}+\\frac{25}{8}=0$. Comprobación con la fórmula $y_v=c-\\frac{b^{2}}{4a}=\\frac{25}{8}-\\frac{25}{8}=0$. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "D": "$\\frac{25}{4}$: suma $\\frac{b^{2}}{4a}$ en lugar de restarla, es decir, calcula $\\frac{25}{8} + \\frac{25}{8}$."
+     "A": "$-8$ no coincide con el valor de $f$ en la abscisa del vértice: con $k=2$, $f\\left(-\\frac{5}{4}\\right)=0$, y la fórmula $c-\\frac{b^{2}}{4a}$ también da 0. No surge de un despeje correcto de $k$ ni de la fórmula de la ordenada.",
+     "B": "$-\\frac{17}{4}$ no sale de la fórmula $y_v=c-\\frac{b^{2}}{4a}$ con $b=5$, $a=2$ y $c=\\frac{25}{8}$. Un error al calcular $\\frac{b^{2}}{4a}$ puede producir valores así, pero el valor correcto es 0.",
+     "D": "$\\frac{25}{4}$ suma $\\frac{b^{2}}{4a}$ en lugar de restarla, es decir, calcula $\\frac{25}{8}+\\frac{25}{8}$."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q30",
@@ -1487,16 +1608,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La altura máxima se alcanza en el vértice de la parábola, cuya abscisa es $x = -\\frac{b}{2a}$; luego se evalúa h en ese tiempo.",
+    "summary": "Como el coeficiente de $x^{2}$ es negativo, la parábola tiene un máximo en su vértice; la altura máxima es el valor de $h$ en la abscisa $x_v=-\\frac{b}{2a}$.",
+    "planteamiento": "Se pide la altura máxima del cohete, es decir, el máximo de $h(x)$. Datos: $h(x)=-5x^{2}+80x$, con $a=-5$ y $b=80$, donde $h$ está en metros y $x$ en segundos.",
     "steps": [
-     "El coeficiente principal es $-5 < 0$, así que la parábola abre hacia abajo y tiene un máximo.",
-     "Tiempo del máximo: $x_v = -\\frac{80}{2 \\cdot (-5)} = 8$ s.",
-     "Altura máxima: $h(8) = -5 \\cdot 8^{2} + 80 \\cdot 8 = -320 + 640 = 320$ metros. Por lo tanto, la alternativa correcta es la A."
+     "El coeficiente principal es $-5<0$, así que la parábola abre hacia abajo y su vértice es un máximo: la altura máxima es la ordenada del vértice.",
+     "Tiempo en que se alcanza el máximo: $x_v=-\\frac{b}{2a}=-\\frac{80}{2\\cdot(-5)}=-\\frac{80}{-10}=8$ s.",
+     "Altura máxima: $h(8)=-5\\cdot 8^{2}+80\\cdot 8=-5\\cdot 64+640=-320+640=320$ m.",
+     "Comprobación: otros tiempos dan menos altura; por ejemplo, $h(7)=-5\\cdot 49+560=-245+560=315$ m y $h(9)=-5\\cdot 81+720=-405+720=315$ m, ambos menores que 320 m y simétricos respecto de $x=8$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "D": "960 metros: si se toma $a = 5$ positivo al calcular $-\\frac{b}{2a}$, se obtiene $x = -8$ y $h(-8) = -960$; al quitar el signo queda 960."
+     "B": "560 metros no es alcanzable: la altura máxima de $h$ es 320 m. Para que $h(x)=560$ habría que resolver $-5x^{2}+80x-560=0$, que no tiene soluciones reales porque su discriminante es $80^{2}-4\\cdot(-5)\\cdot(-560)=-4800<0$.",
+     "C": "700 metros tampoco es alcanzable por el mismo motivo: el valor máximo de $h$ es 320 m, así que cualquier altura mayor queda fuera del recorrido de la función.",
+     "D": "960 metros aparece si se toma $a=5$ positivo al calcular $-\\frac{b}{2a}$: se obtiene $x=-8$ y $h(-8)=-960$; al quitar el signo queda 960. Pero el tiempo debe ser positivo, y $-8$ s no tiene sentido."
     }
-   }
+   },
+   "subtopic": "m2-inversa"
   },
   {
    "id": "m2-2026-invierno-q31",
@@ -1533,18 +1659,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Los ceros −p y 2p dan $b = p$ y $c = -2p^{2}$; así el vértice tiene abscisa positiva y ordenada negativa.",
+    "summary": "Los ceros $-p$ y $2p$ permiten escribir $f$ factorizada; de ahí salen $b$ y $c$, y el cuadrante del vértice se determina por el signo de su abscisa y de su ordenada.",
+    "planteamiento": "Se pide el cuadrante del vértice de $f(x)=x^{2}-bx+c$, cuyos ceros son $-p$ y $2p$ con $p>0$. Datos: la gráfica corta el eje X en $(-p,0)$ y $(2p,0)$, y además $p>0$.",
     "steps": [
-     "Como las raíces son −p y 2p, $f(x) = (x + p)(x - 2p) = x^{2} - px - 2p^{2}$. Al comparar con $x^{2} - bx + c$: $b = p$ y $c = -2p^{2}$.",
-     "Abscisa del vértice: $x_v = \\frac{b}{2} = \\frac{p}{2} > 0$, porque $p > 0$.",
-     "Ordenada del vértice: $f\\left(\\frac{p}{2}\\right) = \\frac{p^{2}}{4} - \\frac{p^{2}}{2} - 2p^{2} = -\\frac{9p^{2}}{4} < 0$.",
-     "El vértice $\\left(\\frac{p}{2}, -\\frac{9p^{2}}{4}\\right)$ tiene x positivo e y negativo. Por lo tanto, la alternativa correcta es la D."
+     "Como las raíces son $-p$ y $2p$, $f(x)=(x+p)(x-2p)=x^{2}-2px+px-2p^{2}=x^{2}-px-2p^{2}$.",
+     "Al comparar con $x^{2}-bx+c$: $-b=-p$, luego $b=p$, y $c=-2p^{2}$.",
+     "La abscisa del vértice es $x_v=\\frac{b}{2}=\\frac{p}{2}$, que es positiva porque $p>0$.",
+     "La ordenada del vértice es $f\\left(\\frac{p}{2}\\right)=\\frac{p^{2}}{4}-\\frac{p^{2}}{2}-2p^{2}=\\frac{p^{2}-2p^{2}-8p^{2}}{4}=-\\frac{9p^{2}}{4}$, que es negativa porque $p^{2}>0$.",
+     "El vértice $\\left(\\frac{p}{2},-\\frac{9p^{2}}{4}\\right)$ tiene abscisa positiva y ordenada negativa, lo que corresponde al cuarto cuadrante. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "Olvida el signo negativo de c y toma $+2p^{2}$: obtiene $f\\left(\\frac{p}{2}\\right) = \\frac{7p^{2}}{4} > 0$, lo que lleva al primer cuadrante.",
-     "C": "Confunde el signo de la abscisa y usa $x_v = -\\frac{b}{2} = -\\frac{p}{2}$; con y negativa, el vértice quedaría en el tercer cuadrante."
+     "A": "Olvida el signo negativo de $c$ y toma $+2p^{2}$: $f\\left(\\frac{p}{2}\\right)=\\frac{p^{2}}{4}-\\frac{p^{2}}{2}+2p^{2}=\\frac{7p^{2}}{4}>0$, lo que lleva al primer cuadrante.",
+     "B": "El segundo cuadrante exige abscisa negativa y ordenada positiva. La ordenada correcta es $-\\frac{9p^{2}}{4}$, negativa, así que este cuadrante no corresponde; se llegaría a él solo cambiando a la vez el signo de la abscisa y el de $c$.",
+     "C": "Confunde el signo de la abscisa y usa $x_v=-\\frac{b}{2}=-\\frac{p}{2}$; con ordenada negativa, el vértice quedaría en el tercer cuadrante, no en el cuarto."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q32",
@@ -1581,17 +1711,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La radiación es proporcional a T⁴, así que al duplicar la temperatura de 100 K a 200 K la radiación se multiplica por $2^{4} = 16$.",
+    "summary": "La radiación es proporcional a $T^{4}$, así que al duplicar la temperatura de 100 K a 200 K la radiación se multiplica por $2^{4}=16$.",
+    "planteamiento": "Se pide la radiación de un cuerpo negro a 200 K. Datos: a 100 K la radiación es $5{,}678\\ \\frac{\\mathrm{W}}{\\mathrm{m}^{2}}$, y la relación es $R=\\sigma\\cdot T^{4}$ con $\\sigma$ constante.",
     "steps": [
-     "Con $R = \\sigma \\cdot T^{4}$ y T = 100 K se tiene $R = 5{,}678$ W/m², que fija el valor de la constante.",
-     "Para T = 200 K: $R = \\sigma \\cdot (2 \\cdot 100)^{4} = 2^{4} \\cdot \\sigma \\cdot 100^{4} = 16 \\cdot 5{,}678$.",
-     "$16 \\cdot 5{,}678 = 90{,}848$ W/m². Por lo tanto, la alternativa correcta es la D."
+     "Con $R=\\sigma\\cdot T^{4}$ y $T=100$ K se tiene $5{,}678=\\sigma\\cdot 100^{4}$, lo que fija el producto $\\sigma\\cdot 100^{4}$ para este cuerpo.",
+     "Para $T=200$ K: $R=\\sigma\\cdot 200^{4}=\\sigma\\cdot(2\\cdot 100)^{4}$. Como $(2\\cdot 100)^{4}=2^{4}\\cdot 100^{4}$, se obtiene $R=2^{4}\\cdot\\sigma\\cdot 100^{4}$.",
+     "Se reemplaza $\\sigma\\cdot 100^{4}=5{,}678$: $R=16\\cdot 5{,}678$.",
+     "Se calcula: $16\\cdot 5{,}678=90{,}848$ W/m². Comprobación: $\\frac{90{,}848}{5{,}678}=16$, es decir, la radiación se multiplica por 16 al duplicar la temperatura. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "11,356 W/m²: supone que la radiación es proporcional a T (factor 2) en lugar de T⁴.",
-     "C": "45,424 W/m²: usa exponente 3 en lugar de 4, con lo que multiplica por $2^{3} = 8$."
+     "A": "$11{,}356$ W/m² supone que la radiación es proporcional a $T$ (factor 2) en lugar de $T^{4}$. Esa relación no corresponde a la ley de radiación del enunciado.",
+     "B": "$34{,}068$ W/m² equivale a multiplicar por 6, factor que no es una potencia de 2 y no surge de $T^{4}$. Al duplicar $T$, el factor debe ser $2^{n}$, con $n$ el exponente, y 6 no lo es.",
+     "C": "$45{,}424$ W/m² equivale a multiplicar por 8, es decir, por $2^{3}$. Usa exponente 3 en lugar de 4 en la ley de radiación."
     }
-   }
+   },
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q33",
@@ -1628,18 +1762,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El error está en el Paso 2: en los triángulos ADC y CDB las hipotenusas son AC y CB, no CD, así que las igualdades correctas son $AD^{2} + CD^{2} = 4^{2}$ y $CD^{2} + (5 - AD)^{2} = 3^{2}$.",
+    "summary": "El error está en el Paso 2: en los triángulos ADC y CDB las hipotenusas son AC y CB, no CD, así que las igualdades del Paso 2 están mal planteadas.",
+    "planteamiento": "Se pide identificar el paso con el error en el cálculo de $\\overline{CD}$ en el triángulo rectángulo $ABC$. Datos: los catetos son $\\overline{BC}=3$ cm y $\\overline{CA}=4$ cm, con ángulo recto en $C$, y $\\overline{CD}$ es la altura sobre la hipotenusa $\\overline{AB}$.",
     "steps": [
-     "El Paso 1 es correcto: el ángulo en C es recto y los catetos miden 3 cm y 4 cm, así que $AB = \\sqrt{3^{2} + 4^{2}} = 5$ cm.",
-     "En el triángulo ADC, el ángulo en D es recto y la hipotenusa es AC = 4 cm, por lo tanto $AD^{2} + CD^{2} = 4^{2}$. En el triángulo CDB la hipotenusa es CB = 3 cm, por lo tanto $CD^{2} + (5 - AD)^{2} = 3^{2}$.",
-     "El Paso 2 escribe $4^{2} + AD^{2} = CD^{2}$ y $3^{2} + (5 - AD)^{2} = CD^{2}$, es decir, pone CD como hipotenusa, lo que no corresponde en ninguno de los dos triángulos.",
-     "Los Pasos 3 y 4 son aritmética correcta sobre esas igualdades erradas, por eso dan $AD = \\frac{9}{5}$ y $CD = \\frac{\\sqrt{481}}{5}$. Con las igualdades correctas se obtiene $AD = \\frac{16}{5}$ y $CD = \\frac{12}{5}$ cm. Por lo tanto, la alternativa correcta es la B."
+     "El Paso 1 es correcto: por el teorema de Pitágoras, $AB=\\sqrt{3^{2}+4^{2}}=\\sqrt{25}=5$ cm, porque la hipotenusa es el lado opuesto al ángulo recto en $C$.",
+     "En el triángulo $ADC$, el ángulo en $D$ es recto y la hipotenusa es $\\overline{AC}=4$ cm, así que $AD^{2}+CD^{2}=4^{2}$. En el triángulo $CDB$, la hipotenusa es $\\overline{CB}=3$ cm, así que $CD^{2}+DB^{2}=3^{2}$, con $DB=5-AD$.",
+     "El Paso 2 escribe $4^{2}+AD^{2}=CD^{2}$ y $3^{2}+(5-AD)^{2}=CD^{2}$, es decir, pone $CD$ como hipotenusa en los dos triángulos. Eso no corresponde, porque $CD$ es un cateto en ambos.",
+     "Los Pasos 3 y 4 son aritmética correcta sobre esas igualdades erradas. Con las igualdades correctas, $AD^{2}+CD^{2}=16$ y $CD^{2}+(5-AD)^{2}=9$, se obtiene $AD=\\frac{16}{5}$ y, con $CD^{2}=AD\\cdot DB$, $CD=\\frac{12}{5}$ cm.",
+     "Por lo tanto, el error está en el Paso 2 y la alternativa correcta es la B."
     ],
     "distractors": {
-     "C": "Paso 3: parece sospechoso porque ahí aparece $\\frac{9}{5}$, pero el despeje es correcto a partir de las igualdades del Paso 2; el error es anterior.",
-     "D": "Paso 4: la raíz de 481 parece complicada, pero la sustitución y el despeje están bien hechos; el error de origen está en el Paso 2."
+     "A": "El Paso 1 es correcto, pues $\\sqrt{3^{2}+4^{2}}=5$ cm. Creer que está mal puede venir de confundir $AB$ con un cateto, pero la hipotenusa de este triángulo mide 5 cm.",
+     "C": "El Paso 3 tiene $\\frac{9}{5}$, que parece sospechoso, pero el despeje es correcto a partir de las igualdades del Paso 2. El error es anterior, así que no es el paso en que se cometió.",
+     "D": "El Paso 4 tiene una raíz de 481 que parece complicada, pero la sustitución y el despeje están bien hechos. El valor $\\frac{\\sqrt{481}}{5}$ se obtiene correctamente de las igualdades erradas, por eso el origen está en el Paso 2."
     }
-   }
+   },
+   "subtopic": "m2-trigonometria"
   },
   {
    "id": "m2-2026-invierno-q34",
@@ -1677,17 +1815,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Cada superficie pintada es la diferencia entre dos cuadrados consecutivos; la quinta tiene área $L^{2}\\left(\\left(\\frac{a}{b}\\right)^{8} - \\left(\\frac{a}{b}\\right)^{10}\\right)$.",
+    "summary": "Cada superficie pintada es la diferencia entre dos cuadrados consecutivos, y la quinta es la región entre los cuadrados de lados $r^{4}L$ y $r^{5}L$, con $r=\\frac{a}{b}$.",
+    "planteamiento": "Se pide el área de la última superficie pintada tras cinco repeticiones. Datos: el cuadrado inicial tiene lado $L$ cm y cada cuadrado nuevo tiene lado $r=\\frac{a}{b}$ veces el anterior, con $a$ y $b$ enteros positivos y $a<b$.",
     "steps": [
-     "Sea $r = \\frac{a}{b}$. Los lados de los cuadrados son $L$, $rL$, $r^{2}L$, $r^{3}L$, …, y cada cuadrado nuevo tiene lado r veces el anterior.",
-     "La quinta superficie pintada es la región entre el cuadrado de lado $r^{4}L$ y el de lado $r^{5}L$.",
-     "Su área es $(r^{4}L)^{2} - (r^{5}L)^{2} = L^{2}\\left(r^{8} - r^{10}\\right)$, es decir, $L^{2}\\left(\\left(\\frac{a}{b}\\right)^{8} - \\left(\\frac{a}{b}\\right)^{10}\\right)$. Por lo tanto, la alternativa correcta es la D."
+     "Sea $r=\\frac{a}{b}$. El primer cuadrado tiene lado $L$; el segundo, $rL$; el tercero, $r^{2}L$, y así sucesivamente, porque cada cuadrado nuevo es $r$ veces el anterior.",
+     "La primera superficie pintada es la región entre el cuadrado de lado $L$ y el de lado $rL$. La segunda, entre $rL$ y $r^{2}L$. En general, la superficie $k$-ésima está entre $r^{k-1}L$ y $r^{k}L$.",
+     "Por lo tanto, la quinta superficie pintada está entre el cuadrado de lado $r^{4}L$ y el de lado $r^{5}L$.",
+     "El área de un cuadrado es su lado al cuadrado, así que la región tiene área $(r^{4}L)^{2}-(r^{5}L)^{2}=r^{8}L^{2}-r^{10}L^{2}$.",
+     "Se saca factor común $L^{2}$: $L^{2}\\left(r^{8}-r^{10}\\right)=L^{2}\\left(\\left(\\frac{a}{b}\\right)^{8}-\\left(\\frac{a}{b}\\right)^{10}\\right)$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$L^{2}\\left(\\left(\\frac{a}{b}\\right)^{4} - \\left(\\frac{a}{b}\\right)^{5}\\right)$: usa los lados $r^{4}$ y $r^{5}$ sin elevarlos al cuadrado, como si fueran áreas.",
-     "C": "$L^{2}\\left(\\left(\\frac{a}{b}\\right)^{10} - \\left(\\frac{a}{b}\\right)^{8}\\right)$: tiene los mismos exponentes, pero invierte la resta y da un área negativa."
+     "A": "$L^{2}\\left(\\left(\\frac{a}{b}\\right)^{4}-\\left(\\frac{a}{b}\\right)^{5}\\right)$ usa los lados $r^{4}$ y $r^{5}$ sin elevarlos al cuadrado, como si fueran áreas. El área debe elevar cada lado al cuadrado.",
+     "B": "$L^{2}\\left(\\left(\\frac{a}{b}\\right)^{5}-\\left(\\frac{a}{b}\\right)^{4}\\right)$ usa los exponentes 4 y 5 sin elevar al cuadrado, y además invierte la resta. Como el cuadrado interior es más pequeño, $a<b$ y esa resta sale negativa, lo que es imposible para un área.",
+     "C": "$L^{2}\\left(\\left(\\frac{a}{b}\\right)^{10}-\\left(\\frac{a}{b}\\right)^{8}\\right)$ tiene los mismos exponentes, pero invierte la resta y da un área negativa, porque el cuadrado exterior debe ir primero."
     }
-   }
+   },
+   "subtopic": "m2-homotecia"
   },
   {
    "id": "m2-2026-invierno-q35",
@@ -1724,18 +1867,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El área pedida es la del círculo menos la del hexágono regular inscrito, cuyo lado es igual al radio.",
+    "summary": "El área pedida es la del círculo menos la del hexágono regular inscrito, cuyo lado es igual al radio del círculo.",
+    "planteamiento": "Se pide el área de la base de madera que queda visible, es decir, el área del círculo menos el área del hexágono. Datos: el diámetro de la base circular es 40 cm, así que el radio es 20 cm, y el hexágono regular está inscrito en el círculo.",
     "steps": [
-     "El diámetro es 40 cm, así que el radio es $R = 20$ cm. El lado del hexágono regular inscrito es igual al radio, es decir, 20 cm.",
-     "Área del círculo: $\\pi \\cdot 20^{2} = 400\\pi$ cm².",
-     "Área del hexágono: seis triángulos equiláteros de lado 20 cm, cada uno de área $\\frac{\\sqrt{3}}{4} \\cdot 20^{2} = 100\\sqrt{3}$; total $600\\sqrt{3}$ cm².",
-     "Área a cubrir: $400\\pi - 600\\sqrt{3}$ cm². Por lo tanto, la alternativa correcta es la A."
+     "El radio es la mitad del diámetro: $R=\\frac{40}{2}=20$ cm. En un hexágono regular inscrito, el lado es igual al radio, así que cada lado mide 20 cm.",
+     "Área del círculo: $\\pi R^{2}=\\pi\\cdot 20^{2}=400\\pi$ cm².",
+     "El hexágono regular se divide en seis triángulos equiláteros de lado 20 cm, con vértice común en el centro del círculo. El área de cada triángulo es $\\frac{\\sqrt{3}}{4}\\cdot 20^{2}=\\frac{\\sqrt{3}}{4}\\cdot 400=100\\sqrt{3}$ cm².",
+     "Área del hexágono: $6\\cdot 100\\sqrt{3}=600\\sqrt{3}$ cm².",
+     "La madera visible es la diferencia entre el círculo y el hexágono: $400\\pi-600\\sqrt{3}$ cm². Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "$400\\pi - 100\\sqrt{3}$: calcula el hexágono como un solo triángulo equilátero de lado 20 cm y olvida multiplicar por 6.",
-     "D": "$1600\\pi - 600\\sqrt{3}$: usa el diámetro de 40 cm como radio en la fórmula del área del círculo."
+     "B": "$400\\pi-100\\sqrt{3}$ calcula el hexágono como un solo triángulo equilátero de lado 20 cm y olvida multiplicar por 6. El hexágono tiene seis triángulos iguales.",
+     "C": "$1600\\pi-1200\\sqrt{3}$ combina dos errores: $1600\\pi$ es el área de un círculo de radio 40 cm, es decir, usa el diámetro como radio, y $1200\\sqrt{3}$ es el doble del área correcta del hexágono.",
+     "D": "$1600\\pi-600\\sqrt{3}$ usa el diámetro de 40 cm como radio en la fórmula del área del círculo, con $\\pi\\cdot 40^{2}=1600\\pi$. El hexágono sí está bien calculado."
     }
-   }
+   },
+   "subtopic": "m2-homotecia"
   },
   {
    "id": "m2-2026-invierno-q37",
@@ -1772,16 +1919,21 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Desde el gráfico se leen $\\vec{u} = (4, 0)$, $\\vec{v} = (0, 3)$ y $\\vec{w} = (-2, -2)$; luego $\\vec{v} - (\\vec{u} + 2\\vec{w}) = (0, 7)$.",
+    "summary": "Desde el gráfico se leen las coordenadas de $\\vec{u}$, $\\vec{v}$ y $\\vec{w}$; luego se opera componente a componente en $\\vec{v}-(\\vec{u}+2\\vec{w})$.",
+    "planteamiento": "Se pide las coordenadas del vector $\\vec{v}-(\\vec{u}+2\\vec{w})$. Datos del gráfico: $\\vec{u}=(4,0)$, $\\vec{v}=(0,3)$ y $\\vec{w}=(-2,-2)$, según las marcas de los ejes y las líneas punteadas.",
     "steps": [
-     "Lectura del gráfico: $\\vec{u} = (4, 0)$, $\\vec{v} = (0, 3)$ y $\\vec{w} = (-2, -2)$, pues el extremo de $\\vec{w}$ está en x = −2 e y = −2.",
-     "Se calcula $\\vec{u} + 2\\vec{w} = (4, 0) + (-4, -4) = (0, -4)$.",
-     "Luego $\\vec{v} - (\\vec{u} + 2\\vec{w}) = (0, 3) - (0, -4) = (0, 7)$. Por lo tanto, la alternativa correcta es la D."
+     "Lectura del gráfico: $\\vec{u}$ termina en $x=4$ sobre el eje X; $\\vec{v}$ termina en $y=3$ sobre el eje Y; $\\vec{w}$ termina en $x=-2$ e $y=-2$, según las líneas punteadas.",
+     "Se calcula $2\\vec{w}=2\\cdot(-2,-2)=(-4,-4)$, y luego $\\vec{u}+2\\vec{w}=(4,0)+(-4,-4)=(0,-4)$.",
+     "Se opera componente a componente: $\\vec{v}-(\\vec{u}+2\\vec{w})=(0,3)-(0,-4)=(0-0,\\ 3-(-4))$.",
+     "Se calcula la componente $y$: $3-(-4)=3+4=7$, y la componente $x$: $0-0=0$. Así el vector es $(0,7)$. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "C": "(0, −1): suma en lugar de restar, es decir, calcula $\\vec{v} + (\\vec{u} + 2\\vec{w}) = (0, 3) + (0, -4)$."
+     "A": "$(-6,1)$ no es coherente con las coordenadas leídas: la componente $x$ de $\\vec{u}+2\\vec{w}$ es $4+2\\cdot(-2)=0$, así que la componente $x$ de la respuesta debe ser 0.",
+     "B": "$(0,5)$ se obtiene al olvidar el factor 2 en la componente $y$ de $2\\vec{w}$: con $-2$ en vez de $-4$, se calcula $3-(-2)=5$. La componente $y$ correcta de $2\\vec{w}$ es $2\\cdot(-2)=-4$.",
+     "C": "$(0,-1)$ suma en lugar de restar: calcula $\\vec{v}+(\\vec{u}+2\\vec{w})=(0,3)+(0,-4)=(0,-1)$."
     }
-   }
+   },
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2026-invierno-q38",
@@ -1818,17 +1970,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La posición de la luna depende solo de su giro en torno al centro del planeta, no de la posición absoluta del planeta, así que basta con contar los 45° que avanza la luna cada minuto.",
+    "summary": "La posición de la luna depende solo de su propio giro alrededor del centro del planeta, no de dónde esté el planeta en el plano. Basta acumular los 5 giros de $45^\\circ$ en sentido horario.",
+    "planteamiento": "Se pide la posición de la luna respecto del planeta tras $5$ minutos. Datos: el planeta gira en torno al origen en sentido antihorario y avanza $45^\\circ$ por minuto; la luna gira en torno al centro del planeta en sentido horario, también $45^\\circ$ por minuto, y en la posición inicial está a la derecha del planeta, es decir, en $0^\\circ$.",
     "steps": [
-     "El planeta gira en sentido antihorario: tras un minuto está en la diagonal superior derecha, tras dos minutos sobre el eje $Y$ (es decir, $90^\\circ$). Avanza $45^\\circ$ por minuto.",
-     "La luna gira en sentido horario en torno al centro del planeta. En la posición inicial está a la derecha del centro ($0^\\circ$), tras un minuto a $-45^\\circ$ (abajo a la derecha) y tras dos minutos justo debajo del centro ($-90^\\circ$).",
-     "Tras 5 minutos la luna lleva girados $5 \\cdot 45^\\circ = 225^\\circ$ en sentido horario, es decir, un ángulo de $-225^\\circ$, que equivale a $135^\\circ$ medido en sentido antihorario desde el centro del planeta.",
-     "Un ángulo de $135^\\circ$ deja la luna arriba a la izquierda del centro del planeta, que es la imagen de la alternativa B. Por lo tanto, la alternativa correcta es la B."
+     "El ángulo de la luna se mide desde el centro del planeta, no desde el origen del plano. El giro del planeta alrededor del origen traslada el sistema completo, pero no cambia la posición relativa de la luna, así que solo importa el giro propio de la luna.",
+     "Cada minuto la luna gira $45^\\circ$ en sentido horario, lo que equivale a restar $45^\\circ$ a su ángulo medido en sentido antihorario. Tras un minuto queda en $-45^\\circ$ (abajo a la derecha del planeta) y tras dos minutos en $-90^\\circ$ (justo debajo del centro), como muestra la secuencia de la figura.",
+     "Tras $5$ minutos el giro acumulado es $5\\cdot 45^\\circ=225^\\circ$ en sentido horario, así que el ángulo es $\\theta=0^\\circ-225^\\circ=-225^\\circ$.",
+     "Un ángulo de $-225^\\circ$ es coterminal con $-225^\\circ+360^\\circ=135^\\circ$, es decir, equivale a $135^\\circ$ medidos en sentido antihorario desde el eje $X$ positivo.",
+     "A $135^\\circ$ la luna queda en el cuadrante II: a la izquierda del centro del planeta y por encima de él, a la misma distancia en ambas direcciones. Esa es la posición de la imagen de la alternativa B: una circunferencia grande con una pequeña en la esquina superior izquierda.",
+     "Comprobación: los pasos de $0^\\circ$ a $-225^\\circ$ son cinco giros de $-45^\\circ$, y $-225^\\circ+360^\\circ=135^\\circ$ coincide con el resultado. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Muestra la luna abajo a la derecha, que es la posición tras un solo minuto ($-45^\\circ$): se olvida acumular los cinco minutos de giro."
+     "A": "Muestra la luna abajo a la derecha, que es la posición tras un solo minuto ($-45^\\circ$): se olvida acumular los cinco minutos de giro.",
+     "C": "Representa una posición que no corresponde a $135^\\circ$. El error típico es invertir el sentido de giro de la luna: un giro de $225^\\circ$ en sentido antihorario la dejaría abajo a la izquierda del planeta, y no arriba a la izquierda.",
+     "D": "Muestra la luna arriba a la derecha, es decir, en $45^\\circ$, que corresponde a un solo minuto de giro en sentido antihorario. Es la trampa de confundir el sentido de giro de la luna con el del planeta, o de contar un único minuto."
     }
-   }
+   },
+   "subtopic": "m2-trigonometria"
   },
   {
    "id": "m2-2026-invierno-q39",
@@ -1865,19 +2023,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Una homotecia de razón $k$ con centro en el origen multiplica las longitudes por $|k|$, y si $k<0$ la figura queda al lado opuesto del origen; con $k=-\\frac{p}{2}$ el perímetro cambia por el factor $\\frac{|p|}{2}$.",
+    "summary": "Una homotecia de razón $k$ con centro en el origen multiplica cada coordenada por $k$: las longitudes cambian por $|k|$ y, si $k<0$, la figura queda al otro lado del origen. Aquí $k=-\\frac{p}{2}$.",
+    "planteamiento": "Se pide qué afirmación se puede deducir sobre el triángulo homotético. Datos: el triángulo original está en el primer cuadrante, la homotecia tiene centro en el origen y razón $-\\frac{p}{2}$, con $p$ un número real. Hay que evaluar cada alternativa según perímetro, área y cuadrante, y ver si vale para todo caso que la alternativa plantea.",
     "steps": [
-     "La razón de la homotecia es $k=-\\frac{p}{2}$, según el enunciado.",
-     "Las longitudes se multiplican por $|k|=\\frac{|p|}{2}$, así que el perímetro del triángulo homotético es $\\frac{|p|}{2}$ veces el perímetro del original.",
-     "Para $p=4$ se tiene $k=-2$ y el perímetro se duplica exactamente, como afirma la alternativa A.",
-     "Para $p=2$ la razón es $-1$: el triángulo homotético es congruente al original y tiene la misma área. Para $p<0$ el factor $\\frac{|p|}{2}$ puede ser mayor o menor que $1$, así que no se deduce nada. Para $p>0$ cada punto $(x,y)$ pasa a $\\left(-\\frac{p}{2}x,-\\frac{p}{2}y\\right)$, con coordenadas negativas: el triángulo queda en el tercer cuadrante. Por lo tanto, la alternativa correcta es la A."
+     "La razón de la homotecia es $k=-\\frac{p}{2}$. Con centro en el origen, cada punto $(x,y)$ pasa a $(kx,ky)$, y todas las distancias entre puntos se multiplican por $|k|$.",
+     "El perímetro es una suma de longitudes de lados, así que el perímetro del triángulo homotético es $|k|=\\frac{|p|}{2}$ veces el perímetro del original. El signo de $k$ no cambia esta razón; solo cambia la ubicación del triángulo.",
+     "Alternativa A: si $p=4$, entonces $k=-2$ y $|k|=2$, así que el perímetro se duplica exactamente. Esta afirmación sí se deduce del enunciado.",
+     "Alternativa B: si $p=2$, entonces $k=-1$ y $|k|=1$. El triángulo homotético es congruente con el original, solo queda reflejado a través del origen, por lo que tiene la misma área y no un área mayor. La afirmación es falsa.",
+     "Alternativa C: si $p<0$, entonces $|k|=\\frac{|p|}{2}$ puede ser mayor o menor que $1$. Con $p=-4$ se tiene $|k|=2$ y el perímetro aumenta; con $p=-1$, $|k|=\\frac{1}{2}$ y el perímetro disminuye. Como no siempre es menor, no se deduce.",
+     "Alternativa D: si $p>0$, entonces $k<0$ y cada punto $(x,y)$ con $x,y>0$ pasa a $\\left(-\\frac{p}{2}x,\\,-\\frac{p}{2}y\\right)$, con ambas coordenadas negativas. El triángulo queda en el tercer cuadrante y no en el primero, así que la afirmación es falsa.",
+     "Solo la alternativa A se deduce para los valores de $p$ que plantea. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "Creer que con $p=2$ el área aumenta: la razón $-1$ solo refleja el triángulo por el origen, sin cambiar su área.",
-     "C": "Suponer que $p<0$ implica perímetro menor: con $p=-4$ la razón vale $2$ en valor absoluto y el perímetro se duplica.",
-     "D": "Pensar que el signo negativo deja el triángulo en el mismo cuadrante: con $k<0$ los puntos se reflejan a través del origen."
+     "B": "Creer que con $p=2$ el área aumenta: la razón $-1$ solo refleja el triángulo por el origen y no cambia su área. Es la trampa de suponer que toda homotecia agranda la figura.",
+     "C": "Suponer que $p<0$ implica perímetro menor: con $p=-4$ la razón vale $2$ en valor absoluto y el perímetro se duplica. El error es ignorar que el factor de cambio es $|k|$, que puede ser mayor o menor que $1$ según la magnitud de $p$.",
+     "D": "Pensar que el signo negativo deja el triángulo en el mismo cuadrante: con $k<0$ los puntos se reflejan a través del origen y sus coordenadas cambian de signo. Es un error de signo al interpretar la razón."
     }
-   }
+   },
+   "subtopic": "m2-homotecia"
   },
   {
    "id": "m2-2026-invierno-q40",
@@ -1914,19 +2077,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El orificio es el centro de una homotecia: el diámetro del sol y el de su proyección están en la misma razón que sus distancias al orificio, así que el diámetro real es $\\frac{d\\cdot D}{L}$.",
+    "summary": "El orificio actúa como centro de una homotecia: el diámetro del sol y el de su proyección están en la misma razón que sus distancias al orificio. Así, el diámetro real es $\\frac{d}{L}\\cdot D$.",
+    "planteamiento": "Se pide el diámetro del sol en kilómetros. Datos: el sol está a $D$ km del orificio, la proyección está a $L$ cm del orificio y su diámetro mide $d$ cm. Como $d$ y $L$ están en centímetros, lo que interviene es el cociente $\\frac{d}{L}$, que no tiene unidad, y el resultado conserva la unidad de $D$.",
     "steps": [
-     "Los rayos que van desde los extremos del sol hasta el orificio y luego hasta los extremos de la proyección forman dos triángulos semejantes con vértice en el orificio.",
-     "Del lado del sol, de diámetro $S$ km, a distancia $D$ km del orificio. Del lado de la caja, de diámetro $d$ cm, a distancia $L$ cm del orificio.",
-     "Por semejanza se cumple $$\\frac{S}{D}=\\frac{d}{L}$$ (ambos cocientes son adimensionales, así que las unidades de $d$ y $L$ no afectan el resultado).",
-     "Despejando, $S=\\frac{d}{L}\\cdot D$ km. Por lo tanto, la alternativa correcta es la C."
+     "Dibuja los rayos que salen de los extremos del sol y pasan por el orificio: siguen en línea recta y llegan a los extremos de la proyección. Aparecen dos triángulos con vértice común en el orificio, uno formado por el sol y otro por la proyección.",
+     "Sea $S$ el diámetro del sol en kilómetros. El triángulo grande tiene base $S$ y altura $D$ (distancia del sol al orificio); el triángulo pequeño tiene base $d$ y altura $L$ (distancia del orificio a la proyección).",
+     "Los dos triángulos son semejantes: el orificio es el centro de una homotecia que lleva el sol a su proyección, los ángulos en el orificio son opuestos por el vértice y los diámetros son paralelos. Por lo tanto, sus lados correspondientes están en la misma razón: $$\\frac{S}{D}=\\frac{d}{L}$$",
+     "Las unidades son coherentes: $\\frac{d}{L}$ es un cociente de dos longitudes en centímetros, así que no tiene unidad. Por eso el resultado conserva la unidad de $D$, que son kilómetros, y no hay que convertir centímetros.",
+     "Se despeja $S$ multiplicando ambos lados por $D$: $S=\\frac{d}{L}\\cdot D$ km.",
+     "Comprobación numérica: si la proyección tuviera $d=1$ cm a $L=100$ cm del orificio, y el sol estuviera a $D=150\\,000\\,000$ km, entonces $S=\\frac{1}{100}\\cdot 150\\,000\\,000=1\\,500\\,000$ km, un valor del orden del diámetro solar.",
+     "La expresión obtenida coincide con la alternativa C. Por lo tanto, la alternativa correcta es la C."
     ],
     "distractors": {
-     "A": "$\\frac{L}{D}\\cdot d$: invierte la razón de distancias, como si la proyección fuera mayor que el sol.",
-     "B": "$\\frac{L}{d}\\cdot D$: invierte la razón de diámetros, usando $\\frac{L}{d}$ en lugar de $\\frac{d}{L}$.",
-     "D": "$\\frac{d}{L}$: olvida la distancia $D$ del sol, y el resultado no está en kilómetros."
+     "A": "$\\frac{L}{D}\\cdot d$: invierte la razón de distancias, como si la proyección fuera mayor que el sol; con números da un resultado en una escala incorrecta.",
+     "B": "$\\frac{L}{d}\\cdot D$: invierte la razón de diámetros, usando $\\frac{L}{d}$ en lugar de $\\frac{d}{L}$. Con los mismos datos del ejemplo daría $100$ veces el diámetro correcto.",
+     "D": "$\\frac{d}{L}$: olvida la distancia $D$ del sol. Ese cociente es adimensional y no está en kilómetros, así que no puede ser el diámetro del sol."
     }
-   }
+   },
+   "subtopic": "m2-homotecia"
   },
   {
    "id": "m2-2026-invierno-q41",
@@ -1963,19 +2131,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El vértice $Q$ queda fijo sobre el eje $X$ en $x=L$, y la coordenada $x$ de $P$ es $L$ menos la proyección horizontal del lado $PQ$, que vale $L\\cdot\\mathrm{sen}(\\theta)$.",
+    "summary": "La rotación se hace alrededor de $Q$, que queda fijo; la coordenada $x$ de $P$ depende de cuánto se desplaza horizontalmente el lado $PQ$ hacia la izquierda de $Q$.",
+    "planteamiento": "Se pide la coordenada $x$ del punto $P$ tras girar el cuadrado en sentido horario alrededor de $Q$. Datos: el lado mide $L$, inicialmente $P=(0,0)$ y $Q=(L,0)$, $Q$ no se mueve, y $\\theta$ es el ángulo en $P$ entre la vertical punteada y el segmento $PQ$.",
     "steps": [
-     "En la figura final, $Q$ está sobre el eje $X$ con abscisa $L$, y el lado $PQ$ mide $L$.",
-     "El ángulo $\\theta$ está en $P$, entre la vertical punteada y el segmento $PQ$. Por eso la componente horizontal de $PQ$ es $L\\cdot\\mathrm{sen}(\\theta)$ y la vertical es $L\\cdot\\cos(\\theta)$.",
-     "Como $P$ queda a la izquierda de $Q$ por esa componente horizontal, $x_P = L - L\\cdot\\mathrm{sen}(\\theta)$.",
-     "Control: con $\\theta=0$ el lado $PQ$ es vertical y $P=(L,L)$, que es el punto que se obtiene al girar $(0,0)$ en 90° en sentido horario alrededor de $(L,0)$. Por lo tanto, la alternativa correcta es la D."
+     "En la figura inicial $P=(0,0)$ y $Q=(L,0)$. Como el giro es alrededor de $Q$, ese vértice no se mueve: $Q$ sigue en $(L,0)$ y el lado $PQ$ conserva su longitud $L$.",
+     "El segmento $PQ$ es la hipotenusa de un triángulo rectángulo que tiene como vértices a $P$, a $Q$ y al pie $F$ de la vertical trazada desde $P$ hasta el eje $X$. El ángulo $\\theta$ está en $P$, entre la vertical $PF$ y la hipotenusa $PQ$.",
+     "En ese triángulo, el cateto $FQ$ es opuesto a $\\theta$ y mide $L\\cdot\\mathrm{sen}(\\theta)$; el cateto $PF$ es adyacente a $\\theta$ y mide $L\\cdot\\cos(\\theta)$. Por eso $P$ está a $L\\,\\mathrm{sen}(\\theta)$ de $Q$ en horizontal, hacia la izquierda.",
+     "Como $Q$ está en $x=L$ y $P$ queda a la izquierda de $Q$, la abscisa de $P$ es $x_P=L-L\\,\\mathrm{sen}(\\theta)$.",
+     "Comprobación con $\\theta=0$: el lado $PQ$ es vertical y $P=(L,L)$, que es el punto que se obtiene al girar $(0,0)$ en $90^\\circ$ en sentido horario alrededor de $(L,0)$. La fórmula da $L-L\\cdot 0=L$, que coincide.",
+     "Comprobación con $\\theta=90^\\circ$: el lado queda horizontal y $P$ vuelve a $(0,0)$, es decir, a la posición inicial sin giro. La fórmula da $L-L\\cdot 1=0$, que también coincide.",
+     "La expresión $L-L\\,\\mathrm{sen}(\\theta)$ coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$L\\cdot\\cos(\\theta)$: es la coordenada $y$ de $P$ (la altura), no la coordenada $x$.",
-     "B": "$L\\cdot\\mathrm{sen}(\\theta)$: es la proyección horizontal de $PQ$, pero la coordenada $x$ de $P$ se mide desde el origen, a partir de $Q$ hacia la izquierda.",
-     "C": "$L-L\\cdot\\cos(\\theta)$: cambia seno por coseno, aunque $\\theta$ está medido desde la vertical y la componente horizontal usa seno."
+     "A": "$L\\cdot\\cos(\\theta)$: es la coordenada $y$ de $P$, es decir, su altura sobre el eje $X$, y no la coordenada $x$.",
+     "B": "$L\\cdot\\mathrm{sen}(\\theta)$: es la proyección horizontal de $PQ$, pero la abscisa de $P$ se mide desde el origen, así que hay que restarla de $L$, la posición de $Q$.",
+     "C": "$L-L\\cdot\\cos(\\theta)$: cambia seno por coseno. El coseno da la componente vertical del lado, no la horizontal, así que esta expresión describe otro punto."
     }
-   }
+   },
+   "subtopic": "m2-trigonometria"
   },
   {
    "id": "m2-2026-invierno-q42",
@@ -2012,18 +2185,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con $\\theta_1=2\\theta_2$, la ley de Snell da $m\\cdot\\mathrm{sen}(2\\theta_2)=p\\cdot\\mathrm{sen}(\\theta_2)$, y usando la identidad del seno del doble se despeja $\\cos(\\theta_2)=\\frac{p}{2m}$.",
+    "summary": "Con $\\theta_1=2\\theta_2$, la ley de Snell se convierte en una ecuación de un único ángulo, y la identidad del seno del doble permite despejar $\\cos(\\theta_2)$.",
+    "planteamiento": "Se pide la expresión de $\\cos(\\theta_2)$ en función de $m$ y $p$. Datos: el rayo pasa de un medio de índice $n_1=m$ a otro de índice $n_2=p$, el ángulo de incidencia cumple $\\theta_1=2\\theta_2$, y vale la identidad $\\mathrm{sen}(2\\alpha)=2\\,\\mathrm{sen}(\\alpha)\\cos(\\alpha)$ para todo $\\alpha$.",
     "steps": [
-     "El medio de índice $m$ es el primero ($n_1=m$) y el de índice $p$ es el segundo ($n_2=p$), con $\\theta_1=2\\theta_2$.",
-     "Reemplazando en la ley: $m\\cdot\\mathrm{sen}(2\\theta_2)=p\\cdot\\mathrm{sen}(\\theta_2)$.",
-     "Por la identidad dada, $\\mathrm{sen}(2\\theta_2)=2\\,\\mathrm{sen}(\\theta_2)\\cos(\\theta_2)$, así que $2m\\,\\mathrm{sen}(\\theta_2)\\cos(\\theta_2)=p\\,\\mathrm{sen}(\\theta_2)$.",
-     "Como $\\mathrm{sen}(\\theta_2)\\neq 0$ (hay refracción), se divide por ese valor y queda $\\cos(\\theta_2)=\\frac{p}{2m}$. Por lo tanto, la alternativa correcta es la D."
+     "Identifica los datos de la ley $n_1\\,\\mathrm{sen}(\\theta_1)=n_2\\,\\mathrm{sen}(\\theta_2)$: el primer medio tiene índice $n_1=m$, el segundo tiene $n_2=p$, y la condición del enunciado es $\\theta_1=2\\theta_2$.",
+     "Reemplaza en la ley: $m\\,\\mathrm{sen}(2\\theta_2)=p\\,\\mathrm{sen}(\\theta_2)$.",
+     "Aplica la identidad dada con $\\alpha=\\theta_2$: $\\mathrm{sen}(2\\theta_2)=2\\,\\mathrm{sen}(\\theta_2)\\cos(\\theta_2)$. Entonces $2m\\,\\mathrm{sen}(\\theta_2)\\cos(\\theta_2)=p\\,\\mathrm{sen}(\\theta_2)$.",
+     "Pasa todo a un lado y factoriza: $\\mathrm{sen}(\\theta_2)\\,\\big(2m\\cos(\\theta_2)-p\\big)=0$.",
+     "Como hay refracción, el rayo no sigue la normal, así que $\\mathrm{sen}(\\theta_2)\\neq 0$. Por lo tanto, $2m\\cos(\\theta_2)-p=0$.",
+     "Despeja el coseno dividiendo por $2m$, que es distinto de $0$ porque $m$ es un índice de refracción positivo: $\\cos(\\theta_2)=\\frac{p}{2m}$.",
+     "Verificación: $2m\\cdot\\frac{p}{2m}=p$, que es exactamente la ecuación obtenida después de dividir por $\\mathrm{sen}(\\theta_2)$. La expresión coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$\\frac{2p}{m}$: al despejar de $2m\\cos(\\theta_2)=p$ multiplica $p$ por 2 en lugar de dividir por $2m$.",
-     "C": "$\\frac{m}{2p}$: invierte los índices y usa $n_2/n_1$ en lugar de $n_1/n_2$."
+     "A": "$\\frac{2p}{m}$: al despejar de $2m\\cos(\\theta_2)=p$ multiplica $p$ por $2$ en lugar de dividir por $2m$, lo que cambia tanto el factor numérico como la posición de $m$.",
+     "B": "$\\frac{2m}{p}$: invierte el cociente, como si se dividiera $2m$ entre $p$ en lugar de $p$ entre $2m$. Es el inverso de lo que corresponde, y el error se nota al comprobar que $2m\\cos(\\theta_2)=p$ no se cumple.",
+     "C": "$\\frac{m}{2p}$: invierte los índices y usa $n_2/n_1$ en lugar de $n_1/n_2$, con lo que la razón queda al revés."
     }
-   }
+   },
+   "subtopic": "m2-trigonometria"
   },
   {
    "id": "m2-2026-invierno-q43",
@@ -2060,18 +2239,22 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El histograma muestra porcentajes acumulados: la cantidad de estudiantes de cada intervalo es la diferencia entre porcentajes consecutivos por 400.",
+    "summary": "El histograma muestra porcentajes acumulados, así que la cantidad de estudiantes de cada intervalo es la diferencia entre porcentajes consecutivos, multiplicada por $400$.",
+    "planteamiento": "Se pide la tabla de frecuencias absolutas. Datos: son $400$ estudiantes y el histograma da, al final de cada intervalo de horas, los porcentajes acumulados $16\\,\\%$, $32\\,\\%$, $40\\,\\%$, $60\\,\\%$, $80\\,\\%$ y $100\\,\\%$, desde $[1,2[$ hasta $[6,7]$.",
     "steps": [
-     "Los porcentajes acumulados son $16\\,\\%$, $32\\,\\%$, $40\\,\\%$, $60\\,\\%$, $80\\,\\%$ y $100\\,\\%$ para los intervalos $[1,2[$, $[2,3[$, $[3,4[$, $[4,5[$, $[5,6[$ y $[6,7]$.",
-     "Los porcentajes de cada intervalo son las diferencias: $16\\,\\%$, $16\\,\\%$ ($32-16$), $8\\,\\%$ ($40-32$), $20\\,\\%$ ($60-40$), $20\\,\\%$ ($80-60$) y $20\\,\\%$ ($100-80$).",
-     "Cantidades: $0{,}16\\cdot 400=64$, $64$, $0{,}08\\cdot 400=32$, $0{,}20\\cdot 400=80$, $80$ y $80$. Su suma es $64+64+32+80+80+80=400$, lo que confirma la tabla.",
-     "Por lo tanto, la alternativa correcta es la D."
+     "Lee el valor acumulado al final de cada barra: $[1,2[$ llega a $16\\,\\%$; $[2,3[$ llega a $32\\,\\%$; $[3,4[$ llega a $40\\,\\%$; $[4,5[$ llega a $60\\,\\%$; $[5,6[$ llega a $80\\,\\%$, y $[6,7]$ llega a $100\\,\\%$.",
+     "Como el porcentaje es acumulado, el porcentaje de cada intervalo es la diferencia con el anterior, y el primero es igual a su propio valor: $[1,2[$: $16\\,\\%$; $[2,3[$: $32-16=16\\,\\%$; $[3,4[$: $40-32=8\\,\\%$; $[4,5[$: $60-40=20\\,\\%$; $[5,6[$: $80-60=20\\,\\%$; $[6,7]$: $100-80=20\\,\\%$.",
+     "Convierte los porcentajes en cantidades multiplicando por $400$: $0{,}16\\cdot 400=64$, $0{,}16\\cdot 400=64$, $0{,}08\\cdot 400=32$, $0{,}20\\cdot 400=80$, $0{,}20\\cdot 400=80$ y $0{,}20\\cdot 400=80$.",
+     "Comprobación: la suma $64+64+32+80+80+80=400$ coincide con el total de estudiantes encuestados.",
+     "La tabla con estas cantidades es la de la alternativa D. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "B": "Muestra los porcentajes escritos directamente como cantidades (16, 16, 8, 20, 20, 20); su suma es 100, no 400.",
-     "C": "Muestra las frecuencias acumuladas (64, 128, 160, 240, 320, 400), no las de cada intervalo."
+     "A": "Copia los porcentajes acumulados del gráfico ($16$, $32$, $40$, $60$, $80$ y $100$) como si fueran cantidades de estudiantes. Su suma no es $400$ y, además, no representan lo que ocurre en cada intervalo.",
+     "B": "Muestra los porcentajes de cada intervalo escritos directamente como cantidades ($16$, $16$, $8$, $20$, $20$, $20$). Su suma es $100$, no $400$: falta multiplicar por el total de estudiantes.",
+     "C": "Muestra las frecuencias acumuladas ($64$, $128$, $160$, $240$, $320$, $400$), no las de cada intervalo. La última fila llega a $400$ porque suma a todos los estudiantes."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q44",
@@ -2108,18 +2291,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La calificación depende del tramo del puntaje: hay que calcular el puntaje de cada extremo (24 y 48 puntos) y aplicar la fórmula que corresponde a cada uno.",
+    "summary": "La calificación se calcula con una fórmula distinta según el tramo del puntaje, así que primero hay que convertir cada porcentaje en puntaje y ubicarlo en su tramo.",
+    "planteamiento": "Se pide la diferencia entre la calificación más alta y la más baja del curso. Datos: el puntaje máximo es $60$; la menor calificación corresponde al $40\\,\\%$ de $60$ puntos y la mayor al $80\\,\\%$ de $60$ puntos. Las fórmulas son $\\frac{P-36}{12}+4$ si $P\\le 36$ y $\\frac{P-60}{8}+7$ si $P>36$.",
     "steps": [
-     "Menor calificación: $40\\,\\%$ de $60$ son $24$ puntos, que es menor o igual que $36$. Se usa $\\frac{P-36}{12}+4$: $\\frac{24-36}{12}+4=-1+4=3$.",
-     "Mayor calificación: $80\\,\\%$ de $60$ son $48$ puntos, que es mayor que $36$. Se usa $\\frac{P-60}{8}+7$: $\\frac{48-60}{8}+7=-\\frac{3}{2}+7=5{,}5$.",
-     "Control: en $P=36$ ambas fórmulas dan $4$, así que la calificación es continua en ese punto.",
-     "La diferencia es $5{,}5-3=2{,}5$. Por lo tanto, la alternativa correcta es la B."
+     "Calcula los puntajes: el $40\\,\\%$ de $60$ es $0{,}40\\cdot 60=24$ puntos, y el $80\\,\\%$ de $60$ es $0{,}80\\cdot 60=48$ puntos.",
+     "Identifica el tramo de cada puntaje: $24\\le 36$, así que la calificación de $24$ puntos usa la fórmula del tramo bajo; $48>36$, así que la calificación de $48$ puntos usa la del tramo alto.",
+     "Calificación menor: $\\frac{24-36}{12}+4=\\frac{-12}{12}+4=-1+4=3$.",
+     "Calificación mayor: $\\frac{48-60}{8}+7=\\frac{-12}{8}+7=-\\frac{3}{2}+7=\\frac{11}{2}=5{,}5$.",
+     "Diferencia entre ambas: $5{,}5-3=2{,}5$.",
+     "Control de continuidad: en $P=36$ la fórmula baja da $\\frac{0}{12}+4=4$ y la alta da $\\frac{36-60}{8}+7=-3+7=4$. Las dos fórmulas coinciden en la frontera, así que la calificación es continua.",
+     "El resultado $2{,}5$ coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$2{,}0$: si se usa la fórmula del tramo bajo también para $48$ puntos, la calificación mayor sería $\\frac{48-36}{12}+4=5$ y la diferencia $2$.",
-     "C": "$3{,}0$: si se usa la fórmula del tramo alto para $24$ puntos, $\\frac{24-60}{8}+7=2{,}5$, y luego $5{,}5-2{,}5=3{,}0$."
+     "A": "$2{,}0$: si se usa la fórmula del tramo bajo también para $48$ puntos, la calificación mayor sería $\\frac{48-36}{12}+4=5$ y la diferencia $5-3=2$. Es el error de aplicar un solo tramo a ambos puntajes.",
+     "C": "$3{,}0$: si se usa la fórmula del tramo alto para $24$ puntos, $\\frac{24-60}{8}+7=2{,}5$, y luego $5{,}5-2{,}5=3{,}0$. Es el error de aplicar al puntaje menor la fórmula que no le corresponde.",
+     "D": "$4{,}5$: no corresponde al cálculo correcto, que da calificaciones $3$ y $5{,}5$ con diferencia $2{,}5$. No se identifica un error típico claro que lleve a este valor."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q45",
@@ -2156,18 +2345,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El rango intercuartílico es $Q_3-Q_1$: para justificar que es menor en $C$ hay que mostrar que el primer cuartil es común a los tres grupos y que el tercer cuartil de $C$ es el menor.",
+    "summary": "El rango intercuartílico es $Q_3-Q_1$. Si los tres grupos comparten $Q_1$, basta comparar sus $Q_3$ para ordenar sus rangos intercuartílicos.",
+    "planteamiento": "Se pide el argumento que justifica que el RIC del grupo $C$ es menor que el de $A$ y el de $B$. Datos de la figura: las cajas de los tres grupos empiezan en el mismo valor ($Q_1$ común), la línea que divide la caja (la mediana) está en la misma posición, y los bordes derechos de las cajas ($Q_3$) están en posiciones distintas.",
     "steps": [
-     "En los diagramas, las cajas de $A$, $B$ y $C$ empiezan en el mismo valor, así que $Q_1$ es igual en los tres grupos.",
-     "Los extremos derechos de las cajas ($Q_3$) están en valores distintos: el de $A$ es el más lejano, luego el de $B$, y el de $C$ es el más cercano.",
-     "Como $Q_1$ es común, $\\mathrm{RIC}(C)=Q_3(C)-Q_1<Q_3(A)-Q_1=\\mathrm{RIC}(A)$, y lo mismo con $B$.",
-     "La mediana coincide en los tres grupos, pero no interviene en el rango intercuartílico. Por lo tanto, la alternativa correcta es la B."
+     "Recuerda la definición: $\\mathrm{RIC}=Q_3-Q_1$. Para concluir que el RIC de $C$ es menor, hay que comparar ambos cuartiles, no solo los extremos de los bigotes.",
+     "En el diagrama, el borde izquierdo de cada caja ($Q_1$) está en la misma posición horizontal en los tres grupos. Por lo tanto, $Q_1(A)=Q_1(B)=Q_1(C)$.",
+     "La línea que divide la caja en dos (la mediana, $Q_2$) también está en la misma posición en los tres grupos. Ese dato no interviene en el rango intercuartílico.",
+     "El borde derecho de la caja ($Q_3$) está en posiciones distintas: el de $A$ es el más lejano, luego el de $B$, y el de $C$ es el más cercano a la izquierda.",
+     "Como $Q_1$ es común, $\\mathrm{RIC}(C)=Q_3(C)-Q_1<Q_3(A)-Q_1=\\mathrm{RIC}(A)$, y de manera análoga $\\mathrm{RIC}(C)<\\mathrm{RIC}(B)$, porque $Q_3(C)<Q_3(B)$.",
+     "La alternativa B reúne exactamente los dos argumentos: $Q_1$ igual en los tres grupos y $Q_3$ de $C$ menor que el de $A$ y el de $B$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "Compara el rango total (máximo menos mínimo): $C$ tiene el rango total menor, pero el rango intercuartílico solo mide la dispersión entre $Q_1$ y $Q_3$.",
-     "D": "Afirma algo verdadero sobre $Q_3$ y la mediana, pero omite que $Q_1$ es igual en los tres grupos, y sin ese dato no se puede concluir sobre el rango intercuartílico."
+     "A": "Compara el rango total (máximo menos mínimo), no el RIC. El rango total de $C$ es menor, pero el RIC mide solo la dispersión entre $Q_1$ y $Q_3$, y la diferencia entre máximo y mínimo no la controla.",
+     "C": "Compara la distancia entre el percentil 75 y el valor máximo, que es una medida desde el extremo superior y no el RIC. Esa distancia es pequeña en $C$, pero la afirmación no involucra $Q_1$, así que no justifica la desigualdad del rango intercuartílico.",
+     "D": "Afirma algo verdadero sobre $Q_3$ y la mediana, pero omite que $Q_1$ es igual en los tres grupos. Sin ese dato no se puede comparar $Q_3-Q_1$ de $C$ con el de $A$ y el de $B$; además, la mediana no interviene en el RIC."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q46",
@@ -2204,18 +2398,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con promedio $5$ la suma de los datos es $25$, así que $p+q=8$; la desviación estándar depende de cuán separados estén $p$ y $q$ de $5$, y con $p=q=4$ la dispersión es mínima.",
+    "summary": "Con promedio $5$, la suma de los cinco datos es $25$, así que $p+q=8$. La dispersión depende de cuán lejos estén $p$ y $q$ de $5$, y la condición $p=q$ fija ambos valores en $4$.",
+    "planteamiento": "Se pide la condición que asegura que la desviación estándar sea menor que $5$. Datos: los cinco valores son $4$, $8$, $5$, $p$ y $q$, con promedio $5$, lo que implica $p+q=8$. Para que $\\sigma<5$ se necesita $\\sigma^2<25$.",
     "steps": [
-     "Promedio igual a $5$: $\\frac{4+8+5+p+q}{5}=5$, luego $p+q=8$.",
-     "La varianza es $\\sigma^2=\\frac{(4-5)^2+(8-5)^2+(5-5)^2+(p-5)^2+(q-5)^2}{5}=\\frac{10+(p-5)^2+(q-5)^2}{5}$.",
-     "Para que $\\sigma<5$ se necesita $\\sigma^2<25$, es decir, $(p-5)^2+(q-5)^2<115$.",
-     "Con $p=q$ y $p+q=8$ se obtiene $p=q=4$: $\\sigma^2=\\frac{10+1+1}{5}=2{,}4$ y $\\sigma\\approx 1{,}55<5$. Esta condición sí asegura lo pedido. Por lo tanto, la alternativa correcta es la A."
+     "Del promedio: $\\frac{4+8+5+p+q}{5}=5$, luego $17+p+q=25$ y $p+q=8$. Esta igualdad ya se cumple por dato, por lo que la alternativa C no aporta información sobre la dispersión.",
+     "La varianza es el promedio de los cuadrados de las desviaciones respecto de $5$: $\\sigma^2=\\frac{(4-5)^2+(8-5)^2+(5-5)^2+(p-5)^2+(q-5)^2}{5}=\\frac{10+(p-5)^2+(q-5)^2}{5}$.",
+     "Para que $\\sigma<5$ se necesita $\\sigma^2<25$, es decir, $10+(p-5)^2+(q-5)^2<125$, o bien $(p-5)^2+(q-5)^2<115$.",
+     "Con $p=q$ y $p+q=8$ se obtiene $2p=8$, es decir, $p=q=4$. Entonces $(p-5)^2+(q-5)^2=1+1=2$, que es menor que $115$, y $\\sigma^2=\\frac{10+2}{5}=2{,}4$, con $\\sigma\\approx 1{,}55<5$.",
+     "Como $p=q$ junto con $p+q=8$ fija los dos valores, el caso es único y la desviación estándar queda determinada y menor que $5$. Esta condición sí asegura lo pedido.",
+     "Las otras alternativas no lo aseguran: $pq<100$ admite $p=100$ y $q=-92$ (con $p+q=8$ y $pq=-9200$), que dan una dispersión enorme; $p+q=8$ ya se cumple por el promedio; y $p<8-q$ equivale a $p+q<8$, lo que contradice $p+q=8$. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "$pq<100$ parece acotar los datos, pero con $p=100$ y $q=-92$ se cumple y la desviación es enorme.",
-     "C": "$p+q=8$ ya se cumple por el promedio, así que no aporta información sobre la dispersión."
+     "B": "$pq<100$ parece acotar los datos, pero con $p=100$ y $q=-92$ se cumple ($pq=-9200$) y la desviación es enorme. Es la trampa de confundir una cota del producto con una cota de la dispersión.",
+     "C": "$p+q=8$ ya se cumple por el promedio, así que no aporta información sobre la dispersión. La condición que se busca debe restringir $(p-5)^2+(q-5)^2$, y la suma $p+q$ no lo hace.",
+     "D": "$p<8-q$ equivale a $p+q<8$, lo que contradice $p+q=8$. Con los datos del enunciado esa desigualdad nunca se cumple, así que no sirve para asegurar nada. Es un error de signo al reordenar la igualdad."
     }
-   }
+   },
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-invierno-q47",
@@ -2252,18 +2451,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La figura $n$ tiene $n+1$ puntos, así que tener al menos $32$ puntos equivale a $n\\ge 31$, y de las 1000 figuras cumplen $970$.",
+    "summary": "La figura $n$ tiene $n+1$ puntos. Contar las figuras con al menos $32$ puntos equivale a contar $n$ desde $31$ hasta $1000$, y la probabilidad es ese conteo dividido por $1000$.",
+    "planteamiento": "Se pide la probabilidad de que una figura elegida al azar tenga al menos $32$ puntos. Datos: se dibujaron $1000$ figuras siguiendo la secuencia de la imagen; la figura $1$ tiene $2$ puntos, la figura $2$ tiene $3$, la figura $3$ tiene $4$ y la figura $4$ tiene $5$.",
     "steps": [
-     "Figura 1: $2$ puntos; figura 2: $3$; figura 3: $4$; figura 4: $5$. El patrón es que la figura $n$ tiene $n+1$ puntos.",
-     "Tener al menos $32$ puntos significa $n+1\\ge 32$, es decir, $n\\ge 31$.",
-     "Las figuras que cumplen van de la $31$ a la $1000$, ambas incluidas: $1000-31+1=970$ figuras.",
-     "La probabilidad es $\\frac{970}{1000}$. Por lo tanto, la alternativa correcta es la D."
+     "Cuenta los puntos de cada figura de la secuencia: la figura $1$ tiene $2$ puntos, la figura $2$ tiene $3$, la figura $3$ tiene $4$ y la figura $4$ tiene $5$.",
+     "Cada figura agrega un punto a la anterior, así que la figura $n$ tiene $n+1$ puntos. La figura $4$ confirma el patrón: $4+1=5$.",
+     "Pedir al menos $32$ puntos significa $n+1\\ge 32$, es decir, $n\\ge 31$.",
+     "Las figuras son $n=1,2,\\ldots,1000$, así que las que cumplen son $n=31,\\ldots,1000$. Su cantidad es $1000-31+1=970$, incluyendo ambos extremos.",
+     "Verificación: las figuras $n=1,\\ldots,30$ tienen entre $2$ y $31$ puntos, es decir, $30$ figuras que no cumplen. Entonces $1000-30=970$, lo que coincide.",
+     "La probabilidad es $\\frac{970}{1000}$, que coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$\\frac{30}{1000}$: es la probabilidad del complemento (menos de $32$ puntos, es decir $n\\le 30$).",
-     "C": "$\\frac{969}{1000}$: cuenta «al menos 32» como «más de 32» y pierde la figura 31, que tiene exactamente $32$ puntos."
+     "A": "$\\frac{30}{1000}$: es la probabilidad del complemento, es decir, de tener menos de $32$ puntos ($n\\le 30$).",
+     "B": "$\\frac{31}{1000}$: cuenta las figuras con a lo más $32$ puntos ($n\\le 31$) en lugar de las que tienen al menos $32$. Es una confusión de los extremos del intervalo.",
+     "C": "$\\frac{969}{1000}$: cuenta «al menos $32$» como «más de $32$» y pierde la figura $31$, que tiene exactamente $32$ puntos."
     }
-   }
+   },
+   "subtopic": "m2-condicional"
   },
   {
    "id": "m2-2026-invierno-q48",
@@ -2300,18 +2504,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Con seis bolas, tres de ellas pares ($2$, $4$ y $6$), la secuencia gana si la primera y la última son pares: $P=\\frac{3}{6}\\cdot\\frac{2}{5}=\\frac{1}{5}$.",
+    "summary": "El orden final es una permutación al azar de las seis bolas. La probabilidad de que la primera y la última sean pares se obtiene multiplicando las probabilidades de los dos extremos, condicionando la segunda a lo que ya salió.",
+    "planteamiento": "Se pide la probabilidad de ganar. Datos: hay seis bolas numeradas del $1$ al $6$, el orden final es al azar y se gana si la primera y la última bola de la secuencia son números pares. Los pares son $2$, $4$ y $6$.",
     "steps": [
-     "Los números pares son $2$, $4$ y $6$: hay tres de seis bolas.",
+     "Entre las seis bolas hay $3$ pares ($2$, $4$ y $6$) y $3$ impares ($1$, $3$ y $5$).",
      "La probabilidad de que la primera bola sea par es $\\frac{3}{6}=\\frac{1}{2}$.",
-     "Si la primera es par, quedan $5$ bolas, de las cuales $2$ son pares. La última bola es una de esas $5$, así que la probabilidad de que sea par es $\\frac{2}{5}$.",
-     "$P=\\frac{1}{2}\\cdot\\frac{2}{5}=\\frac{1}{5}$. Por lo tanto, la alternativa correcta es la B."
+     "Si la primera es par, quedan $5$ bolas, de las cuales $2$ son pares, porque ya salió una. La última bola es una de esas $5$, así que la probabilidad de que sea par es $\\frac{2}{5}$.",
+     "Por la regla del producto para sucesos dependientes: $P(\\text{ganar})=\\frac{1}{2}\\cdot\\frac{2}{5}=\\frac{2}{10}=\\frac{1}{5}$.",
+     "Verificación por conteo: la primera posición puede ocupar $3$ pares y la última, $2$ de los pares restantes; las $4$ bolas del medio se ordenan de $4!=24$ maneras. Los casos favorables son $3\\cdot 2\\cdot 24=144$, y los posibles son $6!=720$. Luego $\\frac{144}{720}=\\frac{1}{5}$.",
+     "El resultado $\\frac{1}{5}$ coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$\\frac{1}{6}$: resulta de multiplicar $\\frac{1}{2}$ por $\\frac{1}{3}$, como si la última bola fuera par con probabilidad $\\frac{1}{3}$ sin descontar la bola ya salida.",
-     "C": "$\\frac{1}{4}$: usa $\\frac{1}{2}\\cdot\\frac{1}{2}$, sin considerar que quedan dos pares entre cinco bolas."
+     "A": "$\\frac{1}{6}$: resulta de multiplicar $\\frac{1}{2}$ por $\\frac{1}{3}$, como si la última bola fuera par con probabilidad $\\frac{1}{3}$ sin descontar la bola que ya salió.",
+     "C": "$\\frac{1}{4}$: usa $\\frac{1}{2}\\cdot\\frac{1}{2}$, sin considerar que quedan dos pares entre cinco bolas, así que la probabilidad del último extremo no es $\\frac{1}{2}$.",
+     "D": "$\\frac{1}{3}$: equivale a $\\frac{2}{6}$, como si solo se contaran dos casos favorables de seis. Olvida que los dos extremos deben ser pares y que la segunda condición depende de la primera."
     }
-   }
+   },
+   "subtopic": "m2-condicional"
   },
   {
    "id": "m2-2026-invierno-q49",
@@ -2348,18 +2557,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El cartón tiene un único conjunto ganador, y como el orden no importa, hay $\\binom{99}{3}=\\frac{99\\cdot 98\\cdot 97}{6}$ conjuntos equiprobables.",
+    "summary": "Como no importa el orden, cada resultado es un conjunto de tres números distintos. El cartón es un único conjunto favorable, así que la probabilidad es $1$ dividido entre las combinaciones de $99$ en $3$.",
+    "planteamiento": "Se pide la probabilidad de que los tres números sorteados coincidan con los del cartón. Datos: el cartón tiene $11$, $19$ y $54$; los números van de $1$ a $99$, no se repiten y el orden en que salen no importa.",
     "steps": [
-     "El cartón gana solo si salen exactamente los números $11$, $19$ y $54$: un único conjunto favorable.",
-     "Como los números no se repiten y el orden no importa, los resultados posibles son los conjuntos de tres números distintos entre $1$ y $99$: $\\binom{99}{3}=\\frac{99\\cdot 98\\cdot 97}{3!}$.",
-     "Todos los conjuntos son igualmente probables, así que $P=\\frac{1}{\\binom{99}{3}}=\\frac{3!}{99\\cdot 98\\cdot 97}=\\frac{6}{99\\cdot 98\\cdot 97}$.",
-     "Por lo tanto, la alternativa correcta es la D."
+     "El juego se gana solo si salen exactamente los números $11$, $19$ y $54$, sin importar el orden. Hay un único conjunto favorable.",
+     "El total de resultados posibles es la cantidad de conjuntos de tres números distintos entre $1$ y $99$: $\\binom{99}{3}=\\frac{99\\cdot 98\\cdot 97}{3!}=\\frac{99\\cdot 98\\cdot 97}{6}$.",
+     "Si el orden importara, habría $99\\cdot 98\\cdot 97$ secuencias ordenadas sin repetición. Cada conjunto aparece en $3!=6$ de ellas, por eso el número de conjuntos se obtiene dividiendo entre $6$.",
+     "Todos los conjuntos son igualmente probables, así que $P=\\frac{1}{\\binom{99}{3}}=\\frac{6}{99\\cdot 98\\cdot 97}$.",
+     "Verificación desde el orden: hay $6$ secuencias favorables (los números $11$, $19$ y $54$ en cualquiera de sus $3!$ posiciones) entre $99\\cdot 98\\cdot 97$ secuencias ordenadas posibles. Se obtiene el mismo resultado, $\\frac{6}{99\\cdot 98\\cdot 97}$.",
+     "Esto coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "B": "$\\frac{1}{99\\cdot 98\\cdot 97}$: cuenta solo un orden del cartón, cuando los $3!=6$ órdenes del mismo conjunto son favorables.",
-     "C": "$\\frac{3}{99\\cdot 98\\cdot 97}$: considera $3$ órdenes favorables en lugar de $3!=6$."
+     "A": "$\\frac{1}{99^3}$: supone que cada posición tiene $99$ opciones independientes, es decir, que los números pueden repetirse. El enunciado dice que no se repiten, así que el total no es $99^3$.",
+     "B": "$\\frac{1}{99\\cdot 98\\cdot 97}$: cuenta solo un orden del cartón entre las secuencias posibles, cuando los $3!=6$ órdenes del mismo conjunto son favorables.",
+     "C": "$\\frac{3}{99\\cdot 98\\cdot 97}$: considera $3$ órdenes favorables en lugar de $3!=6$, es decir, olvida que los tres números pueden salir en cualquiera de las seis disposiciones."
     }
-   }
+   },
+   "subtopic": "m2-condicional"
   },
   {
    "id": "m2-2026-invierno-q50",
@@ -2397,18 +2611,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Como todos señalaron al menos un sabor, la probabilidad de solo vainilla sale por complemento, y luego $P(C\\mid V)=\\frac{P(V\\cap C)}{P(V)}$.",
+    "summary": "Como todos escogieron al menos un sabor, la parte de solo vainilla sale por complemento. Luego la probabilidad condicional es la intersección dividida entre el total de quienes gustan de vainilla.",
+    "planteamiento": "Se pide $P(\\text{chocolate}\\mid\\text{vainilla})$. Datos: $P(V\\cap C)=0{,}15$, $P(\\text{solo } C)=0{,}70$, y todos los estudiantes gustan de al menos un sabor, es decir, $P(V\\cup C)=1$.",
     "steps": [
-     "Como todos señalaron al menos un sabor, $P(V\\cup C)=1$.",
-     "Solo vainilla: $P(\\text{solo }V)=1-P(V\\cap C)-P(\\text{solo }C)=1-0{,}15-0{,}70=0{,}15$.",
-     "Vainilla en total: $P(V)=P(\\text{solo }V)+P(V\\cap C)=0{,}15+0{,}15=0{,}30$.",
-     "Entonces $P(C\\mid V)=\\frac{P(V\\cap C)}{P(V)}=\\frac{0{,}15}{0{,}30}=\\frac{1}{2}$. Por lo tanto, la alternativa correcta es la D."
+     "Como todos señalaron al menos uno de los dos sabores, las tres regiones suman $1$: $P(\\text{solo }V)+P(V\\cap C)+P(\\text{solo }C)=1$.",
+     "Despeja la región de solo vainilla: $P(\\text{solo }V)=1-0{,}15-0{,}70=0{,}15$.",
+     "La probabilidad de que le guste vainilla, con o sin chocolate, es $P(V)=P(\\text{solo }V)+P(V\\cap C)=0{,}15+0{,}15=0{,}30$.",
+     "Por definición de probabilidad condicional, $P(C\\mid V)=\\frac{P(V\\cap C)}{P(V)}=\\frac{0{,}15}{0{,}30}=\\frac{1}{2}$.",
+     "Verificación: el resultado está entre $0$ y $1$, como debe ser, y el denominador es la suma de solo vainilla más la intersección, no la intersección sola.",
+     "El resultado $\\frac{1}{2}$ coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D."
     ],
     "distractors": {
-     "A": "$\\frac{3}{20}$ (0,15): es la probabilidad de la intersección, sin dividir por $P(V)$.",
-     "B": "$\\frac{3}{14}$: divide $0{,}15$ por $0{,}70$, que es la probabilidad de solo chocolate y no el denominador correcto."
+     "A": "$\\frac{3}{20}$ (equivalente a $0{,}15$): es la probabilidad de la intersección, sin dividir entre $P(V)$. Confunde la probabilidad conjunta con la condicional.",
+     "B": "$\\frac{3}{14}$: divide $0{,}15$ entre $0{,}70$, que es la probabilidad de solo chocolate y no la de vainilla. Usa un denominador equivocado.",
+     "C": "$\\frac{1}{15}$: no corresponde a ningún cociente de las probabilidades del enunciado, y no se identifica un error típico claro. Se descarta porque el cociente correcto es $\\frac{0{,}15}{0{,}30}=\\frac{1}{2}$."
     }
-   }
+   },
+   "subtopic": "m2-trigonometria"
   },
   {
    "id": "m2-2026-invierno-q51",
@@ -2445,18 +2664,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La condición «tiene tatuajes» reduce el espacio muestral a las personas con tatuajes: $75$ hombres y $65$ mujeres, de un total de $140$.",
+    "summary": "Condicionar a «tener tatuajes» reduce el espacio muestral a esas personas, así que el denominador es el total de personas con tatuajes y no el total de la muestra.",
+    "planteamiento": "Se pide $P(\\text{hombre}\\mid\\text{tatuajes})$. Datos: hay $100$ hombres y $100$ mujeres; de los hombres, $25$ tienen piercing; de las mujeres, $35$ tienen piercing; cada persona tiene piercing o tatuajes, pero no ambos.",
     "steps": [
      "Hombres con tatuajes: $100-25=75$.",
      "Mujeres con tatuajes: $100-35=65$.",
-     "Total con tatuajes: $75+65=140$ personas.",
-     "$P(\\text{hombre}\\mid\\text{tatuajes})=\\frac{75}{140}$. Por lo tanto, la alternativa correcta es la B."
+     "Total de personas con tatuajes: $75+65=140$. Este es el nuevo espacio muestral al condicionar.",
+     "Dentro de ese grupo de $140$ personas, los hombres son $75$. Por lo tanto, $P(\\text{hombre}\\mid\\text{tatuajes})=\\frac{75}{140}$.",
+     "Verificación: $\\frac{75}{140}\\approx 0{,}54$, un valor entre $0$ y $1$, y es consistente con que hay $75$ hombres entre los $140$ con tatuajes.",
+     "El resultado $\\frac{75}{140}$ coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "$\\frac{75}{200}$: divide entre las $200$ personas, lo que da la probabilidad de ser hombre con tatuajes sin condicionar.",
-     "D": "$\\frac{75}{100}$: divide entre los $100$ hombres, lo que da la probabilidad de tener tatuajes siendo hombre."
+     "A": "$\\frac{75}{200}$: divide entre las $200$ personas, lo que da la probabilidad de ser hombre con tatuajes sin condicionar. No usa la condición del enunciado.",
+     "C": "$\\frac{100}{140}$: usa los $100$ hombres en el numerador en lugar de los $75$ hombres con tatuajes. El numerador debe contar solo a quienes cumplen ambas condiciones.",
+     "D": "$\\frac{75}{100}$: divide entre los $100$ hombres, lo que da la proporción de hombres que tienen tatuajes, no la proporción de hombres entre quienes tienen tatuajes."
     }
-   }
+   },
+   "subtopic": "m2-condicional"
   },
   {
    "id": "m2-2026-invierno-q52",
@@ -2497,18 +2721,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Ambos logaritmos dependen solo del cociente $\\frac{a}{b}$, porque $\\frac{b}{a}$ es su inverso; por eso el dato (2) basta y el dato (1) no.",
+    "summary": "Ambos logaritmos dependen solo del cociente $\\frac{a}{b}$, porque $\\log\\frac{b}{a}$ es el opuesto de $\\log\\frac{a}{b}$. Por eso el dato (2) basta y el dato (1) no.",
+    "planteamiento": "Se pide determinar si $z=\\log_{\\frac{a}{b}}5+\\log\\frac{b}{a}$ queda fijo con el dato (1) $ab$, o con el dato (2) $\\frac{a}{b}$. Datos: $a$ y $b$ son positivos y $\\frac{a}{b}\\neq 1$, como exige la base del logaritmo.",
     "steps": [
-     "Como $\\log\\frac{b}{a}=-\\log\\frac{a}{b}$, se tiene $z=\\log_{\\frac{a}{b}}5-\\log\\frac{a}{b}$, que depende solo de $u=\\frac{a}{b}$.",
-     "Con (2) se conoce $u=\\frac{a}{b}$, así que $z$ queda determinado.",
-     "Con (1) se conoce el producto $ab$, pero no el cociente: con $ab=4$, los pares $(a,b)=(4,1)$ y $(a,b)=(1,4)$ dan cocientes $4$ y $\\frac{1}{4}$, con valores de $z$ opuestos en signo.",
-     "Solo (2) basta. Por lo tanto, la alternativa correcta es la B."
+     "Usa la propiedad del logaritmo del inverso: $\\log\\frac{b}{a}=\\log\\left(\\frac{a}{b}\\right)^{-1}=-\\log\\frac{a}{b}$.",
+     "Sea $u=\\frac{a}{b}$. Entonces $z=\\log_{u}5-\\log u$: la expresión depende solo de $u$, no de $a$ y $b$ por separado.",
+     "Con el dato (2), $u=\\frac{a}{b}$ queda conocido y $z$ queda completamente determinado. Por lo tanto, (2) basta por sí sola.",
+     "Con el dato (1) solo se conoce el producto $ab$. Con $ab=4$, las parejas $(a,b)=(4,1)$ y $(a,b)=(1,4)$ dan cocientes $u=4$ y $u=\\frac{1}{4}$, que producen valores de $z$ opuestos en signo. Por lo tanto, (1) no determina $z$.",
+     "Como (1) no basta por sí sola y (2) sí basta, solo el dato (2) permite conocer $z$. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "(1) por sí sola: el producto $ab$ parece suficiente, pero $z$ depende del cociente, no del producto.",
-     "D": "Cada una por sí sola: (1) no basta, por el contraejemplo $ab=4$ con cocientes $4$ y $\\frac{1}{4}$."
+     "A": "(1) por sí sola: el producto $ab$ parece suficiente, pero $z$ depende del cociente $\\frac{a}{b}$ y no del producto. Con $ab=4$, los cocientes $4$ y $\\frac{1}{4}$ dan valores distintos de $z$.",
+     "C": "Ambas juntas: como (2) ya basta por sí sola, agregar (1) no cambia el resultado. La opción C solo corresponde cuando ninguno de los datos basta por separado y juntos sí.",
+     "D": "Cada una por sí sola: falsa, porque (1) no basta, como muestra el contraejemplo $ab=4$ con cocientes $4$ y $\\frac{1}{4}$, aunque (2) sí basta.",
+     "E": "Se requiere información adicional: falsa, porque el dato (2) entrega $\\frac{a}{b}$, y con ese valor $z$ queda determinado sin datos extra."
     }
-   }
+   },
+   "subtopic": "m2-suficiencia"
   },
   {
    "id": "m2-2026-invierno-q53",
@@ -2549,18 +2778,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "La expresión se simplifica a $(x-y)^2$ porque $(x^2-y^2)^2=(x+y)^2(x-y)^2$, así que basta conocer $x-y$, que da el dato (1).",
+    "summary": "La expresión se simplifica a $(x-y)^2$, porque el numerador es el cuadrado de $(x+y)(x-y)$. Entonces solo importa conocer $x-y$, y el dato (1) lo entrega directamente.",
+    "planteamiento": "Se pide determinar $\\frac{(x^2-y^2)^2}{(x+y)^2}$ con el dato (1) $x-y=10$ o con el dato (2) $x+y=6$. Datos: $x\\neq y$ y $x\\neq -y$, así que $x+y\\neq 0$ y la fracción está bien definida.",
     "steps": [
-     "Como $x^2-y^2=(x+y)(x-y)$, la expresión es $\\frac{(x+y)^2(x-y)^2}{(x+y)^2}$.",
-     "Como $x\\neq -y$, $x+y\\neq 0$ y se puede simplificar: la expresión vale $(x-y)^2$.",
-     "Con (1), $x-y=10$, luego la expresión vale $10^2=100$: basta.",
-     "Con (2) solo se conoce $x+y=6$, y $x-y$ no queda fijo: $x=4$, $y=2$ da $(x-y)^2=4$, mientras que $x=5$, $y=1$ da $16$. Por lo tanto, la alternativa correcta es la A."
+     "Factoriza la diferencia de cuadrados: $x^2-y^2=(x+y)(x-y)$.",
+     "Eleva al cuadrado: $(x^2-y^2)^2=(x+y)^2(x-y)^2$.",
+     "Divide por $(x+y)^2$, que es distinto de $0$ porque $x\\neq -y$: $\\frac{(x+y)^2(x-y)^2}{(x+y)^2}=(x-y)^2$. La expresión vale $(x-y)^2$.",
+     "Con el dato (1), $x-y=10$, luego la expresión vale $10^2=100$. El dato basta por sí solo.",
+     "Con el dato (2) solo se conoce $x+y=6$, y $x-y$ no queda fijo. Por ejemplo, $x=4$, $y=2$ da $(x-y)^2=2^2=4$, mientras que $x=5$, $y=1$ da $(x-y)^2=4^2=16$. Ambos cumplen $x+y=6$, así que (2) no basta.",
+     "Solo el dato (1) basta por sí solo. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "(2) por sí sola: creer que la expresión depende de $x+y$, cuando el numerador y el denominador se cancelan y queda solo $x-y$.",
-     "D": "Cada una por sí sola: (2) no basta, como muestran los contraejemplos anteriores."
+     "B": "(2) por sí sola: se cree que la expresión depende de $x+y$, pero el numerador y el denominador se cancelan y solo queda $(x-y)^2$, que $x+y$ no determina.",
+     "C": "Ambas juntas: como (1) ya basta, sumar (2) no cambia el resultado. La opción C solo sería correcta si ninguno de los datos bastara por separado.",
+     "D": "Cada una por sí sola: falsa, porque (2) no basta, como muestran los contraejemplos $x=4$, $y=2$ y $x=5$, $y=1$.",
+     "E": "Se requiere información adicional: falsa, porque el dato (1) ya entrega $x-y=10$, y con él la expresión queda determinada."
     }
-   }
+   },
+   "subtopic": "m2-suficiencia"
   },
   {
    "id": "m2-2026-invierno-q54",
@@ -2602,17 +2837,23 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "El costo depende del área total de la superficie del cofre, que necesita el radio y también el largo; con las tres dimensiones del cofre el área queda completamente determinada.",
+    "summary": "El costo es el área total de la superficie del cofre multiplicada por $3500$. Como la tapa cubre todo el ancho, el radio es la mitad del ancho, pero el largo del cofre también es necesario para las caras laterales y la superficie curva.",
+    "planteamiento": "Se pide determinar si los datos bastan para conocer el costo total de forrar el cofre, con $3500$ pesos por metro cuadrado de arpillera. Datos: el cofre es un prisma recto de base cuadrada con tapa en forma de media superficie cilíndrica; se evalúa qué dato o datos permiten calcular el área completa.",
     "steps": [
-     "El costo es $3500$ pesos por metro cuadrado multiplicado por el área total: caras del prisma, caras frontales (cuadrado más semicírculo) y superficie curva de la tapa.",
-     "Con (1) solo se conoce el radio $r$, que fija el ancho de la tapa y su semicírculo, pero no el largo del cofre, que interviene en las caras laterales y en la superficie curva. Falta una medida.",
-     "Con (2) se conocen ancho, alto y largo. Como la tapa cubre todo el ancho del cofre, el radio es la mitad del ancho, así que el área total queda determinada. Por lo tanto, la alternativa correcta es la B."
+     "El costo total es $3500$ pesos por cada metro cuadrado, multiplicado por el área de toda la superficie del cofre que debe forrarse: caras del prisma, caras frontales y superficie curva de la tapa.",
+     "La tapa es media superficie cilíndrica de radio $r$ y su ancho coincide con el ancho del cofre, es decir, el diámetro es $2r$. Esto fija el tamaño de la base cuadrada y de las caras frontales.",
+     "Con el dato (1) solo se conoce $r$. Eso fija el ancho y las caras frontales, pero no el largo del cofre. El largo interviene en las caras laterales y en la superficie curva de la tapa, cuya área es proporcional al largo. Falta una medida, así que (1) no basta por sí sola.",
+     "Con el dato (2) se conocen ancho, alto y largo. Como el radio es la mitad del ancho, la tapa queda completamente determinada, y con todas las dimensiones del cofre se calculan todas las áreas de la superficie.",
+     "Así, solo el dato (2) permite conocer el costo. Por lo tanto, la alternativa correcta es la B."
     ],
     "distractors": {
-     "A": "(1) por sí sola: el radio define la forma de la tapa, pero se olvida que sin el largo del cofre no se puede calcular la superficie del prisma.",
-     "C": "Ambas juntas: sumar (1) no agrega nada, porque (2) ya basta."
+     "A": "(1) por sí sola: el radio define la forma de la tapa, pero no el largo del cofre. Sin el largo no se puede calcular el área de las caras laterales ni de la superficie curva.",
+     "C": "Ambas juntas: (1) no agrega nada a (2), porque con las tres dimensiones del cofre ya se conoce el radio y el área completa. La opción C solo sería correcta si ninguno de los datos bastara por separado.",
+     "D": "Cada una por sí sola: falsa, porque (1) no basta. Para que la opción D fuera correcta, el radio tendría que dar también el largo del cofre, lo que no ocurre.",
+     "E": "Se requiere información adicional: falsa, porque con el dato (2) se tienen todas las dimensiones necesarias para la superficie completa, incluido el radio, que es la mitad del ancho."
     }
-   }
+   },
+   "subtopic": "m2-suficiencia"
   },
   {
    "id": "m2-2026-invierno-q55",
@@ -2654,18 +2895,24 @@
    "textQuality": "approximate",
    "explanation": {
     "kind": "solucion",
-    "summary": "Si la primera bolita es roja, la segunda es azul con probabilidad $\\frac{a}{4}$, donde $a$ es el número de bolitas azules; el dato (1) permite obtener $a$, pero el dato (2) no.",
+    "summary": "Si la primera bolita es roja, la probabilidad de que la segunda sea azul es $\\frac{a}{4}$, donde $a$ es el número de bolitas azules. Basta conocer $a$: el dato (1) lo determina, pero el dato (2) no.",
+    "planteamiento": "Se pide $P(\\text{segunda azul}\\mid\\text{primera roja})$ en una urna con $5$ bolitas y sin reposición. Sea $a$ el número de azules, con $1\\le a\\le 4$ para que haya de ambos colores, y $5-a$ rojas. Datos: el dato (1) es $P(\\text{5 azules con reposición})$ y el dato (2) es $P(\\text{una azul y una roja sin reposición})$.",
     "steps": [
-     "Sea $a$ el número de bolitas azules (y $5-a$ las rojas). Si la primera es roja, quedan $4$ bolitas con las $a$ azules, así que $P(\\text{2.ª azul}\\mid\\text{1.ª roja})=\\frac{a}{4}$.",
-     "Con (1): $P(\\text{5 azules con reposición})=\\left(\\frac{a}{5}\\right)^{5}$. Esta función es estrictamente creciente en $a$, así que el valor determina $a$ y, por tanto, $\\frac{a}{4}$. (1) basta.",
-     "Con (2): $P(\\text{una azul y una roja})=2\\cdot\\frac{a}{5}\\cdot\\frac{5-a}{4}=\\frac{a(5-a)}{10}$.",
-     "Para $a=2$ o $a=3$ esta probabilidad vale $\\frac{6}{10}$, pero con $a=2$ se tiene $\\frac{2}{4}$ y con $a=3$, $\\frac{3}{4}$: (2) no determina la respuesta. Por lo tanto, la alternativa correcta es la A."
+     "Sea $a$ el número de bolitas azules, con $1\\le a\\le 4$. Si la primera extracción es roja, quedan $4$ bolitas, de las cuales $a$ son azules: $P(\\text{segunda azul}\\mid\\text{primera roja})=\\frac{a}{4}$.",
+     "Por lo tanto, el problema se reduce a determinar $a$ a partir de los datos.",
+     "Con el dato (1): con reposición, cada extracción es azul con probabilidad $\\frac{a}{5}$, así que $P(\\text{5 azules})=\\left(\\frac{a}{5}\\right)^5$. Para $a=1,2,3,4$ estos valores son distintos, porque la función es estrictamente creciente en $a$. Conocer la probabilidad determina $a$ y, con ello, $\\frac{a}{4}$. El dato (1) basta.",
+     "Con el dato (2): sin reposición, $P(\\text{una azul y una roja})=2\\cdot\\frac{a}{5}\\cdot\\frac{5-a}{4}=\\frac{a(5-a)}{10}$, expresión que es la misma para $a$ y para $5-a$.",
+     "Para $a=1$ o $a=4$ esta probabilidad vale $\\frac{4}{10}$; para $a=2$ o $a=3$ vale $\\frac{6}{10}$. Pero con $a=2$ la probabilidad pedida es $\\frac{2}{4}$, y con $a=3$ es $\\frac{3}{4}$: el mismo dato corresponde a respuestas distintas, así que el dato (2) no basta.",
+     "Solo el dato (1) basta por sí solo. Por lo tanto, la alternativa correcta es la A."
     ],
     "distractors": {
-     "B": "(2) por sí sola: parece suficiente, pero $a=2$ y $a=3$ dan la misma probabilidad de un azul y un rojo y respuestas distintas.",
-     "C": "Ambas juntas: como (1) ya basta, agregar (2) no cambia el resultado. El error está en pensar que (2) aporta algo nuevo, cuando no es necesario."
+     "B": "(2) por sí sola: parece suficiente, pero $a=2$ y $a=3$ dan la misma probabilidad de una azul y una roja ($\\frac{6}{10}$) y, sin embargo, respuestas distintas ($\\frac{2}{4}$ y $\\frac{3}{4}$).",
+     "C": "Ambas juntas: como el dato (1) ya basta, agregar (2) no cambia el resultado. La opción C solo corresponde cuando ninguno de los datos basta por separado.",
+     "D": "Cada una por sí sola: falsa, porque el dato (2) no basta; no distingue entre $a=2$ y $a=3$.",
+     "E": "Se requiere información adicional: falsa, porque con el dato (1) el valor de $a$ queda determinado sin datos extra."
     }
-   }
+   },
+   "subtopic": "m2-suficiencia"
   }
  ]
 }

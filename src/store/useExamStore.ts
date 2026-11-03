@@ -13,6 +13,8 @@ export interface ExamSession {
   flagged: string[]
   /** Modo práctica: preguntas ya verificadas contra el clavijero. */
   checked: Record<string, true>
+  /** Alternativas tachadas (descartadas) por pregunta, como con lápiz en el folleto. */
+  struck?: Record<string, OptionKey[]>
   currentIndex: number
   elapsedMs: number
 }
@@ -24,10 +26,14 @@ interface ExamState {
   /** Prácticas personalizadas (por eje o revancha); se conservan para poder revisar sus resultados. */
   sets: Record<string, PracticeSet>
   createSet: (set: Omit<PracticeSet, 'id' | 'createdAt'>) => string
+  /** Guarda una práctica con id fijo (Desafío Diario) si aún no existe. */
+  ensureSet: (id: string, set: Omit<PracticeSet, 'id' | 'createdAt'>) => void
   start: (examId: string, mode: ExamMode) => string
   select: (key: string, questionId: string, option: OptionKey) => void
   clearAnswer: (key: string, questionId: string) => void
   toggleFlag: (key: string, questionId: string) => void
+  /** Tacha o recupera una alternativa; tachar la marcada también la desmarca. */
+  toggleStrike: (key: string, questionId: string, option: OptionKey) => void
   check: (key: string, questionId: string) => void
   goTo: (key: string, index: number) => void
   addElapsed: (key: string, ms: number) => void
@@ -51,6 +57,10 @@ export const useExamStore = create<ExamState>()(
         set((s) => ({ sets: { ...s.sets, [id]: { ...practice, id, createdAt } } }))
         return id
       },
+      ensureSet: (id, practice) => {
+        if (get().sets[id]) return
+        set((s) => ({ sets: { ...s.sets, [id]: { ...practice, id, createdAt: Date.now() } } }))
+      },
       start: (examId, mode) => {
         const key = sessionKey(examId, mode)
         if (!get().sessions[key]) {
@@ -69,9 +79,34 @@ export const useExamStore = create<ExamState>()(
       },
       select: (key, questionId, option) =>
         set((s) =>
-          patch(s, key, (cur) =>
-            cur.checked[questionId] ? {} : { answers: { ...cur.answers, [questionId]: option } },
-          ),
+          patch(s, key, (cur) => {
+            if (cur.checked[questionId]) return {}
+            // Elegir una alternativa tachada (clic explícito) la recupera.
+            const struck = cur.struck?.[questionId]
+            return {
+              answers: { ...cur.answers, [questionId]: option },
+              ...(struck?.includes(option)
+                ? { struck: { ...cur.struck, [questionId]: struck.filter((k) => k !== option) } }
+                : {}),
+            }
+          }),
+        ),
+      toggleStrike: (key, questionId, option) =>
+        set((s) =>
+          patch(s, key, (cur) => {
+            if (cur.checked[questionId]) return {}
+            const list = cur.struck?.[questionId] ?? []
+            const striking = !list.includes(option)
+            const next = striking ? [...list, option] : list.filter((k) => k !== option)
+            const struck = { ...cur.struck, [questionId]: next }
+            if (!next.length) delete struck[questionId]
+            if (striking && cur.answers[questionId] === option) {
+              const answers = { ...cur.answers }
+              delete answers[questionId]
+              return { struck, answers }
+            }
+            return { struck }
+          }),
         ),
       clearAnswer: (key, questionId) =>
         set((s) =>

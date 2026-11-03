@@ -1,0 +1,1694 @@
+{
+ "m1-racionales": {
+  "theory": [
+   "Los números enteros ($\\mathbb{Z}$) incluyen los naturales, el cero y los negativos. Los racionales ($\\mathbb{Q}$) son los que pueden escribirse como $\\frac{a}{b}$ con $a$ y $b$ enteros y $b \\neq 0$: todo decimal finito o periódico es racional.",
+   "Para operar se respeta la prioridad: primero paréntesis, luego potencias, después multiplicaciones y divisiones (de izquierda a derecha) y al final sumas y restas. Para sumar fracciones se iguala el denominador; para multiplicarlas se multiplican numeradores y denominadores; dividir es multiplicar por el recíproco.",
+   "En la recta numérica, un número es mayor mientras más a la derecha está. Sumar un negativo equivale a desplazarse a la izquierda; restar un negativo, a la derecha."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Operatoria con fracciones",
+   "body": "$$\\frac{a}{b}+\\frac{c}{d}=\\frac{ad+bc}{bd} \\qquad \\frac{a}{b}\\cdot\\frac{c}{d}=\\frac{ac}{bd} \\qquad \\frac{a}{b}:\\frac{c}{d}=\\frac{a}{b}\\cdot\\frac{d}{c}$$\n\nDecimal periódico: $0{,}\\overline{3}=\\dfrac{3}{9}=\\dfrac{1}{3}$ y $0{,}1\\overline{6}=\\dfrac{16-1}{90}=\\dfrac{1}{6}$."
+  },
+  "keyIdeas": [
+   "Prioridad: paréntesis, potencias, $\\times$ y $\\div$, $+$ y $-$.",
+   "Restar un negativo es sumar: $a-(-b)=a+b$.",
+   "Todo decimal finito o periódico es racional.",
+   "Para comparar fracciones, iguala denominadores o pásalas a decimal."
+  ],
+  "method": [
+   "Identifica el orden de las operaciones antes de calcular.",
+   "Simplifica las fracciones en cada paso para trabajar con números pequeños.",
+   "Controla los signos: multiplica primero los signos y luego los valores absolutos.",
+   "Estima el resultado (signo y tamaño) para descartar alternativas imposibles."
+  ],
+  "traps": [
+   "Sumar numeradores y denominadores: $\\frac{1}{2}+\\frac{1}{3}\\neq\\frac{2}{5}$.",
+   "Resolver de izquierda a derecha ignorando que la multiplicación va antes que la resta.",
+   "Confundir $-3^2=-9$ con $(-3)^2=9$."
+  ]
+ },
+ "m1-porcentajes": {
+  "theory": [
+   "Un porcentaje es una razón con denominador 100: el $p\\,\\%$ de $x$ es $\\frac{p}{100}\\cdot x$. Aumentar un valor en un $p\\,\\%$ equivale a multiplicarlo por $\\left(1+\\frac{p}{100}\\right)$, y disminuirlo, por $\\left(1-\\frac{p}{100}\\right)$.",
+   "Los porcentajes sucesivos se multiplican, porque cada uno se aplica sobre el valor ya modificado. En problemas con dinero conviene ordenar los datos (precio unitario, cantidad, total) y revisar las unidades."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Factores de variación",
+   "body": "$$\\text{aumento de } p\\,\\%:\\ x\\left(1+\\tfrac{p}{100}\\right) \\qquad \\text{descuento de } p\\,\\%:\\ x\\left(1-\\tfrac{p}{100}\\right)$$\n\n$$\\text{variación porcentual}=\\frac{\\text{valor final}-\\text{valor inicial}}{\\text{valor inicial}}\\cdot 100$$"
+  },
+  "keyIdeas": [
+   "El 25 % de 80 es $0{,}25\\cdot 80=20$.",
+   "Subir 10 % y luego bajar 10 % deja el valor un 1 % más bajo: $1{,}1\\cdot 0{,}9=0{,}99$.",
+   "La variación porcentual siempre se calcula sobre el valor inicial.",
+   "Precio con IVA (19 %) $=1{,}19\\cdot$ precio neto."
+  ],
+  "method": [
+   "Identifica sobre qué cantidad (base) se aplica cada porcentaje.",
+   "Convierte cada cambio en un factor multiplicativo.",
+   "Multiplica los factores en orden y aplícalos a la base.",
+   "Compara con las alternativas y verifica con un cálculo aproximado."
+  ],
+  "traps": [
+   "Sumar porcentajes sucesivos: $+20\\,\\%$ y $-20\\,\\%$ no se anulan.",
+   "Calcular la variación porcentual sobre el valor final.",
+   "Confundir «el 30 % de» con «un 30 % más que»."
+  ]
+ },
+ "m1-potencias": {
+  "theory": [
+   "Una potencia $a^n$ abrevia la multiplicación de $a$ por sí mismo $n$ veces. Con exponentes enteros se cumple $a^0=1$ (si $a\\neq 0$) y $a^{-n}=\\frac{1}{a^n}$. La notación científica escribe un número como $k\\cdot 10^n$ con $1\\le k<10$.",
+   "La raíz $\\sqrt[n]{a}$ es el número que elevado a $n$ da $a$; equivale a la potencia $a^{1/n}$. Solo se suman o restan raíces semejantes (mismo índice y misma cantidad subradical), por eso primero se simplifican extrayendo factores."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Propiedades",
+   "body": "$$a^m\\cdot a^n=a^{m+n} \\qquad \\frac{a^m}{a^n}=a^{m-n} \\qquad (a^m)^n=a^{mn} \\qquad (ab)^n=a^nb^n$$\n\n$$\\sqrt[n]{ab}=\\sqrt[n]{a}\\,\\sqrt[n]{b} \\qquad \\sqrt[n]{a^m}=a^{m/n} \\qquad \\sqrt{72}=\\sqrt{36\\cdot 2}=6\\sqrt{2}$$"
+  },
+  "keyIdeas": [
+   "Lleva todo a la misma base antes de operar: $8=2^3$, $27=3^3$.",
+   "El exponente negativo invierte, no cambia el signo: $2^{-3}=\\frac{1}{8}$.",
+   "$\\sqrt{a+b}\\neq\\sqrt{a}+\\sqrt{b}$.",
+   "Notación científica: $0{,}00034=3{,}4\\cdot 10^{-4}$."
+  ],
+  "method": [
+   "Descompón las bases en factores primos para igualarlas.",
+   "Aplica una propiedad por paso y escríbelo.",
+   "En raíces, extrae los factores cuadrados perfectos antes de sumar o restar.",
+   "Comprueba el signo y el orden de magnitud del resultado."
+  ],
+  "traps": [
+   "Multiplicar las bases: $2^3\\cdot 2^4\\neq 4^7$ (es $2^7$).",
+   "Sumar exponentes al elevar una potencia: $(2^3)^2=2^6$, no $2^5$.",
+   "Restar radicandos: $\\sqrt{50}-\\sqrt{18}\\neq\\sqrt{32}$."
+  ]
+ },
+ "m1-proporcionalidad": {
+  "theory": [
+   "Dos magnitudes son directamente proporcionales si su cociente es constante ($\\frac{y}{x}=k$): al duplicar una, la otra se duplica. Son inversamente proporcionales si su producto es constante ($xy=k$): al duplicar una, la otra se reduce a la mitad.",
+   "Una razón $a:b$ compara dos cantidades por cociente. Repartir una cantidad en la razón $a:b:c$ es dividirla en $a+b+c$ partes iguales y asignar $a$, $b$ y $c$ de esas partes."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Igualdades clave",
+   "body": "$$\\text{directa: } \\frac{y_1}{x_1}=\\frac{y_2}{x_2} \\qquad \\text{inversa: } x_1\\,y_1=x_2\\,y_2$$"
+  },
+  "keyIdeas": [
+   "Pregúntate: si una magnitud aumenta, ¿la otra aumenta o disminuye?",
+   "Reparto proporcional: total $\\div$ suma de las partes.",
+   "Escala 1:50 000: 1 cm en el mapa son 50 000 cm = 500 m reales."
+  ],
+  "method": [
+   "Decide con sentido común si la relación es directa o inversa.",
+   "Plantea la igualdad de cocientes (directa) o de productos (inversa).",
+   "Despeja la incógnita y revisa que el resultado tenga sentido."
+  ],
+  "traps": [
+   "Tratar como directa una relación inversa (más trabajadores, menos días).",
+   "En un reparto, dividir el total por el número de personas en vez de por la suma de las partes."
+  ]
+ },
+ "m1-expresiones": {
+  "theory": [
+   "Una expresión algebraica combina números y letras con operaciones. Los términos semejantes (misma parte literal) se suman sumando sus coeficientes. Los productos notables permiten desarrollar rápido y, leídos al revés, factorizar.",
+   "Factorizar es escribir una expresión como producto. Primero se busca un factor común; después se reconoce un producto notable o un trinomio $x^2+bx+c$, que se factoriza buscando dos números cuyo producto sea $c$ y cuya suma sea $b$."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Productos notables",
+   "body": "$$(a\\pm b)^2=a^2\\pm 2ab+b^2 \\qquad (a+b)(a-b)=a^2-b^2 \\qquad (x+p)(x+q)=x^2+(p+q)x+pq$$"
+  },
+  "keyIdeas": [
+   "Primero el factor común: $6x^2-9x=3x(2x-3)$.",
+   "Diferencia de cuadrados: $x^2-49=(x+7)(x-7)$.",
+   "$(a+b)^2\\neq a^2+b^2$: falta el término $2ab$."
+  ],
+  "method": [
+   "Busca un factor común numérico y literal.",
+   "Cuenta los términos: dos sugieren diferencia de cuadrados; tres, cuadrado de binomio o trinomio $x^2+bx+c$.",
+   "Comprueba multiplicando los factores obtenidos."
+  ],
+  "traps": [
+   "Olvidar el doble producto en $(a+b)^2$.",
+   "Equivocar los signos al sacar un factor negativo: $-x+3=-(x-3)$."
+  ]
+ },
+ "m1-ecuaciones": {
+  "theory": [
+   "Una ecuación lineal se resuelve aplicando la misma operación a ambos lados hasta aislar la incógnita. En los problemas con enunciado lo central es traducir: «el doble de» es $2x$, «excede en 5» es $+5$, «la mitad de la suma» es $\\frac{a+b}{2}$.",
+   "En una inecuación se procede igual, con una excepción: al multiplicar o dividir por un número negativo se invierte el sentido de la desigualdad. La solución es un intervalo."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Notación de intervalos (DEMRE)",
+   "body": "$$[a,b]=\\{x: a\\le x\\le b\\} \\qquad ]a,b[=\\{x: a<x<b\\} \\qquad [a,+\\infty[=\\{x: x\\ge a\\}$$"
+  },
+  "keyIdeas": [
+   "Si $-2x\\le 6$, entonces $x\\ge -3$ (se invierte la desigualdad).",
+   "Para eliminar denominadores, multiplica **todos** los términos por el m.c.m.",
+   "Revisa qué pide la pregunta: a veces no es $x$, sino otra cantidad."
+  ],
+  "method": [
+   "Traduce el enunciado a una ecuación indicando qué representa la incógnita.",
+   "Elimina paréntesis y denominadores.",
+   "Agrupa términos y despeja; si divides por un negativo, invierte la desigualdad.",
+   "Reemplaza la solución en el enunciado original para comprobar."
+  ],
+  "traps": [
+   "No invertir la desigualdad al dividir por un número negativo.",
+   "Multiplicar por el m.c.m. solo algunos términos.",
+   "Responder el valor de $x$ cuando se pregunta por otra cantidad."
+  ]
+ },
+ "m1-sistemas": {
+  "theory": [
+   "Un sistema de dos ecuaciones lineales con dos incógnitas representa dos rectas: tiene solución única si se cortan, ninguna si son paralelas e infinitas si son la misma recta.",
+   "Se resuelve por sustitución (despejar una incógnita y reemplazarla), igualación o reducción (amplificar y sumar o restar las ecuaciones para eliminar una incógnita)."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Cantidad de soluciones de $ax+by=c,\\ dx+ey=f$",
+   "body": "Única si $\\dfrac{a}{d}\\neq\\dfrac{b}{e}$; ninguna si $\\dfrac{a}{d}=\\dfrac{b}{e}\\neq\\dfrac{c}{f}$; infinitas si $\\dfrac{a}{d}=\\dfrac{b}{e}=\\dfrac{c}{f}$."
+  },
+  "keyIdeas": [
+   "Reducción: elige la incógnita con coeficientes fáciles de igualar.",
+   "Comprueba la solución en **ambas** ecuaciones.",
+   "En problemas, define claramente qué representa cada variable."
+  ],
+  "method": [
+   "Define las variables y plantea una ecuación por cada condición.",
+   "Elimina una variable por reducción o sustitución.",
+   "Calcula la otra variable y comprueba en las dos ecuaciones."
+  ],
+  "traps": [
+   "Reemplazar el valor en la misma ecuación de la que se despejó (siempre se cumple).",
+   "Responder la variable que no se pedía."
+  ]
+ },
+ "m1-funcion-afin": {
+  "theory": [
+   "Una función asigna a cada elemento del dominio un único valor. La función afín $f(x)=mx+n$ tiene como gráfico una recta: $m$ es la pendiente (cuánto cambia $f$ cuando $x$ aumenta en 1) y $n$ es el coeficiente de posición (corte con el eje $Y$). Si $n=0$ es lineal y modela una proporcionalidad directa.",
+   "En contexto, la pendiente es una tasa (pesos por kilómetro, litros por minuto) y $n$ es el valor inicial o cargo fijo."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Pendiente y ecuación",
+   "body": "$$m=\\frac{y_2-y_1}{x_2-x_1} \\qquad f(x)=m(x-x_1)+y_1$$"
+  },
+  "keyIdeas": [
+   "$m>0$: creciente; $m<0$: decreciente; $m=0$: constante.",
+   "Evaluar $f(2)$ es reemplazar $x=2$; resolver $f(x)=2$ es buscar $x$.",
+   "Cargo fijo + tarifa por unidad $\\Rightarrow f(x)=\\text{tarifa}\\cdot x+\\text{fijo}$."
+  ],
+  "method": [
+   "Identifica el valor inicial (cuando la variable es 0) y la tasa de cambio.",
+   "Calcula la pendiente con dos puntos, restando en el mismo orden.",
+   "Escribe la función y verifícala con un punto conocido."
+  ],
+  "traps": [
+   "Restar en distinto orden en el numerador y en el denominador de la pendiente.",
+   "Confundir el cargo fijo con la tarifa por unidad."
+  ]
+ },
+ "m1-cuadratica": {
+  "theory": [
+   "La función $f(x)=ax^2+bx+c$ ($a\\neq 0$) tiene como gráfico una parábola. Si $a>0$ abre hacia arriba y tiene un mínimo; si $a<0$ abre hacia abajo y tiene un máximo. Corta el eje $Y$ en $(0,c)$.",
+   "El vértice está en $x_v=-\\frac{b}{2a}$ y la recta $x=x_v$ es el eje de simetría. Los ceros (cortes con el eje $X$) son las soluciones de $ax^2+bx+c=0$."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Vértice y ceros",
+   "body": "$$x_v=-\\frac{b}{2a},\\quad y_v=f(x_v) \\qquad x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$$"
+  },
+  "keyIdeas": [
+   "El signo de $a$ decide si hay máximo o mínimo.",
+   "El valor máximo o mínimo es la **ordenada** del vértice.",
+   "Dos puntos simétricos tienen la misma altura: el vértice queda al medio."
+  ],
+  "method": [
+   "Identifica $a$, $b$ y $c$ con su signo.",
+   "Calcula $x_v=-\\frac{b}{2a}$ y evalúa la función para obtener $y_v$.",
+   "Lee qué pide el problema: ¿el instante (abscisa) o el valor máximo (ordenada)?"
+  ],
+  "traps": [
+   "Usar $\\frac{b}{2a}$ sin el signo menos.",
+   "Responder $x_v$ cuando se pide el valor máximo de la función."
+  ]
+ },
+ "m1-areas": {
+  "theory": [
+   "El perímetro es la longitud del contorno; el área, la medida de la superficie; el volumen, el espacio que ocupa un cuerpo. Las figuras compuestas se descomponen en figuras conocidas, sumando o restando sus áreas.",
+   "Al multiplicar todas las longitudes por $k$, el perímetro se multiplica por $k$, el área por $k^2$ y el volumen por $k^3$."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "Rectángulo: $A=b\\cdot h$. Triángulo: $A=\\dfrac{b\\cdot h}{2}$. Círculo: $A=\\pi r^2$, $P=2\\pi r$.\n\nPrisma y cilindro: $V=A_{\\text{base}}\\cdot h$ (cilindro: $V=\\pi r^2h$). Cubo: $V=a^3$. Cono: $V=\\dfrac{\\pi r^2h}{3}$."
+  },
+  "keyIdeas": [
+   "Descompón figuras compuestas antes de calcular.",
+   "Revisa unidades: $1\\ \\text{m}^3=1000$ litros.",
+   "Diámetro $=2\\cdot$ radio."
+  ],
+  "method": [
+   "Dibuja o marca las medidas conocidas.",
+   "Elige la fórmula según la figura o cuerpo y verifica las unidades.",
+   "Suma o resta las partes de la figura compuesta."
+  ],
+  "traps": [
+   "Usar el diámetro como radio.",
+   "Confundir área con perímetro.",
+   "Olvidar dividir por 2 el área del triángulo."
+  ]
+ },
+ "m1-triangulos": {
+  "theory": [
+   "Los ángulos interiores de un triángulo suman $180^\\circ$. En un triángulo rectángulo, el lado opuesto al ángulo recto es la hipotenusa y cumple el teorema de Pitágoras.",
+   "Dos triángulos son semejantes si tienen sus ángulos iguales; entonces sus lados correspondientes son proporcionales. El teorema de Thales permite calcular longitudes cuando hay rectas paralelas cortadas por secantes."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Relaciones clave",
+   "body": "$$a^2+b^2=c^2 \\qquad \\text{tríos: } (3,4,5),\\ (5,12,13),\\ (8,15,17)$$\n\nSi la razón de semejanza es $k$, las áreas están en razón $k^2$."
+  },
+  "keyIdeas": [
+   "La hipotenusa es el lado mayor.",
+   "Los múltiplos de un trío pitagórico también lo son: (6, 8, 10).",
+   "Sombras a la misma hora $\\Rightarrow$ triángulos semejantes."
+  ],
+  "method": [
+   "Identifica el ángulo recto y la hipotenusa.",
+   "Plantea Pitágoras o la proporción entre lados correspondientes.",
+   "Verifica que la hipotenusa resulte mayor que los catetos."
+  ],
+  "traps": [
+   "Sumar los cuadrados cuando la incógnita es un cateto.",
+   "Emparejar lados que no se corresponden en la semejanza."
+  ]
+ },
+ "m1-transformaciones": {
+  "theory": [
+   "Las transformaciones isométricas (traslación, reflexión y rotación) cambian la posición de una figura sin alterar su forma ni su tamaño.",
+   "Trasladar un punto según un vector $\\vec{v}=(a,b)$ es sumar las coordenadas. Las reflexiones y rotaciones con centro en el origen siguen reglas fijas sobre las coordenadas."
+  ],
+  "box": {
+   "kind": "ley",
+   "title": "Reglas en coordenadas",
+   "body": "Traslación: $(x,y)\\mapsto(x+a,\\,y+b)$. Reflexión eje $X$: $(x,-y)$. Reflexión eje $Y$: $(-x,y)$.\n\nRotación en $90^\\circ$ antihoraria: $(-y,x)$. Rotación en $180^\\circ$: $(-x,-y)$."
+  },
+  "keyIdeas": [
+   "Reflejar respecto del eje $Y$ cambia el signo de la abscisa.",
+   "Una rotación de $180^\\circ$ equivale a la simetría respecto del origen.",
+   "Vector entre dos puntos: $\\overrightarrow{AB}=B-A$."
+  ],
+  "method": [
+   "Identifica el tipo de transformación y su elemento (vector, eje o centro).",
+   "Aplica la regla de coordenadas.",
+   "Verifica con un dibujo rápido en el plano."
+  ],
+  "traps": [
+   "Confundir la reflexión en el eje $X$ con la del eje $Y$.",
+   "Restar el vector de traslación en vez de sumarlo."
+  ]
+ },
+ "m1-tendencia": {
+  "theory": [
+   "La media aritmética reparte el total en partes iguales; la mediana es el dato central de los datos ordenados; la moda, el dato más frecuente. La media es sensible a valores extremos; la mediana no.",
+   "En una tabla de frecuencias, la frecuencia absoluta cuenta cuántas veces aparece un dato; la relativa es esa cantidad dividida por el total, y la acumulada suma las frecuencias hasta ese dato."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$\\bar{x}=\\frac{\\sum x_i\\,f_i}{n} \\qquad \\text{posición de la mediana}=\\frac{n+1}{2} \\qquad f_r=\\frac{f}{n}$$"
+  },
+  "keyIdeas": [
+   "Para la mediana, **ordena** primero los datos.",
+   "Con $n$ par, la mediana es el promedio de los dos datos centrales.",
+   "Un dato extremo mueve la media, pero casi no mueve la mediana."
+  ],
+  "method": [
+   "Calcula el total de datos $n$ sumando las frecuencias.",
+   "Usa la frecuencia acumulada para ubicar la posición de la mediana.",
+   "Para la media, multiplica cada dato por su frecuencia antes de sumar."
+  ],
+  "traps": [
+   "Calcular la mediana sin ordenar los datos.",
+   "Promediar los valores de la tabla sin considerar sus frecuencias."
+  ]
+ },
+ "m1-posicion": {
+  "theory": [
+   "Los cuartiles dividen los datos ordenados en cuatro partes con igual cantidad de datos: $Q_2$ es la mediana. El percentil $k$ es el valor bajo el cual queda aproximadamente el $k\\,\\%$ de los datos.",
+   "El rango (máximo menos mínimo) y el rango intercuartílico ($Q_3-Q_1$) miden la dispersión. El diagrama de caja muestra mínimo, $Q_1$, mediana, $Q_3$ y máximo."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Definiciones",
+   "body": "Rango $=\\text{máx}-\\text{mín}$. Rango intercuartílico $=Q_3-Q_1$. Percentil 80: el 80 % de los datos es menor o igual que él."
+  },
+  "keyIdeas": [
+   "Percentil alto no significa nota alta, sino posición relativa alta.",
+   "En un diagrama de caja, la caja contiene el 50 % central de los datos.",
+   "Dos grupos pueden tener igual media y distinta dispersión."
+  ],
+  "method": [
+   "Ordena los datos.",
+   "Ubica la medida pedida por su posición (mediana, cuartil o percentil).",
+   "Interpreta en el contexto: qué porcentaje de los datos queda por debajo."
+  ],
+  "traps": [
+   "Interpretar el percentil 80 como «obtuvo el 80 % del puntaje».",
+   "Leer el largo de la caja como el rango total."
+  ]
+ },
+ "m1-probabilidad": {
+  "theory": [
+   "Si todos los resultados de un experimento son equiprobables, la probabilidad de un evento es la razón entre casos favorables y casos posibles (regla de Laplace). Toda probabilidad está entre 0 y 1.",
+   "Para contar casos se usa el principio multiplicativo o un diagrama de árbol. La probabilidad del complemento suele simplificar los problemas de «al menos uno»."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Reglas",
+   "body": "$$P(A)=\\frac{\\text{casos favorables}}{\\text{casos posibles}} \\qquad P(A^c)=1-P(A)$$\n\n$$P(A\\cup B)=P(A)+P(B)-P(A\\cap B) \\qquad \\text{independientes: } P(A\\cap B)=P(A)\\cdot P(B)$$"
+  },
+  "keyIdeas": [
+   "«Al menos uno» $=1-P(\\text{ninguno})$.",
+   "Con dos dados hay $6\\cdot 6=36$ resultados ordenados.",
+   "Eventos independientes: se multiplican sus probabilidades."
+  ],
+  "method": [
+   "Describe el espacio muestral y verifica que sus resultados sean equiprobables.",
+   "Cuenta los casos favorables (directamente o con el complemento).",
+   "Simplifica la fracción y compárala con las alternativas."
+  ],
+  "traps": [
+   "Contar pares no ordenados en experimentos con orden, como dos dados.",
+   "Suponer equiprobables resultados que no lo son, como las sumas de dos dados."
+  ]
+ },
+ "m2-reales": {
+  "theory": [
+   "Los números reales ($\\mathbb{R}$) reúnen los racionales y los irracionales. Un irracional, como $\\sqrt{2}$ o $\\pi$, tiene infinitas cifras decimales no periódicas y no puede escribirse como fracción.",
+   "Racionalizar es eliminar las raíces del denominador amplificando por una expresión adecuada: por la misma raíz si es un monomio, o por el conjugado si es un binomio, aprovechando $(a+b)(a-b)=a^2-b^2$."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Racionalización",
+   "body": "$$\\frac{k}{\\sqrt{a}}=\\frac{k\\sqrt{a}}{a} \\qquad \\frac{k}{\\sqrt{a}-\\sqrt{b}}=\\frac{k(\\sqrt{a}+\\sqrt{b})}{a-b}$$"
+  },
+  "keyIdeas": [
+   "$\\sqrt{2}\\cdot\\sqrt{8}=\\sqrt{16}=4$ es racional: el producto de irracionales puede ser racional.",
+   "El conjugado de $\\sqrt{5}-1$ es $\\sqrt{5}+1$.",
+   "Para ordenar raíces, compara sus cuadrados."
+  ],
+  "method": [
+   "Simplifica las raíces extrayendo factores.",
+   "Identifica el tipo de denominador y amplifica por la raíz o el conjugado.",
+   "Simplifica el resultado y verifica con una aproximación decimal."
+  ],
+  "traps": [
+   "Amplificar solo el denominador.",
+   "Suponer que la suma o el producto de irracionales siempre es irracional."
+  ]
+ },
+ "m2-logaritmos": {
+  "theory": [
+   "El logaritmo en base $b$ de $a$ es el exponente al que hay que elevar $b$ para obtener $a$: $\\log_b a=c \\iff b^c=a$, con $b>0$, $b\\neq 1$ y $a>0$. El logaritmo decimal ($\\log$) tiene base 10.",
+   "Las propiedades transforman productos en sumas y potencias en productos, lo que permite despejar exponentes en ecuaciones exponenciales."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Propiedades",
+   "body": "$$\\log_b(xy)=\\log_b x+\\log_b y \\qquad \\log_b\\frac{x}{y}=\\log_b x-\\log_b y \\qquad \\log_b x^n=n\\log_b x$$\n\n$$\\log_b b=1 \\qquad \\log_b 1=0 \\qquad \\log_b a=\\frac{\\log a}{\\log b}$$"
+  },
+  "keyIdeas": [
+   "$\\log_2 32=5$ porque $2^5=32$.",
+   "Si el argumento está entre 0 y 1, el logaritmo es negativo.",
+   "$\\log(x+y)\\neq\\log x+\\log y$."
+  ],
+  "method": [
+   "Escribe el argumento como potencia de la base o como producto de factores conocidos.",
+   "Aplica las propiedades una por una.",
+   "Verifica con la definición: base elevada al resultado."
+  ],
+  "traps": [
+   "Distribuir el logaritmo sobre una suma.",
+   "Olvidar que el argumento debe ser positivo."
+  ]
+ },
+ "m2-financiera": {
+  "theory": [
+   "En el interés simple, el interés se calcula siempre sobre el capital inicial; en el compuesto, sobre el capital acumulado, por lo que crece de forma exponencial.",
+   "La tasa debe expresarse en la misma unidad de tiempo que los períodos: una tasa mensual con períodos mensuales."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$\\text{simple: } C_n=C_0(1+n\\,i) \\qquad \\text{compuesto: } C_n=C_0(1+i)^n$$"
+  },
+  "keyIdeas": [
+   "Con 2 % mensual, en 3 meses: simple $\\cdot 1{,}06$; compuesto $\\cdot 1{,}02^3\\approx 1{,}0612$.",
+   "El compuesto supera al simple desde el segundo período.",
+   "Depreciación de $p\\,\\%$ anual: $V_n=V_0(1-p/100)^n$."
+  ],
+  "method": [
+   "Identifica si el interés es simple o compuesto.",
+   "Iguala las unidades de la tasa y de los períodos.",
+   "Reemplaza en la fórmula y calcula; distingue interés ganado de monto final."
+  ],
+  "traps": [
+   "Usar interés simple cuando el problema dice compuesto.",
+   "Responder el monto final cuando se pide solo el interés ganado."
+  ]
+ },
+ "m2-cuadraticas": {
+  "theory": [
+   "Una ecuación $ax^2+bx+c=0$ se resuelve factorizando o con la fórmula general. El discriminante $\\Delta=b^2-4ac$ indica cuántas soluciones reales tiene, sin necesidad de calcularlas.",
+   "Las soluciones cumplen $x_1+x_2=-\\frac{b}{a}$ y $x_1x_2=\\frac{c}{a}$, relaciones útiles para construir ecuaciones o verificar resultados."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Discriminante",
+   "body": "$\\Delta>0$: dos soluciones reales distintas. $\\Delta=0$: una solución real (doble). $\\Delta<0$: ninguna solución real.\n\n$$x=\\frac{-b\\pm\\sqrt{\\Delta}}{2a} \\qquad x_1+x_2=-\\frac{b}{a} \\qquad x_1x_2=\\frac{c}{a}$$"
+  },
+  "keyIdeas": [
+   "Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.",
+   "«Una única solución» $\\iff \\Delta=0$.",
+   "La parábola no corta el eje $X$ cuando $\\Delta<0$."
+  ],
+  "method": [
+   "Ordena la ecuación igualando a cero.",
+   "Calcula el discriminante o factoriza.",
+   "Interpreta el resultado según lo pedido (número de soluciones, valores, parámetro)."
+  ],
+  "traps": [
+   "Olvidar el factor 4 en $4ac$.",
+   "Perder una solución al dividir por $x$."
+  ]
+ },
+ "m2-exponencial": {
+  "theory": [
+   "La función exponencial $f(x)=a\\cdot b^x$ ($b>0$, $b\\neq 1$) modela crecimientos ($b>1$) o decrecimientos ($0<b<1$) en que la cantidad cambia en un mismo porcentaje por período: poblaciones, contagios, interés compuesto, decaimiento radiactivo.",
+   "La función logarítmica $g(x)=\\log_b x$ es su inversa: su dominio son los reales positivos y su gráfico es el reflejo del exponencial respecto de la recta $y=x$."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Modelos",
+   "body": "$$N(t)=N_0\\cdot 2^{t/T}\\ \\text{(duplicación cada } T\\text{)} \\qquad N(t)=N_0\\left(\\tfrac{1}{2}\\right)^{t/T}\\ \\text{(vida media } T\\text{)}$$"
+  },
+  "keyIdeas": [
+   "$f(0)=a$: el valor inicial.",
+   "Crecimiento de $r\\,\\%$ por período: $b=1+\\frac{r}{100}$.",
+   "$\\log_b x$ solo existe para $x>0$."
+  ],
+  "method": [
+   "Identifica el valor inicial y el factor de cambio por período.",
+   "Cuenta cuántos períodos transcurren.",
+   "Evalúa la función o despeja el exponente con logaritmos."
+  ],
+  "traps": [
+   "Contar mal los períodos (incluir el instante inicial).",
+   "Modelar con una función lineal un crecimiento porcentual."
+  ]
+ },
+ "m2-inversa": {
+  "theory": [
+   "La composición $(f\\circ g)(x)=f(g(x))$ aplica primero $g$ y luego $f$; en general $f\\circ g\\neq g\\circ f$.",
+   "La inversa $f^{-1}$ deshace lo que hace $f$: $f(f^{-1}(x))=x$. Existe solo si $f$ es biyectiva. Para encontrarla se despeja $x$ en $y=f(x)$ y se intercambian las variables."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Procedimiento",
+   "body": "$$y=f(x) \\ \\Rightarrow\\ x=\\text{(despeje)} \\ \\Rightarrow\\ f^{-1}(x)=\\text{(intercambio)}$$\n\nEl gráfico de $f^{-1}$ es simétrico al de $f$ respecto de la recta $y=x$."
+  },
+  "keyIdeas": [
+   "$(f\\circ g)(3)$: evalúa primero $g(3)$.",
+   "$f^{-1}(x)\\neq\\frac{1}{f(x)}$.",
+   "Comprueba la inversa componiendo: debe dar $x$."
+  ],
+  "method": [
+   "Identifica el orden de aplicación de las funciones.",
+   "Para la inversa, despeja y luego intercambia variables.",
+   "Verifica con un valor numérico."
+  ],
+  "traps": [
+   "Aplicar las funciones en el orden de lectura (de izquierda a derecha).",
+   "Confundir la inversa con el recíproco."
+  ]
+ },
+ "m2-trigonometria": {
+  "theory": [
+   "En un triángulo rectángulo, las razones trigonométricas de un ángulo agudo relacionan sus lados: seno (opuesto/hipotenusa), coseno (adyacente/hipotenusa) y tangente (opuesto/adyacente).",
+   "Se usan para calcular alturas y distancias inaccesibles a partir de un ángulo de elevación o depresión y un lado conocido."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Razones y valores notables",
+   "body": "$$\\operatorname{sen}\\alpha=\\frac{\\text{op}}{\\text{hip}} \\qquad \\cos\\alpha=\\frac{\\text{ady}}{\\text{hip}} \\qquad \\tan\\alpha=\\frac{\\text{op}}{\\text{ady}} \\qquad \\operatorname{sen}^2\\alpha+\\cos^2\\alpha=1$$\n\n$\\operatorname{sen}30^\\circ=\\cos 60^\\circ=\\frac{1}{2}$, $\\operatorname{sen}60^\\circ=\\cos 30^\\circ=\\frac{\\sqrt{3}}{2}$, $\\tan 45^\\circ=1$."
+  },
+  "keyIdeas": [
+   "Identifica qué lado es opuesto y cuál adyacente **respecto del ángulo dado**.",
+   "Ningún cateto es mayor que la hipotenusa.",
+   "$\\tan\\alpha=\\frac{\\operatorname{sen}\\alpha}{\\cos\\alpha}$."
+  ],
+  "method": [
+   "Dibuja el triángulo y marca el ángulo conocido.",
+   "Elige la razón que relaciona el dato con la incógnita.",
+   "Despeja y verifica que el resultado sea razonable."
+  ],
+  "traps": [
+   "Usar el coseno cuando corresponde el seno (o viceversa).",
+   "Dividir en vez de multiplicar al despejar."
+  ]
+ },
+ "m2-homotecia": {
+  "theory": [
+   "Una homotecia de centro $O$ y razón $k$ transforma cada punto $P$ en $P'$ sobre la recta $OP$ con $OP'=|k|\\cdot OP$. Si $k<0$, la imagen queda al otro lado del centro e invertida.",
+   "Si $|k|>1$ la figura se amplía, si $|k|<1$ se reduce. La imagen es semejante a la original: los ángulos se conservan y las longitudes se multiplican por $|k|$."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Efecto de la razón",
+   "body": "Longitudes $\\times|k|$, áreas $\\times k^2$, volúmenes $\\times|k|^3$. Con centro en el origen: $(x,y)\\mapsto(kx,\\,ky)$."
+  },
+  "keyIdeas": [
+   "El signo de $k$ solo cambia el sentido, no el tamaño.",
+   "Razón $-1$: equivale a una rotación de $180^\\circ$.",
+   "Un área nunca resulta negativa."
+  ],
+  "method": [
+   "Identifica el centro y la razón.",
+   "Multiplica las distancias al centro por $k$.",
+   "Para áreas, usa $k^2$."
+  ],
+  "traps": [
+   "Multiplicar el área por $k$ en vez de $k^2$.",
+   "Arrastrar el signo de $k$ a las medidas."
+  ]
+ },
+ "m2-analitica": {
+  "theory": [
+   "La ecuación de una recta puede escribirse como $y=mx+n$ (principal) o $ax+by+c=0$ (general). Dos rectas son paralelas si tienen igual pendiente y perpendiculares si el producto de sus pendientes es $-1$.",
+   "La distancia entre dos puntos se obtiene con Pitágoras, y el punto medio promediando coordenadas."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$d(A,B)=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \\qquad M=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$$\n\nParalelas: $m_1=m_2$. Perpendiculares: $m_1\\cdot m_2=-1$."
+  },
+  "keyIdeas": [
+   "Pendiente perpendicular: invierte y cambia el signo.",
+   "De $ax+by+c=0$: $m=-\\frac{a}{b}$.",
+   "Comprueba que el punto dado satisfaga la ecuación."
+  ],
+  "method": [
+   "Calcula la pendiente requerida (igual o recíproca opuesta).",
+   "Usa la forma punto–pendiente $y-y_1=m(x-x_1)$.",
+   "Reemplaza el punto para verificar."
+  ],
+  "traps": [
+   "Solo invertir o solo cambiar el signo de la pendiente para la perpendicular.",
+   "Leer mal la pendiente de la forma general."
+  ]
+ },
+ "m2-condicional": {
+  "theory": [
+   "La probabilidad condicional $P(A\\mid B)$ es la probabilidad de $A$ sabiendo que ocurrió $B$: el espacio muestral se reduce a $B$. Las tablas de doble entrada y los diagramas de árbol ordenan estos cálculos.",
+   "El modelo binomial describe el número de éxitos en $n$ ensayos independientes con probabilidad de éxito $p$ constante."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)} \\qquad P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}$$\n\nEsperanza binomial: $E(X)=np$."
+  },
+  "keyIdeas": [
+   "La condición indica el denominador.",
+   "$P(A\\mid B)\\neq P(B\\mid A)$ en general.",
+   "En el binomial, $\\binom{n}{k}$ cuenta las ubicaciones de los éxitos."
+  ],
+  "method": [
+   "Identifica qué se sabe (condición) y qué se pregunta.",
+   "Construye una tabla o árbol con las probabilidades.",
+   "Divide la intersección por la probabilidad de la condición."
+  ],
+  "traps": [
+   "Invertir la condición.",
+   "Olvidar el coeficiente binomial."
+  ]
+ },
+ "m2-dispersion": {
+  "theory": [
+   "La desviación estándar mide cuánto se alejan, en promedio, los datos de la media. Si se suma una constante a todos los datos no cambia; si se multiplican por $k$, queda multiplicada por $|k|$.",
+   "En una distribución normal, los datos se concentran simétricamente alrededor de la media: cerca del 68 % está a una desviación estándar de ella y cerca del 95 %, a dos."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$\\sigma=\\sqrt{\\frac{\\sum (x_i-\\bar{x})^2}{n}} \\qquad z=\\frac{x-\\mu}{\\sigma}$$\n\n$P(\\mu-\\sigma\\le X\\le\\mu+\\sigma)\\approx 0{,}68$; $P(\\mu-2\\sigma\\le X\\le\\mu+2\\sigma)\\approx 0{,}95$."
+  },
+  "keyIdeas": [
+   "Igual media no implica igual dispersión.",
+   "Sumar 5 puntos a todos no cambia $\\sigma$.",
+   "$z$ mide a cuántas desviaciones está un dato de la media."
+  ],
+  "method": [
+   "Compara las distancias de los datos a la media.",
+   "Aplica las propiedades ante transformaciones de los datos.",
+   "En la normal, estandariza con $z$ y usa los porcentajes de referencia."
+  ],
+  "traps": [
+   "Creer que sumar una constante cambia la desviación estándar.",
+   "Confundir variedad de datos con dispersión."
+  ]
+ },
+ "m2-combinatoria": {
+  "theory": [
+   "El principio multiplicativo cuenta las formas de realizar etapas sucesivas. Si importa el orden se usan permutaciones o variaciones; si no importa, combinaciones.",
+   "Elegir 3 personas para cargos distintos (presidente, secretario, tesorero) es una variación; elegir un comité de 3 sin cargos, una combinación."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$P_n=n! \\qquad V^n_k=\\frac{n!}{(n-k)!} \\qquad \\binom{n}{k}=\\frac{n!}{k!\\,(n-k)!}$$"
+  },
+  "keyIdeas": [
+   "¿Importa el orden? Sí $\\Rightarrow$ variación; no $\\Rightarrow$ combinación.",
+   "$\\binom{n}{k}=\\binom{n}{n-k}$.",
+   "Con repetición: $n^k$."
+  ],
+  "method": [
+   "Decide si importa el orden y si hay repetición.",
+   "Aplica el principio multiplicativo o la fórmula correspondiente.",
+   "Comprueba con un caso pequeño."
+  ],
+  "traps": [
+   "Usar combinaciones cuando los cargos son distintos.",
+   "Permitir repeticiones que el problema prohíbe."
+  ]
+ },
+ "m2-suficiencia": {
+  "theory": [
+   "En estas preguntas no se pide el valor, sino decidir si la información de las afirmaciones (1) y (2) basta para obtenerlo. Las alternativas son siempre las mismas: (1) por sí sola, (2) por sí sola, ambas juntas, cada una por sí sola, o se requiere información adicional.",
+   "Una afirmación es suficiente si permite determinar un **único** valor. No es necesario terminar el cálculo: basta saber que puede hacerse."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Orden de análisis",
+   "body": "1) Analiza (1) sola. 2) Analiza (2) sola. 3) Solo si ninguna basta, analiza ambas juntas.\n\nSi las dos bastan por separado, la respuesta es «cada una por sí sola»."
+  },
+  "keyIdeas": [
+   "Suficiente = determina un valor único.",
+   "No mezcles la información de (1) al analizar (2).",
+   "«Ambas juntas» solo cuando ninguna basta sola."
+  ],
+  "method": [
+   "Escribe qué se necesita para responder la pregunta.",
+   "Evalúa la afirmación (1) por sí sola y luego la (2) por sí sola.",
+   "Si ninguna basta, evalúa ambas juntas; si aún no basta, se requiere información adicional."
+  ],
+  "traps": [
+   "Usar sin darse cuenta datos de (1) al evaluar (2).",
+   "Elegir «ambas juntas» cuando una sola ya era suficiente.",
+   "Calcular todo cuando solo se pide decidir si es posible."
+  ]
+ },
+ "cl-localizar": {
+  "theory": [
+   "Localizar es encontrar en el texto un dato que está dicho, aunque la alternativa lo exprese con otras palabras (paráfrasis). La respuesta correcta debe poder señalarse con el dedo en el texto.",
+   "Las preguntas suelen indicar el párrafo o la sección («Según el tercer párrafo…»). Lee esa zona completa: la información puede estar repartida en más de una oración."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Cómo reconocer la correcta",
+   "body": "La alternativa correcta **reformula** lo que dice el texto sin agregar, quitar ni cambiar el alcance. Desconfía de las que generalizan («siempre», «todos») o que usan las mismas palabras del texto con otro sentido."
+  },
+  "keyIdeas": [
+   "Busca palabras clave del enunciado en el texto.",
+   "La correcta es una paráfrasis fiel, no una copia literal.",
+   "Una alternativa verdadera en la realidad pero ausente del texto es incorrecta."
+  ],
+  "method": [
+   "Identifica qué dato se pide y en qué parte del texto se ubica.",
+   "Relee esa parte completa, no solo la oración con la palabra clave.",
+   "Contrasta cada alternativa con el texto y descarta las que agregan o distorsionan."
+  ],
+  "traps": [
+   "Elegir una alternativa con palabras copiadas del texto pero con otro sentido.",
+   "Elegir información correcta según tus conocimientos, pero que el texto no dice.",
+   "Confundir lo que dice el emisor con lo que dice una voz citada."
+  ]
+ },
+ "cl-vocabulario": {
+  "theory": [
+   "Estas preguntas piden el significado de una palabra **en ese contexto**, que puede diferir de su definición más común. La palabra aparece en mayúsculas en el enunciado.",
+   "La mejor estrategia es sustituir: reemplaza la palabra por cada alternativa y lee la oración completa. La correcta mantiene el sentido y la coherencia con el resto del párrafo."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Prueba de sustitución",
+   "body": "1) Lee la oración y la siguiente. 2) Formula con tus palabras qué quiere decir. 3) Reemplaza por cada alternativa. 4) Elige la que conserva el sentido exacto, no solo uno parecido."
+  },
+  "keyIdeas": [
+   "Importa el sentido en el texto, no el del diccionario.",
+   "La correcta debe funcionar gramaticalmente en la oración.",
+   "Cuidado con los sinónimos de otra acepción de la palabra."
+  ],
+  "method": [
+   "Ubica la palabra y lee el contexto (oración anterior y posterior).",
+   "Formula su sentido con tus propias palabras.",
+   "Sustituye por cada alternativa y elige la que conserva el sentido."
+  ],
+  "traps": [
+   "Elegir el sinónimo de otra acepción («grave» como «serio» y no como «de tono bajo»).",
+   "Elegir una palabra con matiz más fuerte o más débil que el original."
+  ]
+ },
+ "cl-idea-central": {
+  "theory": [
+   "El tema responde «¿de qué trata?» en pocas palabras; la idea central responde «¿qué se dice sobre ese tema?» en una oración. Una síntesis abarca todo el texto o párrafo, no un detalle.",
+   "Para un párrafo, busca la oración que las demás desarrollan o ejemplifican. Para el texto completo, relaciona las ideas centrales de cada párrafo."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Criterio de amplitud",
+   "body": "La idea central no puede ser demasiado específica (un ejemplo o dato) ni demasiado general (aplicable a cualquier texto del tema). Debe cubrir todo lo que el párrafo o texto plantea."
+  },
+  "keyIdeas": [
+   "Tema: frase nominal. Idea central: afirmación completa.",
+   "Los ejemplos y datos apoyan la idea central; no lo son.",
+   "El título suele anticipar el tema."
+  ],
+  "method": [
+   "Resume cada párrafo en una frase.",
+   "Identifica qué idea agrupa a las demás.",
+   "Descarta alternativas demasiado específicas o demasiado generales."
+  ],
+  "traps": [
+   "Elegir un detalle llamativo como idea central.",
+   "Elegir una afirmación tan general que serviría para cualquier texto."
+  ]
+ },
+ "cl-proposito": {
+  "theory": [
+   "El propósito es para qué el emisor escribe o usa un recurso: informar, persuadir, explicar, ejemplificar, contrastar, criticar, introducir un tema. Se pregunta con «¿con qué propósito…?» o «¿qué función cumple…?».",
+   "Para responder, relaciona el fragmento con lo que viene antes y después: un ejemplo suele ilustrar la idea anterior; una anécdota inicial suele introducir el tema; una cita de autoridad, respaldar una afirmación."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Verbos de propósito",
+   "body": "Ilustrar o ejemplificar, introducir, contrastar, concluir, justificar, refutar, describir, advertir. La alternativa correcta combina el verbo adecuado con el contenido correcto."
+  },
+  "keyIdeas": [
+   "Propósito = intención, no contenido.",
+   "Mira el lugar del fragmento en el texto (inicio, desarrollo, cierre).",
+   "Revisa los conectores que lo rodean."
+  ],
+  "method": [
+   "Ubica el fragmento y lee qué hay antes y después.",
+   "Pregúntate qué hace ese fragmento por la idea vecina (la ilustra, la contradice, la introduce).",
+   "Elige la alternativa cuyo verbo y contenido coincidan con esa relación."
+  ],
+  "traps": [
+   "Elegir una alternativa que resume el fragmento en vez de explicar para qué está.",
+   "Acertar el verbo pero no el contenido (ilustrar, sí, pero otra idea)."
+  ]
+ },
+ "cl-inferencia": {
+  "theory": [
+   "Inferir es obtener una conclusión que no está escrita pero que se deduce necesariamente de lo que sí lo está. Una buena inferencia se puede justificar con datos del texto.",
+   "Las relaciones entre ideas (causa–efecto, problema–solución, contraste, comparación) suelen marcarse con conectores: «porque», «por lo tanto», «sin embargo», «en cambio», «del mismo modo»."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Conectores frecuentes",
+   "body": "Causa: porque, ya que, debido a. Consecuencia: por lo tanto, así, en consecuencia. Contraste: sin embargo, pero, no obstante, en cambio. Adición: además, asimismo."
+  },
+  "keyIdeas": [
+   "La inferencia correcta se apoya en el texto, no en suposiciones.",
+   "Descarta alternativas que exageran o generalizan.",
+   "El conector revela la relación lógica."
+  ],
+  "method": [
+   "Reúne los datos del texto relacionados con la pregunta.",
+   "Pregúntate qué se sigue necesariamente de ellos.",
+   "Elige la alternativa que puedas justificar con una cita."
+  ],
+  "traps": [
+   "Elegir una conclusión posible, pero no necesaria.",
+   "Confundir causa con consecuencia."
+  ]
+ },
+ "cl-literario": {
+  "theory": [
+   "En los textos literarios se pregunta por el narrador (protagonista, testigo u omnisciente), los personajes (qué los caracteriza según lo que hacen y dicen), el conflicto, el ambiente y el lenguaje figurado.",
+   "El lenguaje figurado dice algo distinto de su sentido literal: la comparación usa «como», la metáfora identifica dos elementos, la personificación atribuye rasgos humanos a cosas o animales y la hipérbole exagera."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Figuras frecuentes",
+   "body": "Comparación: «sonó como una respiración». Metáfora: «la ciudad es un hormiguero». Personificación: «el viento susurraba». Hipérbole: «te lo dije mil veces»."
+  },
+  "keyIdeas": [
+   "Caracteriza a un personaje por sus acciones y palabras.",
+   "El narrador en primera persona solo conoce lo que vive.",
+   "Interpreta la figura según el contexto del relato."
+  ],
+  "method": [
+   "Identifica quién narra y desde qué perspectiva.",
+   "Reúne las acciones y palabras del personaje o el contexto de la figura.",
+   "Elige la interpretación que se sostiene en todo el texto."
+  ],
+  "traps": [
+   "Atribuir al narrador ideas de un personaje.",
+   "Interpretar literalmente una expresión figurada."
+  ]
+ },
+ "cl-multimodal": {
+  "theory": [
+   "Infografías, tablas, afiches y gráficos combinan texto e imagen. La información se organiza en bloques, y la relación entre ellos (títulos, flechas, colores) también comunica.",
+   "Lee primero el título y las etiquetas, luego los datos. Las preguntas suelen pedir integrar información de dos partes del texto o reconocer qué aporta un elemento visual."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Orden de lectura",
+   "body": "Título → subtítulos y leyendas → datos destacados → notas y fuentes. Pregunta: ¿qué relación muestra el gráfico o la imagen con el texto?"
+  },
+  "keyIdeas": [
+   "El título dice qué representa el gráfico.",
+   "Fíjate en las unidades y en la fuente.",
+   "Integra la información de dos bloques cuando la pregunta lo pide."
+  ],
+  "method": [
+   "Identifica el tema y la organización de la infografía.",
+   "Ubica los bloques relevantes para la pregunta.",
+   "Integra la información y contrasta con las alternativas."
+  ],
+  "traps": [
+   "Leer un dato de la columna o fila equivocada.",
+   "Ignorar las notas o la fuente, que pueden cambiar la interpretación."
+  ]
+ },
+ "cl-argumentos": {
+  "theory": [
+   "En un texto argumentativo, la tesis es la postura del emisor y los argumentos son las razones que la sostienen. Se pregunta qué afirmación apoya o debilita la tesis, qué estrategia usa el emisor o si un argumento es pertinente.",
+   "Un dato debilita una tesis si muestra que su razón principal es falsa o que su conclusión no se sigue; la refuerza si aporta evidencia a favor de esa misma razón."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Estrategias argumentativas",
+   "body": "Ejemplificación, cita de autoridad, datos o estadísticas, analogía, concesión («es cierto que… pero…»), contraargumentación y apelación a valores."
+  },
+  "keyIdeas": [
+   "Primero identifica la tesis; después evalúa cada alternativa contra ella.",
+   "La concesión reconoce algo del adversario antes de refutarlo.",
+   "«Debilita» exige que el dato afecte directamente el argumento central."
+  ],
+  "method": [
+   "Formula la tesis del emisor en una oración.",
+   "Identifica el argumento central que la sostiene.",
+   "Evalúa qué alternativa afecta (apoya o debilita) directamente ese argumento."
+  ],
+  "traps": [
+   "Elegir una alternativa sobre el tema que no toca el argumento central.",
+   "Confundir la opinión del emisor con la de una voz citada."
+  ]
+ },
+ "cl-forma": {
+  "theory": [
+   "Evaluar la forma es juzgar si un recurso (un título, una imagen, una cita, un ejemplo, el registro) es adecuado para el propósito y el público del texto.",
+   "Estas preguntas piden aplicar un criterio: un recurso es pertinente si contribuye al propósito; es adecuado si corresponde al destinatario y la situación."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Criterios",
+   "body": "Pertinencia: ¿aporta al propósito? Adecuación: ¿corresponde al destinatario y la situación? Coherencia: ¿es consistente con el resto del texto?"
+  },
+  "keyIdeas": [
+   "Identifica primero el propósito y el destinatario.",
+   "Juzga el recurso por su aporte, no por tu gusto.",
+   "Un título adecuado anticipa el tema y la intención."
+  ],
+  "method": [
+   "Identifica el propósito del texto y su destinatario.",
+   "Describe qué aporta el recurso evaluado.",
+   "Elige la alternativa que justifica el juicio con ese aporte."
+  ],
+  "traps": [
+   "Elegir una valoración subjetiva sin respaldo en el texto.",
+   "Ignorar el destinatario al evaluar el registro."
+  ]
+ },
+ "cs-celula": {
+  "theory": [
+   "La célula es la unidad estructural y funcional de los seres vivos. Las procariontes (bacterias) no tienen núcleo ni organelos con membrana; las eucariontes (animales, plantas, hongos, protistas) tienen núcleo y organelos membranosos.",
+   "La membrana plasmática es una bicapa de fosfolípidos con proteínas que regula el paso de sustancias. El transporte pasivo (difusión, osmosis) ocurre a favor del gradiente y sin gasto de ATP; el activo, en contra del gradiente y con gasto de ATP."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Organelos y función",
+   "body": "Núcleo: material genético. Mitocondria: respiración celular (ATP). Cloroplasto: fotosíntesis (solo vegetales). Ribosoma: síntesis de proteínas. Retículo endoplasmático y aparato de Golgi: síntesis, modificación y transporte. Lisosoma: digestión celular."
+  },
+  "keyIdeas": [
+   "Célula vegetal: pared celular, cloroplastos y vacuola grande.",
+   "Osmosis: el agua pasa hacia el medio más concentrado en solutos.",
+   "Los virus no son células."
+  ],
+  "method": [
+   "Identifica el tipo de célula o estructura involucrada.",
+   "Relaciona estructura con función.",
+   "En transporte, determina el sentido del gradiente y si hay gasto de energía."
+  ],
+  "traps": [
+   "Atribuir cloroplastos o pared celular a células animales.",
+   "Pensar que en la osmosis se mueve el soluto (se mueve el agua)."
+  ]
+ },
+ "cs-biomoleculas": {
+  "theory": [
+   "Las biomoléculas orgánicas son carbohidratos (energía), lípidos (reserva energética y membranas), proteínas (estructura, enzimas, transporte, defensa) y ácidos nucleicos (información genética).",
+   "Las enzimas son proteínas que aceleran reacciones al disminuir la energía de activación; no se consumen y actúan sobre un sustrato específico. Su actividad depende de la temperatura y el pH: lejos de su óptimo se desnaturalizan.",
+   "La fotosíntesis transforma energía lumínica en energía química (glucosa) y libera $\\mathrm{O_2}$ proveniente del agua. La respiración celular oxida la glucosa para producir ATP en las mitocondrias."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Ecuaciones globales",
+   "body": "$$\\text{Fotosíntesis: } 6\\,\\mathrm{CO_2}+6\\,\\mathrm{H_2O}\\xrightarrow{\\text{luz}}\\mathrm{C_6H_{12}O_6}+6\\,\\mathrm{O_2}$$\n\n$$\\text{Respiración: } \\mathrm{C_6H_{12}O_6}+6\\,\\mathrm{O_2}\\rightarrow 6\\,\\mathrm{CO_2}+6\\,\\mathrm{H_2O}+\\text{ATP}$$"
+  },
+  "keyIdeas": [
+   "Enzima: específica, reutilizable, sensible a temperatura y pH.",
+   "El $\\mathrm{O_2}$ de la fotosíntesis proviene del agua.",
+   "Fotosíntesis y respiración son procesos complementarios."
+  ],
+  "method": [
+   "Identifica la biomolécula o el proceso.",
+   "Recuerda reactantes, productos y lugar donde ocurre.",
+   "En gráficos de actividad enzimática, ubica el óptimo y explica la caída por desnaturalización."
+  ],
+  "traps": [
+   "Decir que las enzimas se consumen en la reacción.",
+   "Creer que las plantas no respiran (respiran siempre; fotosintetizan con luz)."
+  ]
+ },
+ "cs-genetica": {
+  "theory": [
+   "La mitosis produce dos células hijas idénticas a la madre (crecimiento y reparación). La meiosis produce cuatro células haploides genéticamente distintas (gametos) e incluye el entrecruzamiento, fuente de variabilidad.",
+   "Un gen tiene variantes llamadas alelos. Un alelo dominante se expresa en heterocigosis; uno recesivo solo en homocigosis. El cuadro de Punnett permite calcular proporciones de genotipos y fenotipos.",
+   "El ADN se replica antes de la división y se transcribe a ARN, que se traduce a proteínas en los ribosomas."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Proporciones mendelianas",
+   "body": "$Aa\\times Aa \\Rightarrow$ genotipos $1\\,AA : 2\\,Aa : 1\\,aa$; fenotipos $3$ dominante $: 1$ recesivo.\n\n$Aa\\times aa \\Rightarrow 1\\,Aa : 1\\,aa$. Humanos: $2n=46$ (células somáticas), $n=23$ (gametos)."
+  },
+  "keyIdeas": [
+   "Mitosis: 2 células, mismo número de cromosomas.",
+   "Meiosis: 4 células, la mitad de cromosomas.",
+   "Rasgo recesivo: solo se expresa en $aa$."
+  ],
+  "method": [
+   "Escribe los genotipos de los progenitores.",
+   "Arma el cuadro de Punnett con sus gametos.",
+   "Cuenta las combinaciones que cumplen lo pedido."
+  ],
+  "traps": [
+   "Confundir genotipo con fenotipo.",
+   "Atribuir a la mitosis la variabilidad genética."
+  ]
+ },
+ "cs-evolucion": {
+  "theory": [
+   "La teoría de la evolución por selección natural (Darwin y Wallace) explica que en una población hay variabilidad heredable; los individuos con características ventajosas en un ambiente dejan más descendencia y esas características se vuelven más frecuentes.",
+   "Las evidencias de la evolución incluyen el registro fósil, las estructuras homólogas, la embriología comparada y las semejanzas en el ADN."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Selección natural",
+   "body": "Variabilidad $\\rightarrow$ presión del ambiente $\\rightarrow$ supervivencia y reproducción diferencial $\\rightarrow$ cambio en la frecuencia de los rasgos en la población."
+  },
+  "keyIdeas": [
+   "Evolucionan las poblaciones, no los individuos.",
+   "Las mutaciones ocurren al azar; la selección no es azarosa.",
+   "Lamarck (caracteres adquiridos) fue descartado."
+  ],
+  "method": [
+   "Identifica la variación presente en la población.",
+   "Determina qué presión ambiental favorece a qué variante.",
+   "Concluye cómo cambia la frecuencia del rasgo en generaciones."
+  ],
+  "traps": [
+   "Pensar que el individuo cambia «para adaptarse».",
+   "Explicar con herencia de caracteres adquiridos."
+  ]
+ },
+ "cs-sistemas": {
+  "theory": [
+   "La homeostasis es la mantención de un medio interno estable (temperatura, glicemia, agua). Se logra principalmente por retroalimentación negativa: el cambio de una variable desencadena una respuesta que lo revierte.",
+   "El sistema nervioso coordina respuestas rápidas mediante impulsos eléctricos y neurotransmisores; el endocrino, respuestas más lentas y duraderas mediante hormonas transportadas por la sangre. El sistema inmune defiende de patógenos con respuestas innatas y adaptativas (anticuerpos, memoria)."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Regulación de la glicemia",
+   "body": "Glicemia alta $\\rightarrow$ páncreas libera **insulina** $\\rightarrow$ las células captan glucosa y el hígado la almacena como glucógeno $\\rightarrow$ glicemia baja.\n\nGlicemia baja $\\rightarrow$ páncreas libera **glucagón** $\\rightarrow$ el hígado libera glucosa $\\rightarrow$ glicemia sube."
+  },
+  "keyIdeas": [
+   "Insulina baja la glicemia; glucagón la sube.",
+   "Las vacunas generan memoria inmunológica sin enfermar.",
+   "Retroalimentación negativa: la respuesta se opone al cambio."
+  ],
+  "method": [
+   "Identifica la variable regulada y su cambio.",
+   "Identifica el órgano sensor y la hormona o señal liberada.",
+   "Describe el efecto que devuelve la variable a su valor normal."
+  ],
+  "traps": [
+   "Confundir los efectos de insulina y glucagón.",
+   "Creer que los antibióticos sirven contra virus."
+  ]
+ },
+ "cs-ecologia": {
+  "theory": [
+   "En un ecosistema la energía fluye en una sola dirección: de los productores a los consumidores, y en cada nivel trófico se pierde la mayor parte como calor (aproximadamente solo el 10 % pasa al siguiente). La materia, en cambio, se recicla en ciclos (carbono, nitrógeno, agua).",
+   "Las relaciones entre especies incluyen depredación, competencia, mutualismo, comensalismo y parasitismo. El tamaño de una población depende de natalidad, mortalidad, inmigración y emigración."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Flujo de energía",
+   "body": "Productores $\\rightarrow$ consumidores primarios $\\rightarrow$ secundarios $\\rightarrow$ terciarios. Regla del 10 %: $E_{n+1}\\approx 0{,}1\\cdot E_n$.\n\nLos descomponedores devuelven los nutrientes al suelo."
+  },
+  "keyIdeas": [
+   "La energía fluye; la materia se recicla.",
+   "Mutualismo: ambas especies se benefician.",
+   "Las cadenas tróficas rara vez superan cuatro o cinco niveles."
+  ],
+  "method": [
+   "Ubica cada organismo en su nivel trófico.",
+   "Aplica la regla del 10 % o sigue el ciclo de materia correspondiente.",
+   "Predice el efecto de un cambio en una población sobre las demás."
+  ],
+  "traps": [
+   "Decir que la energía se recicla.",
+   "Confundir comensalismo con mutualismo."
+  ]
+ },
+ "cs-ondas": {
+  "theory": [
+   "Una onda transporta energía sin transportar materia. Se caracteriza por su frecuencia $f$ (oscilaciones por segundo, en Hz), su período $T=\\frac{1}{f}$, su longitud de onda $\\lambda$ y su rapidez $v=\\lambda f$.",
+   "Las ondas mecánicas, como el sonido, necesitan un medio; las electromagnéticas, como la luz, se propagan también en el vacío. Al cambiar de medio, la frecuencia se mantiene y cambian la rapidez y la longitud de onda.",
+   "En el sonido, la frecuencia determina el tono (agudo o grave) y la amplitud, la intensidad. El oído humano percibe aproximadamente entre 20 Hz y 20 000 Hz."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Relaciones",
+   "body": "$$v=\\lambda\\,f \\qquad T=\\frac{1}{f}$$\n\nRapidez del sonido: unos 340 m/s en el aire, mayor en líquidos y aún mayor en sólidos."
+  },
+  "keyIdeas": [
+   "Al cambiar de medio, la frecuencia no cambia.",
+   "El sonido no se propaga en el vacío.",
+   "Tono depende de la frecuencia; intensidad, de la amplitud."
+  ],
+  "method": [
+   "Identifica qué magnitudes se conocen ($v$, $f$, $\\lambda$, $T$).",
+   "Aplica $v=\\lambda f$ despejando la incógnita.",
+   "Si hay cambio de medio, mantén la frecuencia constante."
+  ],
+  "traps": [
+   "Pensar que la frecuencia cambia al pasar a otro medio.",
+   "Confundir tono con intensidad."
+  ]
+ },
+ "cs-luz": {
+  "theory": [
+   "La luz se propaga en línea recta y a unos $3\\cdot 10^8$ m/s en el vacío. Al incidir en una superficie puede reflejarse (el ángulo de incidencia es igual al de reflexión) o refractarse al cambiar de medio, desviándose por el cambio de rapidez.",
+   "Los espejos planos forman imágenes virtuales del mismo tamaño. Las lentes convergentes concentran la luz y pueden formar imágenes reales; las divergentes la dispersan y forman imágenes virtuales más pequeñas."
+  ],
+  "box": {
+   "kind": "ley",
+   "title": "Leyes",
+   "body": "Reflexión: $\\theta_i=\\theta_r$. Refracción: al pasar a un medio donde la luz es más lenta, el rayo se acerca a la normal.\n\nÍndice de refracción: $n=\\dfrac{c}{v}$."
+  },
+  "keyIdeas": [
+   "Los ángulos se miden respecto de la normal.",
+   "El arcoíris se explica por refracción y dispersión.",
+   "La miopía se corrige con lentes divergentes."
+  ],
+  "method": [
+   "Dibuja la normal a la superficie.",
+   "Aplica la ley de reflexión o el criterio de refracción.",
+   "Determina el tipo de imagen según el espejo o la lente."
+  ],
+  "traps": [
+   "Medir los ángulos respecto de la superficie y no de la normal.",
+   "Pensar que en la refracción cambia la frecuencia."
+  ]
+ },
+ "cs-cinematica": {
+  "theory": [
+   "La cinemática describe el movimiento. La rapidez media es la distancia recorrida dividida por el tiempo; la velocidad considera además la dirección. La aceleración mide cuánto cambia la velocidad por unidad de tiempo.",
+   "En el movimiento rectilíneo uniforme (MRU) la velocidad es constante; en el uniformemente acelerado (MRUA), la aceleración es constante. En un gráfico posición–tiempo la pendiente es la velocidad; en uno velocidad–tiempo, la pendiente es la aceleración y el área bajo la curva, el desplazamiento."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Ecuaciones",
+   "body": "$$\\text{MRU: } x=x_0+vt \\qquad \\text{MRUA: } v=v_0+at,\\quad x=x_0+v_0t+\\tfrac{1}{2}at^2$$"
+  },
+  "keyIdeas": [
+   "Pendiente de $x$–$t$ = velocidad.",
+   "Área bajo $v$–$t$ = desplazamiento.",
+   "72 km/h = 20 m/s (divide por 3,6)."
+  ],
+  "method": [
+   "Identifica el tipo de movimiento y los datos con sus unidades.",
+   "Elige la ecuación que relaciona datos e incógnita.",
+   "En gráficos, usa la pendiente o el área según lo pedido."
+  ],
+  "traps": [
+   "Mezclar km/h con m/s.",
+   "Olvidar el factor $\\frac{1}{2}$ en $\\frac{1}{2}at^2$."
+  ]
+ },
+ "cs-dinamica": {
+  "theory": [
+   "Primera ley (inercia): si la fuerza neta es cero, un cuerpo mantiene su estado de reposo o de velocidad constante. Segunda ley: $F_{\\text{neta}}=ma$. Tercera ley: a toda acción corresponde una reacción de igual magnitud y sentido opuesto, aplicada sobre el **otro** cuerpo.",
+   "El peso es la fuerza de gravedad ($P=mg$) y depende del lugar; la masa no. El roce se opone al deslizamiento. La presión es fuerza por unidad de área, y la densidad, masa por unidad de volumen."
+  ],
+  "box": {
+   "kind": "ley",
+   "title": "Fórmulas",
+   "body": "$$F_{\\text{neta}}=m\\,a \\qquad P=m\\,g \\qquad p=\\frac{F}{A} \\qquad \\rho=\\frac{m}{V}$$"
+  },
+  "keyIdeas": [
+   "Acción y reacción actúan sobre cuerpos distintos: no se anulan.",
+   "Velocidad constante $\\Rightarrow$ fuerza neta nula.",
+   "En la Luna cambia el peso, no la masa."
+  ],
+  "method": [
+   "Dibuja las fuerzas que actúan sobre el cuerpo (diagrama de cuerpo libre).",
+   "Calcula la fuerza neta sumando con signo.",
+   "Aplica $F=ma$ o la ley pertinente."
+  ],
+  "traps": [
+   "Creer que se necesita una fuerza para mantener la velocidad constante.",
+   "Sumar acción y reacción como si actuaran sobre el mismo cuerpo."
+  ]
+ },
+ "cs-energia": {
+  "theory": [
+   "La energía mecánica es la suma de la cinética ($\\frac{1}{2}mv^2$) y la potencial gravitatoria ($mgh$). Sin roce se conserva; con roce, parte se transforma en calor.",
+   "El trabajo de una fuerza es $W=Fd\\cos\\theta$ y la potencia, el trabajo por unidad de tiempo. El calor es energía que se transfiere por diferencia de temperatura (conducción, convección, radiación); la temperatura mide la agitación de las partículas."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$E_c=\\tfrac{1}{2}mv^2 \\qquad E_p=mgh \\qquad W=F\\,d \\qquad P=\\frac{W}{t} \\qquad Q=m\\,c\\,\\Delta T$$"
+  },
+  "keyIdeas": [
+   "Sin roce: $E_c+E_p$ constante.",
+   "Calor y temperatura no son lo mismo.",
+   "El agua tiene un calor específico alto: $1\\ \\text{cal}/(\\text{g}\\cdot{}^\\circ\\text{C})$."
+  ],
+  "method": [
+   "Identifica las formas de energía al inicio y al final.",
+   "Plantea la conservación o el balance con pérdidas.",
+   "Despeja la incógnita y revisa las unidades."
+  ],
+  "traps": [
+   "Olvidar elevar la rapidez al cuadrado en la energía cinética.",
+   "Confundir calor con temperatura."
+  ]
+ },
+ "cs-electricidad": {
+  "theory": [
+   "La corriente eléctrica es el flujo de carga; se mide en amperes. La ley de Ohm relaciona voltaje, corriente y resistencia: $V=IR$. La potencia eléctrica es $P=VI$.",
+   "En serie, la corriente es la misma en todas las resistencias y los voltajes se suman; en paralelo, el voltaje es el mismo y las corrientes se suman. Una corriente genera un campo magnético, y un campo magnético variable induce corriente (base de generadores y transformadores)."
+  ],
+  "box": {
+   "kind": "ley",
+   "title": "Fórmulas",
+   "body": "$$V=I\\,R \\qquad P=V\\,I \\qquad R_{\\text{serie}}=R_1+R_2 \\qquad \\frac{1}{R_{\\text{paralelo}}}=\\frac{1}{R_1}+\\frac{1}{R_2}$$"
+  },
+  "keyIdeas": [
+   "Las casas conectan los artefactos en paralelo (mismo voltaje).",
+   "Cargas de igual signo se repelen.",
+   "La resistencia equivalente en paralelo es menor que la menor de ellas."
+  ],
+  "method": [
+   "Identifica si las resistencias están en serie o en paralelo.",
+   "Calcula la resistencia equivalente y la corriente total.",
+   "Aplica Ohm a la resistencia pedida."
+  ],
+  "traps": [
+   "Sumar resistencias en paralelo como si estuvieran en serie.",
+   "Confundir corriente con voltaje."
+  ]
+ },
+ "cs-atomo": {
+  "theory": [
+   "El átomo tiene un núcleo con protones y neutrones y electrones a su alrededor. El número atómico $Z$ es la cantidad de protones; el número másico $A$, la suma de protones y neutrones. Los isótopos tienen igual $Z$ y distinto $A$.",
+   "La configuración electrónica distribuye los electrones en niveles y subniveles. El último nivel ocupado indica el período, y los electrones de valencia, el grupo. En la tabla, el radio atómico aumenta hacia abajo y hacia la izquierda; la electronegatividad, hacia arriba y hacia la derecha."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Relaciones",
+   "body": "$$n=A-Z \\qquad e^-=Z-\\text{carga}$$\n\nModelos: Dalton (esfera indivisible) → Thomson (electrones incrustados) → Rutherford (núcleo pequeño y denso) → Bohr (niveles de energía)."
+  },
+  "keyIdeas": [
+   "Un catión perdió electrones; un anión los ganó.",
+   "Isótopos: mismo elemento, distinta masa.",
+   "Grupo 1: metales alcalinos; grupo 17: halógenos; grupo 18: gases nobles."
+  ],
+  "method": [
+   "Lee $Z$ y $A$ del símbolo y la carga.",
+   "Calcula protones, neutrones y electrones.",
+   "Ubica el elemento con su configuración electrónica."
+  ],
+  "traps": [
+   "Tomar $A$ como número de neutrones.",
+   "Olvidar ajustar los electrones según la carga del ion."
+  ]
+ },
+ "cs-enlace": {
+  "theory": [
+   "El enlace iónico se forma por transferencia de electrones entre un metal y un no metal (gran diferencia de electronegatividad); el covalente, por compartición de electrones entre no metales. El metálico mantiene unidos a los átomos de un metal.",
+   "La geometría molecular depende de los pares de electrones alrededor del átomo central, y la polaridad de la molécula, de la polaridad de sus enlaces y de su geometría."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Tipos de enlace",
+   "body": "Iónico: $\\mathrm{NaCl}$. Covalente polar: $\\mathrm{H_2O}$. Covalente apolar: $\\mathrm{O_2}$, $\\mathrm{CH_4}$ (molécula apolar).\n\nRegla del octeto: los átomos tienden a completar 8 electrones de valencia."
+  },
+  "keyIdeas": [
+   "Metal + no metal $\\Rightarrow$ iónico.",
+   "Los compuestos iónicos conducen la electricidad fundidos o disueltos.",
+   "Una molécula con enlaces polares puede ser apolar si es simétrica ($\\mathrm{CO_2}$)."
+  ],
+  "method": [
+   "Clasifica los elementos como metales o no metales.",
+   "Decide el tipo de enlace.",
+   "Deduce propiedades (conductividad, solubilidad, puntos de fusión)."
+  ],
+  "traps": [
+   "Suponer que toda molécula con enlaces polares es polar.",
+   "Confundir enlace iónico con covalente polar."
+  ]
+ },
+ "cs-organica": {
+  "theory": [
+   "La química orgánica estudia los compuestos del carbono. El carbono forma cuatro enlaces y puede unirse a otros carbonos formando cadenas y anillos. Su hibridación determina la geometría: $sp^3$ (enlaces simples, tetraédrica), $sp^2$ (un doble enlace, plana) y $sp$ (triple enlace, lineal).",
+   "Los grupos funcionales determinan las propiedades: alcoholes ($-\\mathrm{OH}$), aldehídos ($-\\mathrm{CHO}$), cetonas ($-\\mathrm{CO}-$), ácidos carboxílicos ($-\\mathrm{COOH}$), éteres ($-\\mathrm{O}-$), ésteres, aminas y amidas. Los isómeros tienen igual fórmula molecular y distinta estructura."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Grupos funcionales",
+   "body": "Alcohol: $\\mathrm{R{-}OH}$. Aldehído: $\\mathrm{R{-}CHO}$. Cetona: $\\mathrm{R{-}CO{-}R'}$. Ácido: $\\mathrm{R{-}COOH}$. Éter: $\\mathrm{R{-}O{-}R'}$. Éster: $\\mathrm{R{-}COO{-}R'}$. Amina: $\\mathrm{R{-}NH_2}$."
+  },
+  "keyIdeas": [
+   "Cada doble enlace aporta un enlace pi ($\\pi$).",
+   "Carbono con doble enlace: $sp^2$.",
+   "Alcanos: solo enlaces simples ($\\mathrm{C_nH_{2n+2}}$)."
+  ],
+  "method": [
+   "Identifica el grupo funcional o los tipos de enlace.",
+   "Cuenta carbonos y enlaces múltiples.",
+   "Nombra o clasifica según las reglas IUPAC."
+  ],
+  "traps": [
+   "Confundir aldehído (carbonilo en el extremo) con cetona (carbonilo interno).",
+   "Contar mal los enlaces pi."
+  ]
+ },
+ "cs-reacciones": {
+  "theory": [
+   "En una reacción química los átomos se reordenan: la masa se conserva (ley de Lavoisier), por eso la ecuación debe estar balanceada. Los coeficientes indican la proporción en moles.",
+   "El mol es la cantidad de sustancia que contiene $6{,}02\\cdot 10^{23}$ partículas. La masa molar convierte gramos en moles. El reactivo limitante es el que se consume primero y determina la cantidad de producto."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Relaciones",
+   "body": "$$n=\\frac{m}{M} \\qquad N=n\\cdot 6{,}02\\cdot 10^{23} \\qquad \\text{gas ideal: } PV=nRT$$\n\nA condiciones normales, 1 mol de gas ocupa 22,4 L."
+  },
+  "keyIdeas": [
+   "Balancea antes de calcular.",
+   "Los coeficientes relacionan moles, no gramos.",
+   "Masa total de reactantes = masa total de productos."
+  ],
+  "method": [
+   "Balancea la ecuación.",
+   "Convierte los datos a moles.",
+   "Usa la proporción de coeficientes y vuelve a la unidad pedida."
+  ],
+  "traps": [
+   "Usar las proporciones de coeficientes directamente con gramos.",
+   "Olvidar balancear la ecuación."
+  ]
+ },
+ "cs-disoluciones": {
+  "theory": [
+   "Una disolución es una mezcla homogénea de soluto y disolvente. Su concentración puede expresarse en porcentaje masa/masa, masa/volumen o en molaridad (moles de soluto por litro de disolución). Al diluir, la cantidad de soluto se mantiene.",
+   "El pH mide la acidez: $\\mathrm{pH}=-\\log[\\mathrm{H^+}]$. A 25 °C, pH menor que 7 es ácido, igual a 7 neutro y mayor que 7 básico. Las propiedades coligativas (descenso del punto de congelación, aumento del punto de ebullición) dependen de la cantidad de partículas de soluto."
+  ],
+  "box": {
+   "kind": "formula",
+   "title": "Fórmulas",
+   "body": "$$M=\\frac{n_{\\text{soluto}}}{V_{\\text{disolución}}\\,(\\text{L})} \\qquad C_1V_1=C_2V_2 \\qquad \\mathrm{pH}=-\\log[\\mathrm{H^+}] \\qquad \\mathrm{pH}+\\mathrm{pOH}=14$$"
+  },
+  "keyIdeas": [
+   "Diluir no cambia los moles de soluto.",
+   "Cada unidad de pH es un factor 10 en $[\\mathrm{H^+}]$.",
+   "Agregar sal al agua baja su punto de congelación."
+  ],
+  "method": [
+   "Convierte los datos a moles y litros.",
+   "Aplica la fórmula de concentración o de dilución.",
+   "Para pH, usa el logaritmo y clasifica la disolución."
+  ],
+  "traps": [
+   "Usar mililitros en vez de litros en la molaridad.",
+   "Pensar que un pH 4 es el doble de ácido que uno 5 (es 10 veces)."
+  ]
+ },
+ "cs-habilidades": {
+  "theory": [
+   "Muchas preguntas de Ciencias no evalúan un contenido, sino el razonamiento experimental. La variable independiente es la que el investigador manipula; la dependiente, la que mide como respuesta; las controladas, las que se mantienen constantes.",
+   "Una hipótesis es una respuesta tentativa y comprobable a una pregunta de investigación. Una conclusión se deriva de los resultados obtenidos y no debe ir más allá de ellos. Una teoría explica un conjunto amplio de fenómenos; una ley describe una regularidad, a menudo matemática."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Esquema de una investigación",
+   "body": "Observación $\\rightarrow$ pregunta de investigación $\\rightarrow$ hipótesis $\\rightarrow$ diseño experimental (variables y grupo control) $\\rightarrow$ resultados $\\rightarrow$ conclusión."
+  },
+  "keyIdeas": [
+   "Independiente: lo que yo cambio. Dependiente: lo que mido.",
+   "Una conclusión solo puede afirmar lo que los datos muestran.",
+   "El grupo control permite comparar el efecto de la variable."
+  ],
+  "method": [
+   "Identifica qué se cambia a propósito y qué se mide.",
+   "Revisa qué factores se mantienen constantes.",
+   "Evalúa si la conclusión se sigue de los datos, sin generalizar."
+  ],
+  "traps": [
+   "Confundir la variable que se mide con la que se manipula.",
+   "Elegir una conclusión que generaliza más allá de los datos."
+  ]
+ },
+ "hi-revoluciones": {
+  "theory": [
+   "La Revolución Francesa (1789) puso fin al Antiguo Régimen: reemplazó la sociedad estamental y la monarquía absoluta por los principios de soberanía nacional, igualdad ante la ley y derechos individuales. Sus ideas se difundieron por Europa y América.",
+   "La Revolución Industrial, iniciada en Inglaterra en la segunda mitad del siglo XVIII, mecanizó la producción (máquina de vapor, fábricas), aceleró la urbanización y originó el proletariado y la burguesía industrial. En el siglo XIX se expandieron el liberalismo, el nacionalismo (unificaciones de Italia y Alemania) y el imperialismo europeo en África y Asia."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Ideas clave del liberalismo",
+   "body": "Soberanía nacional, separación de poderes, derechos individuales (libertad, propiedad, igualdad ante la ley), constitución escrita y libre mercado."
+  },
+  "keyIdeas": [
+   "1789: fin del Antiguo Régimen en Francia.",
+   "Industrialización $\\rightarrow$ urbanización y cuestión obrera.",
+   "Imperialismo: reparto de África en la Conferencia de Berlín (1884–1885)."
+  ],
+  "method": [
+   "Ubica el proceso en el tiempo y el espacio.",
+   "Identifica sus causas (políticas, económicas, sociales, ideológicas).",
+   "Relaciona sus consecuencias con procesos posteriores."
+  ],
+  "traps": [
+   "Atribuir a la Revolución Francesa el sufragio universal femenino.",
+   "Confundir liberalismo político con socialismo."
+  ]
+ },
+ "hi-chile-xix": {
+  "theory": [
+   "La crisis de la monarquía española (invasión napoleónica, 1808) llevó a formar la Primera Junta Nacional de Gobierno (1810). Tras la Patria Vieja, la Reconquista y la Patria Nueva, la independencia se proclamó en 1818.",
+   "Luego de los ensayos constitucionales, la Constitución de 1833 organizó un Estado centralizado y presidencialista. En la segunda mitad del siglo, Chile expandió su territorio: ocupación de la Araucanía, Guerra del Pacífico (1879–1884), que incorporó Tarapacá y Antofagasta e inició el ciclo del salitre, e incorporación de Rapa Nui (1888)."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Ciclo del salitre",
+   "body": "Exportación de salitre $\\rightarrow$ impuestos de exportación $\\rightarrow$ grandes ingresos fiscales $\\rightarrow$ obras públicas, educación y ferrocarriles. Gran parte de las oficinas eran de capitales extranjeros."
+  },
+  "keyIdeas": [
+   "1810: Primera Junta, en nombre de Fernando VII.",
+   "1833: Constitución de orden conservador y presidencialista.",
+   "Guerra del Pacífico $\\rightarrow$ riqueza salitrera para el Estado."
+  ],
+  "method": [
+   "Ordena los hechos y ubica el período de la república.",
+   "Relaciona el hecho con su causa y sus consecuencias.",
+   "Distingue lo político, lo económico y lo territorial."
+  ],
+  "traps": [
+   "Creer que la Junta de 1810 declaró la independencia.",
+   "Pensar que el Estado explotó directamente las salitreras."
+  ]
+ },
+ "hi-cuestion-social": {
+  "theory": [
+   "Entre fines del siglo XIX y comienzos del XX, la urbanización y las duras condiciones laborales generaron la cuestión social: hacinamiento en conventillos, enfermedades, bajos salarios y ausencia de leyes laborales. Surgieron mancomunales, sociedades de resistencia, sindicatos y partidos obreros.",
+   "El período parlamentario (1891–1925) mostró un Congreso dominante y gobiernos inestables. La crisis se resolvió con las leyes sociales de 1924 y la Constitución de 1925, que restableció el presidencialismo y separó la Iglesia del Estado."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Respuestas a la cuestión social",
+   "body": "Movimiento obrero (huelgas, organización), Iglesia (encíclica *Rerum Novarum*, 1891), Estado (leyes sociales de 1924) y partidos políticos de base popular."
+  },
+  "keyIdeas": [
+   "1907: matanza de la Escuela Santa María de Iquique.",
+   "1924: leyes sociales; 1925: nueva Constitución.",
+   "Conventillo = símbolo de la vivienda popular urbana."
+  ],
+  "method": [
+   "Identifica las condiciones de vida y trabajo descritas.",
+   "Relaciónalas con sus causas (urbanización, industrialización).",
+   "Reconoce las respuestas de los distintos actores."
+  ],
+  "traps": [
+   "Ubicar la cuestión social en la segunda mitad del siglo XX.",
+   "Confundir el período parlamentario con el presidencial."
+  ]
+ },
+ "hi-guerras": {
+  "theory": [
+   "La Primera Guerra Mundial (1914–1918) se explica por el imperialismo, el nacionalismo, la carrera armamentista y el sistema de alianzas. Terminó con el Tratado de Versalles (1919), que impuso duras condiciones a Alemania.",
+   "La crisis de 1929, iniciada con la caída de la bolsa de Nueva York, provocó desempleo masivo y favoreció el ascenso de regímenes totalitarios. La Segunda Guerra Mundial (1939–1945) terminó con la derrota del Eje, el uso de la bomba atómica y la creación de la ONU (1945)."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Multicausalidad de la Primera Guerra Mundial",
+   "body": "Causas estructurales: imperialismo, nacionalismo, paz armada, alianzas. Detonante: asesinato del archiduque Francisco Fernando en Sarajevo (1914)."
+  },
+  "keyIdeas": [
+   "Causa estructural $\\neq$ detonante.",
+   "La crisis de 1929 golpeó fuertemente a Chile por la caída de sus exportaciones.",
+   "1945: fin de la guerra y fundación de la ONU."
+  ],
+  "method": [
+   "Distingue causas de largo plazo y hechos detonantes.",
+   "Relaciona las consecuencias económicas con las políticas.",
+   "Ubica a Chile dentro del proceso mundial."
+  ],
+  "traps": [
+   "Presentar el detonante como la única causa de la guerra.",
+   "Confundir los bandos de ambas guerras."
+  ]
+ },
+ "hi-guerra-fria": {
+  "theory": [
+   "La Guerra Fría (1947–1991) enfrentó a Estados Unidos (capitalismo, democracia liberal) y la Unión Soviética (socialismo, economía planificada) sin guerra directa entre ambos. Se expresó en carreras armamentista y espacial, propaganda, alianzas militares (OTAN y Pacto de Varsovia) y conflictos indirectos (Corea, Vietnam).",
+   "En América Latina, la Revolución Cubana (1959) intensificó la influencia de la Guerra Fría: reformas, movimientos revolucionarios y, en varios países, dictaduras militares inspiradas en la doctrina de seguridad nacional."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Bloques",
+   "body": "Occidental: Estados Unidos, OTAN (1949), Plan Marshall. Oriental: URSS, Pacto de Varsovia (1955). Fin: caída del Muro de Berlín (1989) y disolución de la URSS (1991)."
+  },
+  "keyIdeas": [
+   "Guerra «fría»: sin enfrentamiento directo entre superpotencias.",
+   "1962: crisis de los misiles en Cuba.",
+   "1989: caída del Muro de Berlín."
+  ],
+  "method": [
+   "Identifica los bloques y su ideología.",
+   "Reconoce cómo se expresó el conflicto en cada región.",
+   "Relaciónalo con procesos de Chile y América Latina."
+  ],
+  "traps": [
+   "Describir la Guerra Fría como un enfrentamiento militar directo entre EE. UU. y la URSS."
+  ]
+ },
+ "hi-chile-xx": {
+  "theory": [
+   "Desde 1938 el Estado asumió un rol central en la economía mediante la industrialización por sustitución de importaciones (CORFO, 1939) y amplió derechos sociales. En los años sesenta se impulsaron reformas estructurales: reforma agraria, chilenización (1966) y nacionalización del cobre (1971).",
+   "La polarización política culminó con el golpe de Estado del 11 de septiembre de 1973. La dictadura militar violó sistemáticamente los derechos humanos e impuso un modelo económico neoliberal y la Constitución de 1980. El plebiscito de 1988 abrió la transición a la democracia, con la asunción de Patricio Aylwin en 1990."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Modelos económicos",
+   "body": "ISI (1938–1973): Estado empresario y protección arancelaria. Neoliberal (desde 1975): apertura comercial, privatizaciones y rol subsidiario del Estado."
+  },
+  "keyIdeas": [
+   "1939: CORFO, símbolo del Estado empresario.",
+   "1971: nacionalización del cobre, aprobada por unanimidad en el Congreso.",
+   "1988: triunfo del «No» en el plebiscito."
+  ],
+  "method": [
+   "Ubica el hecho en su período (Estado de compromiso, reformas, dictadura, transición).",
+   "Identifica el modelo económico y político vigente.",
+   "Relaciona continuidades y cambios entre períodos."
+  ],
+  "traps": [
+   "Confundir chilenización (1966) con nacionalización (1971) del cobre.",
+   "Atribuir la Constitución de 1980 a la transición."
+  ]
+ },
+ "hi-estado": {
+  "theory": [
+   "El Estado es la organización política de una población en un territorio, con poder soberano. La Constitución es la norma de mayor jerarquía: organiza los poderes y reconoce derechos.",
+   "En Chile, el Poder Ejecutivo lo ejerce el Presidente de la República; el Legislativo, el Congreso Nacional (Cámara de Diputadas y Diputados y Senado), y el Judicial, los tribunales encabezados por la Corte Suprema. Existen además órganos autónomos, como la Contraloría General de la República, el Banco Central, el Ministerio Público, el Tribunal Constitucional y el Servicio Electoral."
+  ],
+  "box": {
+   "kind": "mecanismo",
+   "title": "Formación de la ley",
+   "body": "Iniciativa (mensaje del Presidente o moción parlamentaria) $\\rightarrow$ discusión y aprobación en ambas cámaras $\\rightarrow$ sanción (o veto) del Presidente $\\rightarrow$ promulgación $\\rightarrow$ publicación en el Diario Oficial."
+  },
+  "keyIdeas": [
+   "Fiscalizar los actos del Gobierno es atribución exclusiva de la Cámara.",
+   "La Contraloría controla la legalidad de los actos de la administración.",
+   "El Tribunal Constitucional vela por que las leyes respeten la Constitución."
+  ],
+  "method": [
+   "Identifica la función descrita (legislar, ejecutar, juzgar, fiscalizar, controlar).",
+   "Asóciala al órgano que la ejerce.",
+   "Verifica si es una atribución exclusiva o compartida."
+  ],
+  "traps": [
+   "Atribuir al Senado la fiscalización del Gobierno.",
+   "Confundir el Tribunal Constitucional con la Corte Suprema."
+  ]
+ },
+ "hi-democracia": {
+  "theory": [
+   "La democracia es un régimen político en que la soberanía reside en el pueblo, que la ejerce mediante elecciones periódicas y otros mecanismos. Requiere Estado de derecho, separación de poderes, pluralismo y respeto a los derechos humanos.",
+   "Los derechos humanos son universales, inalienables, indivisibles e interdependientes; la Declaración Universal de 1948 es su referente. La participación ciudadana incluye votar, organizarse (juntas de vecinos, sindicatos, partidos), informarse y ejercer el control ciudadano."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Democracia directa y representativa",
+   "body": "Representativa: la ciudadanía elige autoridades que deciden. Directa: la ciudadanía decide por sí misma (plebiscito, iniciativa popular, consulta)."
+  },
+  "keyIdeas": [
+   "Estado de derecho: todos, incluidas las autoridades, se someten a la ley.",
+   "Universalidad: los DD. HH. corresponden a toda persona.",
+   "Plebiscito = mecanismo de democracia directa."
+  ],
+  "method": [
+   "Identifica el principio o mecanismo descrito.",
+   "Distingue entre democracia directa y representativa.",
+   "Evalúa si la situación respeta o vulnera derechos."
+  ],
+  "traps": [
+   "Confundir la elección de representantes con democracia directa.",
+   "Creer que los Estados deciden qué derechos humanos reconocer."
+  ]
+ },
+ "hi-mercado": {
+  "theory": [
+   "El problema económico surge de la escasez: las necesidades son ilimitadas y los recursos, limitados, por lo que hay que elegir. El costo de oportunidad es el valor de la mejor alternativa a la que se renuncia.",
+   "En el mercado, la demanda disminuye cuando sube el precio y la oferta aumenta. El precio de equilibrio iguala cantidad ofrecida y demandada. Un aumento de la demanda (con oferta constante) sube el precio; un aumento de la oferta lo baja."
+  ],
+  "box": {
+   "kind": "ley",
+   "title": "Desplazamientos",
+   "body": "Demanda $\\uparrow$ $\\Rightarrow$ precio $\\uparrow$ y cantidad $\\uparrow$. Oferta $\\uparrow$ $\\Rightarrow$ precio $\\downarrow$ y cantidad $\\uparrow$.\n\nFactores de la demanda: ingreso, gustos, precio de bienes relacionados. De la oferta: costos, tecnología, clima."
+  },
+  "keyIdeas": [
+   "Escasez: razón de ser de la economía.",
+   "Costo de oportunidad: lo que dejas de ganar al elegir.",
+   "Agentes económicos: familias, empresas y Estado."
+  ],
+  "method": [
+   "Identifica qué cambió: la demanda o la oferta.",
+   "Determina la dirección del desplazamiento.",
+   "Deduce el efecto sobre el precio y la cantidad."
+  ],
+  "traps": [
+   "Confundir un cambio de precio (movimiento a lo largo de la curva) con un desplazamiento de la curva.",
+   "Creer que lo gratuito no tiene costo de oportunidad."
+  ]
+ },
+ "hi-macro": {
+  "theory": [
+   "La inflación es el alza sostenida y generalizada de los precios; reduce el poder adquisitivo del dinero. En Chile se mide con el IPC (INE). El Banco Central, autónomo, la controla con la política monetaria: si sube la tasa de política monetaria, el crédito se encarece y el gasto se modera.",
+   "La política fiscal (gasto público e impuestos) la conduce el Gobierno. El PIB mide el valor de los bienes y servicios finales producidos en un período. En finanzas personales, conviene comparar créditos por su costo total (CAE) y conocer los derechos del consumidor (SERNAC)."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Instrumentos",
+   "body": "Política monetaria (Banco Central): tasa de interés, meta de inflación de 3 %. Política fiscal (Gobierno): presupuesto, gasto e impuestos.\n\nBalanza comercial = exportaciones − importaciones."
+  },
+  "keyIdeas": [
+   "Subir la tasa de interés frena la inflación.",
+   "Inflación alta perjudica a quienes tienen ingresos fijos.",
+   "La CAE permite comparar créditos con distintos plazos y cargos."
+  ],
+  "method": [
+   "Identifica el fenómeno (inflación, crecimiento, desempleo).",
+   "Reconoce el instrumento y quién lo aplica.",
+   "Deduce el efecto esperado sobre el gasto y los precios."
+  ],
+  "traps": [
+   "Atribuir al Banco Central decisiones de gasto público.",
+   "Confundir alza de un precio con inflación."
+  ]
+ },
+ "hi-geografia": {
+  "theory": [
+   "Chile tiene una población mayoritariamente urbana y concentrada en la Región Metropolitana (más del 40 % según el Censo 2017). Las migraciones internas y, en la última década, la inmigración internacional han transformado la composición de la población.",
+   "Por ubicarse en el Cinturón de Fuego del Pacífico, Chile enfrenta sismos, tsunamis y erupciones; también aluviones, sequías e incendios forestales. El riesgo combina la amenaza natural con la vulnerabilidad de la población."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Riesgo",
+   "body": "$$\\text{riesgo}=\\text{amenaza}\\times\\text{vulnerabilidad}$$\n\nReducir la vulnerabilidad (planificación urbana, normas de construcción, educación) reduce el riesgo, aunque la amenaza no cambie."
+  },
+  "keyIdeas": [
+   "Macrocefalia: concentración de población en la capital.",
+   "Amenaza natural $\\neq$ desastre.",
+   "Migración: factores de expulsión y de atracción."
+  ],
+  "method": [
+   "Lee los datos (tablas, mapas, gráficos) con atención a unidades y fuentes.",
+   "Identifica patrones (concentración, tendencia, contraste).",
+   "Concluye solo lo que los datos permiten."
+  ],
+  "traps": [
+   "Concluir más de lo que muestran los datos.",
+   "Confundir amenaza con riesgo."
+  ]
+ },
+ "hi-fuentes": {
+  "theory": [
+   "Una fuente primaria fue producida en la época estudiada (documentos, fotografías, testimonios); una secundaria es una interpretación posterior (textos de historiadores). Al analizarla se considera su autor, contexto, propósito y destinatario.",
+   "Los procesos históricos son multicausales: tienen causas políticas, económicas, sociales y culturales, de corto y largo plazo. También combinan continuidades (lo que permanece) y cambios (lo que se transforma)."
+  ],
+  "box": {
+   "kind": "definicion",
+   "title": "Preguntas para una fuente",
+   "body": "¿Quién la produjo? ¿Cuándo y dónde? ¿Con qué propósito y para quién? ¿Qué afirma explícitamente? ¿Qué se puede inferir? ¿Qué no permite concluir?"
+  },
+  "keyIdeas": [
+   "La respuesta debe sostenerse en la fuente, no en conocimientos externos.",
+   "Una fuente refleja la perspectiva de su autor.",
+   "Multicausalidad: evita explicaciones de una sola causa."
+  ],
+  "method": [
+   "Identifica el tipo de fuente y su contexto.",
+   "Resume qué afirma o muestra.",
+   "Elige la alternativa que la fuente respalda, sin agregar información externa."
+  ],
+  "traps": [
+   "Elegir una afirmación verdadera históricamente, pero que la fuente no respalda.",
+   "Tomar la opinión del autor como un hecho comprobado."
+  ]
+ }
+}

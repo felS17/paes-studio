@@ -62,6 +62,51 @@ def collect(work: Path) -> int:
     return 1 if bad else 0
 
 
+def collect_deep(work: Path) -> int:
+    """Fusiona los lotes de profundización (prepare_deepen.py) que validan: Planteamiento + pasos + distractores.
+
+    Conserva el tipo de explicación original (`desarrollo` en los curados, `solucion` en los oficiales). Las
+    preguntas sin verificar mantienen su explicación actual.
+    """
+    deep_validator = HERE / "validate_deepen.py"
+    batches = json.loads((work / "batches.json").read_text())
+    dupes: dict[str, list[str]] = json.loads((work / "dupes.json").read_text())
+    store = json.loads(STORE.read_text(encoding="utf-8")) if STORE.exists() else {}
+    bad = merged = 0
+    for b in batches:
+        d = Path(b["dir"])
+        if not (d / "output.json").exists():
+            print(f"  {b['id']:28} pendiente")
+            continue
+        r = subprocess.run([sys.executable, str(deep_validator), str(d)], capture_output=True, text=True)
+        if r.returncode:
+            bad += 1
+            print(f"  {b['id']:28} no valida: {r.stdout.strip().splitlines()[0][:90]}")
+            continue
+        inputs = {q["id"]: q for q in json.loads((d / "input.json").read_text(encoding="utf-8"))}
+        ok = 0
+        for s in json.loads((d / "output.json").read_text(encoding="utf-8")):
+            if not s.get("verified"):
+                continue
+            q = inputs[s["id"]]
+            expl = {
+                "kind": q["current"].get("kind", "solucion"),
+                "summary": s["summary"].strip(),
+                "planteamiento": s["planteamiento"].strip(),
+                "steps": [x.strip() for x in s["steps"]],
+                "distractors": {k: v.strip() for k, v in sorted(s["distractors"].items())},
+            }
+            for qid in [s["id"], *dupes.get(s["id"], [])]:
+                store[qid] = {"answer": q["answer"], "explanation": expl}
+            ok += 1
+        merged += ok
+        print(f"  {b['id']:28} ok  {ok:3d}/{b['count']}")
+    STORE.write_text(json.dumps(dict(sorted(store.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    deep = sum(1 for v in store.values() if v["explanation"].get("planteamiento"))
+    print(f"Profundizadas en esta pasada: {merged}; en el almacén: {deep}/{len(store)} con planteamiento")
+    return 1 if bad else 0
+
+
 def apply() -> None:
     store = json.loads(STORE.read_text(encoding="utf-8")) if STORE.exists() else {}
     applied, totals, mismatched = Counter(), Counter(), []
@@ -94,8 +139,11 @@ def apply() -> None:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--collect", type=Path, metavar="CARPETA", help="carpeta de lotes de prepare_batches.py")
+    ap.add_argument("--collect-deep", type=Path, metavar="CARPETA", help="carpeta de lotes de prepare_deepen.py")
     args = ap.parse_args()
     code = collect(args.collect) if args.collect else 0
+    if args.collect_deep:
+        code = collect_deep(args.collect_deep) or code
     apply()
     return code
 

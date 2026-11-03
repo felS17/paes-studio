@@ -41,7 +41,7 @@ export function ExamPage() {
   if (error) {
     return (
       <div className="mx-auto max-w-xl px-4 py-16">
-        <EmptyState title="No se pudo abrir el ensayo" action={<Button asChild><Link to="/">Volver a ensayos</Link></Button>}>
+        <EmptyState title="No se pudo abrir el ensayo" action={<Button asChild><Link to="/ensayos">Volver a ensayos</Link></Button>}>
           {error}
         </EmptyState>
       </div>

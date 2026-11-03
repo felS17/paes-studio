@@ -75,7 +75,7 @@ export function AnalyticsPage() {
       {attempts.length === 0 ? (
         <EmptyState
           title="Todavía no hay intentos registrados"
-          action={<Button variant="primary" asChild><Link to="/">Elegir un ensayo</Link></Button>}
+          action={<Button variant="primary" asChild><Link to="/ensayos">Elegir un ensayo</Link></Button>}
         >
           Entrega un ensayo o termina una práctica para ver tu diagnóstico. Si tienes un respaldo, impórtalo con el botón de arriba.
         </EmptyState>

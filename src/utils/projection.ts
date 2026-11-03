@@ -1,6 +1,7 @@
 import type { AttemptRecord } from '@/types/analytics'
 import type { ScienceArea, SubjectId } from '@/types/exam'
 import { SUBJECT_ORDER } from '@/data/subjects'
+import { isScoredAttempt } from './analytics'
 
 /** Hitos de la escala PAES que marca el gráfico de proyección. */
 export const MILESTONES = [600, 750, 900, 1000] as const
@@ -20,7 +21,8 @@ export interface ProjectionPoint {
 /** Una serie: tras cada intento entregado, el promedio del último puntaje de cada asignatura vista hasta ese momento. */
 export function buildProjection(attempts: AttemptRecord[]): ProjectionPoint[] {
   const latest = new Map<SubjectId, number>()
-  return [...attempts]
+  return attempts
+    .filter(isScoredAttempt)
     .sort((a, b) => a.finishedAt - b.finishedAt)
     .map((a) => {
       latest.set(a.subject, a.paesScore)
@@ -46,7 +48,7 @@ export interface LatestBySubject {
 /** Último puntaje de cada asignatura (en el orden estándar), solo las que tienen intentos. */
 export function latestBySubject(attempts: AttemptRecord[]): Map<SubjectId, LatestBySubject> {
   const map = new Map<SubjectId, LatestBySubject>()
-  for (const a of [...attempts].sort((x, y) => x.finishedAt - y.finishedAt)) {
+  for (const a of attempts.filter(isScoredAttempt).sort((x, y) => x.finishedAt - y.finishedAt)) {
     map.set(a.subject, { subject: a.subject, score: a.paesScore, area: a.area })
   }
   return new Map(SUBJECT_ORDER.flatMap((id) => (map.has(id) ? [[id, map.get(id)!] as const] : [])))

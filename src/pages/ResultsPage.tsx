@@ -15,6 +15,7 @@ import { useExam } from '@/hooks/useExam'
 import { cn } from '@/lib/utils'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import type { QuestionResult } from '@/types/analytics'
+import { isDailySetId } from '@/utils/daily'
 import { formatDate, formatDuration, formatTime } from '@/utils/format'
 
 type ReviewFilter = 'repasar' | 'todas' | 'incorrectas' | 'omitidas' | 'duda'
@@ -50,6 +51,7 @@ export function ResultsPage() {
     )
   }
 
+  const daily = isDailySetId(attempt.examId)
   const toReview = attempt.questions.filter((q) => !q.isCorrect)
   // Por defecto se muestran las preguntas a repasar (incorrectas y omitidas), con la primera abierta.
   const filter: ReviewFilter = filterChoice ?? (toReview.length ? 'repasar' : 'todas')
@@ -72,7 +74,7 @@ export function ResultsPage() {
     ['Correctas', attempt.correct],
     ['Incorrectas', attempt.incorrect],
     ['Sin responder', attempt.omitted],
-    ['Puntaje P', `${attempt.scorableCorrect}/${attempt.scorableTotal}`],
+    ...(daily ? [] : [['Puntaje P', `${attempt.scorableCorrect}/${attempt.scorableTotal}`] as [string, React.ReactNode]]),
     ['Tiempo', formatDuration(attempt.durationMs)],
   ]
 
@@ -84,7 +86,7 @@ export function ResultsPage() {
         </Button>
         <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <SubjectTag subject={attempt.subject} label={subjectLabel(attempt.subject, attempt.area)} />
+            <SubjectTag subject={attempt.subject} label={daily ? 'Lectora, Matemática y Ciencias o Historia' : subjectLabel(attempt.subject, attempt.area)} />
             <h1 className="mt-1 text-[22px] font-semibold tracking-tight sm:text-2xl">{attempt.examTitle}</h1>
             <p className="mt-1.5 flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
               <Badge tone={attempt.mode === 'ensayo' ? 'solid' : 'outline'}>{attempt.mode === 'ensayo' ? 'Modo ensayo' : 'Modo práctica'}</Badge>
@@ -93,13 +95,26 @@ export function ResultsPage() {
           </div>
           <div className="flex gap-2">
             <Button asChild><Link to={`/ensayo/${attempt.examId}`}>Volver a rendir</Link></Button>
-            <Button variant="primary" asChild><Link to="/">Elegir otro ensayo</Link></Button>
+            <Button variant="primary" asChild><Link to="/ensayos">Elegir otro ensayo</Link></Button>
           </div>
         </div>
       </div>
 
       <Panel className="overflow-hidden">
         <div className="grid gap-6 p-5 sm:p-6 md:grid-cols-[auto_1fr] md:items-end">
+          {daily ? (
+            <div className="md:col-span-2">
+              <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Desafío Diario</p>
+              <p className="mt-1 font-mono text-[56px] leading-none font-semibold tracking-tight tabular-nums">
+                {attempt.correct}<span className="text-zinc-400 dark:text-zinc-600">/{attempt.totalQuestions}</span>
+              </p>
+              <p className="mt-2 max-w-md text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
+                {attempt.answered === attempt.totalQuestions
+                  ? 'Respondiste las tres preguntas: el día cuenta para tu racha. El desafío no se convierte a puntaje PAES porque mezcla asignaturas.'
+                  : 'Responde las tres preguntas para que el día cuente en tu racha.'}
+              </p>
+            </div>
+          ) : (<>
           <div>
             <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Puntaje PAES</p>
             <p className="mt-1 font-mono text-[56px] leading-none font-semibold tracking-tight tabular-nums">{attempt.paesScore}</p>
@@ -112,8 +127,9 @@ export function ResultsPage() {
             </p>
           </div>
           <ScoreRuler markers={markers} />
+          </>)}
         </div>
-        <dl className="grid grid-cols-2 border-t border-zinc-200/80 sm:grid-cols-5 dark:border-zinc-800/80">
+        <dl className={cn('grid grid-cols-2 border-t border-zinc-200/80 dark:border-zinc-800/80', daily ? 'sm:grid-cols-4' : 'sm:grid-cols-5')}>
           {stats.map(([label, value]) => (
             <div key={label} className="border-zinc-200/80 px-5 py-3 not-last:border-r max-sm:odd:border-r dark:border-zinc-800/80">
               <dt className="text-xs text-zinc-500 dark:text-zinc-400">{label}</dt>
@@ -123,11 +139,13 @@ export function ResultsPage() {
         </dl>
       </Panel>
 
-      <div className="grid items-start gap-6 lg:grid-cols-[1fr_1.4fr]">
-        <Panel>
-          <PanelHeader title="Rendimiento por eje" description={attempt.mode === 'practica' ? 'Solo preguntas respondidas' : undefined} />
-          <AxisRadar stats={attempt.perAxis} order={SUBJECTS[attempt.subject].axes} className="p-4" />
-        </Panel>
+      <div className={cn('grid items-start gap-6', !daily && 'lg:grid-cols-[1fr_1.4fr]')}>
+        {!daily && (
+          <Panel>
+            <PanelHeader title="Rendimiento por eje" description={attempt.mode === 'practica' ? 'Solo preguntas respondidas' : undefined} />
+            <AxisRadar stats={attempt.perAxis} order={SUBJECTS[attempt.subject].axes} className="p-4" />
+          </Panel>
+        )}
 
         <Panel>
           <PanelHeader

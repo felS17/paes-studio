@@ -1,11 +1,14 @@
-import { BarChart3, FileText, Layers, LayoutList } from 'lucide-react'
+import { BarChart3, FileText, House, Layers, LayoutList, ListTree, Waypoints } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export const NAV_ITEMS = [
-  { to: '/', label: 'Ensayos', icon: LayoutList, end: true },
-  { to: '/analitica', label: 'Analítica', icon: BarChart3, end: false },
+  { to: '/', label: 'Inicio', icon: House, end: true },
+  { to: '/ensayos', label: 'Ensayos', icon: LayoutList, end: false },
+  { to: '/subtemas', label: 'Subtemas', icon: ListTree, end: false },
+  { to: '/zettelkasten', label: 'Zettelkasten', icon: Waypoints, end: false },
   { to: '/flashcards', label: 'Flashcards', icon: Layers, end: false },
-  { to: '/material', label: 'Material LaTeX', icon: FileText, end: false },
+  { to: '/material', label: 'Material PDF', icon: FileText, end: false },
+  { to: '/analitica', label: 'Analítica', icon: BarChart3, end: false },
 ] as const
 
 export function navLinkClass({ isActive }: { isActive: boolean }) {
