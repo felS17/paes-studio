@@ -1,7 +1,7 @@
-import { EXPLAINED_QUESTIONS, QUESTIONS_BY_SUBTOPIC, SUBTOPIC_OF_QUESTION, SUBTOPICS_BY_ID } from '@/data/temario'
+import { EXPLAINED_QUESTIONS, QUESTIONS_BY_SUBTOPIC, SUBTOPIC_OF_QUESTION, SUBTOPICS, SUBTOPICS_BY_ID } from '@/data/temario'
 import { SUBJECTS } from '@/data/subjects'
 import type { AttemptRecord } from '@/types/analytics'
-import type { PracticeSet } from '@/types/exam'
+import type { PracticeSet, SubjectId } from '@/types/exam'
 import { latestResults, type LatestResult } from './analytics'
 import { examIdOfQuestion } from './practice'
 
@@ -114,6 +114,26 @@ export function subtopicDrillDraft(
     title: sub.title,
     scope: `«${sub.title}» (${SUBJECTS[sub.subject].short}, ${sub.axis})`,
   })
+}
+
+/**
+ * Asignatura de «10 preguntas rápidas»: la de más errores pendientes; sin errores, la última que practicaste. Va
+ * por una sola asignatura para que el puntaje estimado del intento siga teniendo sentido.
+ */
+export function quickDrillSubject(attempts: AttemptRecord[], latest: Map<string, LatestResult>): { subject: SubjectId; pending: number } {
+  const pending = new Map<SubjectId, number>()
+  for (const r of latest.values()) {
+    if (r.selected !== null && !r.isCorrect) pending.set(r.subject, (pending.get(r.subject) ?? 0) + 1)
+  }
+  const [top] = [...pending].sort((a, b) => b[1] - a[1])
+  if (top) return { subject: top[0], pending: top[1] }
+  const last = attempts.reduce<AttemptRecord | null>((best, a) => (!best || a.finishedAt > best.finishedAt ? a : best), null)
+  return { subject: last?.subject ?? 'm1', pending: 0 }
+}
+
+export function quickDrillDraft(subject: SubjectId, latest: Map<string, LatestResult>): SetDraft {
+  const ids = SUBTOPICS.filter((s) => s.subject === subject).map((s) => s.id)
+  return drillDraftFor(ids, 10, latest, { subject, title: '10 preguntas rápidas', scope: SUBJECTS[subject].short })
 }
 
 /** Cuántas preguntas del banco reúne un conjunto de subtemas. */

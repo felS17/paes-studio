@@ -1,19 +1,21 @@
 import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { BarChart3, FileText, Layers, LayoutList, ListTree, Waypoints, type LucideIcon } from 'lucide-react'
+import { BarChart3, FileText, Layers, LayoutList, ListTree, Waypoints, Zap, type LucideIcon } from 'lucide-react'
 import { DailyChallenge } from '@/components/dashboard/DailyChallenge'
+import { DailyQuote } from '@/components/dashboard/DailyQuote'
 import { SubtopicExplorer } from '@/components/dashboard/SubtopicExplorer'
-import { LogoMark } from '@/components/layout/Logo'
+import { Button } from '@/components/ui/button'
 import { EXAMS } from '@/data/catalog'
 import { TOTAL_CARDS } from '@/data/flashcards'
 import pdfs from '@/data/pdfs.json'
-import { SUBJECT_ORDER } from '@/data/subjects'
+import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
 import { SUBTOPICS } from '@/data/temario'
+import { useStartPracticeSet } from '@/hooks/usePracticeSet'
 import { cn } from '@/lib/utils'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import type { SubjectId } from '@/types/exam'
 import { latestResults, mistakeNotebook } from '@/utils/analytics'
-import { masteryOf, subtopicStats } from '@/utils/subtopics'
+import { masteryOf, quickDrillDraft, quickDrillSubject, subtopicStats } from '@/utils/subtopics'
 
 const CONTACT = {
   author: 'felS (Felipe Schneeberger)',
@@ -41,8 +43,11 @@ export function HomePage() {
   const materia = params.get('materia')
   const subject: SubjectId = SUBJECT_ORDER.includes(materia as SubjectId) ? (materia as SubjectId) : 'lectora'
 
+  const startPractice = useStartPracticeSet()
+  const latest = useMemo(() => latestResults(attempts), [attempts])
+  const quick = useMemo(() => quickDrillSubject(attempts, latest), [attempts, latest])
+
   const progress = useMemo(() => {
-    const latest = latestResults(attempts)
     const stats = subtopicStats(attempts, latest)
     const mastery = SUBTOPICS.map((s) => masteryOf(stats.get(s.id)))
     return {
@@ -50,47 +55,47 @@ export function HomePage() {
       mastered: mastery.filter((m) => m === 'dominado').length,
       mistakes: mistakeNotebook(attempts).length,
     }
-  }, [attempts])
+  }, [attempts, latest])
 
   const questions = EXAMS.reduce((n, e) => n + e.questionCount, 0)
   const pdfCount = Object.keys(pdfs).length
   const metrics: [number, string][] = [
     [EXAMS.length, 'Ensayos'],
     [questions, 'Preguntas'],
-    [SUBTOPICS.length, 'Subtemas'],
+    [SUBTOPICS.length, 'Temas'],
     [TOTAL_CARDS, 'Flashcards'],
-    [pdfCount, 'PDF de estudio'],
+    [pdfCount, 'Guías en PDF'],
   ]
 
   const modules: ModuleCard[] = [
     {
-      to: '/ensayos', title: 'Catálogo de ensayos', icon: LayoutList, span: 'lg:col-span-2',
-      description: 'Rinde los ensayos oficiales del DEMRE y los curados en modo práctica, con corrección inmediata, o en modo ensayo con el tiempo oficial.',
+      to: '/ensayos', title: 'Ponerse a prueba (Ensayos Oficiales)', icon: LayoutList, span: 'lg:col-span-2',
+      description: 'Rinde una prueba real con el tiempo oficial y mira qué puntaje sacarías hoy. ¿Sin apuro? En modo práctica corriges cada pregunta al momento.',
       datum: `${EXAMS.length} ensayos, ${attempts.length} ${attempts.length === 1 ? 'intento guardado' : 'intentos guardados'}`,
     },
     {
-      to: '/subtemas', title: 'Explorador de subtemas', icon: ListTree, span: '',
-      description: 'Asignatura, eje y subtema: arma un drill de 10, 20 o todas las preguntas de un tema.',
-      datum: `${progress.explored} de ${SUBTOPICS.length} explorados`,
+      to: '/subtemas', title: 'Atacar un tema específico (Drills rápidos)', icon: ListTree, span: '',
+      description: 'Elige justo lo que te cuesta y practica 10, 20 o todas las preguntas de ese tema, sacadas de todas las pruebas.',
+      datum: `${progress.explored} de ${SUBTOPICS.length} temas explorados`,
     },
     {
-      to: '/flashcards', title: 'Flashcards SM-2', icon: Layers, span: '',
-      description: 'Repaso espaciado para Matemática M1 y M2, Biología, Física, Química e Historia.',
+      to: '/flashcards', title: 'Entrenar la memoria en 5 min (Flashcards)', icon: Layers, span: '',
+      description: 'Tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Hay de Matemática, Biología, Física, Química e Historia.',
       datum: `${TOTAL_CARDS} tarjetas en 6 mazos`,
     },
     {
-      to: '/zettelkasten', title: 'Zettelkasten: red de conocimiento', icon: Waypoints, span: 'lg:col-span-2',
-      description: 'Un grafo de tu dominio del temario: cada pregunta que respondes se conecta a su subtema, y las ideas que comparten las materias quedan enlazadas.',
-      datum: `${progress.mastered} ${progress.mastered === 1 ? 'subtema dominado' : 'subtemas dominados'}`,
+      to: '/zettelkasten', title: 'Ver cómo se conecta lo que sabes (Mapa Mental)', icon: Waypoints, span: 'lg:col-span-2',
+      description: 'Cada pregunta que respondes se suma a tu mapa del temario: ahí ves qué ya dominas, qué te falta y cómo se conectan las materias.',
+      datum: `${progress.mastered} ${progress.mastered === 1 ? 'tema dominado' : 'temas dominados'}`,
     },
     {
-      to: '/analitica', title: 'Analítica y cuaderno de errores', icon: BarChart3, span: 'lg:col-span-2',
-      description: 'Tu evolución en la escala 100–1000, los ejes por mejorar, las preguntas que fallaste con su solución y el modo revancha.',
+      to: '/analitica', title: 'Mirar cuánto has avanzado (Estadísticas y Errores)', icon: BarChart3, span: 'lg:col-span-2',
+      description: 'Mira cómo sube tu puntaje, qué temas reforzar y vuelve a las preguntas que fallaste hasta que te salgan.',
       datum: `${progress.mistakes} ${progress.mistakes === 1 ? 'pregunta por repasar' : 'preguntas por repasar'}`,
     },
     {
-      to: '/material', title: 'Biblioteca LaTeX y Beamer', icon: FileText, span: '',
-      description: 'Compendios teóricos y presentaciones de cada asignatura, listos para leer o descargar en PDF.',
+      to: '/material', title: 'Estudiar con guías claras (Resúmenes PDF)', icon: FileText, span: '',
+      description: 'Un resumen y una presentación de repaso por materia, listos para leer o descargar.',
       datum: `${pdfCount} PDF`,
     },
   ]
@@ -99,19 +104,27 @@ export function HomePage() {
     <div className="space-y-14">
       {/* A. Presentación y métricas */}
       <section aria-labelledby="hero" className="space-y-8">
-        <div className="max-w-3xl">
-          <p className="flex items-center gap-2 text-[14px] font-semibold tracking-tight">
-            <LogoMark className="size-5" />
-            PAES Studio
-          </p>
-          <h1 id="hero" className="mt-5 text-[34px] leading-[1.08] font-semibold tracking-[-0.025em] text-balance sm:text-[46px]">
-            Plataforma abierta de entrenamiento de alta precisión para la PAES
+        <DailyQuote />
+        <div className="max-w-3xl border-t border-zinc-200/80 pt-8 dark:border-zinc-800/80">
+          <h1 id="hero" className="text-[26px] leading-[1.15] font-semibold tracking-[-0.02em] text-balance sm:text-[32px]">
+            Entrena con las pruebas reales del DEMRE, gratis
           </h1>
-          <p className="mt-5 max-w-[62ch] text-[15px] leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Un entorno de estudio gratuito, sin anuncios ni muros de pago. Reúne las pruebas oficiales del DEMRE con su
-            clavijero, soluciones paso a paso con fórmulas en KaTeX, repetición espaciada SM-2 y una red de conocimiento que
-            conecta los subtemas de todas las asignaturas. Tu progreso se guarda solo en este navegador.
+          <p className="mt-3 max-w-[62ch] text-[15px] leading-relaxed text-zinc-600 dark:text-zinc-400">
+            Entra y entrena al tiro: sin crearte cuentas ni contraseñas. Tienes explicaciones paso a paso, claras y sin saltarse
+            ningún cálculo, y tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Tu progreso se guarda
+            automáticamente aquí mismo (y puedes descargarlo si cambias de computador).
           </p>
+          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <Button variant="primary" size="lg" onClick={() => startPractice(quickDrillDraft(quick.subject, latest))}>
+              <Zap />
+              Entrenar 10 preguntas rápidas ahora
+            </Button>
+            <p className="max-w-[40ch] text-[13px] leading-snug text-zinc-500 dark:text-zinc-400">
+              {quick.pending
+                ? `Partimos por ${quick.pending === 1 ? 'tu error pendiente' : `tus ${quick.pending} errores pendientes`} de ${SUBJECTS[quick.subject].short}.`
+                : `De ${SUBJECTS[quick.subject].short}, con la explicación apenas respondes.`}
+            </p>
+          </div>
         </div>
         <dl className="grid grid-cols-2 border-y border-zinc-200/80 sm:grid-cols-5 dark:border-zinc-800/80">
           {metrics.map(([value, label]) => (
@@ -129,8 +142,7 @@ export function HomePage() {
 
       {/* B. Menú de módulos */}
       <section aria-labelledby="modulos">
-        <h2 id="modulos" className="text-[18px] font-semibold tracking-tight">Módulos</h2>
-        <p className="mt-1 text-[13px] text-zinc-500 dark:text-zinc-400">Todo lo que ofrece la plataforma, a un clic.</p>
+        <h2 id="modulos" className="text-[18px] font-semibold tracking-tight">¿Qué quieres hacer hoy?</h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {modules.map(({ to, title, icon: Icon, description, datum, span }) => (
             <li
@@ -155,9 +167,9 @@ export function HomePage() {
 
       {/* C. Mapa de los 67 subtemas */}
       <section aria-labelledby="mapa-subtemas" id="subtemas" className="scroll-mt-20">
-        <h2 id="mapa-subtemas" className="text-[18px] font-semibold tracking-tight">Mapa de los {SUBTOPICS.length} subtemas</h2>
+        <h2 id="mapa-subtemas" className="text-[18px] font-semibold tracking-tight">Elige un tema y ponte a practicar</h2>
         <p className="mt-1 max-w-[70ch] text-[13px] text-zinc-500 dark:text-zinc-400">
-          Elige una asignatura, revisa sus ejes y lanza un drill de cualquier subtema o ábrelo en su compendio.
+          Los {SUBTOPICS.length} temas de la PAES, ordenados por materia. Practica el que quieras o lee su resumen antes de partir.
         </p>
         <div className="mt-5">
           <SubtopicExplorer
@@ -174,23 +186,22 @@ export function HomePage() {
       {/* D. Sobre el proyecto y contacto */}
       <section aria-labelledby="sobre" className="grid gap-6 border-t border-zinc-200/80 pt-10 md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] dark:border-zinc-800/80">
         <div>
-          <h2 id="sobre" className="text-[18px] font-semibold tracking-tight">Sobre PAES Studio</h2>
+          <h2 id="sobre" className="text-[18px] font-semibold tracking-tight">Por qué existe PAES Studio</h2>
           <div className="mt-3 max-w-[64ch] space-y-3 text-[14px] leading-relaxed text-zinc-600 dark:text-zinc-400">
             <p>
-              PAES Studio nació para que cualquier estudiante pueda prepararse con el mismo material que publica el DEMRE,
-              explicado con el detalle de un buen profesor y sin pagar por ello. Es un proyecto abierto bajo licencia MIT
-              (2026): el código se puede leer, usar y mejorar.
+              Preparar la PAES no debería depender de pagar un preuniversitario caro. PAES Studio nació para darte las pruebas
+              reales del DEMRE explicadas con la paciencia y el detalle de un buen profe, gratis para siempre.
             </p>
             <p>
-              No hay cuentas ni servidores: tus ensayos, errores, flashcards y racha viven en tu navegador. Desde Analítica
-              puedes exportar un respaldo e importarlo en otro equipo.
+              Entra y entrena al tiro: sin crearte cuentas ni contraseñas. Tu progreso se guarda automáticamente aquí mismo (y
+              puedes descargarlo si cambias de computador).
             </p>
           </div>
         </div>
         <div className="rounded-xl border border-zinc-200/80 bg-white p-5 dark:border-zinc-800/80 dark:bg-[#121215]">
-          <h3 className="text-[15px] font-semibold tracking-tight">Contacto y contribuciones</h3>
+          <h3 className="text-[15px] font-semibold tracking-tight">¿Viste un error o se te ocurrió una idea?</h3>
           <p className="mt-1 text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400">
-            ¿Encontraste un error en una solución o tienes una idea? Escribe o abre un issue.
+            Escríbeme. Cada aviso ayuda a que esto funcione mejor para todos los que se están preparando.
           </p>
           <dl className="mt-4 space-y-3 text-[13px]">
             <div>

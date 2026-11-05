@@ -14,7 +14,7 @@ export function Footer() {
         <p>© 2026 · Desarrollado por felS</p>
         <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <li>
-            <button type="button" className={LINK} onClick={() => setOpen(true)}>MIT License</button>
+            <button type="button" className={`${LINK} text-[11px]`} onClick={() => setOpen(true)}>Código abierto (MIT)</button>
           </li>
           <li>
             <a className={LINK} href="mailto:felipe.schneeberger@estudiante.uc.cl">felipe.schneeberger@estudiante.uc.cl</a>

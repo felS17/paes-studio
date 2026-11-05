@@ -52,8 +52,8 @@ export function DrillDialog({ subtopic, stat, onClose }: { subtopic: Subtopic | 
           title={`Practicar «${subtopic.title}»`}
           description={
             <>
-              Reúne preguntas de este subtema de todos los ensayos ({plural(n, 'pregunta')} en el banco) y las abre en modo
-              práctica. Primero van {stat?.pending ? `tus ${plural(stat.pending, 'error pendiente', 'errores pendientes')}` : 'las que fallaste'} y luego
+              Juntamos preguntas de este tema de todas las pruebas ({plural(n, 'pregunta')} disponibles) y las abrimos con la
+              explicación al momento. Primero van {stat?.pending ? `tus ${plural(stat.pending, 'error pendiente', 'errores pendientes')}` : 'las que fallaste'} y luego
               las que aún no respondes.
             </>
           }
@@ -67,7 +67,7 @@ export function DrillDialog({ subtopic, stat, onClose }: { subtopic: Subtopic | 
                   variant={s.value === 10 && !disabled ? 'primary' : 'secondary'}
                   size="lg"
                   disabled={disabled}
-                  title={disabled ? `El subtema tiene ${plural(n, 'pregunta')}: usa «Todas».` : undefined}
+                  title={disabled ? `Este tema tiene ${plural(n, 'pregunta')}: usa «Todas».` : undefined}
                   onClick={() => launch(s.value)}
                   className="px-2"
                 >
@@ -103,9 +103,9 @@ function SubtopicRow({ sub, stat, onPractice }: { sub: Subtopic; stat?: Subtopic
           target="_blank"
           rel="noreferrer"
           className="text-xs text-zinc-500 underline-offset-4 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-100"
-          title={`Abrir el compendio de ${SUBJECTS[sub.subject].short} en la página de este subtema`}
+          title={`Abrir la guía de ${SUBJECTS[sub.subject].short} en la página de este tema`}
         >
-          Compendio{sub.pdfPage ? <> p. <span className="font-mono tabular-nums">{sub.pdfPage}</span></> : ' PDF'}
+          Guía{sub.pdfPage ? <> p. <span className="font-mono tabular-nums">{sub.pdfPage}</span></> : ' PDF'}
           <span className="sr-only"> (abre en una pestaña nueva)</span>
         </a>
       </div>
@@ -115,9 +115,9 @@ function SubtopicRow({ sub, stat, onPractice }: { sub: Subtopic; stat?: Subtopic
           size="sm"
           onClick={onPractice}
           disabled={!sub.questionCount}
-          title={sub.questionCount ? undefined : 'Aún no hay preguntas de este subtema en el banco'}
+          title={sub.questionCount ? undefined : 'Aún no tenemos preguntas de este tema'}
         >
-          Practicar subtema
+          Practicar
         </Button>
       </div>
     </li>
@@ -152,22 +152,22 @@ export function SubtopicExplorer({ subject, onSubjectChange }: { subject: Subjec
           rel="noreferrer"
           className="text-[13px] text-zinc-500 underline-offset-4 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-100"
         >
-          Compendio de {SUBJECTS[subject].short} (PDF)
+          Guía de {SUBJECTS[subject].short} (PDF)
           <span className="sr-only"> (abre en una pestaña nueva)</span>
         </a>
       </div>
 
       <p className="text-[13px] text-zinc-500 dark:text-zinc-400">
-        <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{allIds.length}</span> subtemas en{' '}
+        <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{allIds.length}</span> temas en{' '}
         <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{temario.axes.length}</span> ejes y{' '}
-        <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{questionTotal.toLocaleString('es-CL')}</span> preguntas en el banco.{' '}
+        <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{questionTotal.toLocaleString('es-CL')}</span> preguntas para practicar.{' '}
         {total.answered ? (
           <>
-            Tu acierto histórico es <span className="font-mono font-medium text-zinc-900 tabular-nums dark:text-zinc-100">{formatPercent(total.accuracy ?? 0)}</span> en{' '}
+            Aciertas el <span className="font-mono font-medium text-zinc-900 tabular-nums dark:text-zinc-100">{formatPercent(total.accuracy ?? 0)}</span> en{' '}
             {plural(total.answered, 'pregunta respondida', 'preguntas respondidas')}.
           </>
         ) : (
-          'Practica un subtema para ver tu acierto en cada uno.'
+          'Practica un tema y aquí verás cómo te va en cada uno.'
         )}
       </p>
 

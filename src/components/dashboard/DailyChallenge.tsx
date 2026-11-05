@@ -74,13 +74,13 @@ export function DailyChallenge() {
     <Panel aria-labelledby="desafio-diario">
       <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-3 px-5 pt-4 sm:px-6">
         <div className="min-w-0">
-          <h2 id="desafio-diario" className="text-[15px] leading-tight font-semibold tracking-tight">Desafío Diario</h2>
+          <h2 id="desafio-diario" className="text-[15px] leading-tight font-semibold tracking-tight">Desafío del Día</h2>
           <p className="mt-1 text-[13px] text-zinc-500 first-letter:uppercase dark:text-zinc-400">
-            {longDate.format(parseKey(today))}. Tres preguntas con solución paso a paso; cambian a medianoche.
+            {longDate.format(parseKey(today))}. Tres preguntas con explicación paso a paso. Mañana hay otras.
           </p>
         </div>
         <div className="text-right">
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">Racha actual</p>
+          <p className="text-xs text-zinc-500 dark:text-zinc-400">Tu racha</p>
           <p className="font-mono text-[22px] leading-tight font-semibold tabular-nums" aria-live="polite">
             {streak.current}
             <span className="ml-1 font-sans text-[13px] font-normal text-zinc-500 dark:text-zinc-400">
@@ -124,7 +124,7 @@ export function DailyChallenge() {
         <div className="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-400">
           <ActivityStrip today={today} days={days} />
           <span className="hidden sm:inline">
-            {streak.activeToday ? 'Hoy ya cuenta para tu racha.' : 'Completa el desafío o repasa flashcards para sumar hoy.'}
+            {streak.activeToday ? 'Hoy ya cuenta para tu racha.' : 'Haz el desafío o repasa unas flashcards para sumar hoy.'}
             {streak.best > streak.current && (
               <> Mejor racha: <span className="font-mono tabular-nums">{streak.best}</span>.</>
             )}
@@ -141,10 +141,10 @@ export function DailyChallenge() {
               Continuar <span className="font-mono tabular-nums">{answeredNow}/{picks.length}</span>
             </Button>
           ) : done ? (
-            <span className="text-[13px] font-medium">Desafío completado</span>
+            <span className="text-[13px] font-medium">Desafío listo</span>
           ) : (
             <Button variant="primary" size="sm" onClick={start} disabled={!picks.length}>
-              {attempt ? 'Completar desafío' : 'Empezar desafío'}
+              {attempt ? 'Terminar desafío' : 'Empezar desafío'}
             </Button>
           )}
         </div>

@@ -6,7 +6,7 @@ import { FLUENT_MS, LEAK_MS, readTelemetry } from '@/utils/telemetry'
 
 function describe(q: QuestionResult): string {
   const t = readTelemetry(q)
-  const result = q.selected === null ? 'sin responder' : q.isCorrect ? 'correcta' : `incorrecta (marcaste ${q.selected}, clave ${q.correct})`
+  const result = q.selected === null ? 'sin responder' : q.isCorrect ? 'correcta' : `incorrecta (marcaste ${q.selected}, la correcta es ${q.correct})`
   const parts = [`Pregunta ${q.number}`, t ? formatClock(t.timeSpentMs) : 'sin medición', result]
   if (t?.selectionChanges) parts.push(plural(t.selectionChanges, 'cambio'))
   if (t?.discardedCount) parts.push(plural(t.discardedCount, 'descartada'))
@@ -43,7 +43,7 @@ export function CadenceStrip({ questions, onPick }: { questions: QuestionResult[
   return (
     <div>
       <p className="h-5 truncate text-xs text-zinc-500 dark:text-zinc-400">
-        {hovered ? describe(hovered) : 'Pasa el cursor o usa las flechas para ver cada pregunta.'}
+        {hovered ? describe(hovered) : 'Tu ritmo pregunta a pregunta. Pasa el cursor por una barra para ver el detalle.'}
       </p>
       <div className="relative mt-2 pr-9">
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 bottom-2">

@@ -2,11 +2,10 @@ import type { AttemptRecord, QuestionResult, QuestionTelemetry } from '@/types/a
 import { OPTION_KEYS, type OptionKey, type SubjectId } from '@/types/exam'
 import { subjectOfQuestion } from './analytics'
 
-/** Umbrales de la Matriz de Ritmo y Decisión. */
+/** Umbrales de los perfiles de respuesta. */
 export const FLUENT_MS = 90_000
 export const LEAK_MS = 150_000
 export const IMPULSE_MS = 35_000
-export const INDECISION_CHANGES = 2
 
 export type CadenceQuadrant = 'fluido' | 'fuga' | 'indecision' | 'ciego'
 
@@ -33,15 +32,15 @@ export function readTelemetry(q: QuestionResult): QuestionTelemetry | null {
 export const hasTelemetry = (a: AttemptRecord) => (a.questions ?? []).some((q) => readTelemetry(q) !== null)
 
 /**
- * Cuadrante de una pregunta respondida. Son excluyentes: dudar pesa más que demorarse, así cada pregunta se
- * cuenta una sola vez. Las que no cumplen ninguna regla quedan fuera de la matriz (null).
+ * Perfil de una pregunta respondida. Son excluyentes: dudar (cambiar de alternativa) pesa más que demorarse, así
+ * cada pregunta se cuenta una sola vez. Las que no cumplen ninguna regla quedan sin perfil (null).
  */
 export function classifyQuestion(q: QuestionResult, t: QuestionTelemetry): CadenceQuadrant | null {
   if (q.selected === null || t.timeSpentMs <= 0) return null
-  if (t.selectionChanges >= INDECISION_CHANGES) return 'indecision'
+  if (t.selectionChanges > 0) return 'indecision'
   if (q.isCorrect) {
     if (t.timeSpentMs > LEAK_MS) return 'fuga'
-    return t.timeSpentMs < FLUENT_MS && t.selectionChanges === 0 ? 'fluido' : null
+    return t.timeSpentMs < FLUENT_MS ? 'fluido' : null
   }
   return t.timeSpentMs < IMPULSE_MS && t.discardedCount === 0 ? 'ciego' : null
 }
@@ -65,7 +64,7 @@ function addChange(balance: ChangeBalance, q: QuestionResult, t: QuestionTelemet
   else balance.neutral += 1
 }
 
-/** Índice de Duda Tóxica: de los cambios que alteraron el resultado, qué parte te quitó un acierto. */
+/** De los cambios que movieron el resultado, qué parte te quitó un acierto. */
 export const toxicIndex = (b: ChangeBalance) => (b.toxic + b.corrective ? b.toxic / (b.toxic + b.corrective) : null)
 
 export interface QuadrantStat {

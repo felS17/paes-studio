@@ -73,25 +73,24 @@ export function DashboardPage() {
   return (
     <div className="space-y-8">
       <PageHeader
-        title="Ensayos"
+        title="Ensayos Completos"
         description={
           <>
             <span className="tabular-nums">{EXAMS.length}</span> ensayos y{' '}
-            <span className="tabular-nums">{totalQuestions.toLocaleString('es-CL')}</span> preguntas: folletos
-            oficiales del DEMRE corregidos con su clavijero y ensayos curados con desarrollo paso a paso, también
-            ordenadas por los {SUBTOPICS.length} subtemas del temario.
+            <span className="tabular-nums">{totalQuestions.toLocaleString('es-CL')}</span> preguntas para ponerte a prueba: pruebas
+            reales del DEMRE y ensayos con explicación paso a paso. ¿Prefieres ir por partes? También están ordenadas por tema.
           </>
         }
       />
       <ProjectionChart attempts={attempts} />
       <div id="lista-ensayos" tabIndex={-1} className="scroll-mt-20 outline-none">
         <Tabs
-          label="Cómo explorar el banco de preguntas"
+          label="Cómo quieres practicar"
           value={view}
           onChange={setView}
           items={[
-            { value: 'ensayos', label: 'Ensayos oficiales y curados', count: EXAMS.length },
-            { value: 'subtemas', label: 'Explorar por subtemas', count: SUBTOPICS.length },
+            { value: 'ensayos', label: 'Ensayos completos', count: EXAMS.length },
+            { value: 'subtemas', label: 'Practicar por tema', count: SUBTOPICS.length },
           ]}
         >
           {view === 'ensayos' ? (
@@ -104,7 +103,7 @@ export function DashboardPage() {
                   title="Ningún ensayo coincide con estos filtros"
                   action={<Button onClick={() => setFilters({ subject: 'todas', modality: 'todas', year: 'todos' })}>Quitar filtros</Button>}
                 >
-                  Prueba con otro año o modalidad. Los ensayos curados no tienen modalidad oficial.
+                  Prueba con otro año o modalidad. Los ensayos con explicación no tienen modalidad oficial.
                 </EmptyState>
               )}
             </div>

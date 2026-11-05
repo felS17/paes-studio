@@ -248,7 +248,7 @@ export function ProjectionChart({ attempts }: { attempts: AttemptRecord[] }) {
     <Panel className="overflow-hidden">
       <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2 px-5 pt-4 sm:px-6">
         <div className="min-w-0 max-w-xl">
-          <h2 className="text-[15px] leading-tight font-semibold tracking-tight">Proyección en la escala PAES (100 – 1000)</h2>
+          <h2 className="text-[15px] leading-tight font-semibold tracking-tight">Hacia dónde va tu puntaje</h2>
           <p className="mt-1.5 text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400">
             {n === 0
               ? 'Cada ensayo que entregues suma un punto a esta curva: el promedio de tu último puntaje en cada asignatura. Los hitos marcan el camino hacia los puntajes que abren más puertas.'

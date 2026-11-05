@@ -55,10 +55,10 @@ function RowContent({ e }: { e: MistakeEntry }) {
           {SUBJECTS[e.subject].short}, {sourceTitle(e.examId)}, n.º {numberOfQuestion(e.questionId)}
         </span>
       </span>
-      <span className="shrink-0 font-mono text-xs text-zinc-500 tabular-nums dark:text-zinc-400" title={`Marcaste ${e.selected}; la clave es ${e.correct}`}>
+      <span className="shrink-0 font-mono text-xs text-zinc-500 tabular-nums dark:text-zinc-400" title={`Marcaste ${e.selected}; la correcta es ${e.correct}`}>
         <span className="sr-only">Marcaste </span>{e.selected}
         <span className="mx-1 text-zinc-300 dark:text-zinc-700">/</span>
-        <span className="sr-only">clave </span><span className="text-zinc-900 dark:text-zinc-100">{e.correct}</span>
+        <span className="sr-only">correcta </span><span className="text-zinc-900 dark:text-zinc-100">{e.correct}</span>
       </span>
     </>
   )

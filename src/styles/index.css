@@ -35,7 +35,8 @@
   }
   html.dark { color-scheme: dark; }
   body {
-    @apply bg-[#FAFAFA] font-sans text-[14px] text-zinc-900 dark:bg-[#09090B] dark:text-zinc-100;
+    /* Todas las vistas viven en el App Shell, que desplaza su propio <main>: la ventana nunca debe desplazarse. */
+    @apply overflow-hidden bg-[#FAFAFA] font-sans text-[14px] text-zinc-900 dark:bg-[#09090B] dark:text-zinc-100;
   }
   ::selection { @apply bg-zinc-900/10 dark:bg-zinc-100/20; }
   :focus-visible { @apply outline-2 outline-offset-2 outline-zinc-900 dark:outline-zinc-100; }

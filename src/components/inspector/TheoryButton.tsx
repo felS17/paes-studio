@@ -5,7 +5,7 @@ import { useInspectorStore } from '@/store/useInspectorStore'
 import type { Question, SubjectId } from '@/types/exam'
 import { subjectOfQuestion } from '@/utils/analytics'
 
-/** «Consultar teoría del subtema»: abre el Inspector junto a la pregunta, sin salir del ensayo. */
+/** «Ver resumen de este tema»: abre el Inspector junto a la pregunta, sin salir del ensayo. */
 export function TheoryButton({ question, fallbackSubject = 'm1' }: { question: Question; fallbackSubject?: SubjectId }) {
   const open = useInspectorStore((s) => s.openInspector)
   const id = question.subtopic ?? SUBTOPIC_OF_QUESTION.get(question.id)
@@ -14,11 +14,11 @@ export function TheoryButton({ question, fallbackSubject = 'm1' }: { question: Q
     <Button
       variant="ghost"
       size="sm"
-      title={sub ? `Abrir «${sub.title}» en el Inspector` : 'Abrir la asignatura en el Inspector'}
+      title={sub ? `Abrir el resumen de «${sub.title}» junto a la pregunta` : 'Abrir el resumen de la materia junto a la pregunta'}
       onClick={() => open(sub ? { kind: 'subtopic', id: sub.id } : { kind: 'subject', subject: subjectOfQuestion(question.id, fallbackSubject), axis: question.axis })}
     >
       <BookOpen className="size-3.5" />
-      {sub ? 'Consultar teoría del subtema' : 'Consultar teoría de la asignatura'}
+      {sub ? 'Ver resumen de este tema' : 'Ver resumen de esta materia'}
     </Button>
   )
 }

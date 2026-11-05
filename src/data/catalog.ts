@@ -20,7 +20,7 @@ export function loadExam(id: string): Promise<Exam> {
   const meta = EXAMS_BY_ID.get(id)
   if (!meta) return Promise.reject(new Error(`No existe el ensayo "${id}".`))
   const loader = loaders[`./exams/${meta.file}`]
-  if (!loader) return Promise.reject(new Error(`No se encontró el archivo de datos ${meta.file}.`))
+  if (!loader) return Promise.reject(new Error('No pudimos cargar este ensayo. Revisa tu conexión e inténtalo de nuevo.'))
   let pending = cache.get(id)
   if (!pending) {
     pending = loader().then((m) => m.default)
@@ -36,7 +36,7 @@ export function loadExam(id: string): Promise<Exam> {
  */
 async function buildPracticeSet(id: string): Promise<Exam> {
   const set = useExamStore.getState().sets[id]
-  if (!set) throw new Error('Esta práctica ya no está guardada en este navegador.')
+  if (!set) throw new Error('Esta práctica ya no está guardada en este computador.')
   const sources = await Promise.all([...new Set(set.items.map((i) => i.examId))].map((examId) => loadExam(examId)))
   const byId = new Map(sources.map((e) => [e.id, e]))
   const passages: Passage[] = []

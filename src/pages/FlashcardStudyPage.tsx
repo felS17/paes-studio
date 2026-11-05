@@ -107,7 +107,7 @@ export function FlashcardStudyPage() {
           <div className="mt-2 min-w-0">
             <h1 className="text-[20px] leading-tight font-semibold tracking-tight">{deck.title}</h1>
             <p className="mt-1 text-xs text-zinc-500 tabular-nums dark:text-zinc-400">
-              {snap.seen} de {snap.total} estudiadas, {consolidated} en repaso espaciado
+              {snap.seen} de {snap.total} estudiadas, {consolidated} ya en repaso
             </p>
           </div>
         </div>

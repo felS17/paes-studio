@@ -13,11 +13,11 @@ export function SubtopicsPage() {
   return (
     <div className="space-y-8">
       <PageHeader
-        title="Subtemas"
+        title="Practicar por Tema"
         description={
           <>
-            Los <span className="tabular-nums">{SUBTOPICS.length}</span> subtemas del temario DEMRE, ordenados por asignatura y eje.
-            Practica cualquiera con 10, 20 o todas sus preguntas, reunidas de todos los ensayos, o ábrelo en su compendio PDF.
+            Los <span className="tabular-nums">{SUBTOPICS.length}</span> temas de la PAES, ordenados por materia. Elige el que te
+            cuesta y practica 10, 20 o todas sus preguntas, o lee su resumen antes de partir.
           </>
         }
       />

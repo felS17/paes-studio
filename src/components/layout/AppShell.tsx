@@ -29,7 +29,7 @@ function StageHeader() {
   return (
     <header className="flex h-12 shrink-0 items-center gap-2 border-b border-zinc-200/80 px-3 sm:px-4 lg:px-5 dark:border-zinc-800/80">
       {!desktop && (
-        <Button variant="ghost" size="icon" onClick={toggle} aria-label="Abrir navegación"><Menu /></Button>
+        <Button variant="ghost" size="icon" onClick={toggle} aria-label="Abrir menú"><Menu /></Button>
       )}
       <Breadcrumbs />
       {hasTarget && (
@@ -39,8 +39,8 @@ function StageHeader() {
           className={cn('ml-auto', isOpen && 'text-zinc-900 dark:text-zinc-100')}
           aria-pressed={isOpen}
           onClick={isOpen ? close : reopen}
-          title={isOpen ? 'Cerrar Inspector' : 'Volver a abrir el Inspector'}
-          aria-label={isOpen ? 'Cerrar Inspector' : 'Volver a abrir el Inspector'}
+          title={isOpen ? 'Cerrar el resumen' : 'Volver a abrir el resumen'}
+          aria-label={isOpen ? 'Cerrar el resumen' : 'Volver a abrir el resumen'}
         >
           <PanelRight />
         </Button>
@@ -84,14 +84,15 @@ export function AppShell() {
   }, [toggle])
 
   return (
-    <div className="flex h-dvh overflow-hidden bg-[#FAFAFA] dark:bg-[#09090B]">
+    // `relative` aquí y en <main>: sin él, los hijos absolutos (como `sr-only`) escapan del recorte y estiran la ventana.
+    <div className="relative flex h-dvh overflow-hidden bg-[#FAFAFA] dark:bg-[#09090B]">
       <Sidebar />
       <div className="flex min-w-0 flex-1 flex-col">
         {!running && <StageHeader />}
         <div className="flex min-h-0 flex-1">
           <main
             ref={stageRef}
-            className={cn('flex min-h-0 min-w-0 flex-1 flex-col', running ? 'overflow-hidden' : 'overflow-y-auto')}
+            className={cn('relative flex min-h-0 min-w-0 flex-1 flex-col', running ? 'overflow-hidden' : 'overflow-y-auto')}
           >
             <div
               className={cn(

@@ -18,15 +18,15 @@ const MODES: { mode: ExamMode; title: string; icon: typeof Clock; body: (exam: E
     icon: ListChecks,
     body: (exam) =>
       exam.source === 'curado'
-        ? 'Verificas cada respuesta al instante y ves el desarrollo paso a paso. Sin límite de tiempo.'
-        : 'Verificas cada respuesta al instante con el clavijero oficial. Sin límite de tiempo.',
+        ? 'Corriges cada pregunta al momento y ves la explicación paso a paso. Sin reloj ni presión.'
+        : 'Corriges cada pregunta al momento con las respuestas oficiales. Sin reloj ni presión.',
   },
   {
     mode: 'ensayo',
     title: 'Modo ensayo',
     icon: Clock,
     body: (exam) =>
-      `Condiciones de prueba: ${formatMinutes(exam.durationMinutes)} de reloj, sin ver claves hasta entregar. Al final obtienes tu puntaje PAES.`,
+      `Como el día de la prueba: ${formatMinutes(exam.durationMinutes)} de reloj y sin ver las respuestas hasta entregar. Al final sabes qué puntaje sacarías.`,
   },
 ]
 
@@ -42,7 +42,7 @@ export function ExamIntro({ exam }: { exam: Exam }) {
     ['Preguntas', <span className="tabular-nums">{exam.questions.length}</span>],
     ['Tiempo de ensayo', formatMinutes(exam.durationMinutes)],
     ...(exam.passages.length ? [['Lecturas', <span className="tabular-nums">{exam.passages.length}</span>] as [string, React.ReactNode]] : []),
-    ['Fuente', exam.source === 'demre' ? 'Folleto oficial DEMRE' : 'Ensayo curado'],
+    ['Fuente', exam.source === 'demre' ? 'Prueba oficial del DEMRE' : 'Ensayo con explicaciones'],
     ...(exam.form ? [['Forma', <span className="tabular-nums">{exam.form}</span>] as [string, React.ReactNode]] : []),
     ...(pilots ? [['Preguntas piloto', <span className="tabular-nums">{pilots}</span>] as [string, React.ReactNode]] : []),
   ]
@@ -55,7 +55,7 @@ export function ExamIntro({ exam }: { exam: Exam }) {
       <div className="mt-6">
         <SubjectTag subject={exam.subject} label={subjectLabel(exam.subject, exam.area)} />
         <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-[28px]">{exam.title}</h1>
-        <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-zinc-600 dark:text-zinc-400">{exam.description}</p>
+        <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-zinc-600 dark:text-zinc-400">{exam.source === 'demre' ? 'Una prueba real del DEMRE, con sus respuestas oficiales para que te corrijas al tiro.' : exam.description}</p>
       </div>
 
       <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 border-y border-zinc-200/80 py-4 sm:grid-cols-3 dark:border-zinc-800/80">
@@ -119,13 +119,13 @@ export function ExamIntro({ exam }: { exam: Exam }) {
         {snapshots > 0 && (
           <p className="leading-relaxed">
             {snapshots === exam.questions.length ? 'Todas las preguntas' : `${snapshots} preguntas`} con fórmulas, tablas o
-            figuras se muestran como recorte fiel del folleto oficial; marcas tu respuesta con los botones bajo la imagen.
+            figuras se muestran tal como aparecen en la prueba oficial; marcas tu respuesta con los botones bajo la imagen.
           </p>
         )}
         {exam.source === 'demre' && (
           <p className="leading-relaxed">
-            El folleto publicado puede ser una selección de la prueba completa. El puntaje se calcula con la tabla de
-            transformación oficial: es exacto si respondes la prueba completa y estimado (proporcional) si es una selección.
+            A veces el DEMRE publica solo una parte de la prueba. Si es la prueba completa y la respondes entera, tu puntaje
+            es exacto; si es una parte, es una estimación.
           </p>
         )}
       </div>

@@ -99,16 +99,16 @@ function TexLinks({ path, loader, name, onView }: { path: string; loader: Loader
   if (!available) return null
   return (
     <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-      <span className="font-mono text-zinc-400 dark:text-zinc-500">{name}</span>
-      <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('dl')}>Descargar .tex</button>
-      <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('ov')}>Abrir en Overleaf</button>
-      <button type="button" className={LINK} onClick={() => run('ver')}>Ver código</button>
+      <span className="text-zinc-400 dark:text-zinc-500">Para adaptarla:</span>
+      <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('dl')}>Descargar archivo editable</button>
+      <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('ov')}>Editar en Overleaf</button>
+      <button type="button" className={LINK} onClick={() => run('ver')}>Ver archivo</button>
     </p>
   )
 }
 
 const KIND = {
-  guia: { label: 'Compendio de estudio', unit: 'páginas A4' },
+  guia: { label: 'Guía de estudio', unit: 'páginas' },
   beamer: { label: 'Presentación de repaso', unit: 'diapositivas 16:9' },
 } as const
 
@@ -128,7 +128,7 @@ function DocumentRow({ entry, onView }: { entry: ManifestEntry; onView: (v: View
                 <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{pdf.pages}</span> {kind.unit},{' '}
                 <span className="font-mono tabular-nums">{kb(pdf.bytes)}</span>
               </>
-            ) : 'PDF aún no compilado'}
+            ) : 'Este PDF todavía no está disponible'}
             {entry.kind === 'guia' && entry.examples !== undefined && (
               <>
                 ,{' '}<span className="font-mono tabular-nums">{entry.examples}</span> ejemplos resueltos
@@ -157,8 +157,8 @@ function DocumentRow({ entry, onView }: { entry: ManifestEntry; onView: (v: View
 
 function describe(name: string): string {
   return name.startsWith('guia')
-    ? 'Guía a dos columnas con cajas para definiciones, fórmulas, leyes, mecanismos, líneas de tiempo, trampas y ejemplos.'
-    : 'Presentación Beamer 16:9 minimalista para repasos en clase o en video.'
+    ? 'Formato de guía, con recuadros para definiciones, fórmulas, trampas y ejemplos.'
+    : 'Formato de presentación, pensado para repasar en clase o en video.'
 }
 
 function TemplateRow({ path, loader, onView }: { path: string; loader: Loader; onView: (v: Viewing) => void }) {
@@ -167,13 +167,13 @@ function TemplateRow({ path, loader, onView }: { path: string; loader: Loader; o
   return (
     <li className="flex flex-wrap items-center gap-x-6 gap-y-3 px-5 py-4">
       <div className="min-w-0 flex-1 basis-64">
-        <p className="truncate font-mono text-[12.5px]">{name}</p>
+        <p className="truncate text-[13px] font-medium">{name.startsWith('guia') ? 'Formato de guía' : 'Formato de presentación'}</p>
         <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{describe(name)}</p>
       </div>
       <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-        <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('dl')}>Descargar .tex</button>
-        <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('ov')}>Abrir en Overleaf</button>
-        <button type="button" className={LINK} onClick={() => run('ver')}>Ver código</button>
+        <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('dl')}>Descargar archivo editable</button>
+        <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('ov')}>Editar en Overleaf</button>
+        <button type="button" className={LINK} onClick={() => run('ver')}>Ver archivo</button>
       </p>
     </li>
   )
@@ -190,8 +190,8 @@ export function MaterialPage() {
   return (
     <div className="space-y-12">
       <PageHeader
-        title="Compendios y presentaciones"
-        description="Una guía de estudio y una presentación de repaso por asignatura, generadas desde el temario y listas en PDF."
+        title="Guías y Resúmenes PDF"
+        description="Una guía de estudio y una presentación de repaso por materia, listas para leer o descargar."
       />
 
       {bySubject.length ? (
@@ -213,34 +213,29 @@ export function MaterialPage() {
           ))}
         </div>
       ) : (
-        <p className="text-[13px] text-zinc-500">Aún no hay material generado. Ejecuta <code className="font-mono text-[12px]">npm run latex</code>.</p>
+        <p className="text-[13px] text-zinc-500">Las guías todavía no están disponibles. Vuelve a mirar en un rato.</p>
       )}
 
       <section aria-labelledby="plantillas" className="space-y-2.5">
         <div className="px-1">
-          <h2 id="plantillas" className="text-[15px] font-semibold tracking-tight">Plantillas base</h2>
-          <p className="mt-0.5 max-w-2xl text-[13px] text-zinc-500 dark:text-zinc-400">Los estilos de guía y de presentación, por si quieres armar tu propio material.</p>
+          <h2 id="plantillas" className="text-[15px] font-semibold tracking-tight">Para profes y curiosos</h2>
+          <p className="mt-0.5 max-w-2xl text-[13px] text-zinc-500 dark:text-zinc-400">Si haces clases o quieres armar tu propio material, aquí están los formatos base de las guías y presentaciones.</p>
         </div>
         <Panel>
           <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
             {templateEntries.map(([path, loader]) => <TemplateRow key={path} path={path} loader={loader} onView={setViewing} />)}
           </ul>
         </Panel>
-        <p className="px-1 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
-          Para editar el código: «Abrir en Overleaf» crea un proyecto que compila con pdfLaTeX. En tu equipo,{' '}
-          <code className="font-mono text-[11.5px]">npm run latex</code> regenera los .tex y{' '}
-          <code className="font-mono text-[11.5px]">npm run pdfs</code> los compila.
-        </p>
       </section>
 
       <Dialog open={viewing !== null} onOpenChange={(o) => !o && setViewing(null)}>
-        <DialogContent title={viewing?.name ?? 'Código'} description="Código fuente LaTeX del archivo." className="max-w-4xl">
+        <DialogContent title={viewing?.name ?? 'Archivo'} description="El archivo con el que se genera este material." className="max-w-4xl">
           <pre className="mt-4 max-h-[65vh] overflow-auto rounded-lg border border-zinc-200/80 bg-zinc-50 p-3 font-mono text-[11.5px] leading-relaxed text-zinc-700 dark:border-zinc-800/80 dark:bg-zinc-900/50 dark:text-zinc-300">
             {viewing?.text ?? 'Cargando…'}
           </pre>
           {viewing?.text && (
             <div className="mt-3 flex justify-end gap-2">
-              <Button size="sm" onClick={() => download(viewing.text!, viewing.name)}>Descargar .tex</Button>
+              <Button size="sm" onClick={() => download(viewing.text!, viewing.name)}>Descargar archivo editable</Button>
             </div>
           )}
         </DialogContent>

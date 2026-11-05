@@ -36,16 +36,16 @@ export function parseBackup(text: string): BackupParseResult {
   try {
     data = JSON.parse(text)
   } catch {
-    return { ok: false, error: 'El archivo no es un JSON válido.' }
+    return { ok: false, error: 'No pudimos leer ese archivo. Elige el que descargaste desde aquí.' }
   }
   if (!isObj(data) || data.app !== 'paes-studio') {
-    return { ok: false, error: 'El archivo no es un respaldo de PAES Studio.' }
+    return { ok: false, error: 'Ese archivo no es un progreso descargado de PAES Studio.' }
   }
   if (data.version !== 1) {
-    return { ok: false, error: `Versión de respaldo no compatible (${String(data.version)}).` }
+    return { ok: false, error: 'Ese archivo es de una versión que no podemos leer.' }
   }
   if (!Array.isArray(data.attempts)) {
-    return { ok: false, error: 'El respaldo no contiene intentos.' }
+    return { ok: false, error: 'Ese archivo no trae intentos guardados.' }
   }
   const attempts = data.attempts.filter(validAttempt)
   return { ok: true, attempts, skipped: data.attempts.length - attempts.length }

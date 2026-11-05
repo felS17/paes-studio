@@ -27,7 +27,7 @@ export function BackupActions() {
     a.download = `paes-studio-respaldo-${new Date().toISOString().slice(0, 10)}.json`
     a.click()
     URL.revokeObjectURL(url)
-    setMessage({ tone: 'ok', text: `Respaldo descargado con ${plural(attempts.length, 'intento')}.` })
+    setMessage({ tone: 'ok', text: `Listo: descargaste tu progreso con ${plural(attempts.length, 'intento')}.` })
   }
 
   const onFile = async (file: File | undefined) => {
@@ -47,7 +47,7 @@ export function BackupActions() {
     const added = importAttempts(pending.attempts, strategy)
     setMessage({
       tone: 'ok',
-      text: strategy === 'replace' ? `Historial reemplazado: ${plural(added, 'intento')}.` : `Importados ${plural(added, 'intento nuevo', 'intentos nuevos')}.`,
+      text: strategy === 'replace' ? `Listo: ahora tienes ${plural(added, 'intento')}.` : `Listo: sumamos ${plural(added, 'intento nuevo', 'intentos nuevos')}.`,
     })
     setPending(null)
   }
@@ -57,11 +57,11 @@ export function BackupActions() {
       <div className="flex gap-1.5">
         <Button size="sm" variant="ghost" onClick={exportBackup} disabled={!attempts.length}>
           <Download />
-          Exportar
+          Descargar mi progreso
         </Button>
         <Button size="sm" variant="ghost" onClick={() => fileRef.current?.click()}>
           <Upload />
-          Importar
+          Subir mi progreso
         </Button>
         <input ref={fileRef} type="file" accept="application/json,.json" className="sr-only" onChange={(e) => onFile(e.target.files?.[0])} aria-label="Archivo de respaldo" />
       </div>
@@ -72,16 +72,16 @@ export function BackupActions() {
       )}
       <Dialog open={pending !== null} onOpenChange={(o) => !o && setPending(null)}>
         <DialogContent
-          title="Importar respaldo"
-          description={pending ? `${pending.fileName} contiene ${plural(pending.attempts.length, 'intento válido', 'intentos válidos')}${pending.skipped ? ` (${pending.skipped} descartados por formato)` : ''}.` : undefined}
+          title="Subir tu progreso"
+          description={pending ? `${pending.fileName} contiene ${plural(pending.attempts.length, 'intento válido', 'intentos válidos')}${pending.skipped ? ` (${pending.skipped} no se pudieron leer)` : ''}.` : undefined}
         >
           <div className="mt-4 space-y-2">
             <Segmented
-              label="Cómo importar"
+              label="Cómo subirlo"
               value={strategy}
               onChange={setStrategy}
               options={[
-                { value: 'merge', label: 'Combinar con el actual' },
+                { value: 'merge', label: 'Sumar a lo que ya tengo' },
                 { value: 'replace', label: 'Reemplazar todo' },
               ]}
             />
@@ -93,7 +93,7 @@ export function BackupActions() {
           </div>
           <div className="mt-5 flex justify-end gap-2">
             <Button onClick={() => setPending(null)}>Cancelar</Button>
-            <Button variant="primary" onClick={confirmImport}>Importar</Button>
+            <Button variant="primary" onClick={confirmImport}>Subir</Button>
           </div>
         </DialogContent>
       </Dialog>

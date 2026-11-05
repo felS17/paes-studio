@@ -40,11 +40,20 @@ Tienes total libertad y mandato para crear una arquitectura modular y bien ramif
 - `/src/components/math/`: Renderizador `MathText` para texto híbrido Markdown + LaTeX.
 - `/src/hooks/`: Hooks personalizados (`useKeyboardShortcuts`, `useExamTimer`, `useQuestionClock`, `useWorkspace`, `useStorageUsage`, `useSubtopicNotes`, `useTheme`).
 - `/src/store/`: Stores de Zustand (`useExamStore.ts` con sesiones, prácticas y alternativas tachadas; `useAnalyticsStore.ts`; `useFlashcardStore.ts`; `useStreakStore.ts` con los días de estudio de la racha; `useInspectorStore.ts` y `useWorkspaceStore.ts`, sin persistencia).
-- `/src/utils/`: Cálculo de puntajes escala PAES (100-1000), formateadores, validadores y `telemetry.ts` (umbrales, Matriz de Ritmo y Decisión, Índice de Duda Tóxica). La telemetría de un intento se lee siempre con `readTelemetry`: los intentos anteriores a la v2.1 no la traen.
+- `/src/utils/`: Cálculo de puntajes escala PAES (100-1000), formateadores, validadores y `telemetry.ts` (umbrales, 4 perfiles de respuesta y balance de cambios de alternativa). La telemetría de un intento se lee siempre con `readTelemetry`: los intentos anteriores a la v2.1 no la traen.
 - `/scripts/pipeline/`: Scripts en Python para extracción de texto/imágenes desde `/pruebas-oficiales` y cruce con `/facsimiles-oficiales`.
 - `/latex/templates/` y `/latex/output/`: Plantillas `.tex` de guías (`tcolorbox`) y presentaciones Beamer (`16:9`). `/latex/compat/` guarda sustitutos mínimos (`tikzfill.image`, `pdfcol`, `listingsutf8`) que `build_pdfs.py` usa solo si faltan en el TeX Live local.
 - `/public/pdfs/`: los 10 PDF compilados que sirve la vista de Material (metadatos en `src/data/pdfs.json`).
 - `LICENSE` (MIT 2026, felS) y `src/components/layout/Footer.tsx` (autoría, licencia y contacto) al pie de todas las vistas con layout.
+
+---
+
+## Voz y textos de la interfaz
+La app le habla a un estudiante, no a un programador: cercana, motivadora, en tú y en español de Chile, con verbos que invitan a practicar.
+- **Cero jerga visible:** nada de KaTeX, LaTeX, SM-2, localStorage, navegador, clavijero, grafo, nodo, banco, compendio, drill (salvo en la tarjeta «Drills rápidos» del Inicio), Inspector, respaldo, importar o exportar. Se dice «explicación paso a paso», «tarjetas inteligentes», «respuesta oficial», «mapa», «guía», «resumen del tema» y «descargar o subir tu progreso».
+- **Código abierto y MIT:** solo como detalle pequeño en el pie de página.
+- **Transparencia:** las explicaciones redactadas con IA siguen indicándolo, en lenguaje simple.
+- **Frases de impulso:** viven en `src/data/quotes.ts` (25–30, sin autores); rotan una por día y con «Otra frase».
 
 ---
 
@@ -85,5 +94,6 @@ Tienes total libertad y mandato para crear una arquitectura modular y bien ramif
 
 ### 5. Arquitectura de información
 - **Revelación progresiva:** las vistas densas muestran primero un resumen y luego una sola sección a la vez (pestañas `Tabs` de `src/components/ui/tabs.tsx`, con la pestaña activa en la URL, p. ej. `/analitica?vista=errores`). Los listados largos usan maestro-detalle en escritorio y acordeón en móvil.
-- **Espacio de trabajo:** barra lateral con 4 secciones (Foco, Entrenamiento, Conocimiento, Diagnóstico). En ensayo cronometrado la barra parte oculta (Modo Zen) y el Inspector queda bloqueado hasta entregar. El ancho disponible del `ExamRunner` se mide en el propio componente, no en la ventana, porque depende de la barra y del Inspector.
+- **Íconos en llamados a la acción:** el botón «Entrenar 10 preguntas rápidas ahora» lleva `Zap` y «Ver resumen de este tema» lleva `BookOpen`, ambos de Lucide y monocromos, en vez de emoji con color.
+- **Espacio de trabajo:** barra lateral con 4 secciones: Hoy (Inicio, Racha de estudio, Desafío del Día), Práctica (Ensayos Completos, Practicar por Tema, Flashcards), Apuntes y Red (Mapa de Conocimiento, Guías y Resúmenes PDF) y Tu Avance (Estadísticas y Errores). Las rutas y los nombres internos (`/zettelkasten`, `/material`, `/analitica`, `ZettelkastenPage`, `Inspector`) no cambian.  En ensayo cronometrado la barra parte oculta (Modo Zen) y el Inspector queda bloqueado hasta entregar. El ancho disponible del `ExamRunner` se mide en el propio componente, no en la ventana, porque depende de la barra y del Inspector.
 - **Material:** el PDF compilado es la acción principal («Abrir PDF», «Descargar»); el `.tex`, Overleaf y el código quedan como enlaces secundarios en texto.

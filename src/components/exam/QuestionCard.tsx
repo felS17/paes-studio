@@ -99,7 +99,7 @@ export function QuestionCard({
               style={{ maxWidth: `${Math.round(snapshot.width / 1.25)}px` }}
               decoding="async"
             />
-            <figcaption className="sr-only">Recorte del folleto oficial del DEMRE</figcaption>
+            <figcaption className="sr-only">Imagen de la prueba oficial del DEMRE</figcaption>
           </figure>
         ) : (
           <MathText text={question.stem} className="text-[15.5px] leading-[1.7] text-zinc-900 dark:text-zinc-100" />
@@ -153,10 +153,10 @@ export function QuestionCard({
                 isCorrect ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400',
               )}
             >
-              {isCorrect ? 'Correcta.' : selected ? `Incorrecta. Marcaste la ${selected}; la clave es la ${question.answer}.` : `Sin responder. La clave es la ${question.answer}.`}
+              {isCorrect ? 'Correcta.' : selected ? `Esta no era. Marcaste la ${selected}; la correcta es la ${question.answer}.` : `Sin responder. La correcta es la ${question.answer}.`}
             </p>
           ) : (
-            <p className="text-[13px] font-medium text-zinc-500">Sin responder. La clave es la {question.answer}.</p>
+            <p className="text-[13px] font-medium text-zinc-500">Sin responder. La correcta es la {question.answer}.</p>
           )}
           <SolutionAccordion key={question.id} question={question} defaultOpen={!isCorrect} />
         </div>

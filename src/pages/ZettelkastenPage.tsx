@@ -98,13 +98,12 @@ export function ZettelkastenPage() {
   return (
     <div className="space-y-6">
       <PageHeader
-        title="Red de conocimiento"
+        title="Mapa de Conocimiento"
         description={
           <>
-            Tu Zettelkasten del temario DEMRE: cada asignatura se abre en sus ejes y sus{' '}
-            <span className="tabular-nums">{SUBTOPICS.length}</span> subtemas, y cada pregunta que respondes se conecta a su
-            subtema. Las líneas punteadas unen ideas de distintas materias. Haz clic en un nodo para ver su nota, tus preguntas
-            y lanzar un drill.
+            Los <span className="tabular-nums">{SUBTOPICS.length}</span> temas de la PAES en un mapa que crece contigo: cada
+            pregunta que respondes se suma a su tema, y las líneas punteadas muestran cómo se conectan las materias. Toca un
+            punto para leer su resumen, ver tus preguntas y ponerte a practicar.
           </>
         }
       />
@@ -121,7 +120,7 @@ export function ZettelkastenPage() {
           options={[{ value: 'todas', label: 'Todas' }, ...SUBJECT_ORDER.map((id) => ({ value: id, label: SUBJECTS[id].short }))]}
         />
         <Segmented<'si' | 'no'>
-          label="Preguntas resueltas en el grafo"
+          label="Preguntas resueltas en el mapa"
           className="max-w-full overflow-x-auto"
           value={showQuestions ? 'si' : 'no'}
           onChange={(v) => update({ preguntas: v === 'no' ? 'no' : null })}
@@ -136,10 +135,10 @@ export function ZettelkastenPage() {
         <dl className="grid grid-cols-2 border-b border-zinc-200/80 sm:grid-cols-4 dark:border-zinc-800/80">
           {(
             [
-              ['Subtemas explorados', `${summary.explored}/${summary.total}`],
+              ['Temas explorados', `${summary.explored}/${summary.total}`],
               ['Dominados', summary.mastered],
               ['Errores pendientes', summary.pending],
-              ['Preguntas en la red', summary.questions],
+              ['Preguntas en tu mapa', summary.questions],
             ] as const
           ).map(([label, value]) => (
             <div key={label} className="border-zinc-200/80 px-5 py-3 not-last:border-r max-sm:odd:border-r max-sm:[&:nth-child(-n+2)]:border-b dark:border-zinc-800/80">
@@ -148,7 +147,7 @@ export function ZettelkastenPage() {
             </div>
           ))}
         </dl>
-        <div ref={setEl} id="zk-grafo" className="relative scroll-mt-6" style={{ height }} aria-label="Grafo de la red de conocimiento" role="img">
+        <div ref={setEl} id="zk-grafo" className="relative scroll-mt-6" style={{ height }} aria-label="Mapa de conocimiento" role="img">
           {width > 0 && (
             <KnowledgeGraph
               data={data}
@@ -161,7 +160,7 @@ export function ZettelkastenPage() {
           )}
           {!attempts.length && (
             <p className="pointer-events-none absolute inset-x-0 bottom-4 mx-auto w-fit max-w-[90%] rounded-lg border border-zinc-200/80 bg-white/90 px-3 py-2 text-center text-xs text-zinc-600 dark:border-zinc-800/80 dark:bg-[#121215]/90 dark:text-zinc-400">
-              Todo el temario está sin explorar. Responde un drill o un ensayo y tus preguntas aparecerán conectadas a su subtema.
+              Tu mapa te está esperando: responde una práctica o un ensayo y tus preguntas aparecerán aquí, conectadas a su tema.
             </p>
           )}
         </div>
@@ -177,9 +176,9 @@ export function ZettelkastenPage() {
       </Panel>
 
       <section aria-labelledby="zk-lista" className="space-y-2">
-        <h2 id="zk-lista" className="px-1 text-[14px] font-semibold tracking-tight">Abrir un subtema</h2>
+        <h2 id="zk-lista" className="px-1 text-[14px] font-semibold tracking-tight">Abrir un tema</h2>
         <p className="px-1 text-[13px] text-zinc-500 dark:text-zinc-400">
-          La misma red como lista, para navegar con teclado o lector de pantalla.
+          El mismo mapa en forma de lista, para navegar con teclado o lector de pantalla.
         </p>
         <ul className="flex flex-wrap gap-1.5">
           {SUBTOPICS.filter((s) => subject === 'todas' || s.subject === subject).map((s) => {

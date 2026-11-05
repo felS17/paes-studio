@@ -36,7 +36,7 @@ function resolveTarget(target: InspectorTarget) {
   return {
     subject: target.subject,
     title: onlyAxis?.name ?? SUBJECTS[target.subject].name,
-    context: onlyAxis ? SUBJECTS[target.subject].short : 'Asignatura completa',
+    context: onlyAxis ? SUBJECTS[target.subject].short : 'Materia completa',
     subtopicIds: axes.flatMap((a) => a.subtopics.map((s) => s.id)),
     pdfHref: pageHref(temario.pdf, firstPage),
     pdfPage: firstPage,
@@ -47,8 +47,8 @@ function resolveTarget(target: InspectorTarget) {
 
 function Mastery({ stat, questions }: { stat: SubtopicStat; questions: number }) {
   const items: [string, React.ReactNode, string?][] = [
-    ['Dominio histórico', stat.accuracy === null ? '—' : formatPercent(stat.accuracy), stat.answered ? `${stat.correct} de ${stat.answered} correctas` : 'Sin respuestas aún'],
-    ['Respondidas', stat.answered, `de ${questions} en el banco`],
+    ['Tus aciertos aquí', stat.accuracy === null ? '—' : formatPercent(stat.accuracy), stat.answered ? `${stat.correct} de ${stat.answered} correctas` : 'Sin respuestas aún'],
+    ['Respondidas', stat.answered, `de ${questions} disponibles`],
     ['Errores pendientes', stat.pending],
   ]
   return (
@@ -90,7 +90,7 @@ function ZettelLinks({ id, subject, latest }: { id: string; subject: SubjectId; 
   }, [id, latest])
   const cross = CROSS_LINKS.flatMap((l) => (l.a === id ? [{ id: l.b, why: l.why }] : l.b === id ? [{ id: l.a, why: l.why }] : []))
   return (
-    <Block title="Conceptos del Zettelkasten">
+    <Block title="Lo que ya has practicado aquí">
       {concepts.length > 0 ? (
         <ul className="flex flex-wrap gap-1.5">
           {concepts.map(([topic, c]) => (
@@ -101,7 +101,7 @@ function ZettelLinks({ id, subject, latest }: { id: string; subject: SubjectId; 
           ))}
         </ul>
       ) : (
-        <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Los conceptos aparecen a medida que respondes preguntas de este subtema.</p>
+        <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Aparecerá a medida que respondas preguntas de este tema.</p>
       )}
       {cross.length > 0 && (
         <ul className="mt-3 space-y-2">
@@ -120,7 +120,7 @@ function ZettelLinks({ id, subject, latest }: { id: string; subject: SubjectId; 
         </ul>
       )}
       <Link to={`/zettelkasten?asignatura=${subject}`} className="mt-3 inline-block text-xs text-zinc-500 underline-offset-4 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-100">
-        Ver en el grafo
+        Ver en el mapa
       </Link>
     </Block>
   )
@@ -141,7 +141,7 @@ function PdfViewer({ href, label }: { href: string; label: string }) {
       </div>
       <iframe key={src} src={src} title={label} className="min-h-0 w-full flex-1 bg-white" />
       <p className="shrink-0 border-t border-zinc-200/80 px-4 py-2 text-[11.5px] text-zinc-500 lg:hidden dark:border-zinc-800/80 dark:text-zinc-400">
-        Si tu navegador no muestra el PDF aquí, ábrelo en una pestaña completa.
+        Si el PDF no se ve aquí, ábrelo en una pestaña completa.
       </p>
     </div>
   )
@@ -168,9 +168,9 @@ export function InspectorContent() {
   const stat = combineStats(info.subtopicIds, stats)
   const questions = info.subtopicIds.reduce((n, id) => n + (SUBTOPICS_BY_ID.get(id)?.questionCount ?? 0), 0)
   const items: { value: InspectorTab; label: string }[] = [
-    { value: 'ficha', label: 'Ficha y fórmulas' },
-    { value: 'pdf', label: 'Compendio PDF' },
-    { value: 'flashcards', label: 'Flashcards' },
+    { value: 'ficha', label: 'Resumen y fórmulas' },
+    { value: 'pdf', label: 'Guía en PDF' },
+    { value: 'flashcards', label: 'Tarjetas rápidas' },
   ]
 
   return (
@@ -189,11 +189,11 @@ export function InspectorContent() {
         {info.sub && !running && (
           <Button size="sm" onClick={() => setDrillOpen(true)} disabled={!info.sub.questionCount}>Practicar</Button>
         )}
-        <Button variant="ghost" size="icon-sm" onClick={close} aria-label="Cerrar Inspector" title="Cerrar Inspector (Esc)"><X /></Button>
+        <Button variant="ghost" size="icon-sm" onClick={close} aria-label="Cerrar el resumen" title="Cerrar el resumen (Esc)"><X /></Button>
       </div>
 
       <Tabs<InspectorTab>
-        label="Contenido del Inspector"
+        label="Contenido del resumen"
         value={tab}
         onChange={setTab}
         items={items}
@@ -206,7 +206,7 @@ export function InspectorContent() {
             <Mastery stat={stat} questions={questions} />
             {info.sub ? (
               <>
-                <Block title="Resumen del concepto">
+                <Block title="Resumen del tema">
                   <SubtopicNoteView id={info.sub.id} notes={notes} />
                 </Block>
                 <ZettelLinks id={info.sub.id} subject={info.subject} latest={latest} />
@@ -237,7 +237,7 @@ export function InspectorContent() {
         {tab === 'pdf' && (
           <PdfViewer
             href={info.pdfHref}
-            label={`Compendio de ${SUBJECTS[info.subject].short}${info.pdfPage ? `, p. ${info.pdfPage}` : ''}`}
+            label={`Guía de ${SUBJECTS[info.subject].short}${info.pdfPage ? `, p. ${info.pdfPage}` : ''}`}
           />
         )}
         {tab === 'flashcards' && <InspectorFlashcards links={links} />}

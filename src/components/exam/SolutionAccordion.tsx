@@ -17,7 +17,7 @@ export function SolutionAccordion({ question, defaultOpen = false }: { question:
   if (!ex) {
     return (
       <p className="flex items-center gap-2 rounded-lg border border-zinc-200/80 bg-white px-3.5 py-2.5 text-[13px] text-zinc-600 dark:border-zinc-800/80 dark:bg-[#121215] dark:text-zinc-400">
-        Clave oficial del clavijero DEMRE:
+        Respuesta oficial del DEMRE:
         <span className="font-mono text-[13px] font-semibold text-zinc-900 dark:text-zinc-100">{question.answer}</span>
       </p>
     )
@@ -34,9 +34,9 @@ export function SolutionAccordion({ question, defaultOpen = false }: { question:
         className="flex w-full items-center gap-2 px-3.5 py-2.5 text-left text-[13px] font-medium"
       >
         <ChevronRight className={cn('size-4 text-zinc-400 transition-transform duration-150', open && 'rotate-90')} />
-        Solución del ejercicio
+        Explicación paso a paso
         <Badge tone={isAI ? 'neutral' : 'solid'} className="ml-1 hidden sm:inline-flex">{isAI ? 'Redactada con IA' : 'Revisada'}</Badge>
-        <span className="ml-auto font-mono text-xs text-zinc-500 tabular-nums dark:text-zinc-400">Clave {question.answer}</span>
+        <span className="ml-auto font-mono text-xs text-zinc-500 tabular-nums dark:text-zinc-400">Respuesta {question.answer}</span>
       </button>
       {open && (
         <div id={id} className="animate-fade-in border-t border-zinc-200/80 px-3.5 pt-3 pb-4 text-[14px] leading-relaxed dark:border-zinc-800/80">
@@ -86,8 +86,8 @@ export function SolutionAccordion({ question, defaultOpen = false }: { question:
           )}
           {isAI && (
             <p className="mt-3 text-[11.5px] leading-relaxed text-zinc-500 dark:text-zinc-400">
-              Solución redactada con IA a partir del enunciado y la imagen oficial, y validada para que concluya en la clave del
-              clavijero DEMRE. Si detectas un error, la clave oficial es la referencia.
+              Esta explicación la escribió una IA a partir del enunciado, y se comprobó que llega a la respuesta oficial del
+              DEMRE. Si algo no te cuadra, confía en la respuesta oficial.
             </p>
           )}
         </div>

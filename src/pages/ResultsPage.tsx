@@ -48,8 +48,8 @@ export function ResultsPage() {
 
   if (!attempt) {
     return (
-      <EmptyState title="No encontramos este resultado" action={<Button asChild><Link to="/analitica">Ir a analítica</Link></Button>}>
-        Puede que lo hayas borrado o que pertenezca a otro navegador. Importa tu respaldo desde Analítica para recuperarlo.
+      <EmptyState title="No encontramos este resultado" action={<Button asChild><Link to="/analitica">Ver mis estadísticas</Link></Button>}>
+        Puede que lo hayas borrado o que esté en otro computador. Si descargaste tu progreso, súbelo en Estadísticas y Errores para recuperarlo.
       </EmptyState>
     )
   }
@@ -84,7 +84,7 @@ export function ResultsPage() {
     ['Correctas', attempt.correct],
     ['Incorrectas', attempt.incorrect],
     ['Sin responder', attempt.omitted],
-    ...(daily ? [] : [['Puntaje P', `${attempt.scorableCorrect}/${attempt.scorableTotal}`] as [string, React.ReactNode]]),
+    ...(daily ? [] : [['Buenas que puntúan', `${attempt.scorableCorrect}/${attempt.scorableTotal}`] as [string, React.ReactNode]]),
     ['Tiempo', formatDuration(attempt.durationMs)],
   ]
 
@@ -92,7 +92,7 @@ export function ResultsPage() {
     <div className="space-y-6">
       <div>
         <Button variant="ghost" size="sm" asChild className="-ml-2">
-          <Link to="/analitica"><ArrowLeft />Analítica</Link>
+          <Link to="/analitica"><ArrowLeft />Estadísticas y Errores</Link>
         </Button>
         <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -114,7 +114,7 @@ export function ResultsPage() {
         <div className="grid gap-6 p-5 sm:p-6 md:grid-cols-[auto_1fr] md:items-end">
           {daily ? (
             <div className="md:col-span-2">
-              <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Desafío Diario</p>
+              <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Desafío del Día</p>
               <p className="mt-1 font-mono text-[56px] leading-none font-semibold tracking-tight tabular-nums">
                 {attempt.correct}<span className="text-zinc-400 dark:text-zinc-600">/{attempt.totalQuestions}</span>
               </p>
@@ -130,10 +130,10 @@ export function ResultsPage() {
             <p className="mt-1 font-mono text-[56px] leading-none font-semibold tracking-tight tabular-nums">{attempt.paesScore}</p>
             <p className="mt-2 max-w-[17rem] text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
               {attempt.scoreIsExact
-                ? 'Conversión exacta con la tabla oficial de esta prueba.'
+                ? 'Puntaje exacto, calculado con la tabla oficial de esta prueba.'
                 : attempt.mode === 'practica'
-                  ? 'Estimación según tu tasa de acierto en las preguntas que respondiste.'
-                  : 'Estimación: tu proporción de aciertos llevada a la tabla de transformación oficial.'}
+                  ? 'Estimado según cuántas acertaste de las que respondiste.'
+                  : 'Estimado: tus aciertos llevados a la tabla oficial del DEMRE.'}
             </p>
           </div>
           <ScoreRuler markers={markers} />
@@ -151,7 +151,7 @@ export function ResultsPage() {
 
       {cadence && (
         <Panel className="overflow-hidden">
-          <PanelHeader title="Ritmo y decisión" description="Medido en silencio mientras respondías. Elige una pregunta para revisarla." />
+          <PanelHeader title="Detector de dudas y tiempo" description="Lo medimos sin relojes ni presión mientras respondías. Toca una pregunta para revisarla." />
           <div className="space-y-6 p-4 sm:p-5">
             <CadenceStrip questions={attempt.questions} onPick={reviewQuestion} />
             <CadenceMatrix summary={cadence} onPick={reviewQuestion} />
@@ -165,15 +165,15 @@ export function ResultsPage() {
       <div className={cn('grid items-start gap-6', !daily && 'lg:grid-cols-[1fr_1.4fr]')}>
         {!daily && (
           <Panel>
-            <PanelHeader title="Rendimiento por eje" description={attempt.mode === 'practica' ? 'Solo preguntas respondidas' : undefined} />
+            <PanelHeader title="Cómo te fue por eje" description={attempt.mode === 'practica' ? 'Solo preguntas respondidas' : undefined} />
             <AxisRadar stats={attempt.perAxis} order={SUBJECTS[attempt.subject].axes} className="p-4" />
           </Panel>
         )}
 
         <Panel>
           <PanelHeader
-            title="Revisión con solución"
-            description="En las preguntas incorrectas u omitidas, la solución se despliega al abrirlas."
+            title="Revisa tus respuestas"
+            description="Abre las que fallaste o dejaste en blanco: la explicación aparece al tiro."
           />
           <div className="border-b border-zinc-200/80 px-4 py-2.5 dark:border-zinc-800/80">
             <Segmented<ReviewFilter>

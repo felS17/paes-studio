@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { PanelLeftClose, PanelLeftOpen, X } from 'lucide-react'
+import { Download, PanelLeftClose, PanelLeftOpen, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SubjectMono } from '@/components/ui/subject-tag'
 import { EXAMS_BY_ID } from '@/data/catalog'
@@ -20,24 +20,23 @@ import { ThemeToggle } from './ThemeToggle'
 const SECTION_TITLE = 'px-2.5 text-[11px] font-medium text-zinc-400 dark:text-zinc-500'
 const STATUS_ROW =
   'flex h-7 items-center justify-between gap-3 rounded-lg px-2.5 text-[12px] text-zinc-500 transition-colors hover:bg-zinc-900/[0.03] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.04] dark:hover:text-zinc-100'
-const STORAGE_QUOTA = 5 * 1024 * 1024
 
-/** Racha activa y estado del Desafío Diario de hoy, en una línea cada uno. */
+/** Racha de estudio y estado del Desafío del Día, en una línea cada uno. */
 function FocusStatus({ rail }: { rail: boolean }) {
   const [today] = useState(() => localDateKey())
   const days = useStreakStore((s) => s.days)
   const session = useExamStore((s) => s.sessions[sessionKey(dailySetId(today), 'practica')])
   const { current } = streakSummary(days, today)
   const answered = session ? Object.keys(session.answers).length : 0
-  const challenge = days[today]?.challenge ? 'Completado' : session ? `En curso ${answered}/3` : 'Pendiente'
+  const challenge = days[today]?.challenge ? 'Listo' : session ? `En curso ${answered}/3` : 'Te espera'
   const streakLabel = `${current} ${current === 1 ? 'día' : 'días'}`
 
   if (rail) {
     return (
       <Link
         to="/"
-        title={`Racha activa: ${streakLabel}. Desafío Diario: ${challenge.toLowerCase()}.`}
-        aria-label={`Racha activa: ${streakLabel}. Desafío Diario: ${challenge.toLowerCase()}.`}
+        title={`Racha de estudio: ${streakLabel}. Desafío del Día: ${challenge.toLowerCase()}.`}
+        aria-label={`Racha de estudio: ${streakLabel}. Desafío del Día: ${challenge.toLowerCase()}.`}
         className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg font-mono text-[12px] font-medium text-zinc-500 tabular-nums transition-colors hover:bg-zinc-900/[0.03] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.04] dark:hover:text-zinc-100"
       >
         {current}
@@ -47,12 +46,12 @@ function FocusStatus({ rail }: { rail: boolean }) {
   return (
     <div className="mt-0.5">
       <Link to="/" className={STATUS_ROW}>
-        Racha activa
+        Racha de estudio
         <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{streakLabel}</span>
       </Link>
       <Link to="/" className={STATUS_ROW}>
-        Desafío Diario
-        <span className={cn('tabular-nums', challenge !== 'Pendiente' && 'text-zinc-900 dark:text-zinc-100')}>{challenge}</span>
+        Desafío del Día
+        <span className={cn('tabular-nums', challenge !== 'Te espera' && 'text-zinc-900 dark:text-zinc-100')}>{challenge}</span>
       </Link>
     </div>
   )
@@ -69,7 +68,7 @@ function InProgress() {
   if (!list.length) return null
   return (
     <div className="mt-2.5">
-      <p className={SECTION_TITLE}>En curso</p>
+      <p className={SECTION_TITLE}>Para retomar</p>
       <ul className="mt-1 space-y-0.5">
         {list.map((s) => {
           const meta = EXAMS_BY_ID.get(s.examId)
@@ -86,7 +85,7 @@ function InProgress() {
               >
                 <SubjectMono subject={subject} className="mt-px size-5 text-[9px]" />
                 <span className="min-w-0">
-                  <span className="block truncate font-medium">{set?.kind === 'diario' ? 'Desafío Diario' : subjectLabel(subject, meta?.area)}</span>
+                  <span className="block truncate font-medium">{set?.kind === 'diario' ? 'Desafío del Día' : subjectLabel(subject, meta?.area)}</span>
                   <span className="block truncate text-zinc-400 dark:text-zinc-500">
                     {title}, {s.mode === 'ensayo' ? 'ensayo' : 'práctica'}{' '}
                     <span className="tabular-nums">{answered}/{total}</span>
@@ -101,33 +100,26 @@ function InProgress() {
   )
 }
 
-/** Cuánto ocupa el progreso en este navegador. */
+/** Recuerda que el progreso queda guardado y lleva a donde se puede descargar. */
 function StorageStatus({ rail }: { rail: boolean }) {
   const used = useStorageUsage()
   const kb = Math.max(1, Math.round(used / 1024))
-  const share = Math.min(1, used / STORAGE_QUOTA)
-  const label = `Tu progreso ocupa ${kb} KB de unos 5 MB y se guarda solo en este navegador. Respáldalo desde Analítica.`
+  const label = `Tu progreso se guarda automáticamente aquí mismo (ocupa ${kb} KB). Puedes descargarlo en Estadísticas y Errores si cambias de computador.`
   if (rail) {
     return (
       <Link
         to="/analitica"
         title={label}
         aria-label={label}
-        className="flex h-8 w-8 items-center justify-center rounded-lg font-mono text-[10px] text-zinc-500 tabular-nums transition-colors hover:bg-zinc-900/[0.03] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.04] dark:hover:text-zinc-100"
+        className="flex h-8 w-8 items-center justify-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-900/[0.03] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.04] dark:hover:text-zinc-100"
       >
-        {kb >= 1000 ? `${(kb / 1024).toFixed(1)}M` : `${kb}K`}
+        <Download className="size-4" />
       </Link>
     )
   }
   return (
-    <Link to="/analitica" title={label} className="block rounded-lg px-2.5 py-1.5 transition-colors hover:bg-zinc-900/[0.03] dark:hover:bg-zinc-100/[0.04]">
-      <span className="flex items-baseline justify-between gap-3 text-[11.5px] text-zinc-500 dark:text-zinc-400">
-        Guardado en este navegador
-        <span className="font-mono whitespace-nowrap text-zinc-900 tabular-nums dark:text-zinc-100">{kb} KB</span>
-      </span>
-      <span aria-hidden className="mt-1.5 block h-0.5 overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-800">
-        <span className="block h-full rounded-full bg-zinc-900 dark:bg-zinc-100" style={{ width: `${Math.max(share * 100, 1)}%` }} />
-      </span>
+    <Link to="/analitica" title={label} className="block rounded-lg px-2.5 py-1.5 text-[11.5px] leading-snug text-zinc-500 transition-colors hover:bg-zinc-900/[0.03] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.04] dark:hover:text-zinc-100">
+      Tu progreso se guarda solo. Descárgalo si cambias de computador.
     </Link>
   )
 }
@@ -191,7 +183,7 @@ export function Sidebar() {
               if ((e.target as Element).closest('a')) setDrawerOpen(false)
             }}
           >
-            <DialogPrimitive.Title className="sr-only">Navegación</DialogPrimitive.Title>
+            <DialogPrimitive.Title className="sr-only">Menú</DialogPrimitive.Title>
             <DialogPrimitive.Description className="sr-only">Secciones de PAES Studio</DialogPrimitive.Description>
             <SidebarBody
               rail={false}
@@ -199,7 +191,7 @@ export function Sidebar() {
                 <div className="flex h-8 items-center justify-between px-3.5">
                   <Logo />
                   <DialogPrimitive.Close asChild>
-                    <Button variant="ghost" size="icon-sm" aria-label="Cerrar navegación"><X /></Button>
+                    <Button variant="ghost" size="icon-sm" aria-label="Cerrar menú"><X /></Button>
                   </DialogPrimitive.Close>
                 </div>
               }
@@ -212,7 +204,7 @@ export function Sidebar() {
 
   const rail = state === 'rail'
   const hidden = state === 'hidden'
-  const toggleLabel = `${rail ? 'Expandir' : 'Colapsar'} barra lateral (${SIDEBAR_SHORTCUT})`
+  const toggleLabel = `${rail ? 'Expandir' : 'Achicar'} menú (${SIDEBAR_SHORTCUT})`
   return (
     <aside
       inert={hidden}
@@ -228,7 +220,7 @@ export function Sidebar() {
           header={
             rail ? (
               <div className="flex flex-col items-center gap-2 px-3">
-                <Link to="/" aria-label="PAES Studio, Hub Central" className="rounded-md"><LogoMark /></Link>
+                <Link to="/" aria-label="PAES Studio, Inicio" className="rounded-md"><LogoMark /></Link>
                 <Button variant="ghost" size="icon" onClick={toggle} title={toggleLabel} aria-label={toggleLabel}><PanelLeftOpen /></Button>
               </div>
             ) : (

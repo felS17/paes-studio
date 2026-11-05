@@ -81,7 +81,7 @@ export function dailyDraft(dateKey: string): Omit<PracticeSet, 'id' | 'createdAt
   return {
     kind: 'diario',
     subject: 'lectora',
-    title: 'Desafío Diario',
+    title: 'Desafío del Día',
     description: `Las 3 preguntas del ${longDate.format(new Date(y, m - 1, d))}: una de Competencia Lectora, una de Matemática y una de Ciencias o Historia. Responde las tres para sumar el día a tu racha.`,
     items: picks.map((p) => ({ examId: p.examId, questionId: p.questionId })),
   }

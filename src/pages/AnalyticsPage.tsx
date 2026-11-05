@@ -45,10 +45,10 @@ function Summary({ attempts, mistakes }: { attempts: AttemptRecord[]; mistakes: 
           unit={average !== null ? 'pts' : undefined}
           note={`Último puntaje de ${latest.length} ${latest.length === 1 ? 'asignatura' : 'asignaturas'}`}
         />
-        <Metric label="Intentos guardados" value={attempts.length} note="Ensayos y prácticas" />
+        <Metric label="Intentos" value={attempts.length} note="Ensayos y prácticas" />
         <Metric label="Por repasar" value={mistakes} note={mistakes === 1 ? 'Pregunta fallada' : 'Preguntas falladas'} />
         <Metric
-          label="Eje más débil"
+          label="Tu eje más débil"
           value={weakest ? Math.round(weakest.axis.accuracy * 100) : '–'}
           unit={weakest ? '%' : undefined}
           note={weakest ? `${weakest.axis.axis}, ${SUBJECTS[weakest.subject].short}` : 'Aún sin datos suficientes'}
@@ -69,28 +69,28 @@ export function AnalyticsPage() {
   return (
     <div className="space-y-8">
       <PageHeader
-        title="Analítica"
-        description="Calculada con los intentos guardados en este navegador."
+        title="Estadísticas y Errores"
+        description="Todo esto sale de lo que has respondido. Úsalo para decidir qué practicar ahora."
         actions={<BackupActions />}
       />
       {attempts.length === 0 ? (
         <EmptyState
-          title="Todavía no hay intentos registrados"
+          title="Aquí vas a ver tu avance"
           action={<Button variant="primary" asChild><Link to="/ensayos">Elegir un ensayo</Link></Button>}
         >
-          Entrega un ensayo o termina una práctica para ver tu diagnóstico. Si tienes un respaldo, impórtalo con el botón de arriba.
+          Entrega un ensayo o termina una práctica y aparecerá tu diagnóstico. Si descargaste tu progreso antes, súbelo con el botón de arriba.
         </EmptyState>
       ) : (
         <>
           <Summary attempts={attempts} mistakes={mistakes.length} />
           <Tabs<View>
-            label="Secciones de la analítica"
+            label="Secciones de tus estadísticas"
             value={view}
             onChange={setView}
             items={[
-              { value: 'ejes', label: 'Ejes por mejorar', count: axesCount },
+              { value: 'ejes', label: 'Ejes por reforzar', count: axesCount },
               { value: 'errores', label: 'Cuaderno de errores', count: mistakes.length },
-              { value: 'ritmo', label: 'Ritmo y decisión' },
+              { value: 'ritmo', label: 'Dudas y tiempo' },
               { value: 'evolucion', label: 'Evolución' },
             ]}
           >

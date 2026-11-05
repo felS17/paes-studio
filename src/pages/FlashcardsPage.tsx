@@ -37,7 +37,7 @@ export function FlashcardsPage() {
     <div className="space-y-8">
       <PageHeader
         title="Flashcards"
-        description="Repaso espaciado para Matemática M1 y M2, Ciencias e Historia. Cada tarjeta vuelve justo antes de que la olvides, según cómo la calificas (algoritmo SM-2). Dentro de cada mazo puedes estudiar un eje temático a la vez."
+        description="Tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Hay de Matemática M1 y M2, Ciencias e Historia, y en cada mazo puedes estudiar un eje a la vez."
       />
       <ul className="grid gap-4 md:grid-cols-2">
         {DECKS.map((meta) => {
@@ -84,8 +84,8 @@ export function FlashcardsPage() {
                 </div>
                 <p className="mt-1.5 text-[11.5px] text-zinc-500 dark:text-zinc-400">
                   {consolidated > 0
-                    ? <><span className="font-mono tabular-nums">{consolidated}</span> ya en repaso espaciado</>
-                    : 'Las tarjetas pasan a repaso espaciado cuando las calificas con «Bien» o «Fácil»'}
+                    ? <><span className="font-mono tabular-nums">{consolidated}</span> ya las tienes en repaso</>
+                    : 'Si marcas una tarjeta con «Bien» o «Fácil», vuelve cuando estés por olvidarla'}
                 </p>
               </div>
 
@@ -112,8 +112,8 @@ export function FlashcardsPage() {
         </ul>
       </div>
       <p className="max-w-2xl text-[12.5px] leading-relaxed text-zinc-500 dark:text-zinc-400">
-        Los intervalos indicados corresponden a la primera vez que ves una tarjeta. Después, cada respuesta «Bien» multiplica
-        el intervalo por un factor de facilidad que se ajusta según tu historial. El progreso se guarda en este navegador.
+        Estos plazos son para la primera vez que ves una tarjeta. Después, mientras mejor te la sepas, más tarda en volver. Tu
+        progreso se guarda automáticamente aquí mismo.
       </p>
     </div>
   )

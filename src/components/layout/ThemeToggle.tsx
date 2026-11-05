@@ -5,7 +5,7 @@ import { useTheme } from '@/hooks/useTheme'
 import type { ThemePreference } from '@/types/user'
 
 const NEXT: Record<ThemePreference, ThemePreference> = { light: 'dark', dark: 'system', system: 'light' }
-const LABEL: Record<ThemePreference, string> = { light: 'Tema claro', dark: 'Tema oscuro', system: 'Según el sistema' }
+const LABEL: Record<ThemePreference, string> = { light: 'Tema claro', dark: 'Tema oscuro', system: 'Igual que tu dispositivo' }
 const ICON = { light: Sun, dark: Moon, system: Monitor }
 
 /** Selector de tema; `compact` lo reduce a un botón que rota entre las tres opciones (barra de íconos). */

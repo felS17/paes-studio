@@ -258,8 +258,8 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
           variant="ghost"
           size="icon"
           onClick={toggleSidebar}
-          aria-label={sidebarState === 'full' ? 'Ocultar barra lateral' : 'Mostrar barra lateral'}
-          title={mode === 'ensayo' ? 'Modo Zen: mostrar u ocultar la barra lateral' : 'Mostrar u ocultar la barra lateral'}
+          aria-label={sidebarState === 'full' ? 'Ocultar menú' : 'Mostrar menú'}
+          title={mode === 'ensayo' ? 'Modo Zen: mostrar u ocultar el menú' : 'Mostrar u ocultar el menú'}
         >
           <PanelLeft />
         </Button>

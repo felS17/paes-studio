@@ -11,7 +11,7 @@ export function InspectButton({ target, name, withLabel, className }: {
   className?: string
 }) {
   const open = useInspectorStore((s) => s.openInspector)
-  const label = `Abrir «${name}» en el Inspector`
+  const label = `Ver el resumen de «${name}»`
   return (
     <Button
       variant="ghost"
@@ -22,7 +22,7 @@ export function InspectButton({ target, name, withLabel, className }: {
       onClick={() => open(target)}
     >
       <PanelRight />
-      {withLabel && 'Abrir en Inspector'}
+      {withLabel && 'Ver resumen'}
     </Button>
   )
 }

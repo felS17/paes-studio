@@ -13,7 +13,7 @@ export function AxisRadar({ stats, order, className }: {
 }) {
   const axes = [...new Set([...(order ?? []), ...Object.keys(stats)])].filter((a) => stats[a]?.total)
   if (!axes.length) {
-    return <p className={cn('text-[13px] text-zinc-500 dark:text-zinc-400', className)}>Aún no hay preguntas respondidas en esta asignatura.</p>
+    return <p className={cn('text-[13px] text-zinc-500 dark:text-zinc-400', className)}>Aún no hay preguntas respondidas en esta materia.</p>
   }
   return (
     <ul className={cn('space-y-3', className)}>

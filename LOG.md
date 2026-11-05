@@ -13,6 +13,7 @@
 - **v2.0 (2026-11-03):** Inicio con Desafío Diario determinista, racha de estudio y explorador por los 67 subtemas con drills; tachado de alternativas; Zettelkasten con `react-force-graph-2d`; mazos de flashcards M1 (63) y M2 (51); soluciones paso a paso profundizadas (Planteamiento → Paso N → Análisis de distractores) en las 1.058 explicaciones.
 - **v2.0, Inicio como Hub (2026-11-03):** `/` es ahora un menú principal (presentación, métricas, Desafío Diario, módulos, mapa de los 67 subtemas y contacto); el catálogo pasó a `/ensayos` y el explorador también vive en `/subtemas`.
 - **v2.1, Workspace y telemetría (2026-11-05):** navegación en barra lateral colapsable (4 secciones, `Cmd/Ctrl + B`, cajón móvil, Modo Zen), Inspector contextual global (ficha, compendio PDF y flashcards) y telemetría silenciosa por pregunta con Matriz de Ritmo y Decisión e Índice de Duda Tóxica.
+- **v2.1, Textos humanos (2026-11-05):** la interfaz deja la jerga técnica y habla en tono cercano; frase de impulso diaria, botón «Entrenar 10 preguntas rápidas ahora», secciones renombradas y 4 perfiles de respuesta en lenguaje simple.
 
 ---
 
@@ -501,6 +502,20 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - **Color:** `amber` se admite solo en las marcas de telemetría (lo pidió el brief). El validador de la skill `dataviz` confirmó que emerald-500 y rose-500 se confunden con deuteranopia (ΔE 5,6); los tramos contiguos usan pares de distinta luminosidad, con posición fija y cifra propia.
 - **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Prueba desechable del flujo store → corrección → clasificación (umbrales exactos, intentos antiguos, datos inválidos) y de cada unidad del mapa subtema → mazo contra los mazos reales: todo correcto. Sin navegador headless por indicación del autor: la revisión visual queda pendiente en local.
 
+### [2026-11-05] - v2.1: Doble barra de desplazamiento y nombres de secciones
+- **Doble barra:** los hijos absolutos (`sr-only`) escapaban del recorte de la raíz y de `<main>` por no estar posicionados, y estiraban la ventana. La raíz y `<main>` ahora son `relative` y `body` no se desplaza.
+- **Nombres visibles:** Menú, Racha, Subtemas, Flashcards, Cerebro Interactivo, Resúmenes PDF y Análisis, en la barra, las migas, los títulos de página y las tarjetas del Menú. Las rutas no cambian, para no romper enlaces guardados.
+
+### [2026-11-05] - v2.1: Textos humanos y motivadores
+- **Voz:** reescritos los textos de Inicio, Ensayos, Temas, Flashcards, Mapa, Estadísticas, Guías, resultados, soluciones y mensajes de error, con los mensajes que pidió el autor. Se extrajeron con el compilador de TypeScript para no leer archivos completos y se auditaron contra una lista de jerga. La mención a la IA en las explicaciones se conserva, en lenguaje simple. MIT queda solo en el pie.
+- **Nombres:** Hoy (Inicio, Racha de estudio, Desafío del Día), Práctica (Ensayos Completos, Practicar por Tema, Flashcards), Apuntes y Red (Mapa de Conocimiento, Guías y Resúmenes PDF), Tu Avance (Estadísticas y Errores). Reemplazan a los de la entrada anterior (Menú, Cerebro Interactivo, Análisis…), porque este pedido es posterior. Las rutas siguen igual.
+- **Frase de impulso (`src/data/quotes.ts`):** 28 frases propias, sin autores para no atribuir citas dudosas. El índice avanza por día local, así no se repite hasta completar la lista; «Otra frase» pasa a la siguiente. Es el primer elemento del Inicio, en Newsreader grande.
+- **10 preguntas rápidas:** toma la materia con más errores pendientes; sin errores, la última practicada; sin datos, M1. Va por una sola materia, porque una mezcla contaría como puntaje PAES de una asignatura. Reutiliza `drillDraftFor`: primero errores, luego lo no respondido.
+- **Perfiles:** Respuestas seguras, Preguntas que te quitaron mucho tiempo, Errores por apuro y Dudas de último minuto. Cambia la regla de dudas: antes exigía 2 o más cambios y ahora basta 1, porque el pedido habla de cambiar una correcta por una mala aunque sea una vez. Su cifra grande son los aciertos perdidos, junto a las veces que cambiar salvó. «Índice de Duda Tóxica» pasa a «Cuando cambias de respuesta».
+- **Emoji:** ⚡ y 📖 se implementaron con `Zap` y `BookOpen` de Lucide, monocromos, porque los emoji traen color propio y la Lista Negra lo prohíbe.
+- **Almacenamiento en la barra:** se quitó la cifra en KB de la vista y queda en el texto de ayuda; la barra solo recuerda que el progreso se guarda y lleva a donde se descarga.
+- **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; prueba desechable de perfiles, botón rápido (las 5 materias reúnen 10 preguntas) y rotación de frases: todo correcto. Sin navegador, por indicación del autor: la revisión visual queda pendiente en local.
+
 ---
 
 ## Comandos
@@ -585,6 +600,7 @@ APP_PAES/
 - **Subtemas de las preguntas (v2.0):** la asignación es heurística (etiqueta de tema + palabras clave); se corrige a mano con el campo `subtopic` del JSON o afinando `KEYWORDS`/`STRONG` en `assign_subtopics.py`. Algunos subtemas tienen pocas preguntas en el banco (conteo, textos discontinuos, análisis de fuentes).
 - **Soluciones profundizadas (v2.0):** redactadas con IA a partir de las soluciones ya validadas y verificadas contra la clave; conviene revisión docente, empezando por las interpretativas listadas en la Fase 3. Los lotes de trabajo quedan en `scripts/pipeline/solutions/.work/` (ignorado por git).
 - **Telemetría v2.1:** los umbrales (1:30, 2:30, 35 s) son iguales para todas las asignaturas y están en `src/utils/telemetry.ts`; en Lectora, la primera pregunta de cada texto absorbe el tiempo de leerlo (la interfaz lo advierte), así que sus «fugas» se sobrestiman. Una pestaña visible sin actividad sigue sumando tiempo.
+- **Textos no revisados (v2.1):** las soluciones y las descripciones de los ensayos curados vienen de `src/data/exams/` y no se leyeron por la regla de ahorro de tokens, así que pueden conservar términos técnicos. Las 41 pruebas oficiales traían «clavijero» en su descripción: la portada muestra un texto propio en su lugar, sin cambiar los JSON. Tampoco se tocaron el contenido de las notas, las tarjetas ni los PDF.
 - **Flashcards en el Inspector:** las tarjetas solo tienen unidad, no subtema, así que un subtema muestra las de su unidad (`src/data/flashcards/links.ts`). 12 de los 67 subtemas no tienen tarjetas: Lectora (9), `cs-habilidades`, `hi-geografia` e `hi-fuentes`.
 - **Flashcards:** 141 tarjetas iniciales de Ciencias e Historia más 114 de Matemática (M1 63, M2 51); se agregan nuevas en `src/data/flashcards/*.ts` sin tocar el progreso existente (el estado se guarda por id de tarjeta).
 
@@ -636,4 +652,5 @@ APP_PAES/
 - [x] Inspector global con Ficha, Compendio PDF y Flashcards; se invoca desde práctica, revisión, `/subtemas`, `/ensayos` y `/analitica`; bloqueado hasta entregar el ensayo.
 - [x] Telemetría silenciosa por pregunta, Matriz de Ritmo y Decisión, Índice de Duda Tóxica, tiempo por eje e historial de cambios.
 - [x] `localStorage` retrocompatible, sin migración; `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [x] Textos humanos sin jerga, frase de impulso diaria, botón de 10 preguntas rápidas y perfiles en lenguaje simple.
 - [ ] Revisión visual en local (a cargo del autor).

@@ -59,12 +59,12 @@ function ChangeRow({ row, maxChanges }: { row: ChangeHistoryRow; maxChanges: num
                 <span key={i} className={cn('rounded-[1px]', p.cls)} style={{ width: `${(p.n / maxChanges) * 100}%` }} />
               ))}
             </span>
-            <span className="shrink-0 font-mono text-[11.5px] text-zinc-600 tabular-nums dark:text-zinc-300" title={`${corrective} corrigieron un error, ${neutral} entre incorrectas, ${toxic} dejaron la correcta`}>
+            <span className="shrink-0 font-mono text-[11.5px] text-zinc-600 tabular-nums dark:text-zinc-300" title={`${corrective} te salvaron, ${neutral} no cambiaron nada, ${toxic} te costaron un acierto`}>
               +{corrective} ={neutral} −{toxic}
             </span>
           </span>
         ) : (
-          <span className="mt-1 block text-xs text-zinc-500 dark:text-zinc-400">Sin cambios de respuesta</span>
+          <span className="mt-1 block text-xs text-zinc-500 dark:text-zinc-400">No cambiaste ninguna respuesta</span>
         )}
       </Link>
     </li>
@@ -91,8 +91,8 @@ export function CadencePanel({ attempts }: { attempts: AttemptRecord[] }) {
 
   if (!tracked.length) {
     return (
-      <EmptyState title="Aún no hay datos de ritmo" action={<Button variant="primary" asChild><Link to="/ensayos">Elegir un ensayo</Link></Button>}>
-        Desde esta versión, cada ensayo o drill mide en silencio el tiempo y los cambios de alternativa por pregunta. Termina uno para ver tu matriz.
+      <EmptyState title="Aún no tienes este diagnóstico" action={<Button variant="primary" asChild><Link to="/ensayos">Elegir un ensayo</Link></Button>}>
+        Termina un ensayo o una práctica y aquí verás en qué preguntas vas seguro, cuáles te quitan tiempo y cuándo te juegan en contra las dudas.
         {untracked > 0 && ' Tus intentos anteriores siguen guardados, pero no tienen estas mediciones.'}
       </EmptyState>
     )
@@ -130,7 +130,7 @@ export function CadencePanel({ attempts }: { attempts: AttemptRecord[] }) {
 
       <div className="grid items-start gap-6 lg:grid-cols-2">
         <Panel className="overflow-hidden">
-          <PanelHeader title="Tiempo promedio por eje" description="Del más lento al más rápido. Marcas en 1:30 y 2:30." />
+          <PanelHeader title="¿Dónde se te va el tiempo?" description="Promedio por pregunta en cada eje, del más lento al más rápido. Marcas en 1:30 y 2:30." />
           {axes.length ? (
             <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
               {axes.map((row) => (
@@ -138,13 +138,13 @@ export function CadencePanel({ attempts }: { attempts: AttemptRecord[] }) {
               ))}
             </ul>
           ) : (
-            <p className="px-4 py-6 text-[13px] text-zinc-500 dark:text-zinc-400">Sin preguntas respondidas con tiempo medido.</p>
+            <p className="px-4 py-6 text-[13px] text-zinc-500 dark:text-zinc-400">Aún no hay preguntas respondidas en esta materia.</p>
           )}
         </Panel>
         <Panel className="overflow-hidden">
           <PanelHeader
-            title="Historial de cambios de respuesta"
-            description="Por intento: + corrigieron un error, = entre incorrectas, − dejaron la correcta."
+            title="Tus cambios de respuesta"
+            description="Por intento: + te salvaron, = no cambiaron nada, − te costaron un acierto."
           />
           <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
             {history.map((row) => <ChangeRow key={row.attemptId} row={row} maxChanges={maxChanges} />)}

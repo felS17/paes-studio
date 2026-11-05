@@ -22,7 +22,7 @@ import { combineStats, drillDraftFor, questionCountOf, type DrillSize, type Subt
 const KIND_LABEL: Record<KNode['kind'], string> = {
   subject: 'Asignatura',
   axis: 'Eje temático',
-  subtopic: 'Subtema',
+  subtopic: 'Tema',
   concept: 'Concepto clave',
   question: 'Pregunta resuelta',
 }
@@ -81,7 +81,7 @@ function AnsweredList({ entries }: { entries: [string, LatestResult][] }) {
   const firstError = shown.find(([, r]) => !r.isCorrect)?.[0] ?? null
   const open = openChoice === undefined ? firstError : openChoice
   if (!entries.length) {
-    return <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Aún no respondes preguntas de este nodo. Lanza un drill y aparecerán aquí, conectadas en el grafo.</p>
+    return <p className="text-[13px] text-zinc-500 dark:text-zinc-400">Aún no respondes preguntas de aquí. Practica un poco y aparecerán en tu mapa.</p>
   }
   return (
     <ul className="-mx-1 space-y-1">
@@ -125,7 +125,7 @@ function AnsweredList({ entries }: { entries: [string, LatestResult][] }) {
       })}
       {entries.length > shown.length && (
         <li className="px-1 pt-1 text-xs text-zinc-500 dark:text-zinc-400">
-          y {plural(entries.length - shown.length, 'pregunta más', 'preguntas más')}; el drill las incluye.
+          y {plural(entries.length - shown.length, 'pregunta más', 'preguntas más')}; la práctica las incluye.
         </li>
       )}
     </ul>
@@ -166,7 +166,7 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
   const bank = questionCountOf(subtopicIds)
   const sub = node.subtopicId ? SUBTOPICS_BY_ID.get(node.subtopicId) : undefined
   const title = node.kind === 'question' && node.questionId ? questionCaption(node.questionId) : node.label
-  const drillTitle = node.kind === 'subject' ? `Drill de ${SUBJECTS[node.subject].short}` : sub?.title ?? node.label
+  const drillTitle = node.kind === 'subject' ? `Práctica de ${SUBJECTS[node.subject].short}` : sub?.title ?? node.label
   const result = node.kind === 'question' && node.questionId ? latest.get(node.questionId) : undefined
   const cross = sub ? CROSS_LINKS.filter((l) => l.a === sub.id || l.b === sub.id).map((l) => ({ id: l.a === sub.id ? l.b : l.a, why: l.why })) : []
   const temario = TEMARIO_BY_SUBJECT.get(node.subject)
@@ -200,12 +200,12 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
               <DialogPrimitive.Title className="mt-2 text-[17px] leading-snug font-semibold tracking-tight">{title}</DialogPrimitive.Title>
               <DialogPrimitive.Description className="mt-1 text-[12.5px] text-zinc-500 dark:text-zinc-400">
                 {node.kind === 'concept' && sub ? `Concepto de «${sub.title}» que aparece en tus preguntas respondidas.` : null}
-                {node.kind === 'question' && sub ? `Subtema: ${sub.title}.` : null}
+                {node.kind === 'question' && sub ? `Tema: ${sub.title}.` : null}
                 {node.kind === 'axis' ? temario?.axes.find((a) => a.name === node.axis)?.description : null}
                 {node.kind === 'subject' ? temario?.name : null}
                 {node.kind === 'subtopic' && sub ? (
                   <a href={subtopicPdfHref(sub)} target="_blank" rel="noreferrer" className="underline-offset-4 hover:text-zinc-900 hover:underline dark:hover:text-zinc-100">
-                    Compendio de {SUBJECTS[sub.subject].short}{sub.pdfPage ? `, página ${sub.pdfPage}` : ''}
+                    Guía de {SUBJECTS[sub.subject].short}{sub.pdfPage ? `, página ${sub.pdfPage}` : ''}
                     <span className="sr-only"> (abre en una pestaña nueva)</span>
                   </a>
                 ) : null}
@@ -229,7 +229,7 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
             ) : (
               <Metrics
                 items={[
-                  ['En el banco', bank.toLocaleString('es-CL')],
+                  ['Disponibles', bank.toLocaleString('es-CL')],
                   ['Respondidas', stat.answered],
                   ['Acierto', stat.accuracy === null ? '—' : formatPercent(stat.accuracy)],
                   ['Por repasar', stat.pending],
@@ -239,7 +239,7 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
 
             <div className="flex flex-wrap items-center gap-2 border-t border-zinc-200/80 px-5 py-3 dark:border-zinc-800/80">
               <Segmented<string>
-                label="Cantidad de preguntas del drill"
+                label="Cantidad de preguntas"
                 size="sm"
                 value={String(size)}
                 onChange={(v) => setSize(v === 'todas' ? 'todas' : (Number(v) as 10 | 20))}
@@ -250,7 +250,7 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
                 ]}
               />
               <Button variant="primary" size="sm" onClick={launch} disabled={!bank} className="ml-auto">
-                Lanzar drill de este nodo
+                Empezar a practicar
               </Button>
             </div>
 
@@ -261,7 +261,7 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
             )}
 
             {(node.kind === 'axis' || node.kind === 'subject') && (
-              <Section title={node.kind === 'axis' ? 'Subtemas del eje' : 'Ejes y subtemas'}>
+              <Section title={node.kind === 'axis' ? 'Temas de este eje' : 'Ejes y temas'}>
                 <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
                   {subtopicIds.map((id) => {
                     const s = SUBTOPICS_BY_ID.get(id)!
@@ -283,7 +283,7 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
             )}
 
             {cross.length > 0 && (
-              <Section title="Enlaces con otros subtemas">
+              <Section title="Se conecta con">
                 <ul className="space-y-2">
                   {cross.map((c) => {
                     const s = SUBTOPICS_BY_ID.get(c.id)

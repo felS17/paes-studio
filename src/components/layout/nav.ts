@@ -10,23 +10,23 @@ export interface NavItem {
 
 /** Las cuatro secciones de la barra lateral; también dan el primer nivel de las migas. */
 export const NAV_SECTIONS: { title: string; items: NavItem[] }[] = [
-  { title: 'Foco', items: [{ to: '/', label: 'Hub Central', icon: House, end: true }] },
+  { title: 'Hoy', items: [{ to: '/', label: 'Inicio', icon: House, end: true }] },
   {
-    title: 'Entrenamiento',
+    title: 'Práctica',
     items: [
-      { to: '/ensayos', label: 'Ensayos Oficiales', icon: LayoutList },
-      { to: '/subtemas', label: 'Drills por Subtema', icon: ListTree },
-      { to: '/flashcards', label: 'Flashcards SM-2', icon: Layers },
+      { to: '/ensayos', label: 'Ensayos Completos', icon: LayoutList },
+      { to: '/subtemas', label: 'Practicar por Tema', icon: ListTree },
+      { to: '/flashcards', label: 'Flashcards', icon: Layers },
     ],
   },
   {
-    title: 'Conocimiento',
+    title: 'Apuntes y Red',
     items: [
-      { to: '/zettelkasten', label: 'Zettelkasten', icon: Waypoints },
-      { to: '/material', label: 'Biblioteca PDF', icon: FileText },
+      { to: '/zettelkasten', label: 'Mapa de Conocimiento', icon: Waypoints },
+      { to: '/material', label: 'Guías y Resúmenes PDF', icon: FileText },
     ],
   },
-  { title: 'Diagnóstico', items: [{ to: '/analitica', label: 'Analítica & Telemetría', icon: BarChart3 }] },
+  { title: 'Tu Avance', items: [{ to: '/analitica', label: 'Estadísticas y Errores', icon: BarChart3 }] },
 ]
 
 /** Atajo para colapsar la barra lateral, escrito como en el teclado de cada sistema. */

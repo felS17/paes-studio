@@ -33,7 +33,7 @@ export function ExamFilters({ value, onChange, resultCount }: {
         onChange={(e) => onChange({ ...value, modality: e.target.value as FilterState['modality'] })}
       >
         <option value="todas">Todas las modalidades</option>
-        <option value="curado">Curados, con explicaciones</option>
+        <option value="curado">Con explicación paso a paso</option>
         <option value="regular">PAES Regular</option>
         <option value="invierno">PAES de Invierno</option>
       </Select>
