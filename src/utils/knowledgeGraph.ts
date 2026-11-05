@@ -41,7 +41,7 @@ export interface KnowledgeGraphData {
 }
 
 /** Etiquetas de tema demasiado generales para ser un «concepto clave» propio. */
-const GENERIC_TOPICS = new Set([
+export const GENERIC_TOPICS = new Set([
   'Números', 'Álgebra y funciones', 'Geometría', 'Probabilidad y estadística', 'Interpretar', 'Localizar', 'Evaluar',
   'Biología', 'Física', 'Química', 'Química general', 'Procesos históricos', 'Historia', 'Economía',
   'Historia: mundo, América y Chile', 'Formación ciudadana', 'Sistema económico', 'Geografía y espacio',

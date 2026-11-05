@@ -12,13 +12,15 @@ export interface TabItem<T extends string> {
  * Pestañas con subrayado (patrón WAI-ARIA tabs, activación automática con ←/→, Inicio y Fin).
  * El contenido de la pestaña activa se pasa como children y queda enlazado a su pestaña.
  */
-export function Tabs<T extends string>({ value, onChange, items, label, children, className }: {
+export function Tabs<T extends string>({ value, onChange, items, label, children, className, listClassName, panelClassName }: {
   value: T
   onChange: (value: T) => void
   items: TabItem<T>[]
   label: string
   children: React.ReactNode
   className?: string
+  listClassName?: string
+  panelClassName?: string
 }) {
   const base = useId()
   const tabId = (v: T) => `${base}-tab-${v}`
@@ -43,7 +45,7 @@ export function Tabs<T extends string>({ value, onChange, items, label, children
         role="tablist"
         aria-label={label}
         onKeyDown={move}
-        className="-mx-1 flex gap-1 overflow-x-auto border-b border-zinc-200/80 px-1 dark:border-zinc-800/80"
+        className={cn('-mx-1 flex gap-1 overflow-x-auto border-b border-zinc-200/80 px-1 dark:border-zinc-800/80', listClassName)}
       >
         {items.map((item) => {
           const active = item.value === value
@@ -74,7 +76,7 @@ export function Tabs<T extends string>({ value, onChange, items, label, children
           )
         })}
       </div>
-      <div role="tabpanel" id={panelId} aria-labelledby={tabId(value)} tabIndex={0} className="pt-6 focus-visible:outline-none">
+      <div role="tabpanel" id={panelId} aria-labelledby={tabId(value)} tabIndex={0} className={cn('pt-6 focus-visible:outline-none', panelClassName)}>
         {children}
       </div>
     </div>

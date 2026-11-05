@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, Grid3x3, X } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Grid3x3, PanelLeft, X } from 'lucide-react'
 import { SplitPane } from '@/components/layout/SplitPane'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -8,11 +8,15 @@ import { Dialog, DialogContent, SheetContent } from '@/components/ui/dialog'
 import { Kbd } from '@/components/ui/kbd'
 import { Segmented } from '@/components/ui/segmented'
 import { subjectLabel } from '@/data/subjects'
+import { useElementWidth } from '@/hooks/useElementWidth'
 import { useExamTimer } from '@/hooks/useExamTimer'
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { useQuestionClock } from '@/hooks/useQuestionClock'
+import { useSidebar } from '@/hooks/useWorkspace'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import { sessionKey, useExamStore } from '@/store/useExamStore'
+import { useInspectorStore } from '@/store/useInspectorStore'
 import { useSettingsStore } from '@/store/useSettingsStore'
 import { useStreakStore } from '@/store/useStreakStore'
 import type { Exam, ExamMode } from '@/types/exam'
@@ -43,7 +47,13 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
   const setSplitRatio = useSettingsStore((s) => s.setSplitRatio)
 
   const isWide = useMediaQuery('(min-width: 1024px)')
-  const asideVisible = useMediaQuery('(min-width: 1280px)')
+  const inspectorOpen = useInspectorStore((s) => s.isOpen)
+  const { toggle: toggleSidebar, state: sidebarState } = useSidebar()
+  // El espacio depende de la barra lateral y del Inspector, así que se mide el área del runner y no la ventana.
+  const [setRootEl, rootWidth] = useElementWidth()
+  const stageWidth = rootWidth || (isWide ? 1280 : 0)
+  const asideVisible = stageWidth >= 1100 && !inspectorOpen
+  const splitPassage = isWide && stageWidth - (asideVisible ? 288 : 0) >= 720
   const [sheetOpen, setSheetOpen] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
   /** Aviso breve cuando se intenta marcar con el teclado una alternativa tachada. */
@@ -72,9 +82,12 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
   const isDaily = isDailySetId(exam.id)
   const revealed = mode === 'practica' && Boolean(checked[question.id])
   const answeredCount = questions.filter((q) => answers[q.id]).length
+  // Mide el tiempo de resolver: no corre mientras se lee la solución o se consulta teoría en el Inspector.
+  const flushClock = useQuestionClock(key, question.id, Boolean(session) && !revealed && !inspectorOpen)
 
   const finish = useCallback(() => {
     if (finishing.current) return
+    flushClock()
     const current = useExamStore.getState().sessions[key]
     if (!current) return
     finishing.current = true
@@ -85,6 +98,7 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
       flagged: current.flagged,
       startedAt: current.startedAt,
       durationMs: elapsedRef.current,
+      telemetry: current.telemetry,
     })
     if (attempt.answered === 0 && mode === 'practica') {
       discard(key)
@@ -98,7 +112,7 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     }
     discard(key)
     navigate(`/resultados/${attempt.id}`, { replace: true })
-  }, [addAttempt, discard, exam, key, markChallenge, mode, navigate])
+  }, [addAttempt, discard, exam, flushClock, key, markChallenge, mode, navigate])
 
   const { elapsedMs, remainingMs } = useExamTimer({
     sessionKey: key,
@@ -194,12 +208,14 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
         showHints={showHints && isWide}
         struck={struck}
         onToggleStrike={revealed ? undefined : (k) => toggleStrike(key, question.id, k)}
+        theory={mode === 'practica'}
+        subject={exam.subject}
       />
     </div>
   )
 
   let main: React.ReactNode
-  if (passage && isWide) {
+  if (passage && splitPassage) {
     main = (
       <SplitPane
         ratio={splitRatio}
@@ -236,8 +252,17 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
   const unanswered = questions.length - answeredCount
 
   return (
-    <div className="flex h-dvh flex-col bg-[#FAFAFA] dark:bg-[#09090B]">
+    <div ref={setRootEl} className="flex min-h-0 flex-1 flex-col bg-[#FAFAFA] dark:bg-[#09090B]">
       <header className="relative flex h-14 shrink-0 items-center gap-3 border-b border-zinc-200/80 bg-white px-3 sm:px-4 dark:border-zinc-800/80 dark:bg-[#121215]">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleSidebar}
+          aria-label={sidebarState === 'full' ? 'Ocultar barra lateral' : 'Mostrar barra lateral'}
+          title={mode === 'ensayo' ? 'Modo Zen: mostrar u ocultar la barra lateral' : 'Mostrar u ocultar la barra lateral'}
+        >
+          <PanelLeft />
+        </Button>
         <Button variant="ghost" size="icon" asChild>
           <Link to="/ensayos" aria-label="Salir (tu avance queda guardado)" title="Salir; tu avance queda guardado">
             <X />

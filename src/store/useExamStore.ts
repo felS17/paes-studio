@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import type { QuestionTrace } from '@/types/analytics'
 import type { ExamMode, OptionKey, PracticeSet } from '@/types/exam'
 import { persistStorage } from './storage'
 
@@ -17,6 +18,8 @@ export interface ExamSession {
   struck?: Record<string, OptionKey[]>
   currentIndex: number
   elapsedMs: number
+  /** Telemetría silenciosa por pregunta; ausente en sesiones iniciadas antes de la v2.1. */
+  telemetry?: Record<string, QuestionTrace>
 }
 
 export const sessionKey = (examId: string, mode: ExamMode) => `${examId}:${mode}`
@@ -37,6 +40,7 @@ interface ExamState {
   check: (key: string, questionId: string) => void
   goTo: (key: string, index: number) => void
   addElapsed: (key: string, ms: number) => void
+  addQuestionTime: (key: string, questionId: string, ms: number) => void
   discard: (key: string) => void
 }
 
@@ -44,6 +48,20 @@ function patch(state: ExamState, key: string, fn: (s: ExamSession) => Partial<Ex
   const current = state.sessions[key]
   if (!current) return state
   return { sessions: { ...state.sessions, [key]: { ...current, ...fn(current), updatedAt: Date.now() } } }
+}
+
+const NEW_TRACE: QuestionTrace = { timeSpentMs: 0, selectionChanges: 0, firstSelectedOption: null, lastSelectedOption: null, discarded: [] }
+
+/** Actualiza el rastro de una pregunta sin tocar el resto de la sesión. */
+function traced(cur: ExamSession, questionId: string, fn: (t: QuestionTrace) => QuestionTrace) {
+  return { telemetry: { ...cur.telemetry, [questionId]: fn(cur.telemetry?.[questionId] ?? NEW_TRACE) } }
+}
+
+/** Primera elección o cambio real de alternativa; repetir la última no cuenta como cambio. */
+function tracePick(t: QuestionTrace, option: OptionKey): QuestionTrace {
+  if (!t.firstSelectedOption) return { ...t, firstSelectedOption: option, lastSelectedOption: option }
+  if (t.lastSelectedOption === option) return t
+  return { ...t, selectionChanges: t.selectionChanges + 1, lastSelectedOption: option }
 }
 
 export const useExamStore = create<ExamState>()(
@@ -85,6 +103,7 @@ export const useExamStore = create<ExamState>()(
             const struck = cur.struck?.[questionId]
             return {
               answers: { ...cur.answers, [questionId]: option },
+              ...traced(cur, questionId, (t) => tracePick(t, option)),
               ...(struck?.includes(option)
                 ? { struck: { ...cur.struck, [questionId]: struck.filter((k) => k !== option) } }
                 : {}),
@@ -100,12 +119,15 @@ export const useExamStore = create<ExamState>()(
             const next = striking ? [...list, option] : list.filter((k) => k !== option)
             const struck = { ...cur.struck, [questionId]: next }
             if (!next.length) delete struck[questionId]
+            const trace = striking
+              ? traced(cur, questionId, (t) => (t.discarded.includes(option) ? t : { ...t, discarded: [...t.discarded, option] }))
+              : {}
             if (striking && cur.answers[questionId] === option) {
               const answers = { ...cur.answers }
               delete answers[questionId]
-              return { struck, answers }
+              return { struck, answers, ...trace }
             }
-            return { struck }
+            return { struck, ...trace }
           }),
         ),
       clearAnswer: (key, questionId) =>
@@ -129,6 +151,8 @@ export const useExamStore = create<ExamState>()(
         set((s) => patch(s, key, (cur) => ({ checked: { ...cur.checked, [questionId]: true } }))),
       goTo: (key, index) => set((s) => patch(s, key, () => ({ currentIndex: Math.max(0, index) }))),
       addElapsed: (key, ms) => set((s) => patch(s, key, (cur) => ({ elapsedMs: cur.elapsedMs + ms }))),
+      addQuestionTime: (key, questionId, ms) =>
+        set((s) => patch(s, key, (cur) => traced(cur, questionId, (t) => ({ ...t, timeSpentMs: t.timeSpentMs + ms })))),
       discard: (key) =>
         set((s) => {
           const sessions = { ...s.sessions }

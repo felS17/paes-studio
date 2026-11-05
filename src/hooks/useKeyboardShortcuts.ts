@@ -23,6 +23,8 @@ export function useKeyboardShortcuts(map: ShortcutMap, enabled = true) {
     const onKey = (event: KeyboardEvent) => {
       if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey) return
       if (isTypingTarget(event.target)) return
+      // Con el foco en el Inspector, las teclas no deben responder la pregunta que está detrás (Esc sí lo cierra).
+      if (event.key !== 'Escape' && event.target instanceof Element && event.target.closest('[data-shortcuts-ignore]')) return
       if (document.querySelector('[role="dialog"][data-state="open"]')) return
       const key = event.key.length === 1 ? event.key.toLowerCase() : event.key.toLowerCase()
       const handler = ref.current[key]

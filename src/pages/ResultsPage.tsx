@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, Check, ChevronDown, Flag, Minus, X } from 'lucide-react'
 import { AxisRadar } from '@/components/analytics/AxisRadar'
+import { CadenceMatrix, ToxicDoubt } from '@/components/analytics/CadenceMatrix'
+import { CadenceStrip } from '@/components/analytics/CadenceStrip'
 import { ScoreRuler, type RulerMarker } from '@/components/analytics/ScoreRuler'
 import { QuestionCard } from '@/components/exam/QuestionCard'
 import { Badge } from '@/components/ui/badge'
@@ -16,7 +18,8 @@ import { cn } from '@/lib/utils'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import type { QuestionResult } from '@/types/analytics'
 import { isDailySetId } from '@/utils/daily'
-import { formatDate, formatDuration, formatTime } from '@/utils/format'
+import { formatClock, formatDate, formatDuration, formatTime, plural } from '@/utils/format'
+import { hasTelemetry, readTelemetry, summarizeCadence } from '@/utils/telemetry'
 
 type ReviewFilter = 'repasar' | 'todas' | 'incorrectas' | 'omitidas' | 'duda'
 
@@ -70,6 +73,13 @@ export function ResultsPage() {
       (filter === 'omitidas' && q.selected === null) ||
       (filter === 'duda' && q.flagged),
   )
+  // Abre una pregunta en la revisión desde la matriz o la tira de cadencia.
+  const reviewQuestion = (id: string) => {
+    setFilter('todas')
+    setOpen(id)
+    requestAnimationFrame(() => document.getElementById(`revision-${id}`)?.scrollIntoView({ block: 'nearest' }))
+  }
+  const cadence = hasTelemetry(attempt) ? summarizeCadence(attempt.questions) : null
   const stats: [string, React.ReactNode][] = [
     ['Correctas', attempt.correct],
     ['Incorrectas', attempt.incorrect],
@@ -139,6 +149,19 @@ export function ResultsPage() {
         </dl>
       </Panel>
 
+      {cadence && (
+        <Panel className="overflow-hidden">
+          <PanelHeader title="Ritmo y decisión" description="Medido en silencio mientras respondías. Elige una pregunta para revisarla." />
+          <div className="space-y-6 p-4 sm:p-5">
+            <CadenceStrip questions={attempt.questions} onPick={reviewQuestion} />
+            <CadenceMatrix summary={cadence} onPick={reviewQuestion} />
+          </div>
+          <div className="border-t border-zinc-200/80 dark:border-zinc-800/80">
+            <ToxicDoubt balance={cadence.balance} />
+          </div>
+        </Panel>
+      )}
+
       <div className={cn('grid items-start gap-6', !daily && 'lg:grid-cols-[1fr_1.4fr]')}>
         {!daily && (
           <Panel>
@@ -174,8 +197,9 @@ export function ResultsPage() {
               {list.map((q) => {
                 const full = questionsById.get(q.id)
                 const isOpen = open === q.id
+                const t = readTelemetry(q)
                 return (
-                  <li key={q.id}>
+                  <li key={q.id} id={`revision-${q.id}`} className="scroll-mt-4">
                     <button
                       type="button"
                       aria-expanded={isOpen}
@@ -188,6 +212,12 @@ export function ResultsPage() {
                         {q.topic}
                         {q.topic !== q.axis && <span className="ml-2 text-zinc-500 dark:text-zinc-400">{q.axis}</span>}
                       </span>
+                      {t && t.selectionChanges > 0 && (
+                        <span className="hidden text-xs text-zinc-500 md:inline dark:text-zinc-400">{plural(t.selectionChanges, 'cambio')}</span>
+                      )}
+                      {t && (
+                        <span className="hidden font-mono text-xs text-zinc-500 tabular-nums sm:inline dark:text-zinc-400" title="Tiempo en esta pregunta">{formatClock(t.timeSpentMs)}</span>
+                      )}
                       {q.flagged && <Flag className="size-3.5 fill-zinc-900 text-zinc-900 dark:fill-zinc-100 dark:text-zinc-100" aria-label="Con duda" />}
                       <span className="font-mono text-xs text-zinc-500 tabular-nums dark:text-zinc-400">
                         {q.selected ?? '–'}
@@ -207,6 +237,8 @@ export function ResultsPage() {
                             selected={q.selected ?? undefined}
                             revealed
                             flagged={q.flagged}
+                            theory
+                            subject={attempt.subject}
                           />
                         ) : (
                           <p className="text-[13px] text-zinc-500">Cargando pregunta…</p>

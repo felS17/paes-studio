@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { InspectButton } from '@/components/inspector/InspectButton'
 import { Button } from '@/components/ui/button'
 import { Panel } from '@/components/ui/panel'
 import { Segmented } from '@/components/ui/segmented'
@@ -12,7 +13,7 @@ import { axisPracticeDraft } from '@/utils/practice'
 
 const PRIORITY_LABEL = { alta: 'Prioridad alta', media: 'Prioridad media', baja: 'Prioridad baja' } as const
 
-function AxisRow({ w, onPractice }: { w: WeakAxis; onPractice: () => void }) {
+function AxisRow({ w, subject, onPractice }: { w: WeakAxis; subject: SubjectId; onPractice: () => void }) {
   const pct = Math.round(w.accuracy * 100)
   return (
     <li className="grid gap-x-8 gap-y-3 px-5 py-5 sm:grid-cols-[minmax(0,1fr)_minmax(0,14rem)_auto] sm:items-center">
@@ -46,7 +47,10 @@ function AxisRow({ w, onPractice }: { w: WeakAxis; onPractice: () => void }) {
           <span aria-hidden className="absolute inset-y-0 left-[70%] w-px bg-zinc-400/70 dark:bg-zinc-500/70" />
         </div>
       </div>
-      <Button size="sm" onClick={onPractice} className="justify-self-start sm:justify-self-end">Practicar este eje</Button>
+      <div className="flex items-center gap-1 justify-self-start sm:justify-self-end">
+        <InspectButton target={{ kind: 'subject', subject, axis: w.axis }} name={w.axis} />
+        <Button size="sm" onClick={onPractice}>Practicar este eje</Button>
+      </div>
     </li>
   )
 }
@@ -86,7 +90,7 @@ export function DiagnosisPanel({ attempts }: { attempts: AttemptRecord[] }) {
       <Panel>
         <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
           {current.axes.map((w) => (
-            <AxisRow key={w.axis} w={w} onPractice={() => start(axisPracticeDraft(current.subject, w.axis, attempts))} />
+            <AxisRow key={w.axis} w={w} subject={current.subject} onPractice={() => start(axisPracticeDraft(current.subject, w.axis, attempts))} />
           ))}
         </ul>
       </Panel>

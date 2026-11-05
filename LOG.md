@@ -12,6 +12,7 @@
 - **Fase 5 (2026-11-01, cierre):** 10 PDF compilados y servidos desde `public/pdfs/`, Analítica reorganizada con revelación progresiva, `LICENSE` MIT 2026 y footer.
 - **v2.0 (2026-11-03):** Inicio con Desafío Diario determinista, racha de estudio y explorador por los 67 subtemas con drills; tachado de alternativas; Zettelkasten con `react-force-graph-2d`; mazos de flashcards M1 (63) y M2 (51); soluciones paso a paso profundizadas (Planteamiento → Paso N → Análisis de distractores) en las 1.058 explicaciones.
 - **v2.0, Inicio como Hub (2026-11-03):** `/` es ahora un menú principal (presentación, métricas, Desafío Diario, módulos, mapa de los 67 subtemas y contacto); el catálogo pasó a `/ensayos` y el explorador también vive en `/subtemas`.
+- **v2.1, Workspace y telemetría (2026-11-05):** navegación en barra lateral colapsable (4 secciones, `Cmd/Ctrl + B`, cajón móvil, Modo Zen), Inspector contextual global (ficha, compendio PDF y flashcards) y telemetría silenciosa por pregunta con Matriz de Ritmo y Decisión e Índice de Duda Tóxica.
 
 ---
 
@@ -488,6 +489,18 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - **`.vercelignore`** nuevo: `.work/`, `videos/`, `.agents/`, los PDF del DEMRE y los auxiliares de LaTeX. Los mismos (salvo los auxiliares) ya estaban en `.gitignore`.
 - Sin navegador headless en esta pasada, a pedido del usuario: la revisión visual queda a su cargo. `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 
+### [2026-11-05] - v2.1: Workspace y telemetría
+- **App Shell:** barra lateral fija reemplaza a la barra superior (`Navbar.tsx` eliminado). Secciones Foco (Hub, racha, Desafío Diario, «En curso»), Entrenamiento, Conocimiento y Diagnóstico; pie con almacenamiento local y tema. Colapsa a íconos con botón o `Cmd/Ctrl + B` (preferencia en `settings.sidebarCollapsed`); bajo `lg` es un cajón. Cabecera con migas. El desplazamiento pasó de la ventana a `<main>`, que se reinicia al cambiar de ruta; el `Suspense` bajó al área de trabajo para que la barra no parpadee al cargar una vista.
+- **ExamRunner dentro del shell:** en ensayo cronometrado la barra parte oculta (Modo Zen) y se despliega con un botón en la cabecera, sin alterar la preferencia guardada. La hoja de respuestas y la vista dividida del texto dependen del ancho medido del runner, porque ahora varía con la barra y el Inspector.
+- **Inspector (`useInspectorStore`):** panel derecho en escritorio y hoja en móvil. Objetivos: subtema, eje o asignatura. Pestañas: Ficha (dominio, nota con KaTeX, conceptos y enlaces del Zettelkasten), Compendio PDF (`iframe` en la página del subtema, se monta solo al abrir la pestaña) y Flashcards (cola SM-2 compacta, cuenta para la racha). Se invoca desde `ExamRunner` en práctica, revisión de resultados, cuaderno de errores, `/subtemas`, `/ensayos` y `/analitica`. Bloqueado en ensayo cronometrado (`setLocked`).
+- **Telemetría:** cada sesión guarda un rastro por pregunta (`session.telemetry`) que al entregar pasa a `QuestionResult.telemetry` (`timeSpentMs`, `selectionChanges`, `firstSelectedOption`, `finalSelectedOption`, `discardedCount`). Viaja en los respaldos sin cambiar su versión.
+- **Decisiones de medición:** el reloj se pausa con la pestaña oculta, al leer la solución ya verificada y con el Inspector abierto, para medir el tiempo de resolver y no el de estudiar. `discardedCount` cuenta alternativas distintas tachadas, aunque luego se recuperen. Repetir la última alternativa no suma un cambio, ni siquiera tras borrarla o tacharla. Un cambio puede volver a la alternativa inicial (A → B → A): suma cambios, pero no entra en el balance porque la primera y la final coinciden.
+- **Clasificación excluyente:** indecisión (≥ 2 cambios) > fuga (acierto > 2:30) > fluido (acierto < 1:30 sin cambios) > punto ciego (error < 35 s sin tachar). Lo demás queda fuera de la matriz y se informa. El Índice de Duda Tóxica es tóxicos / (tóxicos + correctivos) y considera toda pregunta con al menos un cambio, no solo las de ≥ 2.
+- **Reportes:** panel «Ritmo y decisión» en resultados (tira de cadencia por pregunta, matriz con enlaces a la revisión y duda tóxica) y pestaña `/analitica?vista=ritmo` (agregado por asignatura, tiempo promedio por eje e historial de cambios).
+- **Retrocompatibilidad:** toda lectura pasa por `readTelemetry`, que devuelve null en intentos antiguos y sanea campos inválidos de respaldos. Sesiones en curso sin `telemetry` siguen funcionando. Sin migración de `localStorage`.
+- **Color:** `amber` se admite solo en las marcas de telemetría (lo pidió el brief). El validador de la skill `dataviz` confirmó que emerald-500 y rose-500 se confunden con deuteranopia (ΔE 5,6); los tramos contiguos usan pares de distinta luminosidad, con posición fija y cifra propia.
+- **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Prueba desechable del flujo store → corrección → clasificación (umbrales exactos, intentos antiguos, datos inválidos) y de cada unidad del mapa subtema → mazo contra los mazos reales: todo correcto. Sin navegador headless por indicación del autor: la revisión visual queda pendiente en local.
+
 ---
 
 ## Comandos
@@ -571,6 +584,8 @@ APP_PAES/
 - **Alternativas corruptas en el JSON (M1/M2):** no afectan la vista (se usa el recorte), pero sí el texto alternativo; corregirlas requiere ajustar la extracción de alternativas en `demre/text.py`.
 - **Subtemas de las preguntas (v2.0):** la asignación es heurística (etiqueta de tema + palabras clave); se corrige a mano con el campo `subtopic` del JSON o afinando `KEYWORDS`/`STRONG` en `assign_subtopics.py`. Algunos subtemas tienen pocas preguntas en el banco (conteo, textos discontinuos, análisis de fuentes).
 - **Soluciones profundizadas (v2.0):** redactadas con IA a partir de las soluciones ya validadas y verificadas contra la clave; conviene revisión docente, empezando por las interpretativas listadas en la Fase 3. Los lotes de trabajo quedan en `scripts/pipeline/solutions/.work/` (ignorado por git).
+- **Telemetría v2.1:** los umbrales (1:30, 2:30, 35 s) son iguales para todas las asignaturas y están en `src/utils/telemetry.ts`; en Lectora, la primera pregunta de cada texto absorbe el tiempo de leerlo (la interfaz lo advierte), así que sus «fugas» se sobrestiman. Una pestaña visible sin actividad sigue sumando tiempo.
+- **Flashcards en el Inspector:** las tarjetas solo tienen unidad, no subtema, así que un subtema muestra las de su unidad (`src/data/flashcards/links.ts`). 12 de los 67 subtemas no tienen tarjetas: Lectora (9), `cs-habilidades`, `hi-geografia` e `hi-fuentes`.
 - **Flashcards:** 141 tarjetas iniciales de Ciencias e Historia más 114 de Matemática (M1 63, M2 51); se agregan nuevas en `src/data/flashcards/*.ts` sin tocar el progreso existente (el estado se guarda por id de tarjeta).
 
 ---
@@ -616,3 +631,9 @@ APP_PAES/
 - [x] Soluciones profundizadas (Planteamiento → Paso N → Distractores) con validación programática; claves intactas.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; verificación headless 40/40; `CLAUDE.md` y `LOG.md` actualizados.
 
+### v2.1
+- [x] App Shell con barra lateral de 4 secciones, colapso a íconos (`Cmd/Ctrl + B`), cajón móvil, migas y Modo Zen en ensayo cronometrado.
+- [x] Inspector global con Ficha, Compendio PDF y Flashcards; se invoca desde práctica, revisión, `/subtemas`, `/ensayos` y `/analitica`; bloqueado hasta entregar el ensayo.
+- [x] Telemetría silenciosa por pregunta, Matriz de Ritmo y Decisión, Índice de Duda Tóxica, tiempo por eje e historial de cambios.
+- [x] `localStorage` retrocompatible, sin migración; `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [ ] Revisión visual en local (a cargo del autor).

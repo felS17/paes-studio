@@ -3,20 +3,20 @@ import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { Check, ChevronRight, X } from 'lucide-react'
 import { Accuracy } from '@/components/dashboard/SubtopicExplorer'
 import { QuestionCard } from '@/components/exam/QuestionCard'
-import { MathText } from '@/components/math/MathText'
 import { Button } from '@/components/ui/button'
 import { Segmented } from '@/components/ui/segmented'
 import { Tag } from '@/components/ui/subject-tag'
 import { loadExam } from '@/data/catalog'
 import { SUBJECTS } from '@/data/subjects'
-import { CROSS_LINKS, loadSubtopicNotes, SUBTOPIC_OF_QUESTION, subtopicPdfHref, SUBTOPICS_BY_ID, TEMARIO_BY_SUBJECT } from '@/data/temario'
+import { CROSS_LINKS, SUBTOPIC_OF_QUESTION, subtopicPdfHref, SUBTOPICS_BY_ID, TEMARIO_BY_SUBJECT } from '@/data/temario'
 import { useStartPracticeSet } from '@/hooks/usePracticeSet'
+import { useSubtopicNotes } from '@/hooks/useSubtopicNotes'
 import { cn } from '@/lib/utils'
 import type { Question } from '@/types/exam'
-import type { SubtopicNote } from '@/types/temario'
 import type { LatestResult } from '@/utils/analytics'
 import { formatPercent, plural } from '@/utils/format'
 import { nodeId, questionCaption, subtopicsUnder, type KNode } from '@/utils/knowledgeGraph'
+import { SubtopicNoteView } from './SubtopicNoteView'
 import { combineStats, drillDraftFor, questionCountOf, type DrillSize, type SubtopicStat } from '@/utils/subtopics'
 
 const KIND_LABEL: Record<KNode['kind'], string> = {
@@ -51,18 +51,6 @@ function useQuestions(qids: string[]): Map<string, Question> | null {
   return state?.key === key ? state.map : null
 }
 
-function useNotes(): Record<string, SubtopicNote> | null {
-  const [notes, setNotes] = useState<Record<string, SubtopicNote> | null>(null)
-  useEffect(() => {
-    let alive = true
-    loadSubtopicNotes().then((n) => alive && setNotes(n))
-    return () => {
-      alive = false
-    }
-  }, [])
-  return notes
-}
-
 function Section({ title, children, className }: { title: string; children: React.ReactNode; className?: string }) {
   return (
     <section className={cn('border-t border-zinc-200/80 px-5 py-4 dark:border-zinc-800/80', className)} aria-label={title}>
@@ -82,40 +70,6 @@ function Metrics({ items }: { items: [string, React.ReactNode][] }) {
         </div>
       ))}
     </dl>
-  )
-}
-
-/** Nota del subtema: teoría, recuadro, ideas clave y trampas frecuentes del DEMRE. */
-function SubtopicNoteView({ id, notes }: { id: string; notes: Record<string, SubtopicNote> | null }) {
-  const note = notes?.[id]
-  if (!notes) return <p className="text-[13px] text-zinc-500">Cargando la nota…</p>
-  if (!note) return null
-  return (
-    <div className="space-y-3 text-[13.5px] leading-relaxed">
-      {note.theory.map((p, i) => (
-        <MathText key={i} text={p} className="text-zinc-700 dark:text-zinc-300" />
-      ))}
-      <div className="rounded-lg border border-zinc-200/80 bg-zinc-50/70 px-3.5 py-3 dark:border-zinc-800/80 dark:bg-zinc-900/40">
-        <p className="text-xs font-medium">{note.box.title}</p>
-        <MathText text={note.box.body} className="mt-1.5 text-[13px]" />
-      </div>
-      <div>
-        <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Ideas clave</p>
-        <ul className="mt-1.5 list-disc space-y-1 pl-4 marker:text-zinc-400">
-          {note.keyIdeas.map((t, i) => (
-            <li key={i}><MathText text={t} inline /></li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Trampas frecuentes del DEMRE</p>
-        <ul className="mt-1.5 list-disc space-y-1 pl-4 marker:text-zinc-400">
-          {note.traps.map((t, i) => (
-            <li key={i}><MathText text={t} inline /></li>
-          ))}
-        </ul>
-      </div>
-    </div>
   )
 }
 
@@ -189,7 +143,7 @@ interface DrawerProps {
 
 /** Panel lateral editorial: métricas de dominio, nota del concepto, preguntas respondidas y drill del nodo. */
 export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerProps) {
-  const notes = useNotes()
+  const notes = useSubtopicNotes()
   const startPractice = useStartPracticeSet()
   const [size, setSize] = useState<DrillSize>(10)
 

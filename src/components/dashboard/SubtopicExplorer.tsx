@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { InspectButton } from '@/components/inspector/InspectButton'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Segmented } from '@/components/ui/segmented'
@@ -108,15 +109,17 @@ function SubtopicRow({ sub, stat, onPractice }: { sub: Subtopic; stat?: Subtopic
           <span className="sr-only"> (abre en una pestaña nueva)</span>
         </a>
       </div>
-      <Button
-        size="sm"
-        onClick={onPractice}
-        disabled={!sub.questionCount}
-        title={sub.questionCount ? undefined : 'Aún no hay preguntas de este subtema en el banco'}
-        className="self-start sm:self-auto"
-      >
-        Practicar subtema
-      </Button>
+      <div className="flex items-center gap-1 self-start sm:self-auto">
+        <InspectButton target={{ kind: 'subtopic', id: sub.id }} name={sub.title} />
+        <Button
+          size="sm"
+          onClick={onPractice}
+          disabled={!sub.questionCount}
+          title={sub.questionCount ? undefined : 'Aún no hay preguntas de este subtema en el banco'}
+        >
+          Practicar subtema
+        </Button>
+      </div>
     </li>
   )
 }

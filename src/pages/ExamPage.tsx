@@ -49,7 +49,7 @@ export function ExamPage() {
   }
   if (loading || !exam) {
     return (
-      <div className="flex h-dvh items-center justify-center text-[13px] text-zinc-500" role="status">
+      <div className="flex min-h-[40vh] flex-1 items-center justify-center text-[13px] text-zinc-500" role="status">
         Cargando ensayo…
       </div>
     )

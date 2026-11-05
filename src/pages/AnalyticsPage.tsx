@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { BackupActions } from '@/components/analytics/BackupActions'
+import { CadencePanel } from '@/components/analytics/CadencePanel'
 import { DiagnosisPanel } from '@/components/analytics/DiagnosisPanel'
 import { MistakeNotebook } from '@/components/analytics/MistakeNotebook'
 import { ScoreSummary } from '@/components/analytics/ScoreSummary'
@@ -13,8 +14,8 @@ import type { AttemptRecord } from '@/types/analytics'
 import { diagnosisSubjects, mistakeNotebook } from '@/utils/analytics'
 import { latestBySubject } from '@/utils/projection'
 
-type View = 'ejes' | 'errores' | 'evolucion'
-const VIEWS: View[] = ['ejes', 'errores', 'evolucion']
+type View = 'ejes' | 'errores' | 'ritmo' | 'evolucion'
+const VIEWS: View[] = ['ejes', 'errores', 'ritmo', 'evolucion']
 
 function Metric({ label, value, unit, note }: { label: string; value: React.ReactNode; unit?: string; note: React.ReactNode }) {
   return (
@@ -89,11 +90,13 @@ export function AnalyticsPage() {
             items={[
               { value: 'ejes', label: 'Ejes por mejorar', count: axesCount },
               { value: 'errores', label: 'Cuaderno de errores', count: mistakes.length },
+              { value: 'ritmo', label: 'Ritmo y decisión' },
               { value: 'evolucion', label: 'Evolución' },
             ]}
           >
             {view === 'ejes' && <DiagnosisPanel attempts={attempts} />}
             {view === 'errores' && <MistakeNotebook entries={mistakes} />}
+            {view === 'ritmo' && <CadencePanel attempts={attempts} />}
             {view === 'evolucion' && <ScoreSummary attempts={attempts} />}
           </Tabs>
         </>

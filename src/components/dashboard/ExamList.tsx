@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { InspectButton } from '@/components/inspector/InspectButton'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { AREA_LABEL, SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
@@ -59,9 +60,12 @@ export function ExamList({ exams, bestScores }: { exams: ExamMeta[]; bestScores:
             <h2 id={`group-${subject}`} className="text-[14px] font-semibold tracking-tight">
               {SUBJECTS[subject].name}
             </h2>
-            <p className="text-xs text-zinc-500 dark:text-zinc-400">
-              Prueba oficial: <span className="tabular-nums">{SUBJECTS[subject].officialQuestions}</span> preguntas en {formatMinutes(SUBJECTS[subject].officialMinutes)}
-            </p>
+            <div className="flex items-center gap-3">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                Prueba oficial: <span className="tabular-nums">{SUBJECTS[subject].officialQuestions}</span> preguntas en {formatMinutes(SUBJECTS[subject].officialMinutes)}
+              </p>
+              <InspectButton target={{ kind: 'subject', subject }} name={SUBJECTS[subject].name} withLabel />
+            </div>
           </div>
           <ul className="divide-y divide-zinc-200/80 overflow-hidden rounded-xl border border-zinc-200/80 bg-white dark:divide-zinc-800/80 dark:border-zinc-800/80 dark:bg-[#121215]">
             {list.map((exam) => (

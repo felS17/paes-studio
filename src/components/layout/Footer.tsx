@@ -10,7 +10,7 @@ export function Footer() {
   const [open, setOpen] = useState(false)
   return (
     <footer className="border-t border-zinc-200/80 dark:border-zinc-800/80">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col gap-3 px-4 py-6 text-[12.5px] text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10 dark:text-zinc-400">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-3 px-4 py-6 text-[12.5px] text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10 dark:text-zinc-400">
         <p>© 2026 · Desarrollado por felS</p>
         <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <li>

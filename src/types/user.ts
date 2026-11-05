@@ -16,4 +16,6 @@ export interface UserSettings {
   /** Proporción del panel de lectura en la vista dividida (0.3–0.7). */
   splitRatio: number
   showShortcutHints: boolean
+  /** Barra lateral reducida a íconos (escritorio). */
+  sidebarCollapsed: boolean
 }

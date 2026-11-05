@@ -1,4 +1,4 @@
-import type { AttemptRecord, AxisStat, QuestionResult } from '@/types/analytics'
+import type { AttemptRecord, AxisStat, QuestionResult, QuestionTrace } from '@/types/analytics'
 import type { Exam, ExamMode, OptionKey } from '@/types/exam'
 
 export const PAES_MIN = 100
@@ -36,9 +36,11 @@ export interface GradeInput {
   flagged: string[]
   startedAt: number
   durationMs: number
+  /** Rastro silencioso de la sesión; las sesiones anteriores a la v2.1 no lo traen. */
+  telemetry?: Record<string, QuestionTrace>
 }
 
-export function gradeAttempt({ exam, mode, answers, flagged, startedAt, durationMs }: GradeInput): AttemptRecord {
+export function gradeAttempt({ exam, mode, answers, flagged, startedAt, durationMs, telemetry }: GradeInput): AttemptRecord {
   const flaggedSet = new Set(flagged)
   const perAxis: Record<string, AxisStat> = {}
   // En práctica solo cuentan las preguntas respondidas: saltarse una no es evidencia de debilidad.
@@ -51,6 +53,7 @@ export function gradeAttempt({ exam, mode, answers, flagged, startedAt, duration
       axis.total += 1
       if (isCorrect) axis.correct += 1
     }
+    const trace = telemetry?.[q.id]
     return {
       id: q.id,
       number: q.number,
@@ -61,6 +64,15 @@ export function gradeAttempt({ exam, mode, answers, flagged, startedAt, duration
       isCorrect,
       flagged: flaggedSet.has(q.id),
       pilot: Boolean(q.pilot),
+      ...(trace && {
+        telemetry: {
+          timeSpentMs: Math.round(trace.timeSpentMs),
+          selectionChanges: trace.selectionChanges,
+          firstSelectedOption: trace.firstSelectedOption,
+          finalSelectedOption: selected,
+          discardedCount: trace.discarded.length,
+        },
+      }),
     }
   })
   const answered = questions.filter((q) => q.selected !== null).length

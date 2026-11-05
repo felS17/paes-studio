@@ -38,6 +38,8 @@ function MistakeDetail({ entry }: { entry: MistakeEntry }) {
         selected={entry.selected}
         revealed
         flagged={false}
+        theory
+        subject={entry.subject}
       />
     </div>
   )

@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
 import { useTheme } from '@/hooks/useTheme'
@@ -17,35 +17,25 @@ const MaterialPage = lazy(() => import('@/pages/MaterialPage').then((m) => ({ de
 // El grafo (react-force-graph-2d, Canvas) vive en su propio chunk.
 const ZettelkastenPage = lazy(() => import('@/pages/ZettelkastenPage').then((m) => ({ default: m.ZettelkastenPage })))
 
-function Loading() {
-  return (
-    <div className="flex min-h-[40vh] items-center justify-center text-[13px] text-zinc-500" role="status">
-      Cargando…
-    </div>
-  )
-}
-
 export default function App() {
   useTheme()
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <Routes>
+      <Routes>
+        <Route element={<AppShell />}>
+          <Route index element={<HomePage />} />
+          <Route path="/ensayos" element={<DashboardPage />} />
           <Route path="/ensayo/:examId" element={<ExamPage />} />
-          <Route element={<AppShell />}>
-            <Route index element={<HomePage />} />
-            <Route path="/ensayos" element={<DashboardPage />} />
-            <Route path="/subtemas" element={<SubtopicsPage />} />
-            <Route path="/analitica" element={<AnalyticsPage />} />
-            <Route path="/resultados/:attemptId" element={<ResultsPage />} />
-            <Route path="/flashcards" element={<FlashcardsPage />} />
-            <Route path="/flashcards/:deckId" element={<FlashcardStudyPage />} />
-            <Route path="/material" element={<MaterialPage />} />
-            <Route path="/zettelkasten" element={<ZettelkastenPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
-      </Suspense>
+          <Route path="/subtemas" element={<SubtopicsPage />} />
+          <Route path="/analitica" element={<AnalyticsPage />} />
+          <Route path="/resultados/:attemptId" element={<ResultsPage />} />
+          <Route path="/flashcards" element={<FlashcardsPage />} />
+          <Route path="/flashcards/:deckId" element={<FlashcardStudyPage />} />
+          <Route path="/material" element={<MaterialPage />} />
+          <Route path="/zettelkasten" element={<ZettelkastenPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   )
 }

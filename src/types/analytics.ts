@@ -1,6 +1,31 @@
 /** Dominio: intentos rendidos, desempeño por eje y respaldo del progreso. */
 import type { ExamMode, ExamSource, OptionKey, ScienceArea, SubjectId } from './exam'
 
+/**
+ * Telemetría silenciosa de una pregunta (v2.1). Los intentos anteriores no la traen: leerla siempre con
+ * `readTelemetry` (src/utils/telemetry.ts), que además tolera respaldos importados incompletos.
+ */
+export interface QuestionTelemetry {
+  /** Tiempo real viendo la pregunta, sumando cada vez que vuelve a ella. No corre con la pestaña oculta. */
+  timeSpentMs: number
+  /** Veces que cambió de alternativa. */
+  selectionChanges: number
+  firstSelectedOption: OptionKey | null
+  finalSelectedOption: OptionKey | null
+  /** Alternativas distintas que tachó con la herramienta de descarte. */
+  discardedCount: number
+}
+
+/** Rastro en curso de una pregunta dentro de una sesión; se convierte en `QuestionTelemetry` al entregar. */
+export interface QuestionTrace {
+  timeSpentMs: number
+  selectionChanges: number
+  firstSelectedOption: OptionKey | null
+  /** Última alternativa elegida, aunque luego se haya borrado o tachado. */
+  lastSelectedOption: OptionKey | null
+  discarded: OptionKey[]
+}
+
 export interface QuestionResult {
   id: string
   number: number
@@ -11,6 +36,7 @@ export interface QuestionResult {
   isCorrect: boolean
   flagged: boolean
   pilot: boolean
+  telemetry?: QuestionTelemetry
 }
 
 export interface AxisStat {

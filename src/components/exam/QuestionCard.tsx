@@ -1,11 +1,12 @@
 import { Flag } from 'lucide-react'
+import { TheoryButton } from '@/components/inspector/TheoryButton'
 import { MathText } from '@/components/math/MathText'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Kbd } from '@/components/ui/kbd'
 import { Tag } from '@/components/ui/subject-tag'
 import { cn } from '@/lib/utils'
-import type { OptionKey, Question } from '@/types/exam'
+import type { OptionKey, Question, SubjectId } from '@/types/exam'
 import { AnswerStrip, OptionButton, type OptionState } from './OptionButton'
 import { SolutionAccordion } from './SolutionAccordion'
 
@@ -27,11 +28,14 @@ interface QuestionCardProps {
   /** Alternativas tachadas por el estudiante. */
   struck?: OptionKey[]
   onToggleStrike?: (key: OptionKey) => void
+  /** Muestra «Consultar teoría del subtema» (no en Modo Ensayo: el Inspector está bloqueado hasta entregar). */
+  theory?: boolean
+  subject?: SubjectId
 }
 
 export function QuestionCard({
   question, mode, position, total, selected, revealed, flagged, onSelect, onCheck, onToggleFlag, showHints,
-  struck = [], onToggleStrike,
+  struck = [], onToggleStrike, theory, subject,
 }: QuestionCardProps) {
   const locked = revealed || mode === 'revision'
   const stateOf = (key: OptionKey): OptionState => {
@@ -63,18 +67,23 @@ export function QuestionCard({
             {question.pilot && mode === 'revision' && <Badge tone="outline">Piloto, no puntúa</Badge>}
           </div>
         )}
-        {onToggleFlag && (
-          <Button
-            variant="ghost"
-            size="sm"
-            className={cn('ml-auto', flagged && 'text-zinc-900 dark:text-zinc-100')}
-            aria-pressed={flagged}
-            onClick={onToggleFlag}
-          >
-            <Flag className={cn('size-3.5', flagged && 'fill-current')} />
-            {flagged ? 'Con duda' : 'Marcar duda'}
-            {showHints && <Kbd className="ml-0.5">F</Kbd>}
-          </Button>
+        {(onToggleFlag || (theory && mode !== 'ensayo')) && (
+          <div className="ml-auto flex flex-wrap items-center gap-1">
+            {theory && mode !== 'ensayo' && <TheoryButton question={question} fallbackSubject={subject} />}
+            {onToggleFlag && (
+              <Button
+                variant="ghost"
+                size="sm"
+                className={cn(flagged && 'text-zinc-900 dark:text-zinc-100')}
+                aria-pressed={flagged}
+                onClick={onToggleFlag}
+              >
+                <Flag className={cn('size-3.5', flagged && 'fill-current')} />
+                {flagged ? 'Con duda' : 'Marcar duda'}
+                {showHints && <Kbd className="ml-0.5">F</Kbd>}
+              </Button>
+            )}
+          </div>
         )}
       </header>
 

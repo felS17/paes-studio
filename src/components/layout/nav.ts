@@ -1,15 +1,36 @@
-import { BarChart3, FileText, House, Layers, LayoutList, ListTree, Waypoints } from 'lucide-react'
+import { BarChart3, FileText, House, Layers, LayoutList, ListTree, Waypoints, type LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-export const NAV_ITEMS = [
-  { to: '/', label: 'Inicio', icon: House, end: true },
-  { to: '/ensayos', label: 'Ensayos', icon: LayoutList, end: false },
-  { to: '/subtemas', label: 'Subtemas', icon: ListTree, end: false },
-  { to: '/zettelkasten', label: 'Zettelkasten', icon: Waypoints, end: false },
-  { to: '/flashcards', label: 'Flashcards', icon: Layers, end: false },
-  { to: '/material', label: 'Material PDF', icon: FileText, end: false },
-  { to: '/analitica', label: 'Analítica', icon: BarChart3, end: false },
-] as const
+export interface NavItem {
+  to: string
+  label: string
+  icon: LucideIcon
+  end?: boolean
+}
+
+/** Las cuatro secciones de la barra lateral; también dan el primer nivel de las migas. */
+export const NAV_SECTIONS: { title: string; items: NavItem[] }[] = [
+  { title: 'Foco', items: [{ to: '/', label: 'Hub Central', icon: House, end: true }] },
+  {
+    title: 'Entrenamiento',
+    items: [
+      { to: '/ensayos', label: 'Ensayos Oficiales', icon: LayoutList },
+      { to: '/subtemas', label: 'Drills por Subtema', icon: ListTree },
+      { to: '/flashcards', label: 'Flashcards SM-2', icon: Layers },
+    ],
+  },
+  {
+    title: 'Conocimiento',
+    items: [
+      { to: '/zettelkasten', label: 'Zettelkasten', icon: Waypoints },
+      { to: '/material', label: 'Biblioteca PDF', icon: FileText },
+    ],
+  },
+  { title: 'Diagnóstico', items: [{ to: '/analitica', label: 'Analítica & Telemetría', icon: BarChart3 }] },
+]
+
+/** Atajo para colapsar la barra lateral, escrito como en el teclado de cada sistema. */
+export const SIDEBAR_SHORTCUT = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌘B' : 'Ctrl+B'
 
 export function navLinkClass({ isActive }: { isActive: boolean }) {
   return cn(
