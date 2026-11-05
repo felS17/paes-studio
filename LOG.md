@@ -14,6 +14,7 @@
 - **v2.0, Inicio como Hub (2026-11-03):** `/` es ahora un menú principal (presentación, métricas, Desafío Diario, módulos, mapa de los 67 subtemas y contacto); el catálogo pasó a `/ensayos` y el explorador también vive en `/subtemas`.
 - **v2.1, Workspace y telemetría (2026-11-05):** navegación en barra lateral colapsable (4 secciones, `Cmd/Ctrl + B`, cajón móvil, Modo Zen), Inspector contextual global (ficha, compendio PDF y flashcards) y telemetría silenciosa por pregunta con Matriz de Ritmo y Decisión e Índice de Duda Tóxica.
 - **v2.1, Textos humanos (2026-11-05):** la interfaz deja la jerga técnica y habla en tono cercano; frase de impulso diaria, botón «Entrenar 10 preguntas rápidas ahora», secciones renombradas y 4 perfiles de respuesta en lenguaje simple.
+- **v2.2 (2026-11-05):** 4 temas (Geist Light, Geist Dark, GitHub Dark y Papel Cálido), heatmap de actividad, racha de aciertos, 30 citas reales con autor, temas ordenados en acordeones con buscador y filtros, Formulario Express con 263 fórmulas y mazo de Competencia Lectora (290 tarjetas en total).
 
 ---
 
@@ -516,6 +517,19 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - **Almacenamiento en la barra:** se quitó la cifra en KB de la vista y queda en el texto de ayuda; la barra solo recuerda que el progreso se guarda y lleva a donde se descarga.
 - **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; prueba desechable de perfiles, botón rápido (las 5 materias reúnen 10 preguntas) y rotación de frases: todo correcto. Sin navegador, por indicación del autor: la revisión visual queda pendiente en local.
 
+### [2026-11-05] - PAES Studio v2.2
+- **Temas:** en vez de reescribir unas 100 clases por componente, cada tema redefine tokens (`--canvas`, `--surface`, `--accent`, `--progress`) y las escalas de Tailwind (`--color-zinc-*`; en GitHub Dark también `emerald`, `rose` y `amber`). Se reemplazaron los hexadecimales fijos de superficie por `bg-canvas` y `bg-surface`. El Canvas del grafo lee su paleta de `src/data/themes.ts`. La preferencia antigua (`light`, `dark`, `system`) se migra con `version: 2` en `settings`, y `index.html` también la entiende para no destellar. Se conserva la opción de seguir al dispositivo, además de los 4 temas, para no quitar algo que ya existía.
+- **GitHub Dark:** `#58a6ff` en lo activo y el foco, `#3fb950` en aciertos y barras de progreso, `#f85149` en errores. Las barras de la tira de cadencia no usan verde: en Dudas y tiempo, tinta contra rojo se distingue mejor con daltonismo.
+- **Papel Cálido:** la escala zinc pasa a tonos tierra. Las tarjetas (`#efe8d8`) son más oscuras que el fondo (`#f6f1e7`), como pedía el brief. Los recortes de pregunta usan `mix-blend-mode: multiply` para fundirse con el papel.
+- **Heatmap:** 20 semanas de lunes a domingo, en el Inicio. Cuenta las preguntas respondidas al entregar cada intento y las flashcards de la racha. Los umbrales son fijos (1, 5, 15 y 40), para que el mismo esfuerzo pinte igual siempre. Reemplaza a la tira de 14 días del Desafío del Día. Una sesión sin terminar aún no suma, porque el historial guarda intentos entregados.
+- **Micro-recompensas:** `session.correctRun` lleva los aciertos seguidos al verificar; el badge aparece desde 3 y una nueva verificación de la misma pregunta no suma. El borde de confirmación solo se anima al verificar ahí mismo, no al volver a una pregunta ya verificada.
+- **Citas:** 30 citas con autor y obra. Se evitaron frases famosas mal atribuidas (la de «somos lo que hacemos repetidamente» es de Will Durant, no de Aristóteles). Por búsqueda web se comprobaron Pizarnik, Curie, Mistral y Darwin; el resto se citó de memoria con su obra para que se pueda comprobar, y las escritas en otro idioma son traducciones. Spinoza es la menos segura en su referencia exacta.
+- **Temas de estudio:** `TopicBrowser` reúne materia con contador, buscador y filtro por estado, y agrupa por eje en acordeones con su progreso. El buscador ignora tildes, busca en título y eje y, al escribir, carga las notas para hallar conceptos («pitagoras» encuentra Triángulos); si hay coincidencias en otra materia, las ofrece. Las filas lanzan la práctica con un clic (10, 20 o Todas), sin diálogo.
+- **Dominio unificado:** dominado pasa de 80 % sin errores pendientes a 75 % con al menos 3 preguntas, también en el mapa, para que un tema no tenga dos estados según la vista. Pendientes reúne lo no practicado y lo que está bajo 50 %.
+- **Formulario Express:** 59 tarjetas y 263 fórmulas en 7 hojas (M1, M2, Física, Química, Biología, Lectora e Historia), con filtro por materia y buscador. Cubren los 67 temas y en el Inspector se muestran solo las del tema abierto. Usa `sen`, como se escribe en Chile.
+- **Mazo de Competencia Lectora:** 35 tarjetas en 6 unidades. Total real: 290 tarjetas en 7 mazos. Solo `cs-habilidades`, `hi-geografia` e `hi-fuentes` quedan sin tarjetas.
+- **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Prueba desechable en hora de Chile: KaTeX de las 263 fórmulas, cobertura de temas, contadores de cada mazo, columnas del heatmap en cambios de horario y de año, umbrales, estados, buscador, racha y migración del tema: todo correcto. Sin navegador por indicación del autor: la revisión visual de los 4 temas queda pendiente en local. El contenido del formulario y del mazo no tiene revisión docente.
+
 ---
 
 ## Comandos
@@ -601,8 +615,9 @@ APP_PAES/
 - **Soluciones profundizadas (v2.0):** redactadas con IA a partir de las soluciones ya validadas y verificadas contra la clave; conviene revisión docente, empezando por las interpretativas listadas en la Fase 3. Los lotes de trabajo quedan en `scripts/pipeline/solutions/.work/` (ignorado por git).
 - **Telemetría v2.1:** los umbrales (1:30, 2:30, 35 s) son iguales para todas las asignaturas y están en `src/utils/telemetry.ts`; en Lectora, la primera pregunta de cada texto absorbe el tiempo de leerlo (la interfaz lo advierte), así que sus «fugas» se sobrestiman. Una pestaña visible sin actividad sigue sumando tiempo.
 - **Textos no revisados (v2.1):** las soluciones y las descripciones de los ensayos curados vienen de `src/data/exams/` y no se leyeron por la regla de ahorro de tokens, así que pueden conservar términos técnicos. Las 41 pruebas oficiales traían «clavijero» en su descripción: la portada muestra un texto propio en su lugar, sin cambiar los JSON. Tampoco se tocaron el contenido de las notas, las tarjetas ni los PDF.
-- **Flashcards en el Inspector:** las tarjetas solo tienen unidad, no subtema, así que un subtema muestra las de su unidad (`src/data/flashcards/links.ts`). 12 de los 67 subtemas no tienen tarjetas: Lectora (9), `cs-habilidades`, `hi-geografia` e `hi-fuentes`.
-- **Flashcards:** 141 tarjetas iniciales de Ciencias e Historia más 114 de Matemática (M1 63, M2 51); se agregan nuevas en `src/data/flashcards/*.ts` sin tocar el progreso existente (el estado se guarda por id de tarjeta).
+- **Flashcards en el Inspector:** las tarjetas solo tienen unidad, no subtema, así que un subtema muestra las de su unidad (`src/data/flashcards/links.ts`). Solo `cs-habilidades`, `hi-geografia` e `hi-fuentes` no tienen tarjetas.
+- **Formulario Express y mazo de Lectora (v2.2):** redactados con IA a partir del temario y de lo que suele evaluar el DEMRE; conviene revisión docente. Las fórmulas se validaron solo en que compilan, no en su contenido.
+- **Flashcards:** 141 tarjetas iniciales de Ciencias e Historia, 114 de Matemática (M1 63, M2 51) y 35 de Competencia Lectora; se agregan nuevas en `src/data/flashcards/*.ts` sin tocar el progreso existente (el estado se guarda por id de tarjeta).
 
 ---
 
@@ -654,3 +669,13 @@ APP_PAES/
 - [x] `localStorage` retrocompatible, sin migración; `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 - [x] Textos humanos sin jerga, frase de impulso diaria, botón de 10 preguntas rápidas y perfiles en lenguaje simple.
 - [ ] Revisión visual en local (a cargo del autor).
+
+### v2.2
+- [x] 4 temas con tokens CSS (Geist Light, Geist Dark, GitHub Dark y Papel Cálido), selector en la barra y Canvas del mapa según el tema.
+- [x] Heatmap de 20 semanas con tooltip, racha de aciertos desde x3 y confirmación al acertar en práctica.
+- [x] 30 citas reales con autor y obra.
+- [x] `TopicBrowser` con buscador, estados y acordeón por eje en `/subtemas`, el Inicio y `/zettelkasten`.
+- [x] Formulario Express en `/material?vista=formulario` y en el Inspector.
+- [x] Mazo de Competencia Lectora (35); 290 tarjetas en total.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [ ] Revisión visual de los 4 temas en local y revisión docente del formulario y del mazo (a cargo del autor).

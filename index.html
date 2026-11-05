@@ -9,12 +9,16 @@
     <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)" />
     <title>PAES Studio</title>
     <script>
-      // Evita el destello de tema incorrecto antes de que React monte.
+      // Evita el destello de tema incorrecto antes de que React monte. `light` y `dark` son valores guardados antes de los 4 temas.
       try {
         var raw = localStorage.getItem('paes-studio-storage');
-        var theme = raw ? (JSON.parse(raw).settings || {}).state?.theme : null;
-        var dark = theme === 'dark' || ((!theme || theme === 'system') && matchMedia('(prefers-color-scheme: dark)').matches);
-        if (dark) document.documentElement.classList.add('dark');
+        var saved = raw ? (JSON.parse(raw).settings || {}).state?.theme : null;
+        var theme = saved === 'light' ? 'geist-light' : saved === 'dark' ? 'geist-dark' : saved;
+        if (['geist-light', 'geist-dark', 'github-dark', 'paper'].indexOf(theme) < 0) {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'geist-dark' : 'geist-light';
+        }
+        document.documentElement.dataset.theme = theme;
+        if (theme === 'geist-dark' || theme === 'github-dark') document.documentElement.classList.add('dark');
       } catch (e) {}
     </script>
   </head>

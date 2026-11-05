@@ -227,7 +227,7 @@ export function ResultsPage() {
                       <ChevronDown className={cn('size-4 text-zinc-400 transition-transform', isOpen && 'rotate-180')} />
                     </button>
                     {isOpen && (
-                      <div className="border-t border-zinc-200/80 bg-[#FAFAFA] px-4 py-5 dark:border-zinc-800/80 dark:bg-[#0c0c0e]">
+                      <div className="border-t border-zinc-200/80 bg-canvas px-4 py-5 dark:border-zinc-800/80">
                         {full ? (
                           <QuestionCard
                             question={full}

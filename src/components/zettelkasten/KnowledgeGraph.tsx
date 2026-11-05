@@ -1,20 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ForceGraph2D, { type ForceGraphMethods, type LinkObject, type NodeObject } from 'react-force-graph-2d'
+import { THEME_BY_ID } from '@/data/themes'
+import type { ThemeId } from '@/types/user'
 import type { KLink, KnowledgeGraphData, KNode } from '@/utils/knowledgeGraph'
-
-/** Paleta del canvas: la misma escala Zinc de la interfaz; emerald/rose solo en respuestas corregidas. */
-const PALETTE = {
-  light: {
-    bg: '#FAFAFA', surface: '#FFFFFF', strong: '#18181B', mid: '#71717A', muted: '#A1A1AA', faint: '#D4D4D8',
-    tree: 'rgba(113,113,122,0.55)', leaf: 'rgba(161,161,170,0.45)', cross: 'rgba(113,113,122,0.3)',
-    correct: 'rgba(16,185,129,0.9)', incorrect: 'rgba(225,29,72,0.9)',
-  },
-  dark: {
-    bg: '#09090B', surface: '#121215', strong: '#F4F4F5', mid: '#A1A1AA', muted: '#52525B', faint: '#3F3F46',
-    tree: 'rgba(113,113,122,0.7)', leaf: 'rgba(82,82,91,0.6)', cross: 'rgba(161,161,170,0.28)',
-    correct: 'rgba(52,211,153,0.9)', incorrect: 'rgba(251,113,133,0.9)',
-  },
-} as const
 
 const SANS = '"Geist Variable", "Inter", ui-sans-serif, system-ui, sans-serif'
 const MONO = '"JetBrains Mono Variable", ui-monospace, monospace'
@@ -30,17 +18,17 @@ interface Props {
   data: KnowledgeGraphData
   width: number
   height: number
-  dark: boolean
+  theme: ThemeId
   selectedId: string | null
   onSelect: (node: KNode | null) => void
 }
 
-/** Grafo de fuerzas en Canvas (react-force-graph-2d) con estética monocromática. */
-export function KnowledgeGraph({ data, width, height, dark, selectedId, onSelect }: Props) {
+/** Grafo de fuerzas en Canvas (react-force-graph-2d); toma sus colores del tema activo. */
+export function KnowledgeGraph({ data, width, height, theme, selectedId, onSelect }: Props) {
   const fgRef = useRef<ForceGraphMethods<GNode, GLink> | undefined>(undefined)
   const [hoverId, setHoverId] = useState<string | null>(null)
   const fitted = useRef(false)
-  const colors = dark ? PALETTE.dark : PALETTE.light
+  const { graph: colors, dark } = THEME_BY_ID[theme]
   const reducedMotion = useMemo(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches, [])
 
   /** Vecinos directos de cada nodo: al pasar el mouse o seleccionar, el resto se atenúa. */
@@ -138,7 +126,7 @@ export function KnowledgeGraph({ data, width, height, dark, selectedId, onSelect
       if (String(node.id) === selectedId) {
         ctx.beginPath()
         ctx.arc(x, y, r + (node.pending > 0 ? 3 : 2.2), 0, 2 * Math.PI)
-        ctx.strokeStyle = colors.strong
+        ctx.strokeStyle = colors.accent
         ctx.lineWidth = 1.5 / scale
         ctx.stroke()
       }
@@ -180,10 +168,10 @@ export function KnowledgeGraph({ data, width, height, dark, selectedId, onSelect
   const linkColor = useCallback(
     (l: GLink) => {
       const on = !focusId || endId(l.source) === focusId || endId(l.target) === focusId
-      if (!on) return dark ? 'rgba(63,63,70,0.25)' : 'rgba(212,212,216,0.35)'
+      if (!on) return colors.dim
       return l.kind === 'cross' ? colors.cross : l.kind === 'leaf' ? colors.leaf : colors.tree
     },
-    [colors, dark, focusId],
+    [colors, focusId],
   )
 
   return (

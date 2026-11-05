@@ -6,7 +6,7 @@ export type InspectorTarget =
   /** Una asignatura completa o, con `axis`, solo uno de sus ejes. */
   | { kind: 'subject'; subject: SubjectId; axis?: string }
 
-export type InspectorTab = 'ficha' | 'pdf' | 'flashcards'
+export type InspectorTab = 'ficha' | 'pdf' | 'flashcards' | 'formulario'
 
 interface InspectorState {
   target: InspectorTarget | null

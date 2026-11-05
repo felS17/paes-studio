@@ -27,6 +27,16 @@ export const useSettingsStore = create<SettingsState>()(
       setShowShortcutHints: (value) => set({ showShortcutHints: value }),
       setSidebarCollapsed: (value) => set({ sidebarCollapsed: value }),
     }),
-    { name: 'settings', storage: persistStorage, version: 1 },
+    {
+      name: 'settings',
+      storage: persistStorage,
+      version: 2,
+      // Antes de los 4 temas se guardaba `light` o `dark`.
+      migrate: (state) => {
+        const saved = state as Omit<Partial<SettingsState>, 'theme'> & { theme?: string }
+        const theme = saved.theme === 'light' ? 'geist-light' : saved.theme === 'dark' ? 'geist-dark' : saved.theme
+        return { ...saved, theme: theme ?? 'system' } as SettingsState
+      },
+    },
   ),
 )

@@ -1,12 +1,13 @@
 import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { BarChart3, FileText, Layers, LayoutList, ListTree, Waypoints, Zap, type LucideIcon } from 'lucide-react'
+import { ActivityHeatmap } from '@/components/dashboard/ActivityHeatmap'
 import { DailyChallenge } from '@/components/dashboard/DailyChallenge'
 import { DailyQuote } from '@/components/dashboard/DailyQuote'
 import { SubtopicExplorer } from '@/components/dashboard/SubtopicExplorer'
 import { Button } from '@/components/ui/button'
 import { EXAMS } from '@/data/catalog'
-import { TOTAL_CARDS } from '@/data/flashcards'
+import { DECKS, TOTAL_CARDS } from '@/data/flashcards'
 import pdfs from '@/data/pdfs.json'
 import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
 import { SUBTOPICS } from '@/data/temario'
@@ -80,8 +81,8 @@ export function HomePage() {
     },
     {
       to: '/flashcards', title: 'Entrenar la memoria en 5 min (Flashcards)', icon: Layers, span: '',
-      description: 'Tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Hay de Matemática, Biología, Física, Química e Historia.',
-      datum: `${TOTAL_CARDS} tarjetas en 6 mazos`,
+      description: 'Tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Hay de las 5 pruebas de la PAES.',
+      datum: `${TOTAL_CARDS} tarjetas en ${DECKS.length} mazos`,
     },
     {
       to: '/zettelkasten', title: 'Ver cómo se conecta lo que sabes (Mapa Mental)', icon: Waypoints, span: 'lg:col-span-2',
@@ -95,7 +96,7 @@ export function HomePage() {
     },
     {
       to: '/material', title: 'Estudiar con guías claras (Resúmenes PDF)', icon: FileText, span: '',
-      description: 'Un resumen y una presentación de repaso por materia, listos para leer o descargar.',
+      description: 'Un resumen y una presentación por materia, más un formulario express con todas las fórmulas para repasar antes de un ensayo.',
       datum: `${pdfCount} PDF`,
     },
   ]
@@ -137,7 +138,10 @@ export function HomePage() {
             </div>
           ))}
         </dl>
-        <DailyChallenge />
+        <div className="grid items-start gap-4 xl:grid-cols-[minmax(0,1fr)_auto]">
+          <DailyChallenge />
+          <ActivityHeatmap />
+        </div>
       </section>
 
       {/* B. Menú de módulos */}
@@ -148,7 +152,7 @@ export function HomePage() {
             <li
               key={to}
               className={cn(
-                'group relative flex min-h-40 flex-col rounded-xl border border-zinc-200/80 bg-white p-5 transition-colors duration-150 hover:border-zinc-300 dark:border-zinc-800/80 dark:bg-[#121215] dark:hover:border-zinc-700',
+                'group relative flex min-h-40 flex-col rounded-xl border border-zinc-200/80 bg-surface p-5 transition-colors duration-150 hover:border-zinc-300 dark:border-zinc-800/80 dark:hover:border-zinc-700',
                 span,
               )}
             >
@@ -198,7 +202,7 @@ export function HomePage() {
             </p>
           </div>
         </div>
-        <div className="rounded-xl border border-zinc-200/80 bg-white p-5 dark:border-zinc-800/80 dark:bg-[#121215]">
+        <div className="rounded-xl border border-zinc-200/80 bg-surface p-5 dark:border-zinc-800/80">
           <h3 className="text-[15px] font-semibold tracking-tight">¿Viste un error o se te ocurrió una idea?</h3>
           <p className="mt-1 text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400">
             Escríbeme. Cada aviso ayuda a que esto funcione mejor para todos los que se están preparando.

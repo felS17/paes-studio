@@ -10,40 +10,12 @@ import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import { sessionKey, useExamStore } from '@/store/useExamStore'
 import { useStreakStore } from '@/store/useStreakStore'
 import { dailyDraft, dailyPicks, dailySetId, localDateKey } from '@/utils/daily'
-import { isActiveDay, lastDays, streakSummary } from '@/utils/streak'
+import { streakSummary } from '@/utils/streak'
 
 const longDate = new Intl.DateTimeFormat('es-CL', { weekday: 'long', day: 'numeric', month: 'long' })
-const shortDate = new Intl.DateTimeFormat('es-CL', { weekday: 'short', day: 'numeric', month: 'short' })
 const parseKey = (key: string) => {
   const [y, m, d] = key.split('-').map(Number)
   return new Date(y, m - 1, d, 12)
-}
-
-/** Últimos 14 días: cada celda es un día; llena si completaste el desafío o repasaste flashcards. */
-function ActivityStrip({ today, days }: { today: string; days: ReturnType<typeof useStreakStore.getState>['days'] }) {
-  const keys = lastDays(today, 14)
-  return (
-    <ol className="flex items-center gap-1" aria-label="Actividad de los últimos 14 días">
-      {keys.map((key) => {
-        const day = days[key]
-        const active = isActiveDay(day)
-        const parts = [day?.challenge && 'desafío completado', (day?.flashcards ?? 0) > 0 && `${day!.flashcards} flashcards`].filter(Boolean)
-        const label = `${shortDate.format(parseKey(key))}: ${active ? parts.join(' y ') : 'sin actividad'}`
-        return (
-          <li
-            key={key}
-            title={label}
-            aria-label={label}
-            className={cn(
-              'size-2.5 rounded-[3px]',
-              active ? 'bg-zinc-900 dark:bg-zinc-100' : 'bg-zinc-200 dark:bg-zinc-800',
-              key === today && 'ring-1 ring-zinc-900 ring-offset-2 ring-offset-white dark:ring-zinc-100 dark:ring-offset-[#121215]',
-            )}
-          />
-        )
-      })}
-    </ol>
-  )
 }
 
 /**
@@ -121,15 +93,12 @@ export function DailyChallenge() {
       </ol>
 
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-200/80 px-5 py-3 sm:px-6 dark:border-zinc-800/80">
-        <div className="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-400">
-          <ActivityStrip today={today} days={days} />
-          <span className="hidden sm:inline">
-            {streak.activeToday ? 'Hoy ya cuenta para tu racha.' : 'Haz el desafío o repasa unas flashcards para sumar hoy.'}
-            {streak.best > streak.current && (
-              <> Mejor racha: <span className="font-mono tabular-nums">{streak.best}</span>.</>
-            )}
-          </span>
-        </div>
+        <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          {streak.activeToday ? 'Hoy ya cuenta para tu racha.' : 'Haz el desafío o repasa unas flashcards para sumar hoy.'}
+          {streak.best > streak.current && (
+            <> Mejor racha: <span className="font-mono tabular-nums">{streak.best}</span>.</>
+          )}
+        </p>
         <div className="flex items-center gap-2">
           {attempt && (
             <Button variant="ghost" size="sm" asChild>

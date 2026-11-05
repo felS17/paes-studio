@@ -50,7 +50,7 @@ export function ScoreSummary({ attempts }: { attempts: AttemptRecord[] }) {
                   aria-label={`Último puntaje ${r.last} y promedio ${r.avg} en la escala de 100 a 1000`}
                 >
                   <div className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 overflow-hidden rounded-full bg-zinc-200/70 dark:bg-zinc-800">
-                    <div className="h-full rounded-full bg-zinc-900 dark:bg-zinc-100" style={{ width: `${scaleRatio(r.last) * 100}%` }} />
+                    <div className="h-full rounded-full bg-progress" style={{ width: `${scaleRatio(r.last) * 100}%` }} />
                   </div>
                   <span
                     aria-hidden

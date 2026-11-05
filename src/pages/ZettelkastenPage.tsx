@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom'
 import { PageHeader } from '@/components/layout/AppShell'
 import { Panel } from '@/components/ui/panel'
 import { Segmented } from '@/components/ui/segmented'
+import { Accuracy } from '@/components/dashboard/SubtopicExplorer'
+import { TopicBrowser } from '@/components/dashboard/TopicBrowser'
 import { KnowledgeGraph } from '@/components/zettelkasten/KnowledgeGraph'
 import { NodeDrawer } from '@/components/zettelkasten/NodeDrawer'
 import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
@@ -26,7 +28,7 @@ function Swatch({ kind }: { kind: 'faint' | 'mid' | 'strong' | 'pending' | 'corr
       aria-hidden
       className={cn(
         'inline-block size-2.5 rounded-full border',
-        kind === 'faint' && 'border-zinc-300 bg-white dark:border-zinc-600 dark:bg-[#121215]',
+        kind === 'faint' && 'border-zinc-300 bg-surface dark:border-zinc-600',
         kind === 'mid' && 'border-zinc-500 bg-zinc-500 dark:border-zinc-400 dark:bg-zinc-400',
         kind === 'strong' && 'border-zinc-900 bg-zinc-900 dark:border-zinc-100 dark:bg-zinc-100',
         kind === 'pending' && 'border-dashed border-zinc-900 bg-white outline-1 outline-offset-1 outline-zinc-900 outline-dashed dark:border-zinc-100 dark:bg-transparent dark:outline-zinc-100',
@@ -50,6 +52,8 @@ export function ZettelkastenPage() {
   const { resolved } = useTheme()
   const [setEl, width] = useElementWidth()
   const [selected, setSelected] = useState<KNode | null>(null)
+  /** Materia de la lista cuando el mapa muestra todas. */
+  const [listSubject, setListSubject] = useState<SubjectId>('m1')
 
   const latest = useMemo(() => latestResults(attempts), [attempts])
   const stats = useMemo(() => subtopicStats(attempts, latest), [attempts, latest])
@@ -153,13 +157,13 @@ export function ZettelkastenPage() {
               data={data}
               width={width}
               height={height}
-              dark={resolved === 'dark'}
+              theme={resolved}
               selectedId={selected?.id ?? null}
               onSelect={setSelected}
             />
           )}
           {!attempts.length && (
-            <p className="pointer-events-none absolute inset-x-0 bottom-4 mx-auto w-fit max-w-[90%] rounded-lg border border-zinc-200/80 bg-white/90 px-3 py-2 text-center text-xs text-zinc-600 dark:border-zinc-800/80 dark:bg-[#121215]/90 dark:text-zinc-400">
+            <p className="pointer-events-none absolute inset-x-0 bottom-4 mx-auto w-fit max-w-[90%] rounded-lg border border-zinc-200/80 bg-surface/90 px-3 py-2 text-center text-xs text-zinc-600 dark:border-zinc-800/80 dark:text-zinc-400">
               Tu mapa te está esperando: responde una práctica o un ensayo y tus preguntas aparecerán aquí, conectadas a su tema.
             </p>
           )}
@@ -167,7 +171,7 @@ export function ZettelkastenPage() {
         <ul className="flex flex-wrap gap-x-5 gap-y-2 border-t border-zinc-200/80 px-5 py-3 text-xs text-zinc-600 dark:border-zinc-800/80 dark:text-zinc-400" aria-label="Leyenda">
           <li className="flex items-center gap-2"><Swatch kind="faint" />Sin explorar</li>
           <li className="flex items-center gap-2"><Swatch kind="mid" />En progreso</li>
-          <li className="flex items-center gap-2"><Swatch kind="strong" />Dominado: 80 % o más, sin errores pendientes</li>
+          <li className="flex items-center gap-2"><Swatch kind="strong" />Dominado: 75 % o más</li>
           <li className="flex items-center gap-2"><Swatch kind="pending" />Con errores por repasar</li>
           <li className="flex items-center gap-2"><Swatch kind="correct" />Respuesta correcta</li>
           <li className="flex items-center gap-2"><Swatch kind="incorrect" />Respuesta incorrecta</li>
@@ -178,32 +182,36 @@ export function ZettelkastenPage() {
       <section aria-labelledby="zk-lista" className="space-y-2">
         <h2 id="zk-lista" className="px-1 text-[14px] font-semibold tracking-tight">Abrir un tema</h2>
         <p className="px-1 text-[13px] text-zinc-500 dark:text-zinc-400">
-          El mismo mapa en forma de lista, para navegar con teclado o lector de pantalla.
+          El mismo mapa en forma de lista, para ir directo a un tema o navegar con teclado.
         </p>
-        <ul className="flex flex-wrap gap-1.5">
-          {SUBTOPICS.filter((s) => subject === 'todas' || s.subject === subject).map((s) => {
-            const m = masteryOf(stats.get(s.id))
-            return (
-              <li key={s.id}>
-                <button
-                  type="button"
-                  onClick={() => navigateTo(`t:${s.id}`)}
-                  className={cn(
-                    'rounded-md border px-2 py-1 text-[12px] transition-colors',
-                    m === 'dominado'
-                      ? 'border-zinc-900 bg-zinc-900 text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-900'
-                      : m === 'en-progreso'
-                        ? 'border-zinc-300 bg-white text-zinc-900 hover:border-zinc-400 dark:border-zinc-700 dark:bg-[#121215] dark:text-zinc-100'
-                        : 'border-zinc-200/80 text-zinc-500 hover:text-zinc-900 dark:border-zinc-800/80 dark:text-zinc-400 dark:hover:text-zinc-100',
-                    (stats.get(s.id)?.pending ?? 0) > 0 && 'border-dashed',
-                  )}
-                >
-                  {s.title}
-                </button>
-              </li>
-            )
-          })}
-        </ul>
+        <TopicBrowser
+          subject={subject === 'todas' ? listSubject : subject}
+          onSubjectChange={(s) => {
+            setListSubject(s)
+            if (subject !== 'todas') {
+              setSelected(null)
+              update({ asignatura: s })
+            }
+          }}
+          stats={stats}
+          renderRow={(sub, stat) => (
+            <li key={sub.id}>
+              <button
+                type="button"
+                onClick={() => navigateTo(`t:${sub.id}`)}
+                className="flex w-full items-center gap-3 py-2 pr-4 pl-10 text-left text-[13px] transition-colors hover:bg-zinc-900/[0.02] dark:hover:bg-zinc-100/[0.03]"
+              >
+                <span className="min-w-0 flex-1 truncate font-medium">{sub.title}</span>
+                {Boolean(stat?.pending) && (
+                  <span className="hidden whitespace-nowrap text-xs text-zinc-500 sm:inline dark:text-zinc-400">
+                    <span className="font-mono tabular-nums">{stat!.pending}</span> por repasar
+                  </span>
+                )}
+                <Accuracy stat={stat} />
+              </button>
+            </li>
+          )}
+        />
       </section>
 
       <NodeDrawer node={selected} stats={stats} latest={latest} onClose={() => setSelected(null)} onNavigate={navigateTo} />

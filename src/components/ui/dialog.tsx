@@ -19,7 +19,7 @@ export function DialogContent({
       <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-zinc-950/30 backdrop-blur-[2px] data-[state=open]:animate-fade-in dark:bg-black/60" />
       <DialogPrimitive.Content
         className={cn(
-          'fixed top-1/2 left-1/2 z-50 w-[calc(100vw-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-zinc-200/80 bg-white p-5 shadow-[0_8px_30px_rgba(0,0,0,0.08)] data-[state=open]:animate-fade-in dark:border-zinc-800/80 dark:bg-[#121215]',
+          'fixed top-1/2 left-1/2 z-50 w-[calc(100vw-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-zinc-200/80 bg-surface p-5 shadow-[0_8px_30px_rgba(0,0,0,0.08)] data-[state=open]:animate-fade-in dark:border-zinc-800/80',
           className,
         )}
         {...props}
@@ -56,7 +56,7 @@ export function SheetContent({
       <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-zinc-950/25 data-[state=open]:animate-fade-in dark:bg-black/50" />
       <DialogPrimitive.Content
         className={cn(
-          'fixed inset-y-0 right-0 z-50 flex w-[min(20rem,calc(100vw-3rem))] flex-col border-l border-zinc-200/80 bg-white data-[state=open]:animate-fade-in dark:border-zinc-800/80 dark:bg-[#121215]',
+          'fixed inset-y-0 right-0 z-50 flex w-[min(20rem,calc(100vw-3rem))] flex-col border-l border-zinc-200/80 bg-surface data-[state=open]:animate-fade-in dark:border-zinc-800/80',
           className,
         )}
         {...props}

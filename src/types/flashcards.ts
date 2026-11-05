@@ -1,7 +1,7 @@
-/** Dominio: mazos de flashcards (Matemática M1/M2, Ciencias e Historia) y su estado de repaso espaciado (SM-2). */
+/** Dominio: mazos de flashcards (Matemática M1/M2, Lectora, Ciencias e Historia) y su estado de repaso espaciado (SM-2). */
 
-export type DeckId = 'm1' | 'm2' | 'biologia' | 'fisica' | 'quimica' | 'historia'
-export type DeckSubject = 'm1' | 'm2' | 'ciencias' | 'historia'
+export type DeckId = 'm1' | 'm2' | 'lectora' | 'biologia' | 'fisica' | 'quimica' | 'historia'
+export type DeckSubject = 'm1' | 'm2' | 'lectora' | 'ciencias' | 'historia'
 export type Rating = 1 | 2 | 3 | 4 // Otra vez, Difícil, Bien, Fácil
 
 export interface Flashcard {

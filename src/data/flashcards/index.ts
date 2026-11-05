@@ -5,6 +5,7 @@ import type { Deck, DeckId, DeckSubject } from '@/types/flashcards'
 export const DECKS: { id: DeckId; title: string; mono: string; subject: DeckSubject; cards: number; description: string }[] = [
   { id: 'm1', title: 'Matemática M1', mono: 'M1', subject: 'm1', cards: 63, description: 'Potencias y raíces, productos notables, sistemas, funciones afín y cuadrática, Pitágoras y Thales, vectores, posición y probabilidad.' },
   { id: 'm2', title: 'Matemática M2', mono: 'M2', subject: 'm2', cards: 51, description: 'Logaritmos, interés compuesto, exponencial e inversa, trigonometría, homotecia, dispersión, combinatoria, binomial y suficiencia de datos.' },
+  { id: 'lectora', title: 'Competencia Lectora', mono: 'CL', subject: 'lectora', cards: 35, description: 'Lo que evalúa el DEMRE: localizar, interpretar y evaluar, inferencias válidas, distractores clásicos, tesis y argumentos, tono y gráficos.' },
   { id: 'biologia', title: 'Ciencias: Biología', mono: 'BI', subject: 'ciencias', cards: 35, description: 'Célula, procesos y funciones, herencia y evolución, organismo y ambiente.' },
   { id: 'fisica', title: 'Ciencias: Física', mono: 'FI', subject: 'ciencias', cards: 35, description: 'Ondas, mecánica, energía, electricidad y magnetismo.' },
   { id: 'quimica', title: 'Ciencias: Química', mono: 'QU', subject: 'ciencias', cards: 35, description: 'Estructura atómica, química orgánica, reacciones y estequiometría, soluciones.' },
@@ -14,6 +15,7 @@ export const DECKS: { id: DeckId; title: string; mono: string; subject: DeckSubj
 const loaders: Record<DeckId, () => Promise<Deck>> = {
   m1: () => import('./m1').then((m) => m.m1),
   m2: () => import('./m2').then((m) => m.m2),
+  lectora: () => import('./lectora').then((m) => m.lectora),
   biologia: () => import('./biologia').then((m) => m.biologia),
   fisica: () => import('./fisica').then((m) => m.fisica),
   quimica: () => import('./quimica').then((m) => m.quimica),

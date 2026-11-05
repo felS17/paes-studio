@@ -23,7 +23,7 @@ const RATINGS: { rating: Rating; label: string }[] = [
 ]
 
 const FACE =
-  'flex min-h-72 flex-col rounded-xl border border-zinc-200/80 bg-white p-6 [grid-area:1/1] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] sm:min-h-80 sm:p-8 dark:border-zinc-800/80 dark:bg-[#121215]'
+  'flex min-h-72 flex-col rounded-xl border border-zinc-200/80 bg-surface p-6 [grid-area:1/1] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] sm:min-h-80 sm:p-8 dark:border-zinc-800/80'
 
 function minutesUntil(ts: number, now: number) {
   const m = Math.max(1, Math.round((ts - now) / 60_000))
@@ -89,7 +89,7 @@ export function FlashcardStudyPage() {
   if (!isDeckId(deckId)) {
     return (
       <EmptyState title="Este mazo no existe" action={<Button asChild><Link to="/flashcards">Ver mazos</Link></Button>}>
-        Los mazos disponibles son Matemática M1 y M2, Biología, Física, Química e Historia.
+        Los mazos disponibles son Matemática M1 y M2, Competencia Lectora, Biología, Física, Química e Historia.
       </EmptyState>
     )
   }
@@ -142,7 +142,7 @@ export function FlashcardStudyPage() {
         aria-valuemax={snap.total}
         aria-valuenow={snap.seen}
       >
-        <div className="h-full bg-zinc-900 transition-[width] duration-500 dark:bg-zinc-100" style={{ width: `${(consolidated / snap.total) * 100}%` }} />
+        <div className="h-full bg-progress transition-[width] duration-500" style={{ width: `${(consolidated / snap.total) * 100}%` }} />
         <div className="h-full bg-zinc-400 transition-[width] duration-500 dark:bg-zinc-500" style={{ width: `${((snap.seen - consolidated) / snap.total) * 100}%` }} />
       </div>
 
@@ -214,7 +214,7 @@ export function FlashcardStudyPage() {
                     key={rating}
                     type="button"
                     onClick={() => rate(rating)}
-                    className="group flex flex-col items-center gap-1 rounded-lg border border-zinc-200/90 bg-white px-3 py-3 text-zinc-900 transition-colors duration-150 hover:border-zinc-400 hover:bg-zinc-50/70 dark:border-zinc-800 dark:bg-[#121215] dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:bg-zinc-900/50"
+                    className="group flex flex-col items-center gap-1 rounded-lg border border-zinc-200/90 bg-surface px-3 py-3 text-zinc-900 transition-colors duration-150 hover:border-zinc-400 hover:bg-zinc-50/70 dark:border-zinc-800 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:bg-zinc-900/50"
                   >
                     <span className="flex items-center gap-2">
                       <Kbd>{rating}</Kbd>

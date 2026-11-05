@@ -11,7 +11,7 @@ export const buttonVariants = cva(
         primary:
           'bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200',
         secondary:
-          'border border-zinc-200/80 bg-white text-zinc-900 hover:bg-zinc-50 hover:border-zinc-300 dark:border-zinc-800/80 dark:bg-[#121215] dark:text-zinc-100 dark:hover:bg-zinc-900 dark:hover:border-zinc-700',
+          'border border-zinc-200/80 bg-surface text-zinc-900 hover:bg-zinc-50 hover:border-zinc-300 dark:border-zinc-800/80 dark:text-zinc-100 dark:hover:bg-zinc-900 dark:hover:border-zinc-700',
         ghost:
           'text-zinc-600 hover:bg-zinc-900/[0.04] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.06] dark:hover:text-zinc-100',
         link: 'h-auto px-0 text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-100',

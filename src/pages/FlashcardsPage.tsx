@@ -37,7 +37,7 @@ export function FlashcardsPage() {
     <div className="space-y-8">
       <PageHeader
         title="Flashcards"
-        description="Tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Hay de Matemática M1 y M2, Ciencias e Historia, y en cada mazo puedes estudiar un eje a la vez."
+        description="Tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Hay de Matemática M1 y M2, Lectora, Ciencias e Historia, y en cada mazo puedes estudiar un eje a la vez."
       />
       <ul className="grid gap-4 md:grid-cols-2">
         {DECKS.map((meta) => {
@@ -50,7 +50,7 @@ export function FlashcardsPage() {
           return (
             <li
               key={meta.id}
-              className="group relative flex flex-col gap-4 rounded-xl border border-zinc-200/80 bg-white p-5 transition-colors duration-150 hover:border-zinc-300 dark:border-zinc-800/80 dark:bg-[#121215] dark:hover:border-zinc-700"
+              className="group relative flex flex-col gap-4 rounded-xl border border-zinc-200/80 bg-surface p-5 transition-colors duration-150 hover:border-zinc-300 dark:border-zinc-800/80 dark:hover:border-zinc-700"
             >
               <div>
                 <div className="min-w-0">
@@ -79,7 +79,7 @@ export function FlashcardsPage() {
                   aria-valuenow={seen}
                   aria-valuetext={`${seen} de ${total} estudiadas, ${consolidated} ya en repaso`}
                 >
-                  <div className="h-full bg-zinc-900 transition-[width] duration-500 dark:bg-zinc-100" style={{ width: total ? `${(consolidated / total) * 100}%` : 0 }} />
+                  <div className="h-full bg-progress transition-[width] duration-500" style={{ width: total ? `${(consolidated / total) * 100}%` : 0 }} />
                   <div className="h-full bg-zinc-400 transition-[width] duration-500 dark:bg-zinc-500" style={{ width: total ? `${((seen - consolidated) / total) * 100}%` : 0 }} />
                 </div>
                 <p className="mt-1.5 text-[11.5px] text-zinc-500 dark:text-zinc-400">
@@ -100,7 +100,7 @@ export function FlashcardsPage() {
         })}
       </ul>
 
-      <div className="rounded-xl border border-zinc-200/80 bg-white px-4 py-3 dark:border-zinc-800/80 dark:bg-[#121215]">
+      <div className="rounded-xl border border-zinc-200/80 bg-surface px-4 py-3 dark:border-zinc-800/80">
         <p className="text-xs text-zinc-500 dark:text-zinc-400">Atajos de teclado en el estudio</p>
         <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-2 text-[12.5px]">
           {KEYS.map((k) => (

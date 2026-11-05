@@ -15,7 +15,7 @@ export function QueueCounts({ counts, active, size = 'md' }: {
     { kind: 'repaso', value: counts.repaso },
   ]
   return (
-    <dl className="flex divide-x divide-zinc-200/80 overflow-hidden rounded-lg border border-zinc-200/80 bg-white dark:divide-zinc-800/80 dark:border-zinc-800/80 dark:bg-[#121215]">
+    <dl className="flex divide-x divide-zinc-200/80 overflow-hidden rounded-lg border border-zinc-200/80 bg-surface dark:divide-zinc-800/80 dark:border-zinc-800/80">
       {items.map(({ kind, value }) => (
         <div
           key={kind}

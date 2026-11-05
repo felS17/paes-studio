@@ -85,7 +85,7 @@ export function AppShell() {
 
   return (
     // `relative` aquí y en <main>: sin él, los hijos absolutos (como `sr-only`) escapan del recorte y estiran la ventana.
-    <div className="relative flex h-dvh overflow-hidden bg-[#FAFAFA] dark:bg-[#09090B]">
+    <div className="relative flex h-dvh overflow-hidden bg-canvas">
       <Sidebar />
       <div className="flex min-w-0 flex-1 flex-col">
         {!running && <StageHeader />}

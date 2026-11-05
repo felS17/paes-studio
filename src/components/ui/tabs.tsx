@@ -62,7 +62,7 @@ export function Tabs<T extends string>({ value, onChange, items, label, children
               className={cn(
                 '-mb-px flex shrink-0 items-center gap-2 border-b-2 px-2.5 pt-1 pb-2.5 text-[13.5px] font-medium whitespace-nowrap transition-colors duration-150',
                 active
-                  ? 'border-zinc-900 text-zinc-900 dark:border-zinc-100 dark:text-zinc-100'
+                  ? 'border-accent text-zinc-900 dark:text-zinc-100'
                   : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100',
               )}
             >

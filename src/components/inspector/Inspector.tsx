@@ -42,7 +42,7 @@ export function Inspector() {
       <DialogPrimitive.Root open={isOpen} onOpenChange={(open) => !open && close()}>
         <DialogPrimitive.Portal>
           <DialogPrimitive.Overlay className="fixed inset-0 z-40 bg-zinc-950/25 data-[state=open]:animate-fade-in dark:bg-black/50" />
-          <DialogPrimitive.Content className="fixed inset-y-0 right-0 z-40 flex w-full flex-col bg-white data-[state=open]:animate-fade-in sm:w-[28rem] sm:border-l sm:border-zinc-200/80 dark:bg-[#121215] sm:dark:border-zinc-800/80">
+          <DialogPrimitive.Content className="fixed inset-y-0 right-0 z-40 flex w-full flex-col bg-surface data-[state=open]:animate-fade-in sm:w-[28rem] sm:border-l sm:border-zinc-200/80 sm:dark:border-zinc-800/80">
             <DialogPrimitive.Title className="sr-only">Resumen del tema</DialogPrimitive.Title>
             <DialogPrimitive.Description className="sr-only">Resumen, guía en PDF y tarjetas del tema elegido</DialogPrimitive.Description>
             <Body />
@@ -56,7 +56,7 @@ export function Inspector() {
     <aside
       aria-label="Resumen del tema"
       inert={!isOpen}
-      className={cn('h-full shrink-0 overflow-hidden bg-white transition-[width] duration-200 ease-out dark:bg-[#121215]', isOpen ? cn(WIDTH, 'border-l border-zinc-200/80 dark:border-zinc-800/80') : 'w-0')}
+      className={cn('h-full shrink-0 overflow-hidden bg-surface transition-[width] duration-200 ease-out', isOpen ? cn(WIDTH, 'border-l border-zinc-200/80 dark:border-zinc-800/80') : 'w-0')}
     >
       <div ref={panelRef} tabIndex={-1} data-shortcuts-ignore className={cn('flex h-full flex-col outline-none', WIDTH)}>
         {isOpen && <Body />}

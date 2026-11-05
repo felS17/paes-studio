@@ -49,10 +49,21 @@ export function combineStats(ids: string[], stats: Map<string, SubtopicStat>): S
   return out
 }
 
-/** Dominio de un subtema: guía el contraste de sus nodos en el Zettelkasten. */
+/** Acierto desde el que un tema cuenta como dominado, con al menos 3 preguntas para que no baste un golpe de suerte. */
+export const MASTERY_ACCURACY = 0.75
+const isMastered = (s: SubtopicStat) => s.answered >= 3 && (s.accuracy ?? 0) >= MASTERY_ACCURACY
+
+/** Dominio de un subtema: guía el contraste de sus nodos en el mapa. */
 export type Mastery = 'sin-explorar' | 'en-progreso' | 'dominado'
 export const masteryOf = (s: SubtopicStat | undefined): Mastery =>
-  !s || !s.answered ? 'sin-explorar' : s.answered >= 3 && (s.accuracy ?? 0) >= 0.8 && s.pending === 0 ? 'dominado' : 'en-progreso'
+  !s || !s.answered ? 'sin-explorar' : isMastered(s) ? 'dominado' : 'en-progreso'
+
+/** Estado para filtrar temas: sin practicar o bajo el 50 % (pendiente), a medio camino (progreso) o dominado. */
+export type TopicStatus = 'pendiente' | 'progreso' | 'dominado'
+export function topicStatus(s: SubtopicStat | undefined): TopicStatus {
+  if (!s || !s.answered || (s.accuracy ?? 0) < 0.5) return 'pendiente'
+  return isMastered(s) ? 'dominado' : 'progreso'
+}
 
 function shuffle<T>(list: T[]): T[] {
   const a = [...list]

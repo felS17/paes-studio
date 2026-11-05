@@ -6,24 +6,24 @@ import type { OptionKey, QuestionOption } from '@/types/exam'
 export type OptionState = 'idle' | 'selected' | 'correct' | 'incorrect' | 'muted'
 
 const BASE =
-  'group flex w-full items-start gap-3.5 rounded-lg border border-zinc-200/90 bg-white p-3.5 text-left transition-all duration-150 hover:border-zinc-300 hover:bg-zinc-50/70 dark:border-zinc-800 dark:bg-[#121215] dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50'
+  'group flex w-full items-start gap-3.5 rounded-lg border border-zinc-200/90 bg-surface p-3.5 text-left transition-all duration-150 hover:border-zinc-300 hover:bg-zinc-50/70 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50'
 const KBD =
   'flex h-6 w-6 shrink-0 items-center justify-center rounded border border-zinc-200 bg-zinc-50 font-mono text-xs font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-400'
 
 const STATE: Record<OptionState, string> = {
   idle: '',
   selected:
-    'border-zinc-900 bg-zinc-900/[0.03] ring-1 ring-zinc-900 hover:border-zinc-900 hover:bg-zinc-900/[0.03] dark:border-zinc-100 dark:bg-zinc-100/[0.04] dark:ring-zinc-100 dark:hover:border-zinc-100 dark:hover:bg-zinc-100/[0.04]',
+    'border-accent bg-accent/[0.04] ring-1 ring-accent hover:border-accent hover:bg-accent/[0.04]',
   correct:
     'border-emerald-500/40 bg-emerald-500/[0.06] text-emerald-950 hover:border-emerald-500/40 hover:bg-emerald-500/[0.06] dark:text-emerald-100 dark:hover:border-emerald-500/40 dark:hover:bg-emerald-500/[0.06]',
   incorrect:
     'border-rose-500/40 bg-rose-500/[0.06] text-rose-950 hover:border-rose-500/40 hover:bg-rose-500/[0.06] dark:text-rose-100 dark:hover:border-rose-500/40 dark:hover:bg-rose-500/[0.06]',
-  muted: 'opacity-55 hover:border-zinc-200/90 hover:bg-white dark:hover:border-zinc-800 dark:hover:bg-[#121215]',
+  muted: 'opacity-55 hover:border-zinc-200/90 hover:bg-surface dark:hover:border-zinc-800',
 }
 
 const KBD_STATE: Record<OptionState, string> = {
   idle: '',
-  selected: 'border-zinc-900 bg-zinc-900 text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-900',
+  selected: 'border-accent bg-accent text-white dark:text-zinc-900',
   correct: 'border-emerald-600 bg-emerald-600 text-white dark:border-emerald-500 dark:bg-emerald-500 dark:text-emerald-950',
   incorrect: 'border-rose-600 bg-rose-600 text-white dark:border-rose-500 dark:bg-rose-500 dark:text-rose-950',
   muted: '',

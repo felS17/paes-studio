@@ -42,7 +42,7 @@ function AxisRow({ w, subject, onPractice }: { w: WeakAxis; subject: SubjectId; 
           aria-valuenow={pct}
           aria-valuetext={`${pct} % de acierto`}
         >
-          <div className="h-full rounded-full bg-zinc-900 dark:bg-zinc-100" style={{ width: `${Math.max(pct, 2)}%` }} />
+          <div className="h-full rounded-full bg-progress" style={{ width: `${Math.max(pct, 2)}%` }} />
           <span aria-hidden className="absolute inset-y-0 left-1/2 w-px bg-zinc-400/70 dark:bg-zinc-500/70" />
           <span aria-hidden className="absolute inset-y-0 left-[70%] w-px bg-zinc-400/70 dark:bg-zinc-500/70" />
         </div>

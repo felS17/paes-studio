@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { lazy, Suspense, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ExternalLink, X } from 'lucide-react'
 import { Accuracy, DrillDialog } from '@/components/dashboard/SubtopicExplorer'
@@ -18,6 +18,9 @@ import { formatPercent } from '@/utils/format'
 import { GENERIC_TOPICS } from '@/utils/knowledgeGraph'
 import { combineStats, subtopicStats, type SubtopicStat } from '@/utils/subtopics'
 import { InspectorFlashcards } from './InspectorFlashcards'
+
+// El formulario (KaTeX y sus tarjetas) se descarga solo si se abre esa pestaña.
+const TopicCheatCards = lazy(() => import('@/components/cheatsheets/CheatSheets').then((m) => ({ default: m.TopicCheatCards })))
 
 const pageHref = (pdf: string, page?: number) => (page ? `${pdf}#page=${page}` : pdf)
 
@@ -171,6 +174,7 @@ export function InspectorContent() {
     { value: 'ficha', label: 'Resumen y fórmulas' },
     { value: 'pdf', label: 'Guía en PDF' },
     { value: 'flashcards', label: 'Tarjetas rápidas' },
+    { value: 'formulario', label: 'Formulario' },
   ]
 
   return (
@@ -241,6 +245,11 @@ export function InspectorContent() {
           />
         )}
         {tab === 'flashcards' && <InspectorFlashcards links={links} />}
+        {tab === 'formulario' && (
+          <Suspense fallback={<p className="p-4 text-[13px] text-zinc-500" role="status">Cargando…</p>}>
+            <TopicCheatCards subtopicIds={info.subtopicIds} />
+          </Suspense>
+        )}
       </Tabs>
 
       {info.sub && !running && (

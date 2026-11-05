@@ -36,7 +36,7 @@ export function navLinkClass({ isActive }: { isActive: boolean }) {
   return cn(
     'flex h-8 shrink-0 items-center gap-2.5 rounded-lg px-2.5 text-[13px] font-medium whitespace-nowrap transition-colors duration-150',
     isActive
-      ? 'bg-zinc-900/[0.05] text-zinc-900 dark:bg-zinc-100/[0.07] dark:text-zinc-100'
+      ? 'bg-accent/[0.07] text-accent'
       : 'text-zinc-500 hover:bg-zinc-900/[0.03] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.04] dark:hover:text-zinc-100',
   )
 }

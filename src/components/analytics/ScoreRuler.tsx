@@ -76,7 +76,7 @@ export function ScoreRuler({ markers, className, compact = false }: {
               />
               <div
                 className={cn(
-                  'absolute size-2.5 -translate-x-1/2 translate-y-1/2 rounded-full border-2 border-white dark:border-[#121215]',
+                  'absolute size-2.5 -translate-x-1/2 translate-y-1/2 rounded-full border-2 border-surface',
                   m.emphasis ? 'bg-zinc-900 dark:bg-zinc-100' : 'bg-zinc-400 dark:bg-zinc-500',
                 )}
                 style={{ bottom: rise }}

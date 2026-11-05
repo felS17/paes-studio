@@ -35,10 +35,3 @@ export function streakSummary(days: Record<string, StudyDay>, today: string): St
   }
   return { current, activeToday, best: Math.max(best, current) }
 }
-
-/** Los últimos `n` días (del más antiguo a hoy), para la tira de actividad. */
-export function lastDays(today: string, n: number): string[] {
-  const out = [today]
-  while (out.length < n) out.unshift(previousDateKey(out[0]))
-  return out
-}

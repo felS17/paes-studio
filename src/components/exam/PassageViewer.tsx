@@ -58,7 +58,7 @@ export function PassageViewer({ passage, className }: { passage: Passage; classN
   const reader = useSettingsStore((s) => s.reader)
   return (
     <section className={cn('px-5 pt-5 pb-16 sm:px-8', className)} aria-label={passage.title}>
-      <div className="sticky top-0 z-10 -mx-5 mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200/80 bg-[#FAFAFA]/95 px-5 py-2.5 backdrop-blur sm:-mx-8 sm:px-8 dark:border-zinc-800/80 dark:bg-[#09090B]/95">
+      <div className="sticky top-0 z-10 -mx-5 mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200/80 bg-canvas/95 px-5 py-2.5 backdrop-blur sm:-mx-8 sm:px-8 dark:border-zinc-800/80">
         <h2 className="text-[13px] font-semibold tracking-tight">
           {passage.title}
           {passage.questionRange && (

@@ -185,7 +185,7 @@ function Plot({ points, width, onStart }: { points: ProjectionPoint[]; width: nu
             <circle
               key={points[i].attemptId}
               cx={p.x} cy={p.y} r={isLast || isActive ? 4.5 : 3.5}
-              fill="currentColor" strokeWidth={2} className="stroke-white dark:stroke-[#121215]"
+              fill="currentColor" strokeWidth={2} className="stroke-surface"
             />
           )
         })}
@@ -217,7 +217,7 @@ function Plot({ points, width, onStart }: { points: ProjectionPoint[]; width: nu
       )}
 
       {n === 0 && (
-        <div className="absolute inset-x-4 bottom-9 mx-auto flex max-w-sm flex-col items-center gap-3 rounded-xl border border-zinc-200/80 bg-white/95 px-4 py-4 text-center dark:border-zinc-800/80 dark:bg-[#121215]/95">
+        <div className="absolute inset-x-4 bottom-9 mx-auto flex max-w-sm flex-col items-center gap-3 rounded-xl border border-zinc-200/80 bg-surface/95 px-4 py-4 text-center dark:border-zinc-800/80">
           <p className="text-[13px] leading-relaxed text-zinc-600 dark:text-zinc-300">
             Tu curva aparece aquí cuando entregues tu primer ensayo. Cada intento mueve el punto un poco más cerca del siguiente hito.
           </p>

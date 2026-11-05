@@ -142,6 +142,9 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     return () => window.clearTimeout(t)
   }, [notice])
 
+  const verify = () => check(key, question.id, selected === question.answer)
+  const correctRun = session?.correctRun ?? 0
+
   const optionKeys = question.options.map((o) => o.key)
   const shortcuts: Record<string, (event: KeyboardEvent) => void> = {
     arrowleft: () => go(-1),
@@ -150,7 +153,7 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     backspace: () => clearAnswer(key, question.id),
     enter: () => {
       if (mode === 'practica') {
-        if (!revealed && selected) check(key, question.id)
+        if (!revealed && selected) verify()
         else if (revealed) go(1)
       } else if (index === questions.length - 1) setConfirmOpen(true)
       else go(1)
@@ -203,7 +206,7 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
         revealed={revealed}
         flagged={flagged.includes(question.id)}
         onSelect={(k) => select(key, question.id, k)}
-        onCheck={() => check(key, question.id)}
+        onCheck={verify}
         onToggleFlag={() => toggleFlag(key, question.id)}
         showHints={showHints && isWide}
         struck={struck}
@@ -252,8 +255,8 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
   const unanswered = questions.length - answeredCount
 
   return (
-    <div ref={setRootEl} className="flex min-h-0 flex-1 flex-col bg-[#FAFAFA] dark:bg-[#09090B]">
-      <header className="relative flex h-14 shrink-0 items-center gap-3 border-b border-zinc-200/80 bg-white px-3 sm:px-4 dark:border-zinc-800/80 dark:bg-[#121215]">
+    <div ref={setRootEl} className="flex min-h-0 flex-1 flex-col bg-canvas">
+      <header className="relative flex h-14 shrink-0 items-center gap-3 border-b border-zinc-200/80 bg-surface px-3 sm:px-4 dark:border-zinc-800/80">
         <Button
           variant="ghost"
           size="icon"
@@ -281,6 +284,17 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
             <span className="hidden sm:inline">respondidas</span>
           </p>
         </div>
+        {mode === 'practica' && correctRun >= 3 && (
+          <span aria-live="polite" className="shrink-0">
+            <span
+              key={correctRun}
+              title={`${correctRun} respuestas correctas seguidas`}
+              className="inline-flex h-6 animate-streak items-center rounded-md border border-progress/40 bg-progress/[0.08] px-2 font-mono text-[11.5px] font-medium whitespace-nowrap tabular-nums"
+            >
+              Racha x{correctRun}
+            </span>
+          </span>
+        )}
         <ExamTimer elapsedMs={elapsedMs} remainingMs={remainingMs} />
         {!asideVisible && (
           <Button variant="secondary" size="md" onClick={() => setSheetOpen(true)} aria-label="Abrir hoja de respuestas">
@@ -292,20 +306,20 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
           {mode === 'ensayo' ? 'Entregar' : 'Terminar'}
         </Button>
         <div className="absolute inset-x-0 -bottom-px h-px bg-transparent" aria-hidden>
-          <div className="h-px bg-zinc-900 transition-[width] duration-300 dark:bg-zinc-100" style={{ width: `${progress * 100}%` }} />
+          <div className="h-px bg-progress transition-[width] duration-300" style={{ width: `${progress * 100}%` }} />
         </div>
       </header>
 
       <div className="flex min-h-0 flex-1">
         <div className="flex min-h-0 min-w-0 flex-1 flex-col">{main}</div>
         {asideVisible && (
-          <aside className="w-72 shrink-0 border-l border-zinc-200/80 bg-white dark:border-zinc-800/80 dark:bg-[#121215]">
+          <aside className="w-72 shrink-0 border-l border-zinc-200/80 bg-surface dark:border-zinc-800/80">
             {navigator}
           </aside>
         )}
       </div>
 
-      <footer className="flex h-14 shrink-0 items-center gap-2 border-t border-zinc-200/80 bg-white px-3 sm:px-4 dark:border-zinc-800/80 dark:bg-[#121215]">
+      <footer className="flex h-14 shrink-0 items-center gap-2 border-t border-zinc-200/80 bg-surface px-3 sm:px-4 dark:border-zinc-800/80">
         <Button variant="secondary" onClick={() => go(-1)} disabled={index === 0} aria-label="Pregunta anterior">
           <ArrowLeft />
           <span className="hidden sm:inline">Anterior</span>

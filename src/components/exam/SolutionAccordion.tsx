@@ -16,7 +16,7 @@ export function SolutionAccordion({ question, defaultOpen = false }: { question:
 
   if (!ex) {
     return (
-      <p className="flex items-center gap-2 rounded-lg border border-zinc-200/80 bg-white px-3.5 py-2.5 text-[13px] text-zinc-600 dark:border-zinc-800/80 dark:bg-[#121215] dark:text-zinc-400">
+      <p className="flex items-center gap-2 rounded-lg border border-zinc-200/80 bg-surface px-3.5 py-2.5 text-[13px] text-zinc-600 dark:border-zinc-800/80 dark:text-zinc-400">
         Respuesta oficial del DEMRE:
         <span className="font-mono text-[13px] font-semibold text-zinc-900 dark:text-zinc-100">{question.answer}</span>
       </p>
@@ -25,7 +25,7 @@ export function SolutionAccordion({ question, defaultOpen = false }: { question:
 
   const isAI = ex.kind === 'solucion'
   return (
-    <section className="rounded-lg border border-zinc-200/80 bg-white dark:border-zinc-800/80 dark:bg-[#121215]">
+    <section className="rounded-lg border border-zinc-200/80 bg-surface dark:border-zinc-800/80">
       <button
         type="button"
         aria-expanded={open}

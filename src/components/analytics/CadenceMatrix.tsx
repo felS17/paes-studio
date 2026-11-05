@@ -95,7 +95,7 @@ export function ToxicDoubt({ balance }: { balance: ChangeBalance }) {
     { label: 'Te costaron un acierto (de buena a mala)', n: balance.toxic, cls: TOXIC },
   ]
   return (
-    <section aria-label="Cuando cambias de respuesta" className="grid gap-5 bg-white p-4 sm:grid-cols-[minmax(0,13rem)_minmax(0,1fr)] sm:p-5 dark:bg-[#121215]">
+    <section aria-label="Cuando cambias de respuesta" className="grid gap-5 bg-surface p-4 sm:grid-cols-[minmax(0,13rem)_minmax(0,1fr)] sm:p-5">
       <div>
         <h3 className="text-[13px] font-medium">Cuando cambias de respuesta</h3>
         <p className="mt-1.5 font-mono text-[30px] leading-none font-semibold tracking-tight tabular-nums">
@@ -136,7 +136,7 @@ export function CadenceMatrix({ summary, onPick }: { summary: CadenceSummary; on
           const doubts = key === 'indecision'
           const share = measured ? q.count / measured : 0
           return (
-            <section key={key} aria-label={title} className="min-w-0 bg-white p-4 sm:p-5 dark:bg-[#121215]">
+            <section key={key} aria-label={title} className="min-w-0 bg-surface p-4 sm:p-5">
               <h3 className="text-[13px] font-medium">{title}</h3>
               <p className="mt-2 flex items-baseline gap-2">
                 <span className="font-mono text-[30px] leading-none font-semibold tracking-tight tabular-nums">{doubts ? balance.toxic : q.count}</span>

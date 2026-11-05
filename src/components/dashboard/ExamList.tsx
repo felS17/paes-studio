@@ -64,10 +64,10 @@ export function ExamList({ exams, bestScores }: { exams: ExamMeta[]; bestScores:
               <p className="text-xs text-zinc-500 dark:text-zinc-400">
                 Prueba oficial: <span className="tabular-nums">{SUBJECTS[subject].officialQuestions}</span> preguntas en {formatMinutes(SUBJECTS[subject].officialMinutes)}
               </p>
-              <InspectButton target={{ kind: 'subject', subject }} name={SUBJECTS[subject].name} withLabel />
+              <InspectButton target={{ kind: 'subject', subject }} name={SUBJECTS[subject].name} text="Ver resumen" />
             </div>
           </div>
-          <ul className="divide-y divide-zinc-200/80 overflow-hidden rounded-xl border border-zinc-200/80 bg-white dark:divide-zinc-800/80 dark:border-zinc-800/80 dark:bg-[#121215]">
+          <ul className="divide-y divide-zinc-200/80 overflow-hidden rounded-xl border border-zinc-200/80 bg-surface dark:divide-zinc-800/80 dark:border-zinc-800/80">
             {list.map((exam) => (
               <ExamRow key={exam.id} exam={exam} best={bestScores.get(exam.id)} />
             ))}

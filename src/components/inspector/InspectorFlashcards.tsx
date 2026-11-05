@@ -64,7 +64,7 @@ function CompactStudy({ deckId, units }: { deckId: DeckId; units: string[] }) {
         <p className="text-[11.5px] text-zinc-500 tabular-nums dark:text-zinc-400">{plural(view.cards.length, 'tarjeta')} de este tema</p>
       </div>
       {current ? (
-        <div className="rounded-lg border border-zinc-200/80 bg-white dark:border-zinc-800/80 dark:bg-[#121215]">
+        <div className="rounded-lg border border-zinc-200/80 bg-surface dark:border-zinc-800/80">
           <div className="px-4 py-4">
             <p className="text-[11.5px] text-zinc-500 dark:text-zinc-400">{current.unit}</p>
             <MathText text={current.front} className="mt-1.5 text-[14px] leading-relaxed font-medium" />
@@ -110,7 +110,7 @@ export function InspectorFlashcards({ links }: { links: CardLink[] }) {
   if (!current) {
     return (
       <p className="px-4 py-6 text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400">
-        Este tema aún no tiene tarjetas. Hay mazos de Matemática, Ciencias e Historia en{' '}
+        Este tema aún no tiene tarjetas. Hay mazos de las 5 pruebas en{' '}
         <Link to="/flashcards" className="font-medium text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-100">Flashcards</Link>.
       </p>
     )

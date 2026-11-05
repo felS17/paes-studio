@@ -7,13 +7,10 @@
   --font-serif: 'Newsreader Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-  --color-canvas: #fafafa;
-  --color-canvas-dark: #09090b;
-  --color-surface: #ffffff;
-  --color-surface-dark: #121215;
-
   --animate-fade-in: fade-in 160ms ease-out;
   --animate-pop: pop 180ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  --animate-streak: streak-pulse 560ms ease-out;
+  --animate-confirm: confirm-edge 900ms ease-out both;
 
   @keyframes fade-in {
     from { opacity: 0; transform: translateY(2px); }
@@ -23,6 +20,118 @@
     from { transform: scale(0.96); }
     to { transform: scale(1); }
   }
+  @keyframes streak-pulse {
+    0% { transform: scale(0.94); box-shadow: 0 0 0 0 color-mix(in oklab, var(--progress) 45%, transparent); }
+    55% { transform: scale(1.05); }
+    100% { transform: scale(1); box-shadow: 0 0 0 7px transparent; }
+  }
+  @keyframes confirm-edge {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}
+
+/* Tokens semánticos: su valor depende del tema activo (`data-theme` en <html>). */
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-progress: var(--progress);
+}
+
+:root {
+  --canvas: #fafafa;
+  --surface: #ffffff;
+  --accent: #18181b;
+  --progress: #18181b;
+  --heat-0: #e4e4e7;
+  --heat-1: #a1a1aa;
+  --heat-2: #71717a;
+  --heat-3: #3f3f46;
+  --heat-4: #18181b;
+  --heat-edge: rgba(24, 24, 27, 0.05);
+}
+
+[data-theme='geist-dark'] {
+  --canvas: #09090b;
+  --surface: #121215;
+  --accent: #f4f4f5;
+  --progress: #f4f4f5;
+  --heat-0: #27272a;
+  --heat-1: #52525b;
+  --heat-2: #a1a1aa;
+  --heat-3: #d4d4d8;
+  --heat-4: #fafafa;
+  --heat-edge: rgba(255, 255, 255, 0.04);
+}
+
+/*
+ * GitHub Dark Default. Redefinir las escalas de Tailwind tiñe toda la interfaz sin tocar los componentes:
+ * zinc-100 es el texto primario, zinc-400 el secundario y zinc-800 los bordes.
+ */
+[data-theme='github-dark'] {
+  --canvas: #0d1117;
+  --surface: #161b22;
+  --accent: #58a6ff;
+  --progress: #3fb950;
+  --heat-0: #161b22;
+  --heat-1: #0e4429;
+  --heat-2: #006d32;
+  --heat-3: #26a641;
+  --heat-4: #39d353;
+  --heat-edge: rgba(240, 246, 252, 0.1);
+  --color-white: #f0f6fc;
+  --color-zinc-50: #f0f6fc;
+  --color-zinc-100: #e6edf3;
+  --color-zinc-200: #c9d1d9;
+  --color-zinc-300: #b1bac4;
+  --color-zinc-400: #7d8590;
+  --color-zinc-500: #7d8590;
+  --color-zinc-600: #484f58;
+  --color-zinc-700: #444c56;
+  --color-zinc-800: #393f46;
+  --color-zinc-900: #161b22;
+  --color-zinc-950: #0d1117;
+  --color-emerald-100: #aff5b4;
+  --color-emerald-300: #56d364;
+  --color-emerald-400: #3fb950;
+  --color-emerald-500: #3fb950;
+  --color-emerald-600: #2ea043;
+  --color-emerald-700: #238636;
+  --color-rose-100: #ffdcd7;
+  --color-rose-400: #f85149;
+  --color-rose-500: #f85149;
+  --color-rose-600: #da3633;
+  --color-rose-700: #b62324;
+  --color-amber-400: #d29922;
+  --color-amber-500: #d29922;
+}
+
+/* Papel Cálido: la escala zinc se vuelve tierra para que todo el texto y los bordes sigan al papel. */
+[data-theme='paper'] {
+  --canvas: #f6f1e7;
+  --surface: #efe8d8;
+  --accent: #2c2621;
+  --progress: #2c2621;
+  --heat-0: #e3dac6;
+  --heat-1: #c9b896;
+  --heat-2: #a08c68;
+  --heat-3: #6f6048;
+  --heat-4: #2c2621;
+  --heat-edge: rgba(44, 38, 33, 0.06);
+  --color-white: #faf6ec;
+  --color-zinc-50: #f3ecdd;
+  --color-zinc-100: #e9e1cf;
+  --color-zinc-200: #ddd3bd;
+  --color-zinc-300: #c9bda3;
+  --color-zinc-400: #8f826c;
+  --color-zinc-500: #6f6454;
+  --color-zinc-600: #5a5044;
+  --color-zinc-700: #463e35;
+  --color-zinc-800: #3a322b;
+  --color-zinc-900: #2c2621;
+  --color-zinc-950: #211c18;
 }
 
 @layer base {
@@ -36,10 +145,10 @@
   html.dark { color-scheme: dark; }
   body {
     /* Todas las vistas viven en el App Shell, que desplaza su propio <main>: la ventana nunca debe desplazarse. */
-    @apply overflow-hidden bg-[#FAFAFA] font-sans text-[14px] text-zinc-900 dark:bg-[#09090B] dark:text-zinc-100;
+    @apply overflow-hidden bg-canvas font-sans text-[14px] text-zinc-900 dark:text-zinc-100;
   }
   ::selection { @apply bg-zinc-900/10 dark:bg-zinc-100/20; }
-  :focus-visible { @apply outline-2 outline-offset-2 outline-zinc-900 dark:outline-zinc-100; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-accent; }
   button, [role='button'] { cursor: pointer; }
   button:disabled { cursor: not-allowed; }
   @media (prefers-reduced-motion: reduce) {
@@ -73,6 +182,8 @@
 
   /* Recortes en escala de grises: se invierten en modo oscuro para no encandilar. */
   .snapshot-mono { @apply dark:[filter:invert(0.93)_hue-rotate(180deg)]; }
+  /* En Papel Cálido el blanco del recorte se funde con el papel. */
+  [data-theme='paper'] .snapshot-mono { mix-blend-mode: multiply; }
 }
 
 /* KaTeX hereda el color del texto. */

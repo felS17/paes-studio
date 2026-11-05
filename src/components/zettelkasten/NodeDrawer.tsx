@@ -186,7 +186,7 @@ export function NodeDrawer({ node, stats, latest, onClose, onNavigate }: DrawerP
         <DialogPrimitive.Content
           onInteractOutside={(e) => e.preventDefault()}
           onOpenAutoFocus={(e) => e.preventDefault()}
-          className="fixed inset-y-0 right-0 z-40 flex w-[min(31rem,100vw)] flex-col border-l border-zinc-200/80 bg-white data-[state=open]:animate-fade-in dark:border-zinc-800/80 dark:bg-[#121215]"
+          className="fixed inset-y-0 right-0 z-40 flex w-[min(31rem,100vw)] flex-col border-l border-zinc-200/80 bg-surface data-[state=open]:animate-fade-in dark:border-zinc-800/80"
         >
           <div className="flex items-start gap-3 px-5 pt-4 pb-3">
             <div className="min-w-0 flex-1">

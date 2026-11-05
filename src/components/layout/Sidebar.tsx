@@ -156,13 +156,13 @@ function SidebarBody({ rail, header }: { rail: boolean; header: React.ReactNode 
       </nav>
       <div className={cn('mt-3 space-y-2 border-t border-zinc-200/80 pt-3 dark:border-zinc-800/80', rail ? 'px-3' : 'px-2.5')}>
         <StorageStatus rail={rail} />
-        {rail ? <ThemeToggle compact /> : <ThemeToggle className="ml-2.5" />}
+        {rail ? <ThemeToggle compact /> : <ThemeToggle className="mx-2.5" />}
       </div>
     </>
   )
 }
 
-const SURFACE = 'border-zinc-200/80 bg-[#FAFAFA] dark:border-zinc-800/80 dark:bg-[#09090B]'
+const SURFACE = 'border-zinc-200/80 bg-canvas dark:border-zinc-800/80'
 
 /**
  * Navegación del espacio de trabajo: columna fija y colapsable a íconos en escritorio, cajón en pantallas

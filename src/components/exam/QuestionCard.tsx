@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Flag } from 'lucide-react'
 import { TheoryButton } from '@/components/inspector/TheoryButton'
 import { MathText } from '@/components/math/MathText'
@@ -47,10 +48,16 @@ export function QuestionCard({
     return key === selected ? 'selected' : 'idle'
   }
   const isCorrect = selected === question.answer
+  // Solo confirma al verificar aquí mismo: volver a una pregunta ya verificada no repite la animación.
+  const [alreadyRevealed] = useState(revealed)
+  const confirming = mode === 'practica' && revealed && isCorrect && !alreadyRevealed
   const snapshot = question.presentation === 'snapshot' && question.snapshot
 
   return (
-    <article className="mx-auto w-full max-w-[740px]" aria-labelledby={`q-${question.id}`}>
+    <article className="relative mx-auto w-full max-w-[740px]" aria-labelledby={`q-${question.id}`}>
+      {confirming && (
+        <span aria-hidden className="pointer-events-none absolute -inset-3 animate-confirm rounded-xl border border-emerald-500/60 ring-2 ring-emerald-500/15" />
+      )}
       <header className="flex flex-wrap items-center gap-x-3 gap-y-2">
         <h2 id={`q-${question.id}`} className="flex items-baseline gap-2 text-[13px] font-medium text-zinc-500 dark:text-zinc-400">
           <span className="text-[14px] font-semibold text-zinc-900 dark:text-zinc-100">
@@ -89,7 +96,7 @@ export function QuestionCard({
 
       <div className="mt-4">
         {snapshot ? (
-          <figure className="overflow-hidden rounded-lg border border-zinc-200/80 bg-white p-3 dark:border-zinc-800/80 dark:bg-[#121215]">
+          <figure className="overflow-hidden rounded-lg border border-zinc-200/80 bg-surface p-3 dark:border-zinc-800/80">
             <img
               src={snapshot.src}
               width={snapshot.width}

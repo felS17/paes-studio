@@ -1,6 +1,8 @@
 /** Dominio: preferencias locales del estudiante. */
 
-export type ThemePreference = 'light' | 'dark' | 'system'
+export type ThemeId = 'geist-light' | 'geist-dark' | 'github-dark' | 'paper'
+/** `system` sigue al dispositivo con los dos temas Geist. */
+export type ThemePreference = ThemeId | 'system'
 export type ReaderFont = 'serif' | 'sans'
 
 export interface ReaderSettings {

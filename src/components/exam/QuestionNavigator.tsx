@@ -90,13 +90,13 @@ export function QuestionNavigator({ questions, passages, current, answers, flagg
                             : 'border-rose-500/40 bg-rose-500/[0.08] text-rose-800 dark:text-rose-300'
                           : answered
                             ? 'border-zinc-900 bg-zinc-900 text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-900'
-                            : 'border-zinc-200/90 bg-white text-zinc-600 hover:border-zinc-400 dark:border-zinc-800 dark:bg-[#121215] dark:text-zinc-400 dark:hover:border-zinc-600',
-                        index === current && 'ring-2 ring-zinc-900/80 ring-offset-1 ring-offset-white dark:ring-zinc-100/80 dark:ring-offset-[#121215]',
+                            : 'border-zinc-200/90 bg-surface text-zinc-600 hover:border-zinc-400 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-600',
+                        index === current && 'ring-2 ring-accent/80 ring-offset-1 ring-offset-surface',
                       )}
                     >
                       {q.number}
                       {isFlagged && (
-                        <span className="absolute -top-1 -right-1 size-2.5 rounded-full border-2 border-white bg-zinc-500 dark:border-[#121215] dark:bg-zinc-400" aria-hidden />
+                        <span className="absolute -top-1 -right-1 size-2.5 rounded-full border-2 border-surface bg-zinc-500 dark:bg-zinc-400" aria-hidden />
                       )}
                     </button>
                   </li>

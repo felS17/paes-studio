@@ -19,7 +19,7 @@ const VIEWS: View[] = ['ejes', 'errores', 'ritmo', 'evolucion']
 
 function Metric({ label, value, unit, note }: { label: string; value: React.ReactNode; unit?: string; note: React.ReactNode }) {
   return (
-    <div className="min-w-0 bg-white px-5 py-4 dark:bg-[#121215]">
+    <div className="min-w-0 bg-surface px-5 py-4">
       <dt className="text-xs text-zinc-500 dark:text-zinc-400">{label}</dt>
       <dd className="mt-1.5">
         <span className="font-mono text-[22px] leading-none font-semibold tracking-tight tabular-nums">{value}</span>

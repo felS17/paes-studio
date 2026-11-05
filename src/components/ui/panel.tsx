@@ -6,7 +6,7 @@ export const Panel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn('rounded-xl border border-zinc-200/80 bg-white dark:border-zinc-800/80 dark:bg-[#121215]', className)}
+      className={cn('rounded-xl border border-zinc-200/80 bg-surface dark:border-zinc-800/80', className)}
       {...props}
     />
   ),

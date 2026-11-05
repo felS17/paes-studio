@@ -20,6 +20,8 @@ export interface ExamSession {
   elapsedMs: number
   /** Telemetría silenciosa por pregunta; ausente en sesiones iniciadas antes de la v2.1. */
   telemetry?: Record<string, QuestionTrace>
+  /** Aciertos seguidos al verificar en Modo Práctica. */
+  correctRun?: number
 }
 
 export const sessionKey = (examId: string, mode: ExamMode) => `${examId}:${mode}`
@@ -37,7 +39,8 @@ interface ExamState {
   toggleFlag: (key: string, questionId: string) => void
   /** Tacha o recupera una alternativa; tachar la marcada también la desmarca. */
   toggleStrike: (key: string, questionId: string, option: OptionKey) => void
-  check: (key: string, questionId: string) => void
+  /** Verifica una respuesta en Modo Práctica; `correct` alimenta la racha de aciertos de la sesión. */
+  check: (key: string, questionId: string, correct: boolean) => void
   goTo: (key: string, index: number) => void
   addElapsed: (key: string, ms: number) => void
   addQuestionTime: (key: string, questionId: string, ms: number) => void
@@ -147,8 +150,14 @@ export const useExamStore = create<ExamState>()(
               : [...cur.flagged, questionId],
           })),
         ),
-      check: (key, questionId) =>
-        set((s) => patch(s, key, (cur) => ({ checked: { ...cur.checked, [questionId]: true } }))),
+      check: (key, questionId, correct) =>
+        set((s) =>
+          patch(s, key, (cur) =>
+            cur.checked[questionId]
+              ? {}
+              : { checked: { ...cur.checked, [questionId]: true }, correctRun: correct ? (cur.correctRun ?? 0) + 1 : 0 },
+          ),
+        ),
       goTo: (key, index) => set((s) => patch(s, key, () => ({ currentIndex: Math.max(0, index) }))),
       addElapsed: (key, ms) => set((s) => patch(s, key, (cur) => ({ elapsedMs: cur.elapsedMs + ms }))),
       addQuestionTime: (key, questionId, ms) =>

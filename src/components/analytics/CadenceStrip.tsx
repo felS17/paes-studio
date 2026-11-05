@@ -49,7 +49,7 @@ export function CadenceStrip({ questions, onPick }: { questions: QuestionResult[
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 bottom-2">
           {THRESHOLDS.map(({ ms, label }) => (
             <div key={ms} className="absolute inset-x-0 border-t border-dashed border-zinc-300 dark:border-zinc-700" style={{ bottom: `${(ms / scale) * 100}%` }}>
-              <span className="absolute right-0 -translate-y-1/2 bg-white pl-1 font-mono text-[10.5px] text-zinc-500 tabular-nums dark:bg-[#121215] dark:text-zinc-400">{label}</span>
+              <span className="absolute right-0 -translate-y-1/2 bg-surface pl-1 font-mono text-[10.5px] text-zinc-500 tabular-nums dark:text-zinc-400">{label}</span>
             </div>
           ))}
         </div>

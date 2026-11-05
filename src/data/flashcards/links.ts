@@ -11,10 +11,20 @@ const biologia = (unit: string) => ({ deck: 'biologia', unit }) as const
 const fisica = (unit: string) => ({ deck: 'fisica', unit }) as const
 const quimica = (unit: string) => ({ deck: 'quimica', unit }) as const
 const historia = (unit: string) => ({ deck: 'historia', unit }) as const
+const lectora = (unit: string) => ({ deck: 'lectora', unit }) as const
 const HISTORY = historia('Chile y el mundo (siglos XIX y XX)')
 
-/** Unidad de mazo de cada subtema de Ciencias e Historia. Lectora y los subtemas de habilidades no tienen tarjetas. */
+/** Unidad de mazo de cada subtema de Lectora, Ciencias e Historia. Solo tres subtemas quedan sin tarjetas. */
 const BY_SUBTOPIC: Record<string, { deck: DeckId; unit: string }> = {
+  'cl-localizar': lectora('Localizar'),
+  'cl-vocabulario': lectora('Interpretar'),
+  'cl-idea-central': lectora('Interpretar'),
+  'cl-proposito': lectora('Evaluar'),
+  'cl-inferencia': lectora('Inferencias y distractores'),
+  'cl-literario': lectora('Tesis, argumentos y tono'),
+  'cl-multimodal': lectora('Textos discontinuos'),
+  'cl-argumentos': lectora('Tesis, argumentos y tono'),
+  'cl-forma': lectora('Evaluar'),
   'cs-celula': biologia('Organización celular'),
   'cs-biomoleculas': biologia('Organización celular'),
   'cs-sistemas': biologia('Procesos y funciones biológicas'),

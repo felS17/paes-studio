@@ -29,7 +29,7 @@ function AxisTimeRow({ row, scale, showSubject }: { row: AxisTime; scale: number
         <InspectButton target={{ kind: 'subject', subject: row.subject, axis: row.axis }} name={row.axis} className="-mr-1.5" />
       </p>
       <div className="relative col-span-2 h-1 rounded-full bg-zinc-200/70 dark:bg-zinc-800" role="img" aria-label={`${formatClock(row.avgMs)} por pregunta${slow ? ', sobre el umbral de 2:30' : ''}`}>
-        <div className={cn('h-full rounded-full', slow ? 'bg-amber-500 dark:bg-amber-400' : 'bg-zinc-900 dark:bg-zinc-100')} style={{ width: `${Math.min(100, (row.avgMs / scale) * 100)}%` }} />
+        <div className={cn('h-full rounded-full', slow ? 'bg-amber-500 dark:bg-amber-400' : 'bg-progress')} style={{ width: `${Math.min(100, (row.avgMs / scale) * 100)}%` }} />
         {[FLUENT_MS, LEAK_MS].map((ms) => (
           <span key={ms} aria-hidden className="absolute -inset-y-0.5 w-px bg-zinc-400/70 dark:bg-zinc-500/70" style={{ left: `${(ms / scale) * 100}%` }} />
         ))}

@@ -175,7 +175,7 @@ export function MistakeNotebook({ entries }: { entries: MistakeEntry[] }) {
                       <ChevronDown aria-hidden className={cn('size-4 shrink-0 text-zinc-400 transition-transform', isOpen && 'rotate-180')} />
                     </button>
                     {isOpen && (
-                      <div className="border-t border-zinc-200/80 bg-[#FAFAFA] px-4 py-5 dark:border-zinc-800/80 dark:bg-[#0c0c0e]">
+                      <div className="border-t border-zinc-200/80 bg-canvas px-4 py-5 dark:border-zinc-800/80">
                         <MistakeDetail entry={e} />
                       </div>
                     )}

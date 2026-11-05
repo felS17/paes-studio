@@ -31,7 +31,7 @@ export function AxisRadar({ stats, order, className }: {
             </div>
             <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-zinc-200/80 dark:bg-zinc-800">
               <div
-                className="h-full rounded-full bg-zinc-900 transition-[width] duration-500 dark:bg-zinc-100"
+                className="h-full rounded-full bg-progress transition-[width] duration-500"
                 style={{ width: `${Math.max(pct * 100, pct > 0 ? 2 : 0)}%` }}
               />
             </div>

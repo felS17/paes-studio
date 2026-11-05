@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { PageHeader } from '@/components/layout/AppShell'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Panel } from '@/components/ui/panel'
+import { Tabs } from '@/components/ui/tabs'
 import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
 import type { ManifestEntry } from '@/types/material'
 import pdfsJson from '@/data/pdfs.json'
@@ -179,8 +181,16 @@ function TemplateRow({ path, loader, onView }: { path: string; loader: Loader; o
   )
 }
 
+// El formulario (KaTeX y sus tarjetas) se descarga solo si se abre su pestaña.
+const CheatSheets = lazy(() => import('@/components/cheatsheets/CheatSheets').then((m) => ({ default: m.CheatSheets })))
+
+type View = 'guias' | 'formulario'
+
 export function MaterialPage() {
   const [viewing, setViewing] = useState<Viewing | null>(null)
+  const [params, setParams] = useSearchParams()
+  const view: View = params.get('vista') === 'formulario' ? 'formulario' : 'guias'
+  const setView = (v: View) => setParams(v === 'guias' ? {} : { vista: v }, { replace: true })
   const templateEntries = Object.entries(templates).sort(([a], [b]) => a.localeCompare(b))
   const bySubject = SUBJECT_ORDER.map((subject) => ({
     subject,
@@ -188,45 +198,63 @@ export function MaterialPage() {
   })).filter((g) => g.entries.length)
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-8">
       <PageHeader
         title="Guías y Resúmenes PDF"
-        description="Una guía de estudio y una presentación de repaso por materia, listas para leer o descargar."
+        description="Una guía de estudio y una presentación de repaso por materia, y un formulario con todo lo clave para repasar justo antes de un ensayo."
       />
 
-      {bySubject.length ? (
-        <div className="space-y-6">
-          {bySubject.map(({ subject, entries }) => (
-            <section key={subject} aria-labelledby={`mat-${subject}`} className="space-y-2.5">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-1">
-                <h2 id={`mat-${subject}`} className="text-[15px] font-semibold tracking-tight">{SUBJECTS[subject].name}</h2>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                  {entries[0].axes.length} ejes, <span className="font-mono tabular-nums">{entries[0].subtopics}</span> subtemas
-                </p>
+      <Tabs<View>
+        label="Secciones de guías y resúmenes"
+        value={view}
+        onChange={setView}
+        items={[
+          { value: 'guias', label: 'Guías en PDF' },
+          { value: 'formulario', label: 'Formulario Express' },
+        ]}
+      >
+        {view === 'formulario' ? (
+          <Suspense fallback={<p className="text-[13px] text-zinc-500" role="status">Cargando…</p>}>
+            <CheatSheets />
+          </Suspense>
+        ) : (
+          <div className="space-y-12">
+            {bySubject.length ? (
+              <div className="space-y-6">
+                {bySubject.map(({ subject, entries }) => (
+                  <section key={subject} aria-labelledby={`mat-${subject}`} className="space-y-2.5">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-1">
+                      <h2 id={`mat-${subject}`} className="text-[15px] font-semibold tracking-tight">{SUBJECTS[subject].name}</h2>
+                      <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                        {entries[0].axes.length} ejes, <span className="font-mono tabular-nums">{entries[0].subtopics}</span> subtemas
+                      </p>
+                    </div>
+                    <Panel>
+                      <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
+                        {entries.map((e) => <DocumentRow key={e.file} entry={e} onView={setViewing} />)}
+                      </ul>
+                    </Panel>
+                  </section>
+                ))}
+              </div>
+            ) : (
+              <p className="text-[13px] text-zinc-500">Las guías todavía no están disponibles. Vuelve a mirar en un rato.</p>
+            )}
+
+            <section aria-labelledby="plantillas" className="space-y-2.5">
+              <div className="px-1">
+                <h2 id="plantillas" className="text-[15px] font-semibold tracking-tight">Para profes y curiosos</h2>
+                <p className="mt-0.5 max-w-2xl text-[13px] text-zinc-500 dark:text-zinc-400">Si haces clases o quieres armar tu propio material, aquí están los formatos base de las guías y presentaciones.</p>
               </div>
               <Panel>
                 <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
-                  {entries.map((e) => <DocumentRow key={e.file} entry={e} onView={setViewing} />)}
+                  {templateEntries.map(([path, loader]) => <TemplateRow key={path} path={path} loader={loader} onView={setViewing} />)}
                 </ul>
               </Panel>
             </section>
-          ))}
-        </div>
-      ) : (
-        <p className="text-[13px] text-zinc-500">Las guías todavía no están disponibles. Vuelve a mirar en un rato.</p>
-      )}
-
-      <section aria-labelledby="plantillas" className="space-y-2.5">
-        <div className="px-1">
-          <h2 id="plantillas" className="text-[15px] font-semibold tracking-tight">Para profes y curiosos</h2>
-          <p className="mt-0.5 max-w-2xl text-[13px] text-zinc-500 dark:text-zinc-400">Si haces clases o quieres armar tu propio material, aquí están los formatos base de las guías y presentaciones.</p>
-        </div>
-        <Panel>
-          <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
-            {templateEntries.map(([path, loader]) => <TemplateRow key={path} path={path} loader={loader} onView={setViewing} />)}
-          </ul>
-        </Panel>
-      </section>
+          </div>
+        )}
+      </Tabs>
 
       <Dialog open={viewing !== null} onOpenChange={(o) => !o && setViewing(null)}>
         <DialogContent title={viewing?.name ?? 'Archivo'} description="El archivo con el que se genera este material." className="max-w-4xl">
