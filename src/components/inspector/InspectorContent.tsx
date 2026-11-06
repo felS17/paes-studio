@@ -1,7 +1,8 @@
 import { lazy, Suspense, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ExternalLink, X } from 'lucide-react'
-import { Accuracy, DrillDialog } from '@/components/dashboard/SubtopicExplorer'
+import { Accuracy } from '@/components/dashboard/Accuracy'
+import { DrillDialog } from '@/components/dashboard/SubtopicExplorer'
 import { Button } from '@/components/ui/button'
 import { Tabs } from '@/components/ui/tabs'
 import { SubtopicNoteView } from '@/components/zettelkasten/SubtopicNoteView'
@@ -253,7 +254,7 @@ export function InspectorContent() {
       </Tabs>
 
       {info.sub && !running && (
-        <DrillDialog subtopic={drillOpen ? info.sub : null} stat={stats.get(info.sub.id)} onClose={() => setDrillOpen(false)} />
+        <DrillDialog subtopic={drillOpen ? info.sub : null} onClose={() => setDrillOpen(false)} />
       )}
     </>
   )

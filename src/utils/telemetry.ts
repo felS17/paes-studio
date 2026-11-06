@@ -1,6 +1,5 @@
 import type { AttemptRecord, QuestionResult, QuestionTelemetry } from '@/types/analytics'
-import { OPTION_KEYS, type OptionKey, type SubjectId } from '@/types/exam'
-import { subjectOfQuestion } from './analytics'
+import { OPTION_KEYS, type OptionKey } from '@/types/exam'
 
 /** Umbrales de los perfiles de respuesta. */
 export const FLUENT_MS = 90_000
@@ -118,67 +117,17 @@ export function summarizeCadence(questions: QuestionResult[]): CadenceSummary {
   }
 }
 
-/** Preguntas de un intento que pertenecen a una asignatura (las prácticas pueden mezclar varias). */
-export const questionsOfSubject = (a: AttemptRecord, subject: SubjectId | 'todas') =>
-  subject === 'todas' ? a.questions : a.questions.filter((q) => subjectOfQuestion(q.id, a.subject) === subject)
-
-export interface AxisTime {
-  subject: SubjectId
-  axis: string
-  avgMs: number
-  /** Preguntas respondidas con tiempo medido. */
-  count: number
-  accuracy: number
-}
-
-/** Tiempo promedio por eje temático, del más lento al más rápido. */
-export function axisTimes(attempts: AttemptRecord[], subject: SubjectId | 'todas'): AxisTime[] {
-  const map = new Map<string, { subject: SubjectId; axis: string; ms: number; count: number; correct: number }>()
+/** Segundos promedio por pregunta respondida (en ms), o null si ningún intento tiene tiempo medido. */
+export function averagePaceMs(attempts: AttemptRecord[]): number | null {
+  let ms = 0
+  let count = 0
   for (const a of attempts) {
-    for (const q of questionsOfSubject(a, subject)) {
+    for (const q of a.questions ?? []) {
       const t = readTelemetry(q)
       if (!t || q.selected === null || t.timeSpentMs <= 0) continue
-      const owner = subjectOfQuestion(q.id, a.subject)
-      const key = `${owner}|${q.axis}`
-      const row = map.get(key) ?? { subject: owner, axis: q.axis, ms: 0, count: 0, correct: 0 }
-      row.ms += t.timeSpentMs
-      row.count += 1
-      if (q.isCorrect) row.correct += 1
-      map.set(key, row)
+      ms += t.timeSpentMs
+      count += 1
     }
   }
-  return [...map.values()]
-    .map((r) => ({ subject: r.subject, axis: r.axis, count: r.count, avgMs: r.ms / r.count, accuracy: r.correct / r.count }))
-    .sort((x, y) => y.avgMs - x.avgMs)
-}
-
-export interface ChangeHistoryRow {
-  attemptId: string
-  examTitle: string
-  finishedAt: number
-  balance: ChangeBalance
-  total: number
-}
-
-/** Cambios de respuesta de cada intento con telemetría, del más reciente al más antiguo. */
-export function changeHistory(attempts: AttemptRecord[], subject: SubjectId | 'todas', limit = 12): ChangeHistoryRow[] {
-  const rows: ChangeHistoryRow[] = []
-  for (const a of [...attempts].sort((x, y) => y.finishedAt - x.finishedAt)) {
-    const questions = questionsOfSubject(a, subject)
-    if (!questions.some((q) => readTelemetry(q))) continue
-    const balance = emptyBalance()
-    for (const q of questions) {
-      const t = readTelemetry(q)
-      if (t) addChange(balance, q, t)
-    }
-    rows.push({
-      attemptId: a.id,
-      examTitle: a.examTitle,
-      finishedAt: a.finishedAt,
-      balance,
-      total: balance.toxic + balance.corrective + balance.neutral,
-    })
-    if (rows.length === limit) break
-  }
-  return rows
+  return count ? ms / count : null
 }

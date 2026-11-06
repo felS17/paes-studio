@@ -19,18 +19,3 @@ export function SubjectTag({ subject, area, label, className }: {
 }) {
   return <Tag className={className}>{label ?? (area ? subjectLabel(subject, area) : SUBJECTS[subject].short)}</Tag>
 }
-
-/** Monograma de dos letras (M1, M2, CL, CS, HI) en tipografía mono, para listas compactas. */
-export function SubjectMono({ subject, className }: { subject: SubjectId; className?: string }) {
-  return (
-    <span
-      aria-hidden
-      className={cn(
-        'inline-flex size-6 shrink-0 items-center justify-center rounded-md border border-zinc-200/80 bg-zinc-100 font-mono text-[10px] font-semibold tracking-tight text-zinc-700 dark:border-zinc-700/80 dark:bg-zinc-800/80 dark:text-zinc-300',
-        className,
-      )}
-    >
-      {SUBJECTS[subject].mono}
-    </span>
-  )
-}

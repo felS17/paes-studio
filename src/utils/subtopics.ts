@@ -58,11 +58,12 @@ export type Mastery = 'sin-explorar' | 'en-progreso' | 'dominado'
 export const masteryOf = (s: SubtopicStat | undefined): Mastery =>
   !s || !s.answered ? 'sin-explorar' : isMastered(s) ? 'dominado' : 'en-progreso'
 
-/** Estado para filtrar temas: sin practicar o bajo el 50 % (pendiente), a medio camino (progreso) o dominado. */
-export type TopicStatus = 'pendiente' | 'progreso' | 'dominado'
-export function topicStatus(s: SubtopicStat | undefined): TopicStatus {
-  if (!s || !s.answered || (s.accuracy ?? 0) < 0.5) return 'pendiente'
-  return isMastered(s) ? 'dominado' : 'progreso'
+/** Estado de un proceso en el administrador de tareas (`/analitica`). */
+export type ProcessState = 'dominado' | 'estable' | 'crítico' | 'sin datos'
+export function processState(s: SubtopicStat): ProcessState {
+  if (!s.answered) return 'sin datos'
+  if (isMastered(s)) return 'dominado'
+  return (s.accuracy ?? 0) < 0.5 ? 'crítico' : 'estable'
 }
 
 function shuffle<T>(list: T[]): T[] {

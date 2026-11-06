@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { Check, ChevronRight, X } from 'lucide-react'
-import { Accuracy } from '@/components/dashboard/SubtopicExplorer'
+import { Accuracy } from '@/components/dashboard/Accuracy'
 import { QuestionCard } from '@/components/exam/QuestionCard'
 import { Button } from '@/components/ui/button'
 import { Segmented } from '@/components/ui/segmented'

@@ -46,7 +46,7 @@ function ThemePanel() {
           if (list[0]) setTheme(list[0].id)
         }}
       >
-        <SearchInput value={query} onChange={setQuery} placeholder="Busca por nombre o color: nord, azul, claro…" label="Buscar tema" />
+        <SearchInput value={query} onChange={setQuery} placeholder="nord, azul, claro…" label="Buscar tema" />
       </form>
       <div className="mt-3 min-h-0 flex-1 overflow-y-auto">
         {list.length > 0 ? (
@@ -110,7 +110,7 @@ function FontPanel() {
               >
                 <span className="min-w-0" style={{ fontFamily: f.stack }}>
                   <span className="block text-[15px] font-medium">{f.label}</span>
-                  <span className="block truncate text-[12.5px] text-zinc-500 dark:text-zinc-400">{f.hint}. Resuelve x² + 2x = 15.</span>
+                  <span className="block truncate text-[12.5px] text-zinc-500 dark:text-zinc-400">{f.hint}</span>
                 </span>
                 {active && <Check aria-hidden className="size-3.5 shrink-0" />}
               </button>
@@ -119,7 +119,7 @@ function FontPanel() {
         })}
       </ul>
       <p className="mt-3 text-[12.5px] leading-relaxed text-zinc-500 dark:text-zinc-400">
-        Cambia el Inicio y los menús. Cuando rindes un ensayo o practicas, las preguntas usan siempre una letra normal de examen.
+        En los ensayos se usa siempre la letra normal de examen.
       </p>
     </>
   )
@@ -138,7 +138,7 @@ export function AppearanceDialog() {
       }}
     >
       <DialogContent
-        title="Apariencia"
+        title="apariencia"
         className="flex max-h-[min(88dvh,44rem)] max-w-2xl flex-col"
         // Con mouse se puede buscar de inmediato; en el celular no abrimos el teclado sin que lo pidas.
         onOpenAutoFocus={(e) => {
@@ -155,8 +155,8 @@ export function AppearanceDialog() {
           value={tab ?? 'tema'}
           onChange={openAppearance}
           options={[
-            { value: 'tema', label: 'Tema de colores' },
-            { value: 'fuente', label: 'Tipografía de Interfaz' },
+            { value: 'tema', label: 'tema' },
+            { value: 'fuente', label: 'tipografía' },
           ]}
         />
         {tab === 'fuente' ? <FontPanel /> : <ThemePanel />}

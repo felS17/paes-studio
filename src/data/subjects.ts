@@ -66,6 +66,9 @@ export const SUBJECTS: Record<SubjectId, SubjectInfo> = {
 
 export const SUBJECT_ORDER: SubjectId[] = ['m1', 'm2', 'lectora', 'ciencias', 'historia']
 
+/** Orden de las pestañas de materia en la interfaz; su id ya sirve de nombre corto (`m1`, `lectora`…). */
+export const SUBJECT_TABS: SubjectId[] = ['lectora', 'm1', 'm2', 'ciencias', 'historia']
+
 export const AREA_LABEL: Record<ScienceArea, string> = {
   biologia: 'Biología',
   fisica: 'Física',

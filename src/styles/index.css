@@ -383,8 +383,12 @@
   html.dark { color-scheme: dark; }
   body {
     /* Todas las vistas viven en el App Shell, que desplaza su propio <main>: la ventana nunca debe desplazarse. */
-    @apply overflow-hidden bg-canvas font-sans text-[14px] text-zinc-900 dark:text-zinc-100;
+    @apply overflow-hidden bg-canvas font-sans text-[14px] text-zinc-900 lowercase dark:text-zinc-100;
   }
+  /* Toda la interfaz va en minúsculas; los navegadores no heredan `text-transform` en controles si no se pide. */
+  button, input, select, textarea { text-transform: inherit; }
+  /* Tampoco se debe tocar lo que se copia tal cual: código, teclas y licencia. */
+  pre, code, kbd { text-transform: none; }
   ::selection { @apply bg-zinc-900/10 dark:bg-zinc-100/20; }
   :focus-visible { @apply outline-2 outline-offset-2 outline-accent; }
   button, [role='button'] { cursor: pointer; }
@@ -399,8 +403,8 @@
 }
 
 @layer components {
-  /* Texto híbrido Markdown + LaTeX (MathText). */
-  .mt-prose { @apply text-pretty; }
+  /* Texto híbrido Markdown + LaTeX (MathText): es contenido académico y conserva su escritura normal. */
+  .mt-prose { @apply text-pretty normal-case; }
   .mt-prose > * + * { margin-top: 0.85em; }
   .mt-prose strong { @apply font-semibold text-zinc-950 dark:text-white; }
   .mt-prose em { font-style: italic; }
@@ -426,5 +430,5 @@
   .dark .snapshot-mono { mix-blend-mode: lighten; }
 }
 
-/* KaTeX hereda el color del texto. */
-.katex { color: inherit; }
+/* KaTeX hereda el color del texto, pero no las minúsculas: Δ y δ no son lo mismo. */
+.katex { color: inherit; text-transform: none; }

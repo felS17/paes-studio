@@ -219,7 +219,7 @@ export function ResultsPage() {
                         <span className="hidden font-mono text-xs text-zinc-500 tabular-nums sm:inline dark:text-zinc-400" title="Tiempo en esta pregunta">{formatClock(t.timeSpentMs)}</span>
                       )}
                       {q.flagged && <Flag className="size-3.5 fill-zinc-900 text-zinc-900 dark:fill-zinc-100 dark:text-zinc-100" aria-label="Con duda" />}
-                      <span className="font-mono text-xs text-zinc-500 tabular-nums dark:text-zinc-400">
+                      <span className="font-mono text-xs text-zinc-500 tabular-nums normal-case dark:text-zinc-400">
                         {q.selected ?? '–'}
                         <span className="mx-1 text-zinc-300 dark:text-zinc-700">/</span>
                         <span className="text-zinc-900 dark:text-zinc-100">{q.correct}</span>

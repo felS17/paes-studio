@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import { Download, Upload } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Segmented } from '@/components/ui/segmented'
@@ -10,7 +9,7 @@ import { buildBackup, parseBackup } from '@/utils/validators'
 
 type Pending = { attempts: AttemptRecord[]; skipped: number; fileName: string }
 
-/** Exportar e importar el progreso (JSON). Discreto: dos botones en la cabecera. */
+/** Pestaña `sistema`: exportar e importar el progreso (JSON) con dos botones directos. */
 export function BackupActions() {
   const attempts = useAnalyticsStore((s) => s.attempts)
   const importAttempts = useAnalyticsStore((s) => s.importAttempts)
@@ -27,7 +26,7 @@ export function BackupActions() {
     a.download = `paes-studio-respaldo-${new Date().toISOString().slice(0, 10)}.json`
     a.click()
     URL.revokeObjectURL(url)
-    setMessage({ tone: 'ok', text: `Listo: descargaste tu progreso con ${plural(attempts.length, 'intento')}.` })
+    setMessage({ tone: 'ok', text: `listo: exportaste ${plural(attempts.length, 'intento')}.` })
   }
 
   const onFile = async (file: File | undefined) => {
@@ -53,16 +52,10 @@ export function BackupActions() {
   }
 
   return (
-    <div className="flex flex-col items-end gap-1.5">
-      <div className="flex gap-1.5">
-        <Button size="sm" variant="ghost" onClick={exportBackup} disabled={!attempts.length}>
-          <Download />
-          Descargar mi progreso
-        </Button>
-        <Button size="sm" variant="ghost" onClick={() => fileRef.current?.click()}>
-          <Upload />
-          Subir mi progreso
-        </Button>
+    <div className="flex flex-col items-start gap-2">
+      <div className="flex flex-wrap gap-2">
+        <Button onClick={exportBackup} disabled={!attempts.length}>exportar datos</Button>
+        <Button onClick={() => fileRef.current?.click()}>importar datos</Button>
         <input ref={fileRef} type="file" accept="application/json,.json" className="sr-only" onChange={(e) => onFile(e.target.files?.[0])} aria-label="Archivo de respaldo" />
       </div>
       {message && (
@@ -72,17 +65,17 @@ export function BackupActions() {
       )}
       <Dialog open={pending !== null} onOpenChange={(o) => !o && setPending(null)}>
         <DialogContent
-          title="Subir tu progreso"
+          title="importar datos"
           description={pending ? `${pending.fileName} contiene ${plural(pending.attempts.length, 'intento válido', 'intentos válidos')}${pending.skipped ? ` (${pending.skipped} no se pudieron leer)` : ''}.` : undefined}
         >
           <div className="mt-4 space-y-2">
             <Segmented
-              label="Cómo subirlo"
+              label="Cómo importar"
               value={strategy}
               onChange={setStrategy}
               options={[
-                { value: 'merge', label: 'Sumar a lo que ya tengo' },
-                { value: 'replace', label: 'Reemplazar todo' },
+                { value: 'merge', label: 'sumar' },
+                { value: 'replace', label: 'reemplazar' },
               ]}
             />
             <p className="text-[12.5px] text-zinc-500 dark:text-zinc-400">
@@ -92,8 +85,8 @@ export function BackupActions() {
             </p>
           </div>
           <div className="mt-5 flex justify-end gap-2">
-            <Button onClick={() => setPending(null)}>Cancelar</Button>
-            <Button variant="primary" onClick={confirmImport}>Subir</Button>
+            <Button onClick={() => setPending(null)}>cancelar</Button>
+            <Button variant="primary" onClick={confirmImport}>importar</Button>
           </div>
         </DialogContent>
       </Dialog>

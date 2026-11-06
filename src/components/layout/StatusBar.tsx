@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { PixelIcon } from '@/components/icons/PixelIcon'
 import { UI_FONTS, UI_FONT_BY_ID } from '@/data/fonts'
 import { THEME_BY_ID } from '@/data/themes'
 import { useTheme } from '@/hooks/useTheme'
@@ -8,7 +9,6 @@ import { useStreakStore } from '@/store/useStreakStore'
 import { useWorkspaceStore } from '@/store/useWorkspaceStore'
 import { localDateKey } from '@/utils/daily'
 import { streakSummary } from '@/utils/streak'
-import { ThemeSwatch } from './ThemeToggle'
 
 const ITEM =
   'inline-flex h-6 min-w-0 items-center gap-1.5 px-2 whitespace-nowrap transition-colors hover:bg-zinc-900/[0.04] hover:text-zinc-900 dark:hover:bg-zinc-100/[0.06] dark:hover:text-zinc-100'
@@ -30,18 +30,17 @@ export function StatusBar() {
       aria-label="Tu racha y apariencia"
       className="flex h-6 shrink-0 items-center justify-between gap-2 border-t border-zinc-200/80 bg-canvas font-mono text-[11px] text-zinc-500 dark:border-zinc-800/80 dark:text-zinc-400"
     >
-      <Link to="/" className={ITEM} title="Ver tu racha de estudio en el Inicio">
-        Racha
+      <Link to="/" className={ITEM} title="racha de estudio">
+        <PixelIcon name="flame" />
         <span className="text-zinc-900 tabular-nums dark:text-zinc-100">{current} {current === 1 ? 'día' : 'días'}</span>
       </Link>
       <div className="flex min-w-0">
         <button type="button" className={ITEM} onClick={() => openAppearance('tema')} aria-label={`Cambiar tema. Ahora usas ${theme.label}`}>
-          <ThemeSwatch id={resolved} />
-          <span className="max-sm:hidden">Tema</span>
+          <PixelIcon name="palette" />
           <span className="truncate text-zinc-900 dark:text-zinc-100">{theme.label}</span>
         </button>
         <button type="button" className={ITEM} onClick={() => openAppearance('fuente')} aria-label={`Cambiar fuente. Ahora usas ${font.label}`}>
-          <span className="max-sm:hidden">Fuente</span>
+          <PixelIcon name="type" />
           <span className="truncate text-zinc-900 dark:text-zinc-100">{font.label}</span>
         </button>
       </div>

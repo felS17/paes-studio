@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useRef } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import { Menu, PanelRight } from 'lucide-react'
+import { PanelRight } from 'lucide-react'
+import { PixelIcon } from '@/components/icons/PixelIcon'
 import { Inspector } from '@/components/inspector/Inspector'
 import { Button } from '@/components/ui/button'
 import { useUiFont } from '@/hooks/useUiFont'
@@ -10,6 +11,7 @@ import { useInspectorStore } from '@/store/useInspectorStore'
 import { useWorkspaceStore } from '@/store/useWorkspaceStore'
 import { AppearanceDialog } from './AppearanceDialog'
 import { Breadcrumbs } from './Breadcrumbs'
+import { useCrumbs } from './crumbs'
 import { Footer } from './Footer'
 import { Sidebar } from './Sidebar'
 import { StatusBar } from './StatusBar'
@@ -22,19 +24,24 @@ function Loading() {
   )
 }
 
-/** Cabecera contextual del área de trabajo: dónde estás y, si consultaste algo, cómo volver a verlo. */
+/**
+ * Cabecera contextual: dónde estás y, si consultaste algo, cómo volver a verlo. En escritorio la barra de tareas ya
+ * dice en qué vista estás, así que solo aparece cuando entraste a algo o hay un resumen abierto.
+ */
 function StageHeader() {
   const { desktop, toggle } = useSidebar()
+  const crumbs = useCrumbs()
   const hasTarget = useInspectorStore((s) => s.target !== null)
   const isOpen = useInspectorStore((s) => s.isOpen)
   const reopen = useInspectorStore((s) => s.reopen)
   const close = useInspectorStore((s) => s.closeInspector)
+  if (desktop && crumbs.length < 2 && !hasTarget) return null
   return (
     <header className="flex h-12 shrink-0 items-center gap-2 border-b border-zinc-200/80 px-3 sm:px-4 lg:px-5 dark:border-zinc-800/80">
       {!desktop && (
-        <Button variant="ghost" size="icon" onClick={toggle} aria-label="Abrir menú"><Menu /></Button>
+        <Button variant="ghost" size="icon" onClick={toggle} aria-label="Abrir menú"><PixelIcon name="menu" /></Button>
       )}
-      <Breadcrumbs />
+      <Breadcrumbs crumbs={crumbs} />
       {hasTarget && (
         <Button
           variant="ghost"
@@ -110,7 +117,7 @@ export function AppShell() {
                   <Outlet />
                 </Suspense>
               </div>
-              {!running && <Footer />}
+              {!running && pathname !== '/' && <Footer />}
             </main>
             <Inspector />
           </div>
@@ -130,7 +137,7 @@ export function PageHeader({ title, description, actions }: {
   return (
     <div className="flex flex-wrap items-end justify-between gap-4">
       <div className="min-w-0">
-        <h1 className="text-[22px] font-semibold tracking-tight sm:text-2xl">{title}</h1>
+        <h1 className="text-[20px] font-semibold tracking-tight">{title}</h1>
         {description && <p className="mt-1.5 max-w-2xl text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400">{description}</p>}
       </div>
       {actions && <div className="flex items-center gap-2">{actions}</div>}

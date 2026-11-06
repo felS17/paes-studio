@@ -59,7 +59,7 @@ export function PassageViewer({ passage, className }: { passage: Passage; classN
   return (
     <section className={cn('px-5 pt-5 pb-16 sm:px-8', className)} aria-label={passage.title}>
       <div className="sticky top-0 z-10 -mx-5 mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200/80 bg-canvas/95 px-5 py-2.5 backdrop-blur sm:-mx-8 sm:px-8 dark:border-zinc-800/80">
-        <h2 className="text-[13px] font-semibold tracking-tight">
+        <h2 className="text-[13px] font-semibold tracking-tight normal-case">
           {passage.title}
           {passage.questionRange && (
             <span className="ml-2 font-normal text-zinc-500 dark:text-zinc-400">
@@ -69,7 +69,7 @@ export function PassageViewer({ passage, className }: { passage: Passage; classN
         </h2>
         <ReaderControls />
       </div>
-      <div className={cn('mx-auto max-w-[65ch]', reader.paragraphNumbers && 'pl-9')}>
+      <div className={cn('mx-auto max-w-[65ch] normal-case', reader.paragraphNumbers && 'pl-9')}>
         <MathText
           text={passage.body}
           numberParagraphs={reader.paragraphNumbers}

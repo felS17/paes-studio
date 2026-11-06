@@ -1,14 +1,11 @@
 import { useCallback, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { PageHeader } from '@/components/layout/AppShell'
-import { Panel } from '@/components/ui/panel'
 import { Segmented } from '@/components/ui/segmented'
-import { Accuracy } from '@/components/dashboard/SubtopicExplorer'
+import { Accuracy } from '@/components/dashboard/Accuracy'
 import { TopicBrowser } from '@/components/dashboard/TopicBrowser'
 import { KnowledgeGraph } from '@/components/zettelkasten/KnowledgeGraph'
 import { NodeDrawer } from '@/components/zettelkasten/NodeDrawer'
-import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
-import { SUBTOPICS } from '@/data/temario'
+import { SUBJECT_ORDER, SUBJECT_TABS } from '@/data/subjects'
 import { useElementWidth } from '@/hooks/useElementWidth'
 import { useTheme } from '@/hooks/useTheme'
 import { cn } from '@/lib/utils'
@@ -16,7 +13,7 @@ import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import type { SubjectId } from '@/types/exam'
 import { latestResults } from '@/utils/analytics'
 import { buildKnowledgeGraph, type KNode } from '@/utils/knowledgeGraph'
-import { masteryOf, subtopicStats } from '@/utils/subtopics'
+import { subtopicStats } from '@/utils/subtopics'
 
 type SubjectFilter = SubjectId | 'todas'
 
@@ -53,23 +50,13 @@ export function ZettelkastenPage() {
   const [setEl, width] = useElementWidth()
   const [selected, setSelected] = useState<KNode | null>(null)
   /** Materia de la lista cuando el mapa muestra todas. */
-  const [listSubject, setListSubject] = useState<SubjectId>('m1')
+  const [listSubject, setListSubject] = useState<SubjectId>(SUBJECT_TABS[0])
+  /** La lista de temas no se monta hasta que la abres. */
+  const [listOpen, setListOpen] = useState(false)
 
   const latest = useMemo(() => latestResults(attempts), [attempts])
   const stats = useMemo(() => subtopicStats(attempts, latest), [attempts, latest])
   const data = useMemo(() => buildKnowledgeGraph({ stats, latest, subject, showQuestions }), [stats, latest, subject, showQuestions])
-
-  const summary = useMemo(() => {
-    const scoped = SUBTOPICS.filter((s) => subject === 'todas' || s.subject === subject)
-    const m = scoped.map((s) => masteryOf(stats.get(s.id)))
-    return {
-      total: scoped.length,
-      explored: m.filter((x) => x !== 'sin-explorar').length,
-      mastered: m.filter((x) => x === 'dominado').length,
-      pending: scoped.reduce((n, s) => n + (stats.get(s.id)?.pending ?? 0), 0),
-      questions: data.nodes.filter((n) => n.kind === 'question').length,
-    }
-  }, [data, stats, subject])
 
   const update = (patch: Record<string, string | null>) => {
     const p = new URLSearchParams(params)
@@ -97,60 +84,37 @@ export function ZettelkastenPage() {
     [data, subject],
   )
 
-  const height = Math.max(460, Math.min(760, Math.round(window.innerHeight * 0.68)))
+  // El mapa ocupa casi toda la pantalla: solo le quedan arriba los controles y abajo la línea de la lista.
+  const height = Math.max(420, window.innerHeight - 190)
 
   return (
-    <div className="space-y-6">
-      <PageHeader
-        title="Mapa de Conocimiento"
-        description={
-          <>
-            Los <span className="tabular-nums">{SUBTOPICS.length}</span> temas de la PAES en un mapa que crece contigo: cada
-            pregunta que respondes se suma a su tema, y las líneas punteadas muestran cómo se conectan las materias. Toca un
-            punto para leer su resumen, ver tus preguntas y ponerte a practicar.
-          </>
-        }
-      />
-
-      <div className="flex flex-wrap items-center justify-between gap-3">
+    <div className="space-y-3">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <h1 className="text-[20px] font-semibold tracking-tight">mapa</h1>
         <Segmented<SubjectFilter>
-          label="Asignatura"
+          label="Materia"
           className="max-w-full overflow-x-auto"
           value={subject}
           onChange={(v) => {
             setSelected(null)
             update({ asignatura: v === 'todas' ? null : v })
           }}
-          options={[{ value: 'todas', label: 'Todas' }, ...SUBJECT_ORDER.map((id) => ({ value: id, label: SUBJECTS[id].short }))]}
+          options={[{ value: 'todas', label: 'todas' }, ...SUBJECT_TABS.map((id) => ({ value: id, label: id }))]}
         />
         <Segmented<'si' | 'no'>
           label="Preguntas resueltas en el mapa"
-          className="max-w-full overflow-x-auto"
+          size="sm"
+          className="max-w-full overflow-x-auto sm:ml-auto"
           value={showQuestions ? 'si' : 'no'}
           onChange={(v) => update({ preguntas: v === 'no' ? 'no' : null })}
           options={[
-            { value: 'si', label: 'Con preguntas resueltas' },
-            { value: 'no', label: 'Solo temario' },
+            { value: 'si', label: 'con preguntas' },
+            { value: 'no', label: 'solo temario' },
           ]}
         />
       </div>
 
-      <Panel className="overflow-hidden">
-        <dl className="grid grid-cols-2 border-b border-zinc-200/80 sm:grid-cols-4 dark:border-zinc-800/80">
-          {(
-            [
-              ['Temas explorados', `${summary.explored}/${summary.total}`],
-              ['Dominados', summary.mastered],
-              ['Errores pendientes', summary.pending],
-              ['Preguntas en tu mapa', summary.questions],
-            ] as const
-          ).map(([label, value]) => (
-            <div key={label} className="border-zinc-200/80 px-5 py-3 not-last:border-r max-sm:odd:border-r max-sm:[&:nth-child(-n+2)]:border-b dark:border-zinc-800/80">
-              <dt className="text-xs text-zinc-500 dark:text-zinc-400">{label}</dt>
-              <dd className="mt-0.5 font-mono text-[17px] font-medium tabular-nums">{value}</dd>
-            </div>
-          ))}
-        </dl>
+      <div className="relative overflow-hidden rounded-lg border border-zinc-200/80 dark:border-zinc-800/80">
         <div ref={setEl} id="zk-grafo" className="relative scroll-mt-6" style={{ height }} aria-label="Mapa de conocimiento" role="img">
           {width > 0 && (
             <KnowledgeGraph
@@ -162,57 +126,52 @@ export function ZettelkastenPage() {
               onSelect={setSelected}
             />
           )}
-          {!attempts.length && (
-            <p className="pointer-events-none absolute inset-x-0 bottom-4 mx-auto w-fit max-w-[90%] rounded-lg border border-zinc-200/80 bg-surface/90 px-3 py-2 text-center text-xs text-zinc-600 dark:border-zinc-800/80 dark:text-zinc-400">
-              Tu mapa te está esperando: responde una práctica o un ensayo y tus preguntas aparecerán aquí, conectadas a su tema.
-            </p>
-          )}
         </div>
-        <ul className="flex flex-wrap gap-x-5 gap-y-2 border-t border-zinc-200/80 px-5 py-3 text-xs text-zinc-600 dark:border-zinc-800/80 dark:text-zinc-400" aria-label="Leyenda">
-          <li className="flex items-center gap-2"><Swatch kind="faint" />Sin explorar</li>
-          <li className="flex items-center gap-2"><Swatch kind="mid" />En progreso</li>
-          <li className="flex items-center gap-2"><Swatch kind="strong" />Dominado: 75 % o más</li>
-          <li className="flex items-center gap-2"><Swatch kind="pending" />Con errores por repasar</li>
-          <li className="flex items-center gap-2"><Swatch kind="correct" />Respuesta correcta</li>
-          <li className="flex items-center gap-2"><Swatch kind="incorrect" />Respuesta incorrecta</li>
-          <li className="flex items-center gap-2"><Swatch kind="cross" />Enlace entre materias</li>
-        </ul>
-      </Panel>
+        <details className="absolute bottom-2 left-2 rounded-md border border-zinc-200/80 bg-surface/90 text-[12px] text-zinc-600 dark:border-zinc-800/80 dark:text-zinc-400">
+          <summary className="cursor-pointer rounded-md px-2 py-1 font-mono">leyenda</summary>
+          <ul className="space-y-1 border-t border-zinc-200/80 px-2 py-2 dark:border-zinc-800/80" aria-label="Leyenda">
+            <li className="flex items-center gap-2"><Swatch kind="faint" />sin explorar</li>
+            <li className="flex items-center gap-2"><Swatch kind="mid" />en progreso</li>
+            <li className="flex items-center gap-2"><Swatch kind="strong" />dominado: 75 % o más</li>
+            <li className="flex items-center gap-2"><Swatch kind="pending" />con errores por repasar</li>
+            <li className="flex items-center gap-2"><Swatch kind="correct" />respuesta correcta</li>
+            <li className="flex items-center gap-2"><Swatch kind="incorrect" />respuesta incorrecta</li>
+            <li className="flex items-center gap-2"><Swatch kind="cross" />enlace entre materias</li>
+          </ul>
+        </details>
+      </div>
 
-      <section aria-labelledby="zk-lista" className="space-y-2">
-        <h2 id="zk-lista" className="px-1 text-[14px] font-semibold tracking-tight">Abrir un tema</h2>
-        <p className="px-1 text-[13px] text-zinc-500 dark:text-zinc-400">
-          El mismo mapa en forma de lista, para ir directo a un tema o navegar con teclado.
-        </p>
-        <TopicBrowser
-          subject={subject === 'todas' ? listSubject : subject}
-          onSubjectChange={(s) => {
-            setListSubject(s)
-            if (subject !== 'todas') {
-              setSelected(null)
-              update({ asignatura: s })
-            }
-          }}
-          stats={stats}
-          renderRow={(sub, stat) => (
-            <li key={sub.id}>
-              <button
-                type="button"
-                onClick={() => navigateTo(`t:${sub.id}`)}
-                className="flex w-full items-center gap-3 py-2 pr-4 pl-10 text-left text-[13px] transition-colors hover:bg-zinc-900/[0.02] dark:hover:bg-zinc-100/[0.03]"
-              >
-                <span className="min-w-0 flex-1 truncate font-medium">{sub.title}</span>
-                {Boolean(stat?.pending) && (
-                  <span className="hidden whitespace-nowrap text-xs text-zinc-500 sm:inline dark:text-zinc-400">
-                    <span className="font-mono tabular-nums">{stat!.pending}</span> por repasar
-                  </span>
-                )}
-                <Accuracy stat={stat} />
-              </button>
-            </li>
-          )}
-        />
-      </section>
+      <details onToggle={(e) => setListOpen(e.currentTarget.open)}>
+        <summary className="cursor-pointer rounded-sm py-1 font-mono text-[12.5px] text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">ver lista de temas</summary>
+        {listOpen && (
+          <div className="mt-2">
+            <TopicBrowser
+              subject={subject === 'todas' ? listSubject : subject}
+              onSubjectChange={(s) => {
+                setListSubject(s)
+                if (subject !== 'todas') {
+                  setSelected(null)
+                  update({ asignatura: s })
+                }
+              }}
+              stats={stats}
+              renderRow={(sub, stat) => (
+                <li key={sub.id}>
+                  <button
+                    type="button"
+                    onClick={() => navigateTo(`t:${sub.id}`)}
+                    className="flex min-h-9 w-full items-center gap-2 py-1 pl-6 text-left text-[13px] transition-colors hover:bg-zinc-900/[0.02] dark:hover:bg-zinc-100/[0.03]"
+                  >
+                    <span className="min-w-0 flex-1 sm:truncate">{sub.title}</span>
+                    <Accuracy stat={stat} />
+                    <span aria-hidden className="w-[4.75rem] shrink-0" />
+                  </button>
+                </li>
+              )}
+            />
+          </div>
+        )}
+      </details>
 
       <NodeDrawer node={selected} stats={stats} latest={latest} onClose={() => setSelected(null)} onNavigate={navigateTo} />
     </div>

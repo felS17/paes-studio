@@ -22,11 +22,9 @@ export function formatDuration(ms: number): string {
 }
 
 const dateFmt = new Intl.DateTimeFormat('es-CL', { day: 'numeric', month: 'short', year: 'numeric' })
-const shortFmt = new Intl.DateTimeFormat('es-CL', { day: 'numeric', month: 'short' })
 const timeFmt = new Intl.DateTimeFormat('es-CL', { hour: '2-digit', minute: '2-digit' })
 
 export const formatDate = (ts: number) => dateFmt.format(ts)
-export const formatShortDate = (ts: number) => shortFmt.format(ts)
 export const formatTime = (ts: number) => timeFmt.format(ts)
 
 export function formatPercent(value: number, digits = 0): string {

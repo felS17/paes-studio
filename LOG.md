@@ -16,6 +16,7 @@
 - **v2.1, Textos humanos (2026-11-05):** la interfaz deja la jerga técnica y habla en tono cercano; frase de impulso diaria, botón «Entrenar 10 preguntas rápidas ahora», secciones renombradas y 4 perfiles de respuesta en lenguaje simple.
 - **v2.2 (2026-11-05):** 4 temas (Geist Light, Geist Dark, GitHub Dark y Papel Cálido), heatmap de actividad, racha de aciertos, 30 citas reales con autor, temas ordenados en acordeones con buscador y filtros, Formulario Express con 263 fórmulas y mazo de Competencia Lectora (290 tarjetas en total).
 - **v2.3 (2026-11-06):** Hero «animfetch» en `/` con nebulosa ASCII y katakana animada, datos estilo `fastfetch`, botones de un clic y mini-shell opcional; 10 paletas con selector visual y búsqueda; 5 tipografías de interfaz con el `ExamRunner` aislado; barra de estado de 24px.
+- **v2.4 (2026-11-06):** poda radical. Barra de tareas estilo sistema operativo, Inicio como una sola ventana de terminal, `/analitica` como Administrador de Tareas, íconos Pixel Art, interfaz en minúsculas y vistas sin párrafos de introducción ni cajas dentro de cajas.
 
 ---
 
@@ -557,6 +558,27 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 #### Verificación
 - `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Por pedido del autor no se abrió navegador ni se leyeron los JSON de ensayos, así que **el aspecto final no se ha visto en pantalla**.
 
+### [2026-11-06] - PAES Studio v2.4: escritorio simple
+
+#### Decisiones
+- **Minúsculas por CSS, no reescribiendo textos:** `body` lleva `text-transform: lowercase`, con exclusiones en lo académico. Reescribir a mano habría dejado textos sin cubrir y no alcanza a los datos, que no se pueden tocar (títulos de ensayos, nombres de ejes). Los lectores de pantalla y las búsquedas siguen viendo el texto original. Riesgo cubierto: KaTeX y `MathText` quedan excluidos porque en minúscula Δ pasaría a δ.
+- **Efecto aceptado:** los nombres propios en títulos de temas también bajan (`pitágoras`, `chile`, `siglo xix`). No se excluyeron porque el pedido es «todo en minúsculas»; basta `normal-case` en esas filas para revertirlo.
+- **`SUBJECT_TABS` aparte de `SUBJECT_ORDER`:** las pestañas van `lectora, m1, m2, ciencias, historia`, pero `SUBJECT_ORDER` no se tocó para no arriesgar cálculos que dependan de su orden.
+- **`ProcessTable` como árbol:** ordenar toda la lista mezclaría ejes de distintas materias en unas 25 filas. Con materias cerradas parte en 5 filas y cada nivel se ordena por separado. Lo que no tiene datos queda siempre al final.
+- **`ensayos completados`** solo cuenta ensayos del catálogo; las prácticas van aparte (`+N prácticas`), porque un drill de 10 preguntas no es un ensayo.
+- **`limpiar errores`** lanza la revancha de la materia con más errores en cola (`worstSubject`), porque el puntaje estimado de un intento solo tiene sentido en una materia.
+- **`/subtemas`:** se quita el filtro por estado y los botones `10 · 20 · todas` de cada fila. La elección de cantidad sigue en el resumen del tema (`DrillDialog`).
+- **Guías:** Overleaf y el `.tex` no se eliminan: quedan tras el enlace `tex`, y las plantillas en `formatos base`.
+
+#### Funciones retiradas a pedido del autor
+- **Evolución y proyección de puntaje:** `ScoreSummary`, `ProjectionChart` y `utils/projection.ts`. `/ensayos` ahora muestra el último puntaje de cada ensayo; ya no hay una vista de evolución en el tiempo.
+- **Tiempo por eje, historial de cambios e índice de duda en `stats`:** `CadencePanel`. El detalle por intento sigue en `/resultados` (`CadenceMatrix`, `CadenceStrip`).
+- **Desafío del Día en pantalla:** `DailyChallenge`. Sigue existiendo y suma a la racha, pero solo se abre con `daily` en el prompt.
+- También: `DiagnosisPanel`, `InspectButton`, `useStorageUsage`, `SubjectMono`, `ThemeSwatch` y los helpers que solo ellos usaban. Todo queda en el historial de git.
+
+#### Verificación
+- `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Grilla de los íconos validada (16 × 16) y revisada imprimiéndola en la terminal. Por pedido del autor no se abrió navegador ni se leyeron los JSON de ensayos, así que **el aspecto final no se ha visto en pantalla**.
+
 ---
 
 ## Comandos
@@ -714,3 +736,12 @@ APP_PAES/
 - [x] `StatusBar` de 24px, oculta en `ExamRunner`.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 - [ ] Revisión visual en local de las 10 paletas, las 5 tipografías y el Hero en móvil (a cargo del autor).
+
+### v2.4
+- [x] Barra de tareas con íconos Pixel Art, barrita de ítem activo y bandeja (`retomar`, `apariencia`, `racha`).
+- [x] Inicio como una sola ventana: nebulosa, 5 datos, cita, 7 comandos, prompt, heatmap reducido y contacto.
+- [x] `/analitica` como Administrador de Tareas: 4 medidores y 4 pestañas.
+- [x] Poda de `/ensayos`, `/subtemas`, `/flashcards`, `/zettelkasten` y `/material`.
+- [x] Interfaz en minúsculas, con lo académico excluido.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [ ] Revisión visual en local, sobre todo en móvil y con fuentes mono (a cargo del autor).

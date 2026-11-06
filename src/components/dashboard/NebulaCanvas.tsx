@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Pause, Play } from 'lucide-react'
+import { PixelIcon } from '@/components/icons/PixelIcon'
 import { Button } from '@/components/ui/button'
 import { THEME_BY_ID } from '@/data/themes'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
@@ -85,17 +85,17 @@ export function NebulaCanvas({ className }: { className?: string }) {
 
   const label = paused ? 'Reanudar la animación' : 'Pausar la animación'
   return (
-    <div className={cn('relative overflow-hidden bg-canvas', className)}>
+    <div className={cn('relative overflow-hidden', className)}>
       <canvas ref={canvasRef} aria-hidden className="absolute inset-0 size-full" />
       <Button
         variant="ghost"
         size="icon-sm"
-        className="absolute bottom-2 left-2 bg-canvas/70"
+        className="absolute bottom-2 left-2 bg-surface/70"
         onClick={() => setPaused(!paused)}
         title={label}
         aria-label={label}
       >
-        {paused ? <Play /> : <Pause />}
+        <PixelIcon name={paused ? 'play' : 'pause'} />
       </Button>
     </div>
   )

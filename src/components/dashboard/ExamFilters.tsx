@@ -1,7 +1,7 @@
 import { Segmented } from '@/components/ui/segmented'
 import { Select } from '@/components/ui/select'
 import { YEARS } from '@/data/catalog'
-import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
+import { SUBJECT_TABS } from '@/data/subjects'
 import type { Modality, SubjectId } from '@/types/exam'
 
 export interface FilterState {
@@ -10,46 +10,36 @@ export interface FilterState {
   year: number | 'todos'
 }
 
-export function ExamFilters({ value, onChange, resultCount }: {
-  value: FilterState
-  onChange: (next: FilterState) => void
-  resultCount: number
-}) {
+export function ExamFilters({ value, onChange }: { value: FilterState; onChange: (next: FilterState) => void }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       <Segmented<FilterState['subject']>
-        label="Asignatura"
+        label="Materia"
         value={value.subject}
         onChange={(subject) => onChange({ ...value, subject })}
         className="max-w-full overflow-x-auto"
-        options={[
-          { value: 'todas', label: 'Todas' },
-          ...SUBJECT_ORDER.map((id) => ({ value: id, label: <span className="whitespace-nowrap">{SUBJECTS[id].short}</span> })),
-        ]}
+        options={[{ value: 'todas', label: 'todas' }, ...SUBJECT_TABS.map((id) => ({ value: id, label: id }))]}
       />
       <Select
         aria-label="Modalidad"
         value={value.modality}
         onChange={(e) => onChange({ ...value, modality: e.target.value as FilterState['modality'] })}
       >
-        <option value="todas">Todas las modalidades</option>
-        <option value="curado">Con explicación paso a paso</option>
-        <option value="regular">PAES Regular</option>
-        <option value="invierno">PAES de Invierno</option>
+        <option value="todas">todas</option>
+        <option value="curado">con explicación</option>
+        <option value="regular">regular</option>
+        <option value="invierno">invierno</option>
       </Select>
       <Select
         aria-label="Año de admisión"
         value={String(value.year)}
         onChange={(e) => onChange({ ...value, year: e.target.value === 'todos' ? 'todos' : Number(e.target.value) })}
       >
-        <option value="todos">Todos los años</option>
+        <option value="todos">todos los años</option>
         {YEARS.map((y) => (
-          <option key={y} value={y}>Admisión {y}</option>
+          <option key={y} value={y}>{y}</option>
         ))}
       </Select>
-      <p className="ml-auto text-xs text-zinc-500 dark:text-zinc-400" aria-live="polite">
-        <span className="tabular-nums">{resultCount}</span> {resultCount === 1 ? 'ensayo' : 'ensayos'}
-      </p>
     </div>
   )
 }

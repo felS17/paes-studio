@@ -54,7 +54,7 @@ export function QuestionCard({
   const snapshot = question.presentation === 'snapshot' && question.snapshot
 
   return (
-    <article className="relative mx-auto w-full max-w-[740px]" aria-labelledby={`q-${question.id}`}>
+    <article className="relative mx-auto w-full max-w-[740px] normal-case" aria-labelledby={`q-${question.id}`}>
       {confirming && (
         <span aria-hidden className="pointer-events-none absolute -inset-3 animate-confirm rounded-xl border border-emerald-500/60 ring-2 ring-emerald-500/15" />
       )}

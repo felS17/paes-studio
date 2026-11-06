@@ -75,7 +75,7 @@ export function CheatSheets() {
           onChange={setSheet}
           options={[...SHEETS.map((s) => ({ value: s.id as SheetFilter, label: s.label })), { value: 'todas', label: 'Todas' }]}
         />
-        <SearchInput value={query} onChange={setQuery} placeholder="Buscar fórmula o concepto..." label="Buscar fórmula o concepto" className="min-w-56 flex-1" />
+        <SearchInput value={query} onChange={setQuery} placeholder="buscar fórmula o concepto" label="Buscar fórmula o concepto" className="min-w-48 flex-1" />
       </div>
 
       {groups.length ? (

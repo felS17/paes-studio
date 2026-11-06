@@ -1,106 +1,93 @@
-import { Link, useSearchParams } from 'react-router-dom'
+import { useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { BackupActions } from '@/components/analytics/BackupActions'
-import { CadencePanel } from '@/components/analytics/CadencePanel'
-import { DiagnosisPanel } from '@/components/analytics/DiagnosisPanel'
 import { MistakeNotebook } from '@/components/analytics/MistakeNotebook'
-import { ScoreSummary } from '@/components/analytics/ScoreSummary'
+import { ProcessTable } from '@/components/analytics/ProcessTable'
+import { TelemetryCounters } from '@/components/analytics/TelemetryCounters'
 import { PageHeader } from '@/components/layout/AppShell'
 import { Button } from '@/components/ui/button'
-import { EmptyState } from '@/components/ui/empty-state'
+import { LoadBar } from '@/components/ui/load-bar'
 import { Tabs } from '@/components/ui/tabs'
-import { SUBJECTS } from '@/data/subjects'
+import { EXAMS_BY_ID } from '@/data/catalog'
+import { useStartPracticeSet } from '@/hooks/usePracticeSet'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
-import type { AttemptRecord } from '@/types/analytics'
-import { diagnosisSubjects, mistakeNotebook } from '@/utils/analytics'
-import { latestBySubject } from '@/utils/projection'
+import { globalAccuracy, mistakeNotebook, worstSubject } from '@/utils/analytics'
+import { revengeDraft } from '@/utils/practice'
+import { averagePaceMs } from '@/utils/telemetry'
 
-type View = 'ejes' | 'errores' | 'ritmo' | 'evolucion'
-const VIEWS: View[] = ['ejes', 'errores', 'ritmo', 'evolucion']
+type View = 'procesos' | 'telemetria' | 'errores' | 'sistema'
+const VIEWS: View[] = ['procesos', 'telemetria', 'errores', 'sistema']
 
-function Metric({ label, value, unit, note }: { label: string; value: React.ReactNode; unit?: string; note: React.ReactNode }) {
+function Gauge({ label, value, unit, children }: { label: string; value: React.ReactNode; unit?: string; children?: React.ReactNode }) {
   return (
-    <div className="min-w-0 bg-surface px-5 py-4">
-      <dt className="text-xs text-zinc-500 dark:text-zinc-400">{label}</dt>
-      <dd className="mt-1.5">
-        <span className="font-mono text-[22px] leading-none font-semibold tracking-tight tabular-nums">{value}</span>
-        {unit && <span className="ml-1 text-xs text-zinc-500 dark:text-zinc-400">{unit}</span>}
-        <span className="mt-1.5 block text-xs text-zinc-500 sm:truncate dark:text-zinc-400">{note}</span>
+    <div className="flex min-w-0 flex-col gap-2.5 bg-surface p-4">
+      <dt className="font-mono text-[12px] text-zinc-500 dark:text-zinc-400">{label}</dt>
+      <dd className="flex flex-1 flex-col justify-between gap-2.5">
+        <span>
+          <span className="font-mono text-[24px] leading-none font-semibold tabular-nums">{value}</span>
+          {unit && <span className="ml-1.5 font-mono text-[12px] text-zinc-500 tabular-nums dark:text-zinc-400">{unit}</span>}
+        </span>
+        {children}
       </dd>
     </div>
   )
 }
 
-/** Resumen en una franja: lo esencial antes de entrar al detalle. */
-function Summary({ attempts, mistakes }: { attempts: AttemptRecord[]; mistakes: number }) {
-  const latest = [...latestBySubject(attempts).values()]
-  const average = latest.length ? Math.round(latest.reduce((s, l) => s + l.score, 0) / latest.length) : null
-  const weakest = diagnosisSubjects(attempts)
-    .map((d) => ({ subject: d.subject, axis: d.axes[0] }))
-    .sort((a, b) => a.axis.accuracy - b.axis.accuracy)[0]
-  return (
-    <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-zinc-200/80 bg-zinc-200/80 lg:grid-cols-4 dark:border-zinc-800/80 dark:bg-zinc-800/80">
-        <Metric
-          label="Promedio actual"
-          value={average ?? '–'}
-          unit={average !== null ? 'pts' : undefined}
-          note={`Último puntaje de ${latest.length} ${latest.length === 1 ? 'asignatura' : 'asignaturas'}`}
-        />
-        <Metric label="Intentos" value={attempts.length} note="Ensayos y prácticas" />
-        <Metric label="Por repasar" value={mistakes} note={mistakes === 1 ? 'Pregunta fallada' : 'Preguntas falladas'} />
-        <Metric
-          label="Tu eje más débil"
-          value={weakest ? Math.round(weakest.axis.accuracy * 100) : '–'}
-          unit={weakest ? '%' : undefined}
-          note={weakest ? `${weakest.axis.axis}, ${SUBJECTS[weakest.subject].short}` : 'Aún sin datos suficientes'}
-        />
-    </dl>
-  )
-}
-
+/** Stats como administrador de tareas: 4 medidores de rendimiento arriba y una sola pestaña a la vez abajo. */
 export function AnalyticsPage() {
   const attempts = useAnalyticsStore((s) => s.attempts)
-  const mistakes = mistakeNotebook(attempts)
+  const start = useStartPracticeSet()
   const [params, setParams] = useSearchParams()
   const requested = params.get('vista') as View | null
-  const view: View = requested && VIEWS.includes(requested) ? requested : 'ejes'
-  const setView = (v: View) => setParams(v === 'ejes' ? {} : { vista: v }, { replace: true })
-  const axesCount = diagnosisSubjects(attempts).reduce((n, d) => n + d.axes.length, 0)
+  const view: View = requested && VIEWS.includes(requested) ? requested : 'procesos'
+  const setView = (v: View) => setParams(v === 'procesos' ? {} : { vista: v }, { replace: true })
+
+  const mistakes = useMemo(() => mistakeNotebook(attempts), [attempts])
+  const accuracy = useMemo(() => globalAccuracy(attempts), [attempts])
+  const paceMs = useMemo(() => averagePaceMs(attempts), [attempts])
+  const exams = attempts.filter((a) => EXAMS_BY_ID.has(a.examId)).length
+  const practices = attempts.length - exams
+  const target = worstSubject(mistakes)
 
   return (
-    <div className="space-y-8">
-      <PageHeader
-        title="Estadísticas y Errores"
-        description="Todo esto sale de lo que has respondido. Úsalo para decidir qué practicar ahora."
-        actions={<BackupActions />}
-      />
-      {attempts.length === 0 ? (
-        <EmptyState
-          title="Aquí vas a ver tu avance"
-          action={<Button variant="primary" asChild><Link to="/ensayos">Elegir un ensayo</Link></Button>}
-        >
-          Entrega un ensayo o termina una práctica y aparecerá tu diagnóstico. Si descargaste tu progreso antes, súbelo con el botón de arriba.
-        </EmptyState>
-      ) : (
-        <>
-          <Summary attempts={attempts} mistakes={mistakes.length} />
-          <Tabs<View>
-            label="Secciones de tus estadísticas"
-            value={view}
-            onChange={setView}
-            items={[
-              { value: 'ejes', label: 'Ejes por reforzar', count: axesCount },
-              { value: 'errores', label: 'Cuaderno de errores', count: mistakes.length },
-              { value: 'ritmo', label: 'Dudas y tiempo' },
-              { value: 'evolucion', label: 'Evolución' },
-            ]}
+    <div className="space-y-6">
+      <PageHeader title="stats" />
+      <div className="@container">
+        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-zinc-200/80 bg-zinc-200/80 @3xl:grid-cols-4 dark:border-zinc-800/80 dark:bg-zinc-800/80">
+        <Gauge label="acierto global" value={accuracy === null ? '—' : Math.round(accuracy * 100)} unit={accuracy === null ? undefined : '%'}>
+          <LoadBar value={accuracy} segments={16} />
+        </Gauge>
+        <Gauge label="ensayos completados" value={exams} unit={practices ? `+${practices} prácticas` : undefined} />
+        <Gauge label="errores en cola" value={mistakes.length}>
+          <Button
+            size="sm"
+            className="self-start"
+            disabled={!target}
+            onClick={() => target && start(revengeDraft(target, mistakes))}
+            title={target ? `Revancha de ${target}: hasta 20 preguntas falladas` : undefined}
           >
-            {view === 'ejes' && <DiagnosisPanel attempts={attempts} />}
-            {view === 'errores' && <MistakeNotebook entries={mistakes} />}
-            {view === 'ritmo' && <CadencePanel attempts={attempts} />}
-            {view === 'evolucion' && <ScoreSummary attempts={attempts} />}
-          </Tabs>
-        </>
-      )}
+            limpiar errores
+          </Button>
+        </Gauge>
+        <Gauge label="ritmo promedio" value={paceMs === null ? '—' : Math.round(paceMs / 1000)} unit={paceMs === null ? undefined : 's por pregunta'} />
+        </dl>
+      </div>
+      <Tabs<View>
+        label="Pestañas de stats"
+        value={view}
+        onChange={setView}
+        items={[
+          { value: 'procesos', label: 'procesos' },
+          { value: 'telemetria', label: 'telemetría' },
+          { value: 'errores', label: 'errores', count: mistakes.length },
+          { value: 'sistema', label: 'sistema' },
+        ]}
+      >
+        {view === 'procesos' && <ProcessTable />}
+        {view === 'telemetria' && <TelemetryCounters />}
+        {view === 'errores' && <MistakeNotebook entries={mistakes} />}
+        {view === 'sistema' && <BackupActions />}
+      </Tabs>
     </div>
   )
 }

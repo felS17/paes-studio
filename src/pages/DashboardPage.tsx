@@ -2,21 +2,16 @@ import { useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { ExamFilters, type FilterState } from '@/components/dashboard/ExamFilters'
 import { ExamList } from '@/components/dashboard/ExamList'
-import { ProjectionChart } from '@/components/dashboard/ProjectionChart'
-import { SubtopicExplorer } from '@/components/dashboard/SubtopicExplorer'
 import { PageHeader } from '@/components/layout/AppShell'
 import { Button } from '@/components/ui/button'
 import { EmptyState } from '@/components/ui/empty-state'
-import { Tabs } from '@/components/ui/tabs'
 import { EXAMS } from '@/data/catalog'
 import { SUBJECT_ORDER } from '@/data/subjects'
-import { SUBTOPICS } from '@/data/temario'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import type { Modality, SubjectId } from '@/types/exam'
-import { bestScoreByExam } from '@/utils/analytics'
+import { lastScoreByExam } from '@/utils/analytics'
 
 const MODALITIES: Modality[] = ['regular', 'invierno', 'curado']
-type View = 'ensayos' | 'subtemas'
 
 function readFilters(params: URLSearchParams): FilterState {
   const subject = params.get('asignatura')
@@ -33,32 +28,13 @@ export function DashboardPage() {
   const [params, setParams] = useSearchParams()
   const filters = readFilters(params)
   const attempts = useAnalyticsStore((s) => s.attempts)
-  const best = useMemo(() => bestScoreByExam(attempts), [attempts])
-
-  const view: View = params.get('vista') === 'subtemas' ? 'subtemas' : 'ensayos'
-  const materia = params.get('materia')
-  const explorerSubject: SubjectId = SUBJECT_ORDER.includes(materia as SubjectId)
-    ? (materia as SubjectId)
-    : filters.subject !== 'todas' ? filters.subject : 'm1'
-
-  const setView = (next: View) => {
-    const p = new URLSearchParams(params)
-    if (next === 'subtemas') p.set('vista', 'subtemas')
-    else p.delete('vista')
-    setParams(p, { replace: true })
-  }
-  const setExplorerSubject = (subject: SubjectId) => {
-    const p = new URLSearchParams(params)
-    p.set('materia', subject)
-    setParams(p, { replace: true })
-  }
+  const lastScores = useMemo(() => lastScoreByExam(attempts), [attempts])
 
   const setFilters = (next: FilterState) => {
     const p = new URLSearchParams()
     if (next.subject !== 'todas') p.set('asignatura', next.subject)
     if (next.modality !== 'todas') p.set('modalidad', next.modality)
     if (next.year !== 'todos') p.set('anio', String(next.year))
-    if (materia) p.set('materia', materia)
     setParams(p, { replace: true })
   }
 
@@ -68,50 +44,19 @@ export function DashboardPage() {
       (filters.modality === 'todas' || e.modality === filters.modality) &&
       (filters.year === 'todos' || e.year === filters.year),
   )
-  const totalQuestions = EXAMS.reduce((n, e) => n + e.questionCount, 0)
 
   return (
-    <div className="space-y-8">
-      <PageHeader
-        title="Ensayos Completos"
-        description={
-          <>
-            <span className="tabular-nums">{EXAMS.length}</span> ensayos y{' '}
-            <span className="tabular-nums">{totalQuestions.toLocaleString('es-CL')}</span> preguntas para ponerte a prueba: pruebas
-            reales del DEMRE y ensayos con explicación paso a paso. ¿Prefieres ir por partes? También están ordenadas por tema.
-          </>
-        }
-      />
-      <ProjectionChart attempts={attempts} />
-      <div id="lista-ensayos" tabIndex={-1} className="scroll-mt-20 outline-none">
-        <Tabs
-          label="Cómo quieres practicar"
-          value={view}
-          onChange={setView}
-          items={[
-            { value: 'ensayos', label: 'Ensayos completos', count: EXAMS.length },
-            { value: 'subtemas', label: 'Practicar por tema', count: SUBTOPICS.length },
-          ]}
-        >
-          {view === 'ensayos' ? (
-            <div className="space-y-4">
-              <ExamFilters value={filters} onChange={setFilters} resultCount={visible.length} />
-              {visible.length ? (
-                <ExamList exams={visible} bestScores={best} />
-              ) : (
-                <EmptyState
-                  title="Ningún ensayo coincide con estos filtros"
-                  action={<Button onClick={() => setFilters({ subject: 'todas', modality: 'todas', year: 'todos' })}>Quitar filtros</Button>}
-                >
-                  Prueba con otro año o modalidad. Los ensayos con explicación no tienen modalidad oficial.
-                </EmptyState>
-              )}
-            </div>
-          ) : (
-            <SubtopicExplorer subject={explorerSubject} onSubjectChange={setExplorerSubject} />
-          )}
-        </Tabs>
-      </div>
+    <div className="space-y-5">
+      <PageHeader title="ensayos" />
+      <ExamFilters value={filters} onChange={setFilters} />
+      {visible.length ? (
+        <ExamList exams={visible} lastScores={lastScores} />
+      ) : (
+        <EmptyState
+          title="ningún ensayo con estos filtros"
+          action={<Button onClick={() => setFilters({ subject: 'todas', modality: 'todas', year: 'todos' })}>quitar filtros</Button>}
+        />
+      )}
     </div>
   )
 }

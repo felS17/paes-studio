@@ -1,12 +1,10 @@
 import { lazy, Suspense, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { ArrowUpRight } from 'lucide-react'
 import { PageHeader } from '@/components/layout/AppShell'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
-import { Panel } from '@/components/ui/panel'
 import { Tabs } from '@/components/ui/tabs'
-import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
+import { SUBJECT_TABS } from '@/data/subjects'
 import type { ManifestEntry } from '@/types/material'
 import pdfsJson from '@/data/pdfs.json'
 import manifestJson from '../../latex/output/manifest.json'
@@ -21,7 +19,7 @@ const outputs = import.meta.glob<string>('/latex/output/*.tex', { query: '?raw',
 type Loader = () => Promise<string>
 
 const cache = new Map<string, Promise<string>>()
-/** Carga una sola vez y deja el texto listo (también al pasar el cursor, para no perder el gesto del clic). */
+/** Carga una sola vez y deja el texto listo. */
 function textOf(path: string, loader: Loader): Promise<string> {
   let p = cache.get(path)
   if (!p) {
@@ -68,115 +66,29 @@ interface Viewing {
   text: string | null
 }
 
-const kb = (bytes: number) => `${Math.round(bytes / 1024)} KB`
+const ROW = 'flex min-h-10 flex-wrap items-center gap-x-3 gap-y-1 py-1.5'
+const LIST = 'divide-y divide-zinc-200/80 border-y border-zinc-200/80 dark:divide-zinc-800/80 dark:border-zinc-800/80'
+const TEX_LINK = 'rounded-sm font-mono text-[11.5px] text-zinc-500 underline-offset-4 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-100'
 
-/** Acciones sobre el .tex: descargar, abrir en Overleaf o ver el código. */
-function useTexActions(path: string, loader: Loader | undefined, name: string, onView: (v: Viewing) => void) {
-  const [busy, setBusy] = useState(false)
-  const prefetch = () => void (loader && textOf(path, loader))
-  const run = async (kind: 'dl' | 'ov' | 'ver') => {
-    if (!loader) return
-    if (kind === 'ver') {
-      onView({ name, text: null })
-      onView({ name, text: await textOf(path, loader) })
-      return
-    }
-    setBusy(true)
-    try {
-      const text = await textOf(path, loader)
-      if (kind === 'dl') await download(text, name)
-      else openInOverleaf(text, name)
-    } finally {
-      setBusy(false)
-    }
-  }
-  return { busy, prefetch, run, available: Boolean(loader) }
-}
+const KIND = { guia: { label: 'guía', unit: 'pág' }, beamer: { label: 'presentación', unit: 'diap' } } as const
 
-const LINK = 'rounded text-zinc-500 underline-offset-4 transition-colors hover:text-zinc-900 hover:underline disabled:opacity-50 dark:text-zinc-400 dark:hover:text-zinc-100'
-
-/** Enlaces secundarios y discretos al código fuente. */
-function TexLinks({ path, loader, name, onView }: { path: string; loader: Loader | undefined; name: string; onView: (v: Viewing) => void }) {
-  const { busy, prefetch, run, available } = useTexActions(path, loader, name, onView)
-  if (!available) return null
-  return (
-    <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-      <span className="text-zinc-400 dark:text-zinc-500">Para adaptarla:</span>
-      <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('dl')}>Descargar archivo editable</button>
-      <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('ov')}>Editar en Overleaf</button>
-      <button type="button" className={LINK} onClick={() => run('ver')}>Ver archivo</button>
-    </p>
-  )
-}
-
-const KIND = {
-  guia: { label: 'Guía de estudio', unit: 'páginas' },
-  beamer: { label: 'Presentación de repaso', unit: 'diapositivas 16:9' },
-} as const
-
-/** Una fila por documento: el PDF compilado es la acción principal; el .tex queda como enlace secundario. */
-function DocumentRow({ entry, onView }: { entry: ManifestEntry; onView: (v: Viewing) => void }) {
+/** Una línea por documento: el PDF es la acción principal; el archivo editable queda como enlace mínimo. */
+function DocumentRow({ entry, onView }: { entry: ManifestEntry; onView: (name: string, path: string, loader: Loader) => void }) {
   const path = `/latex/output/${entry.file}`
   const pdf = pdfs[entry.file]
   const kind = KIND[entry.kind]
+  const loader = outputs[path]
   return (
-    <li className="grid gap-x-8 gap-y-4 px-5 py-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
-      <div className="min-w-0 space-y-2">
-        <div>
-          <p className="text-[14px] font-medium">{kind.label}</p>
-          <p className="mt-1 text-[12.5px] text-zinc-500 dark:text-zinc-400">
-            {pdf ? (
-              <>
-                <span className="font-mono text-zinc-900 tabular-nums dark:text-zinc-100">{pdf.pages}</span> {kind.unit},{' '}
-                <span className="font-mono tabular-nums">{kb(pdf.bytes)}</span>
-              </>
-            ) : 'Este PDF todavía no está disponible'}
-            {entry.kind === 'guia' && entry.examples !== undefined && (
-              <>
-                ,{' '}<span className="font-mono tabular-nums">{entry.examples}</span> ejemplos resueltos
-              </>
-            )}
-          </p>
-        </div>
-        <TexLinks path={path} loader={outputs[path]} name={entry.file} onView={onView} />
-      </div>
+    <li className={ROW}>
+      <span className="min-w-0 flex-1 basis-40 truncate text-[13.5px]">{entry.subject} {kind.label}</span>
+      <span className="font-mono text-[12px] text-zinc-500 tabular-nums dark:text-zinc-400">{pdf ? `${pdf.pages} ${kind.unit}` : 'no disponible'}</span>
       {pdf && (
-        <div className="flex flex-wrap gap-2 md:justify-end">
-          <Button variant="primary" asChild>
-            <a href={pdf.pdf} target="_blank" rel="noopener">
-              Abrir PDF
-              <ArrowUpRight />
-            </a>
-          </Button>
-          <Button variant="secondary" asChild>
-            <a href={pdf.pdf} download={entry.file.replace(/\.tex$/, '.pdf')}>Descargar</a>
-          </Button>
-        </div>
+        <span className="flex gap-1">
+          <Button size="sm" asChild><a href={pdf.pdf} target="_blank" rel="noopener">abrir</a></Button>
+          <Button size="sm" variant="ghost" asChild><a href={pdf.pdf} download={entry.file.replace(/\.tex$/, '.pdf')}>descargar</a></Button>
+        </span>
       )}
-    </li>
-  )
-}
-
-function describe(name: string): string {
-  return name.startsWith('guia')
-    ? 'Formato de guía, con recuadros para definiciones, fórmulas, trampas y ejemplos.'
-    : 'Formato de presentación, pensado para repasar en clase o en video.'
-}
-
-function TemplateRow({ path, loader, onView }: { path: string; loader: Loader; onView: (v: Viewing) => void }) {
-  const name = fileName(path)
-  const { busy, prefetch, run } = useTexActions(path, loader, name, onView)
-  return (
-    <li className="flex flex-wrap items-center gap-x-6 gap-y-3 px-5 py-4">
-      <div className="min-w-0 flex-1 basis-64">
-        <p className="truncate text-[13px] font-medium">{name.startsWith('guia') ? 'Formato de guía' : 'Formato de presentación'}</p>
-        <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{describe(name)}</p>
-      </div>
-      <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
-        <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('dl')}>Descargar archivo editable</button>
-        <button type="button" className={LINK} disabled={busy} onPointerEnter={prefetch} onFocus={prefetch} onClick={() => run('ov')}>Editar en Overleaf</button>
-        <button type="button" className={LINK} onClick={() => run('ver')}>Ver archivo</button>
-      </p>
+      {loader && <button type="button" className={TEX_LINK} onClick={() => onView(entry.file, path, loader)} aria-label={`Ver el archivo editable de ${entry.subject} ${kind.label}`}>tex</button>}
     </li>
   )
 }
@@ -184,86 +96,76 @@ function TemplateRow({ path, loader, onView }: { path: string; loader: Loader; o
 // El formulario (KaTeX y sus tarjetas) se descarga solo si se abre su pestaña.
 const CheatSheets = lazy(() => import('@/components/cheatsheets/CheatSheets').then((m) => ({ default: m.CheatSheets })))
 
-type View = 'guias' | 'formulario'
+type View = 'resumenes' | 'formulario'
 
 export function MaterialPage() {
   const [viewing, setViewing] = useState<Viewing | null>(null)
   const [params, setParams] = useSearchParams()
-  const view: View = params.get('vista') === 'formulario' ? 'formulario' : 'guias'
-  const setView = (v: View) => setParams(v === 'guias' ? {} : { vista: v }, { replace: true })
+  const view: View = params.get('vista') === 'formulario' ? 'formulario' : 'resumenes'
+  const setView = (v: View) => setParams(v === 'resumenes' ? {} : { vista: v }, { replace: true })
   const templateEntries = Object.entries(templates).sort(([a], [b]) => a.localeCompare(b))
-  const bySubject = SUBJECT_ORDER.map((subject) => ({
-    subject,
-    entries: manifest.filter((e) => e.subject === subject).sort((a, b) => (a.kind === b.kind ? 0 : a.kind === 'guia' ? -1 : 1)),
-  })).filter((g) => g.entries.length)
+  const documents = SUBJECT_TABS.flatMap((subject) =>
+    manifest.filter((e) => e.subject === subject).sort((a, b) => (a.kind === b.kind ? 0 : a.kind === 'guia' ? -1 : 1)),
+  )
+  const openFile = async (name: string, path: string, loader: Loader) => {
+    setViewing({ name, text: null })
+    const text = await textOf(path, loader)
+    setViewing({ name, text })
+  }
 
   return (
-    <div className="space-y-8">
-      <PageHeader
-        title="Guías y Resúmenes PDF"
-        description="Una guía de estudio y una presentación de repaso por materia, y un formulario con todo lo clave para repasar justo antes de un ensayo."
-      />
-
+    <div className="space-y-5">
+      <PageHeader title="guías" />
       <Tabs<View>
-        label="Secciones de guías y resúmenes"
+        label="Secciones de guías"
         value={view}
         onChange={setView}
+        panelClassName="pt-4"
         items={[
-          { value: 'guias', label: 'Guías en PDF' },
-          { value: 'formulario', label: 'Formulario Express' },
+          { value: 'resumenes', label: 'resúmenes pdf' },
+          { value: 'formulario', label: 'formulario express' },
         ]}
       >
         {view === 'formulario' ? (
-          <Suspense fallback={<p className="text-[13px] text-zinc-500" role="status">Cargando…</p>}>
+          <Suspense fallback={<p className="text-[13px] text-zinc-500" role="status">cargando…</p>}>
             <CheatSheets />
           </Suspense>
         ) : (
-          <div className="space-y-12">
-            {bySubject.length ? (
-              <div className="space-y-6">
-                {bySubject.map(({ subject, entries }) => (
-                  <section key={subject} aria-labelledby={`mat-${subject}`} className="space-y-2.5">
-                    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-1">
-                      <h2 id={`mat-${subject}`} className="text-[15px] font-semibold tracking-tight">{SUBJECTS[subject].name}</h2>
-                      <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                        {entries[0].axes.length} ejes, <span className="font-mono tabular-nums">{entries[0].subtopics}</span> subtemas
-                      </p>
-                    </div>
-                    <Panel>
-                      <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
-                        {entries.map((e) => <DocumentRow key={e.file} entry={e} onView={setViewing} />)}
-                      </ul>
-                    </Panel>
-                  </section>
-                ))}
-              </div>
+          <div className="space-y-4">
+            {documents.length ? (
+              <ul className={LIST}>
+                {documents.map((e) => <DocumentRow key={e.file} entry={e} onView={openFile} />)}
+              </ul>
             ) : (
-              <p className="text-[13px] text-zinc-500">Las guías todavía no están disponibles. Vuelve a mirar en un rato.</p>
+              <p className="text-[13px] text-zinc-500">las guías todavía no están disponibles.</p>
             )}
-
-            <section aria-labelledby="plantillas" className="space-y-2.5">
-              <div className="px-1">
-                <h2 id="plantillas" className="text-[15px] font-semibold tracking-tight">Para profes y curiosos</h2>
-                <p className="mt-0.5 max-w-2xl text-[13px] text-zinc-500 dark:text-zinc-400">Si haces clases o quieres armar tu propio material, aquí están los formatos base de las guías y presentaciones.</p>
-              </div>
-              <Panel>
-                <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
-                  {templateEntries.map(([path, loader]) => <TemplateRow key={path} path={path} loader={loader} onView={setViewing} />)}
-                </ul>
-              </Panel>
-            </section>
+            <details>
+              <summary className="cursor-pointer rounded-sm py-1 font-mono text-[12.5px] text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">formatos base</summary>
+              <ul className={`mt-2 ${LIST}`}>
+                {templateEntries.map(([path, loader]) => {
+                  const name = fileName(path)
+                  return (
+                    <li key={path} className={ROW}>
+                      <span className="min-w-0 flex-1 truncate text-[13.5px]">{name.startsWith('guia') ? 'formato de guía' : 'formato de presentación'}</span>
+                      <button type="button" className={TEX_LINK} onClick={() => openFile(name, path, loader)}>tex</button>
+                    </li>
+                  )
+                })}
+              </ul>
+            </details>
           </div>
         )}
       </Tabs>
 
       <Dialog open={viewing !== null} onOpenChange={(o) => !o && setViewing(null)}>
-        <DialogContent title={viewing?.name ?? 'Archivo'} description="El archivo con el que se genera este material." className="max-w-4xl">
+        <DialogContent title={viewing?.name ?? 'archivo'} className="max-w-4xl">
           <pre className="mt-4 max-h-[65vh] overflow-auto rounded-lg border border-zinc-200/80 bg-zinc-50 p-3 font-mono text-[11.5px] leading-relaxed text-zinc-700 dark:border-zinc-800/80 dark:bg-zinc-900/50 dark:text-zinc-300">
-            {viewing?.text ?? 'Cargando…'}
+            {viewing?.text ?? 'cargando…'}
           </pre>
           {viewing?.text && (
             <div className="mt-3 flex justify-end gap-2">
-              <Button size="sm" onClick={() => download(viewing.text!, viewing.name)}>Descargar archivo editable</Button>
+              <Button size="sm" variant="ghost" onClick={() => openInOverleaf(viewing.text!, viewing.name)}>editar en overleaf</Button>
+              <Button size="sm" onClick={() => download(viewing.text!, viewing.name)}>descargar</Button>
             </div>
           )}
         </DialogContent>
