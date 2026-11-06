@@ -17,6 +17,7 @@
 - **v2.2 (2026-11-05):** 4 temas (Geist Light, Geist Dark, GitHub Dark y Papel Cálido), heatmap de actividad, racha de aciertos, 30 citas reales con autor, temas ordenados en acordeones con buscador y filtros, Formulario Express con 263 fórmulas y mazo de Competencia Lectora (290 tarjetas en total).
 - **v2.3 (2026-11-06):** Hero «animfetch» en `/` con nebulosa ASCII y katakana animada, datos estilo `fastfetch`, botones de un clic y mini-shell opcional; 10 paletas con selector visual y búsqueda; 5 tipografías de interfaz con el `ExamRunner` aislado; barra de estado de 24px.
 - **v2.4 (2026-11-06):** poda radical. Barra de tareas estilo sistema operativo, Inicio como una sola ventana de terminal, `/analitica` como Administrador de Tareas, íconos Pixel Art, interfaz en minúsculas y vistas sin párrafos de introducción ni cajas dentro de cajas.
+- **v2.4.1 (2026-11-06):** ventana del Inicio y heatmap más amplios (`max-w-6xl`, 52 semanas de punta a punta), comandos en 2 columnas con descripción, prompt con menú `/` navegable y racha universal.
 
 ---
 
@@ -579,6 +580,36 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 #### Verificación
 - `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Grilla de los íconos validada (16 × 16) y revisada imprimiéndola en la terminal. Por pedido del autor no se abrió navegador ni se leyeron los JSON de ensayos, así que **el aspecto final no se ha visto en pantalla**.
 
+### [2026-11-06] - v2.4.1: ventana amplia, menú `/` y racha universal
+
+#### Racha universal
+- **Dos fuentes a propósito:** `markPractice` marca el día al responder (en `select`), para que cuente un ensayo que se reparte en varios días. `withAttemptDays` suma al leer los días con intentos entregados, para que también cuenten los anteriores a este cambio y los que llegan al subir un respaldo. Una marca solo hacia adelante los habría perdido.
+- **Efecto:** la racha de quienes ya tenían intentos puede subir de golpe, porque ahora se calcula con su historial completo.
+- **`useStreak`** reemplaza la lógica repetida en la barra de tareas, la barra de estado y la ventana del Inicio.
+
+#### Ciclo de importación evitado
+- Marcar la racha desde `useExamStore` importando `utils/daily` creó el ciclo `data/catalog` → `useExamStore` → `utils/daily` → `data/catalog`. TypeScript, ESLint y el build no lo detectan; según el orden de carga, la app se rompe al abrir. Lo reveló una prueba de lógica compilada con Vite y ejecutada en Node.
+- **Solución:** `src/utils/dateKey.ts`, sin importaciones; `daily` lo re-exporta para no tocar a quienes ya lo usan. Un escaneo de las importaciones de `src/` no encontró otros ciclos.
+
+#### Menú `/`
+- Sigue el patrón combobox de WAI-ARIA (`aria-activedescendant`): el foco se queda en el campo y las flechas mueven la opción activa.
+- **`/tema` frente a `/temas`:** el filtro ordena por nombre exacto, luego por inicio y luego por descripción, porque si no `/tema` + `Enter` abriría `temas`.
+- **`help` no elige nada por adelantado:** así `Enter` no lanza una práctica por sorpresa, a diferencia de `/`, que resalta la primera opción.
+- **El menú abre hacia arriba** porque el prompt está al pie de la ventana y abajo puede no haber espacio. Por eso la ventana dejó de usar `overflow-hidden`.
+- **`/m1`, `/lectora`, etc.** ahora parten una práctica de 10; antes filtraban `/ensayos`.
+- **`/cita`** obligó a subir el índice de la cita a `AnimfetchHero`.
+
+#### Textos ajustados frente al pedido
+- **`ensayos`:** el ejemplo decía «46 pruebas oficiales demre», pero son 41 oficiales y 5 curadas; la descripción sale del catálogo y dice ambas cifras.
+- **`entrenar 10 rápidas`:** su descripción dice la materia real y los errores pendientes. El menú usa el texto pedido («tu materia más débil»), aunque `quickDrillSubject` elige la de más errores pendientes; sin errores, la última practicada, y sin historial, `m1`.
+
+#### Heatmap
+- **Cuadritos fluidos:** con 52 semanas a todo el ancho miden hasta unos 18 px, más que los 12–14 px sugeridos, porque el objetivo era llenar el ancho de punta a punta.
+- En pantallas angostas se muestran menos semanas (mínimo 13) en vez de cuadritos ilegibles. `monthLabels` volvió a `utils/activity.ts`.
+
+#### Verificación
+- `npm run lint` y `npm run build` con 0 errores. Prueba de lógica con 32 casos (menú, comandos y racha) en el scratchpad, no agregada al repo. Por pedido del autor no se abrió navegador, así que **el aspecto final no se ha visto en pantalla**.
+
 ---
 
 ## Comandos
@@ -652,6 +683,7 @@ APP_PAES/
 ---
 
 ## Pendientes y consideraciones
+- **Racha y heatmap (v2.4.1):** una práctica sin terminar ya suma a la racha, pero el heatmap solo cuenta lo entregado, porque guarda las respuestas por intento. Un día así muestra racha activa y su cuadrito vacío hasta entregar.
 - **Derechos de autor:** los folletos del DEMRE indican «Derechos reservados». Los recortes y textos extraídos viven en `public/exam-assets/` y `src/data/exams/`. Están pensados para estudio personal; antes de publicar el sitio abiertamente conviene revisar las condiciones de uso del DEMRE o desplegar solo los ensayos curados (basta con borrar los JSON oficiales y `public/exam-assets/` y regenerar el índice).
 - **Peso del despliegue:** los recortes ocupan ~33 MB, dentro de los límites de Vercel.
 - **Ejes de preguntas oficiales:** fuera de Ciencias son heurísticos; pueden corregirse a mano en el JSON y el índice se actualiza en el siguiente build.
@@ -745,3 +777,11 @@ APP_PAES/
 - [x] Interfaz en minúsculas, con lo académico excluido.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 - [ ] Revisión visual en local, sobre todo en móvil y con fuentes mono (a cargo del autor).
+
+### v2.4.1
+- [x] Racha universal: `isActiveDay`, `markPractice`, `withAttemptDays` y `useStreak`.
+- [x] Ventana del Inicio en `max-w-6xl`, nebulosa más grande y comandos en 2 columnas con descripción.
+- [x] Heatmap de 52 semanas del mismo ancho, con cabecera, leyenda y etiquetas de meses y días.
+- [x] Prompt con menú `/` (flechas, `Enter`, `Tab`, `Esc`, mouse), chip y respuesta para comandos desconocidos.
+- [x] `npm run lint` y `npm run build` con 0 errores.
+- [ ] Revisión visual en local del menú y del heatmap, en escritorio y en móvil (a cargo del autor).

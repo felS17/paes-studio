@@ -1,7 +1,23 @@
 import type { StudyDay } from '@/store/useStreakStore'
-import { previousDateKey } from './daily'
+import type { AttemptRecord } from '@/types/analytics'
+import { localDateKey, previousDateKey } from './dateKey'
 
-export const isActiveDay = (day: StudyDay | undefined) => Boolean(day && (day.challenge || (day.flashcards ?? 0) > 0))
+/** Cualquier práctica suma a la racha: ensayo, tema, entrenamiento rápido, Desafío Diario o flashcards. */
+export const isActiveDay = (day: StudyDay | undefined) => Boolean(day && (day.challenge || day.practice || (day.flashcards ?? 0) > 0))
+
+/**
+ * Suma los días en que entregaste un intento con respuestas. Sin esto no contarían los intentos anteriores a la racha
+ * universal ni los que llegan al subir un respaldo.
+ */
+export function withAttemptDays(days: Record<string, StudyDay>, attempts: AttemptRecord[]): Record<string, StudyDay> {
+  const merged = { ...days }
+  for (const a of attempts) {
+    if (!a.answered) continue
+    const key = localDateKey(a.finishedAt)
+    merged[key] = { ...merged[key], practice: true }
+  }
+  return merged
+}
 
 export interface StreakSummary {
   /** Días seguidos con actividad, terminando hoy (o ayer, si hoy aún no estudias: la racha sigue viva). */

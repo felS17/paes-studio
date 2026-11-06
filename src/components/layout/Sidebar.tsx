@@ -1,15 +1,12 @@
-import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { PixelIcon } from '@/components/icons/PixelIcon'
 import { Button } from '@/components/ui/button'
 import { EXAMS_BY_ID } from '@/data/catalog'
+import { useStreak } from '@/hooks/useStreak'
 import { useSidebar } from '@/hooks/useWorkspace'
 import { cn } from '@/lib/utils'
 import { useExamStore } from '@/store/useExamStore'
-import { useStreakStore } from '@/store/useStreakStore'
-import { localDateKey } from '@/utils/daily'
-import { streakSummary } from '@/utils/streak'
 import { Logo, LogoMark } from './Logo'
 import { DOCK_ACTIVE, DOCK_IDLE, DOCK_ITEM, DOCK_RAIL, NAV_ITEMS, SIDEBAR_SHORTCUT } from './nav'
 import { ThemeToggle } from './ThemeToggle'
@@ -49,9 +46,7 @@ function ResumeItem({ rail }: { rail: boolean }) {
 
 /** `racha`: días seguidos de estudio, siempre a la vista. */
 function StreakItem({ rail }: { rail: boolean }) {
-  const [today] = useState(() => localDateKey())
-  const days = useStreakStore((s) => s.days)
-  const { current } = streakSummary(days, today)
+  const { current } = useStreak()
   const title = `racha de estudio: ${current} ${current === 1 ? 'día' : 'días'}`
   return (
     <Link to="/" title={title} aria-label={title} className={cn(DOCK_ITEM, DOCK_IDLE, rail && DOCK_RAIL)}>

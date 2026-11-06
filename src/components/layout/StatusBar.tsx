@@ -1,14 +1,11 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PixelIcon } from '@/components/icons/PixelIcon'
 import { UI_FONTS, UI_FONT_BY_ID } from '@/data/fonts'
 import { THEME_BY_ID } from '@/data/themes'
+import { useStreak } from '@/hooks/useStreak'
 import { useTheme } from '@/hooks/useTheme'
 import { useSettingsStore } from '@/store/useSettingsStore'
-import { useStreakStore } from '@/store/useStreakStore'
 import { useWorkspaceStore } from '@/store/useWorkspaceStore'
-import { localDateKey } from '@/utils/daily'
-import { streakSummary } from '@/utils/streak'
 
 const ITEM =
   'inline-flex h-6 min-w-0 items-center gap-1.5 px-2 whitespace-nowrap transition-colors hover:bg-zinc-900/[0.04] hover:text-zinc-900 dark:hover:bg-zinc-100/[0.06] dark:hover:text-zinc-100'
@@ -18,9 +15,7 @@ export function StatusBar() {
   const { resolved } = useTheme()
   const uiFont = useSettingsStore((s) => s.uiFont)
   const openAppearance = useWorkspaceStore((s) => s.openAppearance)
-  const days = useStreakStore((s) => s.days)
-  const [today] = useState(() => localDateKey())
-  const { current } = streakSummary(days, today)
+  const { current } = useStreak()
   const font = UI_FONT_BY_ID[uiFont] ?? UI_FONTS[0]
   const theme = THEME_BY_ID[resolved]
 

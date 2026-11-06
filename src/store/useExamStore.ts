@@ -2,7 +2,9 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { QuestionTrace } from '@/types/analytics'
 import type { ExamMode, OptionKey, PracticeSet } from '@/types/exam'
+import { localDateKey } from '@/utils/dateKey'
 import { persistStorage } from './storage'
+import { useStreakStore } from './useStreakStore'
 
 export interface ExamSession {
   key: string
@@ -98,7 +100,10 @@ export const useExamStore = create<ExamState>()(
         }
         return key
       },
-      select: (key, questionId, option) =>
+      select: (key, questionId, option) => {
+        // Responder ya es practicar: suma a la racha aunque el ensayo quede sin terminar.
+        const session = get().sessions[key]
+        if (session && !session.checked[questionId]) useStreakStore.getState().markPractice(localDateKey())
         set((s) =>
           patch(s, key, (cur) => {
             if (cur.checked[questionId]) return {}
@@ -112,7 +117,8 @@ export const useExamStore = create<ExamState>()(
                 : {}),
             }
           }),
-        ),
+        )
+      },
       toggleStrike: (key, questionId, option) =>
         set((s) =>
           patch(s, key, (cur) => {

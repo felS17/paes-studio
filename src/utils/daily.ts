@@ -3,19 +3,7 @@ import { EXPLAINED_QUESTIONS } from '@/data/temario'
 import type { PracticeSet, SubjectId } from '@/types/exam'
 import { examIdOfQuestion } from './practice'
 
-const pad = (n: number) => n.toString().padStart(2, '0')
-
-/** Fecha local en formato `YYYY-MM-DD` (la semilla del Desafío Diario y la clave de la racha). */
-export function localDateKey(date: Date | number = new Date()): string {
-  const d = typeof date === 'number' ? new Date(date) : date
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
-}
-
-/** Día anterior a una clave `YYYY-MM-DD` (respeta cambios de mes, año y horario de verano). */
-export function previousDateKey(key: string): string {
-  const [y, m, d] = key.split('-').map(Number)
-  return localDateKey(new Date(y, m - 1, d - 1, 12))
-}
+export { localDateKey, previousDateKey } from './dateKey'
 
 /** FNV-1a de 32 bits: el mismo texto da siempre el mismo número, en cualquier navegador. */
 export function hashString(text: string): number {

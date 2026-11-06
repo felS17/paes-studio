@@ -64,6 +64,25 @@ export function heatmapColumns(today: string, weeks = 20): string[][] {
   return columns
 }
 
+const monthFmt = new Intl.DateTimeFormat('es-CL', { month: 'short' })
+
+/** Etiqueta de cada mes sobre la columna donde parte. */
+export function monthLabels(columns: string[][]): { column: number; label: string }[] {
+  const labels: { column: number; label: string }[] = []
+  let month = -1
+  columns.forEach((col, column) => {
+    const date = parseKey(col[0])
+    if (date.getMonth() === month) return
+    month = date.getMonth()
+    const last = labels[labels.length - 1]
+    if (last && column - last.column < 3) return
+    // Si el mes partió hace rato en la primera columna, su etiqueta chocaría con la del mes siguiente.
+    if (column === 0 && parseKey(columns[Math.min(2, columns.length - 1)][0]).getMonth() !== month) return
+    labels.push({ column, label: monthFmt.format(date).replace('.', '') })
+  })
+  return labels
+}
+
 const dayFmt = new Intl.DateTimeFormat('es-CL', { day: 'numeric', month: 'long' })
 
 /** «14 preguntas resueltas el 3 de noviembre». */
