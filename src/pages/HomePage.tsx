@@ -1,22 +1,20 @@
 import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { BarChart3, FileText, Layers, LayoutList, ListTree, Waypoints, Zap, type LucideIcon } from 'lucide-react'
+import { BarChart3, FileText, Layers, LayoutList, ListTree, Waypoints, type LucideIcon } from 'lucide-react'
 import { ActivityHeatmap } from '@/components/dashboard/ActivityHeatmap'
+import { AnimfetchHero } from '@/components/dashboard/AnimfetchHero'
 import { DailyChallenge } from '@/components/dashboard/DailyChallenge'
-import { DailyQuote } from '@/components/dashboard/DailyQuote'
 import { SubtopicExplorer } from '@/components/dashboard/SubtopicExplorer'
-import { Button } from '@/components/ui/button'
 import { EXAMS } from '@/data/catalog'
 import { DECKS, TOTAL_CARDS } from '@/data/flashcards'
 import pdfs from '@/data/pdfs.json'
-import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
+import { SUBJECT_ORDER } from '@/data/subjects'
 import { SUBTOPICS } from '@/data/temario'
-import { useStartPracticeSet } from '@/hooks/usePracticeSet'
 import { cn } from '@/lib/utils'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import type { SubjectId } from '@/types/exam'
 import { latestResults, mistakeNotebook } from '@/utils/analytics'
-import { masteryOf, quickDrillDraft, quickDrillSubject, subtopicStats } from '@/utils/subtopics'
+import { masteryOf, subtopicStats } from '@/utils/subtopics'
 
 const CONTACT = {
   author: 'felS (Felipe Schneeberger)',
@@ -35,8 +33,8 @@ interface ModuleCard {
 }
 
 /**
- * Inicio: presentación del proyecto, métricas reales del banco, Desafío Diario, menú de módulos, mapa de los 67
- * subtemas y contacto. El catálogo de ensayos vive en /ensayos.
+ * Inicio: Hero con la nebulosa y tus datos, Desafío Diario, menú de módulos, mapa de los 67 subtemas y contacto. El
+ * catálogo de ensayos vive en /ensayos.
  */
 export function HomePage() {
   const [params, setParams] = useSearchParams()
@@ -44,9 +42,7 @@ export function HomePage() {
   const materia = params.get('materia')
   const subject: SubjectId = SUBJECT_ORDER.includes(materia as SubjectId) ? (materia as SubjectId) : 'lectora'
 
-  const startPractice = useStartPracticeSet()
   const latest = useMemo(() => latestResults(attempts), [attempts])
-  const quick = useMemo(() => quickDrillSubject(attempts, latest), [attempts, latest])
 
   const progress = useMemo(() => {
     const stats = subtopicStats(attempts, latest)
@@ -58,15 +54,7 @@ export function HomePage() {
     }
   }, [attempts, latest])
 
-  const questions = EXAMS.reduce((n, e) => n + e.questionCount, 0)
   const pdfCount = Object.keys(pdfs).length
-  const metrics: [number, string][] = [
-    [EXAMS.length, 'Ensayos'],
-    [questions, 'Preguntas'],
-    [SUBTOPICS.length, 'Temas'],
-    [TOTAL_CARDS, 'Flashcards'],
-    [pdfCount, 'Guías en PDF'],
-  ]
 
   const modules: ModuleCard[] = [
     {
@@ -103,46 +91,14 @@ export function HomePage() {
 
   return (
     <div className="space-y-14">
-      {/* A. Presentación y métricas */}
-      <section aria-labelledby="hero" className="space-y-8">
-        <DailyQuote />
-        <div className="max-w-3xl border-t border-zinc-200/80 pt-8 dark:border-zinc-800/80">
-          <h1 id="hero" className="text-[26px] leading-[1.15] font-semibold tracking-[-0.02em] text-balance sm:text-[32px]">
-            Entrena con las pruebas reales del DEMRE, gratis
-          </h1>
-          <p className="mt-3 max-w-[62ch] text-[15px] leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Entra y entrena al tiro: sin crearte cuentas ni contraseñas. Tienes explicaciones paso a paso, claras y sin saltarse
-            ningún cálculo, y tarjetas inteligentes que te preguntan justo lo que estás a punto de olvidar. Tu progreso se guarda
-            automáticamente aquí mismo (y puedes descargarlo si cambias de computador).
-          </p>
-          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Button variant="primary" size="lg" onClick={() => startPractice(quickDrillDraft(quick.subject, latest))}>
-              <Zap />
-              Entrenar 10 preguntas rápidas ahora
-            </Button>
-            <p className="max-w-[40ch] text-[13px] leading-snug text-zinc-500 dark:text-zinc-400">
-              {quick.pending
-                ? `Partimos por ${quick.pending === 1 ? 'tu error pendiente' : `tus ${quick.pending} errores pendientes`} de ${SUBJECTS[quick.subject].short}.`
-                : `De ${SUBJECTS[quick.subject].short}, con la explicación apenas respondes.`}
-            </p>
-          </div>
-        </div>
-        <dl className="grid grid-cols-2 border-y border-zinc-200/80 sm:grid-cols-5 dark:border-zinc-800/80">
-          {metrics.map(([value, label]) => (
-            <div
-              key={label}
-              className="border-zinc-200/80 py-4 pr-4 max-sm:odd:border-r max-sm:[&:nth-child(-n+4)]:border-b sm:pl-5 sm:not-last:border-r sm:first:pl-0 max-sm:even:pl-4 dark:border-zinc-800/80"
-            >
-              <dd className="font-mono text-[26px] leading-none font-semibold tracking-tight tabular-nums">{value.toLocaleString('es-CL')}</dd>
-              <dt className="mt-1.5 text-xs text-zinc-500 dark:text-zinc-400">{label}</dt>
-            </div>
-          ))}
-        </dl>
+      {/* A. Hero y lo de hoy */}
+      <div className="space-y-4">
+        <AnimfetchHero latest={latest} explored={progress.explored} />
         <div className="grid items-start gap-4 xl:grid-cols-[minmax(0,1fr)_auto]">
           <DailyChallenge />
           <ActivityHeatmap />
         </div>
-      </section>
+      </div>
 
       {/* B. Menú de módulos */}
       <section aria-labelledby="modulos">

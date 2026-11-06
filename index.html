@@ -8,17 +8,28 @@
     <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)" />
     <title>PAES Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Tipografías de interfaz. `media="print"` evita que retrasen el primer pintado; cada archivo baja solo si se usa. -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Geist:wght@100..900&family=IBM+Plex+Mono:wght@400;500;600;700&family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
     <script>
-      // Evita el destello de tema incorrecto antes de que React monte. `light` y `dark` son valores guardados antes de los 4 temas.
+      // Evita el destello de tema incorrecto antes de que React monte. `light` y `dark` son valores guardados antes de los temas con nombre.
       try {
         var raw = localStorage.getItem('paes-studio-storage');
         var saved = raw ? (JSON.parse(raw).settings || {}).state?.theme : null;
         var theme = saved === 'light' ? 'geist-light' : saved === 'dark' ? 'geist-dark' : saved;
-        if (['geist-light', 'geist-dark', 'github-dark', 'paper'].indexOf(theme) < 0) {
+        var lightThemes = ['geist-light', 'paper'];
+        var darkThemes = ['github-dark', 'catppuccin-mocha', 'tokyo-night', 'gruvbox-dark', 'nord', 'rose-pine', 'dracula', 'geist-dark'];
+        if (lightThemes.indexOf(theme) < 0 && darkThemes.indexOf(theme) < 0) {
           theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'geist-dark' : 'geist-light';
         }
         document.documentElement.dataset.theme = theme;
-        if (theme === 'geist-dark' || theme === 'github-dark') document.documentElement.classList.add('dark');
+        if (darkThemes.indexOf(theme) >= 0) document.documentElement.classList.add('dark');
       } catch (e) {}
     </script>
   </head>

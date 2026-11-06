@@ -142,9 +142,9 @@ export function quickDrillSubject(attempts: AttemptRecord[], latest: Map<string,
   return { subject: last?.subject ?? 'm1', pending: 0 }
 }
 
-export function quickDrillDraft(subject: SubjectId, latest: Map<string, LatestResult>): SetDraft {
+export function quickDrillDraft(subject: SubjectId, latest: Map<string, LatestResult>, size: 10 | 20 = 10): SetDraft {
   const ids = SUBTOPICS.filter((s) => s.subject === subject).map((s) => s.id)
-  return drillDraftFor(ids, 10, latest, { subject, title: '10 preguntas rápidas', scope: SUBJECTS[subject].short })
+  return drillDraftFor(ids, size, latest, { subject, title: `${size} preguntas rápidas`, scope: SUBJECTS[subject].short })
 }
 
 /** Cuántas preguntas del banco reúne un conjunto de subtemas. */

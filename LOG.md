@@ -15,6 +15,7 @@
 - **v2.1, Workspace y telemetría (2026-11-05):** navegación en barra lateral colapsable (4 secciones, `Cmd/Ctrl + B`, cajón móvil, Modo Zen), Inspector contextual global (ficha, compendio PDF y flashcards) y telemetría silenciosa por pregunta con Matriz de Ritmo y Decisión e Índice de Duda Tóxica.
 - **v2.1, Textos humanos (2026-11-05):** la interfaz deja la jerga técnica y habla en tono cercano; frase de impulso diaria, botón «Entrenar 10 preguntas rápidas ahora», secciones renombradas y 4 perfiles de respuesta en lenguaje simple.
 - **v2.2 (2026-11-05):** 4 temas (Geist Light, Geist Dark, GitHub Dark y Papel Cálido), heatmap de actividad, racha de aciertos, 30 citas reales con autor, temas ordenados en acordeones con buscador y filtros, Formulario Express con 263 fórmulas y mazo de Competencia Lectora (290 tarjetas en total).
+- **v2.3 (2026-11-06):** Hero «animfetch» en `/` con nebulosa ASCII y katakana animada, datos estilo `fastfetch`, botones de un clic y mini-shell opcional; 10 paletas con selector visual y búsqueda; 5 tipografías de interfaz con el `ExamRunner` aislado; barra de estado de 24px.
 
 ---
 
@@ -530,6 +531,32 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - **Mazo de Competencia Lectora:** 35 tarjetas en 6 unidades. Total real: 290 tarjetas en 7 mazos. Solo `cs-habilidades`, `hi-geografia` e `hi-fuentes` quedan sin tarjetas.
 - **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Prueba desechable en hora de Chile: KaTeX de las 263 fórmulas, cobertura de temas, contadores de cada mazo, columnas del heatmap en cambios de horario y de año, umbrales, estados, buscador, racha y migración del tema: todo correcto. Sin navegador por indicación del autor: la revisión visual de los 4 temas queda pendiente en local. El contenido del formulario y del mazo no tiene revisión docente.
 
+### [2026-11-06] - PAES Studio v2.3
+
+#### Nebulosa y Hero (`AnimfetchHero`, `NebulaCanvas`, `src/utils/nebula.ts`)
+- **Canvas con grilla fija, no texto en el DOM:** los katakana de media anchura miden distinto según la fuente de cada sistema; dibujando cada celda en su coordenada quedan alineados igual.
+- **Rendimiento:** el campo se precalcula por celda y los glifos se copian desde un atlas por tono. El campo cuesta ~0,2 ms por cuadro con 2.730 celdas (medido en Node); corre a ~26 fps, se detiene con `IntersectionObserver` fuera de pantalla y conserva su reloj al pausar.
+- **Campo separado del dibujo:** `buildField` y `sampleField` no tocan el DOM, lo que permitió revisar la forma del vórtice imprimiéndolo como texto en la terminal.
+- **Movimiento reducido:** `nebulaPaused` es `null` hasta que el estudiante use el botón; mientras tanto sigue a `prefers-reduced-motion`.
+- **El Hero reemplaza** la cita grande, el bloque de presentación y la fila de métricas, que quedarían duplicados. El título queda como cabecera de la tarjeta para que un estudiante nuevo entienda qué es esto antes de ver la terminal.
+- **`@container`:** las columnas del Hero dependen de su propio ancho, porque la barra lateral y el Inspector lo cambian sin que cambie la ventana.
+- **Desafío Diario:** `useDailyAction` lo empieza, lo retoma o, si hoy ya está listo, lleva a su resultado en vez de repetirlo; el nombre del botón cambia en cada caso.
+- **Mini-shell:** comandos `run 10`, `run 20`, `daily`, materias, `ensayos`, `temas`, `flash`, `graph`, `pdf`, `stats`, `theme [nombre]`, `font` y `help`. `quickDrillDraft` ahora acepta 10 o 20 preguntas.
+
+#### Temas y tipografías
+- **6 paletas nuevas** con sus escalas `zinc`, `emerald`, `rose` y `amber`, siguiendo el mecanismo de GitHub Dark. Se verificó con un script el contraste AA de texto, botones, acento y correcto/incorrecto en las 7 paletas oscuras con escala propia, más la regla de luminosidad de la telemetría (`rose-600` más oscuro que `emerald-300`).
+- **Recortes de preguntas:** en temas con fondo más claro (Nord, Dracula) el negro invertido se vería como un recuadro; `.dark .snapshot-mono` usa `mix-blend-mode: lighten`.
+- **Aislamiento del `ExamRunner`:** `useUiFont` deja `geist` en `<html>` mientras `useExamRoute().running`. Se descartó un contenedor con clase porque los diálogos del ensayo se abren en un portal y se le escaparían. Con `useLayoutEffect` el cambio ocurre antes de pintar.
+- **Lectura del ensayo:** `reader.font` parte en `sans` y la migración v3 de ajustes lo pasa a `sans` una sola vez a quienes ya tenían datos guardados (no se distingue el valor por defecto de una elección). El botón Serif/Sans sigue disponible.
+- **Google Fonts** se carga con `media="print"` + `onload` para no retrasar el primer pintado. Geist y JetBrains Mono van también en el enlace, pero las versiones self-hosted siguen primero en la pila.
+
+#### Decisiones frente a las reglas
+- **Emoji → Lucide:** los botones del Hero usan `Zap`, `Target`, `Compass`, `Brain` y `Palette`, porque `CLAUDE.md` prohíbe los emoji con color.
+- **Excepciones documentadas en `CLAUDE.md`:** gradiente de la nebulosa, muestras de color y rótulos `Banco`/`Memoria` del Hero, a pedido del autor.
+
+#### Verificación
+- `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. Por pedido del autor no se abrió navegador ni se leyeron los JSON de ensayos, así que **el aspecto final no se ha visto en pantalla**.
+
 ---
 
 ## Comandos
@@ -679,3 +706,11 @@ APP_PAES/
 - [x] Mazo de Competencia Lectora (35); 290 tarjetas en total.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 - [ ] Revisión visual de los 4 temas en local y revisión docente del formulario y del mazo (a cargo del autor).
+
+### v2.3
+- [x] Hero animfetch con nebulosa ASCII/katakana, pausa, datos reales, cita del día, 5 botones de un clic y mini-shell opcional.
+- [x] 10 paletas con selector visual y búsqueda, accesible desde la barra lateral, el Hero y la barra de estado.
+- [x] 5 tipografías de interfaz; `ExamRunner` siempre en Geist.
+- [x] `StatusBar` de 24px, oculta en `ExamRunner`.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [ ] Revisión visual en local de las 10 paletas, las 5 tipografías y el Hero en móvil (a cargo del autor).

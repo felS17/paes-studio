@@ -1,20 +1,16 @@
-import { Monitor } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Segmented } from '@/components/ui/segmented'
-import { THEMES, THEME_BY_ID } from '@/data/themes'
+import { THEME_BY_ID } from '@/data/themes'
 import { useTheme } from '@/hooks/useTheme'
-import type { ThemeId, ThemePreference } from '@/types/user'
-
-const AUTO_LABEL = 'Igual que tu dispositivo'
+import { useWorkspaceStore } from '@/store/useWorkspaceStore'
+import type { ThemeId } from '@/types/user'
 
 /** Muestra del tema con sus colores reales: fondo y acento. */
-function ThemeSwatch({ id }: { id: ThemeId }) {
+export function ThemeSwatch({ id }: { id: ThemeId }) {
   const theme = THEME_BY_ID[id]
   return (
     <span
-      role="img"
-      aria-label={theme.label}
-      className="flex size-3.5 items-center justify-center rounded-[4px] border border-zinc-400/50"
+      aria-hidden
+      className="flex size-3.5 shrink-0 items-center justify-center rounded-[4px] border border-zinc-400/50"
       style={{ background: theme.canvas }}
     >
       <span className="size-1.5 rounded-full" style={{ background: theme.accent }} />
@@ -22,39 +18,31 @@ function ThemeSwatch({ id }: { id: ThemeId }) {
   )
 }
 
-/** Selector de los 4 temas; `compact` lo reduce a un botón que los recorre (barra de íconos). */
-export function ThemeToggle({ className, compact }: { className?: string; compact?: boolean }) {
-  const { theme, resolved, setTheme } = useTheme()
-  const current = THEME_BY_ID[resolved]
+/** Abre el selector de Apariencia desde la barra lateral; `compact` lo reduce a un ícono (barra de íconos). */
+export function ThemeToggle({ compact }: { compact?: boolean }) {
+  const { theme, resolved } = useTheme()
+  const openAppearance = useWorkspaceStore((s) => s.openAppearance)
+  const { label } = THEME_BY_ID[resolved]
+  const name = theme === 'system' ? `Automático, ${label}` : label
 
   if (compact) {
-    const next = THEMES[(THEMES.findIndex((t) => t.id === resolved) + 1) % THEMES.length]
-    const label = `Tema: ${current.label}. Cambiar a ${next.label}`
+    const title = `Cambiar tema y tipografía. Ahora usas ${name}`
     return (
-      <Button variant="ghost" size="icon" className={className} onClick={() => setTheme(next.id)} title={label} aria-label={label}>
+      <Button variant="ghost" size="icon" onClick={() => openAppearance('tema')} title={title} aria-label={title}>
         <ThemeSwatch id={resolved} />
       </Button>
     )
   }
-
   return (
-    <div className={className}>
-      <p className="mb-1.5 flex items-baseline justify-between gap-2 text-[11.5px] text-zinc-500 dark:text-zinc-400">
-        Tema
-        <span className="truncate font-medium text-zinc-900 dark:text-zinc-100" title={theme === 'system' ? AUTO_LABEL : current.hint}>
-          {theme === 'system' ? `Automático, ${current.label}` : current.label}
-        </span>
-      </p>
-      <Segmented<ThemePreference>
-        label="Tema"
-        size="sm"
-        value={theme}
-        onChange={setTheme}
-        options={[
-          ...THEMES.map((t) => ({ value: t.id, label: <ThemeSwatch id={t.id} />, title: `${t.label}: ${t.hint}` })),
-          { value: 'system' as const, label: <Monitor className="size-3.5" aria-label={AUTO_LABEL} />, title: AUTO_LABEL },
-        ]}
-      />
-    </div>
+    <button
+      type="button"
+      onClick={() => openAppearance('tema')}
+      title={name}
+      className="flex h-8 w-full items-center gap-2 rounded-lg px-2.5 text-[12px] text-zinc-500 transition-colors hover:bg-zinc-900/[0.03] hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-100/[0.04] dark:hover:text-zinc-100"
+    >
+      <ThemeSwatch id={resolved} />
+      Apariencia
+      <span className="ml-auto truncate font-medium text-zinc-900 dark:text-zinc-100">{label}</span>
+    </button>
   )
 }

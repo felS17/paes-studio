@@ -3,13 +3,16 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { Menu, PanelRight } from 'lucide-react'
 import { Inspector } from '@/components/inspector/Inspector'
 import { Button } from '@/components/ui/button'
+import { useUiFont } from '@/hooks/useUiFont'
 import { useExamRoute, useSidebar } from '@/hooks/useWorkspace'
 import { cn } from '@/lib/utils'
 import { useInspectorStore } from '@/store/useInspectorStore'
 import { useWorkspaceStore } from '@/store/useWorkspaceStore'
+import { AppearanceDialog } from './AppearanceDialog'
 import { Breadcrumbs } from './Breadcrumbs'
 import { Footer } from './Footer'
 import { Sidebar } from './Sidebar'
+import { StatusBar } from './StatusBar'
 
 function Loading() {
   return (
@@ -51,8 +54,9 @@ function StageHeader() {
 
 /**
  * App Shell del espacio de trabajo: barra lateral, área de trabajo con desplazamiento propio e Inspector a la
- * derecha. El ExamRunner ocupa toda el área (trae su propia cabecera y pie) y en ensayo cronometrado activa el
- * Modo Zen y bloquea el Inspector.
+ * derecha, más la barra de estado abajo. El ExamRunner ocupa toda el área (trae su propia cabecera y pie), oculta la
+ * barra de estado, usa siempre la letra normal de examen y en ensayo cronometrado activa el Modo Zen y bloquea el
+ * Inspector.
  */
 export function AppShell() {
   const { pathname } = useLocation()
@@ -61,6 +65,7 @@ export function AppShell() {
   const setLocked = useInspectorStore((s) => s.setLocked)
   const setZenExpanded = useWorkspaceStore((s) => s.setZenExpanded)
   const stageRef = useRef<HTMLElement>(null)
+  useUiFont()
 
   // El desplazamiento vive en el área de trabajo: cada vista nueva parte desde arriba.
   useEffect(() => {
@@ -85,30 +90,34 @@ export function AppShell() {
 
   return (
     // `relative` aquí y en <main>: sin él, los hijos absolutos (como `sr-only`) escapan del recorte y estiran la ventana.
-    <div className="relative flex h-dvh overflow-hidden bg-canvas">
-      <Sidebar />
-      <div className="flex min-w-0 flex-1 flex-col">
-        {!running && <StageHeader />}
-        <div className="flex min-h-0 flex-1">
-          <main
-            ref={stageRef}
-            className={cn('relative flex min-h-0 min-w-0 flex-1 flex-col', running ? 'overflow-hidden' : 'overflow-y-auto')}
-          >
-            <div
-              className={cn(
-                'flex w-full flex-1 flex-col',
-                running ? 'min-h-0' : 'mx-auto max-w-[1280px] px-4 pt-6 pb-16 sm:px-6 lg:px-10 lg:pt-8',
-              )}
+    <div className="relative flex h-dvh flex-col overflow-hidden bg-canvas">
+      <div className="flex min-h-0 flex-1">
+        <Sidebar />
+        <div className="flex min-w-0 flex-1 flex-col">
+          {!running && <StageHeader />}
+          <div className="flex min-h-0 flex-1">
+            <main
+              ref={stageRef}
+              className={cn('relative flex min-h-0 min-w-0 flex-1 flex-col', running ? 'overflow-hidden' : 'overflow-y-auto')}
             >
-              <Suspense fallback={<Loading />}>
-                <Outlet />
-              </Suspense>
-            </div>
-            {!running && <Footer />}
-          </main>
-          <Inspector />
+              <div
+                className={cn(
+                  'flex w-full flex-1 flex-col',
+                  running ? 'min-h-0' : 'mx-auto max-w-[1280px] px-4 pt-6 pb-16 sm:px-6 lg:px-10 lg:pt-8',
+                )}
+              >
+                <Suspense fallback={<Loading />}>
+                  <Outlet />
+                </Suspense>
+              </div>
+              {!running && <Footer />}
+            </main>
+            <Inspector />
+          </div>
         </div>
       </div>
+      {!running && <StatusBar />}
+      <AppearanceDialog />
     </div>
   )
 }

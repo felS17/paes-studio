@@ -3,9 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: 'Geist Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: 'Geist Variable', 'Geist', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Newsreader Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   --animate-fade-in: fade-in 160ms ease-out;
   --animate-pop: pop 180ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
@@ -134,6 +134,244 @@
   --color-zinc-950: #211c18;
 }
 
+/*
+ * Paletas de editor. Igual que en GitHub Dark, cada una reescribe las escalas de Tailwind: zinc-100 es el texto,
+ * zinc-400 el secundario, zinc-800 los bordes y zinc-900 el texto sobre un botón claro o sobre el acento.
+ */
+[data-theme='catppuccin-mocha'] {
+  --canvas: #1e1e2e;
+  --surface: #181825;
+  --accent: #b4befe;
+  --progress: #cba6f7;
+  --color-white: #eff1fb;
+  --color-zinc-50: #e2e7f8;
+  --color-zinc-100: #cdd6f4;
+  --color-zinc-200: #bac2de;
+  --color-zinc-300: #a6adc8;
+  --color-zinc-400: #9399b2;
+  --color-zinc-500: #7f849c;
+  --color-zinc-600: #6c7086;
+  --color-zinc-700: #585b70;
+  --color-zinc-800: #45475a;
+  --color-zinc-900: #252538;
+  --color-zinc-950: #11111b;
+  --color-emerald-100: #d5f2d2;
+  --color-emerald-300: #a6e3a1;
+  --color-emerald-400: #a6e3a1;
+  --color-emerald-500: #a6e3a1;
+  --color-emerald-600: #7fc27a;
+  --color-rose-100: #fbd5df;
+  --color-rose-300: #f5a6bd;
+  --color-rose-400: #f38ba8;
+  --color-rose-500: #f38ba8;
+  --color-rose-600: #c4557a;
+  --color-amber-400: #f9e2af;
+  --color-amber-500: #f9e2af;
+}
+
+[data-theme='tokyo-night'] {
+  --canvas: #1a1b26;
+  --surface: #16161e;
+  --accent: #7aa2f7;
+  --progress: #7dcfff;
+  --color-white: #e6ebff;
+  --color-zinc-50: #d5dcfa;
+  --color-zinc-100: #c0caf5;
+  --color-zinc-200: #a9b1d6;
+  --color-zinc-300: #9aa5ce;
+  --color-zinc-400: #8b94bd;
+  --color-zinc-500: #737aa2;
+  --color-zinc-600: #565f89;
+  --color-zinc-700: #414868;
+  --color-zinc-800: #2f3549;
+  --color-zinc-900: #20212e;
+  --color-zinc-950: #101014;
+  --color-emerald-100: #d7eab8;
+  --color-emerald-300: #b9e08a;
+  --color-emerald-400: #9ece6a;
+  --color-emerald-500: #9ece6a;
+  --color-emerald-600: #73a044;
+  --color-rose-100: #fcd3da;
+  --color-rose-300: #fa9db0;
+  --color-rose-400: #f7768e;
+  --color-rose-500: #f7768e;
+  --color-rose-600: #c0495f;
+  --color-amber-400: #e0af68;
+  --color-amber-500: #e0af68;
+}
+
+[data-theme='gruvbox-dark'] {
+  --canvas: #282828;
+  --surface: #1d2021;
+  --accent: #fabd2f;
+  --progress: #fe8019;
+  --color-white: #fbf1c7;
+  --color-zinc-50: #f2e5bc;
+  --color-zinc-100: #ebdbb2;
+  --color-zinc-200: #d5c4a1;
+  --color-zinc-300: #bdae93;
+  --color-zinc-400: #a89984;
+  --color-zinc-500: #928374;
+  --color-zinc-600: #7c6f64;
+  --color-zinc-700: #665c54;
+  --color-zinc-800: #504945;
+  --color-zinc-900: #32302f;
+  --color-zinc-950: #141617;
+  --color-emerald-100: #e4e6a0;
+  --color-emerald-300: #c9cc4a;
+  --color-emerald-400: #b8bb26;
+  --color-emerald-500: #b8bb26;
+  --color-emerald-600: #98971a;
+  --color-rose-100: #fdc8bf;
+  --color-rose-300: #fc8374;
+  --color-rose-400: #fb6a56;
+  --color-rose-500: #fb4934;
+  --color-rose-600: #cc241d;
+  --color-amber-400: #fabd2f;
+  --color-amber-500: #fabd2f;
+}
+
+[data-theme='nord'] {
+  --canvas: #2e3440;
+  --surface: #3b4252;
+  --accent: #88c0d0;
+  --progress: #81a1c1;
+  --color-white: #f5f7fa;
+  --color-zinc-50: #f2f4f8;
+  --color-zinc-100: #eceff4;
+  --color-zinc-200: #e5e9f0;
+  --color-zinc-300: #d8dee9;
+  --color-zinc-400: #c0c8d6;
+  --color-zinc-500: #97a1b3;
+  --color-zinc-600: #76819a;
+  --color-zinc-700: #5d6880;
+  --color-zinc-800: #4c566a;
+  --color-zinc-900: #3b4252;
+  --color-zinc-950: #272c36;
+  --color-emerald-100: #dbe6d0;
+  --color-emerald-300: #b7cfa3;
+  --color-emerald-400: #b4cf9c;
+  --color-emerald-500: #a3be8c;
+  --color-emerald-600: #7f9c68;
+  --color-rose-100: #f2d4d7;
+  --color-rose-300: #e09aa1;
+  --color-rose-400: #e39ea5;
+  --color-rose-500: #bf616a;
+  --color-rose-600: #a54e57;
+  --color-amber-400: #ebcb8b;
+  --color-amber-500: #ebcb8b;
+}
+
+/* Rosé Pine no trae verde: su color de «agregado» es la espuma, y esa marca aquí lo correcto. */
+[data-theme='rose-pine'] {
+  --canvas: #191724;
+  --surface: #1f1d2e;
+  --accent: #ebbcba;
+  --progress: #9ccfd8;
+  --color-white: #f2f1fb;
+  --color-zinc-50: #efeefb;
+  --color-zinc-100: #e0def4;
+  --color-zinc-200: #cfcce6;
+  --color-zinc-300: #bdb9d6;
+  --color-zinc-400: #a5a1bf;
+  --color-zinc-500: #908caa;
+  --color-zinc-600: #6e6a86;
+  --color-zinc-700: #524f67;
+  --color-zinc-800: #403d52;
+  --color-zinc-900: #26233a;
+  --color-zinc-950: #12101a;
+  --color-emerald-100: #d5ebef;
+  --color-emerald-300: #b4dde3;
+  --color-emerald-400: #9ccfd8;
+  --color-emerald-500: #9ccfd8;
+  --color-emerald-600: #5f9fae;
+  --color-rose-100: #fad2dd;
+  --color-rose-300: #f29ab3;
+  --color-rose-400: #eb6f92;
+  --color-rose-500: #eb6f92;
+  --color-rose-600: #b4486a;
+  --color-amber-400: #f6c177;
+  --color-amber-500: #f6c177;
+}
+
+[data-theme='dracula'] {
+  --canvas: #282a36;
+  --surface: #1e1f29;
+  --accent: #bd93f9;
+  --progress: #ff79c6;
+  --color-white: #fbfbf7;
+  --color-zinc-50: #fbfbf7;
+  --color-zinc-100: #f8f8f2;
+  --color-zinc-200: #e4e4e0;
+  --color-zinc-300: #cbccd2;
+  --color-zinc-400: #a6acc8;
+  --color-zinc-500: #8d96b8;
+  --color-zinc-600: #6272a4;
+  --color-zinc-700: #525675;
+  --color-zinc-800: #44475a;
+  --color-zinc-900: #303241;
+  --color-zinc-950: #16171f;
+  --color-emerald-100: #c5fdd2;
+  --color-emerald-300: #83fba3;
+  --color-emerald-400: #50fa7b;
+  --color-emerald-500: #50fa7b;
+  --color-emerald-600: #2fc257;
+  --color-rose-100: #ffd0d0;
+  --color-rose-300: #ff8a8a;
+  --color-rose-400: #ff6e6e;
+  --color-rose-500: #ff5555;
+  --color-rose-600: #cc3d3d;
+  --color-amber-400: #ffb86c;
+  --color-amber-500: #ffb86c;
+}
+
+/* El mapa de actividad de las paletas de editor sube desde el fondo hasta su acento. */
+[data-theme='catppuccin-mocha'],
+[data-theme='tokyo-night'],
+[data-theme='gruvbox-dark'],
+[data-theme='nord'],
+[data-theme='rose-pine'],
+[data-theme='dracula'] {
+  --heat-0: var(--color-zinc-800);
+  --heat-1: color-mix(in oklab, var(--accent) 32%, var(--canvas));
+  --heat-2: color-mix(in oklab, var(--accent) 55%, var(--canvas));
+  --heat-3: color-mix(in oklab, var(--accent) 78%, var(--canvas));
+  --heat-4: var(--accent);
+  --heat-edge: rgba(255, 255, 255, 0.06);
+}
+
+/*
+ * Tipografía de interfaz (`settings.uiFont`, en `data-font`). Durante un ExamRunner `useUiFont` deja siempre `geist`,
+ * que no tiene regla aquí: así las preguntas, los diálogos del ensayo y todo lo demás quedan en la letra normal.
+ */
+[data-font='space-grotesk'] {
+  --font-sans: 'Space Grotesk', 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+}
+[data-font='jetbrains-mono'] {
+  --font-sans: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+}
+[data-font='fira-code'] {
+  --font-sans: 'Fira Code', ui-monospace, monospace;
+  --font-mono: 'Fira Code', ui-monospace, monospace;
+}
+[data-font='ibm-plex-mono'] {
+  --font-sans: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+/* Los rasgos `ss01` y `cv11` son de Geist: en otra fuente cambiarían letras que no queremos tocar. */
+[data-font='space-grotesk'],
+[data-font='jetbrains-mono'],
+[data-font='fira-code'],
+[data-font='ibm-plex-mono'] {
+  font-feature-settings: normal;
+}
+/* Una fuente mono es más ancha: apretarla un poco evita que los menús se rompan. */
+[data-font='jetbrains-mono'] body,
+[data-font='fira-code'] body,
+[data-font='ibm-plex-mono'] body {
+  letter-spacing: -0.02em;
+}
+
 @layer base {
   html {
     -webkit-font-smoothing: antialiased;
@@ -184,6 +422,8 @@
   .snapshot-mono { @apply dark:[filter:invert(0.93)_hue-rotate(180deg)]; }
   /* En Papel Cálido el blanco del recorte se funde con el papel. */
   [data-theme='paper'] .snapshot-mono { mix-blend-mode: multiply; }
+  /* En los temas oscuros con fondo más claro (Nord, Dracula…) el negro invertido no debe verse como un recuadro. */
+  .dark .snapshot-mono { mix-blend-mode: lighten; }
 }
 
 /* KaTeX hereda el color del texto. */

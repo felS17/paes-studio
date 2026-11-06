@@ -156,7 +156,7 @@ function SidebarBody({ rail, header }: { rail: boolean; header: React.ReactNode 
       </nav>
       <div className={cn('mt-3 space-y-2 border-t border-zinc-200/80 pt-3 dark:border-zinc-800/80', rail ? 'px-3' : 'px-2.5')}>
         <StorageStatus rail={rail} />
-        {rail ? <ThemeToggle compact /> : <ThemeToggle className="mx-2.5" />}
+        <ThemeToggle compact={rail} />
       </div>
     </>
   )
@@ -209,7 +209,7 @@ export function Sidebar() {
     <aside
       inert={hidden}
       className={cn(
-        'h-dvh shrink-0 overflow-hidden transition-[width] duration-200 ease-out',
+        'h-full shrink-0 overflow-hidden transition-[width] duration-200 ease-out',
         hidden ? 'w-0' : rail ? 'w-14 border-r' : 'w-60 border-r',
         SURFACE,
       )}

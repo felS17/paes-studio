@@ -1,10 +1,12 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { ReaderSettings, ThemePreference, UserSettings } from '@/types/user'
+import type { ReaderSettings, ThemePreference, UiFontId, UserSettings } from '@/types/user'
 import { persistStorage } from './storage'
 
 interface SettingsState extends UserSettings {
   setTheme: (theme: ThemePreference) => void
+  setUiFont: (font: UiFontId) => void
+  setNebulaPaused: (paused: boolean) => void
   setReader: (patch: Partial<ReaderSettings>) => void
   setSplitRatio: (ratio: number) => void
   setShowShortcutHints: (value: boolean) => void
@@ -17,11 +19,15 @@ export const useSettingsStore = create<SettingsState>()(
   persist(
     (set) => ({
       theme: 'system',
-      reader: { font: 'serif', size: 16, paragraphNumbers: true },
+      uiFont: 'geist',
+      nebulaPaused: null,
+      reader: { font: 'sans', size: 16, paragraphNumbers: true },
       splitRatio: 0.52,
       showShortcutHints: true,
       sidebarCollapsed: false,
       setTheme: (theme) => set({ theme }),
+      setUiFont: (uiFont) => set({ uiFont }),
+      setNebulaPaused: (nebulaPaused) => set({ nebulaPaused }),
       setReader: (patch) => set((s) => ({ reader: { ...s.reader, ...patch } })),
       setSplitRatio: (ratio) => set({ splitRatio: Math.min(0.7, Math.max(0.3, ratio)) }),
       setShowShortcutHints: (value) => set({ showShortcutHints: value }),
@@ -30,12 +36,14 @@ export const useSettingsStore = create<SettingsState>()(
     {
       name: 'settings',
       storage: persistStorage,
-      version: 2,
-      // Antes de los 4 temas se guardaba `light` o `dark`.
-      migrate: (state) => {
+      version: 3,
+      migrate: (state, version) => {
         const saved = state as Omit<Partial<SettingsState>, 'theme'> & { theme?: string }
+        // Antes de los temas con nombre se guardaba `light` o `dark`.
         const theme = saved.theme === 'light' ? 'geist-light' : saved.theme === 'dark' ? 'geist-dark' : saved.theme
-        return { ...saved, theme: theme ?? 'system' } as SettingsState
+        // Desde la v2.3 la lectura del ensayo parte en la letra normal de examen; el botón Serif/Sans sigue ahí.
+        const reader = version < 3 && saved.reader ? { ...saved.reader, font: 'sans' as const } : saved.reader
+        return { ...saved, theme: theme ?? 'system', ...(reader && { reader }) } as SettingsState
       },
     },
   ),
