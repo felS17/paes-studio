@@ -1,0 +1,1388 @@
+{
+ "id": "m2-2026-regular",
+ "subject": "m2",
+ "title": "PAES Regular 2025",
+ "description": "Selección oficial de 37 de las 55 preguntas de Competencia Matemática 2 (M2), aplicada el 01-12-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2025,
+ "admissionYear": 2026,
+ "modality": "regular",
+ "source": "demre",
+ "form": "193",
+ "appliedOn": "2025-12-01",
+ "durationMinutes": 95,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   196,
+   223,
+   248,
+   271,
+   292,
+   312,
+   330,
+   349,
+   366,
+   382,
+   396,
+   409,
+   423,
+   438,
+   453,
+   467,
+   479,
+   489,
+   499,
+   511,
+   524,
+   538,
+   552,
+   564,
+   574,
+   583,
+   592,
+   603,
+   617,
+   631,
+   645,
+   657,
+   667,
+   677,
+   688,
+   701,
+   716,
+   731,
+   746,
+   759,
+   772,
+   786,
+   803,
+   821,
+   838,
+   857,
+   876,
+   897,
+   1000
+  ],
+  "officialQuestionCount": 55,
+  "officialScorableCount": 49
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-11-06",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-2026-regular-q01",
+   "number": 1,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Una máquina industrial que produce piezas de acero de un mismo tipo necesita 1,2 kg\n\nde acero para producir 10 de estas piezas.\n\nSi la máquina se programa para reducir en ⁴ la cantidad de acero necesaria para 15 producir cada pieza, ¿cuántas barras de medio kilogramo de acero se necesitan para\n\nproducir 50 piezas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3"
+    },
+    {
+     "key": "B",
+     "text": "4"
+    },
+    {
+     "key": "C",
+     "text": "8"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q01.webp",
+    "width": 907,
+    "height": 432,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-cuadraticas"
+  },
+  {
+   "id": "m2-2026-regular-q02",
+   "number": 2,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "Considera un número P al que se le resta su octava parte, obteniéndose el número Q.\n\n¿Cuál de los siguientes números hay que sumarle a Q para obtener P?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "8 Q 1"
+    },
+    {
+     "key": "B",
+     "text": "7 Q 7"
+    },
+    {
+     "key": "C",
+     "text": "8 Q 8"
+    },
+    {
+     "key": "D",
+     "text": "7 Q"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q02.webp",
+    "width": 907,
+    "height": 454,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-cuadraticas"
+  },
+  {
+   "id": "m2-2026-regular-q03",
+   "number": 3,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Una hoja de 20 por 30 centímetros está hecha de un papel cuya masa es de 75 g por\n\nmetro cuadrado. Estas hojas se empaquetan en resmas de 500 hojas y se guardan\n\nen cajas de cartón que tienen una masa de 500 g cuando están vacías.\n\nSi la masa de una caja con resmas no puede superar los 25 kilogramos, ¿cuál es\n\nla mayor masa, en gramos, que tiene una caja con la máxima cantidad de resmas\n\nguardadas en ella?",
+   "options": [
+    {
+     "key": "A",
+     "text": "22 500"
+    },
+    {
+     "key": "B",
+     "text": "23 000"
+    },
+    {
+     "key": "C",
+     "text": "24 750"
+    },
+    {
+     "key": "D",
+     "text": "25 000"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q03.webp",
+    "width": 907,
+    "height": 443,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-homotecia"
+  },
+  {
+   "id": "m2-2026-regular-q05",
+   "number": 5,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Al aumentar el precio del combustible, una empresa que presta un servicio de\n\ntransporte de carga debe ajustar el precio que cobra. Para ello calcula el porcentaje de aumento de su tarifa como Q · F, tal que Q es el porcentaje de aumento del precio\n\ndel combustible y F es un factor que depende de la masa máxima autorizada del\n\nvehículo.\n\nEl factor que se debe aplicar se obtiene de la siguiente tabla:\n\nMasa máxima autorizada del vehículo Factor aplicado al porcentaje de\n\n(en toneladas) aumento del combustible (F)\n\nMenor que 3,5 0,1\n\nMayor o igual que 3,5 y menor que 20 0,2\n\nMayor o igual que 20 0,3\n\nLa empresa tiene un vehículo de carga cuya masa máxima autorizada es de\n\n3 toneladas por el cual cobra una tarifa de \\$200 000 por servicio de transporte de\n\ncarga a una ciudad.\n\nSi el porcentaje de aumento del precio del combustible es de un 7 %, ¿cuál de las\n\nsiguientes expresiones permite obtener el precio ajustado que se tiene que cobrar por\n\nel servicio de transporte de carga?\n\n\\$200 000 · ⁷",
+   "options": [
+    {
+     "key": "A",
+     "text": "100 ·⁰,¹"
+    },
+    {
+     "key": "B",
+     "text": "\\$200 000 · 7 · 0,1 Å ã 200 000 + 2000 · ⁷"
+    },
+    {
+     "key": "C",
+     "text": "\\$ 100 ·⁰,¹"
+    },
+    {
+     "key": "D",
+     "text": "\\$(200 000 + 2000 · 7 · 0,1)"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q05.webp",
+    "width": 907,
+    "height": 977,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-financiera"
+  },
+  {
+   "id": "m2-2026-regular-q06",
+   "number": 6,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "En el modelo RGB se utilizan combinaciones de tres colores primarios (rojo, verde y\n\nazul) con valores entre 0 y 255 para representar la intensidad de cada color, tal como\n\nse ejemplifica a continuación:\n\nEn los colores grises, los tres niveles de intensidad son iguales, por lo que cuando se\n\nnecesita convertir colores a escala de grises, se promedian los tres niveles y se repite\n\nel mismo valor en cada coordenada. Por ejemplo, el color (40, 30, 200) quedaría en\n\nel gris (90, 90, 90).\n\nPor otro lado, cada gris en el modelo RGB se puede expresar como porcentaje\n\nmediante una escala lineal en la que el blanco corresponde al 0 % y el negro al 100 %,\n\ntal como se representa a continuación:\n\n¿Cuál es el porcentaje en escala de grises del color (60, 40, 70)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "22,¯2 %"
+    },
+    {
+     "key": "B",
+     "text": "33,¯3 %"
+    },
+    {
+     "key": "C",
+     "text": "66,¯6 %"
+    },
+    {
+     "key": "D",
+     "text": "77,¯7 %"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q06.webp",
+    "width": 907,
+    "height": 978,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-combinatoria"
+  },
+  {
+   "id": "m2-2026-regular-q07",
+   "number": 7,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "Un fabricante produce envases cilíndricos de distintos tamaños a pedido. Por razones\n\nde estabilidad de los envases, el radio de la base circular es determinado por la altura.\n\nEl volumen V de cada envase cilíndrico producido se calcula con la siguiente ecuación:\n\nV = h³ · π · 0,64,\n\ntal que h es la altura del envase.\n\nSi el volumen de un cilindro se calcula multiplicando su área basal circular por\n\nsu altura, ¿cuál de las siguientes opciones describe qué porcentaje de la altura\n\ncorresponde al radio de la base?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8 %"
+    },
+    {
+     "key": "B",
+     "text": "36 %"
+    },
+    {
+     "key": "C",
+     "text": "64 %"
+    },
+    {
+     "key": "D",
+     "text": "80 %"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q07.webp",
+    "width": 907,
+    "height": 605,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-homotecia"
+  },
+  {
+   "id": "m2-2026-regular-q12",
+   "number": 12,
+   "axis": "Álgebra y funciones",
+   "topic": "Ecuaciones",
+   "stem": "El diámetro de un determinado hongo, en milímetros, se puede calcular mediante la\n\nk expresión 1 + ce⁻mt, tal que t es el tiempo traⁿscurrido, eⁿ días, k es el diámetro máximo del hongo, en milímetros, c, m y e son constantes positivas, tal que c < 1.\n\nPara determinar la cantidad de días que deben transcurrir para que el diámetro del hongo sea de 0,5 · k milímetros, se realiza el siguiente procedimiento, cometiéndose\n\nun error.\n\nk **Paso 1:** se establece la ecuación k 2 = 1 + ce⁻mt y se obtieⁿe¹ ⁺ ce⁻mt = ². **Paso 2:** se desarrolla la ecuación anterior y se obtiene c⁻¹ = e⁻mt.\n\n**Paso 3:** se aplica logaritmo a ambos lados de la igualdad anterior, luego en\n\nel lado izquierdo se aplican propiedades de logaritmos y se obtiene −log c = log e⁻mt.\n\n**Paso 4:** se despeja el tiempo t de la ecuación anterior y se obtiene t = log (c −em)\n\ndías.\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q12.webp",
+    "width": 907,
+    "height": 826,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-logaritmos"
+  },
+  {
+   "id": "m2-2026-regular-q14",
+   "number": 14,
+   "axis": "Números",
+   "topic": "Interés",
+   "stem": "Una entidad financiera ofrece dos tipos de cuentas de ahorro, una tipo P y otra tipo Q.\n\nLa cuenta de ahorro tipo P considera un interés compuesto mensual de un 0,5 %,\n\nmientras que la cuenta de ahorro tipo Q considera un interés anual de un 5 %.\n\nSi en ambas cuentas se deposita un monto inicial de \\$M y no se hacen retiros\n\nni depósitos, ¿en cuánto supera el interés obtenido en la cuenta tipo P al interés\n\nobtenido en la cuenta tipo Q transcurrido un año?\n\n\\$M · (0,05¹² −0,5)",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": "\\$M · (1,005 −1,05)¹² \\$M · (1,005¹² −1,05)"
+    },
+    {
+     "key": "C",
+     "text": "\\$M · (0,005¹² −0,05)"
+    },
+    {
+     "key": "D",
+     "text": "Å ã"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q14.webp",
+    "width": 907,
+    "height": 686,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-financiera"
+  },
+  {
+   "id": "m2-2026-regular-q15",
+   "number": 15,
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "stem": "(x−2)+ ¹ ¿Cuál de las siguientes expresiones es igual a x(x + 2) 3⁽x²⁻²x ⁺ ⁴⁾ ?\n\nx",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 ⁽x ⁺ ²⁾²⁽x⁻¹⁾ x �x² −4"
+    },
+    {
+     "key": "B",
+     "text": "�(x −1) 3 x"
+    },
+    {
+     "key": "C",
+     "text": "3 ⁽x⁻²⁾²⁽x ⁺ ³⁾ �x² −4 �+ 1 �x² −2x + 4 �"
+    },
+    {
+     "key": "D",
+     "text": "x 3"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q15.webp",
+    "width": 907,
+    "height": 373,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-cuadraticas"
+  },
+  {
+   "id": "m2-2026-regular-q16",
+   "number": 16,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "La figura adjunta está formada por tres rectángulos contiguos cuyas bases tienen la\n\nmisma medida y la altura de cada rectángulo es un tercio mayor que la altura del\n\nrectángulo que está a su izquierda.\n\n¿Cuál de las siguientes expresiones representa el perímetro de la figura?\n\n20a",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 61a"
+    },
+    {
+     "key": "B",
+     "text": "9 22a"
+    },
+    {
+     "key": "C",
+     "text": "3 68a"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q16.webp",
+    "width": 907,
+    "height": 852,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-trigonometria"
+  },
+  {
+   "id": "m2-2026-regular-q17",
+   "number": 17,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "La densidad de un material se define como la razón entre su masa y su volumen.\n\nEn la tabla adjunta se presenta la densidad del hierro en dos estados.\n\nEstado Densidad\n\ng Líquido 7,3 cm³\n\ng Sólido 7,9 cm³\n\nConsidera un molde con forma de prisma recto de base rectangular cuyas medidas\n\ninteriores son 5 cm de ancho, 15 cm de largo y 10 cm de alto. Dicho molde se llena\n\ncon hierro líquido, el cual se solidifica luego de algunas horas.\n\nSi la masa del hierro no varía al pasar de un estado a otro, ¿cuál de las siguientes\n\nexpresiones representa el volumen del bloque de hierro solidificado?\n\n750 · 7,3",
+   "options": [
+    {
+     "key": "A",
+     "text": "cm³ 7,9 750 · 7,9"
+    },
+    {
+     "key": "B",
+     "text": "cm³ 7,3 750"
+    },
+    {
+     "key": "C",
+     "text": "7,3 · 7,9 cm³ 7,3 · 7,9"
+    },
+    {
+     "key": "D",
+     "text": "cm³ 750"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q17.webp",
+    "width": 907,
+    "height": 876,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-homotecia"
+  },
+  {
+   "id": "m2-2026-regular-q18",
+   "number": 18,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Considera un calamar de 4 kg que se mueve a una rapidez P y luego de liberar\n\n0,02 kg de agua se mueve a una rapidez Q.\n\nSi la rapidez con la cual se mueve el calamar es inversamente proporcional a su\n\nmasa, ¿cuál de las siguientes expresiones representa el porcentaje en que aumentó\n\nla rapidez del calamar luego de liberar el agua?\n\nÅ4 −0,02 ã",
+   "options": [
+    {
+     "key": "A",
+     "text": "· 100 % 4 Å ã 1 −⁴⁻⁰,⁰²"
+    },
+    {
+     "key": "B",
+     "text": "· 100 % 4 Å 4 ã"
+    },
+    {
+     "key": "C",
+     "text": "· 100 % 4 −0,02 Å 4 ã"
+    },
+    {
+     "key": "D",
+     "text": "· 100 % 4 −0,02 ⁻¹"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q18.webp",
+    "width": 907,
+    "height": 563,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-financiera"
+  },
+  {
+   "id": "m2-2026-regular-q19",
+   "number": 19,
+   "axis": "Álgebra y funciones",
+   "topic": "Inecuaciones",
+   "stem": "¿Cuál es el conjunto solución de la inecuación x⁻² + 7 −²x 3 <³x ⁺ ¹ ? 4 2\n\nò ï *−∞*, ⁷²",
+   "options": [
+    {
+     "key": "A",
+     "text": "41 ò72 ï"
+    },
+    {
+     "key": "B",
+     "text": "41,∞ ò76 ï"
+    },
+    {
+     "key": "C",
+     "text": "41,∞ ò ï *−∞*, ⁷⁶"
+    },
+    {
+     "key": "D",
+     "text": "41"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q19.webp",
+    "width": 907,
+    "height": 405,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-cuadraticas"
+  },
+  {
+   "id": "m2-2026-regular-q20",
+   "number": 20,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En un ciclo termodinámico, llamado ciclo de Carnot, un tipo de gas experimenta las\n\nsiguientes transferencias de calor:\n\n- Absorbe una cantidad Q¹ de calor a una temperatura constante T¹.\n\n- Cede una cantidad Q² de calor a una temperatura constante T².\n\nLa temperatura y el calor de ambos procesos cumplen la relación Q² = Q¹ . T² T¹\n\nPor otro lado, el rendimiento r del ciclo está dado por r = 1 −T² . T¹\n\nSi para cierto gas que experimenta el ciclo de Carnot se tiene que Q¹ = ³ 2Q², ¿cuál es el rendimiento de ese ciclo?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 1"
+    },
+    {
+     "key": "B",
+     "text": "2 2"
+    },
+    {
+     "key": "C",
+     "text": "3 3"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q20.webp",
+    "width": 907,
+    "height": 791,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-condicional"
+  },
+  {
+   "id": "m2-2026-regular-q21",
+   "number": 21,
+   "axis": "Números",
+   "topic": "Aproximación",
+   "stem": "Al generarse un sismo, se producen principalmente dos tipos de ondas sísmicas,\n\nlas ondas S y las ondas P.\n\nEn la corteza, las ondas S tienen una rapidez aproximada de 4 km y las ondas P s tienen una rapidez aproximada de 7 km . s\n\nSi una persona percibe una diferencia de 12 segundos entre la llegada de las ondas S\n\ny las ondas P, ¿a qué distancia de la localización de la persona se habría generado,\n\naproximadamente, el sismo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A 36 km"
+    },
+    {
+     "key": "B",
+     "text": "A 84 km"
+    },
+    {
+     "key": "C",
+     "text": "A 112 km"
+    },
+    {
+     "key": "D",
+     "text": "A 132 km"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q21.webp",
+    "width": 907,
+    "height": 545,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-reales"
+  },
+  {
+   "id": "m2-2026-regular-q22",
+   "number": 22,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "En un supermercado, el precio normal de una lata de un cierto tipo de atún es\n\nde \\$1500, pero durante esta semana, cada una de esas latas tendrá un 20 % de\n\ndescuento.\n\nUna persona destina cada semana entre \\$12 000 y \\$20 000, ambos valores incluidos,\n\npara comprar latas de este atún.\n\n¿Cuál de las siguientes desigualdades permite determinar la cantidad de latas x que\n\npodrá comprar la persona en la semana del descuento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12 000 ≤0,2 · 1500 · x ≤20 000"
+    },
+    {
+     "key": "B",
+     "text": "0,2 · 12 000 ≤1500 · x ≤0,2 · 20 000"
+    },
+    {
+     "key": "C",
+     "text": "12 000 ≤(1 −0,2) · 1500 · x ≤20 000"
+    },
+    {
+     "key": "D",
+     "text": "(1 −0,2) · 12 000 ≤1500 · x ≤(1 −0,2) · 20 000"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q22.webp",
+    "width": 907,
+    "height": 506,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-financiera"
+  },
+  {
+   "id": "m2-2026-regular-q24",
+   "number": 24,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "En una simulación, dos automóviles parten al mismo tiempo y en sentidos opuestos\n\ndesde dos lugares distintos de una carretera recta, tal como se representa en la\n\nsiguiente figura:\n\nSi el automóvil B viaja a una rapidez constante de 40 m y el punto P está a una s distancia de 180 km del punto donde partió el automóvil A, ¿cuál es la rapidez\n\nconstante que le permite al automóvil A llegar 20 minutos antes al punto P que el\n\nautomóvil B?\n\n16,6 m",
+   "options": [
+    {
+     "key": "A",
+     "text": "s 25 m"
+    },
+    {
+     "key": "B",
+     "text": "s 30 m"
+    },
+    {
+     "key": "C",
+     "text": "s 37,5 m"
+    },
+    {
+     "key": "D",
+     "text": "s"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q24.webp",
+    "width": 907,
+    "height": 773,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-trigonometria"
+  },
+  {
+   "id": "m2-2026-regular-q26",
+   "number": 26,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "Considera un cuadrado inscrito en otro cuadrado de lado p cm, tal como se representa\n\nen la figura adjunta.\n\nSi x > p y el área del cuadrado inscrito es ² del área del otro cuadrado, ¿cuál de las 2 3 siguientes expresiones representa el valor de x?\n\np √ Ä ä",
+   "options": [
+    {
+     "key": "A",
+     "text": "1 + 4 3 2 p √ Ä ä"
+    },
+    {
+     "key": "B",
+     "text": "1 + 4 6 2 p √ Ä ä"
+    },
+    {
+     "key": "C",
+     "text": "3 + 3 6 p √ Ä ä"
+    },
+    {
+     "key": "D",
+     "text": "3 + 6 6"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q26.webp",
+    "width": 907,
+    "height": 777,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-homotecia"
+  },
+  {
+   "id": "m2-2026-regular-q27",
+   "number": 27,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la siguiente gráfica de la función f, con dominio el conjunto de los números reales, definida por f(x) = ax² + bx + c, con a, b y c números reales, tal que a < −5.\n\nLa función g, con dominio el conjunto de los números reales, se obtiene al modificar los valores a, b y c de la función f, obteniéndose g(x) = −(a + 5)x² −bx + c + 1.\n\n¿Cuál de las siguientes opciones representa de mejor manera la gráfica asociada a la\n\nfunción g?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q27.webp",
+    "width": 907,
+    "height": 1139,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-inversa"
+  },
+  {
+   "id": "m2-2026-regular-q30",
+   "number": 30,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "En la figura adjunta se representa la gráfica de la función f, definida por f(x) = a · bx⁻², con a y b números reales positivos y distintos de cero.\n\n¿Cuál de las siguientes expresiones representa a f(x + 1)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4. · 3x⁻¹"
+    },
+    {
+     "key": "B",
+     "text": "3. · 4x⁻¹"
+    },
+    {
+     "key": "C",
+     "text": "4. · 3x⁻³"
+    },
+    {
+     "key": "D",
+     "text": "12. · 3x"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q30.webp",
+    "width": 907,
+    "height": 733,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-inversa"
+  },
+  {
+   "id": "m2-2026-regular-q31",
+   "number": 31,
+   "axis": "Álgebra y funciones",
+   "topic": "Dominio y recorrido",
+   "stem": "En una caverna, la intensidad I de la luz, en candelas, que se alcanza a una distancia\n\nd desde la entrada, en metros, se puede expresar como:\n\nI(d) = I⁰ · 2⁻⁰,¹d,\n\ntal que I⁰ es la intensidad de la luz en la entrada de la caverna, en candelas.\n\nCuando se han recorrido p metros desde la entrada de la caverna, la intensidad de\n\nla luz se ha reducido a la quinta parte de la intensidad de la luz con respecto a la\n\nintensidad de luz en la entrada de la caverna.\n\n¿Cuál de las siguientes expresiones representa a p?\n\nÅ1 ã",
+   "options": [
+    {
+     "key": "A",
+     "text": "−10 log² 5"
+    },
+    {
+     "key": "B",
+     "text": "−10 log² (5) Å4 ã"
+    },
+    {
+     "key": "C",
+     "text": "−10 log² 5 Å5 ã"
+    },
+    {
+     "key": "D",
+     "text": "−10 log² 4"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q31.webp",
+    "width": 907,
+    "height": 652,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-exponencial"
+  },
+  {
+   "id": "m2-2026-regular-q32",
+   "number": 32,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función f, definida por f(x) = 5 sen(x + π).\n\n�π � ¿Cuál es el valor de f ? 4 √ 2 −⁵",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 √ 2"
+    },
+    {
+     "key": "B",
+     "text": "− 2 √ 2"
+    },
+    {
+     "key": "C",
+     "text": "2 √ 5 2"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q32.webp",
+    "width": 907,
+    "height": 443,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-trigonometria"
+  },
+  {
+   "id": "m2-2026-regular-q34",
+   "number": 34,
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "stem": "El logo de una marca consiste en un rectángulo dividido en secciones de colores\n\namarillo y verde, tal como se representa a continuación:\n\nSi la altura del logo mide tres metros, ¿cuántos metros cuadrados de sección de color\n\namarillo se necesitan para armar este logo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,88"
+    },
+    {
+     "key": "B",
+     "text": "3,96"
+    },
+    {
+     "key": "C",
+     "text": "6,84"
+    },
+    {
+     "key": "D",
+     "text": "10,8"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q34.webp",
+    "width": 907,
+    "height": 773,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-trigonometria"
+  },
+  {
+   "id": "m2-2026-regular-q35",
+   "number": 35,
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "stem": "Se tiene un prisma recto de base rectangular cuya altura es de 2 cm y su volumen\n\nes Q 500 cm³.\n\n¿Cuál sería el volumen del prisma, en centímetros cúbicos, si el área de su superficie\n\nbasal se aumenta en un 20 %?\n\nQ",
+   "options": [
+    {
+     "key": "A",
+     "text": "12 500 Q"
+    },
+    {
+     "key": "B",
+     "text": "2500 3Q"
+    },
+    {
+     "key": "C",
+     "text": "1250 9Q"
+    },
+    {
+     "key": "D",
+     "text": "3125"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q35.webp",
+    "width": 907,
+    "height": 520,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-homotecia"
+  },
+  {
+   "id": "m2-2026-regular-q36",
+   "number": 36,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "Considera una estructura formada por dos prismas rectos de base rectangular de igual\n\nprofundidad, tal como se presenta a continuación:\n\n¿Cuánto mide la superficie total de la estructura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "48 m²"
+    },
+    {
+     "key": "B",
+     "text": "46 m²"
+    },
+    {
+     "key": "C",
+     "text": "44 m²"
+    },
+    {
+     "key": "D",
+     "text": "38 m²"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q36.webp",
+    "width": 907,
+    "height": 590,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-homotecia"
+  },
+  {
+   "id": "m2-2026-regular-q37",
+   "number": 37,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "→u = (a, 5b) y →v = (−2a, b + 4), para los cuales se Considera los vectores →u −2 →v = (9, 0). cumple que\n\n→z = →u + →v, se realiza el siguiente procedimiento, Para determinar el vector\n\ncometiéndose un error.\n\n→u y →v en la igualdad →u −2 →v = (9, 0), **Paso 1:** se reemplazan los valores de\n\nobteniéndose a + 4a = 9 y 5b + b + 4 = 0.\n\n**Paso 2:** se resuelven las ecuaciones a + 4a = 9 y 5b + b + 4 = 0, obteniéndose\n\na = ⁹ y b = −² . 5 3 →u y →v, obteniéndose **Paso 3:** los valores de a y b se reemplazan en los vectores\n\nÅ9 ã Å ã →u = →v = −¹⁸ 5,⁻¹⁰ y 5,¹⁰ . 3 3\n\nÅ ã →u + →v, obteniéndose →z = −⁹ **Paso 4:** se resuelve . 5,⁰\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q37.webp",
+    "width": 907,
+    "height": 811,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-analitica"
+  },
+  {
+   "id": "m2-2026-regular-q38",
+   "number": 38,
+   "axis": "Geometría",
+   "topic": "Transformaciones isométricas",
+   "stem": "A una figura se le aplica una reflexión con respecto al eje Y y luego a su imagen se le\n\naplica una traslación, tal como se representa a continuación:\n\nSe aplicará la misma secuencia de transformaciones a la flecha que se representa a\n\ncontinuación:\n\n¿Cuáles son las coordenadas del punto que se obtiene a partir del punto A, luego de\n\naplicar ambas transformaciones?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(−2a, a −2)"
+    },
+    {
+     "key": "B",
+     "text": "(a −2, −2a)"
+    },
+    {
+     "key": "C",
+     "text": "(−2a −5, a + 3)"
+    },
+    {
+     "key": "D",
+     "text": "(−2a −5, a −2)"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q38.webp",
+    "width": 907,
+    "height": 1084,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-analitica"
+  },
+  {
+   "id": "m2-2026-regular-q40",
+   "number": 40,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Un lente de un proyector se ubica a 1,2 m de distancia de un muro en el que se\n\nproyecta una imagen rectangular de 0,8 m de ancho por 0,6 m de alto, tal como se\n\nrepresenta en la siguiente figura:\n\nConsidera que la imagen proyectada proviene de un punto al centro del lente del\n\nproyector y que la imagen proyectada queda siempre centrada en el muro.\n\n¿Cuál es la distancia máxima que puede haber entre el muro y el lente del proyector\n\npara que la imagen proyectada no tenga dimensiones mayores que las del muro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 m"
+    },
+    {
+     "key": "B",
+     "text": "4,8 m"
+    },
+    {
+     "key": "C",
+     "text": "4 m"
+    },
+    {
+     "key": "D",
+     "text": "3,6 m"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q40.webp",
+    "width": 907,
+    "height": 855,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-analitica"
+  },
+  {
+   "id": "m2-2026-regular-q43",
+   "number": 43,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "En un curso se realizó una encuesta a un grupo de estudiantes sobre la cantidad de\n\nmascotas que tienen. Los resultados se presentaron en la siguiente tabla, la cual se\n\nmanchó por un descuido, ocultando la frecuencia de 3 y 4 mascotas.\n\nSe sabe que el promedio de la cantidad de mascotas es 2 y que la encuesta fue\n\ncontestada por 20 estudiantes.\n\n¿Cuál de los siguientes sistemas de ecuaciones permite calcular la cantidad x de\n\nestudiantes con tres mascotas y la cantidad y de estudiantes con cuatro mascotas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "14 + x + y = 20 14 + x + y = 2 5"
+    },
+    {
+     "key": "B",
+     "text": "14 + x + y = 20 18 + 3x + 4y = 2 5"
+    },
+    {
+     "key": "C",
+     "text": "14 + x + y = 20 18 + x + y = 2 20"
+    },
+    {
+     "key": "D",
+     "text": "14 + x + y = 20 18 + 3x + 4y = 2 20"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q43.webp",
+    "width": 907,
+    "height": 1006,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-dispersion"
+  },
+  {
+   "id": "m2-2026-regular-q44",
+   "number": 44,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Se consultó a un grupo de personas acerca de la edad que tenían. Al momento de\n\ntabular los datos, se perdió el dato correspondiente a la cantidad de personas menores\n\nde edad; solo se sabe que es una cantidad par y que es mayor que la cantidad de\n\npersonas mayores de edad. Lo obtenido se representó en el siguiente gráfico:\n\nSi luego de unos años se vuelve a realizar la encuesta a las mismas personas,\n\n¿cuál de las siguientes expresiones representa la cantidad mínima de personas que\n\ndeberían haber dejado de ser menores de edad para que la cantidad de personas\n\nmayores de edad sea mayor que la cantidad de personas menores de edad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Z −40"
+    },
+    {
+     "key": "B",
+     "text": "Z −39 Z"
+    },
+    {
+     "key": "C",
+     "text": "2 ⁻²⁰ Z"
+    },
+    {
+     "key": "D",
+     "text": "2 ⁻¹⁹"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q44.webp",
+    "width": 907,
+    "height": 916,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-dispersion"
+  },
+  {
+   "id": "m2-2026-regular-q47",
+   "number": 47,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "De acuerdo con una encuesta realizada a 3000 personas, 1830 de ellas manifiestan\n\nestar conforme con una política implementada en su comuna, mientras que el resto\n\nmanifiesta estar no conforme con dicha política.\n\nSi se seleccionan al azar a dos personas de las encuestadas, ¿cuál es la probabilidad\n\nde que solo una de ellas esté conforme con la política implementada?\n\n1830",
+   "options": [
+    {
+     "key": "A",
+     "text": "3000 1830"
+    },
+    {
+     "key": "B",
+     "text": "3000 · ¹¹⁷⁰ 3000 1 1"
+    },
+    {
+     "key": "C",
+     "text": "1830 · 1170 3660"
+    },
+    {
+     "key": "D",
+     "text": "3000 · ¹¹⁷⁰ 2999"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q47.webp",
+    "width": 907,
+    "height": 540,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-condicional"
+  },
+  {
+   "id": "m2-2026-regular-q49",
+   "number": 49,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "Considera que al responder una pregunta de verdadero y falso al azar, la probabilidad\n\nde contestarla correctamente es ¹ . 2\n\nSi se contestan al azar y de manera independiente 10 preguntas de verdadero y falso\n\nen una prueba, ¿cuál es la probabilidad de tener correctas exactamente 6 de esas\n\npreguntas?\n\nÇ ã⁶ Å1 ã⁴ 10 å Å1",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 2 2 Ç ã¹⁰ Å1 ã⁴ 10 å Å1"
+    },
+    {
+     "key": "B",
+     "text": "4 2 2 ã¹⁰ Å1 ã⁴ Å1"
+    },
+    {
+     "key": "C",
+     "text": "2 2 ã⁶ Å1 ã⁴ Å1"
+    },
+    {
+     "key": "D",
+     "text": "2 2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q49.webp",
+    "width": 907,
+    "height": 611,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-condicional"
+  },
+  {
+   "id": "m2-2026-regular-q50",
+   "number": 50,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Considera la función f que corresponde a una función densidad que se modela\n\nmediante una distribución normal con media µ y desviación estándar θ y la función g\n\nque corresponde a una función densidad que se modela mediante una distribución\n\nnormal con media µ + 0,3 y desviación estándar θ.\n\n¿En cuál de las siguientes opciones se representan de mejor forma las gráficas de las\n\nfunciones f y g?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q50.webp",
+    "width": 907,
+    "height": 1050,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-dispersion"
+  },
+  {
+   "id": "m2-2026-regular-q51",
+   "number": 51,
+   "axis": "Números",
+   "topic": "Números racionales",
+   "stem": "Considera los números irracionales p y q, tal que p̸ = q.\n\nSe puede determinar que (p + q)² es un número racional, si se sabe que:\n\n(1) p² = q²\n\n(2) p² y q² son números racionales",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q51.webp",
+    "width": 907,
+    "height": 501,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-suficiencia"
+  },
+  {
+   "id": "m2-2026-regular-q52",
+   "number": 52,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera el siguiente gráfico de una función f de la forma f(x) = bx, cuyo dominio corresponde al intervalo [−10, a], tal que a y b son constantes positivas.\n\nEs posible determinar que las áreas de los triángulos grises son iguales, si se sabe\n\nque:\n\n(1) f(−10) = −f(a)\n\nÅ−10 + a ã (2) f = 0 2",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q52.webp",
+    "width": 907,
+    "height": 867,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-suficiencia"
+  },
+  {
+   "id": "m2-2026-regular-q53",
+   "number": 53,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "En la figura adjunta se representa el suelo rectangular de una habitación, el cual tiene un área de 6 m². Parte del suelo se cubre con cuatro alfombras cuadradas de iguales\n\nmedidas entre sí, que se ubican una al lado de la otra, sin sobreponerlas y sin dejar\n\nespacios entre ellas, tal como se representa a continuación:\n\nSe puede determinar el área de cada alfombra, si se sabe que:\n\n(1) la razón de los lados del suelo es 8: 3.\n\n(2) la parte del suelo que queda sin cubrir es un tercio.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q53.webp",
+    "width": 907,
+    "height": 790,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-suficiencia"
+  },
+  {
+   "id": "m2-2026-regular-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Se puede determinar que el promedio de un grupo de datos positivos A es mayor que\n\nel promedio de un grupo de datos B, si se sabe que:\n\n(1) la varianza de los datos de A es mayor que la varianza de los datos\n\nde B.\n\n(2) el grupo de datos A está formado por el triple de cada uno de los datos\n\ndel grupo B.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-regular/q55.webp",
+    "width": 907,
+    "height": 512,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m2-suficiencia"
+  }
+ ]
+}

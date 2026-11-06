@@ -1,0 +1,1665 @@
+{
+ "id": "m1-2026-regular",
+ "subject": "m1",
+ "title": "PAES Regular 2025",
+ "description": "Selección oficial de 45 de las 65 preguntas de Competencia Matemática 1 (M1), aplicada el 03-12-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2025,
+ "admissionYear": 2026,
+ "modality": "regular",
+ "source": "demre",
+ "form": "113",
+ "appliedOn": "2025-12-03",
+ "durationMinutes": 95,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   170,
+   194,
+   216,
+   236,
+   256,
+   275,
+   292,
+   307,
+   320,
+   334,
+   349,
+   365,
+   380,
+   393,
+   403,
+   412,
+   421,
+   432,
+   446,
+   460,
+   474,
+   486,
+   495,
+   502,
+   508,
+   516,
+   526,
+   539,
+   553,
+   567,
+   579,
+   587,
+   595,
+   601,
+   609,
+   618,
+   631,
+   645,
+   660,
+   672,
+   682,
+   690,
+   699,
+   710,
+   723,
+   738,
+   753,
+   767,
+   780,
+   793,
+   807,
+   824,
+   842,
+   861,
+   880,
+   900,
+   923,
+   948,
+   975,
+   1000
+  ],
+  "officialQuestionCount": 65,
+  "officialScorableCount": 60
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-11-06",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m1-2026-regular-q01",
+   "number": 1,
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "stem": "En un juego hay dos tipos de cartas, unas tienen una estrella y las otras tienen un\n\ncorazón, todas con un número.\n\nEl puntaje de cada jugador se calcula de la siguiente forma:\n\n- Primero se extrae una carta al azar (carta inicial) y su valor se considera como\n\npuntaje inicial.\n\n- Luego, se extrae otra carta:\n\n◦si esta tiene una estrella, le debe restar el valor de la carta a su puntaje;\n\n◦si esta tiene un corazón, le debe sumar el valor de la carta a su puntaje.\n\n- El puntaje final se obtiene al repetir el procedimiento anterior, hasta tener diez\n\ncartas.\n\nUn jugador extrae las siguientes cartas, en este orden:\n\n¿Cuál es el puntaje final del jugador?",
+   "options": [
+    {
+     "key": "A",
+     "text": "−14"
+    },
+    {
+     "key": "B",
+     "text": "−4"
+    },
+    {
+     "key": "C",
+     "text": "3"
+    },
+    {
+     "key": "D",
+     "text": "11"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q01.webp",
+    "width": 907,
+    "height": 996,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-probabilidad"
+  },
+  {
+   "id": "m1-2026-regular-q02",
+   "number": 2,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Para preparar una receta, una persona necesita 700 g de carne picada, 1 kg de\n\nchampiñones y 2 cebollas.\n\nPara comprar los ingredientes la persona considera los siguientes precios:\n\n100 g de carne picada \\$900\n\n0,5 kg de champiñón \\$3500\n\n1 cebolla \\$200\n\n¿Cuánto dinero necesita la persona para comprar los ingredientes para esta receta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$4600"
+    },
+    {
+     "key": "B",
+     "text": "\\$8100"
+    },
+    {
+     "key": "C",
+     "text": "\\$10 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$13 700"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q02.webp",
+    "width": 907,
+    "height": 599,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-porcentajes"
+  },
+  {
+   "id": "m1-2026-regular-q03",
+   "number": 3,
+   "axis": "Álgebra y funciones",
+   "topic": "Dominio y recorrido",
+   "stem": "Un auto recorre 5 km para ir de la ciudad A a la ciudad B y recorre 25 km para ir de\n\nla ciudad B a la ciudad C.\n\nSi este auto rinde 10 kilómetros por litro, es decir, recorre 10 km con 1 litro de\n\nbencina, ¿cuál es la cantidad de litros de bencina que se necesitan para hacer el\n\nrecorrido de la ciudad A hasta la ciudad C de ida y vuelta, pasando ambas veces por\n\nla ciudad B?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2"
+    },
+    {
+     "key": "B",
+     "text": "3"
+    },
+    {
+     "key": "C",
+     "text": "4"
+    },
+    {
+     "key": "D",
+     "text": "6"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q03.webp",
+    "width": 907,
+    "height": 443,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-funcion-afin"
+  },
+  {
+   "id": "m1-2026-regular-q04",
+   "number": 4,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuál es el número cuya tercera parte es 0,09?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,7"
+    },
+    {
+     "key": "B",
+     "text": "0,3"
+    },
+    {
+     "key": "C",
+     "text": "0,27"
+    },
+    {
+     "key": "D",
+     "text": "0,03"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q04.webp",
+    "width": 907,
+    "height": 253,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q05",
+   "number": 5,
+   "axis": "Números",
+   "topic": "Fracciones",
+   "stem": "Para resolver la expresión − 6 · ⁻⁸ + 30 ⁺ ² 60 ⁻⁴ , una persona 12 10\n\nrealiza el siguiente procedimiento, cometiendo un error.\n\n**Paso 1:** simplifica una vez por 2 cada fracción de la expresión, obteniendo\n\n�2 � �1 � − 3 · ⁻⁴ + 15 ⁺ ¹ 30 ⁻² . 6 5\n\n�2 � **Paso 2:** desarrolla el primer paréntesis − 3 · ⁻⁴ , obteniendo 1. 6\n\n�1 � , obteniendo −³ **Paso 3:** desarrolla el segundo paréntesis 15 ⁺ ¹ 30 ⁻² . 5 10\n\n**Paso 4:** desarrolla 1 −³ , obteniendo ⁷ . 10 10\n\n¿En cuál de los pasos la persona cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q05.webp",
+    "width": 907,
+    "height": 871,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q11",
+   "number": 11,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La escalera de un edificio tiene 20 peldaños entre piso y piso. La altura de cada uno\n\nde estos peldaños es de 15 cm.\n\nUna persona empieza a subir por la escalera de este edificio, desde el primer peldaño\n\ndel primer piso.\n\nSi n es la cantidad de peldaños que la persona ha subido, ¿cuál de las siguientes\n\ncondiciones garantiza que la persona llegó a un nuevo piso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que 15 · n es divisible por 20."
+    },
+    {
+     "key": "B",
+     "text": "Que 15 + n es divisible por 20."
+    },
+    {
+     "key": "C",
+     "text": "Que 15 · n es divisible por 300."
+    },
+    {
+     "key": "D",
+     "text": "Que 15 + n es divisible por 300."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q11.webp",
+    "width": 907,
+    "height": 482,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q13",
+   "number": 13,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Algunas calculadoras tienen botones que permiten marcar dos ceros o tres ceros a la\n\nvez, tal como la que se representa en la imagen adjunta.\n\nDe esta manera, para marcar el número 1000, basta con presionar los siguientes\n\nbotones una vez cada uno:\n\n¿Cuál de las siguientes acciones permite marcar el número 10¹⁰?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Presionar una vez y siete veces ."
+    },
+    {
+     "key": "B",
+     "text": "Presionar una vez y ocho veces ."
+    },
+    {
+     "key": "C",
+     "text": "Presionar una vez , dos veces y dos veces ."
+    },
+    {
+     "key": "D",
+     "text": "Presionar una vez , tres veces y una vez ."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q13.webp",
+    "width": 907,
+    "height": 669,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q14",
+   "number": 14,
+   "axis": "Álgebra y funciones",
+   "topic": "Factorización",
+   "stem": "Una persona realiza el siguiente procedimiento para factorizar 12 + 20, cometiendo\n\nun error.\n\n**Paso 1:** escribe cada sumando como el producto de dos números, obteniendo 4 · 3 + 4 · 5.\n\n**Paso 2:** descompone cada factor en números primos, obteniendo 2 · 2 · 3 + 2 · 2 · 5.\n\n**Paso 3:** escribe las potencias correspondientes, obteniendo 2² · 3 + 2² · 5.\n\n**Paso 4:** factoriza la suma, obteniendo 2⁴ (3 + 5).\n\n¿En cuál de los pasos la persona cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q14.webp",
+    "width": 907,
+    "height": 688,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-expresiones"
+  },
+  {
+   "id": "m1-2026-regular-q15",
+   "number": 15,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Leonardo juega el siguiente juego:\n\nSe elige un número y luego se extraen dos tarjetas con operaciones: la primera de\n\nun mazo de color blanco y la segunda de un mazo de color gris. La operación de la\n\ntarjeta blanca se aplica sobre el número elegido y la operación de la tarjeta gris sobre\n\nel resultado obtenido.\n\nLeonardo extrae las siguientes tarjetas:\n\nSi eligió el número 2, ¿cuál de las siguientes expresiones corresponde a la correcta\n\naplicación de las instrucciones de las tarjetas en el orden en que las sacó?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(2 −5)³"
+    },
+    {
+     "key": "B",
+     "text": "3 · (2 −5)"
+    },
+    {
+     "key": "C",
+     "text": "3 · (5 −2)"
+    },
+    {
+     "key": "D",
+     "text": "(5 −2)³"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q15.webp",
+    "width": 907,
+    "height": 779,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q18",
+   "number": 18,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Si p es el 25 % de k, ¿cuál de las siguientes expresiones representa el valor de k?\n\n1 · p",
+   "options": [
+    {
+     "key": "A",
+     "text": "25 1 · p"
+    },
+    {
+     "key": "B",
+     "text": "75 100 · p"
+    },
+    {
+     "key": "C",
+     "text": "75 100 · p"
+    },
+    {
+     "key": "D",
+     "text": "25"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q18.webp",
+    "width": 907,
+    "height": 384,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-porcentajes"
+  },
+  {
+   "id": "m1-2026-regular-q19",
+   "number": 19,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "¿Cuánto es el 75 % del 75 % de 100?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5625"
+    },
+    {
+     "key": "B",
+     "text": "150"
+    },
+    {
+     "key": "C",
+     "text": "56,25"
+    },
+    {
+     "key": "D",
+     "text": "1,5"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q19.webp",
+    "width": 907,
+    "height": 252,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-porcentajes"
+  },
+  {
+   "id": "m1-2026-regular-q22",
+   "number": 22,
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "stem": "Se estimó que en el 2022 la cantidad de personas que les gustaba jugar videojuegos\n\nera de 3000 millones.\n\nSi en el 2023 la cantidad de personas que les gustaba jugar videojuegos aumentó en\n\n120 millones respecto al año anterior, ¿cuál es el porcentaje de aumento de ese año,\n\nrespecto del año anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,5 %"
+    },
+    {
+     "key": "B",
+     "text": "4 %"
+    },
+    {
+     "key": "C",
+     "text": "25 %"
+    },
+    {
+     "key": "D",
+     "text": "40 %"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q22.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-porcentajes"
+  },
+  {
+   "id": "m1-2026-regular-q23",
+   "number": 23,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "En el siguiente gráfico se presenta la electricidad total generada por diferentes\n\ntecnologías en Chile durante 2021.\n\nGeneradoras de Chile (2022). Cifras destacadas del sector generación en 2021.\n\n¿Cuál de las siguientes expresiones corresponde a la electricidad total generada\n\ndurante 2020?\n\n80 155",
+   "options": [
+    {
+     "key": "A",
+     "text": "104,5 GWh 80 155 · 100"
+    },
+    {
+     "key": "B",
+     "text": "GWh 104,5 80 155 · 104,5"
+    },
+    {
+     "key": "C",
+     "text": "GWh 100 80 155"
+    },
+    {
+     "key": "D",
+     "text": "104,5 · 100 GWh"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q23.webp",
+    "width": 907,
+    "height": 1098,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q24",
+   "number": 24,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Una tienda vendía un producto a \\$25 000. Como no se vendía lo suficiente, la tienda\n\nrebajó su precio un 20 %. Sin embargo, el precio rebajado no aumentó lo suficiente\n\nlas ventas, por lo que rebajaron un 25 % el precio ya rebajado.\n\n¿Cuál de las siguientes expresiones representa el precio del producto luego de los\n\ndos descuentos, en pesos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,2 · 0,25 · 25 000"
+    },
+    {
+     "key": "B",
+     "text": "(0,2 + 0,25) · 25 000"
+    },
+    {
+     "key": "C",
+     "text": "0,8 · 0,75 · 25 000"
+    },
+    {
+     "key": "D",
+     "text": "(0,8 + 0,75) · 25 000"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q24.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-porcentajes"
+  },
+  {
+   "id": "m1-2026-regular-q25",
+   "number": 25,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "El sueldo líquido mensual de una persona es de \\$M. Todos los meses, gasta las tres\n\nquintas partes y el resto lo ahorra.\n\nSi el sueldo líquido de la persona se mantiene fijo durante doce meses, ¿cuál de las\n\nsiguientes expresiones representa el ahorro, en pesos, de la persona en ese periodo\n\nde tiempo?\n\n2",
+   "options": [
+    {
+     "key": "A",
+     "text": "5M 24"
+    },
+    {
+     "key": "B",
+     "text": "5 M 36"
+    },
+    {
+     "key": "C",
+     "text": "5 M 57"
+    },
+    {
+     "key": "D",
+     "text": "5 M"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q25.webp",
+    "width": 907,
+    "height": 544,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-porcentajes"
+  },
+  {
+   "id": "m1-2026-regular-q26",
+   "number": 26,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "El ingreso y la ganancia de una empresa, ambos en pesos, se modelan con respecto\n\na la cantidad de artículos producidos (x) de la siguiente manera:\n\n- Ingreso: I(x) = 1000x + 600 000\n\n- Ganancia:G(x) = 750x + 450 000\n\nConsidera que la ganancia al producir x artículos se puede calcular como G(x) = I(x) −C(x), tal que C es la función de costo.\n\n¿Cuál es la función costo de la empresa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "C(x) = 250x + 150 000"
+    },
+    {
+     "key": "B",
+     "text": "C(x) = 250x −150 000"
+    },
+    {
+     "key": "C",
+     "text": "C(x) = 1750x −1 050 000"
+    },
+    {
+     "key": "D",
+     "text": "C(x) = 1750x + 1 050 000"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q26.webp",
+    "width": 907,
+    "height": 553,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-expresiones"
+  },
+  {
+   "id": "m1-2026-regular-q27",
+   "number": 27,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Una pista de baile de forma rectangular tiene dimensiones de (3x + 4) metros de largo y (2x −9) metros de ancho. Se cuenta con (20x + 20) metros de una cinta\n\nluminosa para demarcar el borde de la pista de baile.\n\n¿Cuántos metros de cinta luminosa sobran luego de demarcar el borde de la pista?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(10x + 30) metros"
+    },
+    {
+     "key": "B",
+     "text": "(10x + 10) metros"
+    },
+    {
+     "key": "C",
+     "text": "(15x + 15) metros"
+    },
+    {
+     "key": "D",
+     "text": "(15x + 25) metros"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q27.webp",
+    "width": 907,
+    "height": 367,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q28",
+   "number": 28,
+   "axis": "Números",
+   "topic": "Razones",
+   "stem": "Una persona descubrió que para lograr el color que le gusta para el glaseado de\n\ngalletas, debe mezclar gotas del colorante rojo con gotas del colorante amarillo en la\n\nrazón 3: 5, respectivamente.\n\nSi la persona usa 30 gotas de colorante amarillo para preparar el glaseado que le\n\ngusta, ¿cuántas gotas de color rojo deberá agregar para obtener el color que le gusta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "18"
+    },
+    {
+     "key": "B",
+     "text": "28"
+    },
+    {
+     "key": "C",
+     "text": "30"
+    },
+    {
+     "key": "D",
+     "text": "32"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q28.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-proporcionalidad"
+  },
+  {
+   "id": "m1-2026-regular-q30",
+   "number": 30,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Para cierta marca de alimentos, la cantidad p de kilogramos de comida que\n\ndebe comer un perro adulto, durante el día, se modela mediante la expresión p = m · 0,025, tal que m es la masa del perro, en kilogramos.\n\n¿Cómo se puede interpretar 0,025 en el modelo anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que el perro adulto debe consumir 25 gramos de alimento por cada kilogramo de su masa."
+    },
+    {
+     "key": "B",
+     "text": "Que el perro adulto debe consumir 250 gramos de alimento por cada kilogramo de su masa."
+    },
+    {
+     "key": "C",
+     "text": "Que la masa de un perro adulto es 25 veces la cantidad de alimento que debe consumir."
+    },
+    {
+     "key": "D",
+     "text": "Que la masa de un perro adulto es 250 veces la cantidad de alimento que debe consumir."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q30.webp",
+    "width": 907,
+    "height": 504,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q31",
+   "number": 31,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En la información nutricional de un paquete de galletas se indica que una porción de\n\n4 galletas contiene 180 kilocalorías.\n\nPara calcular cuántas kilocalorías K se ingieren al consumir este tipo de galletas se\n\npuede utilizar la fórmula K = ¹⁸⁰x , tal que x es la cantidad de galletas consumidas. 4\n\nUna persona consumió una cantidad de galletas de este tipo junto a un vaso de jugo\n\nque contiene 90 kilocalorías, ingiriendo en total 405 kilocalorías.\n\n¿Cuántas galletas consumió esta persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "9"
+    },
+    {
+     "key": "D",
+     "text": "11"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q31.webp",
+    "width": 907,
+    "height": 565,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q32",
+   "number": 32,
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "stem": "Daniela, con el dinero que tiene, compra en un bazar 7 lápices pasta del mismo\n\ntipo y le sobran \\$900. En el mismo bazar, Marcos, con el dinero que tiene, compra\n\n6 lápices pasta del mismo tipo que Daniela y le sobran \\$2330.\n\nSi Daniela y Marcos tienen la misma cantidad de dinero, ¿cuál es el precio de un\n\nlápiz pasta del mismo tipo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$110"
+    },
+    {
+     "key": "B",
+     "text": "\\$248"
+    },
+    {
+     "key": "C",
+     "text": "\\$1430"
+    },
+    {
+     "key": "D",
+     "text": "\\$3230"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q32.webp",
+    "width": 907,
+    "height": 413,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-porcentajes"
+  },
+  {
+   "id": "m1-2026-regular-q33",
+   "number": 33,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "En una ciudad se registró la cantidad de nacimientos desde el año 2019 al año 2021.\n\nAl relacionar estas cantidades con la cantidad x (en miles) de nacimientos del año\n\n2018, se encontraron las siguientes relaciones:\n\nAño Cantidad de nacimientos (en miles)\n\n2019 5x + 4\n\n2020 3x + 5\n\n2021 2 −x\n\nSi en esta ciudad, durante el año 2019 hubo una cantidad menor de nacimientos que\n\nla suma de los años 2020 y 2021, ¿cuál de las siguientes relaciones representa la\n\ninformación entregada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5x + 4 < 2x + 7"
+    },
+    {
+     "key": "B",
+     "text": "5x + 4 < 4x + 7"
+    },
+    {
+     "key": "C",
+     "text": "5x + 4 > 2x + 7"
+    },
+    {
+     "key": "D",
+     "text": "5x + 4 > 4x + 7"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q33.webp",
+    "width": 907,
+    "height": 597,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q34",
+   "number": 34,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "Dos jóvenes quieren iniciar un emprendimiento de fabricación y venta de helados. Las\n\nproyecciones de los gastos y de los ingresos, ambos acumulados, que deberían tener\n\nen los primeros 12 meses, se presentan en el siguiente gráfico:\n\n¿Qué representa el punto donde las rectas se intersecan?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Es el mes donde se obtiene la mayor cantidad de ingresos acumulados."
+    },
+    {
+     "key": "B",
+     "text": "Es el mes donde los ingresos acumulados igualan a los gastos acumulados."
+    },
+    {
+     "key": "C",
+     "text": "Es el mes desde cuando el emprendimiento no tendrá más gastos acumulados."
+    },
+    {
+     "key": "D",
+     "text": "Es el mes donde los ingresos acumulados son iguales a los gastos iniciales del emprendimiento."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q34.webp",
+    "width": 907,
+    "height": 903,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q35",
+   "number": 35,
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "stem": "Una persona gasta \\$13 500 en la compra de 8 kg de fruta entre manzanas y peras,\n\npagando \\$1500 por el kilogramo de manzanas y \\$1800 por el kilogramo de peras.\n\nEl siguiente sistema de ecuaciones modela la situación anterior:\n\n1500x + 1800y = 13 500 x + y = 8\n\n¿Qué representa la variable x en este sistema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cantidad de peras compradas"
+    },
+    {
+     "key": "B",
+     "text": "La cantidad de manzanas compradas"
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de kilogramos de peras compradas"
+    },
+    {
+     "key": "D",
+     "text": "La cantidad de kilogramos de manzanas compradas"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q35.webp",
+    "width": 907,
+    "height": 510,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-sistemas"
+  },
+  {
+   "id": "m1-2026-regular-q40",
+   "number": 40,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Un estanque contiene 720 litros de agua y, cada vez que se abre la llave, este se\n\nvacía a razón de 3 litros por minuto.\n\n¿Cuál de las siguientes funciones modela la cantidad de agua que queda en el\n\nestanque por cada minuto que la llave se encuentra abierta, tal que x son los minutos\n\ntranscurridos desde que se abre la llave?",
+   "options": [
+    {
+     "key": "A",
+     "text": "f(x) = −3x + 720"
+    },
+    {
+     "key": "B",
+     "text": "g(x) = 3x −720 p(x) = x⁻⁷²⁰"
+    },
+    {
+     "key": "C",
+     "text": "3 h(x) = ⁻x ⁺ ⁷²⁰"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q40.webp",
+    "width": 907,
+    "height": 508,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-funcion-afin"
+  },
+  {
+   "id": "m1-2026-regular-q41",
+   "number": 41,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Una persona dispone de un terreno de forma rectangular. Se sabe que el terreno tiene un área de 192 m² y que su ancho mide 4 m menos que su largo.\n\n¿Cuánto mide el largo del terreno?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12 m"
+    },
+    {
+     "key": "B",
+     "text": "16 m"
+    },
+    {
+     "key": "C",
+     "text": "20 m"
+    },
+    {
+     "key": "D",
+     "text": "24 m"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q41.webp",
+    "width": 907,
+    "height": 352,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-areas"
+  },
+  {
+   "id": "m1-2026-regular-q42",
+   "number": 42,
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "stem": "Considera la función cuadrática f con dominio el conjunto de los números reales.\n\nEn la siguiente figura se representa la gráfica de f con su eje de simetría.\n\nY\n\n7\n\n1 5 X\n\n¿Para cuál de los siguientes valores de x se tiene que f(x) = 7?",
+   "options": [
+    {
+     "key": "A",
+     "text": "4"
+    },
+    {
+     "key": "B",
+     "text": "−3"
+    },
+    {
+     "key": "C",
+     "text": "−4"
+    },
+    {
+     "key": "D",
+     "text": "−5"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q42.webp",
+    "width": 907,
+    "height": 603,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-cuadratica"
+  },
+  {
+   "id": "m1-2026-regular-q43",
+   "number": 43,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "La distancia d, en metros, que recorre un móvil que parte del reposo está dada por d(t) = a · t² , tal que t es el tiempo que demora en recorrer esa distancia, en 2 segundos, y a es la aceleración del móvil, en m s².\n\nSi el móvil acelera a 10 m s², ¿cuáⁿtos seguⁿdos tardará eⁿ recorrer uⁿa distaⁿcia de 45 metros?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3"
+    },
+    {
+     "key": "B",
+     "text": "4,5 √"
+    },
+    {
+     "key": "C",
+     "text": "45"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q43.webp",
+    "width": 907,
+    "height": 449,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q45",
+   "number": 45,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "En la figura adjunta se representa un trapecio rectángulo de área 0,76 m².\n\n¿Cuál es la medida de su altura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1,444 m"
+    },
+    {
+     "key": "B",
+     "text": "0,80 m"
+    },
+    {
+     "key": "C",
+     "text": "0,722 m"
+    },
+    {
+     "key": "D",
+     "text": "0,40 m"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q45.webp",
+    "width": 907,
+    "height": 613,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-areas"
+  },
+  {
+   "id": "m1-2026-regular-q47",
+   "number": 47,
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "stem": "En la siguiente imagen se presenta una red de un cubo.\n\nSe construye el siguiente cuerpo usando algunos cubos como el anterior.\n\n¿Cuántos cubos se utilizaron en total para construir el cuerpo anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "8"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q47.webp",
+    "width": 907,
+    "height": 1130,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-areas"
+  },
+  {
+   "id": "m1-2026-regular-q48",
+   "number": 48,
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "stem": "Una empresa fabrica y vende cajas cúbicas de madera fina para almacenar joyas.\n\nEl precio de venta de las cajas se determina como \\$800 · k, tal que se cobra \\$800 por cada cm² del área exterior de las cajas.\n\nConsidera que el área de una cara exterior de estas cajas es de 25 cm². ¿Cuál de\n\nlas siguientes expresiones representa k?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 · 5²"
+    },
+    {
+     "key": "B",
+     "text": "6 · 5⁴"
+    },
+    {
+     "key": "C",
+     "text": "6 · 5⁶"
+    },
+    {
+     "key": "D",
+     "text": "6 · 5¹²"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q48.webp",
+    "width": 907,
+    "height": 482,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-areas"
+  },
+  {
+   "id": "m1-2026-regular-q49",
+   "number": 49,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "Considera el siguiente procedimiento:\n\n¿Cuál de las siguientes figuras se obtendrá al desdoblarse y estirarse el recorte?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q49.webp",
+    "width": 907,
+    "height": 1059,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-areas"
+  },
+  {
+   "id": "m1-2026-regular-q50",
+   "number": 50,
+   "axis": "Geometría",
+   "topic": "Transformaciones isométricas",
+   "stem": "En el plano cartesiano de la figura adjunta se representan los puntos cardinales.\n\n¿En cuál de las siguientes opciones las transformaciones isométricas aplicadas a la\n\nflecha negra permite que la imagen obtenida sea una flecha que apunta al oeste?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una reflexión con respecto al eje X y luego, una reflexión con respecto a la recta y = x."
+    },
+    {
+     "key": "B",
+     "text": "Una reflexión con respecto al origen del plano cartesiano y luego, una rotación en 45◦en sentido horario con centro el origen del plano cartesiano."
+    },
+    {
+     "key": "C",
+     "text": "Una reflexión con respecto al eje Y."
+    },
+    {
+     "key": "D",
+     "text": "Una traslación según el vector (−3, −3)."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q50.webp",
+    "width": 907,
+    "height": 900,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-transformaciones"
+  },
+  {
+   "id": "m1-2026-regular-q51",
+   "number": 51,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "Considera los vectores representados en el plano cartesiano.\n\nY\n\n5 →v 3 →u\n\n1\n\n−5 −2 2 5 X\n\n¿Cuál de las siguientes afirmaciones es verdadera, respecto a los vectores del\n\ngráfico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tienen distinta dirección."
+    },
+    {
+     "key": "B",
+     "text": "Tienen distinto sentido."
+    },
+    {
+     "key": "C",
+     "text": "Tienen distinta magnitud."
+    },
+    {
+     "key": "D",
+     "text": "Están en el semieje positivo del eje X."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q51.webp",
+    "width": 907,
+    "height": 669,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-transformaciones"
+  },
+  {
+   "id": "m1-2026-regular-q52",
+   "number": 52,
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "stem": "En la cuadrícula de la figura se representa el plano de un videojuego. En ella se ubica\n\nun tesoro y los pies de una persona, ambos al centro de las casillas.\n\n¿Cuál de los siguientes vectores lleva a la persona sobre la casilla del tesoro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(8, −4)"
+    },
+    {
+     "key": "B",
+     "text": "(−4, 2)"
+    },
+    {
+     "key": "C",
+     "text": "(10, −6)"
+    },
+    {
+     "key": "D",
+     "text": "(2, −2)"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q52.webp",
+    "width": 907,
+    "height": 795,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-transformaciones"
+  },
+  {
+   "id": "m1-2026-regular-q53",
+   "number": 53,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "Un tipo de migración exterior corresponde al cambio de residencia hacia un país\n\ndiferente, por ejemplo, la migración desde Chile hacia España. A aquellas personas\n\nmigrantes que llegan a habitar un país son considerados inmigrantes, mientras que a\n\naquellas personas que abandonan un país, se les considera emigrantes.\n\nEn el siguiente gráfico se presenta información de las migraciones exteriores en\n\nEspaña desde el 2011 hasta el 2021.\n\nAdaptada de Indicadores demográficos básicos. INE. (2021). Evolución de las migraciones interiores (2008–2021). (Reproducido en Atlas Nacional de España, por Instituto Geográfico Nacional (IGN)).\n\n¿En qué año hubo mayor cantidad de migrantes exteriores en España?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2013"
+    },
+    {
+     "key": "B",
+     "text": "2015"
+    },
+    {
+     "key": "C",
+     "text": "2018"
+    },
+    {
+     "key": "D",
+     "text": "2019"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q53.webp",
+    "width": 907,
+    "height": 1038,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q54",
+   "number": 54,
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "stem": "El encargado del personal de una empresa extrae de la ficha de contratación las\n\nedades de las personas que trabajan en esta empresa. Luego, resume la distribución\n\nde las edades en la siguiente tabla:\n\nEdad en años Cantidad\n\n18 −24 5\n\n25 −34 7\n\n35 −44 14\n\n45 −54 11\n\n55 o más 13\n\nLa empresa dará un beneficio educacional según la información de la tabla a los\n\ntrabajadores cuya edad no supere los 34 años.\n\n¿Cuál es la mayor cantidad de trabajadores que podría acceder a ese beneficio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "9"
+    },
+    {
+     "key": "D",
+     "text": "12"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q54.webp",
+    "width": 907,
+    "height": 765,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q55",
+   "number": 55,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "Una persona está jugando un nuevo juego en línea en el cual se pueden escoger\n\ndistintos personajes. Cada personaje tiene cinco habilidades, con un puntaje de 0 a\n\n100 en cada habilidad.\n\nEn el siguiente diagrama se representan las habilidades de uno de los personajes.\n\n¿Cuál es la habilidad más débil de este personaje?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Fuerza mágica"
+    },
+    {
+     "key": "B",
+     "text": "Defensa mágica"
+    },
+    {
+     "key": "C",
+     "text": "Defensa física"
+    },
+    {
+     "key": "D",
+     "text": "Fuerza física"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q55.webp",
+    "width": 907,
+    "height": 950,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q56",
+   "number": 56,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Se realizó una encuesta a los estudiantes de IV◦medio de un establecimiento\n\neducacional, sobre la cantidad de años que llevan en dicho establecimiento. En la\n\nsiguiente tabla se presentan los datos de dicha encuesta.\n\nCantidad de Cantidad de años estudiantes\n\n1 24\n\n2 15\n\n3 12\n\n4 8\n\n5 12\n\n6 29\n\n7 14\n\n8 9\n\n9 o más 16\n\n¿Cuántos estudiantes encuestados llevan 5 años o más en el establecimiento\n\neducacional?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12"
+    },
+    {
+     "key": "B",
+     "text": "35"
+    },
+    {
+     "key": "C",
+     "text": "68"
+    },
+    {
+     "key": "D",
+     "text": "80"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q56.webp",
+    "width": 907,
+    "height": 878,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q57",
+   "number": 57,
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "stem": "Según la Encuesta Nacional de Empleos se considera como “ocupado” a aquellas\n\npersonas, en edad de trabajar, que durante la semana de referencia dedicaron al\n\nmenos una hora para producir bienes o servicios a cambio de una remuneración o\n\nbeneficio.\n\nConsidera la siguiente información:\n\n¿Cuál de las siguientes representaciones gráficas corresponde a la información\n\nentregada?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q57.webp",
+    "width": 907,
+    "height": 1115,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q59",
+   "number": 59,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Considera la siguiente tabla:\n\nValor Frecuencia\n\n0 P\n\n1 Q\n\n2 R\n\n¿Cuál de las siguientes expresiones permite determinar el promedio de los valores?\n\nP + Q + 2 · R",
+   "options": [
+    {
+     "key": "A",
+     "text": "P + Q + R R"
+    },
+    {
+     "key": "B",
+     "text": "P + Q + R 0 · P + 1 · Q + 2 · R"
+    },
+    {
+     "key": "C",
+     "text": "P + Q + R 2 · R"
+    },
+    {
+     "key": "D",
+     "text": "P + Q + R"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q59.webp",
+    "width": 907,
+    "height": 718,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q60",
+   "number": 60,
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "stem": "Una persona plantó un brote de dos centímetros y lo fotografió durante cinco semanas\n\npara dejar registro de su crecimiento, tal como se representa a continuación:\n\n¿Cuántos centímetros, en promedio, creció el brote por semana?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 cm"
+    },
+    {
+     "key": "B",
+     "text": "2,4 cm"
+    },
+    {
+     "key": "C",
+     "text": "3 cm"
+    },
+    {
+     "key": "D",
+     "text": "7,5 cm"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q60.webp",
+    "width": 907,
+    "height": 704,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q61",
+   "number": 61,
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "stem": "En el siguiente gráfico se representa la distribución de la cantidad de horas extras\n\nrealizadas por 140 trabajadores durante el mes de mayor demanda productiva de\n\nuna empresa.\n\nPor cada hora extra se paga \\$15 000. ¿Cuál fue el pago más frecuente que realizó\n\nla empresa por concepto de horas extras en ese mes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$15 000"
+    },
+    {
+     "key": "B",
+     "text": "\\$30 000"
+    },
+    {
+     "key": "C",
+     "text": "\\$45 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$60 000"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q61.webp",
+    "width": 907,
+    "height": 857,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-tendencia"
+  },
+  {
+   "id": "m1-2026-regular-q62",
+   "number": 62,
+   "axis": "Números",
+   "topic": "Números",
+   "stem": "Considera el experimento descrito en la siguiente infografía para calcular el tiempo\n\nde reacción, en segundos, de una persona.\n\nCiencianet. (2008). Descubre tu tiempo de reacción. (Reproducido de Mide tu reacción, por C. Torres, en Edumate Perú).\n\nUna persona efectuó el experimento y en el paso cuatro anotó los siguientes números:\n\n10 cm 9 cm 15 cm 8 cm 18 cm\n\n¿Cuál es el tiempo de reacción de la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,10 s"
+    },
+    {
+     "key": "B",
+     "text": "0,14 s"
+    },
+    {
+     "key": "C",
+     "text": "0,16 s"
+    },
+    {
+     "key": "D",
+     "text": "0,17 s"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q62.webp",
+    "width": 907,
+    "height": 994,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-racionales"
+  },
+  {
+   "id": "m1-2026-regular-q64",
+   "number": 64,
+   "axis": "Geometría",
+   "topic": "Figuras planas",
+   "stem": "El memorice es un juego que está compuesto por varias tarjetas. Cada una de estas\n\ntiene una figura que está repetida una sola vez en otra tarjeta, de tal manera que se\n\nforman pares de cada una de estas figuras.\n\nPara jugar, las tarjetas se deben disponer sobre una superficie de manera que\n\nninguna de las figuras de las tarjetas sea visible. Luego, la persona que juega debe\n\nvoltear una tarjeta y, después, debe dar vuelta una segunda tarjeta con la finalidad\n\nde encontrar el par de la primera.\n\nUna persona dispone sobre la mesa 20 tarjetas de este juego y voltea por primera vez\n\nuna de las tarjetas, en la cual aparece un rayo, tal como se presenta en la siguiente\n\nimagen.\n\nSi esta persona no conoce la figura de ninguna de las otras tarjetas dispuestas, ¿cuál\n\nes la probabilidad de que esta persona encuentre el segundo rayo al dar vuelta al\n\nazar la segunda tarjeta?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "20 1"
+    },
+    {
+     "key": "B",
+     "text": "19 2"
+    },
+    {
+     "key": "C",
+     "text": "20 2"
+    },
+    {
+     "key": "D",
+     "text": "19"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-regular/q64.webp",
+    "width": 907,
+    "height": 1142,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "m1-probabilidad"
+  }
+ ]
+}

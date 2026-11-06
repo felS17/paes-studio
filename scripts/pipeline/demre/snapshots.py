@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pymupdf
-from PIL import Image, ImageChops
+from PIL import Image, ImageChops, ImageDraw
 
 from .layout import Region
 
@@ -39,6 +40,47 @@ def _save(img: Image.Image, out: Path, quality: int) -> tuple[int, int, bool]:
         final = img
         final.save(out, "WEBP", quality=max(quality, 70), method=6)
     return final.width, final.height, mono
+
+
+#: Lo que queda bajo este umbral es antialiasing de los bordes de las líneas ya capturadas.
+LOST_INK_MIN = 20
+
+#: Texto de una línea que parece un trozo de fórmula o de fracción apilada, no una palabra.
+_FRAGMENT = re.compile(r"[A-Z][A-Za-z0-9]{0,3}|[a-z]|[0-9]{1,2}|[A-Z]?[a-z]?[0-9+\-]{1,3}")
+
+
+def lost_ink(doc: pymupdf.Document, question) -> int:
+    """Píxeles oscuros de la pregunta que no pertenecen a ninguna línea de texto capturada.
+
+    Una fórmula dibujada con trazos vectoriales pequeños no cuenta como figura y tampoco deja texto: desaparecería en
+    silencio. Medir la tinta sobrante detecta cualquier contenido perdido, sea cual sea su tipo.
+    """
+    scale = 1.5
+    lines = [*question.stem, question.number_line, *question.option_markers.values()]
+    lines += [line for option in question.options.values() for line in option]
+    total = 0
+    for pno in question.region.bands:
+        on_page = [line for line in lines if line.page == pno]
+        if not on_page:
+            continue
+        page = doc[pno]
+        top = min(line.rect.y0 for line in on_page) - 1
+        bottom = max(line.rect.y1 for line in on_page) + 1
+        clip = pymupdf.Rect(0, top, page.rect.width, bottom)
+        pix = page.get_pixmap(matrix=pymupdf.Matrix(scale, scale), clip=clip, colorspace=pymupdf.csGRAY, alpha=False)
+        img = Image.frombytes("L", (pix.width, pix.height), pix.samples)
+        draw = ImageDraw.Draw(img)
+        for line in on_page:
+            r = line.rect
+            draw.rectangle([(r.x0 - 2) * scale, (r.y0 - top - 2) * scale, (r.x1 + 2) * scale, (r.y1 - top + 2) * scale], fill=255)
+        total += sum(img.histogram()[:150])
+    return total
+
+
+def has_formula_fragments(question) -> bool:
+    """Dos o más líneas sueltas como `CH2` o `s` indican una fórmula o fracción que el texto dejó desordenada."""
+    fragments = [line.text.strip() for line in question.stem if _FRAGMENT.fullmatch(line.text.strip() or "#")]
+    return len([f for f in fragments if f != "-"]) >= 2
 
 
 def render_region(

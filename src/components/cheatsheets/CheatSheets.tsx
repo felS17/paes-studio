@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ManimEmbed } from '@/components/manim/ManimEmbed'
 import { MathText } from '@/components/math/MathText'
 import { Button } from '@/components/ui/button'
 import { SearchInput } from '@/components/ui/search-input'
@@ -33,6 +34,7 @@ function CheatCardView({ card }: { card: CheatCard }) {
           </div>
         ))}
       </dl>
+      <ManimEmbed subtopics={card.subtopics} className="border-t border-zinc-200/60 px-3 py-2 dark:border-zinc-800/60" />
     </article>
   )
 }

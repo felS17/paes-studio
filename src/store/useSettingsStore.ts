@@ -1,12 +1,13 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { ReaderSettings, ThemePreference, UiFontId, UserSettings } from '@/types/user'
+import type { ReaderSettings, ThemePreference, TutorRate, UiFontId, UserSettings } from '@/types/user'
 import { persistStorage } from './storage'
 
 interface SettingsState extends UserSettings {
   setTheme: (theme: ThemePreference) => void
   setUiFont: (font: UiFontId) => void
   setNebulaPaused: (paused: boolean) => void
+  setTutorRate: (rate: TutorRate) => void
   setReader: (patch: Partial<ReaderSettings>) => void
   setSplitRatio: (ratio: number) => void
   setShowShortcutHints: (value: boolean) => void
@@ -21,6 +22,7 @@ export const useSettingsStore = create<SettingsState>()(
       theme: 'system',
       uiFont: 'geist',
       nebulaPaused: null,
+      tutorRate: 1,
       reader: { font: 'sans', size: 16, paragraphNumbers: true },
       splitRatio: 0.52,
       showShortcutHints: true,
@@ -28,6 +30,7 @@ export const useSettingsStore = create<SettingsState>()(
       setTheme: (theme) => set({ theme }),
       setUiFont: (uiFont) => set({ uiFont }),
       setNebulaPaused: (nebulaPaused) => set({ nebulaPaused }),
+      setTutorRate: (tutorRate) => set({ tutorRate }),
       setReader: (patch) => set((s) => ({ reader: { ...s.reader, ...patch } })),
       setSplitRatio: (ratio) => set({ splitRatio: Math.min(0.7, Math.max(0.3, ratio)) }),
       setShowShortcutHints: (value) => set({ showShortcutHints: value }),

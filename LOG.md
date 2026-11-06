@@ -5,7 +5,7 @@
 - **Entradas disponibles:** `/pruebas-oficiales` → `Pruebas_DEMRE/` y `/facsimiles-oficiales` → `Clavijeros_Pruebas_DEMRE/` (enlaces simbólicos; los PDF originales no se movieron ni modificaron).
 - **Skill activa:** `frontend-design` (Anthropic) bajo reglas de `CLAUDE.md`, instalada en `.claude/skills/frontend-design/SKILL.md`.
 - **Build:** `npm run build` pasa con 0 errores de TypeScript; `npm run lint` con 0 problemas (verificado de nuevo al cierre de la Fase 5).
-- **Datos:** 46 ensayos y 2.796 preguntas (41 oficiales DEMRE con clavijero + 5 curados). Soluciones paso a paso: **1.892 de 2.796 preguntas**: 85 curadas (`desarrollo`) y 1.807 oficiales (`solucion`, redactadas con IA y validadas contra la clave), de la PAES Regular e Invierno 2024, Invierno 2025 e Invierno 2026, en años reales de rendición. El resto muestra solo la clave oficial (las mini-pautas genéricas se eliminaron en la Fase 3).
+- **Datos:** 53 ensayos y 3.137 preguntas (48 oficiales DEMRE con clavijero + 5 curados). Soluciones paso a paso: **1.892 de 3.137 preguntas**: 85 curadas (`desarrollo`) y 1.807 oficiales (`solucion`, redactadas con IA y validadas contra la clave), de la PAES Regular e Invierno 2024, Invierno 2025 e Invierno 2026, en años reales de rendición. La Regular 2025 entra con su clave oficial y sin explicaciones por ahora. El resto muestra solo la clave oficial (las mini-pautas genéricas se eliminaron en la Fase 3).
 - **Fase 2 (2026-11-01):** mini-pautas en todas las preguntas oficiales, Analítica simplificada a 3 bloques (diagnóstico, cuaderno de errores con modo revancha, evolución), Flashcards SM-2 para Ciencias e Historia (141 tarjetas) y compendios LaTeX/Beamer extensos generados desde un temario de 67 subtemas.
 - **Fase 3 (2026-11-01):** mini-pautas eliminadas; soluciones específicas para Invierno 2026–2027; rediseño con identidad por asignatura (revertido en la Fase 4).
 - **Fase 4 (2026-11-01):** reversión estética estricta a Zinc monocromático. Se eliminan colores e íconos por asignatura, degradados y adornos; se conservan intactos los datos, las soluciones, el material LaTeX y toda la funcionalidad.
@@ -19,6 +19,7 @@
 - **v2.4 (2026-11-06):** poda radical. Barra de tareas estilo sistema operativo, Inicio como una sola ventana de terminal, `/analitica` como Administrador de Tareas, íconos Pixel Art, interfaz en minúsculas y vistas sin párrafos de introducción ni cajas dentro de cajas.
 - **v2.4.1 (2026-11-06):** ventana del Inicio y heatmap más amplios (`max-w-6xl`, 52 semanas de punta a punta), comandos en 2 columnas con descripción, prompt con menú `/` navegable y racha universal.
 - **v2.5 (2026-11-06):** cuenta regresiva a la PAES en el Inicio y la barra de estado, ventana de 1480 px, heatmap sincronizado con la racha, años reales de rendición en todas las pruebas oficiales, curados al final de `/ensayos` y 834 soluciones nuevas.
+- **v2.6 (2026-11-06):** PAES Regular 2025 en el banco, 34 recortes recuperados con detección de tinta perdida, tutor de voz con traductor LaTeX a español y 6 escenas animadas en SVG al estilo Manim.
 
 ---
 
@@ -645,6 +646,36 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 #### Verificación
 - `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas frente a `HEAD` en 2.796 preguntas, sin otros campos alterados. Pruebas de lógica del contador, el heatmap, la racha y el orden en el scratchpad, también en dos zonas horarias. No se abrió navegador, así que **el aspecto final no se ha visto en pantalla**.
 
+### [2026-11-06] - PAES Studio v2.6: Regular 2025, figuras, tutor de voz y Manim
+
+#### Carpetas y PAES Regular 2025
+- **No había nada que reparar.** Las carpetas del repo y sus enlaces estaban bien y el pipeline reconocía los 41 pares. Las carpetas de la papelera (borradas el 2026-11-06 a las 19:37) son copias: sus 94 PDF son idénticos por hash a los del repo. El árbol tampoco cambió.
+- **Lo que faltaba:** los 7 clavijeros del Regular de admisión 2026 no estaban en el equipo con ningún nombre reconocible. Se descargaron del sitio oficial (`https://demre.cl/publicaciones/pdf/2026-26-01-05-clavijero-paes-regular-*.pdf`) y se verificó que fueran PDF. `portaldemre.demre.cl`, que es lo que devuelven los buscadores, no responde desde este equipo; `demre.cl` sí. Quedan fuera de git, como todos los PDF.
+- **Resultado:** 7 ensayos, 341 preguntas, 5 lecturas y 177 recortes. `m2-2026-regular-q54` no entra porque el DEMRE la anuló. El banco queda en 53 ensayos y 3.137 preguntas.
+- **Sin soluciones por ahora**, según lo acordado para ahorrar cuota. Los lotes quedaron listos en `.work/reg2025/`: 13 lotes, 267 preguntas únicas y 74 réplicas, unos 1,2 millones de tokens de Haiku según el costo de la ronda anterior.
+
+#### Figuras perdidas
+- **Causa:** `_needs_snapshot` solo miraba imágenes y dibujos de más de 24 pt. Una fórmula hecha con trazos vectoriales pequeños no contaba como figura y tampoco dejaba texto: desaparecía sin aviso.
+- **Detección nueva en `demre/snapshots.py`:** `lost_ink` renderiza la pregunta, tapa las líneas de texto capturadas y cuenta la tinta que sobra; `has_formula_fragments` detecta líneas sueltas como `CH2` o `s`. Es determinista, tarda unos 25 s en todo el banco y separa muy bien: la tinta vale 0 en las preguntas sanas y más de 120 en las dañadas.
+- **Alcance real:** 34 preguntas de 1.292 de solo texto, no las 7 que se conocían. Se regeneraron solo esas, sin volver a extraer: claves, soluciones y subtemas quedan intactos. Alguna pregunta sana pudo pasar a recorte (por ejemplo, las líneas sueltas de `fisica-2024-invierno-q75`); es inofensivo, porque el recorte es fiel al folleto.
+- **Enunciado de q26:** transcrito del folleto en `STEM_FIXES` (`demre/builder.py`) con sus 2 réplicas, y ahora también con recorte. El texto queda para lectores de pantalla y búsquedas.
+
+#### Tutor de voz
+- **`src/utils/mathToSpeech.ts`:** lector de LaTeX por descenso recursivo, sin modelos. Cubre los 74 comandos que usa el banco. Lee unidades solo después de una cifra, para distinguir el newton del nitrógeno, y `\Delta` como «discriminante» cuando está sola y «variación de» cuando le sigue una variable.
+- **Verificación:** recorre las 11.503 lecturas del banco y ninguna contiene `\`, `$`, `{`, `}`, `^`, `_` ni `&`. Es una prueba de ausencia de código, no de que la lectura suene perfecta: las fórmulas estructurales suenan mecánicas («ce hache sub 3 menos ce hache…»).
+- **`useTutorVoice`:** la pausa corta el trozo actual y lo retoma, porque `speechSynthesis.pause()` falla en móviles. Los textos se parten en trozos de hasta 180 caracteres, porque algunos navegadores cortan las voces largas. Solo un tutor habla a la vez, y se calla al cerrar la explicación o cambiar de pregunta. Sin voz en español el reproductor no aparece.
+- **No lee los distractores:** solo Planteamiento, pasos y conclusión, como se pidió.
+
+#### Manim-Web
+- `src/components/manim/`: 6 escenas en SVG (`t` de 0 a 1, con `stroke-dashoffset`), en un chunk aparte que solo se descarga al abrir una. Parten terminadas y estáticas: solo se mueven al pedirlo o con el tutor leyendo. Con movimiento reducido saltan al final.
+- **Dónde aparecen:** en las soluciones de sus subtemas (`sceneMap.ts`), abiertas; en el Inspector y el Formulario Express, tras `[ ▸ ver animación ]`. La asignación de subtemas es heurística, así que alguna pregunta puede mostrar una escena poco relacionada.
+- **Sincronía con la voz:** cada bloque leído avanza la escena un tramo proporcional. Es un avance general: no enlaza un paso concreto con un trazo concreto.
+- **Excepción de color** documentada en `CLAUDE.md`: la pizarra usa la paleta de Manim en todos los temas.
+- **Revisión geométrica:** las escenas se renderizaron por servidor a una lámina, sin navegador. Se corrigió que el texto cruzara la parábola y que la flecha de velocidad se saliera del cuadro.
+
+#### Verificación
+- `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas frente a `HEAD` en las 2.796 preguntas previas, y solo cambiaron los 3 enunciados de q26. No se abrió navegador: **las voces, los controles y las animaciones no se han probado en vivo**.
+
 ---
 
 ## Comandos
@@ -659,7 +690,7 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 | `npm run pdfs` | `python3 scripts/pipeline/build_pdfs.py`: compila los 10 `.tex` a `public/pdfs/` y escribe `src/data/pdfs.json` (`--only guia_m1 …`) |
 | `npm run latex` | `python3 scripts/pipeline/generate_latex_summary.py`: compendios (`guia_*`) y presentaciones (`beamer_*`) en `latex/output/` |
 | `npm run exams:index` | Regenera solo `src/data/exams/index.json` |
-| `npm run validate:exams` | Valida los 46 JSON: parseo, claves (también contra `soluciones.json`), `$` balanceados y KaTeX de cada solución |
+| `npm run validate:exams` | Valida los 53 JSON: parseo, claves (también contra `soluciones.json`), `$` balanceados y KaTeX de cada solución |
 | `python3 scripts/pipeline/assign_subtopics.py` | Temario → `src/data/temario/` y `subtopic` de cada pregunta (`--dry-run`, `--sample <subtema>`) |
 | `python3 scripts/pipeline/solutions/prepare_deepen.py --work <carpeta>` | Lotes para profundizar soluciones; luego `validate_deepen.py <lote>` y `merge_solutions.py --collect-deep <carpeta>` |
 
@@ -718,14 +749,13 @@ APP_PAES/
 ---
 
 ## Pendientes y consideraciones
-- **Figuras perdidas en Química (v2.5):** al menos 7 preguntas sin recorte mencionan una figura que no se muestra, porque la extracción no la detectó: `ciencias-quimica-2025-invierno-q60`, `q62`, `q64`, `ciencias-quimica-2025-regular-q63`, `q71`, `ciencias-quimica-2026-invierno-q61` y `q74` (búsqueda heurística, pueden ser más). `ciencias-biologia-2025-invierno-q26` tiene además el texto corrupto. Falta ajustar la detección de `demre/snapshots.py`; las soluciones de q60, q64 y q61 ya citan el dato original del folleto.
-- **PAES Regular 2025 (admisión 2026):** folletos disponibles, sin clavijeros. Al conseguirlos: copiarlos a `Clavijeros_Pruebas_DEMRE/` y ejecutar `npm run pipeline`.
+- **Soluciones de la PAES Regular 2025:** faltan las 341. Lotes listos en `.work/reg2025/`; se redactan como los de `sol2025` y se fusionan con `merge_solutions.py --collect-deep`.
+- **Tutor de voz y Manim (v2.6):** falta probarlos en navegadores reales, sobre todo las voces en móviles.
 - **Cuenta regresiva:** agregar a `CONFIRMED` (`src/utils/paesCountdown.ts`) cada fecha oficial del DEMRE; las siguientes a noviembre de 2026 son estimadas.
 - **Derechos de autor:** los folletos del DEMRE indican «Derechos reservados». Los recortes y textos extraídos viven en `public/exam-assets/` y `src/data/exams/`. Están pensados para estudio personal; antes de publicar el sitio abiertamente conviene revisar las condiciones de uso del DEMRE o desplegar solo los ensayos curados (basta con borrar los JSON oficiales y `public/exam-assets/` y regenerar el índice).
 - **Peso del despliegue:** los recortes ocupan ~33 MB, dentro de los límites de Vercel.
 - **Ejes de preguntas oficiales:** fuera de Ciencias son heurísticos; pueden corregirse a mano en el JSON y el índice se actualiza en el siguiente build.
 - **Texto de preguntas oficiales de Matemática:** es aproximado y solo se usa como texto alternativo; la pregunta se muestra con su recorte fiel.
-- **Folletos regulares p2026:** cuando el DEMRE publique sus clavijeros, basta con copiarlos a `Clavijeros_Pruebas_DEMRE/` y ejecutar `npm run pipeline`.
 - **LaTeX local:** `npm run pdfs` compila con el TeX Live local; si faltan `tikzfill`, `pdfcol` o `listingsutf8`, usa los sustitutos de `latex/compat/`. Instalar los paquetes reales (`texlive-tikzfill`, `texlive-pdfcol`, `texlive-listingsutf8`) hace que se usen esos en su lugar. Tras cambiar el temario: `npm run latex && npm run pdfs`.
 - **Soluciones de Invierno 2026–2027:** están redactadas con IA y validadas para concluir en la clave oficial, pero no tienen revisión docente pregunta a pregunta; la interfaz lo indica. Conviene revisar primero las interpretativas listadas en la Fase 3. Para otros años: `prepare_batches.py` → subagentes → `validate_batch.py` → `merge_solutions.py --collect`.
 - **Alternativas corruptas en el JSON (M1/M2):** no afectan la vista (se usa el recorte), pero sí el texto alternativo; corregirlas requiere ajustar la extracción de alternativas en `demre/text.py`.
@@ -831,4 +861,12 @@ APP_PAES/
 - [x] PAES Regular e Invierno 2024 completas e Invierno 2025 en 488/489.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas.
 - [ ] Revisión visual en local y revisión docente de las soluciones nuevas (a cargo del autor).
-- [ ] Recuperar las figuras perdidas de Química y conseguir los clavijeros de la PAES Regular 2025.
+- [x] Figuras perdidas y clavijeros de la PAES Regular 2025: resueltos en la v2.6.
+
+### v2.6
+- [x] PAES Regular 2025 en el banco, con su clave oficial.
+- [x] Detección de tinta perdida y 34 recortes recuperados; enunciado de q26 corregido.
+- [x] Traductor LaTeX a español, reproductor con velocidad y resaltado del bloque leído.
+- [x] 6 escenas al estilo Manim en soluciones, Inspector y Formulario, sincronizadas con la voz.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas.
+- [ ] Probar voces y animaciones en local y redactar las soluciones de la Regular 2025 (a cargo del autor).

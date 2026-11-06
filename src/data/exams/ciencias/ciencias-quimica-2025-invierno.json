@@ -565,7 +565,7 @@
     }
    ],
    "answer": "D",
-   "presentation": "text",
+   "presentation": "snapshot",
    "subtopic": "cs-reacciones",
    "explanation": {
     "kind": "solucion",
@@ -586,7 +586,14 @@
      "C": "Copia el coeficiente del oxígeno al producto y olvida el coeficiente 2 del agua. Así, 2 mol de oxígeno aparecen como 2 mol de agua, cuando en realidad producen 4 mol.",
      "E": "Ignora el reactivo limitante: 6 mol de hidrógeno parecen suficientes, pero 2 mol de oxígeno solo consumen 4 mol de hidrógeno. La trampa es sumar los moles de un reactivo sin comparar con el otro."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-invierno/q10.webp",
+    "width": 907,
+    "height": 385,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-quimica-2025-invierno-q11",
@@ -1327,7 +1334,7 @@
    "number": 26,
    "axis": "Física",
    "topic": "Cinemática",
-   "stem": "Una persona de 60 kg desciende en ascensor, el cual frena con una aceleración de m. Considerando que en ese momento la persona está sobre una magnitud 0,25 2 s m, ¿cuál es la pesa y que la magnitud de la aceleración de gravedad es igual a 10 2 s medida que indicará la pesa mientras frena el ascensor?",
+   "stem": "Una persona de 60 kg desciende en ascensor, el cual frena con una aceleración de magnitud 0,25 m/s². Considerando que en ese momento la persona está sobre una pesa y que la magnitud de la aceleración de gravedad es igual a 10 m/s², ¿cuál es la medida que indicará la pesa mientras frena el ascensor?",
    "options": [
     {
      "key": "A",
@@ -1351,7 +1358,7 @@
     }
    ],
    "answer": "E",
-   "presentation": "text",
+   "presentation": "snapshot",
    "subtopic": "cs-cinematica",
    "explanation": {
     "kind": "solucion",
@@ -1370,7 +1377,14 @@
      "C": "$150\\ \\mathrm{N}$ resulta de multiplicar el peso por la aceleración: $600 \\cdot 0{,}25$. Esa operación no corresponde a ninguna ley y mezcla las unidades.",
      "D": "$585\\ \\mathrm{N}$ es $60 \\cdot (10 - 0{,}25)$: usa el signo contrario, como si la aceleración fuera hacia abajo. Pasaría al arrancar hacia abajo, no al frenar."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-invierno/q26.webp",
+    "width": 907,
+    "height": 345,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-quimica-2025-invierno-q27",
@@ -2993,7 +3007,7 @@
     }
    ],
    "answer": "C",
-   "presentation": "text",
+   "presentation": "snapshot",
    "subtopic": "cs-atomo",
    "explanation": {
     "kind": "solucion",
@@ -3010,7 +3024,14 @@
      "B": "Es falsa: ambas son átomos neutros con $1$ electrón. Ocurre al confundir el número másico con la cantidad de electrones.",
      "D": "Es falsa: sus números másicos son $3$ y $2$, y al tener distinta cantidad de neutrones tienen distinta masa."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-invierno/q60.webp",
+    "width": 907,
+    "height": 358,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-quimica-2025-invierno-q61",
@@ -3089,7 +3110,7 @@
     }
    ],
    "answer": "A",
-   "presentation": "text",
+   "presentation": "snapshot",
    "subtopic": "cs-atomo",
    "explanation": {
     "kind": "solucion",
@@ -3106,7 +3127,14 @@
      "C": "Li > F > K pone K como el menor, cuando tiene más capas electrónicas que Li y F. Además, ignora que el radio disminuye hacia la derecha.",
      "D": "Li > K > F coloca Li por encima de K, lo que contradice el aumento del radio al bajar en el grupo, porque K tiene una capa adicional."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-invierno/q62.webp",
+    "width": 907,
+    "height": 511,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-quimica-2025-invierno-q63",
@@ -3186,7 +3214,7 @@
     }
    ],
    "answer": "D",
-   "presentation": "text",
+   "presentation": "snapshot",
    "pilot": true,
    "subtopic": "cs-enlace",
    "explanation": {
@@ -3204,7 +3232,14 @@
      "B": "C2 y C3 están unidos por un enlace doble. Es más corto que uno simple, pero más largo que uno triple, por lo que no es el menor de la molécula.",
      "C": "C3 y C4 están unidos por un enlace simple. Es tentadora porque está junto al triple, pero estar al lado de él no lo convierte en el más corto."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2025-invierno/q64.webp",
+    "width": 907,
+    "height": 412,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-quimica-2025-invierno-q65",

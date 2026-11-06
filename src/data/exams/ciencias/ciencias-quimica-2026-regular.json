@@ -1,0 +1,1876 @@
+{
+ "id": "ciencias-quimica-2026-regular",
+ "subject": "ciencias",
+ "area": "quimica",
+ "title": "PAES Regular 2025",
+ "description": "Selección oficial de 56 de las 80 preguntas de Ciencias (Química), aplicada el 02-12-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2025,
+ "admissionYear": 2026,
+ "modality": "regular",
+ "source": "demre",
+ "form": "173",
+ "appliedOn": "2025-12-02",
+ "durationMinutes": 110,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   113,
+   138,
+   160,
+   180,
+   199,
+   217,
+   232,
+   246,
+   260,
+   274,
+   289,
+   303,
+   315,
+   324,
+   332,
+   341,
+   351,
+   363,
+   376,
+   389,
+   399,
+   407,
+   412,
+   417,
+   423,
+   430,
+   439,
+   451,
+   464,
+   476,
+   485,
+   492,
+   497,
+   500,
+   504,
+   509,
+   516,
+   525,
+   537,
+   550,
+   561,
+   570,
+   577,
+   582,
+   585,
+   589,
+   595,
+   602,
+   612,
+   624,
+   637,
+   649,
+   658,
+   664,
+   670,
+   676,
+   683,
+   692,
+   704,
+   718,
+   731,
+   742,
+   752,
+   761,
+   771,
+   784,
+   799,
+   814,
+   830,
+   845,
+   862,
+   880,
+   900,
+   923,
+   1000
+  ],
+  "officialQuestionCount": 80,
+  "officialScorableCount": 75
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-11-06",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-quimica-2026-regular-q01",
+   "number": 1,
+   "axis": "Química",
+   "topic": "Química general",
+   "stem": "En una historia de ciencia ficción, una persona explorando un planeta encuentra una extraña sustancia que brilla intensamente. Al analizarla, descubre que tiene diversas propiedades. En relación con lo anterior y considerando que el planeta presenta los mismos elementos químicos y condiciones de la Tierra, ¿cuál de las siguientes opciones señala un procedimiento resumido que debería implementar la persona para determinar si la sustancia encontrada es una mezcla o una sustancia pura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar si la sustancia tiene nuevas propiedades físicas."
+    },
+    {
+     "key": "B",
+     "text": "Determinar si la sustancia se puede separar por medios físicos."
+    },
+    {
+     "key": "C",
+     "text": "Determinar si la sustancia es capaz de disolverse en agua."
+    },
+    {
+     "key": "D",
+     "text": "Determinar si la sustancia es conductora de electricidad."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q02",
+   "number": 2,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "El petróleo es un líquido viscoso de color negro resultante de la descomposición bacteriana de la materia orgánica que por millones de años se acumuló en las profundidades de la corteza terrestre. Una técnica utilizada para separar los compuestos que forman parte del petróleo consiste en aplicar un aumento de la temperatura para ir colectando los diferentes compuestos en base a su temperatura de ebullición. Al respecto, ¿cuál de las siguientes opciones corresponde a la técnica que permite separar y colectar los compuestos derivados del petróleo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Filtración"
+    },
+    {
+     "key": "B",
+     "text": "Tamizado"
+    },
+    {
+     "key": "C",
+     "text": "Decantación"
+    },
+    {
+     "key": "D",
+     "text": "Destilación fraccionada"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q04",
+   "number": 4,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Un científico propuso lo siguiente para la estructura del átomo: sugiere la existencia de dos áreas separadas en él. Un núcleo de pequeño volumen, comparado con el volumen del átomo, que contiene un determinado número de partículas con carga positiva (protones), y que concentra la mayor parte de la masa del átomo y una zona distante, alrededor de este núcleo, donde se encontraría un número igual de partículas con carga negativa (electrones) girando a alta velocidad, en trayectorias denominadas órbitas. La atracción entre cargas eléctricas positivas y negativas mantendría unidas ambas áreas del átomo. Al respecto, ¿cuál de las siguientes opciones es una inferencia correcta a partir de lo propuesto por el científico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los electrones tienen una masa mucho menor que la de los protones."
+    },
+    {
+     "key": "B",
+     "text": "La masa total del átomo está dada por los electrones."
+    },
+    {
+     "key": "C",
+     "text": "Los protones y los electrones se repelen."
+    },
+    {
+     "key": "D",
+     "text": "Los átomos son indivisibles."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q05",
+   "number": 5,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "Un estudiante planteó lo siguiente: “El KMnO⁴ sirve para diferenciar alquenos de aldehídos”, para ello preparó 6 tubos de ensayo y añadió a cada tubo 5 mL de 6 muestras de aldehídos diferentes y conocidos. Luego agregó 1 mL de KMnO⁴, anotando los datos obtenidos. Estos se muestran en la tabla a continuación:\n\nTubo Compuestos orgánicos Reacción con KMnO⁴ 1 Metanal (+) 2 Pentanal (+) 3 Benzaldehído (+) 4 2-etilbutanal (+) 5 2,3,4-trimetilpentanal (+) 6 Etanal (+)\n\n(+): Hay reacción (–): No hay reacción\n\nEn relación a lo planteado en el enunciado y a los datos obtenidos, ¿cuál de las siguientes opciones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El procedimiento experimental está planteado incorrectamente debido a que solo utiliza aldehídos."
+    },
+    {
+     "key": "B",
+     "text": "Los datos obtenidos son consistentes con lo planteado por el estudiante, ya que permiten diferenciar entre alquenos y aldehídos."
+    },
+    {
+     "key": "C",
+     "text": "El procedimiento experimental está planteado incorrectamente por lo que los datos obtenidos presentan errores."
+    },
+    {
+     "key": "D",
+     "text": "El procedimiento experimental permite comprobar el objetivo planteado por el estudiante diferenciando alquenos y aldehídos."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q05.webp",
+    "width": 907,
+    "height": 728,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q06",
+   "number": 6,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Con respecto a la siguiente molécula:\n\nO OH\n\nO CH3\n\nO\n\n¿Cuál de los siguientes grupos funcionales se encuentra presente en ella?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Aldehído"
+    },
+    {
+     "key": "B",
+     "text": "Cetona"
+    },
+    {
+     "key": "C",
+     "text": "Alcohol"
+    },
+    {
+     "key": "D",
+     "text": "Éster"
+    },
+    {
+     "key": "E",
+     "text": "Éter"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q06.webp",
+    "width": 907,
+    "height": 523,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q09",
+   "number": 9,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "En el contexto de un experimento escolar, un grupo de estudiantes hace reaccionar completamente dos reactivos (X e Y) con el fin de obtener un producto XnYm. Las cantidades específicas de X e Y, para dos ensayos de formación de XnYm, se presentan en el siguiente gráfico:\n\nEn relación con el análisis del gráfico, ¿cuál de las siguientes conclusiones es correcta para la formación del producto XnYm?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cantidad de sustancia de X y de Y que se combinan deben ser iguales."
+    },
+    {
+     "key": "B",
+     "text": "La proporción de la cantidad de sustancia en que los reactivos X e Y se combinan es variable."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de sustancia obtenida es igual a la suma de la cantidad de sustancia de los reactivos X e Y."
+    },
+    {
+     "key": "D",
+     "text": "Los reactivos X e Y se combinan en la misma proporción en mol, en ambos ensayos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q09.webp",
+    "width": 907,
+    "height": 828,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q10",
+   "number": 10,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "La combustión del metano se representa por la ecuación\n\nCH⁴ (g) + 2 O² (g) CO²(g) + 2 H²O (λ)\n\n¿Qué masa de CO² se produce por la combustión completa de 32 g de metano?",
+   "options": [
+    {
+     "key": "A",
+     "text": "88 g"
+    },
+    {
+     "key": "B",
+     "text": "44 g"
+    },
+    {
+     "key": "C",
+     "text": "32 g"
+    },
+    {
+     "key": "D",
+     "text": "22 g"
+    },
+    {
+     "key": "E",
+     "text": "16 g"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q11",
+   "number": 11,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "¿Qué masa de oxígeno hay en 200 g de SO³?",
+   "options": [
+    {
+     "key": "A",
+     "text": "16 g"
+    },
+    {
+     "key": "B",
+     "text": "32 g"
+    },
+    {
+     "key": "C",
+     "text": "48 g"
+    },
+    {
+     "key": "D",
+     "text": "80 g"
+    },
+    {
+     "key": "E",
+     "text": "120 g"
+    }
+   ],
+   "answer": "E",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q15",
+   "number": 15,
+   "axis": "Química",
+   "topic": "Química orgánica",
+   "stem": "Un grupo de bioquímicos se encuentra realizando una investigación sobre una sustancia orgánica presente en los cítricos. En su estudio desean obtener esta sustancia orgánica a partir de diversos tipos de especies vegetales: limón, pomelo, naranja y mandarina, para lo cual realizan un procedimiento experimental de extracción. Para ello, colocan la misma masa de cáscaras y realizan por separado en cada especie de cítricos el proceso de extracción por el mismo período de tiempo y bajo las mismas condiciones de temperatura y presión. Luego, cuantifican la cantidad de sustancia orgánica obtenida. En base a lo anterior, ¿cuál de las siguientes opciones corresponde a la variable independiente utilizada por los bioquímicos en su investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tiempo de extracción"
+    },
+    {
+     "key": "B",
+     "text": "Especies de cítricos"
+    },
+    {
+     "key": "C",
+     "text": "Temperatura de extracción"
+    },
+    {
+     "key": "D",
+     "text": "Masa de cáscaras de cítricos"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q16",
+   "number": 16,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un grupo de científicos se propuso realizar un análisis comparativo entre muestras provenientes de distintos océanos. Mediante los análisis adecuados, determinaron que “las muestras de agua del mar Rojo alcanzaron una concentración de iones entre 42 y 46 g/L, las del mar Mediterráneo entre 36 y 39 g/L y las del Atlántico entre 33 y 36 g/L”. A partir de lo anterior, ¿a qué componente de la investigación científica se asocia la frase entre comillas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A una hipótesis"
+    },
+    {
+     "key": "B",
+     "text": "A un resultado"
+    },
+    {
+     "key": "C",
+     "text": "A una inferencia"
+    },
+    {
+     "key": "D",
+     "text": "A un procedimiento"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-disoluciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q17",
+   "number": 17,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "En el laboratorio un grupo de estudiantes prepara diferentes diluciones a partir de una solución de sulfato de cobre 1 mol/L que se encuentra en un vaso de precipitados de 500 mL. Las nuevas diluciones tienen una concentración de 0,5, 0,25 y 0,1 mol/L en un volumen final de 100 mL cada una. Para ello, tomaron 50, 25 y 10 mL respectivamente. Finalmente, guardan el resto de la solución de sulfato de cobre inicial en una botella de 250 mL a 4 °C. Considerando que el procedimiento experimental se realizó correctamente, ¿cuál de las opciones señala el material indispensable para medir una variable controlada en este proceso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Vaso de precipitados de 500 mL."
+    },
+    {
+     "key": "B",
+     "text": "Probeta graduada de 50 mL."
+    },
+    {
+     "key": "C",
+     "text": "Matraz de aforo de 100 mL."
+    },
+    {
+     "key": "D",
+     "text": "Botella de vidrio de 250 mL."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "pilot": true,
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q20",
+   "number": 20,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "En el espectro electromagnético, entre el intervalo de frecuencias correspondientes a radiación infrarroja y ultravioleta, se encuentran las frecuencias referidas a",
+   "options": [
+    {
+     "key": "A",
+     "text": "los rayos X."
+    },
+    {
+     "key": "B",
+     "text": "la luz visible."
+    },
+    {
+     "key": "C",
+     "text": "las microondas."
+    },
+    {
+     "key": "D",
+     "text": "las radiofrecuencias."
+    },
+    {
+     "key": "E",
+     "text": "las radiaciones gamma."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-ondas"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q21",
+   "number": 21,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "En el contexto de una actividad escolar, un grupo de estudiantes hace pasar luz blanca hacia prismas cuadrados de iguales dimensiones, pero de distinto tipo: uno transparente, uno translúcido verde y uno translúcido rojo. En el lado opuesto del cual incide la luz, ubican una pantalla blanca a una distancia fija del prisma transparente, y registran los colores observados en ella. Luego, repiten el procedimiento utilizando los prismas translúcidos, uno a la vez. Considerando lo anterior, ¿cuál de las siguientes hipótesis es acorde con el procedimiento realizado por el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La distancia de la pantalla a los prismas afecta a la luz que incide en estos."
+    },
+    {
+     "key": "B",
+     "text": "El material del prisma influye en la incidencia de la luz en él."
+    },
+    {
+     "key": "C",
+     "text": "La luz blanca está compuesta por rayos monocromáticos."
+    },
+    {
+     "key": "D",
+     "text": "El color del prisma influye en la luz que este transmite."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q23",
+   "number": 23,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "La lente delgada L forma la imagen I del objeto O. La imagen se ubica en el punto Q cuando el objeto se coloca en el punto P, como indica la figura.\n\nI P Q O\n\nL\n\nSi se usa la misma lente, y ahora el objeto O se ubica en el punto Q, el esquema que mejor muestra la imagen I que formará la lente es\n\nO P",
+   "options": [
+    {
+     "key": "A",
+     "text": "Q I L O P"
+    },
+    {
+     "key": "B",
+     "text": "Q I L I O P"
+    },
+    {
+     "key": "C",
+     "text": "Q L I O"
+    },
+    {
+     "key": "D",
+     "text": "Q P L O I"
+    },
+    {
+     "key": "E",
+     "text": "P Q L"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q23.webp",
+    "width": 907,
+    "height": 1120,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q24",
+   "number": 24,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "En un laboratorio de óptica se hace incidir un conjunto de tres haces paralelos de luz láser de potencia fija sobre un arreglo de lentes, tal como se representa en la siguiente figura:\n\nRespecto del patrón de haces de luz observado, ¿cuál de las siguientes opciones señala correctamente el objetivo que se pretende lograr con el experimento descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cambiar el ángulo de incidencia del conjunto de láseres en ambos lentes."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la amplitud del conjunto de láseres en ambos lentes."
+    },
+    {
+     "key": "C",
+     "text": "Aumentar la separación entre los distintos haces de luz láser."
+    },
+    {
+     "key": "D",
+     "text": "Focalizar los distintos haces de luz láser en un único punto."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q24.webp",
+    "width": 907,
+    "height": 638,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q26",
+   "number": 26,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un estudiante ubica un bloque en la parte más alta de un plano inclinado muy largo, lo empuja brevemente, con una fuerza paralela a la superficie, midiendo cuánto tarda en llegar hasta la base del plano. Luego repite el procedimiento varias veces, con las mismas condiciones iniciales, pero recubriendo la superficie del plano inclinado con un material diferente cada vez. Al respecto, ¿cuál de las siguientes fuerzas se asocia directamente con la variable independiente del procedimiento descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La fuerza peso."
+    },
+    {
+     "key": "B",
+     "text": "La fuerza normal."
+    },
+    {
+     "key": "C",
+     "text": "La fuerza de roce."
+    },
+    {
+     "key": "D",
+     "text": "La fuerza aplicada."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q27",
+   "number": 27,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "En una clase de física, se analizan las fuerzas que actúan sobre un cuerpo que está en reposo sobre una superficie horizontal. Los estudiantes P, Q, R y S, entregan diferentes afirmaciones para explicar cuáles son las fuerzas que actúan sobre el cuerpo y sus características. Al respecto, ¿cuál de las siguientes opciones indica una afirmación correcta entregada por uno de los estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El estudiante P afirma que actúan la fuerza peso y la fuerza normal, ambas con igual módulo y diferente dirección."
+    },
+    {
+     "key": "B",
+     "text": "El estudiante Q afirma que actúan la fuerza peso y la fuerza normal, ambas con igual módulo y dirección, pero sentido contrario."
+    },
+    {
+     "key": "C",
+     "text": "El estudiante R afirma que actúan la fuerza peso y la fuerza normal, y que ambas son un par de fuerzas acción y reacción."
+    },
+    {
+     "key": "D",
+     "text": "El estudiante S afirma que actúan la fuerza peso, la fuerza normal y la fuerza de roce, todas estas con igual módulo y sentido."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q29",
+   "number": 29,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Una persona aplica una fuerza de magnitud 30 N a un resorte ideal, logrando que se estire 20 cm, quedando en equilibrio. Al respecto, ¿cuál es la fuerza que habrá que aplicarle para que se estire 45 cm?",
+   "options": [
+    {
+     "key": "A",
+     "text": "97,5 N"
+    },
+    {
+     "key": "B",
+     "text": "67,5 N"
+    },
+    {
+     "key": "C",
+     "text": "43,5 N"
+    },
+    {
+     "key": "D",
+     "text": "37,5 N"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q30",
+   "number": 30,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Una empresa que fabrica resortes para amortiguadores, debe pegar en las cajas contenedoras un rótulo con información sobre sus características dependiendo de las necesidades de sus clientes. A continuación, se muestran los cuatro rótulos que dispone la empresa:\n\nRótulo 1 Rótulo 2\n\nLongitud natural 45 cm\n\nRótulo 3 Rótulo 4\n\nFuerza Deformación aplicada (N) (cm) 0 0 5000 5 10000 10 15000 15 20000 20\n\nSi un cliente solicitara información sobre un amortiguador que sea capaz de resistir una cantidad de carga específica y comprimirse hasta una cierta parte de su largo inicial, ¿qué rótulo debería pegar la empresa en las cajas contenedoras para satisfacer la solicitud del cliente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Rótulo 1."
+    },
+    {
+     "key": "B",
+     "text": "Rótulo 2."
+    },
+    {
+     "key": "C",
+     "text": "Rótulo 3."
+    },
+    {
+     "key": "D",
+     "text": "Rótulo 4."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q30.webp",
+    "width": 907,
+    "height": 930,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q31",
+   "number": 31,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "En el año 2008 hizo erupción el volcán Chaitén en la región de Los Lagos. La erupción consistió en la liberación de material piroclástico y, un mes después de finalizada la erupción, unos científicos exploraron la zona para estudiar la presencia de material liberado por el volcán en dicho evento. Al respecto, ¿cuál de las siguientes hipótesis podrían someter a prueba los científicos en su exploración?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El ritmo de subducción en la región ha aumentado."
+    },
+    {
+     "key": "B",
+     "text": "Las grietas en el suelo se forman en los alrededores del volcán."
+    },
+    {
+     "key": "C",
+     "text": "El tamaño de las rocas volcánicas es mayor en las cercanías del volcán que en lugares alejados."
+    },
+    {
+     "key": "D",
+     "text": "La temperatura de la cámara magmática del volcán es mayor que la de otros volcanes del mismo borde tectónico."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q32",
+   "number": 32,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "Un grupo de personas estudia el comportamiento de ciertas placas tectónicas, R, V, J, T y H, las cuales presentan un movimiento que está representado con flechas, tal como se muestra en la siguiente figura:\n\nR H\n\nT\n\nV J\n\nEn relación con el análisis de la figura, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el límite entre H y J podría existir subducción."
+    },
+    {
+     "key": "B",
+     "text": "En el límite entre V y J podría existir subducción."
+    },
+    {
+     "key": "C",
+     "text": "En el límite entre V y R podría existir una dorsal oceánica."
+    },
+    {
+     "key": "D",
+     "text": "En el límite entre T y V podría existir una dorsal oceánica."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q32.webp",
+    "width": 907,
+    "height": 640,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-cinematica"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q33",
+   "number": 33,
+   "axis": "Física",
+   "topic": "Magnetismo",
+   "stem": "Un grupo de investigadores viaja a la Antártica para indagar sobre el pasado geológico de nuestro planeta. En el desarrollo de su investigación descubren bajo una profunda capa de hielo, fósiles que indican la presencia de grandes zonas boscosas en el pasado. Al respecto, ¿cuál de las siguientes opciones relaciona el descubrimiento con la teoría de la deriva continental?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los continentes cambian sus posiciones a lo largo del tiempo."
+    },
+    {
+     "key": "B",
+     "text": "Los bordes de los continentes encajan entre sí."
+    },
+    {
+     "key": "C",
+     "text": "Existen cordilleras con la misma edad y clase de rocas."
+    },
+    {
+     "key": "D",
+     "text": "Existen rocas con la misma orientación magnética en distintos continentes."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q34",
+   "number": 34,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Para un experimento se dispone de diez barras de grafito de igual ancho y distinta longitud. Se mide la resistencia eléctrica de dichas barras para establecer una relación entre ella y la longitud de cada barra. Además del instrumento que mide la resistencia eléctrica, ¿cuál de los siguientes materiales es suficiente y necesario para establecer la relación entre ambas variables?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una regla"
+    },
+    {
+     "key": "B",
+     "text": "Una batería"
+    },
+    {
+     "key": "C",
+     "text": "Una ampolleta"
+    },
+    {
+     "key": "D",
+     "text": "Un amperímetro"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q35",
+   "number": 35,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Un grupo de estudiantes realiza un experimento en clases y determina la potencia eléctrica de tres circuitos compuestos por varias resistencias, conectados a una misma fuente de poder de voltaje constante. Los resultados se presentan en la siguiente tabla:\n\nCircuito Potencia (Watts) I 3 II 3 III 3\n\nConsiderando lo anterior, ¿qué inferencia correcta puede plantear el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El voltaje en cada resistencia es el mismo."
+    },
+    {
+     "key": "B",
+     "text": "Los circuitos tienen el mismo tipo de conexión."
+    },
+    {
+     "key": "C",
+     "text": "Los circuitos tienen igual cantidad de resistencias."
+    },
+    {
+     "key": "D",
+     "text": "La resistencia equivalente es la misma para todos los circuitos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q35.webp",
+    "width": 907,
+    "height": 471,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q37",
+   "number": 37,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un equipo de investigación cultivó distintos tipos de células humanas con una sustancia que, al entrar a estas, se unía de manera persistente y específica al ADN que constituye parte del nucléolo, afectando el proceso de expresión génica. Ante este resultado es posible especular acerca de potenciales efectos de esta sustancia sobre las células tratadas. A partir de lo anterior, ¿cuál de las siguientes inferencias es correcta respecto a un efecto directo de la sustancia sobre las células tratadas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Aumento progresivo del volumen citoplasmático en las células tratadas."
+    },
+    {
+     "key": "B",
+     "text": "Disminución en la cantidad de ribosomas producidos por unidad de tiempo."
+    },
+    {
+     "key": "C",
+     "text": "Aumento de la cantidad de material genético presente en el núcleo de las células tratadas."
+    },
+    {
+     "key": "D",
+     "text": "Disminución en la velocidad de transporte de sustancias a través de los poros nucleares."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q38",
+   "number": 38,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En un experimento escolar se dispone de una planta con flores blancas y una solución acuosa con colorante azul para repostería. Luego, se corta un tallo con flor y se introduce en un vaso de precipitados que contiene la solución coloreada. Tras unos minutos puede observarse el cambio de color de la flor a azul. Finalmente, el profesor les pide a los estudiantes que realicen un corte a los pétalos azules, para observarlos en el microscopio e identificar cuáles son las estructuras celulares que contienen el colorante. Considerando lo anterior, ¿en cuál de las siguientes estructuras se debería encontrar el colorante mencionado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En las mitocondrias."
+    },
+    {
+     "key": "B",
+     "text": "En la vacuola."
+    },
+    {
+     "key": "C",
+     "text": "En los peroxisomas."
+    },
+    {
+     "key": "D",
+     "text": "En el núcleo."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q40",
+   "number": 40,
+   "axis": "Biología",
+   "topic": "Metabolismo",
+   "stem": "Un grupo de investigadores evaluó el efecto de un nuevo fármaco M sobre la permeabilidad que presentan los enterocitos a la glucosa. El grupo reportó que el fármaco M disminuye la permeabilidad de los enterocitos a la glucosa, provocando una disminución de su flujo desde el intestino hacia los vasos sanguíneos, tal como se indica a continuación:\n\n100\n\n80 permeabilidad a la 60 Porcentaje de glucosa (%) 40\n\n20\n\n0 Concentración fármaco M 5 10 20 Concentración fármaco M (u.a.) 5 (µM) 10 (µM) 20 (µM)\n\nUna comisión evaluó esta investigación y señaló que existe una deficiencia metodológica que es necesaria mejorar para una correcta interpretación de los resultados, por lo que recomiendan replantear el diseño experimental. En relación con estos antecedentes, ¿cuál de las siguientes opciones corresponde a un error del diseño que afecta los resultados presentados por el grupo de investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Faltó evaluar un grupo donde no se aplique el fármaco."
+    },
+    {
+     "key": "B",
+     "text": "Faltó evaluar el fármaco a mayores concentraciones."
+    },
+    {
+     "key": "C",
+     "text": "Faltó evaluar el fármaco a menores concentraciones."
+    },
+    {
+     "key": "D",
+     "text": "Faltó evaluar un grupo con el fármaco en dosis crecientes."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q40.webp",
+    "width": 907,
+    "height": 752,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-biomoleculas"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q42",
+   "number": 42,
+   "axis": "Biología",
+   "topic": "Organismos",
+   "stem": "En la segunda mitad del siglo XVIII, se desconocía cómo se efectuaba la fecundación. Se proponía que el esperma desprendía un gas que al evaporarse entraba en contacto con el ovocito. El científico Lazzaro Spallanzani realizó múltiples experimentos que contribuyeron a la comprensión de este fenómeno, uno de los cuales se resume a continuación:\n\nTratamiento Resultados Huevos de rana adheridos por consistencia natural 1 de 13 huevos con esperma alejada desarrolla renacuajos. (contacto indirecto). Huevos de rana embebidos 12 de 13 huevos por esperma cercana desarrolla renacuajos. (contacto directo).\n\nSegún el experimento presentado, ¿qué demostró Spallanzani sobre el proceso de fecundación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que la participación directa de los espermatozoides garantiza la reproducción."
+    },
+    {
+     "key": "B",
+     "text": "Que la fecundación depende de la cercanía a la cual se encuentran los gametos."
+    },
+    {
+     "key": "C",
+     "text": "Que el desarrollo de organismos se asegura con la participación de ovocitos."
+    },
+    {
+     "key": "D",
+     "text": "Que la fecundación requiere una interacción química entre espermatozoides y ovocitos."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q42.webp",
+    "width": 907,
+    "height": 616,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q43",
+   "number": 43,
+   "axis": "Biología",
+   "topic": "Biología",
+   "stem": "Un equipo de investigadores está interesado en conocer si existe una relación entre la duración del ciclo ovárico y la fertilidad en mujeres de entre 20 y 35 años. Los investigadores plantean la siguiente hipótesis: “mujeres con una duración promedio de 28 días del ciclo ovárico presentan un alto porcentaje de fertilidad”. Al respecto, ¿cuál de las siguientes opciones corresponde a una evidencia que valida la hipótesis presentada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un estudio previo reportó que mujeres que tienen ciclos ováricos de 28 días presentan igual fertilidad que aquellas que poseen ciclos más cortos."
+    },
+    {
+     "key": "B",
+     "text": "Una investigación reciente indicó que las mujeres con ciclo ovárico de 35 días tienen la misma probabilidad de embarazo que aquellas con un ciclo ovárico de 28 días."
+    },
+    {
+     "key": "C",
+     "text": "Un estudio realizado en un grupo de mujeres encontró que aquellas con un ciclo ovárico de 28 días tienen una tasa de fertilidad del 90 %."
+    },
+    {
+     "key": "D",
+     "text": "Una investigación reportó una correlación positiva entre la duración de la menstruación y la fertilidad en mujeres con ciclos ováricos de 28 días."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q44",
+   "number": 44,
+   "axis": "Biología",
+   "topic": "Organismos",
+   "stem": "Un laboratorio farmacéutico está evaluando dos vías de administración de un nuevo anticonceptivo en animales de experimentación. Una de estas vías es la oral por medio de pastillas, mientras que la otra es a través de un anillo vaginal. La concentración plasmática del fármaco, según la vía de administración, se presenta en el siguiente gráfico:\n\nConcentración plasmática (u.a.) Vía oral Vía vaginal\n\nTiempo (días)\n\nEn relación con lo anterior, ¿cuál de las siguientes preguntas de investigación pudo haber guiado el estudio realizado por el laboratorio que originó estos resultados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Qué vía de administración confiere la mayor eficacia para el anticonceptivo?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuál vía de administración permite mantener por más tiempo el anticonceptivo en el organismo?"
+    },
+    {
+     "key": "C",
+     "text": "¿Qué concentración plasmática del anticonceptivo presenta menores efectos secundarios?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuál es la concentración plasmática del anticonceptivo en el tiempo para dos vías de administración?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q44.webp",
+    "width": 907,
+    "height": 785,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q47",
+   "number": 47,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "La mitosis presenta distintos puntos de control que permiten que este proceso se lleve a cabo correctamente. Uno de estos puntos de control se encuentra en la metafase mitótica, en donde se verifica que los cromosomas se unan correctamente al huso mitótico. Al respecto, ¿cuál de las siguientes evidencias valida que este punto de control está funcionando correctamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las células que presenten anomalías luego de la replicación del material genético detendrán la progresión de la mitosis."
+    },
+    {
+     "key": "B",
+     "text": "Las células que tengan cromosomas fuera del ecuador de la célula detendrán la progresión de la mitosis."
+    },
+    {
+     "key": "C",
+     "text": "Las células que presenten daño del ADN detendrán la progresión de la mitosis."
+    },
+    {
+     "key": "D",
+     "text": "Las células que presenten un volumen celular alterado expresarán proteínas que detendrán la progresión de la mitosis."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-genetica"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q48",
+   "number": 48,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En el contexto de una investigación sobre la disyunción cromosómica y sus alteraciones, una científica está estudiando un compuesto que bloquea el proceso de separación de las cromátidas hermanas. Considerando que se aplicó la molécula a cultivos de células germinales, ¿en cuál de las siguientes etapas hará efecto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Profase I."
+    },
+    {
+     "key": "B",
+     "text": "Anafase I."
+    },
+    {
+     "key": "C",
+     "text": "Profase II."
+    },
+    {
+     "key": "D",
+     "text": "Anafase II."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q49",
+   "number": 49,
+   "axis": "Biología",
+   "topic": "Proteínas",
+   "stem": "La trombosis o formación de coágulos de sangre constituye una complicación permanente durante las estadías hospitalarias debido a sus secuelas. En este contexto, un grupo de científicos ha conseguido producir en el laboratorio una proteína transgénica, la cual originalmente es secretada por sanguijuelas evitando la coagulación de sangre cuando estos animales se alimentan. A partir de los antecedentes presentados, ¿cuál de las siguientes hipótesis es coherente con las variables de este estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La proteína transgénica es un potencial fármaco que previene la trombosis en personas hospitalizadas."
+    },
+    {
+     "key": "B",
+     "text": "La proteína transgénica es un anticoagulante más efectivo para tratar trombosis que aquella producida por las sanguijuelas."
+    },
+    {
+     "key": "C",
+     "text": "Las personas con trombosis tratadas con la proteína transgénica tienen una reducción en su tiempo de estadía hospitalaria."
+    },
+    {
+     "key": "D",
+     "text": "Las personas con trombosis tratadas con la proteína transgénica presentan secuelas menos graves que aquellos no tratados."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q50",
+   "number": 50,
+   "axis": "Biología",
+   "topic": "Microorganismos",
+   "stem": "Las poblaciones bacterianas pueden evolucionar rápidamente, respondiendo ante la presencia de antibióticos, utilizados como una presión de selección. En la siguiente tabla, se resumen los resultados de un estudio en el que se expusieron cultivos de una bacteria X, a la misma temperatura y a diferentes antibióticos:\n\nTiempo de muestreo Respuesta ante la presencia de antibiótico (horas) Antibiótico 1 Antibiótico 2 Antibiótico 3 Antibiótico 4 Inicial - - - - 15 - - + - 20 - - + - 25 - + + + 30 - + + + 35 + + + + 40 + + + +\n\n+ = Resistencia al antibiótico - = Sensibilidad al antibiótico\n\nConsiderando los resultados de la tabla, ¿cuál de las siguientes opciones pudo ser la pregunta de investigación que pudo haber guiado este estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Qué mecanismo desarrolla la bacteria X para volverse resistente frente a la acción de los antibióticos?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuánto tiempo demora la bacteria X en generar resistencia a los antibióticos?"
+    },
+    {
+     "key": "C",
+     "text": "¿Qué tipo de antibiótico resulta ser más efectivo en función del tiempo para el tratamiento contra las enfermedades bacterianas?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cómo influye la temperatura en el crecimiento de una población bacteriana sometida a diferentes tratamientos con antibióticos?"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q50.webp",
+    "width": 907,
+    "height": 726,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q51",
+   "number": 51,
+   "axis": "Biología",
+   "topic": "Especies",
+   "stem": "Un grupo de científicos se encuentra realizando estudios de biología molecular de un fósil encontrado en el Parque Nacional Torres del Paine. Para ello realizaron una comparación de las secuencias genéticas de este fósil con restos de 4 especies de interés presentes en otras áreas geográficas de similares características. Los investigadores presentaron los resultados del porcentaje de coincidencia entre las secuencias analizadas (similitud), en la siguiente tabla:\n\nEspecie Similitud (%) 1 41 2 38 3 95 4 0\n\nEn este contexto, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El fósil encontrado es de una especie antigua que posee un ancestro común con la especie 4."
+    },
+    {
+     "key": "B",
+     "text": "El fósil encontrado es de una especie que se encuentra estrechamente relacionada con la especie 3."
+    },
+    {
+     "key": "C",
+     "text": "El fósil encontrado es de una especie que habitó junto con las especies 1 y 2 en un área geográfica distinta de donde fue hallado."
+    },
+    {
+     "key": "D",
+     "text": "El fósil encontrado es de una especie extinta sin relación evolutiva alguna con las especies comparadas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q51.webp",
+    "width": 907,
+    "height": 645,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-evolucion"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q52",
+   "number": 52,
+   "axis": "Biología",
+   "topic": "Plantas",
+   "stem": "Al estudiar la influencia de distintas variables sobre la fotosíntesis de las plantas terrestres, fue posible establecer una relación entre el rendimiento fotosintético en función de la concentración de oxígeno en el estroma del cloroplasto, la cual se representa en el siguiente gráfico:\n\nRendimiento fotosintético (u.a.)\n\nConcentración de oxígeno en el estroma (u.a.)\n\nConsiderando lo anterior, ¿cuál de las siguientes opciones corresponde a una inferencia correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las plantas que viven en ambientes altamente oxigenados presentarán un crecimiento acelerado."
+    },
+    {
+     "key": "B",
+     "text": "La mayor producción de oxígeno asociada a la fotosíntesis se logrará en plantas de rendimiento fotosintético óptimo."
+    },
+    {
+     "key": "C",
+     "text": "Las plantas que eliminan mayores niveles de oxígeno en las hojas presentarán rendimientos fotosintéticos superiores."
+    },
+    {
+     "key": "D",
+     "text": "Las plantas que habitan ambientes con bajas concentraciones de oxígeno presentarán rendimientos fotosintéticos menores."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q52.webp",
+    "width": 907,
+    "height": 858,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q54",
+   "number": 54,
+   "axis": "Biología",
+   "topic": "Especies",
+   "stem": "Para una determinada cuenca, se ha estudiado parte de su trama trófica dulceacuícola representada por dos especies de peces (X e Y) y una especie Z de ninfa herbívora (estado larval de insectos adultos) por un periodo de 6 años, mediante la estimación de la biomasa, medida en unidades arbitrarias (u.a.), y su respectivo rol trófico. Los resultados se presentan en la siguiente tabla:\n\nEstimación de la biomasa Rol trófico Especie Año Año Año Año Año Año 1 2 3 4 5 6 Consumidor terciario X 90 104 110 120 122 122 Consumidor secundario Y 8,75 8,05 7,7 5,6 4,9 4,55 Consumidor primario Z 0,105 0,103 0,100 0,108 0,110 0,104\n\nAl respecto, ¿cuál de las siguientes opciones corresponde a una tendencia que se puede extraer de los datos reportados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La biomasa de la trama trófica en estudio disminuye a medida que pasan los años."
+    },
+    {
+     "key": "B",
+     "text": "La energía disponible en esta trama trófica aumenta a medida que pasan los años."
+    },
+    {
+     "key": "C",
+     "text": "Los consumidores terciarios aumentan a medida que los consumidores secundarios disminuyen."
+    },
+    {
+     "key": "D",
+     "text": "Los consumidores secundarios disminuyen a medida que los consumidores primarios aumentan."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q54.webp",
+    "width": 907,
+    "height": 623,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-evolucion"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q55",
+   "number": 55,
+   "axis": "Química",
+   "topic": "Gases",
+   "stem": "En una práctica de laboratorio, los estudiantes realizan un experimento en el cual calientan bolitas de iodo de color gris contenidas en un vaso de precipitados, observando el desprendimiento de un gas de color violeta intenso. Sobre la tapa del vaso colocan un vidrio de reloj con hielo y observan que, al entrar en contacto el gas con la superficie del vidrio, se forman cristales brillantes y, además, queda un residuo café en el fondo del vaso. Luego, los estudiantes mencionan que “estos cristales corresponden a iodo que ha sido purificado mediante el procedimiento realizado”. ¿A qué componente de la investigación corresponde el texto entre comillas mencionado por los estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un procedimiento experimental."
+    },
+    {
+     "key": "B",
+     "text": "A un marco conceptual."
+    },
+    {
+     "key": "C",
+     "text": "A una conclusión."
+    },
+    {
+     "key": "D",
+     "text": "A una teoría."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q56",
+   "number": 56,
+   "axis": "Química",
+   "topic": "Propiedades coligativas",
+   "stem": "Un grupo de estudiantes necesita separar una mezcla que contiene tres componentes: dos líquidos miscibles X e Y, cuyas temperaturas de ebullición son 80 °C y 110 °C, respectivamente, y un sólido insoluble en ambos líquidos. Para separar estos tres componentes, ¿cuál de las siguientes opciones presenta de manera consecutiva los métodos de separación correctos que se deben usar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tamizado y decantación."
+    },
+    {
+     "key": "B",
+     "text": "Filtración y destilación."
+    },
+    {
+     "key": "C",
+     "text": "Decantación y filtración."
+    },
+    {
+     "key": "D",
+     "text": "Destilación y tamizado."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-disoluciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q60",
+   "number": 60,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "En una clase, un docente presenta a sus estudiantes el siguiente modelo atómico correspondiente a una especie X.\n\nSimbología:\n\np = protones 9 p n = neutrones 10 n = electrones\n\nA partir de la representación, ¿cuál de las siguientes opciones corresponde a la simbología correcta de la especie X?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10 X 9"
+    },
+    {
+     "key": "B",
+     "text": "19 X⁻ 9"
+    },
+    {
+     "key": "C",
+     "text": "9 X 10"
+    },
+    {
+     "key": "D",
+     "text": "19 X⁻ 10"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q60.webp",
+    "width": 907,
+    "height": 608,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-atomo"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q61",
+   "number": 61,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "El nihonio (Nh) es un elemento químico, altamente inestable, que ha sido sintetizado por un equipo de investigadores japoneses. Este tiene dos posibles representaciones:\n\n286 285 Nh y Nh 113 113\n\n¿Cuál es la diferencia entre estas representaciones?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El número de electrones."
+    },
+    {
+     "key": "B",
+     "text": "El número atómico."
+    },
+    {
+     "key": "C",
+     "text": "El número de protones."
+    },
+    {
+     "key": "D",
+     "text": "El número másico."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q61.webp",
+    "width": 907,
+    "height": 329,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-atomo"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q62",
+   "number": 62,
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "stem": "En una clase se muestra la siguiente representación del modelo atómico de Bohr para el ion S²–, con el último nivel incompleto (línea punteada):\n\n16 p 16 n\n\nCon respecto a la información y al modelo atómico anterior, ¿cuántos electrones debe tener en el último nivel (línea punteada) para representar correctamente al ion S²–?",
+   "options": [
+    {
+     "key": "A",
+     "text": "16"
+    },
+    {
+     "key": "B",
+     "text": "10"
+    },
+    {
+     "key": "C",
+     "text": "8"
+    },
+    {
+     "key": "D",
+     "text": "4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q62.webp",
+    "width": 907,
+    "height": 600,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-atomo"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q63",
+   "number": 63,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "Una docente escribe en la pizarra la siguiente estructura de un compuesto que es utilizado como materia prima en la fabricación de varios compuestos cíclicos y poliméricos.\n\nLuego, la docente pregunta por el número total de enlaces sigma del compuesto. Al respecto, ¿cuál de las siguientes opciones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3"
+    },
+    {
+     "key": "B",
+     "text": "5"
+    },
+    {
+     "key": "C",
+     "text": "13"
+    },
+    {
+     "key": "D",
+     "text": "16"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q63.webp",
+    "width": 907,
+    "height": 403,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q64",
+   "number": 64,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Una docente de química presenta a sus estudiantes la siguiente estructura de una molécula orgánica, numerando los átomos de carbono presentes de izquierda a derecha, de acuerdo a la prioridad del grupo funcional:\n\nO\n\n3 HO 1 OH 4 2\n\nAl respecto, ¿cuál de las siguientes opciones indica la relación correcta del átomo de carbono con su respectiva hibridación?\n\n1 2 3 4",
+   "options": [
+    {
+     "key": "A",
+     "text": "sp² sp² sp² sp²"
+    },
+    {
+     "key": "B",
+     "text": "sp² sp³ sp³ sp"
+    },
+    {
+     "key": "C",
+     "text": "sp³ sp² sp² sp"
+    },
+    {
+     "key": "D",
+     "text": "sp² sp³ sp³ sp³"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q64.webp",
+    "width": 907,
+    "height": 523,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-atomo"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q65",
+   "number": 65,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "Un docente dibuja en la pizarra las siguientes representaciones de diferentes compuestos orgánicos:\n\nLuego, solicita a sus estudiantes que analicen estos compuestos según su masa molar. En referencia a la solicitud del docente, ¿cuál de las siguientes opciones presenta los compuestos ordenados de menor a mayor masa molar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "< < <"
+    },
+    {
+     "key": "B",
+     "text": "< < <"
+    },
+    {
+     "key": "C",
+     "text": "< < <"
+    },
+    {
+     "key": "D",
+     "text": "< < <"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q65.webp",
+    "width": 907,
+    "height": 974,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q67",
+   "number": 67,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Una docente de química, presenta a los estudiantes la siguiente fórmula molecular: C⁴H⁸O², y les pregunta por alguna representación estructural del compuesto al que está asociada. ¿Cuál de las siguientes opciones es una representación correcta dada como respuesta por los estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q67.webp",
+    "width": 907,
+    "height": 844,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q68",
+   "number": 68,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "Una docente de química presenta a los estudiantes la siguiente estructura de un compuesto orgánico:\n\nLuego, les solicita escribir en sus cuadernos el nombre del compuesto. ¿Cuál de los nombres entregados por los estudiantes es correcto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Butanal"
+    },
+    {
+     "key": "B",
+     "text": "Butan-2-ona"
+    },
+    {
+     "key": "C",
+     "text": "Butan-1,2-diol"
+    },
+    {
+     "key": "D",
+     "text": "Ácido butanoico"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q68.webp",
+    "width": 907,
+    "height": 374,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q70",
+   "number": 70,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "La siguiente fórmula representa un compuesto orgánico presente en el formol o formalina. Dentro de sus usos se encuentra la preservación de tejidos biológicos en laboratorios.\n\nO\n\nC H H\n\nAl respecto y dada su fórmula, ¿cómo se clasifica este compuesto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Como éter"
+    },
+    {
+     "key": "B",
+     "text": "Como cetona"
+    },
+    {
+     "key": "C",
+     "text": "Como alcohol"
+    },
+    {
+     "key": "D",
+     "text": "Como aldehído"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q70.webp",
+    "width": 907,
+    "height": 403,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q71",
+   "number": 71,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Durante una clase en la que se estudia acerca de la proporción en la que se combinan los reactantes para formar productos, se analiza la reacción entre el hidróxido de sodio (NaOH) y el ácido sulfúrico (H²SO⁴). La ecuación balanceada de la reacción es la siguiente:\n\n2 NaOH (ac) + H²SO⁴ (ac) Na²SO⁴ (ac) + 2 H²O (λ)\n\nDe acuerdo con esta información, ¿qué cantidad de H²SO⁴ se debe utilizar para obtener 2 mol de Na²SO⁴?",
+   "options": [
+    {
+     "key": "A",
+     "text": "98 g"
+    },
+    {
+     "key": "B",
+     "text": "196 g"
+    },
+    {
+     "key": "C",
+     "text": "0,5 mol"
+    },
+    {
+     "key": "D",
+     "text": "1,0 mol"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q72",
+   "number": 72,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Sebastián realiza la siguiente reacción química en el laboratorio de su colegio:\n\nFe + S FeS\n\nPara ello, mezcla y calienta en un crisol de porcelana 112 g de Fe (masa molar = 56 g/mol) con un exceso de S (masa molar = 32 g/mol), para asegurar la reacción completa del hierro. A partir del procedimiento realizado, ¿cuál es la masa máxima de FeS que se formará?",
+   "options": [
+    {
+     "key": "A",
+     "text": "176 g"
+    },
+    {
+     "key": "B",
+     "text": "168 g"
+    },
+    {
+     "key": "C",
+     "text": "144 g"
+    },
+    {
+     "key": "D",
+     "text": "88 g"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q72.webp",
+    "width": 907,
+    "height": 372,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q73",
+   "number": 73,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "En el contexto de una clase de laboratorio, se estudian las relaciones de masa en el proceso de combustión de la glucosa, basándose en la siguiente ecuación no balanceada:\n\nC⁶H¹²O⁶ + O² CO² + H²O\n\nSi se desea obtener un total de 372 g de productos, ¿cuál de las siguientes afirmaciones respecto a las cantidades de las sustancias involucradas es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Debería reaccionar, completamente, 1 mol de C⁶H¹²O⁶ con 6 mol de O²."
+    },
+    {
+     "key": "B",
+     "text": "Debería reaccionar, completamente, 1 mol de C⁶H¹²O⁶ con 1 mol de O²."
+    },
+    {
+     "key": "C",
+     "text": "Se debería formar, luego de la reacción, 6 mol de CO² y 1 mol de H²O."
+    },
+    {
+     "key": "D",
+     "text": "Se debería formar, luego de la reacción, 1 mol de CO² y 1 mol de H²O."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q74",
+   "number": 74,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "Un grupo de estudiantes hace reaccionar completamente una muestra de 8 g de hidrógeno con 96 g de oxígeno en un recipiente cerrado, verificándose la siguiente reacción:\n\n2 H² (g) + O² (g) 2 H²O (g)\n\nConsiderando la estequiometría de la reacción, ¿cuál es la cantidad máxima de H²O que se ha producido una vez finalizada la reacción?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8 mol"
+    },
+    {
+     "key": "B",
+     "text": "6 mol"
+    },
+    {
+     "key": "C",
+     "text": "2 mol"
+    },
+    {
+     "key": "D",
+     "text": "4 mol"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q75",
+   "number": 75,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "Una profesora escribe la siguiente ecuación balanceada que representa la reacción entre Mg (masa molar = 24,0 g/mol) y HCl (masa molar = 36,5 g/mol) para formar MgCl²:\n\nMg + 2 HCl MgCl² + H²\n\nDe acuerdo con la ecuación anterior, ¿cuál es la máxima cantidad de MgCl² que se forma a partir de 48 g de Mg y 73 g de HCl?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5,0 mol"
+    },
+    {
+     "key": "B",
+     "text": "2,5 mol"
+    },
+    {
+     "key": "C",
+     "text": "2,0 mol"
+    },
+    {
+     "key": "D",
+     "text": "1,0 mol"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q77",
+   "number": 77,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "El ácido fosfórico, H³PO⁴, es un líquido incoloro utilizado como saborizante, en detergentes y en la elaboración de bebidas gaseosas. Se realiza el análisis de dos muestras de H³PO⁴, ¿cuál de las siguientes tablas representa correctamente la composición porcentual de cada átomo presente en la molécula de H³PO⁴?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Masa de la muestra Muestra % H % P % O (g) 1 5,25 3,1 31,6 65,3 2 25,45 3,1 31,6 65,3"
+    },
+    {
+     "key": "B",
+     "text": "Masa de la muestra Muestra % H % P % O (g) 1 10 1,5 15 83,5 2 20 3 30 41,75"
+    },
+    {
+     "key": "C",
+     "text": "Masa de la muestra Muestra % H % P % O (g) 1 10 1,5 15 83,5 2 20 0,75 7,5 41,75"
+    },
+    {
+     "key": "D",
+     "text": "Masa de la muestra Muestra % H % P % O (g) 1 5,25 3,1 31,6 65,3 2 25,45 6,2 63,2 30,6"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-quimica-2026-regular/q77.webp",
+    "width": 907,
+    "height": 675,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-atomo"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q78",
+   "number": 78,
+   "axis": "Química",
+   "topic": "Estequiometría",
+   "stem": "En un laboratorio, un grupo de estudiantes debe realizar la hidrólisis de una muestra que contiene almidón. Para ello, deben preparar 0,350 L de una solución acuosa de concentración 2 mol/L de HCl (masa molar = 36 g/mol). ¿Qué masa total de HCl debe contener la solución requerida?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0,7 g"
+    },
+    {
+     "key": "B",
+     "text": "5,7 g"
+    },
+    {
+     "key": "C",
+     "text": "12,6 g"
+    },
+    {
+     "key": "D",
+     "text": "25,2 g"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "pilot": true,
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-quimica-2026-regular-q80",
+   "number": 80,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un estudiante tiene un recipiente con 500 mL de una solución acuosa de sal común (NaCl) de concentración 1,5 mol/L, a la cual le agrega 1 L de agua formando una nueva solución que denomina X. Luego, toma un volumen de 10 mL de la solución X y los lleva a otro recipiente, agregando agua destilada hasta completar un volumen de 50 mL, formando una solución que denominó Y. ¿Cuál es la concentración de la solución Y?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1,50 mol/L"
+    },
+    {
+     "key": "B",
+     "text": "0,50 mol/L"
+    },
+    {
+     "key": "C",
+     "text": "0,30 mol/L"
+    },
+    {
+     "key": "D",
+     "text": "0,10 mol/L"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-disoluciones"
+  }
+ ]
+}

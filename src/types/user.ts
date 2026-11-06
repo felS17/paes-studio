@@ -14,6 +14,7 @@ export type ThemeId =
 /** `system` sigue al dispositivo con los dos temas Geist. */
 export type ThemePreference = ThemeId | 'system'
 export type ReaderFont = 'serif' | 'sans'
+export type TutorRate = 1 | 1.25 | 1.5
 /** Tipografía del Inicio y los menús. El ExamRunner la ignora: ver `useUiFont`. */
 export type UiFontId = 'geist' | 'space-grotesk' | 'jetbrains-mono' | 'fira-code' | 'ibm-plex-mono'
 
@@ -27,6 +28,8 @@ export interface ReaderSettings {
 export interface UserSettings {
   theme: ThemePreference
   uiFont: UiFontId
+  /** Velocidad del tutor de voz. */
+  tutorRate: TutorRate
   /** Nebulosa del Inicio: `null` sigue a la preferencia de movimiento reducido del dispositivo. */
   nebulaPaused: boolean | null
   reader: ReaderSettings

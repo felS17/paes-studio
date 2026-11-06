@@ -5,6 +5,7 @@ import { Accuracy } from '@/components/dashboard/Accuracy'
 import { DrillDialog } from '@/components/dashboard/SubtopicExplorer'
 import { Button } from '@/components/ui/button'
 import { Tabs } from '@/components/ui/tabs'
+import { ManimEmbed } from '@/components/manim/ManimEmbed'
 import { SubtopicNoteView } from '@/components/zettelkasten/SubtopicNoteView'
 import { cardLinksFor } from '@/data/flashcards/links'
 import { SUBJECTS } from '@/data/subjects'
@@ -211,6 +212,7 @@ export function InspectorContent() {
             <Mastery stat={stat} questions={questions} />
             {info.sub ? (
               <>
+                <ManimEmbed subtopics={[info.sub.id]} className="px-4 pt-3" />
                 <Block title="Resumen del tema">
                   <SubtopicNoteView id={info.sub.id} notes={notes} />
                 </Block>

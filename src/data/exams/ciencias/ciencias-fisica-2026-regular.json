@@ -1,0 +1,1859 @@
+{
+ "id": "ciencias-fisica-2026-regular",
+ "subject": "ciencias",
+ "area": "fisica",
+ "title": "PAES Regular 2025",
+ "description": "Selección oficial de 56 de las 80 preguntas de Ciencias (Física), aplicada el 02-12-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
+ "year": 2025,
+ "admissionYear": 2026,
+ "modality": "regular",
+ "source": "demre",
+ "form": "163",
+ "appliedOn": "2025-12-02",
+ "durationMinutes": 110,
+ "scoring": {
+  "method": "official-table",
+  "table": [
+   100,
+   116,
+   140,
+   163,
+   183,
+   203,
+   220,
+   236,
+   250,
+   264,
+   279,
+   294,
+   308,
+   319,
+   328,
+   337,
+   346,
+   358,
+   371,
+   384,
+   395,
+   404,
+   411,
+   416,
+   422,
+   429,
+   438,
+   450,
+   463,
+   475,
+   484,
+   491,
+   496,
+   500,
+   504,
+   509,
+   516,
+   526,
+   538,
+   551,
+   562,
+   571,
+   577,
+   582,
+   586,
+   590,
+   595,
+   603,
+   613,
+   625,
+   638,
+   649,
+   658,
+   664,
+   670,
+   675,
+   682,
+   691,
+   703,
+   716,
+   729,
+   740,
+   750,
+   758,
+   768,
+   780,
+   793,
+   808,
+   823,
+   838,
+   853,
+   869,
+   888,
+   908,
+   930,
+   1000
+  ],
+  "officialQuestionCount": 80,
+  "officialScorableCount": 75
+ },
+ "generatedBy": "scripts/pipeline/extract_demre.py",
+ "generatedAt": "2026-11-06",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-fisica-2026-regular-q02",
+   "number": 2,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "En el espectro electromagnético, entre el intervalo de frecuencias correspondientes a radiación infrarroja y ultravioleta, se encuentran las frecuencias referidas a",
+   "options": [
+    {
+     "key": "A",
+     "text": "los rayos X."
+    },
+    {
+     "key": "B",
+     "text": "la luz visible."
+    },
+    {
+     "key": "C",
+     "text": "las microondas."
+    },
+    {
+     "key": "D",
+     "text": "las radiofrecuencias."
+    },
+    {
+     "key": "E",
+     "text": "las radiaciones gamma."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-ondas"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q03",
+   "number": 3,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "En el contexto de una actividad escolar, un grupo de estudiantes hace pasar luz blanca hacia prismas cuadrados de iguales dimensiones, pero de distinto tipo: uno transparente, uno translúcido verde y uno translúcido rojo. En el lado opuesto del cual incide la luz, ubican una pantalla blanca a una distancia fija del prisma transparente, y registran los colores observados en ella. Luego, repiten el procedimiento utilizando los prismas translúcidos, uno a la vez. Considerando lo anterior, ¿cuál de las siguientes hipótesis es acorde con el procedimiento realizado por el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La distancia de la pantalla a los prismas afecta a la luz que incide en estos."
+    },
+    {
+     "key": "B",
+     "text": "El material del prisma influye en la incidencia de la luz en él."
+    },
+    {
+     "key": "C",
+     "text": "La luz blanca está compuesta por rayos monocromáticos."
+    },
+    {
+     "key": "D",
+     "text": "El color del prisma influye en la luz que este transmite."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q05",
+   "number": 5,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "La lente delgada L forma la imagen I del objeto O. La imagen se ubica en el punto Q cuando el objeto se coloca en el punto P, como indica la figura.\n\nI P Q O\n\nL\n\nSi se usa la misma lente, y ahora el objeto O se ubica en el punto Q, el esquema que mejor muestra la imagen I que formará la lente es\n\nO P",
+   "options": [
+    {
+     "key": "A",
+     "text": "Q I L O P"
+    },
+    {
+     "key": "B",
+     "text": "Q I L I O P"
+    },
+    {
+     "key": "C",
+     "text": "Q L I O"
+    },
+    {
+     "key": "D",
+     "text": "Q P L O I"
+    },
+    {
+     "key": "E",
+     "text": "P Q L"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q05.webp",
+    "width": 907,
+    "height": 1120,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q06",
+   "number": 6,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "En un laboratorio de óptica se hace incidir un conjunto de tres haces paralelos de luz láser de potencia fija sobre un arreglo de lentes, tal como se representa en la siguiente figura:\n\nRespecto del patrón de haces de luz observado, ¿cuál de las siguientes opciones señala correctamente el objetivo que se pretende lograr con el experimento descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cambiar el ángulo de incidencia del conjunto de láseres en ambos lentes."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la amplitud del conjunto de láseres en ambos lentes."
+    },
+    {
+     "key": "C",
+     "text": "Aumentar la separación entre los distintos haces de luz láser."
+    },
+    {
+     "key": "D",
+     "text": "Focalizar los distintos haces de luz láser en un único punto."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q06.webp",
+    "width": 907,
+    "height": 638,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q08",
+   "number": 8,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un estudiante ubica un bloque en la parte más alta de un plano inclinado muy largo, lo empuja brevemente, con una fuerza paralela a la superficie, midiendo cuánto tarda en llegar hasta la base del plano. Luego repite el procedimiento varias veces, con las mismas condiciones iniciales, pero recubriendo la superficie del plano inclinado con un material diferente cada vez. Al respecto, ¿cuál de las siguientes fuerzas se asocia directamente con la variable independiente del procedimiento descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La fuerza peso."
+    },
+    {
+     "key": "B",
+     "text": "La fuerza normal."
+    },
+    {
+     "key": "C",
+     "text": "La fuerza de roce."
+    },
+    {
+     "key": "D",
+     "text": "La fuerza aplicada."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q09",
+   "number": 9,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "En una clase de física, se analizan las fuerzas que actúan sobre un cuerpo que está en reposo sobre una superficie horizontal. Los estudiantes P, Q, R y S, entregan diferentes afirmaciones para explicar cuáles son las fuerzas que actúan sobre el cuerpo y sus características. Al respecto, ¿cuál de las siguientes opciones indica una afirmación correcta entregada por uno de los estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El estudiante P afirma que actúan la fuerza peso y la fuerza normal, ambas con igual módulo y diferente dirección."
+    },
+    {
+     "key": "B",
+     "text": "El estudiante Q afirma que actúan la fuerza peso y la fuerza normal, ambas con igual módulo y dirección, pero sentido contrario."
+    },
+    {
+     "key": "C",
+     "text": "El estudiante R afirma que actúan la fuerza peso y la fuerza normal, y que ambas son un par de fuerzas acción y reacción."
+    },
+    {
+     "key": "D",
+     "text": "El estudiante S afirma que actúan la fuerza peso, la fuerza normal y la fuerza de roce, todas estas con igual módulo y sentido."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q11",
+   "number": 11,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Una persona aplica una fuerza de magnitud 30 N a un resorte ideal, logrando que se estire 20 cm, quedando en equilibrio. Al respecto, ¿cuál es la fuerza que habrá que aplicarle para que se estire 45 cm?",
+   "options": [
+    {
+     "key": "A",
+     "text": "97,5 N"
+    },
+    {
+     "key": "B",
+     "text": "67,5 N"
+    },
+    {
+     "key": "C",
+     "text": "43,5 N"
+    },
+    {
+     "key": "D",
+     "text": "37,5 N"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q12",
+   "number": 12,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Una empresa que fabrica resortes para amortiguadores, debe pegar en las cajas contenedoras un rótulo con información sobre sus características dependiendo de las necesidades de sus clientes. A continuación, se muestran los cuatro rótulos que dispone la empresa:\n\nRótulo 1 Rótulo 2\n\nLongitud natural 45 cm\n\nRótulo 3 Rótulo 4\n\nFuerza Deformación aplicada (N) (cm) 0 0 5000 5 10000 10 15000 15 20000 20\n\nSi un cliente solicitara información sobre un amortiguador que sea capaz de resistir una cantidad de carga específica y comprimirse hasta una cierta parte de su largo inicial, ¿qué rótulo debería pegar la empresa en las cajas contenedoras para satisfacer la solicitud del cliente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Rótulo 1."
+    },
+    {
+     "key": "B",
+     "text": "Rótulo 2."
+    },
+    {
+     "key": "C",
+     "text": "Rótulo 3."
+    },
+    {
+     "key": "D",
+     "text": "Rótulo 4."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q12.webp",
+    "width": 907,
+    "height": 930,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q13",
+   "number": 13,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "En el año 2008 hizo erupción el volcán Chaitén en la región de Los Lagos. La erupción consistió en la liberación de material piroclástico y, un mes después de finalizada la erupción, unos científicos exploraron la zona para estudiar la presencia de material liberado por el volcán en dicho evento. Al respecto, ¿cuál de las siguientes hipótesis podrían someter a prueba los científicos en su exploración?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El ritmo de subducción en la región ha aumentado."
+    },
+    {
+     "key": "B",
+     "text": "Las grietas en el suelo se forman en los alrededores del volcán."
+    },
+    {
+     "key": "C",
+     "text": "El tamaño de las rocas volcánicas es mayor en las cercanías del volcán que en lugares alejados."
+    },
+    {
+     "key": "D",
+     "text": "La temperatura de la cámara magmática del volcán es mayor que la de otros volcanes del mismo borde tectónico."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q14",
+   "number": 14,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "Un grupo de personas estudia el comportamiento de ciertas placas tectónicas, R, V, J, T y H, las cuales presentan un movimiento que está representado con flechas, tal como se muestra en la siguiente figura:\n\nR H\n\nT\n\nV J\n\nEn relación con el análisis de la figura, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el límite entre H y J podría existir subducción."
+    },
+    {
+     "key": "B",
+     "text": "En el límite entre V y J podría existir subducción."
+    },
+    {
+     "key": "C",
+     "text": "En el límite entre V y R podría existir una dorsal oceánica."
+    },
+    {
+     "key": "D",
+     "text": "En el límite entre T y V podría existir una dorsal oceánica."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q14.webp",
+    "width": 907,
+    "height": 640,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-cinematica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q15",
+   "number": 15,
+   "axis": "Física",
+   "topic": "Magnetismo",
+   "stem": "Un grupo de investigadores viaja a la Antártica para indagar sobre el pasado geológico de nuestro planeta. En el desarrollo de su investigación descubren bajo una profunda capa de hielo, fósiles que indican la presencia de grandes zonas boscosas en el pasado. Al respecto, ¿cuál de las siguientes opciones relaciona el descubrimiento con la teoría de la deriva continental?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los continentes cambian sus posiciones a lo largo del tiempo."
+    },
+    {
+     "key": "B",
+     "text": "Los bordes de los continentes encajan entre sí."
+    },
+    {
+     "key": "C",
+     "text": "Existen cordilleras con la misma edad y clase de rocas."
+    },
+    {
+     "key": "D",
+     "text": "Existen rocas con la misma orientación magnética en distintos continentes."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q16",
+   "number": 16,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Para un experimento se dispone de diez barras de grafito de igual ancho y distinta longitud. Se mide la resistencia eléctrica de dichas barras para establecer una relación entre ella y la longitud de cada barra. Además del instrumento que mide la resistencia eléctrica, ¿cuál de los siguientes materiales es suficiente y necesario para establecer la relación entre ambas variables?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una regla"
+    },
+    {
+     "key": "B",
+     "text": "Una batería"
+    },
+    {
+     "key": "C",
+     "text": "Una ampolleta"
+    },
+    {
+     "key": "D",
+     "text": "Un amperímetro"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q17",
+   "number": 17,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Un grupo de estudiantes realiza un experimento en clases y determina la potencia eléctrica de tres circuitos compuestos por varias resistencias, conectados a una misma fuente de poder de voltaje constante. Los resultados se presentan en la siguiente tabla:\n\nCircuito Potencia (Watts) I 3 II 3 III 3\n\nConsiderando lo anterior, ¿qué inferencia correcta puede plantear el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El voltaje en cada resistencia es el mismo."
+    },
+    {
+     "key": "B",
+     "text": "Los circuitos tienen el mismo tipo de conexión."
+    },
+    {
+     "key": "C",
+     "text": "Los circuitos tienen igual cantidad de resistencias."
+    },
+    {
+     "key": "D",
+     "text": "La resistencia equivalente es la misma para todos los circuitos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q17.webp",
+    "width": 907,
+    "height": 471,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q19",
+   "number": 19,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "Un equipo de investigación cultivó distintos tipos de células humanas con una sustancia que, al entrar a estas, se unía de manera persistente y específica al ADN que constituye parte del nucléolo, afectando el proceso de expresión génica. Ante este resultado es posible especular acerca de potenciales efectos de esta sustancia sobre las células tratadas. A partir de lo anterior, ¿cuál de las siguientes inferencias es correcta respecto a un efecto directo de la sustancia sobre las células tratadas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Aumento progresivo del volumen citoplasmático en las células tratadas."
+    },
+    {
+     "key": "B",
+     "text": "Disminución en la cantidad de ribosomas producidos por unidad de tiempo."
+    },
+    {
+     "key": "C",
+     "text": "Aumento de la cantidad de material genético presente en el núcleo de las células tratadas."
+    },
+    {
+     "key": "D",
+     "text": "Disminución en la velocidad de transporte de sustancias a través de los poros nucleares."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q20",
+   "number": 20,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En un experimento escolar se dispone de una planta con flores blancas y una solución acuosa con colorante azul para repostería. Luego, se corta un tallo con flor y se introduce en un vaso de precipitados que contiene la solución coloreada. Tras unos minutos puede observarse el cambio de color de la flor a azul. Finalmente, el profesor les pide a los estudiantes que realicen un corte a los pétalos azules, para observarlos en el microscopio e identificar cuáles son las estructuras celulares que contienen el colorante. Considerando lo anterior, ¿en cuál de las siguientes estructuras se debería encontrar el colorante mencionado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En las mitocondrias."
+    },
+    {
+     "key": "B",
+     "text": "En la vacuola."
+    },
+    {
+     "key": "C",
+     "text": "En los peroxisomas."
+    },
+    {
+     "key": "D",
+     "text": "En el núcleo."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q22",
+   "number": 22,
+   "axis": "Biología",
+   "topic": "Metabolismo",
+   "stem": "Un grupo de investigadores evaluó el efecto de un nuevo fármaco M sobre la permeabilidad que presentan los enterocitos a la glucosa. El grupo reportó que el fármaco M disminuye la permeabilidad de los enterocitos a la glucosa, provocando una disminución de su flujo desde el intestino hacia los vasos sanguíneos, tal como se indica a continuación:\n\n100\n\n80 permeabilidad a la 60 Porcentaje de glucosa (%) 40\n\n20\n\n0 Concentración fármaco M 5 10 20 Concentración fármaco M (u.a.) 5 (µM) 10 (µM) 20 (µM)\n\nUna comisión evaluó esta investigación y señaló que existe una deficiencia metodológica que es necesaria mejorar para una correcta interpretación de los resultados, por lo que recomiendan replantear el diseño experimental. En relación con estos antecedentes, ¿cuál de las siguientes opciones corresponde a un error del diseño que afecta los resultados presentados por el grupo de investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Faltó evaluar un grupo donde no se aplique el fármaco."
+    },
+    {
+     "key": "B",
+     "text": "Faltó evaluar el fármaco a mayores concentraciones."
+    },
+    {
+     "key": "C",
+     "text": "Faltó evaluar el fármaco a menores concentraciones."
+    },
+    {
+     "key": "D",
+     "text": "Faltó evaluar un grupo con el fármaco en dosis crecientes."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q22.webp",
+    "width": 907,
+    "height": 752,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-biomoleculas"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q24",
+   "number": 24,
+   "axis": "Biología",
+   "topic": "Organismos",
+   "stem": "En la segunda mitad del siglo XVIII, se desconocía cómo se efectuaba la fecundación. Se proponía que el esperma desprendía un gas que al evaporarse entraba en contacto con el ovocito. El científico Lazzaro Spallanzani realizó múltiples experimentos que contribuyeron a la comprensión de este fenómeno, uno de los cuales se resume a continuación:\n\nTratamiento Resultados Huevos de rana adheridos por consistencia natural 1 de 13 huevos con esperma alejada desarrolla renacuajos. (contacto indirecto). Huevos de rana embebidos 12 de 13 huevos por esperma cercana desarrolla renacuajos. (contacto directo).\n\nSegún el experimento presentado, ¿qué demostró Spallanzani sobre el proceso de fecundación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que la participación directa de los espermatozoides garantiza la reproducción."
+    },
+    {
+     "key": "B",
+     "text": "Que la fecundación depende de la cercanía a la cual se encuentran los gametos."
+    },
+    {
+     "key": "C",
+     "text": "Que el desarrollo de organismos se asegura con la participación de ovocitos."
+    },
+    {
+     "key": "D",
+     "text": "Que la fecundación requiere una interacción química entre espermatozoides y ovocitos."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q24.webp",
+    "width": 907,
+    "height": 616,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q25",
+   "number": 25,
+   "axis": "Biología",
+   "topic": "Biología",
+   "stem": "Un equipo de investigadores está interesado en conocer si existe una relación entre la duración del ciclo ovárico y la fertilidad en mujeres de entre 20 y 35 años. Los investigadores plantean la siguiente hipótesis: “mujeres con una duración promedio de 28 días del ciclo ovárico presentan un alto porcentaje de fertilidad”. Al respecto, ¿cuál de las siguientes opciones corresponde a una evidencia que valida la hipótesis presentada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un estudio previo reportó que mujeres que tienen ciclos ováricos de 28 días presentan igual fertilidad que aquellas que poseen ciclos más cortos."
+    },
+    {
+     "key": "B",
+     "text": "Una investigación reciente indicó que las mujeres con ciclo ovárico de 35 días tienen la misma probabilidad de embarazo que aquellas con un ciclo ovárico de 28 días."
+    },
+    {
+     "key": "C",
+     "text": "Un estudio realizado en un grupo de mujeres encontró que aquellas con un ciclo ovárico de 28 días tienen una tasa de fertilidad del 90 %."
+    },
+    {
+     "key": "D",
+     "text": "Una investigación reportó una correlación positiva entre la duración de la menstruación y la fertilidad en mujeres con ciclos ováricos de 28 días."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q26",
+   "number": 26,
+   "axis": "Biología",
+   "topic": "Organismos",
+   "stem": "Un laboratorio farmacéutico está evaluando dos vías de administración de un nuevo anticonceptivo en animales de experimentación. Una de estas vías es la oral por medio de pastillas, mientras que la otra es a través de un anillo vaginal. La concentración plasmática del fármaco, según la vía de administración, se presenta en el siguiente gráfico:\n\nConcentración plasmática (u.a.) Vía oral Vía vaginal\n\nTiempo (días)\n\nEn relación con lo anterior, ¿cuál de las siguientes preguntas de investigación pudo haber guiado el estudio realizado por el laboratorio que originó estos resultados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Qué vía de administración confiere la mayor eficacia para el anticonceptivo?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuál vía de administración permite mantener por más tiempo el anticonceptivo en el organismo?"
+    },
+    {
+     "key": "C",
+     "text": "¿Qué concentración plasmática del anticonceptivo presenta menores efectos secundarios?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuál es la concentración plasmática del anticonceptivo en el tiempo para dos vías de administración?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q26.webp",
+    "width": 907,
+    "height": 785,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q29",
+   "number": 29,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "La mitosis presenta distintos puntos de control que permiten que este proceso se lleve a cabo correctamente. Uno de estos puntos de control se encuentra en la metafase mitótica, en donde se verifica que los cromosomas se unan correctamente al huso mitótico. Al respecto, ¿cuál de las siguientes evidencias valida que este punto de control está funcionando correctamente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las células que presenten anomalías luego de la replicación del material genético detendrán la progresión de la mitosis."
+    },
+    {
+     "key": "B",
+     "text": "Las células que tengan cromosomas fuera del ecuador de la célula detendrán la progresión de la mitosis."
+    },
+    {
+     "key": "C",
+     "text": "Las células que presenten daño del ADN detendrán la progresión de la mitosis."
+    },
+    {
+     "key": "D",
+     "text": "Las células que presenten un volumen celular alterado expresarán proteínas que detendrán la progresión de la mitosis."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-genetica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q30",
+   "number": 30,
+   "axis": "Biología",
+   "topic": "Célula",
+   "stem": "En el contexto de una investigación sobre la disyunción cromosómica y sus alteraciones, una científica está estudiando un compuesto que bloquea el proceso de separación de las cromátidas hermanas. Considerando que se aplicó la molécula a cultivos de células germinales, ¿en cuál de las siguientes etapas hará efecto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Profase I."
+    },
+    {
+     "key": "B",
+     "text": "Anafase I."
+    },
+    {
+     "key": "C",
+     "text": "Profase II."
+    },
+    {
+     "key": "D",
+     "text": "Anafase II."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-celula"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q31",
+   "number": 31,
+   "axis": "Biología",
+   "topic": "Proteínas",
+   "stem": "La trombosis o formación de coágulos de sangre constituye una complicación permanente durante las estadías hospitalarias debido a sus secuelas. En este contexto, un grupo de científicos ha conseguido producir en el laboratorio una proteína transgénica, la cual originalmente es secretada por sanguijuelas evitando la coagulación de sangre cuando estos animales se alimentan. A partir de los antecedentes presentados, ¿cuál de las siguientes hipótesis es coherente con las variables de este estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La proteína transgénica es un potencial fármaco que previene la trombosis en personas hospitalizadas."
+    },
+    {
+     "key": "B",
+     "text": "La proteína transgénica es un anticoagulante más efectivo para tratar trombosis que aquella producida por las sanguijuelas."
+    },
+    {
+     "key": "C",
+     "text": "Las personas con trombosis tratadas con la proteína transgénica tienen una reducción en su tiempo de estadía hospitalaria."
+    },
+    {
+     "key": "D",
+     "text": "Las personas con trombosis tratadas con la proteína transgénica presentan secuelas menos graves que aquellos no tratados."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q32",
+   "number": 32,
+   "axis": "Biología",
+   "topic": "Microorganismos",
+   "stem": "Las poblaciones bacterianas pueden evolucionar rápidamente, respondiendo ante la presencia de antibióticos, utilizados como una presión de selección. En la siguiente tabla, se resumen los resultados de un estudio en el que se expusieron cultivos de una bacteria X, a la misma temperatura y a diferentes antibióticos:\n\nTiempo de muestreo Respuesta ante la presencia de antibiótico (horas) Antibiótico 1 Antibiótico 2 Antibiótico 3 Antibiótico 4 Inicial - - - - 15 - - + - 20 - - + - 25 - + + + 30 - + + + 35 + + + + 40 + + + +\n\n+ = Resistencia al antibiótico - = Sensibilidad al antibiótico\n\nConsiderando los resultados de la tabla, ¿cuál de las siguientes opciones pudo ser la pregunta de investigación que pudo haber guiado este estudio?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Qué mecanismo desarrolla la bacteria X para volverse resistente frente a la acción de los antibióticos?"
+    },
+    {
+     "key": "B",
+     "text": "¿Cuánto tiempo demora la bacteria X en generar resistencia a los antibióticos?"
+    },
+    {
+     "key": "C",
+     "text": "¿Qué tipo de antibiótico resulta ser más efectivo en función del tiempo para el tratamiento contra las enfermedades bacterianas?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cómo influye la temperatura en el crecimiento de una población bacteriana sometida a diferentes tratamientos con antibióticos?"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "pilot": true,
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q32.webp",
+    "width": 907,
+    "height": 726,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q33",
+   "number": 33,
+   "axis": "Biología",
+   "topic": "Especies",
+   "stem": "Un grupo de científicos se encuentra realizando estudios de biología molecular de un fósil encontrado en el Parque Nacional Torres del Paine. Para ello realizaron una comparación de las secuencias genéticas de este fósil con restos de 4 especies de interés presentes en otras áreas geográficas de similares características. Los investigadores presentaron los resultados del porcentaje de coincidencia entre las secuencias analizadas (similitud), en la siguiente tabla:\n\nEspecie Similitud (%) 1 41 2 38 3 95 4 0\n\nEn este contexto, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El fósil encontrado es de una especie antigua que posee un ancestro común con la especie 4."
+    },
+    {
+     "key": "B",
+     "text": "El fósil encontrado es de una especie que se encuentra estrechamente relacionada con la especie 3."
+    },
+    {
+     "key": "C",
+     "text": "El fósil encontrado es de una especie que habitó junto con las especies 1 y 2 en un área geográfica distinta de donde fue hallado."
+    },
+    {
+     "key": "D",
+     "text": "El fósil encontrado es de una especie extinta sin relación evolutiva alguna con las especies comparadas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q33.webp",
+    "width": 907,
+    "height": 645,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-evolucion"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q34",
+   "number": 34,
+   "axis": "Biología",
+   "topic": "Plantas",
+   "stem": "Al estudiar la influencia de distintas variables sobre la fotosíntesis de las plantas terrestres, fue posible establecer una relación entre el rendimiento fotosintético en función de la concentración de oxígeno en el estroma del cloroplasto, la cual se representa en el siguiente gráfico:\n\nRendimiento fotosintético (u.a.)\n\nConcentración de oxígeno en el estroma (u.a.)\n\nConsiderando lo anterior, ¿cuál de las siguientes opciones corresponde a una inferencia correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las plantas que viven en ambientes altamente oxigenados presentarán un crecimiento acelerado."
+    },
+    {
+     "key": "B",
+     "text": "La mayor producción de oxígeno asociada a la fotosíntesis se logrará en plantas de rendimiento fotosintético óptimo."
+    },
+    {
+     "key": "C",
+     "text": "Las plantas que eliminan mayores niveles de oxígeno en las hojas presentarán rendimientos fotosintéticos superiores."
+    },
+    {
+     "key": "D",
+     "text": "Las plantas que habitan ambientes con bajas concentraciones de oxígeno presentarán rendimientos fotosintéticos menores."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q34.webp",
+    "width": 907,
+    "height": 858,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q36",
+   "number": 36,
+   "axis": "Biología",
+   "topic": "Especies",
+   "stem": "Para una determinada cuenca, se ha estudiado parte de su trama trófica dulceacuícola representada por dos especies de peces (X e Y) y una especie Z de ninfa herbívora (estado larval de insectos adultos) por un periodo de 6 años, mediante la estimación de la biomasa, medida en unidades arbitrarias (u.a.), y su respectivo rol trófico. Los resultados se presentan en la siguiente tabla:\n\nEstimación de la biomasa Rol trófico Especie Año Año Año Año Año Año 1 2 3 4 5 6 Consumidor terciario X 90 104 110 120 122 122 Consumidor secundario Y 8,75 8,05 7,7 5,6 4,9 4,55 Consumidor primario Z 0,105 0,103 0,100 0,108 0,110 0,104\n\nAl respecto, ¿cuál de las siguientes opciones corresponde a una tendencia que se puede extraer de los datos reportados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La biomasa de la trama trófica en estudio disminuye a medida que pasan los años."
+    },
+    {
+     "key": "B",
+     "text": "La energía disponible en esta trama trófica aumenta a medida que pasan los años."
+    },
+    {
+     "key": "C",
+     "text": "Los consumidores terciarios aumentan a medida que los consumidores secundarios disminuyen."
+    },
+    {
+     "key": "D",
+     "text": "Los consumidores secundarios disminuyen a medida que los consumidores primarios aumentan."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q36.webp",
+    "width": 907,
+    "height": 623,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-evolucion"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q37",
+   "number": 37,
+   "axis": "Química",
+   "topic": "Química general",
+   "stem": "En una historia de ciencia ficción, una persona explorando un planeta encuentra una extraña sustancia que brilla intensamente. Al analizarla, descubre que tiene diversas propiedades. En relación con lo anterior y considerando que el planeta presenta los mismos elementos químicos y condiciones de la Tierra, ¿cuál de las siguientes opciones señala un procedimiento resumido que debería implementar la persona para determinar si la sustancia encontrada es una mezcla o una sustancia pura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Determinar si la sustancia tiene nuevas propiedades físicas."
+    },
+    {
+     "key": "B",
+     "text": "Determinar si la sustancia se puede separar por medios físicos."
+    },
+    {
+     "key": "C",
+     "text": "Determinar si la sustancia es capaz de disolverse en agua."
+    },
+    {
+     "key": "D",
+     "text": "Determinar si la sustancia es conductora de electricidad."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q38",
+   "number": 38,
+   "axis": "Química",
+   "topic": "Compuestos",
+   "stem": "El petróleo es un líquido viscoso de color negro resultante de la descomposición bacteriana de la materia orgánica que por millones de años se acumuló en las profundidades de la corteza terrestre. Una técnica utilizada para separar los compuestos que forman parte del petróleo consiste en aplicar un aumento de la temperatura para ir colectando los diferentes compuestos en base a su temperatura de ebullición. Al respecto, ¿cuál de las siguientes opciones corresponde a la técnica que permite separar y colectar los compuestos derivados del petróleo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Filtración"
+    },
+    {
+     "key": "B",
+     "text": "Tamizado"
+    },
+    {
+     "key": "C",
+     "text": "Decantación"
+    },
+    {
+     "key": "D",
+     "text": "Destilación fraccionada"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q40",
+   "number": 40,
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "stem": "Un científico propuso lo siguiente para la estructura del átomo: sugiere la existencia de dos áreas separadas en él. Un núcleo de pequeño volumen, comparado con el volumen del átomo, que contiene un determinado número de partículas con carga positiva (protones), y que concentra la mayor parte de la masa del átomo y una zona distante, alrededor de este núcleo, donde se encontraría un número igual de partículas con carga negativa (electrones) girando a alta velocidad, en trayectorias denominadas órbitas. La atracción entre cargas eléctricas positivas y negativas mantendría unidas ambas áreas del átomo. Al respecto, ¿cuál de las siguientes opciones es una inferencia correcta a partir de lo propuesto por el científico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los electrones tienen una masa mucho menor que la de los protones."
+    },
+    {
+     "key": "B",
+     "text": "La masa total del átomo está dada por los electrones."
+    },
+    {
+     "key": "C",
+     "text": "Los protones y los electrones se repelen."
+    },
+    {
+     "key": "D",
+     "text": "Los átomos son indivisibles."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q41",
+   "number": 41,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "Un estudiante planteó lo siguiente: “El KMnO⁴ sirve para diferenciar alquenos de aldehídos”, para ello preparó 6 tubos de ensayo y añadió a cada tubo 5 mL de 6 muestras de aldehídos diferentes y conocidos. Luego agregó 1 mL de KMnO⁴, anotando los datos obtenidos. Estos se muestran en la tabla a continuación:\n\nTubo Compuestos orgánicos Reacción con KMnO⁴ 1 Metanal (+) 2 Pentanal (+) 3 Benzaldehído (+) 4 2-etilbutanal (+) 5 2,3,4-trimetilpentanal (+) 6 Etanal (+)\n\n(+): Hay reacción (–): No hay reacción\n\nEn relación a lo planteado en el enunciado y a los datos obtenidos, ¿cuál de las siguientes opciones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El procedimiento experimental está planteado incorrectamente debido a que solo utiliza aldehídos."
+    },
+    {
+     "key": "B",
+     "text": "Los datos obtenidos son consistentes con lo planteado por el estudiante, ya que permiten diferenciar entre alquenos y aldehídos."
+    },
+    {
+     "key": "C",
+     "text": "El procedimiento experimental está planteado incorrectamente por lo que los datos obtenidos presentan errores."
+    },
+    {
+     "key": "D",
+     "text": "El procedimiento experimental permite comprobar el objetivo planteado por el estudiante diferenciando alquenos y aldehídos."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q41.webp",
+    "width": 907,
+    "height": 728,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q42",
+   "number": 42,
+   "axis": "Química",
+   "topic": "Moléculas",
+   "stem": "Con respecto a la siguiente molécula:\n\nO OH\n\nO CH3\n\nO\n\n¿Cuál de los siguientes grupos funcionales se encuentra presente en ella?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Aldehído"
+    },
+    {
+     "key": "B",
+     "text": "Cetona"
+    },
+    {
+     "key": "C",
+     "text": "Alcohol"
+    },
+    {
+     "key": "D",
+     "text": "Éster"
+    },
+    {
+     "key": "E",
+     "text": "Éter"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q42.webp",
+    "width": 907,
+    "height": 523,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-enlace"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q45",
+   "number": 45,
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "stem": "En el contexto de un experimento escolar, un grupo de estudiantes hace reaccionar completamente dos reactivos (X e Y) con el fin de obtener un producto XnYm. Las cantidades específicas de X e Y, para dos ensayos de formación de XnYm, se presentan en el siguiente gráfico:\n\nEn relación con el análisis del gráfico, ¿cuál de las siguientes conclusiones es correcta para la formación del producto XnYm?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cantidad de sustancia de X y de Y que se combinan deben ser iguales."
+    },
+    {
+     "key": "B",
+     "text": "La proporción de la cantidad de sustancia en que los reactivos X e Y se combinan es variable."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de sustancia obtenida es igual a la suma de la cantidad de sustancia de los reactivos X e Y."
+    },
+    {
+     "key": "D",
+     "text": "Los reactivos X e Y se combinan en la misma proporción en mol, en ambos ensayos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q45.webp",
+    "width": 907,
+    "height": 828,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q46",
+   "number": 46,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "La combustión del metano se representa por la ecuación\n\nCH⁴ (g) + 2 O² (g) CO²(g) + 2 H²O (λ)\n\n¿Qué masa de CO² se produce por la combustión completa de 32 g de metano?",
+   "options": [
+    {
+     "key": "A",
+     "text": "88 g"
+    },
+    {
+     "key": "B",
+     "text": "44 g"
+    },
+    {
+     "key": "C",
+     "text": "32 g"
+    },
+    {
+     "key": "D",
+     "text": "22 g"
+    },
+    {
+     "key": "E",
+     "text": "16 g"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q47",
+   "number": 47,
+   "axis": "Química",
+   "topic": "Química",
+   "stem": "¿Qué masa de oxígeno hay en 200 g de SO³?",
+   "options": [
+    {
+     "key": "A",
+     "text": "16 g"
+    },
+    {
+     "key": "B",
+     "text": "32 g"
+    },
+    {
+     "key": "C",
+     "text": "48 g"
+    },
+    {
+     "key": "D",
+     "text": "80 g"
+    },
+    {
+     "key": "E",
+     "text": "120 g"
+    }
+   ],
+   "answer": "E",
+   "presentation": "text",
+   "subtopic": "cs-reacciones"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q51",
+   "number": 51,
+   "axis": "Química",
+   "topic": "Química orgánica",
+   "stem": "Un grupo de bioquímicos se encuentra realizando una investigación sobre una sustancia orgánica presente en los cítricos. En su estudio desean obtener esta sustancia orgánica a partir de diversos tipos de especies vegetales: limón, pomelo, naranja y mandarina, para lo cual realizan un procedimiento experimental de extracción. Para ello, colocan la misma masa de cáscaras y realizan por separado en cada especie de cítricos el proceso de extracción por el mismo período de tiempo y bajo las mismas condiciones de temperatura y presión. Luego, cuantifican la cantidad de sustancia orgánica obtenida. En base a lo anterior, ¿cuál de las siguientes opciones corresponde a la variable independiente utilizada por los bioquímicos en su investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tiempo de extracción"
+    },
+    {
+     "key": "B",
+     "text": "Especies de cítricos"
+    },
+    {
+     "key": "C",
+     "text": "Temperatura de extracción"
+    },
+    {
+     "key": "D",
+     "text": "Masa de cáscaras de cítricos"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q52",
+   "number": 52,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "Un grupo de científicos se propuso realizar un análisis comparativo entre muestras provenientes de distintos océanos. Mediante los análisis adecuados, determinaron que “las muestras de agua del mar Rojo alcanzaron una concentración de iones entre 42 y 46 g/L, las del mar Mediterráneo entre 36 y 39 g/L y las del Atlántico entre 33 y 36 g/L”. A partir de lo anterior, ¿a qué componente de la investigación científica se asocia la frase entre comillas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A una hipótesis"
+    },
+    {
+     "key": "B",
+     "text": "A un resultado"
+    },
+    {
+     "key": "C",
+     "text": "A una inferencia"
+    },
+    {
+     "key": "D",
+     "text": "A un procedimiento"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-disoluciones"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q53",
+   "number": 53,
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "stem": "En el laboratorio un grupo de estudiantes prepara diferentes diluciones a partir de una solución de sulfato de cobre 1 mol/L que se encuentra en un vaso de precipitados de 500 mL. Las nuevas diluciones tienen una concentración de 0,5, 0,25 y 0,1 mol/L en un volumen final de 100 mL cada una. Para ello, tomaron 50, 25 y 10 mL respectivamente. Finalmente, guardan el resto de la solución de sulfato de cobre inicial en una botella de 250 mL a 4 °C. Considerando que el procedimiento experimental se realizó correctamente, ¿cuál de las opciones señala el material indispensable para medir una variable controlada en este proceso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Vaso de precipitados de 500 mL."
+    },
+    {
+     "key": "B",
+     "text": "Probeta graduada de 50 mL."
+    },
+    {
+     "key": "C",
+     "text": "Matraz de aforo de 100 mL."
+    },
+    {
+     "key": "D",
+     "text": "Botella de vidrio de 250 mL."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "pilot": true,
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q57",
+   "number": 57,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "En verano, se recomienda utilizar protector solar incluso si se va a estar bajo el agua, como ocurre al bañarse en una piscina o en el mar. ¿Cuál es la fundamentación de la recomendación anterior?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El agua refleja luz solar."
+    },
+    {
+     "key": "B",
+     "text": "El agua transmite parte de la luz solar."
+    },
+    {
+     "key": "C",
+     "text": "En el agua, la luz solar cambia su rapidez."
+    },
+    {
+     "key": "D",
+     "text": "Una parte de la luz solar es absorbida por el agua."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q58",
+   "number": 58,
+   "axis": "Física",
+   "topic": "Ondas",
+   "stem": "Tres estaciones espaciales 𝑃, 𝑄 y 𝑅 están constantemente comunicadas mediante ondas de radio emitidas con una misma frecuencia 𝑓. En cierto momento, las tres estaciones se desplazan con la misma rapidez 𝑣, pero en los sentidos indicados en la siguiente figura:\n\n𝑣 𝑣 𝑣\n\n𝑃 𝑄 𝑅\n\n¿Cuál de las siguientes opciones corresponde a una predicción que debiese cumplirse para la frecuencia de la onda de radio captada en las estaciones espaciales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "𝑃 capta de 𝑄 una señal de frecuencia mayor que 𝑓."
+    },
+    {
+     "key": "B",
+     "text": "𝑅 capta de 𝑃 una señal de frecuencia menor que 𝑓."
+    },
+    {
+     "key": "C",
+     "text": "𝑄 capta de 𝑅 una señal de frecuencia mayor que 𝑓."
+    },
+    {
+     "key": "D",
+     "text": "𝑄 capta de 𝑃 una señal de frecuencia menor que 𝑓."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q58.webp",
+    "width": 908,
+    "height": 499,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-ondas"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q59",
+   "number": 59,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un grupo de estudiantes desea observar los patrones de interferencia generados al ubicar una fuente puntual de luz láser frente a un papel con dos rendijas muy finas y muy juntas entre sí. Si luego desean modificar el experimento e igualmente observar un patrón de interferencia, ¿de qué es indispensable que se aseguren?",
+   "options": [
+    {
+     "key": "A",
+     "text": "De que la distancia entre las rendijas sea similar."
+    },
+    {
+     "key": "B",
+     "text": "De utilizar una fuente de luz láser de la misma intensidad."
+    },
+    {
+     "key": "C",
+     "text": "De utilizar una fuente de luz láser del mismo color original."
+    },
+    {
+     "key": "D",
+     "text": "De ubicar el láser a la misma distancia del papel con las rendijas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "pilot": true,
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q61",
+   "number": 61,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Una guitarra se encuentra a 2 m de una lente divergente y sobre la línea del eje óptico. Al respecto, ¿cuál de los siguientes pares de características posee la imagen de la guitarra formada por la lente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Es real y más pequeña que la guitarra."
+    },
+    {
+     "key": "B",
+     "text": "Es virtual y más pequeña que la guitarra."
+    },
+    {
+     "key": "C",
+     "text": "Es real y de igual tamaño que la guitarra."
+    },
+    {
+     "key": "D",
+     "text": "Es virtual y de igual tamaño que la guitarra."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q62",
+   "number": 62,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un objeto se coloca frente a un espejo cóncavo de foco F y vértice V, como se representa en la siguiente figura:\n\nV F\n\n¿En cuál de las siguientes opciones se presenta correctamente un par de rayos incidentes y sus respectivos rayos reflejados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "V F"
+    },
+    {
+     "key": "B",
+     "text": "V F"
+    },
+    {
+     "key": "C",
+     "text": "V F"
+    },
+    {
+     "key": "D",
+     "text": "V F"
+    },
+    {
+     "key": "E",
+     "text": "V F"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q62.webp",
+    "width": 908,
+    "height": 860,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q63",
+   "number": 63,
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "stem": "Un grupo de personas realiza una investigación para verificar si se cumple la ley de la reflexión de la luz en el agua. Para esto, utilizarán un puntero láser y un espejo plano que ubican dentro de un recipiente transparente lleno de agua. Al respecto, ¿cuál de los siguientes elementos es más adecuado que el grupo incluya en el montaje para cumplir con su objetivo de investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un segundo espejo plano."
+    },
+    {
+     "key": "B",
+     "text": "Un transportador."
+    },
+    {
+     "key": "C",
+     "text": "Un cronómetro."
+    },
+    {
+     "key": "D",
+     "text": "Una regla."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-luz"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q65",
+   "number": 65,
+   "axis": "Física",
+   "topic": "Masa y peso",
+   "stem": "Una persona toma dos cuerpos de distinta masa, material y dimensiones, pone uno sobre el otro y los empuja sobre una superficie horizontal. Luego, los intercambia de posición y vuelve a empujar el conjunto de cuerpos sobre la misma superficie asegurándose de que la velocidad inicial sea la misma en ambos casos. La persona observa que en las dos situaciones recorren distintas distancias antes de detenerse. En relación con lo anterior, ¿cuál de las siguientes opciones señala la variable responsable de lo observado por la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las dimensiones de los cuerpos."
+    },
+    {
+     "key": "B",
+     "text": "Las masas de los cuerpos."
+    },
+    {
+     "key": "C",
+     "text": "Los materiales de los cuerpos."
+    },
+    {
+     "key": "D",
+     "text": "La superficie en la que se mueven los cuerpos."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q66",
+   "number": 66,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Una persona mueve un mueble de su hogar mediante una fuerza 𝐹⃗ horizontal constante, desde un punto P hacia un punto Q, sobre una superficie de roce despreciable, excepto cuando pasa sobre una alfombra, sobre la cual la fuerza de roce 𝐹⃗𝑅 es de igual magnitud que la fuerza 𝐹⃗. Esta situación se representa en la siguiente figura:\n\n𝐹Ԧ 𝐹Ԧ𝑅 𝐹Ԧ 𝐹Ԧ\n\nP Q Alfombra\n\nAl respecto, ¿cómo es la aceleración del mueble durante el trayecto descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "De igual valor antes y después de pasar por la alfombra."
+    },
+    {
+     "key": "B",
+     "text": "De menor valor después de pasar por la alfombra que antes de pasar por ella."
+    },
+    {
+     "key": "C",
+     "text": "Creciente durante todo el trayecto, excepto en su paso por la alfombra, donde es constante."
+    },
+    {
+     "key": "D",
+     "text": "Creciente durante todo el trayecto, excepto en su paso por la alfombra, donde es decreciente."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q66.webp",
+    "width": 908,
+    "height": 555,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q67",
+   "number": 67,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un grupo de estudiantes desea estudiar las fuerzas que están actuando sobre una persona mientras se desliza por un tobogán, tal como se representa en la siguiente figura:\n\nSi durante la caída la persona se desliza con aceleración constante y su ropa en contacto con el tobogán experimenta un aumento en la temperatura, ¿cuál de los siguientes diagramas indica la dirección de la fuerza directamente responsable del aumento de temperatura de su ropa?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q67.webp",
+    "width": 908,
+    "height": 905,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q68",
+   "number": 68,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "Un equipo realiza una investigación sobre la fuerza de roce entre un bloque y una superficie horizontal y rugosa. Durante el experimento, el bloque es desplazado aplicándole una fuerza horizontal, cuya magnitud se representa en el siguiente gráfico.\n\nMagnitud de la fuerza (N) 20\n\n0 5 7 8 Tiempo (s)\n\nConsiderando que a los 5 s el bloque comienza a moverse y a los 8 s se detiene, ¿qué instrumentos de medición son suficientes para obtener los datos graficados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una balanza y un dinamómetro."
+    },
+    {
+     "key": "B",
+     "text": "Un dinamómetro y un cronómetro."
+    },
+    {
+     "key": "C",
+     "text": "Un sensor de movimiento y una balanza."
+    },
+    {
+     "key": "D",
+     "text": "Un cronómetro y un sensor de movimiento."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q68.webp",
+    "width": 908,
+    "height": 597,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q69",
+   "number": 69,
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "stem": "La unidad de ingeniería de una empresa constructora realiza pruebas de los cables de acero que utilizan en sus grúas. Para ello, cuelgan verticalmente objetos de distinta masa al cable y miden su elongación en cada caso. Luego, con los datos obtenidos, la unidad de ingeniería realiza el siguiente gráfico entre el peso de los objetos colgados y la elongación experimentada por el cable:\n\n6\n\n5\n\n4\n\n3 Elongación (cm) 2\n\n1\n\n0 0 500 1000 1500 2000 2500 3000 3500 4000 4500\n\nPeso (N)\n\nA partir de los resultados que obtuvo la unidad de ingeniería, ¿cuál de las siguientes conclusiones es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El límite elástico del cable es desconocido."
+    },
+    {
+     "key": "B",
+     "text": "La constante de elasticidad del cable es desconocida."
+    },
+    {
+     "key": "C",
+     "text": "El cable se romperá cuando la fuerza sea mayor que 4000 N."
+    },
+    {
+     "key": "D",
+     "text": "La constante de elasticidad para elongaciones mayores que 5 cm es nula."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q69.webp",
+    "width": 908,
+    "height": 871,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q70",
+   "number": 70,
+   "axis": "Física",
+   "topic": "Cinemática",
+   "stem": "Un resorte ideal en su estado natural mide 15 cm de longitud. Este resorte se cuelga verticalmente de uno de sus extremos y se suspende de él un bloque de 3 kg, alcanzando una longitud de 20 cm. Si la magnitud de la aceleración de m gravedad del lugar es 10 ² ¿cuál es la constante elástica del resorte? , s\n\nN",
+   "options": [
+    {
+     "key": "A",
+     "text": "1,50 cm N"
+    },
+    {
+     "key": "B",
+     "text": "2,00 cm N"
+    },
+    {
+     "key": "C",
+     "text": "2,25 cm N"
+    },
+    {
+     "key": "D",
+     "text": "6,00 cm"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q70.webp",
+    "width": 908,
+    "height": 402,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-cinematica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q71",
+   "number": 71,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "La actividad de un volcán está provocando una preocupación creciente en la población de una pequeña comunidad, la cual nunca ha presenciado una erupción volcánica. Debido a esto, la autoridad local quiere crear un afiche informativo sobre el tema para educar a la población local. ¿Cuál de las siguientes opciones presenta un tema adecuado para incluir en el afiche?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tipos de erupciones volcánicas"
+    },
+    {
+     "key": "B",
+     "text": "Ranking de erupciones volcánicas con más víctimas"
+    },
+    {
+     "key": "C",
+     "text": "Mecanismos de formación de volcanes"
+    },
+    {
+     "key": "D",
+     "text": "Recomendaciones ante una erupción volcánica"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "subtopic": "cs-dinamica"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q72",
+   "number": 72,
+   "axis": "Física",
+   "topic": "Física",
+   "stem": "A un grupo de geólogas les llama la atención que la cordillera de los Andes en el norte chico de Chile es notoriamente más alta que en la zona sur del país, por lo que quieren enfocarse en el estudio de las razones de esta característica. A partir de lo anterior, ¿cuál de las siguientes opciones es una hipótesis que podría explicar adecuadamente la diferencia mencionada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Existen lagunas sísmicas en el norte chico de Chile."
+    },
+    {
+     "key": "B",
+     "text": "Existe una mayor cantidad de volcanes activos en la zona sur de Chile."
+    },
+    {
+     "key": "C",
+     "text": "El ángulo de subducción de la placa de Nazca es menor en el norte chico de Chile."
+    },
+    {
+     "key": "D",
+     "text": "La divergencia entre la placa de Nazca y la placa del Pacífico es mayor en la zona sur de Chile."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q74",
+   "number": 74,
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "stem": "Se han extraído rocas del suelo oceánico, en las posiciones representadas en la imagen, a distancias similares de una dorsal. Así, las rocas extraídas del sector 3 están a igual distancia de la dorsal que las rocas sacadas del sector 4, pero al doble de distancia que las extraídas de los sectores 1 y 2.\n\nA partir de los procesos que ocurren en una dorsal, ¿cuál de las siguientes afirmaciones es correcta con respecto a las rocas de los distintos sectores?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las rocas de los sectores 2 y 5 tienen temperatura similar."
+    },
+    {
+     "key": "B",
+     "text": "Las rocas de los sectores 1 y 6 tienen igual densidad."
+    },
+    {
+     "key": "C",
+     "text": "Las rocas de los sectores 3 y 4 están a igual profundidad."
+    },
+    {
+     "key": "D",
+     "text": "Las rocas de los sectores 5 y 6 tienen edad similar."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-regular/q74.webp",
+    "width": 908,
+    "height": 761,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "subtopic": "cs-energia"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q76",
+   "number": 76,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "En una actividad experimental, en cierto circuito eléctrico compuesto por varias pilas conectadas en serie, dos interruptores y un resistor, circula un determinado flujo de cargas en un tiempo conocido. Si se requiere que el flujo de cargas por unidad de tiempo en el circuito aumente, ¿cuál de las siguientes acciones es la que lo permite?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Aumentar la diferencia de potencial del circuito."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la resistencia del circuito."
+    },
+    {
+     "key": "C",
+     "text": "Disminuir el número de pilas."
+    },
+    {
+     "key": "D",
+     "text": "Disminuir el número de interruptores."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q77",
+   "number": 77,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Un electricista quiere instalar el circuito eléctrico en una casa, para lo que necesita la información suministrada por la ingeniera a cargo. ¿Cuál de los siguientes recursos contiene la información necesaria para realizar la instalación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un inventario con los artefactos eléctricos que se utilizarán en la casa."
+    },
+    {
+     "key": "B",
+     "text": "Un cuadro con la cantidad de luminarias requeridas para cada habitación."
+    },
+    {
+     "key": "C",
+     "text": "Un plano de la casa indicando los tipos de conexiones requeridas para cada habitación."
+    },
+    {
+     "key": "D",
+     "text": "Un folleto que describa las características de los enchufes requeridos para cada habitación de la casa."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "pilot": true,
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q78",
+   "number": 78,
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "stem": "Una estudiante quiere comprobar que la red domiciliaria efectivamente corresponde a un circuito en paralelo. ¿Cuál de las siguientes mediciones permite a la estudiante lograr su objetivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La lectura que marca el medidor de la casa."
+    },
+    {
+     "key": "B",
+     "text": "La diferencia de potencial en cada enchufe de la casa."
+    },
+    {
+     "key": "C",
+     "text": "La intensidad de corriente que circula por los artefactos de la casa."
+    },
+    {
+     "key": "D",
+     "text": "La resistencia eléctrica de los cables que forman el circuito de la casa."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "subtopic": "cs-electricidad"
+  },
+  {
+   "id": "ciencias-fisica-2026-regular-q80",
+   "number": 80,
+   "axis": "Física",
+   "topic": "Energía",
+   "stem": "Una persona investiga acerca de la eficiencia energética de algunos tipos de ampolletas. Lee que, a diferencia de una ampolleta incandescente, la cual transforma alrededor de un 5 % de su consumo eléctrico en luz, una ampolleta LED emite cerca del 50 % de la energía consumida en forma de radiación electromagnética visible. En relación con lo anterior, ¿cuál de las siguientes opciones es una conclusión coherente con la información recopilada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El uso de ampolletas LED permite una mayor iluminación en un hogar que el uso de ampolletas incandescentes."
+    },
+    {
+     "key": "B",
+     "text": "El consumo eléctrico de una ampolleta LED es mayor que el consumo de una ampolleta incandescente de similar luminosidad."
+    },
+    {
+     "key": "C",
+     "text": "El cambio de las ampolletas incandescentes de similar luminosidad a LED significa un ahorro en el consumo eléctrico destinado a iluminación."
+    },
+    {
+     "key": "D",
+     "text": "El cambiar las ampolletas incandescentes de una casa por ampolletas LED de similar potencia, resulta en un ahorro del consumo eléctrico en el corto plazo."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "subtopic": "cs-habilidades"
+  }
+ ]
+}

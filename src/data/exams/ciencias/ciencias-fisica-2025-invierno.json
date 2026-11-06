@@ -428,7 +428,7 @@
    "number": 8,
    "axis": "Física",
    "topic": "Cinemática",
-   "stem": "Una persona de 60 kg desciende en ascensor, el cual frena con una aceleración de m. Considerando que en ese momento la persona está sobre una magnitud 0,25 2 s m, ¿cuál es la pesa y que la magnitud de la aceleración de gravedad es igual a 10 2 s medida que indicará la pesa mientras frena el ascensor?",
+   "stem": "Una persona de 60 kg desciende en ascensor, el cual frena con una aceleración de magnitud 0,25 m/s². Considerando que en ese momento la persona está sobre una pesa y que la magnitud de la aceleración de gravedad es igual a 10 m/s², ¿cuál es la medida que indicará la pesa mientras frena el ascensor?",
    "options": [
     {
      "key": "A",
@@ -452,7 +452,7 @@
     }
    ],
    "answer": "E",
-   "presentation": "text",
+   "presentation": "snapshot",
    "subtopic": "cs-cinematica",
    "explanation": {
     "kind": "solucion",
@@ -471,7 +471,14 @@
      "C": "$150\\ \\mathrm{N}$ resulta de multiplicar el peso por la aceleración: $600 \\cdot 0{,}25$. Esa operación no corresponde a ninguna ley y mezcla las unidades.",
      "D": "$585\\ \\mathrm{N}$ es $60 \\cdot (10 - 0{,}25)$: usa el signo contrario, como si la aceleración fuera hacia abajo. Pasaría al arrancar hacia abajo, no al frenar."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2025-invierno/q08.webp",
+    "width": 907,
+    "height": 345,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-fisica-2025-invierno-q09",
@@ -2295,7 +2302,7 @@
     }
    ],
    "answer": "D",
-   "presentation": "text",
+   "presentation": "snapshot",
    "subtopic": "cs-reacciones",
    "explanation": {
     "kind": "solucion",
@@ -2316,7 +2323,14 @@
      "C": "Copia el coeficiente del oxígeno al producto y olvida el coeficiente 2 del agua. Así, 2 mol de oxígeno aparecen como 2 mol de agua, cuando en realidad producen 4 mol.",
      "E": "Ignora el reactivo limitante: 6 mol de hidrógeno parecen suficientes, pero 2 mol de oxígeno solo consumen 4 mol de hidrógeno. La trampa es sumar los moles de un reactivo sin comparar con el otro."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2025-invierno/q46.webp",
+    "width": 907,
+    "height": 385,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-fisica-2025-invierno-q47",
@@ -3835,7 +3849,7 @@
     }
    ],
    "answer": "D",
-   "presentation": "text",
+   "presentation": "snapshot",
    "subtopic": "cs-dinamica",
    "explanation": {
     "kind": "solucion",
@@ -3853,7 +3867,14 @@
      "B": "Las fuerzas sobre $q_1$ indican solo si $q_2$ y $q_3$ tienen el mismo signo que $q_1$ entre sí, pero sin el signo de $q_1$ no se fija el signo de ninguna carga.",
      "C": "El signo de $q_1$ y la fuerza entre $q_1$ y $q_3$ determinan el signo de $q_3$, pero $q_2$ queda sin determinar. Falta información para la carga $q_2$."
     }
-   }
+   },
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2025-invierno/q77.webp",
+    "width": 908,
+    "height": 409,
+    "mono": true
+   },
+   "textQuality": "approximate"
   },
   {
    "id": "ciencias-fisica-2025-invierno-q78",

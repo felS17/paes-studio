@@ -12,7 +12,7 @@ import pymupdf
 from .answer_keys import AnswerKey
 from .catalog import SourceTest
 from .layout import DocumentLayout, Line, RawPassage, RawQuestion, looks_tabular, rows_to_paragraphs, visual_weight
-from .snapshots import render_rect, render_region
+from .snapshots import LOST_INK_MIN, has_formula_fragments, lost_ink, render_rect, render_region
 from .taxonomy import AREA_KEYS, AREAS, MODALITIES, SUBJECTS, classify, science_blocks, topic_within
 from .text import escape_markdown, looks_lossy, to_superscript
 
@@ -38,6 +38,19 @@ class BuildReport:
     skipped: list[int] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
 
+#: Enunciados que la extracción deja ilegibles (fracciones apiladas), transcritos del folleto. Se muestran con su recorte
+#: y este texto queda como alternativa para lectores de pantalla y búsquedas.
+_ELEVATOR = (
+    "Una persona de 60 kg desciende en ascensor, el cual frena con una aceleración de magnitud 0,25 m/s². Considerando que en "
+    "ese momento la persona está sobre una pesa y que la magnitud de la aceleración de gravedad es igual a 10 m/s², "
+    "¿cuál es la medida que indicará la pesa mientras frena el ascensor?"
+)
+STEM_FIXES = {
+    "ciencias-biologia-2025-invierno-q26": _ELEVATOR,
+    "ciencias-fisica-2025-invierno-q08": _ELEVATOR,
+    "ciencias-quimica-2025-invierno-q26": _ELEVATOR,
+}
+
 
 def _md(lines: list[Line], body_size: float) -> str:
     paragraphs = rows_to_paragraphs(lines, body_size)
@@ -54,7 +67,7 @@ def _duration(subject: str, n: int) -> int:
     return max(10, int(round(minutes / 5.0)) * 5)
 
 
-def _needs_snapshot(subject: str, q: RawQuestion, option_texts: dict[str, str]) -> bool:
+def _needs_snapshot(subject: str, q: RawQuestion, option_texts: dict[str, str], doc: pymupdf.Document) -> bool:
     if subject in ("m1", "m2"):
         return True
     images, drawings = visual_weight(q.region)
@@ -65,7 +78,9 @@ def _needs_snapshot(subject: str, q: RawQuestion, option_texts: dict[str, str]) 
     if any(not t.strip() for t in option_texts.values()) or len(option_texts) < 4:
         return True
     raw = _plain(q.stem) + " " + " ".join(option_texts.values())
-    return looks_lossy(raw)
+    if looks_lossy(raw) or has_formula_fragments(q):
+        return True
+    return lost_ink(doc, q) > LOST_INK_MIN
 
 
 def _passage_markdown(
@@ -236,12 +251,12 @@ def build_exam(
             letter: escape_markdown(" ".join(p for _, _, p in rows_to_paragraphs(lines, layout.body_size)))
             for letter, lines in q.options.items()
         }
-        stem_md = _md(q.stem, layout.body_size)
+        stem_md = STEM_FIXES.get(f"{exam_id}-q{q.number:02d}", _md(q.stem, layout.body_size))
         plain = _plain(q.stem)
         axis, topic = classify(test.subject, test.area, plain + " " + " ".join(option_texts.values()))
         snapshot = None
         presentation = "text"
-        if _needs_snapshot(test.subject, q, option_texts):
+        if _needs_snapshot(test.subject, q, option_texts, doc):
             presentation = "snapshot"
             if opts.snapshots:
                 name = f"q{q.number:02d}.webp"
