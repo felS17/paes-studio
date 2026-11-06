@@ -26,12 +26,12 @@ export function ExamFilters({ value, onChange }: { value: FilterState; onChange:
         onChange={(e) => onChange({ ...value, modality: e.target.value as FilterState['modality'] })}
       >
         <option value="todas">todas</option>
-        <option value="curado">con explicación</option>
+        <option value="curado">curados</option>
         <option value="regular">regular</option>
         <option value="invierno">invierno</option>
       </Select>
       <Select
-        aria-label="Año de admisión"
+        aria-label="Año en que se rindió"
         value={String(value.year)}
         onChange={(e) => onChange({ ...value, year: e.target.value === 'todos' ? 'todos' : Number(e.target.value) })}
       >

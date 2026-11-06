@@ -1,6 +1,7 @@
 import { useMemo, useRef, useState } from 'react'
 import { useElementWidth } from '@/hooks/useElementWidth'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
+import { useExamStore } from '@/store/useExamStore'
 import { useStreakStore } from '@/store/useStreakStore'
 import { activityByDay, activityLevel, describeDay, heatmapColumns, monthLabels } from '@/utils/activity'
 import { localDateKey } from '@/utils/daily'
@@ -10,7 +11,6 @@ const MAX_WEEKS = 52
 const MIN_WEEKS = 13
 /** Por debajo de 9 px un cuadrito ya no se distingue: en pantallas angostas se muestran menos semanas, no más chicas. */
 const MIN_STEP = 12
-const GAP = 3
 const LABEL_COLUMN = 22
 const LEVELS = [0, 1, 2, 3, 4] as const
 const WEEKDAYS = ['l', '', 'x', '', 'v', '', '']
@@ -24,12 +24,15 @@ const heatStyle = (level: number) => ({ background: `var(--heat-${level})`, boxS
 export function ActivityHeatmap() {
   const attempts = useAnalyticsStore((s) => s.attempts)
   const days = useStreakStore((s) => s.days)
+  const sessions = useExamStore((s) => s.sessions)
   const [today] = useState(() => localDateKey())
   const [setWidthEl, width] = useElementWidth()
+  // A mayor ancho, más separación, para que los cuadritos grandes no se vean como un bloque.
+  const gap = width >= 1100 ? 5 : width >= 800 ? 4 : 3
   const weeks = width ? Math.max(MIN_WEEKS, Math.min(MAX_WEEKS, Math.floor((width - LABEL_COLUMN) / MIN_STEP))) : MAX_WEEKS
   const columns = useMemo(() => heatmapColumns(today, weeks), [today, weeks])
   const labels = useMemo(() => monthLabels(columns), [columns])
-  const activity = useMemo(() => activityByDay(attempts, days), [attempts, days])
+  const activity = useMemo(() => activityByDay(attempts, days, Object.values(sessions)), [attempts, days, sessions])
   const keys = useMemo(() => columns.flat(), [columns])
   const [activeKey, setActiveKey] = useState(today)
   const [tip, setTip] = useState<{ text: string; x: number; y: number } | null>(null)
@@ -82,7 +85,7 @@ export function ActivityHeatmap() {
           role="group"
           aria-label={`Actividad de las últimas ${weeks} semanas`}
           className="grid"
-          style={{ gap: GAP, gridTemplateColumns: `${LABEL_COLUMN - GAP}px repeat(${columns.length}, minmax(0, 1fr))` }}
+          style={{ gap, gridTemplateColumns: `${LABEL_COLUMN - gap}px repeat(${columns.length}, minmax(0, 1fr))` }}
           onPointerLeave={() => setTip(null)}
         >
           {labels.map(({ column, label }) => (

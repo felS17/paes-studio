@@ -38,9 +38,11 @@ export interface GradeInput {
   durationMs: number
   /** Rastro silencioso de la sesión; las sesiones anteriores a la v2.1 no lo traen. */
   telemetry?: Record<string, QuestionTrace>
+  /** Día en que se respondió cada pregunta; las sesiones anteriores a este dato no lo traen. */
+  answeredOn?: Record<string, string>
 }
 
-export function gradeAttempt({ exam, mode, answers, flagged, startedAt, durationMs, telemetry }: GradeInput): AttemptRecord {
+export function gradeAttempt({ exam, mode, answers, flagged, startedAt, durationMs, telemetry, answeredOn }: GradeInput): AttemptRecord {
   const flaggedSet = new Set(flagged)
   const perAxis: Record<string, AxisStat> = {}
   // En práctica solo cuentan las preguntas respondidas: saltarse una no es evidencia de debilidad.
@@ -64,6 +66,7 @@ export function gradeAttempt({ exam, mode, answers, flagged, startedAt, duration
       isCorrect,
       flagged: flaggedSet.has(q.id),
       pilot: Boolean(q.pilot),
+      ...(selected !== null && answeredOn?.[q.id] && { answeredOn: answeredOn[q.id] }),
       ...(trace && {
         telemetry: {
           timeSpentMs: Math.round(trace.timeSpentMs),

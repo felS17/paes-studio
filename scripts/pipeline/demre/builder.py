@@ -298,9 +298,11 @@ def build_exam(
         "id": exam_id,
         "subject": test.subject,
         **({"area": test.area} if test.area else {}),
-        "title": f"PAES {MODALITIES[test.modality]} {test.admission_year}",
+        # El id conserva el año de admisión del DEMRE (de él dependen los recortes y el progreso guardado); lo visible es el año real.
+        "title": f"PAES {MODALITIES[test.modality]} {test.applied_on.year}",
         "description": _description(test, key, n, subject_meta["name"], area_label),
-        "year": test.admission_year,
+        "year": test.applied_on.year,
+        "admissionYear": test.admission_year,
         "modality": test.modality,
         "source": "demre",
         **({"form": form[1]} if form else {}),

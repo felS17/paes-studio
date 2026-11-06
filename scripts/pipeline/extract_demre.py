@@ -118,7 +118,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"\nTotal recortes: {total_bytes / 1024 / 1024:.1f} MB")
     if not args.dry_run:
         args.report.write_text(json.dumps(summary, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-        # Vuelve a aplicar las soluciones paso a paso guardadas (PAES de Invierno 2026–2027).
+        # Vuelve a aplicar las soluciones paso a paso guardadas (soluciones.json).
         subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "solutions" / "merge_solutions.py")], check=False, cwd=ROOT)
         # Subtema del temario DEMRE para cada pregunta (explorador por subtemas, drills y Zettelkasten).
         subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "assign_subtopics.py")], check=False, cwd=ROOT)

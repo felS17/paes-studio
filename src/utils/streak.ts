@@ -5,16 +5,21 @@ import { localDateKey, previousDateKey } from './dateKey'
 /** Cualquier práctica suma a la racha: ensayo, tema, entrenamiento rápido, Desafío Diario o flashcards. */
 export const isActiveDay = (day: StudyDay | undefined) => Boolean(day && (day.challenge || day.practice || (day.flashcards ?? 0) > 0))
 
+/** Día que le corresponde a una respuesta: cuando se dio o, en intentos antiguos, cuando se entregó. */
+export const answerDay = (answeredOn: string | undefined, finishedAt: number) => answeredOn ?? localDateKey(finishedAt)
+
 /**
- * Suma los días en que entregaste un intento con respuestas. Sin esto no contarían los intentos anteriores a la racha
- * universal ni los que llegan al subir un respaldo.
+ * Suma los días con respuestas de tus intentos entregados. Sin esto no contarían los anteriores a la racha universal
+ * ni los que llegan al subir un respaldo.
  */
 export function withAttemptDays(days: Record<string, StudyDay>, attempts: AttemptRecord[]): Record<string, StudyDay> {
   const merged = { ...days }
   for (const a of attempts) {
-    if (!a.answered) continue
-    const key = localDateKey(a.finishedAt)
-    merged[key] = { ...merged[key], practice: true }
+    for (const q of a.questions ?? []) {
+      if (q.selected === null) continue
+      const key = answerDay(q.answeredOn, a.finishedAt)
+      if (!merged[key]?.practice) merged[key] = { ...merged[key], practice: true }
+    }
   }
   return merged
 }

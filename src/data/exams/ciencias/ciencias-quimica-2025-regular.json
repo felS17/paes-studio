@@ -2,9 +2,10 @@
  "id": "ciencias-quimica-2025-regular",
  "subject": "ciencias",
  "area": "quimica",
- "title": "PAES Regular 2025",
+ "title": "PAES Regular 2024",
  "description": "Selección oficial de 56 de las 80 preguntas de Ciencias (Química), aplicada el 03-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "regular",
  "source": "demre",
  "form": "173",
@@ -130,7 +131,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La temperatura de ebullición sube con la presión y no depende de la masa de agua; para que hierva bajo $90\\,^\\circ\\mathrm{C}$ hay que disminuir la presión por debajo de $526$ mmHg.",
+    "planteamiento": "Se pide la acción que permite que el agua hierva a menos de $90\\,^\\circ\\mathrm{C}$. Datos: la tabla relaciona masa de agua, presión atmosférica y temperatura de ebullición.",
+    "steps": [
+     "Compara las filas a $760$ mmHg: con $100$ g, $200$ g y $400$ g el agua hierve a $100\\,^\\circ\\mathrm{C}$. La masa de agua no cambia la temperatura de ebullición.",
+     "Compara las filas con igual masa: con $200$ g, a $760$ mmHg hierve a $100\\,^\\circ\\mathrm{C}$, a $879$ mmHg a $104\\,^\\circ\\mathrm{C}$ y a $983$ mmHg a $107\\,^\\circ\\mathrm{C}$. La temperatura sube al subir la presión.",
+     "Con $100$ g y $526$ mmHg, el agua hierve a $90\\,^\\circ\\mathrm{C}$. Como la relación es creciente, una presión menor que $526$ mmHg daría una ebullición inferior a $90\\,^\\circ\\mathrm{C}$.",
+     "Revisa C y D: aumentar al doble o disminuir a la mitad la masa de agua no cambia la temperatura de ebullición, que sigue en $100\\,^\\circ\\mathrm{C}$ a $760$ mmHg.",
+     "Revisa B: aumentar la presión por encima de $983$ mmHg eleva la ebullición sobre $107\\,^\\circ\\mathrm{C}$, lo contrario de lo pedido.",
+     "La acción correcta es disminuir la presión a menos de $526$ mmHg. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Aumentar la presión por encima de $983$ mmHg. Trampa: pensar que a más presión el agua hierve antes; en realidad hierve a una temperatura mayor.",
+     "C": "Aumentar la masa de agua al doble. Trampa: asociar mayor masa con mayor o menor temperatura, cuando la tabla muestra que no cambia.",
+     "D": "Disminuir la masa de agua a la mitad. Trampa: creer que una masa menor hierve antes; la presión es la variable que cambia la ebullición."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q03",
@@ -165,7 +184,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable que la persona cambia de forma deliberada es la condición en la que se expone cada trozo de manzana (vinagre, limón, agua o aire libre).",
+    "planteamiento": "Se pide la variable manipulada en el experimento. Datos: cuatro trozos de igual masa y forma; tres se sumergen en vinagre, limón y agua, y el cuarto queda al aire libre; el tiempo de observación es de 1 hora. La intensidad de la coloración es la respuesta que se mide.",
+    "steps": [
+     "Distingue entre variable manipulada y variable medida: la manipulada es la que la persona decide cambiar; la medida es la que se registra como resultado.",
+     "La persona decide dónde poner cada trozo: en vinagre, en limón, en agua o al aire libre. Esa decisión es la condición experimental, por lo que es la variable manipulada.",
+     "La intensidad de la coloración es lo que se observa al final de la hora, es decir, la variable que responde. Por lo tanto, no es la que se manipula.",
+     "El tiempo de exposición se mantiene igual en todos los casos, porque todos los trozos se observan después de 1 hora, así que no es la variable manipulada.",
+     "El nivel de oxidación es lo que la intensidad mide de forma indirecta, según el enunciado. Es un resultado y no una decisión de la persona.",
+     "La condición a la que se expone cada trozo es la única que la persona cambia de forma intencional. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Señala el nivel de oxidación. Trampa: es lo que se infiere de la coloración, así que es la variable que se mide y no la que se manipula.",
+     "B": "Señala el tiempo de exposición. Trampa: el tiempo es el mismo para todos los trozos, por lo que no varía en el experimento.",
+     "D": "Señala la intensidad de la coloración. Trampa: es el resultado observado, es decir, la variable dependiente, no la que la persona decide cambiar."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q04",
@@ -193,7 +230,24 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La oración entre comillas resume lo que Rutherford concluyó a partir de sus resultados: que el átomo es mayormente vacío y que la masa está en un núcleo central.",
+    "planteamiento": "Se pide el componente de la investigación científica al que corresponde la oración. Datos: Rutherford bombardeó una lámina de oro con partículas alfa; la mayoría pasó, algunas se desviaron y pocas rebotaron; con eso dedujo la estructura del átomo.",
+    "steps": [
+     "Identifica el tipo de frase: la oración afirma lo que los resultados muestran sobre la estructura del átomo, es decir, un resultado interpretado.",
+     "Una hipótesis se formula antes de experimentar y se pone a prueba. La oración no anticipa nada, sino que resume lo que se encontró.",
+     "Un procedimiento describe cómo se realizó el experimento, como el bombardeo con partículas alfa y el uso de una lámina de oro. La oración no describe pasos.",
+     "Una teoría es un marco explicativo más amplio y validado por muchas evidencias. La oración se limita a lo que este experimento permitió concluir.",
+     "La oración indica lo que se deduce de los resultados: que el átomo no es compacto y que la masa se concentra en el núcleo. Esa es una conclusión. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Asocia la oración a una hipótesis. Trampa: la frase suena a afirmación general, pero se presenta como lo que los resultados demostraron.",
+     "C": "Asocia la oración a una teoría. Trampa: es el modelo que vino después, pero la cita se refiere solo a lo que este experimento permitió deducir.",
+     "D": "Asocia la oración a un procedimiento experimental. Trampa: la frase menciona el experimento, pero no describe cómo se hizo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q05",
@@ -232,7 +286,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un enlace pi se forma en cada doble enlace (uno) y en cada triple enlace (dos). La estructura C tiene un triple y un doble enlace, es decir, tres enlaces pi, y dos carbonos con hibridación sp² en el doble enlace.",
+    "planteamiento": "Se pide la estructura con tres enlaces pi y exactamente dos carbonos sp². Datos: un enlace simple no tiene componente pi; un doble tiene un pi y un triple tiene dos pi. Un carbono sp² participa en un doble enlace; un carbono sp en un triple enlace.",
+    "steps": [
+     "Recuerda la hibridación: un carbono con triple enlace es sp, y uno con doble enlace es sp². Un carbono con solo enlaces simples es sp³.",
+     "Recuerda el conteo de enlaces pi: cada doble enlace aporta $1$ pi y cada triple enlace aporta $2$ pi. Para tener $3$ pi, la suma debe ser $3$.",
+     "Revisa A: tiene dos dobles enlaces, así que $2$ pi, y cuatro carbonos sp². No cumple con tres pi.",
+     "Revisa B: tiene dos triples enlaces, lo que da $4$ pi, y sus carbonos son sp. No cumple.",
+     "Revisa D: tiene un triple enlace, con $2$ pi, y no tiene doble enlace. Su total es $2$ pi, no tres.",
+     "Revisa E: tiene un solo doble enlace, con $1$ pi. No cumple con tres.",
+     "Revisa C: tiene un triple enlace ($2$ pi), un enlace simple y un doble enlace ($1$ pi). El total es $2 + 1 = 3$ pi. Los dos carbonos del doble enlace son sp², y los del triple enlace son sp. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Tiene dos dobles enlaces. Trampa: cuenta $2$ pi y no $3$; además, los cuatro carbonos son sp².",
+     "B": "Tiene dos triples enlaces. Trampa: parece tener muchos enlaces pi, pero son $4$, y los carbonos son sp.",
+     "D": "Tiene un triple enlace. Trampa: confundir el número de enlaces con el de enlaces pi, que aquí son $2$.",
+     "E": "Dice que tiene un solo doble enlace, con $1$ pi. Trampa: cuenta solo un enlace pi y no los tres que pide la pregunta."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q06",
@@ -260,7 +334,26 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para responder la pregunta el estudiante debe variar el tipo de alimento, que contiene distintas cantidades de carbohidratos, y medir el cambio de color del lugol.",
+    "planteamiento": "Se pide las variables que el estudiante debe manipular y constatar. Datos: el lugol cambia de color según la presencia de carbohidratos; la pregunta relaciona la coloración con la cantidad de carbohidratos de cada alimento.",
+    "steps": [
+     "Identifica la pregunta: ¿cómo varía la coloración del lugol según la cantidad de carbohidratos en los alimentos? Para responderla, hay que comparar distintos alimentos y observar el color.",
+     "La variable que se manipula es la que el estudiante cambia de forma intencional: el tipo de alimento, cada uno con distinta cantidad de carbohidratos.",
+     "La variable que se constata es la respuesta observada: la coloración del lugol, que indica la presencia de carbohidratos.",
+     "La masa de alimento y la cantidad de lugol deben mantenerse constantes para que la comparación sea justa, por lo que no son variables que se manipulan.",
+     "Revisa A: la masa de alimento y la cantidad de lugol deben mantenerse fijas, así que no son las variables de la pregunta.",
+     "Revisa B: la masa de alimento se controla, no se manipula, y el tipo de alimento sí es manipulado. La pareja está mal formada.",
+     "Revisa D: la coloración del lugol es la variable medida, no la manipulada, y la cantidad de lugol debe mantenerse igual. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Señala masa de alimento y cantidad de lugol. Trampa: ambas se mantienen constantes para comparar, así que no son las variables que se manipulan.",
+     "B": "Señala masa de alimento y tipo de alimento. Trampa: la masa debe ser igual en todas las muestras, así que no varía en el experimento.",
+     "D": "Señala coloración de lugol y cantidad de lugol. Trampa: la coloración es lo que se observa y la cantidad de lugol debe permanecer fija."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q07",
@@ -295,7 +388,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los derivados de la tiocarlida tienen el mismo número de átomos de carbono, oxígeno e hidroxilos; lo que cambia es la disposición espacial de los grupos OH, y por eso cambia la actividad.",
+    "planteamiento": "Se pide la conclusión correcta sobre las diferencias de actividad inhibitoria entre los derivados I, II y III. Datos: los tres radicales tienen la misma cadena de anillo; las modificaciones están en la posición de los grupos OH y de los H.",
+    "steps": [
+     "Cuenta los grupos hidroxilo de cada radical: el derivado I tiene el CH₂OH del extremo y dos OH en el anillo, es decir, tres en total; el II tiene el CH₂OH y dos OH inferiores, también tres; el III tiene el CH₂OH y dos OH en la parte superior, también tres.",
+     "Cuenta los carbonos: los tres radicales tienen cinco carbonos en el anillo y uno en el CH₂OH, es decir, seis carbonos. Los átomos de oxígeno también son iguales: uno del anillo más los tres de los OH, es decir, cuatro.",
+     "Como la cantidad de OH, de carbonos y de oxígenos es igual en los tres, la diferencia no puede explicarse por la cantidad de esos átomos.",
+     "Lo que cambia es la disposición de los grupos OH y H en el espacio alrededor del anillo, es decir, la configuración de cada derivado.",
+     "Revisa C: la cantidad de hidroxilos es igual, $3$ en cada uno, así que no puede explicar las diferencias.",
+     "Revisa B y D: los átomos de carbono y de oxígeno son los mismos en los tres derivados, así que tampoco explican la diferencia.",
+     "Revisa A: la disposición de los grupos hidroxilo es lo que diferencia a los derivados, y su distinta orientación afecta la actividad. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Atribuye la diferencia a la cantidad de carbonos. Trampa: los tres radicales tienen el mismo número de carbonos, por lo que no pueden explicar la diferencia.",
+     "C": "Atribuye la diferencia a la cantidad de grupos hidroxilo. Trampa: los tres tienen tres OH, así que la cantidad es igual y lo que varía es su posición.",
+     "D": "Atribuye la diferencia a la cantidad de oxígenos. Trampa: el número de oxígenos es igual en los tres radicales."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q08",
@@ -334,7 +446,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La valina tiene un grupo amino (NH₂) y un grupo ácido carboxílico (COOH), que es el de la derecha con el doble enlace al oxígeno y el OH.",
+    "planteamiento": "Se pide qué funciones orgánicas están presentes en la fórmula estructural de la valina. Datos: la fórmula muestra una cadena con dos grupos CH₃, un carbono central con NH₂ y H, y un extremo con C=O y OH.",
+    "steps": [
+     "Identifica el grupo del extremo derecho: un carbono con doble enlace a oxígeno (C=O) y un OH unido. Esa combinación es un grupo carboxilo, es decir, un ácido carboxílico.",
+     "Identifica el grupo NH₂ unido al carbono central: un nitrógeno con dos hidrógenos corresponde a un grupo amino, es decir, una amina.",
+     "Revisa la presencia de alcohol: un OH unido a un carbono sp³ sería alcohol, pero el OH de este compuesto está unido al carbono del C=O, así que pertenece al ácido y no es un alcohol.",
+     "Revisa la presencia de amida: una amida requiere un nitrógeno unido a un carbono con doble enlace a oxígeno. En la valina el nitrógeno está unido a un carbono tetraédrico, así que no es amida.",
+     "Revisa la presencia de cetona: una cetona tiene un C=O unido a dos carbonos. Aquí el C=O está unido a un OH, así que no es cetona.",
+     "Por lo tanto, las funciones presentes son amina y ácido carboxílico. La alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Alcohol y amina. Trampa: el OH está unido al carbono del C=O, que es un ácido, no un alcohol.",
+     "B": "Cetona y alcohol. Trampa: el C=O tiene un OH unido, y eso define un ácido carboxílico, no una cetona.",
+     "D": "Amida y ácido carboxílico. Trampa: el nitrógeno está unido a un carbono tetraédrico, no a un carbonilo, así que no forma una amida.",
+     "E": "Dice alcohol y amida. Trampa: el OH pertenece al grupo ácido, y no hay un nitrógeno unido a un carbonilo que forme amida."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q09",
@@ -369,7 +500,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al mantener el volumen de la esfera constante y cambiar la temperatura, el sensor mide cómo varía la presión del aire; la hipótesis es que la temperatura afecta la presión a volumen constante.",
+    "planteamiento": "Se pide la hipótesis que el estudiante quiere poner a prueba. Datos: tres esferas de igual volumen con la misma cantidad de aire, a $-2\\,^\\circ\\mathrm{C}$, $25\\,^\\circ\\mathrm{C}$ y $90\\,^\\circ\\mathrm{C}$; las esferas no se dilatan y se mide la presión interna.",
+    "steps": [
+     "Identifica las variables del diseño: la temperatura del agua cambia entre los vasos, la esfera tiene volumen fijo porque el rango de temperatura no la dilata, y la presión interna es lo que se mide.",
+     "Una hipótesis debe relacionar la variable que se cambia (temperatura) con la que se mide (presión) bajo una condición fija (volumen constante), que es justo lo que hace el diseño.",
+     "Revisa B: el volumen no se varía, así que no se puede poner a prueba su efecto con este diseño. Además, la temperatura no se mantiene constante.",
+     "Revisa C: el vaso de precipitados no se está evaluando; los cambios de temperatura se miden en la esfera, no en el vaso.",
+     "Revisa D: la presión no determina el volumen en el diseño. El volumen es fijo, y lo que se mide es la presión.",
+     "Revisa A: la temperatura se varía y la presión se mide, con el volumen constante. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone que el volumen afecta la presión a temperatura constante. Trampa: el diseño mantiene el volumen fijo y varía la temperatura, así que pone a prueba lo contrario.",
+     "C": "Propone que la temperatura de las esferas determina cambios en los vasos. Trampa: confunde el objeto medido, porque el experimento mide la presión dentro de la esfera.",
+     "D": "Propone que la presión determina el volumen de la esfera. Trampa: invierte la relación, ya que el volumen es constante por diseño."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q10",
@@ -402,7 +551,26 @@
    "answer": "A",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si 1 mol de X produce 1 mol de XH₃ y la masa molar del producto es 34,0 g/mol, la masa molar de X es 34,0 − 3 × 1,0 = 31,0 g/mol.",
+    "planteamiento": "Se pide la masa molar del elemento X. Datos: 1 mol del elemento X reacciona completamente con hidrógeno y produce 34,0 g de producto XH₃; la ecuación original está sin ajustar.",
+    "steps": [
+     "Ajusta la ecuación: X₂ + 3 H₂ → 2 XH₃. Así, por cada átomo de X (1 mol de X) se forma 1 mol de XH₃.",
+     "Como se producen 34,0 g de XH₃ a partir de 1 mol de X, la masa molar del producto es $M(\\mathrm{XH_3}) = 34{,}0\\ \\mathrm{g/mol}$.",
+     "Calcula la masa molar del hidrógeno en el producto: $3 \\cdot 1{,}0 = 3{,}0\\ \\mathrm{g/mol}$.",
+     "Despeja la masa molar de X: $M(\\mathrm{X}) = 34{,}0 - 3{,}0 = 31{,}0\\ \\mathrm{g/mol}$.",
+     "Comprobación: el fosfuro de hidrógeno, PH₃, tiene masa molar $31{,}0 + 3{,}0 = 34{,}0\\ \\mathrm{g/mol}$, lo que coincide con el producto del enunciado.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice 17,0 g/mol. Trampa: es la masa de XH₃ dividida por dos, como si se formaran dos moles de producto por mol de X, lo que confunde el factor de la ecuación.",
+     "C": "Dice 16,0 g/mol. Trampa: resta la masa molar del agua (18,0 g/mol) en lugar de los 3,0 g/mol del hidrógeno.",
+     "D": "Dice 15,5 g/mol. Trampa: divide la masa de X entre dos, como si el elemento se presentara como X₂.",
+     "E": "Dice 14,0 g/mol. Trampa: toma la mitad de la masa del producto (17,0 g/mol) y le resta 3,0 g/mol, lo que mezcla factores de la ecuación."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q12",
@@ -434,7 +602,26 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los 132 g de CO₂ equivalen a 3 mol de carbono y los 72 g de H₂O a 8 mol de hidrógeno; la proporción 3 : 8 da la fórmula empírica C₃H₈.",
+    "planteamiento": "Se pide la fórmula empírica del hidrocarburo a partir de los productos de la combustión completa. Datos: CO₂ = 132 g (M = 44 g/mol); H₂O = 72 g (M = 18 g/mol).",
+    "steps": [
+     "Calcula los moles de CO₂: $n = \\dfrac{132\\ \\mathrm{g}}{44\\ \\mathrm{g/mol}} = 3\\ \\mathrm{mol}$. Como cada CO₂ tiene un átomo de carbono, hay $3$ mol de C.",
+     "Calcula los moles de H₂O: $n = \\dfrac{72\\ \\mathrm{g}}{18\\ \\mathrm{g/mol}} = 4\\ \\mathrm{mol}$.",
+     "Cada H₂O tiene dos átomos de hidrógeno, así que hay $4 \\cdot 2 = 8$ mol de H.",
+     "Establece la proporción de átomos: C : H = $3 : 8$. Esa razón ya está en su forma más simple, porque no hay un divisor común distinto de $1$.",
+     "La fórmula empírica es $\\mathrm{C_3H_8}$, que corresponde a un alcano de tres carbonos, el propano.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone $\\mathrm{C_3H_5}$. Trampa: calcula mal los hidrógenos y los deja en cinco, al ignorar que el agua aporta ocho mol de H.",
+     "B": "Propone $\\mathrm{C_3H_4}$. Trampa: toma la mitad de los hidrógenos del agua, como si cada H₂O tuviera un solo H.",
+     "C": "Dice $\\mathrm{C_4H_7}$. Trampa: asigna cuatro carbonos, pero los datos dan 3 mol de CO₂ y, por tanto, 3 mol de C.",
+     "E": "Propone $\\mathrm{C_4H_9}$. Trampa: asigna cuatro carbonos y nueve hidrógenos, lo que no coincide con los moles calculados."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q13",
@@ -466,7 +653,26 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Por la ecuación ajustada, 1 mol de MgH₂ produce 2 mol de H₂; con 4 mol de MgH₂ se forman 8 mol de H₂, que equivalen a 16 g.",
+    "planteamiento": "Se pide la masa de H₂ que se forma a partir de 4 mol de MgH₂ con exceso de agua. Datos: la ecuación ya está ajustada: MgH₂ + 2 H₂O → Mg(OH)₂ + 2 H₂; la masa molar del H₂ es 2 g/mol.",
+    "steps": [
+     "Identifica la relación molar entre el reactivo y el producto: por cada 1 mol de MgH₂ se forman 2 mol de H₂.",
+     "Calcula los moles de H₂ formados: $4\\ \\mathrm{mol\\ MgH_2} \\cdot \\dfrac{2\\ \\mathrm{mol\\ H_2}}{1\\ \\mathrm{mol\\ MgH_2}} = 8\\ \\mathrm{mol\\ H_2}$.",
+     "Como hay exceso de agua, el MgH₂ es el reactivo limitante y determina la cantidad de hidrógeno formada.",
+     "Calcula la masa: $m = n \\cdot M = 8\\ \\mathrm{mol} \\cdot 2\\ \\mathrm{g/mol} = 16\\ \\mathrm{g}$.",
+     "Comprobación: la masa de H₂ por cada mol de MgH₂ es $2 \\cdot 2 = 4$ g, y $4 \\cdot 4 = 16$ g.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Dice 4 g. Trampa: no aplica la relación molar de la ecuación y toma los 4 mol de MgH₂ como masa de hidrógeno.",
+     "B": "Dice 8 g. Trampa: usa 4 mol de H₂ en lugar de 8 mol, es decir, olvida el coeficiente 2 del H₂ en la ecuación.",
+     "C": "Dice 12 g. Trampa: aplica 1,5 mol de H₂ por mol de MgH₂ en lugar de 2 mol, un factor de proporción incorrecto.",
+     "E": "Dice 20 g. Trampa: no respeta la proporción de la ecuación; 20 g equivalen a 10 mol de H₂, cantidad que no sale de la estequiometría."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q14",
@@ -494,7 +700,25 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La comparación entre la estación con lluvia intensa y la estación sin lluvia pone a prueba si la lluvia diluye los metales pesados, es decir, si su concentración disminuye.",
+    "planteamiento": "Se pide la hipótesis que dio origen al procedimiento. Datos: el lago recibe RILES con metales pesados; se midió la concentración en muestras con y sin precipitaciones intensas, en las cuatro estaciones.",
+    "steps": [
+     "Identifica la variable que se cambia en el diseño: la presencia o ausencia de lluvias intensas. La variable que se mide es la concentración de metales pesados en el agua.",
+     "Una hipótesis debe relacionar esas dos variables en una dirección. Según el diseño, la pregunta es si la lluvia cambia la concentración de los metales.",
+     "Revisa A: relaciona la temperatura con la capacidad de eliminar metales. El procedimiento no mide la temperatura como variable de interés, así que no es la hipótesis.",
+     "Revisa C: relaciona la solubilidad con la lluvia. La solubilidad no se midió, y el diseño mide concentración, no solubilidad.",
+     "Revisa D: relaciona la cantidad de metales con el tiempo desde la descarga. Ese tiempo no se controla en el diseño, así que no es la hipótesis que lo originó.",
+     "Revisa B: la concentración de metales disminuye en períodos de lluvia intensa. Esa es exactamente la relación que las muestras con y sin lluvia permiten comprobar. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Relaciona la temperatura con la eliminación de metales. Trampa: la temperatura aparece en el contexto de las estaciones, pero no es la variable que se midió en el diseño.",
+     "C": "Relaciona la solubilidad con la lluvia. Trampa: la solubilidad es una propiedad que sí está en el texto, pero el diseño mide concentración.",
+     "D": "Relaciona la cantidad de metales con el tiempo desde la descarga. Trampa: suena a hipótesis razonable, pero el procedimiento no controla ese tiempo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q16",
@@ -526,7 +750,26 @@
    ],
    "answer": "E",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $1$ mol/L y $200$ mL se necesitan $8{,}0$ g de NaOH; como la solución al $20$ % m/v tiene $20$ g por cada $100$ mL, hay que tomar $40$ mL y completar con agua hasta $200$ mL.",
+    "planteamiento": "Se pide el volumen de solución al $20$ % m/v que se debe extraer y cómo completar el volumen. Datos: volumen final $200$ mL; concentración $1$ mol/L de NaOH; masa molar $40$ g/mol; solución al $20$ % m/v.",
+    "steps": [
+     "Calcula los moles necesarios: $n = c \\cdot V = 1\\ \\mathrm{mol/L} \\cdot 0{,}200\\ \\mathrm{L} = 0{,}200\\ \\mathrm{mol}$.",
+     "Calcula la masa de soluto: $m = n \\cdot M = 0{,}200\\ \\mathrm{mol} \\cdot 40\\ \\mathrm{g/mol} = 8{,}0\\ \\mathrm{g}$ de NaOH.",
+     "La solución al $20$ % m/v contiene $20\\ \\mathrm{g}$ de soluto en $100\\ \\mathrm{mL}$, es decir, $0{,}20\\ \\mathrm{g/mL}$.",
+     "Calcula el volumen a extraer: $V = \\dfrac{8{,}0\\ \\mathrm{g}}{0{,}20\\ \\mathrm{g/mL}} = 40\\ \\mathrm{mL}$.",
+     "Para llevar la solución a $200$ mL, se agrega agua hasta el enrase. Así la concentración final es $0{,}200\\ \\mathrm{mol}/0{,}200\\ \\mathrm{L} = 1\\ \\mathrm{mol/L}$.",
+     "Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "Extraer $1$ mL y agregar $199$ mL de agua. Trampa: $1$ mL de solución tiene solo $0{,}2$ g de soluto, muy lejos de los $8$ g necesarios.",
+     "B": "Extraer $20$ mL y agregar $180$ mL de agua. Trampa: toma $20$ mL por el porcentaje, pero el volumen necesario es $40$ mL.",
+     "C": "Extraer $1$ mL y agregar agua hasta $200$ mL. Trampa: el volumen extraído es demasiado pequeño para aportar el soluto requerido.",
+     "D": "Extraer $20$ mL y agregar agua hasta $200$ mL. Trampa: confunde el porcentaje con el volumen, y no calcula la masa necesaria de NaOH."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q17",
@@ -558,7 +801,25 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En $300$ g de disolución al $20$ % m/m hay $60$ g de soluto, y el resto, $240$ g, es solvente.",
+    "planteamiento": "Se pide la masa de solvente en $300$ g de disolución al $20$ % m/m. Datos: masa total $300$ g; concentración $20$ % en masa.",
+    "steps": [
+     "Calcula la masa de soluto: $m_{\\mathrm{soluto}} = 0{,}20 \\cdot 300\\ \\mathrm{g} = 60\\ \\mathrm{g}$.",
+     "En una disolución, la masa total es la suma de la masa de soluto y la de solvente: $m_{\\mathrm{disolución}} = m_{\\mathrm{soluto}} + m_{\\mathrm{solvente}}$.",
+     "Despeja el solvente: $m_{\\mathrm{solvente}} = 300\\ \\mathrm{g} - 60\\ \\mathrm{g} = 240\\ \\mathrm{g}$.",
+     "Comprobación: el solvente es el $80$ % de la masa total, es decir, $0{,}80 \\cdot 300\\ \\mathrm{g} = 240\\ \\mathrm{g}$, lo que suma los $300$ g.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Dice 20 g. Trampa: toma el porcentaje como masa de solvente, sin calcular la masa de la disolución.",
+     "B": "Dice 60 g. Trampa: entrega la masa de soluto, no la de solvente.",
+     "C": "Dice 80 g. Trampa: resta del total una fracción que no corresponde, sin usar el 20 % m/m.",
+     "E": "Dice 280 g. Trampa: resta solo 20 g, es decir, usa el porcentaje como masa de soluto en vez de calcular el 20 % de 300 g."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q21",
@@ -593,7 +854,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La zona mojada se ve más oscura porque el agua absorbe ciertas longitudes de onda, así que la pregunta directa es qué longitudes absorbe el agua.",
+    "planteamiento": "Se pide la pregunta de investigación que surge de la observación. Datos: la parte mojada del piso se ve más oscura que la parte seca, con las mismas baldosas. La pregunta debe apuntar a la variable que explica la diferencia.",
+    "steps": [
+     "La observación es que la parte mojada se ve más oscura que la seca. Eso sugiere que el agua cambia la forma en que la superficie refleja la luz.",
+     "Una pregunta de investigación debe surgir de ese fenómeno y apuntar a la variable que explica el cambio: qué luz absorbe el agua.",
+     "Revisa A: pregunta por la luz reflejada en las baldosas, pero las baldosas son las mismas en ambas zonas. No explica la diferencia.",
+     "Revisa C: pregunta por la refracción en las baldosas, un fenómeno que no se observa en la situación. El oscurecimiento no depende de refracción en las baldosas.",
+     "Revisa D: pregunta por la luz que incide en el agua. La luz incidente es la misma en la zona mojada y en la seca, así que no explica la diferencia.",
+     "Revisa B: pregunta qué longitudes de onda absorbe el agua, justo lo que se necesita para explicar por qué la zona mojada se ve más oscura. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Pregunta por la luz reflejada en las baldosas. Trampa: centra la atención en el material, que no cambia entre la zona seca y la mojada.",
+     "C": "Pregunta por la refracción en las baldosas. Trampa: suena a fenómeno óptico relacionado, pero no es el que produce el oscurecimiento observado.",
+     "D": "Pregunta por la luz que incide en el agua. Trampa: la incidencia es igual en ambas zonas, así que no explica la diferencia de color."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q22",
@@ -621,7 +900,25 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Lo observado es que dos rayos distintos, con el mismo ángulo de incidencia, se refractan con ángulos distintos; la pregunta debe relacionar la frecuencia del rayo con el ángulo de refracción.",
+    "planteamiento": "Se pide la pregunta de investigación relacionada directamente con lo observado. Datos: dos rayos de distinta clase, con igual ángulo de incidencia sobre el agua, se refractan con ángulos diferentes, y el patrón se repite con otros rayos.",
+    "steps": [
+     "Lo observado: rayos distintos, con el mismo ángulo de incidencia en el agua, se refractan con ángulos distintos, y el patrón se repite.",
+     "La pregunta debe relacionar la variable que se cambia (el tipo de rayo, asociado a su frecuencia) con la variable que se mide (el ángulo de refracción).",
+     "Revisa A: relaciona el ángulo de incidencia con el ángulo de reflexión. Ni el ángulo de incidencia ni la reflexión son lo que se observó.",
+     "Revisa B: habla de medios de transmisión. El medio, el agua, se mantuvo fijo en el experimento, así que no es lo que se investiga.",
+     "Revisa C: relaciona la frecuencia con el ángulo de reflexión, que no se observó.",
+     "Revisa D: relaciona la frecuencia del rayo incidente con el ángulo de refracción, que es la comparación exacta del experimento. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Relaciona el ángulo de incidencia con el de reflexión. Trampa: la reflexión no se midió, y el experimento variaba el tipo de rayo, no el ángulo.",
+     "B": "Habla de los medios de transmisión. Trampa: el agua se mantuvo igual, así que el medio no es la variable en estudio.",
+     "C": "Relaciona la frecuencia con el ángulo de reflexión. Trampa: mezcla la variable correcta con una medida que no se observó."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q23",
@@ -660,7 +957,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al entrar al vidrio el rayo se acerca a la normal, y al salir se aleja, por lo que emerge paralelo al rayo incidente pero desplazado lateralmente.",
+    "planteamiento": "Se pide el esquema que represente la trayectoria de un rayo que atraviesa una placa de vidrio de caras paralelas. Datos: el rayo incide desde el aire, atraviesa el vidrio y emerge de nuevo al aire; la línea segmentada muestra la dirección original.",
+    "steps": [
+     "Al pasar del aire al vidrio, que tiene mayor índice de refracción, el rayo se acerca a la normal. Por eso se quiebra hacia la perpendicular dentro del vidrio.",
+     "Al salir del vidrio hacia el aire, el rayo se aleja de la normal. Como las caras son paralelas, la desviación de salida compensa la de entrada y el rayo emerge paralelo al original.",
+     "Revisa D: el rayo atraviesa sin cambiar de dirección. Eso no ocurre al cambiar de medio con un ángulo de incidencia distinto de cero.",
+     "Revisa B: el rayo dentro del vidrio se dibuja perpendicular a la cara y, al salir, queda vertical. Su dirección final no es paralela a la incidente.",
+     "Revisa C: el rayo emerge con una dirección distinta de la incidente, sin ser paralelo al original.",
+     "Revisa E: el rayo sale en dirección vertical, perpendicular a la cara, lo que no corresponde a una placa de caras paralelas con ese ángulo.",
+     "Revisa A: el rayo se acerca a la normal al entrar, se aleja al salir y emerge paralelo al rayo original, con un pequeño desplazamiento. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dibuja el rayo perpendicular dentro del vidrio y vertical al salir. Trampa: se confunde el ángulo de incidencia con uno normal, lo que no es coherente con el rayo que llega inclinado.",
+     "C": "Dibuja la salida con una dirección distinta de la incidente. Trampa: no considera que las caras son paralelas y que la salida recupera la dirección original.",
+     "D": "Dibuja el rayo sin desviación. Trampa: ignora el cambio de velocidad y de dirección que sufre la luz al cambiar de medio.",
+     "E": "Dibuja la salida vertical, perpendicular a la cara del vidrio. Trampa: confundir la normal con la dirección de salida, sin conservar la dirección original del rayo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q24",
@@ -692,7 +1009,25 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un espejo plano y uno convexo siempre dan imágenes virtuales de un objeto real, así que el arreglo produce solo imágenes virtuales.",
+    "planteamiento": "Se pide qué se puede afirmar de las imágenes formadas por un espejo plano y uno convexo con ejes ópticos coincidentes. Datos: el objeto está sobre el eje óptico, a igual distancia de ambos espejos.",
+    "steps": [
+     "Recuerda el espejo plano: forma una imagen virtual, derecha y del mismo tamaño que el objeto, situada detrás de la superficie reflectora.",
+     "Recuerda el espejo convexo: sus rayos reflejados divergen, por lo que forma imágenes virtuales, derechas y más pequeñas que el objeto, sin importar la distancia.",
+     "Aplica al objeto: la imagen que da el espejo convexo es virtual, y la que da el espejo plano también es virtual.",
+     "Las imágenes que se forman al reflejarse la luz de un espejo en el otro también resultan virtuales en esta configuración, por lo que el conjunto no produce imágenes reales.",
+     "Por eso A, C, D y E son falsas, porque incluyen imágenes reales que no se forman. Solo queda la afirmación de que se forman solo imágenes virtuales. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Afirma que solo hay imágenes reales. Trampa: los espejos convexos no forman imágenes reales de objetos reales, y el plano tampoco.",
+     "C": "Afirma una imagen real y una virtual. Trampa: el espejo convexo solo da virtuales, y confundir su comportamiento con el de un espejo cóncavo lleva a esta opción.",
+     "D": "Afirma una virtual y múltiples reales. Trampa: combina una imagen virtual correcta con imágenes reales inexistentes.",
+     "E": "Afirma una real y múltiples virtuales. Trampa: la parte de la imagen real es falsa, aunque la idea de varias imágenes sea plausible."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q27",
@@ -727,7 +1062,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cuerda superior sostiene a los tres bloques y la inferior solo al de 1 kg; por eso la tensión en la cuerda superior vale seis veces la de la inferior.",
+    "planteamiento": "Se pide la expresión de $T_3$ en función de $T_1$. Datos: $m_1 = 1\\ \\mathrm{kg}$, $m_2 = 2\\ \\mathrm{kg}$, $m_3 = 3\\ \\mathrm{kg}$; cuerdas inextensibles y de masa despreciable; el sistema está en reposo, como lo muestra la figura.",
+    "steps": [
+     "El bloque de 1 kg está sujeto solo a su peso y a la tensión $T_1$ de la cuerda inferior. En equilibrio, $T_1 = m_1 g = 1\\cdot g$.",
+     "La cuerda $T_2$ sostiene a los bloques de 2 kg y de 1 kg, es decir, el conjunto que cuelga de ella: $T_2 = (m_1 + m_2)\\,g = 3g$.",
+     "La cuerda superior $T_3$ sostiene a los tres bloques: $T_3 = (m_1 + m_2 + m_3)\\,g = (1 + 2 + 3)\\,g = 6g$.",
+     "Se expresa $T_3$ en función de $T_1$ dividiendo ambas expresiones: $\\dfrac{T_3}{T_1} = \\dfrac{6g}{g} = 6$, luego $T_3 = 6\\,T_1$.",
+     "Comprobación: $T_2 = 3\\,T_1$ y $T_3 = 6\\,T_1$; cada cuerda sube su tensión en proporción a la masa total que sostiene.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$T_3 = T_1$: supone que la cuerda superior solo sostiene el bloque inferior, pero en realidad sostiene a los tres bloques. La trampa es ignorar el peso acumulado.",
+     "B": "$T_3 = 2T_1$: resulta de una razón entre masas que no incluye el bloque de 3 kg; la cuerda superior debe cargar también ese bloque.",
+     "C": "$T_3 = 3T_1$: corresponde al cociente entre la masa del bloque superior (3 kg) y la del inferior (1 kg), sin sumar la masa de los bloques intermedios."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q30",
@@ -766,7 +1119,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El resorte cumple la ley de Hooke, así que la fuerza es proporcional a la deformación, medida desde los $50$ cm de longitud natural; con $10$ cm de compresión, la fuerza es un tercio de $24$ N.",
+    "planteamiento": "Se pide la fuerza para mantener el extremo libre en $x = 40$ cm. Datos: longitud natural $50$ cm; a $x = 80$ cm se requieren $24$ N, paralelos al eje x.",
+    "steps": [
+     "Identifica el modelo: la fuerza es proporcional a la deformación, $F = k\\,|x - x_0|$, con $x_0 = 50\\ \\mathrm{cm}$.",
+     "En $x = 80$ cm la deformación es $80 - 50 = 30$ cm, y la fuerza es $24$ N. Entonces $k = \\dfrac{F}{\\Delta x} = \\dfrac{24\\ \\mathrm{N}}{30\\ \\mathrm{cm}} = 0{,}8\\ \\mathrm{N/cm}$.",
+     "En $x = 40$ cm la deformación es $40 - 50 = -10$ cm: el resorte está comprimido $10$ cm, y la magnitud de la deformación es $10$ cm.",
+     "Calcula la magnitud de la fuerza: $F = k\\,|\\Delta x| = 0{,}8\\ \\mathrm{N/cm} \\cdot 10\\ \\mathrm{cm} = 8\\ \\mathrm{N}$.",
+     "Comprobación por proporción: la deformación pasa de $30$ cm a $10$ cm, es decir, un tercio. La fuerza también se reduce a un tercio: $24\\ \\mathrm{N} / 3 = 8\\ \\mathrm{N}$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice $12$ N. Trampa: divide la fuerza a la mitad, como si la deformación se redujera a la mitad, pero la compresión es de $10$ cm, no de $15$ cm.",
+     "C": "Dice $16$ N. Trampa: toma $20$ cm de deformación, al no restar bien la longitud natural de $50$ cm.",
+     "D": "Dice $24$ N. Trampa: supone que la fuerza no cambia con la posición, aunque el resorte se deforma de otra forma.",
+     "E": "Dice $32$ N. Trampa: aumenta la fuerza en vez de disminuirla, al confundir la compresión con una mayor elongación."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q31",
@@ -794,7 +1166,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-ondas"
+   "subtopic": "cs-ondas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frase resume los resultados de las mediciones y las concluye: la sismicidad está dentro de parámetros normales, que es la conclusión de la investigación.",
+    "planteamiento": "Se pide el componente de la investigación científica al que se asocia la frase entre comillas. Datos: el grupo realizó un estudio geográfico, instaló sensores, midió y procesó datos, y luego reportó que la sismicidad es normal.",
+    "steps": [
+     "Identifica las etapas del texto: el estudio geográfico y la instalación de sensores son preparación; las mediciones y su análisis son recolección y procesamiento de datos.",
+     "La frase final no describe cómo se midió ni qué se esperaba. Presenta lo que se obtuvo y lo que se decide a partir de ello.",
+     "Revisa A: el planteamiento del problema es la sospecha de que la actividad aumentó, que aparece al inicio. La frase final no plantea el problema.",
+     "Revisa B: la hipótesis es una anticipación de lo que podría pasar. La frase no anticipa nada, describe un resultado ya obtenido.",
+     "Revisa D: la recolección de datos corresponde a las mediciones con sensores. La frase no describe cómo se midió, sino qué se concluyó.",
+     "La frase afirma un resultado general a partir de los datos, es decir, una conclusión. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Asocia la frase al planteamiento del problema. Trampa: la sospecha de aumento de la actividad está al comienzo, pero la frase final es un resultado.",
+     "B": "Asocia la frase a la hipótesis. Trampa: una hipótesis se formula antes de medir, y aquí se reporta un resultado ya obtenido.",
+     "D": "Asocia la frase a la recolección de datos. Trampa: esa etapa describe las mediciones, no la interpretación final."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q33",
@@ -822,7 +1212,24 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La hipótesis debe relacionar las variables que se investigan, aquí la temperatura y la distancia al Ecuador. Y una hipótesis puede resultar falsa: para eso se pone a prueba.",
+    "planteamiento": "Se pide qué hipótesis pudo originar una investigación que compara la temperatura máxima del aire, en un mismo día y en distintos lugares, según su distancia a la línea del Ecuador. Las variables en juego son esa distancia, es decir, la latitud, y la temperatura máxima.",
+    "steps": [
+     "Identifica la variable independiente: lo que cambia de un lugar a otro por diseño es su distancia a la línea del Ecuador, o sea, su latitud.",
+     "Identifica la variable dependiente: lo que se mide y se compara es la máxima temperatura del aire en cada lugar.",
+     "Recuerda qué es una hipótesis: una relación tentativa entre variables, que guía el diseño de la investigación. No necesita ser verdadera antes de investigar: el estudio sirve justamente para aceptarla o rechazarla.",
+     "Compara las alternativas con esas variables: solo la C relaciona temperatura con latitud, que es lo que este diseño permite poner a prueba.",
+     "Lo que se observa en general es lo contrario, porque la temperatura suele bajar al alejarse del Ecuador. Con esos datos la hipótesis se rechazaría, pero igual pudo dar origen a la investigación. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Se refiere solo a puntos de la línea del Ecuador. Para ponerla a prueba habría que comparar lugares sobre esa línea, mientras que la investigación compara lugares a distinta distancia de ella.",
+     "B": "Relaciona la temperatura con la altura de un lugar. Es una idea correcta en general y por eso tienta, pero la altura no es la variable que esta investigación hace variar.",
+     "D": "Relaciona la temperatura con la presión atmosférica, una variable que el enunciado no menciona ni mide. No se podría responder con el diseño descrito."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q34",
@@ -850,7 +1257,25 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una conexión en serie el circuito se interrumpe si una ampolleta falla, así que el manual debe advertir que la lámpara depende de que ambas estén en buen estado.",
+    "planteamiento": "Se pide la información que debe contener el manual para evitar problemas de funcionamiento de una lámpara con dos ampolletas en serie. Datos: las ampolletas están conectadas una a continuación de la otra, en un único camino.",
+    "steps": [
+     "En una conexión en serie, la corriente recorre las ampolletas una tras otra por un único camino.",
+     "Si una de ellas se quema o está defectuosa, el circuito queda abierto y ninguna enciende. Esa es la causa de problemas de funcionamiento.",
+     "Revisa A: en serie la corriente es igual en ambas ampolletas. Es una propiedad real, pero no advierte nada para evitar fallas.",
+     "Revisa C: en serie el voltaje se reparte entre las ampolletas. Es cierto, pero no aborda el problema de que la lámpara deje de funcionar.",
+     "Revisa D: la resistencia equivalente es la suma de las resistencias. También es cierto, pero no se relaciona con la falla.",
+     "Revisa B: indica que el encendido depende de que ambas ampolletas estén en buen estado. Es la advertencia que el manual necesita para evitar problemas. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Dice que la corriente es igual en ambas ampolletas. Trampa: es una propiedad correcta de la serie, pero no sirve para prevenir fallas.",
+     "C": "Dice que el voltaje en cada ampolleta es distinto al del enchufe. Trampa: es correcto, pero describe el reparto de voltaje y no el problema de funcionamiento.",
+     "D": "Dice que la resistencia de la lámpara es la suma de las resistencias. Trampa: es una relación válida en serie, pero no advierte sobre la falla de una ampolleta."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q36",
@@ -885,7 +1310,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El gasto de un refrigerador depende de la energía que consume, y la etiqueta muestra ese dato como consumo mensual en kWh/mes.",
+    "planteamiento": "Se pide qué información de la etiqueta debe considerar la persona para elegir el de menor gasto económico. Datos: el consumo mensual es $18{,}67\\ \\mathrm{kWh/mes}$, medido a $25\\,^\\circ\\mathrm{C}$; el resto de datos son de capacidad y funcionamiento.",
+    "steps": [
+     "El objetivo es el menor gasto económico durante el uso. Como el costo depende de la energía que se consume cada mes, el dato clave es el consumo.",
+     "En la etiqueta, el consumo mensual aparece en la parte inferior: $18{,}67\\ \\mathrm{kWh/mes}$. Si la tarifa es de $t$ pesos por kWh, el gasto mensual es $18{,}67\\, t$ pesos.",
+     "Revisa B: el voltaje indica la alimentación eléctrica que requiere el aparato, no cuánta energía consume, así que no determina el gasto.",
+     "Revisa C: la temperatura del compartimiento congelado es un parámetro de funcionamiento, no un consumo ni un costo.",
+     "Revisa D: el volumen útil dice cuánto cabe en el refrigerador, no cuánta energía gasta. Sirve para elegir capacidad, pero no para comparar el gasto.",
+     "Por lo tanto, la información que debe considerar para el gasto es el consumo mensual. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice que debe considerar el voltaje. Trampa: es un dato técnico de conexión, que no cambia el gasto mensual.",
+     "C": "Dice que debe considerar la temperatura del congelador. Trampa: es un parámetro de funcionamiento y no se traduce en un cobro en la cuenta.",
+     "D": "Dice que debe considerar el volumen útil. Trampa: un refrigerador más grande no implica necesariamente más gasto, y la etiqueta no lo mide en pesos."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q37",
@@ -913,7 +1356,26 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La pregunta pide una hipótesis que se pueda validar con lo medido: células derivadas de troncales que liberan insulina ante glucosa, como posible tratamiento.",
+    "planteamiento": "Se pide la hipótesis que podría validarse con la estrategia del equipo. Datos: las células beta se producen a partir de células troncales y, in vitro, liberan insulina al exponerse a glucosa. La hipótesis debe conectar esa función con un posible tratamiento de la diabetes tipo I, sin afirmar nada que el experimento no mida.",
+    "steps": [
+     "Identifica lo que el experimento sí mide: si las células obtenidas a partir de células troncales liberan insulina cuando se exponen a glucosa. Es una medida de función, no de trasplante ni de ingreso de glucosa.",
+     "Recuerda el problema de base: en la diabetes tipo I, la destrucción de las células beta impide secretar insulina y regular la glucosa en la sangre. Si las células producidas cumplen esa función, podrían reemplazar a las destruidas.",
+     "Una hipótesis validable es una afirmación que se puede confirmar o refutar con datos del mismo tipo que los obtenidos. Debe apuntar a la utilidad terapéutica de las células, que es lo que se evalúa al medir la liberación de insulina.",
+     "Revisa A: afirma que el trasplante disminuye el ingreso de glucosa a la célula. El estudio no mide ingreso de glucosa ni efectos del trasplante, así que no puede validar esa afirmación.",
+     "Revisa B: habla de trasplante de páncreas en personas con diabetes tipo I. El estudio trata de células obtenidas a partir de troncales, no de un órgano completo.",
+     "Revisa C: invierte la relación observada. El experimento muestra que la glucosa estimula la liberación de insulina, mientras que C afirma que los altos niveles de glucosa la disminuyen.",
+     "Revisa D: conecta lo medido (células beta que secretan insulina ante la glucosa) con una aplicación clínica (posible tratamiento de la diabetes tipo I). Es la única que puede validarse con estos resultados. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Afirma que el trasplante disminuye el ingreso de glucosa a la célula. Trampa: suena a mecanismo celular, pero el estudio no mide el ingreso de glucosa ni efectos del trasplante.",
+     "B": "Habla de trasplante de páncreas. Trampa: el tratamiento propuesto es con células derivadas de troncales, no con un órgano, así que la premisa no corresponde.",
+     "C": "Invierte la relación: la glucosa estimula la secreción de insulina en los resultados in vitro, y C afirma lo contrario. Trampa: leer la palabra glucosa y asumir una relación negativa."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q41",
@@ -948,7 +1410,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que leer los promedios (flechas) y no el largo de los rangos; el vello púbico tiene el promedio más temprano.",
+    "planteamiento": "Se pide la conclusión correcta a partir de la figura. Datos: las líneas indican el rango etario de aparición y las flechas el promedio, en años. La conclusión debe basarse en la posición de las flechas.",
+    "steps": [
+     "Lee el promedio de cada característica en el eje de edad: cambio de voz, aproximadamente $13$ años; vello púbico, aproximadamente $12$ años; vello facial, aproximadamente $15$ años; vello axilar, aproximadamente $14$ años.",
+     "Ordena los promedios de menor a mayor: vello púbico ($12$) $<$ cambio de voz ($13$) $<$ vello axilar ($14$) $<$ vello facial ($15$). La de promedio más temprano es el vello púbico.",
+     "Revisa A: dice que el vello púbico es el más tardío. Como su promedio es el más bajo, A es falsa.",
+     "Revisa B: dice que el cambio de voz y el vello facial son las más tempranas. El vello facial tiene el promedio más tardío, $15$ años, así que B es falsa.",
+     "Revisa D: dice que el cambio de voz y el vello axilar son las más tardías. El cambio de voz ($13$ años) es el tercero en orden, y el vello facial ($15$ años) es tardío y no aparece en D, así que D es falsa.",
+     "Revisa C: afirma que el vello púbico es el que, en promedio, aparece más temprano. Coincide con el orden de las flechas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Invierte el orden: el vello púbico tiene el promedio más bajo, cerca de $12$ años, así que es el más temprano y no el más tardío. Trampa: confundir el inicio del rango con el promedio.",
+     "B": "Mezcla una característica temprana (cambio de voz, cerca de $13$ años) con una tardía (vello facial, cerca de $15$ años). Trampa: leer solo que ambas aparecen dentro del rango de los $13$ años.",
+     "D": "Incluye al cambio de voz entre las más tardías, pero su promedio ($13$ años) es menor que el del vello axilar ($14$) y el del vello facial ($15$). Trampa: fijarse en el rango largo de la línea y no en la flecha."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q42",
@@ -983,7 +1463,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La inhibición depende de la concentración: al subir Z deben bajar los espermatozoides unidos, algo que solo muestra la gráfica D.",
+    "planteamiento": "Se pide la representación correcta del resultado esperado. Datos: 100 espermatozoides y 25 ovocitos; cuatro concentraciones crecientes de Z (u.a.); el efecto inhibitorio depende de la concentración de Z. Hay que buscar un resultado con una tendencia descendente.",
+    "steps": [
+     "Interpreta la conclusión: si el efecto inhibitorio depende de la concentración, al aumentar Z debe disminuir el número de espermatozoides unidos a los ovocitos.",
+     "Revisa A: compara solo dos condiciones (Z ausente y Z presente), con $80$ y $20$ espermatozoides unidos. El diseño pedía cuatro concentraciones crecientes, así que la tabla no representa el experimento.",
+     "Revisa B: la curva de espermatozoides es horizontal en $100$ para todas las concentraciones. Eso indica que Z no tiene efecto, lo que contradice la conclusión.",
+     "Revisa C: la tabla muestra $40$, $10$, $20$ y $30$ espermatozoides unidos para las concentraciones $1$, $2$, $3$ y $4$. Los valores suben y bajan sin tendencia, así que no muestran una dependencia con la concentración.",
+     "Revisa D: el gráfico muestra el número de espermatozoides unidos bajando desde aproximadamente $40$ en la concentración $1$ hasta $0$ en la concentración $4$. Es una relación descendente, que es lo que predice la conclusión.",
+     "Comprueba que D describe un resultado plausible del diseño, con el número de espermatozoides unidos disminuyendo a medida que aumenta Z. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Parece un resultado real, pero solo tiene dos condiciones y no las cuatro concentraciones crecientes del diseño. Trampa: aceptar una tabla con datos verosímiles sin revisar si cubre el experimento.",
+     "B": "Muestra los espermatozoides constantes en $100$, es decir, sin efecto de Z. Trampa: mirar solo que las curvas están rotuladas con los gametos correctos.",
+     "C": "La tabla tiene cuatro concentraciones y sus porcentajes coinciden con los números, lo que parece coherente. Sin embargo, la serie no es monótona y no muestra un efecto que dependa de la concentración."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q45",
@@ -1011,7 +1509,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una buena pregunta de investigación compara la prevalencia entre mujeres y hombres en Chile, porque el problema planteado es una diferencia por sexo.",
+    "planteamiento": "Se pide la pregunta pertinente al problema. Datos: el lupus es más prevalente en mujeres a nivel internacional, y el grupo quiere saber si ocurre lo mismo en la población chilena. La pregunta debe permitir comparar mujeres y hombres.",
+    "steps": [
+     "Identifica el problema: se busca comprobar si la mayor frecuencia del lupus en mujeres se repite en Chile. Para responderlo, la pregunta debe comparar la prevalencia entre ambos sexos.",
+     "Revisa A: pregunta por el rango de edad de las mujeres con lupus. Es un dato descriptivo de un solo grupo, así que no responde si hay diferencia con los hombres.",
+     "Revisa B: pregunta por la probabilidad de que una mujer chilena desarrolle lupus. Entrega una cifra para mujeres, pero no la compara con los hombres.",
+     "Revisa C: pregunta por la frecuencia en toda la población. Al juntar a mujeres y hombres, la cifra no permite saber si el lupus es más frecuente en mujeres.",
+     "Revisa D: pregunta por el porcentaje de mujeres y de hombres con lupus en Chile. Esa comparación responde directamente si la diferencia observada internacionalmente se repite en el país. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Pregunta por el rango de edad de las mujeres con lupus. Trampa: es una pregunta sobre un grupo, sin comparación con los hombres.",
+     "B": "Pregunta por la probabilidad en mujeres. Trampa: es un dato útil, pero solo mide un grupo y no contrasta con el sexo masculino.",
+     "C": "Pregunta por la frecuencia total. Trampa: al sumar mujeres y hombres se pierde la información sobre la diferencia por sexo que se quiere investigar."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q46",
@@ -1039,7 +1554,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-sistemas"
+   "subtopic": "cs-sistemas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una evidencia de respuesta humoral es un aumento de sustancias secretadas que circulan en la sangre, como los anticuerpos.",
+    "planteamiento": "Se pide la evidencia que apoya la teoría de que la respuesta inmune es humoral, es decir, mediada por sustancias liberadas por los glóbulos blancos. La evidencia debe mostrar un aumento de esas sustancias en el organismo.",
+    "steps": [
+     "Define el concepto: la respuesta humoral es la mediada por sustancias presentes en los fluidos corporales, como los anticuerpos que secretan los linfocitos B.",
+     "Busca un dato que muestre un aumento de esas sustancias en la sangre durante una infección, y que no sea una respuesta celular.",
+     "Revisa A: disminuir macrófagos en la piel. Los macrófagos participan por fagocitosis, que es una respuesta celular, y su disminución no evidencia secreciones humorales.",
+     "Revisa B: el aumento de temperatura es una respuesta general, como la fiebre. No identifica mediadores humorales específicos.",
+     "Revisa C: aumentan los anticuerpos en la sangre frente a un agente infeccioso. Los anticuerpos son sustancias secretadas que circulan en la sangre, y su aumento coincide con la infección, lo que apoya la idea humoral.",
+     "Revisa D: disminuyen los linfocitos T citotóxicos. Esa observación se asocia con la inmunidad celular, y la disminución de células no evidencia secreción de sustancias. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Disminuyen los macrófagos en la piel. Trampa: los macrófagos son glóbulos blancos y se confunden con el carácter humoral, pero su acción es celular.",
+     "B": "Aumenta la temperatura corporal. Trampa: es un signo de la infección, pero no identifica sustancias liberadas por los glóbulos blancos.",
+     "D": "Disminuyen los linfocitos T citotóxicos. Trampa: asociar la respuesta inmune con cualquier disminución de glóbulos blancos, sin distinguir entre inmunidad celular y humoral."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q47",
@@ -1074,7 +1607,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para atribuir un efecto a un compuesto hay que comparar con el control: el compuesto 2 deja menos células que el control, lo que indica menor proliferación.",
+    "planteamiento": "Se pide la inferencia correcta a partir de la figura. Datos: los tres cultivos iniciales tienen la misma cantidad de células; tras $72$ horas se comparan el control, el cultivo con el compuesto 1 y el cultivo con el compuesto 2.",
+    "steps": [
+     "Lee el diseño: el control crece sin tratamiento, así que muestra lo que ocurre en esas $72$ horas. Cualquier diferencia con el control se atribuye al compuesto.",
+     "Compara el número de células al final: el control tiene la mayor cantidad; el cultivo con el compuesto 1 se ve similar, sin un aumento respecto del control; el cultivo con el compuesto 2 tiene claramente menos células.",
+     "Como todos partieron con la misma cantidad, la diferencia final refleja el crecimiento neto. Menos células al final significa que se dividieron menos, es decir, que la tasa de proliferación disminuyó.",
+     "Revisa A: el compuesto 1 no muestra más células que el control, así que no hay evidencia de que aumente el número de células viables. El crecimiento también ocurre en el control.",
+     "Revisa B: la figura muestra cantidad de células, no el volumen de cada una, y el tamaño individual no se mide. La inferencia no puede sostenerse.",
+     "Revisa D: las células que quedan tienen el mismo aspecto que las del cultivo inicial, sin señales de transformación en células normales. Además, el experimento no identifica células normales. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que el compuesto 1 aumentó las células viables. Trampa: en comparación con el cultivo inicial sí hubo crecimiento, pero también ocurrió en el control, así que no se debe al compuesto.",
+     "B": "Afirma que el compuesto 1 aumentó el volumen celular. Trampa: confundir número de células con tamaño, algo que la figura no muestra.",
+     "D": "Afirma que el compuesto 2 transformó las células cancerosas en normales. Trampa: aceptar una afirmación fuerte sin evidencia; la figura solo muestra cantidad de células."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q48",
@@ -1109,7 +1660,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En la gráfica, solo la curva del arroz dorado sube de manera continua en las seis mediciones, así que la conclusión correcta es la D.",
+    "planteamiento": "Se pide la conclusión correcta del gráfico. Datos: los niveles de betacaroteno (u.a.) de ambos arroces se miden cada semana, de la semana $0$ a la $5$. Hay que verificar cada afirmación contra todos los puntos.",
+    "steps": [
+     "Lee los valores del arroz dorado: aproximadamente $0{,}2$ en la semana $0$, $0{,}5$ en la $1$, $0{,}8$ en la $2$, $1{,}2$ en la $3$, $1{,}9$ en la $4$ y $2{,}7$ en la $5$.",
+     "Lee los valores del arroz no modificado: aproximadamente $0{,}5$, $0{,}8$, $1{,}1$, $1{,}4$, $1{,}4$ y $1{,}4$ en las mismas semanas.",
+     "Revisa A: en las semanas $0$, $1$ y $2$, el arroz dorado tiene valores más bajos. Entonces no es siempre más alto.",
+     "Revisa B: en la semana $5$, el arroz dorado ($2{,}7$) supera al no modificado ($1{,}4$). Entonces tampoco es siempre más bajo.",
+     "Revisa C: el arroz no modificado sube hasta la semana $3$ y luego se mantiene en $1{,}4$. No aumenta de manera constante.",
+     "Revisa D: el arroz dorado sube en cada semana, de $0{,}2$ a $2{,}7$, sin retrocesos. Esa afirmación se cumple en todos los puntos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Dice que siempre es más alto. Trampa: solo es cierto desde la semana $3$; antes, la curva del arroz dorado está por debajo.",
+     "B": "Dice que siempre es más bajo. Trampa: la curva se invierte después de la semana $3$, y al final el arroz dorado es el más alto.",
+     "C": "Dice que el arroz no modificado aumenta de manera constante. Trampa: su curva sube hasta la semana $3$ y después se queda plana en $1{,}4$."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q49",
@@ -1137,7 +1706,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La hipótesis relaciona la inserción de genes de la bacteria con una protección del algodón frente a insectos; es la única opción que propone una relación comprobable.",
+    "planteamiento": "Se pide la hipótesis asociada al procedimiento de generación del algodón Bt. Datos: se introducen genes de Bacillus thuringiensis, que codifican proteínas tóxicas para las larvas de polillas. La hipótesis debe afirmar una relación causa-efecto que pueda ponerse a prueba.",
+    "steps": [
+     "Identifica el procedimiento: se insertan genes de Bacillus thuringiensis en el algodón para que produzca proteínas tóxicas para las larvas de polillas.",
+     "Una hipótesis es una respuesta anticipada, comprobable, que relaciona una causa (la inserción de genes) con un efecto esperado (protección frente a insectos).",
+     "Revisa A: describe un efecto que ya ocurrió (toxicidad en las larvas). No explica por qué se modifica la planta ni propone una relación general que se pueda poner a prueba.",
+     "Revisa B: es un objetivo o propósito del estudio, porque no afirma nada que pueda ser verdadero o falso.",
+     "Revisa C: afirma que, al insertar genes de Bacillus thuringiensis, el algodón consigue protección frente al ataque de insectos. Relaciona la modificación con el efecto, y se puede comprobar comparando plantas Bt con plantas sin modificar.",
+     "Revisa D: describe un resultado contrario, una menor resistencia a insectos. Podría ser un hallazgo, pero no es la hipótesis que dio origen al procedimiento. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Describe la toxicidad de las proteínas en las larvas. Trampa: suena a hipótesis, pero está redactada como un resultado y no relaciona el procedimiento con una protección.",
+     "B": "Propone determinar el efecto defensivo del algodón. Trampa: es el objetivo de la investigación, no una afirmación que pueda validarse o refutarse.",
+     "D": "Describe una menor resistencia a insectos de lo esperado. Trampa: confundir un posible resultado negativo con la hipótesis original, que postulaba protección."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q50",
@@ -1165,7 +1752,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La manipulación genética de levaduras busca optimizar procesos como la fermentación, lo que corresponde a aumentar la actividad metabólica de la célula.",
+    "planteamiento": "Se pide una aplicación científica de la manipulación genética en el funcionamiento celular. Datos: la fermentación, los quesos y el pan dependen del metabolismo de levaduras, que puede optimizarse al conocer los genes y sus funciones.",
+    "steps": [
+     "El texto dice que la manipulación genética puede optimizar procesos basados en levaduras, porque se conocen los genes, sus funciones y los mecanismos celulares.",
+     "La aplicación pedida debe cambiar la manera en que la célula cumple una función para mejorar un proceso industrial.",
+     "Revisa A: la síntesis de organelos nuevos no aparece en el texto y no corresponde a lo que se logra al optimizar procesos existentes.",
+     "Revisa B: identificar especies nuevas es una búsqueda de organismos, no una manipulación del funcionamiento celular.",
+     "Revisa C: aumentar la actividad metabólica de los organelos es la optimización que describe el texto, que mejora la fermentación y la producción de pan y quesos.",
+     "Revisa D: mantener las funciones inalteradas es lo contrario de manipular genéticamente, que busca modificar el funcionamiento para mejorar el rendimiento. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Habla de sintetizar organelos nuevos. Trampa: la manipulación se describe sobre procesos existentes, no sobre crear estructuras celulares nuevas.",
+     "B": "Habla de identificar especies unicelulares. Trampa: es una búsqueda de organismos, no una intervención en la célula.",
+     "D": "Habla de mantener funciones inalteradas. Trampa: sugiere que la manipulación no cambia nada, cuando su propósito es justamente modificar el funcionamiento."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q52",
@@ -1200,7 +1805,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La única variable que cambió la estudiante fue la dirección de la luz solar sobre las plántulas, al girar la botella 180°; por eso la pregunta es sobre el ángulo de incidencia.",
+    "planteamiento": "Se pide la pregunta que la estudiante podría haberse planteado con el cambio de condiciones. Datos: la botella fue girada 180° cerca de la ventana; el tipo de tierra y la variedad de lentejas se mantuvieron. Hay que identificar qué condición se modificó.",
+    "steps": [
+     "Identifica el cambio: la estudiante gira la botella 180°. Como las plántulas quedan en otra posición respecto de la ventana, cambia la dirección desde la que llega la luz solar.",
+     "En las etapas de la figura, el germinado crece hacia la fuente de luz y, tras el giro, vuelve a orientarse hacia ella. Eso indica que la orientación de la luz es la condición que se varió.",
+     "Revisa B: la evaporación del agua no se modifica con el giro de la botella, así que no es la variable manipulada.",
+     "Revisa C: la brisa no aparece como condición controlada ni modificada; el cambio es la orientación respecto de la luz.",
+     "Revisa D: el tipo de tierra se mantuvo igual durante todo el procedimiento, así que no es lo que cambió.",
+     "La pregunta que surge del cambio es el efecto del ángulo de incidencia de la luz solar sobre el crecimiento de la planta. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Pregunta por la evaporación del agua. Trampa: es un fenómeno real en la botella, pero el procedimiento no lo modificó.",
+     "C": "Pregunta por la brisa en la ventana. Trampa: es una posible fuente de variación, pero no es la condición que se manipuló con el giro.",
+     "D": "Pregunta por el tipo de tierra. Trampa: la tierra se usó igual en todas las etapas, así que no puede ser la variable que cambió."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q55",
@@ -1235,7 +1858,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada mezcla se separa por una propiedad distinta: la insolubilidad de la arena en agua, el tamaño de las partículas de la arena y la gravilla, y la diferencia de puntos de ebullición del etanol y el agua.",
+    "planteamiento": "Se pide la técnica más adecuada para separar los componentes de arena con agua, arena con gravilla y etanol con agua. Datos: la arena es insoluble en agua; la arena y la gravilla tienen partículas de tamaños distintos; el etanol y el agua se mezclan y tienen puntos de ebullición distintos.",
+    "steps": [
+     "La arena con agua es una mezcla heterogénea de un sólido insoluble con un líquido. La arena queda retenida en el papel filtro al pasar el líquido, así que se usa filtración simple.",
+     "La arena con gravilla son dos sólidos de tamaños distintos. No se separan por filtración ni destilación, sino por tamización con un tamiz de malla adecuada.",
+     "El etanol con agua es una mezcla de dos líquidos miscibles que se separan aprovechando la diferencia de puntos de ebullición: el etanol hierve a unos $78\\ °\\mathrm{C}$ y el agua a $100\\ °\\mathrm{C}$. Por eso se usa destilación simple.",
+     "La alternativa A usa destilación para la arena con gravilla y filtración para el etanol con agua: ninguna de las dos asignaciones funciona.",
+     "La alternativa C usa tamización en la arena con agua, pero el tamiz no separa un sólido insoluble de un líquido, y filtra el etanol con agua, que es una mezcla de líquidos miscibles.",
+     "La alternativa D usa tamización en la arena con agua y destilación en la arena con gravilla, técnicas que no corresponden a esas mezclas.",
+     "La alternativa B es la única que asigna la técnica correcta a cada mezcla.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Filtración para el etanol con agua y destilación para la arena con gravilla: la filtración no separa líquidos miscibles y la destilación no separa dos sólidos de distinto tamaño.",
+     "C": "Tamización para la arena con agua y filtración para el etanol: el tamiz no sirve para un sólido insoluble en un líquido, y la filtración no separa líquidos miscibles.",
+     "D": "Tamización para la arena con agua y destilación para la arena con gravilla: ninguna de esas asignaciones corresponde a las propiedades de las mezclas."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q57",
@@ -1263,7 +1906,25 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El argón es gas cuando su temperatura supera el punto de ebullición de $-186\\ °\\mathrm{C}$: a $-150\\ °\\mathrm{C}$ está por encima de ese valor, así que es gas.",
+    "planteamiento": "Se pide la inferencia correcta a partir de los puntos de fusión ($-189\\ °\\mathrm{C}$) y de ebullición ($-186\\ °\\mathrm{C}$) del argón. Datos: el estado de agregación depende de la temperatura respecto de esos dos puntos.",
+    "steps": [
+     "Por debajo del punto de fusión ($-189\\ °\\mathrm{C}$) el argón es sólido; entre $-189\\ °\\mathrm{C}$ y $-186\\ °\\mathrm{C}$ es líquido, y por sobre $-186\\ °\\mathrm{C}$ es gas.",
+     "A $-150\\ °\\mathrm{C}$, la temperatura es mayor que $-186\\ °\\mathrm{C}$, así que el argón está por encima de su punto de ebullición y es gas. La alternativa A es correcta.",
+     "A $-186\\ °\\mathrm{C}$ está su punto de ebullición, donde coexisten líquido y vapor; el congelamiento ocurre a $-189\\ °\\mathrm{C}$, así que la alternativa B es falsa.",
+     "A $-189\\ °\\mathrm{C}$ está el punto de fusión, donde el sólido se funde o el líquido se solidifica; no es un punto de ebullición, así que la alternativa C es falsa.",
+     "A $-200\\ °\\mathrm{C}$ la temperatura está por debajo de $-189\\ °\\mathrm{C}$, por lo que el argón es sólido, no líquido: la alternativa D es falsa.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "A $-186\\ °\\mathrm{C}$ el elemento congela: ese valor es el punto de ebullición; la congelación ocurre a $-189\\ °\\mathrm{C}$. La trampa es mezclar los dos puntos.",
+     "C": "A $-189\\ °\\mathrm{C}$ el elemento hierve: ese valor es el punto de fusión; la ebullición ocurre a $-186\\ °\\mathrm{C}$.",
+     "D": "A $-200\\ °\\mathrm{C}$ el elemento es líquido: esa temperatura está por debajo del punto de fusión, así que el argón es sólido."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q58",
@@ -1291,7 +1952,26 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El experimento de Rutherford permite preguntarse cómo se distribuyen las cargas positivas y negativas en el átomo, porque la desviación de las partículas revela una zona central concentrada.",
+    "planteamiento": "Se pide la pregunta que pudo plantear y responder Rutherford con este experimento. Datos: la mayoría de las partículas alfa atraviesa la lámina sin desviarse y algunas se desvían; por eso concluye que el átomo es en su mayoría espacio vacío con un centro compacto.",
+    "steps": [
+     "El experimento busca entender la estructura interna del átomo a partir de cómo se desvían las partículas alfa al chocar con la lámina.",
+     "Las desviaciones se explican si la carga positiva está concentrada en una zona pequeña, lo que plantea la pregunta de cómo se distribuyen las cargas positivas y negativas en el átomo.",
+     "La alternativa C corresponde exactamente a esa pregunta: el experimento responde dónde se concentra la carga positiva y cómo se distribuyen las cargas.",
+     "La alternativa A pregunta por las partículas que componen el átomo; el experimento no identifica partículas distintas, sino la distribución de la carga.",
+     "La alternativa B trata del comportamiento químico del oro, que no se estudia en el experimento: la lámina solo sirve como blanco para las partículas alfa.",
+     "La alternativa D pregunta por las propiedades eléctricas de la lámina, que no se miden en el experimento.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "¿Qué partículas se encuentran presentes en el átomo? Es una pregunta relevante, pero el experimento no identifica partículas distintas: su resultado es la distribución de la carga.",
+     "B": "¿Qué comportamiento del oro es semejante al de otros metales? Es una pregunta química sobre el metal, no sobre la estructura del átomo que el experimento intenta establecer.",
+     "D": "¿Qué características eléctricas presenta la lámina de oro? La lámina es el blanco del experimento, y su electricidad no es lo que se investiga."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q59",
@@ -1326,7 +2006,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La masa atómica crece de forma aproximadamente regular a lo largo de una fila; con Mo (96 u) y Te (128 u) como referencias, el Pd queda cerca de 106 u, valor que corresponde a la opción B.",
+    "planteamiento": "Se pide la inferencia correcta para la masa atómica aproximada del Pd, cuyo dato aparece oculto en la tabla. Datos: el Pd tiene número atómico 46 y está entre el Mo (42, 96 u) y el Te (52, 128 u).",
+    "steps": [
+     "Los números atómicos de la fila son 42 (Mo), 46 (Pd) y 52 (Te): el Pd queda entre el Mo y el Te, así que su masa debe estar entre 96 u y 128 u.",
+     "Entre Mo y Te hay 10 posiciones de diferencia y la masa crece $128 - 96 = 32\\ \\mathrm{u}$, es decir, unas $3{,}2\\ \\mathrm{u}$ por posición, en promedio.",
+     "El Pd está a $46 - 42 = 4$ posiciones del Mo, así que la masa aproximada es $96 + 4 \\cdot 3{,}2 \\approx 109\\ \\mathrm{u}$.",
+     "Entre las alternativas, el valor más cercano a esa estimación es 106 u, que corresponde a la opción B.",
+     "La alternativa A (80 u) queda por debajo de la masa del Mo (96 u), lo que rompe el orden de la fila.",
+     "La alternativa C (130 u) supera la masa del Te (128 u), y la alternativa D (180 u) es todavía mayor; ambas quedan fuera del rango.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "80 u: queda por debajo de la masa del Mo (96 u), y en la misma fila la masa aumenta de izquierda a derecha. La trampa es no comparar con los vecinos.",
+     "C": "130 u: supera la masa del Te (128 u), que está más a la derecha en la fila; la trampa es sumar una cantidad fija sin interpolar.",
+     "D": "180 u: es casi el doble de la masa del Mo y está muy por encima del rango de la fila; la trampa es confundir la masa con otra cantidad."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q61",
@@ -1361,7 +2060,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un átomo neutro tiene igual número de electrones que de protones: el modelo tiene 9 protones y 10 electrones, así que es un ion negativo, y su átomo neutro tiene 9 electrones.",
+    "planteamiento": "Se pide la representación del átomo neutro del ion dado. Datos: el núcleo tiene 9 protones y el modelo muestra 10 electrones, distribuidos en 2 electrones en la capa interna y 8 en la externa.",
+    "steps": [
+     "En un átomo neutro, el número de electrones es igual al número de protones, y el número de protones define el elemento.",
+     "El ion tiene 9 protones y 10 electrones: hay un electrón de más, así que su carga es $-1$. El átomo neutro del mismo elemento debe tener 9 electrones.",
+     "Quitando un electrón al ion, queda una distribución con 9 electrones: 2 en la capa interna y 7 en la externa, que corresponde al flúor.",
+     "La alternativa A tiene 9 protones y 8 electrones (2 en la interna y 6 en la externa): es un ion con carga $+1$, no un átomo neutro.",
+     "La alternativa C tiene 8 protones: corresponde a otro elemento, así que no es el átomo neutro del ion dado.",
+     "La alternativa D también tiene 8 protones, por lo que representa otro elemento y no el mismo átomo.",
+     "La alternativa B tiene 9 protones y 9 electrones (2 en la capa interna y 7 en la externa), y corresponde al átomo neutro.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Muestra 9 protones y solo 8 electrones: es un ion positivo con carga $+1$, porque le faltan electrones para ser neutro.",
+     "C": "Tiene 8 protones: es otro elemento, así que no corresponde al átomo neutro del ion presentado.",
+     "D": "Tiene 8 protones: aunque tenga electrones suficientes en la figura, el número de protones identifica otro elemento."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q62",
@@ -1396,7 +2115,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El número de protones fija el elemento, y al comparar protones con los electrones dibujados se identifica la carga: 18 electrones frente a 20 protones dan un catión 2+.",
+    "planteamiento": "Se pide la inferencia correcta sobre el modelo atómico. Datos del esquema: $p^+ = 20$ y $A = 39$. Los electrones se distribuyen en tres capas con 2, 8 y 8 electrones, es decir, 18 en total.",
+    "steps": [
+     "El número atómico $Z$ es la cantidad de protones: $Z = 20$. El número másico $A = 39$ es la suma de protones y neutrones, así que hay $39 - 20 = 19$ neutrones.",
+     "En el esquema se cuentan los electrones por capa: 2 en la primera, 8 en la segunda y 8 en la tercera. En total hay 18 electrones.",
+     "Un átomo neutro tiene tantos electrones como protones, es decir, 20. Como hay 18, la especie tiene 2 electrones menos que protones y su carga es $20 - 18 = +2$.",
+     "Una especie con carga $+2$ es un catión, porque ha perdido electrones. Su símbolo genérico es $\\mathrm{M^{2+}}$, lo que coincide con la alternativa C.",
+     "Las otras opciones se descartan: el número atómico es 20 y no 39; el número másico es 39 y no 20; y no es un anión, porque tiene menos electrones que protones. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Tiene número atómico 39: confunde el número másico, $A = 39$, con el número atómico, que es la cantidad de protones, 20.",
+     "B": "Tiene número másico 20: confunde el número de protones con el número másico. El número másico es $A = 39$.",
+     "D": "Es un anión del tipo $\\mathrm{X^-}$: un anión tiene más electrones que protones. Aquí ocurre lo contrario, por eso la especie es un catión."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q63",
@@ -1425,7 +2161,25 @@
    "answer": "C",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los enlaces sigma se cuentan por pares de átomos unidos, sin importar si el enlace es sencillo, doble o triple: cada uno aporta exactamente un sigma.",
+    "planteamiento": "Se pide el número total de enlaces sigma de la molécula del enunciado. Datos: la cadena lineal tiene cinco carbonos y seis hidrógenos (2 + 1 + 2 + 0 + 0 + 1), es decir, $\\mathrm{C_5H_6}$.",
+    "steps": [
+     "La cadena lineal de cinco carbonos es $\\mathrm{CH_2{=}CH{-}CH_2{-}C{\\equiv}CH}$, con seis hidrógenos en total.",
+     "Cada enlace simple, doble o triple entre dos átomos contiene exactamente un enlace sigma. Por lo tanto, para contar los sigma basta contar los pares de átomos unidos y los enlaces π no se suman aparte.",
+     "Enlaces C–H: hay 6 hidrógenos, así que hay 6 enlaces C–H, todos sencillos y todos sigma.",
+     "Enlaces C–C: en una cadena lineal de 5 carbonos hay $5 - 1 = 4$ uniones entre carbonos consecutivos, cada una con un enlace sigma.",
+     "Total de sigma: $6 + 4 = 10$. Los enlaces π, que son 1 del doble enlace y 2 del triple enlace, no se cuentan como sigma.",
+     "Comprobación: el total de enlaces es $10 + 3 = 13$, que incluye los 3 π. Como la pregunta pide solo los sigma, la alternativa correcta es la C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "5: cuenta los carbonos, no los enlaces. El número de carbonos no coincide con el número de enlaces sigma.",
+     "B": "7: suma los 4 enlaces C–C con solo 3 de los 6 enlaces C–H y omite el resto de los hidrógenos.",
+     "D": "13: suma los sigma y los π ($10 + 3$), es decir, cuenta todos los enlaces y no solo los sigma."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q64",
@@ -1460,7 +2214,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Contando átomos y dobles enlaces de la estructura se obtiene la fórmula $\\mathrm{C_{20}H_{28}O_2}$, que no es aromática ni un alquino.",
+    "planteamiento": "Se pide la afirmación correcta sobre el ácido retinoico. Datos de la estructura: un anillo de seis carbonos con tres grupos metilo, una cadena lateral con cuatro dobles enlaces C=C, otro C=C en el anillo y un grupo –COOH terminal.",
+    "steps": [
+     "Carbonos: el anillo tiene 6 carbonos y 3 metilos, en total 9. La cadena lateral aporta 9 carbonos (incluido el del –COOH) y 2 metilos, en total 11. Así, $9 + 11 = 20$ carbonos.",
+     "Oxígenos: el grupo –COOH tiene 2 átomos de oxígeno, así que la molécula tiene 2 oxígenos.",
+     "Insaturaciones: la estructura tiene un anillo, cinco C=C (cuatro en la cadena y uno en el anillo) y un C=O, es decir, $1 + 5 + 1 = 7$ insaturaciones.",
+     "Con 20 carbonos y 7 insaturaciones, el número de hidrógenos es $2\\cdot 20 + 2 - 2\\cdot 7 = 28$. Por lo tanto, la fórmula molecular es $\\mathrm{C_{20}H_{28}O_2}$, lo que coincide con la alternativa D.",
+     "Fórmula empírica: se dividen los subíndices por su máximo común divisor, 2, y se obtiene $\\mathrm{C_{10}H_{14}O}$, no CHO.",
+     "Clasificación: no hay enlaces triples, así que no es un alquino. El anillo tiene un solo doble enlace y no forma un sistema aromático de tipo benceno, así que no es aromático. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Su fórmula empírica es CHO: la empírica es $\\mathrm{C_{10}H_{14}O}$, obtenida al dividir los subíndices entre 2. CHO no es la razón de átomos más simple de esta molécula.",
+     "B": "Se clasifica como un alquino: no hay enlaces triples C≡C en la estructura. Sus enlaces múltiples son dobles, así que corresponde a un polieno con grupo ácido.",
+     "C": "Es un compuesto aromático: el anillo tiene un solo doble enlace y no forma el sistema de electrones deslocalizados de un anillo aromático."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q65",
@@ -1495,7 +2267,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El compuesto es el fenobarbital, un anillo de pirimidina con 5-etil-5-fenil; los hidrógenos se cuentan en el etilo, el fenilo y los dos grupos N–H.",
+    "planteamiento": "Se pide el número de átomos de hidrógeno de la molécula. Datos de la estructura: un anillo con dos N–H, tres grupos C=O, un carbono cuaternario con un grupo etilo y un grupo fenilo (C₆H₅).",
+    "steps": [
+     "Hidrógenos del grupo fenilo: el anillo bencénico está sustituido una vez, así que tiene 5 hidrógenos.",
+     "Hidrógenos del grupo etilo, –CH₂–CH₃: 2 + 3 = 5 hidrógenos.",
+     "Hidrógenos de los nitrógenos: el anillo tiene dos grupos N–H, con 1 hidrógeno cada uno, es decir, 2 hidrógenos.",
+     "El carbono del anillo unido al etilo y al fenilo no tiene hidrógenos, y los carbonos del C=O tampoco.",
+     "Total: $5 + 5 + 2 = 12$ hidrógenos, lo que da la fórmula $\\mathrm{C_{12}H_{12}N_2O_3}$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "8: resulta de omitir un grupo completo de hidrógenos, por ejemplo los del etilo o los de los N–H, y hace que el total se vea incompleto.",
+     "C": "10: omite los 2 hidrógenos de los grupos N–H y solo cuenta los 5 del fenilo y los 5 del etilo.",
+     "D": "2: cuenta solo los hidrógenos de los nitrógenos y olvida los 10 hidrógenos de los grupos fenilo y etilo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q66",
@@ -1527,7 +2316,25 @@
    ],
    "answer": "E",
    "presentation": "text",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se construye el ácido butanoico, se agrega el etilo en el carbono 2 y el OH en el carbono 3, y luego se cuentan los átomos.",
+    "planteamiento": "Se pide la fórmula molecular del ácido 2-etil-3-hidroxibutanoico. Datos: cadena base de cuatro carbonos con –COOH en el C1, un grupo etilo en el C2 y un grupo –OH en el C3.",
+    "steps": [
+     "La cadena base es el ácido butanoico: 4 carbonos, C1 con –COOH, C2, C3 y C4 (CH₃).",
+     "El grupo 2-etilo aporta 2 carbonos más: total de carbonos $4 + 2 = 6$.",
+     "Hidrógenos: COOH (1), C2 (1), etilo (5), C3 (1), OH (1), C4 (3). Total: $1 + 1 + 5 + 1 + 1 + 3 = 12$.",
+     "Oxígenos: 2 del grupo –COOH y 1 del –OH, en total 3.",
+     "La fórmula es $\\mathrm{C_6H_{12}O_3}$. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "$\\mathrm{C_4H_{12}O_2}$: no cuenta el grupo etilo, por lo que los carbonos quedan en 4, y además omite oxígenos.",
+     "B": "$\\mathrm{C_4H_{12}O_3}$: tiene el oxígeno correcto, pero no cuenta el grupo etilo, así que el número de carbonos está mal.",
+     "C": "$\\mathrm{C_5H_{12}O_2}$: cuenta un carbono de más en el etilo y omite el OH, dejando solo 2 oxígenos.",
+     "D": "$\\mathrm{C_6H_{10}O_2}$: omite el grupo –OH, que aporta un oxígeno y un hidrógeno, y además dejaría una insaturación que no existe."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q67",
@@ -1555,7 +2362,23 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El 2,2,4-trimetilpentano es un alcano de cadena de cinco carbonos con tres metilos; sumando los carbonos y usando $C_nH_{2n+2}$ se llega a $\\mathrm{C_8H_{18}}$.",
+    "planteamiento": "Se pide la fórmula molecular del 2,2,4-trimetilpentano, componente principal de la gasolina de 97 octanos. Datos: la cadena base tiene 5 carbonos y tiene 3 metilos sustituyentes.",
+    "steps": [
+     "La cadena base es el pentano, con 5 carbonos. Los tres sustituyentes son metilos, cada uno con 1 carbono: $5 + 3 = 8$ carbonos.",
+     "Como el compuesto es un alcano, cumple la fórmula general $\\mathrm{C_nH_{2n+2}}$. Con $n = 8$ se obtiene $2\\cdot 8 + 2 = 18$ hidrógenos.",
+     "Comprobación por sustitución: el pentano es $\\mathrm{C_5H_{12}}$, y cada metilo reemplaza un H por un CH₃, es decir, suma un C y un H₂ neto. Tres metilos agregan 3 C y 6 H: $\\mathrm{C_8H_{18}}$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\mathrm{C_5H_{10}}$: esa fórmula corresponde a un alqueno o a un cicloalcano, no a un alcano de cadena abierta.",
+     "B": "$\\mathrm{C_5H_{12}}$: es el pentano sin sustituyentes. Olvida los tres grupos metilo del nombre.",
+     "C": "$\\mathrm{C_8H_{16}}$: tiene el número correcto de carbonos, pero tiene 2 hidrógenos menos, como un alqueno o un cicloalcano."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q68",
@@ -1590,7 +2413,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una sal la masa molar es la suma de la del ácido y la de la amina, porque no se pierden átomos; la amina nueva, con tres grupos –CH₂OH, suma 121,14 g/mol.",
+    "planteamiento": "Se pide la masa molar y la densidad del compuesto modificado. Datos de la tabla: el ácido libre tiene 250,33 g/mol y 1,09 g/mL; la sal con la amina 2, 339,47 g/mol y 1,12 g/mL; la sal con la amina 3, 355,47 g/mol y 1,18 g/mL.",
+    "steps": [
+     "Al formar una sal, el protón del ácido solo se traslada al nitrógeno de la amina. Ningún átomo se pierde, así que la masa molar de la sal es la suma de la masa del ácido y la de la amina.",
+     "Para la sal 2: $339{,}47 - 250{,}33 = 89{,}14$ g/mol. Esa masa corresponde a $\\mathrm{C_4H_{11}NO}$, la 2-amino-2-metilpropan-1-ol.",
+     "Para la sal 3: $355{,}47 - 250{,}33 = 105{,}14$ g/mol, que es $89{,}14 + 16$. Corresponde a $\\mathrm{C_4H_{11}NO_2}$, con un oxígeno adicional en forma de –OH.",
+     "En el compuesto modificado la amina tiene un carbono central unido a –NH₃⁺ y a tres grupos –CH₂OH: $\\mathrm{C_4H_{11}NO_3}$. Su masa es $4(12{,}01) + 11(1{,}008) + 14{,}01 + 3(16{,}00) \\approx 121{,}14$ g/mol.",
+     "Masa molar del compuesto modificado: $250{,}33 + 121{,}14 = 371{,}47$ g/mol.",
+     "Densidad: la serie de densidades crece con cada cambio de amina (1,09; 1,12; 1,18) al agregar más grupos –OH. Por lo tanto, se espera una densidad algo mayor que 1,18, y 1,20 es la predicción consistente con esa tendencia. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "380,33 g/mol y 1,18 g/mL: la masa no corresponde a sumar el ácido con ninguna amina del esquema, ya que la diferencia es 130,00 g/mol. La densidad 1,18 es la del compuesto 3, así que tampoco hay aumento.",
+     "C": "345,47 g/mol y 1,20 g/mL: la masa es inferior a la que resulta de la amina con tres grupos –CH₂OH. La diferencia con el ácido, 95,14 g/mol, no corresponde a ninguna amina del esquema.",
+     "D": "245,33 g/mol y 1,19 g/mL: la masa es menor que la del ácido solo, algo imposible al formar una sal. Además, la densidad no sigue la tendencia creciente."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q70",
@@ -1618,7 +2459,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un aldehído se caracteriza por el grupo carbonilo en el extremo de la cadena, que se escribe –CHO.",
+    "planteamiento": "Se pide el grupo funcional que debe tener el compuesto obtenido al transformar un alcano en un aldehído. Dato: el aldehído es el compuesto con un carbono terminal unido a un oxígeno doble y a un hidrógeno.",
+    "steps": [
+     "Un alcano no tiene grupos funcionales. Al oxidarlo hasta aldehído, se forma un grupo carbonilo en un carbono primario, que queda en el extremo de la cadena.",
+     "Ese carbono conserva un hidrógeno y tiene un doble enlace con oxígeno, lo que se escribe como –CHO.",
+     "Los demás grupos de las alternativas corresponden a otros compuestos: –OH es un alcohol, –COOH es un ácido carboxílico y –COR es una cetona.",
+     "Por lo tanto, el compuesto debe incluir el grupo –CHO, es decir, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "–OH: es el grupo de los alcoholes. Se obtiene con una reducción o una hidratación, no con la oxidación que lleva a un aldehído.",
+     "B": "–COOH: es el grupo de los ácidos carboxílicos. Aparece si el aldehído se oxida más, pero el compuesto pedido es el intermedio.",
+     "D": "–COR: es el grupo carbonilo de una cetona, que tiene dos carbonos unidos al C=O. Un aldehído tiene un hidrógeno unido, no un radical."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q71",
@@ -1646,7 +2503,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se balancea la combustión del butano con el carbono, luego el hidrógeno y al final el oxígeno, que determina el coeficiente de la molécula de O₂.",
+    "planteamiento": "Se pide los coeficientes X e Y de la ecuación $\\mathrm{2\\,C_4H_{10} + X\\,O_2 \\rightarrow Y\\,CO_2 + 10\\,H_2O}$. Datos: el coeficiente del butano es 2 y el del agua es 10.",
+    "steps": [
+     "Balance del carbono: a la izquierda hay $2\\cdot 4 = 8$ átomos de C, así que $Y = 8$ moléculas de $\\mathrm{CO_2}$.",
+     "Balance del hidrógeno: a la izquierda hay $2\\cdot 10 = 20$ átomos de H, y a la derecha $10\\cdot 2 = 20$. Coincide, así que el coeficiente del agua ya está bien.",
+     "Balance del oxígeno: a la derecha hay $2\\cdot 8 + 10 = 26$ átomos de O. A la izquierda hay $2X$, así que $2X = 26$ y $X = 13$.",
+     "Ecuación completa: $\\mathrm{2\\,C_4H_{10} + 13\\,O_2 \\rightarrow 8\\,CO_2 + 10\\,H_2O}$.",
+     "Por lo tanto, los coeficientes son X = 13 e Y = 8. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "2 y 10: copia los coeficientes del butano y del agua en lugar de balancear el oxígeno y el carbono.",
+     "B": "8 y 5: el valor de Y es correcto, pero X = 8 no iguala el oxígeno: con 8 O₂ habría 16 átomos de O a la izquierda, frente a 26 a la derecha.",
+     "C": "10 y 4: Y = 4 deja solo 4 átomos de carbono a la derecha, cuando a la izquierda hay 8."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q72",
@@ -1678,7 +2552,24 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La molalidad es moles de soluto por kilogramo de solvente; con 100 g de agua, basta multiplicar 0,2 mol/kg por 0,1 kg.",
+    "planteamiento": "Se pide la cantidad de glucosa en 100 g de agua. Datos: la solución es 0,2 molal, es decir, 0,2 mol de glucosa por cada kilogramo de agua.",
+    "steps": [
+     "La molalidad es $m = \\frac{n_{\\text{soluto}}}{\\text{kg de solvente}}$. Por lo tanto, $n = m\\cdot \\text{kg}$.",
+     "Se convierte el solvente a kilogramos: $100$ g $= 0{,}1$ kg.",
+     "Moles de glucosa: $n = 0{,}2\\ \\mathrm{mol/kg}\\cdot 0{,}1$ kg $= 0{,}02$ mol.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "0,01 mol: usa 50 g de agua en lugar de 100 g, lo que reduce a la mitad el resultado.",
+     "C": "0,10 mol: usa 0,5 kg de agua en lugar de 0,1 kg, una mezcla de unidades.",
+     "D": "0,20 mol: copia la molalidad sin convertir los gramos a kilogramos, como si hubiera 1 kg de solvente.",
+     "E": "2,00 mol: multiplica por 10 en lugar de por 0,1, lo que equivale a confundir el factor de conversión de gramos a kilogramos."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q73",
@@ -1713,7 +2604,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como el metal forma un ion 2+, los moles de H₂ igualan los moles de metal; dividir los 4,0 g por esos moles da la masa molar y la identidad del metal.",
+    "planteamiento": "Se pide la identificación de X, Y y Z. Datos: cada muestra tiene 4,0 g de metal y produce moles de H₂ conocidos: X, 0,100 mol; Y, 0,061 mol; Z, 0,165 mol. Masas molares: Mg 24,3; Zn 65,4; Ca 40,0 g/mol.",
+    "steps": [
+     "La reacción es $\\mathrm{M + 2\\,HCl \\rightarrow MCl_2 + H_2}$: un mol de metal produce un mol de H₂. Por lo tanto, los moles de metal son iguales a los moles de H₂.",
+     "La masa molar experimental de cada muestra es $M = \\frac{m}{n}$, con $m = 4{,}0$ g.",
+     "Metal X: $\\frac{4{,}0}{0{,}100} = 40$ g/mol, que corresponde al calcio ($40{,}0$).",
+     "Metal Y: $\\frac{4{,}0}{0{,}061} \\approx 65{,}6$ g/mol, que corresponde al zinc ($65{,}4$).",
+     "Metal Z: $\\frac{4{,}0}{0{,}165} \\approx 24{,}2$ g/mol, que corresponde al magnesio ($24{,}3$).",
+     "Por lo tanto, X es calcio, Y es zinc y Z es magnesio, lo que coincide con la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Calcio, magnesio y zinc: X = calcio es correcto, pero Y = 0,061 mol da 65,6 g/mol, es decir, zinc, no magnesio. Invierte Y y Z.",
+     "B": "Magnesio, zinc y calcio: X = 0,100 mol da 40 g/mol, que es calcio y no magnesio. Asigna mal X y Z.",
+     "D": "Zinc, magnesio y calcio: X = 0,100 mol da 40 g/mol, es decir, calcio, no zinc. Confunde las muestras X y Y."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q74",
@@ -1745,7 +2654,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la proporción de H₂ con respecto al N₂ es 3 : 1, con 12 mol de H₂ el limitante es el hidrógeno y se forman 8 mol de NH₃.",
+    "planteamiento": "Se pide la cantidad máxima de amoníaco que se puede obtener con 12 mol de N₂ y 12 mol de H₂. Datos: la ecuación balanceada es $\\mathrm{N_2 + 3\\,H_2 \\rightarrow 2\\,NH_3}$.",
+    "steps": [
+     "La relación estequiométrica es 1 mol de N₂ : 3 mol de H₂ : 2 mol de NH₃.",
+     "Para consumir los 12 mol de H₂ se necesitan $\\frac{12}{3} = 4$ mol de N₂. Como hay 12 mol de N₂, el nitrógeno está en exceso y el limitante es el H₂.",
+     "Con 12 mol de H₂ se forman $12\\cdot\\frac{2}{3} = 8$ mol de NH₃.",
+     "Se consumen 4 mol de N₂ y quedan 8 mol sin reaccionar, que no afectan la cantidad de producto.",
+     "Por lo tanto, la cantidad máxima de amoníaco es $8{,}0$ mol. La alternativa correcta es la C, porque es el valor que resulta de la proporción."
+    ],
+    "distractors": {
+     "A": "2,0 mol: no respeta la proporción 1 : 3 : 2 de la ecuación, por ejemplo al dividir 12 entre 6 sin usar los coeficientes.",
+     "B": "4,0 mol: son los moles de N₂ consumidos, $12/3$. Confunde el consumo de nitrógeno con la producción de amoníaco y olvida el coeficiente 2 del NH₃.",
+     "D": "12,0 mol: copia la cantidad de reactivo sin aplicar la estequiometría. Con 12 mol de H₂ no se pueden formar 12 mol de NH₃.",
+     "E": "24,0 mol: suma los moles de ambos reactivos, $12 + 12$, error común que ignora la proporción entre reactivos y producto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q75",
@@ -1780,7 +2707,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La propiedad Q es la temperatura de congelación; al mantener constante el volumen de agua, la temperatura depende solo de la masa de soluto X.",
+    "planteamiento": "Se pide la conclusión correcta del experimento. Datos: los cuatro vasos tienen 100 mL de agua y masas de X de 0, 10, 20 y 30 g; la propiedad Q toma los valores 0, −2, −5 y −10 °C.",
+    "steps": [
+     "El volumen de agua es constante (100 mL) en los cuatro vasos. Lo único que cambia es la masa de X: 0 g, 10 g, 20 g y 30 g.",
+     "Con cada aumento de 10 g de soluto, la propiedad Q baja: de 0 °C a −2 °C, luego a −5 °C y finalmente a −10 °C. El descenso se hace mayor con más masa.",
+     "Por lo tanto, Q varía de forma sistemática con la masa del soluto X, mientras el solvente se mantiene igual.",
+     "Descarte de alternativas: A es falsa porque el volumen de solvente es el mismo en todos los vasos y Q sí cambia. B es insuficiente porque los vasos tienen los mismos componentes (agua y X) y lo que cambia es la cantidad. C no se puede concluir porque el soluto es siempre X. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Depende únicamente del volumen del solvente: el volumen es igual en los cuatro vasos, así que no puede explicar los cambios de Q.",
+     "B": "Depende de los componentes presentes en la mezcla: los componentes son los mismos en los cuatro vasos, por lo que el experimento no muestra un efecto de la composición cualitativa.",
+     "C": "Depende del tipo de soluto utilizado: el soluto es siempre X en los cuatro vasos, así que el experimento no compara tipos de soluto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q76",
@@ -1808,7 +2751,24 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una concentración m/v de 10 % significa 10 g de soluto por cada 100 mL de solución; se revisa cada preparación con esa proporción.",
+    "planteamiento": "Se pide la preparación que da una solución de HNO₃ al 10 % m/v. Dato: 10 % m/v equivale a 10 g de soluto en 100 mL de solución.",
+    "steps": [
+     "La concentración m/v es $\\frac{\\text{masa de soluto (g)}}{\\text{volumen de solución (mL)}}\\cdot 100$.",
+     "Alternativa A: $\\frac{10}{1000}\\cdot 100 = 1$ %. Además, 1 L es el volumen de agua, no de solución.",
+     "Alternativa B: $\\frac{5}{50}\\cdot 100 = 10$ %. Se disuelven 5 g en 50 mL de solución, que es la preparación correcta.",
+     "Alternativa C: $\\frac{5}{500}\\cdot 100 = 1$ %. Se usan 0,5 L de agua, no de solución.",
+     "Alternativa D: $\\frac{10}{10}\\cdot 100 = 100$ %. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "10 g en 1 L de agua da 1 % m/v, no 10 %. El volumen usado es de agua y no de solución.",
+     "C": "5 g en 0,5 L de agua da 1 % m/v. Usa un volumen de agua mayor que el que corresponde al 10 %.",
+     "D": "10 g en 10 mL de solución dan 100 % m/v. El volumen es demasiado pequeño para la masa de soluto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q77",
@@ -1840,7 +2800,25 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con la densidad se pasa de masa de solución a volumen; luego se calcula la masa de soluto en ese volumen para obtener el porcentaje m/v.",
+    "planteamiento": "Se pide el valor de % m/v de una solución al 2 % m/m con densidad 0,5 g/mL. Datos: 2 % m/m significa 2 g de soluto por cada 100 g de solución.",
+    "steps": [
+     "En 100 g de solución hay 2 g de soluto.",
+     "Con densidad $0{,}5$ g/mL, el volumen de 100 g de solución es $V = \\frac{m}{d} = \\frac{100\\ \\text{g}}{0{,}5\\ \\text{g/mL}} = 200$ mL.",
+     "En esos 200 mL hay 2 g de soluto: $\\frac{2\\ \\text{g}}{200\\ \\text{mL}}\\cdot 100 = 1$ % m/v.",
+     "La proporción no depende de la masa elegida, porque se trata de la misma solución.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "2: copia el porcentaje m/m sin considerar la densidad. La densidad sirve justamente para pasar de masa a volumen.",
+     "C": "4: multiplica los 100 g por la densidad, obteniendo 50 mL, y así llega a 2 g en 50 mL, un valor de 4 %.",
+     "D": "5: no tiene respaldo en la relación masa-volumen. Surge de invertir la densidad y aplicar mal la conversión.",
+     "E": "10: corresponde a un volumen de 20 mL, lo que sale de dividir 100 g por 5 g/mL. Es una inversión de la densidad."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q78",
@@ -1869,7 +2847,24 @@
    "answer": "A",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La etiqueta indica 5 % m/v; diluir con agua baja la concentración, así que solo sirve una opción por debajo de 5 %, que es la de 1 %.",
+    "planteamiento": "Se pide la solución factible que se puede preparar a partir del cloro, con concentración menor que la de la botella. Datos: la botella tiene 50 g de hipoclorito de sodio en 1 L de solución.",
+    "steps": [
+     "La concentración de la botella es $\\frac{50\\ \\text{g}}{1000\\ \\text{mL}}\\cdot 100 = 5$ % m/v.",
+     "Se pide una solución más diluida que 5 %. Agregar agua siempre baja la concentración, así que las opciones válidas son menores que 5 %.",
+     "Las opciones B (5 %, igual), C (10 %) y D (50 %) no sirven: para subir la concentración habría que agregar más soluto, no agua.",
+     "La opción A (1 %) es posible: basta tomar un volumen de cloro y completar con agua, pues $C_1V_1 = C_2V_2$ con $C_2 = 1$ % menor que 5 %.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "5 % m/v: es igual a la concentración de la botella. No cumple que la solución sea menor, como pide el enunciado.",
+     "C": "10 % m/v: es el doble de la concentración de la botella. Para lograrla habría que agregar soluto, lo que no se puede hacer solo con agua.",
+     "D": "50 % m/v: es la concentración de 50 g en 100 mL, mayor que la de la botella. No se puede preparar diluyendo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-regular-q80",
@@ -1905,7 +2900,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $C_1V_1 = C_2V_2$ y $C_2 = 0{,}1$ %, el volumen de cloro es $V_1 = \\frac{100}{C_1}$ mL; al bajar la concentración aumenta el volumen de cloro y disminuye el agua usada.",
+    "planteamiento": "Se pide la conclusión correcta sobre la relación entre la concentración del cloro y el uso de agua o de volumen. Datos: cada muestra se diluye hasta 1 L para obtener 0,1 % m/v; la tabla entrega concentración y volumen de cloro.",
+    "steps": [
+     "Con $C_1V_1 = C_2V_2$, $V_2 = 1000$ mL y $C_2 = 0{,}1$ %, se obtiene $V_1 = \\frac{100}{C_1}$ mL.",
+     "Muestra 1 ($\\approx 5{,}0$ %): $V_1 = \\frac{100}{5{,}0} = 20$ mL, lo que coincide con la tabla.",
+     "Muestra 2 ($\\approx 2{,}5$ %): $\\frac{100}{2{,}5} = 40$ mL, lo que coincide con la tabla.",
+     "Muestra 3 ($\\approx 2{,}0$ %): $\\frac{100}{2{,}0} = 50$ mL, lo que coincide con la tabla. La muestra 4 aparece con 80 mL, valor que no cuadra con su concentración de 2,1 % (daría cerca de 48 mL). La conclusión se apoya en las muestras 1 a 3, que sí son coherentes.",
+     "El agua usada es $1000 - V_1$: 980 mL con la muestra 1, la más concentrada, y 950 mL con la muestra 3, la menos concentrada. Por lo tanto, mientras mayor es la concentración, se usa más agua.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice que mayor concentración implica mayor volumen diluido. La tabla muestra lo contrario: 20 mL para la muestra más concentrada y 50 mL para la menos concentrada.",
+     "C": "Invierte la relación con el agua. La muestra menos concentrada necesita más cloro (50 mL), así que usa menos agua y no más.",
+     "D": "Dice que menor concentración implica menor volumen diluido. La muestra 3 (2 %) diluye 50 mL, más que los 20 mL de la muestra 1."
+    }
+   }
   }
  ]
 }

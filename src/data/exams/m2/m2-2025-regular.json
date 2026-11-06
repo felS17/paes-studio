@@ -1,9 +1,10 @@
 {
  "id": "m2-2025-regular",
  "subject": "m2",
- "title": "PAES Regular 2025",
+ "title": "PAES Regular 2024",
  "description": "Selección oficial de 38 de las 55 preguntas de Competencia Matemática 2 (M2), aplicada el 02-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "regular",
  "source": "demre",
  "form": "193",
@@ -107,7 +108,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada cociente da una relación de $R$ con $P$ y con $Q$; como $0{,}92 < 1 < 1{,}125$, se compara directo.",
+    "planteamiento": "Se pide el orden creciente de $P$, $Q$ y $R$. Datos: $\\frac{R}{P} = 0{,}92$ y $\\frac{R}{Q} = 1{,}125$, con $P$, $Q$ y $R$ positivos.",
+    "steps": [
+     "Despeja $R$ en la primera igualdad: $R = 0{,}92\\cdot P$. Como $0{,}92 < 1$ y $P > 0$, se tiene $R < P$.",
+     "Despeja $R$ en la segunda igualdad: $R = 1{,}125\\cdot Q$. Como $1{,}125 > 1$ y $Q > 0$, se tiene $R > Q$.",
+     "Junta ambas desigualdades: $Q < R < P$.",
+     "Comprobación: con $R = 1$, $P = \\frac{1}{0{,}92}\\approx 1{,}087$ y $Q = \\frac{1}{1{,}125}\\approx 0{,}889$, se cumple $0{,}889 < 1 < 1{,}087$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$P < R < Q$: invierte la relación entre $R$ y $Q$, lo que ocurriría si $\\frac{R}{Q}$ fuera menor que $1$; aquí vale $1{,}125$.",
+     "C": "$R < Q < P$: confunde el cociente $\\frac{R}{P} = 0{,}92$ con $\\frac{P}{R}$, lo que ubica a $R$ como el menor.",
+     "D": "$P < Q < R$: invierte los dos cocientes y usa $\\frac{P}{R}$ y $\\frac{Q}{R}$ en lugar de $\\frac{R}{P}$ y $\\frac{R}{Q}$.",
+     "E": "$R < P < Q$: pone a $Q$ como el mayor, lo que sucede al tomar $\\frac{R}{Q}$ como menor que $1$, al revés de lo dado."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q02",
@@ -146,7 +164,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-reales"
+   "subtopic": "m2-reales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se escribe la raíz como potencia de exponente fraccionario, se suman los exponentes de igual base y luego se vuelve a radical.",
+    "planteamiento": "Se pide la expresión equivalente a $x\\cdot\\sqrt[m]{x}$, con $m$ entero mayor que $1$ y $x$ real positivo.",
+    "steps": [
+     "Escribe la raíz como potencia: $\\sqrt[m]{x} = x^{\\frac{1}{m}}$.",
+     "Reemplaza en la expresión: $x\\cdot x^{\\frac{1}{m}}$, y recuerda que $x = x^1$.",
+     "Por la propiedad de potencias de igual base, se suman los exponentes: $x^{1+\\frac{1}{m}}$.",
+     "Calcula la suma de exponentes: $1 + \\frac{1}{m} = \\frac{m+1}{m}$, así que la expresión es $x^{\\frac{m+1}{m}}$.",
+     "Vuelve a radical, pues $x^{\\frac{a}{b}} = \\sqrt[b]{x^a}$: $x^{\\frac{m+1}{m}} = \\sqrt[m]{x^{m+1}}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\sqrt[m]{x^2}$: suma $1 + 1$ como si ambos factores tuvieran exponente $1$ en la raíz; olvida que la raíz aporta $\\frac{1}{m}$.",
+     "B": "$\\sqrt[m+1]{x}$: pone $m+1$ como índice de la raíz, cuando el $m+1$ corresponde al exponente de $x$ y el índice sigue siendo $m$.",
+     "C": "$\\sqrt[m]{x^m}$: al sumar exponentes multiplica $1\\cdot m$ en vez de sumarlos; esa expresión equivale a $x$, y no conserva el término $x\\cdot\\sqrt[m]{x}$.",
+     "E": "$\\sqrt[m]{x^3}$: reemplaza $m+1$ por $3$, lo que solo sirve cuando $m = 2$; la expresión debe valer para cualquier $m$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q03",
@@ -181,7 +217,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-trigonometria",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que revisar cada igualdad del procedimiento; el primer paso incorrecto es el que cambia la expresión, y aquí aparece al extraer la raíz de un producto.",
+    "planteamiento": "Se pide identificar en qué paso se cometió el error. Datos: lados $L$, $L$ y $\\frac{3}{2}L$; la fórmula de Herón $A = \\sqrt{S(S-a)(S-b)(S-c)}$ con $S = \\frac{a+b+c}{2}$.",
+    "steps": [
+     "Calcula $S$ para los lados $L$, $L$ y $\\frac{3}{2}L$: $a + b + c = \\frac{7}{2}L$, así que $S = \\frac{7}{4}L$.",
+     "El paso 1 sustituye $S = \\frac{a+b+c}{2}$ en la fórmula sin cambiar nada, y eso es correcto.",
+     "El paso 2 reemplaza los lados: $S - a = \\frac{7}{4}L - L = \\frac{3}{4}L$, $S - b = \\frac{3}{4}L$ y $S - c = \\frac{7}{4}L - \\frac{3}{2}L = \\frac{1}{4}L$. El radicando $\\frac{7L}{4}\\cdot\\frac{3L}{4}\\cdot\\frac{3L}{4}\\cdot\\frac{L}{4}$ coincide con el del procedimiento.",
+     "El paso 3 calcula el producto: $\\frac{7\\cdot 3\\cdot 3\\cdot 1}{4^4}L^4 = \\frac{63}{256}L^4$. Escrito como $7\\left(\\frac{3L^2}{16}\\right)^2 = 7\\cdot\\frac{9L^4}{256} = \\frac{63L^4}{256}$, es correcto.",
+     "El paso 4 extrae la raíz: $\\sqrt{7\\left(\\frac{3L^2}{16}\\right)^2} = \\sqrt{7}\\cdot\\frac{3L^2}{16} = \\frac{3\\sqrt{7}L^2}{16}$. El procedimiento escribe $\\frac{21L^2}{16}$, lo que confunde $\\sqrt{7}\\cdot 3$ con $7\\cdot 3$.",
+     "Comprobación: con $L = 1$, $\\frac{21}{16}\\approx 1{,}31$ y $\\frac{3\\sqrt{7}}{16}\\approx 0{,}50$, no son iguales. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "En el paso 1: sustituir $S$ en la fórmula es correcto, porque $S = \\frac{a+b+c}{2}$ es la definición que se usa en el radicando.",
+     "B": "En el paso 2: los lados se reemplazan bien, y el radicando $\\frac{7L}{4}\\cdot\\frac{3L}{4}\\cdot\\frac{3L}{4}\\cdot\\frac{L}{4}$ es el correcto.",
+     "C": "En el paso 3: el radicando $7\\left(\\frac{3L^2}{16}\\right)^2$ es equivalente al producto $\\frac{63L^4}{256}$, así que tampoco hay error aquí."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q04",
@@ -220,7 +274,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-reales"
+   "subtopic": "m2-reales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para asegurar que una expresión es siempre mayor que $1$, hay que analizar todos los casos permitidos; basta un ejemplo que falle para descartar una opción.",
+    "planteamiento": "Se pide la expresión que siempre es mayor que $1$ cuando $a$ y $b$ son racionales con $0 < a < 1 < b$. Datos: $a$ está entre $0$ y $1$, y $b$ es mayor que $1$.",
+    "steps": [
+     "Analiza la opción D: $\\frac{a}{b} + 0{,}\\overline{9}$. Como $0{,}\\overline{9} = 1$, la expresión equivale a $\\frac{a}{b} + 1$.",
+     "Como $a > 0$ y $b > 1 > 0$, el cociente $\\frac{a}{b}$ es positivo, así que $\\frac{a}{b} + 1 > 1$ para todo $a$ y $b$ permitidos.",
+     "Revisa la opción A con un ejemplo: con $a = 0{,}1$ y $b = 2$, $\\frac{a+2}{b+2} = \\frac{2{,}1}{4} = 0{,}525 < 1$. Por eso A no sirve.",
+     "Revisa la opción B: con $a = 0{,}1$ y $b = 1{,}1$, $\\frac{a+b}{2} = \\frac{1{,}2}{2} = 0{,}6 < 1$.",
+     "Revisa las opciones C y E: con $a = 0{,}1$ y $b = 2$, $ab = 0{,}2 < 1$; con $a = 0{,}9$ y $b = 1{,}1$, $(b-a)^2 = 0{,}04 < 1$. Ninguna cumple siempre.",
+     "Comprobación: la opción D es la única que se mantiene mayor que $1$ en todos los casos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{a+2}{b+2}$: con $a = 0{,}1$ y $b = 2$ da $0{,}525$, menor que $1$; al sumar $2$ al numerador y al denominador, el cociente depende de $a$ y puede quedar bajo $1$.",
+     "B": "$\\frac{a+b}{2}$: es el promedio de un número menor que $1$ y otro mayor que $1$; con $a = 0{,}1$ y $b = 1{,}1$ el promedio queda bajo $1$.",
+     "C": "$ab$: el producto por un número menor que $1$ achica el resultado; con $a = 0{,}1$ y $b = 2$ da $0{,}2$.",
+     "E": "$(b-a)^2$: si la diferencia $b - a$ es pequeña, su cuadrado es menor que $1$; con $a = 0{,}9$ y $b = 1{,}1$ da $0{,}04$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q05",
@@ -255,7 +328,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la masa se cuadruplica cada día, el valor del día siguiente se obtiene multiplicando el anterior por $4$.",
+    "planteamiento": "Se pide la masa registrada después de cuatro días. Datos: el día 1 es $6{,}4\\cdot 10^{-8}$ kg, el día 2 es $2{,}56\\cdot 10^{-7}$ kg y el día 3 es $1{,}024\\cdot 10^{-6}$ kg; la masa se cuadruplica cada $24$ horas.",
+    "steps": [
+     "Verifica el factor entre los días 1 y 2: $\\frac{2{,}56\\cdot 10^{-7}}{6{,}4\\cdot 10^{-8}} = \\frac{25{,}6\\cdot 10^{-8}}{6{,}4\\cdot 10^{-8}} = 4$.",
+     "Verifica el factor entre los días 2 y 3: $\\frac{1{,}024\\cdot 10^{-6}}{2{,}56\\cdot 10^{-7}} = \\frac{10{,}24\\cdot 10^{-7}}{2{,}56\\cdot 10^{-7}} = 4$. El factor es constante.",
+     "Calcula la masa del día 4 multiplicando la del día 3 por $4$: $1{,}024\\cdot 10^{-6}\\cdot 4 = 4{,}096\\cdot 10^{-6}$ kg.",
+     "Comprobación: $6{,}4\\cdot 10^{-8}\\cdot 4^3 = 409{,}6\\cdot 10^{-8} = 4{,}096\\cdot 10^{-6}$ kg, la misma masa. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$8{,}192\\cdot 10^{-6}$ kg: duplica la masa del día 3 en lugar de cuadruplicarla, y el factor $2$ no aparece en la tabla.",
+     "C": "$2{,}048\\cdot 10^{-5}$ kg: usa un factor $2$ en lugar de $4$ y además se equivoca en la potencia de diez; no corresponde a la progresión de la tabla.",
+     "D": "$4{,}096\\cdot 10^{-5}$ kg: acierta con la mantisa $4{,}096$, pero la potencia de diez queda una unidad mayor, un error típico al operar en notación científica."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q06",
@@ -294,7 +383,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para comparar raíces se restan las expresiones cuando comparten términos, y se elevan al cuadrado cuando ambas son positivas.",
+    "planteamiento": "Se pide la relación verdadera entre $P = \\sqrt{3} + \\sqrt{a}$, $Q = \\sqrt{3+a}$ y $R = 3 + \\sqrt{a}$, con $a > 0$.",
+    "steps": [
+     "Compara $R$ con $P$: $R - P = (3 + \\sqrt{a}) - (\\sqrt{3} + \\sqrt{a}) = 3 - \\sqrt{3}$, que es positivo porque $\\sqrt{3} < 3$. Por lo tanto $P < R$.",
+     "Compara $P$ con $Q$ elevando al cuadrado, pues ambas son positivas: $P^2 = (\\sqrt{3}+\\sqrt{a})^2 = 3 + 2\\sqrt{3a} + a$.",
+     "Además $Q^2 = 3 + a$. Entonces $P^2 - Q^2 = 2\\sqrt{3a}$, que es positivo porque $a > 0$.",
+     "Como $P^2 > Q^2$ y ambas son positivas, $P > Q$, es decir, $Q < P$.",
+     "Junta ambas comparaciones: $Q < P < R$. Comprobación: con $a = 1$, $P = \\sqrt{3} + 1 \\approx 2{,}73$, $Q = 2$ y $R = 4$, se cumple $2 < 2{,}73 < 4$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$Q = P < R$: supone que $\\sqrt{3+a}$ y $\\sqrt{3} + \\sqrt{a}$ son iguales; al elevar al cuadrado aparece el término $2\\sqrt{3a}$ que no existe en $Q^2$.",
+     "C": "$Q < R < P$: invierte la comparación entre $R$ y $P$; como $R - P = 3 - \\sqrt{3} > 0$, $R$ es mayor que $P$.",
+     "D": "$P < R < Q$: pone a $Q$ como el mayor, lo que ocurre si se confunde $\\sqrt{3+a}$ con $3 + \\sqrt{a}$; con $a = 1$, $Q = 2$ y $R = 4$.",
+     "E": "$R < P = Q$: dice que $R$ es el menor y que $P = Q$; ninguna de las dos igualdades ocurre, ya que $P^2 - Q^2 = 2\\sqrt{3a} > 0$ para todo $a > 0$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q09",
@@ -329,7 +436,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-logaritmos"
+   "subtopic": "m2-logaritmos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $p = 3^x$ y $b = 3^y$, los exponentes son logaritmos en base $3$, y la propiedad del logaritmo de un producto permite juntarlos.",
+    "planteamiento": "Se pide $x + y$ en términos de $p$ y $b$. Datos: $p = 3^x$ y $b = 3^y$, con $p$ y $b$ positivos.",
+    "steps": [
+     "Aplica la definición de logaritmo en base $3$ a $p = 3^x$: $x = \\log_3 p$.",
+     "Aplica lo mismo a $b = 3^y$: $y = \\log_3 b$.",
+     "Suma ambos resultados: $x + y = \\log_3 p + \\log_3 b$.",
+     "Usa la propiedad del logaritmo de un producto: $\\log_3 p + \\log_3 b = \\log_3(p\\cdot b)$.",
+     "Comprobación: con $x = 1$ e $y = 2$, $p = 3$ y $b = 9$, así que $\\log_3(27) = 3 = x + y$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\log_3(p + b)$: confunde la suma de logaritmos con el logaritmo de una suma; la propiedad solo convierte productos en sumas.",
+     "C": "$\\log_3 p\\cdot\\log_3 b$: multiplica los logaritmos en lugar de sumarlos; con $p = 3$ y $b = 9$ daría $1\\cdot 2 = 2$, no $3$.",
+     "D": "$\\log(p\\cdot b)$: usa el logaritmo sin base, que es de base $10$, mientras el enunciado trabaja en base $3$; $\\log(27)$ no es igual a $3$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q13",
@@ -364,7 +488,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-financiera"
+   "subtopic": "m2-financiera",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que calcular el crecimiento de cada mes respecto del anterior, elegir el mayor y aplicarlo al precio de abril: el mayor aumento en pesos no siempre es el mayor en porcentaje.",
+    "planteamiento": "Se pide el precio de mayo para que su crecimiento iguale al mayor crecimiento porcentual mensual. Datos del gráfico: enero $40\\,000$, febrero $60\\,000$, marzo $100\\,000$ y abril $120\\,000$ pesos.",
+    "steps": [
+     "Calcula el crecimiento de febrero respecto de enero: $\\frac{60\\,000 - 40\\,000}{40\\,000} = \\frac{20\\,000}{40\\,000} = 0{,}5$, es decir, $50\\,\\%$.",
+     "Calcula el de marzo respecto de febrero: $\\frac{100\\,000 - 60\\,000}{60\\,000} = \\frac{40\\,000}{60\\,000} = \\frac{2}{3}$, cerca de $66{,}7\\,\\%$.",
+     "Calcula el de abril respecto de marzo: $\\frac{120\\,000 - 100\\,000}{100\\,000} = \\frac{20\\,000}{100\\,000} = 0{,}2$, es decir, $20\\,\\%$.",
+     "Compara los tres: el mayor es el de marzo, con $\\frac{2}{3}$. Conviene mantener la fracción exacta, en vez de un decimal aproximado, para que el cálculo final sea preciso.",
+     "Aplica ese crecimiento al mes anterior a mayo, que es abril: $120\\,000 + \\frac{2}{3} \\cdot 120\\,000 = 120\\,000 + 80\\,000 = 200\\,000$ pesos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$160\\,000$ pesos resulta de sumar $40\\,000$ al precio de abril: copia el aumento en pesos de marzo, en vez de su aumento porcentual.",
+     "B": "$168\\,000$ pesos equivale a aumentar $40\\,\\%$. Ocurre al calcular el crecimiento de marzo dividiendo por el mes de llegada: $\\frac{40\\,000}{100\\,000}$, cuando se divide por el mes anterior.",
+     "C": "$192\\,000$ pesos equivale a aumentar $60\\,\\%$. Ocurre si se toma como crecimiento la razón entre febrero y marzo, $\\frac{60\\,000}{100\\,000}$, que no mide un aumento."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q14",
@@ -400,7 +541,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-reales"
+   "subtopic": "m2-reales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Es una fórmula de anualidad: el monto mensual sale de la tasa mensual y del número de cuotas, sin confundir $0{,}5\\%$ con $0{,}5$ ni con $1{,}5$.",
+    "planteamiento": "Se pide el monto mensual $P$ de una herencia $H = 5\\,000\\,000$ pesos, pagada en $n = 60$ cuotas con tasa mensual $c = 0{,}5\\% = 0{,}005$, usando $P = \\frac{cH}{1-(1+c)^{-n}}$.",
+    "steps": [
+     "Pasa la tasa a forma decimal: $c = \\frac{0{,}5}{100} = 0{,}005$.",
+     "Calcula $1 + c = 1{,}005$, que es el factor mensual de interés que aparece en el denominador.",
+     "Calcula el numerador: $cH = 0{,}005\\cdot 5\\,000\\,000 = 25\\,000$ pesos.",
+     "Reemplaza en el modelo con $n = 60$: $P = \\frac{25\\,000}{1-(1{,}005)^{-60}}$.",
+     "Comprobación: $(1{,}005)^{-60}\\approx 0{,}741$, así que el denominador es $\\approx 0{,}259$ y $P \\approx 96\\,600$ pesos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{250\\,000\\,000}{1-(51)^{-60}}$: el numerador corresponde a $50\\cdot H$, así que la tasa quedó como $50$ en lugar de $0{,}005$.",
+     "B": "$\\frac{2\\,500\\,000}{1-(1{,}5)^{-60}}$: el numerador corresponde a usar $c = 0{,}5$ (50 % mensual) en lugar de $0{,}005$, y el factor $1{,}5$ tiene el mismo error.",
+     "C": "$\\frac{250\\,000}{1-(1{,}05)^{-60}}$: usa $c = 0{,}05$, es decir, $5\\%$ mensual; el numerador $250\\,000$ y el factor $1{,}05$ corresponden a esa tasa equivocada."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q15",
@@ -435,7 +593,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se desarrollan el cubo y el cuadrado con las identidades notables, se distribuye $p$ y luego se agrupan los términos del mismo grado.",
+    "planteamiento": "Se pide reducir $(p-2)^3 - p(p+1)^2$ a un polinomio. Datos: un binomio elevado al cubo y un producto de $p$ por un binomio al cuadrado.",
+    "steps": [
+     "Desarrolla el cubo con $(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$, con $a = p$ y $b = 2$: $(p-2)^3 = p^3 - 6p^2 + 12p - 8$.",
+     "Desarrolla el cuadrado: $(p+1)^2 = p^2 + 2p + 1$.",
+     "Multiplica por $p$ con la propiedad distributiva: $p(p+1)^2 = p^3 + 2p^2 + p$.",
+     "Resta ambos resultados, cambiando el signo de cada término del segundo: $p^3 - 6p^2 + 12p - 8 - p^3 - 2p^2 - p$.",
+     "Agrupa términos semejantes: $p^3 - p^3 = 0$, $-6p^2 - 2p^2 = -8p^2$, $12p - p = 11p$, y queda $-8$.",
+     "Resultado: $-8p^2 + 11p - 8$. Comprobación con $p = 1$: $(1-2)^3 - 1\\cdot 2^2 = -5$ y $-8 + 11 - 8 = -5$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$-8 - p$: al restar olvida el término cuadrático $-8p^2$ y pierde el término $11p$; el resultado no coincide con la expresión reducida.",
+     "C": "$-4p^2 + 3p - 8$: resta mal los términos cuadráticos, poniendo $-6p^2 + 2p^2 = -4p^2$, y en la parte lineal calcula $12p - 9p$ en lugar de $11p$.",
+     "D": "$-6 - 2p$: es el resultado de cancelar términos de distinto grado, un error común al agrupar; $-6p^2$ y $-2p^2$ se suman, no desaparecen."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q18",
@@ -470,7 +646,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al despejar una inecuación lineal, dividir por un número negativo invierte el sentido de la desigualdad.",
+    "planteamiento": "Se pide el conjunto solución de $-3x + 2 < 0$. Datos: la inecuación es lineal, con coeficiente $-3$ negativo y término independiente $2$.",
+    "steps": [
+     "Resta $2$ a ambos lados: $-3x < -2$.",
+     "Divide por $-3$, que es negativo, y por eso el sentido cambia: $x > \\frac{-2}{-3} = \\frac{2}{3}$.",
+     "El conjunto solución son los números mayores que $\\frac{2}{3}$, es decir, el intervalo abierto $]\\frac{2}{3}, \\infty[$, porque la desigualdad es estricta.",
+     "Comprobación: con $x = 1$, $-3\\cdot 1 + 2 = -1 < 0$, así que cumple; con $x = 0$, $2 < 0$ es falso, y $0$ no pertenece al conjunto. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$]-\\frac{2}{3}, \\infty[$: al dividir $-2$ entre $-3$ cambia el signo del resultado y obtiene $-\\frac{2}{3}$.",
+     "C": "$]-\\infty, -\\frac{2}{3}[$: invierte el sentido de la desigualdad y el signo del resultado; con $x = -1$, $-3(-1) + 2 = 5$, que no es menor que $0$.",
+     "D": "$]-\\infty, \\frac{2}{3}[$: olvida invertir la desigualdad al dividir por $-3$; con $x = 0$ la expresión vale $2$, que no es menor que $0$, así que $0$ no debería estar en el conjunto."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q19",
@@ -509,7 +701,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se escribe cada edad con la misma variable $x$, se despeja $x$ desde la suma $S$ y luego se restan $3$ años a la edad de Raúl.",
+    "planteamiento": "Se pide la edad de Raúl hace $3$ años en función de $S$ (suma de las edades actuales) y de $p$. Datos: la edad de Raúl es $x - 1$ y la de Paulina es $px - 3$.",
+    "steps": [
+     "Calcula la suma de las edades actuales: $S = (x-1) + (px-3) = (p+1)x - 4$.",
+     "Despeja $x$: $(p+1)x = S + 4$, así que $x = \\frac{S+4}{p+1}$.",
+     "La edad actual de Raúl es $x - 1$, así que hace $3$ años tenía $(x-1) - 3 = x - 4$.",
+     "Reemplaza $x$: $x - 4 = \\frac{S+4}{p+1} - 4 = \\frac{S + 4 - 4(p+1)}{p+1} = \\frac{S - 4p}{p+1}$.",
+     "Comprobación: con $p = 1$ y $x = 5$, Raúl tiene $4$ y Paulina $2$, así que $S = 6$; hace $3$ años Raúl tenía $1$, y la fórmula da $\\frac{6-4}{2} = 1$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{S+4}{p+1}$: es el valor de $x$, no la edad de Raúl; a la edad de Raúl ($x-1$) le falta restar los $3$ años.",
+     "C": "$\\frac{S}{p+1}$: olvida el término $-4$ de la suma de edades y el ajuste de los $3$ años.",
+     "D": "$\\frac{S-p+3}{p+1}$: resta $p$ y suma $3$ en el numerador en lugar de $4p$, un error al despejar la constante de la suma de edades.",
+     "E": "$\\frac{S-3p+1}{p+1}$: confunde los términos constantes de las edades; el numerador sale de $4p$ y de $4$, no de $3$ y $1$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q20",
@@ -544,7 +754,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-reales"
+   "subtopic": "m2-reales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La gravedad es proporcional a la masa e inversamente proporcional al cuadrado del radio, así que basta comparar la razón con la de la Tierra.",
+    "planteamiento": "Se pide la gravedad aproximada en Marte. Datos: $g_T \\approx 10\\ \\mathrm{m/s^2}$, $M_M = 0{,}1\\,M_T$ y $R_M = \\frac{1}{2}R_T$.",
+    "steps": [
+     "Escribe la gravedad de Marte con la misma expresión: $g_M = \\frac{G\\,M_M}{R_M^2}$.",
+     "Como $g_T = \\frac{G\\,M_T}{R_T^2}$, la razón es $\\frac{g_M}{g_T} = \\frac{M_M}{M_T}\\cdot\\frac{R_T^2}{R_M^2}$, y la constante $G$ se cancela.",
+     "Reemplaza: $\\frac{M_M}{M_T} = 0{,}1$ y $\\frac{R_T^2}{R_M^2} = \\frac{1}{(1/2)^2} = 4$, así que $\\frac{g_M}{g_T} = 0{,}1\\cdot 4 = 0{,}4$.",
+     "Multiplica por la gravedad terrestre: $g_M = 0{,}4\\cdot 10\\ \\mathrm{m/s^2} = 4\\ \\mathrm{m/s^2}$.",
+     "Comprobación: el radio la mitad multiplica la gravedad por $4$, y la masa diez veces menor la divide por $10$; el efecto neto es $\\frac{4}{10} = 0{,}4$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$0{,}25\\ \\mathrm{m/s^2}$: pone $R^2$ en el numerador. Con un radio menor la gravedad debe aumentar, no disminuir.",
+     "B": "$0{,}5\\ \\mathrm{m/s^2}$: aplica la razón de radios sin elevarla al cuadrado, $0{,}1\\cdot\\frac{1}{2}\\cdot 10 = 0{,}5$, y olvida que la gravedad depende de $R^2$.",
+     "C": "$2\\ \\mathrm{m/s^2}$: usa el cociente de radios $\\frac{R_T}{R_M} = 2$ sin elevarlo al cuadrado, es decir, $0{,}1\\cdot 2\\cdot 10 = 2$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q24",
@@ -579,7 +806,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con dos ecuaciones, una por la cantidad de preguntas correctas y otra por el puntaje total, se traduce la situación a un sistema lineal.",
+    "planteamiento": "Se pide el sistema que representa la situación. Datos: $18$ preguntas correctas; puntaje total $35$; seis preguntas valían $1$ punto; $x$ son los puntos de las preguntas de $2$ puntos e $y$ los de las de $3$ puntos.",
+    "steps": [
+     "Las $18$ preguntas son todas correctas, así que las seis de $1$ punto aportan $6$ puntos al total.",
+     "Los puntos de las preguntas de $2$ y $3$ puntos suman $35 - 6 = 29$, así que $x + y = 29$.",
+     "Las preguntas de $2$ puntos correctas son $\\frac{x}{2}$, y las de $3$ puntos son $\\frac{y}{3}$.",
+     "Las preguntas de $2$ y $3$ puntos correctas suman $18 - 6 = 12$, así que $\\frac{x}{2} + \\frac{y}{3} = 12$.",
+     "Comprobación: con $x = 14$ e $y = 15$, hay $7$ preguntas de $2$ puntos, $5$ de $3$ y $6$ de $1$: $7 + 5 + 6 = 18$ preguntas y $14 + 15 + 6 = 35$ puntos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$x + y = 18$ con $2x + 3y = 35$: trata $x$ e $y$ como cantidades de preguntas, cuando son puntos, y no descuenta las preguntas de $1$ punto.",
+     "C": "$x + y = 12$ con $2x + 3y = 29$: invierte los totales, usando $12$ como suma de puntos y $29$ como si fueran puntos ponderados.",
+     "D": "$\\frac{x}{2} + \\frac{y}{3} = 18$ con $x + y = 35$: usa el número de preguntas correctas y el puntaje total sin descontar los $6$ puntos de las preguntas de $1$ punto."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q26",
@@ -614,7 +858,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Trasladar una gráfica $h$ unidades a la derecha cambia $x$ por $x - h$ dentro de la función.",
+    "planteamiento": "Se pide la función cuya gráfica es la de $f(x) = x^2 - 4x + 5$ trasladada $5$ unidades a la derecha. Datos: $f(x) = x^2 - 4x + 5$ y desplazamiento horizontal de $+5$.",
+    "steps": [
+     "Completa el cuadrado para ver la forma de la parábola: $f(x) = (x-2)^2 + 1$, con vértice en $(2, 1)$.",
+     "Al trasladar $5$ unidades a la derecha, el vértice pasa a $(7, 1)$. La nueva función es $g(x) = f(x-5)$.",
+     "Sustituye: $g(x) = (x-5)^2 - 4(x-5) + 5$.",
+     "Desarrolla: $(x-5)^2 = x^2 - 10x + 25$ y $-4(x-5) = -4x + 20$.",
+     "Suma los términos: $g(x) = x^2 - 10x + 25 - 4x + 20 + 5 = x^2 - 14x + 50$.",
+     "Comprobación: $(x-7)^2 + 1 = x^2 - 14x + 49 + 1 = x^2 - 14x + 50$, que coincide con la forma del vértice en $(7, 1)$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$x^2 + 6x + 5$: traslada en sentido contrario, usando $x + 5$ en lugar de $x - 5$, lo que mueve la gráfica a la izquierda.",
+     "B": "$x^2 - 4x$: quita el término constante, lo que baja la parábola $5$ unidades, y no la traslada horizontalmente.",
+     "C": "$x^2 + x + 5$: cambia el coeficiente de $x$ de $-4$ a $+1$, lo que no corresponde a un desplazamiento horizontal de $5$ unidades."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q27",
@@ -649,7 +911,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con el área del dibujo y el área del margen se obtiene el área total del cuadro, y de ahí una ecuación de segundo grado en el ancho del margen.",
+    "planteamiento": "Se pide el ancho del margen $m$. Datos: la sección de dibujo mide $15$ cm por $9$ cm (área $135\\ \\mathrm{cm^2}$) y el margen ocupa $81\\ \\mathrm{cm^2}$.",
+    "steps": [
+     "Área de la sección de dibujo: $15\\cdot 9 = 135\\ \\mathrm{cm^2}$.",
+     "El margen tiene ancho uniforme $m$ en cada lado, así que el cuadro completo mide $(15+2m)$ cm por $(9+2m)$ cm.",
+     "El área total es la del dibujo más la del margen: $(15+2m)(9+2m) = 135 + 81 = 216$.",
+     "Desarrolla: $135 + 30m + 18m + 4m^2 = 216$, o sea $4m^2 + 48m - 81 = 0$.",
+     "Aplica la fórmula cuadrática: $m = \\frac{-48 \\pm \\sqrt{48^2 + 4\\cdot 4\\cdot 81}}{8} = \\frac{-48 \\pm \\sqrt{3600}}{8} = \\frac{-48 \\pm 60}{8}$.",
+     "La raíz positiva es $m = \\frac{12}{8} = 1{,}5$ cm; la negativa no tiene sentido. Comprobación: $(15+3)(9+3) = 216$ y $216 - 135 = 81$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$13{,}5$ cm: es el valor absoluto de la raíz negativa $-13{,}5$, que no tiene sentido físico; con ese margen el área sería muy superior a $81\\ \\mathrm{cm^2}$.",
+     "B": "$7{,}5$ cm: supone que el margen solo se agrega a un lado, como $\\frac{15}{2}$, y no rodea el dibujo por los cuatro lados.",
+     "C": "$4{,}5$ cm: resulta de dividir $81$ por $18$, un cociente sin sentido geométrico; con $m = 4{,}5$ el área total sería $24\\cdot 18 = 432\\ \\mathrm{cm^2}$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q28",
@@ -688,7 +968,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $a < 0$ la parábola abre hacia abajo, así que su vértice es el máximo; las otras opciones dependen de $b$ o de $c$, que pueden variar.",
+    "planteamiento": "Se pide la afirmación siempre verdadera para $f(x) = ax^2 + bx + c$ con $a < 0$. Datos: el coeficiente principal es negativo, así que la parábola abre hacia abajo; $b$ y $c$ son arbitrarios.",
+    "steps": [
+     "Con $a < 0$, la parábola abre hacia abajo y su vértice es el punto más alto de la gráfica.",
+     "La ordenada del vértice es el valor máximo de $f$, porque $f(x) \\le f\\left(-\\frac{b}{2a}\\right)$ para todo $x$ real.",
+     "Ejemplo: $f(x) = -(x-1)^2 + 3$ tiene vértice $(1, 3)$ y $f(x) \\le 3$ siempre, así que $3$ es el máximo.",
+     "Revisa la opción B con $f(x) = -x^2 + 4$: sus raíces son $\\pm 2$, así que sí interseca el eje $X$. B no es siempre verdadera.",
+     "Revisa la opción C: el corte con el eje $Y$ es $(0, c)$, y con $c = 1 > 0$ queda por encima del origen. C no siempre se cumple.",
+     "Revisa D y E: el recorrido de $-(x-1)^2 + 3$ incluye positivos, y con $f(x) = -x^2 + 2x$ el eje de simetría es $x = 1$, no el eje $Y$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La gráfica no interseca el eje $X$: falso con $f(x) = -x^2 + 4$, que lo corta en $x = \\pm 2$; la posición depende del discriminante $b^2 - 4ac$.",
+     "C": "Corta el eje $Y$ por debajo del origen: el corte es $(0, c)$ y $c$ puede ser positivo, como en $c = 1$.",
+     "D": "El recorrido son solo negativos: el máximo de una parábola que abre hacia abajo puede ser positivo, como en $-(x-1)^2 + 3$, con recorrido $]-\\infty, 3]$.",
+     "E": "El eje de simetría es el eje $Y$: el eje es $x = -\\frac{b}{2a}$, que vale $0$ solo cuando $b = 0$, así que depende de $b$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q30",
@@ -723,7 +1022,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ordenada del vértice de $ax^2 + bx + c$ es $c - \\frac{b^2}{4a}$; con $a = \\frac{1}{k}$ esa expresión da una condición sobre $k$.",
+    "planteamiento": "Se pide la condición sobre $k$ para que la ordenada del vértice sea mayor que $1$. Datos: $f(x) = \\frac{x^2}{k} + 2x - 1$, con $k \\ne 0$, así que $a = \\frac{1}{k}$, $b = 2$ y $c = -1$.",
+    "steps": [
+     "Calcula la ordenada del vértice con $y_v = c - \\frac{b^2}{4a}$.",
+     "Reemplaza: $\\frac{b^2}{4a} = \\frac{4}{4\\cdot\\frac{1}{k}} = \\frac{4}{\\frac{4}{k}} = k$, así que $y_v = -1 - k$.",
+     "Impón la condición $y_v > 1$: $-1 - k > 1$.",
+     "Suma $1$ en ambos lados: $-k > 2$. Multiplica por $-1$ invirtiendo la desigualdad: $k < -2$.",
+     "Comprobación: con $k = -3$, el vértice está en $x = -\\frac{2}{2\\cdot(-\\frac{1}{3})} = 3$, y $f(3) = \\frac{9}{-3} + 6 - 1 = 2 > 1$, igual a $-1 - (-3) = 2$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$k > 2$: al despejar olvida que $-k$ cambia de sentido al multiplicar por $-1$; con $k = 3$, $y_v = -4$, que no es mayor que $1$.",
+     "B": "$0 < k < 2$: con $k = 1$, $y_v = -2$, así que no cumple la condición.",
+     "C": "$-2 < k < 0$: confunde el signo de $k$ en la condición; con $k = -1$, $y_v = 0$, que no supera $1$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q31",
@@ -758,7 +1074,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-inversa",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Igualar $f(t)$ a $3$ lleva a una ecuación polinómica que se factoriza, y sus raíces son todos los valores pedidos.",
+    "planteamiento": "Se pide todos los valores reales de $t$ con $f(t) = 3$. Datos: $f(t) = t^3 - 25t^2 + 150t + 3$.",
+    "steps": [
+     "Plantea $t^3 - 25t^2 + 150t + 3 = 3$.",
+     "Resta $3$ en ambos lados: $t^3 - 25t^2 + 150t = 0$.",
+     "Factoriza $t$: $t\\,(t^2 - 25t + 150) = 0$.",
+     "Factoriza el trinomio: $t^2 - 25t + 150 = (t-10)(t-15)$, porque $10\\cdot 15 = 150$ y $10 + 15 = 25$.",
+     "Iguala cada factor a cero: $t = 0$, $t = 10$ o $t = 15$.",
+     "Comprobación: $f(10) = 1000 - 2500 + 1500 + 3 = 3$ y $f(15) = 3375 - 5625 + 2250 + 3 = 3$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$0$, $-10$ y $-15$: cambia el signo de las raíces, lo que corresponde a $(t+10)(t+15) = t^2 + 25t + 150$, y la ecuación tiene $-25t^2$.",
+     "C": "$3$, $-7$ y $-12$: toma el término independiente $3$ como solución y no corresponde al trinomio; por ejemplo, $f(3) = 255 \\ne 3$.",
+     "D": "Solo $0$: olvida las otras dos raíces, que salen del trinomio $t^2 - 25t + 150$; una ecuación cúbica puede tener hasta tres soluciones reales."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q32",
@@ -797,7 +1131,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una homotecia de centro el origen, cada coordenada se multiplica por el mismo factor k; el primer par de vectores permite hallar k y luego el módulo del nuevo vector.",
+    "planteamiento": "Se pide el módulo de $\\vec{n}$, que es la imagen de $(3, 4)$ por la misma homotecia. Datos: la homotecia lleva $(2, -3)$ a $(-4, 6)$, lo que permite determinar el factor de escala.",
+    "steps": [
+     "En una homotecia con centro en el origen, la imagen de un vector es $k\\cdot\\vec{w}$: cada coordenada se multiplica por el mismo número $k$. Por lo tanto, $(-4, 6) = k\\cdot(2, -3)$.",
+     "Se escribe la igualdad coordenada a coordenada: $-4 = 2k$ en la primera componente y $6 = -3k$ en la segunda.",
+     "De la primera componente se despeja $k = \\frac{-4}{2} = -2$.",
+     "Se verifica con la segunda componente: $-3\\cdot(-2) = 6$, que coincide con el dato. Así, la homotecia tiene razón $k = -2$.",
+     "Se aplica la misma homotecia al vector $(3, 4)$: $\\vec{n} = -2\\cdot(3, 4) = (-6, -8)$.",
+     "El módulo de un vector $(a, b)$ es $\\sqrt{a^2 + b^2}$, así que $|\\vec{n}| = \\sqrt{(-6)^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$ unidades. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "$\\sqrt{50}$ unidades: sale de sumar mal los cuadrados de las componentes (por ejemplo, $1^2 + 7^2$) o de usar un factor distinto de $-2$. No corresponde al vector $(-6, -8)$.",
+     "B": "$\\sqrt{10}$ unidades: confunde $\\sqrt{100}$ con $\\sqrt{10}$, es decir, extrae mal la raíz después de sumar bien $36 + 64 = 100$. Es una trampa de lectura muy frecuente.",
+     "C": "15 unidades: no se obtiene de ninguna operación correcta con $k = -2$. Suele aparecer al mezclar el factor con una suma de valores absolutos o al olvidar elevar al cuadrado las componentes.",
+     "D": "2,5 unidades: es el módulo dividido por 4, lo que corresponde a aplicar una reducción por $\\frac{1}{4}$ en lugar de la homotecia de razón $-2$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q34",
@@ -833,7 +1186,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-financiera"
+   "subtopic": "m2-financiera",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El precio depende del volumen de hormigón de un cimiento; ese volumen es la longitud total del trazo gris multiplicada por su ancho y su profundidad.",
+    "planteamiento": "Se pide la expresión del precio total, en pesos, de los cimientos de $x$ casas. Datos: el cimiento tiene $0{,}5$ m de ancho y $0{,}8$ m de profundidad; el metro cúbico cuesta $95\\,000$ pesos; el rectángulo exterior de la figura mide $8$ m por $5$ m y las franjas grises tienen $0{,}5$ m de ancho.",
+    "steps": [
+     "El volumen de excavación es el ancho por la profundidad por la longitud del trazo: $V = 0{,}5 \\cdot 0{,}8 \\cdot L$, donde $L$ es la longitud total de la franja gris en planta.",
+     "Para hallar $L$ se calcula primero el área gris. La altura total de los recintos blancos es $5 - 3\\cdot 0{,}5 = 3{,}5$ m, porque se descuentan la franja superior, la central y la inferior. El ancho interior es $8 - 2\\cdot 0{,}5 = 7$ m.",
+     "Área gris: $A = 8\\cdot 5 - 7\\cdot 3{,}5 = 40 - 24{,}5 = 15{,}5$ m².",
+     "Como el ancho de la franja es $0{,}5$ m, la longitud del trazo es $L = \\frac{15{,}5}{0{,}5} = 31$ m. Así, el volumen por casa es $V = 0{,}5\\cdot 0{,}8\\cdot 31 = 12{,}4$ m³.",
+     "El precio de una casa es $95\\,000 \\cdot 12{,}4$ pesos, y el de $x$ casas es $95\\,000\\cdot 0{,}5\\cdot 0{,}8\\cdot 31\\cdot x$ pesos.",
+     "Esa expresión coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$95\\,000\\cdot 0{,}5\\cdot 0{,}8\\cdot 24\\cdot x$: usa 24 en lugar de 31. El 24 es solo el perímetro del trazo exterior, $2(7{,}5 + 4{,}5)$, y olvida la franja central de 7 m.",
+     "C": "$95\\,000\\cdot 0{,}5\\cdot 0{,}8\\cdot 34\\cdot x$: el 34 aparece al sumar de más alguna franja, es decir, al contar dos veces un tramo del trazo. No coincide con la superficie gris.",
+     "D": "$95\\,000\\cdot 0{,}5\\cdot 0{,}8\\cdot 40\\cdot x$: el 40 es el área total del rectángulo exterior, $8\\cdot 5$. Olvida que los recintos interiores no se excavan y no divide por el ancho de la franja."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q35",
@@ -869,7 +1240,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un cuadrilátero con un ángulo recto se divide en dos triángulos con una diagonal; la fórmula de Herón permite calcular el área del triángulo que no tiene ángulo recto.",
+    "planteamiento": "Se pide el área del cuadrilátero. Datos: el lado vertical izquierdo mide $4$ cm, el lado inferior $3$ cm y forman un ángulo recto; el lado superior mide $5$ cm y el lado derecho inclinado $6$ cm.",
+    "steps": [
+     "Se traza la diagonal que une el vértice superior izquierdo con el inferior derecho. Así, el cuadrilátero queda dividido en dos triángulos: uno rectángulo, con catetos $3$ cm y $4$ cm, y otro con lados $5$ cm, $5$ cm y $6$ cm.",
+     "Área del triángulo rectángulo: $\\frac{3\\cdot 4}{2} = 6$ cm².",
+     "La diagonal es la hipotenusa del triángulo rectángulo: $d = \\sqrt{3^2 + 4^2} = 5$ cm. Por lo tanto, el segundo triángulo tiene lados $5$, $5$ y $6$ cm.",
+     "Semiperímetro de ese triángulo: $s = \\frac{5 + 5 + 6}{2} = 8$ cm.",
+     "Fórmula de Herón: $A = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{8\\cdot 3\\cdot 3\\cdot 2} = \\sqrt{144} = 12$ cm².",
+     "Área total: $6 + 12 = 18$ cm². Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "12 cm²: corresponde a $3\\cdot 4$, el área de un rectángulo de lados 3 y 4. Ignora el triángulo que completa la figura hacia la derecha.",
+     "C": "21 cm²: resulta de $6 + 15$. El 15 sale de $\\frac{6\\cdot 5}{2}$, usando el lado de 6 cm y el de 5 cm como base y altura, pero esos lados no son perpendiculares.",
+     "D": "24 cm²: es $6\\cdot 4$, como si el lado oblicuo de 6 cm fuera perpendicular al lado de 4 cm. Además, la unidad está bien pero el valor no corresponde a la figura."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q36",
@@ -904,7 +1293,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El área de madera que se pinta es el rectángulo completo menos el área de la elipse que se corta; las medidas de los ejes se obtienen restando los márgenes a las dimensiones de la tabla.",
+    "planteamiento": "Se pide el área de la madera que queda como cubierta. Datos: la tabla mide $66$ cm por $40$ cm; la elipse queda a $8$ cm de cada borde lateral y a $5$ cm de cada borde superior e inferior; el área de la elipse es $\\pi\\cdot a\\cdot b$, donde $a$ y $b$ son los semiejes.",
+    "steps": [
+     "Eje horizontal de la elipse: $66 - 2\\cdot 8 = 50$ cm. Por lo tanto, el semieje mayor es $a = \\frac{50}{2} = 25$ cm.",
+     "Eje vertical de la elipse: $40 - 2\\cdot 5 = 30$ cm. Por lo tanto, el semieje menor es $b = \\frac{30}{2} = 15$ cm.",
+     "Área de la elipse que se corta: $\\pi\\cdot a\\cdot b = \\pi\\cdot 25\\cdot 15 = 375\\pi$ cm².",
+     "Área del rectángulo de madera: $66\\cdot 40 = 2640$ cm².",
+     "La parte que se pinta es la madera que queda, es decir, el rectángulo menos la elipse: $2640 - 375\\pi$ cm².",
+     "Esa expresión coincide con la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$(2640 - 1500\\pi)$ cm²: usa los ejes completos, 50 y 30, como si fueran semiejes, y calcula $\\pi\\cdot 50\\cdot 30 = 1500\\pi$. Es el error de confundir diámetro con radio.",
+     "B": "$(212 - 40\\pi)$ cm²: mezcla el perímetro del rectángulo, $2(66 + 40) = 212$, con el área, y usa un término $40\\pi$ que no corresponde a la elipse.",
+     "D": "$212 - 160\\pi$ cm: combina el mismo error del perímetro con un producto de semiejes incorrecto. Además la unidad está mal, porque se pide cm²."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q37",
@@ -939,7 +1346,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como los barcos navegan en direcciones perpendiculares, la distancia entre ellos es la hipotenusa de un triángulo rectángulo; hay que pasar los nudos a km/h antes de aplicar Pitágoras.",
+    "planteamiento": "Se pide la distancia entre los barcos después de dos horas, en km. Datos: un barco avanza hacia el norte a $v$ nudos, el otro hacia el este a $w$ nudos, y $1$ nudo equivale a $1{,}852$ km/h.",
+    "steps": [
+     "Los dos barcos se alejan en direcciones perpendiculares, así que la distancia entre ellos es la hipotenusa de un triángulo rectángulo cuyos catetos son los recorridos de cada uno.",
+     "Recorrido en 2 horas hacia el norte: $d_N = 1{,}852\\cdot v\\cdot 2$ km. Recorrido en 2 horas hacia el este: $d_E = 1{,}852\\cdot w\\cdot 2$ km.",
+     "Por el teorema de Pitágoras: $d^2 = d_N^2 + d_E^2 = (2\\cdot 1{,}852)^2\\,(v^2 + w^2)$.",
+     "Se extrae la raíz cuadrada: $d = 2\\cdot 1{,}852\\cdot\\sqrt{v^2 + w^2}$ km.",
+     "Esa expresión coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$1{,}852\\cdot\\sqrt{v^2 + w^2}$: olvida el tiempo de 2 horas. Esa expresión daría la distancia después de una sola hora.",
+     "C": "$1{,}852\\cdot(v^2 + w^2)$: no saca la raíz cuadrada y también omite el tiempo. Confunde la suma de cuadrados con la distancia.",
+     "D": "$2\\cdot 1{,}852\\cdot(v^2 + w^2)$: aplica bien el tiempo, pero olvida la raíz cuadrada de la suma de cuadrados, error frecuente al pasar de Pitágoras a la distancia."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q39",
@@ -974,7 +1398,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para mantener la capacidad total hay que igualar el volumen de los 30 cilindros con el de los cubos; cada cubo tiene arista $h$, así que su volumen es $h^3$.",
+    "planteamiento": "Se pide la expresión que da la cantidad de cubos necesarios. Datos: el cilindro tiene radio $r$ y altura $1{,}5h$; la altura del cubo es $\\frac{2}{3}$ de la altura del cilindro; hay 30 botes cilíndricos.",
+    "steps": [
+     "Arista del cubo: $\\frac{2}{3}\\cdot 1{,}5h = h$. Por lo tanto, el volumen de un cubo es $h^3$.",
+     "Volumen de un bote cilíndrico: $\\pi r^2\\cdot 1{,}5h$.",
+     "Capacidad total de los 30 botes cilíndricos: $30\\cdot 1{,}5\\,\\pi r^2 h = 45\\pi r^2 h$.",
+     "Para conservar esa capacidad, la cantidad de cubos es el cociente entre la capacidad total y el volumen de un cubo: $N = \\frac{45\\pi r^2 h}{h^3}$.",
+     "Simplificando una potencia de $h$: $N = \\frac{45\\pi r^2}{h^2}$. Esa es la expresión de la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{45\\pi r^2}{4h^2}$: el denominador $4h^2$ no corresponde al volumen de un cubo de arista $h$, que es $h^3$. Es un error con la razón $\\frac{2}{3}$ y con las potencias.",
+     "B": "$\\frac{\\pi r^2\\cdot 1{,}5}{h^2}$: calcula el cociente para un solo bote, sin multiplicar por 30, y además usa $h^2$ en lugar de $h^3$.",
+     "D": "$\\frac{h^2}{45\\pi r^2}$: invierte la fracción, es decir, divide el volumen de los cubos entre el de los cilindros. Lo que se pide es el número de cubos, no su inverso."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q40",
@@ -1009,7 +1450,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-analitica"
+   "subtopic": "m2-analitica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al trasladar $A(3,1)$ por $\\vec{v} = (k-1, k^2)$ se obtiene $(k+2, k^2+1)$; basta comprobar, gráfica por gráfica, si existe un entero $k$ que dé las coordenadas de P.",
+    "planteamiento": "Se pide la gráfica en la que P no puede ser la traslación de A según $\\vec{v}$, con $k$ entero. Datos: $A(3, 1)$ y $\\vec{v} = (k-1,\\ k^2)$.",
+    "steps": [
+     "Las coordenadas trasladadas son $A + \\vec{v} = (3 + k - 1,\\ 1 + k^2) = (k+2,\\ k^2+1)$.",
+     "Gráfica A, $P(0, 5)$: $k + 2 = 0$ da $k = -2$, y entonces $k^2 + 1 = 5$. Cumple.",
+     "Gráfica B, $P(1, 2)$: $k + 2 = 1$ da $k = -1$, y entonces $k^2 + 1 = 2$. Cumple.",
+     "Gráfica D, $P(4, 5)$: $k + 2 = 4$ da $k = 2$, y entonces $k^2 + 1 = 5$. Cumple.",
+     "Gráfica C, $P(4, 2)$: la abscisa exige $k = 2$, pero entonces la ordenada es $k^2 + 1 = 5 \\neq 2$. No existe un entero $k$ que cumpla ambas coordenadas, así que P no corresponde a una traslación de A según $\\vec{v}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "P(0, 5) sí es posible con $k = -2$, por lo que no es la respuesta pedida. Un error típico es leer mal la ordenada del punto y descartarlo.",
+     "B": "P(1, 2) sí es posible con $k = -1$. El error habitual aquí es restar la componente horizontal en lugar de sumarla al trasladar.",
+     "D": "P(4, 5) sí es posible con $k = 2$. Un error frecuente es olvidar que $k^2$ es el mismo para $k$ positivo y negativo, y creer que solo hay un valor posible."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q42",
@@ -1044,7 +1502,25 @@
     "mono": false
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las dos condiciones determinan si cada mes está por encima o por debajo de 1000 y qué mes es mayor; el gráfico correcto es el que cumple ambas a la vez.",
+    "planteamiento": "Se pide el gráfico compatible con las proyecciones de febrero ($V_F$) y marzo ($V_M$). Datos: si $V_F > 1000$, entonces $\\frac{V_F}{V_M} = 0{,}8$; si $V_F < 1000$, entonces $\\frac{V_F}{V_M} = 1{,}2$.",
+    "steps": [
+     "Si $V_F > 1000$, entonces $V_M = \\frac{V_F}{0{,}8} = 1{,}25\\,V_F$, así que $V_M > V_F > 1000$: marzo es la barra más alta y ambos valores quedan sobre la línea de 1000.",
+     "Si $V_F < 1000$, entonces $V_M = \\frac{V_F}{1{,}2}$, así que $V_M < V_F < 1000$: marzo es más bajo que febrero y ambos quedan bajo 1000.",
+     "Gráfico A: $V_F$ está sobre 1000, pero $V_M$ queda bajo $V_F$. La razón sería mayor que 1, y no es 0,8 ni 1,2. No cumple.",
+     "Gráfico B: $V_F$ está sobre 1000 y $V_M$ es mayor que $V_F$, con $V_M = 1{,}25\\,V_F$. Cumple la primera condición.",
+     "Gráfico C: $V_F$ está bajo 1000, pero $V_M$ es mayor que $V_F$. Con $V_F < 1000$ la razón debe ser 1,2, lo que exige $V_M < V_F$. No cumple.",
+     "Gráfico D: ambos valores están bajo 1000 y $V_M$ es mayor que $V_F$. Esto contradice la segunda condición. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El gráfico muestra $V_F$ sobre 1000 y $V_M$ bajo $V_F$. Eso da una razón mayor que 1; la condición exige que marzo sea mayor que febrero cuando febrero supera 1000.",
+     "C": "Febrero bajo 1000 y marzo sobre 1000 significa que marzo es mayor que febrero, pero con $V_F < 1000$ la razón 1,2 exige lo contrario. Confunde qué mes es el mayor.",
+     "D": "Ambos meses bajo 1000 y marzo por encima de febrero contradicen la razón 1,2, que obliga a que febrero sea el mayor cuando está bajo 1000."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q43",
@@ -1080,7 +1556,25 @@
     "mono": false
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El diagrama de cajón fija el mínimo, la mediana y los cuartiles; el histograma correcto debe tener datos en los intervalos donde caen esas posiciones.",
+    "planteamiento": "Se pide el histograma compatible con el diagrama de cajón de 100 datos. Lectura del diagrama: mínimo cercano a 0, primer cuartil cercano a 6, mediana cercana a 54, tercer cuartil cercano a 65 y máximo cercano a 97.",
+    "steps": [
+     "Con 100 datos, el primer cuartil corresponde al dato 25, la mediana al 50 y el tercer cuartil al 75. Hay que revisar en qué intervalo cae cada una de esas posiciones según las frecuencias acumuladas.",
+     "Gráfico A: [0,10[ = 27, [10,20[ = 0, [20,30[ = 3, [30,40[ = 2, [40,50[ = 1, [50,60[ = 30, [60,70[ = 30, [70,80[ = 2, [80,90[ = 3 y [90,100[ = 2. La suma es 100.",
+     "Acumulando: hasta [0,10[ hay 27 datos, así que el dato 25 cae en [0,10[, coherente con un primer cuartil cercano a 6. Hasta [40,50[ hay 33 datos y con [50,60[ se llega a 63, así que la mediana cae en [50,60[, cerca de 54.",
+     "Hasta [60,70[ se llega a 93 datos, así que el dato 75 cae en [60,70[, coherente con un tercer cuartil cercano a 65.",
+     "El primer intervalo no vacío es [0,10[ y el último es [90,100[, lo que concuerda con un mínimo cercano a 0 y un máximo cercano a 97.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "No tiene datos en [0,10[, pero el diagrama marca un mínimo cercano a 0. Además, acumulando desde [10,20[ el dato 25 cae cerca de 44, muy lejos del primer cuartil de 6.",
+     "C": "Tiene 4 datos en [0,10[ y 32 en [10,20[, así que el primer cuartil caería cerca de 17. El diagrama lo sitúa cerca de 6.",
+     "D": "No tiene datos en [0,10[, lo que contradice el mínimo cercano a 0. Además, el dato 25 caería en [30,40[, no en la zona del primer cuartil."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q45",
@@ -1115,7 +1609,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-condicional",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si solo se sortean los números de los presentes, la probabilidad de Pablo es $\\frac{2}{2b}$, donde $b$ es la cantidad de presentes; despejar $b$ entrega los ausentes.",
+    "planteamiento": "Se pide la expresión de la cantidad de estudiantes que faltaron. Datos: 40 estudiantes compraron 2 números cada uno; la probabilidad inicial de Pablo es $\\frac{1}{40}$ y, con solo $b$ presentes, pasa a ser $\\frac{1}{b}$.",
+    "steps": [
+     "Con 40 estudiantes que compraron 2 números cada uno, se venden 80 números. La probabilidad inicial de Pablo es $\\frac{2}{80} = \\frac{1}{40}$, que coincide con el dato.",
+     "Si solo participan los $b$ presentes, hay $2b$ números en juego, de los cuales 2 son de Pablo. Su probabilidad es $\\frac{2}{2b} = \\frac{1}{b}$, que es la que indica el enunciado.",
+     "Por lo tanto, $b$ es la cantidad de estudiantes presentes.",
+     "Los ausentes son el total menos los presentes: $40 - b$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$40 - \\frac{b}{2}$: divide b entre 2 por confundir la cantidad de estudiantes con la de números, pero la relación es directa entre presentes y números en juego.",
+     "C": "$40 - 2b$: multiplica los presentes por 2 para hallar los números, pero el término $2b$ es el total de números en juego, no la cantidad de ausentes.",
+     "D": "$\\frac{40 - b}{40b}$: mezcla la fracción de ausentes con una probabilidad. La cantidad de ausentes es una diferencia de estudiantes, no un cociente."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q47",
@@ -1154,7 +1664,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-condicional",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como son dos personas escogidas sin reemplazo, la probabilidad es el producto de las dos probabilidades condicionadas, con 5800 personas no altas y 5999 personas restantes en la segunda elección.",
+    "planteamiento": "Se pide la probabilidad de que ninguna de dos personas escogidas al azar mida más de 1,8 m. Datos: en la ciudad hay 6000 personas, de las cuales 200 miden más de 1,8 m, así que 5800 no.",
+    "steps": [
+     "Para que ninguna de las dos mida más de 1,8 m, las dos deben pertenecer al grupo de 5800 personas que no superan esa altura.",
+     "Primera persona: $P_1 = \\frac{5800}{6000}$.",
+     "Como la segunda persona se escoge sin reemplazo, quedan 5999 personas, de las cuales 5799 no superan 1,8 m. Segunda persona: $P_2 = \\frac{5799}{5999}$.",
+     "Por la regla del producto para eventos sucesivos: $P = \\frac{5800}{6000}\\cdot\\frac{5799}{5999}$.",
+     "Esa es la expresión de la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\left(\\frac{1}{5800}\\right)^2$: no es el evento favorable. La fracción $\\frac{1}{5800}$ no representa ninguna probabilidad del enunciado.",
+     "C": "$\\frac{200}{6000}\\cdot\\frac{200}{6000}$: calcula la probabilidad de que ambas personas midan más de 1,8 m, que es el evento contrario al pedido.",
+     "D": "$\\frac{5800}{6000}$: considera solo la primera elección y olvida la segunda persona.",
+     "E": "$2\\cdot\\frac{5800}{6000}$: multiplica por 2 en lugar de calcular la probabilidad de dos elecciones sucesivas. El resultado supera 1, así que no puede ser una probabilidad."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q48",
@@ -1193,7 +1721,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-condicional",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se usa probabilidad total: primero se decide la caja con el dado y luego se calcula la probabilidad de sacar una ficha negra desde esa caja.",
+    "planteamiento": "Se pide la probabilidad de extraer una ficha negra. Datos: la caja A tiene 3 blancas, 2 rojas y 6 negras; la caja B tiene 2 blancas y 3 rojas, sin negras. Se usa A si el dado da 1 o 2 y B en los demás casos.",
+    "steps": [
+     "Probabilidad de elegir la caja A: los resultados menores que 3 son 1 y 2, así que $P(A) = \\frac{2}{6} = \\frac{1}{3}$. La caja B se usa con $P(B) = \\frac{4}{6} = \\frac{2}{3}$.",
+     "Caja A: tiene $3 + 2 + 6 = 11$ fichas, de las cuales 6 son negras. Por lo tanto, $P(\\text{negra}\\mid A) = \\frac{6}{11}$.",
+     "Caja B: tiene $2 + 3 = 5$ fichas y ninguna es negra. Por lo tanto, $P(\\text{negra}\\mid B) = 0$.",
+     "Probabilidad total: $P(\\text{negra}) = \\frac{1}{3}\\cdot\\frac{6}{11} + \\frac{2}{3}\\cdot 0 = \\frac{6}{33} = \\frac{2}{11}$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{6}{11}$: es la probabilidad de negra solo si se extrae de la caja A. Ignora el dado, que decide de qué caja se saca la ficha.",
+     "B": "$\\frac{1}{8}$: no corresponde a una combinación válida de las probabilidades del dado y de las cajas. Las cajas tienen 11 y 5 fichas, no 8.",
+     "D": "$\\frac{3}{11}$: es la probabilidad de sacar una ficha blanca de la caja A. Confunde el color pedido.",
+     "E": "$\\frac{3}{8}$: no proviene de un cálculo válido. La caja B no tiene fichas negras y la caja A tiene 11 fichas, no 8."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q49",
@@ -1228,7 +1774,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada apretón de manos une un par de estudiantes y se cuenta una sola vez, así que el total es la cantidad de pares: $\\frac{n(n-1)}{2}$.",
+    "planteamiento": "Se pide la relación verdadera entre $n$ y los 105 apretones de manos. Datos: cada estudiante saluda una sola vez a cada uno de los demás.",
+    "steps": [
+     "Cada uno de los $n$ estudiantes saluda a los otros $n - 1$, pero un apretón entre A y B es el mismo que entre B y A, así que cada par se cuenta una sola vez.",
+     "Por lo tanto, el número total de apretones es la cantidad de pares distintos: $\\frac{n(n-1)}{2}$.",
+     "Igualando con los 105 apretones: $\\frac{n(n-1)}{2} = 105$.",
+     "Comprobación: con $n = 15$, $\\frac{15\\cdot 14}{2} = 105$. Esa es la relación de la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{n(n-2)}{2} = 105$: resta 2 en lugar de 1, como si cada estudiante no saludara a alguien más. El número de pares se cuenta con $n - 1$.",
+     "B": "$n(n-1) = 105$: olvida dividir entre 2 y cuenta cada apretón dos veces, una por cada persona que lo protagoniza.",
+     "D": "$\\frac{n\\cdot n}{2} = 105$: incluye saludos de una persona consigo misma y no respeta que cada par se cuenta una vez."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q50",
@@ -1263,7 +1825,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada trazo une un par de puntos distintos, así que la cantidad de trazos es una combinación de $n$ puntos tomados de a 2; los ejemplos del enunciado permiten descartar las alternativas que solo coinciden con ellos.",
+    "planteamiento": "Se pide la expresión para la cantidad de trazos con $n$ puntos equidistantes en la circunferencia. Datos: con 3 puntos hay 3 trazos y con 4 puntos hay 6 trazos.",
+    "steps": [
+     "Cada trazo une un par de puntos, y cada par se une una sola vez. La cantidad de trazos es la de combinaciones de $n$ puntos tomados de a 2: $\\binom{n}{2}$.",
+     "Verificación con los ejemplos: con $n = 3$, $\\binom{3}{2} = 3$ trazos (el triángulo). Con $n = 4$, $\\binom{4}{2} = 6$ trazos (el cuadrado con sus diagonales).",
+     "Para descartar las otras alternativas se prueba con $n = 5$, que debe dar $\\binom{5}{2} = 10$ trazos.",
+     "Alternativa B: $\\binom{5}{3} + 2 = 10 + 2 = 12$. Alternativa C: $3(5-2) = 9$. Alternativa D: $3\\cdot 3! = 18$.",
+     "Solo la alternativa A da 10 con $n = 5$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\binom{n}{3} + 2$: coincide con los ejemplos de 3 y 4 puntos, pero con 5 puntos da 12 en lugar de 10. Es una trampa de los casos pequeños.",
+     "C": "$3(n-2)$: también coincide con 3 y 4 puntos, pero con 5 puntos da 9 en lugar de 10, porque no crece como una combinación.",
+     "D": "$3\\cdot(n-2)!$: coincide con los dos ejemplos, pero con 5 puntos da 18. Crece demasiado rápido y no representa los pares de puntos."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q51",
@@ -1298,7 +1877,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-condicional",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Aprobar exige al menos 7 aciertos en una binomial con $n = 10$ y $p = \\frac{1}{2}$; hay que sumar las probabilidades de 7, 8, 9 y 10 aciertos, cada una con su coeficiente binomial.",
+    "planteamiento": "Se pide la probabilidad de aprobar al responder al azar. Datos: el test tiene 10 preguntas de verdadero o falso, cada una con probabilidad $\\frac{1}{2}$ de acertar, y se aprueba con al menos 7 respuestas correctas.",
+    "steps": [
+     "Cada pregunta tiene dos alternativas, así que la probabilidad de acertar al azar es $\\frac{1}{2}$, y las preguntas son independientes. El número de aciertos $X$ sigue una distribución binomial con $n = 10$ y $p = \\frac{1}{2}$.",
+     "Aprobar significa $X \\geq 7$, es decir, $X = 7$, $8$, $9$ o $10$.",
+     "La probabilidad de exactamente $k$ aciertos es $\\binom{10}{k}\\left(\\frac{1}{2}\\right)^{k}\\left(\\frac{1}{2}\\right)^{10-k}$, que se puede escribir como $\\binom{10}{k}\\left(\\frac{1}{2}\\right)^{10-k}\\left(\\frac{1}{2}\\right)^{k}$.",
+     "Para $k = 7$: $\\binom{10}{7}\\left(\\frac{1}{2}\\right)^3\\left(\\frac{1}{2}\\right)^7$. Para $k = 8$: $\\binom{10}{8}\\left(\\frac{1}{2}\\right)^2\\left(\\frac{1}{2}\\right)^8$. Para $k = 9$: $\\binom{10}{9}\\left(\\frac{1}{2}\\right)\\left(\\frac{1}{2}\\right)^9$. Para $k = 10$: $\\left(\\frac{1}{2}\\right)^{10}$.",
+     "La probabilidad pedida es la suma de los cuatro términos: $P = \\binom{10}{7}\\left(\\frac{1}{2}\\right)^3\\left(\\frac{1}{2}\\right)^7 + \\binom{10}{8}\\left(\\frac{1}{2}\\right)^2\\left(\\frac{1}{2}\\right)^8 + \\binom{10}{9}\\left(\\frac{1}{2}\\right)\\left(\\frac{1}{2}\\right)^9 + \\left(\\frac{1}{2}\\right)^{10}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\left(\\frac{1}{2}\\right)^7$: es la probabilidad de acertar una secuencia específica de 7 respuestas. No considera las formas de elegir las respuestas correctas ni los casos 8, 9 y 10.",
+     "B": "$\\binom{10}{7}\\left(\\frac{1}{2}\\right)^3\\left(\\frac{1}{2}\\right)^7$: es solo la probabilidad de exactamente 7 aciertos. Olvida los casos de 8, 9 y 10 aciertos, que también aprueban.",
+     "C": "Tiene la estructura de los cuatro términos, pero omite los coeficientes binomiales $\\binom{10}{k}$. Cada término queda con peso 1 en lugar de contar las formas de elegir las respuestas correctas."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q52",
@@ -1337,7 +1933,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La afirmación (1) fija la razón $\\frac{x}{y}$ directamente, mientras que (2) solo da una suma y no fija el cociente.",
+    "planteamiento": "Se pide determinar si se puede hallar el valor de $\\frac{x}{y}$ con cada afirmación. Datos: (1) $y$ es la cuarta parte de $x$; (2) $x + y = 5$.",
+    "steps": [
+     "Se estudia cada afirmación por separado.",
+     "(1): $y$ es la cuarta parte de $x$, es decir, $y = \\frac{x}{4}$. Entonces $\\frac{x}{y} = \\frac{x}{x/4} = 4$, siempre que $y \\neq 0$, condición necesaria para que la razón exista. Con (1) sola se obtiene el valor.",
+     "(2): $x + y = 5$. Esto no fija la razón: por ejemplo, $x = 4$ e $y = 1$ dan $\\frac{x}{y} = 4$, pero $x = 3$ e $y = 2$ dan $\\frac{3}{2}$. Con (2) sola no se determina.",
+     "Como (1) basta por sí sola, no hace falta combinar las dos. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "(2) por sí sola: $x + y = 5$ admite muchos valores de la razón, como $\\frac{4}{1}$ y $\\frac{3}{2}$. No basta.",
+     "C": "Ambas juntas: es cierto que juntas determinan el valor, pero la alternativa pide una afirmación que basta por sí sola. (1) ya lo logra, así que combinar no es lo pedido.",
+     "D": "Cada una por sí sola: (2) no alcanza, así que esta opción es falsa.",
+     "E": "Se requiere información adicional: es falso, porque (1) por sí sola ya determina $\\frac{x}{y} = 4$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q53",
@@ -1376,7 +1989,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para calcular $p = f(13)$ y $q = f(14)$ hacen falta los tres coeficientes $a$, $b$ y $c$; cada afirmación aporta solo parte de ellos, pero juntas los completan.",
+    "planteamiento": "Se pide si se pueden determinar $p$ y $q$ con cada afirmación. Datos: $f(x) = ax^2 + bx + c$, $p = f(13)$ y $q = f(14)$. (1) conoce $a$ y $b$; (2) conoce $f(0)$.",
+    "steps": [
+     "Las expresiones son $p = 169a + 13b + c$ y $q = 196a + 14b + c$, así que se necesitan $a$, $b$ y $c$.",
+     "(1) da $a$ y $b$, pero no $c$. Sin $c$, $p$ y $q$ dependen de un valor desconocido, así que (1) sola no alcanza.",
+     "(2) da $f(0) = c$, pero no $a$ ni $b$. Sin ellos, $169a + 13b$ y $196a + 14b$ siguen indeterminados; (2) sola no alcanza.",
+     "Juntas se conocen $a$, $b$ y $c$, y entonces $p$ y $q$ se calculan directamente. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: falta $c$, como se vio en el segundo paso, así que no se determinan $p$ ni $q$.",
+     "B": "(2) por sí sola: conoce $c$, pero faltan $a$ y $b$ para calcular $169a + 13b$ y $196a + 14b$.",
+     "D": "Cada una por sí sola: ninguna basta, así que la opción es falsa.",
+     "E": "Se requiere información adicional: es falso, porque con (1) y (2) juntas sí se determinan $p$ y $q$."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q54",
@@ -1415,7 +2045,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El aforo depende de la superficie del recinto; el perímetro y la diferencia entre lados no bastan por separado, pero juntos determinan las dimensiones y el área.",
+    "planteamiento": "Se pide si se puede calcular el aforo máximo con cada afirmación. Datos: el aforo es la aproximación a la unidad de $\\frac{S}{1{,}5}$, con $S$ la superficie en m²; (1) el perímetro mide 28 m; (2) un lado mide 4 m más que el otro.",
+    "steps": [
+     "Para conocer el aforo hay que determinar la superficie $S = a\\cdot b$ del rectángulo.",
+     "(1): el perímetro es $2(a + b) = 28$, así que $a + b = 14$. Esto no fija el área: con $a = b = 7$ el área es $49$ m², pero con $a = 13$ y $b = 1$ es $13$ m². Sola, (1) no alcanza.",
+     "(2): $a = b + 4$. Tampoco fija el área: con $b = 1$ y $a = 5$ la superficie es 5 m², y con $b = 3$ y $a = 7$ es 21 m². Sola, (2) no alcanza.",
+     "Juntas: $a + b = 14$ y $a - b = 4$ dan $a = 9$ y $b = 5$. La superficie es $S = 45$ m², y el aforo es $\\frac{45}{1{,}5} = 30$ personas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: un mismo perímetro admite rectángulos de áreas muy distintas, así que no determina el aforo.",
+     "B": "(2) por sí sola: una diferencia fija entre lados no fija el producto, y el área depende del producto.",
+     "D": "Cada una por sí sola: ninguna da la superficie, así que la opción es falsa.",
+     "E": "Se requiere información adicional: no es necesaria, porque ambas juntas bastan para obtener un único valor."
+    }
+   }
   },
   {
    "id": "m2-2025-regular-q55",
@@ -1454,7 +2101,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La mediana es el percentil 50: conocer el número de personas ubica su posición, y los percentiles 49 y 51 la acotan, pero ninguno de los dos datos entrega su valor exacto.",
+    "planteamiento": "Se pide si se puede determinar la mediana de las edades con cada afirmación. Datos: las edades van de 60 a 90 años; (1) se conoce la cantidad de personas consultadas; (2) se conocen los percentiles 49 y 51.",
+    "steps": [
+     "La mediana es el valor que deja la mitad de los datos a cada lado, es decir, el percentil 50. Para determinarla exactamente hay que conocer el valor de esa posición.",
+     "(1): conocer la cantidad de personas $n$ permite ubicar la posición de la mediana, por ejemplo el dato $\\frac{n+1}{2}$, pero no dice qué edad ocupa esa posición. Sola, no alcanza.",
+     "(2): los percentiles 49 y 51 acotan la mediana entre dos valores, $P_{49} \\leq P_{50} \\leq P_{51}$, pero no la fijan con exactitud. Sola, no alcanza.",
+     "Juntas se conocen $n$ y un intervalo para la mediana, pero siguen existiendo conjuntos de datos distintos, con la misma $n$ y los mismos $P_{49}$ y $P_{51}$, que tienen medianas diferentes. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: el número de personas indica la posición de la mediana, pero no su valor.",
+     "B": "(2) por sí sola: los percentiles dan un intervalo para la mediana, pero no su valor exacto.",
+     "C": "Ambas juntas: aunque se conoce $n$ y un intervalo, la mediana no queda determinada con exactitud.",
+     "D": "Cada una por sí sola: ninguna basta, así que la opción es falsa."
+    }
+   }
   }
  ]
 }

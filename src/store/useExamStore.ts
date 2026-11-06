@@ -24,6 +24,8 @@ export interface ExamSession {
   telemetry?: Record<string, QuestionTrace>
   /** Aciertos seguidos al verificar en Modo Práctica. */
   correctRun?: number
+  /** Día en que se respondió cada pregunta por primera vez: el mapa de actividad y la racha cuentan cada una ese día. */
+  answeredOn?: Record<string, string>
 }
 
 export const sessionKey = (examId: string, mode: ExamMode) => `${examId}:${mode}`
@@ -111,6 +113,7 @@ export const useExamStore = create<ExamState>()(
             const struck = cur.struck?.[questionId]
             return {
               answers: { ...cur.answers, [questionId]: option },
+              answeredOn: cur.answeredOn?.[questionId] ? cur.answeredOn : { ...cur.answeredOn, [questionId]: localDateKey() },
               ...traced(cur, questionId, (t) => tracePick(t, option)),
               ...(struck?.includes(option)
                 ? { struck: { ...cur.struck, [questionId]: struck.filter((k) => k !== option) } }

@@ -8,6 +8,7 @@ import { ScoreRuler, type RulerMarker } from '@/components/analytics/ScoreRuler'
 import { QuestionCard } from '@/components/exam/QuestionCard'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { attemptTitle } from '@/data/catalog'
 import { EmptyState } from '@/components/ui/empty-state'
 import { Panel, PanelHeader } from '@/components/ui/panel'
 import { Segmented } from '@/components/ui/segmented'
@@ -97,7 +98,7 @@ export function ResultsPage() {
         <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
           <div>
             <SubjectTag subject={attempt.subject} label={daily ? 'Lectora, Matemática y Ciencias o Historia' : subjectLabel(attempt.subject, attempt.area)} />
-            <h1 className="mt-1 text-[22px] font-semibold tracking-tight sm:text-2xl">{attempt.examTitle}</h1>
+            <h1 className="mt-1 text-[22px] font-semibold tracking-tight sm:text-2xl">{attemptTitle(attempt)}</h1>
             <p className="mt-1.5 flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
               <Badge tone={attempt.mode === 'ensayo' ? 'solid' : 'outline'}>{attempt.mode === 'ensayo' ? 'Modo ensayo' : 'Modo práctica'}</Badge>
               {formatDate(attempt.finishedAt)}, {formatTime(attempt.finishedAt)}

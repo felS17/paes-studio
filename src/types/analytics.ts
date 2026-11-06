@@ -37,6 +37,8 @@ export interface QuestionResult {
   flagged: boolean
   pilot: boolean
   telemetry?: QuestionTelemetry
+  /** Día local (`YYYY-MM-DD`) en que se respondió; sin él, cuenta el día de la entrega. */
+  answeredOn?: string
 }
 
 export interface AxisStat {

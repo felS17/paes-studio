@@ -110,7 +110,9 @@ export function AppShell() {
               <div
                 className={cn(
                   'flex w-full flex-1 flex-col',
-                  running ? 'min-h-0' : 'mx-auto max-w-[1280px] px-4 pt-6 pb-16 sm:px-6 lg:px-10 lg:pt-8',
+                  running ? 'min-h-0' : 'mx-auto px-4 pt-6 pb-16 sm:px-6 lg:px-10 lg:pt-8',
+                  // Solo el Inicio aprovecha los monitores grandes: 1480 px de ventana más el margen lateral.
+                  !running && (pathname === '/' ? 'max-w-[1560px]' : 'max-w-[1280px]'),
                 )}
               >
                 <Suspense fallback={<Loading />}>

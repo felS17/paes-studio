@@ -99,6 +99,7 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
       startedAt: current.startedAt,
       durationMs: elapsedRef.current,
       telemetry: current.telemetry,
+      answeredOn: current.answeredOn,
     })
     if (attempt.answered === 0 && mode === 'practica') {
       discard(key)

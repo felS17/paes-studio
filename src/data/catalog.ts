@@ -1,7 +1,8 @@
 import { useExamStore } from '@/store/useExamStore'
+import type { AttemptRecord } from '@/types/analytics'
 import type { Exam, ExamMeta, Passage, Question } from '@/types/exam'
 import index from './exams/index.json'
-import { SUBJECTS } from './subjects'
+import { SUBJECTS, SUBJECT_TABS } from './subjects'
 
 /** Catálogo liviano, siempre disponible. */
 export const EXAMS: ExamMeta[] = index as unknown as ExamMeta[]
@@ -73,4 +74,23 @@ async function buildPracticeSet(id: string): Promise<Exam> {
   }
 }
 
-export const YEARS: number[] = [...new Set(EXAMS.map((e) => e.year))].sort((a, b) => b - a)
+/** Años reales de rendición, para el filtro de `/ensayos`. Los ensayos curados no tienen uno. */
+export const YEARS: number[] = [...new Set(EXAMS.filter((e) => e.source !== 'curado').map((e) => e.year))].sort((a, b) => b - a)
+
+const MODALITY_ORDER: Partial<Record<ExamMeta['modality'], number>> = { regular: 0, invierno: 1 }
+
+/** Pruebas oficiales de la más reciente a la más antigua, Regular antes que Invierno, y los curados siempre al final. */
+export function sortExams(exams: ExamMeta[]): ExamMeta[] {
+  const curated = (e: ExamMeta) => Number(e.source === 'curado')
+  return [...exams].sort(
+    (a, b) =>
+      curated(a) - curated(b) ||
+      b.year - a.year ||
+      (MODALITY_ORDER[a.modality] ?? 9) - (MODALITY_ORDER[b.modality] ?? 9) ||
+      SUBJECT_TABS.indexOf(a.subject) - SUBJECT_TABS.indexOf(b.subject) ||
+      (a.area ?? '').localeCompare(b.area ?? ''),
+  )
+}
+
+/** Nombre vigente de un intento: los guardados antes de normalizar los años traen el título antiguo. */
+export const attemptTitle = (attempt: Pick<AttemptRecord, 'examId' | 'examTitle'>) => EXAMS_BY_ID.get(attempt.examId)?.title ?? attempt.examTitle

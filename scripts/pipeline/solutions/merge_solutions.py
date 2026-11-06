@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Soluciones paso a paso de las PAES de Invierno: almacén versionado + integración en los ensayos.
+"""Soluciones paso a paso de las pruebas oficiales: almacén versionado + integración en los ensayos.
 
 Las soluciones viven en `scripts/pipeline/solutions/soluciones.json` ({id de pregunta: {answer, explanation}}),
 así que sobreviven a una nueva extracción de los PDF: `extract_demre.py` vuelve a aplicarlas al final.
@@ -90,7 +90,7 @@ def collect_deep(work: Path) -> int:
                 continue
             q = inputs[s["id"]]
             expl = {
-                "kind": q["current"].get("kind", "solucion"),
+                "kind": (q.get("current") or {}).get("kind", "solucion"),
                 "summary": s["summary"].strip(),
                 "planteamiento": s["planteamiento"].strip(),
                 "steps": [x.strip() for x in s["steps"]],

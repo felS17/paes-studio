@@ -1,9 +1,10 @@
 {
  "id": "m1-2025-regular",
  "subject": "m1",
- "title": "PAES Regular 2025",
+ "title": "PAES Regular 2024",
  "description": "Selección oficial de 45 de las 65 preguntas de Competencia Matemática 1 (M1), aplicada el 04-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "regular",
  "source": "demre",
  "form": "113",
@@ -114,7 +115,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Sumar un número negativo equivale a desplazarse hacia la izquierda en la recta numérica, así que la operación se lee como un punto de partida y un desplazamiento.",
+    "planteamiento": "Se pide qué procedimiento en la recta numérica representa $-5 + (-8)$. Datos: el primer número es $-5$ (punto de partida) y el segundo es $-8$, que indica un desplazamiento de $8$ unidades en sentido negativo, es decir, hacia la izquierda.",
+    "steps": [
+     "El primer sumando, $-5$, es la posición de partida: en la recta numérica se ubica el punto $-5$, que está a la izquierda del $-1$.",
+     "El segundo sumando, $-8$, indica cuánto y hacia dónde moverse: el signo negativo da el sentido (izquierda) y el valor absoluto $|-8| = 8$ da la cantidad de unidades.",
+     "Por lo tanto, el desplazamiento es de $8$ unidades hacia la izquierda desde $-5$. Llegamos a $-5 - 8 = -13$, que es el mismo resultado que $-5 + (-8)$.",
+     "Revisamos las alternativas con esa regla: la correcta parte en $-5$ y avanza $8$ unidades a la izquierda, lo que coincide exactamente con el paso anterior. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Parte en $-5$ y avanza $8$ unidades a la derecha: es un error de signo. Llega a $3$, que es el resultado de $-5 + 8$, no de sumar $-8$.",
+     "C": "Parte en $-8$ y se desplaza $5$ unidades a la derecha: mezcla los dos números, intercambia el punto de partida y la cantidad de unidades. Además, el sentido es hacia la derecha, lo que no corresponde a sumar un negativo.",
+     "D": "Parte en $-8$ y se desplaza $3$ unidades a la derecha: el número $3$ no aparece en la operación. Es una trampa típica de restar los valores ($8-5$) sin seguir la regla de los signos."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q03",
@@ -149,7 +166,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para encontrar el paso con error hay que volver a calcular los paréntesis internos desde el inicio, porque el primer paso ya contiene un valor incorrecto que arrastra todo lo que sigue.",
+    "planteamiento": "Se pide en cuál de los cuatro pasos se cometió el error al calcular $\\left(\\frac{4}{5}\\cdot(4\\cdot 3-6)\\right):\\left(\\frac{5}{3}\\cdot(12-2\\cdot 4)\\right)$. Datos: los paréntesis internos son $4\\cdot 3-6$ y $12-2\\cdot 4$.",
+    "steps": [
+     "Resolvemos el primer paréntesis interno con la jerarquía de operaciones: $4\\cdot 3 = 12$ y luego $12-6 = 6$. Por lo tanto, $4\\cdot 3-6 = 6$, no $-12$.",
+     "Resolvemos el segundo paréntesis interno: $2\\cdot 4 = 8$ y luego $12-8 = 4$. Por lo tanto, $12-2\\cdot 4 = 4$, no $40$.",
+     "Con los valores correctos, el paso 1 debería quedar $\\left(\\frac{4}{5}\\cdot 6\\right):\\left(\\frac{5}{3}\\cdot 4\\right)$. El procedimiento del enunciado escribió $\\left(\\frac{4}{5}\\cdot(-12)\\right):\\left(\\frac{5}{3}\\cdot 40\\right)$, así que el error está ya en el paso 1.",
+     "Los pasos 2, 3 y 4 son consistentes con los valores del paso 1 (por ejemplo, $\\frac{4}{5}\\cdot(-12)=-\\frac{48}{5}$ y $\\frac{5}{3}\\cdot 40=\\frac{200}{3}$), por lo que los errores de signo y de valor se originan en el primer paso. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice que el error está en el paso 2, la multiplicación de fracciones. Esa operación se hizo bien dado el paso 1, así que el error no está allí: el paso 2 hereda el valor incorrecto.",
+     "C": "Dice que el error está en el paso 3, la división transformada en multiplicación por el inverso. La regla es correcta; lo que falla es el dato que llega desde el paso 1.",
+     "D": "Dice que el error está en el paso 4, el producto final $-\\frac{18}{125}$. Ese cálculo es correcto con los números que recibe, por lo que la trampa es revisar solo el último resultado."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q04",
@@ -184,7 +217,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que combinar sacos que sumen exactamente 60 kg, calcular el precio de cada combinación y elegir primero la de menor precio y luego la de menor cantidad de sacos.",
+    "planteamiento": "Se pide qué compra conviene según dos criterios en orden: menor precio total y, si hay empate, menor número de sacos. Datos: se necesitan $60$ kg; los sacos cuestan $33\\,500$ pesos (20 kg), $25\\,000$ pesos (15 kg), $20\\,000$ pesos (12 kg) y $10\\,000$ pesos (5 kg).",
+    "steps": [
+     "Calculamos el precio de cada alternativa y comprobamos que sume $60$ kg: A) $12\\cdot 5 = 60$ kg a $12\\cdot 10\\,000 = 120\\,000$ pesos; B) $5\\cdot 12 = 60$ kg a $5\\cdot 20\\,000 = 100\\,000$ pesos; C) $4\\cdot 15 = 60$ kg a $4\\cdot 25\\,000 = 100\\,000$ pesos; D) $3\\cdot 20 = 60$ kg a $3\\cdot 33\\,500 = 100\\,500$ pesos.",
+     "Comparamos el precio total: A cuesta $120\\,000$, D cuesta $100\\,500$, y B y C cuestan ambos $100\\,000$. El menor precio es entonces $100\\,000$ pesos y corresponde a B o C.",
+     "Aplicamos el segundo criterio, la menor cantidad de sacos: B usa $5$ sacos y C usa $4$ sacos, así que C es la mejor opción.",
+     "Verificamos que no haya una combinación mejor con sacos mezclados que sume $60$ kg: $20+20+20$ cuesta $100\\,500$ pesos, y las mezclas con el saco de $5$ kg necesitan muchos sacos. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Doce sacos de 5 kg suman 60 kg, pero cuestan $120\\,000$ pesos. Es la opción más cara, porque el saco de 5 kg tiene el precio por kilo más alto.",
+     "B": "Cinco sacos de 12 kg suman 60 kg y cuestan $100\\,000$ pesos, igual que la correcta. Pierde porque necesita cinco sacos en vez de cuatro, así que la trampa es olvidar el segundo criterio.",
+     "D": "Tres sacos de 20 kg suman 60 kg, pero cuestan $100\\,500$ pesos, más que la correcta. La trampa es elegir por la menor cantidad de sacos sin mirar primero el precio."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q06",
@@ -219,7 +268,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para comparar cuánto tarda cada rutina hay que calcular el tiempo de cada serie completa y multiplicarlo por las repeticiones, no comparar solo los datos sueltos.",
+    "planteamiento": "Se pide qué argumento garantiza que una persona termina antes que la otra. Datos: la primera persona hace series de $2$ min de ejercicio y $30$ s de descanso, $8$ veces; la segunda hace series de $1$ min $30$ s de ejercicio y $15$ s de descanso, $12$ veces.",
+    "steps": [
+     "Pasamos todo a segundos. Primera persona: una serie dura $120 + 30 = 150$ s; con $8$ repeticiones, el total es $150\\cdot 8 = 1\\,200$ s.",
+     "Segunda persona: una serie dura $90 + 15 = 105$ s; con $12$ repeticiones, el total es $105\\cdot 12 = 1\\,260$ s.",
+     "Los tiempos totales son distintos ($1\\,200 \\neq 1\\,260$), por lo que una persona termina antes que la otra. Lo que garantiza esa diferencia es la suma del ejercicio y el descanso de cada serie, multiplicada por las repeticiones.",
+     "Revisamos las alternativas: la correcta dice exactamente que $(\\text{ejercicio}+\\text{descanso})\\cdot\\text{repeticiones}$ es distinto en cada persona, lo que coincide con $1\\,200 \\neq 1\\,260$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Que las repeticiones sean distintas ($8$ y $12$) no garantiza nada por sí solo: el tiempo total depende también de la duración de cada serie. Es una afirmación verdadera pero que no responde a la pregunta.",
+     "B": "Que el descanso sea distinto ($30$ s y $15$ s) tampoco basta, porque la persona con más descanso puede compensarlo con menos ejercicio. No asegura quién termina primero.",
+     "C": "Sumar ejercicio, descanso y repeticiones mezcla unidades (segundos y una cantidad de veces) y no refleja el tiempo real. Esta suma podría ser distinta sin que cambie el orden de término."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q07",
@@ -254,7 +319,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada fracción del enunciado se aplica sobre una base distinta: el primer día sobre la ruta total y el segundo día sobre lo que faltaba. Hay que ir restando en orden.",
+    "planteamiento": "Se pide cuántos kilómetros recorrió el tercer día. Datos: la ruta total mide $30$ km; el primer día recorrió $\\frac{1}{3}$ de la ruta; el segundo día recorrió $\\frac{3}{5}$ de lo que le faltaba.",
+    "steps": [
+     "Primer día: $\\frac{1}{3}\\cdot 30 = 10$ km. Quedan $30 - 10 = 20$ km por recorrer.",
+     "Segundo día: la fracción se aplica a lo que faltaba, no a la ruta total, así que $\\frac{3}{5}\\cdot 20 = \\frac{60}{5} = 12$ km.",
+     "Quedan $20 - 12 = 8$ km para el tercer día.",
+     "Comprobación: $10 + 12 + 8 = 30$ km, que es la ruta completa. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$15$ km es la mitad de la ruta ($30 \\div 2$). Esa cifra no sale de ningún paso del enunciado, porque el tercer día depende del reparto de los dos primeros días.",
+     "B": "$10$ km es lo que se recorrió el primer día. Confunde el tercer día con el primero, pero los $10$ km ya están contados y el tercer día recorre otra cantidad.",
+     "D": "$2$ km se obtiene si el segundo día se calcula como $\\frac{3}{5}$ de la ruta total ($18$ km) en lugar de sobre lo que faltaba: $30 - 10 - 18 = 2$. La trampa es aplicar la fracción sobre la base equivocada."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q09",
@@ -289,7 +370,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas"
+   "subtopic": "m1-areas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que despejar $k$ de la igualdad usando la equivalencia de un kilómetro, dividiendo los centímetros entre $100\\,000$.",
+    "planteamiento": "Se pide la igualdad que da la equivalencia $k$, en kilómetros, de $x$ millas. Datos: $C = 160\\,934\\cdot x$ centímetros, y $1$ km equivale a $100\\,000$ cm.",
+    "steps": [
+     "Un kilómetro tiene $100\\,000$ cm, por lo tanto los centímetros se transforman en kilómetros dividiendo entre $100\\,000$: $k = \\frac{C}{100\\,000}$.",
+     "Reemplazamos $C$ por el modelo: $k = \\frac{160\\,934\\cdot x}{100\\,000}$.",
+     "Esta es la igualdad buscada y no hay que simplificar más, porque la alternativa correcta ya viene escrita en esa forma.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$k = \\frac{100\\,000\\cdot x}{160\\,934}$ invierte la división: pone los centímetros por kilómetro en el numerador y el factor de millas en el denominador. El resultado sería la inversa de la conversión.",
+     "B": "$k = 160\\,934\\cdot x\\cdot 100\\,000$ multiplica en lugar de dividir. Así el número de kilómetros crecería enormemente, cuando en realidad debe disminuir al pasar de centímetros a kilómetros.",
+     "D": "$k = 160\\,934\\cdot x - 100\\,000$ resta en vez de dividir. Una resta no cambia las unidades de forma proporcional, por lo que no es una equivalencia."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q10",
@@ -324,7 +421,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-tendencia"
+   "subtopic": "m1-tendencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La regla de Naegele se aplica en tres partes: sumar $7$ días, restar $3$ meses (que equivale a avanzar al mes siguiente en el ciclo) y, por el cruce de año, sumar un año.",
+    "planteamiento": "Se pide la fecha probable de parto para una última menstruación el $19/04/2022$. Datos: el día se obtiene sumando $7$ días, el mes restando $3$ meses y el año puede aumentar en uno según la fecha.",
+    "steps": [
+     "Día: a la fecha de la última menstruación se le suman $7$ días, así que $19 + 7 = 26$.",
+     "Mes: se restan $3$ meses a abril, así que $4 - 3 = 1$, que corresponde a enero.",
+     "Año: restar tres meses desde abril equivale a sumar nueve meses dentro del ciclo anual ($4 + 9 = 13$). Como $13$ supera diciembre, el mes cae en enero del año siguiente, por lo que el año pasa de $2022$ a $2023$.",
+     "Resultado: $26/01/2023$. Comprobación: desde el $19/04/2022$ han pasado $9$ meses y $7$ días, lo que lleva al $26/01/2023$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$19/01/2023$ conserva el día de la última menstruación y no suma los $7$ días. Olvidar ese paso es el error típico al aplicar la regla.",
+     "C": "$12/01/2023$ resta $7$ días en lugar de sumarlos ($19 - 7 = 12$). Se confunde el sentido de la operación del día.",
+     "D": "$16/01/2023$ no corresponde a ninguna operación de la regla: ni $19 + 7$ ni $19 - 3$. Es un resultado que no sigue el orden de día, mes y año del diagrama."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q11",
@@ -359,7 +472,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si el $20\\,\\%$ de una cantidad es $30$, la cantidad completa se obtiene dividiendo $30$ entre $0{,}20$.",
+    "planteamiento": "Se pide la cantidad total cuyo $20\\,\\%$ es $30$. Datos: $20\\,\\% \\cdot x = 30$.",
+    "steps": [
+     "Escribimos la relación: $\\frac{20}{100}\\cdot x = 30$.",
+     "Simplificamos la fracción: $\\frac{20}{100} = \\frac{1}{5}$, así que $\\frac{1}{5}\\cdot x = 30$.",
+     "Despejamos $x$ multiplicando ambos lados por $5$: $x = 30\\cdot 5 = 150$.",
+     "Comprobación: $20\\,\\%$ de $150$ es $\\frac{20}{100}\\cdot 150 = 30$. Esto confirma que el total buscado es $150$, porque el $20\\,\\%$ es una quinta parte del total y $30$ multiplicado por $5$ da exactamente $150$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$6$ es el resultado de multiplicar $30$ por $0{,}20$. Ese cálculo halla el $20\\,\\%$ de $30$, pero el enunciado da el $20\\,\\%$ y pide el total.",
+     "B": "$50$ no cumple la relación: $20\\,\\%$ de $50$ es $10$, no $30$. Es una cifra sin una operación clara detrás.",
+     "D": "$600$ se obtiene multiplicando $30$ por $20$, lo que invierte el uso del porcentaje. Su $20\\,\\%$ sería $120$, no $30$."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q13",
@@ -394,7 +523,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si $p$ aumentado en un $40\\,\\%$ es $150$, entonces $1{,}4\\cdot p = 150$, y hay que despejar $p$ dividiendo por $1{,}4$ o por $\\frac{140}{100}$.",
+    "planteamiento": "Se pide la expresión que corresponde a $p$. Datos: $p$ aumentado en $40\\,\\%$ es igual a $150$, es decir, $p + \\frac{40}{100}p = 150$.",
+    "steps": [
+     "Factorizamos el aumento: $p + \\frac{40}{100}\\,p = \\left(1+\\frac{40}{100}\\right)p = \\frac{140}{100}\\,p = 150$.",
+     "Despejamos $p$ dividiendo ambos lados por $\\frac{140}{100}$: $p = 150 \\div \\frac{140}{100}$.",
+     "Dividir por una fracción es multiplicar por su inverso: $p = 150\\cdot \\frac{100}{140} = \\frac{100\\cdot 150}{140}$.",
+     "Comprobación: $\\frac{100\\cdot 150}{140}\\approx 107{,}14$, y $107{,}14$ aumentado en $40\\,\\%$ da $107{,}14\\cdot 1{,}4 = 150$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$150 - 40$ resta $40$ unidades en lugar de aumentar $40\\,\\%$. Esa resta no tiene relación con el porcentaje.",
+     "C": "$\\frac{150}{140}$ divide $150$ entre $140$, pero el $140$ corresponde a $1{,}4$ escrito en porcentaje, así que la escala queda mal. El resultado es $\\approx 1{,}07$, que no es $p$.",
+     "D": "$150 - \\frac{40}{100}$ resta solo el $40\\,\\%$ como número ($0{,}4$) y no aplica el aumento sobre $p$. La trampa es confundir aumentar con sumar la fracción."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q15",
@@ -429,7 +574,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-tendencia"
+   "subtopic": "m1-tendencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para verificar cada afirmación hay que sumar las filas y columnas de la tabla y calcular el porcentaje sobre el total correcto de cada grupo.",
+    "planteamiento": "Se pide la afirmación verdadera entre cuatro. Datos: Administración (hombres: $200$ postulantes y $20$ contratados; mujeres: $50$ y $5$) y Talleres (hombres: $50$ y $25$; mujeres: $200$ y $100$).",
+    "steps": [
+     "Totales de hombres: postulantes $200 + 50 = 250$ y contratados $20 + 25 = 45$. Porcentaje contratado: $\\frac{45}{250} = 18\\,\\%$.",
+     "Administración: postulantes $200 + 50 = 250$ y contratados $20 + 5 = 25$. Porcentaje contratado: $\\frac{25}{250} = 10\\,\\%$.",
+     "Mujeres contratadas: $5 + 100 = 105$, de las cuales $5$ son de Administración. Esa proporción es $\\frac{5}{105}\\approx 4{,}76\\,\\%$, no $5\\,\\%$ exacto.",
+     "Talleres: hombres contratados $\\frac{25}{50} = 50\\,\\%$ y mujeres contratadas $\\frac{100}{200} = 50\\,\\%$. Esto coincide con la alternativa D, que es la única verdadera. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Dice que el $9\\,\\%$ de los hombres fue contratado, pero el cálculo correcto da $18\\,\\%$ ($45$ de $250$). Confunde la cifra de contratados con otra parte de la tabla.",
+     "B": "Dice que en Administración se contrató al $20\\,\\%$ de quienes postularon. La cifra real es $10\\,\\%$ ($25$ de $250$); el $20$ es solo el número de hombres contratados.",
+     "C": "Dice exactamente un $5\\,\\%$, pero $\\frac{5}{105}$ es aproximadamente $4{,}76\\,\\%$. La trampa es usar el número $5$ como si fuera el porcentaje."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q17",
@@ -465,7 +626,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con un $20\\,\\%$ de descuento se paga el $80\\,\\%$ del precio, así que el total es tres camisas por $30\\,000$ pesos multiplicadas por $\\frac{80}{100}$.",
+    "planteamiento": "Se pide la expresión del valor total que paga la persona. Datos: tres camisas de $30\\,000$ pesos cada una y un descuento de $20\\,\\%$ en cada compra.",
+    "steps": [
+     "Precio total sin descuento: $3\\cdot 30\\,000$ pesos.",
+     "El descuento es de $20\\,\\%$, por lo que lo que se paga es el $100\\,\\% - 20\\,\\% = 80\\,\\%$, es decir, $\\frac{80}{100}$ del precio.",
+     "Expresión: $3\\cdot 30\\,000\\cdot \\frac{80}{100}$ pesos. Calculando, $3\\cdot 30\\,000 = 90\\,000$ y $90\\,000\\cdot 0{,}8 = 72\\,000$ pesos.",
+     "Comprobación: el descuento total sería $90\\,000 - 72\\,000 = 18\\,000$ pesos, que es el $20\\,\\%$ de $90\\,000$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$3\\cdot 30\\,000\\cdot\\frac{20}{100}$ calcula el descuento ($18\\,000$ pesos), no lo que paga la persona. Es la cantidad ahorrada, no el total.",
+     "C": "$3\\cdot 30\\,000\\cdot\\frac{60}{100}$ equivale a un descuento de $40\\,\\%$, porque deja solo el $60\\,\\%$ del precio. No coincide con el $20\\,\\%$ del enunciado.",
+     "D": "$3\\cdot 30\\,000\\cdot\\frac{40}{100}$ equivale a un descuento de $60\\,\\%$. Es un error de cálculo sobre el porcentaje que se paga."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q21",
@@ -500,7 +677,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para comparar $\\frac{2}{\\sqrt{2}}$ con las alternativas hay que racionalizar o simplificar la raíz en el denominador.",
+    "planteamiento": "Se pide qué número es igual a $\\frac{2}{\\sqrt{2}}$. Datos: el numerador es $2$ y el denominador es $\\sqrt{2}$.",
+    "steps": [
+     "Multiplicamos numerador y denominador por $\\sqrt{2}$ para quitar la raíz del denominador: $\\frac{2}{\\sqrt{2}}\\cdot\\frac{\\sqrt{2}}{\\sqrt{2}} = \\frac{2\\sqrt{2}}{\\sqrt{2}\\cdot\\sqrt{2}}$.",
+     "Como $\\sqrt{2}\\cdot\\sqrt{2} = 2$, el denominador queda $2$: $\\frac{2\\sqrt{2}}{2}$.",
+     "Simplificamos el factor $2$ entre numerador y denominador: $\\frac{2\\sqrt{2}}{2} = \\sqrt{2}$.",
+     "Comprobación numérica: $\\frac{2}{1{,}414}\\approx 1{,}414$, que es $\\sqrt{2}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$2\\sqrt{2}\\approx 2{,}83$ es el doble de la respuesta. Ocurre si se multiplica por $2$ en lugar de dividir entre $\\sqrt{2}$.",
+     "B": "$2$ no es igual a $\\sqrt{2}$, porque $\\frac{2}{\\sqrt{2}}$ es menor que $2$. La trampa es cancelar el $2$ del numerador con la raíz.",
+     "D": "$2-\\sqrt{2}\\approx 0{,}59$ resta en lugar de dividir. Un resta no reemplaza a una división entre $\\sqrt{2}$."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q23",
@@ -535,7 +728,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El insecticida multiplica la población por $\\frac{2}{5}$ cada semana; hay que aplicarlo semana a semana hasta que queden $64$ o menos insectos y luego sumar el día adicional.",
+    "planteamiento": "Se pide cuántos días se necesitan para acabar con la plaga. Datos: la plaga inicial es de $1\\,000$ insectos; cada semana la cantidad queda en $\\frac{2}{5}$ de la que había al comenzar esa semana; se requiere un día más cuando quedan $64$ o menos.",
+    "steps": [
+     "Inicio: $1\\,000$ insectos. Después de la primera semana: $\\frac{2}{5}\\cdot 1\\,000 = 400$ insectos.",
+     "Después de la segunda semana: $\\frac{2}{5}\\cdot 400 = 160$ insectos. Aún son más de $64$.",
+     "Después de la tercera semana: $\\frac{2}{5}\\cdot 160 = 64$ insectos. Como quedan $64$ o menos, se necesita un día más.",
+     "Tres semanas son $3\\cdot 7 = 21$ días; el día adicional lleva el total a $21 + 1 = 22$ días. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$21$ días es la duración de las tres semanas, pero se detiene justo cuando quedan $64$ insectos. Olvida el día extra que el enunciado exige en esa situación.",
+     "C": "$42$ días corresponde a seis semanas. Aplica el factor a cada día en vez de a cada semana, o cuenta dos semanas por cada una de las tres aplicaciones.",
+     "D": "$43$ días suma dos días extra en vez de uno. El enunciado pide solo un día adicional cuando quedan $64$ o menos insectos."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q24",
@@ -570,7 +779,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como $x^2 - x - 30$ se puede factorizar, el factor $(x+5)$ se cancela y queda el valor de $P$.",
+    "planteamiento": "Se pide la expresión igual a $P$. Datos: $(x+5)\\cdot P = x^2 - x - 30$, con $x \\neq -5$.",
+    "steps": [
+     "Buscamos dos números que multiplicados den $-30$ y sumados den $-1$: son $-6$ y $+5$. Por lo tanto, $x^2 - x - 30 = (x-6)(x+5)$.",
+     "Reemplazamos en la igualdad: $(x+5)\\cdot P = (x-6)(x+5)$.",
+     "Como $x \\neq -5$, el factor $(x+5)$ es distinto de cero y se puede dividir en ambos lados: $P = x - 6$.",
+     "Comprobación: $(x+5)(x-6) = x^2 - 6x + 5x - 30 = x^2 - x - 30$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$x - 35$ no multiplicado por $(x+5)$ da $x^2 - 30x - 175$, distinto del numerador. Es un intento de factorizar mal, sumando $-30$ y $-5$.",
+     "B": "$x^2 - 6$ no es el cociente, porque $(x+5)(x^2-6)$ tiene grado $3$. Mezcla el término $x^2$ del enunciado sin dividir por el factor correcto.",
+     "C": "$x + 6$ corresponde a usar el signo incorrecto en el factor $(x-6)$. Al multiplicar, $(x+5)(x+6) = x^2 + 11x + 30$, que no coincide con el enunciado."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q25",
@@ -605,7 +830,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que aplicar la propiedad distributiva con el signo negativo del $3$ y luego reducir términos semejantes.",
+    "planteamiento": "Se pide la expresión equivalente a $b - 3(b-1)$. Datos: el término $-3$ multiplica al paréntesis $(b-1)$.",
+    "steps": [
+     "Aplicamos la propiedad distributiva: $-3\\cdot(b-1) = -3\\cdot b + (-3)\\cdot(-1)$.",
+     "Calculamos cada producto: $-3\\cdot b = -3b$ y $(-3)\\cdot(-1) = +3$, porque un negativo por un negativo da positivo.",
+     "Reemplazamos: $b - 3b + 3$.",
+     "Reducimos términos semejantes: $b - 3b = -2b$, por lo que la expresión es $-2b + 3$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$-2b - 1$ aparece por escribir $(-3)\\cdot(-1) = -1$. El producto de dos negativos es positivo, así que el término constante debe ser $+3$.",
+     "C": "$-2b + 1$ también tiene un error en la constante: escribe $+1$ en lugar de $+3$, por no multiplicar $-3$ por $-1$.",
+     "D": "$-2b - 3$ cambia el signo de la constante a negativo. Es el mismo error de signo de la distributiva, aplicado con $-3$ en vez de $+3$."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q26",
@@ -640,7 +881,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la relación es lineal, el precio por kilo de cada fruta es el precio del saco dividido por $20$ kg, y el total para $x$ kg de cada una se suma por separado.",
+    "planteamiento": "Se pide la expresión del precio total al comprar $x$ kg de cada fruta. Datos: $20$ kg de naranjas cuestan $16\\,000$ pesos y $20$ kg de manzanas cuestan $18\\,000$ pesos.",
+    "steps": [
+     "Precio por kilo de las naranjas: $\\frac{16\\,000}{20}$ pesos. Para $x$ kg cuesta $\\frac{16\\,000}{20}\\cdot x$ pesos.",
+     "Precio por kilo de las manzanas: $\\frac{18\\,000}{20}$ pesos. Para $x$ kg cuesta $\\frac{18\\,000}{20}\\cdot x$ pesos.",
+     "El total es la suma de ambos montos: $\\left(\\frac{16\\,000}{20}+\\frac{18\\,000}{20}\\right)\\cdot x$ pesos.",
+     "Comprobación: con $x = 20$, la expresión da $16\\,000 + 18\\,000 = 34\\,000$ pesos, que es el costo de comprar $20$ kg de cada fruta. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\left(\\frac{20\\cdot 16\\,000}{x}+\\frac{20\\cdot 18\\,000}{x}\\right)$ divide por $x$ en lugar de multiplicar. Con $x=20$ daría un valor absurdo.",
+     "C": "$16\\,000\\cdot x + 18\\,000\\cdot x$ supone que $16\\,000$ y $18\\,000$ son precios por kilo, pero son precios de $20$ kg. El resultado queda $20$ veces más caro.",
+     "D": "$x$ solo indica que el total depende de $x$ y no entrega la cantidad de dinero. Es incompleta, porque no suma ni considera los precios de cada fruta."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q27",
@@ -675,7 +932,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El dinero que sobra es el monto disponible menos el costo total de los $18$ yogures.",
+    "planteamiento": "Se pide la expresión del dinero que le sobra. Datos: cada yogur cuesta $M$ pesos, compra $18$ yogures y lleva $P$ pesos.",
+    "steps": [
+     "El costo de los $18$ yogures es $18\\cdot M$ pesos, porque cada uno cuesta $M$ pesos.",
+     "El dinero disponible es $P$ pesos.",
+     "El dinero que sobra es lo disponible menos lo gastado: $P - 18\\cdot M$ pesos.",
+     "Como el monto alcanza para comprar los yogures, esa diferencia es positiva o nula, y la expresión describe exactamente el dinero que le queda a la persona al terminar la compra. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{18\\cdot M}{P}$ divide el costo entre el dinero disponible, lo que da una proporción y no una cantidad de pesos.",
+     "C": "$P - M$ resta solo el precio de un yogur, por lo que supone que compra un solo yogur y no $18$.",
+     "D": "$M$ es el precio de un yogur, no el dinero sobrante. La trampa es responder con un dato del enunciado."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q28",
@@ -710,7 +983,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como $2$ pulgadas equivalen a $5{,}1$ cm, hay que hallar cuántas veces entra esa equivalencia en $43{,}2$ cm usando una regla de tres.",
+    "planteamiento": "Se pide la medida del objeto en pulgadas. Datos: la longitud es $43{,}2$ cm y $2$ pulgadas son aproximadamente $5{,}1$ cm.",
+    "steps": [
+     "Calculamos cuántos centímetros tiene una pulgada: $\\frac{5{,}1}{2} = 2{,}55$ cm por pulgada.",
+     "Dividimos la longitud entre la equivalencia: $\\frac{43{,}2}{2{,}55} \\approx 16{,}94$ pulgadas.",
+     "Como la medida se aproxima, $16{,}94$ se redondea a $17$ pulgadas.",
+     "Comprobación: $17\\cdot 2{,}55 = 43{,}35$ cm, muy cercano a $43{,}2$ cm. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$2$ pulgadas es la cifra de la equivalencia, no la medida del objeto. Confunde el dato de conversión con el resultado.",
+     "B": "$5$ pulgadas corresponde a tomar la parte entera de $5{,}1$ cm como si fuera la medida en pulgadas, sin hacer la conversión.",
+     "D": "$108$ pulgadas se obtiene multiplicando $43{,}2$ por $2{,}5$. Esa multiplicación invierte la equivalencia, porque cada pulgada tiene menos de $3$ cm."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q29",
@@ -745,7 +1034,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-tendencia"
+   "subtopic": "m1-tendencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La etiqueta indica $20$ mL por cada litro de agua. Hay que pasar los $5$ litros a mililitros, calcular cuánto desinfectante corresponde y luego dividirlo por la capacidad de la jeringa.",
+    "planteamiento": "Se pide cuántas veces hay que vaciar la jeringa de $5$ mL en un balde de $5$ litros. Datos: $20$ mL de desinfectante se diluyen en $1$ litro de agua; la jeringa carga $5$ mL.",
+    "steps": [
+     "Pasamos los litros a mililitros: $5$ L $= 5\\,000$ mL de agua.",
+     "Como $1$ L $= 1\\,000$ mL requiere $20$ mL de desinfectante, $5$ L requieren $5\\cdot 20 = 100$ mL.",
+     "Cada vez que se vacía la jeringa llena se añaden $5$ mL, así que se necesitan $\\frac{100}{5} = 20$ vaciados.",
+     "Comprobación: $20\\cdot 5 = 100$ mL, que es la cantidad requerida. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$5$ veces es la cantidad de litros de agua. Confunde los litros con el número de vaciados, sin convertir la cantidad de desinfectante.",
+     "C": "$25$ veces supone $5$ mL por cada litro en vez de $20$ mL por cada litro, lo que da $25$ mL y $5$ vaciados. Usa la proporción equivocada.",
+     "D": "$100$ veces toma los $100$ mL de desinfectante como número de vaciados. Olvida dividir entre los $5$ mL que cabe en la jeringa."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q31",
@@ -780,7 +1085,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ecuación debe incluir las tres botellas de jugo a precio $x$ y las tres botellas de bebida a precio $x+390$, con el total igual a $16\\,770$ pesos.",
+    "planteamiento": "Se pide la ecuación que permite hallar el precio $x$ de una botella de jugo. Datos: tres botellas de jugo a $x$ pesos, tres botellas de bebida a $x+390$ pesos y gasto total de $16\\,770$ pesos.",
+    "steps": [
+     "El precio de una botella de bebida es $390$ pesos más que el jugo: si el jugo cuesta $x$, la bebida cuesta $x+390$.",
+     "El gasto en jugos es $3x$ pesos.",
+     "El gasto en bebidas es $3\\cdot(x+390)$ pesos, porque son tres botellas al precio de la bebida.",
+     "La suma debe ser el total: $3x + 3(x+390) = 16\\,770$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$3x + 390 = 16\\,770$ incluye solo una botella de bebida y no tres. Ignora que cada una de las tres bebidas cuesta $390$ pesos más que el jugo.",
+     "B": "$6x + 390 = 16\\,770$ suma las seis botellas al mismo precio $x$ y solo agrega $390$ una vez. No representa las tres bebidas a precio $x+390$.",
+     "D": "$3x + 3(x-390) = 16\\,770$ resta $390$ en lugar de sumarlo. La bebida es más cara que el jugo, así que el signo es positivo."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q32",
@@ -815,7 +1136,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-triangulos"
+   "subtopic": "m1-triangulos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el triángulo de Pascal cada casilla es la suma de las dos superiores, así que se pueden calcular $x$ y $p$ con las filas completas.",
+    "planteamiento": "Se pide $x$ en términos de $p$. Datos: las filas superiores son $1$, $1\\ 1$, $1\\ 2\\ 1$, $1\\ 3\\ 3\\ 1$, $1\\ 4\\ 6\\ 4\\ 1$ y en la fila $6$ aparecen $1$, $5$, $x$, $5$, $1$; en la fila $7$, $15$, $p$, $15$.",
+    "steps": [
+     "Fila 6 completa: cada casilla es la suma de las dos de arriba. Entre $4$ y $6$ va $4+6 = 10$, así que $x = 10$. La casilla de la derecha también es $10$ ($6+4$).",
+     "Fila 7: los extremos son $1$ y la casilla siguiente es $1+5 = 6$. Entre $5$ y $10$ está la casilla $5+10 = 15$, y entre $10$ y $5$ la casilla $10+5 = 15$, lo que confirma la fila.",
+     "La casilla $p$ se forma con las dos casillas de la fila 6 que están justo arriba de ella, que son $10$ y $10$: $p = 10 + 10 = 20$.",
+     "Con $p = 20$, la relación $x = p - 10$ da $20 - 10 = 10$, que coincide con $x = 10$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$p - 15$ daría $5$ cuando $x$ vale $10$. Resta el valor $15$ de la fila 7, que no es la casilla que se calcula.",
+     "C": "$p + 10$ daría $30$ y no coincide con el valor $10$ de $x$. Suma en vez de restar.",
+     "D": "$p + 15$ daría $35$, que está muy lejos de $10$. Confunde la casilla $p$ con la suma de dos casillas de $15$."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q33",
@@ -850,7 +1187,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-ecuaciones"
+   "subtopic": "m1-ecuaciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada anotación de tres puntos vale $3$ puntos y las de dos puntos suman $5 \\cdot 2 = 10$, así que el total de $37$ se descompone en esos dos aportes.",
+    "planteamiento": "Se pide la ecuación que permite determinar la cantidad de anotaciones de tres puntos. Datos: $5$ anotaciones de dos puntos, $x$ anotaciones de tres puntos y un total de $37$ puntos.",
+    "steps": [
+     "Puntos de las anotaciones de dos puntos: $5\\cdot 2 = 10$.",
+     "Puntos de las anotaciones de tres puntos: $x$ anotaciones que valen $3$ cada una, es decir, $3x$.",
+     "La suma de ambos aportes debe ser el total: $3x + 10 = 37$.",
+     "Comprobación: si $x = 9$, entonces $3\\cdot 9 + 10 = 37$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$x + 5 = 37$ cuenta cada anotación de tres puntos como un punto y las de dos puntos como un punto cada una. No respeta los valores del básquetbol.",
+     "B": "$x + 10 = 37$ usa $1$ punto por cada anotación de tres puntos y $10$ para las de dos. El valor de tres puntos no está considerado.",
+     "C": "$3x + 5 = 37$ suma solo $5$ puntos por las anotaciones de dos puntos, en vez de $5\\cdot 2 = 10$. Es un error de multiplicación."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q34",
@@ -885,7 +1238,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tomás paga todas las entradas, incluida la suya, y además los $4$ extras de la atracción; la ecuación suma ambos gastos e iguala el total de $31\\,000$ pesos.",
+    "planteamiento": "Se pide la ecuación para el precio $x$ de cada entrada. Datos: son cinco personas en total (Tomás y cuatro amigos), cada una paga una entrada de $x$ pesos; cuatro personas deben $4\\,000$ pesos extra por la atracción y Tomás pagó $31\\,000$ pesos.",
+    "steps": [
+     "Las entradas: como Tomás paga las entradas de las cinco personas, el gasto es $5x$ pesos.",
+     "La atracción: todos menos Lucas entraron, es decir, cuatro personas, y cada una debe $4\\,000$ pesos. El gasto de la atracción es $4\\cdot 4\\,000 = 16\\,000$ pesos.",
+     "El total que pagó Tomás es la suma: $4\\,000\\cdot 4 + 5x = 31\\,000$.",
+     "Comprobación: si $x = 3\\,000$, el total es $16\\,000 + 15\\,000 = 31\\,000$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$4\\,000\\cdot 4 + 3x = 31\\,000$ cuenta solo tres entradas en vez de cinco. Olvida que Tomás y sus cuatro amigos pagan la entrada.",
+     "C": "$4\\,000\\cdot 5 + 4x = 31\\,000$ supone que cinco personas pagan la atracción, pero Lucas no entró a ella, y cuenta cuatro entradas.",
+     "D": "$4\\,000\\cdot 5 + 5x = 31\\,000$ hace pagar la atracción a las cinco personas. Contradice el mensaje del chat, donde todos menos Lucas entraron."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q35",
@@ -920,7 +1289,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-ecuaciones"
+   "subtopic": "m1-ecuaciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para hallar los chirridos hay que reemplazar la temperatura en la ecuación y despejar $n$ paso a paso, primero quitando el $10$ y luego multiplicando por $7$.",
+    "planteamiento": "Se pide la cantidad $n$ de chirridos por minuto cuando la temperatura es de $20\\,^\\circ\\text{C}$. Datos: $T = 10 + \\frac{n-40}{7}$ y $T = 20$.",
+    "steps": [
+     "Reemplazamos la temperatura: $20 = 10 + \\frac{n-40}{7}$.",
+     "Restamos $10$ en ambos lados para aislar la fracción: $10 = \\frac{n-40}{7}$.",
+     "Multiplicamos ambos lados por $7$ para eliminar el denominador: $70 = n - 40$.",
+     "Sumamos $40$ en ambos lados: $n = 70 + 40 = 110$.",
+     "Comprobación: $T = 10 + \\frac{110-40}{7} = 10 + \\frac{70}{7} = 10 + 10 = 20\\,^\\circ\\text{C}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$8$ chirridos no cumple la ecuación: $10 + \\frac{8-40}{7}\\approx 10 - 4{,}57 = 5{,}43\\,^\\circ\\text{C}$, muy lejos de $20\\,^\\circ\\text{C}$.",
+     "B": "$30$ chirridos da $10 + \\frac{30-40}{7}\\approx 8{,}57\\,^\\circ\\text{C}$. Es un valor cercano al de la ecuación en otro punto, pero no a $20\\,^\\circ\\text{C}$; se obtiene al no multiplicar bien por $7$.",
+     "D": "$170$ chirridos da $10 + \\frac{170-40}{7}\\approx 28{,}6\\,^\\circ\\text{C}$, que supera la temperatura pedida. Es un error al despejar, porque se suma $40$ al lado equivocado."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q36",
@@ -955,7 +1341,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-ecuaciones"
+   "subtopic": "m1-ecuaciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La venta total debe superar $500\\,000$ pesos: los $40$ primeros registros aportan una cantidad fija y las plantas que faltan se suman a $4\\,500$ pesos cada una.",
+    "planteamiento": "Se pide la inecuación para la cantidad $x$ de plantas que debe vender en la segunda mitad del mes. Datos: precio de $3\\,500$ pesos en la primera mitad, $40$ plantas ya vendidas, precio de $4\\,500$ pesos después, y meta de más de $500\\,000$ pesos.",
+    "steps": [
+     "Ventas de la primera mitad: $40$ plantas a $3\\,500$ pesos cada una, es decir, $40\\cdot 3\\,500$ pesos.",
+     "Ventas de la segunda mitad: $x$ plantas a $4\\,500$ pesos cada una, es decir, $4\\,500\\cdot x$ pesos.",
+     "La venta total es la suma: $40\\cdot 3\\,500 + 4\\,500\\cdot x$ pesos.",
+     "La meta es superar los $500\\,000$ pesos, así que la venta total debe ser mayor: $40\\cdot 3\\,500 + 4\\,500\\cdot x > 500\\,000$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$40\\cdot 3\\,500\\,x + 4\\,500 < 500\\,000$ multiplica $x$ por $3\\,500$ dentro del término de la primera mitad y suma $4\\,500$ sin multiplicar. Además usa el signo menor, que indica que no se alcanza la meta.",
+     "B": "$40\\cdot 3\\,500\\,x + 4\\,500 > 500\\,000$ tiene el signo correcto, pero la estructura está mal: el $x$ multiplica al precio de la primera mitad y el precio de $4\\,500$ pesos no acompaña a $x$.",
+     "C": "$40\\cdot 3\\,500 + 4\\,500\\,x < 500\\,000$ tiene la estructura correcta, pero usa el signo menor. Eso significaría que la venta queda por debajo de la meta, lo contrario de lo que se pide."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q38",
@@ -990,7 +1392,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-porcentajes"
+   "subtopic": "m1-porcentajes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que comparar los costos mensuales de ambas empresas según la cantidad de bidones y encontrar desde qué número la segunda empresa resulta más barata.",
+    "planteamiento": "Se pide la cantidad mínima de bidones para que convenga la segunda empresa. Datos: primera empresa: suscripción de $2\\,000$ pesos y $1\\,800$ pesos por bidón; segunda empresa: suscripción de $2\\,500$ pesos y $1\\,600$ pesos por bidón.",
+    "steps": [
+     "Costo mensual con la primera empresa, si se compran $x$ bidones: $2\\,000 + 1\\,800x$ pesos.",
+     "Costo mensual con la segunda empresa: $2\\,500 + 1\\,600x$ pesos.",
+     "La segunda conviene cuando su costo es menor: $2\\,500 + 1\\,600x < 2\\,000 + 1\\,800x$.",
+     "Restamos $1\\,600x$ y $2\\,000$ en ambos lados: $500 < 200x$, luego $x > 2{,}5$.",
+     "Como $x$ es un número entero de bidones, el mínimo es $x = 3$. Comprobación: con $3$ bidones, la primera cuesta $7\\,400$ pesos y la segunda $7\\,300$ pesos; con $2$ bidones, la primera cuesta $5\\,600$ y la segunda $5\\,700$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Con $1$ bidón, la primera empresa cuesta $3\\,800$ pesos y la segunda $4\\,100$ pesos. La segunda es más cara, así que no conviene.",
+     "B": "Con $2$ bidones, la primera cuesta $5\\,600$ pesos y la segunda $5\\,700$ pesos. Por poco la segunda sigue siendo más cara, porque la ventaja de precio por bidón todavía no compensa la suscripción mayor.",
+     "D": "Con $4$ bidones la segunda empresa sí conviene, pero no es la cantidad mínima. La trampa es elegir un valor que cumple la condición sin revisar si hay uno menor."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q42",
@@ -1025,7 +1444,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-cuadratica"
+   "subtopic": "m1-cuadratica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si $b$ y $c$ son cero, la función queda $f(x) = ax^2$: una parábola con vértice en el origen, simétrica respecto al eje $Y$.",
+    "planteamiento": "Se pide qué gráfico podría corresponder a $f$. Datos: $f(x) = ax^2 + bx + c$ con $b = 0$ y $c = 0$, de modo que $f(x) = ax^2$.",
+    "steps": [
+     "Al reemplazar $b = 0$ y $c = 0$, la función se reduce a $f(x) = ax^2$.",
+     "Evaluamos en $x = 0$: $f(0) = a\\cdot 0 = 0$. Por lo tanto, la gráfica pasa por el origen $(0, 0)$ y el vértice está en el origen.",
+     "La función es simétrica respecto al eje $Y$ porque solo tiene término cuadrático: $f(-x) = f(x)$.",
+     "Por lo tanto, el gráfico debe ser una parábola con vértice en $(0,0)$, con el eje de simetría sobre el eje $Y$ y con la concavidad dada por el signo de $a$. Solo la opción B tiene el vértice en el origen. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La parábola de A tiene su vértice sobre el eje $Y$, pero por encima del origen. Eso requiere un término constante $c \\neq 0$, que no está permitido por el enunciado.",
+     "C": "La parábola de C tiene el vértice desplazado hacia la derecha del eje $Y$, lo que supone un término lineal $bx$ distinto de cero, contra lo que indica el enunciado.",
+     "D": "La parábola de D tiene el vértice sobre el eje $Y$, pero por debajo del eje $X$. Esto indica un término constante negativo, por lo que $c \\neq 0$."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q44",
@@ -1060,7 +1495,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-tendencia"
+   "subtopic": "m1-tendencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El promedio es la suma de todas las notas dividida por la cantidad de notas, que aquí son cuatro.",
+    "planteamiento": "Se pide la expresión del promedio con la cuarta nota $x$. Datos: las tres notas conocidas son $5$, $6$ y $4$, y son cuatro pruebas en total.",
+    "steps": [
+     "Sumamos las tres notas conocidas: $5 + 6 + 4 = 15$.",
+     "Agregamos la cuarta nota $x$: la suma total es $15 + x$.",
+     "Dividimos entre la cantidad de notas, que es $4$: el promedio es $\\frac{15 + x}{4}$.",
+     "Comprobación: si $x = 5$, el promedio es $\\frac{20}{4} = 5$, lo que coincide con dividir cuatro notas. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{15+x}{2}$ divide entre dos, como si hubiera solo dos notas. Olvida que el estudiante rinde cuatro pruebas.",
+     "C": "$\\frac{5+x}{2}$ toma solo la primera nota y la cuarta, y divide entre dos. Deja fuera las notas $6$ y $4$.",
+     "D": "$\\frac{15+x}{3}$ divide entre tres, es decir, la cantidad de notas conocidas. La cuarta nota forma parte del promedio, así que el divisor debe ser cuatro."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q47",
@@ -1095,7 +1546,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-tendencia"
+   "subtopic": "m1-tendencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como hombres y mujeres son igual de numerosos, hay que obtener el número de mujeres a partir de los porcentajes y sumarlo a los votos de los hombres por candidato.",
+    "planteamiento": "Se pide la tabla con la intención total de votos. Datos: hombres por candidato: Ana $45$, Juan $38$, Sofía $35$ y Carlos $32$; mujeres: Ana $16\\,\\%$, Juan $24\\,\\%$, Sofía $36\\,\\%$ y Carlos $24\\,\\%$; hay igual número de hombres y mujeres.",
+    "steps": [
+     "Total de hombres encuestados: $45 + 38 + 35 + 32 = 150$.",
+     "Como hay igual cantidad de mujeres, también son $150$. Sus votos se calculan con los porcentajes: Ana $0{,}16\\cdot 150 = 24$; Juan $0{,}24\\cdot 150 = 36$; Sofía $0{,}36\\cdot 150 = 54$; Carlos $0{,}24\\cdot 150 = 36$.",
+     "Sumamos hombres y mujeres por candidato: Ana $45 + 24 = 69$; Juan $38 + 36 = 74$; Sofía $35 + 54 = 89$; Carlos $32 + 36 = 68$.",
+     "Comprobación: $69 + 74 + 89 + 68 = 300 = 150 + 150$, que es el total de personas encuestadas. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La tabla suma el porcentaje como si fuera un número de votos: Ana $45 + 16 = 61$, Juan $38 + 24 = 62$, Sofía $35 + 36 = 71$ y Carlos $32 + 24 = 56$. Mezcla unidades distintas.",
+     "B": "Los valores no corresponden a la suma de hombres y mujeres. Por ejemplo, Carlos aparece con $45$, pero tiene $32$ hombres y $36$ mujeres, que suman $68$.",
+     "C": "La tabla suma más votos de los que hay en la encuesta: su total es $744$, y debería ser $300$ porque son $150$ hombres y $150$ mujeres. Además Carlos aparece con $300$, que es el total de todos."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q48",
@@ -1130,7 +1597,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-tendencia"
+   "subtopic": "m1-tendencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como el promedio de cinco números es la suma dividida por cinco, la suma total debe ser $5\\cdot 73 = 365$; el valor de $x$ es lo que falta para llegar a esa suma.",
+    "planteamiento": "Se pide el valor de $x$. Datos: los números son $68$, $x$, $75$, $80$ y $70$, con promedio $73$.",
+    "steps": [
+     "Planteamos el promedio: $\\frac{68 + x + 75 + 80 + 70}{5} = 73$.",
+     "Multiplicamos por $5$ para obtener la suma total: $68 + x + 75 + 80 + 70 = 365$.",
+     "Sumamos los números conocidos: $68 + 75 + 80 + 70 = 293$, así que $293 + x = 365$.",
+     "Despejamos $x = 365 - 293 = 72$. Comprobación: $68 + 72 + 75 + 80 + 70 = 365$ y $\\frac{365}{5} = 73$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$73{,}25$ daría una suma de $366{,}25$, que no es $365$. Se obtiene al dividir mal la suma o al redondear un promedio intermedio.",
+     "B": "$73$ daría una suma de $366$, porque $293 + 73 = 366$. Es el mismo promedio que el enunciado, pero tomado como valor de $x$ en vez de despejarlo.",
+     "D": "$58{,}6$ daría una suma de $351{,}6$ y un promedio cercano a $70{,}3$, no $73$. Es un valor sin relación con la suma necesaria."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q49",
@@ -1165,7 +1648,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-tendencia"
+   "subtopic": "m1-tendencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para evaluar cada argumento hay que calcular el promedio, el rango y la moda con las frecuencias de la tabla, y revisar que la justificación de cada alternativa sea correcta.",
+    "planteamiento": "Se pide el argumento verdadero. Datos: valores $1$ a $6$ con frecuencias $10$, $8$, $5$, $5$, $8$ y $10$, es decir, $46$ jóvenes en total.",
+    "steps": [
+     "Suma total de videojuegos: $1\\cdot 10 + 2\\cdot 8 + 3\\cdot 5 + 4\\cdot 5 + 5\\cdot 8 + 6\\cdot 10 = 10 + 16 + 15 + 20 + 40 + 60 = 161$.",
+     "Promedio: $\\frac{161}{46} = 3{,}5$. Por lo tanto, el promedio es $3{,}5$, no $5{,}3$.",
+     "Rango: la diferencia entre el valor mayor y el menor es $6 - 1 = 5$. Pero el rango se calcula con los valores de la variable, no con las frecuencias.",
+     "Moda: los valores con mayor frecuencia son $1$ y $6$, ambos con $10$ jóvenes. Por lo tanto, la moda es $1$ y $6$, y la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El promedio $3{,}5$ es numéricamente correcto, pero la justificación es falsa: no es el promedio de los datos centrales, sino de todos los datos ponderados por su frecuencia.",
+     "B": "El rango $5$ es numéricamente correcto, pero se justifica mal: $10 - 5$ son frecuencias, no valores de la variable. El rango es $6 - 1$.",
+     "C": "El promedio $3{,}5$ es correcto, pero no se obtiene como promedio entre el mayor y el menor valor. Eso daría $(1+6)/2 = 3{,}5$ por casualidad, sin probar que sea el promedio de la tabla."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q51",
@@ -1200,7 +1699,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-probabilidad"
+   "subtopic": "m1-probabilidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La probabilidad de un suceso es el número de casos favorables dividido por el total de casos posibles.",
+    "planteamiento": "Se pide la probabilidad de elegir a una persona que prefiera rock. Datos: rock $7$, pop $4$, rap $3$ y reguetón $6$.",
+    "steps": [
+     "Total de personas encuestadas: $7 + 4 + 3 + 6 = 20$.",
+     "Casos favorables: las personas que prefieren rock, $7$.",
+     "Probabilidad: $\\frac{7}{20}$.",
+     "Comprobación: $\\frac{7}{20} = 0{,}35$, un número entre $0$ y $1$, y la suma de las probabilidades de las cuatro preferencias debe dar $1$: $\\frac{7}{20} + \\frac{4}{20} + \\frac{3}{20} + \\frac{6}{20} = \\frac{20}{20} = 1$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{1}{7}$ invierte la relación entre favorables y totales y no se obtiene de la tabla. No representa la fracción de personas que prefieren rock.",
+     "B": "$\\frac{7}{13}$ compara el rock solo con el reguetón ($7 + 6 = 13$). Usa un total que no incluye a todos los encuestados.",
+     "C": "$\\frac{13}{20}$ es la probabilidad de no preferir rock ($20 - 7 = 13$). Responde a otra pregunta, la del complemento."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q52",
@@ -1235,7 +1750,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-probabilidad"
+   "subtopic": "m1-probabilidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La probabilidad de elegir a alguien que estudie una carrera de salud es los casos de salud dividido por el total de personas encuestadas.",
+    "planteamiento": "Se pide la expresión que da la probabilidad de que la persona prefiera una carrera del área de la salud. Datos: ingeniería civil $900$, periodismo $300$, medicina $700$ y enfermería $400$.",
+    "steps": [
+     "Total de personas: $900 + 300 + 700 + 400 = 2\\,300$.",
+     "Casos favorables: las carreras de salud son medicina y enfermería, con $700 + 400 = 1\\,100$ personas.",
+     "Probabilidad: $\\frac{\\text{Frecuencia medicina} + \\text{Frecuencia enfermería}}{2\\,300}$.",
+     "Comprobación: $\\frac{1\\,100}{2\\,300}\\approx 0{,}478$, un valor razonable entre $0$ y $1$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Divide entre $1\\,100$, que es el número de casos favorables y no el total. Así la probabilidad resultaría mayor que $1$.",
+     "C": "$1 - \\frac{\\text{medicina}+\\text{enfermería}}{2\\,300}$ calcula la probabilidad de no estudiar una carrera de salud, es decir, el complemento.",
+     "D": "$1 - \\frac{\\text{medicina}+\\text{enfermería}}{1\\,100}$ mezcla el complemento con el total equivocado y da $0$, porque la fracción vale $1$."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q53",
@@ -1271,7 +1802,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-probabilidad"
+   "subtopic": "m1-probabilidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que contar las bolitas grises y el total de cada caja, y buscar la caja donde la proporción de grises sea mayor que $0{,}5$ y menor que $1$.",
+    "planteamiento": "Se pide la caja en que la probabilidad de sacar una bolita gris cumple $0{,}5 < P < 1$. Datos: en la figura se ven las cuatro cajas con sus bolitas grises y blancas.",
+    "steps": [
+     "Caja 1: $6$ grises y $0$ blancas, con $6$ bolitas en total. La probabilidad es $\\frac{6}{6} = 1$, que no es menor que $1$.",
+     "Caja 2: $3$ grises y $3$ blancas, con $6$ bolitas. La probabilidad es $\\frac{3}{6} = 0{,}5$, que no es mayor que $0{,}5$.",
+     "Caja 3: $2$ grises y $4$ blancas, con $6$ bolitas. La probabilidad es $\\frac{2}{6}\\approx 0{,}33$, que no es mayor que $0{,}5$.",
+     "Caja 4: $4$ grises y $2$ blancas, con $6$ bolitas. La probabilidad es $\\frac{4}{6}\\approx 0{,}67$, que cumple $0{,}5 < P < 1$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La Caja 1 tiene probabilidad $1$, porque todas sus bolitas son grises. El enunciado exige que sea menor que $1$, así que no cumple.",
+     "B": "La Caja 2 tiene exactamente la mitad de bolitas grises. La probabilidad es $0{,}5$, pero el enunciado pide que sea mayor que $0{,}5$.",
+     "C": "La Caja 3 tiene más blancas que grises, por lo que su probabilidad es cercana a $0{,}33$. Está por debajo del límite inferior."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q54",
@@ -1306,7 +1853,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-probabilidad"
+   "subtopic": "m1-probabilidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La probabilidad de que la fruta preferida sea pera o naranja es el número de personas que eligieron alguna de las dos dividido por el total de encuestados.",
+    "planteamiento": "Se pide la probabilidad de elegir a alguien cuya fruta preferida sea pera o naranja. Datos: $50$ personas en total; pera $6$ y naranja $8$.",
+    "steps": [
+     "Total de personas encuestadas: $13 + 6 + 12 + 8 + 11 = 50$.",
+     "Casos favorables: pera o naranja, es decir, $6 + 8 = 14$ personas.",
+     "Probabilidad: $\\frac{14}{50} = \\frac{7}{25}$, dividiendo numerador y denominador entre $2$.",
+     "Comprobación: $\\frac{7}{25} = 0{,}28$, y $14$ de $50$ también es $0{,}28$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{1}{14}$ invierte los números: pone el total de pera y naranja en el denominador. Da una probabilidad muy pequeña.",
+     "C": "$\\frac{7}{24}$ usa $48$ como total, lo que no coincide con las $50$ personas encuestadas. Confunde el denominador.",
+     "D": "$\\frac{1}{7}$ es aproximadamente $0{,}143$, y no corresponde a $14$ de $50$. Es una fracción que no aparece en la tabla."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q55",
@@ -1342,7 +1905,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-probabilidad"
+   "subtopic": "m1-probabilidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para una persona de la población nacional, la probabilidad de estar en el tramo A es la probabilidad de tener Fonasa multiplicada por la probabilidad de pertenecer al tramo A dentro de Fonasa.",
+    "planteamiento": "Se pide la probabilidad de que una persona de la población nacional estuviera en el tramo A de Fonasa en 2021. Datos: Fonasa es $77\\,\\%$ de la población; dentro de Fonasa, el tramo A es $20\\,\\%$.",
+    "steps": [
+     "Primero, la persona debe tener Fonasa: probabilidad $0{,}77$ según el gráfico de tipo previsional.",
+     "Luego, dentro de Fonasa, debe estar en el tramo A: probabilidad $0{,}20$ según el gráfico de tramos.",
+     "Como ambas condiciones deben cumplirse, multiplicamos: $P = 0{,}77 \\cdot 0{,}20 = 0{,}154$.",
+     "Comprobación: $0{,}154$ es menor que $0{,}77$ y que $0{,}20$, como corresponde a una intersección de dos sucesos. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$0{,}2$ es solo la proporción del tramo A dentro de Fonasa. Ignora que el tramo se calcula sobre las personas con Fonasa, que son el $77\\,\\%$ de la población.",
+     "C": "$0{,}25$ es el porcentaje del tramo D, no del tramo A. Confunde los tramos al leer el gráfico.",
+     "D": "$0{,}97$ suma $0{,}77$ y $0{,}20$. Sumar sirve para la unión de sucesos excluyentes de otra situación, no para una persona que cumpla ambas condiciones."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q57",
@@ -1378,7 +1957,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas"
+   "subtopic": "m1-areas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con la expresión del diámetro se calcula el diámetro del tercer piso, luego su radio y finalmente el área del círculo.",
+    "planteamiento": "Se pide el área de la bandeja del tercer piso. Datos: $n = 5$ bandejas, $p = 40$ cm (diámetro del primer piso) y $k = 3$; el diámetro es $\\left(1 - \\frac{k-1}{2(n-1)}\\right)\\cdot p$.",
+    "steps": [
+     "Reemplazamos $k = 3$, $n = 5$ y $p = 40$: $\\left(1 - \\frac{3-1}{2(5-1)}\\right)\\cdot 40$.",
+     "Calculamos el denominador: $2(5-1) = 8$, y el numerador: $3-1 = 2$. Entonces $1 - \\frac{2}{8} = 1 - \\frac{1}{4} = \\frac{3}{4}$.",
+     "Diámetro del tercer piso: $\\frac{3}{4}\\cdot 40 = 30$ cm. Por lo tanto, el radio es $r = 15$ cm.",
+     "Área: $A = \\pi r^2 = \\pi\\cdot 15^2 = 225\\pi$ cm$^2$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$240\\pi$ cm$^2$ no es $\\pi$ por el cuadrado de un radio posible en este diseño. El valor de $15^2$ es $225$, no $240$.",
+     "C": "$300\\pi$ cm$^2$ tampoco corresponde al área de un círculo de radio $15$ cm ni de diámetro $30$ cm. Es un error al elevar al cuadrado.",
+     "D": "$900\\pi$ cm$^2$ es $\\pi\\cdot 30^2$. Usa el diámetro en lugar del radio en la fórmula del área."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q58",
@@ -1413,7 +2008,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas"
+   "subtopic": "m1-areas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada círculo tiene radio igual al perímetro dividido por $2\\pi$, y el área total es la suma de las cuatro áreas.",
+    "planteamiento": "Se pide el área total de los cuatro círculos. Datos: perímetros $12\\pi$, $10\\pi$, $8\\pi$ y $4\\pi$ metros.",
+    "steps": [
+     "Radio a partir del perímetro: $P = 2\\pi r$, así que $r = \\frac{P}{2\\pi}$. Los radios son $\\frac{12\\pi}{2\\pi} = 6$, $\\frac{10\\pi}{2\\pi} = 5$, $\\frac{8\\pi}{2\\pi} = 4$ y $\\frac{4\\pi}{2\\pi} = 2$ metros.",
+     "Áreas: $\\pi r^2$ para cada círculo: $36\\pi$, $25\\pi$, $16\\pi$ y $4\\pi$ metros cuadrados.",
+     "Área total: $36\\pi + 25\\pi + 16\\pi + 4\\pi = 81\\pi$ m$^2$.",
+     "Comprobación: la suma de los cuadrados de los radios es $36 + 25 + 16 + 4 = 81$, y coincide con el coeficiente de $\\pi$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$(17)^2\\pi$ suma primero los radios ($6+5+4+2 = 17$) y luego eleva al cuadrado. Eso no corresponde a sumar las áreas individuales.",
+     "C": "$34\\pi$ parece ser el doble de la suma de radios ($2\\cdot 17$). Mezcla radios con áreas, así que no es el área total.",
+     "D": "$17\\pi$ m es la suma de los radios multiplicada por $\\pi$, con unidad de longitud y no de superficie. No cumple con la pregunta."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q59",
@@ -1449,7 +2060,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas"
+   "subtopic": "m1-areas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El agua llega a $20$ cm bajo el borde, así que su altura es la profundidad menos $0{,}2$ m, y el volumen es largo por ancho por altura de agua.",
+    "planteamiento": "Se pide el volumen de agua en la piscina. Datos: ancho $8$ m, largo $20$ m, profundidad $1{,}7$ m y el agua queda $20$ cm bajo el borde superior.",
+    "steps": [
+     "Altura del agua: $1{,}7 - 0{,}2 = 1{,}5$ m, porque $20$ cm equivalen a $0{,}2$ m.",
+     "Volumen de un paralelepípedo recto: $V = \\text{largo}\\cdot\\text{ancho}\\cdot\\text{altura}$.",
+     "Reemplazamos: $V = 20\\cdot 8\\cdot 1{,}5 = 160\\cdot 1{,}5 = 240$ m$^3$.",
+     "Comprobación: $240$ m$^3$ es menor que el volumen total $20\\cdot 8\\cdot 1{,}7 = 272$ m$^3$, como debe ser con agua que no llena la piscina. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$265{,}2$ m$^3$ no se obtiene con las medidas de la piscina y el nivel del agua. Requiere una altura de agua de $1{,}66$ m, que no aparece en los datos.",
+     "C": "$269{,}28$ m$^3$ tampoco coincide con $160$ m$^2$ por una altura razonable del agua. No es el resultado de usar los datos correctamente.",
+     "D": "$272$ m$^3$ es el volumen de la piscina llena, con altura $1{,}7$ m. Ignora que el agua queda $20$ cm bajo el borde."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q60",
@@ -1484,7 +2111,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas"
+   "subtopic": "m1-areas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El material es la suma de los volúmenes de los dos cilindros sólidos, cada uno con su radio y la misma altura de $8$ cm.",
+    "planteamiento": "Se pide el volumen de material de la pieza. Datos: cilindro superior con diámetro $15$ cm; cilindro inferior con diámetro $20$ cm; ambos con altura $8$ cm.",
+    "steps": [
+     "Radios: el cilindro superior tiene diámetro $15$ cm, así que $r_1 = 7{,}5$ cm; el inferior tiene diámetro $20$ cm, así que $r_2 = 10$ cm.",
+     "Volumen del cilindro superior: $\\pi\\cdot 7{,}5^2\\cdot 8 = \\pi\\cdot 56{,}25\\cdot 8 = 450\\pi$ cm$^3$.",
+     "Volumen del cilindro inferior: $\\pi\\cdot 10^2\\cdot 8 = 800\\pi$ cm$^3$.",
+     "Volumen total del material: $450\\pi + 800\\pi = 1\\,250\\pi$ cm$^3$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$5\\,000\\pi$ cm$^3$ sobrestima el volumen. No corresponde a la suma de $800\\pi$ y $450\\pi$, y sería como si los radios fueran mucho mayores.",
+     "B": "$2\\,500\\pi$ cm$^3$ también excede la suma correcta. Es el doble de lo que sumaría un cilindro grande, pero no es el resultado de usar los radios $7{,}5$ y $10$.",
+     "D": "$560\\pi$ cm (con unidad de longitud) no es un volumen. Además su valor no coincide con ninguno de los dos cilindros."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q61",
@@ -1519,7 +2162,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El aluminio de un perfil es la diferencia entre el área exterior y el área interior de su sección, y se multiplica por el largo.",
+    "planteamiento": "Se pide el factor por el que multiplicar el largo para obtener el volumen de aluminio de un perfil. Datos: sección exterior de $101{,}6$ mm por $50{,}8$ mm, grosor de $4{,}8$ mm en cada lado.",
+    "steps": [
+     "Área exterior de la sección: $101{,}6\\cdot 50{,}8$ mm$^2$.",
+     "Área interior: el grosor $4{,}8$ se descuenta por ambos lados, así que el ancho interior es $101{,}6 - 2\\cdot 4{,}8$ y el alto interior es $50{,}8 - 2\\cdot 4{,}8$.",
+     "Área de aluminio de la sección: $101{,}6\\cdot 50{,}8 - (101{,}6 - 2\\cdot 4{,}8)(50{,}8 - 2\\cdot 4{,}8)$ mm$^2$.",
+     "Volumen de un perfil: se multiplica esta área por el largo, así que el número buscado es la expresión de la sección. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Resta $4{,}8$ una sola vez en cada dimensión interior, lo que equivale a un grosor de $4{,}8$ mm solo en un lado. El grosor del perfil está en los dos lados.",
+     "B": "Usa $4{,}8$ en el ancho interior y $2\\cdot 4{,}8$ en el alto. Las dos dimensiones interiores deben descontar el grosor de la misma manera.",
+     "C": "Usa $2\\cdot 4{,}8$ en el ancho interior y $4{,}8$ en el alto. Es la misma inconsistencia que en B, invertida."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q62",
@@ -1554,7 +2213,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas"
+   "subtopic": "m1-areas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para una traslación, basta comparar la posición de una casilla de referencia en la figura 1 y en la figura 2, contando columnas y filas en la cuadrícula.",
+    "planteamiento": "Se pide el movimiento que lleva la figura de la posición 1 a la posición 2. Datos: la figura 1 ocupa tres casillas en una fila y una casilla debajo de la última; la figura 2 ocupa tres casillas en una fila y una debajo de la última.",
+    "steps": [
+     "En la figura 1, la casilla superior izquierda está en la fila 2 y la columna 7 de la cuadrícula.",
+     "En la figura 2, la casilla superior izquierda equivalente está en la fila 7 y la columna 3.",
+     "Para pasar de la columna 7 a la columna 3 hay que moverse $4$ unidades a la izquierda, y para pasar de la fila 2 a la fila 7 hay que bajar $5$ unidades.",
+     "Comprobación: la casilla de abajo a la derecha de la figura 1 cae en la fila 8 y columna 5 de la figura 2, que coincide con la forma del dibujo punteado. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Cuatro unidades a la izquierda y cuatro hacia abajo dejarían la figura una fila más arriba de la posición 2. La altura del desplazamiento está mal contada.",
+     "C": "Tres unidades a la izquierda y tres hacia abajo mueven la figura a una columna más a la derecha y dos filas más arriba de lo que corresponde. La trampa es contar mal las casillas.",
+     "D": "Cinco unidades a la izquierda y cuatro hacia abajo corren la figura una columna más allá de la posición 2 y una fila menos. Es una lectura errada de la cuadrícula."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q63",
@@ -1589,7 +2264,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-transformaciones"
+   "subtopic": "m1-transformaciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una traslación solo desplaza la figura: conserva su tamaño, su forma y su orientación, así que la copia debe verse idéntica, pero en otro lugar.",
+    "planteamiento": "Se pide la opción que muestra el velero junto con su traslación en el agua. Dato de la figura: el velero original tiene la vela grande a la izquierda, la vela chica a la derecha y la punta del casco hacia la derecha.",
+    "steps": [
+     "Recuerda qué conserva una traslación: cada punto se mueve en la misma dirección y la misma distancia, por lo que la figura no cambia de tamaño, no gira y no se refleja.",
+     "Usa esas condiciones como filtro y compara el segundo velero de cada opción con el primero: su tamaño, el lado de la vela grande y hacia dónde apunta el casco.",
+     "En A, el segundo velero tiene la vela grande a la derecha y el casco apunta al revés: es una reflexión. En B, el segundo velero es claramente más grande: es una ampliación.",
+     "En D, el casco mantiene su dirección, pero las velas quedan invertidas: la vela grande pasa a la derecha, así que tampoco es una copia fiel del original.",
+     "En C, el segundo velero tiene el mismo tamaño, la vela grande a la izquierda y el casco en la misma dirección: solo se desplazó hacia la derecha. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Muestra una reflexión: el segundo velero es como el reflejo del primero en un espejo, con las velas y el casco invertidos. Conserva el tamaño, pero no la orientación.",
+     "B": "Muestra una ampliación: el segundo velero conserva la forma, pero es más grande. En una traslación el tamaño no cambia, así que esta transformación es una homotecia.",
+     "D": "Es la trampa más sutil: los dos veleros parecen iguales a simple vista, pero en el segundo las velas están invertidas. Basta una parte que cambie para que deje de ser una traslación."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q64",
@@ -1624,7 +2316,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales"
+   "subtopic": "m1-racionales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada flecha es un paso del rey, así que hay que sumar los desplazamientos de cada serie y verificar que lleguen de e2 a c7.",
+    "planteamiento": "Se pide la serie de movimientos que lleva el rey desde e2 hasta c7. Datos: e2 corresponde a la columna $5$ y la fila $2$; c7 corresponde a la columna $3$ y la fila $7$. El desplazamiento neto debe ser $(-2, +5)$.",
+    "steps": [
+     "Desplazamiento necesario: de columna $5$ a columna $3$ es $-2$ (izquierda), y de fila $2$ a fila $7$ es $+5$ (arriba).",
+     "Opción C: tres flechas $\\nearrow$ dan $(+3, +3)$; dos flechas $\\nwarrow$ dan $(-2, +2)$; tres flechas $\\leftarrow$ dan $(-3, 0)$.",
+     "Suma de la opción C: $x = 3 - 2 - 3 = -2$ e $y = 3 + 2 + 0 = 5$, es decir, $(-2, +5)$, que coincide con el desplazamiento necesario.",
+     "Como el rey se mueve una casilla a la vez en cualquier dirección, cada flecha es un paso válido. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Tres $\\nearrow$, tres $\\swarrow$ (dos) y tres $\\leftarrow$ dan $x = 3 - 2 - 3 = -2$ e $y = 3 - 2 = 1$. El rey llegaría a c3, no a c7.",
+     "B": "Cuatro $\\leftarrow$, cinco $\\uparrow$ y tres $\\rightarrow$ dan $x = -4 + 3 = -1$ e $y = 5$. Termina en d7, no en c7.",
+     "D": "Seis $\\uparrow$ y tres $\\leftarrow$ dan $(-3, +6)$. El rey llega a b8, porque sube una fila de más y se desplaza una columna de menos."
+    }
+   }
   },
   {
    "id": "m1-2025-regular-q65",
@@ -1659,7 +2367,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-triangulos"
+   "subtopic": "m1-triangulos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La recta $L$ es el eje de simetría, así que los triángulos formados por el punto de intersección de las rectas $DB$ y $CA$ son isósceles, y el ángulo buscado sale de la suma de los ángulos de un triángulo.",
+    "planteamiento": "Se pide la medida de uno de los ángulos formados por las rectas $DB$ y $CA$. Datos: $B$ es simétrico de $A$ y $D$ es simétrico de $C$ respecto de $L$, y $\\angle CDB = 50^\\circ$.",
+    "steps": [
+     "Sea $O$ el punto donde las rectas $DB$ y $CA$ cortan a la recta $L$. Como $D$ es simétrico de $C$ respecto de $L$, el segmento $DC$ es perpendicular a $L$ y $OD = OC$.",
+     "Por lo tanto, el triángulo $OCD$ es isósceles con $OC = OD$, así que sus ángulos en $C$ y en $D$ son iguales.",
+     "Como $B$ está sobre la recta $DO$, el ángulo $\\angle CDB$ es el ángulo $\\angle CDO = 50^\\circ$, y por la igualdad de los ángulos de la base, $\\angle OCD = 50^\\circ$.",
+     "Suma de ángulos del triángulo: $\\angle COD = 180^\\circ - 50^\\circ - 50^\\circ = 80^\\circ$. Las rectas forman además un ángulo suplementario de $100^\\circ$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$40^\\circ$ es la mitad de $80^\\circ$. Ese valor aparece si se divide el ángulo del vértice entre dos, pero el ángulo buscado es el completo en $O$.",
+     "B": "$45^\\circ$ es la mitad de $90^\\circ$, una medida que no aparece en la figura. No se obtiene de los datos del enunciado.",
+     "C": "$50^\\circ$ es el ángulo en $D$ entre $DC$ y $DB$, no un ángulo formado por las rectas $DB$ y $CA$ en su punto de intersección."
+    }
+   }
   }
  ]
 }

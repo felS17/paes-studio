@@ -9,6 +9,13 @@ Tu trabajo: reescribir cada explicación para que sea **significativamente más 
 pedagógica**, sin saltar pasos algebraicos ni inferencias, y guardar el resultado en `output.json` dentro de
 la misma carpeta del lote.
 
+**Si `current` es `null`, la pregunta aún no tiene explicación:** redáctala desde cero con esta misma estructura.
+Ignora lo que este documento dice sobre compararla con la actual; el validador exige un mínimo de 800 caracteres entre planteamiento, pasos y distractores (lo habitual ronda los 1.500).
+
+**No inventes.** Nunca adivines un dato de una figura, tabla o texto que no puedas leer, ni fuerces un razonamiento
+para llegar a la clave. Si no llegas a la clave oficial por tu cuenta, marca esa pregunta con `"verified": false`:
+es preferible dejarla sin explicación a publicar una falsa.
+
 ## Cómo trabajar cada pregunta
 1. Si `image` no es `null`, **abre la imagen** con la herramienta Read: es el recorte fiel del folleto. Cuando
    `text_quality` es `aproximado` (casi todo Matemática), el texto de `stem`/`options` puede estar corrupto o

@@ -2,9 +2,10 @@
  "id": "ciencias-quimica-2025-invierno",
  "subject": "ciencias",
  "area": "quimica",
- "title": "PAES Invierno 2025",
+ "title": "PAES Invierno 2024",
  "description": "Prueba oficial completa de Ciencias (Química): 80 preguntas, aplicada el 18-06-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "invierno",
  "source": "demre",
  "form": "171",
@@ -123,7 +124,23 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-organica"
+   "subtopic": "cs-organica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El compost fino se separa del grueso por tamaño de partícula, y eso se hace pasándolo por una malla o tamiz.",
+    "planteamiento": "Se pide el método que sirva para separar el compost inicial y obtener un compost más fino. Datos: el compost es una mezcla sólida de materia orgánica triturada, con partículas de distintos tamaños.",
+    "steps": [
+     "El compost inicial es una mezcla de sólidos de distintos tamaños: partículas gruesas y partículas finas. Para obtener un compost más fino hay que separarlas según su tamaño.",
+     "El tamizado consiste en hacer pasar una mezcla sólida por un tamiz o malla, cuyos orificios dejan pasar solo las partículas menores que el tamaño de la malla. Así se separa el material fino del grueso.",
+     "La destilación separa líquidos según sus puntos de ebullición, la decantación separa líquidos no miscibles o sólidos insolubles que se depositan, y la filtración separa un sólido suspendido en un líquido. Ninguna de ellas separa partículas sólidas de distinto tamaño, que es lo que se necesita aquí.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La destilación separa componentes líquidos por diferencia de punto de ebullición. El compost es una mezcla sólida, así que este método no permite separar sus partículas finas de las gruesas.",
+     "C": "La decantación separa líquidos o sólidos que se depositan en un líquido, según su densidad. Aquí no hay un líquido en el que las partículas se separen por tamaño.",
+     "D": "La filtración separa un sólido de un líquido que lo contiene. Como el compost no está en un líquido, la filtración no es el método adecuado para separar el material por tamaño."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q02",
@@ -158,7 +175,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El agua parte en 20 °C, sube hasta 98 °C al minuto, se mantiene en ebullición 10 segundos y luego se enfría; solo la curva C reproduce esa secuencia.",
+    "planteamiento": "Se pide el gráfico que representa correctamente la temperatura del agua entre 0 y 80 segundos. Datos: inicio a 20 °C; llega a 98 °C a los 60 s; se mantiene esa condición durante 10 s, hasta los 70 s; luego se apaga el hervidor y el agua se enfría.",
+    "steps": [
+     "Desde el inicio, el agua debe estar a 20 °C, así que el gráfico debe partir en 20 y no en 0. Las opciones A y D empiezan en 0 °C, por lo que quedan descartadas.",
+     "Entre 0 y 60 s la temperatura aumenta de forma progresiva hasta 98 °C. Luego se mantiene casi constante, cerca de 98 °C, desde los 60 hasta los 70 s, que es el tiempo de ebullición descrito.",
+     "Después de los 70 s el hervidor se apaga y el agua se enfría, por lo que la curva debe bajar. La opción C muestra exactamente esa secuencia: inicio cerca de 20 °C, aumento, meseta cercana a 98 °C y descenso hasta unos 90 °C a los 80 s.",
+     "La opción B no muestra la meseta de ebullición ni el enfriamiento, pues sube de forma continua hasta 100 °C a los 80 s. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Empieza en 0 °C, cuando el agua de la taza está a 20 °C. Además, sube en línea recta hasta 100 °C a los 60 s y se mantiene allí sin bajar, por lo que no muestra el enfriamiento posterior.",
+     "B": "Parte correctamente en 20 °C, pero sube de forma continua y se aplana cerca de 100 °C sin ebullición sostenida. No muestra el enfriamiento que sigue al apagado del hervidor.",
+     "D": "Empieza en 0 °C y su máximo es de 100 °C a los 60 s, con un descenso a 80 °C a los 80 s. El punto de partida es incorrecto y la meseta de ebullición no coincide con la de 98 °C."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q03",
@@ -193,7 +226,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "A 200 °C el azufre (fusión a 115 °C) ya está líquido y el polonio (fusión a 254 °C) aún es sólido; la temperatura de fusión determina el estado a esa temperatura.",
+    "planteamiento": "Se pide la conclusión correcta a partir de la tabla de elementos del grupo 16. Datos: temperaturas de fusión de $-218$ °C (oxígeno), $115$ °C (azufre), $221$ °C (selenio), $450$ °C (telurio) y $254$ °C (polonio); densidades y números másicos de cada elemento.",
+    "steps": [
+     "El estado de una sustancia a una temperatura dada depende de su punto de fusión: si la temperatura supera el punto de fusión y no alcanza el de ebullición, la sustancia está líquida; si está por debajo del punto de fusión, está sólida. Con esa regla se evalúa cada opción.",
+     "A 200 °C, el azufre tiene un punto de fusión de 115 °C, así que está líquido; su punto de ebullición, que no aparece en la tabla, es muy superior a 200 °C. El polonio tiene un punto de fusión de 254 °C, así que a 200 °C sigue sólido.",
+     "La opción A dice que el número másico y la temperatura de fusión tienen una relación inversa, pero al aumentar el número másico la fusión sube en general, con la excepción del oxígeno. La C afirma una relación directa con la densidad, pero el polonio tiene la mayor densidad y no la mayor temperatura de fusión.",
+     "La B afirma que a 25 °C el selenio es líquido, pero su punto de fusión es 221 °C, así que a esa temperatura es sólido. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La tabla muestra que, al aumentar el número másico de 16 a 210, la temperatura de fusión tiende a subir (de $-218$ °C a $450$ °C en el telurio). Hablar de relación inversa invierte la tendencia general.",
+     "B": "El oxígeno sí es gaseoso a 25 °C, pero el selenio tiene un punto de fusión de 221 °C, así que a 25 °C es sólido y no líquido. La mitad de la afirmación es falsa.",
+     "C": "La densidad sube de 1,43 a 9,20 g/cm³, pero la temperatura de fusión no sube de manera paralela: el telurio tiene la mayor fusión, con 450 °C, y el polonio, de mayor densidad, tiene 254 °C. La relación no es directa."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q04",
@@ -228,7 +277,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al aumentar el número de átomos de flúor, la temperatura crítica baja de 198 °C a −46 °C: la relación es inversa.",
+    "planteamiento": "Se pide la conclusión correcta a partir de la tabla de compuestos de carbono con cloro y flúor. Datos: CCl₃F (198 °C; 43,5 atm), CCl₂F₂ (112 °C; 40,6 atm), CClF₃ (29 °C; 38,2 atm) y CF₄ (−46 °C; 37,0 atm).",
+    "steps": [
+     "En la serie, los compuestos reemplazan progresivamente cloro por flúor: el número de átomos de flúor es 1, 2, 3 y 4, mientras que el de cloro es 3, 2, 1 y 0. El número de átomos de carbono es 1 en todos.",
+     "La temperatura crítica disminuye al aumentar el número de átomos de flúor: 198 °C, 112 °C, 29 °C y −46 °C. Como un aumento de flúor va acompañado de una disminución de la temperatura crítica, la relación es inversa.",
+     "La opción B falla porque la masa molar también disminuye al reemplazar cloro por flúor, así que se relaciona de forma directa, no inversa, con la temperatura crítica. La C falla porque el número de carbonos no varía entre los compuestos.",
+     "La D asigna una relación inversa entre el cloro y la presión crítica, pero el cloro baja de 3 a 0 mientras la presión baja de 43,5 a 37,0 atm: la relación es directa. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La masa molar de los compuestos baja de forma paralela a la temperatura crítica, aproximadamente de 137 g/mol en el CCl₃F a 88 g/mol en el CF₄. La relación es directa y la afirmación es falsa.",
+     "C": "El número de átomos de carbono es 1 en los cuatro compuestos, así que no varía y no puede tener relación con la presión crítica. La trampa es asumir una relación donde no hay variación.",
+     "D": "El cloro disminuye de 3 a 0 y la presión crítica también disminuye, de 43,5 a 37,0 atm. Esa tendencia es directa, no inversa, así que la afirmación está invertida."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q05",
@@ -263,7 +328,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con los datos de la tabla, la distancia del enlace hidrógeno-halógeno aumenta de 92 a 161 pm al bajar en el grupo 17: el halógeno con más capas forma un enlace más largo.",
+    "planteamiento": "Se pide la conclusión correcta a partir de las tablas de elementos (grupo y período) y de distancias de enlace. Datos: H–F 92 pm, H–Cl 127 pm, H–Br 141 pm e H–I 161 pm; los halógenos F, Cl, Br e I pertenecen a los períodos 2, 3, 4 y 5.",
+    "steps": [
+     "Los halógenos F, Cl, Br e I pertenecen al grupo 17, con períodos 2, 3, 4 y 5. Los enlaces con hidrógeno tienen distancias de 92, 127, 141 y 161 pm, respectivamente.",
+     "Al aumentar el período del halógeno, aumenta el número de capas electrónicas y el átomo es más grande, lo que alarga el enlace con el hidrógeno. Por eso la distancia crece a medida que aumenta el período.",
+     "La opción A compara enlaces del mismo período: el doble C=O (120 pm) es más corto que el simple C–O (143 pm), así que la afirmación es falsa. La B compara enlaces simples y triples del mismo período: el triple C≡C (120 pm) es más corto que el simple C–O (143 pm), lo que también invierte la afirmación.",
+     "La C afirma que los átomos iguales forman enlaces más cortos, pero el F–F (142 pm) es más largo que el H–F (92 pm), y el Cl–Cl (199 pm) más largo que el H–Cl (127 pm). Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El enlace doble C=O mide 120 pm y el simple C–O 143 pm en el mismo período; el doble es más corto, no más largo. La trampa es suponer que más enlaces implican más distancia.",
+     "B": "El enlace triple C≡C mide 120 pm, mientras que el simple C–O mide 143 pm en el mismo período. El triple es más corto, por lo que la relación está invertida.",
+     "C": "Los átomos iguales forman enlaces más largos en varios casos: F–F 142 pm frente a H–F 92 pm, y Cl–Cl 199 pm frente a H–Cl 127 pm. La afirmación no se sostiene con la tabla."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q06",
@@ -291,7 +372,23 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El efecto estérico depende del volumen y de la posición espacial de los grupos; por eso se necesita un modelo tridimensional, como el de esferas y varillas.",
+    "planteamiento": "Se pide la forma de representar moléculas orgánicas que sirva para comunicar la importancia del efecto estérico. Datos: el efecto estérico depende del volumen y de la posición en el espacio de un grupo funcional, y el grupo quiere mostrarlo a sus compañeros.",
+    "steps": [
+     "El efecto estérico es la influencia de la forma y el tamaño de los grupos sobre la reacción, por impedimento espacial. Para mostrarlo hay que representar la distribución tridimensional de los átomos.",
+     "La estructura de esferas y varillas muestra los átomos como esferas y los enlaces como varillas en tres dimensiones. Así se ve el volumen de cada grupo y qué tan cerca o lejos están entre sí, lo que hace visible el impedimento.",
+     "Las fórmulas molecular y empírica indican solo la cantidad de átomos de cada elemento, sin posición espacial. La estructura condensada muestra el orden de los grupos en una línea, pero no su volumen ni su disposición en el espacio.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La estructura condensada ordena los grupos en una línea de texto, como CH3CH2OH. No muestra el volumen ni la posición en el espacio, que son justo los aspectos del efecto estérico.",
+     "C": "La fórmula molecular indica cuántos átomos de cada elemento tiene la molécula, pero no cómo están dispuestos. Sin la disposición espacial, el efecto estérico no se puede visualizar.",
+     "D": "La fórmula empírica da la proporción más simple de los átomos y tampoco muestra la geometría. Es la representación menos útil para explicar un efecto que depende del espacio."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q07",
@@ -326,7 +423,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La temperatura de ebullición es el resultado que se mide para cada isómero, mientras que la estructura y las ramificaciones son las características que cambian entre ellos; por eso es la variable dependiente.",
+    "planteamiento": "Se pide la variable dependiente del trabajo con alcanos de fórmula C₆H₁₄. Datos: hexano, 2-metilpentano, 2,3-dimetilbutano y 2,2-dimetilbutano, con sus ramificaciones y sus temperaturas de ebullición de $69$, $60$, $58$ y $50$ °C.",
+    "steps": [
+     "La variable dependiente es la que se mide como respuesta a los cambios de la variable independiente. En la tabla lo que cambia entre los compuestos es su estructura y sus ramificaciones, y lo que se registra como resultado es la temperatura de ebullición.",
+     "Los valores de temperatura de ebullición son $69$, $60$, $58$ y $50$ °C, cada uno correspondiente a un compuesto con una estructura distinta. La temperatura se mide para comparar, mientras que la estructura se elige como condición del estudio.",
+     "La estructura y las ramificaciones describen cada isómero: son características que se comparan o clasifican, no respuestas medidas. La fórmula general es idéntica en todos los compuestos, $\\text{C}_6\\text{H}_{14}$, así que no varía y no puede ser la dependiente.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La estructura es lo que cambia entre los compuestos y se usa para explicar las diferencias. Es la variable independiente o de clasificación, no la respuesta que se mide.",
+     "B": "La fórmula general es C₆H₁₄ en todos los compuestos, así que no varía. Una variable constante no puede ser dependiente.",
+     "C": "Las ramificaciones se cuentan en cada compuesto y se comparan entre ellos. Son una característica estructural, no la respuesta registrada en el experimento."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q08",
@@ -354,7 +467,22 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frase reporta un valor obtenido en los ensayos, un 55 % más de oxígeno que la hemoglobina; eso es un resultado de la investigación.",
+    "planteamiento": "Se pide a qué componente de la investigación científica se asocia la frase entre comillas. Datos: ensayos clínicos con perfluorocarbonos, y una frase que reporta una comparación cuantitativa de la capacidad de transporte de oxígeno obtenida en múltiples ensayos.",
+    "steps": [
+     "En una investigación, el resultado es lo que se observó o midió al aplicar el procedimiento. La frase entre comillas afirma que un compuesto porta un 55 % más de oxígeno que la hemoglobina, una cifra obtenida a partir de los ensayos.",
+     "La frase está redactada en pasado y con un valor concreto, lo que indica un dato comprobado y no una propuesta. Por eso no es una hipótesis, que se formula antes de experimentar y se presenta como posible.",
+     "Un procedimiento describiría cómo se hicieron los ensayos, y una teoría explicaría por qué ocurre el fenómeno, pero la frase reporta lo que se encontró. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Una teoría es una explicación general que da sentido a varias observaciones. La frase no explica por qué el compuesto transporta más oxígeno, sino que informa cuánto transporta.",
+     "C": "Una hipótesis se formula antes del experimento y se presenta como una posibilidad por comprobar. La frase reporta un valor medido en los ensayos, así que no corresponde a una hipótesis.",
+     "D": "Un procedimiento describe los pasos del estudio, como las dosis o los métodos de medición. La frase no describe cómo se hizo el ensayo, sino el dato que se obtuvo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q09",
@@ -389,7 +517,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El ciclohexanol es un anillo cerrado de seis carbonos con enlaces sencillos y un único grupo –OH unido a un carbono del anillo. Cualquier representación con dobles enlaces, con dos oxígenos o con el oxígeno dentro del anillo no corresponde.",
+    "planteamiento": "Se pide identificar, entre cinco representaciones moleculares, la que corresponde al ciclohexanol. Datos: la fórmula del ciclohexanol es $\\mathrm{C_6H_{11}OH}$, es decir, $\\mathrm{C_6H_{12}O}$; el código de colores es carbono (gris), oxígeno (negro) e hidrógeno (blanco).",
+    "steps": [
+     "El ciclohexanol tiene seis átomos de carbono formando un anillo cerrado, un único átomo de oxígeno y doce átomos de hidrógeno. Cada carbono del anillo que no lleva oxígeno tiene dos hidrógenos, y el carbono que lleva el grupo –OH tiene solo uno.",
+     "Revisa el oxígeno: la fórmula contiene un solo átomo de oxígeno. Por eso se descartan C y D. La representación C muestra dos átomos de oxígeno (dos esferas negras). En D el átomo de oxígeno forma parte del anillo, y el anillo tiene solo cinco carbonos.",
+     "Revisa los enlaces: el ciclohexanol es saturado y solo tiene enlaces sencillos. En B aparecen dobles enlaces entre carbonos (líneas dobles). Queda descartada.",
+     "La representación A tiene exactamente seis carbonos en un anillo cerrado, solo enlaces sencillos y un oxígeno unido a un carbono del anillo mediante un enlace sencillo, con un hidrógeno. Esa unidad corresponde a un grupo hidroxilo, –OH.",
+     "Cuenta los hidrógenos: cinco carbonos del anillo tienen dos hidrógenos cada uno, el carbono con –OH tiene uno y el grupo –OH aporta uno más. Total: $5\\cdot 2 + 1 + 1 = 12$ hidrógenos, lo que da $\\mathrm{C_6H_{12}O}$, la fórmula del ciclohexanol. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Tiene seis carbonos y un grupo OH, pero presenta dobles enlaces entre carbonos (líneas dobles). El ciclohexanol es saturado; la trampa es fijarse solo en el anillo de seis carbonos y no revisar los enlaces.",
+     "C": "Muestra dos átomos de oxígeno, por lo que su fórmula sería $\\mathrm{C_6H_{12}O_2}$, un diol y no el ciclohexanol. El error típico es no contar los oxígenos de la representación.",
+     "D": "El oxígeno está dentro del anillo, así que la estructura es un éter cíclico y no un alcohol; además, el anillo tiene solo cinco carbonos. La trampa es confundir el grupo –OH con un oxígeno del anillo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q10",
@@ -421,7 +566,27 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La estequiometría se lee en moles con la ecuación balanceada: 2 mol de $\\mathrm{H_2}$ reaccionan con 1 mol de $\\mathrm{O_2}$ y producen 2 mol de agua. El reactivo que se acaba limita la reacción.",
+    "planteamiento": "Se pide identificar la afirmación correcta sobre las relaciones molares en la formación del agua. Datos: ecuación balanceada $2\\,\\mathrm{H_2(g)} + \\mathrm{O_2(g)} \\rightarrow 2\\,\\mathrm{H_2O(l)}$.",
+    "steps": [
+     "Verifica el balance: a la izquierda hay 4 átomos de H y 2 de O; a la derecha, dos moléculas de agua aportan 4 átomos de H y 2 de O. La ecuación está balanceada.",
+     "Relación molar: 2 mol de $\\mathrm{H_2}$ reaccionan con 1 mol de $\\mathrm{O_2}$ para producir 2 mol de $\\mathrm{H_2O}$. Es decir, cada mol de oxígeno consume 2 mol de hidrógeno.",
+     "Opción A: 2 mol de $\\mathrm{H_2}$ con 2 mol de $\\mathrm{O_2}$ exigiría 4 mol de $\\mathrm{H_2}$ para consumir todo el oxígeno, ya que $2 \\cdot 2 = 4$. Como solo hay 2 mol de hidrógeno, no reaccionan completamente. La afirmación es falsa.",
+     "Opción B: 1 mol de $\\mathrm{H_2}$ produce 1 mol de agua, porque la relación entre hidrógeno y agua es 2 : 2, es decir 1 : 1. Decir que produce 2 mol es falso.",
+     "Opción C: 2 mol de $\\mathrm{O_2}$ producen $2 \\cdot 2 = 4$ mol de agua, no 2 mol. La afirmación es falsa.",
+     "Opción D: 4 mol de $\\mathrm{H_2}$ requieren $\\frac{4}{2} = 2$ mol de $\\mathrm{O_2}$. Con solo 1 mol de oxígeno, este se agota al consumir 2 mol de hidrógeno, y quedan $4 - 2 = 2$ mol de hidrógeno en exceso. El oxígeno limita la reacción y se forman $1 \\cdot 2 = 2$ mol de agua. La afirmación es verdadera.",
+     "Opción E: 6 mol de $\\mathrm{H_2}$ con 2 mol de $\\mathrm{O_2}$: 2 mol de oxígeno necesitan solo 4 mol de hidrógeno, así que quedan $6 - 4 = 2$ mol de hidrógeno sin reaccionar. La afirmación de que reaccionan completamente es falsa. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Supone que la relación es 1 : 1 entre oxígeno e hidrógeno y olvida que cada mol de oxígeno consume 2 mol de hidrógeno. Con 2 mol de cada uno, el oxígeno está en exceso y el hidrógeno se acaba.",
+     "B": "Duplica el producto sin balancear: asume que 1 mol de hidrógeno da 2 mol de agua, pero el coeficiente del agua es igual al del hidrógeno (2 : 2).",
+     "C": "Copia el coeficiente del oxígeno al producto y olvida el coeficiente 2 del agua. Así, 2 mol de oxígeno aparecen como 2 mol de agua, cuando en realidad producen 4 mol.",
+     "E": "Ignora el reactivo limitante: 6 mol de hidrógeno parecen suficientes, pero 2 mol de oxígeno solo consumen 4 mol de hidrógeno. La trampa es sumar los moles de un reactivo sin comparar con el otro."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q11",
@@ -456,7 +621,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tabla muestra que la masa de urea obtenida depende del reactivo que se acaba. Al comparar las proporciones de NH3 y CO2 en cada experimento se identifica la relación adecuada, que es la estequiométrica de 2 : 1.",
+    "planteamiento": "Se pide el objetivo de la investigación del grupo de científicos. Datos: síntesis $2\\,\\mathrm{NH_3} + \\mathrm{CO_2} \\rightarrow \\mathrm{CO(NH_2)_2} + \\mathrm{H_2O}$; masas molares aproximadas $M(\\mathrm{NH_3}) = 17\\ \\mathrm{g/mol}$, $M(\\mathrm{CO_2}) = 44\\ \\mathrm{g/mol}$ y $M(\\mathrm{CO(NH_2)_2}) = 60\\ \\mathrm{g/mol}$.",
+    "steps": [
+     "Pasa las masas a moles. Experimento 1: $n(\\mathrm{NH_3}) = \\frac{500}{17} \\approx 29{,}4$ mol y $n(\\mathrm{CO_2}) = \\frac{500}{44} \\approx 11{,}4$ mol.",
+     "La ecuación exige 2 mol de $\\mathrm{NH_3}$ por cada mol de $\\mathrm{CO_2}$. En el experimento 1 hay más de 2 mol de amoníaco por cada mol de CO2, así que el CO2 es el reactivo limitante: $11{,}4$ mol de CO2 producen $11{,}4$ mol de urea, es decir, $11{,}4 \\cdot 60 \\approx 681{,}6$ g, valor de la tabla.",
+     "Experimento 2: $n(\\mathrm{NH_3}) = \\frac{1020}{17} = 60$ mol y $n(\\mathrm{CO_2}) = \\frac{2640}{44} = 60$ mol. La proporción es 1 : 1, así que el NH3 es el limitante, porque se necesitan 120 mol para 60 mol de CO2. Se forman $\\frac{60}{2} = 30$ mol de urea, es decir, $30 \\cdot 60 = 1800$ g, valor de la tabla.",
+     "Experimento 3: $n(\\mathrm{NH_3}) = \\frac{1700}{17} = 100$ mol y $n(\\mathrm{CO_2}) = \\frac{2200}{44} = 50$ mol. La proporción es exactamente 2 : 1, así que ambos reactivos se consumen por completo. Se forman 50 mol de urea, es decir, $50 \\cdot 60 = 3000$ g, valor de la tabla.",
+     "Experimento 4: $n(\\mathrm{NH_3}) = \\frac{2040}{17} = 120$ mol y $n(\\mathrm{CO_2}) = \\frac{3520}{44} = 80$ mol. Con la proporción 2 : 1 harían falta 160 mol de NH3, pero hay solo 120 mol, así que el NH3 limita: se forman $\\frac{120}{2} = 60$ mol de urea, es decir, $60 \\cdot 60 = 3600$ g, valor de la tabla.",
+     "Al comparar los cuatro experimentos, la masa de urea sigue siempre la regla del reactivo limitante. Solo en el experimento 3 se usan ambos reactivos en la proporción 2 : 1, y la tabla muestra cuánto producto se obtiene con cada proporción. Por eso el objetivo es determinar la proporción de NH3 y CO2 adecuada para la síntesis. Las opciones A, B y C hablan de efectos biológicos, condiciones fisicoquímicas o protocolos de rendimiento, y la tabla no registra temperatura, presión ni procedimientos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Evaluar el efecto de la urea en las plantas: la tabla solo registra masas de reactivos y de producto, sin datos de fertilización. La urea aparece como contexto del problema, no como objetivo del estudio.",
+     "B": "Determinar las condiciones fisicoquímicas: la tabla no informa temperatura, presión ni catalizador. El estudio varía solo las masas de los reactivos, no las condiciones de reacción.",
+     "C": "Evaluar un protocolo para aumentar el rendimiento: la tabla compara masas de reactivos, no procedimientos. El rendimiento se explica por el reactivo limitante, no por un protocolo distinto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q12",
@@ -488,7 +671,25 @@
    ],
    "answer": "E",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La fórmula mínima indica solo la proporción entre átomos. La fórmula molecular es un múltiplo entero de ella, y ese múltiplo se obtiene dividiendo la masa molar total por la masa de la fórmula mínima.",
+    "planteamiento": "Se pide la fórmula molecular de un compuesto formado por C, H y O, cuya fórmula mínima es $\\mathrm{CH_2O}$ y cuya masa molar es de aproximadamente $180\\ \\mathrm{g/mol}$. Datos: $M(\\mathrm{C}) = 12$, $M(\\mathrm{H}) = 1$ y $M(\\mathrm{O}) = 16$ (en g/mol).",
+    "steps": [
+     "Calcula la masa de la fórmula mínima: $M(\\mathrm{CH_2O}) = 12 + 2\\cdot 1 + 16 = 30\\ \\mathrm{g/mol}$.",
+     "Determina el factor entero: $n = \\frac{M_{\\text{molecular}}}{M_{\\text{mínima}}} = \\frac{180}{30} = 6$.",
+     "Multiplica los subíndices de la fórmula mínima por 6: $(\\mathrm{CH_2O})_6 = \\mathrm{C_6H_{12}O_6}$.",
+     "Verifica la masa: $6\\cdot 12 + 12\\cdot 1 + 6\\cdot 16 = 72 + 12 + 96 = 180\\ \\mathrm{g/mol}$, que coincide con el dato.",
+     "Las opciones A a D tienen la misma proporción C : H : O = 1 : 2 : 1, pero distinta masa molar: $\\mathrm{C_2H_4O_2}$ tiene 60 g/mol, $\\mathrm{C_3H_6O_3}$ tiene 90 g/mol, $\\mathrm{C_4H_8O_4}$ tiene 120 g/mol y $\\mathrm{C_5H_{10}O_5}$ tiene 150 g/mol. Solo la de seis carbonos llega a 180 g/mol. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "$\\mathrm{C_2H_4O_2}$ corresponde a n = 2 y tiene una masa molar de 60 g/mol, un tercio de los 180 g/mol. La trampa es quedarse con un factor demasiado pequeño.",
+     "B": "$\\mathrm{C_3H_6O_3}$ corresponde a n = 3 y tiene una masa molar de 90 g/mol, la mitad de lo exigido. Se produce al tomar la mitad de la masa molar como si fuera el factor.",
+     "C": "$\\mathrm{C_4H_8O_4}$ corresponde a n = 4 y tiene una masa molar de 120 g/mol. El error típico es sumar 30 a la masa molar en lugar de dividirla por la masa de la fórmula mínima.",
+     "D": "$\\mathrm{C_5H_{10}O_5}$ corresponde a n = 5 y tiene una masa molar de 150 g/mol. Se obtiene al restar 30 de 180 en lugar de dividir, es decir, al confundir la operación."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q13",
@@ -516,7 +717,24 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una dilución se agrega solvente, pero el soluto se conserva. Al evaporar todo el agua, la masa de sólido debe ser la misma en todos los vasos, sin importar cuánta agua se haya agregado.",
+    "planteamiento": "Se pide el objetivo del estudio. Datos: cinco vasos con 10 g de un mismo soluto y 50 mL de agua al inicio (igual concentración); luego se agregan distintos volúmenes de agua, se evapora todo el solvente a 100 °C y se pesa el sólido que queda en cada vaso.",
+    "steps": [
+     "Cada vaso parte con 10 g del mismo soluto en 50 mL de agua, así que los cinco tienen la misma concentración: $c = \\frac{10\\ \\mathrm{g}}{50\\ \\mathrm{mL}}$.",
+     "Al agregar distintos volúmenes de agua se modifica el volumen de la solución, pero no la cantidad de soluto: el soluto no se crea ni se destruye, solo se diluye.",
+     "La concentración sí cambia con la dilución, porque $c = \\frac{m_{\\text{soluto}}}{V}$. Si $m_{\\text{soluto}}$ se mantiene y $V$ aumenta, la concentración disminuye.",
+     "Al evaporar por completo el agua, todo el soluto queda como sólido. Por lo tanto, la masa del sólido final es la masa del soluto inicial: 10 g en cada vaso.",
+     "Si las cinco masas pesadas son iguales, se verifica que, en una dilución, la masa de soluto permanece constante. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Habla de que el volumen de agua aumenta de manera creciente. Ese cambio sí ocurre, pero el experimento no mide el volumen de la solución final: lo que se pesa es el soluto. Es una afirmación sobre lo que se manipula, no sobre lo que se verifica.",
+     "C": "Confunde la masa de la solución con la masa de soluto. La masa total de la solución sí aumenta con el agua agregada, pero el montaje pesa solo el sólido que queda después de evaporar.",
+     "D": "Invierte la variable del experimento: la cantidad de soluto se mantuvo fija en 10 g y lo que varió fue el volumen de agua. Por eso no es el objetivo planteado."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q14",
@@ -555,7 +773,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al evaporar solvente, la cantidad de soluto no cambia. Con los moles iniciales y la concentración final se calcula el volumen final, y la diferencia con el inicial es el volumen evaporado.",
+    "planteamiento": "Se pide el volumen de solvente que se evaporó. Datos: volumen inicial $V_i = 50\\ \\mathrm{mL}$, concentración inicial $c_i = 1\\ \\mathrm{mol/L}$ y concentración final $c_f = 10\\ \\mathrm{mol/L}$.",
+    "steps": [
+     "Calcula la cantidad de soluto, que no cambia al evaporar: $n = c_i \\cdot V_i = 1\\ \\mathrm{mol/L} \\cdot 0{,}050\\ \\mathrm{L} = 0{,}05\\ \\mathrm{mol}$.",
+     "Calcula el volumen final con esa misma cantidad de soluto: $V_f = \\frac{n}{c_f} = \\frac{0{,}05\\ \\mathrm{mol}}{10\\ \\mathrm{mol/L}} = 0{,}005\\ \\mathrm{L} = 5\\ \\mathrm{mL}$.",
+     "Como el soluto no se evapora, todo el volumen perdido es solvente: $V_{\\text{evaporado}} = V_i - V_f = 50 - 5 = 45\\ \\mathrm{mL}$.",
+     "Comprobación: la concentración final es $\\frac{0{,}05\\ \\mathrm{mol}}{0{,}005\\ \\mathrm{L}} = 10\\ \\mathrm{mol/L}$, que coincide con el dato. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "1 mL: supone que la concentración apenas cambia, como si se evaporara una cantidad muy pequeña. Pero una concentración de 10 mol/L exige que el volumen final sea de 5 mL.",
+     "B": "5 mL: es el volumen final de la solución, no el evaporado. La trampa es confundir lo que queda en el vaso con lo que se evaporó.",
+     "C": "10 mL: supone que se evaporan 10 mL sin calcular con moles. Si el volumen final fuera 40 mL, la concentración quedaría en $\\frac{0{,}05}{0{,}04} = 1{,}25$ mol/L, no 10 mol/L.",
+     "D": "40 mL: aparece al dividir 50 mL entre 5 para obtener un volumen final de 10 mL y restarlo de 50. El error es usar el factor 5 en vez del correcto, que da 5 mL finales."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q15",
@@ -583,7 +818,23 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un soluto se disuelve hasta su masa máxima para un volumen de agua dado. Si al agregar más agua un residuo se disuelve por completo, esa masa es posible con el nuevo volumen.",
+    "planteamiento": "Se pide la inferencia correcta sobre la solubilidad de la especie Z. Datos: 5 g y luego 7 g se disuelven en 100 mL sin residuo; con 9 g aparece residuo; al agregar 3 mL de agua (103 mL en total) el residuo se disuelve por completo.",
+    "steps": [
+     "5 g de Z se disuelven completamente en 100 mL. Paso 2: al agregar 2 g más (7 g en total) también se disuelven por completo. Por lo tanto, en 100 mL se disuelven al menos 7 g.",
+     "al agregar 2 g más (9 g en total) se acumula un residuo en el fondo. La masa máxima en 100 mL está entre 7 g y 9 g.",
+     "al agregar 3 mL de agua, el volumen pasa a 103 mL y el residuo se disuelve por completo. Por lo tanto, en 103 mL se disuelven completamente 9 g de Z.",
+     "Evaluación: B afirma que en 50 mL se disuelven 7 g; si la capacidad de disolver crece con el volumen de agua, en 50 mL el máximo sería cerca de la mitad del de 100 mL, es decir, unos 4 g. C afirma que 2 g son solubles en 3 mL, pero el experimento no midió la solubilidad en ese volumen. D afirma 12 g en 106 mL, pero el experimento no midió ese máximo. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Supone que la masa máxima en 50 mL es 7 g. Los datos indican que en 100 mL el máximo está entre 7 g y 9 g, así que en 50 mL sería cerca de la mitad. La trampa es mantener la misma masa al reducir el volumen a la mitad.",
+     "C": "Afirma que los 2 g del paso 3 se disuelven en 3 mL. El experimento agregó 3 mL de agua al final y disolvió el residuo, pero no midió cuánto se disuelve en 3 mL solamente. Es una extrapolación sin respaldo.",
+     "D": "Afirma que el máximo en 106 mL es 12 g. Los datos solo permiten afirmar que 9 g se disuelven en 103 mL, y no se midió un valor para 106 mL. La trampa es extrapolar la solubilidad sin medirla."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q16",
@@ -622,7 +873,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tabla da masas máximas para 1 L de agua. Con 2 L el máximo se duplica. Si la masa agregada es menor que el máximo, se disuelve todo; si es igual, la solución está saturada; si es mayor, queda soluto sin disolver.",
+    "planteamiento": "Se pide la afirmación correcta sobre la disolución en 2 L de agua a 25 °C. Datos: masas máximas en 1 L: soluto 1 = 207,0 g; soluto 2 = 9,9 g; soluto 3 = 316,0 g; soluto 4 = 1000,0 g; soluto 5 = 360,0 g.",
+    "steps": [
+     "La masa máxima crece con el volumen de agua, así que en 2 L se duplica: soluto 1 = 414,0 g; soluto 2 = 19,8 g; soluto 3 = 632,0 g; soluto 4 = 2000,0 g; soluto 5 = 720,0 g.",
+     "Regla de lectura: si la masa agregada es menor que el máximo, la solución es insaturada y se disuelve todo. Si es igual, la solución está saturada. Si es mayor, sobra soluto sin disolver.",
+     "Opción A: 900 g de soluto 3 frente a un máximo de 632 g. Sobra soluto, así que la solución no es diluida. La afirmación es falsa.",
+     "Opción B: 108 g de soluto 2 frente a un máximo de 19,8 g. No se disuelve todo el soluto. La afirmación es falsa.",
+     "Opción C: 1660 g de soluto 4 frente a un máximo de 2000 g. Como $1660 < 2000$, sí se disuelve todo. La afirmación de que no se disuelve completamente es falsa.",
+     "Opción D: 254 g de soluto 1 frente a un máximo de 414 g. Como $254 < 414$, se disuelve todo y la solución es insaturada, sin soluto no disuelto. La afirmación es falsa.",
+     "Opción E: 720 g de soluto 5 frente a un máximo de 720 g. Se disuelve exactamente la masa máxima: la solución está saturada y no puede disolver más soluto. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "Supone que el soluto 3 se disuelve por completo en 900 g; el máximo en 2 L es 632 g, así que 900 g dejarían soluto sin disolver. Confundir solución diluida con saturada es el error típico.",
+     "B": "Confunde el máximo en 2 L con la masa de 1 L. Con 19,8 g de máximo, 108 g de soluto 2 están muy por encima de lo que se disuelve.",
+     "C": "Ignora que el máximo de 2000 g para el soluto 4 es suficiente para 1660 g. Es un error de comparación entre la masa agregada y el máximo.",
+     "D": "Compara 254 g con la mitad del máximo de 1 L en lugar del máximo de 2 L. Con 414 g de máximo, 254 g se disuelven por completo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q17",
@@ -654,7 +925,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El porcentaje masa/masa divide la masa de soluto entre la masa total de la solución (soluto más solvente), no solo entre la masa del solvente.",
+    "planteamiento": "Se pide el porcentaje masa/masa de una solución preparada con 100 g de NaCl disueltos en 400 g de agua. Datos: $m_{\\text{soluto}} = 100\\ \\mathrm{g}$ y $m_{\\text{solvente}} = 400\\ \\mathrm{g}$.",
+    "steps": [
+     "Calcula la masa total de la solución: $m_{\\text{solución}} = m_{\\text{soluto}} + m_{\\text{solvente}} = 100 + 400 = 500\\ \\mathrm{g}$.",
+     "Aplica la definición de porcentaje masa/masa: $\\%\\ \\mathrm{m/m} = \\frac{m_{\\text{soluto}}}{m_{\\text{solución}}} \\cdot 100 = \\frac{100}{500} \\cdot 100$.",
+     "Simplifica: $\\frac{100}{500} = 0{,}2$ y $0{,}2 \\cdot 100 = 20$. La solución es al 20 % m/m.",
+     "Comprobación: el 20 % de 500 g es 100 g, que es exactamente la masa de NaCl. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "50 %: se obtiene al dividir 100 g entre 200 g, un denominador que no aparece en los datos. Es un error de cálculo al sumar mal la masa total.",
+     "B": "40 %: se obtiene de $\\frac{200}{500}$, es decir, al duplicar la masa de soluto. No corresponde a los datos del enunciado.",
+     "C": "25 %: divide la masa de soluto entre la masa de solvente, $\\frac{100}{400} \\cdot 100 = 25$. El error típico es usar el solvente como denominador en lugar de la solución.",
+     "E": "4 %: resulta de dividir 20 entre 500, un cálculo sin sentido: el 20 es ya el porcentaje, no una masa. La trampa es usar un resultado intermedio como si fuera la masa."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q18",
@@ -689,7 +977,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La dosificación se compara como proporción volumen/volumen: mL de amonio por cada mL de solución. La solución adecuada es la que tiene la misma proporción que la dosis del utensilio declarado.",
+    "planteamiento": "Se pide qué estudiante preparó la solución adecuada para el utensilio que indicó. Datos: ropa y zapatos, 10 mL en 1000 mL; mesas y equipos, 2 mL en 1000 mL; escobas, traperos y recipientes, 3 mL en 1000 mL; pisos, paredes, cortinas y canaletas, 2 mL en 1000 L. Estudiantes: 1) 10 mL en 2000 mL; 2) 4 mL en 1500 mL; 3) 2 mL en 2500 mL; 4) 5 mL en 500 mL.",
+    "steps": [
+     "Calcula la proporción de cada dosificación: ropa y zapatos, $\\frac{10}{1000} = 1\\,\\%$; mesas y equipos, $\\frac{2}{1000} = 0{,}2\\,\\%$; escobas, traperos y recipientes, $\\frac{3}{1000} = 0{,}3\\,\\%$; pisos, paredes, cortinas y canaletas, $\\frac{2\\ \\mathrm{mL}}{10^6\\ \\mathrm{mL}} = 0{,}0002\\,\\%$.",
+     "Calcula la proporción de cada solución preparada: estudiante 1, $\\frac{10}{2000} = 0{,}5\\,\\%$; estudiante 2, $\\frac{4}{1500} \\approx 0{,}27\\,\\%$; estudiante 3, $\\frac{2}{2500} = 0{,}08\\,\\%$; estudiante 4, $\\frac{5}{500} = 1\\,\\%$.",
+     "Estudiante 1 declaró ropa y zapatos, que requiere 1 %, pero preparó 0,5 %. No coincide.",
+     "Estudiante 2 declaró escobas, traperos y recipientes, que requiere 0,3 %, pero preparó aproximadamente 0,27 %. Tampoco coincide, aunque se acerca.",
+     "Estudiante 3 declaró mesas y equipos, que requiere 0,2 %, pero preparó 0,08 %. La solución está demasiado diluida.",
+     "Estudiante 4 declaró ropa y zapatos, que requiere 1 %, y preparó exactamente 1 %: 5 mL en 500 mL equivalen a 10 mL en 1000 mL. Es la solución adecuada. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Estudiante 1: prepara 0,5 %, la mitad de lo que exige ropa y zapatos (1 %). La trampa es fijarse en el número 10 mL, que aparece en la dosis, y no en la proporción.",
+     "B": "Estudiante 2: prepara 0,27 %, cercano a 0,3 % de escobas, traperos y recipientes. Aproximar la proporción no basta: la dosis debe respetarse con exactitud.",
+     "C": "Estudiante 3: prepara 0,08 %, cuatro veces menos que los 0,2 % de mesas y equipos. La trampa es comparar solo el volumen de amonio (2 mL) y olvidar el volumen total de la solución."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q19",
@@ -724,7 +1030,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El láser que rebota en las paredes del recipiente con agua sigue la ley de la reflexión: en cada pared el ángulo de incidencia es igual al ángulo de reflexión.",
+    "planteamiento": "Se pide el montaje que ejemplifica la ley de la reflexión. Datos: cuatro montajes con sus figuras; en la figura 4, un láser entra a un recipiente con agua y su trayectoria cambia de dirección al tocar las paredes interiores.",
+    "steps": [
+     "La ley de la reflexión establece que el rayo incidente, el rayo reflejado y la normal están en el mismo plano, y que el ángulo de incidencia es igual al ángulo de reflexión. Se verifica en superficies que devuelven el rayo, como un espejo o una pared pulida.",
+     "En la figura 1, una lente convergente desvía los rayos para formar una imagen: ejemplifica la refracción en lentes, no la reflexión. En la figura 2, un prisma dispersa la luz blanca, lo que corresponde a refracción con dispersión.",
+     "En la figura 3, la luz entra por un orificio y proyecta una imagen en el fondo de la caja, lo que ejemplifica la propagación rectilínea de la luz y no la reflexión.",
+     "En la figura 4, el láser sigue una trayectoria quebrada, con cambios de dirección al tocar la pared interior del recipiente, donde el rayo se refleja y vuelve hacia el interior del agua. Esa trayectoria muestra la ley de la reflexión. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La lente convergente forma la imagen por refracción de los rayos al atravesar el vidrio. Aunque hay rayos que se cruzan, el montaje ilustra lentes y no la reflexión en una superficie.",
+     "B": "El prisma separa los colores de la luz blanca por refracción y dispersión. Es un fenómeno de cambio de medio, no de rebote en una superficie, así que no ejemplifica la ley de la reflexión.",
+     "C": "La caja con orificio muestra que la luz viaja en línea recta y forma una imagen invertida. Ese es el principio de la cámara oscura, no la ley de la reflexión."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q20",
@@ -756,7 +1078,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Galileo partía de la suposición de que la luz tarda un tiempo medible en recorrer 2 km; esa es su hipótesis de trabajo: que la velocidad de la luz es finita.",
+    "planteamiento": "Se pide la hipótesis de trabajo de Galileo. Datos: dos colinas separadas por 2 km; cada observador destapa su farol al ver el del otro; Galileo quería medir el tiempo que tarda la luz en recorrer la distancia y no lo consiguió.",
+    "steps": [
+     "La hipótesis de trabajo es la suposición que guía el experimento y que el diseño intenta comprobar. Galileo diseñó un procedimiento para medir un intervalo de tiempo, lo que solo tiene sentido si la luz tarda un tiempo finito en recorrer la distancia.",
+     "Si la luz viajara de forma instantánea, el intervalo medido sería nulo y el experimento no tendría nada que medir. Por eso su punto de partida es que la velocidad de la luz tiene un valor finito.",
+     "La opción C afirma lo contrario, que los fenómenos luminosos son instantáneos, así que sería una idea que el experimento pondría a prueba y descartaría. Las alternativas A, B y E son conclusiones posteriores al fracaso de la medición: la reacción humana es demasiado lenta, los instrumentos no bastan o no es posible medir la velocidad.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El tiempo de reacción de las personas explica por qué Galileo no pudo medir, pero es una conclusión posterior al fracaso del experimento, no la suposición de partida.",
+     "B": "Que los instrumentos no sean adecuados es una explicación posterior al resultado negativo. La hipótesis de trabajo es la afirmación sobre la naturaleza de la luz, que se quiere comprobar.",
+     "C": "Que los fenómenos luminosos ocurran de manera instantánea es justamente lo que el experimento busca refutar. Escogerla sería confundir la hipótesis con la idea que se pone a prueba.",
+     "E": "Que no es posible medir la velocidad de la luz es una conclusión derivada del fracaso del procedimiento. Galileo se propuso medir y mantuvo la expectativa de un tiempo finito."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q21",
@@ -784,7 +1123,23 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable independiente es la que el estudiante cambia a propósito: la longitud de onda de la luz láser.",
+    "planteamiento": "Se pide la variable independiente del experimento. Datos: el estudiante usa rayos láser de distintas longitudes de onda, siempre con el mismo ángulo de incidencia sobre el centro de un espejo cóncavo, y mide el ángulo de reflexión.",
+    "steps": [
+     "En un experimento, la variable independiente es la que el investigador manipula de manera deliberada; la dependiente es la que se mide como respuesta; y las variables controladas se mantienen constantes durante todo el ensayo.",
+     "El enunciado indica que se usan rayos de diferentes longitudes de onda. Ese es el factor que cambia de un ensayo a otro, por lo que es la variable que el estudiante manipula.",
+     "El ángulo de incidencia se mantiene siempre igual, así que es una variable controlada y no la independiente. El ángulo de reflexión es lo que se mide, por lo que corresponde a la variable dependiente. El espejo también es el mismo en todos los ensayos.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El tipo de espejo no cambia durante el experimento, porque se usa siempre el mismo espejo cóncavo. Una variable que no varía no puede ser la independiente.",
+     "C": "El ángulo de incidencia se fija en el mismo valor para todos los ensayos. Es una variable controlada, y confundirla con la independiente es el error típico de esta pregunta.",
+     "D": "El ángulo de reflexión es lo que el estudiante mide tras cada ensayo, es decir, la variable dependiente. Una variable medida como respuesta no es la que se manipula."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q22",
@@ -812,7 +1167,23 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al pasar de agua a aire, la luz se desvía alejándose de la normal; ese cambio de dirección al atravesar la superficie es lo que muestra la ley de refracción.",
+    "planteamiento": "Se pide la observación que evidencia únicamente la ley de refracción. Datos: un láser verde dirigido de abajo hacia arriba, en diagonal, desde el agua de un acuario de vidrio hacia el aire.",
+    "steps": [
+     "La ley de refracción relaciona los ángulos de incidencia y de refracción con los índices de refracción de los dos medios. Se manifiesta como un cambio de dirección del rayo al atravesar la superficie que separa dos medios de distinta densidad óptica.",
+     "Al salir del agua, que es el medio más refringente, hacia el aire, el rayo se aleja de la normal: el ángulo de refracción es mayor que el de incidencia. Visualmente, el rayo se acerca a la horizontal.",
+     "Las alternativas A y B describen que el haz vuelve hacia el agua, es decir, reflexión, y la reflexión total en la superficie pertenece a la ley de la reflexión. La C describe una distorsión visual del haz dentro del agua, que no corresponde a un ángulo medido.",
+     "Solo la D describe el cambio de dirección al pasar del agua al aire, que es lo que evidencia la ley de refracción. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Que el haz de luz se devuelva al llegar a la superficie agua-aire describe reflexión, no refracción. Para esta ley se necesita que el haz siga avanzando con otra dirección.",
+     "B": "El haz que vuelve en zigzag a la superficie es reflexión repetida, o reflexión total, que pertenece a la ley de la reflexión. No evidencia la ley de refracción por sí sola.",
+     "C": "Ver el haz distorsionado dentro del agua es un efecto de observación, no una medición de ángulos. La trampa es confundir una percepción visual con la ley que se quiere demostrar."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q23",
@@ -844,7 +1215,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-energia"
+   "subtopic": "cs-energia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un puntero láser emite luz visible; los demás aparatos usan microondas, sonido, ultrasonido o infrarrojo, que el ojo no percibe como luz.",
+    "planteamiento": "Se pide el aparato cuyo funcionamiento se basa en la emisión de radiación del espectro visible. Datos: cinco aparatos (radar, sonar, ecógrafo, puntero láser y control remoto); el espectro visible corresponde aproximadamente a longitudes de onda entre $400$ nm y $700$ nm.",
+    "steps": [
+     "El espectro electromagnético ordena las radiaciones por longitud de onda: las ondas de radio y las microondas tienen longitudes de onda muy grandes, luego viene el infrarrojo, después la luz visible (aproximadamente entre $400$ nm y $700$ nm), y más allá el ultravioleta, los rayos X y los rayos gamma.",
+     "Para responder hay que identificar qué tipo de energía emite cada aparato. El radar emite microondas, que son radiación electromagnética fuera del rango visible.",
+     "El sonar y el ecógrafo no emiten radiación electromagnética: el sonar usa ondas sonoras y el ecógrafo ultrasonido, que son ondas mecánicas que necesitan un medio material para propagarse.",
+     "El control remoto emite radiación infrarroja, que se ubica justo debajo del rojo y que el ojo humano no puede ver. El puntero láser, en cambio, emite un haz de luz coherente que normalmente está en el rango visible, rojo o verde. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El radar emite microondas, que es radiación electromagnética, pero con una longitud de onda mucho mayor que la de la luz visible. La trampa es pensar que cualquier onda electromagnética es visible.",
+     "B": "El sonar emite ondas sonoras, que son mecánicas y no pertenecen al espectro electromagnético. Confundir ondas sonoras con radiación es la trampa típica de esta pregunta.",
+     "C": "El ecógrafo emplea ultrasonido, una onda mecánica de alta frecuencia que se propaga en los tejidos. No es radiación electromagnética y, por lo tanto, no puede estar en el espectro visible.",
+     "E": "El control remoto emite infrarrojo, que queda fuera del espectro visible. La trampa es pensar que, como se usa luz para transmitir la señal, esa luz es visible para las personas."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q24",
@@ -872,7 +1260,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al añadir bloques de igual masa hasta que la grúa no puede levantar el conjunto, el procedimiento busca la fuerza o carga máxima que la grúa puede ejercer.",
+    "planteamiento": "Se pide el objetivo de investigación que se relaciona directamente con el estudio. Datos: bloques de igual masa que se agregan uno a uno, siempre a la misma altura, hasta que la grúa no puede levantar el conjunto.",
+    "steps": [
+     "El procedimiento aumenta de forma progresiva la masa que la grúa debe levantar, bloque a bloque, y mantiene fija la altura. Así se obtiene una secuencia de cargas crecientes.",
+     "La condición de término es que la grúa no pueda levantar el conjunto. Eso indica que existe un límite, la carga máxima que puede sostener y elevar. Como el peso de los bloques es la fuerza que el cable debe ejercer, ese límite corresponde a la fuerza máxima de la grúa.",
+     "Para elevar el conjunto a velocidad constante, la tensión del cable debe igualar el peso de los bloques, $T = m\\,g$. Al aumentar la masa, la fuerza requerida crece hasta alcanzar el máximo que el sistema puede ejercer.",
+     "La alternativa A busca la altura, que se mantuvo fija durante todo el ensayo. Las alternativas B y D miden tiempos o rapidez de un solo bloque, algo que el procedimiento no hace. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La altura se mantiene igual en todos los ensayos, así que no es una variable que el estudio determine. La altura máxima no se alcanza en el procedimiento, pues el criterio de término es la masa levantada.",
+     "B": "La rapidez de un solo bloque no se mide en el procedimiento, que trabaja con el conjunto creciente de bloques. Confundir la rapidez con la fuerza máxima es el error típico de esta pregunta.",
+     "D": "El tiempo que demora la grúa en elevar cada bloque por separado tampoco se registra. El estudio se centra en la carga que la grúa soporta, no en el tiempo de cada elevación."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q25",
@@ -900,7 +1304,23 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para calcular la aceleración con la segunda ley de Newton hay que conocer la fuerza neta y la masa del cuerpo; la distancia y la rapidez no bastan.",
+    "planteamiento": "Se pide qué variables deben medirse para calcular la aceleración de un cuerpo en un estudio sobre las leyes de Newton. Datos: la relación entre aceleración, fuerza neta y masa dada por la segunda ley de Newton, $a = \\dfrac{F_{\\text{neta}}}{m}$.",
+    "steps": [
+     "La segunda ley de Newton establece que la aceleración de un cuerpo es proporcional a la fuerza neta que actúa sobre él e inversamente proporcional a su masa: $a = \\dfrac{F_{\\text{neta}}}{m}$.",
+     "Para calcular $a$ hay que medir, entonces, la magnitud de la fuerza neta sobre el cuerpo y su masa. Ambas variables aparecen en la fórmula, así que con ellas basta para obtener la aceleración.",
+     "La distancia recorrida y la rapidez promedio describen el movimiento, pero en el marco de las leyes de Newton no contienen la información de la fuerza que causa el cambio de velocidad. Por eso no bastan para obtener la aceleración a partir de la dinámica.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La masa es necesaria, pero la distancia recorrida no permite calcular la aceleración sin conocer el tiempo, y en el contexto de Newton falta la fuerza neta. La trampa es elegir una variable de cinemática.",
+     "C": "La distancia y la rapidez promedio describen el movimiento, no la causa del cambio de velocidad. Sin la fuerza neta ni la masa, la aceleración no puede determinarse con la segunda ley.",
+     "D": "La fuerza neta es necesaria, pero la rapidez promedio no sirve sin el tiempo, y además falta la masa, que aparece en $a = F/m$. El cálculo queda incompleto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q26",
@@ -932,7 +1352,25 @@
    ],
    "answer": "E",
    "presentation": "text",
-   "subtopic": "cs-cinematica"
+   "subtopic": "cs-cinematica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al frenar mientras baja, el ascensor acelera hacia arriba: por eso la pesa marca más que el peso real de la persona.",
+    "planteamiento": "Se pide la medida de la pesa, que es la fuerza normal, mientras frena el ascensor. Datos: masa $m = 60\\ \\mathrm{kg}$, magnitud de la aceleración de frenado $a = 0{,}25\\ \\mathrm{m/s^2}$ y $g = 10\\ \\mathrm{m/s^2}$.",
+    "steps": [
+     "Determina el sentido de la aceleración: el ascensor baja y frena, así que su rapidez disminuye. Para eso la aceleración debe apuntar en sentido contrario al movimiento, es decir, hacia arriba.",
+     "Identifica las fuerzas sobre la persona: el peso $m \\cdot g$ hacia abajo y la fuerza normal $N$ de la pesa hacia arriba. Esa fuerza $N$ es lo que indica la pesa.",
+     "Aplica la segunda ley de Newton, con sentido positivo hacia arriba: $N - m \\cdot g = m \\cdot a$. Al despejar queda $N = m \\cdot g + m \\cdot a = m(g + a)$.",
+     "Reemplaza los valores: $N = 60 \\cdot (10 + 0{,}25) = 60 \\cdot 10{,}25 = 615\\ \\mathrm{N}$.",
+     "El resultado es mayor que el peso de $600\\ \\mathrm{N}$, como corresponde a una aceleración hacia arriba. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "$15\\ \\mathrm{N}$ es solo $m \\cdot a = 60 \\cdot 0{,}25$: es la fuerza neta sobre la persona, no lo que marca la pesa, porque olvida el peso.",
+     "B": "$60\\ \\mathrm{N}$ repite el valor de la masa: confunde kilogramos con newtons y no considera ni la gravedad ni la aceleración.",
+     "C": "$150\\ \\mathrm{N}$ resulta de multiplicar el peso por la aceleración: $600 \\cdot 0{,}25$. Esa operación no corresponde a ninguna ley y mezcla las unidades.",
+     "D": "$585\\ \\mathrm{N}$ es $60 \\cdot (10 - 0{,}25)$: usa el signo contrario, como si la aceleración fuera hacia abajo. Pasaría al arrancar hacia abajo, no al frenar."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q27",
@@ -967,7 +1405,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cuando el resorte no recupera su longitud natural tras retirar la masa, se ha superado su límite de elasticidad; ese es el objetivo que sugiere el registro.",
+    "planteamiento": "Se pide el objetivo de investigación acorde con el procedimiento. Datos: resorte de 10 cm de longitud natural, masa propia de 80 g, cuerpos de 0 a 250 g; se registra la longitud estirada y la longitud natural tras retirar cada cuerpo, que es 10, 10, 10, 10, 13 y 15 cm.",
+    "steps": [
+     "El procedimiento cuelga masas de forma sucesiva, mide la longitud estirada y, después de retirar cada cuerpo, vuelve a medir la longitud natural. Esa segunda medición permite comprobar si el resorte recupera su forma original.",
+     "Con masas de 0, 50, 100 y 150 g, la longitud natural vuelve a 10 cm: el resorte se estira y recupera su forma completamente. Con 200 g, la longitud natural queda en 13 cm, y con 250 g en 15 cm: hay deformación permanente.",
+     "El punto en que aparece la deformación permanente marca el límite de elasticidad: más allá de él, el resorte ya no vuelve a su longitud original. El procedimiento está diseñado precisamente para determinar ese límite.",
+     "Las demás opciones no coinciden con el registro: una constante de elasticidad requeriría comparar varios resortes distintos, la forma del resorte no se varía y la masa del resorte se mantuvo fija en 80 g. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Determinar la constante de elasticidad de distintos resortes requeriría varios resortes. El procedimiento usa un solo resorte, y la constante se obtiene de la parte elástica de la curva, no de la comparación entre resortes.",
+     "C": "La forma del resorte, por ejemplo su diámetro, no se modifica en el procedimiento. Lo que cambia es la masa colgada, así que el objetivo no corresponde a la forma.",
+     "D": "La masa del resorte se mantiene en 80 g durante todo el ensayo. Lo que varía es la masa del cuerpo colgado, no la del resorte, por lo que la relación propuesta no es la estudiada."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q28",
@@ -995,7 +1449,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El estudiante cambia la fuerza aplicada y mide la aceleración que adquiere el objeto; por eso la pregunta debe relacionar esas dos variables.",
+    "planteamiento": "Se pide la pregunta de investigación que pudo guiar el estudio. Datos: un objeto en reposo sobre una superficie horizontal pulida; en cada ensayo se aplica una fuerza distinta durante un tiempo fijo, y se mide la aceleración resultante.",
+    "steps": [
+     "En el procedimiento, la variable que el estudiante cambia en cada ensayo es la fuerza aplicada. La variable que mide es la aceleración que adquiere el objeto. El tiempo de aplicación, el objeto y la superficie se mantienen fijos.",
+     "Una pregunta de investigación debe relacionar la variable manipulada con la variable medida. En este caso, la relación es entre la fuerza aplicada y la aceleración del objeto.",
+     "La alternativa C propone exactamente esa relación. Las demás preguntas involucran variables que no se estudiaron: el peso del objeto (A), la relación entre fuerza y tiempo (B), y el tiempo de aplicación con la aceleración (D), que se mantuvo fijo.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El peso del objeto no cambia en los ensayos, así que no puede relacionarse con la aceleración según el procedimiento. La trampa es mezclar el peso con la fuerza aplicada.",
+     "B": "El tiempo de aplicación de la fuerza se mantiene fijo durante todo el estudio, por lo que la relación entre fuerza y tiempo no se investiga en el procedimiento descrito.",
+     "D": "El tiempo de aplicación también es constante en los ensayos. Relacionarlo con la aceleración no corresponde a lo que varía en el experimento, que es la fuerza."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q29",
@@ -1030,7 +1500,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El mercurio tiene un calor específico mucho menor que el alcohol: necesita menos energía para subir una unidad de temperatura por gramo de sustancia.",
+    "planteamiento": "Se pide la conclusión correcta a partir de la tabla de propiedades del mercurio y del alcohol. Datos: calor específico de $0{,}033$ cal/(g °C) para el mercurio y $0{,}580$ cal/(g °C) para el alcohol; coeficientes de dilatación de $1{,}8 \\times 10^{-4}$ °C⁻¹ y $7{,}5 \\times 10^{-4}$ °C⁻¹; densidades de $13{,}60$ g/cm³ y $0{,}79$ g/cm³; temperaturas de ebullición de $357$ °C y $78$ °C.",
+    "steps": [
+     "El calor específico indica cuánta energía térmica se necesita para elevar en un grado Celsius un gramo de sustancia. La tabla da $0{,}033$ cal/(g °C) para el mercurio y $0{,}580$ cal/(g °C) para el alcohol.",
+     "Un calor específico menor significa que se requiere menos energía para variar la temperatura en una unidad. Como $0{,}033 < 0{,}580$, el mercurio necesita menor variación de energía térmica que el alcohol para aumentar su temperatura en una unidad.",
+     "Las demás opciones se revisan con la tabla. El coeficiente de dilatación del alcohol, $7{,}5 \\times 10^{-4}$ °C⁻¹, es mayor que el del mercurio, $1{,}8 \\times 10^{-4}$ °C⁻¹, así que es el alcohol el que se dilata más. La densidad del mercurio, $13{,}60$ g/cm³, es muy superior a la del alcohol, $0{,}79$ g/cm³.",
+     "El alcohol hierve a $78$ °C y el mercurio a $357$ °C, así que el alcohol deja de ser líquido a menor temperatura; la afirmación de la D es falsa. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Afirma que el mercurio se dilata más por grado. La tabla muestra que su coeficiente de dilatación es menor, $1{,}8 \\times 10^{-4}$ °C⁻¹ frente a $7{,}5 \\times 10^{-4}$ °C⁻¹ del alcohol. La trampa es asociar al metal con mayor dilatación.",
+     "C": "Dice que el alcohol tiene la misma masa en un mismo volumen que el mercurio. La densidad del mercurio, $13{,}60$ g/cm³, es casi diecisiete veces la del alcohol, $0{,}79$ g/cm³, así que la afirmación es falsa.",
+     "D": "Sostiene que el alcohol permanece líquido a mayor temperatura. Su punto de ebullición es $78$ °C, mientras que el del mercurio es $357$ °C; el alcohol pasa a gas antes, así que la afirmación está invertida."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q30",
@@ -1069,7 +1555,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-energia"
+   "subtopic": "cs-energia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La temperatura sube hasta cerca de 6 o 7 minutos y luego baja; ese cambio de tendencia indica que la cocina se apagó en ese intervalo.",
+    "planteamiento": "Se pide la afirmación correcta a partir del gráfico de temperatura T (°C) en función del tiempo t (min). Datos: la curva sube desde unos $8$ °C hasta cerca de $89$ °C alrededor de los 6 minutos, luego desciende y se estabiliza cerca de $28$ °C.",
+    "steps": [
+     "Se lee el gráfico por tramos. Entre 0 y 2 minutos la temperatura sube desde unos $8$ °C hasta unos $52$ °C; entre 2 y 4 minutos sube hasta unos $83$ °C; entre 4 y 6 minutos llega a unos $89$ °C.",
+     "El máximo de la curva ocurre cerca de los 6 o 7 minutos. A partir de ahí la temperatura empieza a bajar, lo que indica que el aporte de calor cesó: la cocina fue apagada en ese intervalo y el agua comenzó a enfriarse.",
+     "Las demás afirmaciones no se cumplen. Entre 0 y 4 minutos la razón de aumento no es constante: unos $22$ °C/min en el primer tramo y unos $15{,}5$ °C/min en el segundo. Entre 0 y 2 minutos la temperatura sube, y entre 8 y 10 minutos baja, así que las razones no son iguales. Entre 2 y 4 minutos la razón es mayor, unos $15{,}5$ °C/min, que entre 4 y 6 minutos, unos $3$ °C/min.",
+     "El gráfico termina en 12 minutos y no muestra datos posteriores, así que la afirmación sobre la temperatura después de ese instante queda fuera de lo representado. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Entre 0 y 4 minutos la curva cambia de pendiente: sube unos $22$ °C por minuto en el primer tramo y unos $15{,}5$ °C por minuto en el segundo. La razón de aumento no fue constante.",
+     "C": "Entre 0 y 2 minutos la temperatura aumenta, con una razón cercana a $22$ °C/min, y entre 8 y 10 minutos disminuye, con una razón cercana a $-25$ °C/min. Tienen magnitudes parecidas, pero signos opuestos, así que no son iguales.",
+     "D": "El gráfico termina en 12 minutos y no entrega datos posteriores. Afirmar que la temperatura es constante después de ese instante supera la información disponible.",
+     "E": "Afirma que entre 2 y 4 minutos la razón de aumento fue menor que entre 4 y 6 minutos. El gráfico muestra lo contrario: entre 2 y 4 minutos la temperatura sube unos $15{,}5$ °C por minuto y entre 4 y 6 minutos solo unos $3$ °C por minuto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q31",
@@ -1108,7 +1611,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-energia"
+   "subtopic": "cs-energia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las flechas forman la cadena de calor S a R, R a P, P a Q, y S también a Q, lo que da $T_S > T_R > T_P > T_Q$; la única relación que se deduce es $T_Q < T_R$.",
+    "planteamiento": "Se pide una relación correcta entre las temperaturas de los cuerpos P, Q, R y S. Datos: el calor fluye desde el cuerpo más caliente hacia el más frío, y las flechas indican P hacia Q, S hacia Q, R hacia P y S hacia R.",
+    "steps": [
+     "El calor siempre fluye desde el cuerpo de mayor temperatura hacia el de menor temperatura. Por eso cada flecha indica una desigualdad entre los dos cuerpos que une.",
+     "Se leen las flechas: de P hacia Q, $T_P > T_Q$; de S hacia Q, $T_S > T_Q$; de R hacia P, $T_R > T_P$; y de S hacia R, $T_S > T_R$.",
+     "Encadenando las desigualdades se obtiene $T_S > T_R > T_P > T_Q$. Con esta cadena se evalúan las opciones: $T_Q < T_R$ se cumple, porque Q es el más frío de los cuatro cuerpos.",
+     "Las demás opciones son falsas o no se deducen. $T_P > T_S$ contradice la cadena; las igualdades de las opciones D y E no se desprenden de flechas, que solo dan desigualdades; y la expresión de la C, con una resta, no se deduce de la información. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Afirma que $T_P > T_S$, pero la flecha va de S hacia R y de R hacia P, lo que da $T_S > T_R > T_P$. La relación queda invertida.",
+     "C": "Propone $T_P < T_R - T_Q$, una comparación con una resta de temperaturas que las flechas no permiten deducir. Solo se conocen desigualdades entre pares de cuerpos.",
+     "D": "Propone una igualdad, $T_S = T_R + T_Q$, pero las flechas solo indican desigualdades. Además, sumar temperaturas de cuerpos distintos no se desprende del diagrama.",
+     "E": "Propone $T_S = T_R + T_P + T_Q$, otra igualdad que las flechas no permiten establecer. Solo se conocen desigualdades entre los pares de cuerpos unidos por una flecha."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q32",
@@ -1143,7 +1663,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-energia"
+   "subtopic": "cs-energia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El calor pasa del fondo metálico al agua por conducción, y dentro del agua las masas calientes suben por convección.",
+    "planteamiento": "Se pide la combinación de mecanismos de transferencia de energía térmica para (X) y (Y). Datos: el calor llega desde la fuente a la parte inferior de la olla y se transfiere al agua; luego se genera un flujo interno en el agua.",
+    "steps": [
+     "La conducción es la transferencia de calor a través de un material, por contacto directo entre partículas que se transmiten energía. El fondo metálico de la olla recibe calor de la fuente por conducción y se lo entrega al agua que está en contacto con él.",
+     "Dentro del agua, la capa inferior se calienta, se vuelve menos densa y sube, mientras que la capa fría, más densa, baja. Ese movimiento de masas de fluido es la convección, y corresponde al flujo interno que describe el enunciado.",
+     "La radiación es transferencia por ondas electromagnéticas y no requiere contacto con un material. No es el mecanismo principal con que la olla calienta el agua, y tampoco describe el flujo interno del fluido.",
+     "Por lo tanto, X corresponde a conducción e Y a convección, lo que es la combinación de la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Convección para (X) desconoce que el calor atraviesa primero el fondo sólido de la olla por contacto. Radiación para (Y) tampoco corresponde, porque el flujo interno del agua es de masas que se mueven.",
+     "B": "Conducción para (X) es correcta, pero radiación para (Y) no describe el flujo interno del agua; la radiación no mueve masas de fluido.",
+     "C": "Convección para (X) no corresponde a la transferencia a través del fondo sólido, y conducción para (Y) no describe el movimiento de masas de agua que se produce en el líquido."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q33",
@@ -1171,7 +1707,23 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Mediciones de posición repetidas durante varios años permiten calcular cuánto se separan las placas por unidad de tiempo, lo que corresponde a su rapidez de separación.",
+    "planteamiento": "Se pide la pregunta de investigación acorde con el procedimiento. Datos: sensores GPS fijos en dos islas situadas en lados opuestos de una dorsal oceánica, con posiciones registradas durante varios años.",
+    "steps": [
+     "Los sensores GPS fijos registran la posición de cada isla en distintos momentos. Al comparar esas posiciones a lo largo de los años se obtiene cuánto cambia la distancia entre ambas islas.",
+     "Dividir ese cambio por el tiempo transcurrido entrega una rapidez de separación. Como las islas están a ambos lados de una dorsal, la separación refleja el movimiento de las placas tectónicas en esa zona.",
+     "La pregunta D pide la rapidez de separación de las placas, que es justo lo que mide el procedimiento. Las demás preguntas requieren datos que no se registran: la actividad volcánica (A), la magnitud de los sismos (B) y la proximidad a un límite de placas (C), que no se determina solo con posiciones GPS.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Predecir actividad volcánica requiere observar la actividad geológica, como temperatura, gases o sismicidad. Las posiciones GPS no entregan esa información sobre el futuro de las islas.",
+     "B": "La magnitud de los sismos se mide con sismógrafos, no con posiciones GPS. El procedimiento no registra eventos sísmicos, así que la pregunta no corresponde a los datos.",
+     "C": "Saber cuál isla está más cerca del límite de placas es un análisis geográfico que no se obtiene de la rapidez de separación registrada. La trampa es confundir distancia a un punto con velocidad de separación."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q34",
@@ -1206,7 +1758,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una barra cargada atrae por inducción a la bolita neutra, y cuanto más carga tiene la barra, más se acerca la bolita; la barra 2, frotada durante más tiempo, debe acercarla aún más.",
+    "planteamiento": "Se pide cómo debe moverse la bolita para validar la hipótesis de que a mayor tiempo de frotación, mayor carga. Datos: la barra 1 se frota 1 minuto y la barra 2, igual a la anterior, 2 minutos; la bolita es conductora y está inicialmente neutra; ambas barras se acercan a la misma distancia.",
+    "steps": [
+     "Una barra cargada atrae a una bolita conductora neutra por inducción: las cargas de la bolita se redistribuyen y la parte más cercana adquiere carga opuesta a la de la barra. La atracción resultante hace que la bolita se acerque.",
+     "La fuerza de atracción por inducción depende de la carga de la barra. Como la barra 2 se frotó durante 2 minutos, debería adquirir más carga que la barra 1, frotada durante 1 minuto, y por eso debe atraer la bolita con más intensidad.",
+     "Para validar la hipótesis, la bolita debe acercarse al poner la barra 1 y acercarse aún más al poner la barra 2. Las opciones que alejan la bolita no corresponden a la atracción por inducción, y la que compara los paños no prueba la hipótesis, porque la hipótesis se refiere a las barras.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Afirma que la bolita se aleja al poner los paños de seda. Los paños no son el objeto de la hipótesis, y la atracción de un cuerpo cargado sobre una bolita neutra no se invierte con el paño.",
+     "B": "Propone que la bolita se aleja con la barra 1 y se aleja aún más con la barra 2. Esa respuesta contradice la atracción por inducción y no muestra un aumento de carga relacionado con el tiempo de frotación.",
+     "C": "Plantea que la bolita se aleja al poner la barra 1 igual que con el paño. Como el paño no es la variable de la hipótesis, esta respuesta no permite validarla."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q35",
@@ -1234,7 +1802,23 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si al retirar una ampolleta las demás siguen encendidas, el circuito es en paralelo; si el juego se apaga, es en serie. Ese procedimiento separa ambos casos.",
+    "planteamiento": "Se pide el procedimiento que permita diferenciar si el juego de luces está conectado en serie o en paralelo. Datos: el juego de luces y la red eléctrica domiciliaria funcionan correctamente.",
+    "steps": [
+     "En un circuito en serie, todas las ampolletas están en una misma trayectoria de corriente: si una se retira o se interrumpe, el circuito se abre y ninguna enciende.",
+     "En un circuito en paralelo, cada ampolleta tiene su propia rama conectada a la misma diferencia de potencial: si se retira una, las demás siguen encendidas.",
+     "Por eso el procedimiento de la opción B separa ambos casos: si el juego no enciende tras retirar una ampolleta, es en serie; si enciende, es en paralelo. Las otras alternativas no lo logran: un transformador de 220 V (A) no distingue la configuración, invertir la polaridad (C) no cambia la conexión de las ampolletas, y usar una batería (D) tampoco revela la configuración del juego.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Conectar el juego a un transformador de 220 V y ver si enciende no revela cómo están conectadas las ampolletas. Ambas configuraciones podrían encender con esa tensión.",
+     "C": "Cambiar la posición del enchufe y la polaridad no modifica la forma en que las ampolletas están unidas entre sí. El resultado sería el mismo en serie y en paralelo, así que no sirve para diferenciarlas.",
+     "D": "Conectar el juego a la red y luego a una batería de corriente continua no separa las dos configuraciones. Cualquiera de ellas puede encender con alimentación continua o alterna, por lo que el resultado no discrimina."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q36",
@@ -1263,7 +1847,23 @@
    "answer": "D",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El interruptor corta cuando la corriente total supera el límite del circuito; esa corriente crece con la potencia que consume cada artefacto, así que la potencia es la característica que lo explica.",
+    "planteamiento": "Se pide la característica de los artefactos, indicada en sus placas de especificaciones, que explica que el interruptor automático corte la corriente al encenderlos. Datos: varios artefactos encendidos a la vez en una red domiciliaria de tensión prácticamente constante.",
+    "steps": [
+     "El interruptor automático protege el circuito: corta la corriente cuando la intensidad supera el valor que la instalación soporta. Esa intensidad aumenta cuando se conectan artefactos que demandan más energía.",
+     "En la red domiciliaria la tensión es prácticamente constante, así que la corriente que consume un artefacto se relaciona con su potencia: $P = V \\cdot I$, de donde $I = \\dfrac{P}{V}$. Un artefacto de mayor potencia demanda más corriente.",
+     "La potencia eléctrica consumida es la característica que aparece en las placas de especificaciones y que explica el corte, porque la suma de las potencias de los artefactos encendidos determina la corriente total. La diferencia de potencial es la misma en todos ellos, y la frecuencia es un dato de la red.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La resistencia determina cuánta corriente pasa por un artefacto, pero no es el dato que se suma al encender varios equipos. La trampa es pensar que cualquier característica eléctrica sirve para explicar el corte.",
+     "B": "La diferencia de potencial de la red es la misma para todos los artefactos y no aumenta al encender más equipos. No puede explicar por sí sola que el interruptor corte.",
+     "C": "La frecuencia de la corriente es la misma para todos los artefactos de la red y no cambia al conectar más equipos. No explica el aumento de corriente que provoca el corte."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q37",
@@ -1291,7 +1891,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Antes de estudiar la pared celular hay que decidir qué organismos se van a comparar: la pared está presente en procariontes y en eucariontes, así que la muestra debe incluir ambos grupos.",
+    "planteamiento": "Se pide la primera actividad que debe considerar el grupo para estudiar la constitución y las funciones de la pared celular en los seres vivos. Datos: el objetivo es comparar la pared celular en organismos que la posean, de los dos grandes tipos celulares.",
+    "steps": [
+     "El objetivo del grupo es estudiar la pared celular en los seres vivos en general, no en un solo grupo. Por eso la muestra debe representar a los dos grandes tipos celulares que tienen pared: procariontes (como las bacterias, con pared de peptidoglicano) y eucariontes (como las células vegetales, de celulosa, y los hongos, de quitina).",
+     "Antes de cualquier extracción, observación o comparación hay que definir qué organismos se estudiarán, porque sin ellos no existe material de análisis. La selección de la muestra es, por lo tanto, el primer paso de la investigación.",
+     "La alternativa A propone solo eucariontes, y la B solo procariontes con paredes gruesas: ambas dejan fuera a la mitad del problema y restringen el estudio a un dominio. La D es una comparación de funciones, que es un objetivo posterior porque primero hay que tener los organismos a comparar.",
+     "La alternativa C reúne ambos grupos y exige que tengan pared celular, condición que delimita correctamente la muestra desde el inicio. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Elegir solo eucariontes con pared celular funcional es una selección válida, pero incompleta: excluye a las bacterias y a las arqueas, que también tienen pared, y deja sin comparar la diferencia entre procariontes y eucariontes que sugiere el objetivo. Además, «funcional» introduce un criterio que todavía no se ha evaluado.",
+     "B": "Extraer la pared de procariontes con paredes gruesas es una actividad de laboratorio, pero no es la primera. Antes hay que decidir qué organismos se usarán, y esta alternativa además deja fuera a los eucariontes con pared, como plantas y hongos. La trampa típica es preferir una acción técnica a la decisión de diseño.",
+     "D": "Comparar la función de la pared celular en procariontes y eucariontes corresponde a una etapa posterior, la del análisis. Solo puede hacerse una vez definida la muestra, así que no es la primera actividad que debe considerar el grupo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q38",
@@ -1326,7 +1942,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si una proteína marcada aparece en distintas regiones de la membrana con el paso del tiempo, las proteínas se desplazan dentro de la bicapa, y eso apoya el modelo de mosaico fluido.",
+    "planteamiento": "Se pide la alternativa que sea evidencia de que los componentes de la membrana se desplazan. Datos: se marca con una molécula fluorescente un tipo particular de proteína de membrana en enterocitos cultivados in vitro, y se observa la marca en distintos tiempos.",
+    "steps": [
+     "El modelo de mosaico fluido sostiene dos ideas: la membrana es una bicapa de fosfolípidos con proteínas insertadas, y estos componentes se mueven lateralmente. Una evidencia debe mostrar movimiento de los componentes de la membrana, y no solo su presencia.",
+     "En el experimento, la proteína se marca con una sustancia fluorescente. Si la marca aparece más tarde en regiones de la membrana distintas de la zona inicial, la proteína se ha desplazado a lo largo de la bicapa.",
+     "La alternativa C describe exactamente ese resultado: la marca distribuida en distintas regiones de la membrana a diferentes tiempos de observación. Esto demuestra el movimiento lateral de la proteína sin depender de un tipo de molécula específico.",
+     "La alternativa A afirma algo que no se observa: el experimento marca proteínas, no fosfolípidos. La B describe la composición de la membrana, que es una característica del modelo y no una evidencia de su movimiento; saber que hay fosfolípidos y proteínas no distingue entre una membrana fluida y una rígida. La D va en sentido contrario al modelo. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Observar el desplazamiento continuo de los fosfolípidos no es posible con este diseño, porque el experimento marca proteínas y no fosfolípidos. La trampa es atribuir a la marca un seguimiento que no existe en el montaje.",
+     "B": "Detectar fosfolípidos y proteínas en la membrana es una descripción de su composición, no de su movilidad. Es un dato que cualquier modelo de membrana también incluye, así que no apoya específicamente el mosaico fluido.",
+     "D": "Que las proteínas marcadas no difundan iría contra el modelo, que describe componentes en desplazamiento continuo. Una afirmación así sería una evidencia en contra y no a favor, por lo que no responde la pregunta."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q39",
@@ -1361,7 +1993,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para evaluar cada fármaco por separado y con resultados confiables, cada uno debe probarse solo, en tejidos de los tres sujetos, sin mezclarlo con otro.",
+    "planteamiento": "Se pide el diseño experimental que evalúe la acción individual de X, W y Z y que entregue resultados confiables. Datos: tres fármacos, tejido epitelial dañado de tres sujetos (1, 2 y 3) y una observación al microscopio en cada caso.",
+    "steps": [
+     "La acción individual de cada fármaco exige aplicarlos por separado: un tratamiento con X, otro con W y otro con Z. Si se mezclan dos fármacos en un mismo tratamiento, el efecto observado no permite atribuir el cambio a uno solo.",
+     "La confiabilidad requiere repetición con distintos individuos. Como el tejido proviene de tres sujetos diferentes, cada fármaco debe probarse en tejidos de los sujetos 1, 2 y 3, para que el resultado no dependa de las características de una sola persona.",
+     "Con esas dos condiciones, el diseño correcto tiene tres bloques, uno por fármaco, y cada bloque incluye el tejido de los tres sujetos antes de la observación al microscopio. Así cada resultado puede compararse de manera directa.",
+     "La alternativa A asigna cada fármaco a un solo sujeto, por lo que confunde el efecto del fármaco con el del individuo. La B combina fármacos en pares (X+W, X+Z, Z+W), lo que impide aislar la acción de cada uno. La D aplica los tres fármacos juntos sobre un mismo tejido, sin control individual. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Asignar un fármaco a un único sujeto impide saber si el efecto se debe al fármaco o a las características de ese individuo. Además, cada fármaco se evalúa una sola vez, lo que no entrega resultados confiables.",
+     "B": "Probar pares de fármacos mezcla sus efectos: si el tejido mejora, no se sabe cuál de los dos lo causó. La acción individual que pide el enunciado no se puede determinar con combinaciones.",
+     "D": "Aplicar X, W y Z juntos sobre el mismo tejido no separa sus acciones; cualquier cambio observado sería el efecto conjunto. El diseño no permite evaluar la acción individual, que es el propósito de la investigación."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q40",
@@ -1389,7 +2037,23 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable dependiente es la que se mide como respuesta al cambiar la variable manipulada; en este estudio es el flujo de sodio que atraviesa los canales.",
+    "planteamiento": "Se pide la opción que puede corresponder a una variable dependiente. Datos: la variable independiente que el equipo establece primero es la concentración de saxitoxina, y el objetivo es medir cómo afecta la velocidad de transporte del ion sodio por sus canales.",
+    "steps": [
+     "En un diseño experimental, la variable independiente es la que el investigador manipula; aquí, la concentración de saxitoxina. La variable dependiente es la que se mide como respuesta a ese cambio.",
+     "El objetivo del estudio es determinar el efecto de la toxina en la velocidad de transporte del ion sodio. Esa velocidad, es decir, el flujo de sodio que ingresa a la célula por los canales, es lo que se registra en cada tratamiento.",
+     "La alternativa B (sensibilidad de los canales a la saxitoxina) es una conclusión que se deduce de la medición, no algo que se mida directamente. La C (cantidad de canales funcionales) puede cambiar, pero no es la velocidad de transporte que señala el objetivo. La D manipula la concentración de sodio extracelular, lo que es otra variable independiente y no una respuesta.",
+     "La alternativa A corresponde a la medición de la respuesta del sistema al tratamiento, por lo que es la variable dependiente. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La sensibilidad de los canales a la saxitoxina es lo que el estudio quiere concluir, no una medición directa. La trampa típica es confundir la conclusión de la investigación con la variable que se registra.",
+     "C": "La cantidad de canales funcionales en la membrana podría cambiar si la toxina los daña, pero no es la velocidad de transporte que mide el estudio. Es un mecanismo posible, no el dato registrado.",
+     "D": "La concentración de sodio extracelular es una variable que el equipo manipularía como independiente, junto con la saxitoxina. Confundir una variable manipulada con una variable medida es el error típico en esta pregunta."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q41",
@@ -1424,7 +2088,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tabla da la velocidad de cada sustancia en ambas membranas; la conclusión correcta es la que coincide con los valores de la membrana de eritrocito, donde el agua es la sustancia más rápida.",
+    "planteamiento": "Se pide la conclusión correcta a partir de la tabla de velocidades de transporte. Datos: cinco sustancias (K⁺, Na⁺, Cl⁻, glucosa y agua) medidas en una membrana sintética y en una membrana de eritrocito humano, en cm/s.",
+    "steps": [
+     "En la membrana de eritrocito humano los valores son: K⁺, $2{,}4 \\times 10^{-10}$ cm/s; Na⁺, $1{,}0 \\times 10^{-10}$ cm/s; Cl⁻, $1{,}4 \\times 10^{-4}$ cm/s; glucosa, $2{,}0 \\times 10^{-5}$ cm/s; y agua, $5{,}0 \\times 10^{-3}$ cm/s.",
+     "Al ordenar esos valores, el agua ($5{,}0 \\times 10^{-3}$ cm/s) es la mayor, seguida por el Cl⁻ ($1{,}4 \\times 10^{-4}$ cm/s). En consecuencia, en el eritrocito el agua tiene la mayor velocidad de transporte de todas las sustancias.",
+     "Ahora se revisan las demás alternativas con la tabla. El Cl⁻ alcanza $1{,}4 \\times 10^{-4}$ cm/s en el eritrocito y solo $1{,}5 \\times 10^{-11}$ cm/s en la membrana sintética, por lo que atraviesa el eritrocito más rápido, y la A afirma lo contrario.",
+     "Para K⁺ y Na⁺, la membrana sintética da valores menores que $9{,}0 \\times 10^{-13}$ y $1{,}6 \\times 10^{-13}$ cm/s, muy por debajo de los del eritrocito, así que la B también es falsa. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que el Cl⁻ atraviesa el eritrocito a menor velocidad que la membrana sintética. La tabla muestra lo contrario: $1{,}4 \\times 10^{-4}$ cm/s en el eritrocito frente a $1{,}5 \\times 10^{-11}$ cm/s en la sintética. La trampa es comparar mal las potencias de diez.",
+     "B": "Dice que K⁺ y Na⁺ atraviesan la membrana sintética a mayor velocidad. Los valores de la sintética son menores que $9{,}0 \\times 10^{-13}$ y $1{,}6 \\times 10^{-13}$ cm/s, mientras que en el eritrocito son del orden de $10^{-10}$ cm/s. La inversión del sentido de la comparación es el error típico.",
+     "D": "Sostiene que el agua y la glucosa son más lentas que los iones en la sintética. Pero la glucosa ($4{,}0 \\times 10^{-10}$ cm/s) y, sobre todo, el agua ($5{,}0 \\times 10^{-3}$ cm/s) superan a K⁺, Na⁺ y Cl⁻. Confunde la carga eléctrica con la velocidad, que en la tabla no sigue esa regla."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q42",
@@ -1459,7 +2139,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El gráfico muestra que la concentración de espermatozoides en ambos grupos de fumadores es menor que en los no fumadores; esa es la inferencia que los datos permiten.",
+    "planteamiento": "Se pide una inferencia pertinente sobre el efecto del tabaquismo a partir del gráfico. Datos: concentración de espermatozoides en unidades de $10^{6}$ por mL; valores aproximados: G1 cerca de $33$, G2 cerca de $35$ y G3 (no fumadores) cerca de $57$.",
+    "steps": [
+     "Se lee el eje vertical, que mide la concentración de espermatozoides en unidades de $10^{6}$ por mL. Los valores aproximados son: G1 (más de 20 cigarros al día) cerca de $33$, G2 (menos de 20 cigarros al día) cerca de $35$ y G3 (no fumadores) cerca de $57$.",
+     "Una inferencia debe apoyarse en la comparación de los grupos que aparecen en el gráfico. Como G3 es el grupo de referencia de los no fumadores, sus valores permiten evaluar el efecto del tabaquismo: ambos grupos de fumadores quedan por debajo de G3.",
+     "Por lo tanto, la concentración de espermatozoides está disminuida en los hombres fumadores frente a los no fumadores, algo que sí se puede afirmar con los datos. Esta inferencia es pertinente porque compara exactamente la variable que se mide.",
+     "La opción B exige que la concentración crezca con el consumo, pero G1 (mayor consumo) tiene un valor menor que G2 (menor consumo), así que la relación no es creciente. La C habla de probabilidad de infertilidad, un dato que el gráfico no entrega, y además una menor concentración sugeriría mayor riesgo, no menor. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Afirma que la concentración aumenta al consumir más cigarros. El gráfico muestra que G1, el grupo con más consumo, tiene un valor menor que G2. La trampa es suponer una tendencia lineal con solo tres barras.",
+     "C": "Dice que los fumadores de más de 20 cigarros al día tienen menos probabilidades de ser infértiles. El gráfico no mide infertilidad, sino concentración de espermatozoides, y el grupo G1 tiene menos espermatozoides que G2, lo que apunta en sentido contrario.",
+     "D": "Habla de un bajo porcentaje de infertilidad masculina idiopática en fumadores. Ese porcentaje no aparece en el gráfico, que solo representa concentraciones de espermatozoides; la afirmación no puede inferirse de los datos."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q43",
@@ -1487,7 +2183,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La pregunta de investigación debe apuntar al mecanismo que el experimento revela: la adhesión y fusión de membranas mediada por proteínas de ambos gametos.",
+    "planteamiento": "Se pide la pregunta de investigación que pudo guiar el experimento de fecundación in vitro en bovinos. Datos: durante la adhesión del espermatozoide al ovocito y la posterior fusión de sus membranas, interactúan proteínas provenientes de ambos gametos.",
+    "steps": [
+     "El experimento describe dos procesos: la adhesión del espermatozoide a la membrana del ovocito y la posterior fusión de ambas membranas. En los dos interactúan proteínas que provienen de los dos gametos. Esa es la observación que una pregunta de investigación debe perseguir.",
+     "Una buena pregunta de investigación pide un mecanismo que explique cómo ocurre el fenómeno observado. En este caso, el resultado se refiere a qué proteínas participan y de qué modo se logra la fusión de las membranas.",
+     "La alternativa C pregunta por los mecanismos que permiten la fusión de las membranas entre el espermatozoide y el ovocito. Coincide con lo observado y con el objeto del experimento.",
+     "Las demás preguntas se apartan de los datos: la A pregunta por el bloqueo de la polispermia, que no se mide; la B pregunta por la síntesis de proteínas, que no se estudió; la D pregunta por la maduración del espermatozoide, que no aparece en el resultado. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Pregunta cómo el ovocito impide la fusión con múltiples espermatozoides, es decir, un bloqueo de la polispermia. El resultado descrito habla de la fusión y de proteínas de ambos gametos, no de un bloqueo, así que la pregunta no surge del dato.",
+     "B": "Pregunta por la síntesis de proteínas durante la fusión. El enunciado no menciona síntesis; se refiere a la adhesión y a la fusión de membranas, por lo que esta pregunta corresponde a otro experimento.",
+     "D": "Pregunta por la maduración del espermatozoide al fusionar su membrana. La maduración es un proceso previo a la fecundación y el experimento no la registra; la trampa es mezclar un proceso de la fecundación con el resultado observado."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q44",
@@ -1515,7 +2227,23 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El fármaco impide que el endometrio prolifere, así que no se forma la capa que se desprende en la menstruación; el ciclo ovárico no cambia, por eso no se altera la ovulación.",
+    "planteamiento": "Se pide el efecto más probable de un fármaco que genera incapacidad de proliferación endometrial a medida que progresa el ciclo ovárico. Datos: la acción recae sobre el endometrio, no sobre el ovario, y el efecto debe analizarse en el ciclo menstrual.",
+    "steps": [
+     "En el ciclo menstrual, el endometrio atraviesa una fase proliferativa, en la que el tejido crece y se engrosa tras la menstruación, y luego una fase secretora. Si no hay fecundación, la capa funcional se desprende, y ese desprendimiento es la menstruación.",
+     "El fármaco impide la proliferación endometrial. Si el endometrio no crece, no se forma la capa funcional que después se desprende. Lo que el fármaco modifica es la preparación del endometrio, no la producción de óvulos.",
+     "Ahora se separan los procesos. La ovulación depende de la maduración del folículo y del aumento de la hormona luteinizante en el ovario, no de la proliferación endometrial, así que el fármaco no la bloquea de forma directa. La fase secretora y la fase proliferativa tampoco se prolongan, porque el fármaco justamente impide el crecimiento del tejido.",
+     "Si la capa funcional no se forma, no hay tejido que desprender en la menstruación, y el flujo menstrual no ocurre o es mínimo. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Sostiene que la ovulación no ocurriría. El fármaco actúa sobre el endometrio, no sobre el folículo ni sobre las hormonas que disparan la ovulación. Confundir el efecto local en el útero con un bloqueo del ovario es la trampa típica.",
+     "C": "Propone que la fase secretora se extendería. Esa fase requiere un endometrio ya preparado por la proliferación, que el fármaco bloquea; sin proliferación no hay una fase secretora que pueda prolongarse. La trampa es pensar que una fase se alarga cuando la anterior se bloquea.",
+     "D": "Afirma que la fase proliferativa se extendería. Como el fármaco impide justamente la proliferación, la fase no puede prolongarse; el efecto es el contrario, porque el endometrio no crece."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q45",
@@ -1550,7 +2278,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Replicar un experimento exige mantener las condiciones que hacen comparable el resultado; la concentración de X en el suero es la variable central del diseño.",
+    "planteamiento": "Se pide la acción correcta para replicar el experimento sobre la mortalidad de Chlamydia trachomatis tratada con la sustancia X. Datos: el grupo experimental presenta 99,9 % de mortalidad y el control 0,0 %, con medio rico en nutrientes, ausencia de luz, pH neutro y 37,5 °C.",
+    "steps": [
+     "Replicar un experimento significa repetirlo con el mismo diseño y en condiciones comparables, para obtener un resultado que pueda contrastarse con el original. Las condiciones descritas son medio rico en nutrientes, ausencia de luz, pH neutro y temperatura de 37,5 °C, además del control sin X.",
+     "La variable independiente es la presencia y la concentración de X en el suero. Si la concentración cambia, el resultado de mortalidad ya no puede compararse con el original, así que el nuevo grupo debe usar la misma concentración.",
+     "La opción A pide que el control tenga una reproducción más lenta, pero el control debe mantenerse como referencia y no modificarse para favorecer un resultado. La C cambia el agente infeccioso, lo que correspondería a otro experimento. La D modifica la cantidad inicial de bacterias, una variable distinta de la que se quiere replicar.",
+     "Asegurar que la concentración de X en el suero sea la misma del experimento original es la acción que permite reproducir los resultados. Así, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Exigir que las bacterias del control se reproduzcan más lento que en el experimento original cambia la condición de referencia. El control debe ser comparable, no ajustarse para obtener un contraste mayor.",
+     "C": "Medir la toxicidad de X sobre otros agentes infecciosos es un estudio nuevo, no una réplica. Aunque use el mismo procedimiento, no permite comprobar si el resultado original se repite con Chlamydia trachomatis.",
+     "D": "Usar una cantidad inicial de bacterias mayor cambia una condición del experimento y no se justifica como requisito de réplica. La trampa es asumir que más bacterias siempre son mejores para repetir un resultado."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q46",
@@ -1578,7 +2322,23 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para que un espermicida sirva, el compuesto debe dañar la membrana del espermatozoide, y la lisis celular es la evidencia directa de ese daño.",
+    "planteamiento": "Se pide la evidencia que sustentaría incorporar Nonoxinol-9 al espermicida. Datos: el compuesto disuelve los lípidos y la membrana plasmática de las células, y el objetivo es inactivar los espermatozoides para impedir la fecundación.",
+    "steps": [
+     "Un espermicida funciona si inactiva a los espermatozoides. Como Nonoxinol-9 disuelve los lípidos de la membrana plasmática, la evidencia que mejor lo sustenta es que destruya esa membrana en los espermatozoides.",
+     "La destrucción de la membrana provoca la lisis celular, es decir, la ruptura de la célula. Si al agregar Nonoxinol-9 a una muestra con espermatozoides se observa lisis, se confirma el mecanismo que se busca.",
+     "La opción B (dos flagelos) es una anomalía morfológica, no un efecto de disolución de la membrana. La C (desplazamiento aletargado) es una disminución de la movilidad, que no implica muerte celular. La D (alteraciones en el material genético) es un daño al ADN, que no corresponde al mecanismo de disolución de lípidos.",
+     "La evidencia más directa de que el compuesto sirve como anticonceptivo es la lisis de los espermatozoides. Así, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Que los espermatozoides presenten dos flagelos describe una alteración de forma, no la acción de un compuesto que disuelve lípidos. No prueba que el espermicida los inactive.",
+     "C": "Un desplazamiento aletargado indica menor movilidad, pero no que la célula se destruya. Un espermicida debe eliminar la capacidad fecundante, y la movilidad disminuida no lo garantiza.",
+     "D": "Las alteraciones en el material genético son un daño distinto, que no corresponde a la disolución de la membrana plasmática. La trampa es asociar cualquier daño celular con el efecto anticonceptivo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q47",
@@ -1606,7 +2366,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-biomoleculas"
+   "subtopic": "cs-biomoleculas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frase propone una relación causa-efecto que aún no está probada: es una hipótesis, y el objetivo, el resultado y la conclusión vienen en otra parte de la investigación.",
+    "planteamiento": "Se pide a qué componente de la investigación corresponde la frase entre comillas. Datos: se propone que inhibir la proteína X durante la etapa S aumenta la reparación del material genético; el grupo lo plantea como una afirmación por comprobar.",
+    "steps": [
+     "En una investigación científica, el objetivo describe lo que se quiere lograr o estudiar; el resultado describe lo que se observó; y la conclusión evalúa si los datos confirman o no lo propuesto. La frase entre comillas no describe lo que se quiere hacer ni un dato observado.",
+     "La hipótesis es una afirmación anticipada y verificable que relaciona dos variables y se formula antes de experimentar. Aquí se relaciona la inhibición de la proteína X con un incremento de la reparación del ADN durante la etapa S.",
+     "El enunciado usa la expresión «al inhibir la proteína X, se produce un incremento», en forma condicional y como propuesta del grupo. Anticipar así un efecto que aún no se ha comprobado es propio de una hipótesis.",
+     "Las demás opciones no encajan: un objetivo sería «estudiar» o «determinar» el efecto de X, un resultado sería un dato medido y una conclusión sería una afirmación posterior al análisis de datos. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Un objetivo se formula con verbos como estudiar o determinar, y describe lo que el grupo quiere lograr. La frase, en cambio, afirma un efecto esperado, lo que corresponde a una hipótesis.",
+     "B": "Un resultado describe datos obtenidos en el experimento. La frase aún no tiene datos: plantea lo que el grupo espera encontrar, por lo que no es un resultado.",
+     "D": "Una conclusión se obtiene después de analizar los datos y evalúa si se confirma lo propuesto. La frase se escribe antes del análisis, así que no es una conclusión."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q48",
@@ -1641,7 +2417,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El gráfico muestra que, a mayor concentración de X, menor nivel de ATP; la pregunta de investigación correcta es la que indaga esa relación entre concentración y ATP.",
+    "planteamiento": "Se pide la pregunta de investigación que pudo guiar el experimento. Datos: cinco concentraciones de X (10, 20, 30, 40 y 50 µM) y un control, con niveles de ATP intracelular relativos al control; el control se ubica en $10$ en la escala del gráfico.",
+    "steps": [
+     "El experimento varía una sola cosa a la vez, la concentración de la molécula X, y mide el nivel de ATP intracelular. Por eso la pregunta de investigación debe relacionar esas dos variables.",
+     "En el gráfico, los niveles de ATP disminuyen a medida que aumenta la concentración de X: desde cerca de $9$ con $10\\ \\mu\\text{M}$ hasta cerca de $3{,}5$ con $50\\ \\mu\\text{M}$. Esa tendencia sugiere una relación inversa, que es justamente lo que una pregunta debe indagar.",
+     "La alternativa A pregunta por la duración del efecto, algo que el gráfico no mide, porque solo hay un momento de medición. La B pregunta por la temperatura y el pH, que se mantuvieron constantes y no fueron variados. La C pregunta por el mecanismo de acción, que el experimento no estudió, pues solo registra los niveles de ATP.",
+     "La alternativa D pregunta por la relación entre la concentración de X y los niveles de ATP, que es exactamente lo que compara el diseño. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La duración del efecto requeriría medir el ATP en varios tiempos después del tratamiento, y el gráfico solo muestra una medición por concentración. La pregunta no surge de los datos.",
+     "B": "La temperatura y el pH se mantuvieron iguales en todos los tratamientos, por lo que no son variables del experimento. Preguntar por su efecto no corresponde al diseño descrito.",
+     "C": "El mecanismo de acción implicaría estudiar rutas metabólicas o proteínas específicas, algo que el montaje no incluye. El experimento solo cuantifica el ATP, así que la pregunta excede los datos."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q49",
@@ -1669,7 +2461,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El modelo dice que el corte del ADN y el intercambio de material generan nuevas combinaciones de genes; si las células lo muestran, el modelo se sostiene.",
+    "planteamiento": "Se pide la evidencia que respalda el modelo en las células resultantes del experimento. Datos: las enzimas que cortan el ADN y promueven el intercambio se introducen en células no reproductoras, que luego se dividen.",
+    "steps": [
+     "El entrecruzamiento o recombinación ocurre en la profase I de la meiosis: cromátidas de cromosomas homólogos intercambian segmentos. Su efecto es generar cromosomas con combinaciones de alelos distintas de las de los progenitores.",
+     "El modelo sostiene que las enzimas que cortan el ADN, al expresarse en otras células, producen ese intercambio. Si el modelo es correcto, las células resultantes deben mostrar cromosomas con nuevas combinaciones de genes.",
+     "La alternativa C describe directamente esa consecuencia. Las demás afirmaciones se refieren a características de la división que no dependen del intercambio: la mitad de los cromosomas es resultado de la reducción meiótica, y las células no reproductoras se dividen por mitosis, sin reducir su número.",
+     "Las opciones B y D describen fases de la división (interfase y metafase) que no dependen de las enzimas de recombinación, así que no son evidencia del modelo. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Tener la mitad de los cromosomas es propio de la meiosis, que reduce el número a la mitad. Las células del experimento no reproductoras se dividen por mitosis, así que la afirmación no se deduce del modelo de recombinación.",
+     "B": "La duplicación del material genético ocurre en la interfase y es independiente de las enzimas de intercambio. Que no ocurra no respalda el modelo, pues es un fenómeno distinto.",
+     "D": "La alineación de los cromosomas en la metafase es un proceso mecánico de la división celular y no depende de la recombinación. Su ausencia no es evidencia del intercambio genético."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q50",
@@ -1704,7 +2512,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tabla muestra que, al aumentar los genes insertados de 1 a 4, la efectividad del detergente sube de baja a muy alta; por eso la conclusión correcta relaciona más genes con más efectividad.",
+    "planteamiento": "Se pide la conclusión correcta a partir de la tabla. Datos: de 1 a 4 genes insertados, con estabilidad bacteriana (de muy estable a inestable), efectividad del detergente (de baja a muy alta), tipos de enzimas (de 1 a 4) y cantidad de material genético en unidades arbitrarias (u.a.).",
+    "steps": [
+     "Se leen las filas de la tabla en orden. Con 1 gen, la estabilidad es muy estable y la efectividad es baja; con 2 genes, estable y media; con 3 genes, ligeramente inestable y alta; con 4 genes, inestable y muy alta.",
+     "La cantidad de material genético aumenta con los genes: $12\\,246\\,680$, $12\\,325\\,575$, $12\\,409\\,750$ y $12\\,512\\,630$ u.a. La columna de tipos de enzimas también crece, de 1 a 4, así que cada gen adicional se asocia con más enzimas producidas.",
+     "Al aumentar la cantidad de genes, la efectividad del detergente crece y la estabilidad bacteriana disminuye. La opción D afirma que a mayor cantidad de genes insertos, mayor efectividad del detergente, lo que coincide con la tabla.",
+     "La A dice que menos material implica menor estabilidad, pero el caso de menor material (1 gen) es el más estable. La B invierte la relación, pues con 1 tipo de enzima la efectividad es baja. La C dice que más genes dan más estabilidad, lo contrario de lo que se observa. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Relaciona menos material genético con menor estabilidad, pero la tabla muestra que el caso con menos material (1 gen) es el de mayor estabilidad. La conclusión está invertida.",
+     "B": "Afirma que a menos tipos de enzimas, mayor efectividad. La tabla muestra lo contrario: con 1 tipo de enzima la efectividad es baja y con 4 tipos es muy alta. La trampa es leer la columna en el orden equivocado.",
+     "C": "Sostiene que a mayor cantidad de genes, mayor estabilidad bacteriana. La tabla muestra que la estabilidad baja de muy estable a inestable al aumentar los genes; la relación es opuesta."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q51",
@@ -1732,7 +2556,23 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si los cultivos Bt fueron atacados aunque tienen el gen y la toxina, las polillas deben tolerar la toxina; la inferencia que explica el ataque es esa resistencia.",
+    "planteamiento": "Se pide la inferencia que explica por qué los cultivos Bt fueron atacados por insectos. Datos: el gen Bt codifica una proteína tóxica para algunas especies de insectos; el ADN de los cultivos confirma la presencia del gen; y se observaron larvas de una especie de polilla.",
+    "steps": [
+     "La toxina Bt actúa sobre algunas especies de insectos. Si los cultivos tienen el gen y las larvas de polilla los dañan, la toxina no está afectando a esa especie, y eso debe explicarse por una característica de las polillas.",
+     "La explicación más directa es que las polillas tengan alguna característica que les permita tolerar la toxina. Así, el gen Bt está presente en el cultivo, la toxina se produce y, aun así, la plaga se alimenta.",
+     "La opción B afirma que las polillas tienen genes que las hacen resistentes a la toxina, lo que explica el ataque. La A propone que los ribosomas funcionan mal, pero el gen está presente y el cultivo produce la toxina. La C dice que hay más copias del gen, lo que implicaría más toxina y, por lo tanto, menos ataque. La D afirma que las polillas eliminan la toxina al incorporar el gen, algo que el enunciado no respalda.",
+     "La inferencia que explica el ataque es que las polillas resisten la toxina. Así, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Los ribosomas con función parcial impedirían la síntesis de proteínas, pero el enunciado confirma que el gen está en el cultivo y que la toxina se produce. La hipótesis contradice la información dada.",
+     "C": "Más copias del gen producirían más toxina, lo que haría menos probable el ataque, no más. La inferencia va en sentido contrario al fenómeno observado.",
+     "D": "Que las polillas incorporen el gen y eliminen la toxina no está descrito en el enunciado. Es una afirmación inventada que no explica por qué la toxina no las afecta."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q52",
@@ -1767,7 +2607,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-evolucion"
+   "subtopic": "cs-evolucion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En torno a 50 % de humedad, la especie 2 alcanza su pico de fotosíntesis por encima de la especie 1; esa es la única comparación correcta en el valor medio de humedad.",
+    "planteamiento": "Se pide la afirmación correcta a partir del gráfico de tasa de fotosíntesis (u.a.) frente a humedad relativa (%) para dos especies de plantas. Datos: el eje horizontal va de 0 a 100 %; la especie 2 tiene su máximo cerca de 50 %.",
+    "steps": [
+     "Se identifican las curvas. La especie 1 (línea continua) sube desde 0 y se mantiene alta entre aproximadamente 25 % y 90 % de humedad; la especie 2 (línea discontinua) tiene un pico estrecho cerca de 50 % y valores bajos en los extremos.",
+     "Para comparar en el valor medio de humedad se mira el eje horizontal cerca de 50 %. Allí la curva de la especie 2 alcanza su máximo, que queda por encima de la curva de la especie 1 en esa zona.",
+     "La A dice que la especie 1 es independiente de la humedad, pero su curva sube y baja a lo largo del rango estudiado. La B dice que la especie 2 resiste mejor la escasa humedad, pero a 25 % su tasa es muy baja, y la especie 1 presenta valores más altos en esa zona.",
+     "La D afirma que ambas especies tienen igual tasa en todo el rango, lo que no ocurre: las curvas solo se cruzan en algunos puntos. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La especie 1 varía con la humedad: su tasa crece desde 0 hasta cerca de 55 % y luego baja hacia 100 %. Afirmar independencia desconoce la forma de su curva.",
+     "B": "A baja humedad (cerca de 25 %), la especie 1 ya tiene una tasa mucho mayor que la especie 2. La trampa es fijarse en la pendiente de la curva 2 y olvidar sus valores absolutos.",
+     "D": "Las curvas se cruzan en algunos puntos, pero la especie 2 tiene un pico muy distinto del resto de la curva. Decir que ambas son iguales en todo el rango contradice el gráfico."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q53",
@@ -1802,7 +2658,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-biomoleculas"
+   "subtopic": "cs-biomoleculas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las burbujas de oxígeno se concentran en las zonas del rojo y del azul-violeta, donde el alga aprovecha mejor la luz; por eso la producción de oxígeno depende de la longitud de onda.",
+    "planteamiento": "Se pide la afirmación correcta sobre la producción de oxígeno por el alga. Datos: la luz blanca se dispersa con un prisma en seis colores (rojo, naranjo, amarillo, verde, azul y violeta) sobre un tubo con alga en agua purificada a 25 °C; las burbujas de O₂ se acumulan en zonas específicas.",
+    "steps": [
+     "El prisma separa la luz blanca en sus componentes de distinta longitud de onda, desde el rojo hasta el violeta. Cada color incide en una posición diferente del tubo que contiene el alga.",
+     "En el esquema, la mayor cantidad de burbujas de oxígeno aparece en dos zonas: la cercana al rojo y la cercana al azul y violeta. En las zonas del amarillo y el verde, la acumulación de burbujas es mucho menor.",
+     "Como la producción de oxígeno se concentra en ciertas longitudes de onda, la fotosíntesis depende de la longitud de onda de la luz, lo que indica la opción A. Las demás opciones no se pueden concluir del esquema: el experimento no varía la intensidad ni evalúa la temperatura óptima o la pureza del agua como variables.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Afirmar independencia de la intensidad no se puede concluir: el esquema no compara intensidades de luz. Además, en general la fotosíntesis aumenta con la intensidad luminosa hasta cierto punto.",
+     "C": "Decir que el máximo rendimiento está a 25 °C no se deduce del montaje. Esa es la temperatura del experimento, pero no se varía, así que no puede identificarse un máximo.",
+     "D": "El oxígeno afectado por la pureza del agua requeriría comparar distintos grados de pureza. En el montaje el agua es purificada y no se compara ninguna otra condición, por lo que la afirmación no se deduce del esquema."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q54",
@@ -1837,7 +2709,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-celula"
+   "subtopic": "cs-celula",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El esquema muestra que cada nivel trófico pierde energía como calor; la evidencia que sustenta el modelo es que el último nivel dispone de la menor cantidad de energía.",
+    "planteamiento": "Se pide la evidencia que sustenta el modelo de transferencia de energía en la cadena pasto, ratón, culebra y búho. Datos: flechas de transferencia entre niveles, flechas de calor disipado en cada nivel y en las bacterias, y flechas que llegan desde cada nivel a las bacterias.",
+    "steps": [
+     "El modelo muestra que la energía fluye en un solo sentido: del pasto al ratón, del ratón a la culebra y de la culebra al búho. En cada nivel sale una flecha de calor, lo que indica que parte de la energía se pierde en cada transferencia.",
+     "Como la energía se disipa en cada paso, la cantidad disponible disminuye al subir de nivel. Por eso el búho, en el último nivel, recibe la menor cantidad de energía, lo que es una consecuencia directa del modelo.",
+     "La opción A afirma exactamente esa consecuencia, por lo que es evidencia que sustenta el modelo. La B habla de biomasa, algo que el esquema no representa, pues solo muestra flujos de energía. La C dice que la transferencia es cíclica, lo contrario de la flecha unidireccional. La D afirma que las bacterias disipan más calor, lo que no se puede comparar en el esquema, que no indica cantidades.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La biomasa no aparece en el esquema, que solo representa flujos de energía. Afirmar que el ratón tiene mayor biomasa no se deduce del modelo y no sustenta la transferencia de energía.",
+     "C": "El modelo muestra una transferencia en un solo sentido, con pérdidas de calor en cada nivel. Decir que es cíclica contradice las flechas, porque la energía no vuelve a los productores.",
+     "D": "El esquema no indica magnitudes de calor en cada nivel, así que no puede afirmarse que las bacterias disipen más calor. Compara cantidades que el modelo no representa."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q55",
@@ -1872,7 +2760,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una sustancia pura tiene un único tipo de partícula, con una composición fija. En la caja B todas las agrupaciones son del mismo tipo, mientras que las demás mezclan especies distintas.",
+    "planteamiento": "Se pide la representación microscópica de la sustancia pura. Datos: cada caja muestra esferas claras y oscuras, unidas en grupos o sueltas, en distintas combinaciones.",
+    "steps": [
+     "Una sustancia pura está formada por un solo tipo de partícula (átomo o molécula) con una composición fija. Una mezcla tiene dos o más tipos de partículas, o combinaciones distintas.",
+     "Caja A: aparecen pares de esferas oscuras y pares formados por una esfera clara y una oscura. Hay al menos dos tipos de agrupaciones distintas, así que es una mezcla.",
+     "Caja C: hay esferas oscuras sueltas, es decir, átomos sin unir, junto a agrupaciones de esfera clara y oscura. Son partículas de distinta naturaleza, así que es una mezcla.",
+     "Caja D: hay esferas claras y oscuras sueltas, sin agrupar, en proporciones distintas. Corresponde a una mezcla de dos especies.",
+     "Caja B: todas las partículas forman agrupaciones del mismo tipo, cada una con una esfera clara y una oscura. Es una sola especie molecular, así que representa una sustancia pura.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Tiene al menos dos tipos de agrupaciones (pares de esferas oscuras y pares claro-oscuro). Esa combinación corresponde a una mezcla, no a una sustancia pura.",
+     "C": "Combina partículas sueltas con agrupaciones de distinta composición. El error típico es mirar solo el color predominante y no la composición de cada partícula.",
+     "D": "Muestra partículas sueltas de dos tonos sin unir, lo que representa una mezcla de dos especies. Una sustancia pura no mezcla especies distintas."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q56",
@@ -1900,7 +2806,24 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En la destilación simple se separan líquidos por su diferencia de puntos de ebullición: el más volátil pasa primero a vapor y luego se condensa.",
+    "planteamiento": "Se pide el fundamento químico correcto de la destilación simple como método para separar una mezcla. Se busca la propiedad física que permite la separación.",
+    "steps": [
+     "En la destilación se calienta la mezcla líquida hasta que el componente más volátil, es decir, el de menor punto de ebullición, pasa a vapor.",
+     "El vapor se enfría en un condensador y vuelve a líquido, separado de los componentes menos volátiles que quedan en el matraz.",
+     "La propiedad que hace posible la separación es la diferencia de puntos de ebullición de los líquidos, no la fusión ni la absorción de calor.",
+     "Revisa las demás: B y C hablan de separar un sólido de un líquido, lo que se hace por otros métodos, como la filtración o la evaporación. D describe una sublimación, que no es una destilación.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Separar un sólido de un líquido no es la destilación simple, y la absorción de calor no es el criterio de separación. Es un fundamento que no corresponde.",
+     "C": "El método separa dos líquidos, no un sólido de un líquido. Usar el punto de ebullición es correcto, pero la mezcla que describe no es la de la destilación simple.",
+     "D": "Pasar de sólido a gas sin pasar por líquido es una sublimación. Puede ser un proceso físico, pero no es el fundamento de la destilación simple."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q57",
@@ -1929,7 +2852,24 @@
    "answer": "A",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El químico varía el tipo de enlace y mide la temperatura de fusión: la pregunta debe relacionar esas dos variables.",
+    "planteamiento": "Se pide la pregunta de investigación que intenta responder el experimento. Datos: se mide la temperatura de fusión de seis compuestos con distintos enlaces, usando la misma cantidad de muestra y tubos de vidrio.",
+    "steps": [
+     "Identifica las variables: el tipo de enlace de cada compuesto cambia (variable independiente) y la temperatura de fusión se mide (variable dependiente).",
+     "La cantidad de muestra y el tipo de tubo se mantienen constantes, por lo que no son parte de la pregunta de investigación.",
+     "Una pregunta de investigación debe relacionar las dos variables estudiadas: cómo se relaciona la temperatura de fusión con los enlaces que poseen los compuestos.",
+     "Revisa las opciones: B y D usan la cantidad de compuesto, que se mantuvo fija. C usa el material del tubo, que también fue constante. Solo A relaciona la temperatura de fusión con el enlace.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Relaciona la temperatura de fusión con la cantidad de compuesto, pero esa cantidad se mantuvo igual en todos los tubos. No es una variable que el experimento estudie.",
+     "C": "Relaciona la temperatura de fusión con el material del tubo. Ese material no se cambió: todos los tubos eran de vidrio.",
+     "D": "Relaciona la cantidad de compuesto con el tipo de enlace, pero el experimento no varía la cantidad de muestra ni mide ese vínculo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q58",
@@ -1964,7 +2904,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un cambio físico mantiene la identidad de la sustancia (fundir metal), mientras que un cambio químico forma sustancias nuevas (tostar pan).",
+    "planteamiento": "Se pide la alternativa que clasifica correctamente cada acción como cambio físico o cambio químico. Datos: la tabla tiene dos columnas y cuatro filas de acciones.",
+    "steps": [
+     "Cambio físico: cambia la forma, el estado o la apariencia, pero la sustancia sigue siendo la misma. Cambio químico: se forman sustancias nuevas, con propiedades distintas.",
+     "Fila A: doblar un papel es un cambio físico, pero cortar papel con tijeras también lo es y está en la columna química. Por eso A está mal.",
+     "Fila C: disolver jugo en polvo en agua es un cambio físico, pero congelar carne también lo es y está en la columna química. Por eso C está mal.",
+     "Fila D: encender un fósforo es una combustión, que es un cambio químico, y está en la columna física. Por eso D está mal.",
+     "Fila B: fundir un trozo de metal es un cambio físico, porque sigue siendo el mismo metal, y tostar un pan es un cambio químico, porque se forman nuevas sustancias por el calor. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Cortar papel con tijeras es un cambio físico: no forma nuevas sustancias. Al ponerlo como químico se invierte la clasificación.",
+     "C": "Congelar carne cambia el estado del agua de la carne, sin formar sustancias nuevas. Es un cambio físico, no químico.",
+     "D": "Encender un fósforo implica combustión, que transforma la sustancia. Está mal ubicado en la columna de cambio físico."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q59",
@@ -1992,7 +2949,24 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los metales alcalinos pierden su electrón de valencia para alcanzar la configuración de gas noble. Eso es ceder un electrón, no un protón.",
+    "planteamiento": "Se pide qué ocurre para formar el ion $\\mathrm{K^+}$ a partir del átomo neutro de potasio. Datos: el potasio tiene número atómico $Z = 19$, y el ion tiene carga $+1$.",
+    "steps": [
+     "En el átomo neutro, el número de protones y de electrones es igual: $19$ protones y $19$ electrones.",
+     "La carga del ion es $+1$, lo que significa que hay una unidad más de carga positiva que negativa. Como el elemento sigue siendo potasio, el núcleo conserva sus $19$ protones.",
+     "Para tener carga $+1$ con $19$ protones, el ion debe tener $18$ electrones: $19 - 18 = +1$. Por lo tanto, el átomo pierde exactamente un electrón.",
+     "Ese electrón es el de valencia del nivel más externo (capa 4). Al perderlo, el potasio queda con la configuración electrónica del argón, un gas noble, que es muy estable.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Ceder un protón cambia el núcleo y, con ello, el elemento: con $18$ protones el átomo sería argón, no potasio. Los protones no se pierden en la formación de iones comunes.",
+     "B": "Captar un protón también cambia el número atómico y da otro elemento (calcio, con $20$ protones). No forma un ion de potasio.",
+     "D": "Captar un electrón daría un ion de carga $-1$, lejos de la configuración estable del potasio. El potasio tiende a perder electrones, no a ganarlos."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q60",
@@ -2020,7 +2994,23 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Dos átomos del mismo elemento tienen igual número de protones aunque su número másico sea distinto: son isótopos, que se diferencian en sus neutrones.",
+    "planteamiento": "Se pide la comparación correcta entre las especies ${}^{3}_{1}\\mathrm{H}$ y ${}^{2}_{1}\\mathrm{H}$. En esta notación, el número de abajo es el número atómico $Z$ y el de arriba es el número másico $A$.",
+    "steps": [
+     "Lee el número atómico: ambas especies tienen $Z = 1$, y como $Z$ indica la cantidad de protones, cada una tiene $1$ protón.",
+     "Calcula los neutrones con $n = A - Z$: en ${}^{3}_{1}\\mathrm{H}$ son $3 - 1 = 2$ y en ${}^{2}_{1}\\mathrm{H}$ son $2 - 1 = 1$.",
+     "Calcula los electrones: las representaciones no muestran carga, así que son átomos neutros y tienen tantos electrones como protones, es decir, $1$ cada uno.",
+     "Compara: coinciden en protones y en electrones, y difieren en neutrones y en masa. Son isótopos del hidrógeno, y la única afirmación verdadera es la de los protones. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Es falsa: ${}^{3}_{1}\\mathrm{H}$ tiene $2$ neutrones y ${}^{2}_{1}\\mathrm{H}$ tiene $1$. Justamente los neutrones son lo que distingue a los isótopos.",
+     "B": "Es falsa: ambas son átomos neutros con $1$ electrón. Ocurre al confundir el número másico con la cantidad de electrones.",
+     "D": "Es falsa: sus números másicos son $3$ y $2$, y al tener distinta cantidad de neutrones tienen distinta masa."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q61",
@@ -2055,7 +3045,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El átomo X es litio y el átomo Y es flúor: un metal alcalino que cede su electrón a un no metal muy electronegativo forma un enlace iónico.",
+    "planteamiento": "Se pide el tipo de enlace que se forma entre dos átomos neutros X e Y. Datos de la figura: X tiene $3$ protones, $4$ neutrones y $3$ electrones; Y tiene $9$ protones, $10$ neutrones y $9$ electrones.",
+    "steps": [
+     "Identifica los elementos por el número de protones: X tiene $Z = 3$, que corresponde al litio (Li); Y tiene $Z = 9$, que corresponde al flúor (F).",
+     "Verifica la neutralidad: en X hay $3$ electrones (2 en la capa interna y 1 en la externa), y en Y hay $9$ electrones (2 en la interna y 7 en la externa). Son átomos neutros, así que el número de electrones iguala al de protones.",
+     "El litio pertenece al grupo 1, con un solo electrón de valencia. El flúor pertenece al grupo 17, con siete electrones de valencia.",
+     "La diferencia de electronegatividad entre ambos es muy grande: el flúor atrae con mucha fuerza los electrones, así que el litio cede su electrón de valencia en lugar de compartirlo.",
+     "Se forman los iones $\\mathrm{Li^+}$ y $\\mathrm{F^-}$, que se atraen por fuerza electrostática. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El enlace covalente polar implica compartir electrones entre dos no metales con diferencia moderada de electronegatividad. Aquí uno de los átomos es un metal alcalino que transfiere su electrón.",
+     "B": "El covalente apolar exige átomos con igual electronegatividad, como dos átomos del mismo elemento. Litio y flúor son muy distintos en ese aspecto.",
+     "D": "El enlace metálico se da entre átomos de metal que comparten electrones en una red. El flúor es un no metal y no forma ese tipo de enlace."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q62",
@@ -2083,7 +3090,23 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El radio atómico crece al bajar en un grupo y aumenta al moverse hacia la izquierda en un periodo. Por eso K es el mayor y F el menor.",
+    "planteamiento": "Se pide ordenar Li, K y F de mayor a menor radio atómico, según su ubicación en la tabla periódica. Datos: Li está en el grupo 1 y periodo 2; K, en el grupo 1 y periodo 4; F, en el grupo 17 y periodo 2.",
+    "steps": [
+     "En un mismo grupo, el radio aumenta al bajar, porque se agregan capas electrónicas. K está en el periodo 4 y Li en el periodo 2, así que $r(\\mathrm{K}) > r(\\mathrm{Li})$.",
+     "En un mismo periodo, el radio disminuye de izquierda a derecha, porque la carga nuclear atrae con más fuerza a los electrones externos. Li y F están en el periodo 2, y Li está más a la izquierda.",
+     "Por lo tanto, $r(\\mathrm{Li}) > r(\\mathrm{F})$.",
+     "Juntando ambas comparaciones: $\\mathrm{K} > \\mathrm{Li} > \\mathrm{F}$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "F > K > Li invierte las dos tendencias: F es el átomo más pequeño de los tres, y K es el más grande, porque tiene una capa más.",
+     "C": "Li > F > K pone K como el menor, cuando tiene más capas electrónicas que Li y F. Además, ignora que el radio disminuye hacia la derecha.",
+     "D": "Li > K > F coloca Li por encima de K, lo que contradice el aumento del radio al bajar en el grupo, porque K tiene una capa adicional."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q63",
@@ -2118,7 +3141,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un carbono con cuatro enlaces simples es $sp^3$; un doble enlace lo lleva a $sp^2$ y un triple enlace a $sp$. Solo la molécula con enlaces simples cumple la condición.",
+    "planteamiento": "Se pide la molécula en la que todos los carbonos presentan solo hibridación $sp^3$. Datos de la figura: cuatro cadenas de carbono, con enlaces simples, un doble enlace, un triple enlace y dos dobles enlaces.",
+    "steps": [
+     "Relaciona la hibridación con los enlaces: un carbono con cuatro enlaces simples (cuatro dominios electrónicos) es $sp^3$; con un doble enlace (tres dominios) es $sp^2$; con un triple enlace (dos dominios) es $sp$.",
+     "Revisa A: es una cadena de cuatro carbonos unidos por enlaces simples. Cada carbono interno completa sus cuatro enlaces con simples y con hidrógenos, así que todos son $sp^3$.",
+     "Revisa B: tiene un doble enlace en un extremo. Los dos carbonos de ese enlace son $sp^2$, así que B no cumple.",
+     "Revisa C: tiene un triple enlace. Los dos carbonos de ese enlace son $sp$, así que C no cumple.",
+     "Revisa D: tiene dos dobles enlaces, y los carbonos que los forman son $sp^2$. D tampoco cumple.",
+     "Solo A tiene todos sus carbonos con cuatro enlaces simples. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Tiene un doble enlace, y los carbonos implicados presentan hibridación $sp^2$. La presencia de un solo doble enlace basta para descartarla.",
+     "C": "Tiene un triple enlace, y los carbonos de ese enlace son $sp$. Un triple enlace no es compatible con $sp^3$.",
+     "D": "Tiene dos dobles enlaces, y cada carbono que participa en ellos es $sp^2$. Es el error típico de pensar que un doble enlace no cambia la hibridación."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q64",
@@ -2147,7 +3188,23 @@
    "answer": "D",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Mientras más pares de electrones comparten dos átomos de carbono, más fuerte se atraen y más corto es su enlace: el triple es el más corto de todos.",
+    "planteamiento": "Se pide cuál enlace carbono-carbono tiene la menor longitud. Dato: la estructura es $\\mathrm{CH_3{-}CH{=}CH{-}C{\\equiv}C{-}CH_3}$, numerada desde la izquierda, con los carbonos C1 a C5 sobre los primeros cinco átomos.",
+    "steps": [
+     "Identifica el tipo de cada enlace: entre C1 y C2 hay un enlace simple, entre C2 y C3 uno doble, entre C3 y C4 uno simple y entre C4 y C5 uno triple.",
+     "Relaciona el tipo de enlace con su longitud: un enlace simple comparte $1$ par de electrones, uno doble $2$ y uno triple $3$. Más electrones compartidos atraen con más fuerza a los núcleos y los acercan.",
+     "Ordena de mayor a menor longitud: simple, luego doble y al final triple. Como referencia, miden cerca de $154$, $134$ y $120$ picómetros, respectivamente.",
+     "Ubica el enlace más corto en la estructura: es el triple, que está entre C4 y C5. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "C1 y C2 están unidos por un enlace simple, el tipo más largo de los tres. Sirve de contraste, pero es lo contrario de lo que se pide.",
+     "B": "C2 y C3 están unidos por un enlace doble. Es más corto que uno simple, pero más largo que uno triple, por lo que no es el menor de la molécula.",
+     "C": "C3 y C4 están unidos por un enlace simple. Es tentadora porque está junto al triple, pero estar al lado de él no lo convierte en el más corto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q65",
@@ -2183,7 +3240,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La valina tiene $5$ carbonos, $11$ hidrógenos, $1$ nitrógeno y $2$ oxígenos. Para encontrar la fórmula molecular se cuentan los átomos de la estructura.",
+    "planteamiento": "Se pide la fórmula molecular de la valina a partir de su estructura. Datos de la figura: dos grupos metilo, un carbono central unido a un grupo $\\mathrm{NH_2}$, un carbono alfa y un grupo carboxilo $\\mathrm{COOH}$.",
+    "steps": [
+     "Cuenta los carbonos: dos grupos $\\mathrm{CH}_3$ (uno arriba y otro a la izquierda), el carbono que los une, el carbono que lleva el grupo amino y el carbono del grupo $\\mathrm{COOH}$. En total son $5$ carbonos.",
+     "Cuenta los hidrógenos: cada $\\mathrm{CH}_3$ aporta $3$, es decir, $6$ en total. El carbono que une los metilos tiene $1$, el carbono alfa tiene $1$, el grupo $\\mathrm{NH}_2$ aporta $2$ y el grupo $\\mathrm{OH}$ del ácido aporta $1$. Suma: $6 + 1 + 1 + 2 + 1 = 11$.",
+     "Cuenta los heteroátomos: hay $1$ nitrógeno, del grupo amino, y $2$ oxígenos, del grupo carboxilo (un $\\mathrm{C=O}$ y un $\\mathrm{O-H}$).",
+     "Escribe la fórmula: $\\mathrm{C}_5\\mathrm{H}_{11}\\mathrm{NO}_2$, que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\mathrm{C}_2\\mathrm{H}_9\\mathrm{NO}_2$ tiene solo $2$ carbonos, que no alcanzan para la cadena de la valina, y $9$ hidrógenos. El error típico es contar solo parte de la estructura.",
+     "B": "$\\mathrm{C}_2\\mathrm{H}_{11}\\mathrm{NO}_2$ tiene los hidrógenos correctos, pero solo $2$ carbonos. Es el error de contar mal los carbonos de la cadena.",
+     "D": "$\\mathrm{C}_5\\mathrm{H}_9\\mathrm{NO}_2$ tiene los carbonos correctos, pero $9$ hidrógenos. Falta dos hidrógenos: es el error típico de olvidar los dos del grupo amino."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q66",
@@ -2219,7 +3292,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El modelo muestra un anillo de seis carbonos sin dobles enlaces, con un grupo $\\mathrm{OH}$ y un grupo $\\mathrm{CH}_3$ en posiciones opuestas: es 4-metilciclohexanol.",
+    "planteamiento": "Se pide la representación bidimensional que corresponde al modelo tridimensional. Datos del modelo: negro es carbono, blanco es hidrógeno y gris es oxígeno. La molécula tiene un anillo de seis carbonos, un grupo $\\mathrm{OH}$ y un grupo $\\mathrm{CH}_3$.",
+    "steps": [
+     "Cuenta los átomos negros que forman un ciclo cerrado: son seis, así que la molécula es un ciclohexano sustituido.",
+     "El oxígeno gris, unido a un hidrógeno, es un grupo $\\mathrm{OH}$ sobre un carbono del anillo. Además, hay un carbono negro con tres hidrógenos blancos, que forma un grupo $\\mathrm{CH}_3$ sobre otro carbono del anillo.",
+     "Determina la posición relativa: el carbono del metilo queda a tres enlaces del carbono del OH, en ambos sentidos del anillo. Esa es la posición 1,4, o para.",
+     "En el modelo no aparecen dobles enlaces en el anillo, así que es un ciclohexano saturado y no un benceno ni un ciclohexeno.",
+     "La representación bidimensional correcta dibuja un hexágono sin dobles enlaces, con un $\\mathrm{CH}_3$ arriba y un $\\mathrm{OH}$ abajo. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Tiene dos dobles enlaces en el anillo, lo que corresponde a un ciclohexadieno. El modelo no muestra enlaces dobles en el anillo.",
+     "C": "Tiene un anillo aromático con tres dobles enlaces alternados, que corresponde al p-cresol. Un anillo aromático no se ajusta al modelo, que es saturado.",
+     "D": "Tiene un doble enlace en el anillo, lo que corresponde a un ciclohexeno. El modelo no muestra ningún doble enlace en el anillo."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q67",
@@ -2247,7 +3337,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La fórmula $\\mathrm{C}_n\\mathrm{H}_{2n+2}$ corresponde a los alcanos, hidrocarburos saturados de cadena abierta. El propano, $\\mathrm{C}_3\\mathrm{H}_8$, es el alcano de tres carbonos.",
+    "planteamiento": "Se pide el compuesto que responde a la fórmula general $\\mathrm{C}_n\\mathrm{H}_{2n+2}$. Datos: la fórmula indica un hidrocarburo sin dobles enlaces y sin anillos.",
+    "steps": [
+     "La fórmula $\\mathrm{C}_n\\mathrm{H}_{2n+2}$ es la de los alcanos, hidrocarburos saturados de cadena abierta.",
+     "Los cicloalcanos tienen fórmula $\\mathrm{C}_n\\mathrm{H}_{2n}$, y los alquenos con un doble enlace también. Esto descarta el ciclopropano (A), el ciclohexeno (B) y el propeno (C).",
+     "Ciclopropano y propeno son $\\mathrm{C}_3\\mathrm{H}_6$, y el ciclohexeno es $\\mathrm{C}_6\\mathrm{H}_{10}$. En los tres casos, el número de hidrógenos es menor que $2n+2$.",
+     "El propano es $\\mathrm{CH}_3\\mathrm{CH}_2\\mathrm{CH}_3$, es decir, $\\mathrm{C}_3\\mathrm{H}_8$. Con $n = 3$, $2n + 2 = 8$, que coincide con los hidrógenos del propano.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El ciclopropano es un cicloalcano, con fórmula $\\mathrm{C}_3\\mathrm{H}_6$. Tiene un anillo, así que no sigue la fórmula de los alcanos.",
+     "B": "El ciclohexeno tiene un anillo y un doble enlace, lo que le quita $4$ hidrógenos respecto del alcano de seis carbonos. No cumple $\\mathrm{C}_n\\mathrm{H}_{2n+2}$.",
+     "C": "El propeno tiene un doble enlace, lo que le resta dos hidrógenos respecto del alcano de tres carbonos. Por eso su fórmula es $\\mathrm{C}_3\\mathrm{H}_6$."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q68",
@@ -2282,7 +3389,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cadena principal tiene nueve carbonos y de ella salen tres ramificaciones: dos metilos y un etilo. Por eso los nombres de las ramificaciones son metil y etil.",
+    "planteamiento": "Se pide identificar los nombres de las ramificaciones del alcano de la figura. Datos: la cadena más larga tiene $9$ carbonos, y las ramas se ubican en los carbonos $4$, $5$ y $6$, contando desde un extremo.",
+    "steps": [
+     "Primero identifica la cadena principal: es la cadena continua más larga de carbonos. En la figura, esa cadena tiene $9$ carbonos, y de ella salen las ramificaciones.",
+     "En el carbono $4$ sale una rama de un solo carbono: un metilo.",
+     "En el carbono $5$ sale una rama de dos carbonos en línea: un etilo.",
+     "En el carbono $6$ sale otra rama de un solo carbono: un metilo.",
+     "Las ramificaciones son dos metilos y un etilo. El nombre del compuesto es $5$-etil-$4,6$-dimetilnonano, y las ramificaciones se nombran metil y etil. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Butil y propil son ramas de cuatro y tres carbonos. En la figura las ramas tienen uno o dos carbonos, así que el error es tomar parte de la cadena principal como si fuera una rama.",
+     "C": "El propilo es una rama de tres carbonos, que no existe en el compuesto. La parte superior de la figura pertenece a la cadena principal, no a una ramificación.",
+     "D": "Isopropil y terbutil son ramas con carbonos ramificados. En la figura todas las ramas son lineales, por lo que esos nombres no corresponden."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q69",
@@ -2317,7 +3441,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Propilciclohexano es un anillo saturado de seis carbonos con una cadena lineal de tres carbonos unida a uno de ellos.",
+    "planteamiento": "Se pide la estructura que corresponde al nombre propilciclohexano. Datos: un anillo de seis carbonos con enlaces simples, y un único sustituyente propilo, es decir, tres carbonos en cadena lineal.",
+    "steps": [
+     "El sufijo ciclohexano indica un anillo de seis carbonos con enlaces simples, sin dobles enlaces.",
+     "El prefijo propil indica un grupo de tres carbonos en cadena lineal, unido a un carbono del anillo.",
+     "Revisa la figura A: es un hexágono sin dobles enlaces, con una cadena de tres carbonos unida a uno de sus vértices. Cumple ambas condiciones.",
+     "Revisa las demás: B tiene un anillo con dobles enlaces alternados, que corresponde a un derivado del benceno. C tiene dobles enlaces en el anillo y un etilo, no un propilo. D tiene cadenas en dos posiciones distintas del anillo, así que no es un único propilo.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Tiene un anillo con dobles enlaces alternados, lo que corresponde a un derivado del benceno (propilbenceno), no a un ciclohexano saturado.",
+     "C": "Tiene un anillo con dobles enlaces y un grupo etilo, que son dos errores frente al nombre dado: no es saturado y el sustituyente no es propilo.",
+     "D": "Tiene cadenas unidas en dos posiciones del anillo. El nombre propilciclohexano describe un solo sustituyente propilo, así que D corresponde a otro compuesto."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q70",
@@ -2352,7 +3493,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La estructura tiene un grupo cetona, con un carbono C=O entre dos carbonos, y un grupo éster, con un carbono C(=O) unido a un oxígeno que lleva un etilo.",
+    "planteamiento": "Se pide identificar los grupos funcionales del compuesto dibujado. Datos de la figura: un carbonilo entre dos carbonos y otro carbonilo unido a un oxígeno que lleva un grupo etilo.",
+    "steps": [
+     "Revisa el carbono central: tiene un doble enlace con oxígeno y está unido a dos carbonos. Ese arreglo $\\mathrm{R{-}C(=O){-}R'}$ es un grupo cetona.",
+     "Revisa el carbono inferior: tiene un doble enlace con oxígeno y, por el otro lado, está unido a un oxígeno que a su vez lleva un grupo etilo. Ese arreglo $\\mathrm{R{-}C(=O){-}O{-}R'}$ es un grupo éster.",
+     "No hay grupos alcohol, porque no aparece un $\\mathrm{OH}$ libre. Tampoco hay un éter aislado, porque el oxígeno del éster está unido a un carbonilo y forma parte del grupo éster.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El oxígeno del éster no es un éter independiente, porque está unido a un carbonilo. Confundir ambos grupos es un error frecuente.",
+     "C": "No hay un oxígeno unido solo a dos carbonos sin carbonilo, ni un $\\mathrm{OH}$ libre. Por eso no hay éter ni alcohol.",
+     "D": "No hay grupo $\\mathrm{OH}$ en la estructura. El oxígeno del extremo es parte de un éster, no de un alcohol."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q71",
@@ -2384,7 +3541,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La masa de agua perdida es la diferencia entre la masa del hidrato y la del anhidro: $249\\ \\mathrm{g} - 159\\ \\mathrm{g} = 90\\ \\mathrm{g}$. El procedimiento permite determinar esa masa de agua.",
+    "planteamiento": "Se pide qué permite el procedimiento experimental. Datos: se calientan $249\\ \\mathrm{g}$ de sulfato de cobre hidratado, que quedan en $159\\ \\mathrm{g}$ de sulfato de cobre anhidro tras enfriar.",
+    "steps": [
+     "Al calentar, el agua de hidratación se libera como vapor y el sólido que queda es el anhidro. Se pesa tras enfriar, para que la masa no esté afectada por el calor.",
+     "La masa perdida es la diferencia: $m_{\\mathrm{H}_2\\mathrm{O}} = 249\\ \\mathrm{g} - 159\\ \\mathrm{g} = 90\\ \\mathrm{g}$.",
+     "Como toda la pérdida de masa corresponde a agua, esa diferencia es la masa de agua presente en el hidrato.",
+     "Comprobación: con $M(\\mathrm{H}_2\\mathrm{O}) = 18\\ \\mathrm{g/mol}$, $90\\ \\mathrm{g}$ corresponden a $5\\ \\mathrm{mol}$ de agua, lo que es coherente con $\\mathrm{CuSO}_4\\cdot 5\\,\\mathrm{H}_2\\mathrm{O}$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El procedimiento no separa los elementos azufre y oxígeno. Solo mide masas totales antes y después del calentamiento.",
+     "B": "El cambio de color se observa, pero la medición de masas no informa sobre el color. Ese dato es una observación cualitativa.",
+     "D": "Evaluar la estabilidad requiere otros ensayos, como calentar más o comparar condiciones. Las dos masas por sí solas no establecen eso.",
+     "E": "El calentamiento no mide ninguna temperatura de fusión. El procedimiento solo compara masas antes y después de calentar."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q72",
@@ -2419,7 +3594,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El magnesio arde con el oxígeno del aire. Al balancear, se necesitan dos átomos de magnesio por cada molécula de oxígeno, y se forman dos unidades de MgO.",
+    "planteamiento": "Se pide la ecuación balanceada de la combustión del magnesio. Datos: el magnesio sólido reacciona con oxígeno del aire al calentarse, emite luz y forma óxido de magnesio sólido.",
+    "steps": [
+     "Escribe las fórmulas: magnesio metálico $\\mathrm{Mg(s)}$, oxígeno molecular $\\mathrm{O}_2\\mathrm{(g)}$ (el oxígeno del aire es diatómico) y óxido de magnesio $\\mathrm{MgO(s)}$.",
+     "La ecuación sin balancear es $\\mathrm{Mg(s) + O}_2\\mathrm{(g) \\to MgO(s)}$. Hay $2$ átomos de O a la izquierda y $1$ a la derecha.",
+     "Para igualar el oxígeno, pon $2$ delante de $\\mathrm{MgO}$: $\\mathrm{Mg(s) + O}_2\\mathrm{(g) \\to 2\\,MgO(s)}$. Ahora hay $2$ átomos de O a cada lado, pero $1$ de Mg a la izquierda y $2$ a la derecha.",
+     "Para igualar el magnesio, pon $2$ delante de $\\mathrm{Mg}$: $\\mathrm{2\\,Mg(s) + O}_2\\mathrm{(g) \\to 2\\,MgO(s)}$. Hay $2$ átomos de Mg y $2$ de O en ambos lados.",
+     "Revisa las opciones: A no está balanceada, porque tiene $2$ átomos de O a la izquierda y $1$ a la derecha. B está balanceada en átomos, pero usa oxígeno monoatómico, que no es la forma del oxígeno del aire. C es la ecuación balanceada con la forma molecular correcta. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "No está balanceada: hay $2$ átomos de oxígeno en los reactantes y $1$ en el producto. Es el error de no igualar el oxígeno.",
+     "B": "Está balanceada en átomos, pero usa $\\mathrm{O(g)}$ monoatómico. El oxígeno del aire existe como molécula diatómica, $\\mathrm{O}_2$.",
+     "D": "Usa $\\mathrm{O(g)}$ monoatómico y no está balanceada: $2$ átomos de Mg a la izquierda, o $1$ de Mg a la derecha, según el coeficiente."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q73",
@@ -2447,7 +3639,23 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada $\\mathrm{ClO}_4^-$ aporta $4$ oxígenos, y hay dos iones, así que son $8$. Las $6$ moléculas de agua aportan $6$ más: el total es $14$.",
+    "planteamiento": "Se pide la cantidad total de átomos de oxígeno, en mol, en un mol de $\\mathrm{Ca(ClO}_4)_2\\cdot 6\\,\\mathrm{H}_2\\mathrm{O}$. Datos: la fórmula tiene un calcio, dos iones perclorato y seis moléculas de agua de hidratación.",
+    "steps": [
+     "Identifica los oxígenos del perclorato: $\\mathrm{Ca(ClO}_4)_2$ contiene $2$ grupos $\\mathrm{ClO}_4$, con $4$ oxígenos cada uno. Eso da $2 \\times 4 = 8$ oxígenos.",
+     "Cada molécula de agua, $\\mathrm{H}_2\\mathrm{O}$, tiene un oxígeno. Las $6$ moléculas de agua aportan $6$ oxígenos.",
+     "Suma los oxígenos: $8 + 6 = 14$.",
+     "Como se pide la cantidad de moles de átomos de oxígeno por mol de compuesto, un mol de la fórmula contiene $14\\ \\mathrm{mol}$ de átomos de O. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$4$ corresponde a los oxígenos de un solo ion perclorato. El error típico es olvidar el segundo ion y el agua de hidratación.",
+     "B": "$5$ no surge de ninguna cuenta correcta de los oxígenos del perclorato ni del agua. Es un error de conteo.",
+     "C": "$9$ resulta de sumar $8 + 1$: cuenta un solo oxígeno del agua, en lugar de los $6$ de las seis moléculas de agua."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q74",
@@ -2475,7 +3683,24 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Por conservación de la masa, la masa de Z es la suma de los reactantes menos la de Q. Con su masa molar se obtiene la cantidad máxima de Z.",
+    "planteamiento": "Se pide la cantidad máxima de Z, en mol, que se forma. Datos: $78\\ \\mathrm{g}$ de X y $51\\ \\mathrm{g}$ de Y reaccionan por completo, se obtienen $37\\ \\mathrm{g}$ de Q y la masa molar de Z es $92\\ \\mathrm{g/mol}$.",
+    "steps": [
+     "Por conservación de la masa, la masa total de los reactantes es igual a la de los productos: $m_X + m_Y = m_Q + m_Z$.",
+     "Reemplaza los datos: $78\\ \\mathrm{g} + 51\\ \\mathrm{g} = 37\\ \\mathrm{g} + m_Z$, es decir, $129\\ \\mathrm{g} = 37\\ \\mathrm{g} + m_Z$.",
+     "Despeja la masa de Z: $m_Z = 129\\ \\mathrm{g} - 37\\ \\mathrm{g} = 92\\ \\mathrm{g}$.",
+     "Convierte a mol con la masa molar: $n_Z = \\frac{92\\ \\mathrm{g}}{92\\ \\mathrm{g/mol}} = 1{,}00\\ \\mathrm{mol}$.",
+     "Como X e Y reaccionan por completo, esa es la cantidad máxima de Z. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$0{,}50\\ \\mathrm{mol}$ equivale a $46\\ \\mathrm{g}$ de Z, la mitad de la masa correcta. Es el error de dividir la masa de Z por dos sin justificación.",
+     "B": "$0{,}75\\ \\mathrm{mol}$ equivale a $69\\ \\mathrm{g}$ de Z. Se obtiene con un error de resta en la conservación de la masa.",
+     "D": "$1{,}25\\ \\mathrm{mol}$ equivale a $115\\ \\mathrm{g}$ de Z. No respeta la conservación de la masa; es el error de restar mal la masa de Q."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q75",
@@ -2510,7 +3735,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El cobre está en exceso: el nitrato de plata es el reactivo limitante. Sus $10\\ \\mathrm{mol}$ producen $10\\ \\mathrm{mol}$ de Ag, es decir, $1070\\ \\mathrm{g}$.",
+    "planteamiento": "Se pide la masa de plata que se obtiene con $640\\ \\mathrm{g}$ de Cu y $1690\\ \\mathrm{g}$ de AgNO$_3$. Datos: $M_{\\mathrm{Cu}} = 64\\ \\mathrm{g/mol}$, $M_{\\mathrm{AgNO_3}} = 169\\ \\mathrm{g/mol}$ y $M_{\\mathrm{Ag}} = 107\\ \\mathrm{g/mol}$.",
+    "steps": [
+     "Calcula los moles de cada reactante: $n_{\\mathrm{Cu}} = \\frac{640\\ \\mathrm{g}}{64\\ \\mathrm{g/mol}} = 10\\ \\mathrm{mol}$ y $n_{\\mathrm{AgNO}_3} = \\frac{1690\\ \\mathrm{g}}{169\\ \\mathrm{g/mol}} = 10\\ \\mathrm{mol}$.",
+     "Según la ecuación, $1\\ \\mathrm{mol}$ de Cu reacciona con $2\\ \\mathrm{mol}$ de AgNO$_3$. Para consumir los $10\\ \\mathrm{mol}$ de Cu se necesitarían $20\\ \\mathrm{mol}$ de AgNO$_3$, pero solo hay $10$.",
+     "Por lo tanto, el AgNO$_3$ es el reactivo limitante, y el cobre queda en exceso.",
+     "Según la razón molar, $2\\ \\mathrm{mol}$ de AgNO$_3$ producen $2\\ \\mathrm{mol}$ de Ag. Con $10\\ \\mathrm{mol}$ de AgNO$_3$ se obtienen $10\\ \\mathrm{mol}$ de Ag.",
+     "Calcula la masa: $m_{\\mathrm{Ag}} = 10\\ \\mathrm{mol}\\cdot 107\\ \\mathrm{g/mol} = 1070\\ \\mathrm{g}$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$640\\ \\mathrm{g}$ es la masa de cobre inicial, no de plata. Es el error de usar el dato de un reactante como si fuera el producto.",
+     "C": "$1690\\ \\mathrm{g}$ es la masa de AgNO$_3$. Olvida la estequiometría y el cambio de compuesto a metal.",
+     "D": "$2140\\ \\mathrm{g}$ son $20\\ \\mathrm{mol}$ de Ag, la cantidad que se necesitaría de AgNO$_3$ para consumir todo el cobre, pero solo hay $10\\ \\mathrm{mol}$."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q76",
@@ -2545,7 +3787,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-enlace"
+   "subtopic": "cs-enlace",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada alcohol de la serie agrega un carbono y dos hidrógenos. La fórmula general de los alcoholes saturados es $\\mathrm{C}_n\\mathrm{H}_{2n+2}\\mathrm{O}$.",
+    "planteamiento": "Se pide la fórmula general de la serie de alcoholes del metanol al butanol. Datos: metanol $\\mathrm{CH}_3\\mathrm{OH}$ con $1$ carbono, etanol con $2$, propanol con $3$ y butanol con $4$, todos con un grupo $\\mathrm{OH}$.",
+    "steps": [
+     "Cuenta carbonos e hidrógenos de cada alcohol: metanol $\\mathrm{CH}_4\\mathrm{O}$ ($n = 1$, $4$ H); etanol $\\mathrm{C}_2\\mathrm{H}_6\\mathrm{O}$ ($n = 2$, $6$ H); propanol $\\mathrm{C}_3\\mathrm{H}_8\\mathrm{O}$ ($n = 3$, $8$ H); butanol $\\mathrm{C}_4\\mathrm{H}_{10}\\mathrm{O}$ ($n = 4$, $10$ H).",
+     "En la serie, cada carbono adicional agrega dos hidrógenos. El número de hidrógenos es $2n + 2$: en el metanol, $2\\cdot 1 + 2 = 4$; en el butanol, $2\\cdot 4 + 2 = 10$.",
+     "El número de oxígenos es siempre $1$, porque cada compuesto tiene un único grupo $\\mathrm{OH}$.",
+     "La fórmula general de los alcoholes saturados es $\\mathrm{C}_n\\mathrm{H}_{2n+2}\\mathrm{O}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\mathrm{C}_n\\mathrm{H}_{2+n}\\mathrm{O}$ no da el número de hidrógenos: para el metanol daría $3$ H, y el metanol tiene $4$.",
+     "B": "$\\mathrm{C}_n\\mathrm{H}_{2n+1}\\mathrm{O}$ para el metanol daría $3$ H, pero tiene $4$. Le falta un hidrógeno en toda la serie.",
+     "D": "$\\mathrm{C}_n\\mathrm{H}_{3+n}\\mathrm{O}$ cumple para el metanol ($4$ H), pero para el etanol daría $5$ H, y el etanol tiene $6$."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q77",
@@ -2573,7 +3831,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una solución $2$ mol/L de NaOH requiere $80\\ \\mathrm{g}$ por litro de solución. Lo que define la concentración es el volumen final de la solución, no el volumen de agua agregada.",
+    "planteamiento": "Se pide la preparación que asegura una solución $2\\ \\mathrm{mol/L}$ de NaOH. Datos: la masa molar es $40\\ \\mathrm{g/mol}$.",
+    "steps": [
+     "Calcula la masa necesaria por litro: $m = c\\cdot V\\cdot M = 2\\ \\frac{\\mathrm{mol}}{\\mathrm{L}}\\cdot 1\\ \\mathrm{L}\\cdot 40\\ \\frac{\\mathrm{g}}{\\mathrm{mol}} = 80\\ \\mathrm{g}$.",
+     "La concentración se define por el volumen de solución, no por el de agua. Por eso el volumen final debe ser $1\\ \\mathrm{L}$ ($1000$ mL).",
+     "Revisa A: $40\\ \\mathrm{g}$ dan como máximo $1\\ \\mathrm{mol/L}$, y al agregar $1000$ mL de agua el volumen final supera el litro.",
+     "Revisa B y C: en B, $80\\ \\mathrm{g}$ en $500$ mL de agua no fija un volumen final de $1$ L. En C, $40\\ \\mathrm{g}$ en $1$ L dan $1\\ \\mathrm{mol/L}$.",
+     "En D, $80\\ \\mathrm{g}$ llevados a $1000$ mL de solución dan $\\frac{2\\ \\mathrm{mol}}{1\\ \\mathrm{L}}$, justo lo pedido. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Con $40\\ \\mathrm{g}$ se obtiene como máximo $1\\ \\mathrm{mol/L}$, y el volumen final supera el litro al agregar $1000$ mL de agua. El error es confundir el agua agregada con el volumen de solución.",
+     "B": "Usa la masa correcta, pero el volumen final no queda fijado en $1$ L: $500$ mL de agua no determinan la concentración de la solución resultante.",
+     "C": "Dejar $40\\ \\mathrm{g}$ en $1$ L da $1\\ \\mathrm{mol/L}$. Es el error de usar la mitad de la masa necesaria."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q78",
@@ -2608,7 +3883,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una composición de $37\\,\\%$ m/m indica que $74\\ \\mathrm{g}$ de los $200\\ \\mathrm{g}$ son ácido. El resto, $126\\ \\mathrm{g}$, es solvente.",
+    "planteamiento": "Se pide la masa de solvente en un frasco de $200\\ \\mathrm{g}$ de solución. Datos de la etiqueta: composición $37\\,\\%$ m/m del ácido, es decir, masa de soluto por cada cien gramos de solución.",
+    "steps": [
+     "Interpreta la etiqueta: $37\\,\\%$ m/m significa $37\\ \\mathrm{g}$ de ácido por cada $100\\ \\mathrm{g}$ de solución.",
+     "Calcula la masa de ácido, o soluto: $m_{\\text{soluto}} = 0{,}37\\cdot 200\\ \\mathrm{g} = 74\\ \\mathrm{g}$.",
+     "Por conservación de la masa, la solución es soluto más solvente: $m_{\\text{solvente}} = 200\\ \\mathrm{g} - 74\\ \\mathrm{g} = 126\\ \\mathrm{g}$.",
+     "Comprobación: $74\\ \\mathrm{g} + 126\\ \\mathrm{g} = 200\\ \\mathrm{g}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$37\\ \\mathrm{g}$ es la masa de soluto por cada $100\\ \\mathrm{g}$ de solución, no por los $200\\ \\mathrm{g}$ del frasco. Es el error de no escalar la composición.",
+     "B": "$63\\ \\mathrm{g}$ es el solvente por cada $100\\ \\mathrm{g}$ de solución, sin escalar a $200\\ \\mathrm{g}$. Es un error de escala.",
+     "C": "$74\\ \\mathrm{g}$ es la masa de ácido, no la del solvente. Es el error de confundir soluto con solvente."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q79",
@@ -2643,7 +3934,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al agregar agua, la concentración baja, porque los moles de soluto se conservan. El matraz Z pasa de $2\\ \\mathrm{mol/L}$ a $1{,}0\\ \\mathrm{mol/L}$.",
+    "planteamiento": "Se pide la conclusión correcta sobre las concentraciones. Datos: la solución inicial es de $2\\ \\mathrm{mol/L}$; se toman $20$, $50$ y $100$ mL y se diluyen en matraces de $100$, $150$ y $200$ mL.",
+    "steps": [
+     "En una dilución, los moles de soluto se conservan: $c_1\\cdot V_1 = c_2\\cdot V_2$.",
+     "Matraz X: $2\\cdot 20 = c_X\\cdot 100$, así que $c_X = 0{,}4\\ \\mathrm{mol/L}$, valor que coincide con la tabla.",
+     "Matraz Y: $2\\cdot 50 = c_Y\\cdot 150$, así que $c_Y \\approx 0{,}67\\ \\mathrm{mol/L}$, que la tabla redondea a $0{,}7\\ \\mathrm{mol/L}$.",
+     "Matraz Z: $2\\cdot 100 = c_Z\\cdot 200$, así que $c_Z = 1{,}0\\ \\mathrm{mol/L}$.",
+     "Las tres concentraciones son menores que $2\\ \\mathrm{mol/L}$: al agregar agua, la concentración disminuye. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La concentración de X bajó de $2$ a $0{,}4\\ \\mathrm{mol/L}$. Agregar agua nunca aumenta la concentración de una solución.",
+     "B": "La concentración de Y bajó de $2$ a $0{,}7\\ \\mathrm{mol/L}$, así que también disminuyó.",
+     "C": "La caída de X es de $1{,}6\\ \\mathrm{mol/L}$ y la de Y es de $1{,}3\\ \\mathrm{mol/L}$. La afirmación se invierte: X disminuyó más que Y."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2025-invierno-q80",
@@ -2678,7 +3986,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "A $40\\,^\\circ\\mathrm{C}$, la solubilidad del KCl es de $40\\ \\mathrm{g}$ por cada $100\\ \\mathrm{g}$ de agua. Para disolver $60\\ \\mathrm{g}$ se necesitan $150\\ \\mathrm{g}$ de agua, es decir, unos $150$ mL.",
+    "planteamiento": "Se pide el volumen aproximado de agua necesario para disolver $60\\ \\mathrm{g}$ de KCl a $40\\,^\\circ\\mathrm{C}$. Datos del gráfico: la solubilidad crece de forma lineal con la temperatura, desde $30$ g/100 g de agua a $10\\,^\\circ\\mathrm{C}$ hasta $60$ g/100 g de agua a $100\\,^\\circ\\mathrm{C}$.",
+    "steps": [
+     "Lee la solubilidad a $40\\,^\\circ\\mathrm{C}$ en la recta del gráfico: vale $40$ g de soluto por cada $100$ g de agua.",
+     "Comprueba con la recta: pasa por $(10\\,^\\circ\\mathrm{C}, 30)$ y $(100\\,^\\circ\\mathrm{C}, 60)$, así que a $40\\,^\\circ\\mathrm{C}$ vale $30 + \\frac{40 - 10}{3} = 40$.",
+     "Plantea la proporción: $40\\ \\mathrm{g}$ de KCl se disuelven en $100\\ \\mathrm{g}$ de agua. Para $60\\ \\mathrm{g}$, el agua necesaria es $\\frac{60\\ \\mathrm{g}\\cdot 100\\ \\mathrm{g}}{40\\ \\mathrm{g}} = 150\\ \\mathrm{g}$.",
+     "Como la densidad del agua es cercana a $1\\ \\mathrm{g/mL}$, $150\\ \\mathrm{g}$ de agua ocupan aproximadamente $150$ mL.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$67$ mL se obtiene al invertir la proporción: $100\\ \\mathrm{mL} \\div \\frac{60}{40}$. Es el error de dividir al revés.",
+     "B": "$75$ mL corresponde a una solubilidad de $80$ g por cada $100$ g de agua, un valor que no se lee en el gráfico a $40\\,^\\circ\\mathrm{C}$.",
+     "C": "$100$ mL es el volumen de referencia del experimento, pero a $40\\,^\\circ\\mathrm{C}$ la solubilidad no permite disolver $60\\ \\mathrm{g}$ en ese volumen."
+    }
+   }
   }
  ]
 }

@@ -1,9 +1,10 @@
 {
  "id": "lectora-2025-invierno",
  "subject": "lectora",
- "title": "PAES Invierno 2025",
+ "title": "PAES Invierno 2024",
  "description": "Prueba oficial completa de Competencia Lectora: 65 preguntas, aplicada el 18-06-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "invierno",
  "source": "demre",
  "form": "101",
@@ -200,7 +201,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto avanza desde una idea general (la disciplina) hacia aspectos particulares (los períodos de edad), lo que corresponde a una organización jerárquica.",
+    "planteamiento": "Se pide identificar el criterio con que el emisor ordena la información de la lectura 1. Datos: el texto se inicia definiendo la psicología evolutiva en términos generales y luego desciende a precisiones sobre la edad y los períodos del desarrollo.",
+    "steps": [
+     "Primero se identifica la estructura de la lectura. El párrafo inicial define de manera amplia la psicología evolutiva como la disciplina que estudia el cambio de la conducta humana a lo largo del tiempo, algo general que sirve de punto de partida.",
+     "Luego el texto precisa dos rasgos diferenciadores: el carácter normativo de los cambios y su relación con la edad. Estos rasgos no son una cronología ni una serie de causas, sino una especificación del concepto central.",
+     "Más adelante la lectura desciende a lo particular: explica que la edad se refiere a períodos del desarrollo y enumera rangos concretos, como la primera infancia (0-2 años) o la vejez, que son ejemplos específicos del concepto general.",
+     "Por lo tanto, el criterio es ir de lo general a lo particular, lo que corresponde a un orden jerárquico. Se descartan las demás opciones: el texto no plantea un cuestionamiento que luego defiende (A), los rangos etarios aparecen como precisión y no como criterio central (B), y el texto no presenta razones o causas explícitas (D). Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Problematizador: el emisor sí puede plantear preguntas en algún momento, pero no organiza el texto alrededor de un cuestionamiento que luego defiende. Es una trampa típica confundir una pregunta aislada con la estructura completa de la lectura.",
+     "B": "Cronológico: la alternativa toma como criterio los rangos etarios, que sí aparecen en el texto, pero como enumeración de períodos y no como una secuencia temporal de hechos. Confundir un listado de edades con una cronología es el error típico.",
+     "D": "Causal: el texto no presenta causas o razones para estudiar la psicología evolutiva. Solo define la disciplina y precisa conceptos, sin una relación de causa y efecto entre sus partes. La mención a la psicoterapia es una comparación, no una causa."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q02",
@@ -229,7 +246,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La perspectiva es analítica: el emisor examina con detalle qué rasgos permiten distinguir a la psicología evolutiva de otras disciplinas, y las dificultades que ello implica.",
+    "planteamiento": "Se pide identificar la perspectiva del emisor sobre la psicología evolutiva en los dos primeros párrafos. Datos: el texto parte definiendo el objeto de estudio y luego reconoce que otras disciplinas psicológicas también estudian el cambio en el tiempo.",
+    "steps": [
+     "El primer párrafo define la disciplina: se ocupa del cambio a lo largo del tiempo, pero la historia y la geología también lo hacen, así que ese rasgo general no basta para distinguirla. El emisor parte de una definición que ya muestra un problema.",
+     "El segundo párrafo reconoce que la psicoterapia y las disciplinas del aprendizaje también se ocupan de cambios en el tiempo. Por eso el emisor se ve obligado a añadir otros rasgos diferenciadores: el carácter normativo y la relación con la edad.",
+     "Esa actitud corresponde a examinar, con detalle, qué hace distinta a esta disciplina y por qué es difícil delimitarla. Es un enfoque analítico: descompone la definición en partes y revisa cada una.",
+     "Se comparan las opciones. B (crítica) exigiría evaluar la validez de las definiciones, cosa que el texto no hace en esos párrafos; C (polémica) implicaría contrastar posturas controversiales, y el texto no expone debates entre autores; D (histórica) supondría un desarrollo cronológico de la ciencia, lo que no aparece. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Crítica: el emisor sí discute las definiciones, pero en los dos primeros párrafos no evalúa su validez; esa evaluación no aparece aquí. Trampa: asociar cualquier argumentación con una postura crítica.",
+     "C": "Polémica: la alternativa supone un contraste entre posturas controversiales. En estos párrafos el emisor no expone debates de autores; expone una dificultad conceptual. Trampa: confundir la dificultad para definir con una controversia.",
+     "D": "Histórica: el texto no narra la historia de la disciplina; menciona la historia solo como ejemplo de una disciplina que se ocupa del cambio en el tiempo. Trampa: tomar esa mención como si fuera el enfoque del texto."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q03",
@@ -259,7 +292,23 @@
    "presentation": "text",
    "passageId": "lectura-1",
    "pilot": true,
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Ambas disciplinas comparten el interés por los cambios a lo largo del tiempo y por transformar un estado inicial de la persona en otra situación.",
+    "planteamiento": "Se pide la similitud entre la psicología evolutiva y la psicoterapia según el segundo párrafo. Datos: el texto afirma que la psicoterapia también se ocupa de los cambios a lo largo del tiempo, partiendo de un estado inicial (un problema psicológico) y buscando una situación diferente.",
+    "steps": [
+     "El segundo párrafo establece la similitud de forma explícita: «la psicoterapia también se ocupa de los cambios a lo largo del tiempo». Ese es el punto de comparación que el texto propone.",
+     "Luego el texto describe cómo opera el cambio en ambas disciplinas: se parte de un estado inicial de la persona y se busca convertirlo en otra situación, ya sea la superación de un problema o la adquisición de una conducta.",
+     "La opción B afirma que ambas se ocupan de los cambios conductuales. Esta afirmación es compatible con el texto: la psicología evolutiva estudia los cambios conductuales a lo largo del desarrollo, y la psicoterapia trabaja sobre los cambios de la persona en el tiempo.",
+     "Se descartan las demás: A (procesos de aprendizaje) corresponde a otra disciplina mencionada por el texto, no a una similitud con la psicoterapia; C (superación de estados psicológicos) es un rasgo de la psicoterapia que la psicología evolutiva no comparte como objetivo; D (origen de los problemas) no aparece en el párrafo. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Procesos de aprendizaje: el texto los menciona como otras disciplinas que se ocupan de cambios en el tiempo, pero no como una similitud entre la psicología evolutiva y la psicoterapia. Trampa: tomar un tercer punto de comparación del texto como la similitud pedida.",
+     "C": "Superación de estados psicológicos: es la meta de la psicoterapia según el texto («la superación del problema»), pero la psicología evolutiva no se define por esa meta. Es una afirmación verdadera sobre la psicoterapia que no responde a la similitud pedida.",
+     "D": "Origen de los problemas: el texto no sostiene que la psicoterapia ni la psicología evolutiva se ocupen del origen de los problemas; se centra en el estado inicial y en el cambio. Trampa: confundir el estado inicial de la persona con la causa de su problema."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q04",
@@ -288,7 +337,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En psicología evolutiva la edad se entiende como un período de la vida, no como un número exacto de años.",
+    "planteamiento": "Se pide qué es la edad para esta disciplina. Datos: el texto indica que, al hablar de edad, no se refiere a una edad concreta, sino a uno de los períodos en que habitualmente se divide el desarrollo humano.",
+    "steps": [
+     "El párrafo sobre la edad establece que, en psicología evolutiva, «edad» no significa una cifra puntual. Se refiere a uno de los períodos en que habitualmente se divide el desarrollo humano.",
+     "Luego el texto enumera esos períodos: primera infancia (0-2 años), años previos a la escolaridad obligatoria (2-6), escuela primaria (6-12), adolescencia, madurez y vejez. Cada uno corresponde a un rango de años, no a una edad exacta.",
+     "Por eso la definición correcta es la que habla de un rango de años en que ocurren cambios o hitos del desarrollo. La opción D dice que es «el rango de años entre los que ocurren hitos del desarrollo», lo que coincide con la idea de período.",
+     "Se descartan las demás: A confunde la edad con la cantidad de años vividos, que es la noción cotidiana y no la técnica del texto; B mezcla la edad con la maduración, concepto que el texto no usa para definirla; C confunde la edad con la regularidad de los cambios, que es un rasgo normativo distinto. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La cantidad de años vividos: es la noción cotidiana de edad, pero el texto aclara que no se refiere a una edad concreta. Trampa: aplicar el sentido común en lugar del sentido técnico que define el texto.",
+     "B": "El grado de maduración: la maduración es un proceso relacionado con el desarrollo, pero el texto no define la edad por ella. Trampa: confundir la edad con la madurez, que el texto menciona como un período de la vida y no como sinónimo de edad.",
+     "C": "La regularidad con que ocurren los cambios: el texto habla de cambios normativos y de su relación con la edad, pero la regularidad es un rasgo de esos cambios, no la definición de edad. Trampa: confundir el carácter normativo con la edad."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q05",
@@ -324,7 +389,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El segmento enumera los períodos del desarrollo humano con sus rangos de edad, sin compararlos ni explicarlos; cumple una función de mención.",
+    "planteamiento": "Se pide la función del segmento citado en relación con la edad y la psicología evolutiva. Datos: el segmento entrega una lista de períodos con sus rangos de edad: primera infancia (0-2 años), años previos a la escolaridad (2-6), escuela primaria (6-12), adolescencia, madurez y vejez.",
+    "steps": [
+     "El segmento aparece citado textualmente en el recuadro de la pregunta. Su contenido es una serie de períodos con sus rangos de edad: 0-2, 2-6, 6-12, la adolescencia, la madurez y la vejez.",
+     "Describir las etapas (A) implicaría explicar qué ocurre en cada etapa; el segmento no entrega características de ninguna de ellas, solo las nombra y las delimita. Además, habla de desarrollo y no de evolución humana.",
+     "Comparar los períodos (B) requeriría establecer diferencias o semejanzas entre ellos; el segmento presenta rangos consecutivos, pero no contrasta ninguno con otro.",
+     "Mencionar (C) corresponde a nombrar los elementos de una serie sin desarrollarlos, que es exactamente lo que hace el segmento al listar los períodos con sus rangos de edad, en relación con el concepto de edad de la disciplina. Ejemplificar (D) supondría ilustrar una idea general con un caso concreto, y el segmento no entrega un caso, sino una enumeración completa. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Describir las etapas: la alternativa supone que el segmento caracteriza cada etapa. Trampa: asumir que toda lista de etapas describe su contenido, cuando el segmento solo entrega nombres y rangos de edad.",
+     "B": "Comparar los periodos del desarrollo humano: el segmento presenta rangos consecutivos, pero no compara sus características. Trampa: confundir una secuencia ordenada de períodos con una comparación.",
+     "D": "Ejemplificar las etapas: se confunde una enumeración completa con un ejemplo. Un ejemplo ilustraría una etapa con una situación concreta; aquí se listan todas las etapas de manera general."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q06",
@@ -353,7 +434,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los dos últimos párrafos profundizan en la normatividad de los cambios y en el papel de la edad, sin tratar la identidad ni la personalidad.",
+    "planteamiento": "Se pide la función de los dos últimos párrafos de la lectura 1. Datos: el penúltimo párrafo resume la definición de la psicología evolutiva como estudio de cambios conductuales relacionados con la edad, y el último desarrolla la importancia de la edad y de los períodos de la vida.",
+    "steps": [
+     "El penúltimo párrafo («Podemos, pues, decir...») resume la definición e indica que los cambios de los que se ocupa la disciplina están más cerca de lo normativo que de lo idiosincrásico. Así retoma el concepto de normatividad.",
+     "El último párrafo («Dada la importancia central que la edad tiene...») explica que la edad se refiere a períodos del desarrollo, con rangos de años y con variaciones interindividuales. Esto profundiza la relación entre la normatividad y la edad.",
+     "La opción A (identidad personal) aparece en un ejemplo anterior, no en los últimos párrafos. La opción C (personalidad) no se trata en ellos. La opción D (definición de madurez) solo menciona la madurez como uno de los períodos, sin explicar procesos psicológicos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Reflexionar sobre la identidad personal: el ejemplo de la identidad aparece en la explicación de la relación con la edad, antes de la definición final. Trampa: tomar un ejemplo del texto como el tema de sus últimos párrafos.",
+     "C": "Valorar el aporte en la personalidad: el texto no valora la disciplina ni menciona la personalidad en esos párrafos. Trampa: asociar la psicología evolutiva con el estudio de la personalidad, que es otra rama de la psicología.",
+     "D": "Explicar la definición de madurez: la madurez aparece como uno de los períodos del desarrollo, pero no se define como concepto ni se relaciona con procesos psicológicos. Trampa: confundir una mención con una explicación."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q07",
@@ -382,7 +478,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La lectura describe un área de la psicología ligada al desarrollo humano, por lo que sirve a quien quiera entender esa disciplina desde sus conceptos básicos.",
+    "planteamiento": "Se pide identificar qué lector se beneficiaría con la información de la lectura 1. Datos: el texto trata la psicología evolutiva, su definición, sus rasgos (normatividad y edad) y los períodos del desarrollo humano.",
+    "steps": [
+     "La lectura 1 es una introducción conceptual a la psicología evolutiva: define el campo, lo distingue de otras disciplinas psicológicas y explica sus rasgos centrales.",
+     "Se revisa cada opción según lo que el texto ofrece. A: el texto no trata métodos psicoterapéuticos, sino cambios en el desarrollo. C: el texto no entrega ejemplos de aplicación de la disciplina en terapia. D: el texto no analiza la vida de una persona en tratamiento.",
+     "La opción B describe a un estudiante que busca acercarse a un área de la psicología ligada al desarrollo humano. El texto cumple esa necesidad, porque presenta el área, sus conceptos clave y sus períodos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Investigador de ciencias que requiere métodos psicoterapéuticos: la lectura menciona la psicoterapia para diferenciarla, pero no describe métodos. Trampa: tomar la mención de otra disciplina como el contenido central del texto.",
+     "C": "Psicoterapeuta que necesita ejemplos de aplicación: el texto contrasta la psicoterapia con la psicología evolutiva, pero no entrega ejemplos clínicos ni aplicaciones. Trampa: asumir que quien trabaja en terapia se beneficia de cualquier texto de psicología.",
+     "D": "Paciente que quiere analizar sus cambios: el texto habla de cambios generales del desarrollo, no de la vida de una persona en terapia; describe el campo, no un caso personal. Trampa: confundir el tema del cambio con un análisis individual."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q08",
@@ -411,7 +522,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las pinturas rupestres se mencionan para contrastarlas con los pictogramas, que se estilizaron de forma estándar para representar conceptos individuales.",
+    "planteamiento": "Se pide la finalidad de mencionar las pinturas rupestres en la lectura 2. Datos: el texto afirma que los pictogramas se basaban en imágenes, pero «a diferencia de las pinturas rupestres» se estilizaron de forma estándar para representar conceptos individuales.",
+    "steps": [
+     "El primer párrafo explica que, con el tiempo, las imágenes sencillas y los palos de conteo se convirtieron en pictogramas, que se basaban en imágenes.",
+     "La frase sobre las pinturas rupestres aparece justo después de esa idea y comienza con «a diferencia de». Es decir, la mención sirve para marcar una diferencia entre dos formas de representación.",
+     "La diferencia está en que las pinturas son representaciones de imágenes, mientras los pictogramas se estilizaron de forma estándar para representar conceptos individuales. El texto contrasta así el significado de ambas formas.",
+     "Se descartan las demás: A dice que las pinturas aparecen como la primera escritura estilizada, pero el texto ubica la escritura estilizada después; B atribuye a las pinturas una explicación de la realidad que el texto no les da; D habla de pintura sobre palos, que no corresponde a la mención. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Primera escritura estilizada: el texto no dice que las pinturas rupestres sean la primera escritura. Trampa: confundir el origen de la representación con el de la escritura, que aparece después con la protoescritura.",
+     "B": "Representación de la realidad en imágenes: es una descripción verdadera de las pinturas, pero no responde a la finalidad de la mención, que es contrastar con los pictogramas. Trampa: elegir una afirmación correcta que no responde a lo que se pregunta.",
+     "D": "Origen de la antigua pintura sobre palos: el texto no habla de pintura sobre palos. Trampa: mezclar las pinturas rupestres con los palos de conteo, que son otro objeto de la lectura."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q09",
@@ -440,7 +567,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto dice que los jeroglíficos eran demasiado complicados para el uso diario, lo que permite inferir que escribirlos tomaba mucho tiempo.",
+    "planteamiento": "Se pide qué se infiere de la escritura de los jeroglíficos. Datos: el texto los describe como un medio formal para ocasiones especiales, «demasiado complicados para su uso cotidiano», y compara su rapidez con la del hierático.",
+    "steps": [
+     "El párrafo sobre los jeroglíficos señala que combinaban pictogramas e ideogramas en estructuras más perceptibles, y que se desarrollaron como un medio de escritura formal para ocasiones especiales.",
+     "El texto precisa que eran «demasiado complicados para su uso cotidiano» y que el hierático «permitía escribir con más rapidez que los jeroglíficos». La rapidez se presenta como una comparación explícita: el hierático era más rápido, luego los jeroglíficos eran lentos de ejecutar.",
+     "De ambas frases se infiere que escribir en jeroglíficos requería más tiempo y dedicación. Es una inferencia, porque el texto no indica el tiempo exacto que tomaba cada símbolo.",
+     "Se descartan las demás: A (trazo elegante) no aparece en el texto; C (ámbito religioso) no se menciona; D (medio habitual) contradice el texto, que dice que no servían para el uso cotidiano. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Trazo elegante: el texto no evalúa la estética de los jeroglíficos. Trampa: confundir su complejidad formal con la elegancia del trazo.",
+     "C": "Restringida al ámbito religioso: el texto dice que eran un medio formal para ocasiones especiales, no que se usaran solo en religión. Trampa: extender a todo uso formal algo que el texto no dice.",
+     "D": "Medio de comunicación habitual: contradice el texto, que afirma que eran demasiado complicados para el uso cotidiano. Trampa: suponer que, por aparecer en tumbas y pinturas murales, eran la escritura normal."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q10",
@@ -469,7 +612,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El hierático era una escritura más rápida que los jeroglíficos, y el propio texto dice que sus caracteres se asemejaban a los chinos.",
+    "planteamiento": "Se pide a qué sistema de escritura se asemejaba el hierático en sus caracteres. Dato: el texto compara explícitamente el hierático con un sistema de escritura por sus caracteres, en el párrafo que lo presenta junto a los jeroglíficos.",
+    "steps": [
+     "El párrafo sobre el hierático dice que se creó al mismo tiempo que los jeroglíficos, que requería menos símbolos pero más sofisticados, y que sus caracteres eran semejantes a los caracteres chinos.",
+     "La pregunta pide a qué sistema se asemejaba en sus caracteres. La frase del texto es directa: «semejantes a los caracteres chinos».",
+     "Se revisan las demás: el sumerio y el romano no aparecen como semejanza en los caracteres; el fenicio aparece solo como fuente de las letras griegas y romanas, es decir, como antecedente y no como comparación. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Sumerio: la escritura sumeria se menciona con la cuneiforme, hecha de marcas en forma de cuña. Trampa: asociar el hierático con otro sistema antiguo mencionado en la lectura.",
+     "B": "Romano: los romanos tenían una cursiva de uso habitual, parecida en función al hierático, pero el texto no compara la forma de sus caracteres. Trampa: confundir la función de los estilos con la forma de las letras.",
+     "C": "Fenicio: el abyad fenicio es un antecedente del alfabeto griego y romano. Trampa: confundir antecedente con semejanza de caracteres."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q11",
@@ -498,7 +656,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El antecedente del alfabeto moderno es el abyad protocananeo; los demás sistemas son antiguos, pero el texto no los presenta como su origen.",
+    "planteamiento": "Se pide el antecedente más antiguo del alfabeto moderno según la lectura. Dato clave: el texto señala que el alfabeto europeo derivó originalmente del sistema de escritura abyad protocananeo, usado en Oriente Medio hace unos 3500 años.",
+    "steps": [
+     "El texto indica que el nombre del alfabeto europeo es griego, pero que sus antecedentes son más complejos.",
+     "La frase clave dice: «Parece que derivó originalmente del sistema de escritura abyad protocananeo». Luego explica que los fenicios lo usaron y que de él proceden las letras griegas y romanas.",
+     "Los demás sistemas, aunque antiguos, no aparecen como antecedentes del alfabeto: el hierático y los jeroglíficos son escrituras egipcias; la cuneiforme es sumeria, de alrededor del año 3600 a. C., y no se conecta con el alfabeto en el texto.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Sistema hierático: es una escritura egipcia más rápida, pero el texto no lo señala como antecedente del alfabeto. Trampa: elegirlo por ser una escritura cursiva que aparece después de los jeroglíficos.",
+     "B": "Jeroglíficos egipcios: son una forma de escritura muy conocida, con pictogramas e ideogramas, pero el texto los presenta como un sistema separado del alfabeto. Trampa: suponer que, por ser el sistema más famoso, es el antecedente.",
+     "D": "Escritura cuneiforme: es el primer sistema de escritura conocido, por lo que es muy antigua, pero no es antecedente del alfabeto. Trampa: confundir antigüedad con parentesco. Es la opción más atractiva porque es la más antigua de todas."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q12",
@@ -527,7 +701,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los romanos mantenían sus dos estilos separados y solo después de la caída del imperio los combinaron, lo que indica que al comienzo se usaban en contextos distintos.",
+    "planteamiento": "Se pide qué se infiere del uso de dos tipos de letras en la sociedad romana. Datos: las mayúsculas se usaban en las inscripciones y la cursiva romana era de uso habitual; el texto afirma que, para los romanos, ambos estilos eran del todo diferentes y nunca se mezclaban.",
+    "steps": [
+     "El texto explica que los romanos tenían dos conjuntos de caracteres: las mayúsculas, que eran las inscripciones, y la cursiva romana, de uso habitual, que dio origen a las minúsculas.",
+     "Luego afirma: «Para los romanos, estos dos estilos eran del todo diferentes y nunca se mezclaban». Si nunca se mezclaban, cada estilo cumplía una función distinta.",
+     "La inferencia es que los dos estilos se utilizaban en contextos diferentes desde un comienzo: uno para inscripciones y otro para el uso cotidiano. La mezcla es posterior, con la caída del Imperio romano.",
+     "Se descartan las demás: B (destacar fragmentos) es un uso que surge después de la caída del imperio, no un origen; C (equivalentes del hierático) compara solo la cursiva con el hierático y las mayúsculas con los jeroglíficos; D (tipos móviles) es una época posterior en la que se creó la terminología. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Destacar fragmentos: es un uso posterior, que apareció después de la caída del imperio cuando se combinaron ambos estilos. Trampa: tomar un uso posterior como el motivo original de los dos tipos.",
+     "C": "Equivalentes al hierático: solo la cursiva romana se compara con el hierático egipcio por su uso habitual; las mayúsculas, en cambio, se comparan con los jeroglíficos. Trampa: generalizar a ambos estilos una analogía que el texto hace solo para uno.",
+     "D": "Época de los tipos móviles: el texto dice que la terminología de mayúsculas y minúsculas proviene de esa época, pero no que los estilos cobraran relevancia entonces. Trampa: confundir el origen del nombre con el origen del uso."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q13",
@@ -556,7 +746,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los paréntesis agregan un dato complementario: los romanos no distinguían la J y la U de la I y la V, porque eran más fáciles de esculpir.",
+    "planteamiento": "Se pide qué aporta la información entre paréntesis sobre el uso de mayúsculas y minúsculas. Dato: el paréntesis aparece en el párrafo que habla de las letras romanas y explica por qué la disposición de sus caracteres no es idéntica a la actual.",
+    "steps": [
+     "El párrafo sobre el alfabeto latino afirma que las mayúsculas actuales son prácticamente iguales a las de los romanos en sus inscripciones. Entre paréntesis, el texto aclara que la disposición de los caracteres no es idéntica.",
+     "El paréntesis dice que los romanos no diferenciaban las letras J y U de la I y la V, porque eran más fáciles de esculpir. Es un dato adicional sobre el alfabeto, que no cambia la idea principal del párrafo.",
+     "Se revisan las opciones: A (opiniones del emisor) no corresponde, porque el paréntesis entrega un hecho histórico y no una valoración; B (corrige nociones extendidas) no aparece, el texto no dice que la gente se equivoque; C (criterio de la distinción) no es correcto, porque el criterio de separar mayúsculas y minúsculas se explica en otra parte del texto. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Opiniones del emisor: el paréntesis entrega un hecho histórico, no una opinión. Trampa: confundir una aclaración con una valoración del autor.",
+     "B": "Corrige nociones extendidas: el texto no dice que las personas crean algo falso sobre los caracteres; solo agrega una precisión sobre su disposición. Trampa: asumir que toda aclaración corrige un error.",
+     "C": "Especifica el criterio de la distinción: el criterio para separar mayúsculas y minúsculas se explica en el texto principal, a propósito de los tipos móviles y de las cajas de letras. El paréntesis trata de cómo se ordenaban ciertas letras."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q14",
@@ -585,7 +790,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El último párrafo sostiene que la escritura es indispensable para la tradición científica, porque permite constatar y desarrollar las ideas.",
+    "planteamiento": "Se pide la idea principal del último párrafo sobre la escritura. Datos: el párrafo se abre con la pregunta «¿Por qué es tan importante el desarrollo de la escritura?» y responde que, sin ella, es difícil imaginar cómo podría haberse construido la tradición científica.",
+    "steps": [
+     "El último párrafo plantea una pregunta: «¿Por qué es tan importante el desarrollo de la escritura?». Su respuesta es que sin la escritura es difícil imaginar cómo podría haberse construido la tradición científica.",
+     "El texto contrasta la tradición oral, que sirve para los relatos de los dioses y sus rayos, con las ideas científicas, que deben ser constatadas y desarrolladas. Para estas últimas, la palabra escrita es la base.",
+     "La idea principal es que la escritura es fundamental para el desarrollo de la ciencia. Las demás opciones no son la idea central: B (más relevante que la oralidad) no se afirma en general; C (registrar tradiciones) no se desarrolla en ese párrafo; D (creación literaria) no aparece. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Más relevante que la oralidad: el texto no compara la importancia en general; solo dice que la escritura es necesaria para las ideas científicas, mientras la oralidad basta para los relatos tradicionales. Trampa: convertir una distinción de uso en una jerarquía.",
+     "C": "Registrar tradiciones: es una función real de la escritura, pero no es la idea que el último párrafo desarrolla, que es su rol en la ciencia. Trampa: elegir una función verdadera que no es la idea principal.",
+     "D": "Primordial para la creación literaria: el texto no habla de literatura en ese párrafo. Trampa: asociar la escritura con la literatura, un tema que no aparece en el último párrafo."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q15",
@@ -614,7 +834,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La figura 2 es una tabla latina del año 48 d. C. que muestra la escritura en un contexto concreto: un discurso oficial del emperador Claudio.",
+    "planteamiento": "Se pide el argumento que valida la relevancia de la figura 2 y su descripción para el tema. Datos: la leyenda indica «Tabla Claudiana, 48 d. C.» y que el texto en latín reproduce el discurso del emperador Claudio para admitir a algunos ciudadanos galos en el Senado.",
+    "steps": [
+     "La leyenda de la figura 2 indica «Tabla Claudiana, 48 d. C.» y que el texto en latín reproduce el discurso del emperador Claudio en favor de admitir a algunos ciudadanos galos en las filas del Senado. Es decir, se trata de un documento real y fechado.",
+     "El tema de la lectura es la escritura y su desarrollo. La figura, por lo tanto, debe servir como ejemplo de cómo se usaba la escritura en la sociedad.",
+     "Se revisa cada argumento: A (evolución del sistema) no se puede sostener con un solo documento, que es una muestra puntual; B (difusión del alfabeto) no se demuestra, porque una sola tabla no mide la difusión; D (prevalencia de la escritura a través de las palabras) es una frase vaga que no describe el documento.",
+     "C: la figura ejemplifica la utilización de la escritura en un contexto particular, un discurso imperial de un momento concreto. Es el argumento que valida la relevancia del recurso. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Evolución del sistema: la figura muestra un caso del siglo I, pero un solo documento no prueba una evolución. Trampa: confundir un ejemplo con una secuencia de cambios.",
+     "B": "Difusión del alfabeto: el texto no habla de difusión, y la figura muestra un texto en latín, no la expansión del alfabeto. Trampa: tomar el uso del latín como prueba de difusión.",
+     "D": "Prevalencia de la escritura a través de las palabras: es una frase que suena a argumento, pero no describe la figura ni sustenta su relevancia. Trampa: elegir una frase general sin relación con el documento."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q16",
@@ -644,7 +880,23 @@
    "presentation": "text",
    "passageId": "lectura-3",
    "pilot": true,
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La distinción entre admirar y querer sirve para exaltar la intensidad del sentimiento del narrador hacia Glenda, que va más allá de la simple admiración.",
+    "planteamiento": "Se pide por qué el narrador diferencia admirar de querer a Glenda. Datos: el texto afirma que «al igual que ellos, también nosotros admirábamos a Glenda», pero que solo el núcleo «queríamos tanto a Glenda»; el contraste está hecho para marcar la intensidad del afecto.",
+    "steps": [
+     "En el segundo párrafo, el narrador reconoce que él y los demás admiraban a Glenda, pero también a otras actrices y actores, como Anouk, Marilina o Marcello. Luego afirma que solo el núcleo la quería tanto, y que esa diferencia definió al grupo.",
+     "La diferencia entre admirar y querer no es una clasificación de personas ni una cuestión de antigüedad. Es un contraste de grado: admirar es una estima compartida con muchos, mientras que querer es un sentimiento más hondo y excluyente.",
+     "Por eso el narrador repite la expresión «queríamos tanto a Glenda» y la presenta como lo que los separa de los demás. El recurso enfatiza el sentimiento, así que su finalidad es exaltarlo.",
+     "Se descartan las demás: A supone una distinción frente a otros integrantes del club, pero quienes solo admiraban no formaban parte del núcleo; B (ser fundador) no es el propósito del contraste, pues el texto dice que el núcleo no se formó de manera precisa; D (relación personal) no corresponde a un vínculo íntimo, sino a un sentimiento admirativo. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Distinguirse de los otros integrantes del club: el texto dice que «de club no tenía nada» y que quienes solo admiraban no pertenecían al núcleo. Trampa: tomar la palabra club como si hubiera miembros de igual rango que se comparan entre sí.",
+     "B": "Confirmar ser miembro fundador: el texto no dice que el narrador sea fundador; los primeros del núcleo son Irazusta y Diana, y el origen del grupo es confuso. Trampa: asociar la antigüedad en el grupo con la intensidad del sentimiento.",
+     "D": "Explicar una relación personal con Glenda: el texto habla de un sentimiento hacia la actriz que aparece en la pantalla, no de un trato directo con ella. Trampa: confundir un afecto intenso con una relación personal."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q17",
@@ -673,7 +925,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Anouk, Marilina, Annie y Silvana se mencionan como otras figuras admiradas por el grupo, pero en menor medida que Glenda.",
+    "planteamiento": "Se pide por qué se nombran esas cuatro figuras. Datos: el narrador escribe que el grupo «admirábamos a Glenda y además a Anouk, a Marilina, a Annie, a Silvana», y que solo el núcleo quería a Glenda con esa intensidad.",
+    "steps": [
+     "El segundo párrafo presenta una lista de artistas que el grupo también admiraba: Anouk, Marilina, Annie y Silvana, a las que se suman Marcello, Yves, Vittorio y Dirk.",
+     "La enumeración sirve para establecer una comparación. El texto dice que todos admiraban a estas figuras, pero que «solamente nosotros queríamos tanto a Glenda», lo que implica que esas artistas quedan en un segundo nivel de afecto.",
+     "Por lo tanto, la mención señala que había otros artistas admirados, pero en menor medida que Glenda. Esa es la finalidad de la lista dentro de la argumentación del narrador.",
+     "Se descartan las demás: A (caracterizar a los miembros) no es el propósito, porque las cuatro figuras son artistas y no integrantes del grupo; B (expulsados por criticar) no aparece en el texto; C (gustos variados) no es la idea, pues la lista sirve para comparar intensidades. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Caracterizar a los miembros del grupo: Anouk, Marilina, Annie y Silvana son artistas admiradas, no integrantes del grupo de admiradores. Trampa: confundir una lista de nombres con una descripción de quienes forman parte del grupo.",
+     "B": "Integrantes expulsados del grupo por criticar a Glenda: el texto no menciona a nadie expulsado por criticar. Las críticas aparecen como dudas tímidas dentro del propio núcleo. Trampa: inventar un hecho que no está en el relato.",
+     "C": "Gustos artísticos variados de los admiradores: el texto no detalla los gustos de cada admirador; solo indica que el grupo admiraba a otras figuras además de Glenda. Trampa: confundir una enumeración de nombres con una muestra de diversidad de gustos."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q18",
@@ -702,7 +970,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Lo que llevó al núcleo a admitir que eran muchos fue la gran participación en reencuentros y encuentros comunes después de ver las películas.",
+    "planteamiento": "Se pide qué provocó que el núcleo reconociera que muchos querían a Glenda. Datos: el texto dice que en el estreno de Los frágiles retornos «nos fue preciso admitir ... que éramos muchos los que queríamos a Glenda», y menciona los reencuentros en los cines, las miradas a la salida y el café del centro.",
+    "steps": [
+     "El párrafo que cuenta el estreno de Los frágiles retornos reconoce que el núcleo debió aceptar que era numeroso. La frase siguiente indica la evidencia: «los reencuentros en los cines, las miradas a la salida».",
+     "Después el texto agrega que el grupo se reunía en un mismo café del centro, que las mesas empezaron a acercarse y que se pedía el mismo cóctel. Es decir, la participación compartida tras las películas mostraba cuántas personas sentían lo mismo.",
+     "Por lo tanto, lo que provocó el reconocimiento fue la alta participación en actividades comunes tras ver las películas de Glenda. La opción B resume esa causa, y las demás no aparecen como causa en el texto.",
+     "Se descartan las demás: A (rendir el examen del club) corresponde a la prueba informal con que el núcleo admitía a nuevos integrantes, no a la cantidad de interesados; C (cines en que se exhibían las películas) menciona un detalle del escenario; D (evidencia para defender escenas) habla de argumentos que el texto no describe. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La cantidad de interesados en rendir el examen: el examen era una prueba disimulada para admitir a nuevos integrantes, no la causa del reconocimiento. Trampa: confundir la forma de admisión con la evidencia de la popularidad.",
+     "C": "La amplia gama de cines: el texto menciona las salas donde Glenda aparecía, pero no dice que la variedad de cines provocara el reconocimiento. Trampa: tomar un detalle del escenario por causa.",
+     "D": "La abundante evidencia para defender las escenas: el texto habla de críticas y de cuestionamientos, pero no de una defensa de las escenas con pruebas. Trampa: asumir que un grupo que se reúne busca argumentos."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q19",
@@ -731,7 +1015,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como el narrador forma parte del núcleo, su relato transmite lo que significaba pertenecer a ese grupo, visto desde dentro.",
+    "planteamiento": "Se pide por qué es relevante que el narrador sea un personaje del relato. Datos: el narrador usa la primera persona del plural («nosotros», «queríamos») y cuenta las reuniones, los exámenes de admisión, las obligaciones y las dudas del núcleo desde dentro.",
+    "steps": [
+     "El narrador habla desde «nosotros»: cuenta las reuniones en el café, los exámenes de admisión, las obligaciones que se definían como un reglamento y las dudas que surgieron dentro del grupo. Su voz pertenece al núcleo.",
+     "Esa posición permite que el lector conozca los sentimientos, las tensiones y la lealtad de los miembros, como la exigencia de no admitir a los advenedizos o la obligación de acudir a las reuniones cuando se pasaba una película de Glenda.",
+     "Por eso la relevancia es que el relato transmite la visión de lo que significa ser parte del núcleo. La opción B resume ese efecto de perspectiva interna.",
+     "Se descartan las demás: A (calidad actoral incuestionable) es una afirmación que el narrador no sostiene, porque reconoce desfallecimientos en las películas; C (discusiones sobre el funcionamiento) es un contenido presente, pero no explica por qué su condición de personaje es relevante; D (trayectoria cinematográfica) no es el foco del relato. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Perspectiva incuestionable de la calidad actoral: el narrador critica varias películas y reconoce «desfallecimientos» y «caídas en lo convencional». Trampa: tomar la admiración del narrador por una evaluación objetiva.",
+     "C": "Revela discusiones sobre el funcionamiento del club: el texto sí menciona reglas y reuniones, pero esa información es un efecto de estar dentro del núcleo y no la razón de la relevancia. Trampa: quedarse con un contenido sin ver su función.",
+     "D": "Describe la exitosa trayectoria cinematográfica de Glenda: el relato no sigue la carrera de la actriz; solo menciona películas como referencias de las reuniones y de las discusiones. Trampa: confundir las películas citadas con un repaso de su carrera."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q20",
@@ -760,7 +1060,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El estreno de Los delirantes creó entusiasmos y, como consecuencia directa, aumentó el número de personas que querían a Glenda.",
+    "planteamiento": "Se pide la consecuencia directa del estreno de Los delirantes. Datos: el texto dice que Glenda apareció en esa película, que su éxito «rompió los diques» y creó entusiasmos momentáneos, y que después «éramos muchos» los que la querían.",
+    "steps": [
+     "El párrafo central de la lectura menciona el momento en que Glenda apareció en escena como la joven asesina de Los delirantes y que su éxito rompió los diques. El estreno es, entonces, el hecho que se describe.",
+     "La consecuencia directa de ese éxito es que se sumaron muchas más personas a la admiración: «veinte, acaso treinta, nunca supimos cuántos llegamos a ser».",
+     "Las demás opciones no son consecuencias directas. A (reuniones periódicas) se explica por el vínculo ya formado y por las visitas previas; B (crítica parcial) aparece después, cuando algunos «se atrevieron a deslizar críticas parciales»; C (alza de postulantes) habla de un examen de admisión y no de postulantes que la película provocara.",
+     "Por lo tanto, la consecuencia directa es el aumento de personas admiradoras de Glenda. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Reuniones periódicas para hablar de Glenda: las reuniones existían antes del estreno, porque ya se conocían y se visitaban para hablar de ella. Trampa: confundir una práctica previa con una consecuencia inmediata.",
+     "B": "Crítica parcial de las habilidades actorales: las críticas aparecen después, poco a poco, y se refieren a secuencias o películas, no a las habilidades de Glenda; el texto dice que ella no era responsable de los desfallecimientos. Trampa: asumir que cualquier crítica surge del estreno.",
+     "C": "Alza de postulantes para integrar el club: el texto menciona el examen de admisión y las reglas del núcleo, pero no dice que la película aumentara los postulantes. Trampa: confundir la expansión general de admiradores con el ingreso formal al grupo."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q21",
@@ -789,7 +1105,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El núcleo no aceptaba el final de Nunca se sabe por qué, que consideraba una falla de la película.",
+    "planteamiento": "Se pide qué película tenía un final inaceptable para los miembros del núcleo. Dato: el texto dice que «no podíamos aceptar que Nunca se sabe por qué terminara así», dentro del párrafo sobre los errores que se volvieron insoportables.",
+    "steps": [
+     "El párrafo que cuenta cómo los errores se volvieron insoportables menciona dos películas con problemas: El fuego de la nieve, por una secuencia de póker, y Nunca se sabe por qué, por su final.",
+     "La frase del texto es directa: «no podíamos aceptar que Nunca se sabe por qué terminara así». Por lo tanto, el final inaceptable corresponde a esa película.",
+     "Las otras películas tienen otros problemas: El fuego de la nieve tiene la secuencia de la partida de póker, El uso de la elegancia tiene un tropezón y Los frágiles retornos fue elegida por su relativa escasa imperfección. Ninguna de ellas tiene el final cuestionado.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El fuego de la nieve: el texto la critica por la secuencia de la partida de póker, que mancha a Glenda, no por su final. Trampa: confundir una secuencia cuestionada con el desenlace de una película.",
+     "B": "Los frágiles retornos: es la película que el núcleo quiso conseguir en copias por su relativa escasa imperfección, así que no es la de final inaceptable. Trampa: pensar que la película más cuidada es la de peor desenlace.",
+     "D": "El uso de la elegancia: el texto menciona un tropezón de Glenda en esa película, pero no un final inaceptable. Trampa: asociar cualquier error con el desenlace."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q22",
@@ -818,7 +1150,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El núcleo buscó las copias de Los frágiles retornos porque era la película menos imperfecta, y así quería mantener la imagen de Glenda cercana a la perfección.",
+    "planteamiento": "Se pide la finalidad de conseguir las copias de Los frágiles retornos. Datos: el texto señala que la película fue «elegida por su relativamente escasa imperfección», y que la felicidad de Glenda «solo podía venir de la perfección».",
+    "steps": [
+     "Después de reconocer los errores y de asumir la misión de proteger a Glenda, el núcleo se dividió las tareas. El texto indica que debían procurarse «la totalidad de las copias de Los frágiles retornos».",
+     "El texto explica la elección: la película fue «elegida por su relativamente escasa imperfección». El núcleo buscaba una obra que se acercara a la perfección que exigía a Glenda.",
+     "Por eso, tener las copias permitía conservar esa imagen y decidir qué versión de Glenda se veía. La finalidad es, entonces, preservar la imagen de Glenda lo más cercana a la perfección.",
+     "Se descartan las demás: B (modificar las escenas) no aparece, porque el núcleo no pide cambios a las películas; C (evitar nuevos admiradores) contradice la expansión del grupo y el hecho de que no bloqueaba el ingreso con las copias; D (una copia original para cada uno) no se menciona, pues el texto habla de procurarse la totalidad de las copias. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Modificar las escenas que perjudicaban a Glenda: el texto no dice que el núcleo buscara cambiar la película. Su acción es procurarse las copias, no editarlas. Trampa: suponer que, si criticaban escenas, buscaban corregirlas.",
+     "C": "Evitar que más personas se unieran al círculo: el texto dice que el grupo se amplió y que se admitía solo con pruebas, pero las copias no sirven para bloquear el ingreso. Trampa: confundir el control de admisión con la compra de las copias.",
+     "D": "Que cada uno tuviera una copia original: el texto habla de procurarse la totalidad de las copias, y de dividir las tareas entre quienes las consiguen, no de repartirlas entre cada integrante. Trampa: tomar la división de tareas como un reparto de copias."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q23",
@@ -847,7 +1195,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cuando el narrador exime a Glenda de la responsabilidad por las películas malas, su juicio se inclina a favor de la actriz, y eso respalda la visión poco objetiva.",
+    "planteamiento": "Se pide qué actitud del narrador respalda la afirmación de que su visión es poco objetiva por fanatismo. Datos: el texto dice «Sabíamos que Glenda no era responsable de los desfallecimientos», y que solo ella se salvaba de lo que hacían los demás.",
+    "steps": [
+     "El narrador reconoce que hubo críticas y desfallecimientos en varias películas. Sin embargo, afirma que Glenda no era responsable de ellos y que, con los directores, eran implacables.",
+     "Así, el narrador traslada la responsabilidad a los directores, a los guiones y a las tramas, y deja fuera a la actriz. Eso es una condescendencia hacia Glenda, pues la exime de culpa aunque sus películas tengan fallas.",
+     "Esta actitud respalda la lectura de que la visión es poco objetiva: el juicio se inclina a favor de la actriz admirada, y los hechos que el propio narrador describe muestran fallas en sus películas.",
+     "Se descartan las demás: A (intolerancia hacia los fundadores) no es lo que dice el texto; B (impulsividad frente a los cuestionamientos) no aparece, pues las dudas se expresaban con culpa y poco a poco; C (imprudencia por dejar tareas) no es el tema del relato. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Intolerancia al criticar los roles de los fundadores: el narrador no critica a los fundadores; al contrario, el núcleo se organiza en torno a ellos. Trampa: suponer que el rigor del grupo equivale a intolerancia contra sus líderes.",
+     "B": "Impulsividad al enfrentar a quienes cuestionan la actuación de Glenda: el texto describe críticas tímidas, con sentimiento de culpa, y decisiones tomadas en reuniones. Trampa: confundir la firmeza del grupo con impulsividad.",
+     "C": "Imprudencia al dejar de lado las tareas cotidianas: el texto menciona las salidas al cine y los cafés, pero no que el narrador descuide sus obligaciones. Trampa: confundir la asistencia constante con imprudencia."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q24",
@@ -876,7 +1240,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-3",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El núcleo era desconfiado: exigía pruebas a los nuevos y dudaba de que sus sentimientos por Glenda fueran auténticos.",
+    "planteamiento": "Se pide la característica del núcleo que puede atribuirse a partir de la lectura. Datos: el grupo no admitía a nadie «sin pruebas», hacía un examen a quienes querían ingresar y buscaba una «autenticidad total sin riesgos de infiltrados o de necios».",
+    "steps": [
+     "El núcleo no admitía a nuevos miembros sin pruebas: el examen de medianoche, disimulado con whiskys y alardes de erudición, servía para comprobar que los nuevos realmente querían a Glenda.",
+     "El texto señala que Diana Rivero, con sus confirmaciones y rechazos, aseguraba una «autenticidad total sin riesgos de infiltrados o de necios». Es decir, el grupo temía que hubiera personas que fingieran un sentimiento que no tenían.",
+     "Por lo tanto, la característica que se puede atribuir es la de ser recelosos, porque desconfiaban de los sentimientos de los nuevos admiradores. La opción C resume esa actitud.",
+     "Se descartan las demás: A (conservadores que preferían películas clásicas) no aparece, pues el texto habla de estrenos y de películas nuevas; B (exigentes frente a los errores de Glenda) es un rasgo que sí aparece en el texto, pero la pregunta pide la característica del núcleo frente a quienes querían integrarse, y ahí el texto insiste en las pruebas; D (radicales que negaban admirar a otros artistas) contradice el texto, que admiraba a otras figuras. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Conservadores que preferían películas clásicas: el texto habla de estrenos y de películas recientes, sin una preferencia por lo antiguo. Trampa: suponer que el afecto por una actriz implica gusto por lo clásico.",
+     "B": "Exigentes que rechazaban los errores de Glenda: el texto sí dice que los errores se volvieron insoportables, pero el rasgo que el texto explicita sobre el grupo frente a los nuevos es la desconfianza y la prueba. Trampa: elegir un rasgo verdadero que no es el central.",
+     "D": "Radicales que negaban cualquier posibilidad de admirar a otros artistas: el texto dice que el núcleo también admiraba a Anouk, Marilina, Annie, Silvana y otros. Trampa: tomar la exclusividad del amor a Glenda por negación de cualquier otro admirado."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q25",
@@ -912,7 +1292,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El testimonio muestra cómo el oficio pasa de padre a hija, por lo que se vincula con la manera de perpetuar la tejuelería mediante la transmisión familiar.",
+    "planteamiento": "Se pide a qué idea de la lectura 4 se vincula el testimonio. Datos: la hablante llegó a Coyhaique con su padre en los años 40, aprendió el oficio de él desde niña, le ayudaba a partir los metanes y a juntar la viruta, y luego hacía tejuelas delante de él.",
+    "steps": [
+     "El testimonio describe una trayectoria familiar: la hablante llegó con su padre, aprendió el oficio de él desde niña y pasó de ayudar a elaborar tejuelas por su cuenta. Es una transmisión de padre a hija.",
+     "La lectura 4 señala que el oficio se transmite sobre todo en el contexto de faenas madereras familiares, y que «frecuentemente, son los abuelos, padres, tíos o maridos quienes han enseñado a sus hijos». El testimonio ejemplifica esa transmisión.",
+     "Las otras opciones no encajan: B (talento innato) no aparece en el testimonio, que relata un aprendizaje por observación y ayuda; C (adaptación al entorno) se menciona en el primer párrafo, pero el testimonio no la desarrolla; D (edad de incorporación) contradice la lectura, que dice que la iniciación puede ser temprana o avanzada, sin una edad fija.",
+     "Por lo tanto, el testimonio se vincula con la manera de perpetuar la actividad mediante la transmisión familiar. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Importancia del talento innato: la lectura menciona el talento y la vocación, pero el testimonio no habla de talento; describe ayuda y aprendizaje sostenido. Trampa: tomar una cualidad mencionada en el texto como tema del testimonio.",
+     "C": "Forma de adaptación al entorno: la adaptación aparece en el primer párrafo, asociada a quienes entejuelaron viviendas. El testimonio relata la transmisión del oficio, no su adecuación al entorno. Trampa: asociar cualquier referencia al lugar con la adaptación.",
+     "D": "Edad de incorporación tradicional: la lectura dice que la iniciación puede ser temprana o avanzada, sin una edad fija. El testimonio menciona que aprendió de niña, pero eso no establece una norma. Trampa: convertir un caso personal en una regla tradicional."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q26",
@@ -948,7 +1344,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El fragmento anticipa que la tradición y la especialización son los dos aspectos que los párrafos siguientes desarrollarán.",
+    "planteamiento": "Se pide la función del fragmento del primer párrafo. Datos: el fragmento dice «ambos aspectos, tradición y especialización, son igualmente relevantes» y presenta cada uno con una explicación breve, sin desarrollarlo.",
+    "steps": [
+     "El primer párrafo define la tejuelería como un oficio tradicional que requiere especialización. El fragmento retoma esos dos aspectos y les da igual relevancia.",
+     "Para cada aspecto el fragmento entrega una idea general: la tradición se vincula con el poblamiento, el arraigo y la adaptación al entorno, y la especialización con la práctica sostenida y el talento. Son temas que el texto todavía no desarrolla.",
+     "Los párrafos siguientes explican la manera en que se transmite el oficio, la persistencia, la práctica individual, los obstáculos actuales y la situación en Aysén. Por eso el fragmento anticipa los temas que se desarrollarán después.",
+     "Se descartan las demás: B (definición que se especifica) es parcial, porque el fragmento no define la tejuelería, sino dos aspectos que la componen; C (opinión que se fundamenta) no corresponde, pues el texto es descriptivo y no defiende una postura; D (justificar la investigación) no corresponde, porque el fragmento no menciona ningún estudio. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Definición de tejuelería que se especificará: el fragmento no define el oficio; caracteriza dos aspectos que lo componen. Trampa: confundir una caracterización con una definición formal.",
+     "C": "Opinión sobre el oficio que se fundamentará: el fragmento es descriptivo y afirma la relevancia de ambos aspectos sin defender una postura. Trampa: tomar una valoración suave por una opinión argumentada.",
+     "D": "Justificar la relevancia de la investigación: el texto es un artículo de un sitio web patrimonial, y el fragmento no menciona una investigación. Trampa: confundir el tono informativo del artículo con la presentación de un estudio."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q27",
@@ -977,7 +1389,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El segundo párrafo describe los procedimientos del oficio y el tercero especifica el contexto en que se transmiten sus conocimientos.",
+    "planteamiento": "Se pide la relación entre el segundo y el tercer párrafo. Datos: el segundo párrafo, «Aquellos que han cultivado el oficio», enumera las etapas del proceso productivo; el tercero, «El conjunto de conocimientos», sitúa la práctica en faenas familiares y de cuadrillas.",
+    "steps": [
+     "El segundo párrafo presenta los eslabones del proceso productivo: preproducción, producción y postproducción, con los conocimientos ecosistémicos, la elección de los ejemplares, el volteo, el trozado y el metaneo, y el labrado de las tejuelas.",
+     "Esa descripción corresponde a los procedimientos del oficio, es decir, a las etapas que los tejueleros dominan.",
+     "El tercer párrafo cambia el foco: dice que el conjunto de conocimientos se adquiere en una práctica situada en el paisaje local, dentro de faenas madereras familiares y de cuadrillas, y que quienes enseñan son abuelos, padres o compañeros de trabajo.",
+     "Se descartan las demás: A (roles familiares asignados) no describe el tercero, que afirma que el aprendizaje no tiene restricciones de parentesco; B (criterio de elección de especies) confunde una etapa del proceso con un criterio general; C (técnicas manuales y lugar de aprendizaje) no es exacta, porque el segundo describe etapas del proceso y el tercero habla de un contexto de transmisión y no de un lugar. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Conocimiento ecosistémico y roles familiares: el segundo párrafo sí menciona conocimientos ecosistémicos, pero el tercero afirma que el aprendizaje no tiene restricciones de parentesco. Trampa: tomar la mención de la familia por una asignación de roles.",
+     "B": "Criterio de elección de especies y responsables: el segundo párrafo menciona la elección de ejemplares idóneos como una etapa, no como un criterio general, y el tercero no precisa responsables de esa tarea. Trampa: confundir una etapa con un criterio.",
+     "C": "Técnicas manuales y lugar de aprendizaje: las técnicas manuales aparecen en el segundo párrafo, pero como parte de un proceso productivo completo. El tercero describe el contexto en que se transmiten, no un lugar específico. Trampa: confundir el contexto de transmisión con un lugar."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q28",
@@ -1006,7 +1434,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las tejueleras reconocidas se nombran para mostrar que el oficio lo practican personas diversas, no solo hombres adultos o de edad avanzada.",
+    "planteamiento": "Se pide la finalidad de mencionar las tejueleras reconocidas. Datos: el texto dice que el oficio «se ve comúnmente asociada a hombres adultos o de avanzada edad», pero que el sexo, la edad o el género no constituyen una restricción, y que existen tejueleras reconocidas.",
+    "steps": [
+     "El tercer párrafo señala que la categoría de tejuelero se asocia comúnmente a hombres adultos o de avanzada edad, porque la figura masculina ha sido protagonista y las labores de mujeres, niños y niñas han quedado en segundo plano.",
+     "Luego el texto corrige esa asociación: el sexo o el género no constituyen una restricción, la iniciación puede ser temprana o avanzada, y existen tejueleras reconocidas, lo que admite la participación de mujeres en el oficio.",
+     "La mención de las tejueleras reconocidas sirve, entonces, para mostrar que el oficio lo practican personas distintas, sin importar su sexo ni su edad. Eso corresponde a la diversidad de quienes realizan el oficio.",
+     "Se descartan las demás: A (interés en incluir a las mujeres) va más allá del texto, que describe una práctica existente y no un propósito de inclusión; C (rol de la mujer en la transmisión) no aparece, porque la transmisión se describe en general como familiar; D (tareas de la familia) no es el propósito de la mención. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Interés en incluir a las mujeres: el texto no habla de políticas ni de una intención de inclusión; constata que hay tejueleras reconocidas. Trampa: leer una constatación como si fuera un propósito de cambio.",
+     "C": "Rol de la mujer en la transmisión del oficio: el texto menciona a abuelos, padres, tíos o maridos como quienes enseñan, y a compañeras entre los aprendices, pero la mención de las tejueleras apunta a la práctica y al reconocimiento. Trampa: asociar a la mujer con la enseñanza sin base en el fragmento.",
+     "D": "Tareas de la familia en la realización del oficio: la familia aparece en la transmisión y en las faenas, pero la mención de las tejueleras apunta a la diversidad de personas. Trampa: asociar cualquier mención de lo familiar con el ejemplo de las tejueleras."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q29",
@@ -1042,7 +1486,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El párrafo muestra que el oficio se aprende en la práctica, situada en el paisaje y sostenida en el tiempo, y que esa es su forma de transmisión.",
+    "planteamiento": "Se pide qué opción sintetiza el párrafo sobre el aprendizaje del oficio. Datos: el conocimiento se adquiere mediante una práctica situada en el paisaje local y sostenida en el tiempo, dentro de faenas familiares y de cuadrillas, sin restricciones de parentesco.",
+    "steps": [
+     "El párrafo empieza diciendo que el conjunto de conocimientos y técnicas se adquiere mediante una práctica situada en el paisaje local y sostenida en el tiempo.",
+     "Luego precisa el contexto: faenas madereras familiares y de cuadrillas. Así se especifica quiénes enseñan: abuelos, padres, tíos, maridos, compañeros de cuadrilla o de trabajo.",
+     "La síntesis debe reunir la idea central, que es la transmisión del oficio. Lo más general es que se transmite a lo largo del tiempo y de manera situada, sin restricciones de parentesco.",
+     "Se descartan las demás: A (promoción del desarrollo) no es el foco, porque el párrafo habla de aprendizaje y no de promoción; B (aporte de nuevos conocimientos) no aparece, el texto habla de conocimientos tradicionales; D (dominio de la técnica) menciona el talento y la persistencia como requisitos, pero no muestra cómo se evidencian en el dominio. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Promoción del desarrollo que incluye a familias y compañeros: el párrafo habla de quiénes enseñan, pero no de promover el oficio. Trampa: tomar un detalle del contexto como la idea central.",
+     "B": "Aporte de nuevos conocimientos que permite la preservación: el párrafo habla de conocimientos tradicionales y de una práctica antiguamente extendida; no menciona la incorporación de nuevos conocimientos. Trampa: suponer que toda transmisión implica innovación.",
+     "D": "Influencia del talento innato y la persistencia en el dominio técnico: el párrafo menciona la vocación, el talento y la persistencia como requisitos para el ejercicio, pero no evidencia el dominio de la técnica. Trampa: confundir un requisito con una demostración."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q30",
@@ -1071,7 +1531,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Entre las tareas del aprendizaje temprano figura organizar las tejuelas, una labor básica que se realiza antes de tener habilidades mínimas.",
+    "planteamiento": "Se pide cuál de las tareas forma parte del aprendizaje temprano. Datos: el texto dice que, cuando el aprendizaje es temprano, se puede iniciar la labor a los ocho años con tareas básicas como ordenar las tejuelas, llevar los metanes al partidor, ordenar desechos, cargar herramientas y apoyar la elaboración de los paquetes.",
+    "steps": [
+     "El tercer párrafo dice que, cuando el aprendizaje es temprano, se puede iniciar la labor a los ocho años, desarrollando tareas básicas.",
+     "Las tareas básicas enumeradas son: ordenar las tejuelas, llevar los metanes al partidor, ordenar desechos, cargar herramientas y apoyar la elaboración de los paquetes.",
+     "Se revisan las opciones: A (seleccionar los árboles idóneos) corresponde a la producción que dominan quienes tienen experiencia, según el segundo párrafo, y no a las tareas tempranas; B (partir los trozos de madera) no figura en la lista temprana, porque la partida aparece solo después de adquirir habilidades mínimas; D (elaborar las tejuelas) es una tarea posterior, asociada a la partida y el labrado.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Seleccionar los árboles idóneos: es parte del conocimiento y de la producción que manejan quienes ya dominan el oficio, según el segundo párrafo, y no figura entre las tareas básicas del aprendizaje temprano. Trampa: confundir un paso importante del proceso con una tarea inicial.",
+     "B": "Partir los trozos de madera: el texto menciona llevar los metanes al partidor como tarea temprana, pero la partida de las tejuelas aparece solo después de adquirir habilidades mínimas. Trampa: confundir el transporte de la madera con la partida.",
+     "D": "Elaborar las tejuelas: el texto dice que la elaboración se practica con la partida y el labrado, una vez adquiridas habilidades mínimas. Trampa: asumir que la tarea final del oficio es también la primera."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q31",
@@ -1100,7 +1576,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La mención a la avanzada edad de los tejueleros revela que el oficio tiene pocos relevos, lo que refleja el panorama difícil que enfrenta.",
+    "planteamiento": "Se pide la función de la mención a la avanzada edad de los tejueleros. Datos: el texto dice que la práctica se mantiene gracias a personas de edad avanzada, que las edades reflejan las dificultades actuales de transmisión y que sus cultores rondan entre los 60 y los 75 años.",
+    "steps": [
+     "El penúltimo bloque del artículo dice que la práctica se mantiene vigente gracias al ejercicio de personas de edad avanzada, en su mayoría hombres.",
+     "La oración siguiente explica el sentido: «las edades reflejan las actuales dificultades de transmisión». Es decir, que los cultores sean mayores es un síntoma de que el oficio no se traspasa con facilidad.",
+     "Esa mención justifica el difícil panorama del oficio: la transmisión ha disminuido y los mismos cultores destacan el sacrificio que implica ejercerlo en circunstancias cada vez más adversas. La opción B resume esa función.",
+     "Se descartan las demás: A (reconocimiento del legado) no es el énfasis del pasaje, que se centra en las dificultades; C (fomento del aprendizaje en las familias) va en sentido contrario, porque la transmisión ha disminuido; D (cuestionar la vigencia) es contradictorio, ya que el texto dice que la práctica se mantiene vigente. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Plantear la necesidad de reconocer el legado: el texto habla de dificultades, no de un llamado al reconocimiento. Trampa: asociar a personas mayores con la idea de memoria o legado.",
+     "C": "Explicar el fomento del aprendizaje en las familias: el texto dice que los cultores integran a sus hijos, sobrinos y nietos en el sistema educativo y en espacios de trabajo con mejores condiciones, pero la transmisión ha disminuido. Trampa: confundir un esfuerzo familiar con su éxito.",
+     "D": "Cuestionar la vigencia de la práctica manual: el texto dice que la práctica se mantiene vigente gracias a los mayores, así que la edad no la pone en duda. Trampa: confundir un oficio escaso con uno que ya no existe."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q32",
@@ -1129,7 +1621,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El penúltimo párrafo enumera obstáculos crecientes para el oficio y explica cómo afectan la transmisión, por lo que la pregunta que lo sintetiza relaciona ambos elementos.",
+    "planteamiento": "Se pide la pregunta que sintetiza el penúltimo párrafo. Datos: el párrafo dice que se reconocen obstáculos crecientes para el ejercicio del oficio, como la competencia con otros materiales y la dificultad para obtener maderas nativas, y que la transmisión ha disminuido.",
+    "steps": [
+     "El penúltimo párrafo comienza diciendo que se reconocen obstáculos crecientes: la competencia con otros materiales constructivos y la progresiva dificultad para obtener maderas nativas adecuadas.",
+     "Luego relaciona esos obstáculos con la transmisión: esta, «más que verse modificada, ha disminuido», y los cultores favorecen que sus hijos, sobrinos y nietos accedan a un sistema educativo y a mejores condiciones de vida.",
+     "Una pregunta que sintetiza el párrafo debe recoger ambos elementos: qué obstáculos hay y cómo afectan la transmisión del oficio. La opción B lo hace.",
+     "Se descartan las demás: A (optimizar materiales) es una pregunta sobre procesos que el texto no plantea; C (calidad de vida de los descendientes) aparece solo como consecuencia de la transmisión, no como tema del párrafo; D (desarrollo progresivo) no coincide con el tono del párrafo, que describe una dificultad creciente. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Optimizar la obtención de materiales constructivos: el párrafo menciona la dificultad de obtener maderas, pero no plantea optimizar su obtención. Trampa: tomar un obstáculo por un problema de gestión.",
+     "C": "Mejorar la calidad de vida de los descendientes: el texto dice que los cultores favorecen que sus hijos accedan a mejores condiciones de vida, pero es una consecuencia de la transmisión y no el tema central. Trampa: convertir una consecuencia en el asunto del párrafo.",
+     "D": "Cómo los tejueleros favorecen el desarrollo progresivo del oficio: el párrafo describe un declive en la transmisión, no un avance. Trampa: leer la palabra progresiva en sentido de avance, cuando aquí describe una dificultad que crece."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q33",
@@ -1158,7 +1666,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con las habilidades mínimas adquiridas, la persona puede participar en la partida y el labrado de las tejuelas.",
+    "planteamiento": "Se pide qué labores puede comenzar a realizar una persona tras adquirir las habilidades de trabajo mínimas. Dato: el texto dice «una vez adquiridas habilidades mínimas, pueden participar de la partida y labrado de las tejuelas».",
+    "steps": [
+     "El tercer párrafo describe dos etapas del aprendizaje: en la temprana se realizan tareas básicas, y una vez adquiridas habilidades mínimas se pasa a otras labores.",
+     "Las tareas básicas de la primera etapa son ordenar las tejuelas, llevar los metanes al partidor, ordenar desechos, cargar herramientas y apoyar la elaboración de los paquetes.",
+     "La segunda etapa, con habilidades mínimas, es la participación en la partida y el labrado de las tejuelas. Ese es el paso que el texto indica explícitamente.",
+     "Se descartan las demás: A (cargar herramientas y apoyar los paquetes) pertenece a las tareas básicas, es decir, a la etapa anterior; B (seleccionar los trozos y llevarlos al partidor) reúne tareas básicas de la primera etapa; C (ordenar tejuelas y desechos) también son tareas básicas. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Cargar herramientas y apoyar la elaboración de los paquetes: son tareas básicas de la primera etapa del aprendizaje temprano, no las que se abren después de adquirir habilidades mínimas. Trampa: elegir una tarea correcta del texto, pero de la etapa anterior.",
+     "B": "Seleccionar los trozos de madera y llevarlos al partidor: el texto indica llevar los metanes al partidor como tarea básica temprana. Trampa: confundir una tarea inicial con una posterior.",
+     "C": "Ordenar las tejuelas y los desechos: son tareas básicas del aprendizaje temprano, que se realizan antes de adquirir habilidades mínimas. Trampa: pensar que, por ser tareas de cierre del proceso, son las que siguen."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q34",
@@ -1187,7 +1711,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Entre los obstáculos destaca la progresiva dificultad para obtener maderas nativas adecuadas, que es la materia prima del oficio.",
+    "planteamiento": "Se pide uno de los principales obstáculos que enfrenta el ejercicio de la tejuelería. Datos: el texto menciona obstáculos crecientes, entre ellos la competencia con otros materiales constructivos y la progresiva dificultad para obtener maderas nativas adecuadas.",
+    "steps": [
+     "El penúltimo párrafo dice que se reconocen obstáculos crecientes para el ejercicio de la tejuelería, y los enumera: la competencia con otros materiales constructivos y la dificultad en la obtención de maderas nativas adecuadas.",
+     "El último párrafo confirma el problema de la materia prima: las principales especies son el ciprés de las Guaitecas y la lenga, con crecientes dificultades para obtenerlas.",
+     "Se revisan las opciones: A (modo de transmitir el oficio) es un efecto de los obstáculos, no un obstáculo que el texto destaque; B (especialización) es una condición del oficio, no una dificultad; C (carácter individual) describe cómo se ejecuta el oficio, no una dificultad.",
+     "La opción D señala la obtención de materia prima, que es el obstáculo más directo que el texto enumera. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El modo en que se transmite el oficio: la transmisión ha disminuido, lo que es una consecuencia de los obstáculos y no un obstáculo en sí. Trampa: confundir un efecto con una causa.",
+     "B": "La especialización del oficio: el texto describe la especialización como una condición del oficio, que se gana con práctica sostenida. Trampa: presentar una característica como si fuera una dificultad.",
+     "C": "El carácter individual del oficio: el texto explica que la tejuelería se desarrolla de manera individual, pero no lo presenta como un obstáculo. Trampa: confundir una descripción de cómo se trabaja con un problema."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q35",
@@ -1216,7 +1756,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El último párrafo agrega que la tejuelería sigue vigente en localidades concretas de Aysén, aunque se desarrolla escasamente.",
+    "planteamiento": "Se pide qué información nueva agrega el último párrafo. Datos: el párrafo dice que la tejuelería se desarrolla escasamente en la región, que las especies principales son el ciprés de las Guaitecas y la lenga, y que aún es posible encontrar personas que la cultivan en localidades como Caleta Tortel, Lago Negro, Puerto Guadal, Villa Ortega, Repollal Alto y Melinka.",
+    "steps": [
+     "Los párrafos anteriores ya hablaban de obstáculos, de la transmisión y de la edad de los cultores. El último párrafo aporta algo distinto: la situación actual y geográfica del oficio.",
+     "El texto indica que la tejuelería «se desarrolla escasamente en la región de Aysén» y que, pese a ello, todavía se cultiva en seis localidades con nombre propio.",
+     "Se revisan las opciones: B (sustituir materias primas) no aparece, el texto habla de dificultades para obtenerlas; C (materiales de mejor calidad) no aparece, la lectura dice que la competencia de otros materiales se da en desmedro de la tejuela labrada; D (competitividad entre personas) no aparece, el oficio se describe como individual y de transmisión familiar.",
+     "La opción A es la que agrega esa información nueva: el oficio está vigente en localidades específicas. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Sustituir materias primas para su continuidad: el texto habla de dificultades para obtener maderas nativas, pero no propone sustituirlas. Trampa: tomar la mención de la escasez por una propuesta de solución.",
+     "C": "Materiales de mejor calidad que los tradicionales: el último párrafo dice que la competencia con otros materiales se da en desmedro de la tradicional tejuela labrada, es decir, que esos materiales la desplazan. Trampa: invertir la comparación del texto.",
+     "D": "Competitividad entre quienes cultivan el oficio: el texto describe un oficio que se ejecuta de manera individual y con apoyo familiar, sin mencionar competencia entre personas. Trampa: confundir la competencia con otros materiales con competencia entre tejueleros."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q36",
@@ -1245,7 +1801,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-5",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las preguntas del primer párrafo no se responden allí: anticipan el tema y dejan planteado que el Sistema de Corriente de Humboldt explica la productividad de las aguas chilenas.",
+    "planteamiento": "Se pide la función de las preguntas del primer párrafo de la lectura 5. Dato clave: el párrafo cierra con «Gran parte de estas preguntas pueden ser explicadas por el famoso y conocido Sistema de Corriente de Humboldt», así que la función se decide por lo que hacen esas preguntas respecto del tema del texto.",
+    "steps": [
+     "El párrafo inicial habla de la gran productividad de las aguas chilenas, de las grandes pesquerías y de la biodiversidad, y luego formula cuatro preguntas: «¿a qué se debe este fenómeno?», «¿Por qué nuestras aguas son tan ‘ricas’ en nutrientes?», «¿Cómo se sostienen esas grandes pesquerías…?» y «¿Cómo se sostienen…?».",
+     "Ninguna de esas preguntas se responde en ese párrafo. El autor las deja abiertas para que el lector siga leyendo y busque la explicación.",
+     "Las preguntas se contestan después con la explicación del fenómeno, y el párrafo termina indicando que el responsable de esa productividad es el Sistema de Corriente de Humboldt.",
+     "Así, las preguntas anticipan la importancia de ese sistema como explicación central del texto. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Cuestionan la riqueza de nutrientes en las aguas chilenas: la pregunta sobre los nutrientes sí aparece, pero el párrafo da por establecida la riqueza y pregunta solo por su motivo. No pone en duda el hecho.",
+     "C": "Introducen la crítica de la emisora hacia las grandes pesquerías: el párrafo no critica a nadie. Las pesquerías aparecen como un hecho positivo que sostiene la biodiversidad.",
+     "D": "Presentan el debate sobre las causas de la Corriente de Humboldt: las preguntas plantean causas, pero no hay debate. El autor no contrapone posturas, sino que anuncia directamente que el sistema es la explicación."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q37",
@@ -1274,7 +1846,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-5",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El segundo párrafo define qué son los EBUS y describe su productividad, su ubicación y sus servicios; la pregunta que lo sintetiza es la que pregunta qué son.",
+    "planteamiento": "Se pide la pregunta que sintetiza el segundo párrafo de la lectura 5. Dato: el párrafo parte con «En el mundo existen los denominados Sistemas de Surgencia de Borde Oriental (EBUS por sus siglas en inglés)» y después describe su superficie, su productividad, los servicios que brindan y las corrientes en que se integran.",
+    "steps": [
+     "El párrafo presenta primero el concepto: los EBUS son ecosistemas altamente productivos que cubren menos del 1 % del océano.",
+     "Luego entrega datos que describen esos sistemas: proporcionan entre el 20 % y el 40 % de la pesca mundial, se integran en cuatro corrientes (California, Humboldt, Canarias/Ibérica y Benguela) y brindan servicios a cerca de 80 millones de personas.",
+     "Una pregunta que sintetice ese contenido debe preguntar qué son los EBUS, porque todo lo demás del párrafo se explica a partir de esa definición.",
+     "La pregunta por el origen de la productividad aparece solo al final del párrafo, como enlace con el párrafo siguiente, y no resume lo que el párrafo desarrolla. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "¿Cuál es el origen de los EBUS?: el párrafo no habla del origen geológico ni histórico de estos sistemas. La trampa es la última frase, que pregunta por qué son tan productivos, pero esa frase introduce el párrafo siguiente.",
+     "C": "¿Qué servicios brindan los EBUS?: el párrafo sí menciona servicios ecosistémicos, económicos y recreativos, pero solo como uno de varios datos. No resume el contenido completo, que incluye la definición y la ubicación.",
+     "D": "¿Cuál es el nivel de productividad de los EBUS?: el párrafo sí habla de productividad, con la cifra de la pesca, pero la pregunta se queda con un solo aspecto y no incluye la definición del concepto."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q38",
@@ -1303,7 +1891,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-5",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El transporte de Ekman depende del viento y del efecto Coriolis; como se pide el factor distinto del Coriolis, la respuesta es el patrón de viento.",
+    "planteamiento": "Se pide qué factor, además del efecto Coriolis, influye en el transporte de Ekman. Dato: el tercer párrafo (el que empieza «En estos ecosistemas EBUS») dice que los sistemas de presión generan «patrones de viento a lo largo de la costa» y que «este viento combinado con el efecto de Coriolis» arrastra las aguas superficiales.",
+    "steps": [
+     "El transporte de Ekman es el arrastre de las aguas superficiales hacia el lado izquierdo de la dirección del viento, en el hemisferio sur.",
+     "La frase del texto indica dos ingredientes: «este viento combinado con el efecto de Coriolis». Hay entonces un factor que es el efecto Coriolis, y otro que es el viento.",
+     "El viento, a su vez, tiene origen en los sistemas de presión atmosférica a gran escala, que generan patrones de viento a lo largo de la costa en dirección al ecuador.",
+     "Como la pregunta pide el factor además del Coriolis, la respuesta es el patrón de viento. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La surgencia costera: es el fenómeno que resulta del transporte de Ekman, no un factor que lo produzca. Confundir causa con efecto es la trampa típica de esta pregunta.",
+     "C": "La conservación de masa: es el principio que obliga a que las aguas profundas asciendan para reemplazar las arrastradas, pero no influye en el arrastre superficial. Es verdadero, pero no responde la pregunta.",
+     "D": "El desplazamiento del agua: es la definición del efecto Coriolis que el texto da entre paréntesis, así que ya forma parte del factor mencionado en el enunciado y no es un factor distinto."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q39",
@@ -1332,7 +1936,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-5",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las aguas profundas, frías y con poco oxígeno, ascienden hasta la superficie para reemplazar las aguas que el viento arrastra; ese ascenso es la surgencia costera.",
+    "planteamiento": "Se pide qué ocurre con las aguas profundas durante la surgencia costera, según la lectura 5. Dato: el tercer párrafo indica que, por el principio de conservación de masa, las aguas profundas «asciendan hasta la superficie, proceso conocido como surgencia costera».",
+    "steps": [
+     "El transporte de Ekman arrastra las aguas superficiales hacia la izquierda de la dirección del viento, en el hemisferio sur.",
+     "Por conservación de masa, esas aguas arrastradas deben ser sustituidas. El texto explica que la sustitución la hacen las aguas profundas, que son frías, con bajo pH, poco oxígeno y altas concentraciones de CO₂ y nutrientes.",
+     "Ese ascenso de aguas profundas hasta la superficie es precisamente la surgencia costera. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Se arrastran hacia el lado izquierdo: esa es la trayectoria de las aguas superficiales por el transporte de Ekman, no de las profundas. La trampa es que el texto menciona el lado izquierdo en el mismo párrafo.",
+     "C": "Se mueven en la dirección del viento: el viento arrastra las aguas superficiales, pero el ascenso de las profundas responde a la conservación de masa; además, el viento actúa desviado por Coriolis.",
+     "D": "Se trasladan según la rotación terrestre: la rotación produce el efecto Coriolis, que desvía el agua, pero el texto atribuye el ascenso de las aguas profundas a la sustitución por conservación de masa."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q40",
@@ -1361,7 +1980,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-5",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El fitoplancton hace fotosíntesis cuando la surgencia le lleva nutrientes y CO₂ desde las aguas profundas; el mecanismo es la captación de esos elementos en el agua.",
+    "planteamiento": "Se pide de qué manera se produce la fotosíntesis en el fitoplancton. Dato: el tercer párrafo dice que «La surgencia favorece la captación de nutrientes y CO₂ por parte del fitoplancton que se encuentra en la superficie» para poder realizar fotosíntesis.",
+    "steps": [
+     "El texto distingue entre el proceso que produce la surgencia y el mecanismo de la fotosíntesis del fitoplancton.",
+     "Para hacer fotosíntesis, el fitoplancton necesita captar nutrientes y CO₂ del agua, y la surgencia los aporta al llevar aguas profundas hacia la superficie.",
+     "La fotosíntesis permite después convertir materia inorgánica en materia orgánica, pero esa es su consecuencia. La pregunta pide cómo se produce, y el texto responde con la captación. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "A través del cambio de la materia inorgánica a orgánica: es verdadero como definición general de la fotosíntesis, pero describe el resultado y no el medio. Es una trampa porque suena a respuesta técnica.",
+     "B": "A través de la proliferación de biomasa fitoplanctónica: la proliferación es consecuencia de la fotosíntesis, como dice el texto (una abundante proliferación de biomasa), y no su mecanismo.",
+     "C": "A través del transporte de energía de las tramas tróficas: el texto dice que el fitoplancton es el punto de partida de ese transporte, o sea, ocurre después de la fotosíntesis y no la explica."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q41",
@@ -1390,7 +2024,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-5",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La surgencia la provocan los patrones de viento, que se generan por sistemas de presión, y el efecto Coriolis, que junto con el viento arrastra las aguas superficiales.",
+    "planteamiento": "Se pide qué factores provocan el fenómeno de surgencia. Dato: el tercer párrafo indica que los sistemas de presión atmosférica generan patrones de viento y que ese viento, combinado con el efecto de Coriolis, arrastra las aguas superficiales, lo que hace que las aguas profundas asciendan.",
+    "steps": [
+     "La surgencia es el ascenso de aguas profundas hasta la superficie, como indica el texto al definir la surgencia costera.",
+     "Según el texto, la cadena empieza con los sistemas de presión atmosférica a gran escala, que producen patrones de viento a lo largo de la costa.",
+     "Ese viento, combinado con el efecto Coriolis, arrastra las aguas superficiales. Por conservación de masa, las aguas profundas deben subir para reemplazarlas.",
+     "Los dos factores que provocan la surgencia son, entonces, los patrones de viento y el efecto Coriolis. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La alta biodiversidad y el bajo pH: la biodiversidad es una consecuencia de la productividad, y el bajo pH es una característica de las aguas profundas que ascienden, no algo que provoque el ascenso.",
+     "B": "Los organismos pelágicos y los bentónicos: son los seres que viven en la columna de agua y en el fondo. El texto los menciona como afectados por la Zona de Mínimo Oxígeno, no como causa de la surgencia.",
+     "D": "Las aguas con bajo oxígeno y la presión fisiológica: son consecuencias del afloramiento continuo. El texto dice que la Zona de Mínimo Oxígeno produce presión fisiológica en organismos, así que la opción invierte la relación."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q42",
@@ -1426,7 +2076,22 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El párrafo describe rasgos del Sistema de Corriente de Humboldt: su productividad, su extensión, sus límites y su origen de aguas; no define ni explica su génesis.",
+    "planteamiento": "Se pide la función del párrafo citado en el enunciado. Dato: el párrafo empieza «Las aguas que bañan las costas chilenas están dominadas por el Sistema de Corriente de Humboldt (SCH)» y luego describe su productividad, su extensión (desde el sur de Chile, alrededor de 42°-45° S, hasta las Islas Galápagos) y sus límites con la Corriente Ecuatorial del Sur y la Corriente de Deriva de los Vientos del Oeste.",
+    "steps": [
+     "Primero se identifica el tipo de información: el párrafo entrega datos del SCH, como que es el más productivo del mundo, que tiene una alta productividad primaria, que se extiende entre dos latitudes y que se limita con otras corrientes.",
+     "El párrafo está escrito en forma descriptiva («presenta», «se extiende», «es la porción oriental») y no valora el sistema ni lo define en sentido estricto.",
+     "Por eso la función es describir características del sistema: extensión, productividad y límites geográficos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Explicar cómo se genera el SCH: el párrafo menciona la surgencia impulsada por el viento, pero no detalla el mecanismo. Eso lo hace el párrafo siguiente, sobre el transporte de Ekman. Mencionar un factor no es explicar la génesis.",
+     "C": "Justificar la importancia del SCH: el párrafo dice que es el más productivo del mundo, pero no argumenta por qué importa. Esa idea se sugiere, no se fundamenta con razones.",
+     "D": "Definir el fenómeno del SCH: la primera oración contiene una caracterización breve, pero el resto del párrafo enumera rasgos y límites. La función principal es describir, no definir."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q43",
@@ -1455,7 +2120,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-5",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Norte y centro-sur se diferencian en la forma en que ocurre la surgencia: permanente en el norte y estacional en el centro-sur.",
+    "planteamiento": "Se pide qué diferencia las zonas norte y centro-sur de Chile respecto del SCH. Datos: en la zona norte (aproximadamente entre Arica y Coquimbo) el afloramiento de aguas es localizado y permanente; en la zona centro-sur el afloramiento «no es constante, sino que estacional».",
+    "steps": [
+     "El texto contrasta dos zonas con la misma estructura: en cada una describe el afloramiento de aguas y su relación con el viento.",
+     "En el norte, los vientos van predominantemente hacia el norte, lo que provoca una surgencia permanente y una alta productividad durante gran parte del año.",
+     "En el centro-sur, los vientos cambian de dirección, así que la surgencia se concentra en primavera-verano, cuando el viento va hacia el norte.",
+     "Lo que cambia entre ambas zonas es la forma en que ocurre la surgencia, es decir, sus características. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El origen de las Aguas Subantárticas: el texto dice que las aguas superficiales del SCH tienen origen subantártico en todo el sistema, sin distinguir zonas. Es verdadero, pero no diferencia norte de centro-sur.",
+     "C": "La riqueza de nutrientes del agua: el texto atribuye aguas subsuperficiales ricas en nutrientes al sistema completo, de origen ecuatorial. No se usa como diferencia entre zonas.",
+     "D": "El tipo de productividad primaria: ambas zonas tienen alta productividad. La diferencia está en la duración del afloramiento, no en el tipo de productividad, así que la opción confunde palabras."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q44",
@@ -1484,7 +2165,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El artículo habla de tejedores y campesinos, pero desde afuera: no recoge la opinión de quienes producen la seda, así que su visión sobre el aporte de Thompson es parcial.",
+    "planteamiento": "Se pide en qué aspecto del artículo se puede sostener que ofrece una visión parcial del aporte de Thompson a la industria de la seda. Dato: el texto, de la Unesco, menciona a los tejedores y a las familias campesinas, pero no incluye la voz de los tailandeses que trabajan en la producción.",
+    "steps": [
+     "Hay que identificar qué voz relevante queda fuera del relato. Las opciones A, C y D nombran personas o instituciones que el texto sí menciona.",
+     "A: los accionistas aparecen en el texto, porque «el 90 % de los accionistas de la firma Jim Thompson son tailandeses». C: los promotores del vestuario aparecen, como Pierre Balmain, Irene Sharaff y la reina Sirikit vistiendo seda.",
+     "D: el texto sí menciona a la reina y a la Fundación SUPPORT, aunque no a autoridades locales. Por eso la omisión que sostiene la afirmación no es esa, sino la de quienes producen la seda.",
+     "El texto describe a los tejedores y a las familias campesinas, pero nunca recoge lo que opinan del proyecto. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "En que se omite la participación de los accionistas: el texto indica que el 90 % de los accionistas son tailandeses y que un tercio son hijos y nietos de los primeros tejedores, así que la participación sí está presente.",
+     "C": "En que se omite la mención de promotores del vestuario de seda: Balmain, Irene Sharaff y la propia reina aparecen de forma explícita como difusores de la seda.",
+     "D": "En que se omite la contribución de las autoridades locales: el texto habla de la reina y de la Fundación SUPPORT, y la crítica de parcialidad se sostiene mejor en la falta de voces de los trabajadores, no en la de autoridades."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q45",
@@ -1514,7 +2211,22 @@
    "presentation": "text",
    "passageId": "lectura-6",
    "pilot": true,
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El artículo narra y valora la trayectoria de Thompson y el beneficio que su empresa trajo al país; su propósito es valorar su aporte.",
+    "planteamiento": "Se pide el propósito del emisor del artículo. Dato: el texto dice que la trayectoria de Thompson «no solo fue la historia de su realización personal, sino la de la transformación de la vida de miles de personas», y que la seda «solo podía aportar prosperidad a este país».",
+    "steps": [
+     "El emisor no expone un proceso técnico ni hace un análisis crítico: narra la vida de Thompson y destaca sus logros.",
+     "El texto habla de su aporte a la industria sedera, de la prosperidad que trajo a Tailandia, de su empresa conocida en el mundo y de la transformación de la vida de miles de personas. Todo apunta a valorar su aporte.",
+     "Así, el propósito es valorar el aporte de Thompson al desarrollo económico de Tailandia. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Explicar el proceso de fabricación de la seda tailandesa: el texto describe la fabricación, pero solo como parte de la historia. El proceso no es el propósito central del artículo.",
+     "C": "Destacar el rol de Thompson en la enseñanza de la tradición artesanal: la transmisión de la técnica a las jóvenes la hacen los tejedores, no Thompson. La opción atribuye a Thompson un rol que el texto no le asigna.",
+     "D": "Reflexionar sobre el impacto del financiamiento de la reina: el texto dice que la reina promovió la artesanía, pero no habla de financiamiento ni reflexiona sobre su impacto."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q46",
@@ -1543,7 +2255,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-literario"
+   "subtopic": "cl-literario",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las cartas que llegaban solo con el nombre de Thompson y su ciudad ilustran cuán conocido era en Tailandia; es una anécdota de fama.",
+    "planteamiento": "Se pide qué representa la mención de las cartas enviadas a Thompson. Dato: el primer párrafo dice que bastaba con remitirle una carta con «Jim Thompson – Bangkok» para que llegara directamente a sus manos, en una ciudad que contaba con tres millones de habitantes.",
+    "steps": [
+     "La carta llega a su destinatario con solo su nombre y su ciudad, lo que supone que la persona es muy conocida.",
+     "El texto explica que el desaparecido «era tan conocido en Tailandia» que eso bastaba. La mención funciona como un ejemplo concreto de esa fama.",
+     "Es, por tanto, una anécdota que ilustra su notoriedad, y no un rasgo de su carácter ni una contribución. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Una historia que muestra lo peculiar de su carácter: el ejemplo habla de su notoriedad, no de su personalidad. Lo peculiar aparece en otros pasajes, no en las cartas.",
+     "C": "Un relato que ilustra el impacto por su desaparición: la carta se menciona en el mismo párrafo que la desaparición, pero el ejemplo se refiere a su fama en vida, no a lo que provocó su ausencia.",
+     "D": "Un ejemplo que muestra su contribución a Tailandia: la contribución está en las secciones sobre la industria y el empleo. La carta solo prueba que era conocido."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q47",
@@ -1572,7 +2299,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En los tres primeros párrafos el emisor narra la vida de Thompson con un registro de fascinación, presentando su historia como una aventura novelesca.",
+    "planteamiento": "Se pide el tono del emisor al referirse a Jim Thompson en los tres primeros párrafos. Datos: la desaparición «apasionó a los medios de información»; su itinerario es «verdaderamente novelesco»; su trayectoria es «una gran aventura» y su casa es «una auténtica joya arquitectónica».",
+    "steps": [
+     "Los primeros párrafos se concentran en la historia del personaje: su desaparición en la jungla, su llegada a Tailandia, su decisión de instalarse y su vuelco hacia la seda.",
+     "El lenguaje valora esa historia con expresiones de impacto: «misterio», «apasionó», «verdaderamente novelesco», «auténtica joya arquitectónica» y «gran aventura».",
+     "Ese registro muestra asombro e interés por la trayectoria, y el texto se centra más en el relato que en listar habilidades. Así, el tono es de fascinación por su historia. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "De entusiasmo por su espíritu innovador: hay innovación en el texto (nuevos métodos, tintes químicos), pero el emisor relata hechos y no expresa entusiasmo declarado por su espíritu.",
+     "B": "De asombro por sus viajes arriesgados: el texto menciona viajes, como el de Nueva York o el de Malasia, pero el asombro no se dirige a los viajes. El tono se orienta a la historia completa.",
+     "D": "De admiración por sus múltiples facetas: el texto sí menciona su condición de arquitecto, coleccionista, empresario y creador de una industria, pero las enumera de forma neutral. El tono dominante es el relato apasionado."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q48",
@@ -1601,7 +2343,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La sericultura se menciona como tradición antigua que Thompson rescató y volvió a poner en valor, lo que muestra su carácter visionario.",
+    "planteamiento": "Se pide para qué se menciona la sericultura en el reino de Siam, en relación con Thompson. Datos: el texto dice que la cría de gusanos existía «por lo menos desde el siglo XIII», pero que los tejedores «eran ya poco numerosos» cuando él llegó, y que los tejidos «solo cobraron fama gracias» a él.",
+    "steps": [
+     "El párrafo contrasta el pasado con la situación en que llegó Thompson: la práctica era antigua, pero casi se había perdido en manos de unos pocos artesanos.",
+     "Thompson se contacta con esos artesanos, les propone comercializar sus artículos y crea una industria que da fama a la seda tailandesa.",
+     "La sericultura aparece, entonces, como la tradición que él rescata y pone en valor, lo que muestra su carácter visionario. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Para contrastar la calidad de su empresa con la sericultura tradicional: el texto no compara calidades. El contraste es entre la tradición antigua y la industria que él impulsa.",
+     "B": "Para explicar su interés por replicar las técnicas tradicionales: Thompson sí conservó colores ancestrales, pero también introdujo innovaciones, como los tintes químicos. La mención no busca explicar un interés de replicar.",
+     "D": "Para mostrar las dificultades que enfrentó al innovar en la sericultura: el texto habla del recelo de los artesanos, pero no de dificultades técnicas en la sericultura. El propósito de la mención es el valor histórico."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q49",
@@ -1630,7 +2387,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Irene Sharaff se menciona porque, con el vestuario de películas, contribuyó a difundir y dar prestigio a la seda tailandesa a través del cine.",
+    "planteamiento": "Se pide el propósito de mencionar a Irene Sharaff. Dato: el texto dice que, después de crear el vestuario de «El rey y yo», la diseñadora «contribuyó a realzar el prestigio de la seda tailandesa utilizándola en muchos otros filmes».",
+    "steps": [
+     "El párrafo habla de cómo la seda tailandesa se hizo conocida en Europa y en Estados Unidos, a través de la reina y de creadores de moda.",
+     "En Estados Unidos, Sharaff es la figura que lleva la seda a la pantalla: crea el vestuario de una película y luego la usa en otras.",
+     "Su mención explica, entonces, la difusión del uso de la seda tailandesa a través del cine. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Para describir el ingreso de la seda al mundo de la moda: ese ingreso se describe a través de Pierre Balmain y de una casa de modas. Sharaff trabaja en el cine, no en la moda de pasarela.",
+     "C": "Para exponer el impulso de la seda como patrimonio cultural: ese impulso lo da la reina con la Fundación SUPPORT, no Sharaff.",
+     "D": "Para justificar la incorporación de la seda en el vestuario europeo: en Europa el texto menciona a Balmain, no a Sharaff, y el texto no presenta una justificación de esa incorporación."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q50",
@@ -1659,7 +2431,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El primer párrafo de «Preservar la tradición» muestra que la reina impulsó la artesanía en Khorat y que su apoyo permitió conservar la técnica tradicional.",
+    "planteamiento": "Se pide la idea principal del primer párrafo de la sección «Preservar la tradición». Datos: la sericultura se implantó en Khorat; la reina «se percató de las dificultades económicas de las familias campesinas» y les propuso tejer seda con tintes tradicionales; en 1976 creó la Fundación SUPPORT para fomentar la artesanía.",
+    "steps": [
+     "Se identifican las acciones del párrafo: la implantación de la sericultura, la reacción de la reina ante la pobreza de las familias y la creación de la fundación.",
+     "Todas las acciones giran en torno a la reina, que promueve y apoya la producción tradicional en una zona rural.",
+     "La idea que resume el párrafo es que la artesanía tradicional se vio favorecida por la intervención de la reina. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La producción tradicional promovió la cría de capullos para su venta: el párrafo dice que los campesinos venden los capullos a la granja de la empresa, pero es un dato de detalle y no la idea central.",
+     "C": "La creación de la Fundación SUPPORT fomentó el uso de tintes tradicionales: la fundación busca fomentar la artesanía y conservar técnicas. El uso de tintes es una propuesta de la reina, no el objetivo de la fundación.",
+     "D": "La masificación de huertos de moreras impulsó la creación de granjas tradicionales: el texto dice que unas mil familias tienen huertos, pero no que eso cause las granjas. La idea general es el apoyo de la reina."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q51",
@@ -1688,7 +2475,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El primer párrafo describe el trabajo agrícola de las familias campesinas y el segundo el trabajo de los tejedores; juntos muestran la secuencia de la producción.",
+    "planteamiento": "Se pide cómo se relacionan los dos primeros párrafos de la sección «Preservar la tradición». Datos: el primero trata de las familias que tienen huertos de moreras y crían gusanos de seda; el segundo, de los unos 600 tejedores que llevan a cabo la operación de tejer los hilos.",
+    "steps": [
+     "El primer párrafo describe la etapa agrícola: la sericultura en Khorat, las familias campesinas con sus huertos y la venta de los capullos.",
+     "El segundo párrafo describe la etapa de tejido: unos 600 tejedores de ambos sexos realizan la operación, y la técnica se transmite a las más jóvenes.",
+     "La relación es de secuencia y complemento: el primero describe el trabajo de las familias campesinas en la producción y el segundo destaca la labor de los tejedores en esa misma producción. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El primero expone el alcance de las técnicas en tejidos y el segundo realza la industrialización: el primer párrafo habla de cultivo y cría, no de tejidos. El segundo menciona la industrialización, pero para equilibrarla con la artesanía.",
+     "B": "El primero destaca el aporte de la reina Sirikit y el segundo detalla modificaciones de Thompson: la reina aparece en el primero, pero el segundo no describe cambios introducidos por Thompson.",
+     "C": "El primero relata el origen de la industrialización de la sericultura y el segundo su difusión: el primer párrafo no habla de industrialización. Describe la implantación de la sericultura tradicional en Khorat."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q52",
@@ -1717,7 +2519,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La empresa de Thompson hizo posible conservar los saberes de la seda, al transmitir la técnica de generación en generación y mantener la artesanía junto con la industria.",
+    "planteamiento": "Se pide qué posibilitó en la sociedad tailandesa la empresa de Thompson. Datos: el texto dice que la técnica heredada «se transmite a las más jóvenes», que la empresa compra los capullos a las familias y que el control de calidad y el acabado a mano permiten equilibrar la artesanía y la industrialización.",
+    "steps": [
+     "Hay que decidir qué efecto social tuvo la empresa, más allá de lo económico.",
+     "El texto muestra que la empresa compra capullos a los campesinos, que la técnica pasa a las jóvenes y que el acabado a mano se mantiene junto con la industria.",
+     "Esto hace posible que los saberes ancestrales se conserven dentro de una cadena de producción que la empresa sostiene. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El ingreso de las mujeres al mercado de la artesanía: el texto dice que Thompson empleó principalmente a mujeres, pero lo presenta como método de organización de la empresa. La pregunta apunta al efecto sobre la sociedad, que el texto enfatiza en la preservación.",
+     "C": "La oportunidad de ingresar a la industria del cine: el cine aparece por Irene Sharaff y el vestuario de películas, no por la empresa. El texto no dice que la empresa abriera oportunidades en el cine.",
+     "D": "El intercambio de técnicas entre distintas localidades: el texto menciona diferencias entre Khorat y Benkrua, pero no un intercambio impulsado por la empresa. La técnica se transmite dentro de las familias."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q53",
@@ -1753,7 +2570,22 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El segmento define la naturaleza como un todo autónomo con leyes propias, que el hombre descubre y aprovecha, pero no crea.",
+    "planteamiento": "Se pide el concepto que se define en el segmento citado de la lectura 7. Dato: el segmento dice «un todo autónomo, dotado de sus propias leyes, que el hombre se limita meramente a descubrir, a enunciar de un modo racional y, eventualmente, a aprovechar en su propio favor», y el texto lo ubica en el segundo párrafo, después de hablar de lo que llamamos «naturaleza».",
+    "steps": [
+     "En el segundo párrafo el autor escribe «lo que en general llamamos “naturaleza”» y, a continuación, da la definición: «un todo autónomo, dotado de sus propias leyes…». Eso es una definición, no una descripción de un caso.",
+     "La definición tiene tres rasgos: es autónoma, se rige por leyes propias y el ser humano solo la descubre, la enuncia de forma racional y, si quiere, la aprovecha.",
+     "Los demás conceptos no cumplen esos rasgos. La sociedad es, según el texto, una agrupación de individuos en la que el propio hombre ha tenido intervención, y el universo se presenta como lo que se originó por creación o por explosión, algo que aún no se sabe. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Universo: el texto usa esa palabra para el origen incierto de todo, por creación o explosión. El segmento habla de un todo que el hombre descubre, y eso es lo que el texto llama naturaleza.",
+     "B": "Sociedad: el texto la define como agrupación de individuos con vínculos e interacciones, y en ella el hombre sí tuvo intervención. El segmento dice lo contrario, que el hombre no intervino en lo que define.",
+     "D": "Medio ambiente: el texto usa la expresión en la primera oración, como término general de lo que nos rodea, pero no la define con leyes propias ni con el verbo «descubrir»."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q54",
@@ -1782,7 +2614,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el segundo párrafo solo es seguro que el hombre no participó en el origen de la naturaleza; el origen del universo sigue siendo incierto.",
+    "planteamiento": "Se pide la afirmación considerada irrefutable según el segundo párrafo. Datos: el texto dice «No sabemos a ciencia cierta si eso que llamamos “universo” fue producto de un acto deliberado de creación […] o el resultado de una explosión casual», y luego afirma: «lo cierto es que el hombre estuvo ausente de tales acciones».",
+    "steps": [
+     "Se separan las afirmaciones inciertas de las seguras. El texto deja abiertas dos hipótesis sobre el origen del universo, creación o explosión, así que las opciones B y D no pueden ser irrefutables.",
+     "Lo que el autor afirma con certeza es que «el hombre estuvo ausente de tales acciones» y que no tuvo que ver ni con el diseño ni con la formación de lo que llamamos naturaleza.",
+     "Esa certeza corresponde a la opción en que la naturaleza se originó sin participación humana. La opción C habla de explotación, que el texto presenta solo como posibilidad. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El universo fue creado por un acto deliberado de un ser superior: el texto lo presenta como una de dos hipótesis, y el autor dice que no sabe cuál es la correcta. Una hipótesis no es irrefutable.",
+     "C": "La naturaleza fue explotada por el ser humano a su propio favor: el texto habla de aprovechar la naturaleza «eventualmente», es decir, como posibilidad, y no como hecho cierto del segundo párrafo.",
+     "D": "El universo fue el resultado de una explosión casual de gran energía: es la otra hipótesis que el texto presenta con la misma incertidumbre, así que tampoco puede considerarse irrefutable."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q55",
@@ -1812,7 +2659,22 @@
    "presentation": "text",
    "passageId": "lectura-7",
    "pilot": true,
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Nino aparece en el tercer párrafo para mostrar cómo las circunstancias llevan a los seres humanos a relacionarse, con conflicto y cooperación, y así forman sociedades.",
+    "planteamiento": "Se pide para qué se cita a Carlos Nino en el tercer párrafo. Dato: la cita dice que determinadas circunstancias «llevan a los hombres, al mismo tiempo, a entrar en conflicto unos con otros y a buscar la cooperación de otros».",
+    "steps": [
+     "El tercer párrafo empieza definiendo la sociedad como una agrupación de individuos que establecen vínculos y relaciones recíprocos, y luego explica cómo se forma la sociedad humana.",
+     "La cita de Nino describe qué circunstancias llevan a los seres humanos a relacionarse, y señala que esas mismas circunstancias generan conflicto y cooperación.",
+     "Así, la cita ilustra las relaciones humanas que dan origen a las sociedades. No contrasta, anticipa ni sintetiza otras posturas. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Para contrastar la idea de sociedad de Martínez Riu y Cortés Morato: el diccionario se cita para la definición de sociedad, como apoyo, y Nino no contrasta con esa definición.",
+     "B": "Para anticipar las distintas visiones filosóficas sobre el origen de las agrupaciones humanas: esas visiones (Aristóteles, Rousseau, Hobbes) aparecen en el párrafo siguiente, no en esta cita.",
+     "C": "Para sintetizar los diferentes enfoques sobre la relación entre naturaleza y sociedad: esa síntesis no aparece en el tercer párrafo. Las visiones sobre naturaleza y sociedad se desarrollan después."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q56",
@@ -1841,7 +2703,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tercer párrafo define sociedad de lo general a lo particular: primero como agrupación de individuos, luego como agrupación humana con territorio, cultura e instituciones.",
+    "planteamiento": "Se pide el recurso que utiliza el emisor en el tercer párrafo para explicar el concepto de sociedad. Datos: primero aparece sociedad como «agrupación de individuos que establecen vínculos y relaciones recíprocos», luego la sociedad humana con el propósito de colaborar, y después con territorio, cultura e instituciones sociales comunes.",
+    "steps": [
+     "El párrafo parte con la noción más amplia, que incluye tanto a animales como a seres humanos.",
+     "Después restringe el concepto: «Esta última es una reunión que forman los seres humanos con el propósito de colaborar entre sí».",
+     "Por último, precisa la definición con «Más específicamente todavía, sociedad es…», incorporando el territorio, la cultura y los fines comunes. Es un recorrido de lo general a lo particular. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Compara visiones diversas de sociedad: el párrafo cita una definición de diccionario, pero no confronta visiones. La comparación de visiones aparece en el párrafo siguiente, con Aristóteles y Rousseau.",
+     "C": "Caracteriza la evolución histórica de las sociedades: el párrafo no tiene secuencia temporal ni menciona etapas o épocas.",
+     "D": "Ejemplifica los distintos tipos de sociedades humanas: no aparecen tipos ni ejemplos concretos de sociedades humanas. Solo se menciona, de forma genérica, que hay sociedades de animales."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q57",
@@ -1870,7 +2747,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según Nino, el derecho sirve para evitar o resolver conflictos y para proveer medios que hagan posible la cooperación social.",
+    "planteamiento": "Se pide una de las funciones del derecho según Carlos Nino. Dato: en el párrafo que empieza «Pero se entienda la sociedad…», el texto cita a Nino: el derecho tiene por función «evitar o resolver algunos conflictos y proveer de ciertos medios para hacer posible la cooperación social».",
+    "steps": [
+     "Se ubica la cita de Nino sobre el derecho en el párrafo que empieza «Pero se entienda la sociedad…», donde se explica que la sociedad se rige por normas.",
+     "La función citada tiene dos partes: evitar o resolver algunos conflictos, y proveer de ciertos medios para hacer posible la cooperación social.",
+     "La alternativa D dice «proporcionar las condiciones que permiten la colaboración social», que es la versión equivalente de «proveer de ciertos medios para hacer posible la cooperación social». Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Precisar la noción de sociedad como estado convencional: el derecho no precisa conceptos. El texto dice que la sociedad puede ser convencional según Rousseau y Hobbes, pero eso no es una función del derecho.",
+     "B": "Determinar las normas que rigen las conductas apropiadas: el texto dice que las normas rigen la conducta, pero no que el derecho determine cuáles son las conductas apropiadas. Es un rasgo general de las normas, no la función citada de Nino.",
+     "C": "Disponer las reglas necesarias de aprender en la vida social: el texto menciona aprender reglas de tránsito para obtener la licencia, como ejemplo. No es una función que Nino atribuya al derecho."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q58",
@@ -1906,7 +2798,22 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El párrafo citado reúne tres normas concretas (los Diez Mandamientos, una disposición constitucional y una regla de tránsito); ejemplifica lo que son las normas de conducta.",
+    "planteamiento": "Se pide la función que cumple el párrafo en relación con la sección «Leyes de la naturaleza y normas de conducta». Datos: el párrafo presenta tres mandatos o prohibiciones: «No matarás», la regla de participación electoral a partir de los 18 años y la señal de tránsito en rojo y en verde.",
+    "steps": [
+     "El párrafo no explica el concepto de norma ni lo compara con otro. Solo presenta tres casos.",
+     "Cada cita es una norma: una prohibición («No matarás»), una regla de participación («Podrán participar en las elecciones…») y un mandato de tránsito («Los vehículos deberán detenerse…»).",
+     "Estos casos concretan lo que la sección define como normas de conducta, por eso el párrafo las ejemplifica. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Contrasta los tipos de normas de conducta: el párrafo no compara. Presenta tres normas del mismo tipo, todas normas de conducta.",
+     "C": "Destaca la importancia de las leyes y las normas: el párrafo sugiere que las normas están presentes en la vida, pero su función específica es mostrar ejemplos, no argumentar sobre su importancia.",
+     "D": "Explica la confusión que se genera entre leyes y normas: esa confusión se trata en el párrafo siguiente, donde el texto dice que es fácil confundirlas. Este párrafo solo presenta normas."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q59",
@@ -1935,7 +2842,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según Popper, las normas son directivas que guían la conducta humana, mientras que las leyes de la naturaleza describen regularidades.",
+    "planteamiento": "Se pide qué afirma Karl Popper acerca de las normas. Dato: el texto dice que Popper «describe del siguiente modo la diferencia» entre leyes de la naturaleza y normas, y que «las normas expresan directivas para nuestra conducta».",
+    "steps": [
+     "El texto presenta a Popper en el párrafo que empieza «Karl Popper, uno de los filósofos más importantes de este siglo…».",
+     "Su diferencia se resume así: las leyes de la naturaleza describen regularidades empíricas, mientras que las normas expresan directivas para nuestra conducta.",
+     "Por lo tanto, Popper atribuye a las normas la función de dirigir la conducta humana, es decir, de prescribir lo que debe ser. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Que establecen lo que es en el mundo: esa es la función de las leyes de la naturaleza, que «establecen lo que es». La opción atribuye a las normas lo que Popper atribuye a las leyes.",
+     "C": "Que se confunden con las leyes: el texto dice que es fácil confundirlas, pero esa confusión se atribuye a motivos históricos y del lenguaje, no es una afirmación de Popper sobre las normas.",
+     "D": "Que describen regularidades empíricas: esa es la función de las leyes de la naturaleza, no de las normas. La opción invierte la distinción de Popper."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q60",
@@ -1964,7 +2886,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La lectura busca argumentar que la actividad física y el deporte son derechos fundamentales, con acceso garantizado para toda la población.",
+    "planteamiento": "Se pide el propósito de la lectura en cuanto a la actividad física y el deporte. Dato: el texto dice que la política «tiene como argumento central considerarlos como derechos fundamentales» y que «la actividad física y el deporte se reconocen como derechos humanos».",
+    "steps": [
+     "Un texto informativo expone datos, mientras que uno argumentativo sostiene una tesis con razones. La lectura incluye ambos aspectos, pero su hilo conductor es una tesis.",
+     "La tesis aparece en el párrafo que empieza «Dadas las implicancias…» y se refuerza con el reconocimiento internacional y con los casos de Cuba y Colombia.",
+     "Así, el propósito es argumentar que la actividad física y el deporte son derechos fundamentales. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Establecer los objetivos de la Política Nacional de Actividad Física y Deporte: la lectura menciona la política, pero no enumera objetivos. Es un fragmento que justifica el enfoque de la política.",
+     "C": "Sugerir estrategias de incentivo de la actividad física y el deporte a nivel nacional: no aparecen estrategias. El texto menciona políticas y experiencias de otros países, pero no propone medidas.",
+     "D": "Presentar entidades que validan la actividad física y el deporte como un derecho: el texto menciona entidades, como la Unesco, el Consejo de Europa y el Comité Olímpico, pero las usa como respaldo de la tesis y no como su propósito."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q61",
@@ -1993,7 +2930,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El primer párrafo presenta el deporte como una manifestación cultural diversa: va desde el juego y la recreación hasta los deportes tradicionales e indígenas.",
+    "planteamiento": "Se pide la función del primer párrafo respecto de la temática de la actividad física y el deporte. Dato: el párrafo dice que la política reconoce «su diversidad cultural» y que incluye «el juego y la recreación», «la danza, los deportes organizados, informales, competitivos, tradicionales e indígenas».",
+    "steps": [
+     "El párrafo se refiere al concepto de actividad física y deporte, no a políticas ni a beneficios. Esos temas aparecen después.",
+     "Lo describe como patrimonio inmaterial y expresión de diversidad cultural, y enumera formas muy distintas de practicarlo.",
+     "Así, el párrafo presenta las actividades deportivas como un fenómeno cultural diverso. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Contextualiza la práctica deportiva como prioridad de las políticas gubernamentales: la prioridad política aparece en el segundo y tercer párrafo, cuando se considera el deporte un derecho. El primero no habla de prioridades.",
+     "B": "Introduce el reconocimiento de los beneficios de la práctica deportiva a nivel internacional: los reconocimientos internacionales aparecen en el segundo párrafo, con la Carta Europea y otras declaraciones.",
+     "C": "Describe las actividades físicas reconocidas oficialmente como deportivas: el párrafo enumera actividades, pero para mostrar su diversidad. No define cuáles son oficiales."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q62",
@@ -2023,7 +2975,22 @@
    "presentation": "text",
    "passageId": "lectura-8",
    "pilot": true,
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El cuarto párrafo concluye lo dicho en los dos anteriores: los beneficios del deporte justifican que sea un derecho con acceso garantizado para todos.",
+    "planteamiento": "Se pide qué función cumple el cuarto párrafo respecto de la práctica de la actividad física y el deporte. Dato: el párrafo empieza con «Dadas las implicancias para el desarrollo individual y social que conlleva la práctica de la actividad física y el deporte» y termina señalando que el acceso «debe estar garantizado para toda la población».",
+    "steps": [
+     "Los párrafos segundo y tercero describen beneficios individuales y colectivos del deporte y de la actividad física.",
+     "El cuarto párrafo parte con «Dadas las implicancias…», una expresión que toma esos beneficios como base para sacar una consecuencia.",
+     "La consecuencia es considerar el deporte como derecho fundamental con acceso garantizado. Es una conclusión y no un nuevo punto. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Sintetiza el contenido que se desarrollará en los párrafos siguientes: el párrafo cierra lo anterior y no anticipa lo que viene. La idea de derechos humanos se desarrolla después, pero no es el sentido de este párrafo.",
+     "B": "Detalla aspectos del tema presentado en los dos párrafos anteriores: detallar significa enumerar subaspectos. Este párrafo no detalla beneficios, sino que saca una consecuencia de ellos.",
+     "C": "Añade un nuevo punto de vista que se explicará en el párrafo siguiente: el carácter de derecho fundamental no es un punto nuevo para el texto, se deduce de los beneficios que ya se describieron."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q63",
@@ -2052,7 +3019,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Comité Olímpico Internacional, mediante la Carta Olímpica de 2004, es la entidad que reconoce explícitamente la práctica del deporte como derecho humano.",
+    "planteamiento": "Se pide qué entidad reconoce explícitamente la práctica del deporte como un derecho humano. Dato: el texto dice «En el año 2004, la Carta Olímpica refuerza la idea de la práctica de deporte como derecho humano, incluyéndola dentro de los fundamentos del olimpismo» y lo atribuye al Comité Olímpico Internacional.",
+    "steps": [
+     "Se revisan las entidades citadas: la Unesco, con la Carta Internacional de la Educación Física y el Deporte; el Consejo de Europa, con la Carta Europea del Deporte; la Asamblea General de Naciones Unidas, con sus resoluciones, y el Comité Olímpico Internacional, con la Carta Olímpica.",
+     "Solo en el caso del Comité se dice de forma explícita que la práctica del deporte es un derecho humano, dentro de los fundamentos del olimpismo.",
+     "Las otras entidades valoran el deporte o instan a promoverlo, pero no lo declaran derecho humano en esas citas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Unesco: el texto la cita por la Carta Internacional de la Educación Física y el Deporte, que reconoce la relevancia social del deporte, pero sin declararlo derecho humano en esa cita.",
+     "B": "Consejo de Europa: la Carta Europea del Deporte define las actividades físicas y considera el deporte una actividad social y cultural, pero no lo declara derecho humano.",
+     "D": "Asamblea General de Naciones Unidas: sus resoluciones destacan la importancia del deporte para educar y combatir la discriminación, e instan a promoverlo. El texto no dice que las declare derecho humano."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q64",
@@ -2081,7 +3063,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La mención de Cuba y Colombia ejemplifica países que han reconocido el deporte como un derecho en sus constituciones.",
+    "planteamiento": "Se pide la función de mencionar a Cuba y Colombia. Dato: el texto dice «destaca el caso de Cuba, que en su Constitución de la República reconoce, desde 1976, la educación física, el deporte y la recreación como un derecho», y «en la misma línea, Colombia, desde el año 1991, reconoce» lo mismo.",
+    "steps": [
+     "El párrafo introduce el caso de Cuba como una experiencia internacional concreta y destacada.",
+     "Luego suma Colombia con la expresión «en la misma línea», lo que muestra que el caso se repite en otro país.",
+     "Así, los dos casos ejemplifican la idea de que hay países que han declarado el deporte como un derecho. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Contrastar el mecanismo político para la protección del derecho en ambos países: el texto describe el financiamiento de Cuba, pero presenta a Colombia «en la misma línea», sin contrastarlos.",
+     "C": "Mostrar el aporte de algunos países en la consideración global del deporte como derecho humano: el aporte global aparece con las cartas y declaraciones internacionales. Los dos países solo se usan como casos concretos.",
+     "D": "Evidenciar la mejora de la calidad de vida en países que reconocen el deporte como derecho: la calidad de vida se menciona en el párrafo final como indicador general, pero no se demuestra con los casos de Cuba y Colombia."
+    }
+   }
   },
   {
    "id": "lectora-2025-invierno-q65",
@@ -2110,7 +3107,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para defender más inversión en deporte escolar, el estudiante necesita evidencia de que el deporte produce beneficios concretos, y los datos científicos sobre salud aportan esa evidencia.",
+    "planteamiento": "Se pide qué información complementa la lectura 8 para defender la inversión en prácticas deportivas de la escuela. Dato: el estudiante considera insuficiente la lectura para respaldar su postura y busca nuevas ideas que la fortalezcan.",
+    "steps": [
+     "La postura del estudiante es que la escuela debe invertir más recursos en deporte. Para defenderla necesita razones y pruebas de que el deporte produce beneficios.",
+     "La lectura 8 ya menciona beneficios en general, como la promoción de la salud y el bienestar, pero los presenta sin datos ni evidencia científica. Por eso el estudiante necesita algo más preciso.",
+     "Los datos científicos sobre los beneficios de las actividades deportivas para la salud entregan esa evidencia y sirven para justificar la inversión. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Nombres de instituciones que destacan el valor de las actividades deportivas: la lectura ya nombra a varias instituciones, como la Unesco y el Comité Olímpico. No agrega información nueva ni prueba beneficios.",
+     "B": "Descripción de otras actividades que sean reconocidas como derechos humanos: amplía el tema, pero no justifica invertir en el deporte escolar, que es el punto del debate.",
+     "D": "Definición de actividad física que involucre el efecto sociocultural de su práctica habitual: es un concepto y no una evidencia. El efecto sociocultural tampoco justifica por sí mismo invertir más recursos."
+    }
+   }
   }
  ]
 }

@@ -10,7 +10,10 @@ valida antes de fusionarla con `merge_solutions.py --collect-deep`.
 Las preguntas del Módulo Común de Ciencias se repiten en las tres pruebas del mismo año: se profundizan una
 sola vez y `dupes.json` registra dónde se replican.
 
-Uso: python3 scripts/pipeline/solutions/prepare_deepen.py --work <carpeta>
+Con `--missing` toma en cambio las preguntas SIN explicación (`current` queda en null y se redactan desde cero), y
+`--only <regex>` limita los ensayos por id.
+
+Uso: python3 scripts/pipeline/solutions/prepare_deepen.py --work <carpeta> [--missing] [--only <regex>]
 """
 
 from __future__ import annotations
@@ -51,7 +54,7 @@ def item(exam: dict, q: dict, passage_file: str | None) -> dict:
         "text_quality": "aproximado" if q.get("textQuality") == "approximate" else "fiel",
         "image": str(PUBLIC / snap["src"].lstrip("/")) if snap else None,
         "passage_file": passage_file,
-        "current": q["explanation"],
+        "current": q.get("explanation"),
     }
 
 
@@ -66,6 +69,8 @@ def chunks(items: list[dict], size: int = CHUNK) -> list[list[dict]]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--work", type=Path, required=True)
+    ap.add_argument("--missing", action="store_true", help="preguntas sin explicación, en vez de las que ya tienen")
+    ap.add_argument("--only", type=re.compile, help="regex sobre el id del ensayo")
     args = ap.parse_args()
     work: Path = args.work.resolve()
     work.mkdir(parents=True, exist_ok=True)
@@ -85,12 +90,12 @@ def main() -> int:
         batches.append({"id": batch_id, "dir": str(d), "count": len(items)})
 
     exams = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(EXAMS.glob("*/*.json"))]
-    exams = [e for e in exams if "questions" in e]
+    exams = [e for e in exams if "questions" in e and (not args.only or args.only.search(e["id"]))]
     science_seen: dict[str, str] = {}
     science: dict[str, list[dict]] = {}
 
     for exam in exams:
-        explained = [q for q in exam["questions"] if q.get("explanation")]
+        explained = [q for q in exam["questions"] if bool(q.get("explanation")) != args.missing]
         if not explained:
             continue
         tag = exam["id"].replace("ciencias-", "")
@@ -111,7 +116,7 @@ def main() -> int:
             if by_passage.get(""):
                 emit(f"{tag}-sueltas", [item(exam, q, None) for q in by_passage[""]], {})
         elif exam["subject"] == "ciencias":
-            group = f"ciencias-{exam['year']}-{exam['modality']}"
+            group = f"ciencias-{exam.get('admissionYear', exam['year'])}-{exam['modality']}"
             for q in explained:
                 k = norm(q["stem"]) + "|" + norm(" ".join(o["text"] for o in q["options"])) + "|" + q["answer"]
                 if k in science_seen:

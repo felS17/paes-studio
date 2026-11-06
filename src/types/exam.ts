@@ -87,7 +87,9 @@ export interface Exam {
   area?: ScienceArea
   title: string
   description: string
+  /** Año real en que se rindió. El `id` conserva el año de admisión del DEMRE, que es uno más. */
   year: number
+  admissionYear?: number
   modality: Modality
   source: ExamSource
   form?: string

@@ -1,9 +1,10 @@
 {
  "id": "m2-2025-invierno",
  "subject": "m2",
- "title": "PAES Invierno 2025",
+ "title": "PAES Invierno 2024",
  "description": "Prueba oficial completa de Competencia Matemática 2 (M2): 54 preguntas (1 anulada por el DEMRE), aplicada el 17-06-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "invierno",
  "source": "demre",
  "form": "191",
@@ -103,7 +104,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-reales"
+   "subtopic": "m2-reales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como $A$ y $B$ son negativos, el cociente $\\frac{B}{A}$ es positivo, y basta con acotar sus valores a partir de la posición de los puntos en la recta numérica.",
+    "planteamiento": "Se pide la desigualdad verdadera para $\\frac{B}{A}$. Datos de la recta: el punto $A$ está entre $-1$ y $-0{,}75$, y el punto $B$ está entre $-0{,}5$ y $-0{,}25$.",
+    "steps": [
+     "Como $A<0$ y $B<0$, el cociente $\\frac{B}{A}$ es positivo. Esto descarta de inmediato la alternativa A, que exige valores negativos para $\\frac{B}{A}$.",
+     "Acota el módulo de $A$: como $-1<A<-0{,}75$, se tiene $0{,}75<|A|<1$.",
+     "Acota el módulo de $B$: como $-0{,}5<B<-0{,}25$, se tiene $0{,}25<|B|<0{,}5$.",
+     "Como $\\frac{B}{A}=\\frac{|B|}{|A|}$, el cociente es mayor que el menor valor posible del numerador dividido por el mayor del denominador: $\\frac{B}{A}>\\frac{0{,}25}{1}=0{,}25$.",
+     "Del mismo modo, el cociente es menor que el mayor valor posible del numerador dividido por el menor del denominador: $\\frac{B}{A}<\\frac{1/2}{3/4}=\\frac{2}{3}=0{,}\\overline{6}$.",
+     "Así, $0{,}25<\\frac{B}{A}<0{,}\\overline{6}$, que es exactamente la desigualdad de la alternativa C.",
+     "Comprobación con la posición aproximada de los puntos: $A\\approx -0{,}87$ y $B\\approx -0{,}35$ dan $\\frac{B}{A}\\approx 0{,}4$, valor que está dentro del intervalo. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que $-0{,}75<\\frac{B}{A}<-0{,}25$. Es la trampa del signo: los dos puntos están a la izquierda del cero, y el cociente de dos números negativos es positivo.",
+     "B": "Afirma que $0<\\frac{B}{A}<0{,}25$. Es un error de cota: el punto $B$ está entre $-0{,}5$ y $-0{,}25$, así que $|B|>0{,}25$ y el cociente nunca baja de $0{,}25$.",
+     "D": "Afirma que $0{,}\\overline{6}<\\frac{B}{A}<1{,}\\overline{6}$. El cociente $\\frac{|B|}{|A|}$ nunca alcanza $\\frac{2}{3}$, porque $|B|<0{,}5$ y $|A|>0{,}75$ impiden llegar a ese valor."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q02",
@@ -142,7 +162,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada mes la colección queda multiplicada por $\\frac{4}{5}$, y el reparto solo es posible si el número de estampillas es múltiplo de $25$; el proceso se detiene cuando esa condición deja de cumplirse.",
+    "planteamiento": "Se pide la cantidad de estampillas que quedan cuando el reparto mensual deja de ser posible. Datos: la colección inicial es $2500$; cada mes Jaime regala $\\frac{1}{5}$ de lo que tiene, dividido en $5$ partes iguales, sin cortar estampillas.",
+    "steps": [
+     "Si Jaime tiene $N$ estampillas, regala $\\frac{1}{5}N$ en total, y cada hermano recibe $\\frac{1}{5}\\cdot\\frac{N}{5}=\\frac{N}{25}$. Para que no haya trozos, $\\frac{N}{25}$ debe ser un número entero, es decir, $N$ debe ser múltiplo de $25$.",
+     "Después del reparto le quedan $N-\\frac{1}{5}N=\\frac{4}{5}N$ estampillas. Por lo tanto, cada mes la cantidad se multiplica por $\\frac{4}{5}$.",
+     "Primer mes: $\\frac{4}{5}\\cdot 2500=2000$. Como $2000=25\\cdot 80$, el reparto del mes siguiente sí es posible.",
+     "Segundo mes: $\\frac{4}{5}\\cdot 2000=1600$. Como $1600=25\\cdot 64$, también se puede repartir sin cortar.",
+     "Tercer mes: $\\frac{4}{5}\\cdot 1600=1280$. Pero para el siguiente reparto se necesita que $1280$ sea múltiplo de $25$, y $1280=25\\cdot 51{,}2$: cada hermano recibiría $51{,}2$ estampillas, así que habría que cortar.",
+     "La cantidad final es $\\left(\\frac{4}{5}\\right)^3\\cdot 2500=\\frac{64}{125}\\cdot 2500=1280$ estampillas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$0$: supone que el reparto continúa hasta vaciar la colección. Como cada mes se regala solo una fracción de lo que queda, la cantidad nunca llega a cero.",
+     "B": "$256=2^8$: no pertenece a la secuencia real de cantidades ($2000$, $1600$, $1280$). Suele salir de dividir por $2$ en lugar de multiplicar por $\\frac{4}{5}$.",
+     "D": "$320$: es lo que se regala en el tercer mes, $\\frac{1}{5}\\cdot 1600$. Confunde lo entregado con lo que queda en la colección.",
+     "E": "$4$: confunde el factor mensual $\\frac{4}{5}$ con una cantidad de estampillas. La colección se reduce a $1280$, no a un número tan pequeño."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q03",
@@ -181,7 +220,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con potencias de base $2$, las tres cantidades se reducen a exponentes, y basta con comparar esos exponentes.",
+    "planteamiento": "Se pide la relación verdadera entre $a=\\left(\\frac{1}{2}\\right)^{-1010}$, $b=\\left(4^{-5}\\right)^{-101}$ y $c=\\frac{8^{600}}{2^{300}}$. Datos: las bases $\\frac{1}{2}$, $4$ y $8$ son potencias de $2$.",
+    "steps": [
+     "Escribe $\\frac{1}{2}=2^{-1}$. Por potencia de una potencia, $a=\\left(2^{-1}\\right)^{-1010}=2^{(-1)(-1010)}=2^{1010}$.",
+     "Escribe $4=2^2$. Entonces $4^{-5}=2^{-10}$, y por lo tanto $b=\\left(2^{-10}\\right)^{-101}=2^{(-10)(-101)}=2^{1010}$.",
+     "Como ambas tienen el mismo exponente, $a=b=2^{1010}$.",
+     "Escribe $8=2^3$, así que $8^{600}=2^{1800}$.",
+     "Aplica la propiedad del cuociente de potencias de igual base: $c=\\frac{2^{1800}}{2^{300}}=2^{1800-300}=2^{1500}$.",
+     "Como $1500>1010$, se tiene $2^{1500}>2^{1010}$, es decir, $c>a=b$, o bien $a=b<c$.",
+     "Esta relación coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Afirma $a<b\\le c$, lo que exige $a<b$. Es el error de signo del exponente: al escribir $\\left(\\frac{1}{2}\\right)^{-1010}$ como $2^{-1010}$ se obtiene un valor menor, pero en realidad $a=2^{1010}$ es igual a $b$.",
+     "C": "Afirma $c<a=b$, lo que invierte la comparación de $c$. Es un error al operar con los exponentes: el valor correcto $c=2^{1500}$ es mayor que $2^{1010}$, porque su exponente es mayor.",
+     "D": "Afirma $a<c\\le b$. Aunque $a<c$ es cierto, la parte $c\\le b$ es falsa, porque $c=2^{1500}$ supera a $b=2^{1010}$. Es una alternativa que mezcla una desigualdad correcta con una falsa.",
+     "E": "Afirma $c<a<b$, con dos desigualdades falsas. Las potencias $a$ y $b$ son iguales, y $c$ es mayor que ambas porque tiene el exponente $1500$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q04",
@@ -216,7 +275,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-reales"
+   "subtopic": "m2-reales",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si $q=-p$, el radicando se anula y la raíz vale $0$, que es racional; las otras condiciones no garantizan la racionalidad.",
+    "planteamiento": "Se pide la condición que asegura que $\\sqrt{\\frac{1}{p}+\\frac{1}{q}}$ sea racional, con $p$ y $q$ enteros distintos de cero. Dato clave: el radicando es $\\frac{1}{p}+\\frac{1}{q}=\\frac{p+q}{pq}$.",
+    "steps": [
+     "Reescribe el radicando sumando fracciones: $\\frac{1}{p}+\\frac{1}{q}=\\frac{q+p}{pq}$.",
+     "Si $p+q=0$, el numerador es cero y el radicando es $0$. Entonces $\\sqrt{0}=0$, que es un número racional.",
+     "Como la condición debe cumplirse en todos los casos, comprueba que $p=-q$ funciona con un ejemplo: $p=3$, $q=-3$ da $\\frac{1}{3}+\\frac{1}{-3}=0$, y la raíz es $0$.",
+     "Prueba la alternativa A con $p=q=1$: $p+q=2$ es múltiplo de $pq=1$, pero el radicando es $1+1=2$ y $\\sqrt{2}$ es irracional. Luego A no asegura nada.",
+     "Prueba la alternativa B con $p=1$ y $q=3$: $p+q=4$ es cuadrado perfecto, pero el radicando es $\\frac{1}{1}+\\frac{1}{3}=\\frac{4}{3}$ y $\\sqrt{\\frac{4}{3}}=\\frac{2}{\\sqrt3}$ es irracional.",
+     "Prueba la alternativa D con $p=q=1$, que son cuadrados perfectos: el radicando es $2$ y $\\sqrt{2}$ es irracional, así que D tampoco asegura la racionalidad.",
+     "Solo la condición $p=-q$ garantiza que el radicando sea $0$ en todos los casos. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Que $(p+q)$ sea múltiplo de $pq$. Una divisibilidad no controla el radicando: con $p=q=1$ se cumple, pero $\\sqrt{2}$ es irracional. Es la trampa de confundir una propiedad aritmética con una condición de racionalidad.",
+     "B": "Que $p+q$ sea cuadrado perfecto. Solo afecta al numerador; el denominador $pq$ también interviene, y con $p=1$, $q=3$ el radicando es $\\frac{4}{3}$, cuya raíz es irracional.",
+     "D": "Que $p$ y $q$ sean cuadrados perfectos. Ser cuadrado perfecto no garantiza nada: con $p=q=1$ el radicando es $2$. Es la trampa de creer que la racionalidad de la suma se obtiene de los sumandos por separado."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q05",
@@ -255,7 +333,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Conviene calcular $s$ exactamente y estimar $p$ y $q$ con aproximaciones, para luego revisar cada relación con cuidado.",
+    "planteamiento": "Se pide la relación verdadera entre $p=2\\sqrt{3}$, $q=3\\sqrt{2}$ y $s=\\left(\\frac{p}{q}\\right)^2$. Datos: $p\\approx 3{,}46$, $q\\approx 4{,}24$, y $s$ se puede calcular exactamente.",
+    "steps": [
+     "Calcula $s$ exactamente: $\\frac{p}{q}=\\frac{2\\sqrt{3}}{3\\sqrt{2}}$, así que $s=\\frac{4\\cdot 3}{9\\cdot 2}=\\frac{12}{18}=\\frac{2}{3}$.",
+     "Obtén aproximaciones: $\\sqrt{3}\\approx 1{,}732$ y $\\sqrt{2}\\approx 1{,}414$. Entonces $p\\approx 3{,}464$, $q\\approx 4{,}243$ y $s\\approx 0{,}667$.",
+     "Evalúa la alternativa A: $p<q<s$ exige $q<s$, pero $q\\approx 4{,}24$ y $s\\approx 0{,}67$. Es falsa.",
+     "Evalúa la alternativa B: $p-s\\approx 3{,}46-0{,}67=2{,}80$ y $s-q\\approx 0{,}67-4{,}24=-3{,}58$. Como $2{,}80$ no es menor que $-3{,}58$, es falsa.",
+     "Evalúa la alternativa C: $q-p\\approx 4{,}24-3{,}46=0{,}78$, que no es menor que $s\\approx 0{,}67$. Es falsa, por una diferencia pequeña.",
+     "Evalúa la alternativa E: $\\frac{1}{p}\\approx 0{,}289$ y $\\frac{1}{q}\\approx 0{,}236$, así que $\\frac{1}{p}<\\frac{1}{q}$ es falso.",
+     "Evalúa la alternativa D: $\\frac{p}{2}=\\sqrt{3}$ y $\\frac{q}{3}=\\sqrt{2}$, así que $\\frac{p}{2}-\\frac{q}{3}=\\sqrt{3}-\\sqrt{2}\\approx 0{,}318$. Este valor es menor que $s=\\frac{2}{3}\\approx 0{,}667$, luego la desigualdad es verdadera. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Afirma $p<q<s$, lo que obliga a que $s$ sea mayor que $q$. Pero $s=\\frac{2}{3}$ es menor que $1$, mientras que $q$ supera $4$. Suele salir de no calcular $s$ y tratarlo como si fuera un número grande.",
+     "B": "Afirma $p-s<s-q$. El lado izquierdo es positivo y el derecho es negativo, así que la desigualdad es falsa. El error típico es restar en un orden equivocado.",
+     "C": "Afirma $q-p<s$. La diferencia $q-p\\approx 0{,}78$ parece pequeña, pero supera a $s\\approx 0{,}67$. Es una trampa de estimación: sin valores precisos, se acepta por cercanía.",
+     "E": "Afirma $\\frac{1}{p}<\\frac{1}{q}<\\frac{1}{s}$. Al tomar recíprocos el orden se invierte: como $p<q$, se tiene $\\frac{1}{p}>\\frac{1}{q}$, así que la primera desigualdad es falsa."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q06",
@@ -290,7 +388,25 @@
     "mono": false
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada ecuación se resuelve con la definición de su operación: raíz enésima, potencia y logaritmo. Luego se suman los tres valores y se ubica el resultado en la recta.",
+    "planteamiento": "Se pide ubicar en la recta numérica la suma $x + r + w$. Datos: $\\sqrt[x]{8} = 2$, $2^{r} = \\frac{1}{4}$ y $\\log_5 w = \\frac{1}{2}$.",
+    "steps": [
+     "Resuelve la raíz: $\\sqrt[x]{8} = 2$ equivale a $2^{x} = 8$. Como $8 = 2^{3}$, por igualdad de bases se tiene $x = 3$.",
+     "Resuelve la potencia: como $\\frac{1}{4} = \\frac{1}{2^{2}} = 2^{-2}$, la ecuación queda $2^{r} = 2^{-2}$, y por igualdad de bases $r = -2$.",
+     "Resuelve el logaritmo con su definición: $\\log_5 w = \\frac{1}{2}$ equivale a $w = 5^{\\frac{1}{2}} = \\sqrt{5}$.",
+     "Suma los tres valores: $x + r + w = 3 + (-2) + \\sqrt{5} = 1 + \\sqrt{5}$.",
+     "Aproxima la raíz: como $2^{2} = 4$ y $3^{2} = 9$, se cumple $2 < \\sqrt{5} < 3$, y más precisamente $\\sqrt{5} \\approx 2{,}24$. Entonces $1 + \\sqrt{5} \\approx 3{,}24$.",
+     "Ese valor está entre $3$ y $4$, poco después del $3$, que es donde se ubica el punto de la recta B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El punto está cerca de $1{,}24$, que es $\\sqrt{5} - 1$. Ocurre si se resta $x + r = 1$ de $w$, en vez de sumarlo.",
+     "C": "El punto está cerca de $5{,}24$, que es $3 + \\sqrt{5}$. Ocurre si se olvida sumar $r$, como si valiera $0$.",
+     "D": "El punto está cerca de $7{,}24$, que es $3 + 2 + \\sqrt{5}$. Ocurre al tomar $r = 2$, sin notar que $\\frac{1}{4}$ corresponde a un exponente negativo."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q07",
@@ -325,7 +441,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-logaritmos"
+   "subtopic": "m2-logaritmos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como el modelo usa logaritmo decimal, dividir el PIB entre $10$ resta $a$ a la esperanza de vida, porque $\\log\\left(\\frac{x}{10}\\right)=\\log x-1$.",
+    "planteamiento": "Se pide la esperanza de vida del país B, $EV_B$, si la del país A es $x$ y su PIB es $10$ veces el del país B. Datos: $EV=a\\cdot\\log(\\text{PIB})+b$, con $a$ y $b$ constantes positivas.",
+    "steps": [
+     "Escribe la ecuación para el país A: $x=a\\cdot\\log(\\text{PIB}_A)+b$.",
+     "Como $\\text{PIB}_A=10\\cdot\\text{PIB}_B$, se tiene $\\text{PIB}_B=\\frac{\\text{PIB}_A}{10}$.",
+     "Escribe la ecuación para el país B: $EV_B=a\\cdot\\log\\left(\\frac{\\text{PIB}_A}{10}\\right)+b$.",
+     "Aplica la propiedad del logaritmo de un cuociente: $\\log\\left(\\frac{\\text{PIB}_A}{10}\\right)=\\log(\\text{PIB}_A)-\\log 10=\\log(\\text{PIB}_A)-1$, porque $\\log 10=1$.",
+     "Reemplaza: $EV_B=a\\cdot\\log(\\text{PIB}_A)-a+b=\\left(a\\cdot\\log(\\text{PIB}_A)+b\\right)-a$.",
+     "El paréntesis es exactamente $x$, así que $EV_B=x-a$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$10x$: multiplica la esperanza de vida por el factor del PIB. Pero la relación es logarítmica, así que un factor multiplicativo en el PIB se traduce en una resta, no en un producto.",
+     "B": "$x+a$: suma $a$ en lugar de restarla. Es el error de signo en la propiedad del cuociente: $\\frac{\\text{PIB}_A}{10}$ es menor que $\\text{PIB}_A$, así que $EV_B$ debe ser menor que $x$.",
+     "D": "$x+1$: confunde el $\\log 10=1$ con un sumando directo de la esperanza de vida. El $1$ aparece dentro del logaritmo y se multiplica por $a$, así que el resultado es $x-a$, no $x+1$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q08",
@@ -364,7 +498,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Bajo la raíz, $p^2-q^2$ se factoriza como $(p-q)(p+q)$, y la expresión completa se reduce a $|p-q|$.",
+    "planteamiento": "Se pide la expresión equivalente a $\\sqrt{\\frac{(p^2-q^2)(p-q)}{p+q}}$. Datos: $p<q$ y $p\\neq -q$, de modo que $p+q\\neq 0$ y la fracción está definida.",
+    "steps": [
+     "Factoriza la diferencia de cuadrados: $p^2-q^2=(p-q)(p+q)$.",
+     "Reemplaza en el radicando: $\\frac{(p-q)(p+q)(p-q)}{p+q}$.",
+     "Simplifica el factor común $(p+q)$, que es distinto de cero: queda $(p-q)^2$.",
+     "Aplica la raíz cuadrada a un cuadrado: $\\sqrt{(p-q)^2}=|p-q|$.",
+     "Como $p<q$, la diferencia $p-q$ es negativa, así que $|p-q|=-(p-q)=q-p$.",
+     "Comprobación numérica: con $p=1$ y $q=3$, el radicando es $\\frac{(1-9)(1-3)}{4}=\\frac{16}{4}=4$, y $\\sqrt{4}=2=q-p$. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "$\\sqrt{\\frac{p^3-q^3}{p+q}}$: confunde $p^2-q^2$ con $p^3-q^3$, que tiene otra factorización y no se simplifica con el factor $(p+q)$.",
+     "B": "$\\sqrt{\\frac{p^3+q^3}{p+q}}$: combina un error de signo y de potencia. Con $p=1$ y $q=3$ daría $\\sqrt{\\frac{28}{4}}=\\sqrt{7}$, distinto de $2$.",
+     "C": "$(p-q)\\cdot\\sqrt{\\frac{p-q}{p+q}}$: saca el factor $(p-q)$ de la raíz sin elevarlo al cuadrado. Con $p=1$ y $q=3$ el radicando es negativo, así que la expresión no es real.",
+     "D": "$\\sqrt{p^2-q^2}$: olvida el factor $\\frac{p-q}{p+q}$ del radicando. Con $p=1$ y $q=3$ el radicando vale $-8$, así que la expresión no es real."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q09",
@@ -403,7 +556,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Racionaliza el denominador con el conjugado $\\sqrt{5}+1$ y simplifica; el numerador y el denominador tienen un factor común que se puede extraer.",
+    "planteamiento": "Se pide el valor equivalente a $\\frac{18-6\\sqrt{5}}{\\sqrt{15}-\\sqrt{3}}$. Datos: el numerador es $18-6\\sqrt{5}$ y el denominador es $\\sqrt{15}-\\sqrt{3}$.",
+    "steps": [
+     "Factoriza el numerador: $18-6\\sqrt{5}=6\\left(3-\\sqrt{5}\\right)$.",
+     "Factoriza el denominador: $\\sqrt{15}-\\sqrt{3}=\\sqrt{3}\\left(\\sqrt{5}-1\\right)$, porque $\\sqrt{15}=\\sqrt{3}\\cdot\\sqrt{5}$.",
+     "La expresión queda $\\frac{6\\left(3-\\sqrt{5}\\right)}{\\sqrt{3}\\left(\\sqrt{5}-1\\right)}$.",
+     "Multiplica numerador y denominador por el conjugado $\\sqrt{5}+1$. En el denominador aparece la diferencia de cuadrados: $\\left(\\sqrt{5}-1\\right)\\left(\\sqrt{5}+1\\right)=5-1=4$.",
+     "En el numerador: $\\left(3-\\sqrt{5}\\right)\\left(\\sqrt{5}+1\\right)=3\\sqrt{5}+3-5-\\sqrt{5}=2\\sqrt{5}-2=2\\left(\\sqrt{5}-1\\right)$.",
+     "La expresión es ahora $\\frac{6\\cdot 2\\left(\\sqrt{5}-1\\right)}{4\\sqrt{3}}=\\frac{12\\left(\\sqrt{5}-1\\right)}{4\\sqrt{3}}=\\frac{3\\left(\\sqrt{5}-1\\right)}{\\sqrt{3}}$.",
+     "Como $\\frac{3}{\\sqrt{3}}=\\sqrt{3}$, el resultado es $\\sqrt{3}\\left(\\sqrt{5}-1\\right)=\\sqrt{15}-\\sqrt{3}$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{12\\sqrt{5}}{\\sqrt{12}}$: su valor es $2\\sqrt{15}\\approx 7{,}75$, que no coincide con la expresión original, cuyo valor es cerca de $2{,}14$. Es una simplificación incompleta del numerador.",
+     "C": "$\\sqrt{15}$: vale unos $3{,}87$, que no coincide con $2{,}14$. Aparece al cancelar mal el $\\sqrt{3}$ del denominador con un término del numerador, o al olvidar el $-\\sqrt{3}$.",
+     "D": "$12$: aparece al reemplazar $\\sqrt{5}$ por $1$ en el numerador ($18-6=12$) y no hacer lo mismo con el denominador. Es una trampa de tratar una raíz como si fuera un número entero.",
+     "E": "$2\\sqrt{15}\\approx 7{,}75$: no coincide con $\\sqrt{15}-\\sqrt{3}\\approx 2{,}14$. Aparece si al racionalizar se multiplica por $2$ de más o si se duplica el resultado correcto."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q10",
@@ -442,7 +615,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-logaritmos"
+   "subtopic": "m2-logaritmos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $\\log 5=\\log\\frac{10}{2}$ y $\\log 20=\\log 2+\\log 10$, todo se expresa en función de $p=\\log 2$.",
+    "planteamiento": "Se pide expresar $\\frac{\\log 5}{\\log 20}$ en términos de $p=\\log 2$. Datos: se usa logaritmo decimal, así que $\\log 10=1$.",
+    "steps": [
+     "Expresa $\\log 5$ en función de $\\log 2$: como $5=\\frac{10}{2}$, se tiene $\\log 5=\\log 10-\\log 2=1-p$.",
+     "Expresa $\\log 20$: como $20=2\\cdot 10$, se tiene $\\log 20=\\log 2+\\log 10=p+1$.",
+     "Reemplaza en la fracción: $\\frac{\\log 5}{\\log 20}=\\frac{1-p}{p+1}$.",
+     "Comprobación con un valor: si $p\\approx 0{,}301$, entonces $\\frac{1-0{,}301}{1{,}301}\\approx 0{,}537$. Y directamente, $\\frac{\\log 5}{\\log 20}=\\frac{0{,}699}{1{,}301}\\approx 0{,}537$.",
+     "La expresión $\\frac{1-p}{p+1}$ corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$-2p$: es negativo, pero un cociente de dos logaritmos mayores que $0$ no puede ser negativo. Además, $-2p\\approx -0{,}60$, lejos de $0{,}537$.",
+     "C": "$\\frac{1}{4}$: supone que $\\log 20$ es $4\\log 5$, lo que no es cierto: $\\log 20=2\\log 2+\\log 5$, y no equivale a multiplicar $\\log 5$ por $4$.",
+     "D": "$0$: iguala el numerador a cero, lo que solo ocurriría si $\\log 5=0$, es decir, si $5=1$. Es falso, porque $\\log 5=1-p\\approx 0{,}699$.",
+     "E": "$\\frac{1}{p^2}$: vale unas $11$ veces el valor real cuando $p\\approx 0{,}301$. Aparece al tratar $\\log 5$ como $\\frac{1}{p}$ y elevar al cuadrado, en vez de usar la resta $1-p$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q11",
@@ -481,7 +672,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-logaritmos"
+   "subtopic": "m2-logaritmos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La suma de logaritmos se convierte en el logaritmo de un producto, y como $\\sqrt{25}\\cdot 2=10$, el resultado es $\\log 10=1$.",
+    "planteamiento": "Se pide el valor de $\\log\\sqrt{25}+\\log 2$. Datos: $\\sqrt{25}=5$ y el logaritmo es decimal, de modo que $\\log 10=1$.",
+    "steps": [
+     "Calcula la raíz: $\\sqrt{25}=5$, así que la expresión es $\\log 5+\\log 2$.",
+     "Aplica la propiedad del logaritmo de un producto: $\\log a+\\log b=\\log(a\\cdot b)$.",
+     "Obtén $\\log(5\\cdot 2)=\\log 10$.",
+     "Como $\\log 10=1$ en base $10$, la expresión vale $1$.",
+     "Comprobación: $10^1=10$, así que el logaritmo de $10$ es efectivamente $1$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\log\\sqrt{50}$: mete el $2$ dentro de la raíz, como si fuera $\\sqrt{25\\cdot 2}$. El $2$ no está bajo la raíz; el valor es $\\log\\sqrt{50}\\approx 0{,}85$, distinto de $1$.",
+     "C": "$\\log(\\sqrt{25}+2)$: suma $2$ dentro del logaritmo, lo que es falso, porque $\\log a+\\log b$ no es igual a $\\log(a+b)$. Su valor es $\\log 7\\approx 0{,}85$.",
+     "D": "$\\frac{1}{2}\\log 27$: es el logaritmo de $\\sqrt{27}$, que no tiene relación con el producto $5\\cdot 2$. Su valor es cerca de $0{,}72$, distinto de $1$.",
+     "E": "$\\log 7$: es el logaritmo de la suma $5+2$. Confunde la suma de logaritmos con el logaritmo de la suma, que no se cumple en general."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q12",
@@ -516,7 +725,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-logaritmos"
+   "subtopic": "m2-logaritmos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La recta parte en $5$ cuando $t=0$; como la cantidad se duplica cada hora, la pendiente es $\\log_b 2$, y el punto final fija la base.",
+    "planteamiento": "Se pide la base $b$ del logaritmo. Datos: el cultivo empieza en $1024$ bacterias y se duplica cada hora. La figura muestra $Y=5$ en $X=0$ y $Y=25$ en $X=40$, donde $Y=\\log_b(\\text{cantidad de bacterias})$.",
+    "steps": [
+     "Modela la cantidad de bacterias: $N(t)=1024\\cdot 2^{t}$, con $t$ en horas.",
+     "Aplica el logaritmo en base $b$: $Y(t)=\\log_b\\left(1024\\cdot 2^{t}\\right)=\\log_b 1024+t\\cdot\\log_b 2$.",
+     "Lee la ordenada en el origen: en $t=0$ la figura muestra $Y=5$, así que $\\log_b 1024=5$, es decir, $b^5=1024$.",
+     "Como $1024=2^{10}=\\left(2^2\\right)^5$, la igualdad $b^5=\\left(2^2\\right)^5$ implica $b=4$.",
+     "Verifica la pendiente: $\\log_4 2=\\frac{1}{2}$, porque $4^{1/2}=2$. Entonces $Y(40)=5+40\\cdot\\frac{1}{2}=25$, que coincide con el gráfico.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$2$: es la base de la duplicación, pero $\\log_2 1024=10$, no $5$. Con $b=2$ la ordenada en el origen sería $10$, valor que no aparece en el gráfico.",
+     "C": "$5$: toma la ordenada en el origen como base. Confunde $\\log_b 1024=5$ con $b=5$; pero $5^5=3125\\neq 1024$.",
+     "D": "$10$: aparece al confundir $1024=2^{10}$ con la base. Con $b=10$, $\\log_{10} 1024\\approx 3{,}01$, que no coincide con $5$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q13",
@@ -551,7 +778,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-financiera"
+   "subtopic": "m2-financiera",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada periodo multiplica el capital por $1+\\text{tasa}$, y la ganancia es lo acumulado menos el depósito inicial.",
+    "planteamiento": "Se pide la ganancia, en pesos, en dos periodos de 30 días. Datos: la tasa del primer periodo es $0{,}3\\,\\%$; en el segundo la tasa aumenta un $100\\,\\%$, es decir, se duplica a $0{,}6\\,\\%$. El depósito inicial es $k$ pesos.",
+    "steps": [
+     "Primer periodo: el depósito crece con una tasa de $0{,}3\\,\\%=0{,}003$, así que al final vale $k\\cdot(1+0{,}003)=k\\cdot 1{,}003$.",
+     "Segundo periodo: la tasa aumenta un $100\\,\\%$ respecto de la anterior, es decir, se duplica: $0{,}003\\cdot 2=0{,}006$. Por eso el factor es $1{,}006$.",
+     "El capital se multiplica por ambos factores: $k\\cdot 1{,}003\\cdot 1{,}006$. Esta es la cantidad total acumulada al final de los dos periodos.",
+     "La ganancia es lo acumulado menos el depósito inicial: $\\text{ganancia}=k\\cdot 1{,}003\\cdot 1{,}006-k$.",
+     "Comprobación: si $k=1000$, el total es $1000\\cdot 1{,}003\\cdot 1{,}006=1009{,}018$ pesos, con una ganancia de $9{,}018$ pesos. Esto coincide con $1000\\cdot 1{,}009018-1000$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$k\\cdot 1{,}009$: suma las tasas, $0{,}3\\,\\%+0{,}6\\,\\%=0{,}9\\,\\%$, y no considera el interés compuesto del segundo periodo. Además, da el total acumulado y no la ganancia.",
+     "B": "$k\\cdot 1{,}009-k$: resta bien el depósito inicial, pero usa la suma de tasas en lugar de multiplicar los factores de cada periodo. Es la trampa de sumar porcentajes en un interés compuesto.",
+     "C": "$k(1{,}003)(1{,}006)$: calcula bien el monto final, pero olvida restar el depósito inicial, por lo que entrega el total acumulado y no la ganancia."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q14",
@@ -586,7 +831,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-financiera"
+   "subtopic": "m2-financiera",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para completar el estanque hay que pasar de $25\\,\\%$ a $100\\,\\%$, y el aumento porcentual se calcula sobre la cantidad inicial, que es el $25\\,\\%$.",
+    "planteamiento": "Se pide el porcentaje de aumento respecto de la cantidad de agua actual. Datos: el estanque tiene $25\\,\\%$ de su capacidad y debe llegar al $100\\,\\%$.",
+    "steps": [
+     "Escribe la capacidad como $C$. La cantidad inicial es $0{,}25\\,C$ y la cantidad final es $C$.",
+     "Calcula el aumento de agua: $C-0{,}25\\,C=0{,}75\\,C$.",
+     "El porcentaje de aumento se calcula sobre la cantidad inicial: $\\frac{0{,}75\\,C}{0{,}25\\,C}\\cdot 100\\,\\%$.",
+     "Simplifica $C$: $\\frac{0{,}75}{0{,}25}=3$, así que el aumento es $3\\cdot 100\\,\\%=300\\,\\%$.",
+     "Comprobación: $0{,}25\\,C\\cdot(1+3)=C$, que es la capacidad completa.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$66{,}\\overline{6}\\,\\%$: es el resultado de una razón mal planteada entre el aumento y una cantidad que no es la inicial. No corresponde al cociente $\\frac{0{,}75\\,C}{0{,}25\\,C}$.",
+     "B": "$75\\,\\%$: es el agua que falta respecto de la capacidad total, $\\frac{0{,}75\\,C}{C}$, y no el aumento respecto de lo que había. Es un error en la base del porcentaje.",
+     "D": "$400\\,\\%$: es la razón entre la cantidad final y la inicial, $\\frac{C}{0{,}25\\,C}=4$, es decir, $400\\,\\%$. Olvida restar el $100\\,\\%$ que ya había en el estanque."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q15",
@@ -621,7 +884,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "$25x^2-y^2$ es una diferencia de cuadrados, porque $25x^2=(5x)^2$.",
+    "planteamiento": "Se pide la expresión factorizada equivalente a $25x^2-y^2$. Datos: $25x^2=(5x)^2$ e $y^2=y^2$.",
+    "steps": [
+     "Escribe el primer término como cuadrado: $25x^2=(5x)^2$.",
+     "Reconoce la forma $a^2-b^2$, con $a=5x$ y $b=y$.",
+     "Aplica la identidad de diferencia de cuadrados: $a^2-b^2=(a+b)(a-b)$.",
+     "Reemplaza: $25x^2-y^2=(5x+y)(5x-y)$.",
+     "Comprobación: $(5x+y)(5x-y)=25x^2-5xy+5xy-y^2=25x^2-y^2$, porque el término cruzado se anula. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$(5x-y)^2$: es un cuadrado de binomio, que al desarrollarse da $25x^2-10xy+y^2$. Tiene un término cruzado que no existe en el original y el signo de $y^2$ es incorrecto.",
+     "B": "$(25x-y)(x+y)$: al desarrollar da $25x^2+25xy-xy-y^2=25x^2+24xy-y^2$, con un término en $xy$ que no aparece en la expresión original.",
+     "C": "$25(x+y)(x-y)$: factoriza bien la diferencia $x^2-y^2$, pero el $25$ multiplica también a $y^2$. Da $25x^2-25y^2$, distinto de $25x^2-y^2$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q16",
@@ -656,7 +936,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se completa el cuadrado en el lado izquierdo y se compara término a término con $(x+a)^2+b$.",
+    "planteamiento": "Se pide el valor de $b$ para que $x^2-5x+6=(x+a)^2+b$ se cumpla como igualdad, con $a$ constante. Dato: el lado izquierdo es un trinomio cuadrático en $x$.",
+    "steps": [
+     "Desarrolla el lado derecho: $(x+a)^2+b=x^2+2ax+a^2+b$.",
+     "Compara los coeficientes de $x$: $2a=-5$, así que $a=-\\frac{5}{2}$.",
+     "Compara los términos independientes: $a^2+b=6$.",
+     "Calcula $a^2=\\left(-\\frac{5}{2}\\right)^2=\\frac{25}{4}$.",
+     "Despeja $b=6-\\frac{25}{4}=\\frac{24}{4}-\\frac{25}{4}=-\\frac{1}{4}$.",
+     "Comprobación: $\\left(x-\\frac{5}{2}\\right)^2-\\frac{1}{4}=x^2-5x+\\frac{25}{4}-\\frac{1}{4}=x^2-5x+6$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$-\\frac{13}{2}$: no cumple $a^2+b=6$, porque $\\frac{25}{4}-\\frac{13}{2}=-\\frac{1}{4}\\neq 6$. Es un error al operar con las fracciones al despejar $b$.",
+     "C": "$6$: es el término independiente del polinomio original, pero no del completado. Olvida que el término $a^2=\\frac{25}{4}$ se incorpora al cuadrado.",
+     "D": "$\\frac{13}{2}$: corresponde a un error de signo al despejar $b$, y tampoco cumple la igualdad, porque $\\frac{25}{4}+\\frac{13}{2}\\neq 6$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q17",
@@ -691,7 +989,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si el peso real excede en $40\\,\\%$ al ideal, entonces $x=1{,}4\\,y$; al reemplazar en la fórmula se obtiene un múltiplo de $y$.",
+    "planteamiento": "Se pide el peso corregido expresado con una sola variable. Datos: $x=y+0{,}40\\,y$, es decir, $x=1{,}4\\,y$; la fórmula es $\\text{peso corregido}=y+(x-y)\\cdot 0{,}25$.",
+    "steps": [
+     "Traduce el enunciado: exceder en un $40\\,\\%$ significa $x=y+0{,}40\\,y=1{,}40\\,y$.",
+     "Calcula la diferencia: $x-y=1{,}40\\,y-y=0{,}40\\,y$.",
+     "Reemplaza en la fórmula: peso corregido $=y+0{,}40\\,y\\cdot 0{,}25$.",
+     "Multiplica: $0{,}40\\cdot 0{,}25=0{,}10$, así que el peso corregido es $y+0{,}10\\,y$.",
+     "Suma los términos semejantes: $y+0{,}10\\,y=1{,}10\\,y$.",
+     "Comprobación: si $y=60$, entonces $x=84$ y el peso corregido es $60+(84-60)\\cdot 0{,}25=60+6=66=1{,}10\\cdot 60$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$0{,}70\\cdot x$: con $x=1{,}4\\,y$ da $0{,}98\\,y$, que no es el peso corregido. Usa un factor que no proviene de la fórmula.",
+     "B": "$0{,}90\\cdot y$: equivale a restar $0{,}10\\,y$ al peso ideal en vez de sumarlo. Es un error de signo, porque el peso real es mayor que el ideal y el corregido debe ser mayor que $y$.",
+     "D": "$1{,}30\\cdot x$: con $x=1{,}4\\,y$ da $1{,}82\\,y$, mucho mayor que $1{,}10\\,y$. Suma un $30\\,\\%$ sobre $x$ en lugar de aplicar el $0{,}25$ sobre la diferencia $x-y$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q18",
@@ -726,7 +1042,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La rapidez en el segundo tramo es distancia dividida por tiempo, y el tiempo de ese tramo se obtiene restando a las $10{,}5$ horas el tiempo de los tramos de asfalto.",
+    "planteamiento": "Se pide la rapidez media en el segundo tramo, en km/h. Datos: el viaje total es de $700$ km en $10{,}5$ h; los tramos de asfalto miden $250$ km y $245$ km, y se recorren a $90$ km/h.",
+    "steps": [
+     "Calcula la distancia del segundo tramo: $700-250-245=205$ km.",
+     "Calcula el tiempo de los tramos de asfalto: $t_1=\\frac{250}{90}$ h y $t_3=\\frac{245}{90}$ h, así que $t_1+t_3=\\frac{495}{90}$ h.",
+     "Calcula el tiempo del segundo tramo: $t_2=10{,}5-\\frac{495}{90}$ h, porque el tiempo total es $10{,}5$ h.",
+     "Aplica la definición de rapidez media: $v_2=\\frac{d_2}{t_2}=\\frac{205}{10{,}5-\\frac{495}{90}}$ km/h.",
+     "Comprobación: $\\frac{495}{90}=5{,}5$, así que $t_2=10{,}5-5{,}5=5$ h y $v_2=\\frac{205}{5}=41$ km/h. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{90\\cdot 495\\cdot 205}{250\\cdot 245}$: multiplica en lugar de dividir y usa los tramos como factores. No respeta la definición de rapidez media, que es distancia dividida por tiempo.",
+     "C": "$\\frac{700-495\\cdot 90}{205}$: resta un producto $495\\cdot 90$ en el numerador, que no tiene significado físico, y divide por la distancia del segundo tramo en lugar de su tiempo.",
+     "D": "$\\frac{10{,}5\\cdot 700-495\\cdot 90}{205}$: multiplica horas por kilómetros en el numerador, lo que no tiene sentido dimensional, y además divide por la distancia del segundo tramo."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q19",
@@ -761,7 +1094,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que intersectar los dos rangos de proliferación y luego quitar la zona donde prolifera la tercera bacteria.",
+    "planteamiento": "Se pide el rango de temperaturas del horno que permite proliferar a los dos primeros tipos de bacterias y evita el tercero. Datos: primer tipo en $[-1,10[$, segundo tipo en $[-3,9]$, y tercer tipo en $]-8,8[$, todos en grados Celsius.",
+    "steps": [
+     "Para que proliferen ambos primeros tipos, la temperatura debe estar en la intersección $[-1,10[\\,\\cap\\,[-3,9]$.",
+     "Calcula la intersección: el límite inferior más alto es $-1$, que está incluido en ambos intervalos. El límite superior más bajo es $9$, incluido en el segundo intervalo y en el primero, porque $9<10$. Entonces la intersección es $[-1,9]$.",
+     "Ahora hay que evitar la proliferación del tercer tipo, que ocurre en $]-8,8[$. Como se busca el conjunto que queda fuera de ese intervalo, se quita $]-8,8[$ de $[-1,9]$.",
+     "Lo que queda de $[-1,9]$ fuera de $]-8,8[$ es el tramo $[8,9]$. El punto $8$ queda incluido, porque el intervalo del tercer tipo no lo contiene.",
+     "Comprobación: cualquier temperatura de $[8,9]$ está dentro de ambos rangos de los dos primeros tipos y no pertenece a $]-8,8[$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$]-8,10[$: incluye temperaturas por debajo de $-1$ y por encima de $9$, donde al menos uno de los dos primeros tipos no prolifera. Además, deja dentro la zona del tercer tipo.",
+     "B": "$[-1,8[$: es la parte de la intersección que cae en la zona prohibida. Es el error de quitar solo el extremo superior y dejar justamente las temperaturas donde prolifera la tercera bacteria.",
+     "D": "$[8,10[$: acepta valores hasta $10$, pero el segundo tipo solo prolifera hasta $9$ incluido. Ignora el corchete cerrado del segundo rango."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q20",
@@ -797,7 +1147,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El producto de dos variables acotadas se extrema en las esquinas del rectángulo de valores; como algunos extremos están excluidos, el intervalo final es abierto.",
+    "planteamiento": "Se pide el conjunto de todos los valores posibles de $p\\cdot b$. Datos: $-4\\le p<3$ y $-\\frac{1}{2}<b<\\frac{3}{2}$, con $p$ y $b$ reales.",
+    "steps": [
+     "Identifica los rangos: $p$ puede tomar valores desde $-4$ (incluido) hasta $3$ (excluido), y $b$ puede tomar valores estrictamente entre $-\\frac{1}{2}$ y $\\frac{3}{2}$.",
+     "El producto $p\\cdot b$ es una función continua sobre ese conjunto de pares, que es conexo. Por eso sus valores forman un intervalo cuyos extremos se obtienen en las esquinas del rectángulo.",
+     "Evalúa las cuatro esquinas: $(-4)\\left(-\\frac{1}{2}\\right)=2$, $(-4)\\cdot\\frac{3}{2}=-6$, $3\\cdot\\left(-\\frac{1}{2}\\right)=-\\frac{3}{2}$ y $3\\cdot\\frac{3}{2}=\\frac{9}{2}$.",
+     "El valor mínimo es $-6$, que se obtiene con $p=-4$ y $b=\\frac{3}{2}$. Como $b<\\frac{3}{2}$ es estricto, $-6$ no pertenece al conjunto, pero los valores cercanos sí.",
+     "El valor máximo es $\\frac{9}{2}$, que se obtiene con $p=3$ y $b=\\frac{3}{2}$. Como $p<3$ y $b<\\frac{3}{2}$ son estrictos, $\\frac{9}{2}$ tampoco pertenece al conjunto.",
+     "Los valores se acercan arbitrariamente a $-6$ y a $\\frac{9}{2}$ sin alcanzarlos, así que el conjunto es $]-6,\\frac{9}{2}[$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$[2,\\frac{9}{2}[$: cierra el extremo $2$, pero $2$ solo se obtendría con $b=-\\frac{1}{2}$, que está excluido. Además, deja fuera los productos negativos.",
+     "B": "$]2,\\frac{9}{2}[$: considera solo los productos positivos y olvida que $p\\cdot b$ toma valores negativos, por ejemplo $-6$ cerca de $p=-4$ y $b=\\frac{3}{2}$.",
+     "D": "$[-6,\\frac{9}{2}[$: cierra el extremo $-6$, que no se alcanza porque $b=\\frac{3}{2}$ está excluido. Es el error de no revisar qué extremos pertenecen al conjunto."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q21",
@@ -836,7 +1204,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se despeja $x$ y luego se intersecta con la condición de que $x$ sea positivo.",
+    "planteamiento": "Se pide el conjunto solución de $x+3<7$ con la restricción de que $x$ sea un número real positivo. Datos: la inecuación y la condición $x>0$.",
+    "steps": [
+     "Resta $3$ en ambos lados de la inecuación: $x+3-3<7-3$, es decir, $x<4$.",
+     "El conjunto solución de la inecuación sola es $]-\\infty,4[$, porque cualquier número menor que $4$ la cumple.",
+     "La restricción del enunciado dice que $x$ debe ser positivo, es decir, $x>0$. Entonces se intersecta $]-\\infty,4[$ con $]0,\\infty[$.",
+     "La intersección es $]0,4[$, porque los valores deben ser mayores que $0$ y menores que $4$. Los extremos quedan excluidos porque ambas desigualdades son estrictas.",
+     "Comprobación: $x=2$ cumple $2+3=5<7$ y es positivo, mientras que $x=4$ no cumple porque $4+3=7$, que no es menor que $7$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$]-\\infty,4[$: resuelve bien la inecuación, pero ignora la condición de que $x$ sea positivo, así que incluye valores negativos.",
+     "C": "$]0,10[$: resta mal el $3$ y obtiene $x<10$. Es el error de sumar $7+3$ en vez de restar $3$ del lado de la desigualdad.",
+     "D": "$\\{1,2,3\\}$: solo considera los enteros positivos menores que $4$. El enunciado pide números reales, así que se pierden todos los valores fraccionarios.",
+     "E": "$]4,\\infty[$: invierte el sentido de la desigualdad. Con $x=5$, se tendría $5+3=8$, que no es menor que $7$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q23",
@@ -871,7 +1257,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay dos condiciones independientes: la suma de litros y la cantidad de endulzante; cada una da una ecuación.",
+    "planteamiento": "Se pide el sistema que determina $A$ (litros de la primera mezcla) y $B$ (litros de la segunda mezcla). Datos: la primera mezcla tiene $10\\,\\%$ de endulzante, la segunda tiene $2\\,\\%$, y la tercera debe tener $10$ litros con $7\\,\\%$ de endulzante.",
+    "steps": [
+     "Ecuación del volumen total: la tercera mezcla debe tener $10$ litros, y están formados por $A$ litros de la primera y $B$ litros de la segunda, así que $A+B=10$.",
+     "Ecuación del endulzante de la primera mezcla: $0{,}10\\,A$ litros de endulzante, porque tiene $10\\,\\%$ de endulzante.",
+     "Ecuación del endulzante de la segunda mezcla: $0{,}02\\,B$ litros de endulzante.",
+     "Ecuación del endulzante de la tercera mezcla: debe tener $7\\,\\%$ de $10$ litros, es decir, $0{,}07\\cdot 10$ litros de endulzante.",
+     "Igualando el endulzante de las dos mezclas originales con el de la tercera se obtiene $0{,}10\\,A+0{,}02\\,B=0{,}07\\cdot 10$.",
+     "El sistema es $0{,}10\\,A+0{,}02\\,B=0{,}07\\cdot 10$ junto con $A+B=10$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Usa $0{,}9\\,A$ como endulzante, pero $90\\,\\%$ es el porcentaje de agua de la primera mezcla. Confunde agua con endulzante.",
+     "B": "La primera ecuación está bien planteada, pero la segunda iguala $A+B$ a $0{,}07\\cdot 10$, es decir, $0{,}7$ litros. El total debe ser $10$ litros, no $0{,}7$.",
+     "D": "Usa $0{,}9\\,A$ y el $10$ como cantidad de endulzante, y la segunda ecuación iguala la suma de litros a $7\\,\\%$ de sí misma, lo que no tiene sentido."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q24",
@@ -906,7 +1310,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un sistema tiene infinitas soluciones cuando sus ecuaciones son proporcionales; al encontrar esa relación, el segundo sistema resulta ser una sola ecuación repetida.",
+    "planteamiento": "Se pide cuántas soluciones tiene el segundo sistema, sabiendo que el primero tiene infinitas soluciones con $m$, $n$ y $k$ distintos de cero. Datos: $2mx+3ny=5mn$ junto con $kx+2ky=10mn$ tienen infinitas soluciones.",
+    "steps": [
+     "Para que un sistema lineal tenga infinitas soluciones, sus dos ecuaciones deben ser proporcionales, es decir, las razones entre coeficientes y términos independientes deben ser iguales.",
+     "Compara las razones: $\\frac{2m}{k}=\\frac{3n}{2k}=\\frac{5mn}{10mn}=\\frac{1}{2}$.",
+     "De $\\frac{2m}{k}=\\frac{1}{2}$ se obtiene $k=4m$. De $\\frac{3n}{2k}=\\frac{1}{2}$ se obtiene $3n=k$. Así, $k=4m=3n$.",
+     "Reemplaza en el segundo sistema: la primera ecuación $3nx+ky=1$ se convierte en $kx+ky=1$, porque $3n=k$.",
+     "La segunda ecuación $kx+4my=1$ se convierte en $kx+ky=1$, porque $4m=k$.",
+     "Las dos ecuaciones son idénticas, así que el sistema tiene infinitas soluciones: todas las parejas $(x,y)$ con $kx+ky=1$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Ninguna solución: ocurriría si las rectas fueran paralelas sin coincidir. Aquí las dos ecuaciones son la misma, así que siempre hay puntos comunes.",
+     "B": "Una solución: exige que el determinante del sistema sea distinto de cero. Como las ecuaciones son proporcionales, el determinante es cero.",
+     "D": "Dependen del valor de $m$ y $n$: la relación $k=4m=3n$ hace que las ecuaciones coincidan para cualquier valor de $m$, $n$ y $k$ distintos de cero. La cantidad de soluciones no depende de esos valores."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q25",
@@ -941,7 +1363,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-trigonometria",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que encontrar el punto de intersección de $f$ y $g$, luego los puntos donde cada recta corta al eje $X$ y, finalmente, aplicar la fórmula del área del triángulo.",
+    "planteamiento": "Se pide el área del triángulo formado por las gráficas de $f$, $g$ y el eje $X$. Datos: $f(x)=-2x+7$ y $g(x)=x+4$; la figura muestra el triángulo sombreado.",
+    "steps": [
+     "Intersección de $f$ y $g$: $-2x+7=x+4$, es decir, $3=3x$, así que $x=1$. Reemplazando, $g(1)=5$; el vértice superior es $(1,5)$.",
+     "Corte de $g$ con el eje $X$: $x+4=0$ da $x=-4$. El vértice izquierdo es $(-4,0)$.",
+     "Corte de $f$ con el eje $X$: $-2x+7=0$ da $x=\\frac{7}{2}$. El vértice derecho es $\\left(\\frac{7}{2},0\\right)$.",
+     "La base del triángulo está sobre el eje $X$ y mide $\\frac{7}{2}-(-4)=\\frac{15}{2}$ unidades.",
+     "La altura es la distancia vertical del vértice $(1,5)$ al eje $X$, que es $5$ unidades.",
+     "Aplica la fórmula: $\\text{Área}=\\frac{1}{2}\\cdot\\frac{15}{2}\\cdot 5=\\frac{75}{4}$ unidades cuadradas. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{15}{4}$: usa la coordenada $x=1$ del vértice como altura, en vez de la altura vertical $5$. Es un error al confundir ejes.",
+     "B": "$\\frac{15}{2}$: es solo la base del triángulo. Olvida multiplicarla por la altura y dividir por $2$.",
+     "C": "$\\frac{75}{2}$: aplica bien la base y la altura, pero olvida el factor $\\frac{1}{2}$ de la fórmula del área del triángulo."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q26",
@@ -976,7 +1416,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-inversa",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El nivel inicial es $b$ y el aumento por hora es $a$; con las dos condiciones del enunciado se obtienen ambos valores y luego se evalúa en $t=5$.",
+    "planteamiento": "Se pide $n(5)$ con $n(t)=at+b$. Datos: $n(3)=273$ cm y el nivel inicial $b$ es el cuádruple del aumento por hora, $b=4a$.",
+    "steps": [
+     "El nivel inicial corresponde a $t=0$, así que $n(0)=b$.",
+     "El enunciado dice que el nivel inicial es el cuádruple del aumento por hora: $b=4a$.",
+     "Con $n(3)=273$, se tiene $3a+b=273$.",
+     "Reemplaza $b=4a$ en la ecuación: $3a+4a=273$, es decir, $7a=273$, así que $a=39$ cm por hora.",
+     "Entonces $b=4\\cdot 39=156$ cm.",
+     "Calcula $n(5)=5\\cdot 39+156=195+156=351$ cm. Comprobación: $n(3)=3\\cdot 39+156=117+156=273$, que coincide con el dato. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$275$ cm: suma solo $2$ cm al nivel de $273$ cm, como si el nivel subiera poco. No sigue la relación lineal del modelo, cuya pendiente es $39$.",
+     "C": "$441$ cm: invierte la relación y toma $b=\\frac{a}{4}$ en lugar de $b=4a$. Con esa suposición se obtiene $a=84$ y $n(5)=441$, pero no cumple el enunciado.",
+     "D": "$455$ cm: supone que el depósito estaba vacío, es decir $b=0$. Entonces $a=91$ y $n(5)=455$, pero el enunciado indica que el depósito contenía agua al inicio."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q27",
@@ -1012,7 +1470,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al igualar los dos modelos de densidad, la variable $x$ resulta ser la longitud de la circunferencia de la base.",
+    "planteamiento": "Se pide qué medida representa $x$ en el modelo $\\rho=\\frac{4\\pi M}{Hx^2}$. Datos: $\\rho=\\frac{M}{V}$ con el volumen de un cilindro $V=\\pi r^2 H$, con altura $H$ y radio $r$.",
+    "steps": [
+     "El volumen del cilindro es $V=\\pi r^2 H$, así que la densidad es $\\rho=\\frac{M}{\\pi r^2 H}$.",
+     "Iguala las dos expresiones de la densidad: $\\frac{M}{\\pi r^2 H}=\\frac{4\\pi M}{H x^2}$.",
+     "Cancela $M$ y $H$, que son distintos de cero: $\\frac{1}{\\pi r^2}=\\frac{4\\pi}{x^2}$.",
+     "Multiplica en cruz: $x^2=4\\pi\\cdot \\pi r^2=4\\pi^2 r^2$.",
+     "Saca raíz cuadrada: $x=2\\pi r$.",
+     "La expresión $2\\pi r$ es la longitud de la circunferencia de la base, es decir, el perímetro de la base. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El área de la base: si $x=\\pi r^2$, entonces $x^2=\\pi^2 r^4$, que no coincide con $4\\pi^2 r^2$. La igualdad exige una magnitud lineal en $r$.",
+     "B": "El radio de la base: si $x=r$, entonces $x^2=r^2$, que no coincide con $4\\pi^2 r^2$. Falta el factor $2\\pi$.",
+     "C": "El diámetro de la base: si $x=2r$, entonces $x^2=4r^2$. Falta el factor $\\pi^2$, así que el modelo no reproduce la densidad real."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q28",
@@ -1047,7 +1523,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se despeja $V$ de la fórmula de la presión dinámica, con cuidado de dejar el $2$ en el lugar correcto.",
+    "planteamiento": "Se pide la rapidez $V$ en función de la densidad $A$ y la presión dinámica $q$. Datos: $q=\\frac{1}{2}AV^2$.",
+    "steps": [
+     "Parte de la expresión dada: $q=\\frac{1}{2}AV^2$.",
+     "Multiplica ambos lados por $2$ para eliminar la fracción: $2q=AV^2$.",
+     "Divide por $A$, que es distinto de cero: $V^2=\\frac{2q}{A}$.",
+     "Saca raíz cuadrada en ambos lados, considerando que la rapidez es positiva: $V=\\sqrt{\\frac{2q}{A}}$.",
+     "Comprobación: si $V=\\sqrt{\\frac{2q}{A}}$, entonces $V^2=\\frac{2q}{A}$ y $\\frac{1}{2}AV^2=\\frac{1}{2}A\\cdot\\frac{2q}{A}=q$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{q}{A}$: no contiene raíz ni el $2$. Es una expresión que no es consistente con el cuadrado de $V$ en la fórmula.",
+     "B": "$\\sqrt{\\frac{q}{2A}}$: deja el $2$ en el denominador, lo que equivale a dividir por $2$ en vez de multiplicar. Al comprobar, no se obtiene $q$.",
+     "D": "$\\frac{\\sqrt{2q}}{A}$: pone la raíz solo sobre el $2q$ y deja $A$ fuera, así que el valor depende de $A$ de forma incorrecta."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q29",
@@ -1082,7 +1575,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La parábola tiene su vértice en $(-5,0)$, y con un punto adicional se obtiene el coeficiente que la hace pasar por $(0,50)$.",
+    "planteamiento": "Se pide la expresión de $f(x)$ para la parábola de la figura. Datos: el vértice está en $(-5,0)$ y la curva pasa por $(0,50)$ y por $(-10,50)$.",
+    "steps": [
+     "El vértice está en el punto mínimo de la curva, $(-5,0)$, así que la forma es $f(x)=a(x+5)^2$.",
+     "Usa el punto $(0,50)$: $50=a(0+5)^2=25a$, así que $a=2$.",
+     "Entonces $f(x)=2(x+5)^2$.",
+     "Desarrolla: $2(x^2+10x+25)=2x^2+20x+50$.",
+     "Comprobación con el otro punto: $f(-10)=2(-10+5)^2=2\\cdot 25=50$, que coincide con la figura. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$(x+5)^2+50$: tiene vértice en $(-5,50)$, no en $(-5,0)$. Confunde la altura de la parábola con la altura del vértice.",
+     "B": "$2x^2-20x+50$: equivale a $2(x-5)^2$, con vértice en $x=5$. Cambia el signo del desplazamiento horizontal.",
+     "D": "$(x-5)^2+50$: tiene vértice en $(5,50)$, que está a la derecha del eje $Y$. Ni la posición ni la altura coinciden con la figura."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q30",
@@ -1117,7 +1627,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una ecuación cuadrática no tiene solución real cuando su discriminante es negativo; la condición sobre $b$ sale de esa desigualdad.",
+    "planteamiento": "Se pide el intervalo de valores de $b$ para los cuales $x^2+bx-2b=0$ no tiene solución real. Datos: $a=1$, coeficiente lineal $b$ y término independiente $-2b$.",
+    "steps": [
+     "Para que la ecuación no tenga solución real, el discriminante debe ser negativo: $\\Delta=b^2-4\\cdot 1\\cdot(-2b)<0$.",
+     "Calcula el discriminante: $\\Delta=b^2+8b$.",
+     "Impón la condición: $b^2+8b<0$.",
+     "Factoriza: $b(b+8)<0$. El producto es negativo cuando los factores tienen signos opuestos.",
+     "Los puntos críticos son $b=-8$ y $b=0$. Entre ellos, el producto es negativo, por ejemplo con $b=-1$: $(-1)(7)=-7<0$.",
+     "Así, $-8<b<0$, y los extremos quedan excluidos porque en ellos el discriminante vale $0$ y la ecuación tiene una raíz real doble. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$[-8,0]$: incluye los extremos, donde el discriminante es $0$ y la ecuación tiene una solución real doble. Además, el intervalo cerrado no cumple la condición estricta.",
+     "B": "$]-\\infty,-8]\\cup[0,\\infty[$: describe los valores de $b$ con discriminante mayor o igual que $0$, es decir, donde sí hay soluciones reales. Invierte la desigualdad.",
+     "D": "$]-\\infty,-8[\\cup]0,\\infty[$: es la región donde el discriminante es positivo, por lo que la ecuación tiene dos soluciones reales. Es el complemento del intervalo correcto."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q31",
@@ -1156,7 +1684,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como $a>0$, el término cuadrático resta volumen; por eso el volumen nunca supera $v_0$ y la afirmación de máximo es siempre verdadera.",
+    "planteamiento": "Se pide la afirmación que es siempre verdadera sobre $V(t)=-\\frac{a}{2}t^2+v_0$, con $a>0$ y $t\\ge 0$. Datos: $V(0)=v_0$ y el término $-\\frac{a}{2}t^2$ siempre es menor o igual que $0$.",
+    "steps": [
+     "Calcula el volumen inicial: $V(0)=-\\frac{a}{2}\\cdot 0^2+v_0=v_0$.",
+     "Como $a>0$ y $t^2\\ge 0$, el término $-\\frac{a}{2}t^2$ es menor o igual que $0$. Entonces $V(t)\\le v_0$ para todo $t$.",
+     "El valor máximo se alcanza cuando $t^2=0$, es decir, en $t=0$, y vale $v_0$.",
+     "Por lo tanto, el máximo volumen de agua del pozo es $v_0$ m$^3$, y esta afirmación se cumple siempre.",
+     "Descarta las demás: $V$ disminuye para $t>0$, el pozo se vacía en $t=\\sqrt{\\frac{2v_0}{a}}$ y $V(2)=v_0-2a$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El volumen inicial es $0$ m$^3$: en realidad es $v_0$. Solo sería $0$ si $v_0=0$, lo que no se garantiza.",
+     "B": "El volumen aumenta con el tiempo: el término cuadrático tiene signo negativo, así que $V$ disminuye para $t>0$.",
+     "D": "El pozo queda sin agua en $t=\\frac{2v_0}{a}$: el volumen se anula cuando $t^2=\\frac{2v_0}{a}$, es decir, en $t=\\sqrt{\\frac{2v_0}{a}}$. Confunde la raíz con el cociente.",
+     "E": "El volumen es $(2a+v_0)$ m$^3$ cuando $t=2$: el valor correcto es $V(2)=v_0-2a$. Cambia el signo del término cuadrático."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q32",
@@ -1191,7 +1737,24 @@
     "mono": false
    },
    "textQuality": "approximate",
-   "subtopic": "m2-financiera"
+   "subtopic": "m2-financiera",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las rectas presupuestarias tienen como interceptos el sueldo dividido por el precio de cada bien; al bajar el sueldo y subir el precio de P, ambos interceptos cambian en el sentido esperado.",
+    "planteamiento": "Se pide el gráfico que muestra la recta antes y después de los cambios. Datos: antes, los interceptos son $\\frac{I}{p}$ en el eje de P y $\\frac{I}{q}$ en el eje de Q; después, el sueldo es $M$ y el precio de P es $s$.",
+    "steps": [
+     "Una recta presupuestaria cumple $I=pP+qQ$, así que su intercepto con el eje de P es $\\frac{I}{p}$ y con el eje de Q es $\\frac{I}{q}$.",
+     "Antes de los cambios, la recta une $\\frac{I}{p}$ en el eje de P con $\\frac{I}{q}$ en el eje de Q.",
+     "Después de los cambios, la ecuación es $M=sP+qQ$, así que el intercepto con el eje de P es $\\frac{M}{s}$ y con el eje de Q es $\\frac{M}{q}$.",
+     "Como $M<I$, el intercepto en Q baja, así que $\\frac{M}{q}<\\frac{I}{q}$. Como $s>p$, el intercepto en P se acerca al origen, así que $\\frac{M}{s}<\\frac{I}{p}$.",
+     "El gráfico correcto muestra una recta punteada de $\\frac{I}{q}$ a $\\frac{I}{p}$ y una recta continua de $\\frac{M}{q}$ a $\\frac{M}{s}$, con ambos cambios en el sentido indicado. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El intercepto $\\frac{M}{q}$ aparece por encima de $\\frac{I}{q}$, lo que implica que el sueldo subió. El sueldo disminuye, así que este orden es incorrecto.",
+     "C": "El intercepto $\\frac{M}{q}$ aparece por encima de $\\frac{I}{q}$, lo que contradice la disminución del sueldo. Aunque el intercepto en P sí se acerca al origen, la figura no es coherente con los datos.",
+     "D": "El intercepto en P queda con $\\frac{I}{p}$ a la izquierda de $\\frac{M}{s}$, lo que significaría que el precio de P bajó. El precio de P sube, así que el intercepto debe acercarse al origen."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q33",
@@ -1226,7 +1789,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El lente produce una homotecia cuya razón se obtiene con la distancia recorrida por el rayo desde el centro de la lente hasta Q y la distancia desde el centro hasta P; el signo negativo indica que la imagen está invertida.",
+    "planteamiento": "Se pide la razón de homotecia de la imagen respecto del objeto. Datos: el objeto $AP$ mide $12$ mm, la distancia horizontal de $A$ a $M$ es $5$ mm y la distancia de $M$ a $Q$ es $78$ mm.",
+    "steps": [
+     "El rayo que pasa por el centro de la lente $M$ sigue en línea recta desde $P$ hasta $Q$, así que $M$, $P$ y $Q$ están alineados.",
+     "En el triángulo rectángulo $PAM$, el cateto vertical es $AP=12$ mm y el horizontal es $AM=5$ mm. Por Pitágoras, $PM=\\sqrt{12^2+5^2}=\\sqrt{169}=13$ mm.",
+     "La razón entre la distancia de $M$ a $Q$ y la distancia de $M$ a $P$ da el factor de amplificación: $\\frac{MQ}{MP}=\\frac{78}{13}=6$.",
+     "Por lo tanto, la imagen mide $6$ veces el objeto en valor absoluto, es decir, $72$ mm.",
+     "La imagen está invertida respecto del objeto, así que la razón de homotecia es negativa: $k=-6$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$-\\frac{1}{6}$: es la inversa de la razón correcta. Divide la imagen por el objeto en vez de multiplicar, así que la razón está invertida.",
+     "C": "$\\frac{1}{6}$: es el inverso del factor en valor absoluto y además omite la inversión de la imagen.",
+     "D": "$6$: obtiene la magnitud correcta, pero olvida que la imagen está invertida, por lo que el signo negativo se pierde."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q34",
@@ -1261,7 +1841,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La razón de homotecia es el cociente entre el radio de la circunferencia imagen y el radio original, y el enunciado permite escribir el radio original como $OB+6$.",
+    "planteamiento": "Se pide la razón de homotecia de centro $O$, que transforma la circunferencia de radio $OA$ en la de radio $OB$. Datos: $OB$ mide $6$ cm menos que $OA$.",
+    "steps": [
+     "Una homotecia de centro $O$ y razón $k$ lleva cada distancia desde $O$ a $k$ veces esa distancia. Por eso $OB=k\\cdot OA$, y $k=\\frac{OB}{OA}$.",
+     "El enunciado dice que el radio de la circunferencia imagen, $OB$, mide $6$ cm menos que el radio original: $OB=OA-6$.",
+     "Despeja el radio original: $OA=OB+6$.",
+     "Reemplaza en la razón: $k=\\frac{OB}{OA}=\\frac{OB}{OB+6}$.",
+     "Comprobación: si $OB=4$ cm, entonces $OA=10$ cm y $k=\\frac{4}{10}$, que coincide con $\\frac{OB}{OB+6}=\\frac{4}{10}$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{OA}{OA+6}$: intercambia los roles de $OA$ y $OB$. Además, usa $OA+6$, que no corresponde a lo que dice el enunciado.",
+     "C": "$\\frac{OB-6}{OB}$: usa $OB-6$ como si fuera el radio original con el signo cambiado. El radio original es mayor que $OB$, no menor.",
+     "D": "$\\frac{OB+6}{AB}$: mezcla un radio con un segmento $AB$ que no es un radio de la circunferencia. No corresponde a un cociente de radios."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q35",
@@ -1297,7 +1894,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un hexágono regular se descompone en seis triángulos equiláteros; con el lado igual a $\\frac{P}{6}$ se obtiene el área en función de $P^2$.",
+    "planteamiento": "Se pide el valor de $k$ en $A=P^2\\cdot k$, donde $A$ es el área de un hexágono regular de perímetro $P$. Datos: el hexágono tiene $6$ lados iguales de longitud $\\frac{P}{6}$.",
+    "steps": [
+     "El lado del hexágono es $s=\\frac{P}{6}$, porque el perímetro es $6s$.",
+     "El hexágono regular se divide en seis triángulos equiláteros de lado $s$.",
+     "El área de un triángulo equilátero de lado $s$ es $\\frac{\\sqrt{3}}{4}s^2$, así que el área del hexágono es $6\\cdot\\frac{\\sqrt{3}}{4}s^2=\\frac{3\\sqrt{3}}{2}s^2$.",
+     "Reemplaza $s=\\frac{P}{6}$: $A=\\frac{3\\sqrt{3}}{2}\\cdot\\frac{P^2}{36}=\\frac{3\\sqrt{3}}{72}P^2$.",
+     "Simplifica: $\\frac{3\\sqrt{3}}{72}=\\frac{\\sqrt{3}}{24}$, así que $A=\\frac{\\sqrt{3}}{24}P^2$ y $k=\\frac{\\sqrt{3}}{24}$.",
+     "Comprobación: con $P=12$ cm, el lado es $2$ cm y el área es $\\frac{3\\sqrt{3}}{2}\\cdot 4=6\\sqrt{3}$ cm$^2$, que coincide con $\\frac{\\sqrt{3}}{24}\\cdot 144=6\\sqrt{3}$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{1}{12}$: no tiene el factor $\\sqrt{3}$ de la fórmula del área del triángulo equilátero. Su valor no corresponde al hexágono.",
+     "C": "$\\frac{\\sqrt{3}}{12}$: es el doble del valor correcto. Aparece al calcular mal la constante de la descomposición en triángulos.",
+     "D": "$\\frac{\\sqrt{3}}{6}$: es cuatro veces el valor correcto. Surge al tomar el área de cada triángulo como $s^2\\sqrt{3}$ sin dividir por $4$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q36",
@@ -1332,7 +1947,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-trigonometria",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada rotación de $60^\\circ$ aplica la misma fórmula; hay que aplicarla dos veces, primero a $\\vec{a}$ y luego al resultado $\\vec{b}$.",
+    "planteamiento": "Se pide el vector $\\vec{c}$ obtenido al rotar dos veces $60^\\circ$ en sentido antihorario el vector $\\vec{a}=(1,0)$. Datos: la rotación de $\\vec{v}=(x,y)$ da $\\vec{w}=\\left(\\frac{x}{2}-\\frac{\\sqrt{3}}{2}y,\\ \\frac{y}{2}+\\frac{\\sqrt{3}}{2}x\\right)$.",
+    "steps": [
+     "Aplica la fórmula a $\\vec{a}=(1,0)$: $\\vec{b}=\\left(\\frac{1}{2}-\\frac{\\sqrt{3}}{2}\\cdot 0,\\ \\frac{0}{2}+\\frac{\\sqrt{3}}{2}\\cdot 1\\right)=\\left(\\frac{1}{2},\\frac{\\sqrt{3}}{2}\\right)$.",
+     "Aplica la fórmula a $\\vec{b}=\\left(\\frac{1}{2},\\frac{\\sqrt{3}}{2}\\right)$, con $x=\\frac{1}{2}$ e $y=\\frac{\\sqrt{3}}{2}$.",
+     "La primera coordenada es $\\frac{x}{2}-\\frac{\\sqrt{3}}{2}y=\\frac{1}{4}-\\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{3}}{2}=\\frac{1}{4}-\\frac{3}{4}=-\\frac{1}{2}$.",
+     "La segunda coordenada es $\\frac{y}{2}+\\frac{\\sqrt{3}}{2}x=\\frac{\\sqrt{3}}{4}+\\frac{\\sqrt{3}}{4}=\\frac{\\sqrt{3}}{2}$.",
+     "Así, $\\vec{c}=\\left(-\\frac{1}{2},\\frac{\\sqrt{3}}{2}\\right)$. Comprobación: su módulo es $\\sqrt{\\frac{1}{4}+\\frac{3}{4}}=1$, igual al de $\\vec{a}$, como debe ocurrir en una rotación. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\left(\\frac{1}{4},\\frac{3}{4}\\right)$: no es el resultado de aplicar dos veces la fórmula de rotación. Sus coordenadas no tienen módulo $1$.",
+     "B": "$(1,\\sqrt{3})$: es el doble de $\\vec{b}$. Confunde rotar con escalar por $2$, y el módulo de la respuesta sería $2$.",
+     "C": "$\\left(-\\frac{1}{2},\\frac{5\\sqrt{3}}{4}\\right)$: la primera coordenada es correcta, pero la segunda suma mal los términos y obtiene $\\frac{5\\sqrt{3}}{4}$ en vez de $\\frac{\\sqrt{3}}{2}$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q37",
@@ -1367,7 +1999,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-homotecia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cantidad de aluminio es el área de la sección transversal multiplicada por el largo; el área de la sección se obtiene como rectángulo exterior menos rectángulo interior.",
+    "planteamiento": "Se pide el volumen de aluminio de un perfil de largo $L$. Datos: la sección exterior mide $A$ por $B$ mm y el grosor es $T$ mm, de modo que el hueco interior mide $(A-2T)$ por $(B-2T)$ mm.",
+    "steps": [
+     "El área exterior de la sección es $A\\cdot B$.",
+     "El área interior, la parte hueca, es $(A-2T)(B-2T)=AB-2TA-2TB+4T^2$.",
+     "El área de aluminio de la sección es la diferencia: $AB-(AB-2TA-2TB+4T^2)=2TA+2TB-4T^2=2T(A+B)-4T^2$.",
+     "El volumen de aluminio es el área de la sección multiplicada por el largo: $V=\\left(2T(A+B)-4T^2\\right)L$ mm$^3$.",
+     "Comprobación: si $A=B=10$ y $T=1$, el área exterior es $100$, el hueco es $8\\cdot 8=64$ y la sección de aluminio es $36$, que coincide con $2\\cdot 1\\cdot 20-4=36$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$2T(A+B)+4T^2$: suma el término de las esquinas en vez de restarlo. Entonces cuenta más aluminio del que hay realmente en la sección.",
+     "C": "$TL(2A+B-T)$: no corresponde a la sección. Usa un factor $T$ en vez de $2T$ y resta solo $T$, por lo que no reproduce el área de las cuatro paredes.",
+     "D": "$2TL(A+B)$: cuenta las cuatro paredes con su longitud completa y no descuenta las esquinas, que se cuentan dos veces. Falta el término $-4T^2$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q38",
@@ -1402,7 +2051,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-trigonometria",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la escalera, el muro y el suelo forman un triángulo rectángulo, la altura se obtiene con el teorema de Pitágoras usando la nueva distancia de la base al muro.",
+    "planteamiento": "Se pide la altura $h$ a la que queda apoyada la escalera después de que la base se mueve $n$ metros. Datos: la escalera mide $5$ m (hipotenusa), la base estaba a $3$ m del muro y ahora queda a $3+n$ m.",
+    "steps": [
+     "La escalera, el muro y el suelo forman un triángulo rectángulo: el muro y el suelo son los catetos y la escalera es la hipotenusa, porque el muro es perpendicular al suelo.",
+     "Al mover la base $n$ metros en el sentido de la flecha, la distancia horizontal desde la base al muro pasa de $3$ m a $3+n$ m.",
+     "Plantea el teorema de Pitágoras con hipotenusa $5$ y cateto horizontal $3+n$: $h^2 + (3+n)^2 = 5^2$.",
+     "Despeja la altura al cuadrado: $h^2 = 5^2 - (3+n)^2 = 25 - (3+n)^2$.",
+     "Como la altura es positiva, extrae la raíz cuadrada: $h = \\sqrt{25 - (3+n)^2}$ metros.",
+     "Comprobación: si $n = 0$, $h = \\sqrt{25 - 9} = \\sqrt{16} = 4$ m, que coincide con la terna pitagórica $3$-$4$-$5$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\sqrt{25 + (3+n)^2}$ metros: cambia la resta por una suma en el teorema de Pitágoras. El resultado sería mayor que la hipotenusa de $5$ m, algo imposible en un triángulo rectángulo.",
+     "C": "$\\sqrt{25 + 3^2 + n^2}$ metros: suma los cuadrados de los catetos a la hipotenusa y además separa $(3+n)^2$ como $3^2 + n^2$, lo que omite el término $6n$ del desarrollo del cuadrado.",
+     "D": "$\\sqrt{25 - 3^2 - n^2}$ metros: resta por separado $3^2$ y $n^2$, olvidando que el cateto horizontal es $3+n$ y que $(3+n)^2$ tiene el término cruzado $6n$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q39",
@@ -1437,7 +2104,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-analitica"
+   "subtopic": "m2-analitica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una transformación se aplica en orden: primero la traslación suma el vector a cada coordenada, y luego la rotación de $180^\\circ$ con centro en el origen cambia el signo de ambas.",
+    "planteamiento": "Se pide el punto imagen de $A(3, 8)$ tras dos transformaciones. Datos: traslación con vector $\\vec{v} = (4, -3)$ y rotación de $180^\\circ$ con centro en el origen $(0, 0)$.",
+    "steps": [
+     "Traslación: se suma el vector a las coordenadas del punto, $A' = (3 + 4,\\ 8 + (-3)) = (7, 5)$.",
+     "Una rotación de $180^\\circ$ con centro en el origen lleva $(x, y)$ a $(-x, -y)$, porque media vuelta invierte ambas coordenadas.",
+     "Aplica la regla al punto trasladado: $A'' = (-7, -5)$.",
+     "Comprobación: el punto $(-7,-5)$ está en el tercer cuadrante y a la misma distancia del origen que $(7,5)$, como corresponde a una media vuelta. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$(-5, 7)$: intercambia las coordenadas y cambia un solo signo. Esa es la imagen de una rotación de $90^\\circ$, no de $180^\\circ$.",
+     "C": "$(-7, -11)$: en la traslación calcula $8 + (-3) = -11$, sumando mal la componente vertical del vector; la componente correcta es $8 - 3 = 5$.",
+     "D": "$(7, 5)$: es el punto después de la traslación, pero olvida aplicar la rotación de $180^\\circ$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q40",
@@ -1476,7 +2159,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-analitica"
+   "subtopic": "m2-analitica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una reflexión respecto de una recta vertical deja la coordenada $y$ igual y reemplaza $x$ por su simétrica respecto de esa recta.",
+    "planteamiento": "Se pide la regla de la imagen $(x', y')$ de un punto genérico $(x, y)$. Datos: la recta de reflexión contiene al punto $(3, 3)$ y es paralela al eje $Y$, así que es la recta $x = 3$.",
+    "steps": [
+     "Una recta paralela al eje $Y$ que pasa por $(3,3)$ es vertical: su ecuación es $x = 3$.",
+     "La distancia horizontal de un punto $x$ a la recta es $3 - x$. La imagen queda a esa misma distancia, pero al otro lado de la recta: $x' = 3 + (3 - x) = 6 - x$.",
+     "La reflexión respecto de una recta vertical no desplaza los puntos en vertical, así que $y' = y$.",
+     "Por lo tanto la regla es $(x', y') = (6 - x, y) = (-x + 6, y)$.",
+     "Comprobación: el punto $(3, 5)$ está sobre la recta y debe quedar fijo; la regla da $(6 - 3, 5) = (3, 5)$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$(-x + 3, y)$: no es la reflexión respecto de $x = 3$, porque el punto $(3, y)$ no quedaría fijo: $-3 + 3 = 0 \\neq 3$.",
+     "C": "$(6 - 2x, y)$: calcula la distancia como $2x$ en lugar de $2(3 - x)$; con $x = 3$ daría $0$ y el punto de la recta no quedaría fijo.",
+     "D": "$(x, -y + 6)$: cambia la coordenada equivocada. Es la reflexión respecto de la recta horizontal $y = 3$, no de la vertical $x = 3$.",
+     "E": "$(x, -y + 3)$: corresponde a una reflexión respecto de la recta horizontal $y = \\frac{3}{2}$, no de la vertical $x = 3$, y además cambia la coordenada $y$ en lugar de la $x$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q41",
@@ -1511,7 +2212,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-trigonometria",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el triángulo rectángulo, el seno de un ángulo es el cateto opuesto dividido por la hipotenusa; la distancia del pie de la escalera al muro es el cateto opuesto al ángulo de $37^\\circ$.",
+    "planteamiento": "Se pide la igualdad trigonométrica verdadera. Datos: escalera de $3$ m (hipotenusa), ángulo de $37^\\circ$ entre la escalera y el muro, y distancia del pie al muro $x$ m, que es el cateto opuesto a ese ángulo.",
+    "steps": [
+     "El muro, el suelo y la escalera forman un triángulo rectángulo en la esquina donde el muro toca el suelo.",
+     "El ángulo de $37^\\circ$ está en el extremo superior de la escalera, entre la escalera y el muro. Su lado opuesto es el tramo del suelo entre el pie de la escalera y el muro, de longitud $x$.",
+     "La hipotenusa es la escalera, de $3$ m, porque es el lado opuesto al ángulo recto.",
+     "Por definición, $\\mathrm{sen}\\,\\theta = \\dfrac{\\text{cateto opuesto}}{\\text{hipotenusa}}$, así que $\\mathrm{sen}\\,37^\\circ = \\dfrac{x}{3}$.",
+     "Comprobación: $x = 3\\cdot \\mathrm{sen}\\,37^\\circ \\approx 3\\cdot 0{,}6 = 1{,}8$ m, una distancia menor que la escalera, como debe ser. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\cos 37^\\circ = \\frac{3}{x}$: confunde el seno con el coseno, que usa el cateto adyacente (el muro), y además invierte el cociente.",
+     "C": "$\\tan 37^\\circ = \\frac{x}{3}$: la tangente compara los dos catetos, opuesto con adyacente, y no usa la hipotenusa de $3$ m.",
+     "D": "$\\tan 37^\\circ = \\frac{3}{x}$: invierte la tangente y usa la escalera como si fuera un cateto; la tangente no involucra la hipotenusa."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q42",
@@ -1546,7 +2264,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los límites de atípicos salen de $Q_1$, $Q_3$ y del rango intercuartílico; después se cuenta cuántos datos superan el límite superior.",
+    "planteamiento": "Se pide cuántos de los datos $60$, $65$, $72$ y $78$ son atípicos. Datos: $Q_1 = 20$ y $Q_3 = 40$; un dato es atípico si es menor que $Q_1 - \\frac{3}{2}R$ o mayor que $Q_3 + \\frac{3}{2}R$.",
+    "steps": [
+     "Calcula el rango intercuartílico: $R = Q_3 - Q_1 = 40 - 20 = 20$.",
+     "Calcula $\\frac{3}{2}R = \\frac{3}{2}\\cdot 20 = 30$.",
+     "Límite inferior: $Q_1 - \\frac{3}{2}R = 20 - 30 = -10$. Ningún dato es menor que $-10$, así que no hay atípicos por abajo.",
+     "Límite superior: $Q_3 + \\frac{3}{2}R = 40 + 30 = 70$. Un dato es atípico si es mayor que $70$.",
+     "Compara cada dato con $70$: $60 < 70$ y $65 < 70$ (no atípicos); $72 > 70$ y $78 > 70$ (atípicos).",
+     "Se cuentan dos datos atípicos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$1$: cuenta solo un dato, por ejemplo el $78$, porque olvida que $72$ también supera el límite de $70$.",
+     "C": "$3$: usa como margen solo $R = 20$ en lugar de $\\frac{3}{2}R = 30$, con lo que el límite superior queda en $60$ y los datos $65$, $72$ y $78$ parecen atípicos.",
+     "D": "$4$: suma mal el límite inferior: si se calcula $Q_3 - \\frac{3}{2}R = 10$ como si fuera el límite superior, los cuatro datos quedan por encima."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q43",
@@ -1582,7 +2318,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La mediana de un grupo unido no es el promedio de las medianas de cada grupo; hay que ver en qué posiciones caen las edades al ordenarlas todas juntas.",
+    "planteamiento": "Se pide la mediana de las edades de $200$ personas. Datos: cada grupo tiene $100$ personas; en el grupo 1 el mayor valor es $10$ años y en el grupo 2 el menor valor es $10$ años.",
+    "steps": [
+     "Con $100 + 100 = 200$ personas, la mediana es el promedio de las edades que ocupan las posiciones $100$ y $101$ al ordenar todas las edades de menor a mayor.",
+     "En los diagramas, el grupo 1 tiene mínimo $2$, $Q_1 = 5$, mediana $8$, $Q_3 = 10$ y máximo $10$. El grupo 2 tiene mínimo $10$, $Q_1 = 20$, mediana $28$, $Q_3 = 35$ y máximo $40$.",
+     "Todas las edades del grupo 1 son menores o iguales que $10$, y todas las del grupo 2 son mayores o iguales que $10$.",
+     "Por lo tanto, las primeras $100$ posiciones de la lista ordenada corresponden al grupo 1, y la posición $100$ tiene edad $10$.",
+     "La posición $101$ corresponde al menor valor del grupo 2, que es $10$.",
+     "La mediana es $\\frac{10 + 10}{2} = 10$ años, y no $8$ ni $28$, que son las medianas de cada grupo por separado. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$18$: es el promedio de las medianas de los dos grupos, $\\frac{8 + 28}{2}$. Ese cálculo ignora que las personas se reparten de otra forma al unir ambos grupos.",
+     "C": "$28$: es la mediana del grupo 2. Olvida que el grupo 1 aporta $100$ personas con edades menores o iguales que $10$, lo que desplaza la mediana total hacia el grupo 1.",
+     "D": "$36$: no puede ser la mediana, porque al menos la mitad de las personas (las $100$ del grupo 1) tiene edades menores o iguales que $10$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q44",
@@ -1617,7 +2371,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con la frecuencia acumulada, cada porcentaje de una fila se obtiene restando el acumulado anterior; luego se descartan las dos categorías que se excluyen.",
+    "planteamiento": "Se pide el porcentaje de personas que no presenta hipoglucemia y no presenta hiperglucemia. Datos: frecuencia acumulada de hipoglucemia $5\\%$, hasta normal $23\\%$, hasta glucemia alterada $50\\%$ y hasta hiperglucemia $100\\%$.",
+    "steps": [
+     "La frecuencia de hipoglucemia es su acumulada, es decir, $5\\%$ de las personas.",
+     "Para hiperglucemia, la acumulada de su fila es $100\\%$ y la de la fila anterior (glucemia alterada) es $50\\%$. Por diferencia, hiperglucemia es $100\\% - 50\\% = 50\\%$.",
+     "Las personas con hipoglucemia o hiperglucemia suman $5\\% + 50\\% = 55\\%$.",
+     "Las que no tienen ninguna de las dos son $100\\% - 55\\% = 45\\%$.",
+     "Comprobación: normal es $23\\% - 5\\% = 18\\%$ y glucemia alterada es $50\\% - 23\\% = 27\\%$. Entonces $5 + 18 + 27 + 50 = 100$, y $18 + 27 = 45$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$55\\%$: es el porcentaje que sí presenta hipoglucemia o hiperglucemia; se eligió el complemento de lo que se pide.",
+     "C": "$68\\%$: resta la hipoglucemia ($5\\%$) y la glucemia alterada ($27\\%$) en lugar de la hiperglucemia ($50\\%$), mezclando categorías.",
+     "D": "$73\\%$: resta $27\\%$, que es la frecuencia de glucemia alterada, en lugar de la frecuencia de hiperglucemia, por confundir la frecuencia de cada fila con la acumulada."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q45",
@@ -1653,7 +2424,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-dispersion",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El coeficiente de variación divide la desviación estándar por el promedio; con los tres datos se calcula primero la media y luego la desviación poblacional.",
+    "planteamiento": "Se pide $C_V = \\frac{\\sigma}{\\bar{x}}$ para los datos $2$, $3$ y $7$. Datos: son los tres valores del grupo, así que se usa la desviación estándar poblacional $\\sigma$, que divide por $n = 3$.",
+    "steps": [
+     "Calcula el promedio: $\\bar{x} = \\frac{2 + 3 + 7}{3} = \\frac{12}{3} = 4$.",
+     "Calcula las desviaciones respecto de la media: $2 - 4 = -2$, $3 - 4 = -1$ y $7 - 4 = 3$.",
+     "Eleva al cuadrado y suma: $(-2)^2 + (-1)^2 + 3^2 = 4 + 1 + 9 = 14$.",
+     "Calcula la varianza poblacional dividiendo por $n = 3$: $\\sigma^2 = \\frac{14}{3}$.",
+     "Saca la raíz: $\\sigma = \\sqrt{\\frac{14}{3}} = \\frac{\\sqrt{14}}{\\sqrt{3}}$.",
+     "Divide por el promedio: $C_V = \\frac{\\sigma}{\\bar{x}} = \\frac{\\sqrt{14}}{4\\sqrt{3}}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{\\sqrt{14}}{4}$: olvida dividir la suma de cuadrados por $n = 3$ al calcular la varianza, de modo que sale $\\sqrt{14}$ en el numerador.",
+     "B": "$\\frac{14}{4}$: divide la suma de cuadrados por el promedio, sin dividir por $n$ ni sacar la raíz; confunde la suma de cuadrados con la desviación estándar.",
+     "D": "$\\frac{14}{12}$: usa la varianza $\\frac{14}{3}$ en lugar de la desviación estándar, y luego la divide por $4$, lo que no es un coeficiente de variación."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q46",
@@ -1688,7 +2477,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-combinatoria"
+   "subtopic": "m2-combinatoria",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como hay restricciones de sexo para dos cargos, se empieza por esos cargos y el tesorero se elige entre las personas que quedan.",
+    "planteamiento": "Se pide el número de grupos distintos de tres cargos (representante, secretario y tesorero) con representante mujer y secretario hombre. Datos: $6$ mujeres y $8$ hombres, es decir, $14$ personas.",
+    "steps": [
+     "El representante debe ser mujer, así que hay $6$ opciones.",
+     "El secretario debe ser hombre, así que hay $8$ opciones. Como el representante ya es mujer, no hay repetición.",
+     "El tesorero puede ser cualquier persona que no haya sido elegida, es decir, $14 - 2 = 12$ opciones.",
+     "Por el principio multiplicativo, el número de grupos distintos es $6\\cdot 8\\cdot 12$.",
+     "Comprobación: los cargos son distintos, así que el orden de elección importa y no se divide por ningún factor. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$14\\cdot 13\\cdot 12$: cuenta todas las formas de elegir tres cargos sin considerar la restricción de sexo para representante y secretario.",
+     "C": "$2(6\\cdot 8\\cdot 12)$: multiplica por $2$ como si hubiera dos órdenes posibles para representante y secretario, algo que no corresponde porque los cargos ya están fijados.",
+     "D": "$2(14\\cdot 13\\cdot 12)$: combina el factor $2$ sin justificación con la falta de restricción de sexo de la opción B."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q47",
@@ -1723,7 +2529,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-cuadraticas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En un torneo en que cada pareja juega una vez, el número de partidos es una combinación de dos jugadores, y eso permite despejar la cantidad de jugadores.",
+    "planteamiento": "Se pide el número de jugadores $n$ si se realizan $28$ partidos. Datos: cada par de jugadores juega exactamente un partido.",
+    "steps": [
+     "Cada partido corresponde a una pareja distinta de jugadores, y en la pareja el orden no importa.",
+     "Con $n$ jugadores, el número de parejas es $\\binom{n}{2} = \\frac{n(n-1)}{2}$.",
+     "Plantea la ecuación $\\frac{n(n-1)}{2} = 28$.",
+     "Multiplica por $2$: $n(n-1) = 56$, es decir, $n^2 - n - 56 = 0$.",
+     "Factoriza: $(n - 8)(n + 7) = 0$. La raíz $n = -7$ no sirve para una cantidad de jugadores, así que $n = 8$.",
+     "Comprobación: $\\frac{8\\cdot 7}{2} = 28$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$27$: resta $1$ a los partidos, como si cada partido involucrara a un solo jugador nuevo; no se considera que cada partido enfrenta a dos jugadores.",
+     "B": "$15$: es la cantidad de partidos con $6$ jugadores, $\\frac{6\\cdot 5}{2} = 15$. Surge de resolver mal la ecuación, por ejemplo con $n(n-1) = 30$ en lugar de $56$.",
+     "C": "$14$: es la mitad de $28$. Dividir directamente no sirve, porque con $14$ jugadores habría $\\frac{14\\cdot 13}{2} = 91$ partidos."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q48",
@@ -1762,7 +2586,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-condicional",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como se escogen tres cargos distintos sin reposición, la probabilidad se obtiene multiplicando las probabilidades de elegir mujer en cada extracción.",
+    "planteamiento": "Se pide la probabilidad de que las tres personas elegidas sean mujeres. Datos: $8$ postulantes, $5$ mujeres y $3$ hombres; se escogen tres personas al azar, sin reposición.",
+    "steps": [
+     "En la primera elección, la probabilidad de que sea mujer es $\\frac{5}{8}$.",
+     "Quedan $7$ postulantes y $4$ mujeres, así que en la segunda elección la probabilidad es $\\frac{4}{7}$.",
+     "Quedan $6$ postulantes y $3$ mujeres, así que en la tercera elección la probabilidad es $\\frac{3}{6} = \\frac{1}{2}$.",
+     "Multiplica las tres probabilidades: $\\frac{5}{8}\\cdot\\frac{4}{7}\\cdot\\frac{3}{6} = \\frac{60}{336}$.",
+     "Simplifica dividiendo por $12$: $\\frac{60}{336} = \\frac{5}{28}$.",
+     "Comprobación con combinatoria: $\\frac{\\binom{5}{3}}{\\binom{8}{3}} = \\frac{10}{56} = \\frac{5}{28}$, el mismo resultado. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{5}{8}$: es solo la probabilidad de que la primera persona sea mujer; olvida las dos elecciones siguientes.",
+     "C": "$\\frac{3}{8}$: es la probabilidad de que la primera persona sea hombre, es decir, el complemento del caso pedido.",
+     "D": "$\\frac{1}{60}$: resulta de invertir el producto $5\\cdot 4\\cdot 3$, como si se tomara la probabilidad de un único orden de las tres mujeres sin considerar todos los casos.",
+     "E": "$\\frac{3}{5}$: divide la cantidad de hombres entre la de mujeres de un modo que no corresponde a ninguna probabilidad del problema; el denominador debe ser el total de postulantes, $8$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q49",
@@ -1797,7 +2640,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-condicional",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las decisiones son independientes, así que la probabilidad de una secuencia es el producto de las probabilidades de cada decisión.",
+    "planteamiento": "Se pide la probabilidad de que el robot gire a la derecha en las primeras $n-1$ decisiones y a la izquierda en la última. Datos: $P(\\text{izquierda}) = \\frac{1}{4}$, por lo tanto $P(\\text{derecha}) = \\frac{3}{4}$, y $n > 3$.",
+    "steps": [
+     "La probabilidad de girar a la derecha es el complemento de la de izquierda: $1 - \\frac{1}{4} = \\frac{3}{4}$.",
+     "El evento pedido es una secuencia fija: derecha en las decisiones $1$ a $n-1$ e izquierda en la decisión $n$.",
+     "Por la regla del producto para decisiones independientes, la probabilidad de las $n-1$ primeras decisiones a la derecha es $\\left(\\frac{3}{4}\\right)^{n-1}$.",
+     "Multiplica por la probabilidad de girar a la izquierda en la última decisión: $\\left(\\frac{3}{4}\\right)^{n-1}\\cdot\\frac{1}{4}$.",
+     "El orden de los factores no altera el producto, así que la expresión es $\\frac{1}{4}\\cdot\\left(\\frac{3}{4}\\right)^{n-1}$.",
+     "Comprobación: con $n = 4$, la probabilidad es $\\frac{1}{4}\\cdot\\left(\\frac{3}{4}\\right)^3 = \\frac{27}{256}$, la de la secuencia derecha, derecha, derecha, izquierda. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{3}{16}\\cdot(n-1)$: multiplica por $n-1$ en lugar de elevar a la potencia; la probabilidad de una secuencia no crece linealmente con el número de decisiones.",
+     "C": "$\\left(\\frac{3}{16}\\right)^{n}$: trata cada decisión como una pareja derecha-izquierda, lo que no corresponde al enunciado, en el que solo la última decisión es a la izquierda.",
+     "D": "$\\frac{3}{4}\\cdot\\left(\\frac{1}{4}\\right)^{n-1}$: intercambia las probabilidades, asignando $\\frac{1}{4}$ a las decisiones que deben ser a la derecha."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q50",
@@ -1832,7 +2693,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-condicional",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las dos cajas son independientes, así que la probabilidad de que ambas bolitas sean azules es el producto de las probabilidades de cada caja.",
+    "planteamiento": "Se pide la probabilidad de sacar azul en la caja 1 y azul en la caja 2. Datos: la caja 1 tiene $M$ azules y $N$ blancas (total $M+N$); la caja 2 tiene $3$ azules y $5$ blancas (total $8$).",
+    "steps": [
+     "En la caja 1, la probabilidad de sacar una bolita azul es $\\frac{M}{M+N}$.",
+     "En la caja 2, la probabilidad de sacar una bolita azul es $\\frac{3}{3+5} = \\frac{3}{8}$.",
+     "Como se extrae una bolita de cada caja y las cajas no se mezclan, los dos sucesos son independientes.",
+     "La probabilidad conjunta es el producto: $P = \\frac{M}{M+N}\\cdot\\frac{3}{8}$.",
+     "Comprobación: si $M = 3$ y $N = 5$, cada caja tiene probabilidad $\\frac{3}{8}$ y el producto es $\\frac{9}{64}$, que coincide con la fórmula. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{M+3}{M+N+8}\\cdot\\frac{M+2}{M+N+7}$: supone que las bolitas se agregan entre cajas y que se extrae sin reemplazo. En el enunciado cada caja se mantiene y el numerador $M+3$ no corresponde a azules.",
+     "B": "$\\frac{M+3}{M+N+8}+\\frac{M+2}{M+N+7}$: suma en lugar de multiplicar, y la probabilidad de que ocurran ambos sucesos no es la suma de sus probabilidades.",
+     "C": "$\\frac{M}{M+N}+\\frac{3}{8}$: suma las probabilidades de cada caja. Con $M = 5$ y $N = 5$ daría $\\frac{7}{8}$, mientras que la probabilidad correcta es $\\frac{3}{16}$."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q51",
@@ -1871,7 +2749,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con un crecimiento del $10\\%$ anual, el factor total es $1{,}1^n$, y se necesita una condición que fije $n$; el crecimiento total de $33{,}1\\%$ la entrega.",
+    "planteamiento": "Se pide decidir si (1) el presupuesto actual o (2) el crecimiento total de $33{,}1\\%$ bastan para determinar $n$. Datos: el presupuesto crece $10\\%$ cada año durante $n$ años.",
+    "steps": [
+     "Con (1), solo se conoce el presupuesto actual. Sin el presupuesto inicial no se sabe el factor total, y para cada $n$ existe un presupuesto inicial distinto, así que (1) no basta por sí sola.",
+     "Con (2), el presupuesto final es $1{,}331$ veces el inicial, así que $1{,}1^n = 1{,}331$.",
+     "Como $1{,}1\\cdot 1{,}1\\cdot 1{,}1 = 1{,}331$, se obtiene $n = 3$. La función $1{,}1^n$ es creciente, así que hay una única solución.",
+     "Por lo tanto, (2) basta por sí sola para determinar $n$.",
+     "Como (2) basta por sí sola y (1) no, la respuesta corresponde a esa situación. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: el presupuesto actual no determina cuántos años han pasado, porque cualquier valor de $n$ es compatible con ese monto.",
+     "C": "Ambas juntas: (2) ya basta por sí sola, así que exigir también (1) es innecesario.",
+     "D": "Cada una por sí sola: (1) no basta, así que la afirmación no se cumple; el error está en suponer que el presupuesto actual, sin el inicial, fija $n$.",
+     "E": "Se requiere información adicional: el dato de $33{,}1\\%$ permite despejar $1{,}1^n = 1{,}331$, así que no falta ningún dato."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q52",
@@ -1910,7 +2806,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con el vértice conocido, la parábola queda en la forma $a(x-h)^2 + k$ y solo falta $a$; un valor adicional de la función lo determina, por eso hay que combinar los datos.",
+    "planteamiento": "Se pide decidir si (1) las coordenadas del vértice o (2) $f(7) = f(14) = 15$ bastan para determinar $a$, $b$ y $c$ en $f(x) = ax^2 + bx + c$.",
+    "steps": [
+     "Las coordenadas del vértice $(h, k)$ dan dos ecuaciones: $-\\frac{b}{2a} = h$ y $f(h) = k$. Son solo dos ecuaciones para tres incógnitas, así que (1) por sí sola no basta.",
+     "Con (2), $f(7) = 15$ y $f(14) = 15$ dan $49a + 7b + c = 15$ y $196a + 14b + c = 15$. Restando, $147a + 7b = 0$, es decir, $b = -21a$.",
+     "Reemplazando, $c = 15 + 98a$. Todo queda en función de $a$, así que (2) por sí sola tampoco determina los coeficientes.",
+     "Juntando ambas condiciones, el vértice da $h$ y $k$, y la forma $f(x) = a(x-h)^2 + k$ con $f(7) = 15$ permite despejar $a = \\frac{15 - k}{(7 - h)^2}$.",
+     "Con $a$ se obtienen $b$ y $c$, así que los tres coeficientes quedan determinados. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: el vértice da solo dos ecuaciones, y falta una tercera condición para fijar $a$, $b$ y $c$ de forma única.",
+     "B": "(2) por sí sola: dos valores iguales de $f$ indican el eje de simetría y una relación entre $a$ y $b$, pero no fijan los tres coeficientes.",
+     "D": "Cada una por sí sola: el vértice aporta dos ecuaciones y no tres, y la igualdad $f(7) = f(14)$ tampoco basta sin un valor adicional.",
+     "E": "Se requiere información adicional: las dos condiciones juntas sí determinan $a$, $b$ y $c$, así que no falta ningún dato."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q53",
@@ -1949,7 +2863,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En un trapecio rectángulo con altura conocida, cada base o cada diagonal basta para calcular los lados que faltan con el teorema de Pitágoras.",
+    "planteamiento": "Se pide decidir si (1) las bases o (2) las diagonales permiten hallar el perímetro. Datos: el ángulo en $A$ es recto y $AD = 8$ cm es la altura; los lados $AB$, $CD$ y $BC$ son desconocidos.",
+    "steps": [
+     "El perímetro es $AB + BC + CD + DA$, con $DA = 8$ cm conocido. Falta determinar $AB$, $CD$ y $BC$.",
+     "Con (1), se conocen $AB$ y $CD$. El lado oblicuo $BC$ es la hipotenusa de un triángulo rectángulo con catetos $AB - CD$ y $8$: $BC = \\sqrt{(AB-CD)^2 + 8^2}$.",
+     "Con $AB$, $CD$, $BC$ y $DA$ se obtiene el perímetro, así que (1) por sí sola basta.",
+     "Con (2), la diagonal $DB$ forma el triángulo rectángulo $DAB$, y $DB^2 = AB^2 + 8^2$, así que $AB$ queda determinada.",
+     "La diagonal $AC$ forma el triángulo rectángulo $ADC$ con ángulo recto en $D$, y $AC^2 = 8^2 + CD^2$, así que $CD$ queda determinada.",
+     "Con $AB$ y $CD$ conocidas, también se obtiene $BC$ y el perímetro, así que (2) basta por sí sola. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: es suficiente, pero no es la única condición suficiente; por eso la opción A deja fuera la situación de (2).",
+     "B": "(2) por sí sola: también basta, pero la opción B omite a (1), que igualmente permite calcular el perímetro.",
+     "C": "Ambas juntas: como cada una basta por sí sola, exigir las dos es innecesario.",
+     "E": "Se requiere información adicional: cada condición ya determina los lados que faltan, así que ningún dato se echa de menos."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q54",
@@ -1988,7 +2921,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La fórmula necesita el área del recipiente, el área del agujero y la altura del agua; el volumen de $5$ L relaciona $A$ con $h$, y el diámetro da el área del agujero.",
+    "planteamiento": "Se pide el tiempo $t = \\frac{A}{b}\\sqrt{\\frac{2h}{g}}$ para un recipiente con $5$ L de agua. Datos: $A$ es el área basal, $b$ el área del agujero, $h$ la altura del nivel y $g = 9{,}8\\ \\mathrm{m/s^2}$; además $5\\ \\mathrm{L} = 0{,}005\\ \\mathrm{m^3}$.",
+    "steps": [
+     "Como $1\\ \\mathrm{L} = 10^{-3}\\ \\mathrm{m^3}$, se tiene $5\\ \\mathrm{L} = 5\\cdot 10^{-3}\\ \\mathrm{m^3} = 0{,}005\\ \\mathrm{m^3}$.",
+     "El volumen de agua en un cilindro es área basal por altura: $A\\cdot h = 0{,}005$, de donde $A = \\frac{0{,}005}{h}$.",
+     "Al reemplazar en $t$, el tiempo queda en función de $h$ y $b$: $t = \\frac{0{,}005}{h\\cdot b}\\sqrt{\\frac{2h}{g}}$.",
+     "Con (1) se conoce $h$ y, por lo tanto, $A$; pero falta $b$, el área del agujero. Así, (1) por sí sola no basta.",
+     "Con (2), el diámetro $d$ da $b = \\pi\\left(\\frac{d}{2}\\right)^2$; sin $h$ no se conoce $A$, así que (2) por sí sola tampoco basta.",
+     "Juntas, (1) y (2) dan $h$, $A = \\frac{0{,}005}{h}$ y $b$, así que $t$ queda determinado. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: con $h$ se obtiene $A$, pero el tiempo depende de la razón $\\frac{A}{b}$, y sin el área del agujero esa razón no tiene valor.",
+     "B": "(2) por sí sola: el diámetro da $b$, pero el área basal $A$ depende de la altura $h$; sin $h$ la razón $\\frac{A}{b}$ no se puede calcular.",
+     "D": "Cada una por sí sola: ninguna basta, porque cada dato deja una incógnita en la expresión $\\frac{A}{b}\\sqrt{\\frac{2h}{g}}$.",
+     "E": "Se requiere información adicional: con (1) y (2) juntas sí se obtiene $t$, así que no falta ningún dato."
+    }
+   }
   },
   {
    "id": "m2-2025-invierno-q55",
@@ -2027,7 +2979,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-suficiencia"
+   "subtopic": "m2-suficiencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La probabilidad de dos sucesos seguidos se obtiene multiplicando la probabilidad de uno por la probabilidad condicionada del otro.",
+    "planteamiento": "Se pide $P(\\text{actividad física} \\cap \\text{alimentación saludable})$. Datos: $P(\\text{saludable} \\mid \\text{actividad física}) = \\frac{4}{7}$; falta conocer $P(\\text{actividad física})$.",
+    "steps": [
+     "Sea $F$ = realiza actividad física frecuentemente, y $S$ = tiene alimentación saludable. Se pide $P(F \\cap S)$.",
+     "La regla del producto dice que $P(F \\cap S) = P(F)\\cdot P(S \\mid F)$.",
+     "El dato $P(S \\mid F) = \\frac{4}{7}$ es conocido, así que $P(F \\cap S) = \\frac{4}{7}\\cdot P(F)$.",
+     "Por lo tanto, basta conocer $P(F)$ para obtener el resultado, y la afirmación (1) entrega ese valor.",
+     "La afirmación (2), $P(S)$, no sirve: incluye a personas que no realizan actividad física, y no permite separar la intersección.",
+     "Comprobación: si $P(F) = \\frac{7}{10}$, entonces $P(F \\cap S) = \\frac{4}{7}\\cdot\\frac{7}{10} = 0{,}4$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "(2) por sí sola: $P(S)$ mezcla a todas las personas de la localidad; sin saber qué parte realiza actividad física no se obtiene la intersección.",
+     "C": "Ambas juntas: (1) ya basta por sí sola, así que agregar (2) no es necesario.",
+     "D": "Cada una por sí sola, (1) o (2): (2) no basta, así que la opción no es válida.",
+     "E": "Se requiere información adicional: el dato de (1) completa el cálculo con el $\\frac{4}{7}$ del enunciado, así que no falta información."
+    }
+   }
   }
  ]
 }

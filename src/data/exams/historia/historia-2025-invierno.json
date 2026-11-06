@@ -1,9 +1,10 @@
 {
  "id": "historia-2025-invierno",
  "subject": "historia",
- "title": "PAES Invierno 2025",
+ "title": "PAES Invierno 2024",
  "description": "Prueba oficial completa de Historia y Ciencias Sociales: 65 preguntas, aplicada el 19-06-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "invierno",
  "source": "demre",
  "form": "121",
@@ -114,7 +115,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una condición necesaria es un requisito sin el cual la democracia no se sostiene. Las garantías jurídicas que protegen los derechos de la ciudadanía cumplen ese papel, porque limitan el poder y hacen exigibles los derechos.",
+    "planteamiento": "Se pide identificar cuál de las cuatro afirmaciones es una condición necesaria para sustentar un sistema democrático. Las alternativas combinan partidos políticos, libertades individuales, independencia de las autoridades y garantías jurídicas, y hay que distinguir cuál de ellas es un requisito y cuáles son efectos deseables o rasgos contrarios a la democracia.",
+    "steps": [
+     "Una condición necesaria es un requisito imprescindible: si falta, el sistema deja de ser democrático. Por eso hay que descartar las alternativas que describen objetivos deseables o rasgos incompatibles con la democracia.",
+     "La alternativa A atribuye a los partidos la función de asegurar el desarrollo sociocultural. Los partidos son canales frecuentes de representación, pero el desarrollo sociocultural es un resultado de políticas públicas y no un requisito que defina el régimen democrático.",
+     "La alternativa C pone la superioridad de las libertades individuales por sobre el bien común. La democracia equilibra derechos individuales y bien colectivo; un predominio absoluto de uno sobre el otro no es una condición de la democracia.",
+     "La alternativa D propone que las autoridades actúen sin contrapesos políticos. Esto es lo opuesto a la democracia moderna, que exige control mutuo entre poderes y rendición de cuentas.",
+     "La alternativa B exige garantías jurídicas para el respeto de los derechos de la ciudadanía. Esas garantías (una constitución, tribunales independientes y leyes que se cumplen) limitan el poder y protegen a las personas, de modo que sin ellas la participación y las elecciones quedarían sin amparo.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Presenta a los partidos como condición para el desarrollo sociocultural. La trampa es confundir un mecanismo de representación con un resultado social, que depende de muchas otras variables.",
+     "C": "Invierte el equilibrio democrático al poner las libertades individuales por sobre el bien común. Suena a defensa de los derechos, pero la democracia exige equilibrar ambos aspectos.",
+     "D": "Propone autoridades independientes de todo control. La trampa es confundir independencia de las personas con ausencia de contrapesos, que es justamente lo que la democracia evita."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q02",
@@ -149,7 +168,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-fuentes"
+   "subtopic": "hi-fuentes",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La caricatura critica una democracia que reduce la participación a votar cada cierto tiempo, mientras que las protestas y otras formas de expresión quedan sin valor institucional.",
+    "planteamiento": "Se pide identificar el rasgo del sistema político criticado por el autor de la caricatura de Ferran Martín (2014). Datos: dos megáfonos dicen «¡Por favor, permanezcan ordenadamente en sus hogares hasta nuevas elecciones!», mientras la ciudadanía protesta con carteles que dicen «NO», «BASTA» e «YA NOS VALE».",
+    "steps": [
+     "La caricatura contrasta dos actores: a la izquierda, dos megáfonos que representan la autoridad y hablan desde arriba, y abajo, una multitud que sostiene carteles de protesta. El centro de la crítica está en lo que se le pide a la ciudadanía.",
+     "El mensaje de los megáfonos asocia la participación con el voto: la población debe quedarse en casa hasta las próximas elecciones. Así, la elección aparece como la única instancia legítima de intervención política.",
+     "Los carteles «NO», «BASTA» e «YA NOS VALE» y la multitud muestran otras formas de participación, como la manifestación pública, la protesta y la expresión colectiva, que el discurso oficial no reconoce como canal válido.",
+     "Por lo tanto, el rasgo criticado es que el sistema político le asigna poca importancia a otras formas de participación distintas del sufragio. Eso corresponde a la alternativa B.",
+     "La alternativa A habla de baja participación electoral, algo que la caricatura no muestra ni cuantifica; su foco es el silencio impuesto a quienes protestan.",
+     "La alternativa C afirma que el sufragio pierde relevancia, pero el megáfono asume que la elección es el único canal que importa, lo que pone al voto en el centro del sistema.",
+     "La alternativa D habla de oposición a formas violentas. Los carteles son pacíficos y la caricatura no alude a violencia, por lo que esta idea no aparece en la fuente.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Habla de baja participación en las últimas elecciones. La trampa es leer el mensaje solo por el contexto electoral, cuando la caricatura se centra en las formas de participación que quedan fuera.",
+     "C": "Afirma que el sufragio pierde relevancia. La caricatura no dice que el voto sea irrelevante; al contrario, presenta la elección como el único canal reconocido.",
+     "D": "Habla de oposición a formas violentas de participación. Los carteles son pacíficos, por lo que la trampa es suponer que toda protesta se asocia con violencia."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q03",
@@ -184,7 +223,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La libertad de asociación, garantizada por la Constitución, permite que la ciudadanía se organice en partidos, sindicatos y agrupaciones sociales, que son la base de la participación política.",
+    "planteamiento": "Se pide una garantía estatal que resguarde la participación política en el sistema democrático chileno. Datos: el enunciado afirma que la participación construye un nexo entre los individuos y el Estado, y las alternativas mencionan el Congreso, los medios de comunicación, la libertad de asociación y el acceso a información privada.",
+    "steps": [
+     "Una garantía estatal es un derecho o norma que el Estado asegura, normalmente en la Constitución, para que una práctica pueda ejercerse sin obstáculos arbitrarios.",
+     "La participación política requiere que las personas puedan reunirse y formar agrupaciones, como partidos, sindicatos, juntas de vecinos u organizaciones sociales. Esa posibilidad depende de la libertad de asociación.",
+     "En Chile, la Constitución, en su artículo 19 número 15, reconoce el derecho de asociarse sin permiso previo. Esa garantía sostiene la organización ciudadana y partidaria.",
+     "Por lo tanto, la garantía que resguarda la participación política es el establecimiento constitucional de la libertad de asociación, alternativa C.",
+     "La alternativa A describe una característica del Congreso, la representatividad ideológica, pero no es una garantía del Estado; además, la representatividad es un resultado y no un derecho asegurado.",
+     "La alternativa B menciona la existencia de medios masivos, que es un hecho del entorno y no una garantía. Que existan medios no asegura que la ciudadanía reciba información plural.",
+     "La alternativa D se refiere a acceder a información privada. El derecho de acceso a la información pública sí está garantizado, pero la información privada está protegida por el derecho a la privacidad, por lo que la alternativa es incorrecta.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Describe la representatividad ideológica del Congreso, que es un atributo deseable pero no una garantía estatal. La trampa es confundir un resultado institucional con un derecho.",
+     "B": "Menciona la existencia de diversos medios de comunicación, que es un hecho y no una garantía de participación. La trampa es asumir que la pluralidad de medios se asegura solo por existir.",
+     "D": "Propone acceder a información de carácter privado. La trampa es confundir el acceso a la información pública, que sí se garantiza, con el acceso a datos privados, que está protegido."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q04",
@@ -219,7 +278,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto del PNUD (2008) sostiene que el poder de los gobiernos solo es democrático si rinde cuentas a la población. Ese control se hace posible con la transparencia de la administración pública.",
+    "planteamiento": "Se pide el rasgo de la democracia actual destacado en el texto del Informe Anual 2008 del Programa de las Naciones Unidas para el Desarrollo. Datos: el texto advierte que si los gobiernos se fortalecen pero no rinden cuentas, el proceso podría perder su carácter democrático y beneficiar a unos pocos y no a la mayoría.",
+    "steps": [
+     "La idea central del texto es que el fortalecimiento de los gobiernos solo es democrático si estos rinden cuentas. La frase clave es «no rinden cuentas a la población».",
+     "Rendir cuentas implica que la población pueda conocer y evaluar lo que hace el gobierno: sus decisiones, el uso de los recursos y los resultados. Esa posibilidad depende de que la información pública sea accesible y veraz.",
+     "Por eso, el texto no se refiere a la cantidad de autoridades ni a la pluralidad política, sino al control que la ciudadanía puede ejercer sobre el poder.",
+     "Por lo tanto, el rasgo destacado es la transparencia de la administración pública, alternativa A, porque es el mecanismo que permite la rendición de cuentas.",
+     "La alternativa B, la representatividad de las autoridades electas, es un atributo importante, pero el texto no habla de quién fue elegido, sino de lo que el gobierno hace después de ser elegido.",
+     "La alternativa C menciona el pluralismo ideológico del sistema de partidos. Ese tema no aparece en el fragmento, que se concentra en los gobiernos y su control.",
+     "La alternativa D menciona la soberanía popular. Es el principio de fondo de la democracia, pero el texto destaca un mecanismo concreto, la rendición de cuentas, y no el principio en abstracto.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Habla de la representatividad de las autoridades electas. La trampa es pensar que elegir a alguien basta para garantizar la democracia, mientras el texto exige control sobre lo que hace el gobierno.",
+     "C": "Habla del pluralismo ideológico de los partidos. Es un rasgo democrático, pero el texto no lo menciona; se centra en el poder de los gobiernos y su control.",
+     "D": "Habla del ejercicio de la soberanía popular. Es un principio general de la democracia, pero la trampa está en que el texto destaca un mecanismo específico de control."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q05",
@@ -254,7 +333,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si la propiedad de los medios está concentrada en pocos actores, el debate público recibe menos voces y menos opiniones, lo que empobrece la deliberación democrática.",
+    "planteamiento": "Se pide cómo afecta la concentración de la propiedad de los medios de comunicación al funcionamiento de la democracia. Datos: los medios instalan temas relevantes en la opinión pública y en Chile existe una concentración significativa de su propiedad.",
+    "steps": [
+     "Los medios de comunicación definen qué temas llegan a la ciudadanía y con qué enfoque. Por eso su propiedad influye directamente en el debate público.",
+     "Si la propiedad está concentrada, unos pocos dueños deciden qué se publica y qué queda fuera. Así, la variedad de opiniones que circulan se reduce.",
+     "La pluralidad de voces es un requisito de la democracia, porque la ciudadanía necesita escuchar posiciones diversas para formar su juicio y decidir con información.",
+     "Si esa pluralidad disminuye, la deliberación pública se empobrece y las decisiones se toman con menos argumentos contrastados.",
+     "Por lo tanto, la concentración de la propiedad disminuye la pluralidad en el debate político ciudadano. Eso corresponde a la alternativa B.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Afirma que aumenta la propaganda electoral. La concentración afecta el contenido del debate, pero no crea propaganda por sí misma; la trampa es asociar cualquier influencia mediática con publicidad electoral.",
+     "C": "Sugiere que aumenta el acuerdo entre grupos antagónicos. Una agenda concentrada tiende a uniformar o polarizar el debate, no a acercar posiciones opuestas.",
+     "D": "Afirma que reduce las formas de participación política. La concentración afecta sobre todo la calidad del debate; no impide asociarse ni protestar, por lo que la afirmación es demasiado amplia."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q06",
@@ -289,7 +386,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El artículo 52 de la Constitución permite a la Cámara de Diputados fiscalizar al Gobierno y exigirle respuestas fundadas. Es un ejemplo de contrapeso entre poderes, rasgo central de la democracia.",
+    "planteamiento": "Se pide un rasgo del sistema político democrático relacionado con el artículo 52 de la Constitución Política de Chile. Datos: la Cámara puede adoptar acuerdos o sugerir observaciones con la mayoría de los diputados presentes, y el Presidente debe dar respuesta fundada por medio del ministro correspondiente dentro de treinta días.",
+    "steps": [
+     "El artículo 52 atribuye a la Cámara de Diputados la facultad exclusiva de fiscalizar los actos del Gobierno. Para ejercerla puede adoptar acuerdos u observaciones que se transmiten al Presidente.",
+     "Fiscalizar significa que un poder vigila al otro y puede pedirle cuentas. El Presidente debe responder de forma fundada y dentro de treinta días, lo que obliga al Gobierno a justificar sus actos.",
+     "Un control de esta clase es un contrapeso: ningún poder concentra todas las decisiones y cada uno limita al otro.",
+     "Por lo tanto, el rasgo democrático relacionado con el artículo es la implementación de un sistema de contrapesos de los poderes públicos, alternativa D.",
+     "La alternativa A habla de normas de transparencia. El artículo se refiere a una atribución de control, que se relaciona con la transparencia pero no la establece como tal.",
+     "La alternativa B habla de un sistema electoral basado en la competencia, tema que el artículo no trata.",
+     "La alternativa C habla de garantías jurídicas de derechos civiles. El artículo regula atribuciones de la Cámara, no el catálogo de derechos civiles.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Habla de normas de transparencia en las instituciones. La trampa es confundir el control político con la transparencia, aunque el artículo regula una atribución de fiscalización.",
+     "B": "Habla de un sistema electoral basado en la competencia. El artículo no se refiere a elecciones ni a la competencia electoral.",
+     "C": "Habla de garantías jurídicas de los derechos civiles. Es un tema importante de la Constitución, pero el artículo citado regula las atribuciones de la Cámara."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q07",
@@ -324,7 +441,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con la regla de la mayoría absoluta, si ninguna candidatura supera el 50 % de los votos válidos, las dos más votadas pasan a segunda vuelta. El gráfico muestra exactamente ese escenario.",
+    "planteamiento": "Se pide inferir una conclusión correcta a partir del gráfico de la elección presidencial de 2005 y de la normativa electoral chilena. Datos: Michelle Bachelet obtuvo $45{,}96\\%$; Sebastián Piñera, $25{,}41\\%$; Joaquín Lavín, $23{,}23\\%$, y Tomás Hirsch, $5{,}40\\%$.",
+    "steps": [
+     "Según la normativa chilena, para ser electo en primera vuelta una candidatura debe superar el $50\\%$ de los votos válidos emitidos. La mayor votación del gráfico es la de Bachelet, con $45{,}96\\%$, así que ninguna candidatura alcanza la mayoría absoluta.",
+     "Como nadie supera ese umbral, la elección se decide en segunda vuelta entre las dos candidaturas más votadas: Bachelet ($45{,}96\\%$) y Piñera ($25{,}41\\%$).",
+     "Lavín ($23{,}23\\%$) queda en el tercer lugar y Hirsch ($5{,}40\\%$) en el cuarto, por lo que ninguno de ellos pasa a la segunda vuelta.",
+     "La conclusión correcta es que las dos candidaturas más votadas pasaron a segunda vuelta.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que la primera mayoría fue electa de manera inapelable. Bachelet tuvo la primera votación, pero no superó el 50 %, por lo que no fue electa en primera vuelta.",
+     "B": "Dice que la segunda mayoría debió ser ratificada por el Congreso. La trampa es atribuir al Congreso una función de ratificación que el sistema no contempla; la proclamación la hace el Tribunal Calificador de Elecciones.",
+     "D": "Sugiere que las candidaturas menos votadas se sumaron a la primera mayoría. El gráfico muestra votos individuales, no alianzas, y no hay evidencia de que alguna candidatura se sumara a otra."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q08",
@@ -359,7 +493,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las mesas receptoras de sufragios, atendidas por vocales de mesa, forman parte de la organización práctica de las elecciones. Un informe sobre las instituciones electorales debe describir sus atribuciones.",
+    "planteamiento": "Se pide qué información debe incluir un informe sobre las funciones de las instituciones que organizan y controlan las elecciones en Chile. El tema del trabajo es el funcionamiento institucional de las elecciones, no las campañas ni la población.",
+    "steps": [
+     "El tema del informe son las instituciones que organizan y controlan las elecciones: el Servicio Electoral, el Tribunal Calificador de Elecciones y las mesas receptoras de sufragios.",
+     "Las mesas receptoras funcionan con vocales de mesa, que reciben la votación, escrutan los votos y levantan el acta. Sus atribuciones forman parte de la organización práctica del sufragio.",
+     "Por eso, las atribuciones de los vocales de mesa son contenido propio de las funciones de esas instituciones, porque describen cómo se organiza y controla cada votación.",
+     "Las otras alternativas quedan fuera del tema: los programas de las candidaturas pertenecen a la campaña, la configuración del sistema de partidos a la organización política y la población en edad de votar es un dato demográfico.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone incluir la propuesta de programa de las candidaturas. Es información de campaña, que no describe funciones de instituciones electorales; la trampa es confundir la oferta política con la organización de la elección.",
+     "C": "Propone la configuración del sistema de partidos. Es un tema del sistema político, pero no la función de organizar o controlar elecciones; es un tema cercano que no responde al pedido.",
+     "D": "Propone las características de la población en edad de votar. Es un dato sobre el electorado y no sobre las instituciones que organizan el proceso."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q09",
@@ -394,7 +545,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cuenta pública obliga al Presidente a informar a la ciudadanía sobre lo que hizo el gobierno. Ese informe fortalece el conocimiento ciudadano y la posibilidad de evaluar la gestión.",
+    "planteamiento": "Se pide el propósito de la ceremonia de cuenta anual o mensaje presidencial en el funcionamiento del sistema democrático chileno. Datos: la ceremonia se realiza ante el Congreso Nacional y con la presencia de diversas autoridades, y ha sido parte de la historia republicana.",
+    "steps": [
+     "La cuenta pública es una ceremonia anual en que el Presidente informa ante el Congreso Nacional sobre la gestión del año y sobre los proyectos del gobierno.",
+     "Su contenido reúne resultados, logros, dificultades y tareas pendientes. Con ello, la ciudadanía puede saber qué se hizo con los recursos del Estado y con las atribuciones que tiene el gobierno.",
+     "Un gobierno que informa permite que la población evalúe su desempeño en la opinión pública, en los debates y en las siguientes elecciones. Eso es rendición de cuentas.",
+     "Por lo tanto, la ceremonia tiene como propósito fortalecer el conocimiento ciudadano de la gestión del gobierno, alternativa D.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone que el Poder Legislativo pueda interpelar al Poder Ejecutivo. La interpelación es una facultad del Congreso que se ejerce por otros mecanismos, no la cuenta pública, que la ofrece el Presidente.",
+     "B": "Propone exigir el apoyo de ambas cámaras al programa de gobierno. La cuenta no exige votos; el apoyo legislativo se obtiene en la tramitación de proyectos concretos.",
+     "C": "Propone anunciar a la ciudadanía las nuevas leyes que serán aprobadas. La cuenta puede mencionar proyectos, pero su propósito principal es informar la gestión, no anunciar leyes que luego el Congreso decidirá."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q10",
@@ -429,7 +597,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Servicio Electoral (SERVEL) fiscaliza el financiamiento de las campañas, para que la competencia electoral se desarrolle con reglas transparentes y sin influencias indebidas del dinero.",
+    "planteamiento": "Se pide identificar una función que ejerce el SERVEL entre cuatro alternativas. Dato: el SERVEL vela por el correcto funcionamiento de las elecciones y por el cumplimiento de la normativa relacionada con la actividad política.",
+    "steps": [
+     "El SERVEL, o Servicio Electoral de Chile, organiza elecciones y plebiscitos, lleva los registros electorales y fiscaliza el cumplimiento de la normativa que regula las campañas y los partidos.",
+     "Dentro de esas funciones de fiscalización se encuentran la revisión de los gastos y de los aportes de las campañas y la rendición de cuentas electorales, para evitar que el dinero incida indebidamente en la elección.",
+     "Al analizar las alternativas, las encuestas son elaboradas por empresas privadas o centros de estudio; la evaluación de metas programáticas corresponde al gobierno y a la ciudadanía; y los estatutos de los partidos los redactan sus militantes, mientras el SERVEL solo verifica su legalidad.",
+     "Por lo tanto, la función que ejerce el SERVEL es la fiscalización del financiamiento de las campañas de las candidaturas, alternativa C.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone el desarrollo de encuestas durante la campaña. Estas las realizan empresas o centros de estudio, no un organismo que controla elecciones.",
+     "B": "Propone evaluar el cumplimiento de las metas programáticas. Ese control corresponde a la gestión del gobierno y a la ciudadanía, no a un organismo electoral.",
+     "D": "Propone diseñar los estatutos que regulan los partidos. Los estatutos los definen los propios partidos; el organismo solo verifica que cumplan la ley."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q11",
@@ -464,7 +649,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La oposición vigila y critica al gobierno desde fuera del Ejecutivo. Esa función de supervisión obliga a rendir cuentas y ayuda a corregir errores o abusos en la gestión.",
+    "planteamiento": "Se pide explicar por qué es importante que exista oposición en una sociedad democrática. Dato: la oposición está formada por grupos o partidos que defienden ideas y propósitos distintos a los de quienes ejercen el Poder Ejecutivo.",
+    "steps": [
+     "La oposición está formada por partidos o grupos que no gobiernan y que proponen alternativas. Su existencia depende de que haya competencia política libre.",
+     "En una democracia el gobierno puede equivocarse o abusar de su poder. La oposición tiene la función de revisar sus decisiones, criticarlas y denunciar lo que considere injusto o ineficiente.",
+     "Esa supervisión mantiene la rendición de cuentas: el gobierno sabe que sus actos serán examinados y debe justificarlos ante la ciudadanía.",
+     "Por lo tanto, la razón de la importancia de la oposición es que contribuye a la supervisión de la gestión del gobierno, alternativa C.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que la oposición asegura el correcto funcionamiento de las alianzas. Las alianzas son acuerdos entre partidos; la oposición no las garantiza y puede existir sin ellas.",
+     "B": "Afirma que la oposición garantiza la periodicidad de los procesos electorales. La periodicidad la fijan la Constitución y la ley, no la oposición.",
+     "D": "Afirma que la oposición funciona con independencia de los poderes económicos. La independencia económica no es la razón de ser de la oposición, y no se sigue de su definición."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q12",
@@ -499,7 +701,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según Sartori, el poder es legítimo cuando surge de la voluntad popular libremente consentida. En la práctica, ese consentimiento se expresa y renueva mediante elecciones periódicas.",
+    "planteamiento": "Se pide identificar el elemento propio de los sistemas democráticos en que se basa lo planteado en el texto de Giovanni Sartori (2012). Datos: el texto sostiene que el poder es legítimo solo si es investido desde abajo, es emanación de la voluntad popular y se consiente libremente.",
+    "steps": [
+     "El texto afirma que el poder legítimo es el que viene «desde abajo», es decir, la emanación de la voluntad popular, y que debe ser libremente consentido por la población.",
+     "Para que ese consentimiento exista de forma regular y pacífica, la democracia necesita un mecanismo que renueve a las autoridades y mida la voluntad popular, que son las elecciones periódicas.",
+     "Las elecciones periódicas convierten el consentimiento en autoridad: la ciudadanía elige y, si el gobierno pierde respaldo, puede ser reemplazado en el siguiente proceso.",
+     "Las demás alternativas aluden a principios importantes, como la igualdad ante la ley, el multipartidismo o la probidad, pero el texto se enfoca en el origen del poder y en su consentimiento, lo que se expresa en elecciones.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone el respeto de la igualdad ante la ley. Es un principio democrático, pero el texto no trata de igualdad jurídica sino del origen del poder.",
+     "C": "Propone un sistema multipartidista. El texto no menciona partidos; la legitimidad se refiere al consentimiento popular, que puede expresarse con uno o varios partidos.",
+     "D": "Propone la probidad en el ejercicio de la función pública. Es un valor deseable, pero no es el origen del poder que analiza el texto."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q13",
@@ -534,7 +753,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Estado de derecho impide el abuso del poder porque obliga a las autoridades a actuar según la ley. Limitar el ejercicio del poder mediante la ley es la condición esencial para prevenir su deterioro.",
+    "planteamiento": "Se pide qué situación es esencial para prevenir el deterioro del Estado de derecho, que garantiza los derechos fundamentales en la democracia chilena. Las alternativas proponen centralizar la justicia, concentrar atribuciones, limitar el poder por la ley o promover la independencia ideológica de la administración.",
+    "steps": [
+     "El Estado de derecho significa que el poder público está sometido a la ley y que sus actos pueden ser controlados por tribunales. Así se evitan decisiones arbitrarias.",
+     "Para prevenir su deterioro es esencial que el ejercicio del poder esté limitado por normas previamente establecidas y conocidas, que se apliquen a todos por igual.",
+     "Esa limitación corresponde a la alternativa C, la limitación al ejercicio del poder a través de la ley.",
+     "Las demás opciones debilitan el Estado de derecho: centralizar la administración judicial o concentrar atribuciones en el presidente elimina controles, y la independencia ideológica de la administración no establece límites legales.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone centralizar la administración judicial. Concentrar la justicia reduce los contrapesos, y lo que protege el Estado de derecho es la independencia de los tribunales.",
+     "B": "Propone concentrar atribuciones en el presidente. Es lo que el Estado de derecho busca evitar, porque elimina el control sobre el Ejecutivo.",
+     "D": "Propone la independencia ideológica de la administración pública. La administración debe actuar con neutralidad y conforme a la ley, pero la clave es la sujeción a la ley y no la independencia ideológica."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q14",
@@ -569,7 +805,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Verificar datos antes de difundirlos permite que el debate ciudadano se apoye en información comprobada, lo que protege la calidad de las decisiones democráticas frente a las noticias falsas.",
+    "planteamiento": "Se pide explicar de qué forma la verificación de datos contribuye al buen funcionamiento del sistema democrático. Datos: se busca evitar el impacto negativo de las noticias falsas en la sociedad.",
+    "steps": [
+     "Verificar consiste en comprobar, con fuentes confiables, si un dato, hecho o información es preciso y verdadero antes de darlo por cierto o difundirlo.",
+     "En democracia, las decisiones de la ciudadanía, como votar, opinar o exigir cuentas, dependen de la información disponible. Si esa información es falsa, el debate se distorsiona.",
+     "Al verificar, se separa lo comprobado de lo falso y el debate se apoya en datos validados. Por eso la verificación valida la información que sustenta el debate ciudadano.",
+     "Las demás alternativas no corresponden: la verificación no impide la censura previa ni evita canales alternativos, y tampoco garantiza el derecho de acceso a la información, que es un derecho distinto.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Afirma que impide la censura previa de la información en la prensa. La verificación no regula lo que publican los medios; es una práctica de calidad informativa, no una garantía frente a la censura.",
+     "C": "Afirma que evita el surgimiento de canales alternativos de información. La verificación puede aplicarse en cualquier medio, incluidos los alternativos, y no busca eliminarlos.",
+     "D": "Afirma que garantiza el derecho a acceder a la información. El acceso se garantiza por ley, mientras que la verificación mejora la calidad de lo que circula."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q15",
@@ -604,7 +857,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ley de transparencia permite a cualquier persona solicitar información pública a los órganos del Estado. Ejercer ese derecho es una forma institucional de control ciudadano sobre la administración.",
+    "planteamiento": "Se pide la situación que evidencia la participación de la ciudadanía en instancias de control sobre la administración pública. Datos: una persona recibió los datos que solicitó al Ministerio de Vivienda mediante la ley de transparencia.",
+    "steps": [
+     "El control ciudadano sobre la administración se ejerce cuando las personas pueden vigilar lo que hacen los órganos del Estado, por ejemplo accediendo a información pública.",
+     "La ley de transparencia reconoce el derecho de cualquier persona a solicitar información de los órganos del Estado y a recibirla, salvo las excepciones que la propia ley establece.",
+     "En la situación C, una persona recibió datos del Ministerio de Vivienda mediante esa ley. Eso muestra participación en el control de la administración pública.",
+     "Las demás situaciones corresponden a otros procesos: la aprobación de un partido es un trámite de registro, la elección de una candidatura independiente es un resultado electoral y una manifestación es expresión pública, no una instancia de control institucional.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Describe la aceptación de una solicitud para formar un partido por el Servicio Electoral. Es un trámite de registro y no una instancia de control ciudadano sobre la administración.",
+     "B": "Describe una candidatura independiente con la mayoría de los votos. Es un resultado electoral, que no implica control sobre la administración pública.",
+     "D": "Describe una manifestación frente a La Moneda. Es una forma legítima de expresión, pero la pregunta pide la instancia que la institucionalidad reconoce para controlar la administración."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q16",
@@ -639,7 +909,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-revoluciones"
+   "subtopic": "hi-revoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las ideas liberales se impusieron en Europa mediante procesos revolucionarios que derribaron o limitaron a las monarquías absolutas y dieron paso a constituciones y derechos individuales.",
+    "planteamiento": "Se pide un proceso político que permitió instaurar el ideario liberal durante la primera mitad del siglo XIX en Europa. Datos: la libertad individual y la igualdad ante la ley eran ideas centrales que necesitaban cambios en el orden político.",
+    "steps": [
+     "El liberalismo buscaba limitar el poder absoluto de los monarcas y reconocer derechos individuales e igualdad ante la ley. Para eso era necesario cambiar el orden político vigente.",
+     "Ese cambio se produjo mediante procesos revolucionarios, como la Revolución de Julio de 1830 en Francia y la oleada de 1848, que derrocaron o limitaron a monarquías y promovieron constituciones.",
+     "Las revoluciones liberales se extendieron por varios países, lo que muestra que el ideario se instaló mediante conflictos políticos y no por la simple expansión de las monarquías.",
+     "Se descarta la alternativa A: el término de las monarquías parlamentarias no fue un objetivo liberal; el liberalismo buscaba limitar a las monarquías absolutas.",
+     "Se descarta la alternativa B: el nacionalismo fue un impulso de unificación y de formación de Estados, no un movimiento que se debilitara en ese proceso.",
+     "Se descarta la alternativa D: el liberalismo promovió la representación, no la democracia directa, que era minoritaria.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone el término de las monarquías parlamentarias. La trampa es suponer que el liberalismo buscaba eliminar cualquier monarquía, cuando su objetivo era limitar el poder absoluto.",
+     "B": "Propone el debilitamiento de los movimientos nacionalistas. En el siglo XIX el nacionalismo fue un impulso de unificación y no un retroceso que el liberalismo provocara.",
+     "D": "Propone el establecimiento de sistemas democráticos directos. El liberalismo promovió sobre todo el gobierno representativo, y la democracia directa era minoritaria."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q17",
@@ -674,7 +963,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras la independencia, la ciudadanía tardó en ejercer sus derechos políticos porque la participación seguía regida por costumbres, cuerpos sociales y autoridades tradicionales, y no por una cultura liberal consolidada.",
+    "planteamiento": "Se pide un fenómeno político ocurrido en América Latina en el contexto del surgimiento del Estado nación, según el texto de Sergio Herrera (2007). Datos: las disputas sobre quién era el soberano siguieron, el peso de la costumbre fue decisivo y la facultad de decidir quién era ciudadano residía en cuerpos sociales y autoridades tradicionales.",
+    "steps": [
+     "El texto explica que, pese a la defensa de los territorios frente a potencias extranjeras, las nuevas repúblicas tuvieron disputas internas sobre quién era el soberano: «el» pueblo o «los» pueblos.",
+     "Señala además que el peso de la costumbre y de lo comunitario siguió siendo decisivo, y que la construcción de una cultura liberal fue paulatina.",
+     "Por eso, la facultad de decidir quién era ciudadano quedaba en cuerpos sociales y autoridades tradicionales, y no en un ejercicio individual y generalizado de los derechos políticos.",
+     "Por lo tanto, el fenómeno que se produjo fue el lento ejercicio de los derechos de participación política de las personas, alternativa B.",
+     "Las alternativas A y D contradicen el texto, que describe disputas prolongadas y no una solución rápida. La alternativa C habla de constituciones, tema que el fragmento no trata; su fondo es el ejercicio de los derechos en la práctica.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone el inmediato funcionamiento de partidos políticos representativos. El texto describe lo contrario: la política seguía regida por cuerpos y autoridades tradicionales.",
+     "C": "Propone el tardío empleo de constituciones que garantizaran los derechos políticos. El fragmento no trata de cuándo se redactaron constituciones; su tema es el ejercicio de esos derechos.",
+     "D": "Propone el rápido término de los conflictos político-territoriales. El texto describe disputas prolongadas al interior de las fronteras, por lo que la alternativa invierte su contenido."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q18",
@@ -709,7 +1016,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los movimientos abolicionistas se fundaron en la igualdad de derechos, principio liberal según el cual todas las personas son iguales ante la ley y ninguna puede ser propiedad de otra.",
+    "planteamiento": "Se pide el principio liberal que promovía los movimientos abolicionistas del siglo XIX. Datos: la esclavitud era aceptada hasta entonces, y la incorporación de las ideas liberales sirvió de fundamento para el rechazo de esa situación.",
+    "steps": [
+     "La esclavitud negaba a una parte de la población derechos básicos que se reconocían a otras personas. Los movimientos abolicionistas denunciaban esa desigualdad radical.",
+     "Las ideas liberales sostienen que todas las personas nacen libres e iguales y deben ser tratadas de la misma forma ante la ley.",
+     "Ese principio de igualdad de derechos permitía cuestionar que una persona fuera propiedad de otra, lo que explica el fundamento del abolicionismo.",
+     "Por lo tanto, el principio liberal que promovía este tipo de movimientos es la igualdad de derechos, alternativa D.",
+     "La soberanía popular, la participación política y la libertad de expresión son principios liberales relevantes, pero no fundamentan directamente el rechazo a la esclavitud como lo hace la igualdad.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone la soberanía popular. Se refiere a que el poder reside en el pueblo; es un principio político importante, pero no es el argumento central contra la esclavitud.",
+     "B": "Propone la participación política. Se refiere al derecho a intervenir en el poder, y el abolicionismo se sustentó en la igualdad y no en la participación.",
+     "C": "Propone la libertad de expresión. Permitió difundir las ideas abolicionistas, pero no es el principio que justifica la abolición."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q19",
@@ -744,7 +1069,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras la independencia, los nuevos Estados tardaron en consolidar sus instituciones porque las elites tenían dificultades para alcanzar acuerdos políticos estables.",
+    "planteamiento": "Se pide un rasgo del proceso de formación de los Estados nacionales latinoamericanos del siglo XIX. Datos: luego de la emancipación del Imperio español, los nuevos países debieron ordenar jurídicamente a la nación y organizar el territorio nacional.",
+    "steps": [
+     "Tras la emancipación, los nuevos países tuvieron que crear constituciones, leyes e instituciones, y definir sus límites territoriales y la forma de gobierno.",
+     "Ese proceso fue lento y conflictivo: hubo disputas entre federalistas y centralistas, entre liberales y conservadores, y guerras civiles que dificultaron alcanzar acuerdos duraderos.",
+     "Por eso, la institucionalidad del Estado tardó en consolidarse debido a las dificultades para concretar acuerdos políticos. Eso corresponde a la alternativa B.",
+     "La alternativa A propone una unidad continental por sobre la soberanía del Estado, lo contrario de lo ocurrido, porque los nuevos Estados defendieron su soberanía.",
+     "Las alternativas C y D describen prioridades que no dominaron la organización del Estado en ese periodo, en el que la participación de los sectores populares era restringida.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone una unidad continental por sobre la soberanía del Estado. La trampa es suponer que el proyecto de unidad americana se impuso, cuando los Estados defendieron su soberanía.",
+     "C": "Propone una legislación centrada en la transformación de las clases sociales. La prioridad fue ordenar el Estado y sus instituciones; las transformaciones sociales vinieron después.",
+     "D": "Propone mecanismos para la participación política de los sectores populares. En el siglo XIX la participación era restringida, y no fue la prioridad de la organización estatal."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q20",
@@ -779,7 +1122,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-revoluciones"
+   "subtopic": "hi-revoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El liberalismo impulsó la separación de poderes, que reparte la autoridad entre el Ejecutivo, el Legislativo y el Judicial para evitar abusos. Varias repúblicas latinoamericanas la incorporaron en sus constituciones.",
+    "planteamiento": "Se pide un rasgo de la influencia liberal en la organización de las nuevas repúblicas latinoamericanas en la primera mitad del siglo XIX. Dato: el liberalismo propone limitar el poder político para proteger la libertad individual.",
+    "steps": [
+     "El pensamiento liberal propone limitar el poder político para proteger la libertad individual y la igualdad ante la ley.",
+     "Una forma de limitar el poder es separarlo en poderes independientes que se controlen mutuamente, lo que da origen al principio de separación de poderes.",
+     "Esa idea se incorporó a las constituciones republicanas latinoamericanas, que organizaron el Ejecutivo, el Legislativo y el Judicial como poderes distintos.",
+     "Por lo tanto, un rasgo de la influencia liberal fue la separación de los poderes públicos, alternativa A.",
+     "Las demás alternativas no corresponden al liberalismo: la nobleza hereditaria es un privilegio contrario a la igualdad ante la ley, la secularización avanzó después y no define el periodo, y la ampliación del voto fue restringida en esos años.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone la subsistencia de los títulos nobiliarios. El liberalismo se opone a los privilegios hereditarios, porque contradicen la igualdad ante la ley.",
+     "C": "Propone la secularización de la administración estatal. Es un proceso importante, pero en la primera mitad del siglo XIX en Chile la religión católica seguía siendo oficial, por lo que no es el rasgo más característico.",
+     "D": "Propone la ampliación del voto a los sectores populares. El voto fue restringido por requisitos de propiedad y renta, por lo que no era el rasgo típico de la época."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q21",
@@ -814,7 +1175,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las constituciones de 1818 a 1833 exigían propiedad, renta o capacidad para ejercer derechos políticos. Así, el sistema republicano quedó en manos de una elite criolla minoritaria.",
+    "planteamiento": "Se pide el impacto político para el sistema republicano de las disposiciones constitucionales que exigían requisitos para otorgar derechos políticos entre 1818 y 1833. Datos: cada carta constitucional fijaba condiciones para votar, y la mayoría de la población quedaba excluida.",
+    "steps": [
+     "Las constituciones de ese periodo establecieron requisitos de propiedad, renta o capacidad para ejercer derechos políticos, lo que dejaba fuera a la mayoría de la población.",
+     "Al restringir el voto a quienes tenían propiedad o renta, el sistema republicano quedó en manos de pocos: los terratenientes, comerciantes y propietarios que formaban la elite criolla.",
+     "Por eso, la república, aunque se declaraba representativa, aseguró el poder político de los grupos aristocráticos criollos. Esa es la consecuencia que describe la alternativa D.",
+     "La alternativa B es contraria, porque estas exigencias limitaron la democracia en lugar de promoverla; el sistema era censitario y no democrático.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Afirma que acabó con el predominio de los caudillos militares. Los requisitos no pusieron fin al caudillismo, que siguió presente en las décadas siguientes.",
+     "B": "Afirma que favoreció la promoción de un sistema democrático. Los requisitos restringían la participación, por lo que el sistema era censitario y no democrático.",
+     "C": "Afirma que terminó con las disputas políticas entre miembros de la elite. Las disputas continuaron durante todo el periodo, con enfrentamientos entre pipiolos y pelucones."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q22",
@@ -853,7 +1231,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-chile-xix"
+   "subtopic": "hi-chile-xix",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El esquema organiza tres problemas centrales del Chile de inicios del siglo XIX: la inexperiencia de la elite en la política republicana, la inestabilidad económica y los múltiples ensayos constitucionales.",
+    "planteamiento": "Se pide qué representa el esquema, en el que X aparece como título general. Datos: de X dependen tres recuadros: inexperiencia de la elite en la práctica política republicana, inestabilidad económica y aplicación de múltiples ensayos constitucionales.",
+    "steps": [
+     "En el esquema, X funciona como título general y de él dependen tres recuadros: la inexperiencia de la elite en la práctica política republicana, la inestabilidad económica y la aplicación de múltiples ensayos constitucionales.",
+     "Cada recuadro describe una dificultad de las primeras décadas republicanas: un grupo dirigente sin experiencia en la nueva forma de gobierno, economías inestables tras la guerra y constituciones que se ensayaban y reemplazaban.",
+     "Por lo tanto, X corresponde a un título que agrupa estas dificultades, es decir, los problemas que enfrentaba la organización de la república. Eso corresponde a la alternativa D.",
+     "Las demás alternativas no coinciden: las causas de la emancipación, las ventajas de la Independencia, el régimen portaliano y los gobiernos conservadores no aparecen como elementos del esquema, que trata de problemas internos del periodo republicano temprano.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone las causas del proceso de emancipación nacional. Las causas de la Independencia son anteriores a los problemas que muestran los recuadros.",
+     "B": "Propone las ventajas de la Independencia respecto de España. Los recuadros muestran dificultades, no ventajas.",
+     "C": "Propone las consecuencias de la instauración del régimen portaliano. El régimen portaliano es posterior a varios de los ensayos constitucionales y no aparece como tema del esquema.",
+     "E": "Propone las características del periodo de los gobiernos conservadores. El esquema no se refiere a un gobierno específico, sino a problemas generales del inicio de la república."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q23",
@@ -888,7 +1284,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Constitución de 1833 declaró oficial la religión católica y excluyó su ejercicio público de otros cultos. Esa norma reforzó la presencia del pensamiento conservador en la vida cotidiana.",
+    "planteamiento": "Se pide un impacto social de la normativa del artículo 5 de la Constitución de 1833. Datos: la religión de la República es la católica, apostólica y romana, con exclusión del ejercicio público de cualquier otra.",
+    "steps": [
+     "La norma establece la religión católica como religión oficial del Estado y prohíbe el ejercicio público de cualquier otra. Es una decisión que se traduce en la vida cotidiana de las personas.",
+     "En una sociedad en que la Iglesia tenía un papel central, esa exclusión reforzaba las costumbres, la educación religiosa, los ritos y la moral católica como referencia obligatoria.",
+     "Esto corresponde a un impacto social: el pensamiento conservador, ligado a la tradición religiosa, se fortaleció en la vida diaria de la población.",
+     "La alternativa C afirma lo contrario, una ofensiva liberal hacia la secularización, porque el artículo consagra la religión oficial y no la separación entre Iglesia y Estado.",
+     "Las alternativas B y D tampoco se desprenden del texto: el artículo no crea alianzas con la burguesía industrial y prohíbe el culto público a otras religiones, incluidos los credos protestantes.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone una alianza gubernamental de la burguesía industrial con el clero. El artículo no menciona alianzas ni grupos económicos; la burguesía industrial era incipiente en 1833.",
+     "C": "Propone una ofensiva legislativa liberal hacia la secularización del Estado. Es lo contrario del artículo, que consagra la religión oficial; el laicismo avanzó después.",
+     "D": "Propone la libertad de culto a los credos protestantes en los actos oficiales. El artículo excluye expresamente el ejercicio público de cualquier otra religión."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q24",
@@ -924,7 +1338,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los grupos que dominaban la economía preferían exportar materias primas, una fuente segura de ganancias. La apertura comercial, favorecida por regulaciones de tipo liberal, consolidó ese modelo exportador.",
+    "planteamiento": "Se pide uno de los factores que propició un modelo económico basado en la exportación de materias primas, a partir del texto de Gabriel Salazar y Julio Pinto (2012). Datos: los exportadores mineros, agropecuarios y comerciantes mayoristas preferían una fuente segura de enriquecimiento, y las potencias económicas exigían apertura comercial.",
+    "steps": [
+     "El texto explica que los exportadores mineros, los exportadores agropecuarios y los comerciantes mayoristas preferían una fuente segura de enriquecimiento, sin arriesgar en una industrialización incierta.",
+     "Agrega que era necesario mantener relaciones armónicas con las potencias económicas, interesadas en la apertura comercial y que eran la fuente de la demanda, de los capitales y de la tecnología.",
+     "La apertura comercial solo es posible si las reglas favorecen el libre intercambio, lo que corresponde a regulaciones de tipo liberal que facilitaban vender materias primas y comprar productos extranjeros.",
+     "Por lo tanto, las ventajas generadas por esas regulaciones fueron un factor que favoreció el modelo exportador, alternativa B.",
+     "La alternativa A es contraria al texto, que deja en segundo plano la manufactura. La alternativa C tampoco corresponde, porque el texto muestra que se buscaba mantener la relación con las potencias, no reducir la dependencia externa.",
+     "La alternativa D atribuye una apatía que el texto no menciona. El problema que describe es de incentivos: los grupos preferían una ganancia segura.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone el protagonismo asignado al sector manufacturero. La trampa es pensar que una economía que pide industrialización ya la había impulsado, cuando el texto muestra que la manufactura quedaba relegada.",
+     "C": "Propone los esfuerzos del Estado por debilitar la dependencia externa. El texto indica que se buscaba mantener relaciones armónicas con las potencias, por lo que es una afirmación contraria.",
+     "D": "Propone la apatía del empresariado por la forma tradicional de producción. El texto no habla de apatía; describe que los grupos preferían una fuente segura de enriquecimiento."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q25",
@@ -960,7 +1393,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-chile-xix"
+   "subtopic": "hi-chile-xix",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Pipiolos y pelucones discrepaban en la organización del poder, pero ambos aceptaban la forma republicana de gobierno, en lugar de un régimen monárquico.",
+    "planteamiento": "Se pide una idea compartida por los pipiolos (liberales) y los pelucones (conservadores) durante las primeras décadas del siglo XIX en Chile. Datos: ambos grupos tenían miradas diferentes en diversos aspectos, pero compartían algunas ideas.",
+    "steps": [
+     "Los pipiolos eran liberales, partidarios de reformas como el federalismo y de ampliar los derechos. Los pelucones eran conservadores, partidarios de un orden más centralizado y del peso político de la Iglesia y de la elite.",
+     "Pese a esas diferencias, ambos grupos aceptaban la forma republicana de gobierno frente a la monarquía. Ninguno proponía volver a un régimen dependiente del rey de España.",
+     "Por lo tanto, la instalación de un sistema político republicano era una idea compartida, aunque la discusión se diera en cómo organizarlo.",
+     "Las demás alternativas corresponden solo a uno de los bandos: la descentralización era propuesta de los pipiolos, el liderazgo de la Iglesia era propio de los pelucones y la expansión de los derechos políticos era un planteamiento liberal.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone la descentralización territorial del poder político. Fue una propuesta más ligada a los pipiolos y al federalismo, mientras los pelucones preferían el centralismo.",
+     "C": "Propone la consagración del liderazgo político de la Iglesia. Es una postura propia de los pelucones; los pipiolos buscaban separar el poder político del religioso.",
+     "D": "Propone la expansión del conjunto de los derechos políticos. Fue una bandera de los pipiolos, mientras que los pelucones defendían restringir el voto."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q26",
@@ -996,7 +1446,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El periódico critica que Chile dependiera de exportar salitre y guano, recursos transitorios y de escaso valor agregado. Si no se crean industrias propias, el país perdería su posición al agotarse esos recursos.",
+    "planteamiento": "Se pide el rasgo de la economía de la época que se usó como base para la crítica del fragmento de El Veintiuno de Mayo de Iquique (1883). Datos: el salitre y los guanos son riquezas transitorias y el texto reclama industrias reproductivas y espontáneas.",
+    "steps": [
+     "El periódico afirma que el salitre y el guano son riquezas transitorias, y que si al término de ellas el país no ha robustecido su economía con industrias, sufrirá un retroceso.",
+     "La crítica supone que el país dependía de vender recursos naturales sin transformarlos. Esa es la base de una economía exportadora de productos primarios con escaso valor agregado.",
+     "Por eso el texto propone industrias reproductivas y espontáneas, es decir, diversificar la economía para no depender de un solo producto de exportación.",
+     "Por lo tanto, el rasgo usado como base de la crítica es la hegemonía de la exportación de productos de escaso valor agregado, alternativa D.",
+     "Las alternativas A y B describen lo que el periódico pide, no lo que describe como realidad, y la alternativa C, la nacionalización de recursos, no aparece en el texto.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone la diversificación de las inversiones en la producción manufacturera. Es el remedio que propone el periódico, no el rasgo criticado.",
+     "B": "Propone la profundización del modelo de crecimiento hacia adentro. El modelo vigente era de crecimiento hacia afuera, y el texto pide industrias sin afirmar que ya existan.",
+     "C": "Propone la consolidación de la nacionalización de recursos naturales. El texto no menciona nacionalización; su crítica se centra en la dependencia de productos transitorios."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q27",
@@ -1031,7 +1499,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-revoluciones"
+   "subtopic": "hi-revoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras la independencia, el Estado usó la escuela para difundir símbolos, historia y lealtades comunes, con el fin de construir un sentido de pertenencia a la nación.",
+    "planteamiento": "Se pide la estrategia aplicada desde el Estado para fortalecer la identidad nacional en el siglo XIX chileno. Datos: la elite enfrentó dificultades para llevar adelante la instalación del Estado nación.",
+    "steps": [
+     "Para formar un Estado nación se necesita que la población se sienta parte de una comunidad común, con símbolos, historia y lealtades compartidas.",
+     "En Chile del siglo XIX, el Estado impulsó la educación pública y la enseñanza de la historia patria, los símbolos y la lengua, lo que difundió un sentido de pertenencia a la nación entre niños y familias.",
+     "Por eso, el uso del sistema educativo para construir un sentido de pertenencia corresponde a la estrategia buscada, alternativa C.",
+     "Las demás opciones no corresponden: la guerra fue una experiencia frecuente que se usó para cohesionar, los inmigrantes podían usar sus símbolos y no se legisló para excluir a los pueblos originarios de la identidad nacional como estrategia de fortalecimiento.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que se evitó utilizar la guerra como recurso de cohesión social. El siglo XIX chileno tuvo varias guerras que se usaron para fortalecer el sentimiento nacional.",
+     "B": "Afirma que se impidió que los inmigrantes emplearan sus símbolos patrios. La estrategia buscó integrar a los inmigrantes, no prohibirles sus símbolos.",
+     "D": "Afirma que se legisló para evitar que los indígenas fueran considerados chilenos. Esa no era una estrategia de identidad nacional; la trampa es confundir exclusión con construcción de pertenencia."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q28",
@@ -1066,7 +1551,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-revoluciones"
+   "subtopic": "hi-revoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ubicación de los puertos chilenos sobre el Pacífico facilitó enviar minerales y productos agrícolas a los mercados europeos y norteamericanos, lo que sostuvo la inserción internacional del país.",
+    "planteamiento": "Se pide una ventaja comparativa que Chile aprovechó para insertarse en los mercados del mundo durante el siglo XIX, frente a otros países latinoamericanos. Dato: la ventaja debe ser una condición propia del país, no un logro de la política económica.",
+    "steps": [
+     "Una ventaja comparativa es una condición que permite producir o vender con más eficiencia que otros países. En el comercio internacional del siglo XIX, el transporte marítimo era decisivo.",
+     "Chile tenía una costa extensa con puertos como Valparaíso, Caldera y Coquimbo, que permitían enviar minerales y productos agrícolas a Europa y Norteamérica.",
+     "Esa localización se aprovechó para exportar cobre, trigo y salitre, productos que vinculaban al país con el mercado mundial.",
+     "Por lo tanto, la ventaja aprovechada es la localización geográfica de los puertos marítimos, alternativa C.",
+     "Las alternativas A, B y D no son ventajas aprovechadas: el mercado interno era reducido, la industria pesada no estaba estatizada en el siglo XIX y la agricultura tradicional de haciendas más bien limitaba el cambio productivo.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone la capacidad adquisitiva del mercado interno. El mercado local era pequeño, y precisamente por eso Chile necesitó insertarse en mercados externos.",
+     "B": "Propone la estatización del sector de la industria pesada. En el siglo XIX el modelo era de exportación privada y no existía una industria pesada estatal.",
+     "D": "Propone la autonomía productiva de la agricultura tradicional. La agricultura de haciendas no fue el motor de la inserción internacional; más bien frenaba los cambios."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q29",
@@ -1101,7 +1604,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-geografia"
+   "subtopic": "hi-geografia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La riqueza que generó la exportación transformó Santiago con faroles de gas, tranvías y cañerías de agua potable, lo que refleja la importación de productos y servicios vinculada a la inserción en mercados internacionales.",
+    "planteamiento": "Se pide relacionar los cambios urbanos descritos en la fuente de Collier y Sater (1999) con un proceso socioeconómico del periodo. Datos: los primeros faroles de gas se encendieron en 1857, los tranvías tirados por caballos comenzaron a circular ese mismo año y, a fines de la década de 1860, parte del centro tenía cañerías de agua potable.",
+    "steps": [
+     "La fuente describe la transformación de Santiago: de una ciudad donde había lecherías y vacas a una ciudad con faroles de gas, tranvías, carruajes y agua potable en el centro.",
+     "El texto atribuye estos cambios al «caudal de nuevas riquezas», que provenía de la expansión exportadora y de la inserción de Chile en los mercados internacionales.",
+     "Esas riquezas se gastaron en productos y servicios traídos del extranjero: el gas, los coches, los rieles y los materiales de las cañerías se importaban, y muchos servicios urbanos se implementaban con capitales y técnicos extranjeros.",
+     "Por lo tanto, el proceso correcto es la importación de productos e implementación de servicios para el desarrollo nacional, alternativa D.",
+     "Las demás alternativas no coinciden con la fuente: la fuente no menciona un aumento de mano de obra rural, la industrialización liderada por el Estado no es el contexto del periodo y el Estado de Bienestar es posterior al siglo XIX.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone el aumento explosivo de la demanda de mano de obra desde el sector rural. La fuente habla de riquezas y servicios urbanos, no de migración rural.",
+     "B": "Propone el desarrollo de una industrialización local liderada por un organismo del Estado. En el periodo predominó un modelo exportador con poca industria estatal.",
+     "C": "Propone la implementación de un Estado de Bienestar que garantizaba los servicios básicos. Es un modelo del siglo XX, posterior a la crisis de 1929, y no corresponde a la época de la fuente."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q30",
@@ -1136,7 +1657,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El auge exportador del nitrato a Europa aumentó la demanda de trabajadores en las oficinas salitreras, lo que atrajo a campesinos que dejaban las haciendas en busca de mejores condiciones.",
+    "planteamiento": "Se pide un factor económico que convirtió a las oficinas salitreras en núcleos de atracción demográfica a fines del siglo XIX. Datos: muchos campesinos migraron desde las haciendas hacia las oficinas en busca de mejores condiciones de vida.",
+    "steps": [
+     "Las oficinas salitreras del norte eran centros productivos que empleaban a miles de trabajadores para extraer y procesar el nitrato.",
+     "El salitre era un producto muy demandado en Europa, especialmente como fertilizante, y sus exportaciones crecieron durante el auge del ciclo.",
+     "Ese aumento de las exportaciones exigía más mano de obra en las oficinas, por lo que estas ofrecían empleo y salarios a quienes llegaban desde el campo.",
+     "Por lo tanto, el factor económico es la alta demanda de mano de obra provocada por el aumento de las exportaciones de nitrato a Europa, alternativa D.",
+     "La alternativa A es incorrecta porque el empleo rural no se estimuló con subvenciones, y las alternativas B y C no corresponden al periodo: el auge se sostuvo en el mercado externo y no en protección estatal ni en seguridad laboral.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone el aumento del empleo en el mundo rural estimulado por subvenciones estatales. Si el campo ofreciera empleo suficiente, los campesinos no habrían migrado a las oficinas.",
+     "B": "Propone el incremento de las medidas proteccionistas del Estado a las actividades extractivas. La fuerza del salitre era su mercado externo, no la protección estatal.",
+     "C": "Propone una mayor seguridad en los puestos de trabajo derivada de innovaciones tecnológicas. Las oficinas eran trabajos duros e inestables; lo que atraía era la demanda de empleo."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q31",
@@ -1171,7 +1710,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-revoluciones"
+   "subtopic": "hi-revoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Asociación Salitrera de Propaganda, financiada por las compañías y por el Estado, buscaba que el salitre fuera competitivo en los mercados mundiales frente a otros productos fertilizantes.",
+    "planteamiento": "Se pide el propósito de la Asociación Salitrera de Propaganda, creada en 1894, según el texto de Memoria Chilena. Datos: recibió aportes de las compañías salitreras y del Estado, y su finalidad fue publicitar el salitre para aumentar su consumo y sacar ventaja frente a otros productos competidores.",
+    "steps": [
+     "La Asociación fue creada en 1894 con fondos de las compañías salitreras y del Estado, lo que indica un interés común en vender más salitre.",
+     "Su finalidad era publicitar el salitre como producto de primera necesidad para la agricultura en América, Europa y Asia, es decir, buscar consumidores en el extranjero.",
+     "El texto dice que el objetivo era «sacar ventaja frente a otros productos competidores», lo que implica competir en el mercado mundial.",
+     "Por lo tanto, el propósito era incrementar la competitividad del producto nacional a escala mundial, lo que corresponde a la alternativa B.",
+     "La alternativa A es anacrónica: los fertilizantes sintéticos alemanes aparecieron después de 1910, mientras que la asociación data de 1894. La alternativa D es posterior, porque la Gran Depresión comenzó en 1929.",
+     "La alternativa C no aparece en el texto, que no busca aumentar el capital nacional, sino vender el salitre en el extranjero.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone competir con productos sintéticos inventados en Alemania. Esa competencia se desarrolló después de 1910, cuando la asociación ya funcionaba desde hacía años.",
+     "C": "Propone aumentar la participación de capital nacional en la producción minera. El texto no menciona ese objetivo; su finalidad es comercial y publicitaria.",
+     "D": "Propone corregir los efectos de la Gran Depresión en la competencia nacional. La crisis comenzó en 1929, muy posterior a la creación de la asociación en 1894."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q32",
@@ -1206,7 +1764,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-geografia"
+   "subtopic": "hi-geografia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La concentración de trabajadores en minas y pueblos mineros los liberó del control de los patrones y de los jefes tradicionales, lo que abrió paso a la creación de partidos obreros.",
+    "planteamiento": "Se pide cómo impactaron las dinámicas descritas por Peter Drake (1992) en las formas de organización popular. Datos: el paternalismo y la dirección electoral de los jefes tradicionales comenzaron a derrumbarse, y los trabajadores ya no estaban controlados por lazos personales.",
+    "steps": [
+     "El texto describe que el paternalismo y la dirección electoral ejercida por los jefes tradicionales comenzaron a derrumbarse a comienzos del siglo XX.",
+     "La migración desde el campo concentró a los trabajadores en minas y pueblos mineros, donde ya no estaban dispersos ni controlados por un patrón, lo que les permitió organizarse.",
+     "El texto afirma que esta situación creó nuevas posibilidades políticas, que se expresaron en organizaciones propias de los trabajadores.",
+     "Por lo tanto, el impacto fue la promoción de la creación de partidos obreros, alternativa B.",
+     "La alternativa A es incorrecta porque el texto se refiere a trabajadores mineros y urbanos, no a campesinos. La alternativa C no aparece, porque el texto no describe obreros en el gobierno. La alternativa D se refiere a tomas de terrenos, que el texto no menciona.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone fomentar la sindicalización campesina. El texto se refiere a trabajadores de las minas y de los pueblos mineros, no al campo.",
+     "C": "Propone propiciar la participación obrera en el gobierno. El texto describe nuevas posibilidades políticas, pero no que los obreros ya estuvieran en el gobierno.",
+     "D": "Propone potenciar las tomas de terrenos en las ciudades. Son una forma de presión urbana, pero el texto no las menciona; se refiere a la organización política de los trabajadores."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q33",
@@ -1241,7 +1817,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-chile-xix"
+   "subtopic": "hi-chile-xix",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Recabarren denuncia que el progreso del centenario benefició a la clase capitalista, mientras los trabajadores del campo seguían viviendo como en 1810. De ahí se infiere que la desigualdad social persistió durante la vida republicana.",
+    "planteamiento": "Se pide la crítica que se infiere de la celebración del centenario, a partir del texto de Luis Emilio Recabarren (1971) y del contexto de 1910. Datos: el progreso económico benefició a la clase capitalista, mientras los peones de los campos vivían, según el autor, como en 1810.",
+    "steps": [
+     "Recabarren contrasta el progreso económico de la clase capitalista con la situación de los gañanes, jornaleros y peones, que en 1910 vivían, según él, como en 1810.",
+     "La comparación muestra que el crecimiento no llegó a los sectores populares: la mejora se concentró en quienes tenían capital.",
+     "Esto permite inferir una crítica: la celebración del centenario oculta que la desigualdad social se mantuvo presente durante toda la vida republicana.",
+     "Por lo tanto, la crítica inferida es que la desigualdad social se mantuvo presente durante la vida republicana, alternativa D.",
+     "La alternativa A no es lo que el autor critica, que es la falta de progreso de los sectores populares. La alternativa B es lo contrario de lo que dice el texto, y la alternativa C no se relaciona con el fragmento.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone que la irrupción de nuevos actores sociales limitó el desarrollo social. El texto no critica a los nuevos actores, sino el escaso progreso de los sectores populares.",
+     "B": "Propone que la elite social se mantuvo al margen de los avances de la economía. El texto dice lo contrario: la clase capitalista progresó.",
+     "C": "Propone que la falta de un sistema educacional público impidió la movilidad social. La educación no aparece en el fragmento, que se centra en el progreso económico y la situación de los trabajadores."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q34",
@@ -1276,7 +1870,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La expansión de las actividades industriales concentró a obreros en fábricas, talleres y puertos, lo que facilitó la organización y convirtió la huelga en una forma habitual de presión.",
+    "planteamiento": "Se pide un elemento del contexto histórico que explica la masificación de la huelga entre mediados del siglo XIX y la primera década del siglo XX en Chile. Dato: el periodo coincide con la expansión de actividades económicas de carácter industrial y con la formación de un proletariado asalariado.",
+    "steps": [
+     "La huelga es la suspensión colectiva del trabajo para exigir mejoras. Para que se masifique se necesitan trabajadores asalariados agrupados en un mismo lugar, con condiciones comunes.",
+     "Desde mediados del siglo XIX, la expansión de actividades industriales, mineras y de servicios concentró a obreros en fábricas, talleres, puertos y oficinas, lo que facilitó la coordinación.",
+     "Esa concentración se combinó con malas condiciones de trabajo y salarios bajos, lo que motivó el descontento y la organización de los trabajadores.",
+     "Por lo tanto, la expansión de las actividades económicas de carácter industrial explica la masificación de la huelga, alternativa D.",
+     "La alternativa A es contraria al proceso, porque la demanda de mano de obra creció con la industria. La alternativa C es falsa: la propiedad agrícola estaba muy concentrada en haciendas. La alternativa B no corresponde, porque la intervención estatal era limitada en la economía liberal de la época.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone la reducción de la demanda por mano de obra especializada. En el periodo crecieron los oficios vinculados a la minería y a la industria, por lo que la demanda aumentó.",
+     "B": "Propone la excesiva intervención estatal en las actividades productivas. El Estado tuvo un rol limitado en la economía liberal del siglo XIX; la huelga surgió precisamente frente a la falta de regulación laboral.",
+     "C": "Propone la escasa concentración de la propiedad de las tierras agrícolas. La propiedad agrícola estaba muy concentrada en haciendas, y eso no explica el malestar obrero."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q35",
@@ -1311,7 +1923,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Mac-Iver atribuye la Cuestión Social a la falta de moralidad pública: los poderes del Estado no cumplían sus deberes y por eso no atendían a las necesidades de la población.",
+    "planteamiento": "Se pide uno de los factores que incidieron en el desarrollo de la Cuestión Social, según el discurso de Enrique Mac-Iver (1900). Datos: el autor considera que predomina la falta de moralidad pública, entendida como el incumplimiento del deber de los poderes públicos y de los magistrados.",
+    "steps": [
+     "El autor afirma que el factor que más predomina es la falta de moralidad pública, definida como el cumplimiento del deber y de las obligaciones por parte de los poderes públicos y de los magistrados.",
+     "Un Estado que no cumple sus funciones, como dictar leyes, administrar y hacer justicia, no responde a las necesidades de la población, y esas necesidades se transforman en conflicto social.",
+     "La Cuestión Social se refería a la pobreza, la vivienda, la salud y el trabajo de los sectores populares. El texto sugiere que la falta de respuesta estatal la agravaba.",
+     "Por lo tanto, la ineficiencia estatal al atender las necesidades de la población es el factor que el texto permite identificar, alternativa B.",
+     "La alternativa A no aparece: el autor no habla de caridad aristocrática. La alternativa C tampoco: el fragmento no menciona a la Iglesia ni la propiedad privada.",
+     "La alternativa D se acerca, pero el autor no afirma que el poder esté en una clase privilegiada; su énfasis está en el deber y en la moralidad de quienes ejercen el poder público.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone el insuficiente ejercicio de la caridad por parte de la aristocracia. El texto no menciona la caridad; se refiere al deber de los poderes públicos.",
+     "C": "Propone la despreocupación de la Iglesia Católica por la propiedad privada. Ese tema no aparece en el fragmento, que se enfoca en la moralidad pública del Estado.",
+     "D": "Propone el mantenimiento del poder político en una clase social privilegiada. Es una interpretación que el fragmento no sostiene de forma explícita; su énfasis está en el incumplimiento del deber público."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q36",
@@ -1346,7 +1977,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ampliación de la educación pública permitió que hijos de familias no acomodadas accedieran a la escuela y al ascenso social, lo que dio forma a los sectores medios como nuevo actor social.",
+    "planteamiento": "Se pide un factor cultural que influyó en el posicionamiento de los sectores medios a fines del siglo XIX e inicios del XX. Datos: la estructura social cambió por la organización de la economía y por nuevas políticas públicas, y se busca un factor cultural ligado a la formación de esos sectores.",
+    "steps": [
+     "Los sectores medios, formados por empleados, profesionales, comerciantes y funcionarios, crecieron con la expansión del Estado, de la administración y del comercio a fines del siglo XIX.",
+     "Para ocupar esos empleos se requerían conocimientos de lectura, escritura y cálculo, lo que hizo central la educación.",
+     "La ampliación de la cobertura de la educación pública permitió que hijos de familias no acomodadas accedieran a escuelas y liceos, con lo que se formó una capa con cultura escrita y aspiraciones de movilidad social.",
+     "Por lo tanto, ese proceso cultural explica el posicionamiento de los sectores medios como nuevo actor social, por lo que corresponde la alternativa D.",
+     "La alternativa A y la alternativa B describen fenómenos urbanos que influyeron en la cultura, pero no explican por sí solos la formación de un grupo social. La alternativa C se refiere a aportes intelectuales que no tuvieron el alcance de una política educativa masiva.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone el aumento de la difusión de la prensa escrita. La prensa influyó en la opinión, pero el crecimiento de las capas medias se explica sobre todo por la educación y el empleo.",
+     "B": "Propone la puesta en marcha de los teatros municipales. Son parte de la vida cultural urbana, pero su funcionamiento no define a un grupo social.",
+     "C": "Propone el arribo de numerosos intelectuales extranjeros. Aportaron ideas, pero su llegada no tuvo el alcance de una política educativa masiva."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q37",
@@ -1381,7 +2030,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-geografia"
+   "subtopic": "hi-geografia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La falta de agua potable, alcantarillado y viviendas adecuadas en los barrios populares favoreció la propagación de enfermedades infectocontagiosas.",
+    "planteamiento": "Se pide una consecuencia derivada de las condiciones de vida de los sectores populares en las ciudades chilenas entre los siglos XIX y XX. Datos: la situación dependía de la infraestructura de servicios básicos, de la vivienda y de la situación laboral.",
+    "steps": [
+     "Los sectores populares de las ciudades vivían en conventillos y casas hacinadas, con agua contaminada, sin alcantarillado y con poca ventilación.",
+     "En esas condiciones se transmitían con facilidad agentes infecciosos por el agua, los alimentos y el contacto estrecho, como la tuberculosis, el tifus o la viruela.",
+     "Por lo tanto, la proliferación de enfermedades infectocontagiosas fue una consecuencia directa de la precariedad de los servicios y de la vivienda, alternativa B.",
+     "La alternativa A no se deduce de esas condiciones, que se asociaban con enfermedades y mortalidad y no con una caída de la fertilidad. La alternativa C invierte el flujo migratorio, que iba del campo a la ciudad.",
+     "La alternativa D no es una consecuencia directa de la infraestructura ni de la vivienda; la escolarización se amplió en el periodo, aunque la asistencia sufría por la pobreza.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone la disminución de la fertilidad en la población femenina. Las malas condiciones se asociaban sobre todo con la mortalidad, no con una caída inmediata de la natalidad.",
+     "C": "Propone la emigración masiva de la población hacia espacios agrícolas. El movimiento dominante fue del campo hacia la ciudad, por lo que la alternativa invierte el flujo.",
+     "D": "Propone la reducción de la cobertura educacional de la población infantil. La pobreza afectaba la asistencia, pero no es la consecuencia directa de la vivienda y los servicios."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q38",
@@ -1416,7 +2083,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerras"
+   "subtopic": "hi-guerras",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Gran Depresión de 1929 provocó desempleo masivo y pérdida de confianza en los gobiernos liberales, lo que favoreció soluciones autoritarias frente a las democracias de la primera mitad del siglo XX.",
+    "planteamiento": "Se pide un proceso que contribuyó al deterioro de los sistemas políticos liberales en la primera mitad del siglo XX, después de la Primera Guerra Mundial. Dato: las democracias liberales occidentales entraron en crisis en ese periodo.",
+    "steps": [
+     "Tras la Primera Guerra Mundial, muchas democracias liberales enfrentaron crisis económicas, sociales y políticas, con inflación, desempleo y radicalización de los conflictos.",
+     "La Gran Depresión, iniciada en 1929 con el colapso de la bolsa de Nueva York, provocó caída del comercio, quiebras y un alto desempleo en Europa y América.",
+     "Esa crisis debilitó la confianza en los gobiernos parlamentarios y dio impulso a movimientos y líderes que prometían orden y soluciones rápidas, a costa de las libertades.",
+     "Por lo tanto, el desarrollo de la Gran Depresión contribuyó al deterioro de los sistemas liberales, alternativa D.",
+     "La alternativa A se refiere sobre todo a la descolonización, que se desarrolló principalmente después de 1945. La alternativa B es una confusión, porque el nacionalsocialismo era un movimiento en ascenso. La alternativa C corresponde a una respuesta a la crisis que tendía a fortalecer la democracia.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone la desarticulación de los imperios coloniales. Ese proceso se asocia sobre todo con la descolonización, y no con el deterioro de los regímenes liberales europeos.",
+     "B": "Propone la debilidad de la doctrina nacionalsocialista. Fue un movimiento fuerte y en ascenso, y su fuerza contribuyó a la crisis de las democracias, no su debilidad.",
+     "C": "Propone el inicio de un modelo de Estado de bienestar. Fue una respuesta a la crisis que buscó proteger a la población y tendía a fortalecer la democracia."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q39",
@@ -1451,7 +2136,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La fotografía muestra el uso masivo de banderas, uniformes y una escena de desfile para proyectar la figura del líder y la fuerza del partido. Ese uso propagandístico de los símbolos es una característica de los totalitarismos.",
+    "planteamiento": "Se pide una característica de los totalitarismos que se evidencia en la fotografía de 1936 de una manifestación del Partido Nazi, en que aparece Adolf Hitler en un vehículo descubierto. Datos: hay numerosas banderas con símbolos del partido, una columna de hombres uniformados y una multitud que observa el desfile.",
+    "steps": [
+     "La fotografía muestra una calle llena de banderas con símbolos del partido, una columna de hombres uniformados y, al fondo, un líder de pie en un vehículo descubierto que saluda al público.",
+     "La escena no busca un fin militar ni económico, sino transmitir una imagen de unidad, fuerza y adhesión al régimen ante la población.",
+     "Los símbolos, las banderas, los uniformes y la puesta en escena del desfile son propaganda, una herramienta central de los totalitarismos para movilizar y legitimar al régimen.",
+     "Por lo tanto, la característica evidenciada es el uso exacerbado de los símbolos con fines propagandísticos, alternativa C.",
+     "La alternativa A no se ve en la fotografía, que no muestra armas ni cifras de presupuesto. La alternativa D tampoco, porque un Estado policial no se deduce de un registro de un acto público.",
+     "La alternativa B aparece en parte, con la columna uniformada, pero el desfile es sobre todo un acto de propaganda y no la militarización completa de la sociedad.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone la inversión del presupuesto en materia armamentística. La fotografía no muestra armas ni datos de presupuesto; es el registro de un acto público.",
+     "B": "Propone la militarización de los diversos sectores de la sociedad. Hay columnas uniformadas, pero se trata de un desfile político y no de la militarización completa de todos los sectores.",
+     "D": "Propone el establecimiento de un Estado policial que controlaba a la población. La imagen muestra una multitud en un acto público, lo que no permite deducir vigilancia generalizada."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q40",
@@ -1486,7 +2190,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerras"
+   "subtopic": "hi-guerras",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El plan educacional fascista de 1934 usaba la escuela para difundir la propaganda del régimen y el ideal expansionista, con contenidos como la guerra en Etiopía y el mare nostro.",
+    "planteamiento": "Se pide uno de los objetivos educacionales del régimen fascista italiano, a partir del texto de Edward Tannenbaum (1975). Datos: el plan de 1934 eliminó los dialectos, redujo la ciencia en favor de la propaganda y dio una historia exclusivamente italiana; en 1937 los ejercicios se referían a la guerra en Etiopía y al mare nostro.",
+    "steps": [
+     "El texto describe un plan de estudios que eliminaba el uso de los dialectos locales, reducía la enseñanza de la ciencia en favor de la propaganda y reemplazaba la historia general por una historia exclusivamente italiana.",
+     "En 1937, los alumnos dedicaban la mayor parte de las horas a la lengua italiana, y muchos ejercicios se referían a las obras públicas, a la guerra en Etiopía y al mar Mediterráneo como «mare nostro».",
+     "Esos contenidos buscaban que los niños asumieran que Italia tenía derecho a dominar el Mediterráneo y a expandirse militarmente.",
+     "Por lo tanto, uno de los objetivos educacionales fue fomentar las ideas expansionistas en las nuevas generaciones, alternativa A.",
+     "La alternativa B no aparece en el texto, que no describe violencia escolar. La alternativa C es contraria, porque el plan ignoraba la historia de los pueblos anteriores a los romanos. La alternativa D también es contraria, porque el plan reducía la enseñanza de la ciencia.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone promover la utilización de la violencia en contra de los disidentes. El texto describe contenidos históricos, lingüísticos y geográficos, sin referencias a violencia escolar.",
+     "C": "Propone reivindicar las relaciones culturales con el mundo griego europeo. El plan ignoraba la historia de los pueblos anteriores a los romanos, por lo que la alternativa va en sentido contrario.",
+     "D": "Propone incentivar aprendizajes que contribuyeran al desarrollo tecnológico. El plan reducía la enseñanza de la ciencia en favor de la propaganda, por lo que invierte el sentido del texto."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q41",
@@ -1521,7 +2243,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerras"
+   "subtopic": "hi-guerras",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Alemania nazi y la Unión Soviética compartían el partido único y el control estatal, pero se diferenciaban en su ideología: el nacionalismo racial en un caso y el marxismo en el otro.",
+    "planteamiento": "Se pide una diferencia entre los regímenes totalitarios de Alemania y de la Unión Soviética en el periodo de entreguerras. Datos: ambos tuvieron rasgos comunes, como el partido único y el control estatal, pero se sostenían en doctrinas distintas.",
+    "steps": [
+     "Alemania nazi y la Unión Soviética compartían características como el partido único, el control estatal de la vida pública y el uso intensivo de la propaganda.",
+     "Sin embargo, se sustentaban en ideologías diferentes: el nazismo en el nacionalismo racial, el antisemitismo y la idea de superioridad de una raza; la Unión Soviética en el marxismo-leninismo, con la lucha de clases y la socialización de los medios de producción.",
+     "Por eso, la diferencia clave está en el tipo de ideología que sostenía el poder político, lo que corresponde a la alternativa A.",
+     "Las alternativas B, C y D son rasgos compartidos o generales del totalitarismo: el control estatal de la vida diaria y la primacía de la colectividad aparecían en ambos regímenes, y el expansionismo fue una política de los dos, aunque con diferencias de contexto.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone la política exterior manifestada en un expansionismo territorial. Ambos regímenes tuvieron políticas expansivas, como el pacto germano-soviético de 1939 y la invasión de Polonia; no separan claramente a ambos.",
+     "C": "Propone la primacía de la colectividad en desmedro de la individualidad. Es un rasgo compartido del totalitarismo, que subordina al individuo al Estado en ambos casos.",
+     "D": "Propone el control estatal sobre el conjunto de aspectos de la vida diaria. Es una característica común de ambos regímenes, por lo que no sirve para diferenciarlos."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q42",
@@ -1556,7 +2295,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-revoluciones"
+   "subtopic": "hi-revoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los totalitarismos europeos se caracterizaron por un partido único que monopolizaba la política y eliminaba la oposición. Los populismos latinoamericanos, en cambio, se apoyaron en movimientos amplios que convivieron con elecciones.",
+    "planteamiento": "Se pide un rasgo que permite diferenciar los procesos históricos de los totalitarismos europeos y de los populismos latinoamericanos del siglo XX. Datos: ambos surgieron en contextos de crisis y se apoyaron en liderazgos con fuerte adhesión popular, propaganda y movilización de masas.",
+    "steps": [
+     "Tanto los totalitarismos europeos como los populismos latinoamericanos surgieron en contextos de crisis y se apoyaron en liderazgos carismáticos, propaganda y movilización de masas.",
+     "Las diferencias están en la organización del poder: los totalitarismos europeos establecieron un partido único que monopolizaba la política y eliminaba a la oposición.",
+     "En cambio, los populismos latinoamericanos, como el peronismo o el varguismo, se desarrollaron con movimientos amplios y coexistieron con elecciones y cierta pluralidad, aunque con restricciones importantes.",
+     "Por lo tanto, el rasgo que permite diferenciar ambos procesos es el establecimiento de un partido único, alternativa B.",
+     "Las alternativas A, C y D son comunes a ambos procesos: la propaganda ideológica, el liderazgo con fuerte adhesión popular y la intervención económica del Estado aparecieron en Europa y en América Latina.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone el uso de propaganda ideológica. Ambos procesos la usaron, por lo que no permite diferenciarlos.",
+     "C": "Propone el liderazgo con fuerte adhesión popular. Es un rasgo compartido, tanto de los líderes europeos como de los populistas latinoamericanos.",
+     "D": "Propone el sistema económico dirigido por el Estado. Ambos procesos tuvieron intervención estatal importante en la economía, por lo que no es un rasgo diferenciador."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q43",
@@ -1591,7 +2348,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-revoluciones"
+   "subtopic": "hi-revoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El fragmento de Hobsbawm muestra que el fascismo se presentó como defensa del capital frente a la revolución socialista, lo que expresa su explícito carácter anticomunista.",
+    "planteamiento": "Se pide la característica del fascismo que se expresa en el párrafo de Eric Hobsbawm (1996). Datos: el fascismo eliminó o venció a la revolución social izquierdista y pareció convertirse en el principal bastión contra ella.",
+    "steps": [
+     "El párrafo afirma que el fascismo fue ventajoso para el capital porque eliminó la revolución social izquierdista y se convirtió en el principal bastión contra ella.",
+     "La revolución social izquierdista se refiere al movimiento socialista y comunista. Al presentarse como barrera contra ella, el fascismo asumió un discurso anticomunista explícito.",
+     "Por lo tanto, el rasgo expresado es el carácter anticomunista, que el propio autor destaca como ventaja para los sectores propietarios, alternativa B.",
+     "La alternativa A, el rechazo al liberalismo, es coherente con el fascismo, pero el párrafo no lo menciona. La alternativa C tampoco se expresa, porque el fascismo movilizó masas con desfiles y propaganda. La alternativa D, la aversión al unipartidismo, es contraria a la organización del régimen.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone el rechazo al liberalismo político. Es un rasgo del fascismo, pero el fragmento no habla de liberalismo; se centra en la lucha contra la izquierda.",
+     "C": "Propone la hostilidad a la política de masas. El fascismo movilizó masas con desfiles y propaganda, así que la alternativa no coincide con el régimen ni con el texto.",
+     "D": "Propone la aversión al unipartidismo político. El fascismo se organizó en torno a un partido único, por lo que la alternativa es incorrecta."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q44",
@@ -1626,7 +2400,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-macro"
+   "subtopic": "hi-macro",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Estado de Bienestar amplió el gasto público en beneficios sociales, como salud, pensiones, educación y seguro de desempleo, para responder al impacto de la crisis de 1929.",
+    "planteamiento": "Se pide una implicancia económica del Estado de Bienestar implementado en los países de Occidente desde la década de 1930. Dato: el modelo buscó enfrentar el impacto de la crisis de 1929 en las sociedades.",
+    "steps": [
+     "El Estado de Bienestar fue una respuesta a la crisis de 1929: el Estado asumió funciones de protección social para reducir la pobreza y el desempleo.",
+     "Para financiar esos beneficios, como pensiones, salud, educación y subsidios de desempleo, fue necesario aumentar el gasto público.",
+     "Ese gasto orientado a beneficios sociales es la implicancia económica característica del modelo, por lo que corresponde a la alternativa C.",
+     "La alternativa A es incorrecta, porque el modelo convivió con la inversión privada y no la redujo como efecto central. La alternativa B es lo contrario, porque el Estado de Bienestar se financió con impuestos.",
+     "La alternativa D es demasiado absoluta, porque el modelo buscó reducir desigualdades mediante políticas sociales, pero no una igualdad total de la renta.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone la reducción de las inversiones privadas en la producción. El modelo convivió con economía mixta, por lo que la reducción de la inversión privada no es su implicancia característica.",
+     "B": "Propone la eliminación de los impuestos a los patrimonios personales. El Estado de Bienestar se financió con impuestos, por lo que la alternativa es contraria al modelo.",
+     "D": "Propone una política de redistribución igualitaria de la renta. El modelo buscó reducir desigualdades mediante políticas sociales, pero la alternativa es demasiado absoluta."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q45",
@@ -1661,7 +2453,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerras"
+   "subtopic": "hi-guerras",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras 1945 la descolonización dejó Estados nuevos formados sobre fronteras trazadas por las potencias europeas, y dentro de ellas convivían pueblos con etnias, lenguas y religiones distintas. Ese es el terreno donde surgen los conflictos étnicos.",
+    "planteamiento": "Se pide identificar cuál de las alternativas corresponde a un problema que enfrentaron los países descolonizados de Asia y África después de la Segunda Guerra Mundial. El enunciado entrega el contexto: esos países habían formado parte de imperios europeos y accedieron a la independencia en la posguerra. Hay que distinguir un problema real de la etapa poscolonial de afirmaciones que invierten el proceso o que no describen dificultades de esos países.",
+    "steps": [
+     "Primero se fija el contexto: tras 1945 los imperios europeos perdieron el control de sus colonias, que se transformaron en Estados independientes. El problema buscado es una dificultad que aparece al construir esos nuevos Estados.",
+     "La alternativa A afirma que se perdió valor de las tradiciones propias. Esto invierte la dinámica del periodo, porque muchos movimientos de independencia reivindicaron lenguas, costumbres y símbolos locales como parte de la identidad nacional.",
+     "La alternativa B habla de la desarticulación de los movimientos de apoyo a la independencia. Los movimientos anticoloniales fueron precisamente el motor del proceso; que se desarticularan no es un problema de los países descolonizados, sino un hecho contrario a la historia del periodo.",
+     "La alternativa C describe el desarrollo de conflictos étnicos al interior de los territorios. Las fronteras coloniales agruparon en un mismo Estado a pueblos distintos, y la falta de una identidad nacional común generó tensiones y enfrentamientos, como ocurrió en varios países de África y Asia.",
+     "La alternativa D plantea un escaso interés de Naciones Unidas en reconocer a los nuevos Estados. Esto no corresponde al contexto: la Organización fue un espacio de reconocimiento y de apoyo al derecho a la autodeterminación, y recibió a numerosos países recién independizados.",
+     "Solo la alternativa C corresponde a un problema real y documentado de los países descolonizados, por lo que es la respuesta. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La pérdida de valor de las tradiciones propias: el error es suponer que la descolonización debilitó la cultura local. El nacionalismo anticolonial hizo lo contrario y recuperó lenguas, costumbres y símbolos propios como base de la nueva identidad.",
+     "B": "La desarticulación de los movimientos de apoyo a la independencia: la trampa está en pensar que la independencia se consolidó con la retirada de sus apoyos. Esos movimientos fueron el motor de la descolonización; su desarticulación no es un problema característico de la época.",
+     "D": "El escaso interés de Naciones Unidas para reconocer los nuevos Estados: contiene un elemento real, como los debates sobre admisiones, pero la Organización no fue un obstáculo. Se descarta porque no describe un problema típico de los países descolonizados."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q46",
@@ -1696,7 +2506,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerras"
+   "subtopic": "hi-guerras",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras 1945 el mundo se ordenó en torno a dos bloques con ideologías antagónicas, liderados por Estados Unidos y la Unión Soviética, y la política de contención de Truman es una expresión de esa rivalidad.",
+    "planteamiento": "Se pide una característica sociopolítica del escenario internacional que empieza a configurarse tras la Segunda Guerra Mundial. El dato clave es la política de contención de 1947 frente al avance del comunismo soviético, que muestra una confrontación ideológica entre dos potencias. Hay que determinar cuál de las alternativas describe mejor ese nuevo orden.",
+    "steps": [
+     "La política de contención de Truman responde al temor a la expansión soviética. Eso indica que el nuevo escenario se organiza alrededor de un antagonismo ideológico, no de una nueva guerra general.",
+     "La alternativa A plantea el fortalecimiento de las alianzas de la guerra. Esas alianzas se quebraron poco después de 1945, cuando la Unión Soviética y las potencias occidentales se enfrentaron, así que la afirmación no describe el escenario que comienza a formarse.",
+     "La alternativa B describe un nuevo enfrentamiento bélico de alcance planetario. La Guerra Fría fue una confrontación indirecta, sin combates directos entre las dos superpotencias, así que no corresponde afirmar que se activó una guerra de alcance planetario.",
+     "La alternativa C describe el surgimiento de un nuevo orden dominado por ideologías antagónicas. Es lo que muestra la contención: el mundo se divide en un bloque capitalista occidental y un bloque socialista soviético, con alianzas militares y disputas de influencia.",
+     "La alternativa D habla de una política imperialista de las potencias industrializadas. Esa lógica corresponde a etapas anteriores, y tras 1945 se asocia más bien al proceso de descolonización, que la política de contención no describe.",
+     "Solo la alternativa C corresponde a una característica sociopolítica (la organización del mundo en bloques ideológicos) que se configura tras la guerra. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El fortalecimiento de las alianzas formadas durante el conflicto: confunde la alianza circunstancial contra el Eje con un orden estable. Las alianzas de la guerra se debilitaron cuando el enemigo común desapareció.",
+     "B": "La activación de un nuevo enfrentamiento bélico de alcance planetario: confunde la Guerra Fría con una guerra mundial. Hubo tensión, carrera armamentista y conflictos regionales, pero no un choque general entre las superpotencias.",
+     "D": "La consolidación de una política imperialista de las potencias industrializadas: tiene un componente de verdad, porque hubo intervenciones en otras regiones, pero no describe la configuración del escenario tras la guerra ni la lógica de la contención."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q47",
@@ -1731,7 +2559,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerras"
+   "subtopic": "hi-guerras",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El principio de autodeterminación de los pueblos, recogido en la Carta de las Naciones Unidas, entregó la base jurídica y moral para exigir la independencia de los territorios coloniales.",
+    "planteamiento": "Se pide un antecedente histórico que fundamentó el proceso de descolonización iniciado después de la Segunda Guerra Mundial. Un antecedente debe ser una idea, norma o hecho que legitime el proceso, no solo un contexto en el que ocurre. Hay que evaluar las cuatro alternativas según ese criterio.",
+    "steps": [
+     "Un antecedente que fundamenta un proceso político debe ser una base de legitimidad o de derecho que sostenga la demanda de independencia. No basta con que sea un hecho contemporáneo.",
+     "La alternativa A menciona alianzas de cooperación económica entre las potencias. Iniciativas como el Plan Marshall buscaban reconstruir Europa; no fundamentaban la independencia de las colonias, así que no cumplen el criterio.",
+     "La alternativa B describe la división del mundo en dos bloques políticos. Es un rasgo del contexto de la Guerra Fría que influyó en la descolonización, pero no es un fundamento jurídico del proceso; actúa como condición de la época, no como base que legitima la independencia.",
+     "La alternativa C menciona la condena de crímenes de lesa humanidad en tribunales internacionales. Los juicios de la posguerra sancionaron a responsables de la guerra, pero no se refieren al derecho de los territorios coloniales a independizarse.",
+     "La alternativa D menciona la declaración del principio de autodeterminación de los pueblos por la ONU. La Carta de las Naciones Unidas (1945) incluye la libre determinación de los pueblos entre sus principios, y la Resolución 1514 (1960) la proclamó de manera expresa para los pueblos coloniales. Ese principio entrega el fundamento para exigir la independencia.",
+     "Solo la alternativa D cumple el criterio de fundamento legítimo y directamente vinculado a la independencia de las colonias. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La articulación de alianzas de cooperación económica entre las potencias: la trampa es asociar cualquier alianza de la posguerra con la descolonización. Estas alianzas buscaban reconstruir economías, no legitimar la independencia de colonias.",
+     "B": "La división del mundo en dos bloques políticos con ideologías divergentes: es un hecho verdadero de la época y tiene influencia en el proceso, pero es un contexto y no el fundamento jurídico que sostiene la demanda de independencia.",
+     "C": "La condena de crímenes de lesa humanidad en tribunales internacionales: confunde la justicia por crímenes de guerra con el derecho a la independencia. Los tribunales juzgaban responsables individuales, no el estatus de los territorios."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q48",
@@ -1766,7 +2612,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La ONU fue creada para evitar nuevas guerras, y una de sus atribuciones centrales es mediar y promover soluciones pacíficas a los conflictos entre Estados.",
+    "planteamiento": "Se pide una atribución de la ONU que le permita cumplir su objetivo de conservar la paz entre los Estados. El enunciado describe a la Organización como garante de los acuerdos internacionales. Hay que identificar la alternativa que corresponde a una función reconocida de la ONU en las relaciones entre Estados.",
+    "steps": [
+     "El objetivo que se menciona es conservar la paz, y la ONU actúa en el plano de las relaciones entre Estados. La atribución correcta debe permitirle intervenir en los conflictos entre países.",
+     "La alternativa A plantea supervisar la redacción de leyes en los Estados miembros. Cada Estado legisla con su soberanía; la ONU no redacta ni supervisa las leyes internas de sus miembros.",
+     "La alternativa B plantea mediar en el desarrollo de conflictos bélicos entre los Estados. La Carta de las Naciones Unidas obliga a los miembros a resolver sus controversias por medios pacíficos, y el Consejo de Seguridad y el Secretario General pueden mediar y promover negociaciones.",
+     "La alternativa C plantea sugerir candidatos para las elecciones internas de los Estados. Eso corresponde a la soberanía de cada país y a sus procesos democráticos; no es una función de la Organización.",
+     "La alternativa D plantea impedir el crecimiento de las instituciones militares de los Estados. La ONU puede promover el desarme y regular ciertos armamentos, pero no tiene la atribución general de impedir que un Estado mantenga o desarrolle sus fuerzas armadas.",
+     "Solo la alternativa B corresponde a una atribución de la ONU orientada a conservar la paz. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Supervisar la redacción de leyes en los Estados miembros: confunde el papel de la ONU con el de un órgano legislativo supranacional. La soberanía de cada Estado para legislar se mantiene.",
+     "C": "Sugerir candidatos para las elecciones internas de los Estados: es un asunto de soberanía política interna, que la Carta de la ONU no entrega a la Organización.",
+     "D": "Impedir el crecimiento de las instituciones militares de los Estados: la trampa es confundir el desarme, que la ONU promueve en ciertos casos, con una prohibición general de tener fuerzas armadas."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q49",
@@ -1801,7 +2665,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerras"
+   "subtopic": "hi-guerras",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Segunda Guerra Mundial dejó a las potencias europeas con economías destruidas y muy endeudadas, lo que debilitó su capacidad para sostener el control de sus colonias.",
+    "planteamiento": "Se pide la afirmación que permite explicar la relación entre el término de la Segunda Guerra Mundial y el inicio de la descolonización. Hay que identificar una consecuencia de la guerra que explique por qué las potencias perdieron control de sus dominios, y descartar afirmaciones que sean falsas o que no expliquen la relación.",
+    "steps": [
+     "La pregunta busca un vínculo causal: una consecuencia de la guerra que facilite la pérdida de los territorios coloniales. Hay que buscar un efecto económico, político o militar de la guerra sobre las potencias.",
+     "La alternativa A plantea que la profundización de la crisis económica en las potencias dificultó el control de sus dominios. La guerra dejó a países como Gran Bretaña, Francia y los Países Bajos con economías destruidas y endeudadas, con menos recursos militares y financieros para sostener guerras coloniales lejanas.",
+     "Un ejemplo que ilustra esta relación es la independencia de la India en 1947: Gran Bretaña, debilitada por la guerra, no tuvo la capacidad ni el respaldo para mantener su dominio por la fuerza.",
+     "La alternativa B afirma que los tratados de paz acrecentaron el poder de las colonias del bando vencedor. Es falsa: los tratados fortalecieron a las potencias vencedoras, y las colonias siguieron bajo control europeo al término del conflicto.",
+     "La alternativa C afirma que la creación de instituciones militares internacionales impidió el dominio de un Estado sobre territorios ajenos. Las guerras coloniales posteriores, como las de Indochina y Argelia, muestran que esa afirmación no describe la realidad y no explica la relación pedida.",
+     "La alternativa D atribuye a dos superpotencias la garantía del respeto a los derechos humanos en sus zonas de influencia. Esto es incorrecto: las zonas de influencia se disputaron y no garantizaron derechos, y la afirmación no explica la descolonización.",
+     "Solo la alternativa A establece un vínculo causal verdadero entre la guerra y la pérdida de control colonial. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La instauración de los tratados de paz acrecentó el poder de las colonias: invierte el efecto de los tratados, que fortalecieron a las potencias vencedoras. Las colonias no ganaron poder con esos acuerdos.",
+     "C": "La creación de instituciones militares internacionales impidió el dominio de un Estado sobre territorios ajenos: suena a una norma de seguridad colectiva, pero las guerras coloniales de la posguerra muestran que no impidió ese dominio.",
+     "D": "La emergencia de dos nuevas superpotencias garantizó el respeto de los derechos humanos: combina un hecho real, el surgimiento de dos superpotencias, con una conclusión falsa. Las zonas de influencia no garantizaron derechos y la afirmación no explica la descolonización."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q50",
@@ -1836,7 +2719,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-geografia"
+   "subtopic": "hi-geografia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La migración masiva hacia las ciudades superó la oferta de vivienda formal y llevó a la autoconstrucción de poblaciones precarias en la periferia urbana.",
+    "planteamiento": "Se pide el cambio en las ciudades chilenas que se produjo por el aumento de la población urbana a mediados del siglo XX, producto de la migración campo-ciudad. El dato central es el crecimiento acelerado de la población urbana, que el Estado y el mercado formal no alcanzaban a absorber con viviendas y servicios.",
+    "steps": [
+     "El enunciado indica que la población urbana superó a la rural a mediados del siglo XX por la migración campo-ciudad. Se pide el cambio que ese fenómeno produjo en la fisonomía de las ciudades.",
+     "Un crecimiento tan rápido exige viviendas, agua, alcantarillado y suelo urbano que no se alcanzan a construir en el corto plazo. Ante esa demanda, muchas familias ocuparon terrenos en la periferia y levantaron sus casas con materiales de desecho, lo que dio origen a campamentos y poblaciones precarias.",
+     "La alternativa A describe el surgimiento de núcleos de vivienda precaria de autoconstrucción. Es coherente con el proceso: la migración masiva generó una demanda de vivienda que se resolvió de manera informal.",
+     "La alternativa B menciona el rescate patrimonial de barrios tradicionales del centro. Esa es una respuesta propia de etapas posteriores, que protege edificios antiguos, y no corresponde a la respuesta inmediata al crecimiento urbano de mediados del siglo XX.",
+     "La alternativa C afirma un acceso igualitario a la infraestructura urbana. Es lo contrario de lo esperable: la migración saturó servicios y los nuevos barrios carecieron de agua potable, alcantarillado y pavimento durante años.",
+     "La alternativa D habla de un plan estatal que provocó un superávit habitacional. En la época el problema era el déficit de viviendas, así que la afirmación no describe la realidad.",
+     "Solo la alternativa A describe un cambio concreto y documentado en la fisonomía de las ciudades provocado por la migración. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El rescate patrimonial de los barrios tradicionales del centro urbano: es una política de conservación que aparece en otras etapas de la historia urbana. No responde al crecimiento acelerado que describe el enunciado.",
+     "C": "El acceso igualitario para los habitantes de la infraestructura urbana: la trampa es suponer que el crecimiento urbano reduce la desigualdad. En la práctica, la presión sobre los servicios amplió las brechas entre barrios.",
+     "D": "El desarrollo de un plan estatal que provocó un superávit habitacional: invierte la situación, porque el déficit de viviendas era el problema de la época, y un superávit no sería un cambio provocado por la migración."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q51",
@@ -1871,7 +2773,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-geografia"
+   "subtopic": "hi-geografia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La población rural disminuyó porque el campo ofrecía pocas oportunidades y las ciudades atraían a los campesinos con empleo, servicios y mejores condiciones de vida.",
+    "planteamiento": "Se pide un factor social de la época que explique la situación descrita en el texto: el agro postergado, el crecimiento lento de la agricultura y la disminución de la población rural, mientras la población total aumentaba en 900.000 habitantes entre 1940 y 1952. Hay que identificar la causa social que lleva a esa disminución.",
+    "steps": [
+     "El texto afirma que el problema del agro quedó postergado y que el lento crecimiento agrícola se manifestó en una disminución de la población rural. Entre 1940 y 1952 la población total creció en 900.000 habitantes, mientras la rural bajó en 25.000.",
+     "Como se pide un factor social, la explicación debe ser una razón por la que las personas dejaron el campo. Esa razón es la búsqueda de mejores condiciones de vida en otro lugar, y el texto la vincula con la postergación del agro.",
+     "La alternativa A menciona la disminución de los suelos disponibles para el cereal. Es un factor productivo y físico, no social, y el texto no señala una pérdida de suelo agrícola.",
+     "La alternativa B menciona la caída de la demanda de alimentos en los mercados internacionales. Es un factor económico externo que el texto no menciona; la postergación del agro se explica por causas internas.",
+     "La alternativa C menciona una reestructuración masiva de la propiedad de la tierra. La reforma agraria chilena es posterior al periodo (1962), así que no puede explicar la caída de la población rural de 1940 a 1952.",
+     "La alternativa D menciona la búsqueda de mejores condiciones de vida en las principales ciudades. Explica la reducción de la población rural: la industrialización y la expansión de los servicios urbanos atrajeron a campesinos con empleo, educación y salud. Es el factor social que coincide con el texto.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La disminución de los suelos disponibles para la producción cerealera: parece una causa del estancamiento agrícola, pero el texto no habla de pérdida de tierras. Además, es un factor productivo, no social.",
+     "B": "La caída de la demanda de alimentos en los mercados internacionales: es un factor económico externo que no aparece en el texto. El problema descrito es interno y de postergación del agro.",
+     "C": "La reestructuración masiva de la propiedad de la tierra en las haciendas: la trampa es mezclar el problema de la tenencia de la tierra con la reforma agraria, que llegó después de 1962 y no explica la migración de 1940 a 1952."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q52",
@@ -1910,7 +2831,28 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-geografia"
+   "subtopic": "hi-geografia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El testimonio describe una toma de terrenos en Santiago: la falta de vivienda y la pobreza urbana llevaron a los pobladores a organizarse y ocupar terrenos como solución colectiva.",
+    "planteamiento": "Se pide la relación causal entre lo que refleja el relato (familias que marchan desde La Legua para ocupar terrenos en Santiago) y los fenómenos sociales que originaron ese movimiento a mediados del siglo XX. Hay que identificar la causa urbana que lleva a la movilización organizada, y no una causa rural ni una institucional.",
+    "steps": [
+     "El testimonio describe una acción colectiva: personas que salen en marcha con carretones y pertenencias, se unen al grupo y se instalan en un terreno. Es una toma de terrenos organizada por los pobladores.",
+     "Para establecer la relación causal hay que preguntar qué fenómeno social origina esa acción. El relato es urbano y habla de pobladores de Santiago, por lo que la causa debe estar en la pobreza y en la falta de vivienda de las ciudades del periodo.",
+     "La alternativa A atribuye el origen a la incapacidad del Estado oligárquico para resolver la pobreza rural. El relato es urbano, así que la causa propuesta no corresponde al fenómeno descrito.",
+     "La alternativa B atribuye la situación a la falta de partidos que representen a los sectores populares urbanos. El movimiento de pobladores contó con vínculos políticos y organizaciones propias, por lo que la afirmación no explica la acción descrita.",
+     "La alternativa C presenta la movilización organizada de pobladores como solución alternativa a los graves problemas de pobreza urbana y de falta de vivienda. Coincide con el relato: las familias se organizan, marchan y ocupan terrenos ante la falta de vivienda.",
+     "La alternativa D habla del progreso en soluciones institucionales a las demandas de la población pobre. La toma existe justamente porque esas soluciones no llegaban, así que la afirmación contradice el sentido del relato.",
+     "La alternativa E habla del protagonismo de los grupos marginales en el diseño de las políticas de vivienda. Los pobladores presionaron con acciones directas, pero el testimonio no muestra que hayan diseñado políticas; la relación causal no corresponde.",
+     "Solo la alternativa C establece una relación causal coherente con el testimonio. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La incapacidad del Estado oligárquico por resolver las situaciones de pobreza rural: confunde la pobreza urbana del testimonio con la pobreza del campo. La causa que se pide es la del fenómeno urbano.",
+     "B": "La falta de partidos políticos que representaran a los sectores populares urbanos: la trampa es afirmar una ausencia que el relato no muestra. El testimonio muestra acción colectiva, no falta de representación política.",
+     "D": "El progreso en la búsqueda de soluciones institucionales a las demandas de la población pobre: parece una respuesta positiva, pero el propio hecho de la toma muestra que las soluciones institucionales eran insuficientes.",
+     "E": "El protagonismo de los grupos marginales en el diseño y la implementación de las políticas de vivienda: la trampa es confundir la presión social con el diseño de políticas. Los pobladores actuaron fuera de las políticas oficiales."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q53",
@@ -1945,7 +2887,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto explica que los organismos públicos y los poderes neutrales fueron arrastrados a la disputa política, lo que menoscabó su misión propia y agravó el quiebre democrático.",
+    "planteamiento": "Se pide identificar a qué factor explicativo del quiebre de la democracia en Chile se refiere el texto de Valenzuela. La cita describe el fracaso de las negociaciones, el deterioro de las instituciones mediadoras y la incorporación de la Contraloría, los tribunales, el Tribunal Constitucional y las Fuerzas Armadas a la controversia política.",
+    "steps": [
+     "El texto explica el quiebre a partir del fracaso de las negociaciones y del deterioro de las instituciones mediadoras. Como consecuencia, organismos que deberían mantenerse neutrales se vieron involucrados en controversias que pertenecían a la arena política y legislativa.",
+     "Se pide el factor explicativo que el texto señala. La idea central es que los organismos públicos perdieron su misión propia al verse arrastrados por la contingencia política, lo que contribuyó al quiebre.",
+     "La alternativa A menciona el desinterés de las organizaciones comunitarias por el bienestar social. El texto se centra en partidos e instituciones políticas, no en organizaciones comunitarias, así que la afirmación no aparece en la cita.",
+     "La alternativa B menciona la indiferencia de la clase política ante la pobreza. La cita habla de movilización social y de conflicto político, no de la pobreza, por lo que la alternativa no corresponde.",
+     "La alternativa C menciona la apatía de la sociedad civil frente a la crisis de representatividad. El texto describe más bien una fuerte movilización social, así que la afirmación contradice la cita.",
+     "La alternativa D menciona el menoscabo de la misión de los organismos públicos por la contingencia. Coincide con el texto: la Contraloría, los tribunales, el Tribunal Constitucional y las Fuerzas Armadas se involucraron en controversias que no les correspondían.",
+     "Solo la alternativa D corresponde al factor explicativo que el texto desarrolla. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El desinterés de las organizaciones comunitarias por el bienestar social: la afirmación es un juicio general que la cita no sostiene. El texto no habla de organizaciones comunitarias ni de desinterés.",
+     "B": "La indiferencia de la clase política ante la pobreza que sufría la población: la trampa es asociar cualquier crisis con la pobreza. La cita se enfoca en la erosión institucional, no en la pobreza.",
+     "C": "La apatía de la sociedad civil frente a la crisis de representatividad política: contradice el texto, que describe movilización social intensa y no apatía de la población."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q54",
@@ -1981,7 +2942,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-democracia"
+   "subtopic": "hi-democracia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El triunfo del NO en 1988 se explica por una oposición que adoptó una postura moderada y unitaria, capaz de convocar a una amplia mayoría social.",
+    "planteamiento": "Se pide una estrategia que favoreció el triunfo de la opción NO en el plebiscito de 1988, según el texto de Boeninger. La cita menciona la Concertación por el No, la decisión de la Democracia Cristiana, la definición del PS-Núñez, la evolución del PS-Almeyda y el aislamiento del extremismo PC-MIR. Hay que identificar la estrategia que el texto asocia a ese resultado.",
+    "steps": [
+     "El texto explica que el triunfo del NO fue la suma de decisiones de partidos de centro e izquierda moderada: la Democracia Cristiana, el PS-Núñez, que se distanció tempranamente del PC, y el PS-Almeyda, que evolucionó hacia una posición que aisló al extremismo PC-MIR.",
+     "La cita asocia ese proceso con la formación de un referente claramente mayoritario, sustentado en una amplia mayoría social. La estrategia que favoreció el triunfo fue, entonces, una oposición unida y de postura moderada.",
+     "La alternativa A menciona la actuación coordinada de los parlamentarios de oposición. El texto no se refiere al trabajo parlamentario, sino a la unidad de los partidos y a la campaña por el NO.",
+     "La alternativa B menciona la implementación de las primeras reformas al texto constitucional. Esas reformas se aprobaron en 1989, después del plebiscito, así que no pueden ser la estrategia que lo favoreció.",
+     "La alternativa C menciona la salida de los partidos de derecha del escenario político. Es falsa: los partidos de derecha siguieron participando y apoyaron la opción SÍ. El texto habla del aislamiento del extremismo PC-MIR, no de la derecha.",
+     "La alternativa D menciona una postura política moderada por parte de la oposición. Coincide con el texto: al distanciarse del PC y del MIR, la oposición se convirtió en un referente mayoritario y amplio.",
+     "Solo la alternativa D corresponde a la estrategia que el texto identifica. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La actuación coordinada de los parlamentarios de oposición: la coordinación existió, pero el texto atribuye el triunfo a la decisión de los partidos y a la campaña ciudadana, no al trabajo parlamentario.",
+     "B": "La implementación de las primeras reformas al texto constitucional: la trampa es de cronología. Las primeras reformas fueron posteriores al plebiscito de 1988, por lo que no pudieron favorecer el triunfo del NO.",
+     "C": "La salida de los partidos políticos de derecha del escenario político: es una afirmación falsa. La derecha se mantuvo en la contienda y el texto menciona el aislamiento del extremismo PC-MIR, no de la derecha."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q55",
@@ -2017,7 +2997,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-estado"
+   "subtopic": "hi-estado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como Estado subsidiario, el Estado interviene solo donde el sector privado no actúa, por lo que destina recursos a sectores económicos poco rentables para los privados.",
+    "planteamiento": "Se pide la implicancia de que el Estado chileno adoptara el rol subsidiario durante la Dictadura Militar, en el marco del modelo neoliberal. El principio de subsidiariedad define cuándo debe intervenir el Estado: como apoyo cuando el sector privado no puede o no quiere actuar. Hay que identificar la alternativa que expresa esa consecuencia.",
+    "steps": [
+     "El principio de subsidiariedad establece que el Estado no compite con los privados en todas las actividades; interviene cuando estos no alcanzan a cubrir una necesidad o cuando una actividad no es rentable para ellos.",
+     "Una implicancia directa de ese rol es que el presupuesto público se orienta a apoyar a los sectores que los privados no atienden por falta de rentabilidad. Así, el Estado actúa como respaldo y no como productor principal.",
+     "La alternativa A menciona el traspaso de la gestión de la administración pública a manos de privados. Es una medida asociada a las privatizaciones, pero no es la implicancia del rol subsidiario, que define cuándo interviene el Estado y no que deje toda la gestión.",
+     "La alternativa B menciona el abandono de programas de desarrollo social. El rol subsidiario redujo la acción directa del Estado en algunos ámbitos, pero no supone abandonar el apoyo social; la alternativa exagera el efecto y no describe la implicancia pedida.",
+     "La alternativa C menciona la marginación del sector público en instituciones financieras. El Estado mantuvo instituciones públicas en el sistema financiero, así que la afirmación no describe el rol subsidiario.",
+     "La alternativa D menciona la utilización del presupuesto para asistir a sectores económicos de poca rentabilidad para los privados. Es la implicancia que corresponde: el Estado destina recursos a actividades que el mercado no atiende, por ejemplo mediante subsidios o apoyos sectoriales.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El traspaso de la gestión de la administración pública a manos de privados: confunde la privatización, una medida del periodo, con el principio de subsidiariedad, que define en qué casos interviene el Estado.",
+     "B": "El abandono de la realización de programas de desarrollo social por parte del gobierno: la trampa es suponer que el rol subsidiario eliminó la acción social. El Estado redujo su rol directo, pero no abandonó el apoyo social.",
+     "C": "La marginación del sector público en la participación en instituciones financieras: la afirmación no describe el rol subsidiario y no coincide con la presencia de instituciones públicas del periodo."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q56",
@@ -2052,7 +3051,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-guerra-fria"
+   "subtopic": "hi-guerra-fria",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La reorganización de las fuerzas políticas en los años 80 permitió a la oposición negociar una salida pacífica a la dictadura, que culminó en el plebiscito de 1988.",
+    "planteamiento": "Se pide cómo incidió la rearticulación del escenario político en la recuperación del sistema democrático durante la década de 1980. El dato clave es que la reorganización de las fuerzas políticas dio a la oposición una estrategia común y una capacidad de negociación frente al régimen militar.",
+    "steps": [
+     "El enunciado señala que la reorganización de las fuerzas políticas contribuyó a la recuperación de la democracia. Hay que determinar qué efecto tuvo esa reorganización sobre el sistema democrático.",
+     "Cuando los partidos se rearticulan, la oposición puede presentar una estrategia común y negociar con el régimen en lugar de depender solo de la protesta. Esa capacidad de negociación abre la vía institucional.",
+     "La vía institucional se concretó en el plebiscito de 1988 y en la transición que siguió. Es una salida pacífica frente a una dictadura que había reprimido la protesta, y no un camino de enfrentamiento armado.",
+     "La alternativa A afirma que la rearticulación dificultó el liderazgo de las protestas a nivel nacional. Es contraria al proceso: la coordinación de las fuerzas políticas fortaleció las movilizaciones nacionales de la década.",
+     "La alternativa B afirma que la rearticulación implicó el término de la polarización del debate público. Es falsa: la polarización persistió y el plebiscito de 1988 fue una confrontación entre el SÍ y el NO.",
+     "La alternativa C afirma que la rearticulación permitió la búsqueda de una salida pacífica a la dictadura. Coincide con el proceso: la reorganización hizo posible la negociación y el plebiscito como vía de transición.",
+     "La alternativa D menciona la apelación a organismos jurídicos internacionales. Es otra estrategia de denuncia de la época, pero no corresponde a la incidencia de la rearticulación de las fuerzas políticas en la recuperación democrática.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Dificultó el liderazgo de las protestas a nivel nacional: invierte el efecto. Las protestas nacionales de la década tuvieron mejor coordinación cuando los partidos se rearticularon.",
+     "B": "Implicó el término de la polarización del debate público: la trampa es suponer que la negociación elimina las diferencias. El plebiscito de 1988 mantuvo una fuerte polarización entre el SÍ y el NO.",
+     "D": "Posibilitó la apelación a organismos jurídicos internacionales: es una estrategia real de la época, pero no es la incidencia de la rearticulación política que pregunta el enunciado; la alternativa desvía la relación causal."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q57",
@@ -2087,7 +3106,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cuando una sola empresa controla casi toda la oferta, deja de haber competencia real y la empresa puede fijar precios, lo que limita la libre competencia.",
+    "planteamiento": "Se pide un impacto de la situación del texto según la teoría económica sobre el funcionamiento del mercado. El texto describe que en 1880 había muchas compañías que competían y que, hacia 1889, la compañía De Beers, creada por Rhodes, controlaba casi toda la producción mundial de diamantes. Hay que relacionar esa concentración con la teoría del mercado.",
+    "steps": [
+     "El texto describe el paso de muchas compañías que competían entre sí a una sola empresa que controló casi toda la producción de diamantes. Eso es una concentración de la oferta.",
+     "En la teoría económica, un mercado de libre competencia tiene muchos oferentes que no pueden fijar el precio por sí solos. Cuando un único oferente concentra casi toda la oferta, se forma un monopolio que limita la competencia.",
+     "La alternativa A menciona la limitación de la libre competencia. Coincide: al eliminar a sus rivales, De Beers redujo la competencia y adquirió poder para fijar precios y condiciones.",
+     "La alternativa B menciona el aumento de los costos de producción. El texto no informa de alzas de costos; la concentración puede reducir costos, y la alternativa no se deduce de la cita.",
+     "La alternativa C menciona el control de la oferta de bienes sustitutos. El texto habla de diamantes y no de bienes sustitutos, así que la afirmación no corresponde al caso.",
+     "La alternativa D menciona la reducción de la demanda a escala global. El texto no menciona la demanda, y la concentración de la oferta no reduce por sí misma la demanda mundial de diamantes.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El aumento de los costos de producción: no se deduce del texto, que no habla de costos. Un monopolio puede tener costos distintos, pero el impacto que pregunta la teoría es sobre la competencia.",
+     "C": "El control de la oferta de bienes sustitutos: la trampa es mezclar el control de la oferta de diamantes con bienes sustitutos, que el texto no menciona.",
+     "D": "La reducción de la demanda a escala global: no aparece en el texto. El caso describe control de la oferta, no una caída de la demanda mundial."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q58",
@@ -2122,7 +3160,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un concierto aumenta de forma repentina la demanda de bienes en la zona; los comerciantes suben los precios porque esperan vender más a un precio mayor.",
+    "planteamiento": "Se pide el razonamiento que explica el alza de precios de los productos del comercio cercano el día de un concierto masivo, considerando la ley de la oferta y la demanda. El dato clave es el aumento explosivo de la demanda de esos productos en un espacio y un tiempo concentrados.",
+    "steps": [
+     "Según la ley de la oferta y la demanda, el precio sube cuando la demanda aumenta más rápido que la oferta, o cuando la oferta disminuye. El enunciado describe un alza explosiva de precios en un solo día.",
+     "El concierto reúne a un gran número de personas en un mismo lugar, que compran alimentos, bebidas y otros productos. La oferta del comercio cercano no crece de inmediato, así que la demanda supera la oferta habitual.",
+     "La alternativa A menciona un monopolio comercial. No corresponde: el enunciado habla de varios comercios cercanos y no de una empresa que controle el mercado.",
+     "La alternativa B menciona un descenso abrupto de la oferta. Podría haber escasez, pero el enunciado no informa de desabastecimiento; el razonamiento que explica la subida de precios es el que parte de la demanda.",
+     "La alternativa C menciona que los comerciantes esperan beneficiarse de un aumento de la demanda. Explica la subida: con más compradores dispuestos a pagar, el comerciante puede subir precios y aumentar sus ganancias.",
+     "La alternativa D menciona la transferencia de un alza del costo de producción a los consumidores. El concierto no aumenta el costo de producción, sino la demanda, así que la alternativa no explica el caso.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Los consumidores se verán afectados por la existencia de un monopolio comercial: no hay evidencia de un monopolio. Varios comercios distintos ofrecen productos, y el alza se explica por la demanda.",
+     "B": "Los consumidores enfrentarán un descenso abrupto de la oferta: es un mecanismo posible en otras situaciones, pero el enunciado no menciona escasez de productos. El razonamiento pedido parte de la demanda.",
+     "D": "Los comerciantes transferirán el alza del costo de producción a los consumidores: la trampa es asumir un aumento de costos. El enunciado describe un aumento de demanda, no de costos."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q59",
@@ -2157,7 +3214,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Subir la tasa de interés encarece el crédito y hace más atractivo el ahorro; con ello baja el consumo y se contiene la inflación.",
+    "planteamiento": "Se pide la reacción que el Banco Central busca provocar en el mercado nacional cuando aumenta la tasa de interés. El objetivo del organismo es mantener baja y estable la inflación, y la tasa de interés es su herramienta para influir en la demanda de bienes y servicios.",
+    "steps": [
+     "El Banco Central busca mantener baja y estable la inflación. Cuando sube la tasa de interés, pedir dinero prestado cuesta más, por lo que las personas y las empresas se endeudan menos.",
+     "Con un crédito más caro, las familias postergan compras a plazo y las empresas invierten menos. La demanda agregada disminuye y la presión sobre los precios se reduce.",
+     "La alternativa A menciona desincentivar el consumo. Corresponde exactamente al efecto buscado: con un costo del dinero mayor, la gente gasta menos.",
+     "La alternativa B menciona fomentar la sobreproducción. Es contraria al efecto: si baja la demanda, las empresas tienden a producir menos, no más.",
+     "La alternativa C menciona estimular un aumento de la oferta. Encarecer el crédito no aumenta la oferta de bienes; puede incluso reducir la inversión productiva.",
+     "La alternativa D menciona restringir la importación de bienes. Es una medida comercial, no el mecanismo de la tasa de interés, que actúa sobre el crédito y el consumo internos.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Fomentar la sobreproducción: es contrario al propósito de la política monetaria. Una tasa alta reduce la demanda, y las empresas producen menos cuando venden menos.",
+     "C": "Estimular un aumento de la oferta: la trampa es asociar la tasa de interés con la producción. El instrumento actúa principalmente sobre la demanda, no sobre la capacidad productiva.",
+     "D": "Restringir la importación de bienes: suena a una medida frente a la inflación, pero no es un efecto directo de la tasa de interés; las restricciones a importaciones son decisiones comerciales."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q60",
@@ -2192,7 +3268,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si sube el precio de los combustibles, aumenta el costo del transporte y de los insumos, y ese costo se traslada al precio final de los productos en un mercado libre.",
+    "planteamiento": "Se pide la situación que justifica el temor de José, un fabricante de muebles que recibe madera transportada desde el sur, ante el alza de los combustibles. Hay que identificar el mecanismo del mercado que traslada un mayor costo de los factores productivos al precio final del producto.",
+    "steps": [
+     "José compra la madera a un proveedor que la transporta desde el sur. El alza de los combustibles encarece el transporte, y el insumo que recibe José cuesta más, aunque no falte.",
+     "El enunciado pide la situación que justifica su temor en una economía de libre mercado. El mecanismo buscado es que el costo de los factores productivos (madera, transporte, energía) se traslade al precio final.",
+     "La alternativa A menciona la eficacia de las entregas por parte del distribuidor. Es un asunto de servicio y logística, no de costos asociados a los combustibles, así que no justifica el temor.",
+     "La alternativa B menciona el impacto que el costo de los factores productivos tendrá en el precio final. Es el mecanismo correcto: si sube el costo de la madera y del transporte, el productor debe subir su precio o reducir su margen.",
+     "La alternativa C menciona el desabastecimiento de materias primas. La noticia habla de un alza de precios, no de escasez; no se deduce que falte madera.",
+     "La alternativa D menciona la posibilidad de que una empresa más grande concentre la oferta. Describe concentración de mercado, que no se deduce de la noticia sobre combustibles.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La eficacia de las entregas a los clientes por parte del distribuidor: la alternativa habla de servicio y no de costos. Una entrega eficaz no explica por qué sube el precio de la madera.",
+     "C": "El desabastecimiento de materias primas necesarias para la elaboración de sus productos: la trampa es confundir alza de precio con escasez. La noticia habla de costos, no de falta de madera.",
+     "D": "La posibilidad de que una empresa más grande concentre la oferta del mismo producto: es un riesgo real de mercado, pero no se deriva de la noticia sobre el alza de combustibles."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q61",
@@ -2227,7 +3322,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los impuestos aumentan los costos de las empresas, que suelen trasladar parte de ese costo al precio final de los productos que comercializan.",
+    "planteamiento": "Se pide uno de los efectos que provoca la recaudación de impuestos en el funcionamiento del mercado dentro de un Estado de derecho. Los impuestos son ingresos del Estado que recaen sobre personas y empresas; el efecto buscado debe ser un efecto sobre los mercados, no sobre el presupuesto del Estado.",
+    "steps": [
+     "Los impuestos son pagos que el Estado recauda de personas y empresas. Cuando recaen sobre la producción o la venta, aumentan el costo de la empresa.",
+     "Para mantener su margen de ganancia, muchas empresas trasladan parte de ese mayor costo al precio final de los productos. Por eso un efecto habitual de la recaudación sobre el mercado es el alza de precios.",
+     "La alternativa A menciona un incremento constante del ingreso de las personas. Es falso: los impuestos reducen el ingreso disponible, no lo aumentan.",
+     "La alternativa B menciona la reducción de la disponibilidad de recursos fiscales. Es contraria al efecto de la recaudación, que aumenta los recursos del Estado y no los reduce.",
+     "La alternativa C menciona la disminución de la disponibilidad de bienes de consumo. Los impuestos pueden encarecer los bienes, pero no reducen por sí mismos la cantidad de bienes producidos.",
+     "La alternativa D menciona el aumento del precio final de los productos comercializados. Coincide con el mecanismo de traslado de costos: el impuesto encarece el producto para el consumidor.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El incremento constante del ingreso de las personas: la trampa es suponer que el Estado redistribuye sin costo. Los impuestos disminuyen el ingreso disponible de quienes los pagan.",
+     "B": "La reducción de la disponibilidad de recursos fiscales: invierte el efecto, porque la recaudación aumenta los recursos fiscales que luego el Estado destina al gasto público.",
+     "C": "La disminución de la disponibilidad de bienes de consumo: la trampa es suponer que el impuesto reduce la producción. El efecto típico es sobre el precio, no sobre la cantidad de bienes."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q62",
@@ -2262,7 +3376,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cuando pocas empresas concentran casi todo el mercado, pueden fijar precios según sus intereses, lo que debilita la competencia y perjudica a los consumidores.",
+    "planteamiento": "Se pide el problema que se deriva del caso hipotético en una economía de libre mercado. El caso indica que tres cadenas controlan el 98 % del mercado de bienes de consumo (48 %, 30 % y 20 %), y que solo el 2 % lo cubren comercios pequeños. Hay que identificar la consecuencia que surge de esa concentración.",
+    "steps": [
+     "Sumando las participaciones se obtiene 48 % + 30 % + 20 % = 98 %. Tres cadenas dominan casi todo el mercado y los comercios pequeños solo cubren el 2 % restante.",
+     "Una concentración así corresponde a un oligopolio: pocas empresas grandes con poder para influir en los precios. En una economía de libre mercado, ese poder reduce la competencia que regula los precios.",
+     "La alternativa A afirma que los supermercados controlan el conjunto de la producción de los bienes que ofrecen. Va más allá del caso, que describe participación en la venta de bienes de consumo y no control de toda la producción.",
+     "La alternativa B afirma que los supermercados más grandes fijan los precios de acuerdo con sus intereses. Es el problema que se deriva de la concentración: con tanta participación, las cadenas grandes pueden influir en los precios y en las condiciones del mercado.",
+     "La alternativa C afirma que los comercios pequeños deben adquirir obligatoriamente su mercadería en los supermercados. El caso no menciona ninguna obligación, así que no se deriva del texto.",
+     "La alternativa D afirma que el supermercado pequeño debe vender productos diferentes a los de los grandes. El caso no habla de diferenciación de productos, por lo que la afirmación no corresponde.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Los supermercados controlan el conjunto de la producción de bienes que ofrecen: la trampa es confundir participación en la venta con control de la producción. El caso no describe producción.",
+     "C": "Los comercios de menor tamaño deben adquirir obligatoriamente su mercadería en los supermercados: el caso no menciona obligación alguna. Los comercios pequeños pueden abastecerse de distintos proveedores.",
+     "D": "El supermercado de menor tamaño tiene que vender productos diferentes a los que ofrecen los grandes supermercados: no se deduce del caso, que no habla de diferenciación de productos."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q63",
@@ -2297,7 +3430,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si la moneda nacional pierde valor, con el mismo dinero se compra menos; por eso la devaluación debilita el poder adquisitivo de los consumidores.",
+    "planteamiento": "Se pide una consecuencia de la devaluación de la moneda nacional para los consumidores. La devaluación significa que la moneda vale menos frente a otras monedas. Hay que relacionar esa pérdida de valor con lo que las personas pueden comprar con su dinero.",
+    "steps": [
+     "La devaluación reduce el valor de la moneda nacional frente a otras monedas. Como los bienes importados se pagan con monedas extranjeras, su precio en moneda nacional tiende a subir.",
+     "Si los precios suben y el ingreso se mantiene, el dinero rinde menos. Esa capacidad de compra es lo que se llama poder adquisitivo, y la devaluación lo debilita.",
+     "La alternativa A menciona el estancamiento del salario nominal. No es una consecuencia directa: el salario en pesos puede mantenerse o cambiar; lo que se afecta es su valor real.",
+     "La alternativa B menciona el debilitamiento del poder adquisitivo. Es la consecuencia directa para los consumidores: con el mismo ingreso se pueden comprar menos bienes.",
+     "La alternativa C menciona la reducción de la demanda del dinero. Es un concepto monetario que no describe lo que vive el consumidor al comprar, así que no es la consecuencia pedida.",
+     "La alternativa D menciona la disminución del precio de los bienes. Es lo contrario de lo esperable: con una moneda más débil, los bienes importados y muchos insumos suben de precio.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El estancamiento del salario nominal: la trampa es suponer que el salario en pesos se congela automáticamente. Lo que se pierde con la devaluación es el valor real del salario, no necesariamente su monto nominal.",
+     "C": "La reducción de la demanda del dinero: es un concepto técnico que no describe la experiencia del consumidor. La pregunta busca el efecto sobre lo que la persona puede comprar.",
+     "D": "La disminución del precio de los bienes: invierte el efecto. Con una moneda que vale menos, los bienes importados suben de precio."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q64",
@@ -2332,7 +3484,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La inflación hace que el dinero compre menos; si el ingreso no sube al mismo ritmo que los precios, la familia tiene menos margen para ahorrar.",
+    "planteamiento": "Se pide cómo se evidencian los efectos de la inflación en la economía de una familia. La inflación es un aumento generalizado y sostenido de los precios que altera la relación entre oferta y demanda. Hay que identificar el efecto familiar que se deriva de la pérdida de valor del dinero.",
+    "steps": [
+     "La inflación es el aumento generalizado y sostenido de los precios. Con el mismo dinero, la familia puede comprar cada vez menos bienes y servicios.",
+     "Si los precios suben y el ingreso no sube al mismo ritmo, el gasto familiar cubre una parte mayor de lo que se gana. El ingreso real disminuye aunque el monto nominal se mantenga.",
+     "Si el gasto aumenta más que el ingreso, queda menos dinero disponible al final del mes. Por eso la inflación disminuye la capacidad de ahorro de las familias.",
+     "La alternativa A afirma que la inflación reduce el monto de los ingresos. Es un error: la inflación no reduce el monto nominal de los ingresos, sino su valor real.",
+     "La alternativa B afirma que la inflación aumenta progresivamente el poder adquisitivo. Es contraria al efecto: el poder adquisitivo disminuye cuando los precios suben.",
+     "La alternativa C afirma que la inflación incrementa la cantidad de necesidades básicas. Las necesidades no aumentan por el alza de precios; lo que cambia es el costo de satisfacerlas.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Reduciendo el monto de los ingresos que reciben: la trampa es confundir el valor real con el monto nominal. Los ingresos siguen igual en pesos, pero compran menos.",
+     "B": "Aumentando progresivamente el poder adquisitivo: es la afirmación opuesta. Con inflación, la familia puede comprar menos con el mismo ingreso.",
+     "C": "Incrementando la cantidad de necesidades básicas: la alternativa confunde el costo de satisfacer las necesidades con su cantidad. El efecto de la inflación se evidencia en el gasto y el ahorro."
+    }
+   }
   },
   {
    "id": "historia-2025-invierno-q65",
@@ -2367,7 +3538,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "hi-mercado"
+   "subtopic": "hi-mercado",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las leyes que garantizan la libre competencia impiden la formación de monopolios, porque sancionan las prácticas de concentración y mantienen el mercado abierto a nuevos participantes.",
+    "planteamiento": "Se pide la situación que limita las posibilidades de configurar un monopolio, es decir, una empresa que controla el mercado y puede fijar precios. Hay que identificar el factor que restringe ese poder, ya sea de origen legal o de mercado, y descartar las prácticas que favorecen el monopolio.",
+    "steps": [
+     "Un monopolio se configura cuando una empresa domina la oferta y puede fijar precios sin que los rivales la limiten. Para limitarlo se requiere un marco que proteja la competencia.",
+     "Las normas de libre competencia (como las leyes antimonopolio) sancionan las prácticas de concentración y abuso de posición dominante, y mantienen el mercado abierto a nuevos oferentes. Así se reducen las posibilidades de un monopolio.",
+     "La alternativa A menciona la presión del aumento sostenido de la oferta. Un aumento de la oferta puede presionar los precios a la baja, pero no garantiza que el monopolio no se forme; la pregunta busca el límite institucional.",
+     "La alternativa B menciona la aplicación de impuestos a la producción. Encarece la producción de todas las empresas y puede favorecer a las grandes, que absorben mejor el costo; no limita la formación de monopolios.",
+     "La alternativa C menciona la aprobación de leyes que garanticen la libre competencia. Impide la formación de monopolios: las normas antimonopolio sancionan la concentración abusiva y obligan a mantener el mercado abierto.",
+     "La alternativa D menciona la fijación de precios por parte de las unidades productoras. Es una práctica monopólica, que favorece el monopolio en lugar de limitarlo.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La presión ejercida por el aumento sostenido de la oferta: puede moderar precios, pero no impide por sí sola que una empresa concentre el mercado. Se descarta porque no es un límite estructural.",
+     "B": "La aplicación de un conjunto de impuestos a la producción: la trampa es suponer que cualquier carga sobre las empresas frena la concentración. Los impuestos no distinguen entre competidores y pueden favorecer a las más grandes.",
+     "D": "La fijación de precios por parte de las unidades productoras: es justamente una conducta monopólica. Favorece el monopolio en lugar de limitarlo."
+    }
+   }
   }
  ]
 }

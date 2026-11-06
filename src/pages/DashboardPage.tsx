@@ -50,7 +50,7 @@ export function DashboardPage() {
       <PageHeader title="ensayos" />
       <ExamFilters value={filters} onChange={setFilters} />
       {visible.length ? (
-        <ExamList exams={visible} lastScores={lastScores} />
+        <ExamList exams={visible} lastScores={lastScores} flat={filters.subject !== 'todas'} />
       ) : (
         <EmptyState
           title="ningún ensayo con estos filtros"

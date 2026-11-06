@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-import { EXAMS_BY_ID } from '@/data/catalog'
+import { attemptTitle, EXAMS_BY_ID } from '@/data/catalog'
 import { DECKS } from '@/data/flashcards'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import { useExamStore } from '@/store/useExamStore'
@@ -30,7 +30,7 @@ export function useCrumbs(): Crumb[] {
   }
   if (root === 'resultados') {
     const attempt = attempts.find((a) => a.id === id)
-    return [...section('/analitica'), { label: attempt?.examTitle ?? 'resultado' }]
+    return [...section('/analitica'), { label: attempt ? attemptTitle(attempt) : 'resultado' }]
   }
   const base = section(`/${root}`)
   if (!base.length) return [{ label: 'página no encontrada' }]

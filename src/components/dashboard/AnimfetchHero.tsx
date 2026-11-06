@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { DailyQuote } from '@/components/dashboard/DailyQuote'
 import { HubShell } from '@/components/dashboard/HubShell'
 import { NebulaCanvas } from '@/components/dashboard/NebulaCanvas'
+import { PaesCountdown } from '@/components/dashboard/PaesCountdown'
 import { PixelIcon, type PixelIconName } from '@/components/icons/PixelIcon'
 import { EXAMS } from '@/data/catalog'
 import { TOTAL_CARDS } from '@/data/flashcards'
@@ -22,7 +23,7 @@ import { quickDrillDraft, quickDrillSubject } from '@/utils/subtopics'
 const curated = EXAMS.filter((e) => e.source === 'curado').length
 
 const COMMANDS: { label: string; hint: string; icon: PixelIconName; to: string }[] = [
-  { label: 'ensayos', hint: `${EXAMS.length - curated} pruebas oficiales demre y ${curated} con explicación`, icon: 'document', to: '/ensayos' },
+  { label: 'ensayos', hint: `${EXAMS.length - curated} pruebas oficiales demre y ${curated} curados`, icon: 'document', to: '/ensayos' },
   { label: 'temas', hint: `${SUBTOPICS.length} subtemas, con resumen y práctica`, icon: 'tree', to: '/subtemas' },
   { label: 'flashcards', hint: `${TOTAL_CARDS} tarjetas de memoria`, icon: 'cards', to: '/flashcards' },
   { label: 'mapa', hint: 'cómo se conecta lo que sabes', icon: 'constellation', to: '/zettelkasten' },
@@ -91,27 +92,31 @@ export function AnimfetchHero() {
       <div className="grid @3xl:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
         <NebulaCanvas className="h-56 @lg:h-72 @3xl:h-auto @3xl:min-h-[340px]" />
         <div className="flex min-w-0 flex-col gap-5 p-5 @3xl:p-6">
-          <dl className="font-mono text-[14px] leading-[1.9]">
-            <Field name="racha">{current} {current === 1 ? 'día' : 'días'}</Field>
-            <Field name="ensayos">{EXAMS.length}</Field>
-            <Field name="tarjetas">{TOTAL_CARDS}</Field>
-            <Field name="acierto">{accuracy === null ? '—' : `${Math.round(accuracy * 100)} %`}</Field>
-            <Field name="tema">
-              <button
-                type="button"
-                onClick={() => openAppearance('tema')}
-                aria-label={`Cambiar tema. Ahora usas ${theme.label}`}
-                className="group inline-flex flex-wrap items-center gap-x-2 rounded-sm text-left"
-              >
-                <span className="underline-offset-4 group-hover:underline">{theme.label}</span>
-                <span aria-hidden className="whitespace-nowrap">
-                  {blocks.map((color, i) => (
-                    <span key={i} style={{ color }}>█</span>
-                  ))}
-                </span>
-              </button>
-            </Field>
-          </dl>
+          {/* En la ventana más ancha, el contador y los datos caben lado a lado y le dejan aire a la composición. */}
+          <div className="flex flex-col gap-5 @[1300px]:flex-row @[1300px]:items-start @[1300px]:justify-between @[1300px]:gap-8">
+            <PaesCountdown />
+            <dl className="shrink-0 font-mono text-[14px] leading-[1.9]">
+              <Field name="racha">{current} {current === 1 ? 'día' : 'días'}</Field>
+              <Field name="ensayos">{EXAMS.length}</Field>
+              <Field name="tarjetas">{TOTAL_CARDS}</Field>
+              <Field name="acierto">{accuracy === null ? '—' : `${Math.round(accuracy * 100)} %`}</Field>
+              <Field name="tema">
+                <button
+                  type="button"
+                  onClick={() => openAppearance('tema')}
+                  aria-label={`Cambiar tema. Ahora usas ${theme.label}`}
+                  className="group inline-flex flex-wrap items-center gap-x-2 rounded-sm text-left"
+                >
+                  <span className="underline-offset-4 group-hover:underline">{theme.label}</span>
+                  <span aria-hidden className="whitespace-nowrap">
+                    {blocks.map((color, i) => (
+                      <span key={i} style={{ color }}>█</span>
+                    ))}
+                  </span>
+                </button>
+              </Field>
+            </dl>
+          </div>
           <div className="mt-auto">
             <DailyQuote index={quoteIndex} onNext={nextQuote} />
           </div>

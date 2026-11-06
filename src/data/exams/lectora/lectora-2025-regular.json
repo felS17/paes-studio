@@ -1,9 +1,10 @@
 {
  "id": "lectora-2025-regular",
  "subject": "lectora",
- "title": "PAES Regular 2025",
+ "title": "PAES Regular 2024",
  "description": "Selección oficial de 48 de las 65 preguntas de Competencia Lectora, aplicada el 03-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "regular",
  "source": "demre",
  "form": "103",
@@ -180,7 +181,24 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La emisora usa la frase para justificar la brevedad de su discurso: si la imperfección se tolera mejor en pequeñas dosis, ella anuncia que no hablará demasiado.",
+    "planteamiento": "Se pide la intención con que se usa la expresión «Toda imperfección resulta más fácil de aguantar si se sirve en pequeñas dosis», que aparece en el primer párrafo. Datos: la frase va justo antes de «Por eso mi discurso no va a ser demasiado largo», así que debe relacionarse con la extensión del discurso.",
+    "steps": [
+     "La expresión aparece en el primer párrafo, después de que la emisora dice que debe hablar sobre poesía y que casi nunca se ha expresado sobre ese tema, siempre con la convicción de que no lo hace muy bien.",
+     "A continuación escribe «Por eso mi discurso no va a ser demasiado largo». La palabra «Por eso» muestra que la conclusión sobre la extensión se deriva de lo que acaba de decir.",
+     "La metáfora de las dosis compara el discurso con una porción de comida: una imperfección se tolera mejor si llega en cantidades pequeñas. Trasladado al discurso, significa que un texto breve hace más llevadera la imperfección que se le pueda reconocer.",
+     "Se descarta cualquier admisión de indignidad, porque la emisora no se califica como indigna del premio. Tampoco se trata de un gesto para conocer a la audiencia, sino de justificar la brevedad.",
+     "Por lo tanto, la expresión funciona como justificación de la extensión del discurso, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Afirma que la emisora es indigna del premio. Es una trampa de lectura literal: la expresión habla de imperfecciones tolerables, no de un premio no merecido, y el texto no contiene una admisión de indignidad.",
+     "C": "Reconoce la inexperiencia que la inseguriza. Es una trampa parcial: el primer párrafo sí dice que la emisora casi nunca habla de poesía, pero la frase citada no reconoce inexperiencia, sino que justifica la brevedad.",
+     "D": "Transmite que conoce los intereses de la audiencia. Es una trampa porque la emisora menciona a los oyentes en otros pasajes, pero en esta frase no analiza lo que le interesa a su público."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q02",
@@ -209,7 +227,24 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El segundo párrafo sostiene que a los poetas les cuesta reconocer sus propias virtudes, por lo que se muestran escépticos y desconfiados de sí mismos.",
+    "planteamiento": "Se pide la idea central del segundo párrafo, que comienza con «El poeta contemporáneo es escéptico y desconfía incluso de sí mismo». Datos: el párrafo habla de la desconfianza del poeta, de cómo oculta su profesión y de la dificultad para reconocer sus virtudes.",
+    "steps": [
+     "El párrafo abre con una afirmación general: el poeta contemporáneo es escéptico y desconfía de sí mismo, y confiesa su profesión con desgano, como si fuera algo vergonzoso.",
+     "Luego hace una comparación: es más fácil admitir los vicios propios que reconocer las virtudes, porque estas «están escondidas más profundamente, y hasta uno mismo no cree tanto en ellas». Esa es la tesis del párrafo.",
+     "Los ejemplos apoyan la tesis: en las encuestas el poeta usa el término genérico «escritor», y el empleado público o los compañeros de viaje reciben con perplejidad la noticia de que tratan con un poeta.",
+     "El tramo final compara con el filósofo, que puede adornar su profesión con un grado académico, mientras que el poeta no tiene ese respaldo. El problema del poeta es, entonces, de reconocimiento personal y social.",
+     "Se confirma que el párrafo se ordena en torno a la dificultad para reconocer las virtudes del quehacer poético, idea que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Afirma que los poetas prefieren ser reconocidos como escritores. Es una trampa: el texto dice que el poeta usa el término «escritor» para no revelar su profesión, no porque busque reconocimiento público.",
+     "C": "Dice que los poetas parecen menos serios que los profesores de Filosofía. Es un detalle del párrafo, pero la comparación sirve para mostrar el prestigio académico que el poeta no tiene; no se afirma que sea menos serio.",
+     "D": "Señala que los poetas provocan inquietud al revelar su profesión. Es una inversión del sujeto: el texto dice que la noticia causa inquietud a otras personas, como el empleado público, y no que el poeta la provoque."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q03",
@@ -239,7 +274,23 @@
    "presentation": "text",
    "passageId": "lectura-1",
    "pilot": true,
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La anécdota de Brodsky muestra lo absurdo de exigir un certificado para ser poeta, y así respalda que la poesía no depende de un título.",
+    "planteamiento": "Se pide el propósito de la anécdota sobre Josef Brodsky, en el segundo párrafo. Datos: a Brodsky se le clasificó como «parásito» y se le condenó al destierro «por no contar con un certificado oficial que le permitiera ser poeta»; la emisora lo conoció y notó que se llamaba poeta sin conflictos.",
+    "steps": [
+     "La anécdota aparece después de que la emisora sostiene que, si la poesía exigiera estudios, exámenes y diplomas, habría que tener «un papel con sello y firma» para ser poeta.",
+     "El hecho narrado es que a Brodsky se le expulsó del país por no tener certificado, aunque era un poeta de gran calidad, que luego recibió el Premio Nobel. La falta de certificado queda así en evidencia como un criterio arbitrario.",
+     "Además, la emisora cuenta que Brodsky pronunciaba la palabra «poeta» sin conflictos internos. Esto sugiere que la identidad de poeta nace de la obra y no de un documento.",
+     "La anécdota es, por tanto, un ejemplo concreto que sostiene que se puede ser poeta sin certificación. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Revela una crítica al estilo de vida de los poetas. Es una lectura equivocada: la anécdota critica a quien exige certificados para reconocer a un poeta, no el modo de vida de los poetas.",
+     "B": "Destaca a los poetas como seres irreverentes. Es una trampa de palabra: Brodsky sí se llama poeta con «desafiante desenvoltura», pero la anécdota no enfatiza la irreverencia, sino la injusticia del castigo.",
+     "C": "Ilustra que los poetas se avergüenzan de su oficio. Es una confusión: esa actitud aparece al comienzo del párrafo, pero Brodsky es justamente el contraejemplo, porque no se avergüenza de llamarse poeta."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q04",
@@ -268,7 +319,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La crítica es que las biografías filmadas muestran el proceso creativo, pero no explican de dónde surge la inspiración, que es lo esencial.",
+    "planteamiento": "Se pide la crítica que la emisora hace a las películas biográficas sobre artistas y científicos, en el quinto párrafo. Datos: el texto dice que estas películas muestran el proceso creativo de forma verosímil, pero «no dice nada sobre el extraño estado de ánimo que se conoce comúnmente como inspiración».",
+    "steps": [
+     "La emisora reconoce que las películas biográficas muestran el proceso creativo que condujo a descubrimientos o a obras de arte, y que lo hacen con «aceptables resultados».",
+     "Enumera lo que sí logran: laboratorios, instrumentos, experimentos repetidos o las fases de un cuadro y de una composición musical. Aun así, concluye que «todo sigue siendo muy ingenuo».",
+     "La crítica se afirma en la frase siguiente: estas películas no dicen nada sobre la inspiración, es decir, sobre el origen de la creación. Lo que muestran es la parte visible del trabajo, pero no lo que lo motiva.",
+     "Por lo tanto, la crítica apunta a que estas películas omiten el origen de los procesos creativos e intelectuales, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Que excluyen los momentos clave de sus trayectorias vitales. Es una trampa por semejanza: el texto no reclama que falten etapas biográficas, sino que el proceso creativo queda sin explicar.",
+     "C": "Que desestiman sus méritos en la búsqueda del reconocimiento. El párrafo no habla de reconocimiento ni de méritos desestimados; es una idea ajena al texto.",
+     "D": "Que banalizan sus experiencias mediante la música y el dramatismo. Es una trampa: la emisora elogia el dramatismo y las escenas de suspenso («resultan muy dramáticas»), así que no los critica."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q05",
@@ -297,7 +364,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según el quinto párrafo, los directores más ambiciosos quieren mostrar de forma verosímil el proceso creativo que lleva a descubrimientos u obras de arte.",
+    "planteamiento": "Se pide la ambición de quienes dirigen películas sobre grandes científicos y artistas, según el quinto párrafo. Datos: el párrafo comienza con «Hay algo que resulta muy característico» y la frase clave es «La tarea de los directores más ambiciosos es mostrar en forma verosímil el proceso creativo».",
+    "steps": [
+     "El quinto párrafo identifica primero el hecho: se filman películas biográficas sobre científicos y artistas de manera continua.",
+     "Luego declara la meta de los directores más ambiciosos: mostrar de forma verosímil el proceso creativo que condujo a importantes descubrimientos o a grandes obras de arte.",
+     "Los ejemplos que siguen (laboratorios y experimentos, pintores y compositores) ilustran ese proceso creativo que se intenta reconstruir, desde la primera raya hasta la última pincelada.",
+     "Por eso la ambición es recrear los procesos creativos, y no los hechos personales ni las repercusiones de la obra. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Retratar la biografía con exactitud. Es una trampa: el texto busca lo verosímil, que no es lo mismo que la exactitud biográfica, y no menciona la biografía como meta.",
+     "C": "Transmitir la satisfacción de los científicos y artistas por sus obras. Es una afirmación que no aparece en el párrafo, que habla de proceso y de inspiración, no de satisfacción.",
+     "D": "Destacar las repercusiones de su labor. El párrafo se concentra en el camino hasta el descubrimiento o la obra, que es distinto de los efectos que esa obra produce después."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q06",
@@ -326,7 +409,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según la emisora, la inspiración nace de un «no lo sé» perpetuo, es decir, del cuestionamiento constante de quien busca nuevos desafíos en su trabajo.",
+    "planteamiento": "Se pide de dónde proviene la inspiración según la emisora. Datos: la emisora responde a la pregunta por la inspiración y la asocia a la expresión «no lo sé», que se repite perpetuamente en quienes cumplen su trabajo con amor e imaginación.",
+    "steps": [
+     "La emisora responde que la inspiración no es privilegio de los poetas ni de los artistas: se despierta en personas que escogen su trabajo y lo cumplen con amor e imaginación, como médicos, maestros o jardineros.",
+     "Esas personas tienen una inquietud que no desfallece, porque cada problema resuelto surge un enjambre de nuevas preguntas. Su trabajo es una aventura sin fin si encuentran nuevos desafíos.",
+     "La frase clave es «La inspiración, cualquier cosa que sea, nace de un perpetuo “no lo sé”». Su origen es el cuestionamiento continuo, no el conocimiento cerrado del oficio.",
+     "Por lo tanto, la inspiración proviene del cuestionamiento constante, lo que corresponde a la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Del interés en la aventura. Es una trampa: el texto dice que el trabajo puede ser una aventura, pero como consecuencia de encontrar desafíos, no como origen de la inspiración.",
+     "B": "Del conocimiento del oficio. Es contraria al texto: la inspiración nace de un «no lo sé», y no de saber mucho del oficio, aunque se confunda la experiencia con la inspiración.",
+     "C": "Del compromiso con el trabajo. Aparece como rasgo de quienes sienten la inspiración («lo cumplen con amor»), pero el texto no lo identifica como su origen; el origen es la pregunta constante."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q07",
@@ -355,7 +454,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-1",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Newton y Curie ilustran que quienes se dicen «no sé» y buscan con espíritu inquieto llegan a resultados notables, como los premios Nobel.",
+    "planteamiento": "Se pide el propósito de mencionar a Isaac Newton y a Marie Sklodowska-Curie, en el párrafo sobre el «no sé». Datos: Newton habría solo recogido manzanas sin esa actitud, y Curie llegó dos veces a Estocolmo porque siguió repitiéndose «no sé».",
+    "steps": [
+     "La emisora sostiene que la expresión «no sé» es decisiva: si Newton no se la hubiera dicho, las manzanas solo se habrían inclinado a recogerlas y comerlas.",
+     "En el caso de Curie, sin esa actitud se habría quedado como maestra de química en un colegio, y en cambio «justo estas palabras la trajeron dos veces a Estocolmo».",
+     "Ambos ejemplos muestran el resultado de la actitud: descubrimientos y premios Nobel. El texto describe a Estocolmo como lugar donde se premia a personas «de espíritu inquieto y en búsqueda constante».",
+     "Por lo tanto, se mencionan para mostrar los resultados obtenidos por personalidades con espíritu inquieto, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Comparar los procesos creativos de científicos y artistas. Es una trampa: los ejemplos son científicos y no hay comparación con artistas en ese pasaje.",
+     "B": "Destacar las consecuencias de la observación de la naturaleza. Newton sí observa manzanas, pero el texto no hace de la observación el punto; lo que destaca es la actitud de preguntarse.",
+     "D": "Describir las anécdotas que inspiraron a personas en búsqueda constante. Es una trampa de palabra: hay anécdotas y aparece la búsqueda constante, pero la función es mostrar el efecto de la duda, no inspirar a otros."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q08",
@@ -385,7 +500,23 @@
    "presentation": "text",
    "passageId": "lectura-1",
    "pilot": true,
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al inicio, la emisora se muestra incómoda porque tiene poca práctica en el tema de la poesía y lo dice abiertamente.",
+    "planteamiento": "Se pide el estado anímico de la emisora que se interpreta al inicio del discurso. Datos: la emisora dice que la primera frase es la más difícil, que casi nunca se ha expresado sobre poesía y que siempre tiene la convicción de no hacerlo muy bien.",
+    "steps": [
+     "Al inicio, la emisora dice que lo más difícil de un discurso es la primera frase, y que ya la dijo. Eso muestra incomodidad frente a la tarea de hablar.",
+     "Después afirma que debe hablar sobre poesía, tema sobre el que «muy raras veces» se ha expresado, y que «casi nunca» lo ha hecho.",
+     "Agrega que siempre tiene la convicción de que no lo hace muy bien. Esa revelación refleja que la emisora reconoce su falta de práctica frente al tema.",
+     "Por lo tanto, el estado anímico es incomodidad, porque plantea su falta de práctica frente al tema del discurso, lo que corresponde a la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Nerviosismo, porque ignora el tema. Es una trampa: la emisora no dice que ignore el tema; dice que casi nunca se ha expresado sobre él, lo que es distinto de ignorarlo.",
+     "B": "Agobio, porque la elaboración fue desprolija. El texto no dice que su discurso esté mal elaborado. Es una trampa que confunde la imperfección que tolera con un descuido en la redacción.",
+     "C": "Pesimismo, porque cree que su exposición es insuficiente. Tiene algo de duda, pero la emisora no concluye que su exposición sea insuficiente en general; dice que será breve, lo que no es pesimismo."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q09",
@@ -414,7 +545,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-vocabulario"
+   "subtopic": "cl-vocabulario",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La emisora compara dos ratas en un laberinto para mostrar que quien juega sin objetivo aprende mejor, y así explica una ventaja del juego.",
+    "planteamiento": "Se pide la estrategia que se usa para introducir el tema del juego en el primer párrafo de la lectura, un artículo de 1991. Datos: el párrafo compara una rata bien alimentada que explora un laberinto sin motivo con otra que no ha recorrido ese laberinto jugando antes.",
+    "steps": [
+     "El párrafo presenta dos ratas. La primera, bien alimentada, recorre el laberinto sin razón evidente; la segunda, en ayunas, debe encontrar la comida en el mismo laberinto.",
+     "Se contrastan ambas: la rata que exploró sin objetivo ya conoce el plano y descubre en seguida el camino al alimento, mucho antes que otra rata que no haya jugado allí.",
+     "Esa comparación explica una ventaja concreta del juego: la exploración sin objetivo preciso permite familiarizarse con el entorno, y el texto luego extiende esa ventaja a la especie y al individuo.",
+     "Por lo tanto, la estrategia es una comparación que explica las ventajas del juego, lo que corresponde a la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Una narración que contiene un mensaje acerca del juego. Es una trampa: hay un caso concreto, pero la estructura no es una historia con mensaje; se comparan dos casos para explicar una ventaja.",
+     "B": "Una metáfora que profundiza sobre el sentido del juego. Es una trampa: no hay metáfora en el párrafo, sino un hecho observable en animales que se compara con otro.",
+     "C": "Una anécdota que indaga las características del juego. Es una trampa de lectura: el ejemplo es un caso concreto, pero no indaga en las características del juego; se usa para mostrar su utilidad."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q10",
@@ -444,7 +591,24 @@
    "presentation": "text",
    "passageId": "lectura-2",
    "pilot": true,
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tercer párrafo sostiene que el juego se conserva en algunas especies y que las más aptas para jugar son las que se adaptan a climas diversos, lo que favorece su supervivencia.",
+    "planteamiento": "Se pide la idea principal del tercer párrafo. Datos: todos los animales juegan en distinto grado, solo algunos conservan el juego de la juventud en la adultez, y las especies aptas para el juego son las «cosmopolitas», que se adaptan a climas muy variados.",
+    "steps": [
+     "La primera oración afirma que todos los animales juegan, exploran y se mueven sin motivo aparente, aunque en distinto grado. Esa es la base general del párrafo.",
+     "La segunda precisa que solo algunos conservan la capacidad juvenil de jugar al llegar a la edad adulta, como los cuervos, los roedores, los carnívoros superiores, los primates y el ser humano. Así se limita la afirmación anterior.",
+     "La tercera oración conecta el juego con la supervivencia: las especies realmente aptas para el juego son las «cosmopolitas», que han sabido adaptarse a climas muy variados, aumentando sus posibilidades de supervivencia.",
+     "Las oraciones se ordenan hacia la última idea: el juego se vincula con la adaptación y la supervivencia de las especies.",
+     "Por lo tanto, la idea principal es que el juego favorece la adaptación de las especies, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El juego motiva la exploración en los animales. Es una idea del primer y segundo párrafo, pero no es el centro del tercero, que se ocupa de qué especies juegan y de su adaptación.",
+     "B": "El juego es exclusivo de las especies juveniles. Es una trampa: el texto dice lo contrario, que algunas especies conservan el juego en la adultez.",
+     "D": "El juego es una actividad transversal a los animales. Es verdadera en parte, porque el texto dice que todos juegan en distinto grado, pero es solo la primera oración; el párrafo continúa hacia la adaptación."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q11",
@@ -473,7 +637,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-vocabulario"
+   "subtopic": "cl-vocabulario",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La lectura explica «game» y «play» porque en español ambas se traducen como juego, y esa falta de distinción genera confusiones de significado.",
+    "planteamiento": "Se pide la finalidad de explicar los vocablos «game» y «play». Datos: el texto dice que en inglés existen dos palabras para aludir al juego, mientras que en español solo hay una, lo que origina confusiones.",
+    "steps": [
+     "El párrafo sitúa el problema en el plano semántico: para aludir al juego, el inglés tiene dos vocablos, «game» y «play».",
+     "En español, como en alemán, en francés y en otras lenguas, solo hay una palabra, deficiencia que origina «confusiones sin cuento».",
+     "Por eso el texto pide distinguir «juegos» en plural, más o menos equivalente a «game», y «juego» en singular, que sería la traducción de «play». Ambos designan dos realidades totalmente distintas.",
+     "Por lo tanto, la explicación busca evidenciar que la palabra «juego» tiene significados distintos, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Describir el origen de la palabra «juego» en inglés. Es una trampa: el texto no explica la etimología, sino la diferencia de significados entre dos vocablos ingleses.",
+     "C": "Mostrar cómo el lenguaje determina el juego en una cultura. Es una lectura exagerada: el texto habla de confusión semántica, pero no afirma que el lenguaje determine la forma del juego.",
+     "D": "Respaldar la influencia del inglés en la creación de distintos tipos de juegos. Es una trampa: el inglés aparece solo para mostrar la diferencia de palabras, no la creación de juegos."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q12",
@@ -502,7 +682,24 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La sección sostiene que el juego depende de la actitud con que se vive una actividad y no de la actividad misma, porque cualquier cosa puede vivirse como juego.",
+    "planteamiento": "Se pide la idea principal de la sección «Los juegos no son sino los fósiles del juego». Datos: el texto distingue los juegos instituidos, como el bridge, del juego como actitud existencial, y afirma que muchas actividades pueden vivirse lúdicamente.",
+    "steps": [
+     "La sección separa dos realidades: los juegos, que son instituciones sociales, y el juego, que es una actitud existencial, una manera concreta de abordar la vida.",
+     "El bridge, el fútbol, el escondite o los dados son juegos, pero jugar a las cartas o bailar no genera automáticamente el modo de vida que es el juego. Alguien puede aburrirse en un torneo de bridge.",
+     "Luego se afirma que actividades como un viaje, una charla animada, una obra de arte o el trabajo pueden vivirse como juego, sin serlo de manera constante. Lo decisivo es la forma de vivirlas.",
+     "Los recuerdos de exaltación lúdica se vinculan con momentos de vida intensa y circunstancias fortuitas, no con juegos propiamente dichos. Esto confirma que el juego depende de la forma de experimentar los hechos.",
+     "Por lo tanto, la idea principal es que el juego depende de la forma de experimentar los hechos, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La autenticidad del juego tiene su origen en la infancia. Es una trampa: la infancia aparece como fuente de recuerdos, pero el texto dice que esos recuerdos no se relacionan con juegos propiamente dichos.",
+     "C": "La distinción en torno al juego es propia de ciertos idiomas. Es una trampa parcial: la distinción de palabras sí depende del idioma, pero la sección la usa para una idea más amplia sobre la actitud de jugar.",
+     "D": "El juego es una problemática de interés para los intelectuales. Es verdadera en el texto, porque menciona a pensadores destacados, pero no responde a la idea de la sección, que trata de la experiencia de vivir el juego."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q13",
@@ -531,7 +728,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La emisora clasifica el bridge como un juego instituido: tiene reglas sociales, pero no garantiza el juego, que depende de cómo se vive.",
+    "planteamiento": "Se pide qué afirma la emisora sobre el bridge, mencionado en la sección sobre los juegos. Datos: el texto dice que «Ningún juego instituido garantiza el juego», y la nota al pie describe el bridge como juego de naipes de cuatro jugadores formando parejas.",
+    "steps": [
+     "El bridge aparece al inicio de la sección como un tipo de juego «bastante alejado» del fútbol, y la nota al pie lo describe como juego de naipes de cuatro jugadores formando parejas.",
+     "Luego el texto clasifica: los juegos son instituciones sociales, con reglas definidas. El bridge, el fútbol, el escondite o los dados forman parte de ese grupo.",
+     "Como juego instituido, el bridge no produce por sí solo el modo de vida del juego: el texto dice que es posible participar en un torneo de bridge y ser presa de mortal aburrimiento.",
+     "Por lo tanto, la emisora afirma que el bridge es un juego instituido, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Que es un juego peculiar. Es una trampa: el texto usa «alejado» para describir la distancia entre tipos de juego, pero no califica al bridge de peculiar.",
+     "B": "Que es un juego aburrido. Es una trampa: el texto dice que alguien puede aburrirse en un torneo, pero no afirma que el bridge sea aburrido por naturaleza.",
+     "D": "Que es un juego auténtico. Es lo contrario al texto: la autenticidad se asocia al juego como actitud, y el bridge no garantiza ese modo de vida."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q14",
@@ -567,7 +780,23 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al escribir «entre los que cabe citar al azar», la emisora sugiere que muchos otros sabios destacados también hablaron del valor del juego.",
+    "planteamiento": "Se pide qué se infiere de la expresión subrayada «entre los que cabe citar al azar» en el segmento que aparece en la figura. Datos: el segmento nombra a Kepler, Ampère, Darwin, Gauss, Pasteur, Maxwell, Planck, Poincaré y Einstein, y dice que estaban con la misma excitación y el mismo placer que siente un niño cuando juega.",
+    "steps": [
+     "La expresión subrayada significa que los nombres se citan como ejemplos y no como una lista cerrada: si se cita «al azar», hay otros posibles.",
+     "Por lo tanto, la emisora no pretende agotar la nómina de sabios, sino ilustrar que son muchos los sabios que han referido un mismo fenómeno.",
+     "El segmento afirma que esos sabios sintieron en pleno descubrimiento «la misma excitación y el mismo placer que siente un niño cuando juega», lo que respalda la tesis del valor del juego.",
+     "La inferencia es que la emisora piensa que muchos otros sabios destacados se han referido al valor del juego, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Un criterio para nombrar sabios es la calidad de sus opiniones. Es una trampa: la expresión indica que la selección es arbitraria, no que se base en la calidad de las opiniones.",
+     "C": "Estudia la influencia de la casualidad en el trabajo de los sabios sobre el juego. Es una trampa de palabra: la casualidad aparece en «al azar», pero se refiere a la forma de citar nombres, no a un estudio.",
+     "D": "Comparte la perspectiva teórica sobre el juego de los sabios que menciona después. Es una inferencia que no se sostiene: la emisora menciona a los sabios, pero no se declara parte de su perspectiva teórica."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q15",
@@ -596,7 +825,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-2",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las mariposas clavadas en una caja representan el deseo de conservar intacto un recuerdo de viaje, algo que el viajero jugador evita.",
+    "planteamiento": "Se pide qué representa, en relación con el turista, la referencia a las mariposas clavadas con alfileres en una caja. Datos: el texto dice que el viajero jugador «no tratará de coleccionar los recuerdos cual si fueran mariposas clavadas con alfileres en una caja de cristal», sino que buscará renovar su persona y su vida.",
+    "steps": [
+     "El texto contrasta al turista, que fija objetivos precisos y busca curiosidades y monumentos, con el viajero jugador, que se deja llevar por su deseo y no planifica todo.",
+     "La metáfora describe una forma de guardar: una mariposa clavada queda inmóvil y conservada en una caja de cristal, es decir, un recuerdo fijo y sin vida.",
+     "Al decir que el viajero jugador no quiere coleccionar recuerdos de ese modo, el texto sugiere que el turista tiende a conservar la experiencia como algo fijo, en lugar de renovar su vida.",
+     "Por lo tanto, la referencia representa el anhelo de conservar una experiencia de viaje, lo que corresponde a la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La búsqueda de renovación vital a través de un viaje. Es la idea que el texto asocia al viajero jugador, no a la metáfora; la renovación aparece como lo opuesto a conservar.",
+     "B": "La intención de cumplir el deseo de realizar un viaje. Es una trampa: el deseo de viajar es el punto de partida, pero la metáfora no alude a la intención de viajar, sino a la forma de guardar recuerdos.",
+     "C": "El daño a la naturaleza al guardar recuerdos de viaje. Es una trampa: la imagen de la mariposa podría sugerir daño, pero el texto no alude a la naturaleza, sino a la manera de conservar recuerdos."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q16",
@@ -632,7 +877,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para que una vivencia sea un «oasis de dicha», debe ser auténtica: cuanto más auténtico es el juego, más liberado de toda contingencia se siente quien juega.",
+    "planteamiento": "Se pide la condición necesaria para que cualquier vivencia pueda transformarse en un «oasis de dicha», según la figura de la pregunta. Datos: el texto dice que «cuanto más auténtico es el juego» más liberado se siente el jugador, y que el juego es gratuidad absoluta, un «oasis de dicha» en el desierto de la vida considerada seria.",
+    "steps": [
+     "El texto afirma que muchas actividades que no suelen considerarse juegos pueden vivirse lúdicamente, y que todo puede vivirse como un juego sin serlo de manera constante.",
+     "A continuación indica que cuanto más auténtico es el juego, más liberado de toda contingencia se siente el jugador.",
+     "Luego llega la frase: el juego es gratuidad absoluta y, en términos del filósofo Eugen Fink, un «oasis de dicha» en el desierto de la vida considerada seria. La dicha depende, entonces, del grado de autenticidad de la vivencia.",
+     "Las otras opciones son rasgos secundarios: el placer acompaña al juego, pero el texto dice que no lo garantiza; la belleza y el recuerdo aparecen como ejemplos de otras actividades, no como condición.",
+     "Por lo tanto, la condición necesaria es la autenticidad de la experiencia, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La experimentación del placer. Es una trampa: el placer caracteriza al juego, pero el texto aclara que no basta, porque se puede participar en un baile y ser presa de mortal aburrimiento.",
+     "C": "La apreciación de la belleza. Es una trampa: la belleza aparece como ejemplo de actividades que pueden vivirse lúdicamente, pero el texto no la señala como condición para llegar a la dicha.",
+     "D": "La activación del recuerdo. Es una trampa: los recuerdos de exaltación lúdica se mencionan, pero el texto los vincula a momentos de vida intensa, no a la condición para el oasis."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q25",
@@ -661,7 +923,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La afirmación inicial es una pregunta de verdadero o falso que pone en duda la idea popular de que la psicología se reduce a la psicoterapia; su función es problematizarla.",
+    "planteamiento": "Se pide la función de la afirmación que abre el primer párrafo: «La mayoría de los psicólogos estudian los problemas mentales y emocionales y trabajan como psicoterapeutas». Datos: el texto la somete a examen de inmediato con la pregunta «¿Es esta afirmación verdadera o falsa?» y después amplía el campo de la disciplina.",
+    "steps": [
+     "El primer párrafo abre con una cita que asocia a los psicólogos casi exclusivamente con los problemas mentales y la psicoterapia. Es una idea generalizada sobre el campo.",
+     "Enseguida el texto la pone en duda con la pregunta «¿Es esta afirmación verdadera o falsa?» y responde que definir qué es la psicología «no es tan simple como podría pensarse».",
+     "A continuación amplía el campo: los psicólogos intentan explicar cómo percibimos, aprendemos, recordamos y nos relacionamos, desde el nacimiento hasta la muerte, y estudian la inteligencia, la motivación y la personalidad.",
+     "Así, la afirmación inicial cumple la función de problematizar la idea generalizada sobre el campo de acción de la psicología, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Criticar el rol limitado de la psicoterapia. Es una trampa: la cita sí habla de psicoterapeutas, pero el texto no critica la psicoterapia; la menciona como una de las áreas posibles.",
+     "C": "Relativizar el aporte de los psicoterapeutas a la disciplina. El texto no evalúa el aporte de los psicoterapeutas, sino la extensión del campo de la psicología.",
+     "D": "Cuestionar la existencia de múltiples ámbitos de estudio. Es lo contrario al texto: el párrafo afirma que la psicología tiene muchos ámbitos y que la definición general no refleja su amplitud."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q26",
@@ -690,7 +968,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La mención a la APA y a sus 53 divisiones sirve como evidencia de que la psicología está formada por muchas subdisciplinas, por lo que su función es sustentar esa existencia.",
+    "planteamiento": "Se pide la función de la mención a la Asociación Americana de Psicología (APA) en la sección «Los campos de la psicología». Datos: la APA está integrada por 53 divisiones que representan los principales campos de indagación, y el texto habla de «un paraguas para una confederación amplia de subdisciplinas».",
+    "steps": [
+     "La sección abre con una cita de Evans que describe la psicología como un paraguas para una confederación amplia de subdisciplinas, es decir, como un campo no unificado.",
+     "Para respaldar esa idea, el texto menciona a la APA, integrada por 53 divisiones que representan los principales campos de investigación e intereses profesionales.",
+     "Esas divisiones son una prueba concreta de que existen campos separados, cada uno con su propio enfoque y sus propios modelos, como anuncia la frase final: «veremos algunos de los subcampos principales».",
+     "Por lo tanto, la mención sustenta la existencia de las subdisciplinas, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Ejemplificar una división de la psicología. Es una trampa: la APA no es una división de la disciplina, sino una organización que reúne a sus divisiones; la mención sirve como evidencia, no como ejemplo de clasificación.",
+     "B": "Citar información científica especializada. Aunque el dato es institucional, su función no es aportar un hallazgo científico, sino respaldar la idea de que hay muchos subcampos.",
+     "D": "Destacar la profesionalización de la psicología. El texto no alude a la profesionalización ni a la regulación del oficio; la cifra solo muestra la diversidad de campos."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q27",
@@ -719,7 +1013,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La sección define la neurociencia y la psicología fisiológica como el estudio de las bases biológicas de la conducta, los pensamientos y las emociones humanas.",
+    "planteamiento": "Se pide la idea principal de la sección «Neurociencia y psicología fisiológica». Datos: el primer enunciado afirma que estos especialistas investigan las bases biológicas de la conducta, los pensamientos y las emociones humanas, y el resto de la sección desarrolla ejemplos de ese enfoque.",
+    "steps": [
+     "El primer enunciado presenta el campo: los psicofisiólogos y los neurocientíficos investigan las bases biológicas de la conducta, los pensamientos y las emociones humanas.",
+     "Las oraciones siguientes desarrollan esa definición con ejemplos: sustancias químicas como las hormonas, medicamentos psicoactivos y preguntas sobre la activación cerebral al resolver problemas o escuchar música.",
+     "La parte sobre el desarrollo y las fallas del cerebro y la parte sobre la herencia son subtemas. Cada una es un caso dentro de la idea principal, y no la idea que las abarca.",
+     "Por lo tanto, la idea principal es que estas disciplinas investigan las bases biológicas de la conducta, los pensamientos y las emociones, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El impacto de la herencia en los rasgos y conductas. Es un subtema: el texto lo presenta con los genetistas conductuales, no como el objeto general del campo. Es una trampa porque toma una oración secundaria.",
+     "C": "Cómo se desarrollan, funcionan y, en ocasiones, fallan el cerebro y el sistema nervioso. Es verdadera, pero parcial: es una de las preguntas del campo, no su definición completa, que incluye conducta, pensamientos y emociones.",
+     "D": "Los efectos de sustancias naturales y de mensajeros químicos sintéticos. Es una trampa: el texto menciona hormonas y medicamentos como parte del estudio, pero es un ámbito del campo y no su idea central."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q28",
@@ -749,7 +1059,23 @@
    "presentation": "text",
    "passageId": "lectura-4",
    "pilot": true,
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los tres subcampos se presentan con el mismo patrón: primero se delimita qué estudia cada especialidad y luego se profundiza con una serie de preguntas.",
+    "planteamiento": "Se pide la estrategia que usan los emisores para organizar la información sobre Neurociencia y psicología fisiológica, Psicología experimental y Psicología de la personalidad. Datos: cada apartado abre con una oración que describe el quehacer del campo y continúa con interrogantes.",
+    "steps": [
+     "En la sección de neurociencia, la primera oración describe el trabajo de los psicofisiólogos y los neurocientíficos; después se abren preguntas, como por qué late más rápido el corazón cuando nos sentimos amenazados.",
+     "En la psicología experimental, la oración inicial indica que se investigan procesos básicos como el aprendizaje, la memoria o la emoción; luego se formulan preguntas como «¿De qué manera recuerda la gente y qué la hace olvidar?».",
+     "En la psicología de la personalidad, la oración inicial delimita el estudio de las diferencias entre individuos en rasgos; después se plantean interrogantes como «¿La personalidad es innata y estable o es aprendida y sujeta a cambio?».",
+     "En los tres casos el patrón es el mismo: primero se delimita el quehacer de la especialidad y luego se profundiza con preguntas. Por lo tanto, la estrategia corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Definición de los conceptos clave del subcampo y discusión a través de interrogantes. Es una trampa: los apartados describen el quehacer de cada especialidad, no definen conceptos clave, y las preguntas no discuten una definición.",
+     "C": "Explicación de la evolución de la subdisciplina y proyección a través de preguntas. El texto no traza una historia ni un desarrollo de los campos; solo describe lo que estudian hoy.",
+     "D": "Descripción de estudios complementarios del área y reflexión a través de interrogantes. Los apartados no mencionan estudios complementarios, así que la alternativa no coincide con la organización del texto."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q29",
@@ -778,7 +1104,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Ambos campos coinciden en estudiar cómo la cultura influye en la conducta humana: la personalidad compara culturas y grupos, y la experimental se pregunta si las emociones son universales.",
+    "planteamiento": "Se pide el campo de estudio que comparten la psicología de la personalidad y la psicología experimental. Datos: la personalidad estudia diferencias entre grupos culturales y raciales y los tipos de personalidad que producen las culturas; la experimental se pregunta si la gente de culturas diferentes experimenta las mismas emociones.",
+    "steps": [
+     "La psicología de la personalidad estudia las diferencias entre individuos en rasgos y se pregunta si las diferentes culturas tienden a producir distintos tipos de personalidad.",
+     "La psicología experimental estudia procesos básicos como la emoción y se pregunta si la gente de culturas diferentes experimenta las mismas emociones en situaciones similares, o si cada cultura enfatiza algunas.",
+     "Ambos campos consideran lo cultural como un factor que modifica la conducta humana, y es ese punto el que tienen en común.",
+     "Las demás alternativas corresponden a un solo campo: el aprendizaje y la memoria son de la experimental, y la sociabilidad aparece en la personalidad. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Las formas de desarrollo del aprendizaje humano. Es propia de la psicología experimental, que estudia el aprendizaje; la personalidad no se centra en él, así que no es un campo común.",
+     "B": "Las causas de la sociabilidad en distintos individuos. La sociabilidad es un rasgo que estudia la personalidad, pero la experimental no la aborda; no es un campo compartido.",
+     "C": "La manera en que los individuos utilizan la memoria. Es un tema de la psicología experimental, que estudia cómo recuerda la gente; la personalidad no lo aborda."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q30",
@@ -807,7 +1149,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una dificultad para adaptarse a un nuevo trabajo es un problema normal de ajuste, y el texto asigna esos casos al psicólogo consejero.",
+    "planteamiento": "Se pide a qué especialista acudir en primera instancia ante dificultades para adaptarse a un nuevo trabajo. Datos: el texto dice que los consejeros se interesan en los problemas «normales» de ajuste, como la elección de una carrera o los problemas conyugales, mientras que los clínicos se enfocan en los trastornos psicológicos.",
+    "steps": [
+     "La situación descrita es una dificultad para adaptarse a un nuevo trabajo, que corresponde a un problema de ajuste que la mayoría de las personas enfrenta en algún momento.",
+     "El texto distingue dos enfoques dentro de la psicología clínica y la consejería: los clínicos se interesan en el diagnóstico, la causa y el tratamiento de los trastornos psicológicos, y los consejeros, en los problemas «normales» de ajuste.",
+     "Como la dificultad no es un trastorno, sino un ajuste normal a una situación nueva, el especialista indicado es el consejero, y no el clínico ni los especialistas de investigación.",
+     "Por lo tanto, la primera consulta corresponde a un psicólogo consejero, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Un psicólogo de la personalidad. Es una trampa: este campo estudia rasgos y diferencias entre individuos, pero el texto no lo presenta como el primer apoyo para un problema de ajuste laboral.",
+     "B": "Un psicólogo experimental. Es una trampa: el campo investiga procesos básicos, como la memoria o la motivación, y su tarea no es atender a personas con dificultades en el trabajo.",
+     "D": "Un psicólogo clínico. Es una trampa frecuente: el clínico trata trastornos psicológicos, y el texto indica que su foco es el diagnóstico y la causa de esos trastornos, no los ajustes normales de la vida."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q31",
@@ -836,7 +1194,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-4",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los emisores defienden una visión amplia de la psicología frente a la idea simplificada de que solo trata de la psicoterapia; su postura es reivindicativa.",
+    "planteamiento": "Se pide la postura de los emisores frente a la psicología. Datos: el texto dice que la definición general «no refleja la amplitud, profundidad o lo apasionante del campo» y que la idea popular de psicólogo como terapeuta es «en parte correcta».",
+    "steps": [
+     "El texto comienza cuestionando la visión popular: la afirmación sobre los psicoterapeutas se presenta como algo que hay que evaluar, y no como una verdad establecida.",
+     "Luego sostiene que definir la psicología como la ciencia de la conducta y los procesos mentales es insuficiente, porque no refleja la amplitud, la profundidad ni lo apasionante del campo.",
+     "Enseguida despliega la diversidad de subcampos, desde la psicología del desarrollo hasta la neurociencia, para mostrar que el campo es mucho más amplio que la idea simplificada.",
+     "La postura es, entonces, de defensa y ampliación del campo frente a una visión reducida, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Integradora, porque unifican las distintas áreas de la psicología. Es una trampa: el texto afirma que la psicología es menos un campo unificado que una confederación de subdisciplinas, así que no las unifica.",
+     "C": "Analítica, porque relacionan los subcampos con la psicología en general. El texto describe los subcampos, pero su propósito no es analizar la relación con el todo, sino reivindicar la amplitud del campo.",
+     "D": "Crítica, porque cuestionan el aporte de la psicología a la investigación. Es una trampa: el texto no cuestiona el aporte de la psicología a la investigación; cuestiona la visión simplificada del campo."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q41",
@@ -865,7 +1239,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Batteux propuso el concepto de «bellas artes» y lo incorporó como una clasificación dentro de las manifestaciones artísticas, lo que organizó la idea de arte.",
+    "planteamiento": "Se pide el aporte teórico de Charles Batteux a la concepción de arte. Datos: el texto dice que el concepto de «bellas artes» fue propuesto por Batteux en 1746 y que se aplicó originariamente a la danza, la música, la escultura, la pintura, la poesía y la floricultura.",
+    "steps": [
+     "El primer párrafo ubica a Batteux: propuso en 1746 el concepto de «bellas artes», que agrupa las manifestaciones que tienen su punto de mira en la búsqueda de la belleza.",
+     "Originalmente, ese concepto se aplicó a la danza, la música, la escultura, la pintura, la poesía y la floricultura, y más tarde se amplió a la arquitectura, la retórica y otros géneros literarios.",
+     "Esta ampliación muestra que la clasificación se incorporó como un modo de ordenar las artes según la búsqueda de la belleza, y ese es el aporte teórico del autor.",
+     "Por lo tanto, su aporte fue incorporar la clasificación de bellas artes dentro de las manifestaciones artísticas, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Definir las artes escénicas como bellas artes. Es una trampa: el texto dice que las artes escénicas no forman parte oficialmente de las bellas artes, así que Batteux no las definió así.",
+     "B": "Promover la valoración de las bellas artes entre los espectadores. El texto no atribuye a Batteux un trabajo de difusión entre el público; solo menciona su propuesta de clasificación.",
+     "D": "Generar las distintas clasificaciones de manifestaciones artísticas. Es una trampa de exceso: el texto atribuye a Batteux una propuesta, no la creación de varias clasificaciones; las ampliaciones son posteriores."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q42",
@@ -894,7 +1284,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-vocabulario"
+   "subtopic": "cl-vocabulario",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El cine figura entre las manifestaciones que se incorporaron a las bellas artes desde el siglo XX, mientras que el teatro, el circo y el cabaret son artes escénicas que no forman parte oficialmente de ellas.",
+    "planteamiento": "Se pide cuál de las expresiones es categorizada oficialmente como bellas artes. Datos: el texto menciona el cine junto a la fotografía y la historieta desde el siglo XX, y aclara que las artes escénicas «no forman parte oficialmente de las bellas artes».",
+    "steps": [
+     "El texto indica que, a partir del siglo XX, el cine, la fotografía y la historieta pasaron a formar parte de las bellas artes.",
+     "Las artes escénicas, en cambio, aunque tienen esa consideración de facto en muchos ámbitos sociales, no forman parte oficialmente de las bellas artes.",
+     "Las opciones A, B y D corresponden a artes escénicas según la lista del texto: el cabaret, el teatro y el circo, por lo que no son categorías oficiales de bellas artes.",
+     "Por lo tanto, la única expresión oficialmente categorizada como bellas artes es el cine, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El cabaret. Es una trampa: el texto lo incluye entre las artes escénicas, que no forman parte oficialmente de las bellas artes, aunque tengan consideración de facto.",
+     "B": "El teatro. Es una trampa de lectura: el teatro es un ejemplo central de artes escénicas, y el texto aclara que esas artes no son oficialmente bellas artes.",
+     "D": "El circo. Es una trampa: el circo aparece en la lista de artes escénicas, en cualquiera de sus formatos, y no en la categoría oficial de bellas artes."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q43",
@@ -923,7 +1329,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tercer párrafo define el arte como una creación humana que se expresa mediante un lenguaje o una técnica, por lo que cualquier creación humana puede considerarse arte.",
+    "planteamiento": "Se pide la idea central del tercer párrafo respecto del arte. Datos: el párrafo dice que los lenguajes artísticos son conjuntos de símbolos que requieren el dominio de técnicas, que el arte es el resultado de una acción creativa a partir de un lenguaje o técnica expresiva, y que, en este sentido, arte es cualquier creación humana.",
+    "steps": [
+     "El párrafo parte señalando que los lenguajes artísticos son conjuntos de símbolos que requieren el dominio de sus técnicas, y recuerda que «técnica» deriva de «tekné», término que en la Grecia Clásica se usaba para denominar al arte.",
+     "Luego sostiene que el arte es el resultado de una acción creativa a partir de un lenguaje o de una técnica expresiva determinada.",
+     "El concepto se usa también en otros ámbitos, como «el arte de vivir» o «el arte de la guerra», para expresar la capacidad creativa de cualquier actividad humana.",
+     "La conclusión es que, en este sentido, arte es cualquier creación humana que se expresa mediante un lenguaje, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Una manifestación del dominio de una técnica. Es una trampa: el texto dice que el arte requiere dominar una técnica, pero no que sea la manifestación de ese dominio; el énfasis está en la creación.",
+     "C": "Una forma de expresión usada en distintos ámbitos sociales. Es verdadera en parte, porque el concepto se usa en otros ámbitos, pero es un uso del término y no la idea central sobre el arte.",
+     "D": "Una conceptualización que tuvo su origen en la Grecia Clásica. Es una trampa: el texto solo señala que la palabra «tekné» se usaba en Grecia; no sostiene que el concepto de arte tenga su origen allí."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q44",
@@ -952,7 +1374,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La música queda fuera de las artes escénicas porque su expresión no depende de la escena ni de un soporte material, aunque pueda formar parte de un espectáculo.",
+    "planteamiento": "Se pide por qué el emisor excluye la música de las artes escénicas. Datos: el texto dice que la música «no forma parte de las artes escénicas porque su expresión no está supeditada a la escena ni a ninguna materialidad», aunque puede integrarse en un espectáculo.",
+    "steps": [
+     "El apartado define que las artes escénicas tienen en común el hecho escénico, que requiere la presencia real de intérpretes y espectadores en un espacio escénico.",
+     "La música se excluye por una razón específica: su expresión no está supeditada a la escena ni a ninguna materialidad, es decir, no depende de un soporte material.",
+     "El texto aclara que la música puede formar parte de un espectáculo escénico, como el teatro musical, pero ese valor añadido no la convierte en arte escénica.",
+     "Por lo tanto, la razón es que la música puede expresarse sin necesidad de soporte material, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Porque es cuestionada desde la perspectiva de su valor. Es una trampa: el texto no discute el valor de la música; la exclusión se basa en su relación con la escena y la materialidad.",
+     "C": "Porque tiene un lenguaje distinto del que se utiliza en el espectáculo. El texto no fundamenta la exclusión en el lenguaje; la música puede formar parte del espectáculo, así que no es un problema de lenguaje.",
+     "D": "Porque es complementaria a la puesta en escena. Es una trampa: el texto reconoce que puede acompañar la puesta en escena, pero esa complementariedad no es el motivo de la exclusión."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q45",
@@ -981,7 +1419,23 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El espectador es activo porque responde al intérprete con su mirada, sus gestos y su complicidad, y así interactúa con los actores en la construcción de la representación.",
+    "planteamiento": "Se pide la razón por la que el emisor afirma que el espectador tiene un rol activo en el teatro. Datos: el texto dice que el espectador «no es receptor pasivo, sino sujeto activo en un proceso de comunicación», y que la interacción hace que cada representación sea única e irrepetible.",
+    "steps": [
+     "El texto define el hecho escénico como lo que ocurre cuando intérpretes y espectadores se encuentran, y señala que el espectador no es un receptor pasivo.",
+     "El intérprete toma la iniciativa, pero el espectador le contesta con su mirada, su respiración, sus gestos y su complicidad.",
+     "Esa interacción hace que cada representación se configure de manera singular y sea una experiencia única e irrepetible, porque el público participa en el evento.",
+     "Por lo tanto, el espectador es activo porque interactúa con los actores para dar vida a la representación, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Porque perfecciona sus conocimientos para apreciar el hecho escénico. Es una trampa: el texto dice que el espectador puede llegar a ser avanzado, pero esa es una vía de aprendizaje y no la razón de su rol activo.",
+     "C": "Porque participa de los eventos sociales que rodean a una obra. El texto menciona los espacios sociales del teatro, pero el rol activo se explica por la comunicación con el intérprete, no por los eventos sociales.",
+     "D": "Porque accede a un plano distinto al de la realidad cotidiana. Es una trampa: el texto dice que la comunicación crea una atmósfera en un plano distinto, pero eso describe la experiencia, no el rol del espectador."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q46",
@@ -1010,7 +1464,23 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El centro vital del edificio es el lugar donde se encuentran el espacio del público y el de los actores, y allí se conforma el espacio de representación.",
+    "planteamiento": "Se pide el centro vital del espacio escénico según la lectura. Datos: el texto distingue el espacio del público (la sala y los espacios sociales adjuntos) y el espacio de los actores (los camerinos y el escenario), y dice que el centro vital es donde ambos se encuentran.",
+    "steps": [
+     "El texto divide el espacio del teatro en dos: el espacio del público, que es la sala y los espacios sociales adjuntos, y el espacio de los actores, que son los camerinos y el escenario.",
+     "Luego indica que el centro vital del edificio es donde se encuentran ambos espacios, donde se acopla el escenario con la sala.",
+     "Ese encuentro conforma el espacio de representación, que es el núcleo de la experiencia escénica.",
+     "Por lo tanto, el centro vital es el espacio de representación, lo que corresponde a la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El espacio mental. Es una trampa: el espacio mental es la construcción que crea el hecho escénico, pero el texto no lo llama centro vital del edificio.",
+     "B": "El espacio del público. Es una de las dos partes que se encuentran, no el punto donde se unen ambas; el texto la presenta como una mitad del edificio.",
+     "C": "El espacio de los actores. Es también una de las dos partes, con camerinos y escenario, pero el centro vital es el punto de encuentro, no una de sus mitades."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q47",
@@ -1039,7 +1509,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La referencia al término griego theatron sirve para introducir la descripción del espacio del teatro, al definirlo como el lugar para contemplar.",
+    "planteamiento": "Se pide el propósito de la referencia al «theatron». Datos: el texto escribe «El teatro, del griego theatron, es “el lugar para contemplar”» y, en la frase siguiente, comienza a dividir el espacio del teatro en espacio del público y espacio de los actores.",
+    "steps": [
+     "El apartado 1.3 trata del espacio escénico como construcción mental que requiere un espacio físico aislado del entorno cotidiano.",
+     "Luego aparece la referencia al origen griego: «theatron» significa «el lugar para contemplar», lo que ubica el concepto en su dimensión física.",
+     "A continuación, el texto describe cómo se divide ese espacio, en espacio del público y espacio de los actores, y cuáles son sus partes.",
+     "Por lo tanto, la mención introduce la descripción del espacio del teatro, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Caracterizar la construcción mental del espacio escénico. Es una trampa: la construcción mental se describe en el mismo apartado, pero la referencia griega se usa para el lugar físico, no para la mente.",
+     "C": "Demostrar que el concepto de espacio escénico es antiguo. El texto no sostiene la antigüedad del concepto con esa mención; solo indica el origen de la palabra teatro.",
+     "D": "Comprobar que los griegos inventaron el espacio del teatro. El texto no afirma que los griegos inventaran el espacio; solo señala el origen etimológico de la palabra."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q48",
@@ -1068,7 +1554,23 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El espectador completa activamente el espacio escénico, que es vacío, con sus construcciones mentales surgidas de la interacción con los intérpretes.",
+    "planteamiento": "Se pide qué se puede inferir del rol del espectador en el teatro. Datos: el espacio escénico es inicialmente vacío y su carencia de contenido «se va llenando con elementos escenográficos y con las construcciones mentales que surgen de la interacción entre intérpretes y espectadores».",
+    "steps": [
+     "El texto dice que el espacio escénico es inicialmente vacío, sin elementos de la cotidianidad, sin luz y sin objetos.",
+     "Ese vacío se llena con elementos escenográficos y con las construcciones mentales que surgen de la interacción entre intérpretes y espectadores.",
+     "Como el espectador participa en esa interacción, aporta las construcciones mentales que completan el espacio con su imaginario.",
+     "Por lo tanto, se infiere que el espectador completa activamente el espacio escénico con su imaginario, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Que necesita estar preparado para dialogar con los actores. Es una trampa: el texto habla de comunicación y de intercambio de miradas, pero no exige preparación previa para dialogar.",
+     "B": "Que requiere estar familiarizado con los objetos del escenario. Es una trampa: el espacio escénico es vacío de objetos; los elementos escenográficos ayudan a crear el espacio, pero no son requisito del público.",
+     "D": "Que percibe el hecho escénico como una experiencia de tipo sagrado. El texto compara el espacio escénico con el espacio ritual sagrado, pero no afirma que el espectador lo perciba así; es una comparación de la condición espacial."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q49",
@@ -1097,7 +1599,23 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-6",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tono es reflexivo porque el emisor analiza los componentes de las artes escénicas y del hecho escénico, sin tomar partido ni criticar.",
+    "planteamiento": "Se pide el tono del emisor considerando el tratamiento del tema. Datos: el texto es un fragmento de manual de estudio que delimita el objeto de análisis, define las artes escénicas, examina el hecho escénico y el espacio escénico, y sostiene sus argumentos con citas de especialistas.",
+    "steps": [
+     "El texto está organizado como un manual de estudio: delimita el objeto de análisis, define las artes escénicas y las distingue de otras artes.",
+     "Luego analiza los componentes del hecho escénico, como el intérprete, el espectador y el escenario, y después el espacio escénico como construcción mental.",
+     "Los argumentos se sostienen con citas de McAuley, Ubersfield y otros autores, lo que muestra una exposición meditada y no militante.",
+     "No hay una denuncia ni una defensa explícita de las artes escénicas, ni una crítica a la exclusión de algunas manifestaciones, por lo que el tono es reflexivo, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Comprometido, porque promueve la revalorización de las artes escénicas. Es una trampa: el texto valora las artes escénicas, pero no las promueve como causa; su propósito es analítico.",
+     "C": "Crítico, porque cuestiona la exclusión de algunas manifestaciones artísticas. El texto constata que la música y las artes visuales quedan fuera, pero no lo cuestiona; explica el criterio de exclusión.",
+     "D": "Escéptico, porque desconfía de la categorización de las manifestaciones artísticas. El texto usa categorías y las explica, sin mostrar desconfianza hacia ellas; la clasificación es la base del análisis."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q50",
@@ -1126,7 +1644,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una cotización es una parte obligatoria del sueldo que se descuenta para financiar la seguridad social, no un cobro voluntario ni una comisión.",
+    "planteamiento": "Se pide la definición de «cotización» según el apartado «Estación 2. Cotizaciones previsionales». El texto presenta las cotizaciones como porcentajes de la remuneración imponible, es decir, del sueldo sobre el que se calculan los descuentos.",
+    "steps": [
+     "El apartado parte explicando la previsión social: garantiza los derechos sociales de las personas que trabajan cuando su capacidad de generar recursos se interrumpe por enfermedad, cesantía, vejez, invalidez o sobrevivencia. La cotización es el mecanismo que financia esa protección.",
+     "Luego enumera las cotizaciones y las expresa como porcentajes del sueldo imponible: el 10 % va a la cuenta de capitalización para la jubilación y el 7 % a salud. Por lo tanto, una cotización es una porción del sueldo que se retiene para cubrir la seguridad social.",
+     "Al comparar esa descripción con las alternativas, la que habla de un monto de dinero descontado del sueldo para cubrir la seguridad social coincide con la definición del texto. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Describe la comisión de la AFP. El texto la menciona aparte, con la frase «más las comisiones de tu AFP», y aclara que varía según la administradora. Es una trampa típica porque aparece en la misma enumeración que las cotizaciones, pero no es la cotización en sí.",
+     "C": "Describe el costo de los planes de las Isapres. El texto dice que esos planes «pueden ser igual o mayor al 7 %», pero eso se refiere a un tipo de institución y a un plan de cobertura, no a la definición general de cotización. Restringir el concepto a las Isapres es el error de esta alternativa.",
+     "D": "Afirma que la cotización es voluntaria y que sirve para la estabilidad laboral. El texto presenta las cotizaciones como obligatorias, pues se «deben considerar», y no las vincula con la estabilidad en el empleo sino con la protección ante contingencias como la cesantía o la vejez. Confunde una obligación con un aporte opcional."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q51",
@@ -1155,7 +1688,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Solo el seguro de cesantía aparece como cotización que comparten empleador y trabajador: la mayor parte la financia el empleador, pero el trabajador también aporta.",
+    "planteamiento": "Se pide identificar la cotización que financian ambos, empleador y trabajador. El apartado «Estación 2» indica quién paga cada cotización, y el cuadro de cargo de las cotizaciones obligatorias del folleto permite revisarlo.",
+    "steps": [
+     "Revisa la cotización para salud: es el 7 % de la remuneración imponible del trabajador, pagado en FONASA o en la Isapre que él elija. El texto no le asigna ningún porcentaje de cargo al empleador.",
+     "Revisa las cotizaciones de la AFP: el 10 % para pensión por vejez y el 1,53 % del seguro de invalidez y sobrevivencia se descuentan de la remuneración del trabajador y se destinan a su cuenta. El empleador actúa solo como intermediario del pago.",
+     "Revisa el seguro de cesantía: el 3 % de la remuneración imponible se destina a la cuenta individual del trabajador y al Fondo de Cesantía Solidario, y el texto precisa que «la mayor parte de esta cotización la financia tu organismo empleador». Eso indica que el empleador aporta una parte grande y el trabajador la otra. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Salud. Es una cotización del trabajador, de 7 % de su remuneración imponible. El empleador la paga en su nombre, porque el texto le asigna el pago, pero el dinero proviene del sueldo del trabajador y el empleador no la financia. Confundir quién paga con quién financia es la trampa de esta alternativa.",
+     "B": "AFP. El porcentaje destinado a la cuenta de capitalización individual se descuenta del trabajador, y el texto no asigna a la empresa ninguna parte de ese porcentaje. Es una trampa porque la AFP aparece junto al empleador en el proceso de pago de las cotizaciones.",
+     "C": "Pensión por vejez. Corresponde a la cotización de capitalización individual del 10 % del trabajador, que se acumula para su jubilación. Se confunde con el hecho de que el empleador la declara y la paga, pero no la financia en conjunto."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q52",
@@ -1184,7 +1732,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Subsidio al Empleo Joven ayuda al trabajador joven con bajos salarios y, al mismo tiempo, apoya a quien lo contrata.",
+    "planteamiento": "Se pide el beneficio que favorece a la vez al trabajador y al empleador. El recuadro verde de la página 32 del folleto describe los subsidios; el fragmento clave es «Este beneficio apoya además a quienes los contratan», referido al Subsidio al Empleo Joven.",
+    "steps": [
+     "Lee la descripción del Subsidio al Empleo Joven: es un aporte en dinero del Estado para aumentar la remuneración de trabajadores de 18 a menos de 25 años que perciben bajos salarios, es decir, del 40 % más vulnerable de la población.",
+     "La frase siguiente dice que «este beneficio apoya además a quienes los contratan». Como el aporte sube la remuneración del trabajador joven y, a la vez, beneficia al empleador que lo contrata, cumple las dos condiciones de la pregunta.",
+     "Revisa las demás opciones con el mismo criterio: el Bono al Trabajo de la Mujer es para mujeres de 25 a 59 años y el texto no lo vincula con el empleador; el Seguro de Invalidez y Sobrevivencia es una cotización, no un beneficio para el empleador; y el Subsidio Previsional a trabajadores jóvenes se describe como un aporte que aumenta los ahorros del trabajador. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Bono al Trabajo de la Mujer. El folleto lo describe como un aporte a mujeres trabajadoras de 25 a 59 años que cumplan requisitos de postulación. No dice que favorezca al empleador, así que cumple solo una parte de la pregunta.",
+     "C": "Seguro de Invalidez y Sobrevivencia. Es parte de las cotizaciones obligatorias (1,53 %) que se descuentan de la remuneración del trabajador. No es un beneficio que se otorgue al empleador; funciona como protección ante la invalidez o la muerte del trabajador.",
+     "D": "Subsidio Previsional a trabajadores jóvenes. Es un beneficio para el trabajador, que le ayuda a aumentar sus ahorros previsionales. El texto no menciona que favorezca al empleador. Confunde el subsidio previsional con el Subsidio al Empleo Joven, que es el que sí apoya a quien contrata."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q53",
@@ -1213,7 +1776,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El último recuadro advierte los límites del despido por necesidades de la empresa: hay excepciones y exigencias que protegen al trabajador.",
+    "planteamiento": "Se pide qué pregunta sintetiza el último recuadro de la lectura, que aparece en la página 33 del folleto. Trata de la causal «necesidades de la empresa» y establece que no puede invocarse con licencia médica ni con licencia por embarazo, que la invalidez total o parcial no es justa causa de término y que la desvinculación no se hace efectiva mientras existan cotizaciones impagas.",
+    "steps": [
+     "Identifica el tema del recuadro: la causal «necesidades de la empresa», es decir, un despido que no se debe a una falta del trabajador.",
+     "Lista lo que el recuadro establece: esa causal no puede aplicarse a trabajadores con licencia médica ni con licencia por embarazo (existe fuero maternal); la invalidez total o parcial no es justa causa y da derecho a indemnización; y la desvinculación no se hace efectiva mientras el empleador no tenga pagadas al día las cotizaciones, salvo renuncia o mutuo acuerdo.",
+     "Todo el contenido responde a una pregunta sobre excepciones y límites de la causal. La pregunta que sintetiza el recuadro es, por tanto, la que pregunta qué excepciones existen para invocarla. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "¿Qué requisitos debe cumplir el empleador...? Es una pregunta cercana, porque el recuadro sí menciona una exigencia del empleador (tener las cotizaciones al día). Sin embargo, esa es solo una parte; la mayoría del recuadro describe casos en que la causal no se puede aplicar, así que no lo sintetiza por completo.",
+     "C": "¿Cuáles son los argumentos del empleador...? El recuadro no presenta argumentos del empleador; describe límites legales a su decisión. La pregunta no corresponde al contenido.",
+     "D": "¿Cómo se hace efectiva la desvinculación...? El recuadro menciona que la desvinculación no se hace efectiva mientras existan cotizaciones impagas, pero es solo un detalle. La pregunta se centra en el procedimiento y no en las excepciones, que son el núcleo del recuadro."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q54",
@@ -1242,7 +1820,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El último recuadro muestra que la causal de despido tiene normas de protección para el trabajador, aunque no lo diga con esas palabras.",
+    "planteamiento": "Se pide una inferencia sobre los trabajadores respecto de la causal «necesidades de la empresa», a partir del último recuadro de la página 33. El texto no afirma explícitamente que existan normas de protección, así que hay que deducirlo de sus condiciones: licencia médica, fuero por embarazo, indemnización y cotizaciones pagadas al día.",
+    "steps": [
+     "Reconoce qué establece el recuadro: la causal no se puede invocar con licencia médica o por embarazo; la invalidez no es justa causa y da derecho a indemnización; y la desvinculación queda condicionada al pago de las cotizaciones.",
+     "Cada una de esas condiciones impone un límite al empleador para proteger al trabajador. Si la ley prohíbe aplicar la causal en ciertos casos y condiciona el término a un requisito, existen normas que protegen al trabajador frente a esa causal.",
+     "Por eso se infiere que existen normas de protección, que es lo que afirma la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Obligaciones legales que el trabajador debe cumplir después del término del contrato. El recuadro no describe deberes posteriores del trabajador; trata de límites y condiciones que se imponen al empleador. La alternativa agrega una idea que el texto no contiene.",
+     "B": "Que el trabajador debe tener sus cotizaciones pagadas al día. Invierte la condición: el recuadro dice que la desvinculación no se hace efectiva hasta que el empleador tenga pagadas las cotizaciones del trabajador. La obligación recae en el empleador, no en el trabajador.",
+     "D": "Indemnización independientemente del motivo del despido. Es falsa: el recuadro asocia la indemnización a la causal «necesidades de la empresa», y el folleto indica que las causales atribuibles al trabajador no dan derecho a indemnización. Confunde el derecho con cualquier despido."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q55",
@@ -1271,7 +1864,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La información destacada al final de cada estación no resume ni explica el contenido: entrega un lugar donde seguir informándose.",
+    "planteamiento": "Se pide qué aporta la información destacada al final de cada estación. Esos recuadros, como el de la Estación 1 («¿Tienes dudas acerca de tu contrato de trabajo?»), invitan a consultar a la Dirección del Trabajo o a visitar un sitio web para resolver dudas o ampliar.",
+    "steps": [
+     "Observa el contenido típico del recuadro final: en la Estación 1 pregunta si tienes dudas sobre el contrato, ofrece asesoría gratuita en la Dirección del Trabajo y entrega un teléfono y un sitio web; la Estación 3 cierra con «Para aclarar tus dudas... ingresa a: www.dt.cl».",
+     "Esa información no repite los conceptos de la estación, no los justifica con evidencia y no los reformula para aclararlos. Su función es indicar dónde ampliar el tema, es decir, entregar orientación para profundizar.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Evidencia de las situaciones planteadas. El recuadro no presenta casos ni datos que comprueben lo que dice la estación; solo remite a fuentes de consulta.",
+     "C": "Síntesis del contenido desarrollado. Un resumen repetiría las ideas centrales de la estación; el recuadro, en cambio, no reproduce conceptos sino que deriva al lector hacia otras fuentes.",
+     "D": "Explicación para aclarar la información. Aclarar sería reformular lo confuso del texto; el recuadro no hace eso, sino que pide consultar a una institución externa."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q56",
@@ -1300,7 +1908,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cartilla es una guía para que la persona trabajadora conozca sus derechos y beneficios desde que firma un contrato.",
+    "planteamiento": "Se pide el propósito de la cartilla informativa de la Superintendencia de Seguridad Social, titulada «Ruta de la Seguridad Social. Guía informativa de derechos y beneficios». Sus estaciones parten con «Mi Primer Contrato de Trabajo» y recorren las cotizaciones y el término de la relación laboral.",
+    "steps": [
+     "Revisa el título y la portada: se trata de una guía informativa de derechos y beneficios, dirigida a la persona que trabaja.",
+     "Revisa las estaciones: la 1 explica qué es el contrato de trabajo, qué debe contener y en qué plazo debe firmarse; la 2 explica las cotizaciones; la 3 explica las causales de término. Todas describen derechos y deberes del trabajador frente a su contrato.",
+     "Como el contenido se organiza en torno a los derechos que posee quien firma un contrato, esa es la finalidad de la cartilla. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Detalla responsabilidades contractuales del empleador. La cartilla menciona obligaciones del empleador, como pagar las cotizaciones, pero no es su propósito principal: se dirige a la persona trabajadora y no a quien contrata.",
+     "B": "Describe beneficios previsionales que deben otorgarse a los trabajadores. Una parte de la cartilla sí habla de beneficios, como el Subsidio Previsional, pero los describe; no establece que deban otorgarse. Es una lectura parcial del propósito.",
+     "D": "Presenta las leyes que protegen a las personas que ingresan al mundo laboral. La cartilla cita normas, pero su propósito es informar derechos y beneficios de forma práctica, no presentar leyes como tema central."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q57",
@@ -1329,7 +1952,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-7",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cartilla aporta la información para que la persona trabajadora vigile que el empleador cumpla con pagar sus cotizaciones.",
+    "planteamiento": "Se pide la responsabilidad que debe asumir el trabajador con su Seguridad Social, para cumplir el propósito de la cartilla. El texto indica que el pago de las cotizaciones corresponde al empleador y que la desvinculación depende de que las cotizaciones estén pagadas al día.",
+    "steps": [
+     "La cartilla dice que «será tu organismo empleador el encargado de pagar, cuando y donde corresponde, las cotizaciones señaladas». El pago es responsabilidad del empleador.",
+     "Sin embargo, el recuadro del final de la página 33 advierte que tu desvinculación «no se hará efectiva hasta que el organismo empleador tenga tus cotizaciones previsionales pagadas al día». Por eso, para protegerte, conviene verificar que el empleador cumpla ese pago.",
+     "La responsabilidad que te corresponde es, entonces, supervisar que las cotizaciones se paguen correctamente, que es lo que plantea la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Orientar al empleador en la elección de las instituciones aseguradoras según sus beneficios para la cotización. El folleto no asigna al trabajador esa función; por ejemplo, la mutualidad a la que se adhiere la elige el empleador.",
+     "B": "Informar a las instituciones estatales sobre el monto a pagar por parte del empleador. El texto no atribuye esa tarea a la persona trabajadora; los montos están definidos por porcentajes de la remuneración imponible.",
+     "D": "Elegir las instituciones previsionales según la conveniencia del porcentaje de cotización. El porcentaje de las cotizaciones obligatorias está fijado por ley; solo la comisión de la AFP varía. Elegir según el porcentaje sería una confusión, y no es la responsabilidad que destaca el folleto."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q58",
@@ -1358,7 +1996,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-idea-central"
+   "subtopic": "cl-idea-central",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El primer párrafo lamenta que el ocio balneario de Valparaíso haya sido olvidado, aunque fue parte de su cultura urbana.",
+    "planteamiento": "Se pide la idea principal del primer párrafo del fragmento de Rodrigo Booth. El párrafo dice que el ocio balneario que acogió la rada durante el siglo XIX «ha sido olvidado por la memoria colectiva» y que la investigación lo ha omitido «como un elemento crucial en la conformación de la cultura urbana chilena».",
+    "steps": [
+     "Identifica el sujeto del párrafo: el ocio balneario en la rada de Valparaíso durante el siglo XIX.",
+     "Observa el énfasis: la población percibe el borde costero como exclusivamente productivo, y la escasa preocupación de los investigadores ha dejado de lado el balneario. Se trata de un olvido, es decir, de la falta de reconocimiento de ese uso.",
+     "Eso corresponde a la alternativa que habla de la falta de reconocimiento de los balnearios como elemento constituyente de la cultura de Valparaíso, que es la idea principal del párrafo. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La importancia de la actividad económica en la configuración urbana. El párrafo menciona la función productiva del borde costero, pero como una percepción que el autor cuestiona, no como tema central.",
+     "C": "La escasa investigación sobre el desarrollo productivo en los balnearios. El párrafo sí menciona la escasa preocupación de los investigadores, pero el tema es la escasa investigación sobre el ocio y no sobre el desarrollo productivo. Es una inversión del término.",
+     "D": "La relevancia del testimonio histórico para la recuperación de las actividades de ocio. El primer párrafo no trabaja con testimonios, que aparecen más adelante en el texto. Su idea central es el olvido del balneario."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q59",
@@ -1387,7 +2040,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Barcelona se menciona para contrastar: allí el desarrollo costero no siguió el monopolio portuario-industrial que se dio en Valparaíso.",
+    "planteamiento": "Se pide a qué recurso corresponde la mención a Barcelona en el segundo párrafo. El fragmento dice: «En contraposición a lo ocurrido en otras ciudades costeras como Barcelona (Tatjer, 1996), la evolución de los usos del puerto chileno se orientó... hacia un marcado monopolio portuario-industrial».",
+    "steps": [
+     "Localiza el segundo párrafo: habla de la unión entre usos industriales y de ocio en Valparaíso durante gran parte del siglo XIX y, luego, de la extensión de la vía férrea.",
+     "La palabra clave es «en contraposición». Barcelona aparece como comparación de la que Valparaíso se distingue: allí la evolución costera no se orientó al monopolio portuario-industrial que se dio en el puerto chileno.",
+     "Por eso el recurso es un contraste: un ejemplo de desarrollo urbano distinto, opuesto al de Valparaíso. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Una proyección sobre el futuro crecimiento urbano. El párrafo habla del pasado (siglo XIX) y no proyecta nada hacia el futuro; la referencia a Barcelona sirve para comparar, no para predecir.",
+     "B": "Un caso de progreso urbano paralelo al de la ciudad-puerto. Sería correcta si el texto dijera que Barcelona avanzó junto a Valparaíso; pero la expresión «en contraposición» indica lo contrario, y por eso la alternativa invierte la relación.",
+     "C": "Una alabanza de un modelo exitoso de ciudad-puerto. El texto no elogia a Barcelona; usa su ejemplo solo como comparación para mostrar la diferencia con Valparaíso. Confunde una comparación con una valoración."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q60",
@@ -1416,7 +2084,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-proposito"
+   "subtopic": "cl-proposito",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los testimonios de French y Treutler sirven como pruebas de que la costa de Valparaíso tuvo usos recreativos, no solo productivos.",
+    "planteamiento": "Se pide el fin de incluir los testimonios de Santiago French (1830) y de Paul Treutler (mediados de 1850). El autor dice que el primero «nos permite afirmar que desde temprano la rada porteña acogió usos diferentes de los portuarios», y que el segundo «nos permite reconocer el uso de la playa de Barón» como espacio de paseo.",
+    "steps": [
+     "Revisa el aviso de French: convoca al público a tomar baños de mar en su Fonda de la Marina. El autor concluye que ese testimonio muestra usos distintos de los portuarios.",
+     "Revisa el testimonio de Treutler: describe los baños flotantes que visitaba la alta sociedad y la playa de Barón, que era un espacio de paseo para los porteños de todas las extracciones sociales. El autor lo usa para reconocer usos recreativos.",
+     "Ambos testimonios cumplen la misma función: demostrar que la costa tuvo usos recreativos del borde costero. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Informar sobre el auge económico de los baños de mar. El texto no habla de un auge económico; los testimonios muestran la existencia de la práctica en un contexto de precariedad material, sobre todo en la primera mitad del siglo.",
+     "B": "Describir la infraestructura utilizada para el ocio marítimo. Parte del testimonio de Treutler sí describe los baños flotantes, pero no es el fin de incluir ambos; el autor reconoce que la infraestructura se conoce poco.",
+     "D": "Documentar las experiencias de veraneantes en el puerto. Los testimonios describen usos del borde costero, no vivencias personales de veraneantes. La alternativa cambia el objeto del testimonio."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q61",
@@ -1445,7 +2128,22 @@
    "answer": "B",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-localizar"
+   "subtopic": "cl-localizar",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los Almacenes Fiscales muestran cómo en el puerto convivían usos industriales con prácticas recreativas.",
+    "planteamiento": "Se pide qué ejemplifican, según el emisor, los «Almacenes Fiscales». El texto dice que «las construcciones portuarias de uso industrial también albergaban prácticas recreativas. Ese fue el caso de los Almacenes Fiscales, el más claro ejemplo de la mixtura de usos verificada en la rada».",
+    "steps": [
+     "Localiza la mención en la sección «El ferrocarril monopoliza el borde costero», dentro de la descripción de construcciones portuarias de uso industrial.",
+     "El autor señala que esas construcciones albergaban prácticas recreativas y que los Almacenes Fiscales son el ejemplo más claro de la mezcla de usos. Allí llegaban los veraneantes y había cabinas sobre pilotes.",
+     "Eso corresponde a un espacio con prácticas industriales y recreativas en el puerto. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Un espacio monopolizado por la empresa de ferrocarriles. El monopolio ferroviario es el tema de otra parte del texto, referida a la vía férrea que ocupó la costa. Los Almacenes Fiscales no se describen así.",
+     "C": "Un espacio que conecta la estación de trenes con espacios recreativos. El texto no dice que los almacenes conecten estaciones con lugares de recreo; mezcla la función de la vía férrea con la de los almacenes.",
+     "D": "Un espacio construido para satisfacer las exigencias de los veraneantes. Los almacenes eran de uso industrial; los veraneantes los frecuentaban, pero no fueron construidos para ellos. La alternativa invierte el origen del lugar."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q62",
@@ -1474,7 +2172,22 @@
    "answer": "A",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-inferencia"
+   "subtopic": "cl-inferencia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La vía férrea que se extendió por el frente de mar expulsó poco a poco los usos recreativos de la costa.",
+    "planteamiento": "Se pide la causa de la pérdida del uso recreativo de las playas de Valparaíso. El texto dice que, desde la década de 1870, la vía férrea «modificó el acercamiento de los porteños al mar» y fue «determinante en el lento proceso de expulsión de los usos recreativos del mar».",
+    "steps": [
+     "Identifica el proceso: el uso recreativo de la costa se pierde de forma lenta, y el autor atribuye esa pérdida a una causa concreta.",
+     "La causa que menciona el texto es la extensión del tendido ferroviario desde la estación Barón hacia el centro, que acaparó la costa con bodegas, galpones, patios de maniobras, viviendas y estaciones, y dificultó el mantenimiento de los antiguos balnearios.",
+     "Esa actividad ferroviaria costera es la causa de la pérdida del uso recreativo. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Por la incomodidad de las instalaciones balnearias. El texto dice que las comodidades de los Almacenes Fiscales «no eran las mejores», pero no lo señala como causa del abandono; es un detalle de la época y no explica el proceso.",
+     "C": "Por el surgimiento del balneario de Viña del Mar. El texto dice que Valparaíso fue el antecedente inmediato de los balnearios de Viña; es decir, Viña surgió después y no provocó la pérdida. La alternativa invierte la relación temporal.",
+     "D": "Por la suciedad de las aguas costeras. La suciedad aparece como la «mayor dificultad» en los Almacenes Fiscales, pero el texto la presenta como un problema de la época. No es la causa del proceso, que el autor atribuye al ferrocarril."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q63",
@@ -1503,7 +2216,22 @@
    "answer": "C",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-forma"
+   "subtopic": "cl-forma",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La sección muestra que el Estado no se comprometió con los balnearios: dejó las concesiones a los intereses privados y ferroviarios.",
+    "planteamiento": "Se pide la intención de la sección «Concesiones públicas e inversiones privadas». Su último párrafo dice que, «sumado a la preferencia por la gestión ferroviaria, el Estado, representado por la Intendencia de Valparaíso, no se comprometía con el desarrollo de los balnearios porteños».",
+    "steps": [
+     "La sección explica que las concesiones estatales permitían a privados cobrar entradas para financiar sus inversiones, pero que también debían ser autorizadas por el superintendente del ferrocarril y no perjudicar el funcionamiento del tren.",
+     "Muestra un caso en que la concesión fue rechazada por causar molestias al tráfico de la estación Bellavista. Luego afirma que el Estado no se comprometió con el desarrollo de los balnearios, aunque conocía sus beneficios higiénicos, terapéuticos y recreativos.",
+     "Así, la sección evidencia el desinterés del Estado en el desarrollo de actividades recreativas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Explicar los daños que causó la extensión de la línea férrea en la zona costera. Ese daño se describe en la sección anterior. Esta sección trata de las concesiones y de la autorización de la empresa ferroviaria.",
+     "B": "Criticar la acción de las empresas que intervinieron los balnearios. La sección describe la acción de las empresas, pero sin criticarla; el tono es descriptivo. La crítica recae sobre la falta de compromiso del Estado.",
+     "D": "Describir la infraestructura del borde costero de Valparaíso durante el año 1870. La sección se refiere a concesiones, autorizaciones y al rol del Estado. El año 1870 aparece solo como fecha del tendido ferroviario por el frente de mar."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q64",
@@ -1532,7 +2260,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-vocabulario"
+   "subtopic": "cl-vocabulario",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tensión del título es entre dos modelos de ciudad: el puerto productivo y el balneario de ocio.",
+    "planteamiento": "Se pide a qué se refiere la tensión declarada en el título «La tensión puerto-balneario en Valparaíso». El texto contrapone los usos industriales y portuarios del borde costero con los usos de ocio marítimo que trajeron los balnearios.",
+    "steps": [
+     "Analiza el título: la palabra tensión indica un conflicto o una contraposición entre dos elementos, que son el puerto y el balneario.",
+     "El primer párrafo reconoce a Valparaíso como ciudad eminentemente portuaria y, a la vez, recuerda el ocio balneario olvidado. El segundo sostiene que hubo una unión entre usos industriales y de ocio, pero que la evolución se orientó luego al monopolio portuario-industrial.",
+     "Por lo tanto, la tensión es entre dos modelos de ciudad: uno portuario-industrial y otro de balneario. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El desinterés por el cuidado de los espacios públicos. El texto habla del olvido de la memoria colectiva y de la investigación, no del cuidado de los espacios públicos.",
+     "B": "El conflicto social originado por el desarrollo urbano. El texto describe un conflicto de usos del espacio, pero no un conflicto social entre grupos; la alternativa va más allá de lo que dice el texto.",
+     "C": "La priorización de lo privado por sobre lo estatal. El Estado aparece como actor poco comprometido y las concesiones son privadas, pero la tensión del título no es entre lo privado y lo estatal, sino entre puerto y balneario."
+    }
+   }
   },
   {
    "id": "lectora-2025-regular-q65",
@@ -1561,7 +2304,22 @@
    "answer": "D",
    "presentation": "text",
    "passageId": "lectura-8",
-   "subtopic": "cl-argumentos"
+   "subtopic": "cl-argumentos",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los subtítulos ordenan el texto por hitos cronológicos: avanza desde la primera mitad del siglo XIX hasta la década de 1870.",
+    "planteamiento": "Se pide para qué se usan los subtítulos del fragmento. Están numerados como «1. Los balnearios en la rada de Valparaíso», «2. El ferrocarril monopoliza el borde costero» y «3. Concesiones públicas e inversiones privadas», y cada uno se sitúa en un período o en una fecha.",
+    "steps": [
+     "El subtítulo 1 se ubica en el siglo XVIII y en 1830, y continúa con mediados de 1850.",
+     "El subtítulo 2 parte en la década de 1860, pasa por la conexión ferroviaria de 1863 y llega a la década de 1870.",
+     "El subtítulo 3 se sitúa entre 1870 y 1876, con el caso de 1872. Los tres subtítulos siguen una secuencia temporal, lo que organiza la información en torno a hitos cronológicos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Agrupar los argumentos del artículo académico. Los subtítulos agrupan contenidos, pero lo hacen por período y no por argumento. Los argumentos se formulan en el cuerpo del texto y no en los títulos.",
+     "B": "Clasificar los testimonios recogidos para el estudio. Los testimonios aparecen dentro de cada sección, como el de French o el de Treutler, pero ningún subtítulo los clasifica; los subtítulos delimitan períodos.",
+     "C": "Ordenar la investigación de acuerdo a su relevancia. El texto no jerarquiza por importancia: los subtítulos siguen una secuencia de tiempo, no una valoración de cada sección."
+    }
+   }
   }
  ]
 }

@@ -5,7 +5,7 @@
 - **Entradas disponibles:** `/pruebas-oficiales` → `Pruebas_DEMRE/` y `/facsimiles-oficiales` → `Clavijeros_Pruebas_DEMRE/` (enlaces simbólicos; los PDF originales no se movieron ni modificaron).
 - **Skill activa:** `frontend-design` (Anthropic) bajo reglas de `CLAUDE.md`, instalada en `.claude/skills/frontend-design/SKILL.md`.
 - **Build:** `npm run build` pasa con 0 errores de TypeScript; `npm run lint` con 0 problemas (verificado de nuevo al cierre de la Fase 5).
-- **Datos:** 46 ensayos y 2.796 preguntas (41 oficiales DEMRE con clavijero + 5 curados). Soluciones paso a paso: 85 curadas (`desarrollo`) y **973 de las 978 preguntas de las PAES de Invierno 2026 y 2027** (`solucion`, redactadas con IA y validadas contra la clave). El resto muestra solo la clave oficial (las mini-pautas genéricas se eliminaron en la Fase 3).
+- **Datos:** 46 ensayos y 2.796 preguntas (41 oficiales DEMRE con clavijero + 5 curados). Soluciones paso a paso: **1.892 de 2.796 preguntas**: 85 curadas (`desarrollo`) y 1.807 oficiales (`solucion`, redactadas con IA y validadas contra la clave), de la PAES Regular e Invierno 2024, Invierno 2025 e Invierno 2026, en años reales de rendición. El resto muestra solo la clave oficial (las mini-pautas genéricas se eliminaron en la Fase 3).
 - **Fase 2 (2026-11-01):** mini-pautas en todas las preguntas oficiales, Analítica simplificada a 3 bloques (diagnóstico, cuaderno de errores con modo revancha, evolución), Flashcards SM-2 para Ciencias e Historia (141 tarjetas) y compendios LaTeX/Beamer extensos generados desde un temario de 67 subtemas.
 - **Fase 3 (2026-11-01):** mini-pautas eliminadas; soluciones específicas para Invierno 2026–2027; rediseño con identidad por asignatura (revertido en la Fase 4).
 - **Fase 4 (2026-11-01):** reversión estética estricta a Zinc monocromático. Se eliminan colores e íconos por asignatura, degradados y adornos; se conservan intactos los datos, las soluciones, el material LaTeX y toda la funcionalidad.
@@ -18,6 +18,7 @@
 - **v2.3 (2026-11-06):** Hero «animfetch» en `/` con nebulosa ASCII y katakana animada, datos estilo `fastfetch`, botones de un clic y mini-shell opcional; 10 paletas con selector visual y búsqueda; 5 tipografías de interfaz con el `ExamRunner` aislado; barra de estado de 24px.
 - **v2.4 (2026-11-06):** poda radical. Barra de tareas estilo sistema operativo, Inicio como una sola ventana de terminal, `/analitica` como Administrador de Tareas, íconos Pixel Art, interfaz en minúsculas y vistas sin párrafos de introducción ni cajas dentro de cajas.
 - **v2.4.1 (2026-11-06):** ventana del Inicio y heatmap más amplios (`max-w-6xl`, 52 semanas de punta a punta), comandos en 2 columnas con descripción, prompt con menú `/` navegable y racha universal.
+- **v2.5 (2026-11-06):** cuenta regresiva a la PAES en el Inicio y la barra de estado, ventana de 1480 px, heatmap sincronizado con la racha, años reales de rendición en todas las pruebas oficiales, curados al final de `/ensayos` y 834 soluciones nuevas.
 
 ---
 
@@ -610,6 +611,40 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 #### Verificación
 - `npm run lint` y `npm run build` con 0 errores. Prueba de lógica con 32 casos (menú, comandos y racha) en el scratchpad, no agregada al repo. Por pedido del autor no se abrió navegador, así que **el aspecto final no se ha visto en pantalla**.
 
+### [2026-11-06] - PAES Studio v2.5: años reales, cuenta regresiva y soluciones 2024-2025
+
+#### Años reales
+- **Fuente:** el año sale de `appliedOn`, la fecha real de aplicación, y no de restar 1 a ciegas. La migración comprobó en los 41 ensayos oficiales que ambos dan lo mismo.
+- **Los `id` no cambian:** `m1-2025-regular` ahora se titula «PAES Regular 2024». De ese `id` dependen los recortes, `soluciones.json`, los subtemas y el progreso guardado de cada estudiante. `admissionYear` guarda el año del DEMRE y `builder.py` genera lo mismo en una nueva extracción.
+- **Intentos antiguos:** guardan el título viejo; `attemptTitle` muestra el vigente.
+- **Banco resultante:** Invierno 2026, Invierno 2025, Regular e Invierno 2024, Regular e Invierno 2023. **No hay PAES Regular 2025:** sus folletos (admisión 2026) están en `Pruebas_DEMRE/`, pero faltan sus clavijeros.
+
+#### `/ensayos`
+- `sortExams` ordena sin alterar `EXAMS`. Con todas las materias, cada prueba es un grupo y sus filas son las materias, para no repetir «PAES Invierno 2026» siete veces; con una materia, una lista corrida. Los curados van en un grupo propio al final.
+- El filtro `con explicación` pasó a `curados`, porque ya no los distingue: muchas oficiales también tienen explicación.
+
+#### Heatmap y racha
+- **`answeredOn`:** cada respuesta guarda el día en que se dio, primero en la sesión y luego en el intento. Así una prueba repartida en varios días pinta cada día, y entregarla no duplica nada, porque la sesión se borra al convertirse en intento.
+- **Invariante:** un día que suma a la racha nunca queda vacío. Si ya no quedan respuestas que contar, por ejemplo al descartar una práctica, `practiced` lo pinta en el nivel 1.
+- **Cambio de criterio:** la racha cuenta los días en que respondiste, no el día en que entregaste. Entregar hoy lo que respondiste ayer no suma hoy.
+
+#### Cuenta regresiva
+- `paesCountdown.ts`: fecha confirmada (PAES Regular 2026, 30-11-2026 09:00 de Chile) y, al pasar, estimaciones por el patrón de años anteriores: tercer lunes de junio y lunes desde el 28 de noviembre. **Son estimaciones y la interfaz lo dice** (`fecha estimada`). Hay que agregar cada fecha oficial a `CONFIRMED` cuando se publique.
+- La barra de la recta final parte 90 días antes de la prueba.
+
+#### Soluciones
+- **Alcance:** las PAES «2025» en sus dos sentidos: los archivos `*-2025-*` (833 preguntas, ahora Regular e Invierno 2024, con 0 soluciones) y los `*-2026-invierno` (ahora Invierno 2025, con 2 pendientes).
+- **Pipeline:** `prepare_deepen.py --missing --only <regex>` arma lotes de preguntas sin explicación; `validate_deepen.py` exige un mínimo de 800 caracteres cuando no hay versión previa (la mediana del banco era 1.583). 660 preguntas únicas en 34 lotes en `.work/sol2025/`, más 175 réplicas del Módulo Común de Ciencias.
+- **Ronda:** 17 agentes Haiku, 2 lotes cada uno y 6 a la vez, unos 2,9 millones de tokens en total. Verificaron 645 de 660 y marcaron `verified: false` en vez de forzar las demás.
+- **Rescate:** 14 de esas 15 las revisé con el recorte o con la página original del folleto y las redacté a mano. Hay que desconfiar de las notas de los agentes: el de `m2-2025-regular-q13` dijo que la clave era B y que había un error, pero la clave es D y el cálculo la confirma.
+- **Sin solución a propósito:** `ciencias-biologia-2026-invierno-q73` (pregunta piloto, no puntúa). El dibujo parece Anafase I, con pares homólogos en 3 tamaños, y la clave dice Anafase II. Se dejó sin explicación en vez de justificar algo que no cuadra.
+- **Fuera de alcance, siguen sin solución:** 3 preguntas de Invierno 2026 (`ciencias-biologia-2027-invierno-q79`, `ciencias-quimica-2027-invierno-q60` y `q65`).
+- **Calidad:** revisé a mano muestras de Historia y M2 y las 14 rescatadas. Las otras no tienen revisión humana ni docente: el validador comprueba estructura, cierre en la clave y KaTeX, no que el razonamiento sea correcto. La interfaz indica que están redactadas con IA.
+- **El Desafío Diario** toma solo preguntas con solución, así que su banco creció y las preguntas de cada día cambian desde este despliegue. Un desafío ya empezado no se altera.
+
+#### Verificación
+- `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas frente a `HEAD` en 2.796 preguntas, sin otros campos alterados. Pruebas de lógica del contador, el heatmap, la racha y el orden en el scratchpad, también en dos zonas horarias. No se abrió navegador, así que **el aspecto final no se ha visto en pantalla**.
+
 ---
 
 ## Comandos
@@ -619,7 +654,7 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 | `npm run build` | Regenera el índice, compila TypeScript y genera `dist/` para Vercel |
 | `npm run lint` | ESLint (incluye las reglas de React Compiler de `react-hooks` v7) |
 | `npm run pipeline` | `python3 scripts/pipeline/extract_demre.py`: PDFs → JSON + recortes (`--subject`, `--year`, `--modality`, `--dry-run`, `--list`, `--no-snapshots`) |
-| `npm run solutions` | `python3 scripts/pipeline/solutions/merge_solutions.py`: aplica `soluciones.json` (Invierno 2026–2027) a los ensayos; `--collect <carpeta>` incorpora lotes nuevos validados |
+| `npm run solutions` | `python3 scripts/pipeline/solutions/merge_solutions.py`: aplica `soluciones.json` a los ensayos; `--collect <carpeta>` incorpora lotes nuevos validados |
 | `npm run curated` | `python3 scripts/pipeline/build_curated.py`: valida y escribe los ensayos curados |
 | `npm run pdfs` | `python3 scripts/pipeline/build_pdfs.py`: compila los 10 `.tex` a `public/pdfs/` y escribe `src/data/pdfs.json` (`--only guia_m1 …`) |
 | `npm run latex` | `python3 scripts/pipeline/generate_latex_summary.py`: compendios (`guia_*`) y presentaciones (`beamer_*`) en `latex/output/` |
@@ -683,7 +718,9 @@ APP_PAES/
 ---
 
 ## Pendientes y consideraciones
-- **Racha y heatmap (v2.4.1):** una práctica sin terminar ya suma a la racha, pero el heatmap solo cuenta lo entregado, porque guarda las respuestas por intento. Un día así muestra racha activa y su cuadrito vacío hasta entregar.
+- **Figuras perdidas en Química (v2.5):** al menos 7 preguntas sin recorte mencionan una figura que no se muestra, porque la extracción no la detectó: `ciencias-quimica-2025-invierno-q60`, `q62`, `q64`, `ciencias-quimica-2025-regular-q63`, `q71`, `ciencias-quimica-2026-invierno-q61` y `q74` (búsqueda heurística, pueden ser más). `ciencias-biologia-2025-invierno-q26` tiene además el texto corrupto. Falta ajustar la detección de `demre/snapshots.py`; las soluciones de q60, q64 y q61 ya citan el dato original del folleto.
+- **PAES Regular 2025 (admisión 2026):** folletos disponibles, sin clavijeros. Al conseguirlos: copiarlos a `Clavijeros_Pruebas_DEMRE/` y ejecutar `npm run pipeline`.
+- **Cuenta regresiva:** agregar a `CONFIRMED` (`src/utils/paesCountdown.ts`) cada fecha oficial del DEMRE; las siguientes a noviembre de 2026 son estimadas.
 - **Derechos de autor:** los folletos del DEMRE indican «Derechos reservados». Los recortes y textos extraídos viven en `public/exam-assets/` y `src/data/exams/`. Están pensados para estudio personal; antes de publicar el sitio abiertamente conviene revisar las condiciones de uso del DEMRE o desplegar solo los ensayos curados (basta con borrar los JSON oficiales y `public/exam-assets/` y regenerar el índice).
 - **Peso del despliegue:** los recortes ocupan ~33 MB, dentro de los límites de Vercel.
 - **Ejes de preguntas oficiales:** fuera de Ciencias son heurísticos; pueden corregirse a mano en el JSON y el índice se actualiza en el siguiente build.
@@ -785,3 +822,13 @@ APP_PAES/
 - [x] Prompt con menú `/` (flechas, `Enter`, `Tab`, `Esc`, mouse), chip y respuesta para comandos desconocidos.
 - [x] `npm run lint` y `npm run build` con 0 errores.
 - [ ] Revisión visual en local del menú y del heatmap, en escritorio y en móvil (a cargo del autor).
+
+### v2.5
+- [x] Ventana y heatmap de hasta 1480 px en `/`; las demás vistas siguen en 1280 px.
+- [x] Heatmap con sesiones en curso y respuestas por día; un día de racha nunca queda vacío.
+- [x] Cuenta regresiva en el Inicio y la barra de estado, con paso automático a la siguiente convocatoria.
+- [x] Años reales en las 41 pruebas oficiales; orden cronológico y curados al final de `/ensayos`.
+- [x] PAES Regular e Invierno 2024 completas e Invierno 2025 en 488/489.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas.
+- [ ] Revisión visual en local y revisión docente de las soluciones nuevas (a cargo del autor).
+- [ ] Recuperar las figuras perdidas de Química y conseguir los clavijeros de la PAES Regular 2025.

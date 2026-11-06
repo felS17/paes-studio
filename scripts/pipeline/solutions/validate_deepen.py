@@ -10,6 +10,8 @@ import sys
 from pathlib import Path
 
 GROWTH = 1.3
+#: Sin explicación previa (`current` en null) no hay con qué comparar: se exige un mínimo absoluto.
+MIN_NEW = 800
 
 d = Path(sys.argv[1])
 inp = {q["id"]: q for q in json.loads((d / "input.json").read_text(encoding="utf-8"))}
@@ -59,7 +61,7 @@ for s in out:
         problems.append(f"{sid}: 'planteamiento' vacío o muy corto (qué pide y qué datos entrega)")
     if not isinstance(steps, list) or not 3 <= len(steps) <= 10 or not all(isinstance(x, str) and len(x.strip()) >= 15 for x in steps):
         problems.append(f"{sid}: 'steps' debe tener entre 3 y 10 pasos de texto (mínimo 15 caracteres cada uno)"); continue
-    old = q["current"]
+    old = q.get("current") or {}
     if len(steps) < min(len(old.get("steps", [])), 9):
         problems.append(f"{sid}: tiene menos pasos ({len(steps)}) que la explicación actual ({len(old['steps'])})")
     if any(STEP_PREFIX.match(x) for x in steps):
@@ -80,7 +82,9 @@ for s in out:
         problems.append(f"{sid}: cada distractor necesita una explicación (mínimo 20 caracteres)")
         continue
     new_size = len(plan or "") + size({"steps": steps, "distractors": dis})
-    if new_size < GROWTH * size(old):
+    if not old and new_size < MIN_NEW:
+        problems.append(f"{sid}: la explicación es muy breve ({new_size} caracteres entre planteamiento, pasos y distractores); se espera ≥ {MIN_NEW}")
+    elif new_size < GROWTH * size(old):
         problems.append(f"{sid}: la versión nueva ({new_size} caracteres) no es lo bastante más detallada que la actual ({size(old)}); se espera ≥ {int(GROWTH * size(old))}")
     for t in [summary, plan, *steps, *dis.values()]:
         if CTRL.search(t) or "\t" in t:

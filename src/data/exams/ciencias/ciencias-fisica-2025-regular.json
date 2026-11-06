@@ -2,9 +2,10 @@
  "id": "ciencias-fisica-2025-regular",
  "subject": "ciencias",
  "area": "fisica",
- "title": "PAES Regular 2025",
+ "title": "PAES Regular 2024",
  "description": "Selección oficial de 56 de las 80 preguntas de Ciencias (Física), aplicada el 03-12-2024 (Admisión 2025). Claves del clavijero oficial DEMRE.",
- "year": 2025,
+ "year": 2024,
+ "admissionYear": 2025,
  "modality": "regular",
  "source": "demre",
  "form": "163",
@@ -130,7 +131,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La zona mojada se ve más oscura porque el agua absorbe ciertas longitudes de onda, así que la pregunta directa es qué longitudes absorbe el agua.",
+    "planteamiento": "Se pide la pregunta de investigación que surge de la observación. Datos: la parte mojada del piso se ve más oscura que la parte seca, con las mismas baldosas. La pregunta debe apuntar a la variable que explica la diferencia.",
+    "steps": [
+     "La observación es que la parte mojada se ve más oscura que la seca. Eso sugiere que el agua cambia la forma en que la superficie refleja la luz.",
+     "Una pregunta de investigación debe surgir de ese fenómeno y apuntar a la variable que explica el cambio: qué luz absorbe el agua.",
+     "Revisa A: pregunta por la luz reflejada en las baldosas, pero las baldosas son las mismas en ambas zonas. No explica la diferencia.",
+     "Revisa C: pregunta por la refracción en las baldosas, un fenómeno que no se observa en la situación. El oscurecimiento no depende de refracción en las baldosas.",
+     "Revisa D: pregunta por la luz que incide en el agua. La luz incidente es la misma en la zona mojada y en la seca, así que no explica la diferencia.",
+     "Revisa B: pregunta qué longitudes de onda absorbe el agua, justo lo que se necesita para explicar por qué la zona mojada se ve más oscura. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Pregunta por la luz reflejada en las baldosas. Trampa: centra la atención en el material, que no cambia entre la zona seca y la mojada.",
+     "C": "Pregunta por la refracción en las baldosas. Trampa: suena a fenómeno óptico relacionado, pero no es el que produce el oscurecimiento observado.",
+     "D": "Pregunta por la luz que incide en el agua. Trampa: la incidencia es igual en ambas zonas, así que no explica la diferencia de color."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q04",
@@ -158,7 +177,25 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Lo observado es que dos rayos distintos, con el mismo ángulo de incidencia, se refractan con ángulos distintos; la pregunta debe relacionar la frecuencia del rayo con el ángulo de refracción.",
+    "planteamiento": "Se pide la pregunta de investigación relacionada directamente con lo observado. Datos: dos rayos de distinta clase, con igual ángulo de incidencia sobre el agua, se refractan con ángulos diferentes, y el patrón se repite con otros rayos.",
+    "steps": [
+     "Lo observado: rayos distintos, con el mismo ángulo de incidencia en el agua, se refractan con ángulos distintos, y el patrón se repite.",
+     "La pregunta debe relacionar la variable que se cambia (el tipo de rayo, asociado a su frecuencia) con la variable que se mide (el ángulo de refracción).",
+     "Revisa A: relaciona el ángulo de incidencia con el ángulo de reflexión. Ni el ángulo de incidencia ni la reflexión son lo que se observó.",
+     "Revisa B: habla de medios de transmisión. El medio, el agua, se mantuvo fijo en el experimento, así que no es lo que se investiga.",
+     "Revisa C: relaciona la frecuencia con el ángulo de reflexión, que no se observó.",
+     "Revisa D: relaciona la frecuencia del rayo incidente con el ángulo de refracción, que es la comparación exacta del experimento. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Relaciona el ángulo de incidencia con el de reflexión. Trampa: la reflexión no se midió, y el experimento variaba el tipo de rayo, no el ángulo.",
+     "B": "Habla de los medios de transmisión. Trampa: el agua se mantuvo igual, así que el medio no es la variable en estudio.",
+     "C": "Relaciona la frecuencia con el ángulo de reflexión. Trampa: mezcla la variable correcta con una medida que no se observó."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q05",
@@ -197,7 +234,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al entrar al vidrio el rayo se acerca a la normal, y al salir se aleja, por lo que emerge paralelo al rayo incidente pero desplazado lateralmente.",
+    "planteamiento": "Se pide el esquema que represente la trayectoria de un rayo que atraviesa una placa de vidrio de caras paralelas. Datos: el rayo incide desde el aire, atraviesa el vidrio y emerge de nuevo al aire; la línea segmentada muestra la dirección original.",
+    "steps": [
+     "Al pasar del aire al vidrio, que tiene mayor índice de refracción, el rayo se acerca a la normal. Por eso se quiebra hacia la perpendicular dentro del vidrio.",
+     "Al salir del vidrio hacia el aire, el rayo se aleja de la normal. Como las caras son paralelas, la desviación de salida compensa la de entrada y el rayo emerge paralelo al original.",
+     "Revisa D: el rayo atraviesa sin cambiar de dirección. Eso no ocurre al cambiar de medio con un ángulo de incidencia distinto de cero.",
+     "Revisa B: el rayo dentro del vidrio se dibuja perpendicular a la cara y, al salir, queda vertical. Su dirección final no es paralela a la incidente.",
+     "Revisa C: el rayo emerge con una dirección distinta de la incidente, sin ser paralelo al original.",
+     "Revisa E: el rayo sale en dirección vertical, perpendicular a la cara, lo que no corresponde a una placa de caras paralelas con ese ángulo.",
+     "Revisa A: el rayo se acerca a la normal al entrar, se aleja al salir y emerge paralelo al rayo original, con un pequeño desplazamiento. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dibuja el rayo perpendicular dentro del vidrio y vertical al salir. Trampa: se confunde el ángulo de incidencia con uno normal, lo que no es coherente con el rayo que llega inclinado.",
+     "C": "Dibuja la salida con una dirección distinta de la incidente. Trampa: no considera que las caras son paralelas y que la salida recupera la dirección original.",
+     "D": "Dibuja el rayo sin desviación. Trampa: ignora el cambio de velocidad y de dirección que sufre la luz al cambiar de medio.",
+     "E": "Dibuja la salida vertical, perpendicular a la cara del vidrio. Trampa: confundir la normal con la dirección de salida, sin conservar la dirección original del rayo."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q06",
@@ -229,7 +286,25 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un espejo plano y uno convexo siempre dan imágenes virtuales de un objeto real, así que el arreglo produce solo imágenes virtuales.",
+    "planteamiento": "Se pide qué se puede afirmar de las imágenes formadas por un espejo plano y uno convexo con ejes ópticos coincidentes. Datos: el objeto está sobre el eje óptico, a igual distancia de ambos espejos.",
+    "steps": [
+     "Recuerda el espejo plano: forma una imagen virtual, derecha y del mismo tamaño que el objeto, situada detrás de la superficie reflectora.",
+     "Recuerda el espejo convexo: sus rayos reflejados divergen, por lo que forma imágenes virtuales, derechas y más pequeñas que el objeto, sin importar la distancia.",
+     "Aplica al objeto: la imagen que da el espejo convexo es virtual, y la que da el espejo plano también es virtual.",
+     "Las imágenes que se forman al reflejarse la luz de un espejo en el otro también resultan virtuales en esta configuración, por lo que el conjunto no produce imágenes reales.",
+     "Por eso A, C, D y E son falsas, porque incluyen imágenes reales que no se forman. Solo queda la afirmación de que se forman solo imágenes virtuales. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Afirma que solo hay imágenes reales. Trampa: los espejos convexos no forman imágenes reales de objetos reales, y el plano tampoco.",
+     "C": "Afirma una imagen real y una virtual. Trampa: el espejo convexo solo da virtuales, y confundir su comportamiento con el de un espejo cóncavo lleva a esta opción.",
+     "D": "Afirma una virtual y múltiples reales. Trampa: combina una imagen virtual correcta con imágenes reales inexistentes.",
+     "E": "Afirma una real y múltiples virtuales. Trampa: la parte de la imagen real es falsa, aunque la idea de varias imágenes sea plausible."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q09",
@@ -264,7 +339,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cuerda superior sostiene a los tres bloques y la inferior solo al de 1 kg; por eso la tensión en la cuerda superior vale seis veces la de la inferior.",
+    "planteamiento": "Se pide la expresión de $T_3$ en función de $T_1$. Datos: $m_1 = 1\\ \\mathrm{kg}$, $m_2 = 2\\ \\mathrm{kg}$, $m_3 = 3\\ \\mathrm{kg}$; cuerdas inextensibles y de masa despreciable; el sistema está en reposo, como lo muestra la figura.",
+    "steps": [
+     "El bloque de 1 kg está sujeto solo a su peso y a la tensión $T_1$ de la cuerda inferior. En equilibrio, $T_1 = m_1 g = 1\\cdot g$.",
+     "La cuerda $T_2$ sostiene a los bloques de 2 kg y de 1 kg, es decir, el conjunto que cuelga de ella: $T_2 = (m_1 + m_2)\\,g = 3g$.",
+     "La cuerda superior $T_3$ sostiene a los tres bloques: $T_3 = (m_1 + m_2 + m_3)\\,g = (1 + 2 + 3)\\,g = 6g$.",
+     "Se expresa $T_3$ en función de $T_1$ dividiendo ambas expresiones: $\\dfrac{T_3}{T_1} = \\dfrac{6g}{g} = 6$, luego $T_3 = 6\\,T_1$.",
+     "Comprobación: $T_2 = 3\\,T_1$ y $T_3 = 6\\,T_1$; cada cuerda sube su tensión en proporción a la masa total que sostiene.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$T_3 = T_1$: supone que la cuerda superior solo sostiene el bloque inferior, pero en realidad sostiene a los tres bloques. La trampa es ignorar el peso acumulado.",
+     "B": "$T_3 = 2T_1$: resulta de una razón entre masas que no incluye el bloque de 3 kg; la cuerda superior debe cargar también ese bloque.",
+     "C": "$T_3 = 3T_1$: corresponde al cociente entre la masa del bloque superior (3 kg) y la del inferior (1 kg), sin sumar la masa de los bloques intermedios."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q12",
@@ -303,7 +396,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El resorte cumple la ley de Hooke, así que la fuerza es proporcional a la deformación, medida desde los $50$ cm de longitud natural; con $10$ cm de compresión, la fuerza es un tercio de $24$ N.",
+    "planteamiento": "Se pide la fuerza para mantener el extremo libre en $x = 40$ cm. Datos: longitud natural $50$ cm; a $x = 80$ cm se requieren $24$ N, paralelos al eje x.",
+    "steps": [
+     "Identifica el modelo: la fuerza es proporcional a la deformación, $F = k\\,|x - x_0|$, con $x_0 = 50\\ \\mathrm{cm}$.",
+     "En $x = 80$ cm la deformación es $80 - 50 = 30$ cm, y la fuerza es $24$ N. Entonces $k = \\dfrac{F}{\\Delta x} = \\dfrac{24\\ \\mathrm{N}}{30\\ \\mathrm{cm}} = 0{,}8\\ \\mathrm{N/cm}$.",
+     "En $x = 40$ cm la deformación es $40 - 50 = -10$ cm: el resorte está comprimido $10$ cm, y la magnitud de la deformación es $10$ cm.",
+     "Calcula la magnitud de la fuerza: $F = k\\,|\\Delta x| = 0{,}8\\ \\mathrm{N/cm} \\cdot 10\\ \\mathrm{cm} = 8\\ \\mathrm{N}$.",
+     "Comprobación por proporción: la deformación pasa de $30$ cm a $10$ cm, es decir, un tercio. La fuerza también se reduce a un tercio: $24\\ \\mathrm{N} / 3 = 8\\ \\mathrm{N}$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice $12$ N. Trampa: divide la fuerza a la mitad, como si la deformación se redujera a la mitad, pero la compresión es de $10$ cm, no de $15$ cm.",
+     "C": "Dice $16$ N. Trampa: toma $20$ cm de deformación, al no restar bien la longitud natural de $50$ cm.",
+     "D": "Dice $24$ N. Trampa: supone que la fuerza no cambia con la posición, aunque el resorte se deforma de otra forma.",
+     "E": "Dice $32$ N. Trampa: aumenta la fuerza en vez de disminuirla, al confundir la compresión con una mayor elongación."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q13",
@@ -331,7 +443,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-ondas"
+   "subtopic": "cs-ondas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frase resume los resultados de las mediciones y las concluye: la sismicidad está dentro de parámetros normales, que es la conclusión de la investigación.",
+    "planteamiento": "Se pide el componente de la investigación científica al que se asocia la frase entre comillas. Datos: el grupo realizó un estudio geográfico, instaló sensores, midió y procesó datos, y luego reportó que la sismicidad es normal.",
+    "steps": [
+     "Identifica las etapas del texto: el estudio geográfico y la instalación de sensores son preparación; las mediciones y su análisis son recolección y procesamiento de datos.",
+     "La frase final no describe cómo se midió ni qué se esperaba. Presenta lo que se obtuvo y lo que se decide a partir de ello.",
+     "Revisa A: el planteamiento del problema es la sospecha de que la actividad aumentó, que aparece al inicio. La frase final no plantea el problema.",
+     "Revisa B: la hipótesis es una anticipación de lo que podría pasar. La frase no anticipa nada, describe un resultado ya obtenido.",
+     "Revisa D: la recolección de datos corresponde a las mediciones con sensores. La frase no describe cómo se midió, sino qué se concluyó.",
+     "La frase afirma un resultado general a partir de los datos, es decir, una conclusión. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Asocia la frase al planteamiento del problema. Trampa: la sospecha de aumento de la actividad está al comienzo, pero la frase final es un resultado.",
+     "B": "Asocia la frase a la hipótesis. Trampa: una hipótesis se formula antes de medir, y aquí se reporta un resultado ya obtenido.",
+     "D": "Asocia la frase a la recolección de datos. Trampa: esa etapa describe las mediciones, no la interpretación final."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q15",
@@ -359,7 +489,24 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La hipótesis debe relacionar las variables que se investigan, aquí la temperatura y la distancia al Ecuador. Y una hipótesis puede resultar falsa: para eso se pone a prueba.",
+    "planteamiento": "Se pide qué hipótesis pudo originar una investigación que compara la temperatura máxima del aire, en un mismo día y en distintos lugares, según su distancia a la línea del Ecuador. Las variables en juego son esa distancia, es decir, la latitud, y la temperatura máxima.",
+    "steps": [
+     "Identifica la variable independiente: lo que cambia de un lugar a otro por diseño es su distancia a la línea del Ecuador, o sea, su latitud.",
+     "Identifica la variable dependiente: lo que se mide y se compara es la máxima temperatura del aire en cada lugar.",
+     "Recuerda qué es una hipótesis: una relación tentativa entre variables, que guía el diseño de la investigación. No necesita ser verdadera antes de investigar: el estudio sirve justamente para aceptarla o rechazarla.",
+     "Compara las alternativas con esas variables: solo la C relaciona temperatura con latitud, que es lo que este diseño permite poner a prueba.",
+     "Lo que se observa en general es lo contrario, porque la temperatura suele bajar al alejarse del Ecuador. Con esos datos la hipótesis se rechazaría, pero igual pudo dar origen a la investigación. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Se refiere solo a puntos de la línea del Ecuador. Para ponerla a prueba habría que comparar lugares sobre esa línea, mientras que la investigación compara lugares a distinta distancia de ella.",
+     "B": "Relaciona la temperatura con la altura de un lugar. Es una idea correcta en general y por eso tienta, pero la altura no es la variable que esta investigación hace variar.",
+     "D": "Relaciona la temperatura con la presión atmosférica, una variable que el enunciado no menciona ni mide. No se podría responder con el diseño descrito."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q16",
@@ -387,7 +534,25 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En una conexión en serie el circuito se interrumpe si una ampolleta falla, así que el manual debe advertir que la lámpara depende de que ambas estén en buen estado.",
+    "planteamiento": "Se pide la información que debe contener el manual para evitar problemas de funcionamiento de una lámpara con dos ampolletas en serie. Datos: las ampolletas están conectadas una a continuación de la otra, en un único camino.",
+    "steps": [
+     "En una conexión en serie, la corriente recorre las ampolletas una tras otra por un único camino.",
+     "Si una de ellas se quema o está defectuosa, el circuito queda abierto y ninguna enciende. Esa es la causa de problemas de funcionamiento.",
+     "Revisa A: en serie la corriente es igual en ambas ampolletas. Es una propiedad real, pero no advierte nada para evitar fallas.",
+     "Revisa C: en serie el voltaje se reparte entre las ampolletas. Es cierto, pero no aborda el problema de que la lámpara deje de funcionar.",
+     "Revisa D: la resistencia equivalente es la suma de las resistencias. También es cierto, pero no se relaciona con la falla.",
+     "Revisa B: indica que el encendido depende de que ambas ampolletas estén en buen estado. Es la advertencia que el manual necesita para evitar problemas. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Dice que la corriente es igual en ambas ampolletas. Trampa: es una propiedad correcta de la serie, pero no sirve para prevenir fallas.",
+     "C": "Dice que el voltaje en cada ampolleta es distinto al del enchufe. Trampa: es correcto, pero describe el reparto de voltaje y no el problema de funcionamiento.",
+     "D": "Dice que la resistencia de la lámpara es la suma de las resistencias. Trampa: es una relación válida en serie, pero no advierte sobre la falla de una ampolleta."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q18",
@@ -422,7 +587,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El gasto de un refrigerador depende de la energía que consume, y la etiqueta muestra ese dato como consumo mensual en kWh/mes.",
+    "planteamiento": "Se pide qué información de la etiqueta debe considerar la persona para elegir el de menor gasto económico. Datos: el consumo mensual es $18{,}67\\ \\mathrm{kWh/mes}$, medido a $25\\,^\\circ\\mathrm{C}$; el resto de datos son de capacidad y funcionamiento.",
+    "steps": [
+     "El objetivo es el menor gasto económico durante el uso. Como el costo depende de la energía que se consume cada mes, el dato clave es el consumo.",
+     "En la etiqueta, el consumo mensual aparece en la parte inferior: $18{,}67\\ \\mathrm{kWh/mes}$. Si la tarifa es de $t$ pesos por kWh, el gasto mensual es $18{,}67\\, t$ pesos.",
+     "Revisa B: el voltaje indica la alimentación eléctrica que requiere el aparato, no cuánta energía consume, así que no determina el gasto.",
+     "Revisa C: la temperatura del compartimiento congelado es un parámetro de funcionamiento, no un consumo ni un costo.",
+     "Revisa D: el volumen útil dice cuánto cabe en el refrigerador, no cuánta energía gasta. Sirve para elegir capacidad, pero no para comparar el gasto.",
+     "Por lo tanto, la información que debe considerar para el gasto es el consumo mensual. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice que debe considerar el voltaje. Trampa: es un dato técnico de conexión, que no cambia el gasto mensual.",
+     "C": "Dice que debe considerar la temperatura del congelador. Trampa: es un parámetro de funcionamiento y no se traduce en un cobro en la cuenta.",
+     "D": "Dice que debe considerar el volumen útil. Trampa: un refrigerador más grande no implica necesariamente más gasto, y la etiqueta no lo mide en pesos."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q19",
@@ -450,7 +633,26 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La pregunta pide una hipótesis que se pueda validar con lo medido: células derivadas de troncales que liberan insulina ante glucosa, como posible tratamiento.",
+    "planteamiento": "Se pide la hipótesis que podría validarse con la estrategia del equipo. Datos: las células beta se producen a partir de células troncales y, in vitro, liberan insulina al exponerse a glucosa. La hipótesis debe conectar esa función con un posible tratamiento de la diabetes tipo I, sin afirmar nada que el experimento no mida.",
+    "steps": [
+     "Identifica lo que el experimento sí mide: si las células obtenidas a partir de células troncales liberan insulina cuando se exponen a glucosa. Es una medida de función, no de trasplante ni de ingreso de glucosa.",
+     "Recuerda el problema de base: en la diabetes tipo I, la destrucción de las células beta impide secretar insulina y regular la glucosa en la sangre. Si las células producidas cumplen esa función, podrían reemplazar a las destruidas.",
+     "Una hipótesis validable es una afirmación que se puede confirmar o refutar con datos del mismo tipo que los obtenidos. Debe apuntar a la utilidad terapéutica de las células, que es lo que se evalúa al medir la liberación de insulina.",
+     "Revisa A: afirma que el trasplante disminuye el ingreso de glucosa a la célula. El estudio no mide ingreso de glucosa ni efectos del trasplante, así que no puede validar esa afirmación.",
+     "Revisa B: habla de trasplante de páncreas en personas con diabetes tipo I. El estudio trata de células obtenidas a partir de troncales, no de un órgano completo.",
+     "Revisa C: invierte la relación observada. El experimento muestra que la glucosa estimula la liberación de insulina, mientras que C afirma que los altos niveles de glucosa la disminuyen.",
+     "Revisa D: conecta lo medido (células beta que secretan insulina ante la glucosa) con una aplicación clínica (posible tratamiento de la diabetes tipo I). Es la única que puede validarse con estos resultados. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Afirma que el trasplante disminuye el ingreso de glucosa a la célula. Trampa: suena a mecanismo celular, pero el estudio no mide el ingreso de glucosa ni efectos del trasplante.",
+     "B": "Habla de trasplante de páncreas. Trampa: el tratamiento propuesto es con células derivadas de troncales, no con un órgano, así que la premisa no corresponde.",
+     "C": "Invierte la relación: la glucosa estimula la secreción de insulina en los resultados in vitro, y C afirma lo contrario. Trampa: leer la palabra glucosa y asumir una relación negativa."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q23",
@@ -485,7 +687,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que leer los promedios (flechas) y no el largo de los rangos; el vello púbico tiene el promedio más temprano.",
+    "planteamiento": "Se pide la conclusión correcta a partir de la figura. Datos: las líneas indican el rango etario de aparición y las flechas el promedio, en años. La conclusión debe basarse en la posición de las flechas.",
+    "steps": [
+     "Lee el promedio de cada característica en el eje de edad: cambio de voz, aproximadamente $13$ años; vello púbico, aproximadamente $12$ años; vello facial, aproximadamente $15$ años; vello axilar, aproximadamente $14$ años.",
+     "Ordena los promedios de menor a mayor: vello púbico ($12$) $<$ cambio de voz ($13$) $<$ vello axilar ($14$) $<$ vello facial ($15$). La de promedio más temprano es el vello púbico.",
+     "Revisa A: dice que el vello púbico es el más tardío. Como su promedio es el más bajo, A es falsa.",
+     "Revisa B: dice que el cambio de voz y el vello facial son las más tempranas. El vello facial tiene el promedio más tardío, $15$ años, así que B es falsa.",
+     "Revisa D: dice que el cambio de voz y el vello axilar son las más tardías. El cambio de voz ($13$ años) es el tercero en orden, y el vello facial ($15$ años) es tardío y no aparece en D, así que D es falsa.",
+     "Revisa C: afirma que el vello púbico es el que, en promedio, aparece más temprano. Coincide con el orden de las flechas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Invierte el orden: el vello púbico tiene el promedio más bajo, cerca de $12$ años, así que es el más temprano y no el más tardío. Trampa: confundir el inicio del rango con el promedio.",
+     "B": "Mezcla una característica temprana (cambio de voz, cerca de $13$ años) con una tardía (vello facial, cerca de $15$ años). Trampa: leer solo que ambas aparecen dentro del rango de los $13$ años.",
+     "D": "Incluye al cambio de voz entre las más tardías, pero su promedio ($13$ años) es menor que el del vello axilar ($14$) y el del vello facial ($15$). Trampa: fijarse en el rango largo de la línea y no en la flecha."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q24",
@@ -520,7 +740,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La inhibición depende de la concentración: al subir Z deben bajar los espermatozoides unidos, algo que solo muestra la gráfica D.",
+    "planteamiento": "Se pide la representación correcta del resultado esperado. Datos: 100 espermatozoides y 25 ovocitos; cuatro concentraciones crecientes de Z (u.a.); el efecto inhibitorio depende de la concentración de Z. Hay que buscar un resultado con una tendencia descendente.",
+    "steps": [
+     "Interpreta la conclusión: si el efecto inhibitorio depende de la concentración, al aumentar Z debe disminuir el número de espermatozoides unidos a los ovocitos.",
+     "Revisa A: compara solo dos condiciones (Z ausente y Z presente), con $80$ y $20$ espermatozoides unidos. El diseño pedía cuatro concentraciones crecientes, así que la tabla no representa el experimento.",
+     "Revisa B: la curva de espermatozoides es horizontal en $100$ para todas las concentraciones. Eso indica que Z no tiene efecto, lo que contradice la conclusión.",
+     "Revisa C: la tabla muestra $40$, $10$, $20$ y $30$ espermatozoides unidos para las concentraciones $1$, $2$, $3$ y $4$. Los valores suben y bajan sin tendencia, así que no muestran una dependencia con la concentración.",
+     "Revisa D: el gráfico muestra el número de espermatozoides unidos bajando desde aproximadamente $40$ en la concentración $1$ hasta $0$ en la concentración $4$. Es una relación descendente, que es lo que predice la conclusión.",
+     "Comprueba que D describe un resultado plausible del diseño, con el número de espermatozoides unidos disminuyendo a medida que aumenta Z. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Parece un resultado real, pero solo tiene dos condiciones y no las cuatro concentraciones crecientes del diseño. Trampa: aceptar una tabla con datos verosímiles sin revisar si cubre el experimento.",
+     "B": "Muestra los espermatozoides constantes en $100$, es decir, sin efecto de Z. Trampa: mirar solo que las curvas están rotuladas con los gametos correctos.",
+     "C": "La tabla tiene cuatro concentraciones y sus porcentajes coinciden con los números, lo que parece coherente. Sin embargo, la serie no es monótona y no muestra un efecto que dependa de la concentración."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q27",
@@ -548,7 +786,24 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una buena pregunta de investigación compara la prevalencia entre mujeres y hombres en Chile, porque el problema planteado es una diferencia por sexo.",
+    "planteamiento": "Se pide la pregunta pertinente al problema. Datos: el lupus es más prevalente en mujeres a nivel internacional, y el grupo quiere saber si ocurre lo mismo en la población chilena. La pregunta debe permitir comparar mujeres y hombres.",
+    "steps": [
+     "Identifica el problema: se busca comprobar si la mayor frecuencia del lupus en mujeres se repite en Chile. Para responderlo, la pregunta debe comparar la prevalencia entre ambos sexos.",
+     "Revisa A: pregunta por el rango de edad de las mujeres con lupus. Es un dato descriptivo de un solo grupo, así que no responde si hay diferencia con los hombres.",
+     "Revisa B: pregunta por la probabilidad de que una mujer chilena desarrolle lupus. Entrega una cifra para mujeres, pero no la compara con los hombres.",
+     "Revisa C: pregunta por la frecuencia en toda la población. Al juntar a mujeres y hombres, la cifra no permite saber si el lupus es más frecuente en mujeres.",
+     "Revisa D: pregunta por el porcentaje de mujeres y de hombres con lupus en Chile. Esa comparación responde directamente si la diferencia observada internacionalmente se repite en el país. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Pregunta por el rango de edad de las mujeres con lupus. Trampa: es una pregunta sobre un grupo, sin comparación con los hombres.",
+     "B": "Pregunta por la probabilidad en mujeres. Trampa: es un dato útil, pero solo mide un grupo y no contrasta con el sexo masculino.",
+     "C": "Pregunta por la frecuencia total. Trampa: al sumar mujeres y hombres se pierde la información sobre la diferencia por sexo que se quiere investigar."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q28",
@@ -576,7 +831,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-sistemas"
+   "subtopic": "cs-sistemas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una evidencia de respuesta humoral es un aumento de sustancias secretadas que circulan en la sangre, como los anticuerpos.",
+    "planteamiento": "Se pide la evidencia que apoya la teoría de que la respuesta inmune es humoral, es decir, mediada por sustancias liberadas por los glóbulos blancos. La evidencia debe mostrar un aumento de esas sustancias en el organismo.",
+    "steps": [
+     "Define el concepto: la respuesta humoral es la mediada por sustancias presentes en los fluidos corporales, como los anticuerpos que secretan los linfocitos B.",
+     "Busca un dato que muestre un aumento de esas sustancias en la sangre durante una infección, y que no sea una respuesta celular.",
+     "Revisa A: disminuir macrófagos en la piel. Los macrófagos participan por fagocitosis, que es una respuesta celular, y su disminución no evidencia secreciones humorales.",
+     "Revisa B: el aumento de temperatura es una respuesta general, como la fiebre. No identifica mediadores humorales específicos.",
+     "Revisa C: aumentan los anticuerpos en la sangre frente a un agente infeccioso. Los anticuerpos son sustancias secretadas que circulan en la sangre, y su aumento coincide con la infección, lo que apoya la idea humoral.",
+     "Revisa D: disminuyen los linfocitos T citotóxicos. Esa observación se asocia con la inmunidad celular, y la disminución de células no evidencia secreción de sustancias. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Disminuyen los macrófagos en la piel. Trampa: los macrófagos son glóbulos blancos y se confunden con el carácter humoral, pero su acción es celular.",
+     "B": "Aumenta la temperatura corporal. Trampa: es un signo de la infección, pero no identifica sustancias liberadas por los glóbulos blancos.",
+     "D": "Disminuyen los linfocitos T citotóxicos. Trampa: asociar la respuesta inmune con cualquier disminución de glóbulos blancos, sin distinguir entre inmunidad celular y humoral."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q29",
@@ -611,7 +884,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para atribuir un efecto a un compuesto hay que comparar con el control: el compuesto 2 deja menos células que el control, lo que indica menor proliferación.",
+    "planteamiento": "Se pide la inferencia correcta a partir de la figura. Datos: los tres cultivos iniciales tienen la misma cantidad de células; tras $72$ horas se comparan el control, el cultivo con el compuesto 1 y el cultivo con el compuesto 2.",
+    "steps": [
+     "Lee el diseño: el control crece sin tratamiento, así que muestra lo que ocurre en esas $72$ horas. Cualquier diferencia con el control se atribuye al compuesto.",
+     "Compara el número de células al final: el control tiene la mayor cantidad; el cultivo con el compuesto 1 se ve similar, sin un aumento respecto del control; el cultivo con el compuesto 2 tiene claramente menos células.",
+     "Como todos partieron con la misma cantidad, la diferencia final refleja el crecimiento neto. Menos células al final significa que se dividieron menos, es decir, que la tasa de proliferación disminuyó.",
+     "Revisa A: el compuesto 1 no muestra más células que el control, así que no hay evidencia de que aumente el número de células viables. El crecimiento también ocurre en el control.",
+     "Revisa B: la figura muestra cantidad de células, no el volumen de cada una, y el tamaño individual no se mide. La inferencia no puede sostenerse.",
+     "Revisa D: las células que quedan tienen el mismo aspecto que las del cultivo inicial, sin señales de transformación en células normales. Además, el experimento no identifica células normales. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que el compuesto 1 aumentó las células viables. Trampa: en comparación con el cultivo inicial sí hubo crecimiento, pero también ocurrió en el control, así que no se debe al compuesto.",
+     "B": "Afirma que el compuesto 1 aumentó el volumen celular. Trampa: confundir número de células con tamaño, algo que la figura no muestra.",
+     "D": "Afirma que el compuesto 2 transformó las células cancerosas en normales. Trampa: aceptar una afirmación fuerte sin evidencia; la figura solo muestra cantidad de células."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q30",
@@ -646,7 +937,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En la gráfica, solo la curva del arroz dorado sube de manera continua en las seis mediciones, así que la conclusión correcta es la D.",
+    "planteamiento": "Se pide la conclusión correcta del gráfico. Datos: los niveles de betacaroteno (u.a.) de ambos arroces se miden cada semana, de la semana $0$ a la $5$. Hay que verificar cada afirmación contra todos los puntos.",
+    "steps": [
+     "Lee los valores del arroz dorado: aproximadamente $0{,}2$ en la semana $0$, $0{,}5$ en la $1$, $0{,}8$ en la $2$, $1{,}2$ en la $3$, $1{,}9$ en la $4$ y $2{,}7$ en la $5$.",
+     "Lee los valores del arroz no modificado: aproximadamente $0{,}5$, $0{,}8$, $1{,}1$, $1{,}4$, $1{,}4$ y $1{,}4$ en las mismas semanas.",
+     "Revisa A: en las semanas $0$, $1$ y $2$, el arroz dorado tiene valores más bajos. Entonces no es siempre más alto.",
+     "Revisa B: en la semana $5$, el arroz dorado ($2{,}7$) supera al no modificado ($1{,}4$). Entonces tampoco es siempre más bajo.",
+     "Revisa C: el arroz no modificado sube hasta la semana $3$ y luego se mantiene en $1{,}4$. No aumenta de manera constante.",
+     "Revisa D: el arroz dorado sube en cada semana, de $0{,}2$ a $2{,}7$, sin retrocesos. Esa afirmación se cumple en todos los puntos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Dice que siempre es más alto. Trampa: solo es cierto desde la semana $3$; antes, la curva del arroz dorado está por debajo.",
+     "B": "Dice que siempre es más bajo. Trampa: la curva se invierte después de la semana $3$, y al final el arroz dorado es el más alto.",
+     "C": "Dice que el arroz no modificado aumenta de manera constante. Trampa: su curva sube hasta la semana $3$ y después se queda plana en $1{,}4$."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q31",
@@ -674,7 +983,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La hipótesis relaciona la inserción de genes de la bacteria con una protección del algodón frente a insectos; es la única opción que propone una relación comprobable.",
+    "planteamiento": "Se pide la hipótesis asociada al procedimiento de generación del algodón Bt. Datos: se introducen genes de Bacillus thuringiensis, que codifican proteínas tóxicas para las larvas de polillas. La hipótesis debe afirmar una relación causa-efecto que pueda ponerse a prueba.",
+    "steps": [
+     "Identifica el procedimiento: se insertan genes de Bacillus thuringiensis en el algodón para que produzca proteínas tóxicas para las larvas de polillas.",
+     "Una hipótesis es una respuesta anticipada, comprobable, que relaciona una causa (la inserción de genes) con un efecto esperado (protección frente a insectos).",
+     "Revisa A: describe un efecto que ya ocurrió (toxicidad en las larvas). No explica por qué se modifica la planta ni propone una relación general que se pueda poner a prueba.",
+     "Revisa B: es un objetivo o propósito del estudio, porque no afirma nada que pueda ser verdadero o falso.",
+     "Revisa C: afirma que, al insertar genes de Bacillus thuringiensis, el algodón consigue protección frente al ataque de insectos. Relaciona la modificación con el efecto, y se puede comprobar comparando plantas Bt con plantas sin modificar.",
+     "Revisa D: describe un resultado contrario, una menor resistencia a insectos. Podría ser un hallazgo, pero no es la hipótesis que dio origen al procedimiento. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Describe la toxicidad de las proteínas en las larvas. Trampa: suena a hipótesis, pero está redactada como un resultado y no relaciona el procedimiento con una protección.",
+     "B": "Propone determinar el efecto defensivo del algodón. Trampa: es el objetivo de la investigación, no una afirmación que pueda validarse o refutarse.",
+     "D": "Describe una menor resistencia a insectos de lo esperado. Trampa: confundir un posible resultado negativo con la hipótesis original, que postulaba protección."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q32",
@@ -702,7 +1029,25 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-genetica"
+   "subtopic": "cs-genetica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La manipulación genética de levaduras busca optimizar procesos como la fermentación, lo que corresponde a aumentar la actividad metabólica de la célula.",
+    "planteamiento": "Se pide una aplicación científica de la manipulación genética en el funcionamiento celular. Datos: la fermentación, los quesos y el pan dependen del metabolismo de levaduras, que puede optimizarse al conocer los genes y sus funciones.",
+    "steps": [
+     "El texto dice que la manipulación genética puede optimizar procesos basados en levaduras, porque se conocen los genes, sus funciones y los mecanismos celulares.",
+     "La aplicación pedida debe cambiar la manera en que la célula cumple una función para mejorar un proceso industrial.",
+     "Revisa A: la síntesis de organelos nuevos no aparece en el texto y no corresponde a lo que se logra al optimizar procesos existentes.",
+     "Revisa B: identificar especies nuevas es una búsqueda de organismos, no una manipulación del funcionamiento celular.",
+     "Revisa C: aumentar la actividad metabólica de los organelos es la optimización que describe el texto, que mejora la fermentación y la producción de pan y quesos.",
+     "Revisa D: mantener las funciones inalteradas es lo contrario de manipular genéticamente, que busca modificar el funcionamiento para mejorar el rendimiento. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Habla de sintetizar organelos nuevos. Trampa: la manipulación se describe sobre procesos existentes, no sobre crear estructuras celulares nuevas.",
+     "B": "Habla de identificar especies unicelulares. Trampa: es una búsqueda de organismos, no una intervención en la célula.",
+     "D": "Habla de mantener funciones inalteradas. Trampa: sugiere que la manipulación no cambia nada, cuando su propósito es justamente modificar el funcionamiento."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q34",
@@ -737,7 +1082,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La única variable que cambió la estudiante fue la dirección de la luz solar sobre las plántulas, al girar la botella 180°; por eso la pregunta es sobre el ángulo de incidencia.",
+    "planteamiento": "Se pide la pregunta que la estudiante podría haberse planteado con el cambio de condiciones. Datos: la botella fue girada 180° cerca de la ventana; el tipo de tierra y la variedad de lentejas se mantuvieron. Hay que identificar qué condición se modificó.",
+    "steps": [
+     "Identifica el cambio: la estudiante gira la botella 180°. Como las plántulas quedan en otra posición respecto de la ventana, cambia la dirección desde la que llega la luz solar.",
+     "En las etapas de la figura, el germinado crece hacia la fuente de luz y, tras el giro, vuelve a orientarse hacia ella. Eso indica que la orientación de la luz es la condición que se varió.",
+     "Revisa B: la evaporación del agua no se modifica con el giro de la botella, así que no es la variable manipulada.",
+     "Revisa C: la brisa no aparece como condición controlada ni modificada; el cambio es la orientación respecto de la luz.",
+     "Revisa D: el tipo de tierra se mantuvo igual durante todo el procedimiento, así que no es lo que cambió.",
+     "La pregunta que surge del cambio es el efecto del ángulo de incidencia de la luz solar sobre el crecimiento de la planta. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Pregunta por la evaporación del agua. Trampa: es un fenómeno real en la botella, pero el procedimiento no lo modificó.",
+     "C": "Pregunta por la brisa en la ventana. Trampa: es una posible fuente de variación, pero no es la condición que se manipuló con el giro.",
+     "D": "Pregunta por el tipo de tierra. Trampa: la tierra se usó igual en todas las etapas, así que no puede ser la variable que cambió."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q38",
@@ -772,7 +1135,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La temperatura de ebullición sube con la presión y no depende de la masa de agua; para que hierva bajo $90\\,^\\circ\\mathrm{C}$ hay que disminuir la presión por debajo de $526$ mmHg.",
+    "planteamiento": "Se pide la acción que permite que el agua hierva a menos de $90\\,^\\circ\\mathrm{C}$. Datos: la tabla relaciona masa de agua, presión atmosférica y temperatura de ebullición.",
+    "steps": [
+     "Compara las filas a $760$ mmHg: con $100$ g, $200$ g y $400$ g el agua hierve a $100\\,^\\circ\\mathrm{C}$. La masa de agua no cambia la temperatura de ebullición.",
+     "Compara las filas con igual masa: con $200$ g, a $760$ mmHg hierve a $100\\,^\\circ\\mathrm{C}$, a $879$ mmHg a $104\\,^\\circ\\mathrm{C}$ y a $983$ mmHg a $107\\,^\\circ\\mathrm{C}$. La temperatura sube al subir la presión.",
+     "Con $100$ g y $526$ mmHg, el agua hierve a $90\\,^\\circ\\mathrm{C}$. Como la relación es creciente, una presión menor que $526$ mmHg daría una ebullición inferior a $90\\,^\\circ\\mathrm{C}$.",
+     "Revisa C y D: aumentar al doble o disminuir a la mitad la masa de agua no cambia la temperatura de ebullición, que sigue en $100\\,^\\circ\\mathrm{C}$ a $760$ mmHg.",
+     "Revisa B: aumentar la presión por encima de $983$ mmHg eleva la ebullición sobre $107\\,^\\circ\\mathrm{C}$, lo contrario de lo pedido.",
+     "La acción correcta es disminuir la presión a menos de $526$ mmHg. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Aumentar la presión por encima de $983$ mmHg. Trampa: pensar que a más presión el agua hierve antes; en realidad hierve a una temperatura mayor.",
+     "C": "Aumentar la masa de agua al doble. Trampa: asociar mayor masa con mayor o menor temperatura, cuando la tabla muestra que no cambia.",
+     "D": "Disminuir la masa de agua a la mitad. Trampa: creer que una masa menor hierve antes; la presión es la variable que cambia la ebullición."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q39",
@@ -807,7 +1188,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable que la persona cambia de forma deliberada es la condición en la que se expone cada trozo de manzana (vinagre, limón, agua o aire libre).",
+    "planteamiento": "Se pide la variable manipulada en el experimento. Datos: cuatro trozos de igual masa y forma; tres se sumergen en vinagre, limón y agua, y el cuarto queda al aire libre; el tiempo de observación es de 1 hora. La intensidad de la coloración es la respuesta que se mide.",
+    "steps": [
+     "Distingue entre variable manipulada y variable medida: la manipulada es la que la persona decide cambiar; la medida es la que se registra como resultado.",
+     "La persona decide dónde poner cada trozo: en vinagre, en limón, en agua o al aire libre. Esa decisión es la condición experimental, por lo que es la variable manipulada.",
+     "La intensidad de la coloración es lo que se observa al final de la hora, es decir, la variable que responde. Por lo tanto, no es la que se manipula.",
+     "El tiempo de exposición se mantiene igual en todos los casos, porque todos los trozos se observan después de 1 hora, así que no es la variable manipulada.",
+     "El nivel de oxidación es lo que la intensidad mide de forma indirecta, según el enunciado. Es un resultado y no una decisión de la persona.",
+     "La condición a la que se expone cada trozo es la única que la persona cambia de forma intencional. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Señala el nivel de oxidación. Trampa: es lo que se infiere de la coloración, así que es la variable que se mide y no la que se manipula.",
+     "B": "Señala el tiempo de exposición. Trampa: el tiempo es el mismo para todos los trozos, por lo que no varía en el experimento.",
+     "D": "Señala la intensidad de la coloración. Trampa: es el resultado observado, es decir, la variable dependiente, no la que la persona decide cambiar."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q40",
@@ -835,7 +1234,24 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La oración entre comillas resume lo que Rutherford concluyó a partir de sus resultados: que el átomo es mayormente vacío y que la masa está en un núcleo central.",
+    "planteamiento": "Se pide el componente de la investigación científica al que corresponde la oración. Datos: Rutherford bombardeó una lámina de oro con partículas alfa; la mayoría pasó, algunas se desviaron y pocas rebotaron; con eso dedujo la estructura del átomo.",
+    "steps": [
+     "Identifica el tipo de frase: la oración afirma lo que los resultados muestran sobre la estructura del átomo, es decir, un resultado interpretado.",
+     "Una hipótesis se formula antes de experimentar y se pone a prueba. La oración no anticipa nada, sino que resume lo que se encontró.",
+     "Un procedimiento describe cómo se realizó el experimento, como el bombardeo con partículas alfa y el uso de una lámina de oro. La oración no describe pasos.",
+     "Una teoría es un marco explicativo más amplio y validado por muchas evidencias. La oración se limita a lo que este experimento permitió concluir.",
+     "La oración indica lo que se deduce de los resultados: que el átomo no es compacto y que la masa se concentra en el núcleo. Esa es una conclusión. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Asocia la oración a una hipótesis. Trampa: la frase suena a afirmación general, pero se presenta como lo que los resultados demostraron.",
+     "C": "Asocia la oración a una teoría. Trampa: es el modelo que vino después, pero la cita se refiere solo a lo que este experimento permitió deducir.",
+     "D": "Asocia la oración a un procedimiento experimental. Trampa: la frase menciona el experimento, pero no describe cómo se hizo."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q41",
@@ -874,7 +1290,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un enlace pi se forma en cada doble enlace (uno) y en cada triple enlace (dos). La estructura C tiene un triple y un doble enlace, es decir, tres enlaces pi, y dos carbonos con hibridación sp² en el doble enlace.",
+    "planteamiento": "Se pide la estructura con tres enlaces pi y exactamente dos carbonos sp². Datos: un enlace simple no tiene componente pi; un doble tiene un pi y un triple tiene dos pi. Un carbono sp² participa en un doble enlace; un carbono sp en un triple enlace.",
+    "steps": [
+     "Recuerda la hibridación: un carbono con triple enlace es sp, y uno con doble enlace es sp². Un carbono con solo enlaces simples es sp³.",
+     "Recuerda el conteo de enlaces pi: cada doble enlace aporta $1$ pi y cada triple enlace aporta $2$ pi. Para tener $3$ pi, la suma debe ser $3$.",
+     "Revisa A: tiene dos dobles enlaces, así que $2$ pi, y cuatro carbonos sp². No cumple con tres pi.",
+     "Revisa B: tiene dos triples enlaces, lo que da $4$ pi, y sus carbonos son sp. No cumple.",
+     "Revisa D: tiene un triple enlace, con $2$ pi, y no tiene doble enlace. Su total es $2$ pi, no tres.",
+     "Revisa E: tiene un solo doble enlace, con $1$ pi. No cumple con tres.",
+     "Revisa C: tiene un triple enlace ($2$ pi), un enlace simple y un doble enlace ($1$ pi). El total es $2 + 1 = 3$ pi. Los dos carbonos del doble enlace son sp², y los del triple enlace son sp. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Tiene dos dobles enlaces. Trampa: cuenta $2$ pi y no $3$; además, los cuatro carbonos son sp².",
+     "B": "Tiene dos triples enlaces. Trampa: parece tener muchos enlaces pi, pero son $4$, y los carbonos son sp.",
+     "D": "Tiene un triple enlace. Trampa: confundir el número de enlaces con el de enlaces pi, que aquí son $2$.",
+     "E": "Dice que tiene un solo doble enlace, con $1$ pi. Trampa: cuenta solo un enlace pi y no los tres que pide la pregunta."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q42",
@@ -902,7 +1338,26 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para responder la pregunta el estudiante debe variar el tipo de alimento, que contiene distintas cantidades de carbohidratos, y medir el cambio de color del lugol.",
+    "planteamiento": "Se pide las variables que el estudiante debe manipular y constatar. Datos: el lugol cambia de color según la presencia de carbohidratos; la pregunta relaciona la coloración con la cantidad de carbohidratos de cada alimento.",
+    "steps": [
+     "Identifica la pregunta: ¿cómo varía la coloración del lugol según la cantidad de carbohidratos en los alimentos? Para responderla, hay que comparar distintos alimentos y observar el color.",
+     "La variable que se manipula es la que el estudiante cambia de forma intencional: el tipo de alimento, cada uno con distinta cantidad de carbohidratos.",
+     "La variable que se constata es la respuesta observada: la coloración del lugol, que indica la presencia de carbohidratos.",
+     "La masa de alimento y la cantidad de lugol deben mantenerse constantes para que la comparación sea justa, por lo que no son variables que se manipulan.",
+     "Revisa A: la masa de alimento y la cantidad de lugol deben mantenerse fijas, así que no son las variables de la pregunta.",
+     "Revisa B: la masa de alimento se controla, no se manipula, y el tipo de alimento sí es manipulado. La pareja está mal formada.",
+     "Revisa D: la coloración del lugol es la variable medida, no la manipulada, y la cantidad de lugol debe mantenerse igual. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Señala masa de alimento y cantidad de lugol. Trampa: ambas se mantienen constantes para comparar, así que no son las variables que se manipulan.",
+     "B": "Señala masa de alimento y tipo de alimento. Trampa: la masa debe ser igual en todas las muestras, así que no varía en el experimento.",
+     "D": "Señala coloración de lugol y cantidad de lugol. Trampa: la coloración es lo que se observa y la cantidad de lugol debe permanecer fija."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q43",
@@ -937,7 +1392,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los derivados de la tiocarlida tienen el mismo número de átomos de carbono, oxígeno e hidroxilos; lo que cambia es la disposición espacial de los grupos OH, y por eso cambia la actividad.",
+    "planteamiento": "Se pide la conclusión correcta sobre las diferencias de actividad inhibitoria entre los derivados I, II y III. Datos: los tres radicales tienen la misma cadena de anillo; las modificaciones están en la posición de los grupos OH y de los H.",
+    "steps": [
+     "Cuenta los grupos hidroxilo de cada radical: el derivado I tiene el CH₂OH del extremo y dos OH en el anillo, es decir, tres en total; el II tiene el CH₂OH y dos OH inferiores, también tres; el III tiene el CH₂OH y dos OH en la parte superior, también tres.",
+     "Cuenta los carbonos: los tres radicales tienen cinco carbonos en el anillo y uno en el CH₂OH, es decir, seis carbonos. Los átomos de oxígeno también son iguales: uno del anillo más los tres de los OH, es decir, cuatro.",
+     "Como la cantidad de OH, de carbonos y de oxígenos es igual en los tres, la diferencia no puede explicarse por la cantidad de esos átomos.",
+     "Lo que cambia es la disposición de los grupos OH y H en el espacio alrededor del anillo, es decir, la configuración de cada derivado.",
+     "Revisa C: la cantidad de hidroxilos es igual, $3$ en cada uno, así que no puede explicar las diferencias.",
+     "Revisa B y D: los átomos de carbono y de oxígeno son los mismos en los tres derivados, así que tampoco explican la diferencia.",
+     "Revisa A: la disposición de los grupos hidroxilo es lo que diferencia a los derivados, y su distinta orientación afecta la actividad. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Atribuye la diferencia a la cantidad de carbonos. Trampa: los tres radicales tienen el mismo número de carbonos, por lo que no pueden explicar la diferencia.",
+     "C": "Atribuye la diferencia a la cantidad de grupos hidroxilo. Trampa: los tres tienen tres OH, así que la cantidad es igual y lo que varía es su posición.",
+     "D": "Atribuye la diferencia a la cantidad de oxígenos. Trampa: el número de oxígenos es igual en los tres radicales."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q44",
@@ -976,7 +1450,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La valina tiene un grupo amino (NH₂) y un grupo ácido carboxílico (COOH), que es el de la derecha con el doble enlace al oxígeno y el OH.",
+    "planteamiento": "Se pide qué funciones orgánicas están presentes en la fórmula estructural de la valina. Datos: la fórmula muestra una cadena con dos grupos CH₃, un carbono central con NH₂ y H, y un extremo con C=O y OH.",
+    "steps": [
+     "Identifica el grupo del extremo derecho: un carbono con doble enlace a oxígeno (C=O) y un OH unido. Esa combinación es un grupo carboxilo, es decir, un ácido carboxílico.",
+     "Identifica el grupo NH₂ unido al carbono central: un nitrógeno con dos hidrógenos corresponde a un grupo amino, es decir, una amina.",
+     "Revisa la presencia de alcohol: un OH unido a un carbono sp³ sería alcohol, pero el OH de este compuesto está unido al carbono del C=O, así que pertenece al ácido y no es un alcohol.",
+     "Revisa la presencia de amida: una amida requiere un nitrógeno unido a un carbono con doble enlace a oxígeno. En la valina el nitrógeno está unido a un carbono tetraédrico, así que no es amida.",
+     "Revisa la presencia de cetona: una cetona tiene un C=O unido a dos carbonos. Aquí el C=O está unido a un OH, así que no es cetona.",
+     "Por lo tanto, las funciones presentes son amina y ácido carboxílico. La alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Alcohol y amina. Trampa: el OH está unido al carbono del C=O, que es un ácido, no un alcohol.",
+     "B": "Cetona y alcohol. Trampa: el C=O tiene un OH unido, y eso define un ácido carboxílico, no una cetona.",
+     "D": "Amida y ácido carboxílico. Trampa: el nitrógeno está unido a un carbono tetraédrico, no a un carbonilo, así que no forma una amida.",
+     "E": "Dice alcohol y amida. Trampa: el OH pertenece al grupo ácido, y no hay un nitrógeno unido a un carbonilo que forme amida."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q45",
@@ -1011,7 +1504,25 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al mantener el volumen de la esfera constante y cambiar la temperatura, el sensor mide cómo varía la presión del aire; la hipótesis es que la temperatura afecta la presión a volumen constante.",
+    "planteamiento": "Se pide la hipótesis que el estudiante quiere poner a prueba. Datos: tres esferas de igual volumen con la misma cantidad de aire, a $-2\\,^\\circ\\mathrm{C}$, $25\\,^\\circ\\mathrm{C}$ y $90\\,^\\circ\\mathrm{C}$; las esferas no se dilatan y se mide la presión interna.",
+    "steps": [
+     "Identifica las variables del diseño: la temperatura del agua cambia entre los vasos, la esfera tiene volumen fijo porque el rango de temperatura no la dilata, y la presión interna es lo que se mide.",
+     "Una hipótesis debe relacionar la variable que se cambia (temperatura) con la que se mide (presión) bajo una condición fija (volumen constante), que es justo lo que hace el diseño.",
+     "Revisa B: el volumen no se varía, así que no se puede poner a prueba su efecto con este diseño. Además, la temperatura no se mantiene constante.",
+     "Revisa C: el vaso de precipitados no se está evaluando; los cambios de temperatura se miden en la esfera, no en el vaso.",
+     "Revisa D: la presión no determina el volumen en el diseño. El volumen es fijo, y lo que se mide es la presión.",
+     "Revisa A: la temperatura se varía y la presión se mide, con el volumen constante. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone que el volumen afecta la presión a temperatura constante. Trampa: el diseño mantiene el volumen fijo y varía la temperatura, así que pone a prueba lo contrario.",
+     "C": "Propone que la temperatura de las esferas determina cambios en los vasos. Trampa: confunde el objeto medido, porque el experimento mide la presión dentro de la esfera.",
+     "D": "Propone que la presión determina el volumen de la esfera. Trampa: invierte la relación, ya que el volumen es constante por diseño."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q46",
@@ -1044,7 +1555,26 @@
    "answer": "A",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si 1 mol de X produce 1 mol de XH₃ y la masa molar del producto es 34,0 g/mol, la masa molar de X es 34,0 − 3 × 1,0 = 31,0 g/mol.",
+    "planteamiento": "Se pide la masa molar del elemento X. Datos: 1 mol del elemento X reacciona completamente con hidrógeno y produce 34,0 g de producto XH₃; la ecuación original está sin ajustar.",
+    "steps": [
+     "Ajusta la ecuación: X₂ + 3 H₂ → 2 XH₃. Así, por cada átomo de X (1 mol de X) se forma 1 mol de XH₃.",
+     "Como se producen 34,0 g de XH₃ a partir de 1 mol de X, la masa molar del producto es $M(\\mathrm{XH_3}) = 34{,}0\\ \\mathrm{g/mol}$.",
+     "Calcula la masa molar del hidrógeno en el producto: $3 \\cdot 1{,}0 = 3{,}0\\ \\mathrm{g/mol}$.",
+     "Despeja la masa molar de X: $M(\\mathrm{X}) = 34{,}0 - 3{,}0 = 31{,}0\\ \\mathrm{g/mol}$.",
+     "Comprobación: el fosfuro de hidrógeno, PH₃, tiene masa molar $31{,}0 + 3{,}0 = 34{,}0\\ \\mathrm{g/mol}$, lo que coincide con el producto del enunciado.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Dice 17,0 g/mol. Trampa: es la masa de XH₃ dividida por dos, como si se formaran dos moles de producto por mol de X, lo que confunde el factor de la ecuación.",
+     "C": "Dice 16,0 g/mol. Trampa: resta la masa molar del agua (18,0 g/mol) en lugar de los 3,0 g/mol del hidrógeno.",
+     "D": "Dice 15,5 g/mol. Trampa: divide la masa de X entre dos, como si el elemento se presentara como X₂.",
+     "E": "Dice 14,0 g/mol. Trampa: toma la mitad de la masa del producto (17,0 g/mol) y le resta 3,0 g/mol, lo que mezcla factores de la ecuación."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q48",
@@ -1076,7 +1606,26 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los 132 g de CO₂ equivalen a 3 mol de carbono y los 72 g de H₂O a 8 mol de hidrógeno; la proporción 3 : 8 da la fórmula empírica C₃H₈.",
+    "planteamiento": "Se pide la fórmula empírica del hidrocarburo a partir de los productos de la combustión completa. Datos: CO₂ = 132 g (M = 44 g/mol); H₂O = 72 g (M = 18 g/mol).",
+    "steps": [
+     "Calcula los moles de CO₂: $n = \\dfrac{132\\ \\mathrm{g}}{44\\ \\mathrm{g/mol}} = 3\\ \\mathrm{mol}$. Como cada CO₂ tiene un átomo de carbono, hay $3$ mol de C.",
+     "Calcula los moles de H₂O: $n = \\dfrac{72\\ \\mathrm{g}}{18\\ \\mathrm{g/mol}} = 4\\ \\mathrm{mol}$.",
+     "Cada H₂O tiene dos átomos de hidrógeno, así que hay $4 \\cdot 2 = 8$ mol de H.",
+     "Establece la proporción de átomos: C : H = $3 : 8$. Esa razón ya está en su forma más simple, porque no hay un divisor común distinto de $1$.",
+     "La fórmula empírica es $\\mathrm{C_3H_8}$, que corresponde a un alcano de tres carbonos, el propano.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone $\\mathrm{C_3H_5}$. Trampa: calcula mal los hidrógenos y los deja en cinco, al ignorar que el agua aporta ocho mol de H.",
+     "B": "Propone $\\mathrm{C_3H_4}$. Trampa: toma la mitad de los hidrógenos del agua, como si cada H₂O tuviera un solo H.",
+     "C": "Dice $\\mathrm{C_4H_7}$. Trampa: asigna cuatro carbonos, pero los datos dan 3 mol de CO₂ y, por tanto, 3 mol de C.",
+     "E": "Propone $\\mathrm{C_4H_9}$. Trampa: asigna cuatro carbonos y nueve hidrógenos, lo que no coincide con los moles calculados."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q49",
@@ -1108,7 +1657,26 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Por la ecuación ajustada, 1 mol de MgH₂ produce 2 mol de H₂; con 4 mol de MgH₂ se forman 8 mol de H₂, que equivalen a 16 g.",
+    "planteamiento": "Se pide la masa de H₂ que se forma a partir de 4 mol de MgH₂ con exceso de agua. Datos: la ecuación ya está ajustada: MgH₂ + 2 H₂O → Mg(OH)₂ + 2 H₂; la masa molar del H₂ es 2 g/mol.",
+    "steps": [
+     "Identifica la relación molar entre el reactivo y el producto: por cada 1 mol de MgH₂ se forman 2 mol de H₂.",
+     "Calcula los moles de H₂ formados: $4\\ \\mathrm{mol\\ MgH_2} \\cdot \\dfrac{2\\ \\mathrm{mol\\ H_2}}{1\\ \\mathrm{mol\\ MgH_2}} = 8\\ \\mathrm{mol\\ H_2}$.",
+     "Como hay exceso de agua, el MgH₂ es el reactivo limitante y determina la cantidad de hidrógeno formada.",
+     "Calcula la masa: $m = n \\cdot M = 8\\ \\mathrm{mol} \\cdot 2\\ \\mathrm{g/mol} = 16\\ \\mathrm{g}$.",
+     "Comprobación: la masa de H₂ por cada mol de MgH₂ es $2 \\cdot 2 = 4$ g, y $4 \\cdot 4 = 16$ g.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Dice 4 g. Trampa: no aplica la relación molar de la ecuación y toma los 4 mol de MgH₂ como masa de hidrógeno.",
+     "B": "Dice 8 g. Trampa: usa 4 mol de H₂ en lugar de 8 mol, es decir, olvida el coeficiente 2 del H₂ en la ecuación.",
+     "C": "Dice 12 g. Trampa: aplica 1,5 mol de H₂ por mol de MgH₂ en lugar de 2 mol, un factor de proporción incorrecto.",
+     "E": "Dice 20 g. Trampa: no respeta la proporción de la ecuación; 20 g equivalen a 10 mol de H₂, cantidad que no sale de la estequiometría."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q50",
@@ -1136,7 +1704,25 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La comparación entre la estación con lluvia intensa y la estación sin lluvia pone a prueba si la lluvia diluye los metales pesados, es decir, si su concentración disminuye.",
+    "planteamiento": "Se pide la hipótesis que dio origen al procedimiento. Datos: el lago recibe RILES con metales pesados; se midió la concentración en muestras con y sin precipitaciones intensas, en las cuatro estaciones.",
+    "steps": [
+     "Identifica la variable que se cambia en el diseño: la presencia o ausencia de lluvias intensas. La variable que se mide es la concentración de metales pesados en el agua.",
+     "Una hipótesis debe relacionar esas dos variables en una dirección. Según el diseño, la pregunta es si la lluvia cambia la concentración de los metales.",
+     "Revisa A: relaciona la temperatura con la capacidad de eliminar metales. El procedimiento no mide la temperatura como variable de interés, así que no es la hipótesis.",
+     "Revisa C: relaciona la solubilidad con la lluvia. La solubilidad no se midió, y el diseño mide concentración, no solubilidad.",
+     "Revisa D: relaciona la cantidad de metales con el tiempo desde la descarga. Ese tiempo no se controla en el diseño, así que no es la hipótesis que lo originó.",
+     "Revisa B: la concentración de metales disminuye en períodos de lluvia intensa. Esa es exactamente la relación que las muestras con y sin lluvia permiten comprobar. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Relaciona la temperatura con la eliminación de metales. Trampa: la temperatura aparece en el contexto de las estaciones, pero no es la variable que se midió en el diseño.",
+     "C": "Relaciona la solubilidad con la lluvia. Trampa: la solubilidad es una propiedad que sí está en el texto, pero el diseño mide concentración.",
+     "D": "Relaciona la cantidad de metales con el tiempo desde la descarga. Trampa: suena a hipótesis razonable, pero el procedimiento no controla ese tiempo."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q52",
@@ -1168,7 +1754,26 @@
    ],
    "answer": "E",
    "presentation": "text",
-   "subtopic": "cs-reacciones"
+   "subtopic": "cs-reacciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $1$ mol/L y $200$ mL se necesitan $8{,}0$ g de NaOH; como la solución al $20$ % m/v tiene $20$ g por cada $100$ mL, hay que tomar $40$ mL y completar con agua hasta $200$ mL.",
+    "planteamiento": "Se pide el volumen de solución al $20$ % m/v que se debe extraer y cómo completar el volumen. Datos: volumen final $200$ mL; concentración $1$ mol/L de NaOH; masa molar $40$ g/mol; solución al $20$ % m/v.",
+    "steps": [
+     "Calcula los moles necesarios: $n = c \\cdot V = 1\\ \\mathrm{mol/L} \\cdot 0{,}200\\ \\mathrm{L} = 0{,}200\\ \\mathrm{mol}$.",
+     "Calcula la masa de soluto: $m = n \\cdot M = 0{,}200\\ \\mathrm{mol} \\cdot 40\\ \\mathrm{g/mol} = 8{,}0\\ \\mathrm{g}$ de NaOH.",
+     "La solución al $20$ % m/v contiene $20\\ \\mathrm{g}$ de soluto en $100\\ \\mathrm{mL}$, es decir, $0{,}20\\ \\mathrm{g/mL}$.",
+     "Calcula el volumen a extraer: $V = \\dfrac{8{,}0\\ \\mathrm{g}}{0{,}20\\ \\mathrm{g/mL}} = 40\\ \\mathrm{mL}$.",
+     "Para llevar la solución a $200$ mL, se agrega agua hasta el enrase. Así la concentración final es $0{,}200\\ \\mathrm{mol}/0{,}200\\ \\mathrm{L} = 1\\ \\mathrm{mol/L}$.",
+     "Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "Extraer $1$ mL y agregar $199$ mL de agua. Trampa: $1$ mL de solución tiene solo $0{,}2$ g de soluto, muy lejos de los $8$ g necesarios.",
+     "B": "Extraer $20$ mL y agregar $180$ mL de agua. Trampa: toma $20$ mL por el porcentaje, pero el volumen necesario es $40$ mL.",
+     "C": "Extraer $1$ mL y agregar agua hasta $200$ mL. Trampa: el volumen extraído es demasiado pequeño para aportar el soluto requerido.",
+     "D": "Extraer $20$ mL y agregar agua hasta $200$ mL. Trampa: confunde el porcentaje con el volumen, y no calcula la masa necesaria de NaOH."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q53",
@@ -1200,7 +1805,25 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-disoluciones"
+   "subtopic": "cs-disoluciones",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En $300$ g de disolución al $20$ % m/m hay $60$ g de soluto, y el resto, $240$ g, es solvente.",
+    "planteamiento": "Se pide la masa de solvente en $300$ g de disolución al $20$ % m/m. Datos: masa total $300$ g; concentración $20$ % en masa.",
+    "steps": [
+     "Calcula la masa de soluto: $m_{\\mathrm{soluto}} = 0{,}20 \\cdot 300\\ \\mathrm{g} = 60\\ \\mathrm{g}$.",
+     "En una disolución, la masa total es la suma de la masa de soluto y la de solvente: $m_{\\mathrm{disolución}} = m_{\\mathrm{soluto}} + m_{\\mathrm{solvente}}$.",
+     "Despeja el solvente: $m_{\\mathrm{solvente}} = 300\\ \\mathrm{g} - 60\\ \\mathrm{g} = 240\\ \\mathrm{g}$.",
+     "Comprobación: el solvente es el $80$ % de la masa total, es decir, $0{,}80 \\cdot 300\\ \\mathrm{g} = 240\\ \\mathrm{g}$, lo que suma los $300$ g.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Dice 20 g. Trampa: toma el porcentaje como masa de solvente, sin calcular la masa de la disolución.",
+     "B": "Dice 60 g. Trampa: entrega la masa de soluto, no la de solvente.",
+     "C": "Dice 80 g. Trampa: resta del total una fracción que no corresponde, sin usar el 20 % m/m.",
+     "E": "Dice 280 g. Trampa: resta solo 20 g, es decir, usa el porcentaje como masa de soluto en vez de calcular el 20 % de 300 g."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q55",
@@ -1235,7 +1858,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-energia"
+   "subtopic": "cs-energia",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una variable continua que cambia con otra se comunica mejor con un gráfico de dispersión con ejes bien escalados, como el de la alternativa A.",
+    "planteamiento": "Se pide el gráfico que comunica con mayor precisión la relación entre $n\\,(\\times 10^{-3})$ y $T\\,(°C)$. Datos: cinco pares de valores, con $T$ entre $20\\ °\\mathrm{C}$ y $60\\ °\\mathrm{C}$ y $n$ entre $1326{,}3$ y $1332{,}1$ ($\\times 10^{-3}$).",
+    "steps": [
+     "La tabla relaciona dos variables numéricas continuas: la temperatura $T$ (variable independiente) y el índice de refracción $n$ (variable dependiente). Cada par debe mostrarse como un punto en el plano.",
+     "Un gráfico de dispersión con ejes escalados permite leer cada par $(T, n)$ y ver la tendencia: a medida que $T$ aumenta, $n$ disminuye.",
+     "La alternativa A es un gráfico de dispersión, con $n\\,(\\times 10^{-3})$ en el eje vertical y $T\\,(°C)$ en el horizontal, y los cinco puntos caen en las posiciones de la tabla.",
+     "Sus puntos descienden de forma suave, desde $1332{,}1$ hasta $1326{,}3$, que es exactamente la tendencia de los datos.",
+     "La alternativa B usa barras con el número de medición en el eje horizontal, lo que oculta la temperatura y no muestra la relación entre $T$ y $n$.",
+     "La alternativa C tiene el eje vertical desde 0 hasta 2500, y los datos quedan comprimidos en una franja plana: se pierde la variación de $n$.",
+     "La alternativa D es un gráfico circular, que representa proporciones de un total; no sirve para mostrar cómo cambia $n$ al cambiar $T$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Gráfico de barras por número de medición: oculta la temperatura, que es la variable que el estudio cambia, y no permite ver la relación entre $T$ y $n$.",
+     "C": "Línea plana con eje de 0 a 2500: la escala elegida aplana los datos y hace parecer constante el índice de refracción, lo que es engañoso.",
+     "D": "Gráfico circular con cada valor de $n$ como porción: un gráfico circular compara partes de un total, y las cifras de $n$ no son partes de un todo."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q56",
@@ -1263,7 +1906,24 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al pasar del vacío a un material más denso, la luz se refleja con un ángulo igual al de incidencia y se refracta acercándose a la normal.",
+    "planteamiento": "Se pide lo que ocurre con un rayo que pasa del vacío a un material transparente con un ángulo de incidencia $0 < \\alpha < 90°$. Datos: el vacío tiene índice $n_1 = 1$ y el material tiene $n_2 > 1$.",
+    "steps": [
+     "Un rayo que incide con ángulo $\\alpha$ medido desde la normal se separa en dos partes: una se refleja y otra se refracta.",
+     "Por la ley de la reflexión, el ángulo de reflexión es igual al de incidencia, así que el rayo reflejado forma un ángulo igual a $\\alpha$.",
+     "Por la ley de Snell, $n_1 \\sin\\alpha = n_2 \\sin\\beta$, con $n_1 = 1$ y $n_2 > 1$. Entonces $\\sin\\beta = \\dfrac{\\sin\\alpha}{n_2} < \\sin\\alpha$.",
+     "Como el seno del ángulo refractado es menor y ambos ángulos están entre $0°$ y $90°$, se cumple $\\beta < \\alpha$: el rayo se acerca a la normal.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Reflejado con ángulo menor que $\\alpha$: la ley de la reflexión exige que el ángulo reflejado sea igual al de incidencia, no menor.",
+     "B": "Reflejado y refractado con ángulos mayores que $\\alpha$: el ángulo reflejado debe ser igual a $\\alpha$, y al entrar a un medio más denso el refractado se acerca a la normal.",
+     "D": "Reflejado y refractado con ángulos iguales a $\\alpha$: el refractado sería igual a $\\alpha$ solo si no hubiera cambio de medio, y aquí el índice cambia."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q58",
@@ -1291,7 +1951,26 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para recomponer la luz blanca, los rayos de cada color deben volver a un mismo trayecto; una segunda secuencia de prismas o lentes lo consigue, mientras que medir o reflejar con espejos planos no basta.",
+    "planteamiento": "Se pide el procedimiento que permitiría recomponer en un haz de luz blanca los colores separados por un prisma.",
+    "steps": [
+     "Un prisma descompone la luz blanca porque cada color tiene un índice de refracción distinto y, por lo tanto, se desvía de manera diferente.",
+     "Para recomponer la luz, los rayos de todos los colores deben volver a un mismo trayecto, es decir, sus desviaciones deben compensarse.",
+     "Una secuencia de prismas o lentes puede redireccionar los rayos de manera que los colores se reúnan en un mismo haz, con una desviación que compense la del primer prisma.",
+     "La opción A solo mide ángulos: medir no cambia la trayectoria de los rayos, así que no los recompone.",
+     "La opción C estudia prismas de distintas características; eso describe la dispersión, pero no recompone la luz.",
+     "La opción D usa espejos planos: reflejan los rayos sin hacerlos converger, por lo que no los reúnen en un haz blanco.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Medir los ángulos entre los rayos dispersados: la medición describe la separación de los colores, pero no altera su trayectoria ni los vuelve a juntar.",
+     "C": "Estudiar el efecto de prismas distintos: es una investigación sobre la dispersión, que no conduce a recomponer la luz blanca.",
+     "D": "Usar una secuencia de espejos planos: los espejos planos cambian la dirección de los rayos, pero no los hacen converger en un mismo haz; la trampa es confundir redirección con recomposición."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q59",
@@ -1319,7 +1998,28 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La atmósfera absorbe la radiación UVC, pero deja pasar parte de la UVA y la UVB, así que la crema no necesita proteger contra la UVC.",
+    "planteamiento": "Se pide la hipótesis que explica por qué la crema no protege contra la radiación UVC, siendo todas las radiaciones ultravioleta ondas que se diferencian por su longitud de onda.",
+    "steps": [
+     "Las radiaciones UVA, UVB y UVC son ondas electromagnéticas que se diferencian por su longitud de onda, pero no todas llegan igual a la superficie terrestre.",
+     "La atmósfera, en particular la capa de ozono, absorbe gran parte de la radiación UVC, que tiene la menor longitud de onda y la mayor energía.",
+     "Por eso, la radiación UVA y gran parte de la UVB sí llegan a la superficie y pueden dañar la piel; la UVC, en cambio, casi no alcanza el suelo.",
+     "Como la protección de la crema se diseña para la radiación que realmente llega, no tiene sentido indicar protección contra la UVC.",
+     "La hipótesis A es la única que explica lo observado por la estudiante: el bloqueo atmosférico selectivo.",
+     "La hipótesis B es falsa, porque la radiación electromagnética sí se propaga en el vacío: la luz del Sol viaja por el espacio.",
+     "La hipótesis C no es correcta: la velocidad de las ondas electromagnéticas en el vacío es la misma para todas, así que no son más rápidas unas que otras.",
+     "La hipótesis D es falsa, porque las frecuencias de la UVA y la UVB no son iguales: se diferencian por su longitud de onda y por su frecuencia.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "La radiación UVC no se propaga en el vacío: las ondas electromagnéticas sí se propagan en el vacío, así que la hipótesis es falsa aunque suene plausible.",
+     "C": "Las UVA y UVB son más rápidas que la UVC: en el vacío todas las ondas electromagnéticas viajan a la misma rapidez; la trampa es confundir la rapidez con la energía.",
+     "D": "Las frecuencias de UVA y UVB son iguales: no lo son; la diferencia entre ellas se refleja en sus longitudes de onda y frecuencias."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q60",
@@ -1354,7 +2054,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-ondas"
+   "subtopic": "cs-ondas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una estrella más luminosa pulsa menos veces en el mismo intervalo de tiempo; por eso, en el gráfico correcto, la curva más alta (la más luminosa) debe tener menos pulsos que la otra.",
+    "planteamiento": "Se pide el gráfico que muestra dos cefeidas que cumplen la relación descubierta en 1912: mayor luminosidad implica menor frecuencia de pulsación. Datos: se compara la altura media de cada curva, que representa la luminosidad, y el número de pulsos en un mismo intervalo de $t$.",
+    "steps": [
+     "Según la relación descubierta, la estrella más luminosa tiene menor frecuencia de pulsación: pulsa menos veces en el mismo intervalo de tiempo.",
+     "Para comparar, se cuentan los pulsos de cada curva en un mismo intervalo de $t$ y se compara la altura media de cada curva, que representa su luminosidad.",
+     "En la alternativa A, la cefeida 2 está más arriba (mayor luminosidad) y pulsa dos veces en el intervalo, mientras que la cefeida 1, más abajo, pulsa tres o cuatro veces. Se cumple la relación.",
+     "En la alternativa B, la cefeida 1 está arriba y pulsa más veces que la cefeida 2. La estrella más luminosa tendría mayor frecuencia, lo que contradice la relación.",
+     "En la alternativa C, ambas cefeidas presentan una cantidad similar de pulsos en el intervalo, así que no se distingue una diferencia de frecuencia.",
+     "En la alternativa D, las dos curvas tienen un número casi igual de pulsos y no hay una relación clara entre luminosidad y frecuencia.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Cefeida 1 arriba con más pulsos: es la estrella más luminosa y con mayor frecuencia, lo que invierte la relación descubierta en 1912. La trampa es leer solo la cantidad de pulsos.",
+     "C": "Pulsos casi iguales en ambas curvas: no hay diferencia de frecuencia que justifique la relación, así que la alternativa no muestra lo que se pide.",
+     "D": "Número de pulsos casi igual en ambas curvas, con formas irregulares: el gráfico no permite identificar cuál es la estrella más luminosa ni cuál pulsa menos."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q61",
@@ -1382,7 +2101,26 @@
    ],
    "answer": "A",
    "presentation": "text",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una lente convergente con el objeto dentro de su distancia focal produce una imagen virtual, derecha y mayor, como una lupa; el recipiente lleno de agua se comporta así.",
+    "planteamiento": "Se pide la afirmación que explica una imagen de la mano derecha, no invertida y de mayor tamaño cuando se observa a través del recipiente con agua. Datos: el recipiente de vidrio lleno de agua produce el efecto de una lente.",
+    "steps": [
+     "Una lente convergente con el objeto dentro de su distancia focal forma una imagen virtual, derecha y de mayor tamaño que el objeto. Así funciona una lupa.",
+     "Una lente divergente siempre produce imágenes virtuales y de menor tamaño, por lo que no puede explicar una imagen aumentada.",
+     "Un recipiente cilíndrico lleno de agua y con paredes de vidrio refracta la luz de manera convergente, por lo que actúa como lente convergente.",
+     "Como la imagen observada es derecha y mayor, la mano debe estar dentro de la distancia focal de esa lente convergente.",
+     "La opción B afirma que la mano está fuera de la distancia focal, y en ese caso la imagen sería real e invertida, algo que no se observó.",
+     "Las opciones C y D describen una lente divergente, que no produce una imagen aumentada, así que no explican lo observado.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Lente convergente con la mano fuera de la distancia focal: produciría una imagen real e invertida, que contradice que la imagen no se invierta.",
+     "C": "Lente divergente con la mano dentro de la distancia focal: una lente divergente forma imágenes de menor tamaño, lo que no explica el aumento observado.",
+     "D": "Lente divergente con la mano fuera del foco: también produce imágenes reducidas y no aumentadas; la trampa es elegir la lente equivocada."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q62",
@@ -1410,7 +2148,26 @@
    ],
    "answer": "B",
    "presentation": "text",
-   "subtopic": "cs-luz"
+   "subtopic": "cs-luz",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En un espejo cóncavo, si el objeto está exactamente en el foco, los rayos reflejados salen paralelos y no se cruzan; por eso no se forma imagen real.",
+    "planteamiento": "Se pide la condición que hizo que no se formara la imagen de un objeto frente a un espejo cóncavo. Datos: el reflejo no apareció, es decir, los rayos reflejados no convergen en un punto.",
+    "steps": [
+     "En un espejo cóncavo, los rayos que parten de un objeto se reflejan y pueden converger para formar una imagen. La posición del objeto determina si esa convergencia ocurre.",
+     "Los rayos que salen de un punto ubicado en el foco se reflejan paralelos al eje principal. Como son paralelos, no se cruzan ni se abren desde un punto.",
+     "Por eso, cuando el objeto está en el foco, no se forma una imagen real que pueda registrarse en una fotografía.",
+     "Si el objeto está entre el foco y el espejo, se forma una imagen virtual y mayor detrás del espejo, así que sí hay imagen aunque no sea real.",
+     "Si el objeto está entre el foco y el centro de curvatura, o en el centro de curvatura, la imagen es real: invertida y mayor en el primer caso, e igual al objeto en el segundo.",
+     "Solo cuando el objeto está en el foco los rayos reflejados son paralelos, y por eso no se forma una imagen real.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Objeto entre el foco y el espejo: se forma una imagen virtual detrás del espejo; la imagen existe, aunque no se proyecte sobre una pantalla. La trampa es pensar que no hay imagen porque no es real.",
+     "C": "Objeto en el centro de curvatura: la imagen es real, invertida e igual al objeto, por lo que sí se forma. La trampa es asociar el centro con la ausencia de imagen.",
+     "D": "Objeto entre el foco y el centro de curvatura: la imagen es real, invertida y mayor, y se forma más allá del centro de curvatura."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q63",
@@ -1438,7 +2195,27 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Mientras la canasta está en reposo, el roce estático equilibra la componente del peso que la empuja hacia abajo; al aumentar el ángulo, esa componente crece hasta superar el roce máximo y la canasta desliza.",
+    "planteamiento": "Se pide la predicción correcta para la canasta en reposo sobre un plano inclinado en $20°$ respecto de la horizontal. Datos: $\\theta = 20°$ y la canasta permanece en reposo.",
+    "steps": [
+     "En reposo, el roce estático iguala la componente del peso paralela al plano: $f_s = m g \\sin\\theta$.",
+     "El roce estático tiene un valor máximo, $f_{s,\\max} = \\mu_s N = \\mu_s\\, m g \\cos\\theta$. La canasta desliza cuando $m g \\sin\\theta > \\mu_s\\, m g \\cos\\theta$, es decir, cuando $\\tan\\theta > \\mu_s$.",
+     "Esta condición depende solo del ángulo y del coeficiente de roce, porque la masa se cancela; por eso quitar maníes no cambia la condición de deslizamiento.",
+     "Si aumenta el ángulo, $\\tan\\theta$ crece y eventualmente supera a $\\mu_s$: la canasta deslizará. Esto corresponde a la alternativa D.",
+     "Si el ángulo baja a $10°$, $\\tan 10°$ es menor que $\\tan 20°$; la canasta sigue en reposo, así que la alternativa A es falsa.",
+     "Una superficie más rugosa aumenta $\\mu_s$, lo que hace más difícil el deslizamiento: la alternativa B es falsa.",
+     "Quitar maníes cambia la masa, pero no altera la condición $\\tan\\theta > \\mu_s$: la alternativa C es falsa.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Si se inclina en $10°$ en lugar de $20°$, la canasta deslizará: la componente del peso disminuye y el roce disponible es suficiente. La trampa es pensar que una inclinación menor favorece el deslizamiento.",
+     "B": "Si la superficie es más rugosa, la canasta deslizará: un roce mayor aumenta la fuerza que se opone al deslizamiento. La trampa es invertir el efecto del roce.",
+     "C": "Si se saca cierta cantidad de maníes, la canasta deslizará: la masa se cancela en la condición de deslizamiento, así que no cambia el resultado."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q65",
@@ -1473,7 +2250,28 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para que $m_2$ acelere hacia abajo, su peso debe superar la tensión de la cuerda, es decir, $T < m_2 g$; esa es la condición para que el sistema gane rapidez.",
+    "planteamiento": "Se pide la condición para que ambos bloques aumenten su rapidez. Datos: $m_1$ sobre una superficie horizontal con roce, $m_2$ colgando de una cuerda que pasa por una polea ideal; la cuerda es inextensible.",
+    "steps": [
+     "Para $m_2$, que cuelga, la segunda ley de Newton en el sentido de caída da $m_2 g - T = m_2 a$.",
+     "Para $m_1$, sobre la superficie horizontal, la tensión tira hacia la polea y el roce se opone al movimiento: $T - f_r = m_1 a$.",
+     "Sumando ambas ecuaciones se obtiene $a = \\dfrac{m_2 g - f_r}{m_1 + m_2}$. Para que $a > 0$ se necesita que $m_2 g > f_r$.",
+     "De la primera ecuación, $m_2 g - T = m_2 a$. Si $a > 0$, entonces $m_2 g > T$: la tensión debe ser menor que el peso de $m_2$.",
+     "La alternativa A expresa exactamente esa desigualdad: la fuerza que ejerce la cuerda es menor que el peso del bloque de masa $m_2$.",
+     "La alternativa B repite la idea, pero la compara con el peso de $m_1$, que es horizontal y no contribuye a la aceleración en el sentido del movimiento.",
+     "La alternativa C compara la normal con la tensión, pero la normal equilibra el peso de $m_1$ y no determina el sentido del movimiento.",
+     "La alternativa D compara la normal con el roce; la normal no es la condición del movimiento y el roce siempre se opone a él.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Que la tensión sea menor que el peso de $m_1$: el peso de $m_1$ es perpendicular al movimiento horizontal, así que esa comparación no decide si el sistema acelera.",
+     "C": "Que la normal sea mayor que la tensión: la normal de $m_1$ equilibra su peso y no tiene relación con la aceleración del sistema.",
+     "D": "Que la normal sea mayor que el roce: aunque la normal sea mayor, el roce depende de $\\mu N$ y no establece la condición de movimiento de $m_2$."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q66",
@@ -1512,7 +2310,27 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según la tercera ley de Newton, la reacción a la fuerza que la cuerda ejerce sobre las manos es la que las manos ejercen sobre la cuerda, con igual magnitud y sentido opuesto.",
+    "planteamiento": "Se pide la fuerza de reacción a $\\vec F$, la fuerza que la cuerda ejerce sobre las manos del joven. Datos: el par acción-reacción actúa sobre cuerpos distintos.",
+    "steps": [
+     "La fuerza $\\vec F$ actúa sobre las manos del joven: es la fuerza que ejerce la cuerda sobre ellas.",
+     "La tercera ley de Newton establece que a toda acción corresponde una reacción de igual magnitud, misma línea de acción y sentido opuesto, aplicada sobre el otro cuerpo del par.",
+     "Por lo tanto, la reacción de $\\vec F$ debe actuar sobre la cuerda y ser ejercida por las manos, pues las manos son el cuerpo con el que la cuerda interactúa.",
+     "La opción E indica que las manos del joven ejercen fuerza sobre la cuerda en el extremo R: es el par exacto de $\\vec F$.",
+     "Las opciones A y D involucran a la pared sobre los pies o sobre la cuerda; la pared no es el cuerpo que forma el par con las manos.",
+     "Las opciones B y C involucran a la cuerda sobre la pared y a los pies sobre la pared; son pares de otros cuerpos y no el par de $\\vec F$.",
+     "Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "La pared ejerce sobre los pies del joven: es una fuerza que actúa sobre los pies, pero no forma par con la fuerza que la cuerda ejerce sobre las manos.",
+     "B": "La cuerda ejerce sobre la pared en el punto P: involucra a la cuerda y la pared, un par distinto al que se pide.",
+     "C": "Los pies del joven ejercen sobre la pared en Q: es una fuerza entre el joven y la pared en el punto de apoyo, pero no es la reacción de la fuerza que la cuerda ejerce sobre las manos.",
+     "D": "La pared ejerce sobre la cuerda en el extremo P: es una fuerza sobre la cuerda desde la pared, que no es la reacción de $\\vec F$."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q67",
@@ -1541,7 +2359,25 @@
    "answer": "C",
    "presentation": "text",
    "pilot": true,
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Sin la fuerza $F$, la única fuerza horizontal es el roce cinético: su magnitud es constante y su sentido se opone al movimiento del bloque.",
+    "planteamiento": "Se pide la caracterización de la fuerza neta entre el instante en que deja de actuar $F$ y el momento previo a detenerse. Datos: la superficie es horizontal y el bloque se desliza sobre madera.",
+    "steps": [
+     "Mientras el bloque se desliza sin $F$, en la dirección horizontal solo actúa el roce cinético. En la vertical, el peso y la normal se equilibran.",
+     "Por lo tanto, la fuerza neta es igual a la fuerza de roce cinético, con sentido contrario al movimiento: $F_{\\text{neta}} = -f_k$.",
+     "El roce cinético se calcula como $f_k = \\mu_k N$. En una superficie horizontal, $N = m g$, que es constante mientras la masa no cambie.",
+     "Como $\\mu_k$ y $N$ permanecen constantes, la magnitud de $f_k$ no varía durante el deslizamiento, aunque la rapidez del bloque disminuya.",
+     "El roce siempre se opone al movimiento, así que el sentido de la fuerza neta es contrario al del desplazamiento.",
+     "Por lo tanto, la fuerza neta tiene magnitud constante y sentido opuesto al movimiento: la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Magnitud constante y mismo sentido del movimiento: el roce se opone al movimiento, así que el sentido no puede coincidir con el del desplazamiento.",
+     "B": "Magnitud variable y mismo sentido: además del sentido erróneo, la magnitud no cambia porque el roce cinético depende de $\\mu_k N$, que es constante.",
+     "D": "Magnitud variable y sentido opuesto: el sentido es correcto, pero la magnitud es constante; la trampa es suponer que la fuerza disminuye al frenar el bloque."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q68",
@@ -1576,7 +2412,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La elongación del resorte es proporcional al peso colgado, de modo que la razón entre fuerza y elongación es constante: con cualquier par de la tabla correcta se obtiene la constante elástica.",
+    "planteamiento": "Se pide la tabla que permite calcular la constante elástica $k$ del resorte. Datos: longitud sin carga de $10\\ \\mathrm{cm}$; con $1\\ \\mathrm{N}$ mide $12\\ \\mathrm{cm}$; con $3\\ \\mathrm{N}$ acumulados mide $16\\ \\mathrm{cm}$; y con $6\\ \\mathrm{N}$ acumulados mide $22\\ \\mathrm{cm}$.",
+    "steps": [
+     "La elongación se obtiene restando la longitud sin carga: $\\Delta x = L - L_0$, con $L_0 = 10\\ \\mathrm{cm}$.",
+     "Con $1\\ \\mathrm{N}$: $\\Delta x = 12 - 10 = 2\\ \\mathrm{cm}$.",
+     "Con $1\\ \\mathrm{N} + 2\\ \\mathrm{N} = 3\\ \\mathrm{N}$: $\\Delta x = 16 - 10 = 6\\ \\mathrm{cm}$.",
+     "Con $1\\ \\mathrm{N} + 2\\ \\mathrm{N} + 3\\ \\mathrm{N} = 6\\ \\mathrm{N}$: $\\Delta x = 22 - 10 = 12\\ \\mathrm{cm}$.",
+     "Los pares correctos son (1 N; 2 cm), (3 N; 6 cm) y (6 N; 12 cm). Según la ley de Hooke, $F = k\\,\\Delta x$, así que $F/\\Delta x = 1/2 = 3/6 = 6/12 = 0{,}5\\ \\mathrm{N/cm}$.",
+     "Por lo tanto, la constante elástica se obtiene con cualquiera de los pares: $k = 0{,}5\\ \\mathrm{N/cm}$, que equivale a $50\\ \\mathrm{N/m}$.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Pesos 1, 3 y 6 con elongaciones 12, 16 y 22: son las longitudes totales del resorte, no las elongaciones. La trampa es no restar la longitud sin carga.",
+     "C": "Pesos 1, 2 y 3 con elongaciones 2, 6 y 12: el peso de 2 N no corresponde a ninguna medición de la figura, porque las cargas acumuladas son 1, 3 y 6 N.",
+     "D": "Pesos 1, 2 y 3 con longitudes 12, 16 y 22: mezcla longitudes con pesos que no se midieron; la trampa es leer los datos sin relacionarlos con la carga."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q69",
@@ -1612,7 +2467,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-dinamica"
+   "subtopic": "cs-dinamica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La pared empuja el auto de forma perpendicular a su superficie y en sentido contrario a la empuja de la mano; como la mano lo presiona hacia la pared, la normal apunta hacia la izquierda.",
+    "planteamiento": "Se pide la dirección y el sentido, desde la posición de quien observa, de la fuerza normal que la pared ejerce sobre el auto. Datos: la figura muestra la mano empujando el auto contra la pared, con los lados izquierdo y derecho marcados.",
+    "steps": [
+     "La fuerza normal es una fuerza de contacto perpendicular a la superficie de apoyo. En este caso la superficie es la pared, que es vertical.",
+     "Por lo tanto, la normal es perpendicular a la pared, es decir, horizontal, y no puede ser paralela a ella: las alternativas A y B quedan descartadas.",
+     "La normal siempre apunta desde la superficie hacia el cuerpo en contacto, porque la superficie empuja y no jala.",
+     "En la figura, el auto está del lado izquierdo de la pared, de modo que la pared queda a su derecha y lo empuja hacia la izquierda, alejándolo de ella.",
+     "Como la mano empuja el auto hacia la pared (hacia la derecha), la reacción de la pared apunta hacia la izquierda, con igual magnitud.",
+     "La alternativa C tiene la dirección correcta (perpendicular), pero el sentido contrario, así que no corresponde.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Paralela a la pared y hacia abajo: una normal nunca es paralela a la superficie de contacto. La trampa es confundir la normal con el peso del auto.",
+     "B": "Paralela a la pared y hacia arriba: como en A, la dirección paralela no corresponde a una fuerza normal.",
+     "C": "Perpendicular a la pared y hacia la derecha: la dirección es correcta, pero es la del empuje de la mano sobre el auto, no la de la reacción de la pared."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q70",
@@ -1640,7 +2514,26 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-cinematica"
+   "subtopic": "cs-cinematica",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La presión en un líquido en reposo es $P = \\rho\\, g\\, h$; como se conocen $g$ y la densidad del agua, la variable que falta es la profundidad $h$ de la moneda.",
+    "planteamiento": "Se pide la variable faltante para determinar la presión que el agua ejerce sobre la moneda sumergida. Datos: se conocen $g$ y la densidad del agua $\\rho$.",
+    "steps": [
+     "La presión hidrostática en un punto de un líquido en reposo es $P = \\rho\\, g\\, h$, donde $h$ es la profundidad bajo la superficie.",
+     "Como se conocen $g$ y $\\rho$, la única variable que falta para calcular $P$ es $h$.",
+     "La profundidad de la moneda con respecto a la superficie del agua es precisamente $h$: esa es la variable que falta.",
+     "El radio del recipiente no interviene en $P$: la presión en un punto depende de la profundidad y no del ancho del recipiente.",
+     "La fuerza que el agua ejerce sobre la moneda es el resultado de multiplicar la presión por el área, así que no es un dato previo para calcular la presión.",
+     "El volumen desplazado se relaciona con el empuje, no con la presión en un punto del líquido.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El radio del recipiente cilíndrico: la presión en un punto del agua no depende del ancho del recipiente, solo de la profundidad.",
+     "B": "La fuerza que el agua ejerce sobre la moneda: es una consecuencia de la presión y el área, no el dato que falta para calcular la presión.",
+     "D": "El volumen de agua desplazado: relaciona el empuje, que es una fuerza distinta de la presión en un punto; la trampa es mezclar conceptos."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q72",
@@ -1675,7 +2568,25 @@
     "mono": false
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Volcanes en una cadena paralela a la costa, junto a sismos cercanos a la costa, son el patrón de una zona de subducción, que es un límite convergente de placas.",
+    "planteamiento": "Se pide una inferencia compatible con ambos mapas según la tectónica de placas. Datos: los volcanes activos forman una cadena paralela a la costa, en tierra, y los epicentros de sismos sobre 4,0 se concentran cerca de la costa y del mar.",
+    "steps": [
+     "La teoría de tectónica de placas asocia la actividad volcánica y sísmica a los bordes de las placas: límites convergentes, divergentes y transformantes.",
+     "Los volcanes activos se alinean en una cadena paralela a la costa, en tierra firme. Esa disposición es típica de un arco volcánico asociado a subducción.",
+     "Los sismos se concentran en una franja cercana a la costa, donde una placa se hunde bajo otra; esa zona de choque produce terremotos.",
+     "Un límite transformante produce sismos, pero casi no tiene volcanes activos; un límite divergente produce volcanes sobre todo en dorsales oceánicas, lejos de la costa.",
+     "El centro de una placa tiene pocos volcanes y sismos, por lo que la alternativa A no se sostiene con los mapas.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Cerca del centro de una placa principal: el centro de una placa casi no tiene volcanes en cadena ni sismos concentrados en la costa.",
+     "B": "Cerca de un límite transformante: habría sismos, pero no una cadena volcánica continental paralela a la costa.",
+     "D": "Cerca de un límite divergente: los volcanes de estos límites suelen estar en dorsales oceánicas, no en una cadena continental junto a la costa."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q73",
@@ -1710,7 +2621,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-habilidades"
+   "subtopic": "cs-habilidades",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al cambiar el número de vasos con agua se cambia la humedad dentro de cada caja, y la temperatura medida permite estudiar si esa humedad influye en el efecto invernadero.",
+    "planteamiento": "Se pide la pregunta de investigación que puede abordar el procedimiento. Datos: las cajas son iguales, se varía el número de vasos con agua (de 0 a 3) y se registra la temperatura cada 5 minutos.",
+    "steps": [
+     "La variable manipulada es el número de vasos con agua, que aumenta la cantidad de vapor de agua, es decir, la humedad, dentro de cada caja.",
+     "La variable que se mide es la temperatura interior, que se usa como indicador del efecto invernadero: cuanto más calor retiene la caja, más sube la temperatura.",
+     "Con este diseño, la pregunta que se puede responder es si la humedad ambiental influye en el efecto invernadero, pues se varía la humedad y se observa la temperatura.",
+     "La alternativa A pregunta si la temperatura influye en la humedad: la temperatura no se manipula y la humedad no se mide, así que el diseño no lo responde.",
+     "La alternativa C pregunta por la temperatura ambiental, que es la variable medida y no la manipulada; el diseño no varía el ambiente, por eso no responde esa pregunta.",
+     "La alternativa D pregunta por el tiempo de registro: el tiempo solo sirve para seguir la temperatura, pero no es la variable que se compara entre cajas.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "¿Influye la temperatura en la humedad ambiental? La humedad no se varía directamente, y la temperatura se mide pero no se manipula; el diseño no responde esa relación.",
+     "C": "¿Influye la temperatura ambiental en el efecto invernadero? La temperatura ambiental es un resultado del experimento y no la variable que se cambia entre cajas.",
+     "D": "¿Influye el tiempo de registro en la temperatura promedio? El tiempo sirve para seguir la evolución, pero la pregunta central del diseño es sobre la humedad."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q74",
@@ -1738,7 +2668,26 @@
    ],
    "answer": "C",
    "presentation": "text",
-   "subtopic": "cs-ondas"
+   "subtopic": "cs-ondas",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tiempo atmosférico describe las condiciones de un lugar en un momento o pocos días, y el clima, las condiciones promedio de un periodo largo. Un cambio de un día para otro corresponde al tiempo atmosférico.",
+    "planteamiento": "Se pide evaluar si el periodista tiene razón al decir que hoy hay tiempo primaveral y que mañana cambiará el clima con lluvia intensa. Datos: el cambio anunciado ocurre de un día para otro.",
+    "steps": [
+     "El tiempo atmosférico es el estado de la atmósfera en un lugar y momento determinado, con variables como temperatura, lluvia y viento, en horas o días.",
+     "El clima es el conjunto de condiciones atmosféricas promedio de una zona durante un periodo largo, normalmente de 30 años o más.",
+     "El periodista habla de un cambio de un día para otro y de una lluvia intensa para mañana: eso es un cambio del tiempo atmosférico, no del clima.",
+     "La afirmación «cambiará el clima» es incorrecta, porque las variaciones del clima se producen en un largo periodo y no de un día para otro.",
+     "La alternativa A afirma que es correcta, pero confunde las estaciones con climas independientes. La alternativa B iguala tiempo y clima, que son conceptos distintos.",
+     "La alternativa D dice que las variaciones del tiempo se producen en largos periodos, lo que invierte la definición.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Es correcta, porque las estaciones tienen climas independientes: las estaciones forman parte de un mismo régimen climático, y la trampa es asociar cada estación con un clima aislado.",
+     "B": "Es correcta, porque tiempo y clima son sinónimos: son conceptos diferentes, uno de corto plazo y otro de largo plazo, y la trampa es usarlos como equivalentes.",
+     "D": "Es incorrecta, porque las variaciones del tiempo atmosférico se producen en un largo periodo: invierte la definición, ya que el tiempo cambia en horas o días."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q75",
@@ -1766,7 +2715,27 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para que las cuatro resistencias de igual magnitud sean recorridas por la misma corriente, la fuente debe repartir la corriente en dos ramas iguales, cada una con dos resistores en serie.",
+    "planteamiento": "Se pide la asociación de cuatro resistores de igual magnitud $R$, conectados a una única fuente, de modo que por cada uno circule la misma corriente.",
+    "steps": [
+     "Dos resistores en serie son recorridos por la misma corriente, y dos ramas en paralelo reciben la misma diferencia de potencial.",
+     "Si las cuatro resistencias deben tener la misma corriente, la corriente total se reparte en partes iguales entre dos ramas, cada una con dos resistores en serie.",
+     "Cada rama con dos resistores en serie tiene resistencia $2R$. Al estar en paralelo, ambas ramas reciben la misma tensión y cada una lleva la mitad de la corriente total, $I/2$.",
+     "Dentro de cada rama, los dos resistores en serie llevan $I/2$, así que los cuatro resistores transportan la misma corriente: la alternativa D cumple la condición.",
+     "En la alternativa A, S y T en paralelo tienen resistencia $R/2$ y están en serie con U y W; las ramas no reparten igual la corriente, y U y W llevan toda la corriente.",
+     "En la alternativa B, S, T y U en paralelo se reparten la corriente en tres partes, mientras que W lleva la corriente total: no son iguales.",
+     "En la alternativa C, S, T y U en serie llevan la misma corriente, pero W en paralelo lleva el triple que cada uno de los de la serie.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "S y T en paralelo, en serie con U y W: S y T reciben la mitad de la corriente que U y W, así que no hay igualdad. La trampa es mirar solo la conexión en paralelo.",
+     "B": "S, T y U en paralelo, en serie con W: cada una de las tres lleva un tercio de la corriente y W lleva la corriente total; la trampa es el reparto en tres ramas.",
+     "C": "S, T y U en serie, en paralelo con W: W lleva el triple que cada resistor de la serie; la trampa es pensar que tres resistores en serie reparten la corriente en partes iguales con W."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q77",
@@ -1805,7 +2774,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las resistencias $R_2$ y $R_3$ equivalen a $20\\ \\Omega$ en paralelo; en serie con $R_1 = 30\\ \\Omega$ dan $50\\ \\Omega$, y con $12\\ \\mathrm{V}$ la corriente marcada por el amperímetro es $0{,}24\\ \\mathrm{A}$.",
+    "planteamiento": "Se pide la corriente que registra el amperímetro A. Datos: $R_1 = 30\\ \\Omega$ en serie con la asociación en paralelo de $R_2 = 30\\ \\Omega$ y $R_3 = 60\\ \\Omega$; la diferencia de potencial es $V = 12\\ \\mathrm{V}$.",
+    "steps": [
+     "Primero se reduce la asociación en paralelo: $\\dfrac{1}{R_p} = \\dfrac{1}{30} + \\dfrac{1}{60} = \\dfrac{3}{60} = \\dfrac{1}{20}$, luego $R_p = 20\\ \\Omega$.",
+     "La resistencia equivalente del circuito es la suma en serie: $R_{eq} = R_1 + R_p = 30 + 20 = 50\\ \\Omega$.",
+     "Por la ley de Ohm, la corriente total es $I = \\dfrac{V}{R_{eq}} = \\dfrac{12\\ \\mathrm{V}}{50\\ \\Omega} = 0{,}24\\ \\mathrm{A}$.",
+     "El amperímetro está en serie con $R_1$ y con la asociación en paralelo, por lo que mide la corriente total: $I_A = 0{,}24\\ \\mathrm{A}$.",
+     "Comprobación: la caída en la asociación en paralelo es $V_p = 0{,}24 \\cdot 20 = 4{,}8\\ \\mathrm{V}$, y en $R_1$ es $0{,}24 \\cdot 30 = 7{,}2\\ \\mathrm{V}$; la suma $7{,}2 + 4{,}8 = 12\\ \\mathrm{V}$.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$0{,}60\\ \\mathrm{A}$ corresponde a $12/20$: usa solo la asociación en paralelo y omite la resistencia $R_1$ en serie.",
+     "B": "$0{,}53\\ \\mathrm{A}$ no corresponde a ninguna resistencia equivalente correcta del circuito, pues $12/0{,}53 \\approx 22{,}6\\ \\Omega$, valor que no se obtiene de estas resistencias.",
+     "C": "$0{,}40\\ \\mathrm{A}$ corresponde a $12/30$: considera solo una de las resistencias de $30\\ \\Omega$ y omite la asociación completa.",
+     "E": "$0{,}10\\ \\mathrm{A}$ corresponde a $12/120$: suma las tres resistencias como si estuvieran todas en serie, lo que no es la conexión del esquema."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q78",
@@ -1840,7 +2828,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para saber por dónde circula la corriente hay que cortarla en distintos puntos del circuito: moviendo el interruptor se ve qué ampolletas dependen de cada tramo.",
+    "planteamiento": "Se pide qué elemento debería ir modificando la estudiante para saber cómo se distribuye la corriente. Datos: el circuito tiene una batería, un interruptor junto a ella y tres ampolletas idénticas; en sus pruebas acciona el interruptor y anota cuáles se encienden.",
+    "steps": [
+     "Identifica qué observa: una ampolleta se enciende solo si pasa corriente por ella, así que anotar cuáles se encienden revela por qué tramos está circulando.",
+     "Analiza la posición actual del interruptor: está junto a la batería, por donde pasa toda la corriente del circuito. Al abrirlo se apagan las tres y al cerrarlo se encienden las tres, así que la prueba no distingue un tramo de otro.",
+     "Deduce qué debe cambiar: si ubica el interruptor en distintos puntos del circuito, al abrirlo corta solo la corriente de ese tramo, y las ampolletas que sigan encendidas muestran qué caminos son independientes.",
+     "Considera qué debe mantenerse fijo: quiere estudiar este circuito, así que no debe alterar las ampolletas ni sus conexiones, para que cualquier cambio observado se deba solo a lo que modificó.",
+     "El elemento que le permite obtener esa información es la posición del interruptor. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Cambiar la distribución de las ampolletas arma un circuito distinto: ya no estudiaría cómo se distribuye la corriente en el circuito que construyó, sino en otro.",
+     "B": "Invertir la batería cambia el sentido de la corriente, pero las ampolletas se encienden igual en cualquier sentido. No aporta información sobre cómo se reparte.",
+     "D": "Usar más o menos cable casi no cambia lo que se observa: se encienden las mismas ampolletas, porque la conexión entre ellas sigue siendo la misma."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q79",
@@ -1875,7 +2880,24 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un elemento de seguridad interrumpe o desvía fallas: la conexión a tierra desvía las corrientes de fuga y el interruptor automático corta el circuito ante sobrecargas o cortocircuitos.",
+    "planteamiento": "Se pide cuál(es) de los tres dispositivos (amperímetro, conexión a tierra e interruptor automático) son elementos de seguridad en un circuito domiciliario.",
+    "steps": [
+     "El amperímetro mide la intensidad de corriente en un circuito; no protege a las personas ni a la instalación, así que no es un elemento de seguridad.",
+     "La conexión a tierra lleva a tierra las corrientes de fuga o de falla, de modo que las partes metálicas de los aparatos no queden con un voltaje peligroso.",
+     "El interruptor automático corta el circuito cuando la corriente supera un valor seguro, como en una sobrecarga o un cortocircuito.",
+     "Por lo tanto, los elementos de seguridad son la conexión a tierra y el interruptor automático.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Solo el amperímetro: es un instrumento de medición y no protege el circuito, así que no cumple una función de seguridad.",
+     "B": "El amperímetro y la conexión a tierra: el amperímetro no es de seguridad; la trampa es incluirlo porque aparece en la figura.",
+     "C": "El amperímetro y el interruptor automático: el interruptor automático sí es de seguridad, pero el amperímetro no; la trampa es mezclar un instrumento con una protección."
+    }
+   }
   },
   {
    "id": "ciencias-fisica-2025-regular-q80",
@@ -1910,7 +2932,26 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "cs-electricidad"
+   "subtopic": "cs-electricidad",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al conectar una segunda ampolleta en serie, la resistencia total aumenta, la corriente baja y con ella la potencia que entrega la batería: el gráfico debe mostrar un escalón descendente en $t_1$ y luego un valor constante.",
+    "planteamiento": "Se pide la gráfica de la potencia $P$ que entrega la batería en función del tiempo. Datos: la batería mantiene una diferencia de potencial $V$ constante; en $t_1$ se conecta una segunda ampolleta en serie.",
+    "steps": [
+     "La batería mantiene una diferencia de potencial constante $V$. La potencia que entrega es $P = V I$, y como $I = V/R$, se cumple $P = \\dfrac{V^2}{R}$.",
+     "Antes de $t_1$, el circuito tiene una sola ampolleta de resistencia $R_1$, así que la potencia es constante: $P_1 = \\dfrac{V^2}{R_1}$.",
+     "En $t_1$ se conecta una segunda ampolleta en serie, y la resistencia total pasa a ser $R_{eq} = R_1 + R_2 > R_1$.",
+     "La potencia cambia de forma instantánea a $P_2 = \\dfrac{V^2}{R_{eq}}$, que es menor que $P_1$, porque el denominador aumenta.",
+     "Como $V$ y $R_{eq}$ se mantienen, después de $t_1$ la potencia es constante en ese valor más bajo: la gráfica tiene un escalón descendente en $t_1$ y luego una línea horizontal.",
+     "La alternativa D presenta exactamente ese escalón descendente seguido de una línea horizontal. La alternativa A tiene una caída gradual, y la B muestra un aumento.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Línea horizontal seguida de una caída gradual: el cambio en la potencia es inmediato al conectar la ampolleta, no progresivo; la trampa es suponer un cambio suave.",
+     "B": "Aumento de la potencia después de $t_1$: al añadir resistencia, la corriente baja y la potencia disminuye; la trampa es pensar que más ampolletas consumen más potencia en la batería.",
+     "C": "Potencia constante sin cambio en $t_1$: la resistencia total aumenta al conectar la segunda ampolleta, así que la potencia debe cambiar en ese instante."
+    }
+   }
   }
  ]
 }

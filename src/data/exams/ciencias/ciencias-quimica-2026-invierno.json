@@ -2,9 +2,10 @@
  "id": "ciencias-quimica-2026-invierno",
  "subject": "ciencias",
  "area": "quimica",
- "title": "PAES Invierno 2026",
+ "title": "PAES Invierno 2025",
  "description": "Prueba oficial completa de Ciencias (Química): 80 preguntas, aplicada el 17-06-2025 (Admisión 2026). Claves del clavijero oficial DEMRE.",
- "year": 2026,
+ "year": 2025,
+ "admissionYear": 2026,
  "modality": "invierno",
  "source": "demre",
  "form": "171",
@@ -3076,7 +3077,23 @@
    ],
    "answer": "D",
    "presentation": "text",
-   "subtopic": "cs-atomo"
+   "subtopic": "cs-atomo",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Todas las especies son silicio, así que comparten el número atómico; lo único que cambia es el número másico, y por lo tanto los neutrones: son isótopos.",
+    "planteamiento": "Se pide en qué se diferencian las especies ${}^{28}_{14}\\mathrm{Si}$, ${}^{29}_{14}\\mathrm{Si}$, ${}^{30}_{14}\\mathrm{Si}$ y ${}^{32}_{14}\\mathrm{Si}$. En esta notación, el número de abajo es el número atómico $Z$ y el de arriba es el número másico $A$.",
+    "steps": [
+     "Lee el número atómico: todas tienen $Z = 14$, y como $Z$ indica la cantidad de protones, todas tienen $14$ protones.",
+     "Calcula los electrones: no muestran carga, así que son átomos neutros, con tantos electrones como protones, es decir, $14$ en todas.",
+     "Calcula los neutrones con $n = A - Z$: $28 - 14 = 14$, $29 - 14 = 15$, $30 - 14 = 16$ y $32 - 14 = 18$.",
+     "Compara: protones y electrones coinciden, y solo cambian los neutrones. Por eso son isótopos del silicio. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El número atómico es $14$ en todas las especies. Si cambiara, ya no sería silicio, sino otro elemento.",
+     "B": "El número de protones es $14$ en todas, porque es igual al número atómico. Es justamente lo que define que sean silicio.",
+     "C": "Son átomos neutros, con $14$ electrones cada uno. El número másico no depende de los electrones, cuya masa es muy pequeña."
+    }
+   }
   },
   {
    "id": "ciencias-quimica-2026-invierno-q62",
