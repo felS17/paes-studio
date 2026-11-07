@@ -12,6 +12,7 @@
     "preview": "vite preview",
     "exams:index": "node scripts/build-exam-index.mjs",
     "validate:exams": "node scripts/validate-exams.mjs",
+    "check:tts": "node scripts/check-tts.mjs",
     "pipeline": "python3 scripts/pipeline/extract_demre.py",
     "latex": "python3 scripts/pipeline/generate_latex_summary.py",
     "curated": "python3 scripts/pipeline/build_curated.py",

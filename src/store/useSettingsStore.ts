@@ -3,7 +3,12 @@ import { persist } from 'zustand/middleware'
 import type { ReaderSettings, ThemePreference, TutorRate, UiFontId, UserSettings } from '@/types/user'
 import { persistStorage } from './storage'
 
+/** Minúsculas y sin espacios, como un usuario de terminal. Vacío significa volver a la sesión por defecto. */
+export const normalizeUserName = (raw: string): string | null =>
+  raw.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]/gu, '').slice(0, 16) || null
+
 interface SettingsState extends UserSettings {
+  setUserName: (name: string) => void
   setTheme: (theme: ThemePreference) => void
   setUiFont: (font: UiFontId) => void
   setNebulaPaused: (paused: boolean) => void
@@ -19,6 +24,8 @@ export const READER_SIZES = [14, 15, 16, 17, 18, 20, 22] as const
 export const useSettingsStore = create<SettingsState>()(
   persist(
     (set) => ({
+      userName: null,
+      setUserName: (name) => set({ userName: normalizeUserName(name) }),
       theme: 'system',
       uiFont: 'geist',
       nebulaPaused: null,

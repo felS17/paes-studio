@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { DailyQuote } from '@/components/dashboard/DailyQuote'
 import { HubShell } from '@/components/dashboard/HubShell'
+import { SessionName } from '@/components/dashboard/SessionName'
 import { NebulaCanvas } from '@/components/dashboard/NebulaCanvas'
 import { PaesCountdown } from '@/components/dashboard/PaesCountdown'
 import { PixelIcon, type PixelIconName } from '@/components/icons/PixelIcon'
@@ -71,6 +72,7 @@ export function AnimfetchHero() {
   const { current } = useStreak()
   const [quoteIndex, setQuoteIndex] = useState(() => quoteIndexOf(new Date()))
   const nextQuote = () => setQuoteIndex((i) => (i + 1) % QUOTES.length)
+  const [editingName, setEditingName] = useState(false)
 
   const latest = useMemo(() => latestResults(attempts), [attempts])
   const quick = useMemo(() => quickDrillSubject(attempts, latest), [attempts, latest])
@@ -85,9 +87,7 @@ export function AnimfetchHero() {
 
   return (
     <section aria-label="Ventana de inicio" className="@container rounded-xl border border-zinc-200/80 bg-surface dark:border-zinc-800/80">
-      <p aria-hidden className="border-b border-zinc-200/80 px-5 py-2 font-mono text-[12px] text-zinc-500 dark:border-zinc-800/80 dark:text-zinc-400">
-        paes@studio
-      </p>
+      <SessionName editing={editingName} onEditingChange={setEditingName} />
 
       <div className="grid @3xl:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
         <NebulaCanvas className="h-56 @lg:h-72 @3xl:h-auto @3xl:min-h-[340px]" />
@@ -134,7 +134,7 @@ export function AnimfetchHero() {
         ))}
       </nav>
 
-      <HubShell onTrain={train} onDaily={runDaily} onQuote={nextQuote} />
+      <HubShell onTrain={train} onDaily={runDaily} onQuote={nextQuote} onEditName={() => setEditingName(true)} />
     </section>
   )
 }

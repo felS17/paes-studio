@@ -2,7 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { THEMES } from '@/data/themes'
 import { cn } from '@/lib/utils'
-import { useSettingsStore } from '@/store/useSettingsStore'
+import { normalizeUserName, useSettingsStore } from '@/store/useSettingsStore'
 import { useWorkspaceStore } from '@/store/useWorkspaceStore'
 import type { SubjectId } from '@/types/exam'
 import { normalizeText, queryTerms } from '@/utils/topicSearch'
@@ -12,15 +12,19 @@ interface HubShellProps {
   onTrain: (size: 10 | 20, subject?: SubjectId) => void
   onDaily: () => void
   onQuote: () => void
+  /** Abre la edición del nombre en la barra de la ventana. */
+  onEditName: () => void
 }
 
 /**
  * Prompt del Inicio con menú `/`, como en Notion o Discord: se navega con flechas y Enter o con el mouse. Es opcional:
  * los comandos más usados ya están a un clic arriba, y con el campo vacío Enter parte a entrenar.
  */
-export function HubShell({ onTrain, onDaily, onQuote }: HubShellProps) {
+export function HubShell({ onTrain, onDaily, onQuote, onEditName }: HubShellProps) {
   const navigate = useNavigate()
   const setTheme = useSettingsStore((s) => s.setTheme)
+  const userName = useSettingsStore((s) => s.userName)
+  const setUserName = useSettingsStore((s) => s.setUserName)
   const openAppearance = useWorkspaceStore((s) => s.openAppearance)
   const listId = useId()
   const inputRef = useRef<HTMLInputElement>(null)
@@ -48,9 +52,19 @@ export function HubShell({ onTrain, onDaily, onQuote }: HubShellProps) {
     setActive(isHelpText(next) ? -1 : 0)
   }
 
-  const run = (command: HubCommand, arg = '', typed = '') => {
+  const run = (command: HubCommand, arg = '', typed = '', rawArg = '') => {
     change('')
     const { action } = command
+    if (action.kind === 'name') {
+      const next = normalizeUserName(rawArg)
+      if (!next) {
+        onEditName()
+        return
+      }
+      setUserName(next)
+      setFeedback(userName ? `listo, ahora eres ${next}.` : `hola, ${next}. esta sesión ya es tuya.`)
+      return
+    }
     if (action.kind === 'train') onTrain(arg === '20' || typed === '20' ? 20 : 10, action.subject)
     else if (action.kind === 'route') navigate(action.to)
     else if (action.kind === 'daily') onDaily()
@@ -82,11 +96,11 @@ export function HubShell({ onTrain, onDaily, onQuote }: HubShellProps) {
     const [word = '', arg = ''] = queryTerms(text.replace(/^\/+/, ''))
     const command = findCommand(word)
     if (command) {
-      run(command, arg, word)
+      run(command, arg, word, text.split(/\s+/).slice(1).join(' '))
       return
     }
     change('')
-    setFeedback(`mmm, «${text}» no me suena. escribe /help y te muestro todo lo que sé hacer.`)
+    setFeedback(`mmm${userName ? `, ${userName}` : ''}, «${text}» no me suena. escribe /help y te muestro todo lo que sé hacer.`)
   }
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -167,7 +181,7 @@ export function HubShell({ onTrain, onDaily, onQuote }: HubShellProps) {
       <div className="flex items-center gap-2 text-[13.5px]">
         <label className="flex min-h-9 min-w-0 flex-1 items-center gap-2 rounded-md px-2 transition-colors focus-within:bg-zinc-900/[0.04] dark:focus-within:bg-zinc-100/[0.05]">
           <span aria-hidden className="shrink-0 text-zinc-500 dark:text-zinc-400">
-            <span className="hidden @md:inline">~/paes-studio </span>
+            <span className="hidden @md:inline">{userName ?? 'paes'}@studio </span>
             <span className="text-accent">❯</span>
           </span>
           <span className="sr-only">Escribe un comando (es opcional)</span>

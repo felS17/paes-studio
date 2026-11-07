@@ -1,14 +1,17 @@
-import type { SceneId } from './sceneMap'
-import { HomotheticScene, PhysicsScene, QuadraticScene, ThalesScene, TrigonometryScene, VectorsScene, type SceneProps } from './scenes'
+import type { SceneId, SceneValues } from './sceneMap'
+import type { SceneProps } from './sceneProps'
+import { ConditionalScene, BoxplotScene, DispersionScene, ProbabilityScene } from './scenesData'
+import { FigurasScene, ThalesScene } from './scenesGeometry'
+import { HomotheticScene, LineScene, TrigonometryScene, VectorsScene } from './scenesPlane'
 import { fmt } from './manimMath'
-
-export type SceneValues = Record<string, string | number>
 
 export interface ChoiceParam {
   kind: 'choice'
   key: string
   label: string
   options: { value: string; label: string }[]
+  /** Cómo rotular un valor que no está en `options`, por ejemplo uno que vino del enunciado. */
+  custom?: (value: string) => string
   /** Solo se muestra si se cumple: cada modalidad de una escena tiene sus propios parámetros. */
   when?: (values: SceneValues) => boolean
 }
@@ -33,9 +36,92 @@ export interface SceneMeta {
   Component: (props: SceneProps) => React.ReactNode
 }
 
-const modeIs = (mode: string) => (values: SceneValues) => values.modo === mode
+const modeIs = (...modes: string[]) => (values: SceneValues) => modes.includes(String(values.modo))
+const shown = (value: string) => `(${value.replace(',', ', ').replace(/-/g, '−')})`
+
+const ALPHA_RANGE: RangeParam = {
+  kind: 'range', key: 'alfa', label: 'ángulo α', min: 5, max: 355, step: 5, format: (value) => `${value}°`, when: modeIs('unitaria', 'cuerda'),
+}
 
 export const SCENES: Record<SceneId, SceneMeta> = {
+  figuras: {
+    title: 'figuras y cuerpos',
+    description: 'Figuras planas y cuerpos geométricos: lados, alturas, áreas por descomposición, sector circular y volumen.',
+    durationMs: 6000,
+    defaults: { forma: 'rectangulo', a: 8, b: 5, h: 6, c: 3, d: 2, r: 4, angulo: 90 },
+    Component: FigurasScene,
+    params: [{
+      kind: 'choice', key: 'forma', label: 'figura',
+      options: [
+        { value: 'rectangulo', label: 'rectángulo' },
+        { value: 'triangulo', label: 'triángulo' },
+        { value: 'compuesta', label: 'compuesta' },
+        { value: 'circulo', label: 'círculo' },
+        { value: 'prisma', label: 'prisma' },
+        { value: 'cilindro', label: 'cilindro' },
+        { value: 'cono', label: 'cono' },
+        { value: 'esfera', label: 'esfera' },
+      ],
+    }],
+  },
+  thales: {
+    title: 'thales y pitágoras',
+    description: 'Paralelas que cortan dos rectas y dejan segmentos proporcionales, o cuadrados sobre los lados de un triángulo rectángulo.',
+    durationMs: 5500,
+    defaults: { modo: 'pitagoras', a: 4, b: 2, c: 6, d: 3, catetos: '3-4' },
+    Component: ThalesScene,
+    params: [
+      { kind: 'choice', key: 'modo', label: 'teorema', options: [{ value: 'thales', label: 'thales' }, { value: 'pitagoras', label: 'pitágoras' }] },
+      { kind: 'choice', key: 'catetos', label: 'catetos', when: modeIs('pitagoras'), custom: (value) => value.replace('-', ' y '), options: [{ value: '3-4', label: '3 y 4' }, { value: '6-8', label: '6 y 8' }, { value: '5-12', label: '5 y 12' }] },
+    ],
+  },
+  vectores: {
+    title: 'plano, vectores e isometrías',
+    description: 'Coordenadas, suma y resta de vectores, traslación, rotación y reflexión en el plano cartesiano.',
+    durationMs: 5500,
+    defaults: { modo: 'suma', p: '3,2', u: '4,1', w: '1,3', t: '2,-3', giro: '90', eje: 'y' },
+    Component: VectorsScene,
+    params: [
+      {
+        kind: 'choice', key: 'modo', label: 'qué ver',
+        options: [
+          { value: 'plano', label: 'punto' },
+          { value: 'suma', label: 'suma' },
+          { value: 'resta', label: 'resta' },
+          { value: 'traslacion', label: 'traslación' },
+          { value: 'rotacion', label: 'rotación' },
+          { value: 'reflexion', label: 'reflexión' },
+        ],
+      },
+      { kind: 'choice', key: 'w', label: 'vector v', when: modeIs('suma', 'resta'), custom: shown, options: [{ value: '1,3', label: '(1, 3)' }, { value: '-2,3', label: '(−2, 3)' }, { value: '3,-1', label: '(3, −1)' }] },
+      { kind: 'choice', key: 'giro', label: 'giro', when: modeIs('rotacion'), options: [{ value: '90', label: '90°' }, { value: '180', label: '180°' }, { value: '270', label: '270°' }] },
+      { kind: 'choice', key: 'eje', label: 'respecto de', when: modeIs('reflexion'), options: [{ value: 'x', label: 'eje x' }, { value: 'y', label: 'eje y' }, { value: 'origen', label: 'origen' }] },
+    ],
+  },
+  boxplot: {
+    title: 'diagrama de cajón',
+    description: 'Construcción del diagrama de cajón con sus cuartiles y el rango intercuartílico.',
+    durationMs: 6000,
+    defaults: { datos: '2,3,5,6,7,8,9,11,12,14,16', q1: '', q2: '', q3: '', min: '', max: '' },
+    Component: BoxplotScene,
+    params: [],
+  },
+  probabilidad: {
+    title: 'probabilidad',
+    description: 'Regla de Laplace con casos favorables, diagrama de árbol e intersección de conjuntos.',
+    durationMs: 6000,
+    defaults: { modo: 'laplace', favorables: 6, casos: 15, pa: '3/5', pba: '1/2', pbna: '1/4', a: 60, b: 40, ambos: 20, total: 100 },
+    Component: ProbabilityScene,
+    params: [{ kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'laplace', label: 'laplace' }, { value: 'arbol', label: 'árbol' }, { value: 'venn', label: 'conjuntos' }] }],
+  },
+  recta: {
+    title: 'pendiente de una recta',
+    description: 'Recta por dos puntos con su pendiente, y rectas paralelas o perpendiculares.',
+    durationMs: 5500,
+    defaults: { modo: 'pendiente', a: '-3,-1', b: '3,2' },
+    Component: LineScene,
+    params: [{ kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'pendiente', label: 'pendiente' }, { value: 'paralelas', label: 'paralelas' }, { value: 'perpendiculares', label: 'perpendiculares' }] }],
+  },
   homotecia: {
     title: 'homotecia',
     description: 'Una figura y su homotética desde el centro O, con rayos que pasan por cada vértice.',
@@ -44,63 +130,39 @@ export const SCENES: Record<SceneId, SceneMeta> = {
     Component: HomotheticScene,
     params: [{
       kind: 'choice', key: 'k', label: 'razón',
+      custom: (value) => `k = ${fmt(Number(value))}`,
       options: [{ value: '2', label: 'k > 1' }, { value: '0.5', label: '0 < k < 1' }, { value: '-1.5', label: 'k < 0' }],
     }],
   },
-  cuadratica: {
-    title: 'función cuadrática',
-    description: 'Parábola con su vértice, su eje de simetría y sus raíces, según el signo de a y del discriminante.',
-    durationMs: 5500,
-    defaults: { a: '1', delta: 'positivo' },
-    Component: QuadraticScene,
-    params: [
-      { kind: 'choice', key: 'a', label: 'a', options: ['-2', '-1', '-0.5', '0.5', '1', '2'].map((value) => ({ value, label: fmt(Number(value), 1) })) },
-      { kind: 'choice', key: 'delta', label: 'discriminante', options: [{ value: 'positivo', label: 'Δ > 0' }, { value: 'cero', label: 'Δ = 0' }, { value: 'negativo', label: 'Δ < 0' }] },
-    ],
-  },
-  thales: {
-    title: 'thales y pitágoras',
-    description: 'Paralelas que cortan dos rectas y dejan segmentos proporcionales, o cuadrados sobre los lados de un triángulo rectángulo.',
-    durationMs: 5500,
-    defaults: { modo: 'thales', paralela: 0.75, catetos: '3-4' },
-    Component: ThalesScene,
-    params: [
-      { kind: 'choice', key: 'modo', label: 'teorema', options: [{ value: 'thales', label: 'thales' }, { value: 'pitagoras', label: 'pitágoras' }] },
-      { kind: 'range', key: 'paralela', label: 'segunda paralela', min: 0.55, max: 0.95, step: 0.05, format: (value) => fmt(value), when: modeIs('thales') },
-      { kind: 'choice', key: 'catetos', label: 'catetos', when: modeIs('pitagoras'), options: [{ value: '3-4', label: '3 y 4' }, { value: '6-8', label: '6 y 8' }, { value: '5-12', label: '5 y 12' }] },
-    ],
-  },
   trigonometria: {
-    title: 'trigonometría',
-    description: 'Circunferencia unitaria donde el seno, el coseno y la tangente de un ángulo aparecen como trazos.',
-    durationMs: 5000,
-    defaults: { alfa: 40 },
+    title: 'razones trigonométricas',
+    description: 'Triángulo rectángulo y circunferencia unitaria con el seno, el coseno y la tangente; arcos y cuerdas.',
+    durationMs: 5500,
+    defaults: { modo: 'triangulo', alfa: 40, op: 3, ady: 4 },
     Component: TrigonometryScene,
-    params: [{ kind: 'range', key: 'alfa', label: 'ángulo α', min: 0, max: 360, step: 5, format: (value) => `${value}°` }],
-  },
-  vectores: {
-    title: 'vectores y rotaciones',
-    description: 'Suma de dos vectores por la ley del paralelogramo, o rotación de un punto en torno al origen.',
-    durationMs: 5000,
-    defaults: { modo: 'suma', vector: '1,3', giro: '90' },
-    Component: VectorsScene,
     params: [
-      { kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'suma', label: 'suma' }, { value: 'rotacion', label: 'rotación' }] },
-      { kind: 'choice', key: 'vector', label: 'vector v', when: modeIs('suma'), options: [{ value: '1,3', label: '(1, 3)' }, { value: '-2,3', label: '(−2, 3)' }, { value: '3,-1', label: '(3, −1)' }] },
-      { kind: 'choice', key: 'giro', label: 'giro', when: modeIs('rotacion'), options: [{ value: '90', label: '90°' }, { value: '180', label: '180°' }, { value: '270', label: '270°' }] },
+      { kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'triangulo', label: 'triángulo' }, { value: 'unitaria', label: 'unitaria' }, { value: 'cuerda', label: 'arco y cuerda' }] },
+      ALPHA_RANGE,
     ],
   },
-  fisica: {
-    title: 'cinemática y ondas',
-    description: 'Partícula con sus vectores velocidad y aceleración, o una onda sinusoidal con su amplitud y su longitud de onda.',
+  dispersion: {
+    title: 'varianza y desviación estándar',
+    description: 'Dos grupos con la misma media: se comparan sus distancias a la media, su varianza y su desviación estándar.',
     durationMs: 6000,
-    defaults: { modo: 'cinematica', movimiento: 'acelera', amplitud: 1.25, longitud: 5 },
-    Component: PhysicsScene,
+    defaults: { datos: '4,6,8,10,12' },
+    Component: DispersionScene,
+    params: [],
+  },
+  condicional: {
+    title: 'condicional, binomial y conteo',
+    description: 'Árbol de probabilidad condicional, barras de la distribución binomial y principio multiplicativo.',
+    durationMs: 6000,
+    defaults: { modo: 'arbol', pa: '3/5', pba: '1/2', pbna: '1/4', n: '6', p: '1/2', k: '', a: 3, b: 2 },
+    Component: ConditionalScene,
     params: [
-      { kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'cinematica', label: 'cinemática' }, { value: 'ondas', label: 'ondas' }] },
-      { kind: 'choice', key: 'movimiento', label: 'movimiento', when: modeIs('cinematica'), options: [{ value: 'mru', label: 'constante' }, { value: 'acelera', label: 'acelera' }, { value: 'frena', label: 'frena' }] },
-      { kind: 'range', key: 'amplitud', label: 'amplitud A', when: modeIs('ondas'), min: 0.5, max: 2, step: 0.25, format: (value) => `${fmt(value)} m` },
-      { kind: 'range', key: 'longitud', label: 'longitud λ', when: modeIs('ondas'), min: 3, max: 8, step: 0.5, format: (value) => `${fmt(value)} m` },
+      { kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'arbol', label: 'árbol' }, { value: 'binomial', label: 'binomial' }, { value: 'conteo', label: 'conteo' }] },
+      { kind: 'choice', key: 'n', label: 'n', when: modeIs('binomial'), custom: String, options: [{ value: '4', label: '4' }, { value: '6', label: '6' }, { value: '10', label: '10' }] },
+      { kind: 'choice', key: 'p', label: 'p', when: modeIs('binomial'), custom: String, options: [{ value: '1/4', label: '1/4' }, { value: '1/2', label: '1/2' }, { value: '3/4', label: '3/4' }] },
     ],
   },
 }

@@ -7,7 +7,7 @@ import { normalizeText } from '@/utils/topicSearch'
 export type HubAction =
   | { kind: 'train'; subject?: SubjectId }
   | { kind: 'route'; to: string }
-  | { kind: 'daily' | 'theme' | 'font' | 'quote' }
+  | { kind: 'daily' | 'theme' | 'font' | 'quote' | 'name' }
 
 export interface HubCommand {
   name: string
@@ -33,6 +33,7 @@ export const HUB_COMMANDS: HubCommand[] = [
   { name: 'stats', hint: 'abrir administrador de tareas y errores', action: { kind: 'route', to: '/analitica' } },
   { name: 'tema', aliases: ['theme'], hint: 'cambiar paleta de colores y fuente', action: { kind: 'theme' } },
   { name: 'fuente', aliases: ['font'], hint: 'cambiar la tipografía', action: { kind: 'font' }, hidden: true },
+  { name: 'nombre', label: '/nombre <alias>', aliases: ['nick'], hint: 'ponle tu nombre a esta sesión', action: { kind: 'name' } },
   { name: 'cita', hint: 'mostrar otra cita filosófica', action: { kind: 'quote' } },
 ]
 

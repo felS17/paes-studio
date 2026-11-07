@@ -26,6 +26,8 @@ export interface ReaderSettings {
 }
 
 export interface UserSettings {
+  /** Alias del estudiante en la ventana del Inicio. Sin definir, la sesión se llama `paes`. */
+  userName: string | null
   theme: ThemePreference
   uiFont: UiFontId
   /** Velocidad del tutor de voz. */

@@ -20,6 +20,7 @@
 - **v2.4.1 (2026-11-06):** ventana del Inicio y heatmap más amplios (`max-w-6xl`, 52 semanas de punta a punta), comandos en 2 columnas con descripción, prompt con menú `/` navegable y racha universal.
 - **v2.5 (2026-11-06):** cuenta regresiva a la PAES en el Inicio y la barra de estado, ventana de 1480 px, heatmap sincronizado con la racha, años reales de rendición en todas las pruebas oficiales, curados al final de `/ensayos` y 834 soluciones nuevas.
 - **v2.6 (2026-11-06):** PAES Regular 2025 en el banco, 34 recortes recuperados con detección de tinta perdida, tutor de voz con traductor LaTeX a español y 6 escenas animadas en SVG al estilo Manim.
+- **v2.7 (2026-11-06):** voz con audio real desde `/api/tts` y respaldo en el dispositivo, 10 escenas Manim solo para los subtemas visuales de M1 y M2 (sin Física ni cuadráticas), nombre de usuario en la sesión y `README.md`.
 
 ---
 
@@ -676,6 +677,27 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 #### Verificación
 - `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas frente a `HEAD` en las 2.796 preguntas previas, y solo cambiaron los 3 enunciados de q26. No se abrió navegador: **las voces, los controles y las animaciones no se han probado en vivo**.
 
+### v2.7: voz con audio real, Manim focalizado, nombre de sesión y README (2026-11-06)
+
+#### Tutor de voz
+- **Causa:** `speechSynthesis` era el único motor, y en Chromium sobre Linux suele venir sin voces o sin motor de voz. No había nada que arreglar en el hook: hacía falta audio de verdad.
+- **`/api/tts`:** `api/_lib/tts.ts` atiende igual en Vercel (`api/tts.ts`) y en `npm run dev` / `preview` (plugin en `vite.config.ts`). Parte en fragmentos bajo 180 caracteres, concatena los MP3, valida la firma y responde con caché larga. Respeta `Range`, porque Safari no reproduce sin eso. `vercel.json` excluye `api/` de la reescritura a `index.html`.
+- **Edge TTS descartado:** se implementó y probó, y Microsoft responde 403 al token público de siempre (`Sec-MS-GEC` simple). `edge-tts` 7.3.1 solo lo logra con un digest «v2» de unas 450 líneas obtenido por ingeniería inversa (`drm.py`, LGPLv3). No se copió: sería saltarse un control de acceso y mezclar licencias en un repositorio MIT. El endpoint queda solo con Google. Si se quieren las voces `es-CL` neuronales, la vía oficial es Azure Speech, con llave.
+- **`useTutorVoice`:** un único `<audio>` para toda la app (iOS solo deja sonar el que se desbloqueó con un toque; cargar otro `src` reinicia `playbackRate`, así que se fijan también `defaultPlaybackRate`). Pausa y reanudación inmediatas, velocidad sin reiniciar el trozo y el siguiente trozo pedido por adelantado.
+- **Respaldo:** si `/api/tts` falla por cualquier motivo, o sin conexión, sigue con `speechSynthesis` desde el mismo trozo. Se pidió «solo sin internet», pero un servicio caído también dejaría mudo al estudiante, así que se amplió. `cancel()` y `speak()` van separados y la locución queda en `window.__activeUtterance`. Hay un plazo de 2,5 s para detectar sistemas donde `speak()` nunca empieza; entonces el reproductor lo dice.
+
+#### Manim
+- **Alcance:** se eliminaron Física y cuadráticas. Quedan 10 escenas para 11 subtemas (`m1-areas`, `m1-triangulos`, `m1-transformaciones`, `m1-posicion`, `m1-probabilidad`, `m2-analitica`, `m2-homotecia`, `m2-trigonometria`, `m2-dispersion`, `m2-condicional`, `m2-combinatoria`). Dentro de una solución aparecen solo en las oficiales rendidas de 2024 a 2026: 147 preguntas hoy. El Inspector y el Formulario siguen mostrándolas tras un botón, porque son material del tema y no de un año.
+- **Extracción de cifras (`sceneExtract.ts`):** determinista y conservadora; 37 de las 147 usan sus propias cifras y la leyenda dice `valores de ejemplo` en las demás. La revisión de contexto encontró y corrigió falsos positivos que el render no detecta: productos que no eran medidas (`2·80·180`), mallas de cuadrados, listas sin su último dato, `k` de una alternativa descartada, decimales `{,}` y preguntas de vectores dentro de `m2-analitica`, que ahora abren la escena de vectores.
+- **Sincronía:** la escena consulta cuadro a cuadro el avance real del audio (`getProgress`), sin renderizar la explicación. Se detiene con la pausa y se completa al terminar la lectura.
+- **Verificación sin navegador:** render por servidor de las 147 preguntas en 6 instantes de la línea de tiempo, sin errores ni `NaN`, y láminas PNG de cada modalidad. Se corrigieron lecturas cortadas al borde y un `total` que Laplace y Venn compartían por error. Las láminas usan otra tipografía que la app, así que el ajuste fino al borde no está comprobado.
+
+#### Nombre de sesión
+- `settings.userName` en el almacenamiento existente, sin migración: el `persist` completa el campo nuevo. Edición en la barra de la ventana (`SessionName`), con `/nombre` o `/nick`; aparece en la barra, el prompt, el saludo por hora y las respuestas del prompt.
+
+#### Verificación
+- `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; `npm run check:tts` confirma `audio/mpeg` válido y de más de 1 KB contra el middleware de Vite. No se abrió navegador, así que **no está comprobado que suene en uno**: falta esa prueba manual.
+
 ---
 
 ## Comandos
@@ -691,6 +713,7 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 | `npm run latex` | `python3 scripts/pipeline/generate_latex_summary.py`: compendios (`guia_*`) y presentaciones (`beamer_*`) en `latex/output/` |
 | `npm run exams:index` | Regenera solo `src/data/exams/index.json` |
 | `npm run validate:exams` | Valida los 53 JSON: parseo, claves (también contra `soluciones.json`), `$` balanceados y KaTeX de cada solución |
+| `npm run check:tts` | Prueba `/api/tts` contra el middleware de Vite: tipo, tamaño, firma MP3 y `Range` (requiere internet) |
 | `python3 scripts/pipeline/assign_subtopics.py` | Temario → `src/data/temario/` y `subtopic` de cada pregunta (`--dry-run`, `--sample <subtema>`) |
 | `python3 scripts/pipeline/solutions/prepare_deepen.py --work <carpeta>` | Lotes para profundizar soluciones; luego `validate_deepen.py <lote>` y `merge_solutions.py --collect-deep <carpeta>` |
 
@@ -750,7 +773,8 @@ APP_PAES/
 
 ## Pendientes y consideraciones
 - **Soluciones de la PAES Regular 2025:** faltan las 341. Lotes listos en `.work/reg2025/`; se redactan como los de `sol2025` y se fusionan con `merge_solutions.py --collect-deep`.
-- **Tutor de voz y Manim (v2.6):** falta probarlos en navegadores reales, sobre todo las voces en móviles.
+- **Tutor de voz y Manim (v2.7):** falta probarlos en navegadores reales, sobre todo el audio en móviles y en Fedora.
+- **Voz de Google (v2.7):** es un servicio no oficial, sin garantías, y desde las IP de Vercel podría limitarse. La caché de la CDN reduce las llamadas y el dispositivo cubre las caídas, pero `speechSynthesis` puede no tener voz en Linux: en ese caso, sin internet no hay audio.
 - **Cuenta regresiva:** agregar a `CONFIRMED` (`src/utils/paesCountdown.ts`) cada fecha oficial del DEMRE; las siguientes a noviembre de 2026 son estimadas.
 - **Derechos de autor:** los folletos del DEMRE indican «Derechos reservados». Los recortes y textos extraídos viven en `public/exam-assets/` y `src/data/exams/`. Están pensados para estudio personal; antes de publicar el sitio abiertamente conviene revisar las condiciones de uso del DEMRE o desplegar solo los ensayos curados (basta con borrar los JSON oficiales y `public/exam-assets/` y regenerar el índice).
 - **Peso del despliegue:** los recortes ocupan ~33 MB, dentro de los límites de Vercel.
@@ -870,3 +894,13 @@ APP_PAES/
 - [x] 6 escenas al estilo Manim en soluciones, Inspector y Formulario, sincronizadas con la voz.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 0 claves cambiadas.
 - [ ] Probar voces y animaciones en local y redactar las soluciones de la Regular 2025 (a cargo del autor).
+
+### v2.7
+- [x] `/api/tts` en Vercel y en Vite, con audio MP3 real y respaldo en la voz del dispositivo.
+- [ ] Voces `es-CL` de Edge: descartadas, Microsoft exige un token no público (ver el Historial).
+- [x] 10 escenas Manim para 11 subtemas visuales de M1 y M2; fuera Física y cuadráticas.
+- [x] Cifras reales del enunciado cuando se pueden leer, con aviso de `valores de ejemplo` en las demás.
+- [x] Nombre de sesión editable, con `/nombre` y `/nick`.
+- [x] `README.md`, `LOG.md` y `CLAUDE.md`.
+- [x] `npm run lint`, `npm run build`, `npm run validate:exams` y `npm run check:tts` con 0 errores.
+- [ ] Escuchar el audio y revisar las animaciones en un navegador real (a cargo del autor).

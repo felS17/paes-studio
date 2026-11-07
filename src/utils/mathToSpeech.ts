@@ -383,10 +383,10 @@ export function explanationSpeech(explanation: Explanation): SpeechBlock[] {
 }
 
 /**
- * Parte un texto en trozos de hasta `max` caracteres, en pausas naturales. Algunos navegadores cortan las voces de más
- * de unos 15 segundos, y con trozos breves la pausa y el cambio de velocidad funcionan en todos.
+ * Parte un texto en trozos de hasta `max` caracteres, en pausas naturales. Cada trozo es un audio de `/api/tts`, cuyo
+ * motor admite menos de 180 caracteres, y en la voz del dispositivo evita que el navegador corte las frases largas.
  */
-export function chunkSpeech(text: string, max = 180): string[] {
+export function chunkSpeech(text: string, max = 170): string[] {
   const chunks: string[] = []
   let rest = text.trim()
   while (rest.length > max) {

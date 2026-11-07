@@ -1,19 +1,28 @@
-import { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense, useMemo, useState } from 'react'
 import { cn } from '@/lib/utils'
-import { sceneForSubtopic } from './sceneMap'
+import type { Question } from '@/types/exam'
+import type { VoiceSync } from './ManimVisualizer'
+import { sceneForQuestion, sceneForSubtopic } from './sceneMap'
 
 // Las escenas viven en su propio chunk: quien no abre una animación no las descarga.
 const ManimVisualizer = lazy(() => import('./ManimVisualizer').then((m) => ({ default: m.ManimVisualizer })))
 
-/** Escena del primer subtema que tenga una. Sin escena, no ocupa lugar. */
-export function ManimEmbed({ subtopics, defaultOpen = false, syncProgress = null, className }: {
-  subtopics: readonly (string | undefined)[]
+/**
+ * Escena de una pregunta (`question`, solo oficiales de 2024 a 2026 con solución) o del primer subtema que tenga una
+ * (`subtopics`, en el resumen y el formulario). Sin escena, no ocupa lugar.
+ */
+export function ManimEmbed({ question, subtopics, defaultOpen = false, sync, className }: {
+  question?: Question
+  subtopics?: readonly (string | undefined)[]
   defaultOpen?: boolean
-  syncProgress?: number | null
+  sync?: VoiceSync
   className?: string
 }) {
   const [open, setOpen] = useState(defaultOpen)
-  const entry = subtopics.map(sceneForSubtopic).find(Boolean)
+  const entry = useMemo(
+    () => (question ? sceneForQuestion(question) : subtopics?.map(sceneForSubtopic).find(Boolean) ?? null),
+    [question, subtopics],
+  )
   if (!entry) return null
   return (
     <div className={cn('space-y-2', className)}>
@@ -27,7 +36,7 @@ export function ManimEmbed({ subtopics, defaultOpen = false, syncProgress = null
       </button>
       {open && (
         <Suspense fallback={<p className="text-[13px] text-zinc-500" role="status">cargando…</p>}>
-          <ManimVisualizer scene={entry.scene} initial={entry.initial} syncProgress={syncProgress} />
+          <ManimVisualizer scene={entry.scene} initial={entry.initial} fromQuestion={question ? entry.fromQuestion : undefined} sync={sync} />
         </Suspense>
       )}
     </div>

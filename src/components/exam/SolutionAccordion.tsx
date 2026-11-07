@@ -37,8 +37,8 @@ function ExplanationView({ question, ex, defaultOpen }: { question: Question; ex
   const voice = useTutorVoice(blocks)
   const body = useRef<HTMLDivElement>(null)
   const reading = voice.activeBlock >= 0 ? blocks[voice.activeBlock].target : null
-  // La animación del tema avanza junto con la lectura: cada bloque leído es un tramo de la escena.
-  const syncProgress = voice.status === 'playing' && voice.activeBlock >= 0 ? (voice.activeBlock + 1) / blocks.length : null
+  // La animación del tema avanza con la lectura: consulta el avance cuadro a cuadro, sin renderizar toda la explicación.
+  const sync = useMemo(() => ({ state: voice.status, progress: voice.getProgress }), [voice.status, voice.getProgress])
 
   useEffect(() => {
     if (reading === null) return
@@ -65,9 +65,9 @@ function ExplanationView({ question, ex, defaultOpen }: { question: Question; ex
           <Badge tone={isAI ? 'neutral' : 'solid'} className="ml-1 hidden sm:inline-flex">{isAI ? 'Redactada con IA' : 'Revisada'}</Badge>
           <span className="ml-auto font-mono text-xs text-zinc-500 tabular-nums dark:text-zinc-400">Respuesta {question.answer}</span>
         </button>
-        {open && voice.available && (
+        {open && (
           <div className="pb-2 pl-3.5 sm:py-2 sm:pl-0">
-            <TutorVoicePlayer status={voice.status} rate={voice.rate} onToggle={voice.toggle} onRate={voice.changeRate} />
+            <TutorVoicePlayer status={voice.status} rate={voice.rate} buffering={voice.buffering} error={voice.error} onToggle={voice.toggle} onRate={voice.changeRate} />
           </div>
         )}
       </div>
@@ -106,7 +106,7 @@ function ExplanationView({ question, ex, defaultOpen }: { question: Question; ex
               ))}
             </ol>
           </section>
-          <ManimEmbed subtopics={[question.subtopic]} defaultOpen syncProgress={syncProgress} className="mt-4" />
+          <ManimEmbed question={question} defaultOpen sync={sync} className="mt-4" />
           {ex.distractors && Object.keys(ex.distractors).length > 0 && (
             <section className="mt-4 border-t border-dashed border-zinc-200 pt-3 dark:border-zinc-800" aria-label="Análisis de distractores">
               <h3 className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
