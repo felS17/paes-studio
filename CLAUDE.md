@@ -27,6 +27,7 @@ Plataforma web estática de estudio para la PAES (Chile) + pipeline de extracci�
 El repositorio cuenta con dos carpetas de entrada intocables con el material bruto:
 - `/pruebas-oficiales/`: PDFs de las pruebas oficiales publicadas por el DEMRE.
 - `/facsimiles-oficiales/`: PDFs de los facsímiles, solucionarios y clavijeros oficiales.
+- Ambas son enlaces simbólicos a `Pruebas_DEMRE/` y `Clavijeros_Pruebas_DEMRE/` (49 y 49 PDF, con los nombres que usa demre.cl). Un folleto o clavijero nuevo se deja ahí con su nombre original; `extract_demre.py --list` muestra el cruce. Para auditar el pipeline sin pisar soluciones ni subtemas, córrelo con `--out` y `--assets` hacia una carpeta temporal y compáralo con el banco.
 
 Tienes total libertad y mandato para crear una arquitectura modular y bien ramificada:
 - `/src/types/`: Definiciones TypeScript separadas por dominio (`exam.ts`, `analytics.ts`, `user.ts`).

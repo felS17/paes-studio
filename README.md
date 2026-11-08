@@ -1,15 +1,22 @@
 # PAES Studio
 
-Plataforma de estudio para la PAES de Chile, con las pruebas oficiales del DEMRE, explicaciones paso a paso y material de síntesis. Es un sitio estático con una sola función serverless para la voz: no tiene cuentas ni base de datos, y tu progreso se guarda en tu navegador.
+[![Licencia MIT](https://img.shields.io/badge/licencia-MIT-informational)](LICENSE)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-3178c6?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
+![KaTeX](https://img.shields.io/badge/KaTeX-0.19-44cc11)
+![Ensayos validados](https://img.shields.io/badge/ensayos%20validados-53-success)
+
+Entorno abierto e interactivo de preparación para la PAES (DEMRE, Chile), con las pruebas oficiales, explicaciones paso a paso y material de síntesis. Es un sitio estático con una sola función serverless para la voz: no tiene cuentas ni base de datos, y tu progreso se guarda en tu navegador.
 
 | Contenido | Cantidad |
 | --- | ---: |
 | Ensayos (48 oficiales y 5 curados) | 53 |
 | Preguntas | 3.137 |
-| Soluciones paso a paso | 1.892 |
+| Soluciones paso a paso | 1.892+ |
 | Subtemas del temario | 67 |
-| Flashcards | 290 |
-| Guías en PDF | 10 |
+| Flashcards con repaso espaciado (SM-2) | 290 |
+| Guías en PDF (LaTeX y Beamer) | 10 |
 
 Las explicaciones oficiales las redactó una IA y se validaron contra la clave del DEMRE; la interfaz lo indica en cada una.
 
@@ -29,6 +36,8 @@ Las explicaciones oficiales las redactó una IA y se validaron contra la clave d
 Requiere Node.js 22 o superior.
 
 ```bash
+git clone https://github.com/felS17/paes-studio.git
+cd paes-studio
 npm install
 npm run dev              # servidor de desarrollo, con /api/tts incluido
 npm run build            # compilación estática en dist/

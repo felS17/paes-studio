@@ -21,6 +21,7 @@
 - **v2.5 (2026-11-06):** cuenta regresiva a la PAES en el Inicio y la barra de estado, ventana de 1480 px, heatmap sincronizado con la racha, años reales de rendición en todas las pruebas oficiales, curados al final de `/ensayos` y 834 soluciones nuevas.
 - **v2.6 (2026-11-06):** PAES Regular 2025 en el banco, 34 recortes recuperados con detección de tinta perdida, tutor de voz con traductor LaTeX a español y 6 escenas animadas en SVG al estilo Manim.
 - **v2.7 (2026-11-06):** voz con audio real desde `/api/tts` y respaldo en el dispositivo, 10 escenas Manim solo para los subtemas visuales de M1 y M2 (sin Física ni cuadráticas), nombre de usuario en la sesión y `README.md`.
+- **v2.7.1 (2026-11-08):** auditoría del pipeline contra el banco (sin cambios en los datos), carpetas y clavijeros verificados y `README.md` con badges e instalación desde `git clone`.
 
 ---
 
@@ -698,6 +699,16 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 #### Verificación
 - `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; `npm run check:tts` confirma `audio/mpeg` válido y de más de 1 KB contra el middleware de Vite. No se abrió navegador, así que **no está comprobado que suene en uno**: falta esa prueba manual.
 
+
+### [2026-11-08] - v2.7.1: auditoría del banco y README
+- **Carpetas:** `pruebas-oficiales/` y `facsimiles-oficiales/` son enlaces a `Pruebas_DEMRE/` (49 folletos) y `Clavijeros_Pruebas_DEMRE/` (49 clavijeros oficiales de demre.cl). `extract_demre.py --list` cruza cada folleto con su clavijero, incluidos los 7 de la PAES Regular 2025 (`2026-26-01-05-clavijero-paes-regular-*`). No hubo que mover nada.
+- **Pipeline completo en una carpeta temporal (≈110 s):** frente al banco versionado, 48 pruebas oficiales y 3.052 preguntas con 0 claves, 0 enunciados y 0 recortes distintos, sin preguntas perdidas ni nuevas. El banco ya refleja la salida del pipeline, así que no se sobrescribió `src/data/exams/` (eso habría arriesgado soluciones y subtemas fusionados después).
+- **Regular 2025 (ids `*-2026-regular`):** 341 preguntas con clave oficial, `year` 2025 y `admissionYear` 2026. `sortExams` la deja entre Invierno 2026 e Invierno 2025, con los curados al final. Sus soluciones siguen pendientes, y por eso tampoco muestran escenas Manim (`sceneForQuestion` exige explicación).
+- **Recortes:** las 1.801 preguntas con `snapshot` tienen su archivo en `public/exam-assets/`, incluida `ciencias-quimica-2026-invierno-q64`. El enunciado de la pregunta del bloque y la fuerza de roce (q26 de Biología y Química, q08 de Física, Invierno 2025) sigue limpio y con recorte.
+- **Manim y nombre de sesión:** sin cambios; se comprobó que `BY_SUBTOPIC` cubre solo los 11 subtemas visuales de M1/M2 y que `/nombre`, `/nick`, la barra, el prompt y el saludo usan `settings.userName`.
+- **README:** badges (MIT, TypeScript, React, Vite, KaTeX, ensayos validados), descripción, `git clone` y métricas comprobadas con scripts (53 ensayos, 3.137 preguntas, 1.892 soluciones, 10 PDF).
+- **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. No se abrió navegador.
+
 ---
 
 ## Comandos
@@ -904,3 +915,9 @@ APP_PAES/
 - [x] `README.md`, `LOG.md` y `CLAUDE.md`.
 - [x] `npm run lint`, `npm run build`, `npm run validate:exams` y `npm run check:tts` con 0 errores.
 - [ ] Escuchar el audio y revisar las animaciones en un navegador real (a cargo del autor).
+
+### v2.7.1
+- [x] Carpetas y clavijeros verificados; pipeline completo idéntico al banco.
+- [x] `README.md` con badges, `git clone` y métricas comprobadas.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [ ] Redactar las 341 soluciones de la Regular 2025 (lotes en `.work/reg2025/`).
