@@ -9,7 +9,7 @@ import { ManimEmbed } from '@/components/manim/ManimEmbed'
 import { SubtopicNoteView } from '@/components/zettelkasten/SubtopicNoteView'
 import { cardLinksFor } from '@/data/flashcards/links'
 import { SUBJECTS } from '@/data/subjects'
-import { CROSS_LINKS, SUBTOPIC_OF_QUESTION, subtopicPdfHref, SUBTOPICS_BY_ID, TEMARIO_BY_SUBJECT } from '@/data/temario'
+import { CROSS_LINKS, SUBTOPIC_OF_QUESTION, subtopicPdfHref, SUBTOPICS_BY_ID, TEMARIO_BY_SUBJECT, TEMARIO_YEAR } from '@/data/temario'
 import { useSubtopicNotes } from '@/hooks/useSubtopicNotes'
 import { useExamRoute } from '@/hooks/useWorkspace'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
@@ -191,6 +191,9 @@ export function InspectorContent() {
             ) : info.context}
           </p>
           <h2 className="mt-0.5 text-[15px] leading-snug font-semibold tracking-tight">{info.title}</h2>
+          {info.sub?.retired && (
+            <p className="mt-1 text-[11.5px] text-zinc-500 dark:text-zinc-400">fuera del temario {TEMARIO_YEAR}: solo trae preguntas de pruebas anteriores</p>
+          )}
         </div>
         {info.sub && !running && (
           <Button size="sm" onClick={() => setDrillOpen(true)} disabled={!info.sub.questionCount}>Practicar</Button>

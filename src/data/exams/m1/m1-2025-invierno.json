@@ -240,7 +240,7 @@
   {
    "id": "m1-2025-invierno-q04",
    "number": 4,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "11 por 2 ¿Cuál de las siguientes desigualdades asegura que al multiplicar 6 3 11? se obtiene un número menor que 6\n\n11 2 <",
    "options": [
@@ -270,7 +270,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-ecuaciones",
    "explanation": {
     "kind": "solucion",
     "summary": "Multiplicar un número positivo por una fracción menor que $1$ produce un resultado más pequeño, y esa condición se reduce a comparar el factor $\\frac{2}{3}$ con $1$.",
@@ -343,7 +343,7 @@
   {
    "id": "m1-2025-invierno-q06",
    "number": 6,
-   "axis": "Números",
+   "axis": "Geometría",
    "topic": "Números",
    "stem": "Un juego consiste en lanzar cinco bolitas desde cierta distancia hacia los agujeros de una caja. Los puntajes se asignan según el agujero por el cual entra la bolita, como se presenta a continuación:\n\nCuando una bolita no ingresa en alguno de los agujeros, se repite el lanzamiento. El juego finaliza cuando todas las bolitas entran por uno de los agujeros, siendo el puntaje final la suma de los puntajes asignados por donde ingresó cada una de las bolitas.\n\nUna persona jugó este juego y se sabe que las bolitas ingresaron por los tres agujeros.\n\n¿Cuál de los siguientes puntajes corresponde al máximo puntaje que pudo haber obtenido la persona al finalizar el juego?",
    "options": [
@@ -373,7 +373,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-cuerpos",
    "explanation": {
     "kind": "solucion",
     "summary": "Para maximizar el puntaje hay que asignar las bolitas al agujero de mayor valor, pero cada agujero debe recibir al menos una bolita porque las tres fueron usadas.",
@@ -1062,7 +1062,7 @@
   {
    "id": "m1-2025-invierno-q20",
    "number": 20,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "¿Cuál de las siguientes expresiones representa una descomposición del número 12 056 ?\n\n3 2 1 0",
    "options": [
@@ -1092,7 +1092,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Cada cifra vale según su posición: en un número de cinco cifras, la primera vale $10^4$ y la última $10^0$.",
@@ -1266,7 +1266,7 @@
   {
    "id": "m1-2025-invierno-q24",
    "number": 24,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "¿Cuál de las siguientes expresiones es igual a x² + 5 x − 6 ?\n\n( )( )",
    "options": [
@@ -1296,7 +1296,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Para factorizar $x^2 + bx + c$ se buscan dos números cuya suma sea $b$ y cuyo producto sea $c$.",
@@ -1317,7 +1317,7 @@
   {
    "id": "m1-2025-invierno-q25",
    "number": 25,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "1 ¿Cuál de las siguientes expresiones es igual a ( − b − ( b − 2 ) + 2 ) ? 2",
    "options": [
@@ -1347,7 +1347,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Al quitar un paréntesis precedido de signo menos hay que cambiar el signo de cada término, y el factor $\\frac{1}{2}$ se aplica al final a todo el paréntesis.",
@@ -1368,7 +1368,7 @@
   {
    "id": "m1-2025-invierno-q26",
    "number": 26,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "A un paciente de 83 kg se le debe administrar una dosis de ,0 05 g de medicamento por cada kilogramo de masa corporal.\n\n¿Cuántos gramos de medicamento se le deben administrar al paciente?",
    "options": [
@@ -1500,7 +1500,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas",
+   "subtopic": "m1-cuerpos",
    "explanation": {
     "kind": "solucion",
     "summary": "De $r = \\frac{V}{t}$ se despeja $t = \\frac{V}{r}$, y como el resultado sale en horas se multiplica por $60$ para expresarlo en minutos.",
@@ -1521,7 +1521,7 @@
   {
    "id": "m1-2025-invierno-q29",
    "number": 29,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "Se coloca un cuadro en una pared, tal como se representa a continuación:\n\n¿Cuál es el valor de x?",
    "options": [
@@ -1551,7 +1551,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Los tramos a cada lado del cuadro, más el cuadro mismo, forman el largo total de la pared; para sumar, hay que expresar todo en la misma unidad.",
@@ -1572,7 +1572,7 @@
   {
    "id": "m1-2025-invierno-q30",
    "number": 30,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "La fórmula de Euler establece que para cierto tipo de poliedros se cumple la relación C + V = A + 2 , tal que C es la cantidad de caras, A es la cantidad de aristas y V es la cantidad de vértices del poliedro.\n\nSi un poliedro con 8 vértices y 18 aristas cumple con la fórmula de Euler, ¿cuántas caras tiene?",
    "options": [
@@ -1602,7 +1602,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-cuadratica",
    "explanation": {
     "kind": "solucion",
     "summary": "Se reemplazan los valores conocidos en la relación de Euler y se despeja la cantidad de caras.",
@@ -2031,7 +2031,7 @@
   {
    "id": "m1-2025-invierno-q39",
    "number": 39,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Funciones",
    "stem": "Gola y Colón son empresas de gasfitería que tienen distintas modalidades para cobrar por sus trabajos.\n\nGola cobra a sus clientes diez mil pesos por visita domiciliaria más quince mil por hora, lo cual se puede modelar por la función determinada por f () t = 10 000 + 15 000 t , tal que t corresponde a la cantidad de horas trabajadas.\n\nColón cobra un 30 % menos por visita domiciliaria y un 20 % más por hora en relación con lo que cobra Gola.\n\n¿Cuál de las siguientes funciones modela el cobro que realiza Colón por su trabajo, en términos de la cantidad t de horas trabajadas?\n\n()",
    "options": [
@@ -2061,7 +2061,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-expresiones",
+   "subtopic": "m1-porcentajes",
    "explanation": {
     "kind": "solucion",
     "summary": "Un cambio porcentual se aplica multiplicando por el factor $(1 \\pm p)$: un $30\\,\\%$ menos equivale a multiplicar por $0{,}7$ y un $20\\,\\%$ más equivale a multiplicar por $1{,}2$.",
@@ -2133,7 +2133,7 @@
   {
    "id": "m1-2025-invierno-q41",
    "number": 41,
-   "axis": "Probabilidad y estadística",
+   "axis": "Álgebra y funciones",
    "topic": "Probabilidad",
    "stem": "Una persona dispone de \\$ 12 000 en monedas de 100 \\$ y 500 \\$ , y en total tiene 36 monedas.\n\nPara saber cuántas monedas tiene de cada tipo, efectúa el siguiente desarrollo, cometiendo un error.\n\n**Paso 1:** considera que x es la cantidad de monedas de 100 \\$ e y es la cantidad de monedas de 500 \\$ , planteando el siguiente sistema de ecuaciones:\n\n100x + 500y = 12 000 x + y = 36\n\n**Paso 2:** multiplica la segunda ecuación por 100 − , obteniendo\n\n100x + 500y = 12 000 −100x + 100y = −3600\n\ny luego suma hacia abajo las ecuaciones, obteniendo y = 14 .\n\n**Paso 3:** reemplaza el resultado anterior en la ecuación x + y = 36 , obteniendo x = 22 .\n\n**Paso 4:** por último, concluye que tiene 14 monedas de 500 \\$ y 22 monedas de \\$ 100 .\n\n¿En cuál de los pasos se cometió el error?",
    "options": [
@@ -2214,7 +2214,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-triangulos",
+   "subtopic": "m1-areas",
    "explanation": {
     "kind": "solucion",
     "summary": "Con el área de un triángulo rectángulo se plantea una ecuación cuadrática en el cateto menor, que se resuelve por factorización.",
@@ -2235,7 +2235,7 @@
   {
    "id": "m1-2025-invierno-q43",
    "number": 43,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "Una persona ordena cajas, de un mismo tipo, en una bodega de tal manera que ubica una caja sobre otra y no deja espacios entre ellas, dejándolas perfectamente alineadas.\n\nEn la siguiente imagen se representan las cajas que se tienen ordenadas en la bodega.\n\n¿Cuántas cajas hay ordenadas en la bodega?",
    "options": [
@@ -2265,7 +2265,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Para contar cajas apiladas hay que sumar, columna por columna, cuántas cajas hay en cada posición del piso, incluidas las que quedan escondidas detrás de otras.",
@@ -2368,7 +2368,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas",
+   "subtopic": "m1-cuerpos",
    "explanation": {
     "kind": "solucion",
     "summary": "El volumen de un cuerpo compuesto se obtiene sumando los volúmenes de sus paralelepípedos, cada uno con sus propias dimensiones.",
@@ -2420,7 +2420,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas",
+   "subtopic": "m1-cuerpos",
    "explanation": {
     "kind": "solucion",
     "summary": "Al unir dos prismas por una cara lateral, esa cara deja de estar en la superficie exterior: se pierde una vez por cada prisma.",
@@ -2471,7 +2471,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-triangulos",
+   "subtopic": "m1-areas",
    "explanation": {
     "kind": "solucion",
     "summary": "Para comparar perímetros de triángulos rectángulos hay que calcular cada hipotenusa con el teorema de Pitágoras y sumar los tres lados.",
@@ -2574,7 +2574,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-triangulos",
+   "subtopic": "m1-areas",
    "explanation": {
     "kind": "solucion",
     "summary": "En un triángulo rectángulo isósceles, el área da el cuadrado del cateto y la hipotenusa es el cateto multiplicado por la raíz de dos.",
@@ -2647,7 +2647,7 @@
   {
    "id": "m1-2025-invierno-q51",
    "number": 51,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Razones",
    "stem": "Una tienda ubicada en una ciudad turística puso un anuncio en un terminal de buses para que los visitantes fueran a conocer la tienda. El anuncio mencionaba la forma de llegar desde una de las salidas del terminal: avance cinco cuadras hacia el norte y siete cuadras hacia el este, y tenía el siguiente dibujo:\n\nCon el paso del tiempo, la tienda ha tenido algunos cambios de ubicación, primero se movió tres cuadras hacia el sur y dos cuadras al este y después, diez cuadras al norte y tres al oeste. Por esta razón, han decidido hacer un nuevo anuncio que mencione cómo llegar desde la misma salida del terminal de buses.\n\n¿Cuál de las siguientes indicaciones pueden poner en el anuncio en el terminal de buses para que los turistas puedan llegar a la tienda?",
    "options": [
@@ -2899,7 +2899,7 @@
   {
    "id": "m1-2025-invierno-q56",
    "number": 56,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Proporcionalidad",
    "stem": "En la infografía adjunta se caracteriza a las personas mayores de 75 años de la región de Valparaíso.\n\n**¿Quiénes son las personas mayores de 75 años en la región de Valparaíso?**\n\n**Características de las personas mayores de 75 años en la región de Valparaíso**\n\nhombres\n\nmujeres\n\nAdaptado de Programa Conocimiento e Investigación en Personas Mayores (CIPEM), Caja los Héroes y Universidad del Desarrollo en base a datos de Encuesta CASEN 2017.\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
    "options": [

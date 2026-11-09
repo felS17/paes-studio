@@ -111,7 +111,7 @@
 \newcommand{\guiaTitulo}{Compendio de estudio}
 \newcommand{\guiaAsignatura}{Competencia Matemática 1 (M1)}
 \newcommand{\guiaDescripcion}{La prueba M1 evalúa la resolución de problemas, la modelación, la representación y la argumentación con los contenidos de 7.º básico a 2.º medio. Tiene 65 preguntas de 4 alternativas y dura 2 h 20 min.}
-\newcommand{\guiaFuente}{4 ejes y 15 subtemas. Frecuencias calculadas sobre 7 ensayos (6 oficiales DEMRE), 390 preguntas. Generado el 1 de noviembre de 2026.}
+\newcommand{\guiaFuente}{4 ejes y 16 subtemas. Frecuencias calculadas sobre 8 ensayos (7 oficiales DEMRE), 435 preguntas. Generado el 8 de noviembre de 2026.}
 %%</META>%%
 
 \begin{document}
@@ -142,13 +142,13 @@ Distribución de las preguntas por eje en los ensayos disponibles en PAES Studio
 
 \toprule Eje & Preg. & \% & \\ \midrule
 
-Números & 178 & 46 & \barra{0.100} \\
+Números & 141 & 32 & \barra{0.071} \\
 
-Probabilidad y estadística & 94 & 24 & \barra{0.053} \\
+Probabilidad y estadística & 101 & 23 & \barra{0.051} \\
 
-Geometría & 79 & 20 & \barra{0.045} \\
+Álgebra y funciones & 99 & 23 & \barra{0.050} \\
 
-Álgebra y funciones & 39 & 10 & \barra{0.022} \\
+Geometría & 94 & 22 & \barra{0.048} \\
 
 \bottomrule
 
@@ -156,11 +156,11 @@ Geometría & 79 & 20 & \barra{0.045} \\
 
 \end{center}
 
-\begin{dato}Números y Probabilidad y estadística concentran el 70 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
+\begin{dato}Números y Probabilidad y estadística concentran el 56 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
 
 \section{Números}
 
-{\itshape\color{zinc700} Operatoria en los conjuntos numéricos, porcentajes, potencias, raíces y proporcionalidad.}
+{\itshape\color{zinc700} Enteros y racionales, porcentaje, potencias y raíces.}
 
 \subsection{Números enteros y racionales}
 
@@ -231,12 +231,15 @@ Decimal periódico: $0{,}\overline{3}=\dfrac{3}{9}=\dfrac{1}{3}$ y $0{,}1\overli
 \alternativa{C}{$\dfrac{2}{9}$}
 \alternativa{D}{$\dfrac{8}{9}$}
 \clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Respeta la prioridad de operaciones: primero la multiplicación y después la resta.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Antes de restar hay que multiplicar: la prioridad de operaciones obliga a calcular primero el producto de fracciones y recién después la diferencia con $\dfrac{2}{3}$.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Multiplica: $\dfrac{1}{4}\cdot\dfrac{8}{9} = \dfrac{8}{36} = \dfrac{2}{9}$.
-  \item Escribe $\dfrac{2}{3}$ con denominador 9: $\dfrac{2}{3} = \dfrac{6}{9}$.
-  \item Resta: $\dfrac{6}{9} - \dfrac{2}{9} = \dfrac{4}{9}$.
+  \item La prioridad de operaciones exige multiplicar antes de restar, así que primero se calcula $\dfrac{1}{4}\cdot\dfrac{8}{9}$.
+  \item Al multiplicar fracciones se multiplican los numeradores entre sí y los denominadores entre sí: $\dfrac{1}{4}\cdot\dfrac{8}{9} = \dfrac{1\cdot 8}{4\cdot 9} = \dfrac{8}{36}$.
+  \item Se simplifica dividiendo numerador y denominador por $4$: $\dfrac{8}{36} = \dfrac{2}{9}$.
+  \item Ahora la expresión queda $\dfrac{2}{3} - \dfrac{2}{9}$. Para restar, ambas fracciones deben tener el mismo denominador; $\dfrac{2}{3}$ se escribe con denominador $9$ amplificando numerador y denominador por $3$: $\dfrac{2}{3} = \dfrac{6}{9}$.
+  \item Con denominador común se restan los numeradores y se conserva el denominador: $\dfrac{6}{9} - \dfrac{2}{9} = \dfrac{6-2}{9} = \dfrac{4}{9}$.
+  \item Comprobación: $\dfrac{4}{9}\approx 0{,}44$ es menor que $\dfrac{2}{3}\approx 0{,}67$, como corresponde a restar un valor positivo. Por lo tanto, la alternativa correcta es la A.
 \end{enumerate}
 \end{ejemplo}
 
@@ -248,16 +251,19 @@ Decimal periódico: $0{,}\overline{3}=\dfrac{3}{9}=\dfrac{1}{3}$ y $0{,}1\overli
 \alternativa{C}{$4$}
 \alternativa{D}{$16$}
 \clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Escribe todas las potencias en la misma base (2) y opera con los exponentes.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Todas las potencias se escriben como potencias de $2$ para poder operar con los exponentes.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Como $4 = 2^2$ y $8 = 2^3$: $4^3 = (2^2)^3 = 2^6$ y $8^3 = (2^3)^3 = 2^9$.
-  \item Multiplicación de igual base, se suman exponentes: $2^5\cdot 2^6 = 2^{11}$.
-  \item División de igual base, se restan exponentes: $\dfrac{2^{11}}{2^{9}} = 2^{2} = 4$.
+  \item Escribe las bases como potencias de $2$: $4 = 2^2$ y $8 = 2^3$.
+  \item Eleva cada potencia a su exponente, aplicando la regla de potencia de potencia, que multiplica los exponentes: $4^3 = (2^2)^3 = 2^{2\cdot 3} = 2^6$ y $8^3 = (2^3)^3 = 2^{3\cdot 3} = 2^9$.
+  \item Reemplaza en la expresión: $\dfrac{2^5\cdot 2^6}{2^9}$.
+  \item En el numerador, por producto de potencias de igual base se suman los exponentes: $2^5\cdot 2^6 = 2^{5+6} = 2^{11}$.
+  \item En el cuociente, por división de potencias de igual base se restan los exponentes: $\dfrac{2^{11}}{2^{9}} = 2^{11-9} = 2^{2}$.
+  \item Finalmente $2^2 = 4$. Comprobación directa: $2^5 = 32$, $4^3 = 64$ y $8^3 = 512$, luego $\dfrac{32\cdot 64}{512} = \dfrac{2048}{512} = 4$. Por lo tanto, la alternativa correcta es la C.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Porcentajes y problemas con dinero}
+\subsection{Porcentaje}
 
 Un porcentaje es una razón con denominador 100: el $p\,\%$ de $x$ es $\frac{p}{100}\cdot x$. Aumentar un valor en un $p\,\%$ equivale a multiplicarlo por $\left(1+\frac{p}{100}\right)$, y disminuirlo, por $\left(1-\frac{p}{100}\right)$.
 
@@ -324,12 +330,14 @@ Una zapatilla cuesta \$40 000. En marzo su precio sube un 20 \% y en abril el nu
 \alternativa{C}{\$32 000}
 \alternativa{D}{\$48 000}
 \clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Los porcentajes sucesivos se aplican sobre el precio vigente en cada momento, por eso se multiplican sus factores.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Los porcentajes sucesivos se aplican cada uno sobre el precio vigente en ese momento; por eso los factores se multiplican y no se suman ni se cancelan.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Subir un 20 \% equivale a multiplicar por $1{,}2$: $40\,000\cdot 1{,}2 = 48\,000$.
-  \item Bajar un 20 \% equivale a multiplicar por $0{,}8$: $48\,000\cdot 0{,}8 = 38\,400$.
-  \item En una sola cuenta: $40\,000\cdot 1{,}2\cdot 0{,}8 = 40\,000\cdot 0{,}96 = 38\,400$. El precio final es un 4 \% menor que el inicial.
+  \item Un aumento de $20\,\%$ deja el precio en el $120\,\%$ del valor anterior, así que el factor es $1{,}2$. En marzo: $40\,000\cdot 1{,}2 = 48\,000$ pesos.
+  \item Una rebaja de $20\,\%$ deja el precio en el $80\,\%$ del valor vigente, así que el factor es $0{,}8$. Como la rebaja se aplica sobre el precio de marzo: $48\,000\cdot 0{,}8 = 38\,400$ pesos.
+  \item En una sola cuenta, por la propiedad asociativa del producto: $40\,000\cdot 1{,}2\cdot 0{,}8 = 40\,000\cdot 0{,}96 = 38\,400$ pesos.
+  \item La subida agregó $8\,000$ pesos ($40\,000\cdot 0{,}2$) y la rebaja quitó $9\,600$ pesos ($48\,000\cdot 0{,}2$). Así, $40\,000 + 8\,000 - 9\,600 = 38\,400$ pesos, un $4\,\%$ menos que el precio inicial.
+  \item Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
@@ -405,15 +413,95 @@ a^m\cdot a^n=a^{m+n} \\
 \alternativa{C}{$8\sqrt{2}$}
 \alternativa{D}{$2\sqrt{2}$}
 \clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Solo se pueden restar raíces semejantes (mismo índice y misma cantidad subradical), así que primero se simplifican.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Las raíces solo se pueden sumar o restar cuando son semejantes; para eso hay que simplificar cada radical extrayendo el máximo cuadrado perfecto.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Descompón: $\sqrt{50} = \sqrt{25\cdot 2} = 5\sqrt{2}$ y $\sqrt{18} = \sqrt{9\cdot 2} = 3\sqrt{2}$.
-  \item Resta los coeficientes de las raíces semejantes: $5\sqrt{2} - 3\sqrt{2} = 2\sqrt{2}$.
+  \item Busca el mayor cuadrado perfecto que divide a $50$: $50 = 25\cdot 2$, con $25 = 5^2$. Por la propiedad de la raíz de un producto, $\sqrt{ab} = \sqrt{a}\cdot\sqrt{b}$, se obtiene $\sqrt{50} = \sqrt{25}\cdot\sqrt{2} = 5\sqrt{2}$.
+  \item Haz lo mismo con $18$: $18 = 9\cdot 2$, con $9 = 3^2$, así que $\sqrt{18} = \sqrt{9}\cdot\sqrt{2} = 3\sqrt{2}$.
+  \item Reemplaza en la expresión original: $\sqrt{50} - \sqrt{18} = 5\sqrt{2} - 3\sqrt{2}$.
+  \item Ahora ambos términos son radicales semejantes (mismo índice y misma cantidad subradical $2$), así que se factoriza la raíz común por la propiedad distributiva: $5\sqrt{2} - 3\sqrt{2} = (5 - 3)\sqrt{2}$.
+  \item Efectúa la resta de coeficientes: $(5-3)\sqrt{2} = 2\sqrt{2}$.
+  \item Comprobación numérica: $\sqrt{50}\approx 7{,}07$ y $\sqrt{18}\approx 4{,}24$, cuya diferencia es $\approx 2{,}83$, y $2\sqrt{2}\approx 2{,}83$. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Razones y proporcionalidad}
+\section{Álgebra y funciones}
+
+{\itshape\color{zinc700} Expresiones algebraicas, proporcionalidad, ecuaciones, sistemas y funciones afín y cuadrática.}
+
+\subsection{Expresiones algebraicas}
+
+Una expresión algebraica combina números y letras con operaciones. Los términos semejantes (misma parte literal) se suman sumando sus coeficientes. Los productos notables permiten desarrollar rápido y, leídos al revés, factorizar.
+
+Factorizar es escribir una expresión como producto. Primero se busca un factor común; después se reconoce un producto notable o un trinomio $x^2+bx+c$, que se factoriza buscando dos números cuyo producto sea $c$ y cuya suma sea $b$.
+
+\begin{formula}[Productos notables]
+\begin{gather*}
+(a\pm b)^2=a^2\pm 2ab+b^2 \\
+(a+b)(a-b)=a^2-b^2 \\
+(x+p)(x+q)=x^2+(p+q)x+pq
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Primero el factor común: $6x^2-9x=3x(2x-3)$.
+  \item Diferencia de cuadrados: $x^2-49=(x+7)(x-7)$.
+  \item $(a+b)^2\neq a^2+b^2$: falta el término $2ab$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Busca un factor común numérico y literal.
+  \item Cuenta los términos: dos sugieren diferencia de cuadrados; tres, cuadrado de binomio o trinomio $x^2+bx+c$.
+  \item Comprueba multiplicando los factores obtenidos.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Olvidar el doble producto en $(a+b)^2$.
+  \item Equivocar los signos al sacar un factor negativo: $-x+3=-(x-3)$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes expresiones es equivalente a $4x^2-25$?
+\alternativa{A}{$(2x-5)^2$}
+\alternativa{B}{$(2x+5)(2x-5)$}
+\alternativa{C}{$(4x-5)(x+5)$}
+\alternativa{D}{$(2x-25)(2x+1)$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Son dos cuadrados perfectos restados: $(2x)^2-5^2$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $4x^2=(2x)^2$ y $25=5^2$.
+  \item Diferencia de cuadrados: $(2x)^2-5^2=(2x+5)(2x-5)$.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Factorización]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Cuál de las siguientes expresiones es equivalente a $x^2 - 9x + 20$?
+\alternativa{A}{$(x-4)(x-5)$}
+\alternativa{B}{$(x+4)(x+5)$}
+\alternativa{C}{$(x-2)(x-10)$}
+\alternativa{D}{$(x+2)(x-10)$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Para factorizar un trinomio $x^2 + bx + c$ se buscan dos números cuyo producto sea $c$ y cuya suma sea $b$.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Identifica el trinomio con $b = -9$ y $c = 20$. Como $c$ es positivo, los dos números tienen el mismo signo; como $b$ es negativo, ambos son negativos.
+  \item Busca pares de factores negativos de $20$: $(-1)(-20)$ suma $-21$; $(-2)(-10)$ suma $-12$; $(-4)(-5)$ suma $-9$.
+  \item Los números buscados son $-4$ y $-5$, porque $(-4)\cdot(-5) = 20$ y $-4 + (-5) = -9$.
+  \item Por lo tanto $x^2 - 9x + 20 = (x-4)(x-5)$.
+  \item Comprobación por propiedad distributiva: $(x-4)(x-5) = x\cdot x - 5x - 4x + 20 = x^2 - 9x + 20$, que coincide con la expresión original. Por lo tanto, la alternativa correcta es la A.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Proporcionalidad directa e inversa}
 
 Dos magnitudes son directamente proporcionales si su cociente es constante ($\frac{y}{x}=k$): al duplicar una, la otra se duplica. Son inversamente proporcionales si su producto es constante ($xy=k$): al duplicar una, la otra se reduce a la mitad.
 
@@ -486,85 +574,15 @@ Si 6 personas pintan una casa en 10 días, ¿cuántos días tardarían 4 persona
 \alternativa{C}{15 días}
 \alternativa{D}{20 días}
 \clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Menos personas tardan más días: es una proporcionalidad inversa, donde el producto se mantiene constante.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Es proporcionalidad inversa: al reducir las personas, el tiempo aumenta en la misma razón, porque el producto personas por días (el trabajo total) se mantiene constante.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item El trabajo total es $6\cdot 10 = 60$ días-persona.
-  \item Con 4 personas: $4\cdot d = 60 \Rightarrow d = 15$ días.
-\end{enumerate}
-\end{ejemplo}
-
-\section{Álgebra y funciones}
-
-{\itshape\color{zinc700} Expresiones algebraicas, ecuaciones, sistemas y funciones afín y cuadrática.}
-
-\subsection{Expresiones algebraicas y factorización}
-
-Una expresión algebraica combina números y letras con operaciones. Los términos semejantes (misma parte literal) se suman sumando sus coeficientes. Los productos notables permiten desarrollar rápido y, leídos al revés, factorizar.
-
-Factorizar es escribir una expresión como producto. Primero se busca un factor común; después se reconoce un producto notable o un trinomio $x^2+bx+c$, que se factoriza buscando dos números cuyo producto sea $c$ y cuya suma sea $b$.
-
-\begin{formula}[Productos notables]
-\begin{gather*}
-(a\pm b)^2=a^2\pm 2ab+b^2 \\
-(a+b)(a-b)=a^2-b^2 \\
-(x+p)(x+q)=x^2+(p+q)x+pq
-\end{gather*}
-\end{formula}
-
-\begin{ideasclave}
-\begin{itemize}
-  \item Primero el factor común: $6x^2-9x=3x(2x-3)$.
-  \item Diferencia de cuadrados: $x^2-49=(x+7)(x-7)$.
-  \item $(a+b)^2\neq a^2+b^2$: falta el término $2ab$.
-\end{itemize}
-\end{ideasclave}
-
-\begin{metodo}
-\begin{enumerate}
-  \item Busca un factor común numérico y literal.
-  \item Cuenta los términos: dos sugieren diferencia de cuadrados; tres, cuadrado de binomio o trinomio $x^2+bx+c$.
-  \item Comprueba multiplicando los factores obtenidos.
-\end{enumerate}
-\end{metodo}
-
-\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
-\begin{itemize}
-  \item Olvidar el doble producto en $(a+b)^2$.
-  \item Equivocar los signos al sacar un factor negativo: $-x+3=-(x-3)$.
-\end{itemize}
-\end{errorfrecuente}
-
-\begin{ejemplo}[Ejemplo resuelto]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-¿Cuál de las siguientes expresiones es equivalente a $4x^2-25$?
-\alternativa{A}{$(2x-5)^2$}
-\alternativa{B}{$(2x+5)(2x-5)$}
-\alternativa{C}{$(4x-5)(x+5)$}
-\alternativa{D}{$(2x-25)(2x+1)$}
-\clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Son dos cuadrados perfectos restados: $(2x)^2-5^2$.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item $4x^2=(2x)^2$ y $25=5^2$.
-  \item Diferencia de cuadrados: $(2x)^2-5^2=(2x+5)(2x-5)$.
-\end{enumerate}
-\end{ejemplo}
-
-\begin{ejemplo}[Ejemplo tipo PAES 2: Factorización]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-¿Cuál de las siguientes expresiones es equivalente a $x^2 - 9x + 20$?
-\alternativa{A}{$(x-4)(x-5)$}
-\alternativa{B}{$(x+4)(x+5)$}
-\alternativa{C}{$(x-2)(x-10)$}
-\alternativa{D}{$(x+2)(x-10)$}
-\clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Para factorizar $x^2 + bx + c$ se buscan dos números que multiplicados den $c$ y sumados den $b$.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item Se buscan dos números cuyo producto sea $20$ y cuya suma sea $-9$: son $-4$ y $-5$.
-  \item Por lo tanto $x^2 - 9x + 20 = (x-4)(x-5)$.
-  \item Comprobación: $(x-4)(x-5) = x^2 - 5x - 4x + 20 = x^2 - 9x + 20$.
+  \item Identifica la relación: si hay menos personas, cada una pinta más y la casa necesita más días. Como el número de personas y el tiempo varían en sentido contrario, es una proporcionalidad inversa.
+  \item En una proporcionalidad inversa, el producto $n\cdot d$ (personas por días) es constante, y mide el trabajo total en días-persona.
+  \item Calcula el trabajo total con los datos conocidos: $6\cdot 10 = 60$ días-persona.
+  \item Plantea la misma constante con 4 personas: $4\cdot d = 60$.
+  \item Despeja el tiempo dividiendo ambos lados por $4$: $d = \dfrac{60}{4} = 15$ días.
+  \item Comprobación: $4\cdot 15 = 60$, igual al trabajo total. Además, 15 días es más que 10, como corresponde a menos trabajadores. Por lo tanto, la alternativa correcta es la C.
 \end{enumerate}
 \end{ejemplo}
 
@@ -634,9 +652,11 @@ La suma de tres números enteros consecutivos es 72. ¿Cuál es el mayor de ello
 {\sffamily\footnotesize\color{zinc500} Análisis}\par Al multiplicar o dividir una desigualdad por un número negativo, el sentido de la desigualdad se invierte.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Resta 5 a ambos lados: $-2x \le 6$.
-  \item Divide por $-2$ e invierte el signo: $x \ge -3$.
-  \item Comprobación con $x = 0$ (que cumple $x \ge -3$): $5 - 0 = 5 \le 11$. Verdadero.
+  \item Resta $5$ en ambos lados para aislar el término con $x$: $5 - 2x - 5 \le 11 - 5$, es decir, $-2x \le 6$.
+  \item Divide ambos lados por $-2$, que es negativo. Como dividir por un número negativo invierte el sentido de la desigualdad, el signo $\le$ pasa a $\ge$.
+  \item Calcula los cocientes: $\dfrac{-2x}{-2} = x$ y $\dfrac{6}{-2} = -3$. Así, $x \ge -3$.
+  \item Comprobación con un valor de la solución: $x = 0$ cumple $x \ge -3$, y $5 - 2\cdot 0 = 5 \le 11$ es verdadero.
+  \item Comprobación con un valor fuera de la solución: $x = -4$ no cumple $x \ge -3$, y $5 - 2(-4) = 13 \le 11$ es falso. Esto confirma que el sentido invertido es el correcto. Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
@@ -698,12 +718,14 @@ En una librería, 2 cuadernos y 3 lápices cuestan \$5400, y 1 cuaderno y 2 láp
 \alternativa{C}{$x = -1$}
 \alternativa{D}{$x = 11$}
 \clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Distribuye el 3 en el paréntesis y luego agrupa los términos con $x$ en un lado.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Se resuelve una ecuación lineal: primero se distribuye el paréntesis y luego se agrupan los términos con $x$ en un lado y los números en el otro.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Distribuye: $3x - 6 = 2x + 5$.
-  \item Resta $2x$ a ambos lados: $x - 6 = 5$.
-  \item Suma 6: $x = 11$. Comprobación: $3(11-2) = 27$ y $2\cdot 11 + 5 = 27$.
+  \item Aplica la propiedad distributiva: el $3$ multiplica a $x$ y también a $-2$, así que $3(x-2) = 3x - 6$. La ecuación queda $3x - 6 = 2x + 5$.
+  \item Para juntar los términos con $x$, resta $2x$ en ambos lados, lo que mantiene la igualdad: $3x - 2x - 6 = 2x - 2x + 5$.
+  \item Simplifica cada lado: $x - 6 = 5$.
+  \item Para aislar $x$, suma $6$ en ambos lados: $x - 6 + 6 = 5 + 6$, de donde $x = 11$.
+  \item Comprobación en la ecuación original: el lado izquierdo es $3(11-2) = 3\cdot 9 = 27$ y el derecho es $2\cdot 11 + 5 = 27$. Ambos coinciden. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
@@ -715,12 +737,16 @@ En un taller de robótica hay 12 estudiantes. Si hay 4 mujeres más que hombres,
 \alternativa{C}{8}
 \alternativa{D}{10}
 \clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Dos condiciones, dos incógnitas: plantea un sistema y resuélvelo por reducción.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Son dos condiciones con dos incógnitas: se plantea un sistema de ecuaciones lineales y se resuelve, por ejemplo, por reducción.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Sean $m$ las mujeres y $h$ los hombres: $m + h = 12$ y $m - h = 4$.
-  \item Suma ambas ecuaciones: $2m = 16 \Rightarrow m = 8$.
-  \item Entonces $h = 12 - 8 = 4$; efectivamente hay 4 mujeres más que hombres.
+  \item Define las incógnitas: $m$ es el número de mujeres y $h$ el número de hombres.
+  \item La primera condición es el total: $m + h = 12$.
+  \item La segunda condición es la diferencia: hay $4$ mujeres más que hombres, así que $m = h + 4$, que equivale a $m - h = 4$.
+  \item Resuelve por reducción: suma ambas ecuaciones para eliminar $h$, obteniendo $(m + h) + (m - h) = 12 + 4$, es decir, $2m = 16$.
+  \item Despeja: $m = \dfrac{16}{2} = 8$.
+  \item Obtén $h$ reemplazando en la primera ecuación: $8 + h = 12$, luego $h = 4$.
+  \item Comprobación: $8 + 4 = 12$ estudiantes y $8 - 4 = 4$ mujeres más que hombres. Ambas condiciones se cumplen. Por lo tanto, la alternativa correcta es la C.
 \end{enumerate}
 \end{ejemplo}
 
@@ -836,12 +862,14 @@ El gráfico de la función $f(x) = mx + n$ pasa por los puntos $(1, 3)$ y $(3, 7
 \alternativa{C}{$13$}
 \alternativa{D}{$15$}
 \clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Con dos puntos se calcula la pendiente; con ella y un punto, el coeficiente de posición.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con dos puntos de una recta se obtiene la pendiente $m$ y luego el coeficiente de posición $n$; con la función completa se evalúa en el punto pedido.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Pendiente: $m = \dfrac{7-3}{3-1} = \dfrac{4}{2} = 2$.
-  \item Usando $(1,3)$: $3 = 2\cdot 1 + n \Rightarrow n = 1$. Así, $f(x) = 2x + 1$.
-  \item Evalúa: $f(5) = 2\cdot 5 + 1 = 11$.
+  \item Calcula la pendiente con la fórmula $m = \dfrac{y_2 - y_1}{x_2 - x_1}$, usando $(1,3)$ y $(3,7)$: $m = \dfrac{7-3}{3-1} = \dfrac{4}{2} = 2$.
+  \item Reemplaza la pendiente y el punto $(1,3)$ en $y = mx + n$: $3 = 2\cdot 1 + n$.
+  \item Despeja $n$ restando $2$ en ambos lados: $n = 3 - 2 = 1$. Entonces $f(x) = 2x + 1$.
+  \item Verifica con el segundo punto: $f(3) = 2\cdot 3 + 1 = 7$, que coincide con la ordenada dada. Así la función queda bien determinada.
+  \item Evalúa en el valor pedido: $f(5) = 2\cdot 5 + 1 = 10 + 1 = 11$. Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
@@ -856,32 +884,38 @@ El gráfico de la función $f(x) = mx + n$ pasa por los puntos $(1, 3)$ y $(3, 7
 {\sffamily\footnotesize\color{zinc500} Análisis}\par La abscisa del vértice de $ax^2 + bx + c$ es $x_v = -\dfrac{b}{2a}$; la ordenada se obtiene evaluando la función en ese valor.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Aquí $a = 1$ y $b = -4$: $x_v = -\dfrac{-4}{2\cdot 1} = 2$.
-  \item $f(2) = 2^2 - 4\cdot 2 + 3 = 4 - 8 + 3 = -1$.
-  \item El vértice es $(2, -1)$. Como $a > 0$, es el punto mínimo de la parábola.
+  \item Identifica los coeficientes: $a = 1$, $b = -4$ y $c = 3$.
+  \item Calcula la abscisa con $x_v = -\dfrac{b}{2a}$: $x_v = -\dfrac{-4}{2\cdot 1} = \dfrac{4}{2} = 2$. El signo menos de la fórmula cancela el signo negativo de $b$.
+  \item Calcula la ordenada evaluando $f$ en $x = 2$: $f(2) = 2^2 - 4\cdot 2 + 3$.
+  \item Efectúa las operaciones respetando su orden: $f(2) = 4 - 8 + 3 = -4 + 3 = -1$.
+  \item Por lo tanto, el vértice es $(2, -1)$. Como $a = 1 > 0$, la parábola abre hacia arriba y el vértice es su punto mínimo.
+  \item Comprobación: la simetría respecto de $x = 2$ implica que $f(0) = 3 = f(4)$, y el vértice debe quedar justo en el medio de esos dos puntos. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
 \section{Geometría}
 
-{\itshape\color{zinc700} Medición, teorema de Pitágoras, semejanza y transformaciones en el plano.}
+{\itshape\color{zinc700} Figuras y cuerpos geométricos, transformaciones isométricas y semejanza.}
 
-\subsection{Perímetros, áreas y volúmenes}
+\subsection{Figuras geométricas: Pitágoras, perímetros y áreas}
 
-El perímetro es la longitud del contorno; el área, la medida de la superficie; el volumen, el espacio que ocupa un cuerpo. Las figuras compuestas se descomponen en figuras conocidas, sumando o restando sus áreas.
+El perímetro es la longitud del contorno y el área, la medida de la superficie. Las figuras compuestas se descomponen en triángulos, paralelogramos, trapecios y círculos, sumando o restando sus áreas.
 
-Al multiplicar todas las longitudes por $k$, el perímetro se multiplica por $k$, el área por $k^2$ y el volumen por $k^3$.
+En un triángulo rectángulo, el lado opuesto al ángulo recto es la hipotenusa y cumple el teorema de Pitágoras: $a^2+b^2=c^2$. Sirve para hallar diagonales, alturas y distancias que faltan antes de calcular un área o un perímetro.
 
 \begin{formula}[Fórmulas]
-Rectángulo: $A=b\cdot h$. Triángulo: $A=\dfrac{b\cdot h}{2}$. Círculo: $A=\pi r^2$, $P=2\pi r$.
+Triángulo: $A=\dfrac{b\cdot h}{2}$. Paralelogramo: $A=b\cdot h$. Trapecio: $A=\dfrac{(a+c)\,h}{2}$. Círculo: $A=\pi r^2$, $P=2\pi r$.
 
-Prisma y cilindro: $V=A_{\text{base}}\cdot h$ (cilindro: $V=\pi r^2h$). Cubo: $V=a^3$. Cono: $V=\dfrac{\pi r^2h}{3}$.
+\begin{gather*}
+a^2+b^2=c^2 \\
+\text{tríos: } (3,4,5),\ (5,12,13),\ (8,15,17)
+\end{gather*}
 \end{formula}
 
 \begin{ideasclave}
 \begin{itemize}
-  \item Descompón figuras compuestas antes de calcular.
-  \item Revisa unidades: $1\ \text{m}^3=1000$ litros.
+  \item La hipotenusa es el lado mayor del triángulo rectángulo.
+  \item Los múltiplos de un trío pitagórico también lo son: (6, 8, 10).
   \item Diámetro $=2\cdot$ radio.
 \end{itemize}
 \end{ideasclave}
@@ -889,8 +923,8 @@ Prisma y cilindro: $V=A_{\text{base}}\cdot h$ (cilindro: $V=\pi r^2h$). Cubo: $V
 \begin{metodo}
 \begin{enumerate}
   \item Dibuja o marca las medidas conocidas.
-  \item Elige la fórmula según la figura o cuerpo y verifica las unidades.
-  \item Suma o resta las partes de la figura compuesta.
+  \item Si falta un lado, búscalo con Pitágoras en un triángulo rectángulo de la figura.
+  \item Elige la fórmula según la figura y suma o resta las partes de la figura compuesta.
 \end{enumerate}
 \end{metodo}
 
@@ -898,79 +932,7 @@ Prisma y cilindro: $V=A_{\text{base}}\cdot h$ (cilindro: $V=\pi r^2h$). Cubo: $V
 \begin{itemize}
   \item Usar el diámetro como radio.
   \item Confundir área con perímetro.
-  \item Olvidar dividir por 2 el área del triángulo.
-\end{itemize}
-\end{errorfrecuente}
-
-\begin{ejemplo}[Ejemplo resuelto]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-Un estanque cilíndrico tiene 2 m de radio y 1,5 m de altura. Considerando $\pi\approx 3$, ¿cuál es su volumen?
-\alternativa{A}{$9\ \text{m}^3$}
-\alternativa{B}{$12\ \text{m}^3$}
-\alternativa{C}{$18\ \text{m}^3$}
-\alternativa{D}{$36\ \text{m}^3$}
-\clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Volumen del cilindro: área de la base por la altura.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item Base: $\pi r^2\approx 3\cdot 4=12\ \text{m}^2$.
-  \item $V\approx 12\cdot 1{,}5=18\ \text{m}^3$.
-\end{enumerate}
-\end{ejemplo}
-
-\begin{ejemplo}[Ejemplo tipo PAES 2: Áreas compuestas]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-A un rectángulo de 8 cm de largo y 5 cm de ancho se le recorta un semicírculo cuyo diámetro es uno de los lados de 8 cm. ¿Cuál es el área, en $\text{cm}^2$, de la figura que queda?
-\alternativa{A}{$40 - 4\pi$}
-\alternativa{B}{$40 - 16\pi$}
-\alternativa{C}{$26 - 8\pi$}
-\alternativa{D}{$40 - 8\pi$}
-\clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Área de la figura = área del rectángulo $-$ área del semicírculo.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item Rectángulo: $8\cdot 5 = 40\ \text{cm}^2$.
-  \item El diámetro mide 8 cm, así que el radio es $r = 4$ cm (cabe dentro del ancho de 5 cm).
-  \item Semicírculo: $\dfrac{\pi r^2}{2} = \dfrac{16\pi}{2} = 8\pi\ \text{cm}^2$.
-  \item Área restante: $40 - 8\pi\ \text{cm}^2$.
-\end{enumerate}
-\end{ejemplo}
-
-\subsection{Triángulos, Pitágoras y semejanza}
-
-Los ángulos interiores de un triángulo suman $180^\circ$. En un triángulo rectángulo, el lado opuesto al ángulo recto es la hipotenusa y cumple el teorema de Pitágoras.
-
-Dos triángulos son semejantes si tienen sus ángulos iguales; entonces sus lados correspondientes son proporcionales. El teorema de Thales permite calcular longitudes cuando hay rectas paralelas cortadas por secantes.
-
-\begin{formula}[Relaciones clave]
-\begin{gather*}
-a^2+b^2=c^2 \\
-\text{tríos: } (3,4,5),\ (5,12,13),\ (8,15,17)
-\end{gather*}
-
-Si la razón de semejanza es $k$, las áreas están en razón $k^2$.
-\end{formula}
-
-\begin{ideasclave}
-\begin{itemize}
-  \item La hipotenusa es el lado mayor.
-  \item Los múltiplos de un trío pitagórico también lo son: (6, 8, 10).
-  \item Sombras a la misma hora $\Rightarrow$ triángulos semejantes.
-\end{itemize}
-\end{ideasclave}
-
-\begin{metodo}
-\begin{enumerate}
-  \item Identifica el ángulo recto y la hipotenusa.
-  \item Plantea Pitágoras o la proporción entre lados correspondientes.
-  \item Verifica que la hipotenusa resulte mayor que los catetos.
-\end{enumerate}
-\end{metodo}
-
-\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
-\begin{itemize}
-  \item Sumar los cuadrados cuando la incógnita es un cateto.
-  \item Emparejar lados que no se corresponden en la semejanza.
+  \item Sumar los cuadrados cuando la incógnita es un cateto: ahí se restan.
 \end{itemize}
 \end{errorfrecuente}
 
@@ -998,31 +960,91 @@ Una escalera de 5 m de largo está apoyada en una pared vertical y su extremo su
 \alternativa{C}{9 m}
 \alternativa{D}{3 m}
 \clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Pared, suelo y escalera forman un triángulo rectángulo cuya hipotenusa es la escalera.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Pared, suelo y escalera forman un triángulo rectángulo cuya hipotenusa es la escalera; con el teorema de Pitágoras se obtiene la distancia en el suelo.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Por Pitágoras: $d^2 + 4^2 = 5^2$.
-  \item $d^2 = 25 - 16 = 9 \Rightarrow d = 3$ m.
+  \item Dibuja el triángulo: la pared es un cateto vertical de $4$ m, el suelo es el otro cateto de longitud $d$ y la escalera es la hipotenusa de $5$ m.
+  \item Por el teorema de Pitágoras, en un triángulo rectángulo el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos: $5^2 = d^2 + 4^2$.
+  \item Reemplaza: $25 = d^2 + 16$.
+  \item Despeja $d^2$ restando $16$ en ambos lados: $d^2 = 25 - 16 = 9$.
+  \item Extrae la raíz cuadrada positiva, porque una distancia no es negativa: $d = \sqrt{9} = 3$ m.
+  \item Comprobación: $3^2 + 4^2 = 9 + 16 = 25 = 5^2$. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
-\begin{ejemplo}[Ejemplo tipo PAES 3: Semejanza]
+\begin{ejemplo}[Ejemplo tipo PAES 3: Áreas compuestas]
 {\sffamily\footnotesize\color{zinc500} Enunciado}\par
-A cierta hora, una persona de 1,5 m de estatura proyecta una sombra de 2 m. A la misma hora, un árbol proyecta una sombra de 12 m. ¿Cuál es la altura del árbol?
-\alternativa{A}{8 m}
-\alternativa{B}{9 m}
-\alternativa{C}{10,5 m}
-\alternativa{D}{16 m}
-\clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Los rayos del sol llegan paralelos: persona y árbol forman triángulos semejantes, así que la razón altura/sombra es la misma.
+A un rectángulo de 8 cm de largo y 5 cm de ancho se le recorta un semicírculo cuyo diámetro es uno de los lados de 8 cm. ¿Cuál es el área, en $\text{cm}^2$, de la figura que queda?
+\alternativa{A}{$40 - 4\pi$}
+\alternativa{B}{$40 - 16\pi$}
+\alternativa{C}{$26 - 8\pi$}
+\alternativa{D}{$40 - 8\pi$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El área pedida es el área del rectángulo menos el área del semicírculo recortado.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Plantea la proporción: $\dfrac{h}{12} = \dfrac{1{,}5}{2}$.
-  \item Despeja: $h = 12\cdot\dfrac{1{,}5}{2} = 12\cdot 0{,}75 = 9$ m.
+  \item Calcula el área del rectángulo: $A_{\text{rect}} = 8\cdot 5 = 40\ \text{cm}^2$.
+  \item Determina el radio del semicírculo: el diámetro es el lado de $8$ cm, así que $r = \dfrac{8}{2} = 4$ cm. Como su altura, $4$ cm, es menor que el ancho de $5$ cm, el semicírculo cabe dentro del rectángulo.
+  \item Calcula el área del círculo completo de radio $4$ cm: $\pi r^2 = \pi\cdot 4^2 = 16\pi\ \text{cm}^2$.
+  \item El semicírculo es la mitad del círculo completo: $A_{\text{semi}} = \dfrac{16\pi}{2} = 8\pi\ \text{cm}^2$.
+  \item Resta el área recortada al área del rectángulo: $A = 40 - 8\pi\ \text{cm}^2$.
+  \item Aproximación de control: $8\pi \approx 25{,}1$, así que $A \approx 14{,}9\ \text{cm}^2$, un valor positivo y menor que $40$. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Plano cartesiano, vectores y transformaciones}
+\subsection{Cuerpos geométricos: áreas y volúmenes}
+
+El volumen mide el espacio que ocupa un cuerpo. En paralelepípedos, cubos y cilindros se calcula igual: área de la base por la altura.
+
+El área de la superficie es la suma de las áreas de todas sus caras. En el cilindro son dos círculos y un rectángulo (el manto), cuyo largo es el perímetro de la base.
+
+\begin{formula}[Fórmulas]
+Paralelepípedo: $V=a\cdot b\cdot c$, $\;A=2(ab+bc+ac)$. Cubo: $V=a^3$, $\;A=6a^2$.
+
+Cilindro: $V=\pi r^2 h$, $\;A=2\pi r^2+2\pi r h$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item $1\ \text{m}^3=1000$ litros y $1\ \text{dm}^3=1$ litro.
+  \item Si todas las medidas se multiplican por $k$, el volumen se multiplica por $k^3$.
+  \item El manto del cilindro desplegado es un rectángulo de $2\pi r$ por $h$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica el cuerpo y cuál de sus caras es la base.
+  \item Calcula el área de la base y multiplícala por la altura.
+  \item Pasa a las unidades que pide la pregunta (litros, $\text{cm}^3$, $\text{m}^3$).
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar el diámetro como radio.
+  \item Confundir el área de la superficie con el volumen.
+  \item Contar una sola tapa del cilindro.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un estanque cilíndrico tiene 2 m de radio y 1,5 m de altura. Considerando $\pi\approx 3$, ¿cuál es su volumen?
+\alternativa{A}{$9\ \text{m}^3$}
+\alternativa{B}{$12\ \text{m}^3$}
+\alternativa{C}{$18\ \text{m}^3$}
+\alternativa{D}{$36\ \text{m}^3$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Volumen del cilindro: área de la base por la altura.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Base: $\pi r^2\approx 3\cdot 4=12\ \text{m}^2$.
+  \item $V\approx 12\cdot 1{,}5=18\ \text{m}^3$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Transformaciones isométricas y vectores}
 
 Las transformaciones isométricas (traslación, reflexión y rotación) cambian la posición de una figura sin alterar su forma ni su tamaño.
 
@@ -1097,8 +1119,11 @@ El punto $P(3,1)$ se rota en $90^\circ$ en sentido antihorario con centro en el 
 {\sffamily\footnotesize\color{zinc500} Análisis}\par Una reflexión respecto del eje $Y$ cambia el signo de la abscisa y conserva la ordenada: $(x, y) \mapsto (-x, y)$.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Aplica la regla a $P(2,-3)$: $(-2, -3)$.
-  \item Interpretación: el punto queda a la misma distancia del eje $Y$, pero al otro lado.
+  \item Recuerda la regla de reflexión respecto del eje $Y$: el punto se refleja en la recta $x = 0$, por lo que la abscisa cambia de signo y la ordenada no cambia: $(x,y)\mapsto(-x,y)$.
+  \item Aplica la regla a $P(2, -3)$: la abscisa $2$ pasa a $-2$, y la ordenada $-3$ se mantiene.
+  \item Resultado: $P'(-2, -3)$.
+  \item Verifica la distancia: $P$ está a $2$ unidades a la derecha del eje $Y$, y $P'$ queda a $2$ unidades a la izquierda, a la misma altura $y = -3$. El eje $Y$ es la mediatriz del segmento $PP'$.
+  \item Por lo tanto, la alternativa correcta es la A.
 \end{enumerate}
 \end{ejemplo}
 
@@ -1110,20 +1135,98 @@ El punto $A(1, 4)$ se traslada según el vector $\vec{v} = (-3, 2)$. ¿Cuáles s
 \alternativa{C}{$(-2, 6)$}
 \alternativa{D}{$(2, -6)$}
 \clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Trasladar un punto según un vector es sumar sus coordenadas componente a componente.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Trasladar un punto según un vector $\vec{v} = (v_1, v_2)$ es sumar $v_1$ a la abscisa y $v_2$ a la ordenada.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Suma las abscisas: $1 + (-3) = -2$ (el punto se mueve 3 unidades a la izquierda).
-  \item Suma las ordenadas: $4 + 2 = 6$ (el punto sube 2 unidades).
-  \item El punto trasladado es $A' = (-2, 6)$.
+  \item Recuerda que una traslación mueve cada punto siguiendo el vector: $A' = A + \vec{v}$, es decir, $(x', y') = (x + v_1,\ y + v_2)$.
+  \item Calcula la nueva abscisa: $x' = 1 + (-3) = -2$. El punto se desplaza $3$ unidades a la izquierda.
+  \item Calcula la nueva ordenada: $y' = 4 + 2 = 6$. El punto sube $2$ unidades.
+  \item Resultado: $A'(-2, 6)$.
+  \item Comprobación: el vector de $A$ a $A'$ es $(-2 - 1,\ 6 - 4) = (-3, 2)$, que coincide con $\vec{v}$. Por lo tanto, la alternativa correcta es la C.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Semejanza y proporcionalidad de figuras}
+
+Dos figuras son semejantes si tienen la misma forma: sus ángulos correspondientes son iguales y sus lados correspondientes, proporcionales. La razón entre lados correspondientes es la razón de semejanza $k$.
+
+Los modelos a escala, los planos y las sombras a la misma hora son situaciones de semejanza. El teorema de Thales permite calcular longitudes cuando rectas paralelas cortan a dos secantes.
+
+\begin{formula}[Relaciones clave]
+\begin{gather*}
+\frac{a'}{a}=\frac{b'}{b}=k \\
+\text{perímetros en razón } k \\
+\text{áreas en razón } k^2
+\end{gather*}
+
+Escala $1:n$: 1 cm del plano equivale a $n$ cm de la realidad.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Sombras a la misma hora $\Rightarrow$ triángulos semejantes.
+  \item Si las longitudes se duplican, el área se cuadruplica.
+  \item Empareja los lados opuestos a ángulos iguales.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica los pares de lados correspondientes.
+  \item Plantea la proporción con la razón de semejanza o la escala.
+  \item Despeja y revisa que el resultado sea coherente con el tamaño de cada figura.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Emparejar lados que no se corresponden.
+  \item Usar la razón $k$ para áreas, que están en razón $k^2$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Un poste de 6 m proyecta una sombra de 4 m. A la misma hora, un árbol proyecta una sombra de 10 m. ¿Cuál es la altura del árbol?
+\alternativa{A}{12 m}
+\alternativa{B}{15 m}
+\alternativa{C}{16 m}
+\alternativa{D}{20 m}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par A la misma hora, los triángulos que forman objeto y sombra son semejantes.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\dfrac{h}{10}=\dfrac{6}{4}$.
+  \item $h=10\cdot 1{,}5=15$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Semejanza]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+A cierta hora, una persona de 1,5 m de estatura proyecta una sombra de 2 m. A la misma hora, un árbol proyecta una sombra de 12 m. ¿Cuál es la altura del árbol?
+\alternativa{A}{8 m}
+\alternativa{B}{9 m}
+\alternativa{C}{10,5 m}
+\alternativa{D}{16 m}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Los rayos del sol llegan paralelos, así que la persona y el árbol forman triángulos rectángulos semejantes y sus razones altura/sombra son iguales.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Como los rayos del sol son paralelos y los objetos están sobre el suelo, la persona y el árbol con sus sombras forman triángulos rectángulos semejantes: ambos tienen ángulo recto y el mismo ángulo de elevación del sol.
+  \item En triángulos semejantes los lados correspondientes son proporcionales: altura con altura y sombra con sombra. Entonces $\dfrac{\text{altura de la persona}}{\text{sombra de la persona}} = \dfrac{\text{altura del árbol}}{\text{sombra del árbol}}$.
+  \item Plantea la proporción con $h$ como altura del árbol: $\dfrac{1{,}5}{2} = \dfrac{h}{12}$.
+  \item Multiplica en cruz, es decir, iguala el producto de los extremos con el producto de los medios: $1{,}5\cdot 12 = 2h$.
+  \item Calcula el lado izquierdo: $18 = 2h$.
+  \item Despeja $h$ dividiendo por $2$: $h = \dfrac{18}{2} = 9$ m.
+  \item Comprobación: la razón altura/sombra es $\dfrac{9}{12} = 0{,}75$, igual a $\dfrac{1{,}5}{2} = 0{,}75$. Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
 \section{Probabilidad y estadística}
 
-{\itshape\color{zinc700} Tablas y gráficos, medidas estadísticas y probabilidad.}
+{\itshape\color{zinc700} Representación de datos, medidas de posición y reglas de las probabilidades.}
 
-\subsection{Tablas, gráficos y medidas de tendencia central}
+\subsection{Representación de datos: tablas, gráficos y promedio}
 
 La media aritmética reparte el total en partes iguales; la mediana es el dato central de los datos ordenados; la moda, el dato más frecuente. La media es sensible a valores extremos; la mediana no.
 
@@ -1201,12 +1304,14 @@ Si agrega un sexto control con nota 13, ¿cuál es el nuevo promedio (media arit
 \alternativa{C}{$8$}
 \alternativa{D}{$8{,}5$}
 \clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par La media es la suma de todos los datos dividida por la cantidad de datos.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La media aritmética es la suma de todos los datos dividida por la cantidad de datos; agregar un dato cambia tanto el numerador como el denominador.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Suma original: $4 + 7 + 7 + 8 + 9 = 35$.
-  \item Con el sexto dato: $35 + 13 = 48$.
-  \item Nueva media: $\dfrac{48}{6} = 8$.
+  \item Suma las cinco notas originales: $4 + 7 + 7 + 8 + 9 = 35$.
+  \item Agrega la nueva nota: $35 + 13 = 48$ es la suma total de las seis notas.
+  \item La cantidad de datos ahora es $6$, así que la media es $\bar{x} = \dfrac{48}{6}$.
+  \item Efectúa la división: $\dfrac{48}{6} = 8$.
+  \item Comprobación: la media original era $\dfrac{35}{5} = 7$; la nueva nota ($13$) está por encima de $7$, por lo que la media debe subir, y $8 > 7$ es coherente. Por lo tanto, la alternativa correcta es la C.
 \end{enumerate}
 \end{ejemplo}
 
@@ -1233,30 +1338,33 @@ En un curso se preguntó a cada estudiante cuántos hermanos tiene. Los resultad
 \alternativa{C}{45 \%}
 \alternativa{D}{75 \%}
 \clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par «Al menos 2» significa 2 o más. Suma esas frecuencias y compáralas con el total.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par «Al menos 2» incluye las frecuencias de 2, 3 y más; se suman esas frecuencias y se divide por el total del curso.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Total de estudiantes: $5 + 9 + 4 + 2 = 20$.
-  \item Con al menos 2 hermanos: $4 + 2 = 6$.
-  \item Porcentaje: $\dfrac{6}{20}\cdot 100 = 30\,\%$.
+  \item Calcula el total de estudiantes sumando todas las frecuencias: $5 + 9 + 4 + 2 = 20$.
+  \item Identifica el grupo «al menos 2 hermanos», que significa $2$ o más: corresponden a las filas de $2$ y $3$ hermanos. Las filas de $0$ y $1$ quedan fuera.
+  \item Suma esas frecuencias: $4 + 2 = 6$ estudiantes.
+  \item Calcula la proporción respecto del total: $\dfrac{6}{20} = 0{,}3$.
+  \item Convierte a porcentaje multiplicando por $100$: $0{,}3\cdot 100 = 30\,\%$.
+  \item Comprobación: los estudiantes con 0 o 1 hermano suman $5 + 9 = 14$, y $14 + 6 = 20$, el total del curso. Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Medidas de posición y dispersión}
+\subsection{Medidas de posición: cuartiles, percentiles y diagrama de cajón}
 
 Los cuartiles dividen los datos ordenados en cuatro partes con igual cantidad de datos: $Q_2$ es la mediana. El percentil $k$ es el valor bajo el cual queda aproximadamente el $k\,\%$ de los datos.
 
-El rango (máximo menos mínimo) y el rango intercuartílico ($Q_3-Q_1$) miden la dispersión. El diagrama de caja muestra mínimo, $Q_1$, mediana, $Q_3$ y máximo.
+El diagrama de cajón resume los datos con cinco valores: mínimo, $Q_1$, mediana, $Q_3$ y máximo. Cada uno de sus cuatro tramos contiene aproximadamente el 25 \% de los datos, y sirve para comparar dos o más grupos.
 
 \begin{definicion}[Definiciones]
-Rango $=\text{máx}-\text{mín}$. Rango intercuartílico $=Q_3-Q_1$. Percentil 80: el 80 \% de los datos es menor o igual que él.
+$Q_1=P_{25}$, $\;Q_2=P_{50}=$ mediana, $\;Q_3=P_{75}$. Percentil 80: el 80 \% de los datos es menor o igual que él.
 \end{definicion}
 
 \begin{ideasclave}
 \begin{itemize}
   \item Percentil alto no significa nota alta, sino posición relativa alta.
   \item En un diagrama de caja, la caja contiene el 50 \% central de los datos.
-  \item Dos grupos pueden tener igual media y distinta dispersión.
+  \item Un tramo más largo del cajón no tiene más datos: tiene los datos más separados.
 \end{itemize}
 \end{ideasclave}
 
@@ -1299,20 +1407,22 @@ Una bolsa contiene 3 bolitas rojas, 5 azules y 2 verdes, todas del mismo tamaño
 \alternativa{C}{$\dfrac{1}{5}$}
 \alternativa{D}{$\dfrac{2}{3}$}
 \clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Regla de Laplace: casos favorables dividido por casos posibles, cuando todos los resultados son equiprobables.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con la regla de Laplace, la probabilidad de un evento es casos favorables sobre casos posibles; el evento «no azul» se cuenta directamente o como complemento.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Casos posibles: $3 + 5 + 2 = 10$ bolitas.
-  \item Casos favorables (no azul): $3 + 2 = 5$.
-  \item $P = \dfrac{5}{10} = \dfrac{1}{2}$. También: $P(\text{no azul}) = 1 - \dfrac{5}{10}$.
+  \item Cuenta los casos posibles: $3 + 5 + 2 = 10$ bolitas, todas equiprobables.
+  \item Cuenta los casos favorables, es decir, las bolitas que no son azules: rojas y verdes, $3 + 2 = 5$.
+  \item Aplica la regla de Laplace: $P(\text{no azul}) = \dfrac{5}{10}$.
+  \item Simplifica dividiendo numerador y denominador por $5$: $\dfrac{5}{10} = \dfrac{1}{2}$.
+  \item Comprobación por complemento: $P(\text{azul}) = \dfrac{5}{10} = \dfrac{1}{2}$ y, como «no azul» es el complemento de «azul», $P(\text{no azul}) = 1 - \dfrac{1}{2} = \dfrac{1}{2}$. Ambos caminos coinciden. Por lo tanto, la alternativa correcta es la A.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Probabilidad y conteo}
+\subsection{Reglas de las probabilidades}
 
 Si todos los resultados de un experimento son equiprobables, la probabilidad de un evento es la razón entre casos favorables y casos posibles (regla de Laplace). Toda probabilidad está entre 0 y 1.
 
-Para contar casos se usa el principio multiplicativo o un diagrama de árbol. La probabilidad del complemento suele simplificar los problemas de «al menos uno».
+La regla aditiva suma probabilidades de eventos que no ocurren juntos (restando la intersección si la hay); la regla multiplicativa multiplica las de eventos sucesivos independientes. Un diagrama de árbol ordena ambos cálculos, y el complemento simplifica los problemas de «al menos uno».
 
 \begin{formula}[Reglas]
 \begin{gather*}
@@ -1373,11 +1483,15 @@ Se lanzan dos dados comunes. ¿Cuál es la probabilidad de que la suma de los pu
 \alternativa{C}{$\dfrac{7}{36}$}
 \alternativa{D}{$\dfrac{1}{11}$}
 \clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par El espacio muestral tiene $6\cdot 6 = 36$ pares ordenados equiprobables.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Conviene listar el espacio muestral de pares ordenados, que tiene $36$ resultados equiprobables, y contar los que suman $7$.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Pares con suma 7: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, es decir, 6 casos.
-  \item $P(\text{suma } 7) = \dfrac{6}{36} = \dfrac{1}{6}$.
+  \item Calcula el espacio muestral: como cada dado tiene $6$ resultados, el número de pares ordenados posibles es $6\cdot 6 = 36$.
+  \item Lista los pares cuya suma es $7$: $(1,6)$, $(2,5)$, $(3,4)$, $(4,3)$, $(5,2)$ y $(6,1)$.
+  \item Cuenta los casos favorables: son $6$ pares, porque el orden importa (el primer dado y el segundo son distinguibles).
+  \item Aplica la regla de Laplace: $P(\text{suma } 7) = \dfrac{6}{36}$.
+  \item Simplifica dividiendo por $6$: $\dfrac{6}{36} = \dfrac{1}{6}$.
+  \item Comprobación: $\dfrac{1}{6}\approx 0{,}167$. La suma $7$ es la más probable de las once sumas posibles, y su probabilidad debe ser la mayor de todas; $\dfrac{1}{6}$ cumple esa condición. Por lo tanto, la alternativa correcta es la A.
 \end{enumerate}
 \end{ejemplo}
 %%</CONTENIDO>%%

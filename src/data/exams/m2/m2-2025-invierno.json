@@ -411,7 +411,7 @@
   {
    "id": "m2-2025-invierno-q07",
    "number": 7,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "Considera que la esperanza de vida (EV) en los países, en años, se puede relacionar con su producto interno bruto (PIB), en dólares, con la siguiente relación:\n\nEV = a · log ( PIB ) + b , en la que a y b son constantes positivas.\n\nSi la esperanza de vida del país A es x años y su PIB es 10 veces el del país B, ¿cuál de las siguientes expresiones representa la esperanza de vida, en años, en el país B según el modelo?",
    "options": [
@@ -581,7 +581,7 @@
   {
    "id": "m2-2025-invierno-q10",
    "number": 10,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "log 5 Si p = log 2 , ¿cuál de las siguientes expresiones es igual a ? log 20",
    "options": [
@@ -638,7 +638,7 @@
   {
    "id": "m2-2025-invierno-q11",
    "number": 11,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "¿Cuál es el valor de log 25 + log 2 ?",
    "options": [
@@ -695,7 +695,7 @@
   {
    "id": "m2-2025-invierno-q12",
    "number": 12,
-   "axis": "Probabilidad y estadística",
+   "axis": "Números",
    "topic": "Gráficos estadísticos",
    "stem": "En un laboratorio se estudia el crecimiento de una colonia de 1024 bacterias que duplica su cantidad cada una hora. En el gráfico, el eje X representa el tiempo transcurrido en horas, mientras el eje Y corresponde al logaritmo en base b de la cantidad de bacterias en ese instante.\n\nY\n\n25\n\n5\n\n40 X\n\n¿Cuál es el valor de b que se utilizó para construir el gráfico?",
    "options": [
@@ -959,7 +959,7 @@
   {
    "id": "m2-2025-invierno-q17",
    "number": 17,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "Considera que el peso corregido depende del peso ideal () y y del peso real () x de una persona, de la siguiente forma:\n\nPeso corregido = y + ( x − y ) · ,0 25\n\n¿Cuál de las siguientes expresiones permite calcular el peso corregido de cualquier persona cuyo peso real excede en un 40 % su peso ideal?",
    "options": [
@@ -989,7 +989,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas",
+   "subtopic": "m2-reales",
    "explanation": {
     "kind": "solucion",
     "summary": "Si el peso real excede en $40\\,\\%$ al ideal, entonces $x=1{,}4\\,y$; al reemplazar en la fórmula se obtiene un múltiplo de $y$.",
@@ -1116,7 +1116,7 @@
   {
    "id": "m2-2025-invierno-q20",
    "number": 20,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "Considera los números reales p y b, tal que p es mayor o igual que − 4 y 1 3. menor que 3, y b es mayor que − y menor que 2 2\n\n¿Cuál de los siguientes conjuntos representa únicamente a todos los valores posibles de p · b ?\n\n9",
    "options": [
@@ -1147,7 +1147,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas",
+   "subtopic": "m2-reales",
    "explanation": {
     "kind": "solucion",
     "summary": "El producto de dos variables acotadas se extrema en las esquinas del rectángulo de valores; como algunos extremos están excluidos, el intervalo final es abierto.",
@@ -1310,7 +1310,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas",
+   "subtopic": "m2-sistemas",
    "explanation": {
     "kind": "solucion",
     "summary": "Un sistema tiene infinitas soluciones cuando sus ecuaciones son proporcionales; al encontrar esa relación, el segundo sistema resulta ser una sola ecuación repetida.",
@@ -1386,7 +1386,7 @@
   {
    "id": "m2-2025-invierno-q26",
    "number": 26,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Funciones",
    "stem": "El nivel n, en centímetros, que alcanza el agua en un depósito, durante un tiempo t, en horas, se modela según la función () n t = at + b .\n\nInicialmente, el depósito contiene agua y al cabo de tres horas, el nivel que alcanza el agua es de 273 cm .\n\nSi el nivel inicial del agua es el cuádruple de lo que aumenta el nivel cada hora, ¿cuál es el nivel del agua al cabo de cinco horas?",
    "options": [
@@ -1416,7 +1416,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-inversa",
+   "subtopic": "m2-financiera",
    "explanation": {
     "kind": "solucion",
     "summary": "El nivel inicial es $b$ y el aumento por hora es $a$; con las dos condiciones del enunciado se obtienen ambos valores y luego se evalúa en $t=5$.",
@@ -1627,7 +1627,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas",
+   "subtopic": "m2-sistemas",
    "explanation": {
     "kind": "solucion",
     "summary": "Una ecuación cuadrática no tiene solución real cuando su discriminante es negativo; la condición sobre $b$ sale de esa desigualdad.",
@@ -1969,7 +1969,7 @@
   {
    "id": "m2-2025-invierno-q37",
    "number": 37,
-   "axis": "Geometría",
+   "axis": "Números",
    "topic": "Cuerpos geométricos",
    "stem": "Considera un perfil de aluminio de largo L milímetros, hecho con aluminio de grosor constante T milímetros, tal que al realizarle un corte transversal se obtienen las siguientes medidas:\n\nSi se requiere conocer la cantidad de aluminio necesaria para confeccionar uno de estos perfiles, ¿cuál de las siguientes expresiones representa esta cantidad, 3 en mm?\n\n( ( ) 2 )L",
    "options": [
@@ -1999,7 +1999,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia",
+   "subtopic": "m2-reales",
    "explanation": {
     "kind": "solucion",
     "summary": "La cantidad de aluminio es el área de la sección transversal multiplicada por el largo; el área de la sección se obtiene como rectángulo exterior menos rectángulo interior.",
@@ -2477,7 +2477,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-combinatoria",
+   "subtopic": "m2-cuadraticas",
    "explanation": {
     "kind": "solucion",
     "summary": "Como hay restricciones de sexo para dos cargos, se empieza por esos cargos y el tesorero se elige entre las personas que quedan.",
@@ -2499,7 +2499,7 @@
   {
    "id": "m2-2025-invierno-q47",
    "number": 47,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "En un torneo de tenis cada jugador juega con cada uno de los otros jugadores solo una vez.\n\nSi se realizan 28 partidos en total, ¿cuántos jugadores participaron en este torneo?",
    "options": [
@@ -2529,7 +2529,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas",
+   "subtopic": "m2-reales",
    "explanation": {
     "kind": "solucion",
     "summary": "En un torneo en que cada pareja juega una vez, el número de partidos es una combinación de dos jugadores, y eso permite despejar la cantidad de jugadores.",

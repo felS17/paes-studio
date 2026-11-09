@@ -5,6 +5,7 @@ const OND = 'Ondas'
 const MEC = 'Mecánica'
 const ENE = 'Energía'
 const ELE = 'Electricidad y magnetismo'
+const TIE = 'Tierra y universo'
 const r = String.raw
 
 export const fisica: Deck = {
@@ -12,8 +13,8 @@ export const fisica: Deck = {
   title: 'Ciencias: Física',
   subject: 'ciencias',
   mono: 'FI',
-  description: 'Ondas, mecánica, energía, electricidad y magnetismo.',
-  units: [OND, MEC, ENE, ELE],
+  description: 'Ondas, mecánica, energía, electricidad, la Tierra y el universo.',
+  units: [OND, MEC, ENE, ELE, TIE],
   cards: [
     card('fis-01', OND, r`Relación entre rapidez, longitud de onda y frecuencia`, r`$$v=\lambda\,f$$`, [r`Período: $T=\frac{1}{f}$.`]),
     card('fis-02', OND, r`¿Qué magnitud **no cambia** cuando una onda pasa de un medio a otro?`, r`La **frecuencia**. Cambian la rapidez y la longitud de onda.`),
@@ -50,5 +51,13 @@ export const fisica: Deck = {
     card('fis-33', ELE, r`Interacción entre cargas eléctricas`, r`Cargas de **igual signo se repelen** y de **distinto signo se atraen**.`, [r`Ley de Coulomb: $F=k\dfrac{q_1q_2}{d^2}$.`]),
     card('fis-34', ELE, r`Métodos de electrización`, r`**Frotamiento**, **contacto** e **inducción**.`, [r`La carga total se conserva.`]),
     card('fis-35', ELE, r`Inducción electromagnética`, r`Un **campo magnético variable** induce una corriente eléctrica en un conductor.`, [r`Base de generadores y transformadores.`]),
+    card('fis-36', TIE, r`Capas de la geosfera`, r`**Corteza**, **manto** y **núcleo**. La **litosfera** (corteza y manto superior) está dividida en placas que se mueven sobre la **astenosfera**.`),
+    card('fis-37', TIE, r`Evidencias de la deriva continental (Wegener)`, r`El **encaje** de las costas de África y Sudamérica, **fósiles** y **rocas** iguales a ambos lados del océano.`, [r`La tectónica de placas explica el mecanismo: corrientes de convección del manto.`]),
+    card('fis-38', TIE, r`¿Por qué Chile tiene tantos sismos y volcanes?`, r`Está en un **borde convergente**: la placa de **Nazca subduce** bajo la placa **Sudamericana**.`),
+    card('fis-39', TIE, r`Epicentro vs. hipocentro`, r`El **hipocentro** es el punto interior donde se libera la energía; el **epicentro**, el punto de la superficie justo sobre él.`, [r`Magnitud: energía liberada (una por sismo). Intensidad: efectos en cada lugar.`]),
+    card('fis-40', TIE, r`Modelo geocéntrico vs. heliocéntrico`, r`**Geocéntrico** (Aristóteles, Ptolomeo): la Tierra al centro. **Heliocéntrico** (Copérnico): el Sol al centro.`, [r`Galileo lo apoyó con las lunas de Júpiter y las fases de Venus.`]),
+    card('fis-41', TIE, r`Primera y segunda ley de Kepler`, r`1.ª: las órbitas son **elipses** con el Sol en un foco. 2.ª: el planeta barre **áreas iguales en tiempos iguales** (va más rápido cerca del Sol).`),
+    card('fis-42', TIE, r`Tercera ley de Kepler`, r`$$T^2\propto a^3$$`, [r`El cuadrado del período orbital es proporcional al cubo del semieje mayor.`]),
+    card('fis-43', TIE, r`Evidencias del Big Bang`, r`El **alejamiento de las galaxias** (corrimiento al rojo) y la **radiación de fondo de microondas**.`, [r`El universo se originó hace unos 13 800 millones de años y sigue expandiéndose.`]),
   ],
 }

@@ -57,7 +57,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'm1-proporcionalidad', sheet: 'm1', axis: 'Números', title: 'Proporcionalidad', subtopics: ['m1-proporcionalidad'],
+    id: 'm1-proporcionalidad', sheet: 'm1', axis: 'Álgebra y funciones', title: 'Proporcionalidad', subtopics: ['m1-proporcionalidad'],
     rows: [
       ['Proporción', r`$\dfrac{a}{b}=\dfrac{c}{d}\iff ad=bc$`],
       ['Directa', r`$\dfrac{y}{x}=k$: si una sube, la otra sube.`],
@@ -75,7 +75,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'm1-ecuaciones', sheet: 'm1', axis: 'Álgebra y funciones', title: 'Ecuaciones y sistemas', subtopics: ['m1-ecuaciones', 'm1-sistemas'],
+    id: 'm1-ecuaciones', sheet: 'm1', axis: 'Álgebra y funciones', title: 'Ecuaciones y sistemas', subtopics: ['m1-ecuaciones', 'm1-sistemas', 'm2-sistemas'],
     rows: [
       ['Ecuación lineal', r`$ax+b=c\Rightarrow x=\dfrac{c-b}{a}$`],
       ['Resolver sistemas', 'Sustitución, igualación o reducción.'],
@@ -110,7 +110,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'm1-triangulos', sheet: 'm1', axis: 'Geometría', title: 'Triángulos, Pitágoras y Thales', subtopics: ['m1-triangulos', 'm2-trigonometria', 'm2-homotecia'],
+    id: 'm1-triangulos', sheet: 'm1', axis: 'Geometría', title: 'Triángulos, Pitágoras y Thales', subtopics: ['m1-areas', 'm1-triangulos', 'm2-trigonometria', 'm2-homotecia'],
     rows: [
       ['Pitágoras', r`$a^2+b^2=c^2$, con $c$ la hipotenusa`],
       ['Tríos pitagóricos', r`$3,4,5$; $\;5,12,13$; $\;8,15,17$`],
@@ -133,7 +133,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'm1-volumenes', sheet: 'm1', axis: 'Geometría', title: 'Volúmenes', subtopics: ['m1-areas'],
+    id: 'm1-volumenes', sheet: 'm1', axis: 'Geometría', title: 'Volúmenes', subtopics: ['m1-cuerpos', 'm2-esfera'],
     rows: [
       ['Cubo', r`$V=a^3$`],
       ['Paralelepípedo', r`$V=a\cdot b\cdot c$`],
@@ -224,6 +224,14 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
+    id: 'm2-sistemas', sheet: 'm2', axis: 'Álgebra y funciones', title: 'Sistemas: tipos de solución', subtopics: ['m2-sistemas'],
+    rows: [
+      ['Única solución', r`$\dfrac{a}{d}\neq\dfrac{b}{e}$: rectas secantes`],
+      ['Sin solución', r`$\dfrac{a}{d}=\dfrac{b}{e}\neq\dfrac{c}{f}$: rectas paralelas`],
+      ['Infinitas soluciones', r`$\dfrac{a}{d}=\dfrac{b}{e}=\dfrac{c}{f}$: la misma recta`],
+    ],
+  },
+  {
     id: 'm2-exponencial', sheet: 'm2', axis: 'Álgebra y funciones', title: 'Función exponencial', subtopics: ['m2-exponencial'],
     rows: [
       ['Forma', r`$f(x)=a\cdot b^x$, con $b>0$ y $b\neq 1$`],
@@ -252,6 +260,27 @@ export const CHEAT_CARDS: CheatCard[] = [
       ['30°', r`$\operatorname{sen}=\dfrac{1}{2}$, $\;\cos=\dfrac{\sqrt{3}}{2}$, $\;\tan=\dfrac{\sqrt{3}}{3}$`],
       ['45°', r`$\operatorname{sen}=\cos=\dfrac{\sqrt{2}}{2}$, $\;\tan=1$`],
       ['60°', r`$\operatorname{sen}=\dfrac{\sqrt{3}}{2}$, $\;\cos=\dfrac{1}{2}$, $\;\tan=\sqrt{3}$`],
+    ],
+  },
+  {
+    id: 'm2-funciones-trig', sheet: 'm2', axis: 'Álgebra y funciones', title: 'Funciones seno y coseno', subtopics: ['m2-funciones-trig'],
+    rows: [
+      ['Forma general', r`$y=a\sin(bx)+c$`],
+      ['Amplitud', r`$|a|$`],
+      ['Período', r`$\dfrac{2\pi}{|b|}$ (o $\dfrac{360^\circ}{|b|}$)`],
+      ['Recorrido', r`$[\,c-|a|,\ c+|a|\,]$`],
+      ['Valores clave', r`$\sin 0=0$, $\sin 90^\circ=1$, $\cos 0=1$, $\cos 90^\circ=0$`],
+    ],
+  },
+  {
+    id: 'm2-circunferencia', sheet: 'm2', axis: 'Geometría', title: 'Circunferencia', subtopics: ['m2-circunferencia'],
+    rows: [
+      ['Ángulo inscrito', r`$\alpha=\dfrac{\text{ángulo del centro}}{2}$`],
+      ['En semicircunferencia', r`Ángulo inscrito de $90^\circ$`],
+      ['Cuadrilátero inscrito', r`Ángulos opuestos suman $180^\circ$`],
+      ['Cuerdas que se cortan', r`$PA\cdot PB=PC\cdot PD$`],
+      ['Secantes desde $P$', r`$PA\cdot PB=PC\cdot PD$ (exterior por secante completa)`],
+      ['Arco', r`$L=\dfrac{\alpha}{360^\circ}\cdot 2\pi r$`],
     ],
   },
   {
@@ -284,7 +313,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'm2-dispersion', sheet: 'm2', axis: 'Probabilidad y estadística', title: 'Dispersión y normal', subtopics: ['m2-dispersion'],
+    id: 'm2-dispersion', sheet: 'm2', axis: 'Probabilidad y estadística', title: 'Dispersión y normal', subtopics: ['m2-dispersion', 'm2-modelos'],
     rows: [
       ['Rango', r`$x_{\max}-x_{\min}$`],
       ['Varianza', r`$\sigma^2=\dfrac{\sum (x_i-\bar{x})^2}{n}$`],
@@ -295,7 +324,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'm2-combinatoria', sheet: 'm2', axis: 'Probabilidad y estadística', title: 'Combinatoria y binomial', subtopics: ['m2-combinatoria'],
+    id: 'm2-combinatoria', sheet: 'm2', axis: 'Probabilidad y estadística', title: 'Combinatoria y binomial', subtopics: ['m2-combinatoria', 'm2-modelos'],
     rows: [
       ['Factorial', r`$n!=n\cdot(n-1)\cdots 2\cdot 1$ y $0!=1$`],
       ['Permutación', r`$P_n=n!$: ordenar todos`],
@@ -366,7 +395,19 @@ export const CHEAT_CARDS: CheatCard[] = [
       ['Potencia', r`$P=V\cdot I=I^2 R$`],
       ['Resistencias en serie', r`$R_{\text{eq}}=R_1+R_2$`],
       ['Resistencias en paralelo', r`$\dfrac{1}{R_{\text{eq}}}=\dfrac{1}{R_1}+\dfrac{1}{R_2}$`],
+      ['Energía consumida', r`$E=P\cdot t$ (en kWh en la cuenta de la luz)`],
       ['Ley de Coulomb', r`$F=k\dfrac{q_1 q_2}{r^2}$`],
+    ],
+  },
+  {
+    id: 'fi-tierra-universo', sheet: 'fisica', axis: 'Energía y Tierra', title: 'Tierra y universo', subtopics: ['cs-tierra', 'cs-universo'],
+    rows: [
+      ['Geosfera', 'Corteza, manto y núcleo; la litosfera se divide en placas.'],
+      ['Borde convergente', 'Subducción: sismos, volcanes y cordilleras (Nazca bajo la Sudamericana).'],
+      ['Epicentro e hipocentro', 'Hipocentro: punto interior del sismo. Epicentro: sobre él, en la superficie.'],
+      ['Magnitud e intensidad', 'Magnitud: energía liberada. Intensidad: efectos en cada lugar.'],
+      ['Leyes de Kepler', r`Órbitas elípticas; áreas iguales en tiempos iguales; $T^2\propto a^3$.`],
+      ['Big Bang', 'Evidencias: galaxias que se alejan y radiación de fondo de microondas.'],
     ],
   },
   {
@@ -489,13 +530,23 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'bi-sistemas', sheet: 'biologia', axis: 'Procesos y funciones biológicas', title: 'Sistemas y regulación', subtopics: ['cs-sistemas'],
+    id: 'bi-sistemas', sheet: 'biologia', axis: 'Procesos y funciones biológicas', title: 'Sistemas y regulación', subtopics: ['cs-sistemas', 'cs-nervioso'],
     rows: [
       ['Homeostasis', 'Mantener estable el medio interno.'],
       ['Insulina', 'Baja la glucosa en la sangre.'],
       ['Glucagón', 'Sube la glucosa en la sangre.'],
       ['Sistema nervioso', 'Respuesta rápida por impulsos eléctricos.'],
       ['Sistema endocrino', 'Respuesta lenta y sostenida por hormonas.'],
+    ],
+  },
+  {
+    id: 'bi-reproduccion', sheet: 'biologia', axis: 'Procesos y funciones biológicas', title: 'Reproducción e ITS', subtopics: ['cs-reproduccion'],
+    rows: [
+      ['Fecundación', 'Ovocito (n) + espermatozoide (n) forman un cigoto (2n).'],
+      ['Ciclo de 28 días', 'Menstruación, fase folicular, ovulación (día 14 aprox.) y fase lútea.'],
+      ['Métodos de barrera', 'Previenen el embarazo y las ITS (condón).'],
+      ['Métodos hormonales', 'Previenen el embarazo, pero no las ITS.'],
+      ['ITS', 'VIH y herpes son virus; gonorrea y clamidia, bacterias.'],
     ],
   },
   {
@@ -523,7 +574,7 @@ export const CHEAT_CARDS: CheatCard[] = [
 
   // ─────────────────────────────── Competencia Lectora ───────────────────────────────
   {
-    id: 'cl-tipos', sheet: 'lectora', axis: 'Tipos de preguntas', title: 'Tipos de preguntas DEMRE', subtopics: ['cl-localizar', 'cl-idea-central', 'cl-inferencia', 'cl-proposito', 'cl-forma'],
+    id: 'cl-tipos', sheet: 'lectora', axis: 'Tipos de preguntas', title: 'Tipos de preguntas DEMRE', subtopics: ['cl-localizar', 'cl-idea-central', 'cl-inferencia', 'cl-proposito', 'cl-forma', 'cl-contextos'],
     rows: [
       ['Localizar', 'Hallar información explícita. «Según el texto…», «¿qué dato menciona…?».'],
       ['Interpretar', 'Inferir, sintetizar y relacionar. «Se puede inferir…», «¿cuál es la idea principal?».'],
@@ -555,7 +606,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'cl-argumentos', sheet: 'lectora', axis: 'Textos argumentativos', title: 'Tesis, argumentos y tono', subtopics: ['cl-argumentos', 'cl-proposito'],
+    id: 'cl-argumentos', sheet: 'lectora', axis: 'Textos argumentativos', title: 'Tesis, argumentos y tono', subtopics: ['cl-argumentos', 'cl-postura', 'cl-intencion'],
     rows: [
       ['Tesis', 'La postura que defiende el autor.'],
       ['Argumento', 'La razón que sostiene la tesis.'],
@@ -627,7 +678,7 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'hi-chile-xx', sheet: 'historia', axis: 'Línea de tiempo', title: 'Chile en el siglo XX', subtopics: ['hi-cuestion-social', 'hi-chile-xx'],
+    id: 'hi-chile-xx', sheet: 'historia', axis: 'Línea de tiempo', title: 'Chile en el siglo XX', subtopics: ['hi-cuestion-social', 'hi-chile-xx', 'hi-dictadura'],
     rows: [
       ['1907', 'Matanza de la Escuela Santa María de Iquique.'],
       ['1925', 'Constitución presidencialista; se separan la Iglesia y el Estado.'],
@@ -644,13 +695,24 @@ export const CHEAT_CARDS: CheatCard[] = [
     ],
   },
   {
-    id: 'hi-ciudadania', sheet: 'historia', axis: 'Formación ciudadana', title: 'Estado y ciudadanía', subtopics: ['hi-estado', 'hi-democracia'],
+    id: 'hi-ciudadania', sheet: 'historia', axis: 'Formación ciudadana', title: 'Estado y ciudadanía', subtopics: ['hi-estado', 'hi-democracia', 'hi-informacion'],
     rows: [
       ['Poder Ejecutivo', 'Presidente y ministros: gobiernan y administran.'],
       ['Poder Legislativo', 'Congreso, con Cámara y Senado: hace las leyes.'],
       ['Poder Judicial', 'Tribunales: aplican las leyes.'],
       ['Órganos autónomos', 'Contraloría, Banco Central, Tribunal Constitucional y Servel.'],
       ['Ciudadanía', 'Chilenos de 18 años o más, sin condena a pena aflictiva.'],
+    ],
+  },
+  {
+    id: 'hi-justicia-trabajo', sheet: 'historia', axis: 'Formación ciudadana', title: 'Justicia y derechos laborales', subtopics: ['hi-justicia', 'hi-laborales'],
+    rows: [
+      ['Ministerio Público', 'Investiga y acusa (Fiscalía).'],
+      ['Defensoría Penal Pública', 'Defiende a quien no puede pagar un abogado.'],
+      ['Juez de garantía', 'Protege los derechos del imputado.'],
+      ['Tribunal Constitucional', 'Revisa que las leyes respeten la Constitución.'],
+      ['Dirección del Trabajo', 'Fiscaliza y recibe denuncias laborales.'],
+      ['Sindicatos', 'Negocian colectivamente las condiciones de trabajo.'],
     ],
   },
   {

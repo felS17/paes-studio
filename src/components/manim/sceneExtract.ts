@@ -9,8 +9,8 @@ import type { Question } from '@/types/exam'
 export interface Extraction {
   values: Record<string, string | number>
   complete: boolean
-  /** Otra escena distinta de la del subtema: un mismo tema del temario puede tratar de vectores o de rectas. */
-  scene?: 'vectores'
+  /** Otra escena distinta de la del subtema: un mismo tema puede tratar de vectores o de rectas, o de Pitágoras. */
+  scene?: 'vectores' | 'thales'
 }
 
 const NUM = '-?\\d+(?:[.,]\\d+)?'
@@ -279,8 +279,17 @@ function counting(text: string): Extraction {
   return { values: { modo: 'conteo' }, complete: false }
 }
 
+/** Figuras geométricas (temario 2027): el teorema de Pitágoras se ve mejor en su escena; el resto, como área. */
+function figures(text: string): Extraction {
+  if (/pitagoras|hipotenusa|cateto/.test(text)) return { ...triangles(text.replace(/thales|tales|paralel|semejan|proporcion/g, '')), scene: 'thales' }
+  return areas(text)
+}
+
 export const EXTRACTORS: Record<string, (text: string) => Extraction> = {
-  'm1-areas': areas,
+  'm1-areas': figures,
+  'm1-cuerpos': areas,
+  'm2-esfera': areas,
+  'm2-modelos': conditional,
   'm1-triangulos': triangles,
   'm1-transformaciones': transformations,
   'm1-posicion': position,

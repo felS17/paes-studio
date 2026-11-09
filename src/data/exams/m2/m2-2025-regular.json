@@ -406,7 +406,7 @@
   {
    "id": "m2-2025-regular-q09",
    "number": 9,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "x y , ¿cuál de las siguientes expresiones es igual a ( ) Si p = 3 y b = 3 x + y , en términos de p y b?\n\n( )",
    "options": [
@@ -881,7 +881,7 @@
   {
    "id": "m2-2025-regular-q27",
    "number": 27,
-   "axis": "Álgebra y funciones",
+   "axis": "Geometría",
    "topic": "Álgebra y funciones",
    "stem": "Un estudiante de Artes pintará un cuadro de forma rectangular, este tendrá una sección de dibujo y por fuera se dejará un margen con un ancho uniforme que 2 . ocupará 81 cm\n\nSi la sección de dibujo tendrá 15 cm de largo y 9 cm de ancho, ¿cuál es el ancho correspondiente al margen?",
    "options": [
@@ -911,7 +911,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-cuadraticas",
+   "subtopic": "m2-analitica",
    "explanation": {
     "kind": "solucion",
     "summary": "Con el área del dibujo y el área del margen se obtiene el área total del cuadro, y de ahí una ecuación de segundo grado en el ancho del margen.",
@@ -1044,7 +1044,7 @@
   {
    "id": "m2-2025-regular-q31",
    "number": 31,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Funciones",
    "stem": "Considera la función f, definida por () 3 2 f t = t − 25 t + 150 t + 3 , con dominio el conjunto de los números reales.\n\n¿Cuál de las siguientes opciones representa todos los valores de t para los que f () t = 3 ?",
    "options": [
@@ -1074,7 +1074,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-inversa",
+   "subtopic": "m2-reales",
    "explanation": {
     "kind": "solucion",
     "summary": "Igualar $f(t)$ a $3$ lleva a una ecuación polinómica que se factoriza, y sus raíces son todos los valores pedidos.",
@@ -1293,7 +1293,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia",
+   "subtopic": "m2-analitica",
    "explanation": {
     "kind": "solucion",
     "summary": "El área de madera que se pinta es el rectángulo completo menos el área de la elipse que se corta; las medidas de los ejes se obtienen restando los márgenes a las dimensiones de la tabla.",
@@ -1825,7 +1825,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia",
+   "subtopic": "m2-circunferencia",
    "explanation": {
     "kind": "solucion",
     "summary": "Cada trazo une un par de puntos distintos, así que la cantidad de trazos es una combinación de $n$ puntos tomados de a 2; los ejemplos del enunciado permiten descartar las alternativas que solo coinciden con ellos.",

@@ -18,7 +18,8 @@ export interface SceneEntry {
  */
 const BY_SUBTOPIC: Record<string, SceneEntry> = {
   'm1-areas': { scene: 'figuras' },
-  'm1-triangulos': { scene: 'thales' },
+  'm1-cuerpos': { scene: 'figuras', initial: { forma: 'cilindro' } },
+  'm1-triangulos': { scene: 'thales', initial: { modo: 'thales' } },
   'm1-transformaciones': { scene: 'vectores' },
   'm1-posicion': { scene: 'boxplot' },
   'm1-probabilidad': { scene: 'probabilidad' },
@@ -28,6 +29,10 @@ const BY_SUBTOPIC: Record<string, SceneEntry> = {
   'm2-dispersion': { scene: 'dispersion' },
   'm2-condicional': { scene: 'condicional' },
   'm2-combinatoria': { scene: 'condicional', initial: { modo: 'conteo' } },
+  'm2-modelos': { scene: 'condicional', initial: { modo: 'binomial' } },
+  'm2-funciones-trig': { scene: 'trigonometria', initial: { modo: 'unitaria' } },
+  'm2-circunferencia': { scene: 'trigonometria', initial: { modo: 'cuerda' } },
+  'm2-esfera': { scene: 'figuras', initial: { forma: 'esfera' } },
 }
 
 /** La escena de un subtema, o null si no tiene. Vive aparte de las escenas para no cargarlas si no se usan. */

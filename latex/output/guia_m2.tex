@@ -111,7 +111,7 @@
 \newcommand{\guiaTitulo}{Compendio de estudio}
 \newcommand{\guiaAsignatura}{Competencia Matemática 2 (M2)}
 \newcommand{\guiaDescripcion}{M2 profundiza los contenidos de M1 y agrega los de 3.º y 4.º medio: números reales, logaritmos, matemática financiera, funciones exponenciales e inversas, trigonometría, homotecia, probabilidad condicional y modelos de probabilidad. Tiene 55 preguntas y dura 2 h 20 min.}
-\newcommand{\guiaFuente}{5 ejes y 13 subtemas. Frecuencias calculadas sobre 7 ensayos (6 oficiales DEMRE), 326 preguntas. Generado el 1 de noviembre de 2026.}
+\newcommand{\guiaFuente}{5 ejes y 17 subtemas. Frecuencias calculadas sobre 8 ensayos (7 oficiales DEMRE), 363 preguntas. Generado el 8 de noviembre de 2026.}
 %%</META>%%
 
 \begin{document}
@@ -142,13 +142,13 @@ Distribución de las preguntas por eje en los ensayos disponibles en PAES Studio
 
 \toprule Eje & Preg. & \% & \\ \midrule
 
-Álgebra y funciones & 126 & 39 & \barra{0.085} \\
+Álgebra y funciones & 103 & 28 & \barra{0.062} \\
 
-Geometría & 77 & 24 & \barra{0.052} \\
+Números & 96 & 26 & \barra{0.058} \\
 
-Probabilidad y estadística & 67 & 21 & \barra{0.045} \\
+Geometría & 91 & 25 & \barra{0.055} \\
 
-Números & 56 & 17 & \barra{0.038} \\
+Probabilidad y estadística & 73 & 20 & \barra{0.044} \\
 
 \bottomrule
 
@@ -156,7 +156,7 @@ Números & 56 & 17 & \barra{0.038} \\
 
 \end{center}
 
-\begin{dato}Álgebra y funciones y Geometría concentran el 62 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
+\begin{dato}Álgebra y funciones y Números concentran el 55 \% de las preguntas: priorízalos si tienes poco tiempo.\end{dato}
 
 \section{Números}
 
@@ -225,9 +225,12 @@ Racionalizar es eliminar las raíces del denominador amplificando por una expres
 {\sffamily\footnotesize\color{zinc500} Análisis}\par Para racionalizar un denominador binomial se amplifica por su conjugado y se usa $(a-b)(a+b) = a^2 - b^2$.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Amplifica por $\sqrt{5}+1$: $\dfrac{4(\sqrt{5}+1)}{(\sqrt{5}-1)(\sqrt{5}+1)}$.
-  \item Denominador: $(\sqrt{5})^2 - 1^2 = 5 - 1 = 4$.
-  \item Simplifica: $\dfrac{4(\sqrt{5}+1)}{4} = \sqrt{5} + 1$.
+  \item El denominador $\sqrt{5} - 1$ tiene una raíz, así que se elimina multiplicando numerador y denominador por el conjugado $\sqrt{5} + 1$.
+  \item Amplifica por $\dfrac{\sqrt{5}+1}{\sqrt{5}+1} = 1$, lo que no altera la fracción: $\dfrac{4}{\sqrt{5}-1}\cdot\dfrac{\sqrt{5}+1}{\sqrt{5}+1} = \dfrac{4(\sqrt{5}+1)}{(\sqrt{5}-1)(\sqrt{5}+1)}$.
+  \item Desarrolla el denominador con la identidad $(a-b)(a+b) = a^2 - b^2$, con $a = \sqrt{5}$ y $b = 1$: $(\sqrt{5})^2 - 1^2 = 5 - 1 = 4$.
+  \item Reemplaza el denominador: $\dfrac{4(\sqrt{5}+1)}{4}$.
+  \item Simplifica el factor $4$ del numerador con el denominador: $\dfrac{4(\sqrt{5}+1)}{4} = \sqrt{5} + 1$.
+  \item Comprobación numérica: $\dfrac{4}{\sqrt{5}-1}\approx \dfrac{4}{1{,}236}\approx 3{,}236$, y $\sqrt{5} + 1 \approx 3{,}236$. Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
@@ -298,12 +301,14 @@ Si $\log 2\approx 0{,}301$, ¿cuál es el valor aproximado de $\log 50$?
 \alternativa{C}{$-3$}
 \alternativa{D}{$-7$}
 \clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par $\log_b a = c$ significa $b^c = a$: busca a qué exponente hay que elevar cada base.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Un logaritmo $\log_b a$ es el exponente al que hay que elevar $b$ para obtener $a$; con esa definición cada término se calcula por separado y luego se suman.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item $\log_2 32 = 5$, porque $2^5 = 32$.
-  \item $\log_3 \dfrac{1}{9} = -2$, porque $3^{-2} = \dfrac{1}{3^2} = \dfrac{1}{9}$.
-  \item Suma: $5 + (-2) = 3$.
+  \item Recuerda la definición: $\log_b a = c$ equivale a $b^c = a$.
+  \item Calcula $\log_2 32$: se busca el exponente $c$ con $2^c = 32$. Como $2^5 = 32$, se obtiene $\log_2 32 = 5$.
+  \item Calcula $\log_3 \dfrac{1}{9}$: se busca $c$ con $3^c = \dfrac{1}{9}$. Como $\dfrac{1}{9} = \dfrac{1}{3^2} = 3^{-2}$, por la propiedad de las potencias con exponente negativo, $\log_3 \dfrac{1}{9} = -2$.
+  \item Verifica el signo: el argumento $\dfrac{1}{9}$ es menor que $1$, así que el logaritmo debe ser negativo, y $-2$ lo cumple.
+  \item Suma los dos resultados: $5 + (-2) = 3$. Por lo tanto, la alternativa correcta es la A.
 \end{enumerate}
 \end{ejemplo}
 
@@ -315,12 +320,15 @@ Si $\log 2 \approx 0{,}301$ y $\log 3 \approx 0{,}477$, ¿cuál es el valor apro
 \alternativa{C}{$1{,}079$}
 \alternativa{D}{$1{,}204$}
 \clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Descompón 12 en factores primos y usa $\log(ab) = \log a + \log b$ y $\log a^n = n\log a$.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Se descompone $12$ en factores primos y se aplican las propiedades del logaritmo del producto y de la potencia.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item $12 = 2^2\cdot 3$.
-  \item $\log 12 = \log 2^2 + \log 3 = 2\log 2 + \log 3$.
-  \item $2\cdot 0{,}301 + 0{,}477 = 0{,}602 + 0{,}477 = 1{,}079$.
+  \item Descompón $12$ en factores primos: $12 = 2^2\cdot 3$.
+  \item Aplica el logaritmo del producto, $\log(ab) = \log a + \log b$: $\log 12 = \log(2^2\cdot 3) = \log 2^2 + \log 3$.
+  \item Aplica la propiedad de la potencia, $\log a^n = n\log a$, al primer término: $\log 2^2 = 2\log 2$. Así, $\log 12 = 2\log 2 + \log 3$.
+  \item Reemplaza los valores aproximados: $2\cdot 0{,}301 + 0{,}477$.
+  \item Efectúa la multiplicación y la suma: $2\cdot 0{,}301 = 0{,}602$, y luego $0{,}602 + 0{,}477 = 1{,}079$.
+  \item Comprobación: el valor exacto es $\log 12 \approx 1{,}0792$, así que la aproximación coincide con la alternativa. Por lo tanto, la alternativa correcta es la C.
 \end{enumerate}
 \end{ejemplo}
 
@@ -384,71 +392,72 @@ Se depositan \$1 000 000 a un interés compuesto del 2 \% mensual. ¿Cuál es el
 \alternativa{C}{\$1 060 000}
 \alternativa{D}{\$1 080 000}
 \clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Con interés compuesto, cada mes se gana interés sobre el monto acumulado: $C_n = C_0(1 + i)^n$.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En interés compuesto cada período se calcula sobre el monto acumulado, por lo que el capital se multiplica por $(1+i)$ en cada mes: $C_n = C_0(1+i)^n$.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Datos: $C_0 = 1\,000\,000$, $i = 0{,}02$ y $n = 3$.
-  \item $(1{,}02)^2 = 1{,}0404$ y $(1{,}02)^3 = 1{,}0404\cdot 1{,}02 = 1{,}061208$.
-  \item $C_3 = 1\,000\,000\cdot 1{,}061208 = 1\,061\,208$.
+  \item Identifica la fórmula del interés compuesto: $C_n = C_0(1+i)^n$, con $C_0 = 1\,000\,000$, $i = 0{,}02$ y $n = 3$.
+  \item Calcula el factor de crecimiento: $1 + i = 1{,}02$, lo que indica que cada mes el monto queda multiplicado por $1{,}02$.
+  \item Calcula los dos primeros meses: $(1{,}02)^2 = 1{,}0404$.
+  \item Multiplica por $1{,}02$ para el tercer mes: $(1{,}02)^3 = 1{,}0404\cdot 1{,}02 = 1{,}061208$.
+  \item Multiplica el capital por este factor: $C_3 = 1\,000\,000\cdot 1{,}061208 = 1\,061\,208$ pesos.
+  \item Comprobación mes a mes: $1\,000\,000\cdot 1{,}02 = 1\,020\,000$; luego $1\,020\,000\cdot 1{,}02 = 1\,040\,400$; y finalmente $1\,040\,400\cdot 1{,}02 = 1\,061\,208$. Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
 \section{Álgebra y funciones}
 
-{\itshape\color{zinc700} Ecuaciones cuadráticas, funciones exponencial, logarítmica, compuesta e inversa.}
+{\itshape\color{zinc700} Sistemas de ecuaciones, funciones potencia, exponencial, logarítmica y trigonométricas, y la ecuación cuadrática de M1.}
 
-\subsection{Ecuación cuadrática y discriminante}
+\subsection{Sistemas de ecuaciones: tipos de solución}
 
-Una ecuación $ax^2+bx+c=0$ se resuelve factorizando o con la fórmula general. El discriminante $\Delta=b^2-4ac$ indica cuántas soluciones reales tiene, sin necesidad de calcularlas.
+Un sistema de dos ecuaciones lineales con dos incógnitas representa dos rectas en el plano. Si se cortan, hay una única solución; si son paralelas distintas, no hay solución; si son la misma recta, hay infinitas soluciones.
 
-Las soluciones cumplen $x_1+x_2=-\frac{b}{a}$ y $x_1x_2=\frac{c}{a}$, relaciones útiles para construir ecuaciones o verificar resultados.
+Para decidir el caso basta comparar los coeficientes: en $ax+by=c$ y $dx+ey=f$, las rectas son paralelas cuando $\dfrac{a}{d}=\dfrac{b}{e}$, y coinciden si además esa razón es igual a $\dfrac{c}{f}$.
 
-\begin{formula}[Discriminante]
-$\Delta>0$: dos soluciones reales distintas. $\Delta=0$: una solución real (doble). $\Delta<0$: ninguna solución real.
-
+\begin{ley}[Criterio]
 \begin{gather*}
-x=\frac{-b\pm\sqrt{\Delta}}{2a} \\
-x_1+x_2=-\frac{b}{a} \\
-x_1x_2=\frac{c}{a}
+\frac{a}{d}\neq\frac{b}{e}\ \Rightarrow\ \text{única} \\
+\frac{a}{d}=\frac{b}{e}\neq\frac{c}{f}\ \Rightarrow\ \text{ninguna} \\
+\frac{a}{d}=\frac{b}{e}=\frac{c}{f}\ \Rightarrow\ \text{infinitas}
 \end{gather*}
-\end{formula}
+\end{ley}
 
 \begin{ideasclave}
 \begin{itemize}
-  \item Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.
-  \item «Una única solución» $\iff \Delta=0$.
-  \item La parábola no corta el eje $X$ cuando $\Delta<0$.
+  \item Pendientes distintas: las rectas se cortan en un punto.
+  \item Misma pendiente y distinto coeficiente de posición: rectas paralelas, sin solución.
+  \item Una ecuación múltiplo de la otra: infinitas soluciones.
 \end{itemize}
 \end{ideasclave}
 
 \begin{metodo}
 \begin{enumerate}
-  \item Ordena la ecuación igualando a cero.
-  \item Calcula el discriminante o factoriza.
-  \item Interpreta el resultado según lo pedido (número de soluciones, valores, parámetro).
+  \item Ordena ambas ecuaciones en la forma $ax+by=c$.
+  \item Compara las razones entre coeficientes.
+  \item Si hay un parámetro, despeja el valor que hace iguales las razones.
 \end{enumerate}
 \end{metodo}
 
 \begin{errorfrecuente}[Trampas frecuentes del DEMRE]
 \begin{itemize}
-  \item Olvidar el factor 4 en $4ac$.
-  \item Perder una solución al dividir por $x$.
+  \item Concluir «sin solución» solo porque las pendientes son iguales, sin revisar si las rectas coinciden.
+  \item Comparar coeficientes sin ordenar antes las ecuaciones.
 \end{itemize}
 \end{errorfrecuente}
 
 \begin{ejemplo}[Ejemplo resuelto]
 {\sffamily\footnotesize\color{zinc500} Enunciado}\par
-¿Para qué valores de $k$ la ecuación $x^2-4x+k=0$ no tiene soluciones reales?
-\alternativa{A}{$k<4$}
-\alternativa{B}{$k=4$}
-\alternativa{C}{$k>4$}
-\alternativa{D}{$k>16$}
-\clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par No hay soluciones reales cuando el discriminante es negativo.
+¿Para qué valor de $k$ el sistema $2x+ky=5$ y $4x+6y=7$ no tiene solución?
+\alternativa{A}{$k=2$}
+\alternativa{B}{$k=3$}
+\alternativa{C}{$k=6$}
+\alternativa{D}{$k=12$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par No hay solución cuando las rectas son paralelas y distintas.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item $\Delta=(-4)^2-4\cdot 1\cdot k=16-4k$.
-  \item $16-4k<0 \Rightarrow k>4$.
+  \item $\dfrac{2}{4}=\dfrac{k}{6}\Rightarrow k=3$.
+  \item Con $k=3$: $\dfrac{5}{7}\neq\dfrac{1}{2}$, así que son paralelas distintas.
 \end{enumerate}
 \end{ejemplo}
 
@@ -460,16 +469,19 @@ x_1x_2=\frac{c}{a}
 \alternativa{C}{$k = 9$}
 \alternativa{D}{$k = 6$ o $k = -6$}
 \clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Una ecuación cuadrática tiene una única solución real (doble) cuando su discriminante es cero: $\Delta = b^2 - 4ac = 0$.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Una ecuación cuadrática tiene una única solución real cuando su discriminante es cero: $\Delta = b^2 - 4ac = 0$.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Aquí $a = 1$, $b = k$ y $c = 9$: $\Delta = k^2 - 4\cdot 1\cdot 9 = k^2 - 36$.
-  \item $k^2 - 36 = 0 \Rightarrow k^2 = 36 \Rightarrow k = 6$ o $k = -6$.
-  \item Comprobación con $k = 6$: $x^2 + 6x + 9 = (x+3)^2$, cuya única solución es $x = -3$.
+  \item Identifica los coeficientes de $x^2 + kx + 9 = 0$: $a = 1$, $b = k$ y $c = 9$.
+  \item Recuerda que una ecuación cuadrática $ax^2+bx+c=0$ tiene una única solución real (raíz doble) cuando $\Delta = b^2 - 4ac = 0$.
+  \item Calcula el discriminante: $\Delta = k^2 - 4\cdot 1\cdot 9 = k^2 - 36$.
+  \item Iguala a cero: $k^2 - 36 = 0$, de donde $k^2 = 36$.
+  \item Extrae la raíz cuadrada en ambos lados, considerando los dos signos: $k = 6$ o $k = -6$.
+  \item Comprobación con $k = 6$: $x^2 + 6x + 9 = (x+3)^2$, que tiene la única solución $x = -3$; con $k = -6$ se obtiene $(x-3)^2$, con solución $x = 3$. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Funciones exponencial y logarítmica}
+\subsection{Función potencia, exponencial y logarítmica}
 
 La función exponencial $f(x)=a\cdot b^x$ ($b>0$, $b\neq 1$) modela crecimientos ($b>1$) o decrecimientos ($0<b<1$) en que la cantidad cambia en un mismo porcentaje por período: poblaciones, contagios, interés compuesto, decaimiento radiactivo.
 
@@ -529,11 +541,15 @@ Una colonia de bacterias tiene 500 individuos y duplica su población cada 3 hor
 \alternativa{C}{8000}
 \alternativa{D}{16 000}
 \clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Crecimiento exponencial: $N(t) = N_0\cdot 2^{t/T}$, donde $T$ es el tiempo de duplicación.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En crecimiento exponencial la población se multiplica por $2$ en cada período de duplicación; basta contar cuántos períodos caben en el tiempo transcurrido.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item En 12 horas hay $\dfrac{12}{3} = 4$ duplicaciones.
-  \item $N(12) = 500\cdot 2^4 = 500\cdot 16 = 8000$.
+  \item Recuerda el modelo de duplicación: $N(t) = N_0\cdot 2^{t/T}$, donde $t$ es el tiempo transcurrido y $T$ el tiempo de duplicación.
+  \item Calcula el número de duplicaciones: $\dfrac{t}{T} = \dfrac{12}{3} = 4$. Cada intervalo de 3 horas duplica la población.
+  \item Reemplaza en el modelo: $N(12) = 500\cdot 2^{4}$.
+  \item Calcula la potencia: $2^4 = 16$.
+  \item Multiplica: $500\cdot 16 = 8\,000$.
+  \item Comprobación por etapas: $500 \to 1\,000$ (3 h), $\to 2\,000$ (6 h), $\to 4\,000$ (9 h) y $\to 8\,000$ (12 h). Son 4 duplicaciones. Por lo tanto, la alternativa correcta es la C.
 \end{enumerate}
 \end{ejemplo}
 
@@ -545,139 +561,123 @@ Sean $f(x) = 2x + 1$ y $g(x) = x^2$. ¿Cuál es el valor de $(f\circ g)(3)$?
 \alternativa{C}{$21$}
 \alternativa{D}{$36$}
 \clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par $(f\circ g)(x) = f(g(x))$: primero se aplica $g$ y luego $f$.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par $(f\circ g)(x) = f(g(x))$: primero se aplica $g$ al valor dado y después $f$ al resultado.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item $g(3) = 3^2 = 9$.
-  \item $f(9) = 2\cdot 9 + 1 = 19$.
+  \item Recuerda la definición de composición: $(f\circ g)(x) = f(g(x))$, por lo que primero actúa $g$ y su resultado entra en $f$.
+  \item Calcula $g(3) = 3^2 = 9$.
+  \item Usa ese resultado como entrada de $f$: $f(9) = 2\cdot 9 + 1$.
+  \item Efectúa la multiplicación y la suma: $2\cdot 9 = 18$ y $18 + 1 = 19$.
+  \item Comprobación: $f(g(3)) = f(9) = 19$, que coincide con el resultado. Por lo tanto, la alternativa correcta es la A.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Composición e inversa de funciones}
+\subsection{Funciones trigonométricas seno y coseno}
 
-La composición $(f\circ g)(x)=f(g(x))$ aplica primero $g$ y luego $f$; en general $f\circ g\neq g\circ f$.
+Las funciones $f(x)=\sin x$ y $g(x)=\cos x$ son periódicas: se repiten cada $360^\circ$ ($2\pi$ radianes) y toman valores entre $-1$ y $1$. Modelan fenómenos que se repiten, como mareas, ruedas o el día y la noche.
 
-La inversa $f^{-1}$ deshace lo que hace $f$: $f(f^{-1}(x))=x$. Existe solo si $f$ es biyectiva. Para encontrarla se despeja $x$ en $y=f(x)$ y se intercambian las variables.
+En $f(x)=a\sin(bx)+c$, $|a|$ es la amplitud, el período es $\dfrac{360^\circ}{|b|}$ (o $\dfrac{2\pi}{|b|}$) y $c$ desplaza la gráfica verticalmente: los valores van de $c-|a|$ a $c+|a|$.
 
-\begin{formula}[Procedimiento]
-\[y=f(x) \ \Rightarrow\ x=\text{(despeje)} \ \Rightarrow\ f^{-1}(x)=\text{(intercambio)}\]
-
-El gráfico de $f^{-1}$ es simétrico al de $f$ respecto de la recta $y=x$.
-\end{formula}
-
-\begin{ideasclave}
-\begin{itemize}
-  \item $(f\circ g)(3)$: evalúa primero $g(3)$.
-  \item $f^{-1}(x)\neq\frac{1}{f(x)}$.
-  \item Comprueba la inversa componiendo: debe dar $x$.
-\end{itemize}
-\end{ideasclave}
-
-\begin{metodo}
-\begin{enumerate}
-  \item Identifica el orden de aplicación de las funciones.
-  \item Para la inversa, despeja y luego intercambia variables.
-  \item Verifica con un valor numérico.
-\end{enumerate}
-\end{metodo}
-
-\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
-\begin{itemize}
-  \item Aplicar las funciones en el orden de lectura (de izquierda a derecha).
-  \item Confundir la inversa con el recíproco.
-\end{itemize}
-\end{errorfrecuente}
-
-\begin{ejemplo}[Ejemplo resuelto]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-Si $f(x)=3x-2$, ¿cuál es $f^{-1}(7)$?
-\alternativa{A}{$19$}
-\alternativa{B}{$3$}
-\alternativa{C}{$\dfrac{1}{19}$}
-\alternativa{D}{$\dfrac{5}{3}$}
-\clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par $f^{-1}(7)$ es el valor de $x$ tal que $f(x)=7$.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item $3x-2=7 \Rightarrow x=3$.
-  \item Por lo tanto $f^{-1}(7)=3$ (19 sería $f(7)$).
-\end{enumerate}
-\end{ejemplo}
-
-\begin{ejemplo}[Ejemplo tipo PAES 2: Función inversa]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-Si $f(x) = \dfrac{x - 3}{2}$, ¿cuál es la función inversa $f^{-1}(x)$?
-\alternativa{A}{$2x - 3$}
-\alternativa{B}{$\dfrac{x + 3}{2}$}
-\alternativa{C}{$2x + 3$}
-\alternativa{D}{$\dfrac{2}{x - 3}$}
-\clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Para invertir: escribe $y = f(x)$, despeja $x$ y luego intercambia los nombres de las variables.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item $y = \dfrac{x-3}{2} \Rightarrow 2y = x - 3 \Rightarrow x = 2y + 3$.
-  \item Intercambia variables: $f^{-1}(x) = 2x + 3$.
-  \item Comprobación: $f(f^{-1}(x)) = \dfrac{(2x+3)-3}{2} = x$.
-\end{enumerate}
-\end{ejemplo}
-
-\section{Geometría}
-
-{\itshape\color{zinc700} Trigonometría, homotecia y geometría analítica.}
-
-\subsection{Trigonometría en el triángulo rectángulo}
-
-En un triángulo rectángulo, las razones trigonométricas de un ángulo agudo relacionan sus lados: seno (opuesto/hipotenusa), coseno (adyacente/hipotenusa) y tangente (opuesto/adyacente).
-
-Se usan para calcular alturas y distancias inaccesibles a partir de un ángulo de elevación o depresión y un lado conocido.
-
-\begin{formula}[Razones y valores notables]
+\begin{formula}[Parámetros]
 \begin{gather*}
-\operatorname{sen}\alpha=\frac{\text{op}}{\text{hip}} \\
-\cos\alpha=\frac{\text{ady}}{\text{hip}} \\
-\tan\alpha=\frac{\text{op}}{\text{ady}} \\
-\operatorname{sen}^2\alpha+\cos^2\alpha=1
+y=a\sin(bx)+c \\
+\text{amplitud}=|a| \\
+\text{período}=\frac{2\pi}{|b|} \\
+\text{recorrido}=[\,c-|a|,\ c+|a|\,]
 \end{gather*}
-
-$\operatorname{sen}30^\circ=\cos 60^\circ=\frac{1}{2}$, $\operatorname{sen}60^\circ=\cos 30^\circ=\frac{\sqrt{3}}{2}$, $\tan 45^\circ=1$.
 \end{formula}
 
 \begin{ideasclave}
 \begin{itemize}
-  \item Identifica qué lado es opuesto y cuál adyacente \textbf{respecto del ángulo dado}.
-  \item Ningún cateto es mayor que la hipotenusa.
-  \item $\tan\alpha=\frac{\operatorname{sen}\alpha}{\cos\alpha}$.
+  \item $\sin 0=0$, $\sin 90^\circ=1$; $\cos 0=1$, $\cos 90^\circ=0$.
+  \item La gráfica del coseno es la del seno desplazada $90^\circ$.
+  \item Un $b$ mayor comprime la gráfica: más ciclos en el mismo intervalo.
 \end{itemize}
 \end{ideasclave}
 
 \begin{metodo}
 \begin{enumerate}
-  \item Dibuja el triángulo y marca el ángulo conocido.
-  \item Elige la razón que relaciona el dato con la incógnita.
-  \item Despeja y verifica que el resultado sea razonable.
+  \item Lee en la gráfica el máximo, el mínimo y la distancia entre dos máximos.
+  \item Amplitud: la mitad de máximo menos mínimo; $c$: el punto medio entre ambos.
+  \item Período: distancia entre dos máximos consecutivos.
 \end{enumerate}
 \end{metodo}
 
 \begin{errorfrecuente}[Trampas frecuentes del DEMRE]
 \begin{itemize}
-  \item Usar el coseno cuando corresponde el seno (o viceversa).
-  \item Dividir en vez de multiplicar al despejar.
+  \item Confundir la amplitud con la distancia entre máximo y mínimo (que es el doble).
+  \item Calcular el período como $2\pi\cdot b$ en vez de $\dfrac{2\pi}{b}$.
 \end{itemize}
 \end{errorfrecuente}
 
 \begin{ejemplo}[Ejemplo resuelto]
 {\sffamily\footnotesize\color{zinc500} Enunciado}\par
-Desde un punto del suelo a 20 m de un edificio, se ve su azotea con un ángulo de elevación de $45^\circ$. ¿Cuál es la altura del edificio?
-\alternativa{A}{10 m}
-\alternativa{B}{20 m}
-\alternativa{C}{$20\sqrt{2}$ m}
-\alternativa{D}{40 m}
-\clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par La altura es el cateto opuesto y la distancia, el adyacente: se usa la tangente.
+La altura de la marea, en metros, se modela con $h(t)=1{,}5\sin\!\left(\dfrac{\pi t}{6}\right)+3$, con $t$ en horas. ¿Cuál es la altura máxima?
+\alternativa{A}{1,5 m}
+\alternativa{B}{3 m}
+\alternativa{C}{4,5 m}
+\alternativa{D}{6 m}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El seno vale como máximo 1.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item $\tan 45^\circ=\dfrac{h}{20}$.
-  \item $h=20\cdot 1=20$ m.
+  \item Máximo: $1{,}5\cdot 1+3=4{,}5$ m.
+  \item El período es $\dfrac{2\pi}{\pi/6}=12$ horas.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Ecuación y función cuadrática (contenido de M1)}
+
+Una ecuación $ax^2+bx+c=0$ se resuelve factorizando o con la fórmula general. El discriminante $\Delta=b^2-4ac$ indica cuántas soluciones reales tiene, sin necesidad de calcularlas.
+
+Las soluciones cumplen $x_1+x_2=-\frac{b}{a}$ y $x_1x_2=\frac{c}{a}$, relaciones útiles para construir ecuaciones o verificar resultados.
+
+\begin{formula}[Discriminante]
+$\Delta>0$: dos soluciones reales distintas. $\Delta=0$: una solución real (doble). $\Delta<0$: ninguna solución real.
+
+\begin{gather*}
+x=\frac{-b\pm\sqrt{\Delta}}{2a} \\
+x_1+x_2=-\frac{b}{a} \\
+x_1x_2=\frac{c}{a}
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.
+  \item «Una única solución» $\iff \Delta=0$.
+  \item La parábola no corta el eje $X$ cuando $\Delta<0$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Ordena la ecuación igualando a cero.
+  \item Calcula el discriminante o factoriza.
+  \item Interpreta el resultado según lo pedido (número de soluciones, valores, parámetro).
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Olvidar el factor 4 en $4ac$.
+  \item Perder una solución al dividir por $x$.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+¿Para qué valores de $k$ la ecuación $x^2-4x+k=0$ no tiene soluciones reales?
+\alternativa{A}{$k<4$}
+\alternativa{B}{$k=4$}
+\alternativa{C}{$k>4$}
+\alternativa{D}{$k>16$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par No hay soluciones reales cuando el discriminante es negativo.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\Delta=(-4)^2-4\cdot 1\cdot k=16-4k$.
+  \item $16-4k<0 \Rightarrow k>4$.
 \end{enumerate}
 \end{ejemplo}
 
@@ -689,31 +689,23 @@ Una rampa de 10 m de largo forma un ángulo de $30^\circ$ con el suelo horizonta
 \alternativa{C}{$\dfrac{10\sqrt{3}}{3}$ m}
 \alternativa{D}{20 m}
 \clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par La rampa es la hipotenusa y la altura es el cateto opuesto al ángulo: se usa el seno.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La rampa es la hipotenusa y la altura es el cateto opuesto al ángulo de $30^\circ$, por lo que se usa el seno.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item $\operatorname{sen} 30^\circ = \dfrac{h}{10}$.
-  \item Como $\operatorname{sen} 30^\circ = \dfrac{1}{2}$: $h = 10\cdot\dfrac{1}{2} = 5$ m.
+  \item Dibuja el triángulo rectángulo: la rampa es la hipotenusa de $10$ m, el suelo es el cateto adyacente al ángulo de $30^\circ$ y la altura $h$ es el cateto opuesto.
+  \item Elige la razón trigonométrica: $\operatorname{sen}\alpha = \dfrac{\text{cateto opuesto}}{\text{hipotenusa}}$, que relaciona justo $h$ con la hipotenusa.
+  \item Plantea la ecuación: $\operatorname{sen} 30^\circ = \dfrac{h}{10}$.
+  \item Usa el valor exacto $\operatorname{sen} 30^\circ = \dfrac{1}{2}$, que se obtiene del triángulo especial de $30^\circ$-$60^\circ$-$90^\circ$.
+  \item Despeja $h$ multiplicando por $10$: $h = 10\cdot\dfrac{1}{2} = 5$ m.
+  \item Comprobación: la altura debe ser menor que la hipotenusa, y $5 < 10$. Además, $\cos 30^\circ \approx 0{,}866$ daría una distancia horizontal de $8{,}66$ m, y $5^2 + 8{,}66^2 = 25 + 75 = 100 = 10^2$. Por lo tanto, la alternativa correcta es la A.
 \end{enumerate}
 \end{ejemplo}
 
-\begin{ejemplo}[Ejemplo tipo PAES 3: Razones trigonométricas]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-Si $\alpha$ es un ángulo agudo y $\operatorname{sen}\alpha = \dfrac{3}{5}$, ¿cuál es el valor de $\tan\alpha$?
-\alternativa{A}{$\dfrac{4}{5}$}
-\alternativa{B}{$\dfrac{3}{4}$}
-\alternativa{C}{$\dfrac{4}{3}$}
-\alternativa{D}{$\dfrac{5}{3}$}
-\clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Construye un triángulo rectángulo con cateto opuesto 3 e hipotenusa 5 y encuentra el cateto adyacente.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item Cateto adyacente: $\sqrt{5^2 - 3^2} = \sqrt{16} = 4$.
-  \item $\tan\alpha = \dfrac{\text{opuesto}}{\text{adyacente}} = \dfrac{3}{4}$.
-\end{enumerate}
-\end{ejemplo}
+\section{Geometría}
 
-\subsection{Homotecia y semejanza}
+{\itshape\color{zinc700} Homotecia, razones trigonométricas, circunferencia, esfera y rectas en el plano.}
+
+\subsection{Homotecia de figuras planas}
 
 Una homotecia de centro $O$ y razón $k$ transforma cada punto $P$ en $P'$ sobre la recta $OP$ con $OP'=|k|\cdot OP$. Si $k<0$, la imagen queda al otro lado del centro e invertida.
 
@@ -769,15 +761,201 @@ Una figura de área $12\ \text{cm}^2$ se transforma mediante una homotecia de ra
 \alternativa{C}{$-24\ \text{cm}^2$}
 \alternativa{D}{$144\ \text{cm}^2$}
 \clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par En una homotecia de razón $k$, las longitudes se multiplican por $|k|$ y las áreas por $k^2$. El signo solo indica que la figura queda invertida respecto del centro.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En una homotecia de razón $k$, las longitudes se multiplican por $|k|$ y las áreas por $k^2$; el signo de $k$ solo indica que la figura queda al otro lado del centro.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Factor de área: $k^2 = (-2)^2 = 4$.
-  \item Área homotética: $12\cdot 4 = 48\ \text{cm}^2$.
+  \item Recuerda cómo cambian las áreas en una homotecia: si las longitudes se multiplican por $|k|$, las áreas se multiplican por $k^2$, porque el área depende de dos longitudes.
+  \item Calcula el factor de área: $k^2 = (-2)^2 = 4$.
+  \item Aplica el factor al área original: $12\ \text{cm}^2\cdot 4 = 48\ \text{cm}^2$.
+  \item Interpreta el signo: $k = -2$ invierte la figura respecto del centro de homotecia, pero no cambia su tamaño ni su área.
+  \item Comprobación: si un cuadrado tiene lado $2$ cm, su área es $4\ \text{cm}^2$; con $k = -2$ el lado queda en $4$ cm y el área en $16\ \text{cm}^2$, cuatro veces mayor. Por lo tanto, la alternativa correcta es la B.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Rectas y distancias en el plano}
+\subsection{Razones trigonométricas}
+
+En un triángulo rectángulo, las razones trigonométricas de un ángulo agudo relacionan sus lados: seno (opuesto/hipotenusa), coseno (adyacente/hipotenusa) y tangente (opuesto/adyacente).
+
+Se usan para calcular alturas y distancias inaccesibles a partir de un ángulo de elevación o depresión y un lado conocido.
+
+\begin{formula}[Razones y valores notables]
+\begin{gather*}
+\operatorname{sen}\alpha=\frac{\text{op}}{\text{hip}} \\
+\cos\alpha=\frac{\text{ady}}{\text{hip}} \\
+\tan\alpha=\frac{\text{op}}{\text{ady}} \\
+\operatorname{sen}^2\alpha+\cos^2\alpha=1
+\end{gather*}
+
+$\operatorname{sen}30^\circ=\cos 60^\circ=\frac{1}{2}$, $\operatorname{sen}60^\circ=\cos 30^\circ=\frac{\sqrt{3}}{2}$, $\tan 45^\circ=1$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Identifica qué lado es opuesto y cuál adyacente \textbf{respecto del ángulo dado}.
+  \item Ningún cateto es mayor que la hipotenusa.
+  \item $\tan\alpha=\frac{\operatorname{sen}\alpha}{\cos\alpha}$.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Dibuja el triángulo y marca el ángulo conocido.
+  \item Elige la razón que relaciona el dato con la incógnita.
+  \item Despeja y verifica que el resultado sea razonable.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar el coseno cuando corresponde el seno (o viceversa).
+  \item Dividir en vez de multiplicar al despejar.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Desde un punto del suelo a 20 m de un edificio, se ve su azotea con un ángulo de elevación de $45^\circ$. ¿Cuál es la altura del edificio?
+\alternativa{A}{10 m}
+\alternativa{B}{20 m}
+\alternativa{C}{$20\sqrt{2}$ m}
+\alternativa{D}{40 m}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La altura es el cateto opuesto y la distancia, el adyacente: se usa la tangente.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $\tan 45^\circ=\dfrac{h}{20}$.
+  \item $h=20\cdot 1=20$ m.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Razones trigonométricas]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Si $\alpha$ es un ángulo agudo y $\operatorname{sen}\alpha = \dfrac{3}{5}$, ¿cuál es el valor de $\tan\alpha$?
+\alternativa{A}{$\dfrac{4}{5}$}
+\alternativa{B}{$\dfrac{3}{4}$}
+\alternativa{C}{$\dfrac{4}{3}$}
+\alternativa{D}{$\dfrac{5}{3}$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con $\operatorname{sen}\alpha$ conocido, se encuentra el cateto adyacente por Pitágoras y luego se calcula $\tan\alpha$ como cociente de catetos.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Interpreta el dato: en un triángulo rectángulo, $\operatorname{sen}\alpha = \dfrac{\text{opuesto}}{\text{hipotenusa}} = \dfrac{3}{5}$, así que se toma un cateto opuesto $3$ y una hipotenusa $5$.
+  \item Calcula el cateto adyacente con el teorema de Pitágoras: $\text{adyacente}^2 = 5^2 - 3^2 = 25 - 9 = 16$.
+  \item Extrae la raíz cuadrada positiva, porque es una longitud: $\text{adyacente} = \sqrt{16} = 4$.
+  \item Aplica la definición de tangente: $\tan\alpha = \dfrac{\text{opuesto}}{\text{adyacente}}$.
+  \item Reemplaza: $\tan\alpha = \dfrac{3}{4}$.
+  \item Comprobación: $\cos\alpha = \dfrac{4}{5}$ y $\dfrac{\operatorname{sen}\alpha}{\cos\alpha} = \dfrac{3/5}{4/5} = \dfrac{3}{4}$, valor que coincide. Por lo tanto, la alternativa correcta es la B.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Relaciones métricas en la circunferencia}
+
+Un ángulo inscrito mide la mitad del ángulo del centro que subtiende el mismo arco. Por eso todos los ángulos inscritos en el mismo arco son iguales, y uno inscrito en una semicircunferencia mide $90^\circ$.
+
+Cuando dos cuerdas se cortan dentro de la circunferencia, el producto de los segmentos de una es igual al de la otra. Con dos secantes trazadas desde un punto exterior, el producto del segmento exterior por la secante completa es igual en ambas.
+
+\begin{ley}[Relaciones]
+Ángulo inscrito $=\dfrac{\text{ángulo del centro}}{2}$. Longitud de arco $=\dfrac{\alpha}{360^\circ}\cdot 2\pi r$.
+
+\begin{gather*}
+\text{cuerdas: } PA\cdot PB=PC\cdot PD \\
+\text{secantes: } PA\cdot PB=PC\cdot PD\ (P \text{ exterior})
+\end{gather*}
+\end{ley}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Ángulo inscrito en una semicircunferencia: $90^\circ$.
+  \item Cuadrilátero inscrito: sus ángulos opuestos suman $180^\circ$.
+  \item Tangente y radio son perpendiculares en el punto de tangencia.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Marca el centro, los arcos y los ángulos conocidos.
+  \item Decide si es un ángulo del centro, inscrito o una relación entre cuerdas o secantes.
+  \item Plantea la ecuación y revisa que las medidas sean positivas.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Tomar el ángulo inscrito igual al del centro.
+  \item En secantes, multiplicar los dos segmentos exteriores en vez del exterior por la secante completa.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Dos cuerdas $AB$ y $CD$ se cortan en $P$. Si $PA=4$, $PB=6$ y $PC=3$, ¿cuánto mide $PD$?
+\alternativa{A}{2}
+\alternativa{B}{4,5}
+\alternativa{C}{8}
+\alternativa{D}{13}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par En cuerdas que se cortan, los productos de sus segmentos son iguales.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $PA\cdot PB=PC\cdot PD \Rightarrow 4\cdot 6=3\cdot PD$.
+  \item $PD=8$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Esfera: superficie y volumen}
+
+La esfera es el conjunto de puntos del espacio que están a la misma distancia $r$ de un centro. Su área de superficie es $4\pi r^2$ y su volumen, $\dfrac{4}{3}\pi r^3$.
+
+Al multiplicar el radio por $k$, el área se multiplica por $k^2$ y el volumen por $k^3$. La semiesfera tiene la mitad del volumen; su superficie total suma la mitad curva y el círculo de la base.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+A=4\pi r^2 \\
+V=\frac{4}{3}\pi r^3 \\
+V_{\text{semiesfera}}=\frac{2}{3}\pi r^3
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item Duplicar el radio multiplica el volumen por 8.
+  \item El área de la esfera es igual a 4 círculos máximos.
+  \item Diámetro $=2\cdot$ radio.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Obtén el radio (no el diámetro).
+  \item Aplica la fórmula de área o de volumen según lo que se pide.
+  \item Si comparas esferas, usa la razón $k^2$ o $k^3$ sin recalcular todo.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Usar el diámetro como radio.
+  \item Olvidar el factor $\dfrac{4}{3}$ del volumen.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Una pelota de radio 3 cm se cambia por otra de radio 6 cm. ¿Cuántas veces mayor es el volumen de la nueva pelota?
+\alternativa{A}{2}
+\alternativa{B}{4}
+\alternativa{C}{6}
+\alternativa{D}{8}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par El volumen depende del cubo del radio.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item La razón entre radios es $k=2$.
+  \item Los volúmenes están en razón $k^3=8$.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Rectas en el plano}
 
 La ecuación de una recta puede escribirse como $y=mx+n$ (principal) o $ax+by+c=0$ (general). Dos rectas son paralelas si tienen igual pendiente y perpendiculares si el producto de sus pendientes es $-1$.
 
@@ -839,130 +1017,41 @@ Paralelas: $m_1=m_2$. Perpendiculares: $m_1\cdot m_2=-1$.
 \alternativa{C}{$y = \dfrac{1}{2}x + \dfrac{3}{2}$}
 \alternativa{D}{$y = -\dfrac{1}{2}x + \dfrac{5}{2}$}
 \clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Dos rectas son perpendiculares si el producto de sus pendientes es $-1$.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Dos rectas perpendiculares tienen pendientes cuyo producto es $-1$; por lo tanto la pendiente buscada es el opuesto del recíproco de la pendiente dada.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Pendiente dada: $2$. Pendiente perpendicular: $m = -\dfrac{1}{2}$.
-  \item Punto-pendiente: $y - 2 = -\dfrac{1}{2}(x - 1)$.
-  \item Despeja: $y = -\dfrac{1}{2}x + \dfrac{1}{2} + 2 = -\dfrac{1}{2}x + \dfrac{5}{2}$.
+  \item Identifica la pendiente de la recta dada: en $y = 2x + 5$, la pendiente es $m_1 = 2$.
+  \item Para que dos rectas sean perpendiculares se cumple $m_1 \cdot m_2 = -1$, así que $m_2 = -\dfrac{1}{m_1} = -\dfrac{1}{2}$.
+  \item Escribe la ecuación punto-pendiente con el punto $(1,2)$: $y - 2 = -\dfrac{1}{2}(x - 1)$.
+  \item Distribuye el signo: $y - 2 = -\dfrac{1}{2}x + \dfrac{1}{2}$.
+  \item Despeja $y$ sumando $2$ en ambos lados: $y = -\dfrac{1}{2}x + \dfrac{1}{2} + 2 = -\dfrac{1}{2}x + \dfrac{5}{2}$.
+  \item Comprobación: el punto $(1,2)$ cumple la ecuación, pues $-\dfrac{1}{2} + \dfrac{5}{2} = 2$. Además $m_1\cdot m_2 = 2\cdot\left(-\dfrac{1}{2}\right) = -1$. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
 \section{Probabilidad y estadística}
 
-{\itshape\color{zinc700} Probabilidad condicional, modelos binomial y normal, dispersión y combinatoria.}
+{\itshape\color{zinc700} Dispersión, probabilidad condicional, permutación y combinatoria, y modelos binomial y normal.}
 
-\subsection{Probabilidad condicional y modelo binomial}
-
-La probabilidad condicional $P(A\mid B)$ es la probabilidad de $A$ sabiendo que ocurrió $B$: el espacio muestral se reduce a $B$. Las tablas de doble entrada y los diagramas de árbol ordenan estos cálculos.
-
-El modelo binomial describe el número de éxitos en $n$ ensayos independientes con probabilidad de éxito $p$ constante.
-
-\begin{formula}[Fórmulas]
-\begin{gather*}
-P(A\mid B)=\frac{P(A\cap B)}{P(B)} \\
-P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
-\end{gather*}
-
-Esperanza binomial: $E(X)=np$.
-\end{formula}
-
-\begin{ideasclave}
-\begin{itemize}
-  \item La condición indica el denominador.
-  \item $P(A\mid B)\neq P(B\mid A)$ en general.
-  \item En el binomial, $\binom{n}{k}$ cuenta las ubicaciones de los éxitos.
-\end{itemize}
-\end{ideasclave}
-
-\begin{metodo}
-\begin{enumerate}
-  \item Identifica qué se sabe (condición) y qué se pregunta.
-  \item Construye una tabla o árbol con las probabilidades.
-  \item Divide la intersección por la probabilidad de la condición.
-\end{enumerate}
-\end{metodo}
-
-\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
-\begin{itemize}
-  \item Invertir la condición.
-  \item Olvidar el coeficiente binomial.
-\end{itemize}
-\end{errorfrecuente}
-
-\begin{ejemplo}[Ejemplo resuelto]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-En un curso de 40 estudiantes, 25 practican deporte; de ellos, 10 también tocan un instrumento. Si se elige al azar un estudiante que practica deporte, ¿cuál es la probabilidad de que toque un instrumento?
-\alternativa{A}{$\dfrac{1}{4}$}
-\alternativa{B}{$\dfrac{2}{5}$}
-\alternativa{C}{$\dfrac{5}{8}$}
-\alternativa{D}{$\dfrac{3}{5}$}
-\clave{B}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par La condición «practica deporte» reduce el espacio muestral a 25 estudiantes.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item Casos posibles: los 25 que practican deporte.
-  \item Favorables: 10. $P=\dfrac{10}{25}=\dfrac{2}{5}$.
-  \item $\frac{1}{4}=\frac{10}{40}$ usa el curso completo como espacio muestral, ignorando la condición.
-\end{enumerate}
-\end{ejemplo}
-
-\begin{ejemplo}[Ejemplo tipo PAES 2: Probabilidad condicional]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-En un curso, el 60 \% son mujeres. El 30 \% de las mujeres y el 20 \% de los hombres usa lentes. Se elige al azar a una persona del curso y se observa que usa lentes.
-
-¿Cuál es la probabilidad de que sea mujer?
-\alternativa{A}{$\dfrac{9}{50}$}
-\alternativa{B}{$\dfrac{13}{50}$}
-\alternativa{C}{$\dfrac{3}{10}$}
-\alternativa{D}{$\dfrac{9}{13}$}
-\clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Se pide $P(M \mid L) = \dfrac{P(M\cap L)}{P(L)}$: la información de que usa lentes reduce el espacio muestral.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item $P(M\cap L) = 0{,}6\cdot 0{,}3 = 0{,}18$.
-  \item $P(H\cap L) = 0{,}4\cdot 0{,}2 = 0{,}08$, así que $P(L) = 0{,}18 + 0{,}08 = 0{,}26$.
-  \item $P(M\mid L) = \dfrac{0{,}18}{0{,}26} = \dfrac{18}{26} = \dfrac{9}{13}$.
-\end{enumerate}
-\end{ejemplo}
-
-\begin{ejemplo}[Ejemplo tipo PAES 3: Modelo binomial]
-{\sffamily\footnotesize\color{zinc500} Enunciado}\par
-Se lanza una moneda equilibrada 4 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras?
-\alternativa{A}{$\dfrac{1}{2}$}
-\alternativa{B}{$\dfrac{1}{4}$}
-\alternativa{C}{$\dfrac{3}{8}$}
-\alternativa{D}{$\dfrac{1}{16}$}
-\clave{C}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Cuenta de cuántas maneras pueden ubicarse 2 caras en 4 lanzamientos y multiplica por la probabilidad de cada secuencia.
-{\sffamily\footnotesize\color{zinc500} Desarrollo}
-\begin{enumerate}
-  \item Número de secuencias con 2 caras: $\binom{4}{2} = \dfrac{4!}{2!\,2!} = 6$.
-  \item Cada secuencia tiene probabilidad $\left(\dfrac{1}{2}\right)^4 = \dfrac{1}{16}$.
-  \item $P = 6\cdot\dfrac{1}{16} = \dfrac{6}{16} = \dfrac{3}{8}$.
-\end{enumerate}
-\end{ejemplo}
-
-\subsection{Dispersión y distribución normal}
+\subsection{Medidas de dispersión}
 
 La desviación estándar mide cuánto se alejan, en promedio, los datos de la media. Si se suma una constante a todos los datos no cambia; si se multiplican por $k$, queda multiplicada por $|k|$.
 
-En una distribución normal, los datos se concentran simétricamente alrededor de la media: cerca del 68 \% está a una desviación estándar de ella y cerca del 95 \%, a dos.
+El rango (máximo menos mínimo) y el rango intercuartílico ($Q_3-Q_1$) también miden dispersión. Para comparar grupos con medias distintas conviene mirar cuánto se separan sus datos, no solo su promedio.
 
 \begin{formula}[Fórmulas]
 \begin{gather*}
 \sigma=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n}} \\
-z=\frac{x-\mu}{\sigma}
+\sigma^2=\text{varianza} \\
+\text{rango}=\text{máx}-\text{mín}
 \end{gather*}
-
-$P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0{,}95$.
 \end{formula}
 
 \begin{ideasclave}
 \begin{itemize}
   \item Igual media no implica igual dispersión.
   \item Sumar 5 puntos a todos no cambia $\sigma$.
-  \item $z$ mide a cuántas desviaciones está un dato de la media.
+  \item Multiplicar todos los datos por 2 duplica $\sigma$ y cuadruplica la varianza.
 \end{itemize}
 \end{ideasclave}
 
@@ -970,7 +1059,7 @@ $P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sig
 \begin{enumerate}
   \item Compara las distancias de los datos a la media.
   \item Aplica las propiedades ante transformaciones de los datos.
-  \item En la normal, estandariza con $z$ y usa los porcentajes de referencia.
+  \item Decide si conviene la desviación estándar, el rango o el rango intercuartílico.
 \end{enumerate}
 \end{metodo}
 
@@ -1005,33 +1094,94 @@ Los cuatro conjuntos de datos siguientes tienen media 5. ¿Cuál tiene la \textb
 \alternativa{C}{$\{2, 5, 5, 8\}$}
 \alternativa{D}{$\{1, 5, 5, 9\}$}
 \clave{D}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par La desviación estándar mide cuánto se alejan los datos de la media: con igual media y cantidad de datos, basta comparar la suma de los cuadrados de las desviaciones.
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Con igual media y cantidad de datos, la desviación estándar es mayor cuanto más se alejan los datos de la media; basta comparar la suma de los cuadrados de las desviaciones.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item $\{5,5,5,5\}$: todas las desviaciones son 0.
-  \item $\{3,4,6,7\}$: $4 + 1 + 1 + 4 = 10$.
-  \item $\{2,5,5,8\}$: $9 + 0 + 0 + 9 = 18$.
-  \item $\{1,5,5,9\}$: $16 + 0 + 0 + 16 = 32$, la mayor.
+  \item Verifica la media de cada conjunto: en todos la suma es $20$ y $\dfrac{20}{4} = 5$, así que la comparación depende solo de la dispersión.
+  \item Recuerda que la varianza es el promedio de los cuadrados de las desviaciones $(x_i - \bar{x})^2$; la desviación estándar es su raíz, y ambas crecen con la suma de esos cuadrados.
+  \item Calcula para $\{5,5,5,5\}$: todas las desviaciones son $0$, así que la suma de cuadrados es $0$.
+  \item Calcula para $\{3,4,6,7\}$: $(3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2 = 4 + 1 + 1 + 4 = 10$.
+  \item Calcula para $\{2,5,5,8\}$: $(2-5)^2 + 0 + 0 + (8-5)^2 = 9 + 0 + 0 + 9 = 18$.
+  \item Calcula para $\{1,5,5,9\}$: $(1-5)^2 + 0 + 0 + (9-5)^2 = 16 + 0 + 0 + 16 = 32$. Es la suma mayor, así que su desviación estándar también es la mayor. Por lo tanto, la alternativa correcta es la D.
 \end{enumerate}
 \end{ejemplo}
 
-\begin{ejemplo}[Ejemplo tipo PAES 3: Combinatoria]
+\subsection{Probabilidad condicional}
+
+La probabilidad condicional $P(A\mid B)$ es la probabilidad de $A$ sabiendo que ocurrió $B$: el espacio muestral se reduce a $B$. Las tablas de doble entrada y los diagramas de árbol ordenan estos cálculos.
+
+Dos eventos son independientes si saber que ocurrió uno no cambia la probabilidad del otro: $P(A\mid B)=P(A)$. Entonces $P(A\cap B)=P(A)\cdot P(B)$.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+P(A\mid B)=\frac{P(A\cap B)}{P(B)} \\
+P(A\cap B)=P(B)\cdot P(A\mid B)
+\end{gather*}
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item La condición indica el denominador.
+  \item $P(A\mid B)\neq P(B\mid A)$ en general.
+  \item En un árbol, se multiplica a lo largo de una rama y se suma entre ramas.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Identifica qué se sabe (condición) y qué se pregunta.
+  \item Construye una tabla o árbol con las probabilidades.
+  \item Divide la intersección por la probabilidad de la condición.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Invertir la condición.
+  \item Usar el total general como denominador cuando hay una condición.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
 {\sffamily\footnotesize\color{zinc500} Enunciado}\par
-De un grupo de 8 personas se elegirá una directiva con presidente, secretario y tesorero (cargos distintos, sin repetir personas). ¿Cuántas directivas distintas se pueden formar?
-\alternativa{A}{$336$}
-\alternativa{B}{$56$}
-\alternativa{C}{$512$}
-\alternativa{D}{$24$}
-\clave{A}
-{\sffamily\footnotesize\color{zinc500} Análisis}\par Como los cargos son distintos, el orden importa: son variaciones de 8 elementos tomados de 3 en 3.
+En un curso de 40 estudiantes, 25 practican deporte; de ellos, 10 también tocan un instrumento. Si se elige al azar un estudiante que practica deporte, ¿cuál es la probabilidad de que toque un instrumento?
+\alternativa{A}{$\dfrac{1}{4}$}
+\alternativa{B}{$\dfrac{2}{5}$}
+\alternativa{C}{$\dfrac{5}{8}$}
+\alternativa{D}{$\dfrac{3}{5}$}
+\clave{B}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par La condición «practica deporte» reduce el espacio muestral a 25 estudiantes.
 {\sffamily\footnotesize\color{zinc500} Desarrollo}
 \begin{enumerate}
-  \item Presidente: 8 opciones; secretario: 7 (no se repite); tesorero: 6.
-  \item Principio multiplicativo: $8\cdot 7\cdot 6 = 336$.
+  \item Casos posibles: los 25 que practican deporte.
+  \item Favorables: 10. $P=\dfrac{10}{25}=\dfrac{2}{5}$.
+  \item $\frac{1}{4}=\frac{10}{40}$ usa el curso completo como espacio muestral, ignorando la condición.
 \end{enumerate}
 \end{ejemplo}
 
-\subsection{Técnicas de conteo}
+\begin{ejemplo}[Ejemplo tipo PAES 2: Probabilidad condicional]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+En un curso, el 60 \% son mujeres. El 30 \% de las mujeres y el 20 \% de los hombres usa lentes. Se elige al azar a una persona del curso y se observa que usa lentes.
+
+¿Cuál es la probabilidad de que sea mujer?
+\alternativa{A}{$\dfrac{9}{50}$}
+\alternativa{B}{$\dfrac{13}{50}$}
+\alternativa{C}{$\dfrac{3}{10}$}
+\alternativa{D}{$\dfrac{9}{13}$}
+\clave{D}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Es una probabilidad condicional: el dato «usa lentes» reduce el espacio muestral, y se divide la probabilidad conjunta por la probabilidad de ese dato.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Plantea la definición de probabilidad condicional: $P(M\mid L) = \dfrac{P(M\cap L)}{P(L)}$.
+  \item Calcula la conjunta de mujeres con lentes, multiplicando la probabilidad de ser mujer por la de usar lentes dado que es mujer: $P(M\cap L) = 0{,}6\cdot 0{,}3 = 0{,}18$.
+  \item Calcula la conjunta de hombres con lentes. Los hombres son el $40\,\%$, es decir, $1 - 0{,}6 = 0{,}4$, y $P(H\cap L) = 0{,}4\cdot 0{,}2 = 0{,}08$.
+  \item Aplica la probabilidad total: $P(L) = P(M\cap L) + P(H\cap L) = 0{,}18 + 0{,}08 = 0{,}26$.
+  \item Reemplaza en la definición: $P(M\mid L) = \dfrac{0{,}18}{0{,}26}$.
+  \item Simplifica multiplicando por $100$ y dividiendo luego por $2$: $\dfrac{18}{26} = \dfrac{9}{13}$. Comprobación: $\dfrac{9}{13}\approx 0{,}69$, mayor que $0{,}6$, lo que tiene sentido porque los lentes son más frecuentes entre las mujeres. Por lo tanto, la alternativa correcta es la D.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Permutación y combinatoria}
 
 El principio multiplicativo cuenta las formas de realizar etapas sucesivas. Si importa el orden se usan permutaciones o variaciones; si no importa, combinaciones.
 
@@ -1081,6 +1231,101 @@ V^n_k=\frac{n!}{(n-k)!} \\
 \begin{enumerate}
   \item $\binom{6}{2}=\dfrac{6\cdot 5}{2}=15$.
   \item 30 contaría cada par dos veces (con orden).
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Combinatoria]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+De un grupo de 8 personas se elegirá una directiva con presidente, secretario y tesorero (cargos distintos, sin repetir personas). ¿Cuántas directivas distintas se pueden formar?
+\alternativa{A}{$336$}
+\alternativa{B}{$56$}
+\alternativa{C}{$512$}
+\alternativa{D}{$24$}
+\clave{A}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Como los cargos son distintos, el orden importa y se trata de variaciones: se multiplican las opciones de cada cargo sin repetir personas.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Identifica el tipo de conteo: como los cargos son distintos, la misma persona en otro cargo forma otra directiva, por lo que el orden importa. Corresponde a variaciones de $8$ elementos tomados de $3$ en $3$.
+  \item Para el presidente hay $8$ opciones, pues cualquiera de las 8 personas puede ocupar el cargo.
+  \item Para el secretario quedan $7$ opciones, porque la persona que es presidente no puede repetirse.
+  \item Para el tesorero quedan $6$ opciones, al descontar a las dos personas ya asignadas.
+  \item Aplica el principio multiplicativo: el total de directivas es $8\cdot 7\cdot 6$.
+  \item Efectúa el producto: $8\cdot 7 = 56$ y $56\cdot 6 = 336$. Comprobación con la fórmula $\dfrac{8!}{(8-3)!} = \dfrac{8!}{5!} = 8\cdot 7\cdot 6 = 336$. Por lo tanto, la alternativa correcta es la A.
+\end{enumerate}
+\end{ejemplo}
+
+\subsection{Modelos binomial y normal}
+
+El modelo binomial cuenta los éxitos en $n$ ensayos independientes, cada uno con la misma probabilidad de éxito $p$. Su esperanza es $np$: el número de éxitos que se espera en promedio.
+
+En una distribución normal, los datos se reparten de forma simétrica alrededor de la media $\mu$: cerca del 68 \% queda a una desviación estándar $\sigma$ de ella y cerca del 95 \%, a dos. El valor $z$ dice a cuántas desviaciones está un dato de la media.
+
+\begin{formula}[Fórmulas]
+\begin{gather*}
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} \\
+E(X)=np \\
+z=\frac{x-\mu}{\sigma}
+\end{gather*}
+
+$P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0{,}95$.
+\end{formula}
+
+\begin{ideasclave}
+\begin{itemize}
+  \item $\binom{n}{k}$ cuenta en qué ensayos caen los $k$ éxitos.
+  \item La normal es simétrica: la mitad de los datos está bajo la media.
+  \item Un $z$ negativo indica un dato bajo la media.
+\end{itemize}
+\end{ideasclave}
+
+\begin{metodo}
+\begin{enumerate}
+  \item Binomial: identifica $n$, $p$ y el número de éxitos $k$.
+  \item Normal: estandariza con $z$ y usa los porcentajes de referencia o la tabla.
+  \item Aprovecha la simetría: $P(Z\le -a)=P(Z\ge a)$.
+\end{enumerate}
+\end{metodo}
+
+\begin{errorfrecuente}[Trampas frecuentes del DEMRE]
+\begin{itemize}
+  \item Olvidar el coeficiente binomial.
+  \item Leer el 95 \% como «a una desviación de la media» en vez de a dos.
+\end{itemize}
+\end{errorfrecuente}
+
+\begin{ejemplo}[Ejemplo resuelto]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Los puntajes de un test siguen una distribución normal de media 500 y desviación estándar 100. ¿Qué porcentaje aproximado de los puntajes está entre 400 y 600?
+\alternativa{A}{34 \%}
+\alternativa{B}{50 \%}
+\alternativa{C}{68 \%}
+\alternativa{D}{95 \%}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par 400 y 600 están a una desviación estándar de la media.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item $z=\dfrac{400-500}{100}=-1$ y $z=\dfrac{600-500}{100}=1$.
+  \item Entre $z=-1$ y $z=1$ queda cerca del 68 \%.
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[Ejemplo tipo PAES 2: Modelo binomial]
+{\sffamily\footnotesize\color{zinc500} Enunciado}\par
+Se lanza una moneda equilibrada 4 veces. ¿Cuál es la probabilidad de obtener exactamente 2 caras?
+\alternativa{A}{$\dfrac{1}{2}$}
+\alternativa{B}{$\dfrac{1}{4}$}
+\alternativa{C}{$\dfrac{3}{8}$}
+\alternativa{D}{$\dfrac{1}{16}$}
+\clave{C}
+{\sffamily\footnotesize\color{zinc500} Análisis}\par Es un modelo binomial: se cuentan las secuencias con exactamente 2 caras y se multiplica por la probabilidad de cada una.
+{\sffamily\footnotesize\color{zinc500} Desarrollo}
+\begin{enumerate}
+  \item Cuenta las secuencias con exactamente 2 caras entre 4 lanzamientos: se eligen las 2 posiciones de las caras, $\binom{4}{2} = \dfrac{4!}{2!\,2!} = \dfrac{24}{4} = 6$.
+  \item Lista las 6 secuencias para comprobar: CCSS, CSCS, CSSC, SCCS, SCSC y SSCC.
+  \item Calcula la probabilidad de cada secuencia específica: por independencia se multiplican las probabilidades de cada lanzamiento, $\left(\dfrac{1}{2}\right)^4 = \dfrac{1}{16}$.
+  \item Suma las probabilidades de las secuencias favorables: son $6$ secuencias disjuntas, todas con probabilidad $\dfrac{1}{16}$, así que $P = 6\cdot\dfrac{1}{16}$.
+  \item Efectúa el cálculo: $P = \dfrac{6}{16} = \dfrac{3}{8}$.
+  \item Comprobación: de las 16 secuencias, 1 tiene 0 caras, 4 tienen 1, 6 tienen 2, 4 tienen 3 y 1 tiene 4 caras; la suma $1+4+6+4+1 = 16$ confirma que $6$ es el número correcto. Por lo tanto, la alternativa correcta es la C.
 \end{enumerate}
 \end{ejemplo}
 

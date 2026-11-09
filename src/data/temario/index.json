@@ -7,115 +7,121 @@
    "axes": [
     {
      "name": "Números",
-     "description": "Operatoria en los conjuntos numéricos, porcentajes, potencias, raíces y proporcionalidad.",
+     "description": "Enteros y racionales, porcentaje, potencias y raíces.",
      "subtopics": [
       {
        "id": "m1-racionales",
        "title": "Números enteros y racionales",
        "pdfPage": 1,
-       "questionCount": 114
+       "questionCount": 73
       },
       {
        "id": "m1-porcentajes",
-       "title": "Porcentajes y problemas con dinero",
+       "title": "Porcentaje",
        "pdfPage": 2,
-       "questionCount": 58
+       "questionCount": 63
       },
       {
        "id": "m1-potencias",
        "title": "Potencias y raíces",
        "pdfPage": 3,
        "questionCount": 5
-      },
-      {
-       "id": "m1-proporcionalidad",
-       "title": "Razones y proporcionalidad",
-       "pdfPage": 4,
-       "questionCount": 18
       }
      ]
     },
     {
      "name": "Álgebra y funciones",
-     "description": "Expresiones algebraicas, ecuaciones, sistemas y funciones afín y cuadrática.",
+     "description": "Expresiones algebraicas, proporcionalidad, ecuaciones, sistemas y funciones afín y cuadrática.",
      "subtopics": [
       {
        "id": "m1-expresiones",
-       "title": "Expresiones algebraicas y factorización",
+       "title": "Expresiones algebraicas",
+       "pdfPage": 4,
+       "questionCount": 36
+      },
+      {
+       "id": "m1-proporcionalidad",
+       "title": "Proporcionalidad directa e inversa",
        "pdfPage": 5,
-       "questionCount": 6
+       "questionCount": 20
       },
       {
        "id": "m1-ecuaciones",
        "title": "Ecuaciones e inecuaciones lineales",
-       "pdfPage": 5,
-       "questionCount": 14
+       "pdfPage": 6,
+       "questionCount": 15
       },
       {
        "id": "m1-sistemas",
        "title": "Sistemas de ecuaciones lineales",
-       "pdfPage": 6,
+       "pdfPage": 7,
        "questionCount": 8
       },
       {
        "id": "m1-funcion-afin",
        "title": "Función lineal y afín",
-       "pdfPage": 7,
-       "questionCount": 14
+       "pdfPage": 8,
+       "questionCount": 13
       },
       {
        "id": "m1-cuadratica",
        "title": "Función cuadrática",
-       "pdfPage": 7,
-       "questionCount": 6
+       "pdfPage": 8,
+       "questionCount": 7
       }
      ]
     },
     {
      "name": "Geometría",
-     "description": "Medición, teorema de Pitágoras, semejanza y transformaciones en el plano.",
+     "description": "Figuras y cuerpos geométricos, transformaciones isométricas y semejanza.",
      "subtopics": [
       {
        "id": "m1-areas",
-       "title": "Perímetros, áreas y volúmenes",
-       "pdfPage": 8,
-       "questionCount": 59
+       "title": "Figuras geométricas: Pitágoras, perímetros y áreas",
+       "pdfPage": 10,
+       "questionCount": 53
       },
       {
-       "id": "m1-triangulos",
-       "title": "Triángulos, Pitágoras y semejanza",
-       "pdfPage": 9,
-       "questionCount": 13
+       "id": "m1-cuerpos",
+       "title": "Cuerpos geométricos: áreas y volúmenes",
+       "pdfPage": 11,
+       "questionCount": 22
       },
       {
        "id": "m1-transformaciones",
-       "title": "Plano cartesiano, vectores y transformaciones",
-       "pdfPage": 10,
+       "title": "Transformaciones isométricas y vectores",
+       "pdfPage": 11,
        "questionCount": 15
+      },
+      {
+       "id": "m1-triangulos",
+       "title": "Semejanza y proporcionalidad de figuras",
+       "pdfPage": 12,
+       "questionCount": 4
       }
      ]
     },
     {
      "name": "Probabilidad y estadística",
-     "description": "Tablas y gráficos, medidas estadísticas y probabilidad.",
+     "description": "Representación de datos, medidas de posición y reglas de las probabilidades.",
      "subtopics": [
       {
        "id": "m1-tendencia",
-       "title": "Tablas, gráficos y medidas de tendencia central",
-       "pdfPage": 11,
+       "title": "Representación de datos: tablas, gráficos y promedio",
+       "pdfPage": 13,
        "questionCount": 68
       },
       {
        "id": "m1-posicion",
-       "title": "Medidas de posición y dispersión",
-       "pdfPage": 12,
-       "questionCount": 9
+       "title": "Medidas de posición: cuartiles, percentiles y diagrama de cajón",
+       "pdfPage": 15,
+       "questionCount": 8
       },
       {
        "id": "m1-probabilidad",
-       "title": "Probabilidad y conteo",
-       "pdfPage": 13,
-       "questionCount": 28
+       "title": "Reglas de las probabilidades",
+       "pdfPage": 15,
+       "questionCount": 25
       }
      ]
     }
@@ -134,91 +140,121 @@
        "id": "m2-reales",
        "title": "Números reales y racionalización",
        "pdfPage": 1,
-       "questionCount": 27
+       "questionCount": 40
       },
       {
        "id": "m2-logaritmos",
        "title": "Logaritmos",
        "pdfPage": 2,
-       "questionCount": 19
+       "questionCount": 20
       },
       {
        "id": "m2-financiera",
        "title": "Matemática financiera",
        "pdfPage": 3,
-       "questionCount": 26
+       "questionCount": 31
       }
      ]
     },
     {
      "name": "Álgebra y funciones",
-     "description": "Ecuaciones cuadráticas, funciones exponencial, logarítmica, compuesta e inversa.",
+     "description": "Sistemas de ecuaciones, funciones potencia, exponencial, logarítmica y trigonométricas, y la ecuación cuadrática de M1.",
      "subtopics": [
       {
-       "id": "m2-cuadraticas",
-       "title": "Ecuación cuadrática y discriminante",
-       "pdfPage": 3,
-       "questionCount": 87
+       "id": "m2-sistemas",
+       "title": "Sistemas de ecuaciones: tipos de solución",
+       "pdfPage": 4,
+       "questionCount": 10
       },
       {
        "id": "m2-exponencial",
-       "title": "Funciones exponencial y logarítmica",
-       "pdfPage": 4,
+       "title": "Función potencia, exponencial y logarítmica",
+       "pdfPage": 5,
        "questionCount": 5
+      },
+      {
+       "id": "m2-funciones-trig",
+       "title": "Funciones trigonométricas seno y coseno",
+       "pdfPage": 6,
+       "questionCount": 2
+      },
+      {
+       "id": "m2-cuadraticas",
+       "title": "Ecuación y función cuadrática (contenido de M1)",
+       "pdfPage": 6,
+       "questionCount": 75
       },
       {
        "id": "m2-inversa",
        "title": "Composición e inversa de funciones",
-       "pdfPage": 5,
-       "questionCount": 18
+       "retired": true,
+       "questionCount": 4
       }
      ]
     },
     {
      "name": "Geometría",
-     "description": "Trigonometría, homotecia y geometría analítica.",
+     "description": "Homotecia, razones trigonométricas, circunferencia, esfera y rectas en el plano.",
      "subtopics": [
       {
-       "id": "m2-trigonometria",
-       "title": "Trigonometría en el triángulo rectángulo",
-       "pdfPage": 5,
-       "questionCount": 29
+       "id": "m2-homotecia",
+       "title": "Homotecia de figuras planas",
+       "pdfPage": 7,
+       "questionCount": 28
       },
       {
-       "id": "m2-homotecia",
-       "title": "Homotecia y semejanza",
-       "pdfPage": 6,
-       "questionCount": 40
+       "id": "m2-trigonometria",
+       "title": "Razones trigonométricas",
+       "pdfPage": 8,
+       "questionCount": 21
+      },
+      {
+       "id": "m2-circunferencia",
+       "title": "Relaciones métricas en la circunferencia",
+       "pdfPage": 9,
+       "questionCount": 5
+      },
+      {
+       "id": "m2-esfera",
+       "title": "Esfera: superficie y volumen",
+       "pdfPage": 9,
+       "questionCount": 2
       },
       {
        "id": "m2-analitica",
-       "title": "Rectas y distancias en el plano",
-       "pdfPage": 7,
-       "questionCount": 14
+       "title": "Rectas en el plano",
+       "pdfPage": 10,
+       "questionCount": 26
       }
      ]
     },
     {
      "name": "Probabilidad y estadística",
-     "description": "Probabilidad condicional, modelos binomial y normal, dispersión y combinatoria.",
+     "description": "Dispersión, probabilidad condicional, permutación y combinatoria, y modelos binomial y normal.",
      "subtopics": [
       {
-       "id": "m2-condicional",
-       "title": "Probabilidad condicional y modelo binomial",
-       "pdfPage": 8,
-       "questionCount": 27
+       "id": "m2-dispersion",
+       "title": "Medidas de dispersión",
+       "pdfPage": 11,
+       "questionCount": 36
       },
       {
-       "id": "m2-dispersion",
-       "title": "Dispersión y distribución normal",
-       "pdfPage": 9,
-       "questionCount": 35
+       "id": "m2-condicional",
+       "title": "Probabilidad condicional",
+       "pdfPage": 12,
+       "questionCount": 26
       },
       {
        "id": "m2-combinatoria",
-       "title": "Técnicas de conteo",
-       "pdfPage": 10,
-       "questionCount": 7
+       "title": "Permutación y combinatoria",
+       "pdfPage": 13,
+       "questionCount": 2
+      },
+      {
+       "id": "m2-modelos",
+       "title": "Modelos binomial y normal",
+       "pdfPage": 13,
+       "questionCount": 1
       }
      ]
     },
@@ -229,7 +265,7 @@
       {
        "id": "m2-suficiencia",
        "title": "Evaluación de suficiencia de datos",
-       "pdfPage": 10,
+       "pdfPage": 14,
        "questionCount": 29
       }
      ]
@@ -249,67 +285,85 @@
        "id": "cl-localizar",
        "title": "Información explícita",
        "pdfPage": 1,
-       "questionCount": 30
+       "questionCount": 41
       }
      ]
     },
     {
      "name": "Interpretar",
-     "description": "Comprender el sentido global y local, inferir y relacionar.",
+     "description": "Relacionar partes del texto, inferir, determinar significados, sintetizar y reconocer la función de un elemento.",
      "subtopics": [
       {
-       "id": "cl-vocabulario",
-       "title": "Vocabulario contextual",
+       "id": "cl-inferencia",
+       "title": "Relaciones e inferencias",
        "pdfPage": 2,
+       "questionCount": 150
+      },
+      {
+       "id": "cl-vocabulario",
+       "title": "Significado de palabras y expresiones",
+       "pdfPage": 4,
        "questionCount": 22
       },
       {
        "id": "cl-idea-central",
-       "title": "Tema, idea central y síntesis",
-       "pdfPage": 3,
-       "questionCount": 39
+       "title": "Ideas centrales, síntesis y jerarquía",
+       "pdfPage": 4,
+       "questionCount": 38
       },
       {
        "id": "cl-proposito",
-       "title": "Propósito y función de fragmentos",
-       "pdfPage": 4,
-       "questionCount": 74
-      },
-      {
-       "id": "cl-inferencia",
-       "title": "Inferencias y relaciones entre ideas",
-       "pdfPage": 4,
-       "questionCount": 183
+       "title": "Función de un fragmento o recurso",
+       "pdfPage": 5,
+       "questionCount": 63
       },
       {
        "id": "cl-literario",
-       "title": "Textos literarios",
-       "pdfPage": 5,
-       "questionCount": 24
-      },
-      {
-       "id": "cl-multimodal",
-       "title": "Textos discontinuos e infografías",
+       "title": "Lectura de relatos: personajes, tiempo y espacio",
        "pdfPage": 6,
-       "questionCount": 7
+       "questionCount": 34
       }
      ]
     },
     {
      "name": "Evaluar",
-     "description": "Valorar argumentos, recursos y la relación entre forma, contenido y propósito.",
+     "description": "Juzgar la intención, la información, la forma, la postura del emisor y la relación con nuevos contextos.",
      "subtopics": [
       {
+       "id": "cl-intencion",
+       "title": "Intención comunicativa del emisor",
+       "pdfPage": 8,
+       "questionCount": 21
+      },
+      {
        "id": "cl-argumentos",
-       "title": "Evaluar argumentos y postura",
-       "pdfPage": 7,
-       "questionCount": 50
+       "title": "Juzgar la información y los argumentos",
+       "pdfPage": 9,
+       "questionCount": 29
       },
       {
        "id": "cl-forma",
-       "title": "Evaluar forma, recursos y pertinencia",
-       "pdfPage": 8,
-       "questionCount": 5
+       "title": "Juzgar la forma: registro, estructura y recursos",
+       "pdfPage": 9,
+       "questionCount": 12
+      },
+      {
+       "id": "cl-postura",
+       "title": "Posición, actitud y tono del emisor",
+       "pdfPage": 10,
+       "questionCount": 16
+      },
+      {
+       "id": "cl-multimodal",
+       "title": "Recursos no lingüísticos: imágenes, tablas y diseño",
+       "pdfPage": 10,
+       "questionCount": 7
+      },
+      {
+       "id": "cl-contextos",
+       "title": "Relación con nuevos textos y contextos",
+       "pdfPage": 11,
+       "questionCount": 1
       }
      ]
     }
@@ -322,85 +376,115 @@
    "axes": [
     {
      "name": "Biología",
-     "description": "Organización celular, procesos y funciones biológicas, herencia y evolución, organismo y ambiente.",
+     "description": "Organización celular, procesos y funciones biológicas (sistema nervioso y reproducción), herencia y evolución, organismo y ambiente.",
      "subtopics": [
       {
        "id": "cs-celula",
-       "title": "Organización celular",
+       "title": "Organización, estructura y actividad celular",
        "pdfPage": 1,
-       "questionCount": 199
+       "questionCount": 112
+      },
+      {
+       "id": "cs-nervioso",
+       "title": "Sistema nervioso",
+       "pdfPage": 2,
+       "questionCount": 3
+      },
+      {
+       "id": "cs-reproduccion",
+       "title": "Reproducción, sexualidad e ITS",
+       "pdfPage": 3,
+       "questionCount": 57
+      },
+      {
+       "id": "cs-genetica",
+       "title": "Ciclo celular, meiosis y manipulación genética",
+       "pdfPage": 4,
+       "questionCount": 84
+      },
+      {
+       "id": "cs-evolucion",
+       "title": "Evolución: evidencias y selección natural",
+       "pdfPage": 5,
+       "questionCount": 30
+      },
+      {
+       "id": "cs-ecologia",
+       "title": "Fotosíntesis, respiración y flujo de energía",
+       "pdfPage": 5,
+       "questionCount": 58
       },
       {
        "id": "cs-biomoleculas",
        "title": "Biomoléculas, enzimas y metabolismo",
-       "pdfPage": 2,
-       "questionCount": 31
-      },
-      {
-       "id": "cs-genetica",
-       "title": "División celular y herencia",
-       "pdfPage": 3,
-       "questionCount": 67
-      },
-      {
-       "id": "cs-evolucion",
-       "title": "Evolución y biodiversidad",
-       "pdfPage": 4,
-       "questionCount": 33
+       "retired": true,
+       "questionCount": 4
       },
       {
        "id": "cs-sistemas",
-       "title": "Sistemas del organismo y homeostasis",
-       "pdfPage": 4,
-       "questionCount": 36
+       "title": "Homeostasis, hormonas e inmunidad",
+       "retired": true,
+       "questionCount": 6
       },
       {
-       "id": "cs-ecologia",
-       "title": "Organismo y ambiente",
-       "pdfPage": 5,
-       "questionCount": 28
+       "id": "cs-poblaciones",
+       "title": "Poblaciones y relaciones entre especies",
+       "retired": true,
+       "questionCount": 3
       }
      ]
     },
     {
      "name": "Física",
-     "description": "Ondas, mecánica, energía, electricidad y magnetismo.",
+     "description": "Ondas electromagnéticas, mecánica (movimiento, fuerzas y universo), energía y Tierra, y electricidad.",
      "subtopics": [
       {
-       "id": "cs-ondas",
-       "title": "Ondas y sonido",
-       "pdfPage": 6,
-       "questionCount": 52
-      },
-      {
        "id": "cs-luz",
-       "title": "Luz y óptica",
+       "title": "Ondas electromagnéticas, luz y óptica",
        "pdfPage": 7,
-       "questionCount": 73
+       "questionCount": 104
       },
       {
        "id": "cs-cinematica",
-       "title": "Movimiento (cinemática)",
-       "pdfPage": 7,
-       "questionCount": 29
+       "title": "Movimiento: MRU y MRUA",
+       "pdfPage": 8,
+       "questionCount": 28
       },
       {
        "id": "cs-dinamica",
        "title": "Fuerzas y leyes de Newton",
-       "pdfPage": 8,
-       "questionCount": 116
+       "pdfPage": 9,
+       "questionCount": 97
       },
       {
-       "id": "cs-energia",
-       "title": "Energía, trabajo y calor",
-       "pdfPage": 8,
-       "questionCount": 62
+       "id": "cs-universo",
+       "title": "Sistema solar y universo",
+       "pdfPage": 10,
+       "questionCount": 5
+      },
+      {
+       "id": "cs-tierra",
+       "title": "Tectónica de placas y sismos",
+       "pdfPage": 10,
+       "questionCount": 24
       },
       {
        "id": "cs-electricidad",
-       "title": "Electricidad y magnetismo",
-       "pdfPage": 9,
-       "questionCount": 79
+       "title": "Circuitos eléctricos y consumo de energía",
+       "pdfPage": 11,
+       "questionCount": 82
+      },
+      {
+       "id": "cs-ondas",
+       "title": "Ondas mecánicas y sonido",
+       "retired": true,
+       "questionCount": 4
+      },
+      {
+       "id": "cs-energia",
+       "title": "Energía, calor, presión y fluidos",
+       "retired": true,
+       "questionCount": 36
       }
      ]
     },
@@ -410,33 +494,33 @@
      "subtopics": [
       {
        "id": "cs-atomo",
-       "title": "Estructura atómica y tabla periódica",
-       "pdfPage": 10,
-       "questionCount": 90
-      },
-      {
-       "id": "cs-enlace",
-       "title": "Enlace químico y moléculas",
-       "pdfPage": 11,
-       "questionCount": 81
+       "title": "Materia y estructura atómica",
+       "pdfPage": 12,
+       "questionCount": 91
       },
       {
        "id": "cs-organica",
        "title": "Química orgánica",
-       "pdfPage": 12,
-       "questionCount": 12
+       "pdfPage": 13,
+       "questionCount": 76
       },
       {
        "id": "cs-reacciones",
        "title": "Reacciones químicas y estequiometría",
-       "pdfPage": 13,
-       "questionCount": 138
+       "pdfPage": 15,
+       "questionCount": 155
       },
       {
        "id": "cs-disoluciones",
-       "title": "Disoluciones y pH",
-       "pdfPage": 13,
-       "questionCount": 84
+       "title": "Disoluciones y concentración",
+       "pdfPage": 15,
+       "questionCount": 73
+      },
+      {
+       "id": "cs-enlace",
+       "title": "Enlace químico y tabla periódica",
+       "retired": true,
+       "questionCount": 5
       }
      ]
     },
@@ -447,8 +531,8 @@
       {
        "id": "cs-habilidades",
        "title": "Habilidades de pensamiento científico",
-       "pdfPage": 14,
-       "questionCount": 264
+       "pdfPage": 16,
+       "questionCount": 337
       }
      ]
     }
@@ -461,79 +545,103 @@
    "axes": [
     {
      "name": "Historia: mundo, América y Chile",
-     "description": "Procesos políticos, económicos y sociales de los siglos XIX y XX.",
+     "description": "Siglo XIX en Europa, América y Chile; primera mitad del siglo XX; posguerra, Guerra Fría, dictadura y retorno a la democracia.",
      "subtopics": [
       {
        "id": "hi-revoluciones",
-       "title": "Revoluciones y siglo XIX en Europa",
+       "title": "Siglo XIX: ideas liberales, republicanas y Estado-nación",
        "pdfPage": 1,
-       "questionCount": 27
+       "questionCount": 32
       },
       {
        "id": "hi-chile-xix",
-       "title": "Chile en el siglo XIX: independencia, república y expansión",
+       "title": "Chile en el siglo XIX: formación de la República y economía",
        "pdfPage": 2,
-       "questionCount": 20
+       "questionCount": 19
       },
       {
        "id": "hi-cuestion-social",
-       "title": "Cuestión social y crisis del parlamentarismo",
-       "pdfPage": 3,
+       "title": "Del siglo XIX al XX: transformaciones y cuestión social",
+       "pdfPage": 4,
        "questionCount": 10
       },
       {
        "id": "hi-guerras",
-       "title": "Guerras mundiales y crisis de 1929",
-       "pdfPage": 4,
-       "questionCount": 29
+       "title": "Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo",
+       "pdfPage": 6,
+       "questionCount": 28
       },
       {
        "id": "hi-guerra-fria",
-       "title": "Guerra Fría y América Latina",
-       "pdfPage": 5,
+       "title": "Posguerra, Guerra Fría y América Latina",
+       "pdfPage": 6,
        "questionCount": 7
       },
       {
        "id": "hi-chile-xx",
-       "title": "Chile en el siglo XX: del Estado de compromiso a la transición",
-       "pdfPage": 6,
-       "questionCount": 8
+       "title": "Chile a mediados del siglo XX: Estado, reformas y democratización",
+       "pdfPage": 7,
+       "questionCount": 4
+      },
+      {
+       "id": "hi-dictadura",
+       "title": "Dictadura militar y retorno a la democracia",
+       "pdfPage": 8,
+       "questionCount": 27
       }
      ]
     },
     {
      "name": "Formación ciudadana",
-     "description": "Estado, Constitución, democracia, derechos humanos y participación.",
+     "description": "Democracia, institucionalidad democrática en Chile, sociedad de la información y sistema judicial.",
      "subtopics": [
       {
-       "id": "hi-estado",
-       "title": "Estado, Constitución y poderes del Estado",
-       "pdfPage": 7,
-       "questionCount": 104
+       "id": "hi-democracia",
+       "title": "Democracia: fundamentos, atributos y dimensiones",
+       "pdfPage": 10,
+       "questionCount": 62
       },
       {
-       "id": "hi-democracia",
-       "title": "Democracia, derechos humanos y participación",
-       "pdfPage": 8,
-       "questionCount": 88
+       "id": "hi-estado",
+       "title": "Institucionalidad democrática en Chile",
+       "pdfPage": 11,
+       "questionCount": 77
+      },
+      {
+       "id": "hi-informacion",
+       "title": "Democracia en la sociedad de la información",
+       "pdfPage": 12,
+       "questionCount": 24
+      },
+      {
+       "id": "hi-justicia",
+       "title": "Sistema judicial y acceso a la justicia",
+       "pdfPage": 13,
+       "questionCount": 18
       }
      ]
     },
     {
      "name": "Sistema económico",
-     "description": "Problema económico, mercado, macroeconomía y finanzas personales.",
+     "description": "Funcionamiento del mercado, Estado y modelos de desarrollo, y derechos laborales.",
      "subtopics": [
       {
        "id": "hi-mercado",
-       "title": "Problema económico y mercado",
-       "pdfPage": 9,
-       "questionCount": 79
+       "title": "Funcionamiento del mercado",
+       "pdfPage": 13,
+       "questionCount": 66
       },
       {
        "id": "hi-macro",
-       "title": "Macroeconomía y finanzas personales",
-       "pdfPage": 9,
-       "questionCount": 18
+       "title": "Estado, mercado y modelos de desarrollo",
+       "pdfPage": 15,
+       "questionCount": 13
+      },
+      {
+       "id": "hi-laborales",
+       "title": "Derechos laborales",
+       "pdfPage": 16,
+       "questionCount": 22
       }
      ]
     },
@@ -544,8 +652,8 @@
       {
        "id": "hi-geografia",
        "title": "Población, territorio y ambiente",
-       "pdfPage": 10,
-       "questionCount": 37
+       "retired": true,
+       "questionCount": 19
       }
      ]
     },
@@ -555,9 +663,9 @@
      "subtopics": [
       {
        "id": "hi-fuentes",
-       "title": "Análisis de fuentes y pensamiento histórico",
-       "pdfPage": 11,
-       "questionCount": 4
+       "title": "Pensamiento temporal, espacial y crítico; análisis de fuentes",
+       "pdfPage": 16,
+       "questionCount": 3
       }
      ]
     }

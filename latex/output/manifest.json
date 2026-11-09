@@ -7,15 +7,15 @@
     "name": "Números",
     "subtopics": [
      "Números enteros y racionales",
-     "Porcentajes y problemas con dinero",
-     "Potencias y raíces",
-     "Razones y proporcionalidad"
+     "Porcentaje",
+     "Potencias y raíces"
     ]
    },
    {
     "name": "Álgebra y funciones",
     "subtopics": [
-     "Expresiones algebraicas y factorización",
+     "Expresiones algebraicas",
+     "Proporcionalidad directa e inversa",
      "Ecuaciones e inecuaciones lineales",
      "Sistemas de ecuaciones lineales",
      "Función lineal y afín",
@@ -25,24 +25,25 @@
    {
     "name": "Geometría",
     "subtopics": [
-     "Perímetros, áreas y volúmenes",
-     "Triángulos, Pitágoras y semejanza",
-     "Plano cartesiano, vectores y transformaciones"
+     "Figuras geométricas: Pitágoras, perímetros y áreas",
+     "Cuerpos geométricos: áreas y volúmenes",
+     "Transformaciones isométricas y vectores",
+     "Semejanza y proporcionalidad de figuras"
     ]
    },
    {
     "name": "Probabilidad y estadística",
     "subtopics": [
-     "Tablas, gráficos y medidas de tendencia central",
-     "Medidas de posición y dispersión",
-     "Probabilidad y conteo"
+     "Representación de datos: tablas, gráficos y promedio",
+     "Medidas de posición: cuartiles, percentiles y diagrama de cajón",
+     "Reglas de las probabilidades"
     ]
    }
   ],
-  "subtopics": 15,
+  "subtopics": 16,
   "kind": "guia",
   "file": "guia_m1.tex",
-  "examples": 35,
+  "examples": 36,
   "includes": [
    "Teoría y definiciones",
    "Fórmulas, leyes y mecanismos",
@@ -59,15 +60,15 @@
     "name": "Números",
     "subtopics": [
      "Números enteros y racionales",
-     "Porcentajes y problemas con dinero",
-     "Potencias y raíces",
-     "Razones y proporcionalidad"
+     "Porcentaje",
+     "Potencias y raíces"
     ]
    },
    {
     "name": "Álgebra y funciones",
     "subtopics": [
-     "Expresiones algebraicas y factorización",
+     "Expresiones algebraicas",
+     "Proporcionalidad directa e inversa",
      "Ecuaciones e inecuaciones lineales",
      "Sistemas de ecuaciones lineales",
      "Función lineal y afín",
@@ -77,24 +78,25 @@
    {
     "name": "Geometría",
     "subtopics": [
-     "Perímetros, áreas y volúmenes",
-     "Triángulos, Pitágoras y semejanza",
-     "Plano cartesiano, vectores y transformaciones"
+     "Figuras geométricas: Pitágoras, perímetros y áreas",
+     "Cuerpos geométricos: áreas y volúmenes",
+     "Transformaciones isométricas y vectores",
+     "Semejanza y proporcionalidad de figuras"
     ]
    },
    {
     "name": "Probabilidad y estadística",
     "subtopics": [
-     "Tablas, gráficos y medidas de tendencia central",
-     "Medidas de posición y dispersión",
-     "Probabilidad y conteo"
+     "Representación de datos: tablas, gráficos y promedio",
+     "Medidas de posición: cuartiles, percentiles y diagrama de cajón",
+     "Reglas de las probabilidades"
     ]
    }
   ],
-  "subtopics": 15,
+  "subtopics": 16,
   "kind": "beamer",
   "file": "beamer_m1.tex",
-  "slides": 53,
+  "slides": 56,
   "includes": [
    "Teoría esencial por subtema",
    "Desafíos tipo PAES",
@@ -117,25 +119,29 @@
    {
     "name": "Álgebra y funciones",
     "subtopics": [
-     "Ecuación cuadrática y discriminante",
-     "Funciones exponencial y logarítmica",
-     "Composición e inversa de funciones"
+     "Sistemas de ecuaciones: tipos de solución",
+     "Función potencia, exponencial y logarítmica",
+     "Funciones trigonométricas seno y coseno",
+     "Ecuación y función cuadrática (contenido de M1)"
     ]
    },
    {
     "name": "Geometría",
     "subtopics": [
-     "Trigonometría en el triángulo rectángulo",
-     "Homotecia y semejanza",
-     "Rectas y distancias en el plano"
+     "Homotecia de figuras planas",
+     "Razones trigonométricas",
+     "Relaciones métricas en la circunferencia",
+     "Esfera: superficie y volumen",
+     "Rectas en el plano"
     ]
    },
    {
     "name": "Probabilidad y estadística",
     "subtopics": [
-     "Probabilidad condicional y modelo binomial",
-     "Dispersión y distribución normal",
-     "Técnicas de conteo"
+     "Medidas de dispersión",
+     "Probabilidad condicional",
+     "Permutación y combinatoria",
+     "Modelos binomial y normal"
     ]
    },
    {
@@ -145,9 +151,313 @@
     ]
    }
   ],
-  "subtopics": 13,
+  "subtopics": 17,
   "kind": "guia",
   "file": "guia_m2.tex",
+  "examples": 32,
+  "includes": [
+   "Teoría y definiciones",
+   "Fórmulas, leyes y mecanismos",
+   "Ideas clave y método",
+   "Trampas frecuentes del DEMRE",
+   "Ejemplos resueltos paso a paso"
+  ]
+ },
+ {
+  "subject": "m2",
+  "title": "Competencia Matemática 2 (M2)",
+  "axes": [
+   {
+    "name": "Números",
+    "subtopics": [
+     "Números reales y racionalización",
+     "Logaritmos",
+     "Matemática financiera"
+    ]
+   },
+   {
+    "name": "Álgebra y funciones",
+    "subtopics": [
+     "Sistemas de ecuaciones: tipos de solución",
+     "Función potencia, exponencial y logarítmica",
+     "Funciones trigonométricas seno y coseno",
+     "Ecuación y función cuadrática (contenido de M1)"
+    ]
+   },
+   {
+    "name": "Geometría",
+    "subtopics": [
+     "Homotecia de figuras planas",
+     "Razones trigonométricas",
+     "Relaciones métricas en la circunferencia",
+     "Esfera: superficie y volumen",
+     "Rectas en el plano"
+    ]
+   },
+   {
+    "name": "Probabilidad y estadística",
+    "subtopics": [
+     "Medidas de dispersión",
+     "Probabilidad condicional",
+     "Permutación y combinatoria",
+     "Modelos binomial y normal"
+    ]
+   },
+   {
+    "name": "Habilidades transversales",
+    "subtopics": [
+     "Evaluación de suficiencia de datos"
+    ]
+   }
+  ],
+  "subtopics": 17,
+  "kind": "beamer",
+  "file": "beamer_m2.tex",
+  "slides": 60,
+  "includes": [
+   "Teoría esencial por subtema",
+   "Desafíos tipo PAES",
+   "Soluciones detalladas",
+   "Distribución por eje"
+  ]
+ },
+ {
+  "subject": "lectora",
+  "title": "Competencia Lectora",
+  "axes": [
+   {
+    "name": "Localizar",
+    "subtopics": [
+     "Información explícita"
+    ]
+   },
+   {
+    "name": "Interpretar",
+    "subtopics": [
+     "Relaciones e inferencias",
+     "Significado de palabras y expresiones",
+     "Ideas centrales, síntesis y jerarquía",
+     "Función de un fragmento o recurso",
+     "Lectura de relatos: personajes, tiempo y espacio"
+    ]
+   },
+   {
+    "name": "Evaluar",
+    "subtopics": [
+     "Intención comunicativa del emisor",
+     "Juzgar la información y los argumentos",
+     "Juzgar la forma: registro, estructura y recursos",
+     "Posición, actitud y tono del emisor",
+     "Recursos no lingüísticos: imágenes, tablas y diseño",
+     "Relación con nuevos textos y contextos"
+    ]
+   }
+  ],
+  "subtopics": 12,
+  "kind": "guia",
+  "file": "guia_lectora.tex",
+  "examples": 23,
+  "includes": [
+   "Teoría y definiciones",
+   "Fórmulas, leyes y mecanismos",
+   "Ideas clave y método",
+   "Trampas frecuentes del DEMRE",
+   "Ejemplos resueltos paso a paso"
+  ]
+ },
+ {
+  "subject": "lectora",
+  "title": "Competencia Lectora",
+  "axes": [
+   {
+    "name": "Localizar",
+    "subtopics": [
+     "Información explícita"
+    ]
+   },
+   {
+    "name": "Interpretar",
+    "subtopics": [
+     "Relaciones e inferencias",
+     "Significado de palabras y expresiones",
+     "Ideas centrales, síntesis y jerarquía",
+     "Función de un fragmento o recurso",
+     "Lectura de relatos: personajes, tiempo y espacio"
+    ]
+   },
+   {
+    "name": "Evaluar",
+    "subtopics": [
+     "Intención comunicativa del emisor",
+     "Juzgar la información y los argumentos",
+     "Juzgar la forma: registro, estructura y recursos",
+     "Posición, actitud y tono del emisor",
+     "Recursos no lingüísticos: imágenes, tablas y diseño",
+     "Relación con nuevos textos y contextos"
+    ]
+   }
+  ],
+  "subtopics": 12,
+  "kind": "beamer",
+  "file": "beamer_lectora.tex",
+  "slides": 43,
+  "includes": [
+   "Teoría esencial por subtema",
+   "Desafíos tipo PAES",
+   "Soluciones detalladas",
+   "Distribución por eje"
+  ]
+ },
+ {
+  "subject": "ciencias",
+  "title": "Ciencias",
+  "axes": [
+   {
+    "name": "Biología",
+    "subtopics": [
+     "Organización, estructura y actividad celular",
+     "Sistema nervioso",
+     "Reproducción, sexualidad e ITS",
+     "Ciclo celular, meiosis y manipulación genética",
+     "Evolución: evidencias y selección natural",
+     "Fotosíntesis, respiración y flujo de energía"
+    ]
+   },
+   {
+    "name": "Física",
+    "subtopics": [
+     "Ondas electromagnéticas, luz y óptica",
+     "Movimiento: MRU y MRUA",
+     "Fuerzas y leyes de Newton",
+     "Sistema solar y universo",
+     "Tectónica de placas y sismos",
+     "Circuitos eléctricos y consumo de energía"
+    ]
+   },
+   {
+    "name": "Química",
+    "subtopics": [
+     "Materia y estructura atómica",
+     "Química orgánica",
+     "Reacciones químicas y estequiometría",
+     "Disoluciones y concentración"
+    ]
+   },
+   {
+    "name": "Habilidades científicas",
+    "subtopics": [
+     "Habilidades de pensamiento científico"
+    ]
+   }
+  ],
+  "subtopics": 17,
+  "kind": "guia",
+  "file": "guia_ciencias.tex",
+  "examples": 32,
+  "includes": [
+   "Teoría y definiciones",
+   "Fórmulas, leyes y mecanismos",
+   "Ideas clave y método",
+   "Trampas frecuentes del DEMRE",
+   "Ejemplos resueltos paso a paso"
+  ]
+ },
+ {
+  "subject": "ciencias",
+  "title": "Ciencias",
+  "axes": [
+   {
+    "name": "Biología",
+    "subtopics": [
+     "Organización, estructura y actividad celular",
+     "Sistema nervioso",
+     "Reproducción, sexualidad e ITS",
+     "Ciclo celular, meiosis y manipulación genética",
+     "Evolución: evidencias y selección natural",
+     "Fotosíntesis, respiración y flujo de energía"
+    ]
+   },
+   {
+    "name": "Física",
+    "subtopics": [
+     "Ondas electromagnéticas, luz y óptica",
+     "Movimiento: MRU y MRUA",
+     "Fuerzas y leyes de Newton",
+     "Sistema solar y universo",
+     "Tectónica de placas y sismos",
+     "Circuitos eléctricos y consumo de energía"
+    ]
+   },
+   {
+    "name": "Química",
+    "subtopics": [
+     "Materia y estructura atómica",
+     "Química orgánica",
+     "Reacciones químicas y estequiometría",
+     "Disoluciones y concentración"
+    ]
+   },
+   {
+    "name": "Habilidades científicas",
+    "subtopics": [
+     "Habilidades de pensamiento científico"
+    ]
+   }
+  ],
+  "subtopics": 17,
+  "kind": "beamer",
+  "file": "beamer_ciencias.tex",
+  "slides": 59,
+  "includes": [
+   "Teoría esencial por subtema",
+   "Desafíos tipo PAES",
+   "Soluciones detalladas",
+   "Distribución por eje"
+  ]
+ },
+ {
+  "subject": "historia",
+  "title": "Historia y Ciencias Sociales",
+  "axes": [
+   {
+    "name": "Historia: mundo, América y Chile",
+    "subtopics": [
+     "Siglo XIX: ideas liberales, republicanas y Estado-nación",
+     "Chile en el siglo XIX: formación de la República y economía",
+     "Del siglo XIX al XX: transformaciones y cuestión social",
+     "Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo",
+     "Posguerra, Guerra Fría y América Latina",
+     "Chile a mediados del siglo XX: Estado, reformas y democratización",
+     "Dictadura militar y retorno a la democracia"
+    ]
+   },
+   {
+    "name": "Formación ciudadana",
+    "subtopics": [
+     "Democracia: fundamentos, atributos y dimensiones",
+     "Institucionalidad democrática en Chile",
+     "Democracia en la sociedad de la información",
+     "Sistema judicial y acceso a la justicia"
+    ]
+   },
+   {
+    "name": "Sistema económico",
+    "subtopics": [
+     "Funcionamiento del mercado",
+     "Estado, mercado y modelos de desarrollo",
+     "Derechos laborales"
+    ]
+   },
+   {
+    "name": "Habilidades de pensamiento histórico",
+    "subtopics": [
+     "Pensamiento temporal, espacial y crítico; análisis de fuentes"
+    ]
+   }
+  ],
+  "subtopics": 15,
+  "kind": "guia",
+  "file": "guia_historia.tex",
   "examples": 29,
   "includes": [
    "Teoría y definiciones",
@@ -158,349 +468,49 @@
   ]
  },
  {
-  "subject": "m2",
-  "title": "Competencia Matemática 2 (M2)",
-  "axes": [
-   {
-    "name": "Números",
-    "subtopics": [
-     "Números reales y racionalización",
-     "Logaritmos",
-     "Matemática financiera"
-    ]
-   },
-   {
-    "name": "Álgebra y funciones",
-    "subtopics": [
-     "Ecuación cuadrática y discriminante",
-     "Funciones exponencial y logarítmica",
-     "Composición e inversa de funciones"
-    ]
-   },
-   {
-    "name": "Geometría",
-    "subtopics": [
-     "Trigonometría en el triángulo rectángulo",
-     "Homotecia y semejanza",
-     "Rectas y distancias en el plano"
-    ]
-   },
-   {
-    "name": "Probabilidad y estadística",
-    "subtopics": [
-     "Probabilidad condicional y modelo binomial",
-     "Dispersión y distribución normal",
-     "Técnicas de conteo"
-    ]
-   },
-   {
-    "name": "Habilidades transversales",
-    "subtopics": [
-     "Evaluación de suficiencia de datos"
-    ]
-   }
-  ],
-  "subtopics": 13,
-  "kind": "beamer",
-  "file": "beamer_m2.tex",
-  "slides": 48,
-  "includes": [
-   "Teoría esencial por subtema",
-   "Desafíos tipo PAES",
-   "Soluciones detalladas",
-   "Distribución por eje"
-  ]
- },
- {
-  "subject": "lectora",
-  "title": "Competencia Lectora",
-  "axes": [
-   {
-    "name": "Localizar",
-    "subtopics": [
-     "Información explícita"
-    ]
-   },
-   {
-    "name": "Interpretar",
-    "subtopics": [
-     "Vocabulario contextual",
-     "Tema, idea central y síntesis",
-     "Propósito y función de fragmentos",
-     "Inferencias y relaciones entre ideas",
-     "Textos literarios",
-     "Textos discontinuos e infografías"
-    ]
-   },
-   {
-    "name": "Evaluar",
-    "subtopics": [
-     "Evaluar argumentos y postura",
-     "Evaluar forma, recursos y pertinencia"
-    ]
-   }
-  ],
-  "subtopics": 9,
-  "kind": "guia",
-  "file": "guia_lectora.tex",
-  "examples": 20,
-  "includes": [
-   "Teoría y definiciones",
-   "Fórmulas, leyes y mecanismos",
-   "Ideas clave y método",
-   "Trampas frecuentes del DEMRE",
-   "Ejemplos resueltos paso a paso"
-  ]
- },
- {
-  "subject": "lectora",
-  "title": "Competencia Lectora",
-  "axes": [
-   {
-    "name": "Localizar",
-    "subtopics": [
-     "Información explícita"
-    ]
-   },
-   {
-    "name": "Interpretar",
-    "subtopics": [
-     "Vocabulario contextual",
-     "Tema, idea central y síntesis",
-     "Propósito y función de fragmentos",
-     "Inferencias y relaciones entre ideas",
-     "Textos literarios",
-     "Textos discontinuos e infografías"
-    ]
-   },
-   {
-    "name": "Evaluar",
-    "subtopics": [
-     "Evaluar argumentos y postura",
-     "Evaluar forma, recursos y pertinencia"
-    ]
-   }
-  ],
-  "subtopics": 9,
-  "kind": "beamer",
-  "file": "beamer_lectora.tex",
-  "slides": 34,
-  "includes": [
-   "Teoría esencial por subtema",
-   "Desafíos tipo PAES",
-   "Soluciones detalladas",
-   "Distribución por eje"
-  ]
- },
- {
-  "subject": "ciencias",
-  "title": "Ciencias",
-  "axes": [
-   {
-    "name": "Biología",
-    "subtopics": [
-     "Organización celular",
-     "Biomoléculas, enzimas y metabolismo",
-     "División celular y herencia",
-     "Evolución y biodiversidad",
-     "Sistemas del organismo y homeostasis",
-     "Organismo y ambiente"
-    ]
-   },
-   {
-    "name": "Física",
-    "subtopics": [
-     "Ondas y sonido",
-     "Luz y óptica",
-     "Movimiento (cinemática)",
-     "Fuerzas y leyes de Newton",
-     "Energía, trabajo y calor",
-     "Electricidad y magnetismo"
-    ]
-   },
-   {
-    "name": "Química",
-    "subtopics": [
-     "Estructura atómica y tabla periódica",
-     "Enlace químico y moléculas",
-     "Química orgánica",
-     "Reacciones químicas y estequiometría",
-     "Disoluciones y pH"
-    ]
-   },
-   {
-    "name": "Habilidades científicas",
-    "subtopics": [
-     "Habilidades de pensamiento científico"
-    ]
-   }
-  ],
-  "subtopics": 18,
-  "kind": "guia",
-  "file": "guia_ciencias.tex",
-  "examples": 34,
-  "includes": [
-   "Teoría y definiciones",
-   "Fórmulas, leyes y mecanismos",
-   "Ideas clave y método",
-   "Trampas frecuentes del DEMRE",
-   "Ejemplos resueltos paso a paso"
-  ]
- },
- {
-  "subject": "ciencias",
-  "title": "Ciencias",
-  "axes": [
-   {
-    "name": "Biología",
-    "subtopics": [
-     "Organización celular",
-     "Biomoléculas, enzimas y metabolismo",
-     "División celular y herencia",
-     "Evolución y biodiversidad",
-     "Sistemas del organismo y homeostasis",
-     "Organismo y ambiente"
-    ]
-   },
-   {
-    "name": "Física",
-    "subtopics": [
-     "Ondas y sonido",
-     "Luz y óptica",
-     "Movimiento (cinemática)",
-     "Fuerzas y leyes de Newton",
-     "Energía, trabajo y calor",
-     "Electricidad y magnetismo"
-    ]
-   },
-   {
-    "name": "Química",
-    "subtopics": [
-     "Estructura atómica y tabla periódica",
-     "Enlace químico y moléculas",
-     "Química orgánica",
-     "Reacciones químicas y estequiometría",
-     "Disoluciones y pH"
-    ]
-   },
-   {
-    "name": "Habilidades científicas",
-    "subtopics": [
-     "Habilidades de pensamiento científico"
-    ]
-   }
-  ],
-  "subtopics": 18,
-  "kind": "beamer",
-  "file": "beamer_ciencias.tex",
-  "slides": 62,
-  "includes": [
-   "Teoría esencial por subtema",
-   "Desafíos tipo PAES",
-   "Soluciones detalladas",
-   "Distribución por eje"
-  ]
- },
- {
   "subject": "historia",
   "title": "Historia y Ciencias Sociales",
   "axes": [
    {
     "name": "Historia: mundo, América y Chile",
     "subtopics": [
-     "Revoluciones y siglo XIX en Europa",
-     "Chile en el siglo XIX: independencia, república y expansión",
-     "Cuestión social y crisis del parlamentarismo",
-     "Guerras mundiales y crisis de 1929",
-     "Guerra Fría y América Latina",
-     "Chile en el siglo XX: del Estado de compromiso a la transición"
+     "Siglo XIX: ideas liberales, republicanas y Estado-nación",
+     "Chile en el siglo XIX: formación de la República y economía",
+     "Del siglo XIX al XX: transformaciones y cuestión social",
+     "Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo",
+     "Posguerra, Guerra Fría y América Latina",
+     "Chile a mediados del siglo XX: Estado, reformas y democratización",
+     "Dictadura militar y retorno a la democracia"
     ]
    },
    {
     "name": "Formación ciudadana",
     "subtopics": [
-     "Estado, Constitución y poderes del Estado",
-     "Democracia, derechos humanos y participación"
+     "Democracia: fundamentos, atributos y dimensiones",
+     "Institucionalidad democrática en Chile",
+     "Democracia en la sociedad de la información",
+     "Sistema judicial y acceso a la justicia"
     ]
    },
    {
     "name": "Sistema económico",
     "subtopics": [
-     "Problema económico y mercado",
-     "Macroeconomía y finanzas personales"
-    ]
-   },
-   {
-    "name": "Geografía y espacio",
-    "subtopics": [
-     "Población, territorio y ambiente"
+     "Funcionamiento del mercado",
+     "Estado, mercado y modelos de desarrollo",
+     "Derechos laborales"
     ]
    },
    {
     "name": "Habilidades de pensamiento histórico",
     "subtopics": [
-     "Análisis de fuentes y pensamiento histórico"
+     "Pensamiento temporal, espacial y crítico; análisis de fuentes"
     ]
    }
   ],
-  "subtopics": 12,
-  "kind": "guia",
-  "file": "guia_historia.tex",
-  "examples": 25,
-  "includes": [
-   "Teoría y definiciones",
-   "Fórmulas, leyes y mecanismos",
-   "Ideas clave y método",
-   "Trampas frecuentes del DEMRE",
-   "Ejemplos resueltos paso a paso"
-  ]
- },
- {
-  "subject": "historia",
-  "title": "Historia y Ciencias Sociales",
-  "axes": [
-   {
-    "name": "Historia: mundo, América y Chile",
-    "subtopics": [
-     "Revoluciones y siglo XIX en Europa",
-     "Chile en el siglo XIX: independencia, república y expansión",
-     "Cuestión social y crisis del parlamentarismo",
-     "Guerras mundiales y crisis de 1929",
-     "Guerra Fría y América Latina",
-     "Chile en el siglo XX: del Estado de compromiso a la transición"
-    ]
-   },
-   {
-    "name": "Formación ciudadana",
-    "subtopics": [
-     "Estado, Constitución y poderes del Estado",
-     "Democracia, derechos humanos y participación"
-    ]
-   },
-   {
-    "name": "Sistema económico",
-    "subtopics": [
-     "Problema económico y mercado",
-     "Macroeconomía y finanzas personales"
-    ]
-   },
-   {
-    "name": "Geografía y espacio",
-    "subtopics": [
-     "Población, territorio y ambiente"
-    ]
-   },
-   {
-    "name": "Habilidades de pensamiento histórico",
-    "subtopics": [
-     "Análisis de fuentes y pensamiento histórico"
-    ]
-   }
-  ],
-  "subtopics": 12,
+  "subtopics": 15,
   "kind": "beamer",
   "file": "beamer_historia.tex",
-  "slides": 51,
+  "slides": 60,
   "includes": [
    "Teoría esencial por subtema",
    "Desafíos tipo PAES",

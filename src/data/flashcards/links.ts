@@ -1,4 +1,4 @@
-import { SUBTOPICS } from '@/data/temario'
+import { ALL_SUBTOPICS } from '@/data/temario'
 import type { DeckId } from '@/types/flashcards'
 import type { Subtopic } from '@/types/temario'
 
@@ -14,12 +14,15 @@ const historia = (unit: string) => ({ deck: 'historia', unit }) as const
 const lectora = (unit: string) => ({ deck: 'lectora', unit }) as const
 const HISTORY = historia('Chile y el mundo (siglos XIX y XX)')
 
-/** Unidad de mazo de cada subtema de Lectora, Ciencias e Historia. Solo tres subtemas quedan sin tarjetas. */
+/** Unidad de mazo de cada subtema de Lectora, Ciencias e Historia (también los no vigentes, por sus preguntas antiguas). */
 const BY_SUBTOPIC: Record<string, { deck: DeckId; unit: string }> = {
   'cl-localizar': lectora('Localizar'),
   'cl-vocabulario': lectora('Interpretar'),
   'cl-idea-central': lectora('Interpretar'),
-  'cl-proposito': lectora('Evaluar'),
+  'cl-proposito': lectora('Interpretar'),
+  'cl-intencion': lectora('Evaluar'),
+  'cl-postura': lectora('Tesis, argumentos y tono'),
+  'cl-contextos': lectora('Evaluar'),
   'cl-inferencia': lectora('Inferencias y distractores'),
   'cl-literario': lectora('Tesis, argumentos y tono'),
   'cl-multimodal': lectora('Textos discontinuos'),
@@ -28,6 +31,9 @@ const BY_SUBTOPIC: Record<string, { deck: DeckId; unit: string }> = {
   'cs-celula': biologia('Organización celular'),
   'cs-biomoleculas': biologia('Organización celular'),
   'cs-sistemas': biologia('Procesos y funciones biológicas'),
+  'cs-nervioso': biologia('Procesos y funciones biológicas'),
+  'cs-reproduccion': biologia('Procesos y funciones biológicas'),
+  'cs-poblaciones': biologia('Organismo y ambiente'),
   'cs-genetica': biologia('Herencia y evolución'),
   'cs-evolucion': biologia('Herencia y evolución'),
   'cs-ecologia': biologia('Organismo y ambiente'),
@@ -37,6 +43,8 @@ const BY_SUBTOPIC: Record<string, { deck: DeckId; unit: string }> = {
   'cs-dinamica': fisica('Mecánica'),
   'cs-energia': fisica('Energía'),
   'cs-electricidad': fisica('Electricidad y magnetismo'),
+  'cs-tierra': fisica('Tierra y universo'),
+  'cs-universo': fisica('Tierra y universo'),
   'cs-atomo': quimica('Estructura atómica'),
   'cs-enlace': quimica('Estructura atómica'),
   'cs-organica': quimica('Química orgánica'),
@@ -48,10 +56,14 @@ const BY_SUBTOPIC: Record<string, { deck: DeckId; unit: string }> = {
   'hi-guerras': HISTORY,
   'hi-guerra-fria': HISTORY,
   'hi-chile-xx': HISTORY,
+  'hi-dictadura': HISTORY,
   'hi-estado': historia('Formación ciudadana'),
   'hi-democracia': historia('Formación ciudadana'),
+  'hi-informacion': historia('Formación ciudadana'),
+  'hi-justicia': historia('Formación ciudadana'),
   'hi-mercado': historia('Sistema económico'),
   'hi-macro': historia('Sistema económico'),
+  'hi-laborales': historia('Sistema económico'),
 }
 
 function linkOf(sub: Subtopic): { deck: DeckId; unit: string } | undefined {
@@ -66,7 +78,7 @@ function linkOf(sub: Subtopic): { deck: DeckId; unit: string } | undefined {
 export function cardLinksFor(subtopicIds: string[]): CardLink[] {
   const wanted = new Set(subtopicIds)
   const decks = new Map<DeckId, Set<string>>()
-  for (const sub of SUBTOPICS) {
+  for (const sub of ALL_SUBTOPICS) {
     if (!wanted.has(sub.id)) continue
     const link = linkOf(sub)
     if (!link) continue

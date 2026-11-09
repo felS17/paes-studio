@@ -282,7 +282,7 @@
   {
    "id": "m2-2026-invierno-q05",
    "number": 5,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "Considera que 1200 se aumenta en su 15 % y el número que se obtiene se disminuye\n\nen su 5 %.\n\n¿Cuál de las siguientes expresiones representa el número final que se obtiene?",
    "options": [
@@ -328,12 +328,12 @@
      "D": "$1200\\cdot 0{,}15-1200\\cdot 0{,}05$ usa 0,15 y 0,05 como factores, en vez de $1+0{,}15$ y $1-0{,}05$, y además resta. Da $180-60=120$, que corresponde solo a una parte del porcentaje."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2026-invierno-q06",
    "number": 6,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "Para medir la popularidad de un artista en redes sociales, se analizó la cantidad de\n\nbúsquedas diarias que tuvo durante tres días seguidos. Se detectó que el artista\n\ndescendió un 4 % cada día respecto al día anterior, presentando 276 480 búsquedas\n\nel último día.\n\n¿Cuál es la cantidad de búsquedas que se realizaron de este artista el primer día?\n\n276 480",
    "options": [
@@ -380,7 +380,7 @@
      "D": "$276\\,480\\cdot 0{,}04^{2}$ usa la caída como factor y además multiplica, por lo que da un valor muy pequeño, cercano a 442 búsquedas. No corresponde a un primer día con búsquedas que bajan un $4\\,\\%$ diario."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-invierno-q07",
@@ -643,7 +643,7 @@
   {
    "id": "m2-2026-invierno-q12",
    "number": 12,
-   "axis": "Probabilidad y estadística",
+   "axis": "Números",
    "topic": "Medidas de tendencia central",
    "stem": "El nivel de intensidad sonora β, en dB, y la intensidad acústica I, en W m², se relacionan mediante la expresión β = 10 · log(I) + 120, tal que β ≥0.\n\nEn la siguiente tabla se presentan los niveles máximos permisibles de intensidad\n\nsonora en zonas residenciales durante el día según la legislación chilena.\n\nDe 7:00 a 21:00 De 21:00 a 7:00\n\n55 dB 45 dB\n\n¿Cuál es el máximo permisible de intensidad acústica en zonas residenciales a las\n\n23:00?\n\n10⁻⁶,⁵ W",
    "options": [
@@ -1052,7 +1052,7 @@
      "D": "218,7 g es la masa de la esfera de alabastro, no la diferencia entre las dos. Confunde la masa de una esfera con el resultado de comparar ambas."
     }
    },
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-esfera"
   },
   {
    "id": "m2-2026-invierno-q20",
@@ -1364,7 +1364,7 @@
      "D": "$x+y=50+5$ plantea bien el total, pero asigna a las monedas añadidas la masa de la moneda de 100 pesos, $5\\cdot 9$, en lugar de $5\\cdot 6{,}5$. Como son de 500 pesos, su masa es 6,5 g."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-sistemas"
   },
   {
    "id": "m2-2026-invierno-q26",
@@ -1421,7 +1421,7 @@
   {
    "id": "m2-2026-invierno-q27",
    "number": 27,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Funciones",
    "stem": "Considera la función f definida por f(x) = ax² + bx + c, tal que a, b y c son números\n\nreales distintos de cero.\n\n¿Cuál de las siguientes funciones representa la gráfica de la función f reflejada con\n\nrespecto al eje X?\n\np(x) = −ax² + bx + c",
    "options": [
@@ -1468,7 +1468,7 @@
      "D": "$t(x)=ax^{2}-bx+c$ corresponde a la reflexión respecto del eje Y, es decir, $f(-x)$, que cambia el signo de $b$ y deja $a$ y $c$ igual. No es una reflexión respecto del eje X."
     }
    },
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-invierno-q28",
@@ -1623,7 +1623,7 @@
      "D": "960 metros aparece si se toma $a=5$ positivo al calcular $-\\frac{b}{2a}$: se obtiene $x=-8$ y $h(-8)=-960$; al quitar el signo queda 960. Pero el tiempo debe ser positivo, y $-8$ s no tiene sentido."
     }
    },
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2026-invierno-q31",
@@ -1883,7 +1883,7 @@
      "D": "$1600\\pi-600\\sqrt{3}$ usa el diámetro de 40 cm como radio en la fórmula del área del círculo, con $\\pi\\cdot 40^{2}=1600\\pi$. El hexágono sí está bien calculado."
     }
    },
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-circunferencia"
   },
   {
    "id": "m2-2026-invierno-q37",
@@ -2420,7 +2420,7 @@
   {
    "id": "m2-2026-invierno-q47",
    "number": 47,
-   "axis": "Geometría",
+   "axis": "Probabilidad y estadística",
    "topic": "Figuras planas",
    "stem": "Se dibujaron varias figuras siguiendo una secuencia de puntos, tal como se representa\n\nen la siguiente imagen:\n\nSi se dibujaron 1000 figuras siguiendo esta secuencia y se selecciona una de ellas al\n\nazar, ¿cuál es la probabilidad de que esta tenga dibujados al menos 32 puntos?\n\n30",
    "options": [
@@ -2579,7 +2579,7 @@
   {
    "id": "m2-2026-invierno-q50",
    "number": 50,
-   "axis": "Probabilidad y estadística",
+   "axis": "Geometría",
    "topic": "Probabilidad",
    "stem": "Se encuestó a un grupo de estudiantes para conocer qué sabor de helados les gusta\n\nentre vainilla y chocolate, y todos ellos señalaron al menos uno de estos sabores.\n\nDe acuerdo con los resultados de la encuesta, se sabe que si se escoge a un\n\nestudiante del grupo al azar, la probabilidad de que le guste el helado de vainilla y\n\nel helado de chocolate es 0,15, y la probabilidad de que le guste solo el helado de\n\nchocolate es 0,70.\n\nSi se escoge al azar a un estudiante del grupo, ¿cuál es la probabilidad de que le\n\nguste el helado de chocolate dado que le gusta el helado de vainilla?\n\n3",
    "options": [

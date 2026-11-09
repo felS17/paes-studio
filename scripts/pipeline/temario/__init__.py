@@ -24,15 +24,18 @@ def ejemplo(enunciado: str, opciones: list[str], clave: str, analisis: str, paso
 
 def sub(id: str, titulo: str, labels: list[str], teoria: list[str], caja: dict, claves: list[str],
         metodo: list[str], trampas: list[str], ejemplo: dict, tabla: dict | None = None,
-        linea: list[tuple[str, str]] | None = None) -> dict:
+        linea: list[tuple[str, str]] | None = None, vigente: bool = True) -> dict:
     """Subtema del temario.
 
-    labels: etiquetas de tema (taxonomy.TOPIC_LABELS) que este subtema cubre, para enlazar preguntas.
-    tabla:  esquema comparativo opcional {"head": [...], "rows": [[...], ...]}.
-    linea:  línea de tiempo opcional [(fecha, hecho), ...].
+    labels:  etiquetas de tema (taxonomy.TOPIC_LABELS) que este subtema cubre, para enlazar preguntas.
+    tabla:   esquema comparativo opcional {"head": [...], "rows": [[...], ...]}.
+    linea:   línea de tiempo opcional [(fecha, hecho), ...].
+    vigente: False si el temario DEMRE vigente (Admisión 2027) ya no lo incluye. Sus preguntas de años
+             anteriores siguen en el banco, pero la app las muestra aparte y no las cuenta en el dominio.
     """
     return {"id": id, "titulo": titulo, "labels": labels, "teoria": teoria, "caja": caja, "claves": claves,
-            "metodo": metodo, "trampas": trampas, "ejemplo": ejemplo, "tabla": tabla, "linea": linea}
+            "metodo": metodo, "trampas": trampas, "ejemplo": ejemplo, "tabla": tabla, "linea": linea,
+            "vigente": vigente}
 
 
 def eje(nombre: str, descripcion: str, subtemas: list[dict]) -> dict:
@@ -43,7 +46,14 @@ SUBJECTS = ("m1", "m2", "lectora", "ciencias", "historia")
 
 
 def load(subject: str) -> dict:
-    return importlib.import_module(f"temario.{subject}").TEMARIO
+    """Temario de la asignatura. Los ids de `NO_VIGENTES` del módulo quedan con `vigente=False`."""
+    module = importlib.import_module(f"temario.{subject}")
+    retired = getattr(module, "NO_VIGENTES", set())
+    for e in module.TEMARIO["ejes"]:
+        for s in e["subtemas"]:
+            if s["id"] in retired:
+                s["vigente"] = False
+    return module.TEMARIO
 
 
 def all_subtopics(temario: dict):

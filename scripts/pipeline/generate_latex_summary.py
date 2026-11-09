@@ -32,6 +32,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from temario import SUBJECTS, all_subtopics, load  # noqa: E402
 
+
+def vigente(temario: dict) -> dict:
+    """Solo el temario vigente (Admisión 2027): las guías no incluyen los subtemas que el DEMRE ya no evalúa."""
+    ejes = [{**e, "subtemas": [s for s in e["subtemas"] if s.get("vigente", True)]} for e in temario["ejes"]]
+    return {**temario, "ejes": [e for e in ejes if e["subtemas"]]}
+
 EXAMS_DIR = ROOT / "src" / "data" / "exams"
 TEMPLATES = ROOT / "latex" / "templates"
 OUTPUT = ROOT / "latex" / "output"
@@ -220,7 +226,7 @@ def subtopic_guide(s: dict, curated: list[dict]) -> str:
 
 
 def build_guide(subject: str, exams: list[dict]) -> str:
-    temario = load(subject)
+    temario = vigente(load(subject))
     ranked, total = axis_stats(exams)
     curated = curated_by_subtopic(temario, exams)
     template = (TEMPLATES / "guia_sintesis_paes.tex").read_text(encoding="utf-8")
@@ -260,7 +266,7 @@ def build_guide(subject: str, exams: list[dict]) -> str:
 
 
 def build_deck(subject: str, exams: list[dict]) -> str:
-    temario = load(subject)
+    temario = vigente(load(subject))
     ranked, total = axis_stats(exams)
     template = (TEMPLATES / "beamer_repaso_paes.tex").read_text(encoding="utf-8")
     short = temario["nombre"].split(" (")[0]
@@ -350,9 +356,9 @@ def main() -> int:
         deck_tex = build_deck(subject, exams)
         deck.write_text(deck_tex, encoding="utf-8")
         frames = len(re.findall(r"\\begin\{frame\}", deck_tex)) + 1  # + portada
-        n_sub = sum(len(e["subtemas"]) for e in load(subject)["ejes"])
+        n_sub = sum(len(e["subtemas"]) for e in vigente(load(subject))["ejes"])
         print(f"✓ {subject:9} {n_sub:2d} subtemas → {guide.name} ({guide.stat().st_size // 1024} KB), {deck.name} ({frames} diapositivas)")
-        temario = load(subject)
+        temario = vigente(load(subject))
         curated = curated_by_subtopic(temario, exams)
         axes = [{"name": e["nombre"], "subtopics": [s["titulo"] for s in e["subtemas"]]} for e in temario["ejes"]]
         examples = n_sub + sum(min(2, len(v)) for v in curated.values())

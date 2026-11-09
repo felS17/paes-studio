@@ -14,8 +14,8 @@ Entorno abierto e interactivo de preparación para la PAES (DEMRE, Chile), con l
 | Ensayos (48 oficiales y 5 curados) | 53 |
 | Preguntas | 3.137 |
 | Soluciones paso a paso | 1.892+ |
-| Subtemas del temario | 67 |
-| Flashcards con repaso espaciado (SM-2) | 290 |
+| Subtemas del temario DEMRE vigente (Admisión 2027) | 77 |
+| Flashcards con repaso espaciado (SM-2) | 298 |
 | Guías en PDF (LaTeX y Beamer) | 10 |
 
 Las explicaciones oficiales las redactó una IA y se validaron contra la clave del DEMRE; la interfaz lo indica en cada una.

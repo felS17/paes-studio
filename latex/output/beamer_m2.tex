@@ -104,7 +104,7 @@
 %%<META>%%
 \title[Repaso PAES: Competencia Matemática 2]{Repaso PAES}
 \subtitle{Competencia Matemática 2 (M2)}
-\date{1 de noviembre de 2026}
+\date{8 de noviembre de 2026}
 %%</META>%%
 
 \begin{document}
@@ -122,11 +122,11 @@
 
     \item \textbf{Números}: Números reales y racionalización, Logaritmos, Matemática financiera
 
-    \item \textbf{Álgebra y funciones}: Ecuación cuadrática y discriminante, Funciones exponencial y logarítmica, Composición e inversa de funciones
+    \item \textbf{Álgebra y funciones}: Sistemas de ecuaciones: tipos de solución, Función potencia, exponencial y logarítmica, Funciones trigonométricas seno y coseno, Ecuación y función cuadrática (contenido de M1)
 
-    \item \textbf{Geometría}: Trigonometría en el triángulo rectángulo, Homotecia y semejanza, Rectas y distancias en el plano
+    \item \textbf{Geometría}: Homotecia de figuras planas, Razones trigonométricas, Relaciones métricas en la circunferencia, Esfera: superficie y volumen, Rectas en el plano
 
-    \item \textbf{Probabilidad y estadística}: Probabilidad condicional y modelo binomial, Dispersión y distribución normal, Técnicas de conteo
+    \item \textbf{Probabilidad y estadística}: Medidas de dispersión, Probabilidad condicional, Permutación y combinatoria, Modelos binomial y normal
 
     \item \textbf{Habilidades transversales}: Evaluación de suficiencia de datos
 
@@ -136,17 +136,17 @@
 
 \begin{frame}{Qué evalúa la prueba}
 
-  \framesubtitle{Distribución por eje en 7 ensayos (326 preguntas)}
+  \framesubtitle{Distribución por eje en 8 ensayos (363 preguntas)}
 
   \vspace{0.8em}
 
-  \ejebarra{Álgebra y funciones}{0.387}{39 \%}
+  \ejebarra{Álgebra y funciones}{0.284}{28 \%}
 
-  \ejebarra{Geometría}{0.236}{24 \%}
+  \ejebarra{Números}{0.264}{26 \%}
 
-  \ejebarra{Probabilidad y estadística}{0.206}{21 \%}
+  \ejebarra{Geometría}{0.251}{25 \%}
 
-  \ejebarra{Números}{0.172}{17 \%}
+  \ejebarra{Probabilidad y estadística}{0.201}{20 \%}
 
 \end{frame}
 
@@ -292,55 +292,53 @@
 \begin{frame}[plain]
   \vfill
   {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Álgebra y funciones}\par\vspace{0.6em}
-  {\color{zinc700} Ecuaciones cuadráticas, funciones exponencial, logarítmica, compuesta e inversa.}\par\vspace{1em}
-  {\small\color{zinc500} Ecuación cuadrática y discriminante, Funciones exponencial y logarítmica, Composición e inversa de funciones}
+  {\color{zinc700} Sistemas de ecuaciones, funciones potencia, exponencial, logarítmica y trigonométricas, y la ecuación cuadrática de M1.}\par\vspace{1em}
+  {\small\color{zinc500} Sistemas de ecuaciones: tipos de solución, Función potencia, exponencial y logarítmica, Funciones trigonométricas seno y coseno, Ecuación y función cuadrática (contenido de M1)}
   \vfill
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Ecuación cuadrática y discriminante}
+\begin{frame}[allowframebreaks]{Sistemas de ecuaciones: tipos de solución}
   \framesubtitle{Teoría esencial}
   \begin{itemize}\small
-    \item Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.
-    \item «Una única solución» $\iff \Delta=0$.
-    \item La parábola no corta el eje $X$ cuando $\Delta<0$.
+    \item Pendientes distintas: las rectas se cortan en un punto.
+    \item Misma pendiente y distinto coeficiente de posición: rectas paralelas, sin solución.
+    \item Una ecuación múltiplo de la otra: infinitas soluciones.
   \end{itemize}
-  \begin{cajaclave}[Discriminante]\footnotesize
-$\Delta>0$: dos soluciones reales distintas. $\Delta=0$: una solución real (doble). $\Delta<0$: ninguna solución real.
-
+  \begin{cajaclave}[Criterio]\footnotesize
 \begin{gather*}
-x=\frac{-b\pm\sqrt{\Delta}}{2a} \\
-x_1+x_2=-\frac{b}{a} \\
-x_1x_2=\frac{c}{a}
+\frac{a}{d}\neq\frac{b}{e}\ \Rightarrow\ \text{única} \\
+\frac{a}{d}=\frac{b}{e}\neq\frac{c}{f}\ \Rightarrow\ \text{ninguna} \\
+\frac{a}{d}=\frac{b}{e}=\frac{c}{f}\ \Rightarrow\ \text{infinitas}
 \end{gather*}
   \end{cajaclave}
 \end{frame}
 
 \begin{frame}{Desafío}
-  \framesubtitle{Ecuación cuadrática y discriminante}
-  {\small ¿Para qué valores de $k$ la ecuación $x^2-4x+k=0$ no tiene soluciones reales?}
+  \framesubtitle{Sistemas de ecuaciones: tipos de solución}
+  {\small ¿Para qué valor de $k$ el sistema $2x+ky=5$ y $4x+6y=7$ no tiene solución?}
   \vspace{0.4em}
-  \alternativa{A}{$k<4$}
-  \alternativa{B}{$k=4$}
-  \alternativa{C}{$k>4$}
-  \alternativa{D}{$k>16$}
+  \alternativa{A}{$k=2$}
+  \alternativa{B}{$k=3$}
+  \alternativa{C}{$k=6$}
+  \alternativa{D}{$k=12$}
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{No hay soluciones reales cuando el discriminante es negativo.}
+  \framesubtitle{No hay solución cuando las rectas son paralelas y distintas.}
   {\small
-  \paso{1}{$\Delta=(-4)^2-4\cdot 1\cdot k=16-4k$.}
-  \paso{2}{$16-4k<0 \Rightarrow k>4$.}
+  \paso{1}{$\dfrac{2}{4}=\dfrac{k}{6}\Rightarrow k=3$.}
+  \paso{2}{Con $k=3$: $\dfrac{5}{7}\neq\dfrac{1}{2}$, así que son paralelas distintas.}
   }
-  \alternativaok{C}{$k>4$}
+  \alternativaok{B}{$k=3$}
   \begin{cajatrampa}\footnotesize
     \begin{itemize}
-    \item Olvidar el factor 4 en $4ac$.
-    \item Perder una solución al dividir por $x$.
+    \item Concluir «sin solución» solo porque las pendientes son iguales, sin revisar si las rectas coinciden.
+    \item Comparar coeficientes sin ordenar antes las ecuaciones.
     \end{itemize}
   \end{cajatrampa}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Funciones exponencial y logarítmica}
+\begin{frame}[allowframebreaks]{Función potencia, exponencial y logarítmica}
   \framesubtitle{Teoría esencial}
   \begin{itemize}\small
     \item $f(0)=a$: el valor inicial.
@@ -356,7 +354,7 @@ N(t)=N_0\left(\tfrac{1}{2}\right)^{t/T}\ \text{(vida media } T\text{)}
 \end{frame}
 
 \begin{frame}{Desafío}
-  \framesubtitle{Funciones exponencial y logarítmica}
+  \framesubtitle{Función potencia, exponencial y logarítmica}
   {\small Una sustancia tiene una vida media de 5 años. Si hoy hay 80 g, ¿cuánta quedará en 15 años?}
   \vspace{0.4em}
   \alternativa{A}{40 g}
@@ -380,43 +378,87 @@ N(t)=N_0\left(\tfrac{1}{2}\right)^{t/T}\ \text{(vida media } T\text{)}
   \end{cajatrampa}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Composición e inversa de funciones}
+\begin{frame}[allowframebreaks]{Funciones trigonométricas seno y coseno}
   \framesubtitle{Teoría esencial}
   \begin{itemize}\small
-    \item $(f\circ g)(3)$: evalúa primero $g(3)$.
-    \item $f^{-1}(x)\neq\frac{1}{f(x)}$.
-    \item Comprueba la inversa componiendo: debe dar $x$.
+    \item $\sin 0=0$, $\sin 90^\circ=1$; $\cos 0=1$, $\cos 90^\circ=0$.
+    \item La gráfica del coseno es la del seno desplazada $90^\circ$.
+    \item Un $b$ mayor comprime la gráfica: más ciclos en el mismo intervalo.
   \end{itemize}
-  \begin{cajaclave}[Procedimiento]\footnotesize
-\[y=f(x) \ \Rightarrow\ x=\text{(despeje)} \ \Rightarrow\ f^{-1}(x)=\text{(intercambio)}\]
-
-El gráfico de $f^{-1}$ es simétrico al de $f$ respecto de la recta $y=x$.
+  \begin{cajaclave}[Parámetros]\footnotesize
+\begin{gather*}
+y=a\sin(bx)+c \\
+\text{amplitud}=|a| \\
+\text{período}=\frac{2\pi}{|b|} \\
+\text{recorrido}=[\,c-|a|,\ c+|a|\,]
+\end{gather*}
   \end{cajaclave}
 \end{frame}
 
 \begin{frame}{Desafío}
-  \framesubtitle{Composición e inversa de funciones}
-  {\small Si $f(x)=3x-2$, ¿cuál es $f^{-1}(7)$?}
+  \framesubtitle{Funciones trigonométricas seno y coseno}
+  {\small La altura de la marea, en metros, se modela con $h(t)=1{,}5\sin\!\left(\dfrac{\pi t}{6}\right)+3$, con $t$ en horas. ¿Cuál es la altura máxima?}
   \vspace{0.4em}
-  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
-  \alternativa{A}{$19$}
-  \alternativa{B}{$3$}
-  \alternativa{C}{$\dfrac{1}{19}$}
-  \alternativa{D}{$\dfrac{5}{3}$}
-  \end{tcbraster}
+  \alternativa{A}{1,5 m}
+  \alternativa{B}{3 m}
+  \alternativa{C}{4,5 m}
+  \alternativa{D}{6 m}
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{$f^{-1}(7)$ es el valor de $x$ tal que $f(x)=7$.}
+  \framesubtitle{El seno vale como máximo 1.}
   {\small
-  \paso{1}{$3x-2=7 \Rightarrow x=3$.}
-  \paso{2}{Por lo tanto $f^{-1}(7)=3$ (19 sería $f(7)$).}
+  \paso{1}{Máximo: $1{,}5\cdot 1+3=4{,}5$ m.}
+  \paso{2}{El período es $\dfrac{2\pi}{\pi/6}=12$ horas.}
   }
-  \alternativaok{B}{$3$}
+  \alternativaok{C}{4,5 m}
   \begin{cajatrampa}\footnotesize
     \begin{itemize}
-    \item Aplicar las funciones en el orden de lectura (de izquierda a derecha).
-    \item Confundir la inversa con el recíproco.
+    \item Confundir la amplitud con la distancia entre máximo y mínimo (que es el doble).
+    \item Calcular el período como $2\pi\cdot b$ en vez de $\dfrac{2\pi}{b}$.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Ecuación y función cuadrática (contenido de M1)}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.
+    \item «Una única solución» $\iff \Delta=0$.
+    \item La parábola no corta el eje $X$ cuando $\Delta<0$.
+  \end{itemize}
+  \begin{cajaclave}[Discriminante]\footnotesize
+$\Delta>0$: dos soluciones reales distintas. $\Delta=0$: una solución real (doble). $\Delta<0$: ninguna solución real.
+
+\begin{gather*}
+x=\frac{-b\pm\sqrt{\Delta}}{2a} \\
+x_1+x_2=-\frac{b}{a} \\
+x_1x_2=\frac{c}{a}
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Ecuación y función cuadrática (contenido de M1)}
+  {\small ¿Para qué valores de $k$ la ecuación $x^2-4x+k=0$ no tiene soluciones reales?}
+  \vspace{0.4em}
+  \alternativa{A}{$k<4$}
+  \alternativa{B}{$k=4$}
+  \alternativa{C}{$k>4$}
+  \alternativa{D}{$k>16$}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{No hay soluciones reales cuando el discriminante es negativo.}
+  {\small
+  \paso{1}{$\Delta=(-4)^2-4\cdot 1\cdot k=16-4k$.}
+  \paso{2}{$16-4k<0 \Rightarrow k>4$.}
+  }
+  \alternativaok{C}{$k>4$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Olvidar el factor 4 en $4ac$.
+    \item Perder una solución al dividir por $x$.
     \end{itemize}
   \end{cajatrampa}
 \end{frame}
@@ -426,56 +468,12 @@ El gráfico de $f^{-1}$ es simétrico al de $f$ respecto de la recta $y=x$.
 \begin{frame}[plain]
   \vfill
   {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Geometría}\par\vspace{0.6em}
-  {\color{zinc700} Trigonometría, homotecia y geometría analítica.}\par\vspace{1em}
-  {\small\color{zinc500} Trigonometría en el triángulo rectángulo, Homotecia y semejanza, Rectas y distancias en el plano}
+  {\color{zinc700} Homotecia, razones trigonométricas, circunferencia, esfera y rectas en el plano.}\par\vspace{1em}
+  {\small\color{zinc500} Homotecia de figuras planas, Razones trigonométricas, Relaciones métricas en la circunferencia, Esfera: superficie y volumen, Rectas en el plano}
   \vfill
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Trigonometría en el triángulo rectángulo}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Identifica qué lado es opuesto y cuál adyacente \textbf{respecto del ángulo dado}.
-    \item Ningún cateto es mayor que la hipotenusa.
-    \item $\tan\alpha=\frac{\operatorname{sen}\alpha}{\cos\alpha}$.
-  \end{itemize}
-  \begin{cajaclave}[Razones y valores notables]\footnotesize
-\begin{gather*}
-\operatorname{sen}\alpha=\frac{\text{op}}{\text{hip}} \\
-\cos\alpha=\frac{\text{ady}}{\text{hip}} \\
-\tan\alpha=\frac{\text{op}}{\text{ady}} \\
-\operatorname{sen}^2\alpha+\cos^2\alpha=1
-\end{gather*}
-
-$\operatorname{sen}30^\circ=\cos 60^\circ=\frac{1}{2}$, $\operatorname{sen}60^\circ=\cos 30^\circ=\frac{\sqrt{3}}{2}$, $\tan 45^\circ=1$.
-  \end{cajaclave}
-\end{frame}
-
-\begin{frame}{Desafío}
-  \framesubtitle{Trigonometría en el triángulo rectángulo}
-  {\small Desde un punto del suelo a 20 m de un edificio, se ve su azotea con un ángulo de elevación de $45^\circ$. ¿Cuál es la altura del edificio?}
-  \vspace{0.4em}
-  \alternativa{A}{10 m}
-  \alternativa{B}{20 m}
-  \alternativa{C}{$20\sqrt{2}$ m}
-  \alternativa{D}{40 m}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La altura es el cateto opuesto y la distancia, el adyacente: se usa la tangente.}
-  {\small
-  \paso{1}{$\tan 45^\circ=\dfrac{h}{20}$.}
-  \paso{2}{$h=20\cdot 1=20$ m.}
-  }
-  \alternativaok{B}{20 m}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar el coseno cuando corresponde el seno (o viceversa).
-    \item Dividir en vez de multiplicar al despejar.
-    \end{itemize}
-  \end{cajatrampa}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{Homotecia y semejanza}
+\begin{frame}[allowframebreaks]{Homotecia de figuras planas}
   \framesubtitle{Teoría esencial}
   \begin{itemize}\small
     \item El signo de $k$ solo cambia el sentido, no el tamaño.
@@ -488,7 +486,7 @@ Longitudes $\times|k|$, áreas $\times k^2$, volúmenes $\times|k|^3$. Con centr
 \end{frame}
 
 \begin{frame}{Desafío}
-  \framesubtitle{Homotecia y semejanza}
+  \framesubtitle{Homotecia de figuras planas}
   {\small Con centro en el origen y razón $k=3$, el punto $A(2,-1)$ se transforma en:}
   \vspace{0.4em}
   \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
@@ -513,7 +511,134 @@ Longitudes $\times|k|$, áreas $\times k^2$, volúmenes $\times|k|^3$. Con centr
   \end{cajatrampa}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Rectas y distancias en el plano}
+\begin{frame}[allowframebreaks]{Razones trigonométricas}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Identifica qué lado es opuesto y cuál adyacente \textbf{respecto del ángulo dado}.
+    \item Ningún cateto es mayor que la hipotenusa.
+    \item $\tan\alpha=\frac{\operatorname{sen}\alpha}{\cos\alpha}$.
+  \end{itemize}
+  \begin{cajaclave}[Razones y valores notables]\footnotesize
+\begin{gather*}
+\operatorname{sen}\alpha=\frac{\text{op}}{\text{hip}} \\
+\cos\alpha=\frac{\text{ady}}{\text{hip}} \\
+\tan\alpha=\frac{\text{op}}{\text{ady}} \\
+\operatorname{sen}^2\alpha+\cos^2\alpha=1
+\end{gather*}
+
+$\operatorname{sen}30^\circ=\cos 60^\circ=\frac{1}{2}$, $\operatorname{sen}60^\circ=\cos 30^\circ=\frac{\sqrt{3}}{2}$, $\tan 45^\circ=1$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Razones trigonométricas}
+  {\small Desde un punto del suelo a 20 m de un edificio, se ve su azotea con un ángulo de elevación de $45^\circ$. ¿Cuál es la altura del edificio?}
+  \vspace{0.4em}
+  \alternativa{A}{10 m}
+  \alternativa{B}{20 m}
+  \alternativa{C}{$20\sqrt{2}$ m}
+  \alternativa{D}{40 m}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La altura es el cateto opuesto y la distancia, el adyacente: se usa la tangente.}
+  {\small
+  \paso{1}{$\tan 45^\circ=\dfrac{h}{20}$.}
+  \paso{2}{$h=20\cdot 1=20$ m.}
+  }
+  \alternativaok{B}{20 m}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Usar el coseno cuando corresponde el seno (o viceversa).
+    \item Dividir en vez de multiplicar al despejar.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Relaciones métricas en la circunferencia}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Ángulo inscrito en una semicircunferencia: $90^\circ$.
+    \item Cuadrilátero inscrito: sus ángulos opuestos suman $180^\circ$.
+    \item Tangente y radio son perpendiculares en el punto de tangencia.
+  \end{itemize}
+  \begin{cajaclave}[Relaciones]\footnotesize
+Ángulo inscrito $=\dfrac{\text{ángulo del centro}}{2}$. Longitud de arco $=\dfrac{\alpha}{360^\circ}\cdot 2\pi r$.
+
+\begin{gather*}
+\text{cuerdas: } PA\cdot PB=PC\cdot PD \\
+\text{secantes: } PA\cdot PB=PC\cdot PD\ (P \text{ exterior})
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Relaciones métricas en la circunferencia}
+  {\small Dos cuerdas $AB$ y $CD$ se cortan en $P$. Si $PA=4$, $PB=6$ y $PC=3$, ¿cuánto mide $PD$?}
+  \vspace{0.4em}
+  \alternativa{A}{2}
+  \alternativa{B}{4,5}
+  \alternativa{C}{8}
+  \alternativa{D}{13}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{En cuerdas que se cortan, los productos de sus segmentos son iguales.}
+  {\small
+  \paso{1}{$PA\cdot PB=PC\cdot PD \Rightarrow 4\cdot 6=3\cdot PD$.}
+  \paso{2}{$PD=8$.}
+  }
+  \alternativaok{C}{8}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Tomar el ángulo inscrito igual al del centro.
+    \item En secantes, multiplicar los dos segmentos exteriores en vez del exterior por la secante completa.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Esfera: superficie y volumen}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item Duplicar el radio multiplica el volumen por 8.
+    \item El área de la esfera es igual a 4 círculos máximos.
+    \item Diámetro $=2\cdot$ radio.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+A=4\pi r^2 \\
+V=\frac{4}{3}\pi r^3 \\
+V_{\text{semiesfera}}=\frac{2}{3}\pi r^3
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Esfera: superficie y volumen}
+  {\small Una pelota de radio 3 cm se cambia por otra de radio 6 cm. ¿Cuántas veces mayor es el volumen de la nueva pelota?}
+  \vspace{0.4em}
+  \alternativa{A}{2}
+  \alternativa{B}{4}
+  \alternativa{C}{6}
+  \alternativa{D}{8}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{El volumen depende del cubo del radio.}
+  {\small
+  \paso{1}{La razón entre radios es $k=2$.}
+  \paso{2}{Los volúmenes están en razón $k^3=8$.}
+  }
+  \alternativaok{D}{8}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Usar el diámetro como radio.
+    \item Olvidar el factor $\dfrac{4}{3}$ del volumen.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Rectas en el plano}
   \framesubtitle{Teoría esencial}
   \begin{itemize}\small
     \item Pendiente perpendicular: invierte y cambia el signo.
@@ -531,7 +656,7 @@ Paralelas: $m_1=m_2$. Perpendiculares: $m_1\cdot m_2=-1$.
 \end{frame}
 
 \begin{frame}{Desafío}
-  \framesubtitle{Rectas y distancias en el plano}
+  \framesubtitle{Rectas en el plano}
   {\small ¿Cuál es la distancia entre los puntos $A(1,2)$ y $B(4,6)$?}
   \vspace{0.4em}
   \alternativa{A}{3}
@@ -560,75 +685,29 @@ Paralelas: $m_1=m_2$. Perpendiculares: $m_1\cdot m_2=-1$.
 \begin{frame}[plain]
   \vfill
   {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Probabilidad y estadística}\par\vspace{0.6em}
-  {\color{zinc700} Probabilidad condicional, modelos binomial y normal, dispersión y combinatoria.}\par\vspace{1em}
-  {\small\color{zinc500} Probabilidad condicional y modelo binomial, Dispersión y distribución normal, Técnicas de conteo}
+  {\color{zinc700} Dispersión, probabilidad condicional, permutación y combinatoria, y modelos binomial y normal.}\par\vspace{1em}
+  {\small\color{zinc500} Medidas de dispersión, Probabilidad condicional, Permutación y combinatoria, Modelos binomial y normal}
   \vfill
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Probabilidad condicional y modelo binomial}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La condición indica el denominador.
-    \item $P(A\mid B)\neq P(B\mid A)$ en general.
-    \item En el binomial, $\binom{n}{k}$ cuenta las ubicaciones de los éxitos.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-P(A\mid B)=\frac{P(A\cap B)}{P(B)} \\
-P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
-\end{gather*}
-
-Esperanza binomial: $E(X)=np$.
-  \end{cajaclave}
-\end{frame}
-
-\begin{frame}{Desafío}
-  \framesubtitle{Probabilidad condicional y modelo binomial}
-  {\small En un curso de 40 estudiantes, 25 practican deporte; de ellos, 10 también tocan un instrumento. Si se elige al azar un estudiante que practica deporte, ¿cuál es la probabilidad de que toque un instrumento?}
-  \vspace{0.4em}
-  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
-  \alternativa{A}{$\dfrac{1}{4}$}
-  \alternativa{B}{$\dfrac{2}{5}$}
-  \alternativa{C}{$\dfrac{5}{8}$}
-  \alternativa{D}{$\dfrac{3}{5}$}
-  \end{tcbraster}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La condición «practica deporte» reduce el espacio muestral a 25 estudiantes.}
-  {\small
-  \paso{1}{Casos posibles: los 25 que practican deporte.}
-  \paso{2}{Favorables: 10. $P=\dfrac{10}{25}=\dfrac{2}{5}$.}
-  \paso{3}{$\frac{1}{4}=\frac{10}{40}$ usa el curso completo como espacio muestral, ignorando la condición.}
-  }
-  \alternativaok{B}{$\dfrac{2}{5}$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Invertir la condición.
-    \item Olvidar el coeficiente binomial.
-    \end{itemize}
-  \end{cajatrampa}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{Dispersión y distribución normal}
+\begin{frame}[allowframebreaks]{Medidas de dispersión}
   \framesubtitle{Teoría esencial}
   \begin{itemize}\small
     \item Igual media no implica igual dispersión.
     \item Sumar 5 puntos a todos no cambia $\sigma$.
-    \item $z$ mide a cuántas desviaciones está un dato de la media.
+    \item Multiplicar todos los datos por 2 duplica $\sigma$ y cuadruplica la varianza.
   \end{itemize}
   \begin{cajaclave}[Fórmulas]\footnotesize
 \begin{gather*}
 \sigma=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n}} \\
-z=\frac{x-\mu}{\sigma}
+\sigma^2=\text{varianza} \\
+\text{rango}=\text{máx}-\text{mín}
 \end{gather*}
-
-$P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0{,}95$.
   \end{cajaclave}
 \end{frame}
 
 \begin{frame}{Desafío}
-  \framesubtitle{Dispersión y distribución normal}
+  \framesubtitle{Medidas de dispersión}
   {\small Los puntajes de una prueba tienen media 60 y desviación estándar 8. Si a todos se les suman 5 puntos, ¿cuál es la nueva desviación estándar?}
   \vspace{0.4em}
   \alternativa{A}{3}
@@ -652,7 +731,50 @@ $P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sig
   \end{cajatrampa}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Técnicas de conteo}
+\begin{frame}[allowframebreaks]{Probabilidad condicional}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item La condición indica el denominador.
+    \item $P(A\mid B)\neq P(B\mid A)$ en general.
+    \item En un árbol, se multiplica a lo largo de una rama y se suma entre ramas.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+P(A\mid B)=\frac{P(A\cap B)}{P(B)} \\
+P(A\cap B)=P(B)\cdot P(A\mid B)
+\end{gather*}
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Probabilidad condicional}
+  {\small En un curso de 40 estudiantes, 25 practican deporte; de ellos, 10 también tocan un instrumento. Si se elige al azar un estudiante que practica deporte, ¿cuál es la probabilidad de que toque un instrumento?}
+  \vspace{0.4em}
+  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
+  \alternativa{A}{$\dfrac{1}{4}$}
+  \alternativa{B}{$\dfrac{2}{5}$}
+  \alternativa{C}{$\dfrac{5}{8}$}
+  \alternativa{D}{$\dfrac{3}{5}$}
+  \end{tcbraster}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{La condición «practica deporte» reduce el espacio muestral a 25 estudiantes.}
+  {\small
+  \paso{1}{Casos posibles: los 25 que practican deporte.}
+  \paso{2}{Favorables: 10. $P=\dfrac{10}{25}=\dfrac{2}{5}$.}
+  \paso{3}{$\frac{1}{4}=\frac{10}{40}$ usa el curso completo como espacio muestral, ignorando la condición.}
+  }
+  \alternativaok{B}{$\dfrac{2}{5}$}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Invertir la condición.
+    \item Usar el total general como denominador cuando hay una condición.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Permutación y combinatoria}
   \framesubtitle{Teoría esencial}
   \begin{itemize}\small
     \item ¿Importa el orden? Sí $\Rightarrow$ variación; no $\Rightarrow$ combinación.
@@ -669,7 +791,7 @@ V^n_k=\frac{n!}{(n-k)!} \\
 \end{frame}
 
 \begin{frame}{Desafío}
-  \framesubtitle{Técnicas de conteo}
+  \framesubtitle{Permutación y combinatoria}
   {\small ¿Cuántos comités de 2 personas se pueden formar con un grupo de 6 personas?}
   \vspace{0.4em}
   \alternativa{A}{12}
@@ -689,6 +811,49 @@ V^n_k=\frac{n!}{(n-k)!} \\
     \begin{itemize}
     \item Usar combinaciones cuando los cargos son distintos.
     \item Permitir repeticiones que el problema prohíbe.
+    \end{itemize}
+  \end{cajatrampa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Modelos binomial y normal}
+  \framesubtitle{Teoría esencial}
+  \begin{itemize}\small
+    \item $\binom{n}{k}$ cuenta en qué ensayos caen los $k$ éxitos.
+    \item La normal es simétrica: la mitad de los datos está bajo la media.
+    \item Un $z$ negativo indica un dato bajo la media.
+  \end{itemize}
+  \begin{cajaclave}[Fórmulas]\footnotesize
+\begin{gather*}
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} \\
+E(X)=np \\
+z=\frac{x-\mu}{\sigma}
+\end{gather*}
+
+$P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0{,}95$.
+  \end{cajaclave}
+\end{frame}
+
+\begin{frame}{Desafío}
+  \framesubtitle{Modelos binomial y normal}
+  {\small Los puntajes de un test siguen una distribución normal de media 500 y desviación estándar 100. ¿Qué porcentaje aproximado de los puntajes está entre 400 y 600?}
+  \vspace{0.4em}
+  \alternativa{A}{34 \%}
+  \alternativa{B}{50 \%}
+  \alternativa{C}{68 \%}
+  \alternativa{D}{95 \%}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Solución}
+  \framesubtitle{400 y 600 están a una desviación estándar de la media.}
+  {\small
+  \paso{1}{$z=\dfrac{400-500}{100}=-1$ y $z=\dfrac{600-500}{100}=1$.}
+  \paso{2}{Entre $z=-1$ y $z=1$ queda cerca del 68 \%.}
+  }
+  \alternativaok{C}{68 \%}
+  \begin{cajatrampa}\footnotesize
+    \begin{itemize}
+    \item Olvidar el coeficiente binomial.
+    \item Leer el 95 \% como «a una desviación de la media» en vez de a dos.
     \end{itemize}
   \end{cajatrampa}
 \end{frame}

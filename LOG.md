@@ -23,6 +23,7 @@
 - **v2.7 (2026-11-06):** voz con audio real desde `/api/tts` y respaldo en el dispositivo, 10 escenas Manim solo para los subtemas visuales de M1 y M2 (sin Física ni cuadráticas), nombre de usuario en la sesión y `README.md`.
 - **v2.7.1 (2026-11-08):** auditoría del pipeline contra el banco (sin cambios en los datos), carpetas y clavijeros verificados y `README.md` con badges e instalación desde `git clone`.
 - **v2.7.2 (2026-11-08):** sin nombre completo ni correo personal en el código y la documentación, video de presentación de 30 s y borrador del post para Reddit.
+- **v2.8 (2026-11-09):** temario alineado al DEMRE de la Admisión 2027 en las 5 materias: 77 subtemas vigentes (23 nuevos), 8 fuera del temario aparte, 868 preguntas reclasificadas, guías PDF recompiladas.
 
 ---
 
@@ -718,6 +719,17 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - **`post_reddit.txt`:** dos títulos (comunidades de estudiantes y de programación) y un post en tú. Dice «3.137 preguntas, 3.052 de pruebas oficiales», porque 85 son de ensayos curados, y aclara que las explicaciones las redactó una IA.
 - `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 
+
+### [2026-11-09] - v2.8: temario DEMRE de la Admisión 2027
+- **Origen:** el autor notó que Física listaba «energía, trabajo y calor» y «electricidad y magnetismo», y faltaban universo y Tierra. Se descargaron los 5 temarios oficiales (`2027-26-03-19-temario-paes-regular-*.pdf`) y los de Admisión 2026 para comparar: son equivalentes, así que **el temario de la app nunca calzó con el vigente**.
+- **Diferencias encontradas:** Física = Ondas (solo electromagnéticas), Mecánica (con sistema solar y universo), Energía–Tierra (tectónica) y Electricidad (circuitos; sin magnetismo, calor ni sonido). Química sin enlace químico. Biología sin biomoléculas, Mendel ni sistemas fuera del nervioso y el reproductor. M1: proporcionalidad va en Álgebra, cuerpos geométricos es unidad propia, sin dispersión ni conteo. M2: faltaban sistemas (tipos de solución), funciones seno y coseno, circunferencia, esfera y modelos binomial y normal; composición e inversa ya no entra. Historia sin geografía, con derechos laborales, sistema judicial y sociedad de la información. Lectora: propósito y multimodal son tareas de Evaluar; faltaban función de un elemento, postura y tono, y nuevos contextos.
+- **Temario nuevo:** 77 subtemas vigentes (M1 16, M2 17, Lectora 12, Ciencias 17, Historia 15), 23 de ellos nuevos con teoría, recuadro, ideas clave, método, trampas y ejemplo resuelto. Se conservaron los ids cuando el contenido equivale, para no perder progreso ni notas. 8 quedan no vigentes (`NO_VIGENTES`): composición e inversa, biomoléculas, homeostasis e inmunidad, poblaciones, sonido, energía y calor, enlace químico y geografía.
+- **Clasificación:** palabras clave nuevas, señales inequívocas para Ciencias e Historia y un detector de habilidades científicas más amplio (precauciones, preguntas de investigación, errores de diseño). Fuera de Ciencias, los candidatos son toda la materia y el eje del extractor solo suma un punto; el `axis` de la pregunta pasa a seguir a su subtema. Las pruebas de Admisión 2026 y 2027 (rendidas con este temario) no pueden caer en un subtema no vigente; las anteriores sí, si sus palabras clave lo indican. Resultado: 868 preguntas cambian de subtema y 279 de eje; 0 claves ni enunciados cambiados; 92 preguntas de 2023 y 2024 quedan fuera del temario (36 de calor y presión, 19 de geografía). Se verificó con muestras: varias que parecían de calor o presión en 2025 eran de habilidades científicas.
+- **App:** `TEMARIO_BY_SUBJECT` y `SUBTOPICS` traen solo lo vigente, así que `stats`, el mapa, el dominio y los conteos los excluyen sin tocar cada vista. `temas` muestra al final un desplegable cerrado `fuera del temario 2027` y el resumen del tema lo avisa. 16 subtemas con escena Manim (sumados cuerpos, esfera, circunferencia, funciones trigonométricas y modelos); Pitágoras abre su escena desde figuras geométricas.
+- **Material:** 6 tarjetas nuevas del Formulario (funciones seno y coseno, circunferencia, sistemas, Tierra y universo, reproducción e ITS, justicia y derechos laborales) y 8 flashcards de «Tierra y universo» (298 en total). Enlaces cruzados del mapa rehechos. Guías y presentaciones solo con lo vigente, recompiladas (10/10 PDF).
+- **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; 835 fórmulas de notas, Formulario y mazo de Física compilan en KaTeX; el asignador queda estable (0 ensayos cambian en la segunda corrida). No se abrió navegador.
+- **Límites conocidos:** la clasificación es por palabras clave: en muestras de 50 preguntas de ciclo celular se ven 4 o 5 que serían de evolución o ecología. Sistema nervioso (3), universo (5) y nuevos contextos (1) tienen pocas preguntas en el banco.
+
 ---
 
 ## Comandos
@@ -937,3 +949,10 @@ APP_PAES/
 - [x] `post_reddit.txt`.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 - [ ] Ver el video, escuchar la pista y publicar el post (a cargo del autor).
+
+### v2.8
+- [x] Temario alineado a los 5 temarios DEMRE de la Admisión 2027; 23 subtemas nuevos y 8 no vigentes aparte.
+- [x] 3.137 preguntas reclasificadas sin cambiar claves; guías PDF recompiladas.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [ ] Revisar en la app el desplegable `fuera del temario 2027` y los resúmenes nuevos (a cargo del autor).
+- [ ] Revisión docente de los 23 resúmenes nuevos y de una muestra de la reclasificación (a cargo del autor).

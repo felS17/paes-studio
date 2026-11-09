@@ -232,7 +232,7 @@
   {
    "id": "m2-2027-invierno-q04",
    "number": 4,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "El 2015, la cantidad de turistas extranjeros que ingresaron a Chile en la temporada\n\nde verano fue 1 333 532, lo que significó un aumento del 18,7 % con respecto a los\n\nturistas extranjeros que ingresaron a Chile en la temporada de verano del 2014.\n\n¿Cuál de las siguientes expresiones representa la cantidad de turistas extranjeros\n\nque llegaron a Chile en la temporada de verano del 2014?\n\n1 333 532",
    "options": [
@@ -280,7 +280,7 @@
      "C": "$\\frac{1\\,333\\,532}{18{,}7}$: divide por $18{,}7$ sin pasar el porcentaje a decimal. La cifra resultante es de unos $71\\,300$, mucho menor que la de 2015, algo imposible si hubo un aumento."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2027-invierno-q05",
@@ -602,7 +602,7 @@
   {
    "id": "m2-2027-invierno-q11",
    "number": 11,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "Considera que cada día se realizan 1 600 000 viajes en bicicleta en el país.\n\n¿Cuál de las siguientes expresiones representa la cantidad de viajes realizados en\n\nbicicleta durante 365 días?\n\n16 · 10⁵",
    "options": [
@@ -650,12 +650,12 @@
      "C": "$5{,}84\\cdot 10^{7}$: el producto numérico es correcto ($584\\cdot 10^{6}$), pero al normalizar se ajusta mal la potencia de diez y se obtiene $10^{7}$ en vez de $10^{8}$."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2027-invierno-q12",
    "number": 12,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Funciones",
    "stem": "El volumen V de una esfera se modela en función de su radio r de acuerdo con la función potencia V(r) = ⁴π 3 r³.\n\nPara “linealizar” la función anterior, se aplica la función logaritmo y se grafica log V(r)\n\nversus log r, como se representa a continuación:\n\n� � 0, log ⁴π ¿Qué valor debe tomar el radio de la esfera para obtener el punto en 3 el gráfico “linealizado”?",
    "options": [
@@ -706,7 +706,7 @@
   {
    "id": "m2-2027-invierno-q13",
    "number": 13,
-   "axis": "Probabilidad y estadística",
+   "axis": "Números",
    "topic": "Medidas de tendencia central",
    "stem": "El nivel de la intensidad acústica, en decibeles, se calcula mediante la siguiente\n\nexpresión:\n\n�I � 10 · log , I⁰\n\ntal que I corresponde a la intensidad acústica, en W m², eI⁰ correspoⁿde al umbral de audición y su valor es de 10⁻¹² W m².\n\nSegún cierta normativa, el nivel de exposición a ruidos debe ser menor o igual que\n\n65 decibeles.\n\n¿Cuál es la intensidad acústica máxima, en W m², que permite cumplir coⁿ la normativa?",
    "options": [
@@ -759,7 +759,7 @@
   {
    "id": "m2-2027-invierno-q14",
    "number": 14,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "A una persona, producto de una dolencia, se le administra cierto tipo de medicamento.\n\nSe sabe que la cantidad C, en miligramos, de este medicamento en la sangre va\n\ndisminuyendo a medida que transcurre el tiempo t, en horas, de acuerdo a la relación log² C = 3 −0,4 · t.\n\nSi a las 6: 00 se le administró el medicamento a la persona y este se debe\n\nadministrar nuevamente cuando tenga 0,5 mg en la sangre, ¿a qué hora se le debe\n\nadministrar nuevamente la dosis?",
    "options": [
@@ -806,7 +806,7 @@
      "C": "13:30: confunde $0{,}5$ mg con $1$ mg, ya que $\\log_{2}1=0$. Eso da $0=3-0{,}4\\cdot t$, $t=7{,}5$ horas y las 13:30."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-logaritmos"
   },
   {
    "id": "m2-2027-invierno-q15",
@@ -865,7 +865,7 @@
   {
    "id": "m2-2027-invierno-q16",
    "number": 16,
-   "axis": "Geometría",
+   "axis": "Álgebra y funciones",
    "topic": "Volúmenes",
    "stem": "Un objeto macizo flota si su densidad es menor que la del fluido en el que se\n\nencuentra.\n\nConsidera que la densidad es el cociente entre la masa y el volumen de un objeto y que la densidad del agua es 1000 kg m³.\n\nSi un objeto macizo tiene una masa de p kg y un volumen de 730 000 cm³, ¿cuál de\n\nlas siguientes inecuaciones representa únicamente todos los posibles valores de p\n\nque permiten que el objeto flote en el agua?\n\n100p",
    "options": [
@@ -913,7 +913,7 @@
      "C": "$\\frac{10\\,000\\,p}{730\\,000}<1000$: usa $1\\ \\mathrm{m}^{3}=10\\,000\\ \\mathrm{cm}^{3}$ en vez de $10^{6}\\ \\mathrm{cm}^{3}$. Da $p<73\\,000$, lo que tampoco corresponde."
     }
    },
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2027-invierno-q17",
@@ -1072,7 +1072,7 @@
      "C": "$50(x^{2}+1)$: al multiplicar $(x+1)(x-1)$ escribe $x^{2}+1$, es decir, se equivoca de signo. El coeficiente $50$ sí es correcto, pero la diferencia de cuadrados está mal aplicada."
     }
    },
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2027-invierno-q20",
@@ -1228,7 +1228,7 @@
      "D": "Que $a$ sea proporcional a $b$: con la razón de los coeficientes $(1,1)$, eso equivale a $a=b$. Entonces el determinante se anula y, si además $c\\neq d$, el sistema no tiene solución."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-sistemas"
   },
   {
    "id": "m2-2027-invierno-q23",
@@ -1281,7 +1281,7 @@
      "D": "$6x+5y=9200$ con $\\frac{1}{3}x+\\frac{1}{2}y=300$: solo falla la ecuación de la leche, que se deja sin dividir por $2$; el lado derecho debe ser $4600$."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-sistemas"
   },
   {
    "id": "m2-2027-invierno-q24",
@@ -1385,7 +1385,7 @@
      "D": "$t(x)=\\frac{88\\,200x}{10}+88\\,200$: divide la pendiente por $10$, aunque el costo por día es $88\\,200$ pesos; así $t(10)=176\\,400$."
     }
    },
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2027-invierno-q26",
@@ -1437,7 +1437,7 @@
      "D": "$160$: en la demanda, $q=160$ da $p=110-80=30$ dólares, no $40$; el precio de $40$ dólares corresponde a $q=140$."
     }
    },
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2027-invierno-q27",
@@ -1805,7 +1805,7 @@
      "D": "$6\\,\\mathrm{sen}(x+4)+1$: cambia el valor inicial, pues $f(0)=6\\,\\mathrm{sen}(4)+1\\approx -3{,}5$ y no $1$; además tiene periodo $2\\pi$."
     }
    },
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-funciones-trig"
   },
   {
    "id": "m2-2027-invierno-q34",
@@ -1915,7 +1915,7 @@
   {
    "id": "m2-2027-invierno-q36",
    "number": 36,
-   "axis": "Álgebra y funciones",
+   "axis": "Geometría",
    "topic": "Álgebra y funciones",
    "stem": "En un partido de fútbol, la pelota está ubicada en un lugar llamado punto penal, tal\n\ncomo se representa a continuación.\n\nLa altura del arco de fútbol es h metros y la distancia entre el punto penal y el punto\n\nmedio entre ambos postes es d metros.\n\nSi un jugador patea la pelota de manera que su trayectoria hasta que pasa 1 m\n\nsobre el centro del travesaño es una línea recta, ¿cuál de las siguientes expresiones\n\nrepresenta la distancia recorrida por la pelota hasta que pasa por sobre el travesaño,\n\nen metros?\n\n√ d² + h²",
    "options": [
@@ -1962,7 +1962,7 @@
      "C": "$\\sqrt{d^{2}+2d+1+h^{2}}$: expande $(d+1)^{2}$ en lugar de $(h+1)^{2}$, sumando el metro a la distancia horizontal y no a la altura."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2027-invierno-q37",
@@ -2014,12 +2014,12 @@
      "D": "$28r$: multiplica el cociente $140:35=4$ por $7r$, sin sacar la raíz cuadrada de $4$."
     }
    },
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-circunferencia"
   },
   {
    "id": "m2-2027-invierno-q38",
    "number": 38,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Álgebra y funciones",
    "stem": "Un atleta entrena dando vueltas perimetrales en un parque circular, realizando:\n\ncuatro en la mañana y seis en la tarde.\n\nSi el parque tiene un diámetro de 400 metros, ¿cuál de las siguientes expresiones\n\nrepresenta la diferencia entre las distancias, en metros, recorridas en la tarde y en la\n\nmañana?",
    "options": [
@@ -2066,7 +2066,7 @@
      "D": "Combina el error de la alternativa C con el diámetro: eleva al cuadrado $400$ y cambia la unidad de longitud por una de área."
     }
    },
-   "subtopic": "m2-cuadraticas"
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2027-invierno-q39",
@@ -2123,7 +2123,7 @@
   {
    "id": "m2-2027-invierno-q41",
    "number": 41,
-   "axis": "Álgebra y funciones",
+   "axis": "Geometría",
    "topic": "Pendiente de una recta",
    "stem": "Un funicular es un tipo especial de ferrocarril usado para subir caminos con\n\npendientes pronunciadas.\n\nEl funicular de la figura adjunta recorre 60 m en línea recta entre la estación inferior y\n\nsuperior.\n\n¿Cuál de las siguientes expresiones representa la diferencia de altura, en metros,\n\nentre ambas estaciones?\n\nsen(20◦)",
    "options": [
@@ -2437,7 +2437,7 @@
   {
    "id": "m2-2027-invierno-q47",
    "number": 47,
-   "axis": "Geometría",
+   "axis": "Probabilidad y estadística",
    "topic": "Áreas",
    "stem": "En una superficie de área S, la probabilidad de que un dardo acierte en una región totalmente incluida en la región de área S se puede calcular como A , tal que A es el S área de la región incluida.\n\nConsidera dos círculos, cada uno de área M, de modo que la superficie de la\n\nintersección tiene un área Q, tal como se representa en la figura adjunta.\n\nEn la superficie formada por los dos círculos, ¿cuál es la probabilidad de que un\n\ndardo no acierte en la intersección?\n\nM −Q",
    "options": [
@@ -2588,12 +2588,12 @@
      "D": "$6$: con $n=6$ se obtiene $\\binom{6}{2}=15$, no $21$."
     }
    },
-   "subtopic": "m2-combinatoria"
+   "subtopic": "m2-cuadraticas"
   },
   {
    "id": "m2-2027-invierno-q50",
    "number": 50,
-   "axis": "Álgebra y funciones",
+   "axis": "Probabilidad y estadística",
    "topic": "Álgebra y funciones",
    "stem": "Un grupo de cinco personas está compuesto por tres niños y dos adultos. Este grupo\n\nse quiere tomar una fotografía en alguna de las siguientes poses:\n\n¿De cuántas formas distintas se pueden ordenar para tomarse la fotografía?",
    "options": [

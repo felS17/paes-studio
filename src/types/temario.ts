@@ -8,6 +8,8 @@ export interface TemarioSubtopicEntry {
   pdfPage?: number
   /** Preguntas del banco asignadas a este subtema. */
   questionCount: number
+  /** Fuera del temario vigente (Admisión 2027): solo trae preguntas de pruebas anteriores. */
+  retired?: boolean
 }
 
 export interface TemarioAxisEntry {

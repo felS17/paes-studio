@@ -370,7 +370,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas",
+   "subtopic": "m1-cuerpos",
    "explanation": {
     "kind": "solucion",
     "summary": "Hay que despejar $k$ de la igualdad usando la equivalencia de un kilómetro, dividiendo los centímetros entre $100\\,000$.",
@@ -749,7 +749,7 @@
   {
    "id": "m1-2025-regular-q24",
    "number": 24,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "Si ( ) 2 x + 5 · P = x − x − 30 , con x ≠ − 5 , ¿cuál de las siguientes expresiones es igual a P?",
    "options": [
@@ -779,7 +779,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Como $x^2 - x - 30$ se puede factorizar, el factor $(x+5)$ se cancela y queda el valor de $P$.",
@@ -800,7 +800,7 @@
   {
    "id": "m1-2025-regular-q25",
    "number": 25,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "¿Cuál de las siguientes expresiones es igual a b − 3 ( b − )1 ?",
    "options": [
@@ -830,7 +830,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Hay que aplicar la propiedad distributiva con el signo negativo del $3$ y luego reducir términos semejantes.",
@@ -1136,7 +1136,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-triangulos",
+   "subtopic": "m1-areas",
    "explanation": {
     "kind": "solucion",
     "summary": "En el triángulo de Pascal cada casilla es la suma de las dos superiores, así que se pueden calcular $x$ y $p$ con las filas completas.",
@@ -2060,7 +2060,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas",
+   "subtopic": "m1-cuerpos",
    "explanation": {
     "kind": "solucion",
     "summary": "El agua llega a $20$ cm bajo el borde, así que su altura es la profundidad menos $0{,}2$ m, y el volumen es largo por ancho por altura de agua.",
@@ -2111,7 +2111,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-areas",
+   "subtopic": "m1-cuerpos",
    "explanation": {
     "kind": "solucion",
     "summary": "El material es la suma de los volúmenes de los dos cilindros sólidos, cada uno con su radio y la misma altura de $8$ cm.",
@@ -2132,7 +2132,7 @@
   {
    "id": "m1-2025-regular-q61",
    "number": 61,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "Considera un perfil rectangular de 6 m de largo hecho de aluminio de 8,4 mm de grosor, tal como el que se representa a continuación:\n\n¿Por cuál de los siguientes números hay que multiplicar el largo del perfil, en mm, para obtener la cantidad de aluminio necesaria para confeccionar uno de 3 estos perfiles, en mm?\n\n( )( )",
    "options": [
@@ -2162,7 +2162,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "El aluminio de un perfil es la diferencia entre el área exterior y el área interior de su sección, y se multiplica por el largo.",
@@ -2286,7 +2286,7 @@
   {
    "id": "m1-2025-regular-q64",
    "number": 64,
-   "axis": "Números",
+   "axis": "Álgebra y funciones",
    "topic": "Números",
    "stem": "En el siguiente tablero de ajedrez, el rey se ubica inicialmente en la casilla e2.\n\nEl rey puede moverse en cualquier dirección y sentido, una casilla a la vez. Cada uno de estos movimientos se puede representar con una flecha que indica la dirección del movimiento con respecto al tablero anterior, por ejemplo, a la flecha le corresponde el siguiente movimiento:\n\n¿Cuál de las siguientes series de movimientos permite que la pieza quede ubicada en la casilla c7, partiendo de e2?",
    "options": [
@@ -2316,7 +2316,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-racionales",
+   "subtopic": "m1-expresiones",
    "explanation": {
     "kind": "solucion",
     "summary": "Cada flecha es un paso del rey, así que hay que sumar los desplazamientos de cada serie y verificar que lleguen de e2 a c7.",
@@ -2367,7 +2367,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m1-triangulos",
+   "subtopic": "m1-areas",
    "explanation": {
     "kind": "solucion",
     "summary": "La recta $L$ es el eje de simetría, así que los triángulos formados por el punto de intersección de las rectas $DB$ y $CA$ son isósceles, y el ángulo buscado sale de la suma de los ángulos de un triángulo.",

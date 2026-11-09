@@ -1,6 +1,6 @@
 import { EXAMS_BY_ID } from '@/data/catalog'
 import { SUBJECTS, SUBJECT_ORDER } from '@/data/subjects'
-import { CROSS_LINKS, SUBTOPIC_OF_QUESTION, SUBTOPICS_BY_ID, TEMARIO } from '@/data/temario'
+import { CROSS_LINKS, SUBTOPIC_OF_QUESTION, SUBTOPICS_BY_ID, TEMARIO_BY_SUBJECT } from '@/data/temario'
 import type { SubjectId } from '@/types/exam'
 import type { LatestResult } from './analytics'
 import { masteryOf, type Mastery, type SubtopicStat } from './subtopics'
@@ -70,7 +70,7 @@ export const nodeId = {
 }
 
 /**
- * Red de conocimiento: Asignatura → Eje → Subtema (los 67 del temario) y, alrededor de cada subtema, las
+ * Red de conocimiento: Asignatura → Eje → Subtema (los del temario vigente) y, alrededor de cada subtema, las
  * preguntas que ya respondiste agrupadas por su concepto clave. Los enlaces cruzados unen subtemas afines de
  * distintas asignaturas.
  */
@@ -85,7 +85,8 @@ export function buildKnowledgeGraph({ stats, latest, subject, showQuestions }: {
   const included = new Set<string>()
   const subjects = subject === 'todas' ? SUBJECT_ORDER : [subject]
 
-  for (const s of TEMARIO.subjects) {
+  // Solo el temario vigente: los subtemas que ya no se evalúan no entran al mapa.
+  for (const s of TEMARIO_BY_SUBJECT.values()) {
     if (!subjects.includes(s.subject)) continue
     const sid = nodeId.subject(s.subject)
     let subjectPending = 0
@@ -174,7 +175,7 @@ export function buildKnowledgeGraph({ stats, latest, subject, showQuestions }: {
 /** Ids de subtemas bajo un nodo (para estadísticas y drills). */
 export function subtopicsUnder(node: KNode): string[] {
   if (node.subtopicId) return [node.subtopicId]
-  const s = TEMARIO.subjects.find((x) => x.subject === node.subject)
+  const s = TEMARIO_BY_SUBJECT.get(node.subject)
   if (!s) return []
   const axes = node.kind === 'axis' ? s.axes.filter((a) => a.name === node.axis) : s.axes
   return axes.flatMap((a) => a.subtopics.map((x) => x.id))

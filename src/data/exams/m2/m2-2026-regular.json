@@ -214,7 +214,7 @@
   {
    "id": "m2-2026-regular-q06",
    "number": 6,
-   "axis": "Números",
+   "axis": "Probabilidad y estadística",
    "topic": "Porcentajes",
    "stem": "En el modelo RGB se utilizan combinaciones de tres colores primarios (rojo, verde y\n\nazul) con valores entre 0 y 255 para representar la intensidad de cada color, tal como\n\nse ejemplifica a continuación:\n\nEn los colores grises, los tres niveles de intensidad son iguales, por lo que cuando se\n\nnecesita convertir colores a escala de grises, se promedian los tres niveles y se repite\n\nel mismo valor en cada coordenada. Por ejemplo, el color (40, 30, 200) quedaría en\n\nel gris (90, 90, 90).\n\nPor otro lado, cada gris en el modelo RGB se puede expresar como porcentaje\n\nmediante una escala lineal en la que el blanco corresponde al 0 % y el negro al 100 %,\n\ntal como se representa a continuación:\n\n¿Cuál es el porcentaje en escala de grises del color (60, 40, 70)?",
    "options": [
@@ -249,7 +249,7 @@
   {
    "id": "m2-2026-regular-q07",
    "number": 7,
-   "axis": "Geometría",
+   "axis": "Números",
    "topic": "Volúmenes",
    "stem": "Un fabricante produce envases cilíndricos de distintos tamaños a pedido. Por razones\n\nde estabilidad de los envases, el radio de la base circular es determinado por la altura.\n\nEl volumen V de cada envase cilíndrico producido se calcula con la siguiente ecuación:\n\nV = h³ · π · 0,64,\n\ntal que h es la altura del envase.\n\nSi el volumen de un cilindro se calcula multiplicando su área basal circular por\n\nsu altura, ¿cuál de las siguientes opciones describe qué porcentaje de la altura\n\ncorresponde al radio de la base?",
    "options": [
@@ -279,12 +279,12 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-financiera"
   },
   {
    "id": "m2-2026-regular-q12",
    "number": 12,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Ecuaciones",
    "stem": "El diámetro de un determinado hongo, en milímetros, se puede calcular mediante la\n\nk expresión 1 + ce⁻mt, tal que t es el tiempo traⁿscurrido, eⁿ días, k es el diámetro máximo del hongo, en milímetros, c, m y e son constantes positivas, tal que c < 1.\n\nPara determinar la cantidad de días que deben transcurrir para que el diámetro del hongo sea de 0,5 · k milímetros, se realiza el siguiente procedimiento, cometiéndose\n\nun error.\n\nk **Paso 1:** se establece la ecuación k 2 = 1 + ce⁻mt y se obtieⁿe¹ ⁺ ce⁻mt = ². **Paso 2:** se desarrolla la ecuación anterior y se obtiene c⁻¹ = e⁻mt.\n\n**Paso 3:** se aplica logaritmo a ambos lados de la igualdad anterior, luego en\n\nel lado izquierdo se aplican propiedades de logaritmos y se obtiene −log c = log e⁻mt.\n\n**Paso 4:** se despeja el tiempo t de la ecuación anterior y se obtiene t = log (c −em)\n\ndías.\n\n¿En cuál de los pasos se cometió el error?",
    "options": [
@@ -419,7 +419,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2026-regular-q17",
@@ -454,7 +454,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2026-regular-q18",
@@ -559,7 +559,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-condicional"
+   "subtopic": "m2-dispersion"
   },
   {
    "id": "m2-2026-regular-q21",
@@ -699,12 +699,12 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-circunferencia"
   },
   {
    "id": "m2-2026-regular-q27",
    "number": 27,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Funciones",
    "stem": "Considera la siguiente gráfica de la función f, con dominio el conjunto de los números reales, definida por f(x) = ax² + bx + c, con a, b y c números reales, tal que a < −5.\n\nLa función g, con dominio el conjunto de los números reales, se obtiene al modificar los valores a, b y c de la función f, obteniéndose g(x) = −(a + 5)x² −bx + c + 1.\n\n¿Cuál de las siguientes opciones representa de mejor manera la gráfica asociada a la\n\nfunción g?",
    "options": [
@@ -734,12 +734,12 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-regular-q30",
    "number": 30,
-   "axis": "Álgebra y funciones",
+   "axis": "Números",
    "topic": "Funciones",
    "stem": "En la figura adjunta se representa la gráfica de la función f, definida por f(x) = a · bx⁻², con a y b números reales positivos y distintos de cero.\n\n¿Cuál de las siguientes expresiones representa a f(x + 1)?",
    "options": [
@@ -769,7 +769,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-inversa"
+   "subtopic": "m2-reales"
   },
   {
    "id": "m2-2026-regular-q31",
@@ -841,7 +841,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-funciones-trig"
   },
   {
    "id": "m2-2026-regular-q34",
@@ -876,7 +876,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-trigonometria"
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2026-regular-q35",
@@ -911,7 +911,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2026-regular-q36",
@@ -946,7 +946,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-homotecia"
+   "subtopic": "m2-analitica"
   },
   {
    "id": "m2-2026-regular-q37",
@@ -1226,7 +1226,7 @@
     "mono": true
    },
    "textQuality": "approximate",
-   "subtopic": "m2-dispersion"
+   "subtopic": "m2-modelos"
   },
   {
    "id": "m2-2026-regular-q51",

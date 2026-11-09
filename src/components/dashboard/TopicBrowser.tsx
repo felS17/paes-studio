@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { SearchInput } from '@/components/ui/search-input'
 import { Segmented } from '@/components/ui/segmented'
 import { SUBJECT_TABS } from '@/data/subjects'
-import { SUBTOPICS, SUBTOPICS_BY_ID, TEMARIO_BY_SUBJECT } from '@/data/temario'
+import { RETIRED_BY_SUBJECT, SUBTOPICS, SUBTOPICS_BY_ID, TEMARIO_BY_SUBJECT, TEMARIO_YEAR } from '@/data/temario'
 import { useSubtopicNotes } from '@/hooks/useSubtopicNotes'
 import { cn } from '@/lib/utils'
 import type { SubjectId } from '@/types/exam'
@@ -22,8 +22,9 @@ interface TopicBrowserProps {
 }
 
 /**
- * Temario ordenado: materia y buscador arriba; temas agrupados por eje abajo. Parte con un solo eje abierto para no
- * mostrar los 67 temas de golpe; al buscar se abren todos los que tengan resultados.
+ * Temario vigente ordenado: materia y buscador arriba; temas agrupados por eje abajo. Parte con un solo eje abierto
+ * para no mostrar todos los temas de golpe; al buscar se abren todos los que tengan resultados. Al final, cerrados, los
+ * temas que el DEMRE ya no evalúa pero que todavía tienen preguntas de pruebas anteriores.
  */
 export function TopicBrowser({ subject, onSubjectChange, stats, renderRow }: TopicBrowserProps) {
   const [query, setQuery] = useState('')
@@ -45,6 +46,7 @@ export function TopicBrowser({ subject, onSubjectChange, stats, renderRow }: Top
     }))
     .filter((a) => a.topics.length > 0)
   const isOpen = (key: string, position: number) => toggled[key] ?? (terms.length > 0 || position === 0)
+  const retired = (RETIRED_BY_SUBJECT.get(subject) ?? []).filter((s) => matches(s.id))
 
   const elsewhere = terms.length
     ? SUBJECT_TABS.filter((s) => s !== subject)
@@ -84,7 +86,7 @@ export function TopicBrowser({ subject, onSubjectChange, stats, renderRow }: Top
         </p>
       )}
 
-      {visibleAxes.length > 0 ? (
+      {visibleAxes.length > 0 || retired.length > 0 ? (
         <div className="divide-y divide-zinc-200/80 border-y border-zinc-200/80 dark:divide-zinc-800/80 dark:border-zinc-800/80">
           {visibleAxes.map(({ axis, position, key, topics }) => {
             const open = isOpen(key, position)
@@ -117,6 +119,22 @@ export function TopicBrowser({ subject, onSubjectChange, stats, renderRow }: Top
               </section>
             )
           })}
+          {retired.length > 0 && (
+            <details className="group">
+              <summary
+                className="flex min-h-10 cursor-pointer list-none items-center gap-2 text-left text-zinc-500 transition-colors hover:bg-zinc-900/[0.02] dark:text-zinc-400 dark:hover:bg-zinc-100/[0.03] [&::-webkit-details-marker]:hidden"
+                title={`Temas que el DEMRE ya no evalúa desde el temario ${TEMARIO_YEAR}. Sus preguntas vienen de pruebas anteriores y no cuentan en tu dominio.`}
+              >
+                <PixelIcon name="chevron-right" className="text-zinc-400 transition-transform duration-150 group-open:rotate-90" />
+                <span className="min-w-0 flex-1 text-[13.5px] sm:truncate">fuera del temario {TEMARIO_YEAR}</span>
+                <span className="font-mono text-[12px] tabular-nums">{retired.length}</span>
+                <span aria-hidden className="w-[4.75rem] shrink-0" />
+              </summary>
+              <ul className="divide-y divide-zinc-200/50 border-t border-zinc-200/60 dark:divide-zinc-800/50 dark:border-zinc-800/60">
+                {retired.map((sub) => renderRow(sub, stats.get(sub.id)))}
+              </ul>
+            </details>
+          )}
         </div>
       ) : (
         <div className="flex flex-col items-start gap-2 py-4">
