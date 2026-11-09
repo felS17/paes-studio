@@ -1,0 +1,42 @@
+TÍTULO (r/chile, r/PAES o similares):
+Hice una app gratis y de código abierto para preparar la PAES con las pruebas oficiales del DEMRE, sin publicidad y sin cuenta
+
+TÍTULO (r/programacion, r/devsarg, r/webdev en español):
+Mi app para estudiar la PAES parte con una terminal: animfetch, comandos con /, 10 paletas de editor y tipografías mono (React + Vite, MIT)
+
+---
+
+Hola! Les comparto PAES Studio, un proyecto que armé para preparar la PAES sin tener que andar saltando entre PDFs.
+
+👉 Pruébala acá: https://paes-studio-xi.vercel.app
+👉 Código: https://github.com/felS17/paes-studio
+
+**Qué trae**
+
+- **3.137 preguntas**, de las cuales 3.052 salen de 48 pruebas oficiales del DEMRE (Regular e Invierno, 2023 a 2026), con su clave oficial. M1, M2, Competencia Lectora, Ciencias e Historia.
+- **1.892+ explicaciones paso a paso**, con fórmulas bien escritas, el planteamiento y por qué las otras alternativas son trampa. Ojo: las redactó una IA y se validaron contra la clave oficial; la app lo indica en cada una.
+- **Modo práctica y modo ensayo** cronometrado, con puntaje en la escala PAES (100–1000), tachado de alternativas y atajos de teclado (A–E, Enter, flechas).
+- **Una voz que te lee la explicación**, incluidas las fórmulas, a 1x, 1,25x o 1,5x.
+- **Animaciones al estilo Manim** en los temas de geometría y probabilidad de M1 y M2.
+- **290 flashcards** con repaso espaciado (SM-2, como Anki).
+- **67 subtemas** del temario DEMRE, con resumen, guías en PDF y un mapa de cómo se conectan.
+
+**La parte "dev/hacker"** (que fue lo más entretenido de hacer)
+
+- El inicio es una ventana de terminal tipo neofetch («animfetch»): nebulosa ASCII animada, cuenta regresiva a la PAES y un prompt `tunombre@studio ❯` donde escribes `/` y te sale un menú de comandos (`/m1`, `/daily`, `/temas`, `/nombre`...). Si no te gusta la terminal, todo se puede hacer con clics.
+- **10 paletas de editor**: GitHub Dark, Catppuccin Mocha, Tokyo Night, Gruvbox, Nord, Rosé Pine, Dracula, Geist Dark/Light y Papel Cálido.
+- **5 tipografías** de interfaz: Geist, Space Grotesk, JetBrains Mono, Fira Code e IBM Plex Mono.
+- Las estadísticas son un **administrador de tareas**: procesos por materia y eje, telemetría de ritmo, cola de errores y "sistema" para descargar o subir tu progreso.
+- Stack: React 19 + TypeScript + Vite + Tailwind + Zustand + KaTeX. Las pruebas se extraen de los PDF del DEMRE con un pipeline en Python, y las guías se compilan con LaTeX/Beamer.
+
+**Lo importante**
+
+- 100% gratis, sin publicidad y sin cuenta: tu progreso queda guardado en tu navegador.
+- Código abierto con licencia MIT.
+- Funciona en el celular, pero brilla en el computador.
+
+Si la usas, me encantaría saber qué le falta o qué está malo (una clave, una explicación confusa, un bug). Pueden dejarlo en los comentarios o en los issues del repo.
+
+¡Éxito a todos los que dan la PAES este año! 🙌
+
+— felS

@@ -12,7 +12,7 @@ export function ContactLine() {
       <span aria-hidden>·</span>
       <a className={LINK} href="https://github.com/felS17" target="_blank" rel="noopener noreferrer" aria-label="GitHub de felS (abre en una pestaña nueva)">github</a>
       <span aria-hidden>·</span>
-      <a className={LINK} href="mailto:felipe.schneeberger@estudiante.uc.cl" aria-label="Escribirle un correo a felS">correo</a>
+      <a className={LINK} href="https://github.com/felS17/paes-studio/issues" target="_blank" rel="noopener noreferrer" aria-label="Enviar una sugerencia o reportar un error (abre en una pestaña nueva)">sugerencias</a>
     </p>
   )
 }

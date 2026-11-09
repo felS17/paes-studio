@@ -22,6 +22,7 @@
 - **v2.6 (2026-11-06):** PAES Regular 2025 en el banco, 34 recortes recuperados con detección de tinta perdida, tutor de voz con traductor LaTeX a español y 6 escenas animadas en SVG al estilo Manim.
 - **v2.7 (2026-11-06):** voz con audio real desde `/api/tts` y respaldo en el dispositivo, 10 escenas Manim solo para los subtemas visuales de M1 y M2 (sin Física ni cuadráticas), nombre de usuario en la sesión y `README.md`.
 - **v2.7.1 (2026-11-08):** auditoría del pipeline contra el banco (sin cambios en los datos), carpetas y clavijeros verificados y `README.md` con badges e instalación desde `git clone`.
+- **v2.7.2 (2026-11-08):** sin nombre completo ni correo personal en el código y la documentación, video de presentación de 30 s y borrador del post para Reddit.
 
 ---
 
@@ -366,11 +367,11 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - No se eliminó ninguna funcionalidad; solo se redistribuyó.
 
 #### 4. Licencia y footer
-- `LICENSE`: MIT License, © 2026 felS (Felipe Schneeberger).
+- `LICENSE`: MIT License, © 2026 felS.
 - `Footer.tsx`, al pie de todas las vistas con layout:
   - «© 2026 · Desarrollado por felS»;
   - «MIT License», que abre un diálogo con el texto del `LICENSE` importado con `?raw` (sin duplicarlo);
-  - `mailto:felipe.schneeberger@estudiante.uc.cl`;
+  - enlace de sugerencias a los issues de GitHub (antes un correo personal, retirado en la v2.7.2);
   - GitHub `@felS17`, con enlace a https://github.com/felS17.
 
 #### Verificación (Chromium headless)
@@ -490,7 +491,7 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
   - **A. Presentación:** «PAES Studio» con su marca, el titular «Plataforma abierta de entrenamiento de alta precisión para la PAES», un párrafo de propósito y una barra de métricas reales en JetBrains Mono. Las cifras se calculan, no se escriben: 46 ensayos, 2.796 preguntas, 67 subtemas, 255 flashcards (`TOTAL_CARDS` desde `DECKS`) y 10 PDF (`pdfs.json`). Debajo, el Desafío Diario con la racha.
   - **B. Módulos:** grilla de 6 tarjetas con anchos alternados 2+1, 1+2, 2+1: Catálogo de ensayos, Explorador de subtemas, Flashcards, Zettelkasten, Analítica y Biblioteca. Cada una lleva su ícono de navegación y un dato vivo en mono (intentos, subtemas explorados, dominados, preguntas por repasar).
   - **C. Mapa de los 67 subtemas:** el mismo `SubtopicExplorer`, por asignatura y con la materia en la URL (`?materia=`), con drills de 10/20/Todas y enlaces al PDF.
-  - **D. Sobre PAES Studio y contacto:** propósito abierto (MIT 2026), progreso local y respaldo; autor, `mailto:felipe.schneeberger@estudiante.uc.cl` y github.com/felS17.
+  - **D. Sobre PAES Studio y contacto:** propósito abierto (MIT 2026), progreso local y respaldo; autor (felS) y github.com/felS17.
 - **Diferencias con el pedido:** no se muestran 284 flashcards ni un mazo de Lectora (no existe: hay 255 tarjetas en 6 mazos), ni un simulador de ponderaciones en Analítica (no existe). Los textos describen lo que la app hace.
 - **Subtemas escasos** (reglas deterministas en `assign_subtopics.py`, sin IA):
   - *Técnicas de conteo* pasa de 1 a **6** preguntas (frases como «formas distintas», «se pueden formar», «cuántos grupos/códigos»);
@@ -709,6 +710,14 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 - **README:** badges (MIT, TypeScript, React, Vite, KaTeX, ensayos validados), descripción, `git clone` y métricas comprobadas con scripts (53 ensayos, 3.137 preguntas, 1.892 soluciones, 10 PDF).
 - **Verificación:** `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores. No se abrió navegador.
 
+
+### [2026-11-08] - v2.7.2: privacidad, video y difusión
+- **Privacidad:** se retiraron el nombre completo y el correo personal de `LICENSE`, `README.md`, `LOG.md` y `Footer.tsx`. El pie dice `felS · github · sugerencias`, y `sugerencias` abre los issues del repo en vez de un correo. Los PDF compilados no traen autor en sus metadatos. **No se tocó el historial de git** (decisión del autor): los commits anteriores y los nuevos siguen firmados con su nombre y correo.
+- **Link público:** `https://paes-studio-xi.vercel.app` es la página de inicio del repo en GitHub, y su HTML usa `paes-studio-storage`. Ojo: `paes-studio.vercel.app` es otro proyecto.
+- **Video (`videos/paes-studio-v25/`, fuera de git):** 30 s, 1920×1080 a 60 fps, hecho con la skill `hve-video-director` sobre capturas reales de la v2.5 (Chrome headless, autorizado por el autor solo para esto). Escenas: shell con menú `/` y ráfaga de 5 temas; ensayo con `C`, `Enter`, explicación, tutor de voz y escena Manim; flashcards; stats; cierre con el link. Música y SFX sintetizados en local, sin voz, a −16 LUFS. `hyperframes check` con 0 errores y 0 avisos. El tutor aparece en pantalla, pero su voz no suena en el video.
+- **`post_reddit.txt`:** dos títulos (comunidades de estudiantes y de programación) y un post en tú. Dice «3.137 preguntas, 3.052 de pruebas oficiales», porque 85 son de ensayos curados, y aclara que las explicaciones las redactó una IA.
+- `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+
 ---
 
 ## Comandos
@@ -921,3 +930,10 @@ APP_PAES/
 - [x] `README.md` con badges, `git clone` y métricas comprobadas.
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 - [ ] Redactar las 341 soluciones de la Regular 2025 (lotes en `.work/reg2025/`).
+
+### v2.7.2
+- [x] Nombre completo y correo personal fuera de los archivos versionados.
+- [x] Video de 30 s en `videos/paes-studio-v25/out/final.mp4`.
+- [x] `post_reddit.txt`.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
+- [ ] Ver el video, escuchar la pista y publicar el post (a cargo del autor).

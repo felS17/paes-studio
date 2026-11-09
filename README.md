@@ -65,4 +65,4 @@ React 19, TypeScript, Vite, Tailwind CSS, Zustand y KaTeX en el frontend. Python
 
 Código bajo [licencia MIT](LICENSE), 2026. Las pruebas, claves y solucionarios oficiales pertenecen al DEMRE.
 
-**Felipe Schneeberger** · [`@felS17`](https://github.com/felS17) · [felipe.schneeberger@estudiante.uc.cl](mailto:felipe.schneeberger@estudiante.uc.cl)
+Hecho por **felS** · [`@felS17`](https://github.com/felS17). Sugerencias y errores en [issues](https://github.com/felS17/paes-studio/issues).
