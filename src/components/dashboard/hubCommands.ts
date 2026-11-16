@@ -31,6 +31,7 @@ export const HUB_COMMANDS: HubCommand[] = [
   { name: 'mapa', aliases: ['graph'], hint: 'abrir red de conocimiento zettelkasten', action: { kind: 'route', to: '/zettelkasten' } },
   { name: 'guias', aliases: ['pdf'], hint: 'ver resúmenes pdf y formulario express', action: { kind: 'route', to: '/material' } },
   { name: 'stats', hint: 'abrir administrador de tareas y errores', action: { kind: 'route', to: '/analitica' } },
+  { name: 'prueba', aliases: ['dia', 'horarios'], hint: 'ver horarios, qué llevar y estrategia del día de la prueba', action: { kind: 'route', to: '/dia-prueba' } },
   { name: 'tema', aliases: ['theme'], hint: 'cambiar paleta de colores y fuente', action: { kind: 'theme' } },
   { name: 'fuente', aliases: ['font'], hint: 'cambiar la tipografía', action: { kind: 'font' }, hidden: true },
   { name: 'nombre', label: '/nombre <alias>', aliases: ['nick'], hint: 'ponle tu nombre a esta sesión', action: { kind: 'name' } },

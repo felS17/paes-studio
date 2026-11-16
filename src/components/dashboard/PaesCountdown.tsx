@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { LoadBar } from '@/components/ui/load-bar'
 import { usePaesCountdown } from '@/hooks/usePaesCountdown'
 
@@ -32,7 +33,9 @@ export function PaesCountdown() {
       className="min-w-0 border-b border-zinc-200/80 pb-5 font-mono tabular-nums @[1300px]:max-w-[22rem] @[1300px]:flex-1 @[1300px]:border-b-0 @[1300px]:pb-0 dark:border-zinc-800/80"
     >
       <p className="flex flex-wrap items-baseline justify-between gap-x-3 text-[12.5px]">
-        <span className="text-zinc-900 dark:text-zinc-100">{date.name}</span>
+        <Link to="/dia-prueba" title="horarios, qué llevar y estrategia" className="rounded-sm text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-100">
+          {date.name}
+        </Link>
         <span className="text-zinc-500 dark:text-zinc-400">
           {date.estimated ? `fecha estimada, ${dateFmt.format(date.at)}` : dateFmt.format(date.at)}
         </span>

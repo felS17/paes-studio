@@ -32,7 +32,7 @@ export function StatusBar() {
           <PixelIcon name="flame" />
           <span className="text-zinc-900 tabular-nums dark:text-zinc-100">{current} {current === 1 ? 'día' : 'días'}</span>
         </Link>
-        <Link to="/" className={`${ITEM} max-md:hidden`} title={`faltan ${countdown.days} días y ${countdown.hours} horas para la ${countdown.date.name}`}>
+        <Link to="/dia-prueba" className={`${ITEM} max-md:hidden`} title={`faltan ${countdown.days} días y ${countdown.hours} horas para la ${countdown.date.name}: ver el día de la prueba`}>
           <PixelIcon name="hourglass" />
           <span className="text-zinc-900 tabular-nums dark:text-zinc-100">{countdown.days}d {String(countdown.hours).padStart(2, '0')}h</span>
         </Link>
