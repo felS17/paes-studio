@@ -11,7 +11,8 @@ import { Tabs } from '@/components/ui/tabs'
 import { EXAMS_BY_ID } from '@/data/catalog'
 import { useStartPracticeSet } from '@/hooks/usePracticeSet'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
-import { globalAccuracy, mistakeNotebook, worstSubject } from '@/utils/analytics'
+import { useProgressStore } from '@/store/useProgressStore'
+import { globalAccuracy, mistakeBank, worstSubject } from '@/utils/analytics'
 import { revengeDraft } from '@/utils/practice'
 import { averagePaceMs } from '@/utils/telemetry'
 
@@ -42,7 +43,8 @@ export function AnalyticsPage() {
   const view: View = requested && VIEWS.includes(requested) ? requested : 'procesos'
   const setView = (v: View) => setParams(v === 'procesos' ? {} : { vista: v }, { replace: true })
 
-  const mistakes = useMemo(() => mistakeNotebook(attempts), [attempts])
+  const progress = useProgressStore((s) => s.questions)
+  const mistakes = useMemo(() => mistakeBank(progress), [progress])
   const accuracy = useMemo(() => globalAccuracy(attempts), [attempts])
   const paceMs = useMemo(() => averagePaceMs(attempts), [attempts])
   const exams = attempts.filter((a) => EXAMS_BY_ID.has(a.examId)).length
@@ -64,7 +66,7 @@ export function AnalyticsPage() {
             className="self-start"
             disabled={!target}
             onClick={() => target && start(revengeDraft(target, mistakes))}
-            title={target ? `Revancha de ${target}: hasta 20 preguntas falladas` : undefined}
+            title={target ? `Repasa hasta 20 falladas de ${target}: cada una sale con 2 aciertos seguidos` : undefined}
           >
             limpiar errores
           </Button>

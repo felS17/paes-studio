@@ -74,9 +74,23 @@ export interface AttemptRecord {
 }
 
 
+/** Registro de una pregunta en todos los modos (`paes-progress-v1`). */
+export interface QuestionProgress {
+  /** Veces que la respondiste y se corrigió. */
+  attempts: number
+  correct: number
+  /** Aciertos seguidos más recientes. */
+  streak: number
+  lastAt: number
+  /** Está en el banco de errores: la fallaste y aún no juntas 2 aciertos seguidos. */
+  miss?: { selected: OptionKey; answer: OptionKey; axis: string; topic: string; at: number }
+}
+
 export interface BackupFile {
   app: 'paes-studio'
   version: 1
   exportedAt: string
   attempts: AttemptRecord[]
+  /** Registro por pregunta; los archivos anteriores no lo traen y se rehace desde los intentos. */
+  progress?: Record<string, QuestionProgress>
 }

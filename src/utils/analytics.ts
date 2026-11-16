@@ -1,4 +1,4 @@
-import type { AttemptRecord } from '@/types/analytics'
+import type { AttemptRecord, QuestionProgress } from '@/types/analytics'
 import { EXAMS_BY_ID } from '@/data/catalog'
 import type { SubjectId } from '@/types/exam'
 
@@ -61,25 +61,23 @@ export interface MistakeEntry {
   topic: string
   selected: NonNullable<LatestResult['selected']>
   correct: LatestResult['correct']
-  attemptId: string
   failedAt: number
+  /** Aciertos seguidos desde que la fallaste: con 2 sale del banco. */
+  streak: number
 }
 
-/** Preguntas cuyo último intento fue incorrecto: desaparecen del cuaderno cuando se responden bien. */
-export function mistakeNotebook(attempts: AttemptRecord[]): MistakeEntry[] {
+/** Banco de errores: preguntas falladas en cualquier modo que aún no juntan 2 aciertos seguidos. */
+export function mistakeBank(progress: Record<string, QuestionProgress>): MistakeEntry[] {
   const out: MistakeEntry[] = []
-  for (const [questionId, r] of latestResults(attempts)) {
-    if (r.selected === null || r.isCorrect) continue
+  for (const [questionId, p] of Object.entries(progress)) {
+    if (!p.miss) continue
+    const examId = questionId.replace(/-q\d+$/, '')
+    const subject = EXAMS_BY_ID.get(examId)?.subject
+    if (!subject) continue
     out.push({
-      questionId,
-      examId: questionId.replace(/-q\d+$/, ''),
-      subject: r.subject,
-      axis: r.axis,
-      topic: r.topic,
-      selected: r.selected,
-      correct: r.correct,
-      attemptId: r.attemptId,
-      failedAt: r.at,
+      questionId, examId, subject,
+      axis: p.miss.axis, topic: p.miss.topic, selected: p.miss.selected, correct: p.miss.answer,
+      failedAt: p.miss.at, streak: p.streak,
     })
   }
   return out.sort((a, b) => b.failedAt - a.failedAt)

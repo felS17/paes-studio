@@ -16,6 +16,7 @@ import { useQuestionClock } from '@/hooks/useQuestionClock'
 import { useSidebar } from '@/hooks/useWorkspace'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import { sessionKey, useExamStore } from '@/store/useExamStore'
+import { useProgressStore } from '@/store/useProgressStore'
 import { useInspectorStore } from '@/store/useInspectorStore'
 import { useSettingsStore } from '@/store/useSettingsStore'
 import { useStreakStore } from '@/store/useStreakStore'
@@ -107,6 +108,14 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
       return
     }
     addAttempt(attempt)
+    // Registro por pregunta: lo verificado en práctica ya se anotó al corregirlo.
+    useProgressStore.getState().record(
+      attempt.questions.flatMap((q) =>
+        q.selected === null || (mode === 'practica' && current.checked[q.id])
+          ? []
+          : [{ id: q.id, selected: q.selected, answer: q.correct, axis: q.axis, topic: q.topic }],
+      ),
+    )
     // Desafío Diario: cuenta para la racha si respondes las 3 preguntas el mismo día del desafío.
     if (isDailySetId(exam.id) && attempt.answered === attempt.totalQuestions && dateKeyOfDailySet(exam.id) === localDateKey()) {
       markChallenge(localDateKey())
@@ -143,7 +152,11 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     return () => window.clearTimeout(t)
   }, [notice])
 
-  const verify = () => check(key, question.id, selected === question.answer)
+  const verify = () => {
+    if (!selected || checked[question.id]) return
+    check(key, question.id, selected === question.answer)
+    useProgressStore.getState().record([{ id: question.id, selected, answer: question.answer, axis: question.axis, topic: question.topic }])
+  }
   const correctRun = session?.correctRun ?? 0
 
   const optionKeys = question.options.map((o) => o.key)

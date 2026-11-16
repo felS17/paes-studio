@@ -3,59 +3,98 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Segmented } from '@/components/ui/segmented'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
-import type { AttemptRecord } from '@/types/analytics'
+import { useExamStore } from '@/store/useExamStore'
+import { useProgressStore } from '@/store/useProgressStore'
+import type { AttemptRecord, QuestionProgress } from '@/types/analytics'
 import { plural } from '@/utils/format'
 import { buildBackup, parseBackup } from '@/utils/validators'
 
-type Pending = { attempts: AttemptRecord[]; skipped: number; fileName: string }
+type Pending = { attempts: AttemptRecord[]; progress: Record<string, QuestionProgress> | null; skipped: number; fileName: string }
 
-/** Pestaña `sistema`: exportar e importar el progreso (JSON) con dos botones directos. */
+/** Pestaña `sistema`: exportar, importar o borrar el progreso (intentos y registro por pregunta) con botones directos. */
 export function BackupActions() {
   const attempts = useAnalyticsStore((s) => s.attempts)
   const importAttempts = useAnalyticsStore((s) => s.importAttempts)
+  const tracked = useProgressStore((s) => Object.keys(s.questions).length)
   const fileRef = useRef<HTMLInputElement>(null)
   const [pending, setPending] = useState<Pending | null>(null)
   const [strategy, setStrategy] = useState<'merge' | 'replace'>('merge')
+  const [confirmWipe, setConfirmWipe] = useState(false)
   const [message, setMessage] = useState<{ tone: 'ok' | 'error'; text: string } | null>(null)
+  const empty = !attempts.length && !tracked
 
   const exportBackup = () => {
-    const blob = new Blob([JSON.stringify(buildBackup(attempts), null, 2)], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `paes-studio-respaldo-${new Date().toISOString().slice(0, 10)}.json`
-    a.click()
-    URL.revokeObjectURL(url)
-    setMessage({ tone: 'ok', text: `listo: exportaste ${plural(attempts.length, 'intento')}.` })
+    try {
+      const backup = buildBackup(attempts, useProgressStore.getState().questions)
+      const url = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }))
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `paes-studio-respaldo-${new Date().toISOString().slice(0, 10)}.json`
+      a.click()
+      URL.revokeObjectURL(url)
+      setMessage({ tone: 'ok', text: `listo: exportaste ${plural(attempts.length, 'intento')} y ${plural(tracked, 'pregunta')}.` })
+    } catch {
+      setMessage({ tone: 'error', text: 'no pudimos crear el archivo. inténtalo de nuevo.' })
+    }
   }
 
   const onFile = async (file: File | undefined) => {
     if (!file) return
-    const result = parseBackup(await file.text())
+    let text: string
+    try {
+      text = await file.text()
+    } catch {
+      setMessage({ tone: 'error', text: 'no pudimos leer ese archivo.' })
+      return
+    }
+    const result = parseBackup(text)
     if (fileRef.current) fileRef.current.value = ''
     if (!result.ok) {
       setMessage({ tone: 'error', text: result.error })
       return
     }
     setStrategy('merge')
-    setPending({ attempts: result.attempts, skipped: result.skipped, fileName: file.name })
+    setPending({ attempts: result.attempts, progress: result.progress, skipped: result.skipped, fileName: file.name })
   }
 
   const confirmImport = () => {
     if (!pending) return
-    const added = importAttempts(pending.attempts, strategy)
-    setMessage({
-      tone: 'ok',
-      text: strategy === 'replace' ? `Listo: ahora tienes ${plural(added, 'intento')}.` : `Listo: sumamos ${plural(added, 'intento nuevo', 'intentos nuevos')}.`,
-    })
+    try {
+      const known = new Set(attempts.map((a) => a.id))
+      const fresh = pending.attempts.filter((a) => !known.has(a.id))
+      const added = importAttempts(pending.attempts, strategy)
+      const progress = useProgressStore.getState()
+      if (strategy === 'merge') progress.recordAttempts(fresh)
+      else if (pending.progress) progress.replace(pending.progress)
+      else progress.rebuild(pending.attempts)
+      setMessage({
+        tone: 'ok',
+        text: strategy === 'replace' ? `Listo: ahora tienes ${plural(added, 'intento')}.` : `Listo: sumamos ${plural(added, 'intento nuevo', 'intentos nuevos')}.`,
+      })
+    } catch {
+      setMessage({ tone: 'error', text: 'no pudimos importar ese archivo.' })
+    }
     setPending(null)
+  }
+
+  const wipe = () => {
+    try {
+      useAnalyticsStore.getState().clear()
+      useProgressStore.getState().clear()
+      useExamStore.getState().reset()
+      setMessage({ tone: 'ok', text: 'listo: borramos tus datos de este dispositivo.' })
+    } catch {
+      setMessage({ tone: 'error', text: 'no pudimos borrar los datos.' })
+    }
+    setConfirmWipe(false)
   }
 
   return (
     <div className="flex flex-col items-start gap-2">
       <div className="flex flex-wrap gap-2">
-        <Button onClick={exportBackup} disabled={!attempts.length}>exportar datos</Button>
+        <Button onClick={exportBackup} disabled={empty}>exportar datos</Button>
         <Button onClick={() => fileRef.current?.click()}>importar datos</Button>
+        <Button variant="ghost" onClick={() => setConfirmWipe(true)} disabled={empty}>borrar datos</Button>
         <input ref={fileRef} type="file" accept="application/json,.json" className="sr-only" onChange={(e) => onFile(e.target.files?.[0])} aria-label="Archivo de respaldo" />
       </div>
       {message && (
@@ -87,6 +126,17 @@ export function BackupActions() {
           <div className="mt-5 flex justify-end gap-2">
             <Button onClick={() => setPending(null)}>cancelar</Button>
             <Button variant="primary" onClick={confirmImport}>importar</Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+      <Dialog open={confirmWipe} onOpenChange={setConfirmWipe}>
+        <DialogContent
+          title="¿borrar tus datos?"
+          description={`Se borran de este dispositivo tus ${plural(attempts.length, 'intento')}, tus errores en cola y lo que tengas en curso. No se puede deshacer: si quieres guardarlos, expórtalos antes. Tu racha, tus tarjetas y tu apariencia se quedan.`}
+        >
+          <div className="mt-5 flex justify-end gap-2">
+            <Button onClick={() => setConfirmWipe(false)}>cancelar</Button>
+            <Button variant="primary" onClick={wipe}>borrar todo</Button>
           </div>
         </DialogContent>
       </Dialog>

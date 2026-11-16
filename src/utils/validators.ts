@@ -1,4 +1,4 @@
-import type { AttemptRecord, BackupFile } from '@/types/analytics'
+import type { AttemptRecord, BackupFile, QuestionProgress } from '@/types/analytics'
 import { OPTION_KEYS } from '@/types/exam'
 
 const SUBJECTS = new Set(['m1', 'm2', 'lectora', 'ciencias', 'historia'])
@@ -26,8 +26,24 @@ function validAttempt(a: unknown): a is AttemptRecord {
   )
 }
 
+const isKey = (v: unknown) => OPTION_KEYS.includes(v as never)
+
+function validProgress(p: unknown): p is QuestionProgress {
+  if (!isObj(p) || !isNum(p.attempts) || !isNum(p.correct) || !isNum(p.streak) || !isNum(p.lastAt)) return false
+  if (p.attempts < 1 || p.correct < 0 || p.correct > p.attempts) return false
+  if (p.miss === undefined) return true
+  const m = p.miss
+  return isObj(m) && isKey(m.selected) && isKey(m.answer) && typeof m.axis === 'string' && typeof m.topic === 'string' && isNum(m.at)
+}
+
+/** Registro por pregunta de un archivo: solo las entradas bien formadas; `null` si el archivo no lo trae. */
+function parseProgress(raw: unknown): Record<string, QuestionProgress> | null {
+  if (!isObj(raw)) return null
+  return Object.fromEntries(Object.entries(raw).filter((entry): entry is [string, QuestionProgress] => validProgress(entry[1])))
+}
+
 export type BackupParseResult =
-  | { ok: true; attempts: AttemptRecord[]; skipped: number }
+  | { ok: true; attempts: AttemptRecord[]; skipped: number; progress: Record<string, QuestionProgress> | null }
   | { ok: false; error: string }
 
 /** Valida un respaldo exportado por la app antes de importarlo. */
@@ -48,9 +64,9 @@ export function parseBackup(text: string): BackupParseResult {
     return { ok: false, error: 'Ese archivo no trae intentos guardados.' }
   }
   const attempts = data.attempts.filter(validAttempt)
-  return { ok: true, attempts, skipped: data.attempts.length - attempts.length }
+  return { ok: true, attempts, skipped: data.attempts.length - attempts.length, progress: parseProgress(data.progress) }
 }
 
-export function buildBackup(attempts: AttemptRecord[]): BackupFile {
-  return { app: 'paes-studio', version: 1, exportedAt: new Date().toISOString(), attempts }
+export function buildBackup(attempts: AttemptRecord[], progress: Record<string, QuestionProgress>): BackupFile {
+  return { app: 'paes-studio', version: 1, exportedAt: new Date().toISOString(), attempts, progress }
 }
