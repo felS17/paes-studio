@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { BackupActions } from '@/components/analytics/BackupActions'
 import { MistakeNotebook } from '@/components/analytics/MistakeNotebook'
 import { ProcessTable } from '@/components/analytics/ProcessTable'
+import { WeakSpots } from '@/components/analytics/WeakSpots'
 import { TelemetryCounters } from '@/components/analytics/TelemetryCounters'
 import { PageHeader } from '@/components/layout/AppShell'
 import { Button } from '@/components/ui/button'
@@ -11,12 +12,13 @@ import { Tabs } from '@/components/ui/tabs'
 import { EXAMS_BY_ID } from '@/data/catalog'
 import { useStartPracticeSet } from '@/hooks/usePracticeSet'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
-import { globalAccuracy, mistakeNotebook, worstSubject } from '@/utils/analytics'
+import { useProgressStore } from '@/store/useProgressStore'
+import { globalAccuracy, mistakeBank, worstSubject } from '@/utils/analytics'
 import { revengeDraft } from '@/utils/practice'
 import { averagePaceMs } from '@/utils/telemetry'
 
-type View = 'procesos' | 'telemetria' | 'errores' | 'sistema'
-const VIEWS: View[] = ['procesos', 'telemetria', 'errores', 'sistema']
+type View = 'procesos' | 'diagnostico' | 'telemetria' | 'errores' | 'sistema'
+const VIEWS: View[] = ['procesos', 'diagnostico', 'telemetria', 'errores', 'sistema']
 
 function Gauge({ label, value, unit, children }: { label: string; value: React.ReactNode; unit?: string; children?: React.ReactNode }) {
   return (
@@ -33,7 +35,7 @@ function Gauge({ label, value, unit, children }: { label: string; value: React.R
   )
 }
 
-/** Stats como administrador de tareas: 4 medidores de rendimiento arriba y una sola pestaña a la vez abajo. */
+/** Stats como administrador de tareas: 4 medidores de rendimiento arriba y una sola de sus 5 pestañas a la vez abajo. */
 export function AnalyticsPage() {
   const attempts = useAnalyticsStore((s) => s.attempts)
   const start = useStartPracticeSet()
@@ -42,7 +44,8 @@ export function AnalyticsPage() {
   const view: View = requested && VIEWS.includes(requested) ? requested : 'procesos'
   const setView = (v: View) => setParams(v === 'procesos' ? {} : { vista: v }, { replace: true })
 
-  const mistakes = useMemo(() => mistakeNotebook(attempts), [attempts])
+  const progress = useProgressStore((s) => s.questions)
+  const mistakes = useMemo(() => mistakeBank(progress), [progress])
   const accuracy = useMemo(() => globalAccuracy(attempts), [attempts])
   const paceMs = useMemo(() => averagePaceMs(attempts), [attempts])
   const exams = attempts.filter((a) => EXAMS_BY_ID.has(a.examId)).length
@@ -64,7 +67,7 @@ export function AnalyticsPage() {
             className="self-start"
             disabled={!target}
             onClick={() => target && start(revengeDraft(target, mistakes))}
-            title={target ? `Revancha de ${target}: hasta 20 preguntas falladas` : undefined}
+            title={target ? `Repasa hasta 20 falladas de ${target}: cada una sale con 2 aciertos seguidos` : undefined}
           >
             limpiar errores
           </Button>
@@ -78,12 +81,14 @@ export function AnalyticsPage() {
         onChange={setView}
         items={[
           { value: 'procesos', label: 'procesos' },
+          { value: 'diagnostico', label: 'diagnóstico' },
           { value: 'telemetria', label: 'telemetría' },
           { value: 'errores', label: 'errores', count: mistakes.length },
           { value: 'sistema', label: 'sistema' },
         ]}
       >
         {view === 'procesos' && <ProcessTable />}
+        {view === 'diagnostico' && <WeakSpots />}
         {view === 'telemetria' && <TelemetryCounters />}
         {view === 'errores' && <MistakeNotebook entries={mistakes} />}
         {view === 'sistema' && <BackupActions />}

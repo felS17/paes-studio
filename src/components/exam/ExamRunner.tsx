@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, SheetContent } from '@/components/ui/dialog'
 import { Kbd } from '@/components/ui/kbd'
 import { Segmented } from '@/components/ui/segmented'
-import { subjectLabel } from '@/data/subjects'
+import { SUBJECTS, subjectLabel } from '@/data/subjects'
 import { useElementWidth } from '@/hooks/useElementWidth'
 import { useExamTimer } from '@/hooks/useExamTimer'
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
@@ -16,6 +16,7 @@ import { useQuestionClock } from '@/hooks/useQuestionClock'
 import { useSidebar } from '@/hooks/useWorkspace'
 import { useAnalyticsStore } from '@/store/useAnalyticsStore'
 import { sessionKey, useExamStore } from '@/store/useExamStore'
+import { useProgressStore } from '@/store/useProgressStore'
 import { useInspectorStore } from '@/store/useInspectorStore'
 import { useSettingsStore } from '@/store/useSettingsStore'
 import { useStreakStore } from '@/store/useStreakStore'
@@ -107,6 +108,14 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
       return
     }
     addAttempt(attempt)
+    // Registro por pregunta: lo verificado en práctica ya se anotó al corregirlo.
+    useProgressStore.getState().record(
+      attempt.questions.flatMap((q) =>
+        q.selected === null || (mode === 'practica' && current.checked[q.id])
+          ? []
+          : [{ id: q.id, selected: q.selected, answer: q.correct, axis: q.axis, topic: q.topic }],
+      ),
+    )
     // Desafío Diario: cuenta para la racha si respondes las 3 preguntas el mismo día del desafío.
     if (isDailySetId(exam.id) && attempt.answered === attempt.totalQuestions && dateKeyOfDailySet(exam.id) === localDateKey()) {
       markChallenge(localDateKey())
@@ -143,7 +152,11 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
     return () => window.clearTimeout(t)
   }, [notice])
 
-  const verify = () => check(key, question.id, selected === question.answer)
+  const verify = () => {
+    if (!selected || checked[question.id]) return
+    check(key, question.id, selected === question.answer)
+    useProgressStore.getState().record([{ id: question.id, selected, answer: question.answer, axis: question.axis, topic: question.topic }])
+  }
   const correctRun = session?.correctRun ?? 0
 
   const optionKeys = question.options.map((o) => o.key)
@@ -257,7 +270,7 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
 
   return (
     <div ref={setRootEl} className="flex min-h-0 flex-1 flex-col bg-canvas">
-      <header className="relative flex h-14 shrink-0 items-center gap-3 border-b border-zinc-200/80 bg-surface px-3 sm:px-4 dark:border-zinc-800/80">
+      <header className="relative flex h-14 shrink-0 items-center gap-1.5 border-b border-zinc-200/80 bg-surface px-3 sm:gap-3 sm:px-4 dark:border-zinc-800/80">
         <Button
           variant="ghost"
           size="icon"
@@ -274,11 +287,13 @@ export function ExamRunner({ exam, mode }: { exam: Exam; mode: ExamMode }) {
         </Button>
         <div className="min-w-0 flex-1 overflow-hidden">
           <p className="truncate text-[13px] font-semibold tracking-tight">
-            {isDaily ? exam.title : subjectLabel(exam.subject, exam.area)}
+            {/* En móvil no cabe el nombre completo: va la sigla de la materia (M1, CL…), que no se corta. */}
+            <span className="sm:hidden">{isDaily ? 'Desafío' : SUBJECTS[exam.subject].mono}</span>
+            <span className="hidden sm:inline">{isDaily ? exam.title : subjectLabel(exam.subject, exam.area)}</span>
             {!isDaily && <span className="ml-2 hidden font-normal text-zinc-500 sm:inline dark:text-zinc-400">{exam.title}</span>}
           </p>
           <p className="flex items-center gap-2 truncate text-[11px] text-zinc-500 dark:text-zinc-400">
-            <Badge tone={mode === 'ensayo' ? 'solid' : 'outline'} className="py-0">
+            <Badge tone={mode === 'ensayo' ? 'solid' : 'outline'} className="py-0 max-sm:hidden">
               {mode === 'ensayo' ? 'Ensayo' : 'Práctica'}
             </Badge>
             <span className="tabular-nums">{answeredCount}/{questions.length}</span>

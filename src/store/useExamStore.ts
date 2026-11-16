@@ -49,6 +49,8 @@ interface ExamState {
   addElapsed: (key: string, ms: number) => void
   addQuestionTime: (key: string, questionId: string, ms: number) => void
   discard: (key: string) => void
+  /** Borra lo que esté en curso y las prácticas guardadas. */
+  reset: () => void
 }
 
 function patch(state: ExamState, key: string, fn: (s: ExamSession) => Partial<ExamSession>) {
@@ -177,6 +179,7 @@ export const useExamStore = create<ExamState>()(
           delete sessions[key]
           return { sessions }
         }),
+      reset: () => set({ sessions: {}, sets: {} }),
     }),
     { name: 'sessions', storage: persistStorage, version: 2, migrate: (state) => ({ sets: {}, ...(state as object) }) as ExamState },
   ),

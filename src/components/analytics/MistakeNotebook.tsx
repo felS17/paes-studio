@@ -63,7 +63,7 @@ export function MistakeNotebook({ entries }: { entries: MistakeEntry[] }) {
           options={[{ value: 'todas', label: 'todas' }, ...available.map((s) => ({ value: s, label: s }))]}
         />
         {target && (
-          <Button size="sm" variant="primary" onClick={() => start(revengeDraft(target, entries))} title="Hasta 20 preguntas falladas en modo práctica: cada acierto la saca de la cola">
+          <Button size="sm" variant="primary" onClick={() => start(revengeDraft(target, entries))} title="Hasta 20 preguntas falladas en modo práctica: cada una sale de la cola con 2 aciertos seguidos">
             revancha {target}
           </Button>
         )}
@@ -78,7 +78,7 @@ export function MistakeNotebook({ entries }: { entries: MistakeEntry[] }) {
                 type="button"
                 aria-expanded={isOpen}
                 onClick={() => setOpenId(isOpen ? null : e.questionId)}
-                title={`${sourceTitle(e.examId)}, fallada ${relativeDays(e.failedAt)}`}
+                title={`${sourceTitle(e.examId)}, fallada ${relativeDays(e.failedAt)}${e.streak ? '; llevas 1 de 2 aciertos seguidos' : ''}`}
                 className="flex h-9 w-full items-center gap-2 text-left text-[13px] transition-colors hover:bg-zinc-900/[0.02] dark:hover:bg-zinc-100/[0.03]"
               >
                 <PixelIcon name="chevron-right" className={cn('text-zinc-400 transition-transform duration-150', isOpen && 'rotate-90')} />

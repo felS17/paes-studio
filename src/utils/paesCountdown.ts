@@ -6,7 +6,8 @@ export interface PaesDate {
 }
 
 /** Agrega aquí cada fecha oficial apenas se publique: reemplaza a la estimada del mismo nombre. */
-const CONFIRMED: PaesDate[] = [{ name: 'paes regular 2026', at: Date.parse('2026-11-30T09:00:00-03:00'), estimated: false }]
+/** Regular 2026: parte el lunes 30 de noviembre a las 15:00 con M2 (demre.cl, «Fechas y horarios PAES»). */
+const CONFIRMED: PaesDate[] = [{ name: 'paes regular 2026', at: Date.parse('2026-11-30T15:00:00-03:00'), estimated: false }]
 
 /** La «recta final»: la barra parte a llenarse 90 días antes de la prueba. */
 const FINAL_STRETCH_MS = 90 * 86_400_000

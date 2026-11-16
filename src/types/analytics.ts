@@ -74,9 +74,34 @@ export interface AttemptRecord {
 }
 
 
+/** Registro de una pregunta en todos los modos (`paes-progress-v1`). */
+export interface QuestionProgress {
+  /** Veces que la respondiste y se corrigió. */
+  attempts: number
+  correct: number
+  /** Aciertos seguidos más recientes. */
+  streak: number
+  lastAt: number
+  /** Está en el banco de errores: la fallaste y aún no juntas 2 aciertos seguidos. */
+  miss?: { selected: OptionKey; answer: OptionKey; axis: string; topic: string; at: number }
+}
+
+/** Plan de repaso hasta la prueba: lo que eligió el estudiante y los temas de cada día. */
+export interface StudyPlan {
+  subjects: SubjectId[]
+  /** Días de la semana disponibles (0 = domingo). */
+  weekdays: number[]
+  createdOn: string
+  /** Último día de estudio: la víspera de la prueba. */
+  until: string
+  days: { date: string; subtopics: string[] }[]
+}
+
 export interface BackupFile {
   app: 'paes-studio'
   version: 1
   exportedAt: string
   attempts: AttemptRecord[]
+  /** Registro por pregunta; los archivos anteriores no lo traen y se rehace desde los intentos. */
+  progress?: Record<string, QuestionProgress>
 }
