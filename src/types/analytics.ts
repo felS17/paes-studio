@@ -86,6 +86,17 @@ export interface QuestionProgress {
   miss?: { selected: OptionKey; answer: OptionKey; axis: string; topic: string; at: number }
 }
 
+/** Plan de repaso hasta la prueba: lo que eligió el estudiante y los temas de cada día. */
+export interface StudyPlan {
+  subjects: SubjectId[]
+  /** Días de la semana disponibles (0 = domingo). */
+  weekdays: number[]
+  createdOn: string
+  /** Último día de estudio: la víspera de la prueba. */
+  until: string
+  days: { date: string; subtopics: string[] }[]
+}
+
 export interface BackupFile {
   app: 'paes-studio'
   version: 1

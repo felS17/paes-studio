@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist, type PersistStorage } from 'zustand/middleware'
-import type { AttemptRecord, QuestionProgress } from '@/types/analytics'
+import type { AttemptRecord, QuestionProgress, StudyPlan } from '@/types/analytics'
 import type { OptionKey } from '@/types/exam'
 import { useAnalyticsStore } from './useAnalyticsStore'
 
@@ -57,6 +57,9 @@ interface ProgressState {
   questions: Record<string, QuestionProgress>
   /** Ya se cargó el historial anterior a este registro. */
   seeded: boolean
+  /** Plan de repaso hasta la prueba, si armaste uno. */
+  plan: StudyPlan | null
+  setPlan: (plan: StudyPlan | null) => void
   /** Registra respuestas ya corregidas: al verificar en práctica o al entregar un ensayo. */
   record: (events: AnswerEvent[]) => void
   /** Suma las respuestas de intentos recién importados. */
@@ -97,6 +100,8 @@ export const useProgressStore = create<ProgressState>()(
     (set) => ({
       questions: {},
       seeded: false,
+      plan: null,
+      setPlan: (plan) => set({ plan }),
       record: (events) => {
         if (!events.length) return
         const now = Date.now()

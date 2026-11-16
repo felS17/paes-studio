@@ -113,7 +113,12 @@ export function TestDayPage() {
     <div className="max-w-3xl space-y-6">
       <PageHeader
         title="día de la prueba"
-        actions={<Button asChild size="sm"><Link to="/ensayos" title="Practica con el mismo tiempo de la prueba real">ensayo con reloj</Link></Button>}
+        actions={
+          <>
+            <Button asChild size="sm"><Link to="/plan" title="Reparte tus temas en los días que quedan">plan de repaso</Link></Button>
+            <Button asChild size="sm"><Link to="/ensayos" title="Practica con el mismo tiempo de la prueba real">ensayo con reloj</Link></Button>
+          </>
+        }
       />
       <Tabs<View>
         label="Día de la prueba"

@@ -32,6 +32,7 @@ export function useCrumbs(): Crumb[] {
     const attempt = attempts.find((a) => a.id === id)
     return [...section('/analitica'), { label: attempt ? attemptTitle(attempt) : 'resultado' }]
   }
+  if (root === 'plan') return [...section('/'), { label: 'plan de repaso' }]
   if (root === 'dia-prueba') return [...section('/'), { label: 'día de la prueba' }]
   const base = section(`/${root}`)
   if (!base.length) return [{ label: 'página no encontrada' }]
