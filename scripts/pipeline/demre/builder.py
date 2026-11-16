@@ -63,6 +63,9 @@ def _plain(lines: list[Line]) -> str:
 
 def _duration(subject: str, n: int) -> int:
     meta = SUBJECTS[subject]
+    # Prueba completa (a lo más le falta una pregunta eliminada): conserva el tiempo oficial, sin prorratear.
+    if n >= meta["official_questions"] - 1:
+        return meta["official_minutes"]
     minutes = meta["official_minutes"] * n / meta["official_questions"]
     return max(10, int(round(minutes / 5.0)) * 5)
 
