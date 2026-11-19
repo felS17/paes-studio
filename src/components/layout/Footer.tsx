@@ -15,7 +15,7 @@ export function ContactLine() {
       <span aria-hidden>·</span>
       <a className={LINK} href="https://github.com/felS17/paes-studio/issues" target="_blank" rel="noopener noreferrer" aria-label="Enviar una sugerencia o reportar un error (abre en una pestaña nueva)">sugerencias</a>
       <span aria-hidden>·</span>
-      <Link className={LINK} to="/ayuda" title="Comandos del inicio y atajos de teclado">ayuda</Link>
+      <Link className={LINK} to="/ayuda">ayuda</Link>
     </p>
   )
 }
