@@ -290,6 +290,9 @@ def build_deck(subject: str, exams: list[dict]) -> tuple[str, dict]:
     tx = {"inline": inline, "md": md_to_latex, "esc": _escape_text, "table": table_latex}
     meta, body, info = latex_deck.build_deck(subject, temario, exams, tx, text_ok=text_ok(subject), date_text=today_es())
     out = replace_block(template, "META", meta)
+    # Los esquemas TikZ de Ciencias van solo en su presentación: las demás no los usan.
+    esquemas = (TEMPLATES / "esquemas_ciencias.tex").read_text(encoding="utf-8") if subject == "ciencias" else ""
+    out = replace_block(out, "ESQUEMAS", esquemas)
     return replace_block(out, "CONTENIDO", body), info
 
 

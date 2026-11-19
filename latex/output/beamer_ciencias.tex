@@ -116,6 +116,183 @@
 \newcommand{\sumariotema}[2]{\noindent\hspace*{0.8em}\hyperlink{#2}{#1}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
 \newcommand{\sumarioitem}[2]{\noindent{\bfseries\hyperlink{#2}{#1}}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
 \newcommand{\portadaDetalle}{}
+\colorlet{acento}{zinc900}
+\newcommand{\esquema}[2]{{#1}\par\vspace{3pt}{\tiny\color{zinc500}#2}}
+\newcommand{\recortechico}[1]{\IfFileExists{#1}{\includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{#1}}{\fbox{\tiny recorte: #1}}}
+%%<ESQUEMAS>%%
+% ── Esquemas de Ciencias (TikZ) ───────────────────────────────────────────────
+% Diagramas propios para las láminas de solución. Cada uno dibuja solo lo que dice
+% el temario DEMRE 2027 (scripts/pipeline/temario/ciencias.py). Monocromos con un
+% acento: se leen igual impresos en blanco y negro.
+\usetikzlibrary{arrows.meta,calc,positioning}
+\tikzset{esq/.style={font=\scriptsize\sffamily, line width=0.6pt, >={Stealth[length=4pt]}},
+  caja/.style={draw=zinc700, rounded corners=2pt, inner sep=3pt, align=center, font=\scriptsize\sffamily},
+  cajaac/.style={caja, draw=acento, line width=1pt}}
+\newcommand{\resistencia}[2]{\draw[fill=white, draw=acento, line width=0.9pt] ($(#1)+(-0.28,-0.1)$) rectangle ($(#1)+(0.28,0.1)$); \node[font=\tiny, above=1pt] at (#1) {#2};}
+\newcommand{\resistenciav}[2]{\draw[fill=white, draw=acento, line width=0.9pt] ($(#1)+(-0.1,-0.28)$) rectangle ($(#1)+(0.1,0.28)$); \node[font=\tiny, right=3pt] at (#1) {#2};}
+\newcommand{\pila}[1]{\draw[line width=1pt] ($(#1)+(-0.06,-0.14)$) -- ($(#1)+(-0.06,0.14)$); \draw[line width=1pt] ($(#1)+(0.06,-0.24)$) -- ($(#1)+(0.06,0.24)$);}
+
+\newcommand{\esqSerie}{\begin{tikzpicture}[esq]
+  \draw (0,0) rectangle (3,1.6); \fill[white] (-0.1,0.6) rectangle (0.1,1.0); \pila{0,0.8}
+  \resistencia{1,1.6}{$R_1$} \resistencia{2,1.6}{$R_2$}
+  \node[align=center, anchor=north] at (1.5,-0.12) {serie: la misma corriente\\los voltajes se suman\\$R = R_1 + R_2$};
+\end{tikzpicture}}
+
+\newcommand{\esqParalelo}{\begin{tikzpicture}[esq]
+  \draw (0,0) rectangle (3,1.6); \draw (1.5,0) -- (1.5,1.6); \fill[white] (-0.1,0.6) rectangle (0.1,1.0); \pila{0,0.8}
+  \resistenciav{1.5,0.8}{$R_1$} \resistenciav{3,0.8}{$R_2$}
+  \node[align=center, anchor=north] at (1.5,-0.12) {paralelo: el mismo voltaje\\las corrientes se suman\\$R$ eq.\ menor que cada una};
+\end{tikzpicture}}
+
+\newcommand{\esqOnda}{\begin{tikzpicture}[esq]
+  \draw[zinc500] (0,0) -- (4.2,0);
+  \draw[acento, line width=1pt, domain=0:4, samples=80] plot (\x,{0.55*cos(\x*180)});
+  \draw[<->] (0,0.85) -- node[above] {$\lambda$} (2,0.85);
+  \draw[dashed, zinc500] (2,0) -- (2,0.55); \node[right] at (2,0.28) {$A$};
+  \node[align=center, anchor=north] at (2.1,-0.7) {$c = \lambda\, f$ \quad $T = 1/f$\\más frecuencia, menor $\lambda$};
+\end{tikzpicture}}
+
+\newcommand{\esqReflexion}{\begin{tikzpicture}[esq]
+  \draw[line width=1.2pt] (0,0) -- (3.4,0); \node[below] at (3.0,0) {espejo};
+  \draw[dashed, zinc500] (1.7,0) -- (1.7,1.8); \node[above] at (1.7,1.8) {normal};
+  \draw[->, acento, line width=1pt] (0.5,1.5) -- (1.7,0); \draw[->, line width=1pt] (1.7,0) -- (2.9,1.5);
+  \node at (1.4,0.9) {$\theta_i$}; \node at (2.0,0.9) {$\theta_r$};
+  \node at (1.7,-0.7) {$\theta_i = \theta_r$ (desde la normal)};
+\end{tikzpicture}}
+
+\newcommand{\esqRefraccion}{\begin{tikzpicture}[esq]
+  \fill[zinc200] (0,-1.5) rectangle (3.4,0); \draw (0,0) -- (3.4,0);
+  \node[right] at (0,0.25) {medio 1}; \node[right] at (0,-0.3) {medio 2 (más lento)};
+  \draw[dashed, zinc500] (1.7,1.5) -- (1.7,-1.5);
+  \draw[->, acento, line width=1pt] (0.6,1.4) -- (1.7,0); \draw[->, acento, line width=1pt] (1.7,0) -- (2.25,-1.4);
+  \node at (1.45,0.75) {$\theta_1$}; \node at (1.9,-0.8) {$\theta_2$};
+  \node[align=center] at (1.7,-2.0) {se acerca a la normal;\\la frecuencia no cambia};
+\end{tikzpicture}}
+
+\newcommand{\esqCicloCelular}{\begin{tikzpicture}[esq]
+  \draw[line width=2pt] (90:1) arc (90:-40:1); \draw[line width=2pt] (-44:1) arc (-44:-140:1);
+  \draw[line width=2pt] (-144:1) arc (-144:-210:1); \draw[acento, line width=3pt] (-214:1) arc (-214:-266:1);
+  \node at (25:1.35) {$G_1$}; \node at (-92:1.3) {$S$}; \node at (-177:1.35) {$G_2$}; \node[acento] at (122:1.3) {$M$};
+  \node[align=center] at (0,0) {interfase\\[-1pt]\tiny en $S$ se\\[-2pt]\tiny replica el ADN};
+  \node[align=left, anchor=west] at (1.75,0.3) {mitosis: $2n \rightarrow$ 2 células $2n$\\[1pt]meiosis: $2n \rightarrow$ 4 células $n$};
+\end{tikzpicture}}
+
+\newcommand{\esqFotosintesis}{\begin{tikzpicture}[esq]
+  \node[cajaac, minimum width=1.9cm, minimum height=0.8cm] (c) at (0,0) {cloroplasto\\fotosíntesis};
+  \node[caja, minimum width=1.9cm, minimum height=0.8cm] (m) at (3.6,0) {mitocondria\\respiración};
+  \draw[->] ($(c.east)+(0,0.18)$) -- node[above] {glucosa + O$_2$} ($(m.west)+(0,0.18)$);
+  \draw[->] ($(m.west)+(0,-0.18)$) -- node[below] {CO$_2$ + H$_2$O} ($(c.east)+(0,-0.18)$);
+  \draw[->, acento] (0,1.1) -- node[right] {luz} (c.north); \draw[->] (m.south) -- node[right] {ATP} (3.6,-1.1);
+\end{tikzpicture}}
+
+\newcommand{\esqTectonica}{\begin{tikzpicture}[esq]
+  \draw[line width=1pt] (0,1) -- (2,1) -- (3.6,-0.4); \draw (0,0.7) -- (1.9,0.7) -- (3.3,-0.6);
+  \draw[line width=1pt] (2,1) -- (2.6,1.15) -- (3,1.6) -- (3.3,1.3) -- (4.4,1.1);
+  \node[font=\tiny, align=center] at (0.8,1.25) {placa de Nazca}; \node[font=\tiny, align=center] at (3.9,0.75) {placa\\Sudamericana};
+  \draw[->, acento] (0.3,1.5) -- (1.3,1.5);
+  \fill[acento] (2.6,0.45) circle (2pt); \node[right, font=\tiny] at (2.65,0.35) {hipocentro};
+  \draw[dashed] (2.6,0.45) -- (2.6,1.15); \fill (2.6,1.15) circle (1.6pt); \node[above left, font=\tiny] at (2.6,1.15) {epicentro};
+  \node at (2.2,-0.95) {borde convergente: subducción};
+\end{tikzpicture}}
+
+\newcommand{\esqDivergente}{\begin{tikzpicture}[esq]
+  \draw[line width=1pt] (0,0.8) -- (1.8,0.8); \draw[line width=1pt] (2.4,0.8) -- (4.2,0.8);
+  \draw (0,0.4) -- (1.8,0.4); \draw (2.4,0.4) -- (4.2,0.4);
+  \draw[->, acento, line width=1pt] (1.6,1.15) -- (0.6,1.15); \draw[->, acento, line width=1pt] (2.6,1.15) -- (3.6,1.15);
+  \fill[acento!25] (1.85,0.85) -- (2.35,0.85) -- (2.2,-0.6) -- (2.0,-0.6) -- cycle; \node[font=\tiny] at (2.1,-0.8) {magma};
+  \node[align=center] at (2.1,-1.35) {dorsal: las placas se separan\\y se forma nuevo suelo oceánico};
+\end{tikzpicture}}
+
+\newcommand{\esqKepler}{\begin{tikzpicture}[esq]
+  \draw (0,0) ellipse (1.9 and 1.05); \fill[acento] (-1.15,0) circle (3.5pt); \node[below] at (-1.15,-0.1) {Sol};
+  \fill (-1.9,0) circle (1.5pt); \node[left] at (-1.9,0) {perihelio}; \fill (1.9,0) circle (1.5pt); \node[right] at (1.9,0) {afelio};
+  \node[align=center] at (0,-1.5) {más rápido cerca del Sol\\áreas iguales en tiempos iguales};
+\end{tikzpicture}}
+
+\newcommand{\esqMovimiento}{\begin{tikzpicture}[esq]
+  \draw[->] (0,0) -- (1.9,0) node[below] {$t$}; \draw[->] (0,0) -- (0,1.5) node[left] {$x$};
+  \draw[acento, line width=1pt] (0,0.2) -- (1.7,1.3); \node[align=center] at (0.95,-0.5) {MRU\\pendiente = velocidad};
+  \begin{scope}[xshift=2.6cm]
+  \fill[acento!20] (0,0) -- (1.7,0) -- (1.7,1.3) -- cycle;
+  \draw[->] (0,0) -- (1.9,0) node[below] {$t$}; \draw[->] (0,0) -- (0,1.5) node[left] {$v$};
+  \draw[acento, line width=1pt] (0,0) -- (1.7,1.3); \node[align=center] at (0.95,-0.5) {MRUA\\área = desplazamiento};
+  \end{scope}
+\end{tikzpicture}}
+
+\newcommand{\esqFuerzas}{\begin{tikzpicture}[esq]
+  \draw (-1.6,0) -- (1.6,0); \draw[line width=0.9pt] (-0.5,0) rectangle (0.5,0.6);
+  \draw[->, line width=1pt] (0,0.3) -- (0,-0.9) node[below] {$P = mg$};
+  \draw[->, line width=1pt] (0,0.6) -- (0,1.5) node[above] {$N$};
+  \draw[->, acento, line width=1pt] (0.5,0.35) -- (1.5,0.35) node[right] {$F$};
+  \draw[->, line width=1pt] (-0.5,0.12) -- (-1.3,0.12) node[left] {$f_r=\mu N$};
+  \node[align=left, anchor=west] at (2.3,0.3) {$F_{\text{neta}} = m\,a$\\$F_{\text{neta}}=0$: reposo o $v$ constante};
+\end{tikzpicture}}
+
+\newcommand{\esqAtomo}{\begin{tikzpicture}[esq]
+  \draw[zinc500] (0,0) circle (0.6); \draw[zinc500] (0,0) circle (1.05); \draw[acento, line width=1pt] (0,0) circle (0.22);
+  \node[font=\tiny] at (0,0) {p$^+$n$^0$};
+  \foreach \a in {0,180} \fill (\a:0.6) circle (1.6pt); \foreach \a in {90,210,330} \fill (\a:1.05) circle (1.6pt);
+  \node[align=left, anchor=west] at (1.35,0.1) {$Z$ = protones\\$A$ = protones + neutrones\\neutrones $= A - Z$\\isótopos: igual $Z$, distinto $A$\\catión: perdió e$^-$ · anión: ganó e$^-$};
+\end{tikzpicture}}
+
+\newcommand{\esqCarbono}{\begin{tikzpicture}[esq]
+  \foreach \y/\n/\h/\g in {1/1/sp^3/tetraédrica, 0.5/2/sp^2/plana, 0/3/sp/lineal} {
+    \node at (0,\y) {C}; \node at (1.2,\y) {C};
+    \ifnum\n=1 \draw (0.15,\y) -- (1.05,\y); \fi
+    \ifnum\n=2 \draw (0.15,\y+0.04) -- (1.05,\y+0.04); \draw[acento] (0.15,\y-0.04) -- (1.05,\y-0.04); \fi
+    \ifnum\n=3 \draw (0.15,\y) -- (1.05,\y); \draw[acento] (0.15,\y+0.06) -- (1.05,\y+0.06); \draw[acento] (0.15,\y-0.06) -- (1.05,\y-0.06); \fi
+    \node[anchor=west] at (1.5,\y) {$\h$ \quad \g}; }
+  \node at (1.6,-0.55) {cada doble enlace aporta un enlace $\pi$};
+\end{tikzpicture}}
+
+\newcommand{\esqMol}{\begin{tikzpicture}[esq]
+  \node[caja] (g) at (0,0) {masa (g)}; \node[cajaac] (n) at (2,0) {moles ($n$)}; \node[caja] (p) at (4.1,0) {partículas ($N$)};
+  \draw[->] (g) -- node[below=2pt] {$\div M$} (n); \draw[->] (n) -- node[below=2pt] {$\times 6{,}02\cdot10^{23}$} (p);
+  \node at (2,-0.85) {los coeficientes de la ecuación relacionan moles};
+\end{tikzpicture}}
+
+\newcommand{\esqDilucion}{\begin{tikzpicture}[esq]
+  \foreach \x/\h/\t in {0/0.5/{C_1,\,V_1}, 2.4/0.95/{C_2,\,V_2}} {
+    \fill[acento!18] (\x+0.05,0.05) rectangle (\x+0.95,\h); \draw (\x,1.3) -- (\x,0) -- (\x+1,0) -- (\x+1,1.3); \node at (\x+0.5,-0.25) {$\t$}; }
+  \draw[->, acento] (1.15,0.65) -- node[above, font=\tiny] {+ disolvente} (2.25,0.65);
+  \node[align=center, anchor=north] at (1.7,-0.5) {$C_1V_1 = C_2V_2$\\los moles de soluto no cambian};
+\end{tikzpicture}}
+
+\newcommand{\esqNeurona}{\begin{tikzpicture}[esq]
+  \foreach \x in {0,3.3} {
+    \foreach \a in {140,170,200,230} \draw ($(\x,0)+(\a:0.2)$) -- ++(\a:0.4); \draw (\x,0) circle (0.2); }
+  \draw[acento, line width=1.2pt] (0.2,0) -- (2.6,0); \foreach \a in {-30,0,30} \draw (2.6,0) -- ++(\a:0.25);
+  \node[below, font=\tiny] at (-0.4,-0.35) {dendritas}; \node[above] at (1.4,0.05) {axón};
+  \draw[<->, zinc500] (2.88,-0.35) -- (3.0,-0.35); \node[below, font=\tiny, align=center] at (2.95,-0.38) {sinapsis:\\neurotransmisores};
+  \node[font=\tiny] at (1.6,0.75) {dos neuronas: células separadas};
+\end{tikzpicture}}
+
+\newcommand{\esqReflejo}{\begin{tikzpicture}[esq]
+  \node[align=center] at (0,0) {receptor $\rightarrow$ n.\ sensitiva $\rightarrow$ médula espinal\\$\rightarrow$ n.\ motora $\rightarrow$ efector (sin pasar por el cerebro)};
+\end{tikzpicture}}
+
+\newcommand{\esqInvestigacion}{\begin{tikzpicture}[esq, node distance=0.25cm]
+  \node[caja] (a) {observación}; \node[caja, right=of a] (b) {pregunta}; \node[caja, right=of b] (c) {hipótesis};
+  \node[caja, below=0.5cm of a] (d) {diseño:\\variables y control}; \node[caja, right=of d] (e) {resultados}; \node[cajaac, right=of e] (f) {conclusión};
+  \draw[->] (a) -- (b); \draw[->] (b) -- (c); \draw[->] (c.south) -- ++(0,-0.15) -| (d.north); \draw[->] (d) -- (e); \draw[->] (e) -- (f);
+\end{tikzpicture}}
+
+\newcommand{\esqSeleccion}{\begin{tikzpicture}[esq, node distance=0.3cm]
+  \node[caja] (a) {variabilidad\\heredable}; \node[caja, right=of a] (b) {presión del\\ambiente};
+  \node[caja, right=of b] (c) {reproducción\\diferencial}; \node[cajaac, right=of c] (d) {cambia la\\población};
+  \draw[->] (a) -- (b); \draw[->] (b) -- (c); \draw[->] (c) -- (d);
+\end{tikzpicture}}
+
+\newcommand{\esqTablaPeriodica}{\begin{tikzpicture}[esq, x=0.2cm, y=0.2cm]
+  \foreach \r in {1,...,7} {
+    \foreach \c in {1,...,18} {
+      \pgfmathtruncatemacro{\ok}{(\r==1 && (\c==1 || \c==18)) || (\r<=3 && (\c<=2 || \c>=13)) || (\r>=4)}
+      \ifnum\ok=1 \draw[zinc500, line width=0.3pt] (\c,-\r) rectangle ++(1,1); \fi } }
+  \draw[->, acento] (1,0.8) -- (19,0.8) node[right, black] {grupos (columnas)};
+  \draw[->, acento] (-0.3,0) -- (-0.3,-7) node[below, black] {períodos (filas)};
+\end{tikzpicture}}
+% ─────────────────────────────────────────────────────────────────────────────
+%%</ESQUEMAS>%%
 % ajustar: el contenido va a todo el ancho y, solo si no cabe en la altura dada, se reduce entero (una lámina).
 \newsavebox{\ajustecaja}
 \newlength{\ajustealto}
@@ -282,6 +459,8 @@ Ejemplos & bacterias & animales, plantas, hongos \\
 \begin{frame}{Solución 1 · Organización, estructura y actividad celular}
 \framesubtitle{El test que reacciona solo con el VHS-1 es el que da positivo con ese virus y negativo con los demás orígenes de proteína de la tabla.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Leer la fila de VHS-1: el Test 1 (+), el Test 3 (+) y el Test 4 (+) reaccionan con la proteína del VHS-1, mientras que el Test 2 (–) no reacciona. Un test útil debe reaccionar con el virus objetivo, así que el Test 2 queda descartado.}
 \paso{2}{Revisar la especificidad del Test 1: reacciona con el VHS-1 (+), pero también con el VIH (+). Como reacciona con dos orígenes distintos, no es exclusivo del VHS-1.}
@@ -291,33 +470,34 @@ Ejemplos & bacterias & animales, plantas, hongos \\
 }
 \respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 9}
 \begin{notagris}\scriptsize \textbf{Si marcaste B:} Test 2: reconoce la proteína del virus de la hepatitis, no la del VHS-1; su resultado sería negativo para el herpes genital.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2027-invierno/q09.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
 \begin{frame}{Ejercicio 2 · Organización, estructura y actividad celular}
-\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 58}
-\begin{ajustar}[0.7\textheight]
-{\small Un grupo de estudiantes necesitaba investigar experimentalmente la función celular de los nucléolos. Al planificar su estudio, decidieron bloquear enzimas involucradas específicamente en la síntesis de ácidos nucleicos de la zona nucleolar, para luego, analizar los efectos de este tratamiento. De acuerdo con estos antecedentes, ¿cuál de las siguientes opciones correspondería a un efecto directo del procedimiento planteado por los estudiantes?}
-\vspace{0.4em}
-\alternativa{A}{Se impedirá la síntesis de vesículas lisosomales.}
-\alternativa{B}{Se impedirá la síntesis de subunidades ribosomales.}
-\alternativa{C}{Se generará acumulación de proteínas en el citoplasma.}
-\alternativa{D}{Se generará acumulación de sustancias tóxicas en el citoplasma.}
-\end{ajustar}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 64}
+\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q64.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 2 · Organización, estructura y actividad celular}
-\framesubtitle{El nucléolo sintetiza el ARN ribosomal y ensambla las subunidades ribosomales; bloquear las enzimas que participan en esa síntesis impide justamente esa producción.}
+\framesubtitle{Las dosis de refuerzo se administran después de la primaria para mantener o recuperar un nivel de protección que disminuye con el tiempo, logrando una protección de larga duración.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
-\paso{1}{Identificar la función del nucléolo: es la región del núcleo donde se transcribe el ARN ribosomal (ARNr) a partir de genes específicos.}
-\paso{2}{Describir el ensamblaje: el ARNr se combina con proteínas dentro del nucléolo para formar las subunidades ribosomales, la mayor y la menor, que luego salen al citoplasma.}
-\paso{3}{Aplicar el bloqueo: si las enzimas que sintetizan ácidos nucleicos en el nucléolo están bloqueadas, no se produce el ARNr, y sin ARNr no se completan las subunidades.}
-\paso{4}{Clasificar los efectos: que no se formen subunidades ribosomales es el efecto directo, porque ocurre en el mismo sitio y en el mismo paso bloqueado. Por lo tanto, la alternativa correcta es la B.}
+\paso{1}{Leer el esquema: la dosis primaria se da al nacer; la segunda, a 1 o 2 meses, y la tercera, de refuerzo, a los 6 a 18 meses, cuando la protección inicial ya ha disminuido.}
+\paso{2}{Explicar la disminución: tras la primera vacunación, los anticuerpos y las células de memoria disminuyen con el tiempo, así que la protección se debilita.}
+\paso{3}{Explicar el refuerzo: al aplicar una nueva dosis se reactiva la memoria inmunológica, y la respuesta es más rápida e intensa, lo que restablece el nivel de protección.}
+\paso{4}{El propósito del refuerzo es mantener un nivel seguro de protección inmunológica durante un período largo, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A.}
 }
-\respuesta{B}{PAES Invierno 2025, Ciencias Biología, pregunta 58}
-\begin{notagris}\scriptsize \textbf{Si marcaste C:} La acumulación de proteínas en el citoplasma sería un efecto secundario posible, pero no es consecuencia directa de bloquear la síntesis de ARN ribosomal.\end{notagris}
+\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 64}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Confundir la inmunización activa con la pasiva: la vacuna hace que el propio organismo produzca anticuerpos, mientras que la pasiva entrega anticuerpos ya formados.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2026-invierno/q64.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -360,6 +540,8 @@ Receptor $\rightarrow$ neurona sensitiva (aferente) $\rightarrow$ médula espina
 \begin{frame}{Solución 1 · Sistema nervioso}
 \framesubtitle{La limitación era técnica: la microscopía de la época no tenía la resolución necesaria para distinguir los límites entre células en el tejido nervioso.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Identificar el tipo de aspecto que se pide: procedimental significa relativo al método, es decir, a cómo se observa y se mide, no a lo que se sabe ni a lo que se teoriza.}
 \paso{2}{Identificar la disputa: se trata de decidir si el tejido nervioso es un continuo citoplasmático con varios núcleos o está formado por células. Esa distinción solo podía resolverse observando los límites de las estructuras.}
@@ -368,6 +550,9 @@ Receptor $\rightarrow$ neurona sensitiva (aferente) $\rightarrow$ médula espina
 }
 \respuesta{C}{PAES Invierno 2025, Ciencias Biología, pregunta 57}
 \begin{notagris}\scriptsize \textbf{Si marcaste B:} Desconocer las funciones del sistema nervioso es un vacío conceptual, no una falla del método de observación.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqNeurona}{esquema: neuronas separadas por sinapsis}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -387,6 +572,8 @@ Receptor $\rightarrow$ neurona sensitiva (aferente) $\rightarrow$ médula espina
 \begin{frame}{Solución 2 · Sistema nervioso}
 \framesubtitle{Si las neuronas formaran un sincicio, una sustancia debería difundirse de una neurona a sus vecinas por citoplasma continuo; que no lo haga es la evidencia a favor de la teoría de Ramón y Cajal.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Un sincicio es una red de citoplasma continuo: lo que se incorpora en una célula puede difundirse a las células vecinas a través de esa continuidad.}
 \paso{2}{Si la teoría de Ramón y Cajal es correcta, un marcador incorporado en el soma de una neurona debe quedar confinado a esa célula, sin pasar a las vecinas.}
@@ -397,6 +584,9 @@ Receptor $\rightarrow$ neurona sensitiva (aferente) $\rightarrow$ médula espina
 }
 \respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 57}
 \begin{notagris}\scriptsize \textbf{Si marcaste A:} Pensar que una molécula detectada en toda la red demuestra individualidad, cuando precisamente indica que las células comparten citoplasma.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqNeurona}{esquema: neuronas separadas por sinapsis}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -424,6 +614,32 @@ Días 1–5: menstruación. Días 6–13: fase folicular, el endometrio se engro
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Reproducción, sexualidad e ITS}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 7}
+\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q07.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 1 · Reproducción, sexualidad e ITS}
+\framesubtitle{Los preservativos protegen menos frente a las ITS que producen lesiones, como herpes y sífilis, y esa es la conclusión que se lee en la tabla.}
+\begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
+{\footnotesize
+\paso{1}{Ordenamos la tabla de mayor a menor protección: VIH/SIDA y hepatitis B superan el 90 \%, la gonorrea llega al 80 \%, la sífilis está entre 50 \% y 80 \%, y el herpes entre 10 \% y 50 \%.}
+\paso{2}{Las infecciones con menor protección son herpes y sífilis. Ambas producen lesiones en la piel o en las mucosas, que pueden quedar fuera de la zona cubierta por el preservativo y suelen liberar secreción.}
+\paso{3}{En cambio, VIH y hepatitis B tienen la protección más alta, y la tabla no les atribuye lesiones externas. La relación entre lesiones y menor protección es la que sostiene la conclusión.}
+\paso{4}{Las demás alternativas no se deducen de la tabla: no entrega tamaños de patógenos ni tiempos de incubación (A y B), y la protección bacteriana y viral se solapa, así que no hay una diferencia general (C).}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Ciencias Biología, pregunta 7}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Mayor efectividad frente a patógenos de mayor tamaño: la tabla no informa tamaños. Además, el VIH, con la mayor protección, es un virus muy pequeño, lo que contradice la idea.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2026-invierno/q07.png}}{figura del folleto oficial}
+\end{columns}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Reproducción, sexualidad e ITS}
 \framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 63}
 \begin{ajustar}[0.7\textheight]
 {\small La estimulación ovárica (EO) consiste en un procedimiento que induce una ovulación múltiple en personas con problemas de fertilidad. Para esto, se usan fármacos que regulan el ciclo ovárico, promoviendo la expulsión de varios ovocitos maduros a fin de asegurar la fecundación. Estos fármacos deben aplicarse diariamente, durante 10 a 12 días previos al término de la fase folicular, para lograr una disponibilidad óptima de ovocitos. En este contexto, si una persona con ciclos ováricos de 32 días quiere someterse a un proceso de EO para lograr un embarazo, ¿en qué rango de días de su ciclo debería ser aplicado el fármaco correspondiente?}
@@ -436,7 +652,7 @@ Días 1–5: menstruación. Días 6–13: fase folicular, el endometrio se engro
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Solución 1 · Reproducción, sexualidad e ITS}
+\begin{frame}{Solución 2 · Reproducción, sexualidad e ITS}
 \framesubtitle{Se cuentan los días hacia atrás desde la ovulación, que ocurre en el día 18 de un ciclo de 32 días si la fase lútea dura unos 14 días.}
 \begin{ajustar}[0.64\textheight]
 {\footnotesize
@@ -447,34 +663,6 @@ Días 1–5: menstruación. Días 6–13: fase folicular, el endometrio se engro
 }
 \respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 63}
 \begin{notagris}\scriptsize \textbf{Si marcaste D:} Elegir los días 21 a 32 por aplicar el fármaco en la fase lútea, que viene después de la ovulación y no antes.\end{notagris}
-\end{ajustar}
-\end{frame}
-
-\begin{frame}{Ejercicio 2 · Reproducción, sexualidad e ITS}
-\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 8}
-\begin{ajustar}[0.7\textheight]
-{\small En la década de 1770, un investigador se dedicó a experimentar con muestras seminales, exponiéndolas a diferentes medios como ácido acético, bicarbonato de sodio y distintos alcoholes. El investigador concluyó que, al exponer las células sexuales a distintas concentraciones de estos medios, disminuía e incluso se inhibía la capacidad de fertilización. En este contexto, ¿cuál de las siguientes opciones indica un método anticonceptivo que pudo haber tenido como base el experimento descrito?}
-\vspace{0.4em}
-\alternativa{A}{Preservativo.}
-\alternativa{B}{Espermicida.}
-\alternativa{C}{Vasectomía.}
-\alternativa{D}{Diafragma.}
-\end{ajustar}
-\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
-\end{frame}
-
-\begin{frame}{Solución 2 · Reproducción, sexualidad e ITS}
-\framesubtitle{Un espermicida es una sustancia química que inactiva o mata a los espermatozoides, y el experimento con ácido acético y alcoholes sugiere justamente ese efecto.}
-\begin{ajustar}[0.64\textheight]
-{\footnotesize
-\paso{1}{El investigador expuso células sexuales a sustancias químicas, y concluyó que la capacidad de fertilización disminuye e incluso se inhibe según la concentración. El efecto observado es químico y actúa sobre las células.}
-\paso{2}{Un método anticonceptivo que se apoye en ese principio debe actuar químicamente sobre los espermatozoides, de modo que pierdan la capacidad de fecundar.}
-\paso{3}{Un espermicida cumple exactamente esa función: es una sustancia que inmoviliza, inactiva o mata a los espermatozoides antes de que lleguen al óvulo.}
-\paso{4}{Los demás métodos no dependen de un efecto químico sobre las células: el preservativo y el diafragma son barreras físicas, y la vasectomía es una cirugía que interrumpe los conductos deferentes.}
-\paso{5}{Por lo tanto, la alternativa correcta es la B.}
-}
-\respuesta{B}{PAES Invierno 2025, Ciencias Biología, pregunta 8}
-\begin{notagris}\scriptsize \textbf{Si marcaste A:} Preservativo: es una barrera física que impide que los espermatozoides lleguen al óvulo. No actúa químicamente sobre ellos, así que el experimento no lo explica.\end{notagris}
 \end{ajustar}
 \end{frame}
 
@@ -519,6 +707,31 @@ Función & crecimiento y reparación & formar gametos \\
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Ciclo celular, meiosis y manipulación genética}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 71}
+\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q71.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 1 · Ciclo celular, meiosis y manipulación genética}
+\framesubtitle{Con el fármaco bajan las células diferenciadas y las que están en G1, mientras suben las de S y G2/M; eso indica más células en ciclo activo, es decir, proliferando.}
+\begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
+{\footnotesize
+\paso{1}{Células diferenciadas: la barra con fármaco es más baja que la barra sin fármaco. El fármaco disminuye la proporción de células especializadas.}
+\paso{2}{Fase G1: la barra con fármaco también es menor; una proporción menor de células se queda en la fase de crecimiento previa a la replicación del ADN.}
+\paso{3}{Fases S y G2/M: las barras con fármaco son más altas que las sin fármaco. Más células están replicando su ADN o preparándose para dividirse, es decir, están en un ciclo activo.}
+\paso{4}{Relacionar los datos: una menor proporción de células diferenciadas y una mayor proporción en fases de replicación y división indica que el fármaco favorece la proliferación. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 71}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Promover la especialización celular: el fármaco disminuye las células diferenciadas, así que no favorece la especialización; la barra de células diferenciadas es menor con fármaco.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2026-invierno/q71.png}}{figura del folleto oficial}
+\end{columns}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Ciclo celular, meiosis y manipulación genética}
 \framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 11}
 \begin{ajustar}[0.7\textheight]
 {\small Un grupo de estudiantes observa con un microscopio células en división mitótica. La profesora les solicita que seleccionen una célula de las que observan e identifiquen la etapa de la mitosis en la que se encuentra. Luego, ella indica que deben justificar su identificación escribiendo en su cuaderno la característica que utilizaron para ello. Al pasar unos minutos, un estudiante le comenta a la profesora que cree haber identificado correctamente una célula en telofase. En relación con lo anterior, ¿cuál de las siguientes opciones presenta una justificación correcta respecto de la etapa en la que se encuentra la célula seleccionada por el estudiante?}
@@ -531,7 +744,7 @@ Función & crecimiento y reparación & formar gametos \\
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Solución 1 · Ciclo celular, meiosis y manipulación genética}
+\begin{frame}{Solución 2 · Ciclo celular, meiosis y manipulación genética}
 \framesubtitle{En telofase los cromosomas llegan a los polos y se reorganiza una carioteca alrededor de cada grupo, así que la justificación correcta describe dos zonas de reorganización nuclear.}
 \begin{ajustar}[0.64\textheight]
 {\footnotesize
@@ -543,26 +756,6 @@ Función & crecimiento y reparación & formar gametos \\
 }
 \respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 11}
 \begin{notagris}\scriptsize \textbf{Si marcaste C:} Cromosomas en el plano ecuatorial: es la característica de metafase, cuando los cromosomas se alinean antes de separarse.\end{notagris}
-\end{ajustar}
-\end{frame}
-
-\begin{frame}{Ejercicio 2 · Ciclo celular, meiosis y manipulación genética}
-\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 71}
-\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q71.png}\end{center}
-\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
-\end{frame}
-
-\begin{frame}{Solución 2 · Ciclo celular, meiosis y manipulación genética}
-\framesubtitle{Con el fármaco bajan las células diferenciadas y las que están en G1, mientras suben las de S y G2/M; eso indica más células en ciclo activo, es decir, proliferando.}
-\begin{ajustar}[0.64\textheight]
-{\footnotesize
-\paso{1}{Células diferenciadas: la barra con fármaco es más baja que la barra sin fármaco. El fármaco disminuye la proporción de células especializadas.}
-\paso{2}{Fase G1: la barra con fármaco también es menor; una proporción menor de células se queda en la fase de crecimiento previa a la replicación del ADN.}
-\paso{3}{Fases S y G2/M: las barras con fármaco son más altas que las sin fármaco. Más células están replicando su ADN o preparándose para dividirse, es decir, están en un ciclo activo.}
-\paso{4}{Relacionar los datos: una menor proporción de células diferenciadas y una mayor proporción en fases de replicación y división indica que el fármaco favorece la proliferación. Por lo tanto, la alternativa correcta es la A.}
-}
-\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 71}
-\begin{notagris}\scriptsize \textbf{Si marcaste C:} Promover la especialización celular: el fármaco disminuye las células diferenciadas, así que no favorece la especialización; la barra de células diferenciadas es menor con fármaco.\end{notagris}
 \end{ajustar}
 \end{frame}
 
@@ -619,6 +812,8 @@ Variabilidad $\rightarrow$ presión del ambiente $\rightarrow$ supervivencia y r
 \begin{frame}{Solución 2 · Evolución: evidencias y selección natural}
 \framesubtitle{El núcleo, ubicado en la base, dirige la forma de la sombrilla que se regenera: al intercambiar solo los núcleos cambia la forma de la sombrilla, mientras que el tallo no define esa característica.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Del esquema original se deduce que la base, donde está el núcleo, controla la forma de la sombrilla: la especie 1 regenera una sombrilla ovalada aunque su tallo provenga de la especie 2, y la especie 2 regenera una dentada aunque reciba el tallo de la especie 1.}
 \paso{2}{Por lo tanto, el tallo no define la forma de la sombrilla. Lo que determina la regeneración es el núcleo.}
@@ -628,6 +823,9 @@ Variabilidad $\rightarrow$ presión del ambiente $\rightarrow$ supervivencia y r
 }
 \respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 67}
 \begin{notagris}\scriptsize \textbf{Si marcaste C:} Supone que cada sombrilla queda dividida en dos mitades de formas distintas. El esquema no muestra sombrillas mixtas: la regeneración depende de un solo núcleo.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2027-invierno/q67.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -657,57 +855,54 @@ Respiración: la reacción inversa, que libera la energía de la glucosa como AT
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Fotosíntesis, respiración y flujo de energía}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 77}
-\begin{ajustar}[0.7\textheight]
-{\small En la zona austral de Chile investigadores registraron una reducción en la tasa fotosintética de diversas especies vegetales endémicas, aparentemente asociada con incrementos sostenidos de temperatura durante los últimos años. Para investigar este fenómeno analizaron muestras foliares de una especie, observando una disminución de la producción fotosintética de O\textsuperscript{2}. Al respecto, si los investigadores pretenden comparar la capacidad de producción de O\textsuperscript{2} de esta especie en el tiempo mediante la evaluación de la actividad enzimática, ¿en qué estructura del cloroplasto deberían focalizar el análisis?}
-\vspace{0.4em}
-\alternativa{A}{En el estroma.}
-\alternativa{B}{En los tilacoides.}
-\alternativa{C}{En la membrana externa.}
-\alternativa{D}{En el espacio intermembrana.}
-\end{ajustar}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 16}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q16.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 1 · Fotosíntesis, respiración y flujo de energía}
-\framesubtitle{El oxígeno se libera durante la fotólisis del agua en los tilacoides; por eso el análisis enzimático para comparar la producción de $\mathrm{O_2}$ debe focalizarse en esa estructura.}
+\framesubtitle{Si el alga entrega productos de la fotosíntesis y la mitocondria de la salamandra aporta el $\mathrm{CO}_2$ que el alga necesita, el carbono orgánico del alga proviene de la respiración de la salamandra.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
-\paso{1}{La producción de $\mathrm{O_2}$ en la fotosíntesis proviene de la fotólisis del agua, que forma parte de la fase luminosa.}
-\paso{2}{La fase luminosa se realiza en las membranas de los tilacoides, donde están los fotosistemas y la cadena de transporte de electrones.}
-\paso{3}{Para comparar en el tiempo la capacidad de producir $\mathrm{O_2}$ mediante actividad enzimática, el análisis debe centrarse en los tilacoides, que es donde se libera el oxígeno.}
-\paso{4}{El estroma es el lugar del ciclo de Calvin, que fija $\mathrm{CO_2}$ pero no libera $\mathrm{O_2}$. La membrana externa y el espacio intermembrana no participan en la producción de oxígeno.}
-\paso{5}{Por lo tanto, la alternativa correcta es la B.}
+\paso{1}{Identificar el tipo de nutrición del alga. Al realizar fotosíntesis, fabrica sus moléculas orgánicas a partir de $\mathrm{CO}_2$ y agua; por lo tanto, es autótrofa y no heterótrofa.}
+\paso{2}{Identificar el origen de un reactante. La mitocondria de la salamandra realiza respiración celular, proceso que libera $\mathrm{CO}_2$. El enunciado indica que esas mitocondrias proveen los reactantes que el alga necesita.}
+\paso{3}{Seguir el átomo de carbono. De los reactantes que aporta la mitocondria, el $\mathrm{CO}_2$ es el que contiene carbono. Por lo tanto, el carbono que el alga incorpora a sus moléculas orgánicas proviene de la respiración celular de la salamandra.}
+\paso{4}{Evaluar las demás opciones. La A confunde autótrofo con heterótrofo; la B asigna autotrofía a la salamandra, cuya dieta de invertebrados la hace heterótrofa; la C compara eficiencias que el texto no mide.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
 }
-\respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 77}
-\begin{notagris}\scriptsize \textbf{Si marcaste C:} La membrana externa del cloroplasto no participa en la fotólisis del agua; la reacción que libera oxígeno ocurre en los tilacoides.\end{notagris}
+\respuesta{D}{PAES Invierno 2026, Ciencias Biología, pregunta 16}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Salamandra autótrofa: su dieta de gusanos e insectos la hace heterótrofa; la fotosíntesis la realiza el alga, no el animal.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqFotosintesis}{esquema: fotosíntesis y respiración}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
 \begin{frame}{Ejercicio 2 · Fotosíntesis, respiración y flujo de energía}
-\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 78}
-\begin{ajustar}[0.7\textheight]
-{\small En el contexto de una evaluación de productos de la fotosíntesis con fines alimentarios, un grupo de investigación cultivó tejidos fotosintéticamente activos, en los cuales midió la producción de hidratos de carbono bajo diferentes tratamientos. Al analizar los resultados, se constató que en uno de estos cultivos experimentales hubo una disminución en la magnitud de la variable dependiente. ¿Cuál podría ser el tratamiento asociado con este resultado?}
-\vspace{0.4em}
-\alternativa{A}{Baja disponibilidad de luz}
-\alternativa{B}{Alta concentración de CO\textsuperscript{2}}
-\alternativa{C}{Baja concentración de O\textsuperscript{2}}
-\alternativa{D}{Alta humedad ambiental}
-\end{ajustar}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 18}
+\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q18.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 2 · Fotosíntesis, respiración y flujo de energía}
-\framesubtitle{La producción de hidratos de carbono depende de la luz, que impulsa la fase lumínica; si la luz disminuye, baja la fijación de carbono y con ella la producción de azúcares.}
+\framesubtitle{La energía que entra al ecosistema (180 J) es igual a la que sale (18 J de biomasa más 162 J de respiración), lo que confirma que la energía se conserva.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
-\paso{1}{Identificar la variable dependiente: la producción de hidratos de carbono, que depende de la fotosíntesis de los tejidos.}
-\paso{2}{Relacionar la fotosíntesis con la luz: la fase lumínica usa energía luminosa para producir ATP y NADPH, que luego se utilizan en el ciclo de Calvin para fijar $\mathrm{CO_2}$ en azúcares.}
-\paso{3}{Aplicar cada tratamiento: con baja disponibilidad de luz se limita la fase lumínica y, con ella, la fijación de carbono; por eso disminuye la producción de hidratos de carbono.}
-\paso{4}{Revisar los demás tratamientos: el alto $\mathrm{CO_2}$ es sustrato y favorece la fotosíntesis; el bajo $\mathrm{O_2}$ no limita el proceso porque es un producto; la alta humedad no inhibe la fotosíntesis. Por lo tanto, la alternativa correcta es la A.}
+\paso{1}{Sumamos la energía que entra al ecosistema: $100\ \mathrm{J} + 50\ \mathrm{J} + 30\ \mathrm{J} = 180\ \mathrm{J}$.}
+\paso{2}{Sumamos la energía que sale: $18\ \mathrm{J}$ de biomasa vegetal más $162\ \mathrm{J}$ de respiración, es decir, $18 + 162 = 180\ \mathrm{J}$.}
+\paso{3}{Entrada y salida coinciden: $180\ \mathrm{J} = 180\ \mathrm{J}$. La energía total no se crea ni se destruye, solo cambia de forma, desde la energía química de la biomasa hasta la energía liberada en la respiración.}
+\paso{4}{Revisamos las otras opciones: el diagrama no entrega la biomasa de cada especie, así que no se puede evaluar la eficiencia de cada una (A); la mayor salida es la respiración, no la biomasa (B); y la respiración es una salida, no una entrada (C).}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
 }
-\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 78}
-\begin{notagris}\scriptsize \textbf{Si marcaste B:} Alta concentración de $\mathrm{CO_2}$: el dióxido de carbono es sustrato de la fotosíntesis, y su abundancia la favorece en lugar de disminuirla.\end{notagris}
+\respuesta{D}{PAES Invierno 2025, Ciencias Biología, pregunta 18}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Respiración como principal aporte: la respiración es una salida del sistema, no una entrada. La mayor entrada es la de E1, con 100 J.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2026-invierno/q18.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -754,6 +949,8 @@ Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más 
 \begin{frame}{Solución 1 · Ondas electromagnéticas, luz y óptica}
 \framesubtitle{El corrimiento al rojo recibe ese nombre porque la luz recibida tiene menor frecuencia y mayor longitud de onda, desplazándose hacia el extremo rojo del espectro.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\small
 \paso{1}{El corrimiento al rojo es un desplazamiento del espectro de la luz hacia las longitudes de onda más largas, que corresponden a una menor frecuencia.}
 \paso{2}{El color que percibimos depende de la frecuencia: una frecuencia menor hace que la luz recibida se ubique más cerca del extremo rojo del espectro visible.}
@@ -762,6 +959,9 @@ Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más 
 }
 \respuesta{A}{PAES Invierno 2026, Ciencias Física, pregunta 59}
 \begin{notagris}\scriptsize \textbf{Si marcaste D:} Confunde color con intensidad: una menor intensidad no cambia la frecuencia ni el color de la luz.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqOnda}{esquema: onda}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -774,6 +974,8 @@ Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más 
 \begin{frame}{Solución 2 · Ondas electromagnéticas, luz y óptica}
 \framesubtitle{En un espejo cóncavo sin defectos, los rayos que parten del foco se reflejan paralelos al eje óptico; si la superficie tiene irregularidades, los rayos reflejados se desordenan y la prueba los detecta.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Identificar el comportamiento esperado: en un espejo cóncavo sin defectos, los rayos que parten del foco se reflejan paralelos al eje óptico.}
 \paso{2}{Interpretar la prueba: los obstáculos dejan pasar solo algunos rayos hacia el espejo, y lo que se observa es la dirección de los rayos reflejados. En la figura, esos rayos salen horizontales y ordenados.}
@@ -783,6 +985,9 @@ Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más 
 }
 \respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 23}
 \begin{notagris}\scriptsize \textbf{Si marcaste D:} Identificar el material del espejo: los rayos reflejados informan sobre la forma y regularidad de la superficie, no sobre su composición.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2027-invierno/q23.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -881,58 +1086,54 @@ Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más 
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Fuerzas y leyes de Newton}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 26}
-\begin{ajustar}[0.7\textheight]
-{\small Una persona asiste a una feria de exhibición aeronáutica y luego de observar la caída de un grupo de paracaidistas, nota que, a pesar de que todos los paracaidistas abren sus paracaídas en el mismo instante, no todos llegan al suelo al mismo tiempo. Al investigar acerca del hecho, la persona constata que todos los paracaidistas tienen masas muy similares y que los paracaídas están hechos del mismo material, por lo que afirma que el tamaño de los paracaídas debe ser distinto. Al respecto, ¿a qué componente de la investigación científica corresponde la afirmación de la persona?}
-\vspace{0.4em}
-\alternativa{A}{A un marco conceptual.}
-\alternativa{B}{A un procedimiento.}
-\alternativa{C}{A una observación.}
-\alternativa{D}{A una inferencia.}
-\end{ajustar}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 29}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q29.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 1 · Fuerzas y leyes de Newton}
-\framesubtitle{La persona explica un hecho observado con una causa que no vio directamente, el tamaño de los paracaídas; esa explicación deducida es una inferencia.}
+\framesubtitle{Los puntos muestran una tendencia creciente y casi lineal; interpolando entre los dos tramos medidos, la deformación para fuerzas entre 3,0 y 6,0 N queda entre 0,3 y 0,7 m.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
-\paso{1}{Identificar lo observado: todos los paracaidistas abren sus paracaídas en el mismo instante, pero no llegan al suelo al mismo tiempo. Eso es un hecho registrado por la persona.}
-\paso{2}{Identificar lo constatado: las masas son muy similares y el material de los paracaídas es el mismo. Con esos datos se descartan esas dos posibles causas.}
-\paso{3}{Identificar la afirmación: que el tamaño de los paracaídas debe ser distinto no se observó directamente. Es una explicación que se deduce de lo observado y de lo constatado, es decir, una inferencia.}
-\paso{4}{Diferenciar con las otras categorías: un procedimiento describe pasos de medición o prueba, un marco conceptual es un conjunto general de ideas, y una observación es lo que se ve directamente. La afirmación es una explicación puntual.}
-\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+\paso{1}{Leer el tramo inferior: entre $0{,}5$ y $2{,}4$ N la deformación sube de forma regular, desde unos $0{,}03$ m hasta unos $0{,}27$ m. La tendencia es creciente y casi lineal.}
+\paso{2}{Leer el tramo superior: entre $7{,}0$ y $8{,}4$ N la deformación va de unos $0{,}78$ m a unos $0{,}95$ m, también con tendencia creciente.}
+\paso{3}{Estimar la pendiente uniendo ambos tramos: $\frac{0{,}78 - 0{,}27}{7{,}0 - 2{,}4} \approx 0{,}11\ \mathrm{m/N}$.}
+\paso{4}{Interpolar en el rango faltante: para $3{,}0$ N la deformación sería $0{,}27 + 0{,}11 \cdot 0{,}6 \approx 0{,}33$ m, y para $6{,}0$ N sería $0{,}27 + 0{,}11 \cdot 3{,}6 \approx 0{,}67$ m.}
+\paso{5}{Evaluar las opciones: la B supone un límite elástico que el gráfico no muestra; la C invierte la comparación, porque la deformación entre 3,0 y 6,0 N es menor que la de 8,5 N; y la D lee la tendencia al revés. Por lo tanto, la alternativa correcta es la A.}
 }
-\respuesta{D}{PAES Invierno 2026, Ciencias Biología, pregunta 26}
-\begin{notagris}\scriptsize \textbf{Si marcaste B:} Procedimiento: describe pasos para medir o probar algo; en el texto no hay pasos ni datos registrados, solo una conclusión.\end{notagris}
+\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 29}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Decrecerá al aumentar la fuerza: lee la tendencia con el signo cambiado; en el gráfico la deformación aumenta con la fuerza aplicada.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2027-invierno/q29.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
 \begin{frame}{Ejercicio 2 · Fuerzas y leyes de Newton}
-\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 25}
-\begin{ajustar}[0.7\textheight]
-{\small Durante una actividad experimental, una estudiante fija un globo desinflado a los bordes de un plato hondo, cubriéndolo completamente hasta dejar tenso el globo, simulando una cama elástica. Luego deja caer, desde cierta altura, una canica sobre el globo tenso, observando que el globo se hunde levemente y que la canica rebota. Al respecto, ¿cuál de los siguientes hechos explica correctamente lo observado por la estudiante?}
-\vspace{0.4em}
-\alternativa{A}{La fuerza que la canica ejerce sobre el globo es proporcional a la altura desde donde se suelta la canica.}
-\alternativa{B}{La fuerza que ejerce la canica sobre el globo depende de cuan tenso esté el globo en la superficie del plato.}
-\alternativa{C}{La canica ejerce una fuerza sobre el globo en sentido contrario a la fuerza que el globo ejerce sobre la misma.}
-\alternativa{D}{La altura que alcanza la canica luego de rebotar sobre el globo se relaciona directamente con la tensión que el globo tiene en el plato.}
-\end{ajustar}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 27}
+\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q27.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 2 · Fuerzas y leyes de Newton}
-\framesubtitle{Al caer sobre el globo, la canica ejerce una fuerza sobre él, y el globo ejerce a su vez una fuerza igual y opuesta sobre la canica: es el par acción-reacción de la tercera ley de Newton.}
+\framesubtitle{Afirmar que el roce no depende del área de contacto es una conclusión, porque se deduce de comparar los resultados de dos montajes.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
-\paso{1}{Mientras la canica cae sobre el globo, lo empuja hacia abajo; por eso el globo se hunde levemente. Esa es la fuerza que la canica ejerce sobre el globo.}
-\paso{2}{El globo tenso responde con una fuerza hacia arriba sobre la canica, que la hace rebotar. Esa es la fuerza que el globo ejerce sobre la canica.}
-\paso{3}{Según la tercera ley de Newton, ambas fuerzas tienen igual magnitud y sentidos opuestos, y actúan sobre cuerpos distintos. Así, la interacción es un par acción-reacción.}
-\paso{4}{El hundimiento y el rebote describen el resultado del movimiento, pero no cambian la relación entre las dos fuerzas. La explicación del fenómeno está en el par de fuerzas.}
+\paso{1}{Los estudiantes miden la fuerza con el dinamómetro en dos montajes: los bloques lado a lado y el bloque 2 sobre el bloque 1. El área de contacto con la superficie cambia entre ambos casos, pero la fuerza medida se mantiene.}
+\paso{2}{La diferencia entre los resultados es despreciable, así que los datos respaldan que el roce no depende del área de contacto.}
+\paso{3}{La frase del informe resume y generaliza lo observado: interpreta los datos del experimento y los traduce en un enunciado general sobre el roce. Eso corresponde a una conclusión.}
+\paso{4}{Los otros componentes no encajan: un marco conceptual sería la teoría de base, como las leyes de Newton; un procedimiento describiría las acciones realizadas; y una predicción se formula antes del experimento.}
 \paso{5}{Por lo tanto, la alternativa correcta es la C.}
 }
-\respuesta{C}{PAES Invierno 2025, Ciencias Biología, pregunta 25}
-\begin{notagris}\scriptsize \textbf{Si marcaste D:} Altura de rebote relacionada con la tensión: el rebote depende de la energía con que llega la canica y de lo que el globo devuelve, no de una relación directa que explique la tercera ley.\end{notagris}
+\respuesta{C}{PAES Invierno 2025, Ciencias Biología, pregunta 27}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Predicción: se formula antes del experimento, a partir de una hipótesis. Esta afirmación proviene de datos ya obtenidos, así que no es una predicción.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2026-invierno/q27.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -995,6 +1196,8 @@ Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más 
 \begin{frame}{Solución 2 · Sistema solar y universo}
 \framesubtitle{Una estrella más luminosa pulsa menos veces en el mismo intervalo de tiempo; por eso, en el gráfico correcto, la curva más alta (la más luminosa) debe tener menos pulsos que la otra.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Según la relación descubierta, la estrella más luminosa tiene menor frecuencia de pulsación: pulsa menos veces en el mismo intervalo de tiempo.}
 \paso{2}{Para comparar, se cuentan los pulsos de cada curva en un mismo intervalo de $t$ y se compara la altura media de cada curva, que representa su luminosidad.}
@@ -1006,6 +1209,9 @@ Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más 
 }
 \respuesta{A}{PAES Regular 2024, Ciencias Física, pregunta 60}
 \begin{notagris}\scriptsize \textbf{Si marcaste C:} Pulsos casi iguales en ambas curvas: no hay diferencia de frecuencia que justifique la relación, así que la alternativa no muestra lo que se pide.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-fisica-2025-regular/q60.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1035,33 +1241,6 @@ Divergente: se separan; dorsales y nuevo suelo oceánico. Transformante: se desl
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Tectónica de placas y sismos}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 31}
-\begin{ajustar}[0.7\textheight]
-{\small Una persona que desea comprar una casa en una de las comunas del sector precordillerano de Santiago, se entera de que esta es atravesada por la falla de San Ramón, una fractura geológica ubicada a los pies de la cordillera de los Andes. Se estima que la falla tiene una longitud de entre 30 y 50 km y una profundidad de entre 10 y 12 km. Ante esta información, la persona decide investigar si existe la posibilidad de que la falla genere sismos de gran magnitud. Al respecto, ¿cuál de los siguientes datos sería relevante para iniciar su investigación?}
-\vspace{0.4em}
-\alternativa{A}{Las características de los sismos generados por fallas similares a la de San Ramón.}
-\alternativa{B}{La cantidad de sismos registrados en la falla de San Ramón en los últimos 2 años.}
-\alternativa{C}{La cantidad de fallas similares a la de San Ramón que existen en la placa Sudamericana.}
-\alternativa{D}{La clasificación de la falla de San Ramón según la forma de desplazamiento de las rocas.}
-\end{ajustar}
-\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
-\end{frame}
-
-\begin{frame}{Solución 1 · Tectónica de placas y sismos}
-\framesubtitle{Para estimar si la falla puede generar sismos de gran magnitud, lo más útil son los sismos registrados en fallas parecidas, porque muestran qué magnitudes alcanzan fallas de tamaño similar.}
-\begin{ajustar}[0.64\textheight]
-{\footnotesize
-\paso{1}{Identificar la pregunta: si la falla puede producir sismos de gran magnitud. Esto depende del tamaño de la superficie que puede romperse y desplazarse en un evento.}
-\paso{2}{Usar los datos de tamaño: la longitud de entre 30 y 50 km y la profundidad de entre 10 y 12 km describen el tamaño de la falla y permiten buscar fallas comparables.}
-\paso{3}{Identificar el dato que responde la pregunta: los sismos registrados en fallas similares, con longitud y profundidad parecidas, muestran qué magnitudes son posibles para ese tipo de falla.}
-\paso{4}{Evaluar las demás opciones: dos años de registros son un intervalo muy corto para conocer los sismos grandes; la cantidad de fallas similares no informa la magnitud; y la clasificación por desplazamiento describe el movimiento, pero no la energía liberada. Por lo tanto, la alternativa correcta es la A.}
-}
-\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 31}
-\begin{notagris}\scriptsize \textbf{Si marcaste C:} Fallas similares en la placa Sudamericana: su cantidad no informa sobre la magnitud que puede generar la falla de San Ramón.\end{notagris}
-\end{ajustar}
-\end{frame}
-
-\begin{frame}{Ejercicio 2 · Tectónica de placas y sismos}
 \framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 31}
 \begin{ajustar}[0.7\textheight]
 {\small En un océano que no presenta fosas oceánicas, pero que sí tiene una dorsal oceánica que pasa por su centro, existen dos islas que se ubican en sus costas opuestas. Al respecto, ¿cuál de las siguientes opciones es una predicción consistente con lo planteado por la Teoría de Tectónica de Placas?}
@@ -1074,9 +1253,11 @@ Divergente: se separan; dorsales y nuevo suelo oceánico. Transformante: se desl
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Solución 2 · Tectónica de placas y sismos}
+\begin{frame}{Solución 1 · Tectónica de placas y sismos}
 \framesubtitle{En una dorsal oceánica el fondo se expande y las placas a ambos lados se alejan; por eso las islas ubicadas en costas opuestas deberían separarse.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{La dorsal oceánica es un límite divergente: en ella asciende magma desde el manto, se solidifica y forma corteza oceánica nueva.}
 \paso{2}{Esa corteza nueva empuja hacia afuera a ambos lados de la dorsal, así que las placas se separan de forma continua.}
@@ -1086,6 +1267,35 @@ Divergente: se separan; dorsales y nuevo suelo oceánico. Transformante: se desl
 }
 \respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 31}
 \begin{notagris}\scriptsize \textbf{Si marcaste D:} Misma posición: contradice el movimiento de placas que indica la dorsal; confunde la ausencia de fosas con ausencia de movimiento.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqDivergente}{esquema: borde divergente}
+\end{columns}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Tectónica de placas y sismos}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Física, pregunta 69}
+\begin{center}\recorte{img/ciencias-fisica-2026-invierno/q69.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Tectónica de placas y sismos}
+\framesubtitle{Un límite convergente se identifica midiendo, durante un tiempo largo, la distancia entre una estación de cada placa cerca de la frontera: si la distancia disminuye, las placas se acercan.}
+\begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
+{\footnotesize
+\paso{1}{En un límite convergente las placas se acercan entre sí. Para detectarlo hay que medir la distancia entre una estación de P y una de Q, cerca de la frontera, para que el acercamiento sea visible.}
+\paso{2}{La pareja 4 y 3 cumple esa condición: la estación 4 pertenece a P, la estación 3 pertenece a Q y ambas están junto a la frontera.}
+\paso{3}{Las parejas 5 y 4 (ambas en P) y 1 y 2 (ambas en Q) miden el movimiento dentro de una misma placa, así que no informan sobre el acercamiento entre P y Q.}
+\paso{4}{Los movimientos de las placas tectónicas son del orden de centímetros por año. Una medición cada minuto durante 24 horas no alcanza a mostrar un cambio apreciable; hace falta registrar durante una década.}
+\paso{5}{Si la distancia entre 4 y 3 disminuye durante la década, las placas se están acercando, que es el criterio de un límite convergente. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Ciencias Física, pregunta 69}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Medir 1 y 2 durante una década: ambas están en Q, así que la distancia entre ellas no cambia por el acercamiento entre P y Q.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-fisica-2026-invierno/q69.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1128,29 +1338,35 @@ $R$ equivalente & $R_1+R_2$ & menor que cada una \\
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Circuitos eléctricos y consumo de energía}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Física, pregunta 62}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Física, pregunta 78}
 \begin{ajustar}[0.7\textheight]
-{\small Un guardabosques quiere estudiar el comportamiento de un grupo de chinchillas, que son animales nocturnos, por lo que decide utilizar una cámara infrarroja. ¿Qué característica de la cámara permite que se utilice durante la noche?}
+{\small Un estudiante realiza una maqueta de una habitación para modelar un circuito domiciliario básico. En la maqueta debe instalar dos enchufes y dos ampolletas. A partir de esta situación, ¿cuál de las siguientes configuraciones permite que el estudiante modele el circuito correctamente?}
 \vspace{0.4em}
-\alternativa{A}{Su tamaño compacto.}
-\alternativa{B}{El rango de radiación que capta.}
-\alternativa{C}{El amplio campo visual que tiene.}
-\alternativa{D}{Su resistencia a diferentes condiciones climáticas.}
+\alternativa{A}{Un único circuito con dos ampolletas y dos enchufes conectados en serie a una pila.}
+\alternativa{B}{Un único circuito con dos ampolletas y dos enchufes conectados en paralelo a una pila.}
+\alternativa{C}{Un circuito que conecte dos ampolletas en serie a una pila y otro circuito que conecte dos enchufes en paralelo a una pila.}
+\alternativa{D}{Un circuito que conecte dos ampolletas en paralelo a una pila y otro circuito que conecte dos enchufes en serie a una pila.}
 \end{ajustar}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 1 · Circuitos eléctricos y consumo de energía}
-\framesubtitle{La cámara infrarroja capta radiación infrarroja, que emiten los cuerpos aunque no haya luz visible; por eso su rango de radiación le permite funcionar de noche.}
+\framesubtitle{En una instalación domiciliaria los artefactos se conectan en paralelo a la misma fuente, de modo que cada uno recibe el mismo voltaje y puede encenderse o apagarse de forma independiente.}
 \begin{ajustar}[0.64\textheight]
-{\small
-\paso{1}{Las chinchillas están activas de noche, cuando hay poca o nula luz visible; el guardabosques necesita detectarlas sin iluminarlas.}
-\paso{2}{Todos los cuerpos con temperatura emiten radiación infrarroja. La cámara está diseñada para captar ese rango de radiación, y eso no depende de que haya luz visible.}
-\paso{3}{El tamaño compacto facilita transportar la cámara, el campo visual determina cuánta área se abarca y la resistencia climática permite usarla a la intemperie. Ninguna de ellas explica que funcione en la oscuridad.}
-\paso{4}{La característica que permite su uso nocturno es el rango de radiación que capta. Por lo tanto, la alternativa correcta es la B.}
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
+{\footnotesize
+\paso{1}{En un circuito en serie, la corriente es la misma en todos los elementos y el voltaje de la fuente se reparte entre ellos. Si se corta un elemento, todos los demás dejan de funcionar.}
+\paso{2}{En un circuito en paralelo, cada elemento queda conectado directamente a los dos terminales de la fuente, así que tiene la misma diferencia de potencial que la red. Cada rama puede abrirse o cerrarse por separado.}
+\paso{3}{Una instalación domiciliaria necesita que cada ampolleta y cada enchufe funcione de forma independiente y a voltaje completo; por eso se conectan en paralelo.}
+\paso{4}{Entonces, la maqueta debe ser un único circuito con ampolletas y enchufes conectados en paralelo a la fuente. Esto corresponde a la alternativa B, la única que cumple ambas condiciones.}
+\paso{5}{Por lo tanto, la alternativa correcta es la B.}
 }
-\respuesta{B}{PAES Invierno 2026, Ciencias Física, pregunta 62}
-\begin{notagris}\scriptsize \textbf{Si marcaste D:} La resistencia climática permite usar la cámara a la intemperie, pero no explica que funcione de noche.\end{notagris}
+\respuesta{B}{PAES Invierno 2026, Ciencias Física, pregunta 78}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Todo en serie: cada ampolleta recibe solo una parte del voltaje y se apaga al desconectar un enchufe; no modela un circuito domiciliario.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqSerie\par\medskip\esqParalelo}{esquema: circuitos en serie y en paralelo}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1163,6 +1379,8 @@ $R$ equivalente & $R_1+R_2$ & menor que cada una \\
 \begin{frame}{Solución 2 · Circuitos eléctricos y consumo de energía}
 \framesubtitle{En la analogía, el área de la sección del tubo corresponde a su radio; para estudiar su efecto se cambia el radio y se mide la rapidez con que se llena el contenedor 2, manteniendo el resto del montaje igual.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Asociar las partes de la analogía: el agua que fluye corresponde a la corriente, el tubo corresponde al material conductor y la diferencia de altura entre los contenedores corresponde a la diferencia de potencial. El área de la sección del tubo corresponde a su radio.}
 \paso{2}{Identificar la variable que se quiere estudiar: el área de la sección transversal, que en la analogía se cambia variando el radio del tubo.}
@@ -1171,6 +1389,9 @@ $R$ equivalente & $R_1+R_2$ & menor que cada una \\
 }
 \respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 36}
 \begin{notagris}\scriptsize \textbf{Si marcaste A:} Largo del tubo y temperatura: ni el área ni el flujo se estudian así, y la temperatura no aparece en la analogía.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2027-invierno/q36.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1210,6 +1431,8 @@ Modelos: Dalton $\rightarrow$ Thomson $\rightarrow$ Rutherford $\rightarrow$ Boh
 \begin{frame}{Solución 1 · Materia y estructura atómica}
 \framesubtitle{En un átomo neutro, el número atómico $Z$ es igual al número de protones del núcleo, que en la representación del profesor son 9.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\small
 \paso{1}{El número atómico $Z$ es la cantidad de protones del núcleo, que la figura indica como 9 p.}
 \paso{2}{Como el átomo es neutro, su número de electrones también es 9: 2 en la capa interna y 7 en la externa, lo que concuerda con los protones.}
@@ -1218,6 +1441,9 @@ Modelos: Dalton $\rightarrow$ Thomson $\rightarrow$ Rutherford $\rightarrow$ Boh
 }
 \respuesta{A}{PAES Invierno 2026, Ciencias Química, pregunta 62}
 \begin{notagris}\scriptsize \textbf{Si marcaste C:} Es el número másico ($9 + 10 = 19$), que suma protones y neutrones; no corresponde al número atómico.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-quimica-2027-invierno/q62.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1230,6 +1456,8 @@ Modelos: Dalton $\rightarrow$ Thomson $\rightarrow$ Rutherford $\rightarrow$ Boh
 \begin{frame}{Solución 2 · Materia y estructura atómica}
 \framesubtitle{La carga neta de una especie es el número de protones menos el de electrones; si hay más electrones que protones, la especie es un anión, y así resulta que X es un anión.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\small
 \paso{1}{Calcular la carga neta de cada especie como número de protones menos número de electrones. Los neutrones no tienen carga y no intervienen. R: $11 - 10 = +1$; J: $13 - 13 = 0$; X: $16 - 17 = -1$; Z: $17 - 18 = -1$.}
 \paso{2}{Interpretar cada resultado: R tiene carga positiva, por lo que es un catión; J es neutra, es decir, un átomo neutro; X y Z tienen carga negativa, por lo que son aniones.}
@@ -1238,6 +1466,9 @@ Modelos: Dalton $\rightarrow$ Thomson $\rightarrow$ Rutherford $\rightarrow$ Boh
 }
 \respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 40}
 \begin{notagris}\scriptsize \textbf{Si marcaste B:} Especie J como catión: tiene 13 protones y 13 electrones, por lo que es neutra.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqAtomo}{esquema: estructura del átomo}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1265,49 +1496,60 @@ Alcohol: $\mathrm{R{-}OH}$. Aldehído: $\mathrm{R{-}CHO}$. Cetona: $\mathrm{R{-}
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Química orgánica}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 42}
-\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q42.png}\end{center}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 44}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q44.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 1 · Química orgánica}
-\framesubtitle{El grupo –CHO está en el extremo de la cadena, así que el compuesto es un aldehído y la numeración parte en ese carbono; la cadena más larga tiene 7 carbonos, con metilos en las posiciones 3 y 6.}
+\framesubtitle{Los alcanos lineales muestran que la propiedad X aumenta con el número de átomos de carbono; por lo tanto, al disminuir los carbonos, X disminuye.}
 \begin{ajustar}[0.64\textheight]
-{\small
-\paso{1}{Identificar el grupo principal: el grupo –CHO está en el extremo de la cadena, lo que corresponde a un aldehído, con sufijo -al. El carbono de ese grupo es el C1, y la numeración parte desde él.}
-\paso{2}{Identificar la cadena principal: la cadena más larga que contiene el grupo –CHO tiene 7 carbonos, de C1 a C7, es decir, una heptana.}
-\paso{3}{Ubicar los sustituyentes: un metilo está en C3 y otro en C6. El carbono 6 tiene un metilo y el carbono 7 cierra la cadena, por lo que el extremo ramificado forma parte de la cadena principal.}
-\paso{4}{Formar el nombre: los sustituyentes con localizadores 3 y 6 dan 3,6-dimetilheptanal. Por lo tanto, la alternativa correcta es la A.}
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
+{\footnotesize
+\paso{1}{Identificar la serie: los compuestos son lineales, no ramificados y con solo enlaces simples C–C. Por lo tanto, la única variable que cambia entre ellos es el número de átomos de carbono.}
+\paso{2}{Leer el gráfico: con 3 carbonos $X \approx -40$; con 4, $X \approx 0$; con 5, $X \approx 37$; con 6, $X \approx 70$; con 7, $X \approx 100$; con 8, $X \approx 125$; y con 9, $X \approx 150$.}
+\paso{3}{Describir la tendencia: $X$ aumenta de forma continua a medida que aumenta el número de carbonos. Por lo tanto, cuando el número de carbonos disminuye, $X$ también disminuye.}
+\paso{4}{Evaluar las opciones: la A afirma que $X$ es negativa al aumentar los carbonos, pero ya es positiva desde 5 carbonos; la B habla de la temperatura, que se mantiene fija en el estudio; la D supone que $X$ se estabiliza, pero sigue creciendo. Por lo tanto, la alternativa correcta es la C.}
 }
-\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 42}
-\begin{notagris}\scriptsize \textbf{Si marcaste D:} 3-butil-3-butanona: combina un sufijo de cetona con un sustituyente y una cadena que no corresponden a la estructura.\end{notagris}
+\respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 44}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Propiedad constante sobre 8 carbonos: X sigue aumentando hasta cerca de 150 con 9 carbonos.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2027-invierno/q44.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
 \begin{frame}{Ejercicio 2 · Química orgánica}
-\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Química, pregunta 69}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 41}
 \begin{ajustar}[0.7\textheight]
-{\small El triclorometano, conocido tradicionalmente como cloroformo, es un compuesto orgánico usado antiguamente como anestésico por inhalación y como insecticida. Sin embargo, dada su toxicidad debió ser reemplazado por otras sustancias, aunque en la actualidad sigue teniendo otros usos, por ejemplo, como solvente en varios procesos industriales. Respecto del cloroformo, ¿cuál es su fórmula empírica?}
+{\small Una estudiante de educación media quiere saber si existe una relación entre la hibridación del átomo de carbono (C) en un compuesto orgánico y su temperatura de ebullición. Para ello, se controlaron dos probables efectos: la longitud de la cadena de C y la presencia de elementos distintos a C e hidrógeno (H). A partir de lo anterior, ¿cuál de los siguientes procedimientos resumidos es adecuado para que la estudiante logre su objetivo?}
 \vspace{0.4em}
-\alternativa{A}{C\textsuperscript{2}HCl\textsuperscript{3}}
-\alternativa{B}{CHCl\textsuperscript{3}}
-\alternativa{C}{CH\textsuperscript{3}Cl}
-\alternativa{D}{C\textsuperscript{2}H\textsuperscript{3}Cl\textsuperscript{3}}
+\alternativa{A}{Determinar la temperatura de ebullición de tres hidrocarburos formados por una cadena de dos átomos de C, uno que presente un enlace simple, otro un enlace doble y otro un enlace triple.}
+\alternativa{B}{Determinar la temperatura de ebullición de tres hidrocarburos, uno formado por dos átomos de C y enlaces simples, otro por tres átomos de C y un enlace doble, y otro por cuatro átomos de C y un enlace triple.}
+\alternativa{C}{Determinar la temperatura de ebullición de un hidrocarburo formado únicamente por átomos de C e H, y que presente por lo menos un enlace doble y un enlace triple.}
+\alternativa{D}{Determinar la temperatura de ebullición de tres hidrocarburos, uno que presente solo átomos de C con hibridación sp\textsuperscript{2} y otro que presente un átomo de C con hibridación sp.}
 \end{ajustar}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 2 · Química orgánica}
-\framesubtitle{La fórmula empírica da la proporción mínima de átomos; en el cloroformo, CHCl3, los subíndices 1, 1 y 3 no tienen divisor común, así que la fórmula empírica coincide con la molecular.}
+\framesubtitle{Para aislar el efecto de la hibridación hay que mantener fijo el número de carbonos y variar solo el tipo de enlace; la alternativa A hace exactamente eso con hidrocarburos de dos carbonos.}
 \begin{ajustar}[0.64\textheight]
-{\small
-\paso{1}{La fórmula molecular del triclorometano es $\mathrm{CHCl_{3}}$: un carbono, un hidrógeno y tres átomos de cloro.}
-\paso{2}{La fórmula empírica se obtiene dividiendo los subíndices por su máximo común divisor. Los subíndices 1, 1 y 3 tienen máximo común divisor 1, así que no se pueden simplificar.}
-\paso{3}{Por lo tanto, la fórmula empírica coincide con la molecular: $\mathrm{CHCl_{3}}$.}
-\paso{4}{Las opciones A ($\mathrm{C_{2}HCl_{3}}$) y D ($\mathrm{C_{2}H_{3}Cl_{3}}$) tienen dos carbonos y no corresponden a la proporción del cloroformo; la C ($\mathrm{CH_{3}Cl}$) tiene un solo cloro. Por lo tanto, la alternativa correcta es la B.}
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
+{\footnotesize
+\paso{1}{Las variables a controlar son la longitud de la cadena de carbono y la presencia de elementos distintos de C e H. La hibridación es la variable que se quiere estudiar y la temperatura de ebullición, la que se mide.}
+\paso{2}{Con dos átomos de carbono se forman tres hidrocarburos: el etano (solo enlace simple, carbonos con hibridación $sp^{3}$), el eteno (un enlace doble, $sp^{2}$) y el etino (un enlace triple, $sp$).}
+\paso{3}{Los tres son hidrocarburos, es decir, solo tienen C e H, y tienen la misma longitud de cadena. Así, una diferencia en la temperatura de ebullición puede atribuirse al tipo de enlace y a la hibridación.}
+\paso{4}{Las demás alternativas no aíslan la hibridación: B cambia el largo de la cadena junto con el tipo de enlace; C estudia un único compuesto; y D no controla la longitud de la cadena.}
+\paso{5}{Por lo tanto, la alternativa correcta es la A.}
 }
-\respuesta{B}{PAES Invierno 2025, Ciencias Química, pregunta 69}
-\begin{notagris}\scriptsize \textbf{Si marcaste C:} $\mathrm{CH_{3}Cl}$ es el clorometano, con un solo cloro; el error es confundir el número de cloros del compuesto.\end{notagris}
+\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 41}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Un único hidrocarburo: sin comparación no se puede establecer relación alguna con la hibridación.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqCarbono}{esquema: hibridación del carbono}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1337,29 +1579,28 @@ Leyes ponderales: conservación de la masa (Lavoisier), proporciones definidas (
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Reacciones químicas y estequiometría}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 76}
-\begin{ajustar}[0.7\textheight]
-{\small Si 20 gg de NNNNNNNN (masa molar = 40 gg/mmmmmm) se disuelven en 500 gg de agua, ¿cuál de las siguientes opciones presenta el valor correcto de la concentración molal de la solución?}
-\vspace{0.4em}
-\alternativa{A}{5,0 mmmmmm/kkkk}
-\alternativa{B}{4,0 mmmmmm/kkkk}
-\alternativa{C}{1,0 mmmmmm/kkkk}
-\alternativa{D}{0,5 mmmmmm/kkkk}
-\end{ajustar}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 72}
+\begin{center}\recorte{img/ciencias-quimica-2027-invierno/q72.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 1 · Reacciones químicas y estequiometría}
-\framesubtitle{La molalidad es moles de soluto por kilogramo de disolvente (agua), no por kilogramo de solución: 0,5 mol en 0,5 kg de agua da $1{,}0\ \mathrm{mol/kg}$.}
+\framesubtitle{Con la masa de $\mathrm{P_2O_5}$ se obtienen sus moles, y la proporción 1 : 2 de la ecuación entrega los moles de $\mathrm{P_4}$ que reaccionaron.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\small
-\paso{1}{Moles de soluto: $n = \frac{20\ \mathrm{g}}{40\ \mathrm{g/mol}} = 0{,}5\ \mathrm{mol}$.}
-\paso{2}{La molalidad se refiere al disolvente, que es el agua: 500 g, es decir, 0,5 kg.}
-\paso{3}{Molalidad: $m = \frac{0{,}5\ \mathrm{mol}}{0{,}5\ \mathrm{kg}} = 1{,}0\ \mathrm{mol/kg}$.}
-\paso{4}{Verificación: la masa de la solución sería 520 g, pero la molalidad no usa esa masa, porque se define por kilogramo de disolvente. Por lo tanto, la alternativa correcta es la C.}
+\paso{1}{Datos: la masa de $\mathrm{P_2O_5}$ es 284 g y su masa molar es 142 g/mol.}
+\paso{2}{Moles de $\mathrm{P_2O_5}$: $n = \frac{284\ \mathrm{g}}{142\ \mathrm{g/mol}} = 2{,}0\ \mathrm{mol}$.}
+\paso{3}{Según la ecuación, 1 mol de $\mathrm{P_4}$ produce 2 mol de $\mathrm{P_2O_5}$, es decir, la proporción es 1 : 2.}
+\paso{4}{Entonces, $n(\mathrm{P_4}) = 2{,}0\ \mathrm{mol\,P_2O_5} \cdot \frac{1\ \mathrm{mol\,P_4}}{2\ \mathrm{mol\,P_2O_5}} = 1{,}0\ \mathrm{mol}$.}
+\paso{5}{Comprobación: 1,0 mol de $\mathrm{P_4}$ produce 2,0 mol de $\mathrm{P_2O_5}$, es decir, $2{,}0 \cdot 142 = 284\ \mathrm{g}$, lo que coincide con el dato. Por lo tanto, la alternativa correcta es la B.}
 }
-\respuesta{C}{PAES Invierno 2026, Ciencias Química, pregunta 76}
-\begin{notagris}\scriptsize \textbf{Si marcaste A:} 5,0 mol/kg: divide los 0,5 mol entre 0,1 kg, como si el agua fuera de 100 g en lugar de 500 g.\end{notagris}
+\respuesta{B}{PAES Invierno 2026, Ciencias Química, pregunta 72}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} 2,0 mol: copia directamente los moles de $\mathrm{P_2O_5}$ e ignora los coeficientes de la ecuación.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqMol}{esquema: de gramos a moles y partículas}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1372,6 +1613,8 @@ Leyes ponderales: conservación de la masa (Lavoisier), proporciones definidas (
 \begin{frame}{Solución 2 · Reacciones químicas y estequiometría}
 \framesubtitle{La densidad es una propiedad intensiva: no depende de cuánta masa de aceite se use, así que la masa utilizada puede cambiar sin afectar la reproducibilidad de los resultados.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Recordar qué es la reproducibilidad: otro grupo, siguiendo el mismo procedimiento, debe obtener resultados equivalentes. Para eso, las condiciones que definen lo que se mide deben mantenerse.}
 \paso{2}{Analizar la densidad: se calcula como $\rho = \frac{m}{V}$. Es una propiedad intensiva: el cociente es el mismo si se usa más o menos masa de un mismo aceite a la misma temperatura.}
@@ -1380,6 +1623,9 @@ Leyes ponderales: conservación de la masa (Lavoisier), proporciones definidas (
 }
 \respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 43}
 \begin{notagris}\scriptsize \textbf{Si marcaste D:} Temperatura a la que se mide: la temperatura cambia la densidad en la tabla, así que modificarla altera los resultados.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-biologia-2027-invierno/q43.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1407,35 +1653,6 @@ Leyes ponderales: conservación de la masa (Lavoisier), proporciones definidas (
 \end{frame}
 
 \begin{frame}{Ejercicio 1 · Disoluciones y concentración}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 51}
-\begin{ajustar}[0.7\textheight]
-{\small ¿Cuál es la concentración de una solución acuosa que contiene 1,0 mol de cloruro de sodio (NaCl) en 500 mL de solución?}
-\vspace{0.4em}
-\alternativa{A}{2,0 mol/L}
-\alternativa{B}{1,5 mol/L}
-\alternativa{C}{1,0 mol/L}
-\alternativa{D}{0,5 mol/L}
-\alternativa{E}{0,2 mol/L}
-\end{ajustar}
-\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
-\end{frame}
-
-\begin{frame}{Solución 1 · Disoluciones y concentración}
-\framesubtitle{La concentración molar es el cociente entre moles de soluto y litros de solución, así que hay que convertir los mililitros a litros antes de dividir.}
-\begin{ajustar}[0.64\textheight]
-{\small
-\paso{1}{Se usa la definición de concentración molar: $c = \frac{n}{V}$, con $V$ expresado en litros.}
-\paso{2}{Conversión: $500\ \mathrm{mL} = 500 \cdot 10^{-3}\ \mathrm{L} = 0{,}5\ \mathrm{L}$, porque un litro tiene $1000\ \mathrm{mL}$.}
-\paso{3}{Reemplazo de valores: $c = \frac{1{,}0\ \mathrm{mol}}{0{,}5\ \mathrm{L}}$.}
-\paso{4}{Dividir por $0{,}5$ equivale a multiplicar por $2$: $c = 1{,}0 \cdot 2 = 2{,}0\ \mathrm{mol/L}$.}
-\paso{5}{Verificación: $2{,}0\ \mathrm{mol/L} \cdot 0{,}5\ \mathrm{L} = 1{,}0\ \mathrm{mol}$, que recupera los moles de soluto. Por lo tanto, la alternativa correcta es la A.}
-}
-\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 51}
-\begin{notagris}\scriptsize \textbf{Si marcaste C:} Elegir $1{,}0\ \mathrm{mol/L}$ por confundir la concentración con los moles de soluto, sin dividir por el volumen.\end{notagris}
-\end{ajustar}
-\end{frame}
-
-\begin{frame}{Ejercicio 2 · Disoluciones y concentración}
 \framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 79}
 \begin{ajustar}[0.7\textheight]
 {\small En un laboratorio se requiere preparar una solución acuosa de concentración 0,2 mmmmmm/LL, a partir de 0,5 LL de una solución acuosa de ácido sulfúrico (HH\textsuperscript{2}SSSS\textsuperscript{4}) de concentración 4,0 mmmmmm/LL. Si se considera que los volúmenes son aditivos, ¿qué volumen de agua se debe agregar para preparar la solución deseada?}
@@ -1448,9 +1665,11 @@ Leyes ponderales: conservación de la masa (Lavoisier), proporciones definidas (
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Solución 2 · Disoluciones y concentración}
+\begin{frame}{Solución 1 · Disoluciones y concentración}
 \framesubtitle{Al diluir se conservan los moles de soluto, $C_1 V_1 = C_2 V_2$; con volúmenes aditivos, el agua que se agrega es el volumen final menos el inicial, es decir, 9,5 L.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\small
 \paso{1}{Moles de ácido sulfúrico en la solución inicial: $n = 4{,}0\ \mathrm{mol/L} \cdot 0{,}5\ \mathrm{L} = 2{,}0\ \mathrm{mol}$.}
 \paso{2}{Al diluir con agua, los moles de soluto no cambian, así que $n = C_2 \cdot V_2$.}
@@ -1460,6 +1679,42 @@ Leyes ponderales: conservación de la masa (Lavoisier), proporciones definidas (
 }
 \respuesta{D}{PAES Invierno 2026, Ciencias Química, pregunta 79}
 \begin{notagris}\scriptsize \textbf{Si marcaste B:} 2,0 L: toma los 2,0 mol de soluto directamente como volumen en litros, sin dividir por la concentración final.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqDilucion}{esquema: dilución}
+\end{columns}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Disoluciones y concentración}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Química, pregunta 78}
+\begin{ajustar}[0.7\textheight]
+{\small Los estudiantes Alejandra y Benjamín realizan en el laboratorio un procedimiento de dilución de una solución de ácido clorhídrico (HCl). Para ello, toman 5 mL de HCl al 37 \% en masa y lo vierten a un matraz aforado de 25 mL de capacidad, que contiene un poco de agua destilada. Posteriormente, agregan agua destilada hasta alcanzar el aforo y agitan para homogenizar. Según lo anterior, ¿cuál es una predicción correcta respecto de la concentración que tendrá la solución diluida en comparación con la solución inicial?}
+\vspace{0.4em}
+\alternativa{A}{Será el quíntuple que la de la solución original.}
+\alternativa{B}{Será el cuádruple que la de la solución original.}
+\alternativa{C}{Será un cuarto que la de la solución original.}
+\alternativa{D}{Será un quinto que la de la solución original.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Disoluciones y concentración}
+\framesubtitle{Al diluir se conserva la cantidad de soluto: la concentración final es la inicial multiplicada por el cociente entre el volumen inicial y el volumen final del matraz, es decir, 5/25 = 1/5.}
+\begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
+{\footnotesize
+\paso{1}{En una dilución la cantidad de soluto se conserva, aunque cambie el volumen: $C_{1} \cdot V_{1} = C_{2} \cdot V_{2}$.}
+\paso{2}{El volumen inicial de la solución concentrada es 5 mL y el volumen final, el del matraz aforado, es 25 mL.}
+\paso{3}{Se despeja la concentración final: $C_{2} = C_{1} \cdot \frac{5}{25} = \frac{C_{1}}{5}$.}
+\paso{4}{El agua agregada solo cambia el volumen, no la cantidad de HCl disuelto. La solución final tiene un quinto de la concentración original, es decir, una dilución de 1 : 5.}
+\paso{5}{Las opciones que hablan de un quíntuple o de un cuádruple son falsas, porque la concentración disminuye; la de un cuarto usa un volumen incorrecto. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Ciencias Química, pregunta 78}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Cuádruple: repite el error de invertir la dilución, y además no corresponde a la razón 5/25.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqDilucion}{esquema: dilución}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
@@ -1504,6 +1759,8 @@ Observación $\rightarrow$ pregunta de investigación $\rightarrow$ hipótesis $
 \begin{frame}{Solución 1 · Habilidades de pensamiento científico}
 \framesubtitle{La variable dependiente es la fuerza horizontal máxima necesaria para iniciar el movimiento, y para medir una fuerza se usa un dinamómetro.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
 \paso{1}{Identificar las variables: la masa del objeto es la independiente, porque se cambia deliberadamente; la fuerza horizontal máxima necesaria para iniciar el movimiento es la dependiente.}
 \paso{2}{Identificar la magnitud de la variable dependiente: es una fuerza, que se expresa en newtons. Por lo tanto, el instrumento debe medir fuerzas.}
@@ -1512,27 +1769,35 @@ Observación $\rightarrow$ pregunta de investigación $\rightarrow$ hipótesis $
 }
 \respuesta{D}{PAES Invierno 2026, Ciencias Biología, pregunta 28}
 \begin{notagris}\scriptsize \textbf{Si marcaste C:} Cronómetro: mide tiempo; el procedimiento busca la fuerza máxima y no cuánto dura el movimiento.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\esqInvestigacion}{esquema: esquema de una investigación}
+\end{columns}
 \end{ajustar}
 \end{frame}
 
 \begin{frame}{Ejercicio 2 · Habilidades de pensamiento científico}
-\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 80}
-\begin{center}\recorte{img/ciencias-quimica-2027-invierno/q80.png}\end{center}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Física, pregunta 74}
+\begin{center}\recorte{img/ciencias-fisica-2027-invierno/q74.png}\end{center}
 \vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
 \begin{frame}{Solución 2 · Habilidades de pensamiento científico}
-\framesubtitle{A 20 \textdegree{}C la solubilidad es de unos 21 g por 100 g de agua: en el matraz 3, los 23,0 g añadidos superan esa cantidad en 2,0 g, que quedan como precipitado.}
+\framesubtitle{La roca de la zona de subducción llega a su límite de fusión cerca de 150 km de profundidad, así que el magma que se forma allí se origina a más de 100 km; esa es una hipótesis compatible con el gráfico.}
 \begin{ajustar}[0.64\textheight]
+\begin{columns}[T,onlytextwidth]
+\column{0.6\textwidth}
 {\footnotesize
-\paso{1}{Los matraces 1 (20,0 g) y 2 (21,0 g) no tienen precipitado: todo el sólido se disolvió, así que a 20 \textdegree{}C la solubilidad es de al menos 21,0 g por 100 g de agua.}
-\paso{2}{El matraz 3 (23,0 g) sí tiene precipitado: la solución está saturada, con una solubilidad menor que 23,0 g.}
-\paso{3}{Al evaporar el sobrenadante del matraz 3 se recuperan unos 21,0 g: esa es la cantidad disuelta, es decir, la solubilidad aproximada a 20 \textdegree{}C.}
-\paso{4}{Así, los 23,0 g añadidos superan la solubilidad en unos 2,0 g, que quedan como precipitado.}
-\paso{5}{Comparación: el matraz 1 tiene 1,0 g menos que la solubilidad (20,0 frente a 21,0), no 2,0 g, y el matraz 2 tiene aproximadamente la cantidad de la solubilidad. Por lo tanto, la alternativa correcta es la C.}
+\paso{1}{Hasta unos 100 km de profundidad, la línea continua queda muy por debajo de la segmentada: la roca está lejos de su temperatura de fusión y permanece sólida.}
+\paso{2}{Entre unos 100 km y 150 km la distancia entre las líneas se reduce, y cerca de 150 km ambas se juntan: la roca alcanza su límite de fusión.}
+\paso{3}{Como la roca solo alcanza su punto de fusión a partir de unos 150 km, el magma que se forma allí se origina a profundidades mayores que 100 km. Esto es compatible con el gráfico.}
+\paso{4}{Una buena hipótesis debe poder contrastarse con los datos: «el magma se origina a profundidades mayores a 100 km» se puede verificar con el cruce de las líneas, mientras que el gráfico no entrega datos sobre lava, erupciones, relieve o corrientes de convección.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
 }
-\respuesta{C}{PAES Invierno 2026, Ciencias Química, pregunta 80}
-\begin{notagris}\scriptsize \textbf{Si marcaste D:} La diferencia entre el matraz 1 y la solubilidad es de 1,0 g (21,0 $-$ 20,0), no de 2,0 g.\end{notagris}
+\respuesta{D}{PAES Invierno 2026, Ciencias Física, pregunta 74}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Elevación de cordilleras: el gráfico solo relaciona profundidad y temperatura; no muestra relieve ni alturas, así que no sustenta esa hipótesis.\end{notagris}
+\column{0.37\textwidth}\centering
+\esquema{\recortechico{img/ciencias-fisica-2027-invierno/q74.png}}{figura del folleto oficial}
+\end{columns}
 \end{ajustar}
 \end{frame}
 %%</CONTENIDO>%%

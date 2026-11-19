@@ -116,6 +116,11 @@
 \newcommand{\sumariotema}[2]{\noindent\hspace*{0.8em}\hyperlink{#2}{#1}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
 \newcommand{\sumarioitem}[2]{\noindent{\bfseries\hyperlink{#2}{#1}}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
 \newcommand{\portadaDetalle}{}
+\colorlet{acento}{zinc900}
+\newcommand{\esquema}[2]{{#1}\par\vspace{3pt}{\tiny\color{zinc500}#2}}
+\newcommand{\recortechico}[1]{\IfFileExists{#1}{\includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{#1}}{\fbox{\tiny recorte: #1}}}
+%%<ESQUEMAS>%%
+%%</ESQUEMAS>%%
 % ajustar: el contenido va a todo el ancho y, solo si no cabe en la altura dada, se reduce entero (una lámina).
 \newsavebox{\ajustecaja}
 \newlength{\ajustealto}
