@@ -32,6 +32,12 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
+
+# Acento de cada materia en las portadas (y en los esquemas de Ciencias). Todos oscuros: el texto blanco de la
+# banda tiene contraste ≥ 6,9:1 y en blanco y negro se imprime como un gris medio.
+ACCENTS = {"m1": "1D4E89", "m2": "4B2A7B", "lectora": "8A1C3B", "ciencias": "0E6655", "historia": "7A4310"}
+COVER_NAMES = {"m1": "Matemática M1", "m2": "Matemática M2", "lectora": "Competencia Lectora", "ciencias": "Ciencias",
+               "historia": "Historia y Ciencias Sociales"}
 PUBLIC = ROOT / "public"
 OUTPUT = ROOT / "latex" / "output"
 IMG_DIR = OUTPUT / "img"
@@ -142,7 +148,9 @@ def pick_exercises(sub_id: str, questions: list[tuple[dict, dict]], text_ok, n: 
     """Las más recientes primero; entre ellas, las de solución más breve, y de ensayos distintos."""
     pool = [(e, q) for e, q in questions if q.get("subtopic") == sub_id and _usable(e, q, text_ok)]
     # Primero las que caben cómodas en una lámina; entre ellas, las más recientes.
-    pool.sort(key=lambda eq: (len(eq[1]["explanation"]["steps"]) > 5 or solution_size(eq[1]) > 900, -eq[0]["admissionYear"], solution_size(eq[1])))
+    # En Ciencias, a igualdad de largo, primero las que tienen una figura que corresponde a su solución.
+    pool.sort(key=lambda eq: (len(eq[1]["explanation"]["steps"]) > 5 or solution_size(eq[1]) > 900, solution_figure(eq[1]) is None,
+                              -eq[0]["admissionYear"], solution_size(eq[1])))
     chosen, exams_used = [], set()
     for e, q in pool:
         if e["id"] in exams_used:
@@ -171,6 +179,9 @@ def build_deck(subject: str, temario: dict, exams: list[dict], tx, *, text_ok, d
         rf"\title[Resumen PAES: {esc(short)}]{{Resumen PAES}}",
         rf"\subtitle{{{esc(temario['nombre'])}}}",
         rf"\date{{{esc(date_text)}}}",
+        rf"\definecolor{{acento}}{{HTML}}{{{ACCENTS.get(subject, '18181B')}}}",
+        rf"\renewcommand{{\portadaMateria}}{{{esc(COVER_NAMES.get(subject, short))}}}",
+        r"\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}",
         rf"\renewcommand{{\portadaDetalle}}{{{esc(f'{len(subs)} temas del temario 2027 y {n_ex} ejercicios de pruebas oficiales del DEMRE (admisiones {years[0]} a {years[-1]})')}}}",
     ])
 
@@ -310,6 +321,53 @@ def statement_frame(s: dict, i: int, e: dict, q: dict, inline, md, esc) -> str:
         + r"\end{frame}")
 
 
+# Esquemas TikZ de latex/templates/esquemas_ciencias.tex. Se elige uno solo si el subtema coincide y la solución usa
+# exactamente ese concepto (palabras clave); si no hay coincidencia clara, la lámina queda sin esquema.
+FIGURE_RULES: list[tuple[str, str, str, str]] = [
+    # (subtema, expresión sobre la solución, macro, rótulo)
+    ("cs-electricidad", r"\ben serie\b.*\ben paralelo\b|\ben paralelo\b.*\ben serie\b", r"\esqSerie\par\medskip\esqParalelo", "circuitos en serie y en paralelo"),
+    ("cs-electricidad", r"\ben serie\b", r"\esqSerie", "circuito en serie"),
+    ("cs-electricidad", r"\ben paralelo\b", r"\esqParalelo", "circuito en paralelo"),
+    ("cs-luz", r"refracci|se refracta", r"\esqRefraccion", "refracción"),
+    ("cs-luz", r"reflexi|se refleja|espejo", r"\esqReflexion", "reflexión"),
+    ("cs-luz", r"longitud de onda|frecuencia|\\lambda", r"\esqOnda", "onda"),
+    ("cs-genetica", r"interfase|ciclo celular|\bg_?\{?[12]\b|fase \$?s\b", r"\esqCicloCelular", "ciclo celular"),
+    ("cs-ecologia", r"fotos[ií]ntesis.*respiraci[oó]n|respiraci[oó]n.*fotos[ií]ntesis", r"\esqFotosintesis", "fotosíntesis y respiración"),
+    ("cs-tierra", r"dorsal|divergente", r"\esqDivergente", "borde divergente"),
+    ("cs-tierra", r"hipocentro|epicentro|subducci", r"\esqTectonica", "subducción, hipocentro y epicentro"),
+    ("cs-universo", r"kepler|perihelio|afelio|[oó]rbita", r"\esqKepler", "órbita de Kepler"),
+    ("cs-cinematica", r"gr[aá]fico|pendiente|[aá]rea bajo", r"\esqMovimiento", "gráficos x–t y v–t"),
+    ("cs-dinamica", r"fuerza neta|\bnormal\b|\broce\b|\bpeso\b", r"\esqFuerzas", "diagrama de fuerzas"),
+    ("cs-atomo", r"protones|neutrones|n[uú]mero at[oó]mico|n[uú]mero m[aá]sico|is[oó]topo", r"\esqAtomo", "estructura del átomo"),
+    ("cs-atomo", r"tabla peri[oó]dica.*(grupo|per[ií]odo)|(grupo|per[ií]odo).*tabla peri[oó]dica", r"\esqTablaPeriodica", "grupos y períodos de la tabla periódica"),
+    ("cs-organica", r"hibridaci|\bsp\^?\{?[23]?\}?\b.*(plana|lineal|tetra)", r"\esqCarbono", "hibridación del carbono"),
+    ("cs-reacciones", r"^(?!.*(molalidad|molaridad|concentraci)).*(masa molar|6\{?,\}?02)", r"\esqMol", "de gramos a moles y partículas"),
+    ("cs-disoluciones", r"dilu|c_1|c_\{1\}", r"\esqDilucion", "dilución"),
+    ("cs-nervioso", r"arco reflejo", r"\esqNeurona\par\medskip\esqReflejo", "neurona y arco reflejo"),
+    ("cs-nervioso", r"neurona|sinapsis|ax[oó]n|dendrita", r"\esqNeurona", "neuronas separadas por sinapsis"),
+    ("cs-habilidades", r"variable (independiente|dependiente)|grupo (de )?control|hip[oó]tesis", r"\esqInvestigacion", "esquema de una investigación"),
+    ("cs-evolucion", r"selecci[oó]n natural", r"\esqSeleccion", "selección natural"),
+]
+FIGURE_WORDS = r"\b(figura|gr[aá]fico|esquema|imagen|diagrama|circuito|dibujo|tabla|montaje|ilustraci)"
+
+
+def solution_figure(q: dict) -> tuple[str, str] | None:
+    """Imagen para la lámina de solución de Ciencias: el recorte oficial si la solución remite a su figura, o un
+    esquema propio del concepto que usa la solución. Devuelve (LaTeX, pie) o None."""
+    if not q["id"].startswith("ciencias-"):
+        return None
+    expl = q["explanation"]
+    text = " ".join([expl["summary"], expl.get("planteamiento", ""), *expl["steps"]]).lower()
+    if q.get("presentation") == "snapshot" and re.search(FIGURE_WORDS, text):
+        path = snapshot_png(q["snapshot"]["src"])
+        if path:
+            return rf"\recortechico{{{path}}}", "figura del folleto oficial"
+    for sub, pattern, macro, label in FIGURE_RULES:
+        if q.get("subtopic") == sub and re.search(pattern, text, re.S):
+            return macro, f"esquema: {label}"
+    return None
+
+
 def solution_frame(s: dict, i: int, e: dict, q: dict, inline, esc) -> str:
     expl = q["explanation"]
     steps = "\n".join(rf"\paso{{{n}}}{{{inline(p)}}}" for n, p in enumerate(expl["steps"], start=1))
@@ -322,11 +380,15 @@ def solution_frame(s: dict, i: int, e: dict, q: dict, inline, esc) -> str:
     if wrong:
         k, v = min(wrong, key=lambda kv: len(kv[1]))
         note = rf"\begin{{notagris}}\scriptsize \textbf{{Si marcaste {k}:}} {inline(v)}\end{{notagris}}"
+    figure = solution_figure(q)
+    body = ("{" + font + "\n" + steps + "\n}\n"
+            + rf"\respuesta{{{q['answer']}}}{{{esc(exam_label(e))}, pregunta {q['number']}}}" + "\n" + note)
     return (
         rf"\begin{{frame}}{{Solución {i} · {esc(s['titulo'])}}}" + "\n"
         + rf"\framesubtitle{{{inline(expl['summary'])}}}" + "\n"
         + rf"\begin{{ajustar}}[{room:.2f}\textheight]" + "\n"
-        + "{" + font + "\n" + steps + "\n}\n"
-        + rf"\respuesta{{{q['answer']}}}{{{esc(exam_label(e))}, pregunta {q['number']}}}" + "\n"
-        + note + "\n" + r"\end{ajustar}" + "\n"
+        + (body if not figure else
+           r"\begin{columns}[T,onlytextwidth]" + "\n" + r"\column{0.6\textwidth}" + "\n" + body + "\n"
+           + r"\column{0.37\textwidth}\centering" + "\n" + rf"\esquema{{{figure[0]}}}{{{esc(figure[1])}}}" + "\n" + r"\end{columns}")
+        + "\n" + r"\end{ajustar}" + "\n"
         + r"\end{frame}")

@@ -245,6 +245,10 @@ def build_guide(subject: str, exams: list[dict]) -> str:
         rf"\newcommand{{\guiaAsignatura}}{{{_escape_text(temario['nombre'])}}}",
         rf"\newcommand{{\guiaDescripcion}}{{{_escape_text(temario['intro'])}}}",
         rf"\newcommand{{\guiaFuente}}{{{_escape_text(f'{len(temario['ejes'])} ejes y {n_sub} subtemas. Frecuencias calculadas sobre {len(exams)} ensayos ({official} oficiales DEMRE), {total} preguntas. Generado el {today_es()}.')}}}",
+        rf"\definecolor{{acento}}{{HTML}}{{{latex_deck.ACCENTS.get(subject, '18181B')}}}",
+        rf"\renewcommand{{\portadaMateria}}{{{_escape_text(latex_deck.COVER_NAMES.get(subject, temario['nombre']))}}}",
+        r"\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}",
+        rf"\renewcommand{{\portadaDetalle}}{{{_escape_text(f'{len(temario['ejes'])} ejes y {n_sub} subtemas del temario 2027, con teoría, método, trampas frecuentes y ejemplos resueltos. {today_es()}.')}}}",
     ])
     body = [r"\section*{Cómo usar este compendio}",
             "Cada subtema sigue el mismo orden: teoría, recuadro con las fórmulas, leyes o mecanismos centrales, "
@@ -290,6 +294,9 @@ def build_deck(subject: str, exams: list[dict]) -> tuple[str, dict]:
     tx = {"inline": inline, "md": md_to_latex, "esc": _escape_text, "table": table_latex}
     meta, body, info = latex_deck.build_deck(subject, temario, exams, tx, text_ok=text_ok(subject), date_text=today_es())
     out = replace_block(template, "META", meta)
+    # Los esquemas TikZ de Ciencias van solo en su presentación: las demás no los usan.
+    esquemas = (TEMPLATES / "esquemas_ciencias.tex").read_text(encoding="utf-8") if subject == "ciencias" else ""
+    out = replace_block(out, "ESQUEMAS", esquemas)
     return replace_block(out, "CONTENIDO", body), info
 
 

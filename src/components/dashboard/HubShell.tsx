@@ -100,7 +100,7 @@ export function HubShell({ onTrain, onDaily, onQuote, onEditName }: HubShellProp
       return
     }
     change('')
-    setFeedback(`mmm${userName ? `, ${userName}` : ''}, «${text}» no me suena. abre [ comandos ] para ver todo lo que sé hacer.`)
+    setFeedback(`mmm${userName ? `, ${userName}` : ''}, «${text}» no me suena.`)
   }
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -181,7 +181,7 @@ export function HubShell({ onTrain, onDaily, onQuote, onEditName }: HubShellProp
             <span className="hidden @md:inline">{userName ?? 'paes'}@studio </span>
             <span className="text-accent">❯</span>
           </span>
-          <span className="sr-only">Escribe un comando (es opcional)</span>
+          <span className="sr-only">comando</span>
           <input
             ref={inputRef}
             type="text"
