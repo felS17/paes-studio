@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import licenseText from '../../../LICENSE?raw'
 
 const LINK = 'rounded underline-offset-4 transition-colors hover:text-zinc-900 hover:underline dark:hover:text-zinc-100'
 
-/** Autoría y contacto en una sola línea; es también el pie del Inicio. */
+/** Autoría, contacto y ayuda en una sola línea; es también el pie del Inicio. */
 export function ContactLine() {
   return (
     <p className="flex flex-wrap items-center gap-x-2 font-mono text-[12px] text-zinc-500 dark:text-zinc-400">
@@ -13,6 +14,8 @@ export function ContactLine() {
       <a className={LINK} href="https://github.com/felS17" target="_blank" rel="noopener noreferrer" aria-label="GitHub de felS (abre en una pestaña nueva)">github</a>
       <span aria-hidden>·</span>
       <a className={LINK} href="https://github.com/felS17/paes-studio/issues" target="_blank" rel="noopener noreferrer" aria-label="Enviar una sugerencia o reportar un error (abre en una pestaña nueva)">sugerencias</a>
+      <span aria-hidden>·</span>
+      <Link className={LINK} to="/ayuda" title="Comandos del inicio y atajos de teclado">ayuda</Link>
     </p>
   )
 }

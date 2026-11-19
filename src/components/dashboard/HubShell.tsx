@@ -100,7 +100,7 @@ export function HubShell({ onTrain, onDaily, onQuote, onEditName }: HubShellProp
       return
     }
     change('')
-    setFeedback(`mmm${userName ? `, ${userName}` : ''}, «${text}» no me suena. escribe /help y te muestro todo lo que sé hacer.`)
+    setFeedback(`mmm${userName ? `, ${userName}` : ''}, «${text}» no me suena. abre [ comandos ] para ver todo lo que sé hacer.`)
   }
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -172,9 +172,6 @@ export function HubShell({ onTrain, onDaily, onQuote, onEditName }: HubShellProp
               </li>
             ))}
           </ul>
-          <p aria-hidden className="hidden border-t border-zinc-200/80 px-3 py-1.5 text-[11px] text-zinc-500 @md:block dark:border-zinc-800/80 dark:text-zinc-400">
-            ↑↓ moverte, enter abrir, tab completar, esc cerrar
-          </p>
         </div>
       )}
 
@@ -198,7 +195,6 @@ export function HubShell({ onTrain, onDaily, onQuote, onEditName }: HubShellProp
             onKeyDown={onKeyDown}
             onFocus={() => setDismissed(false)}
             onBlur={() => setDismissed(true)}
-            placeholder="escribe / para ver comandos, o presiona enter para entrenar 10 rápidas..."
             autoComplete="off"
             autoCapitalize="none"
             spellCheck={false}
@@ -213,7 +209,7 @@ export function HubShell({ onTrain, onDaily, onQuote, onEditName }: HubShellProp
           onClick={toggleMenu}
           className="shrink-0 rounded-sm px-1 text-[12px] whitespace-nowrap text-zinc-500 transition-colors hover:text-accent dark:text-zinc-400"
         >
-          [ / comandos ]
+          [ comandos ]
         </button>
       </div>
       <p role="status" className="px-2 text-[12.5px] leading-relaxed text-zinc-600 not-empty:mt-1 dark:text-zinc-300">{feedback}</p>

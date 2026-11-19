@@ -34,6 +34,7 @@ export function useCrumbs(): Crumb[] {
   }
   if (root === 'plan') return [...section('/'), { label: 'plan de repaso' }]
   if (root === 'dia-prueba') return [...section('/'), { label: 'día de la prueba' }]
+  if (root === 'ayuda') return [...section('/'), { label: 'ayuda' }]
   const base = section(`/${root}`)
   if (!base.length) return [{ label: 'página no encontrada' }]
   if (root === 'flashcards' && id) return [...base, { label: DECKS.find((d) => d.id === id)?.title ?? 'mazo' }]
