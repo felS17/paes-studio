@@ -9,7 +9,8 @@ Fuentes:
 
 Salida (latex/output/):
   * guia_<asignatura>.tex   compendio completo: recorre cada eje y subtema del temario.
-  * beamer_<asignatura>.tex presentación de repaso: por subtema, teoría, desafío y solución.
+  * beamer_<asignatura>.tex resumen en láminas (latex_deck.py): qué se repite en las pruebas oficiales y, por
+                            tema, teoría y ejercicios oficiales del DEMRE con su solución.
 
 Uso:
     python3 scripts/pipeline/generate_latex_summary.py                 # todas las asignaturas
@@ -31,6 +32,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from temario import SUBJECTS, all_subtopics, load  # noqa: E402
+import latex_deck  # noqa: E402
 
 
 def vigente(temario: dict) -> dict:
@@ -61,7 +63,13 @@ TEXT_UNICODE = {
 MATH_UNICODE = {"°": r"^{\circ}", "−": "-", "·": r"\cdot ", "×": r"\times ", "≤": r"\le ", "≥": r"\ge "}
 
 
+def _plain_math_letters(text: str) -> str:
+    """Letras matemáticas Unicode (𝑂, 𝐱, …, U+1D400–U+1D7FF) a su letra normal: pdfLaTeX no las tiene."""
+    return "".join(unicodedata.normalize("NFKC", c) if 0x1D400 <= ord(c) <= 0x1D7FF else c for c in text)
+
+
 def _escape_text(text: str) -> str:
+    text = _plain_math_letters(text)
     text = text.replace(r"\$", "\x00D\x00").replace("\\\\", "\x00B\x00")
     text = text.replace("\\", r"\textbackslash{}")
     for ch, rep in (("&", r"\&"), ("%", r"\%"), ("#", r"\#"), ("_", r"\_"), ("{", r"\{"), ("}", r"\}"),
@@ -74,7 +82,7 @@ def _escape_text(text: str) -> str:
 
 
 def _fix_math(tex: str) -> str:
-    return "".join(MATH_UNICODE.get(ch, ch) for ch in tex.strip())
+    return "".join(MATH_UNICODE.get(ch, ch) for ch in _plain_math_letters(tex.strip()))
 
 
 def display_math(tex: str) -> str:
@@ -265,78 +273,24 @@ def build_guide(subject: str, exams: list[dict]) -> str:
 # ───────────────────────────── presentación Beamer ─────────────────────────────
 
 
-def build_deck(subject: str, exams: list[dict]) -> str:
-    temario = vigente(load(subject))
-    ranked, total = axis_stats(exams)
-    template = (TEMPLATES / "beamer_repaso_paes.tex").read_text(encoding="utf-8")
-    short = temario["nombre"].split(" (")[0]
-    meta = "\n".join([
-        rf"\title[Repaso PAES: {_escape_text(short)}]{{Repaso PAES}}",
-        rf"\subtitle{{{_escape_text(temario['nombre'])}}}",
-        rf"\date{{{_escape_text(today_es())}}}",
-    ])
-    frames = [
-        r"\begin{frame}{Contenidos}",
-        r"  \framesubtitle{" + _escape_text(f"{len(temario['ejes'])} ejes, en el orden del temario") + "}",
-        r"  \begin{enumerate}\small",
-    ]
-    for e in temario["ejes"]:
-        frames.append(rf"    \item \textbf{{{_escape_text(e['nombre'])}}}: " + ", ".join(_escape_text(s["titulo"]) for s in e["subtemas"]))
-    frames += [r"  \end{enumerate}", r"\end{frame}",
-               r"\begin{frame}{Qué evalúa la prueba}",
-               rf"  \framesubtitle{{Distribución por eje en {len(exams)} ensayos ({total} preguntas)}}",
-               r"  \vspace{0.8em}"]
-    frames += [rf"  \ejebarra{{{_escape_text(a)}}}{{{sh:.3f}}}{{{sh * 100:.0f} \%}}" for a, _, sh in ranked]
-    frames.append(r"\end{frame}")
+def text_ok(subject: str):
+    """Preguntas en texto que caben en una lámina: sin figuras incrustadas ni texto de lectura asociado."""
+    def ok(exam: dict, q: dict) -> bool:
+        if "![" in q["stem"] or any("![" in o["text"] for o in q["options"]):
+            return False
+        if q.get("passageId") and not (subject == "lectora" and len(" ".join(latex_deck.key_quotes(q))) >= 30):
+            return False  # sin el texto completo, solo se puede si la solución cita el fragmento clave
+        return len(q["stem"]) <= 700
+    return ok
 
-    for e in temario["ejes"]:
-        frames.append(rf"\section{{{_escape_text(e['nombre'])}}}")
-        frames.append(
-            r"\begin{frame}[plain]" + "\n" + r"  \vfill" + "\n"
-            + rf"  {{\color{{zinc500}}\small Eje}}\par\vspace{{0.3em}}{{\Large\bfseries {_escape_text(e['nombre'])}}}\par\vspace{{0.6em}}" + "\n"
-            + rf"  {{\color{{zinc700}} {inline(e['descripcion'])}}}\par\vspace{{1em}}" + "\n"
-            + "  {\\small\\color{zinc500} " + ", ".join(_escape_text(s["titulo"]) for s in e["subtemas"]) + "}\n"
-            + r"  \vfill" + "\n" + r"\end{frame}")
-        for s in e["subtemas"]:
-            claves = "\n".join(rf"    \item {inline(c)}" for c in s["claves"])
-            extra = ""
-            if s.get("tabla"):
-                extra = "\n" + table_latex(s["tabla"]["head"], s["tabla"]["rows"], small=r"\footnotesize")
-            frames.append(
-                rf"\begin{{frame}}[allowframebreaks]{{{_escape_text(s['titulo'])}}}" + "\n"
-                + r"  \framesubtitle{Teoría esencial}" + "\n"
-                + "  \\begin{itemize}\\small\n" + claves + "\n  \\end{itemize}\n"
-                + rf"  \begin{{cajaclave}}[{_escape_text(s['caja']['titulo'])}]\footnotesize" + "\n"
-                + md_to_latex(s["caja"]["contenido"]) + "\n  \\end{cajaclave}" + extra + "\n"
-                + r"\end{frame}")
-            if s.get("linea") and not s.get("tabla"):
-                # La línea de tiempo va en su propia lámina: junto a la teoría no cabe en 16:9.
-                frames.append(
-                    rf"\begin{{frame}}{{{_escape_text(s['titulo'])}}}" + "\n"
-                    + r"  \framesubtitle{Línea de tiempo}" + "\n"
-                    + "  \\begin{lineatiempo}\n" + "\n".join(rf"  {_escape_text(f)} & {inline(h)} \\" for f, h in s["linea"]) + "\n  \\end{lineatiempo}\n"
-                    + r"\end{frame}")
-            ex = s["ejemplo"]
-            alts = "\n".join(rf"  \alternativa{{{'ABCDE'[i]}}}{{{inline(o)}}}" for i, o in enumerate(ex["opciones"]))
-            if "|" in ex["enunciado"] or len(ex["enunciado"]) > 240 or any("frac" in o for o in ex["opciones"]):
-                # Enunciado con tabla o largo, o fracciones altas: alternativas en dos columnas para que quepan.
-                alts = ("  \\begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]\n"
-                        + alts + "\n  \\end{tcbraster}")
-            frames.append(
-                rf"\begin{{frame}}{{Desafío}}" + "\n"
-                + rf"  \framesubtitle{{{_escape_text(s['titulo'])}}}" + "\n"
-                + "  {\\small " + md_to_latex(ex["enunciado"]) + "}\n  \\vspace{0.4em}\n" + alts + "\n" + r"\end{frame}")
-            correct = ex["opciones"]["ABCDE".index(ex["clave"])]
-            steps = "\n".join(rf"  \paso{{{i}}}{{{inline(p)}}}" for i, p in enumerate(ex["pasos"], start=1))
-            traps = "\n".join(rf"    \item {inline(t)}" for t in s["trampas"][:2])
-            frames.append(
-                r"\begin{frame}[allowframebreaks]{Solución}" + "\n"
-                + rf"  \framesubtitle{{{inline(ex['analisis'])}}}" + "\n  {\\small\n" + steps + "\n  }\n"
-                + rf"  \alternativaok{{{ex['clave']}}}{{{inline(correct)}}}" + "\n"
-                + "  \\begin{cajatrampa}\\footnotesize\n    \\begin{itemize}\n" + traps + "\n    \\end{itemize}\n  \\end{cajatrampa}\n"
-                + r"\end{frame}")
+
+def build_deck(subject: str, exams: list[dict]) -> tuple[str, dict]:
+    temario = vigente(load(subject))
+    template = (TEMPLATES / "beamer_repaso_paes.tex").read_text(encoding="utf-8")
+    tx = {"inline": inline, "md": md_to_latex, "esc": _escape_text, "table": table_latex}
+    meta, body, info = latex_deck.build_deck(subject, temario, exams, tx, text_ok=text_ok(subject), date_text=today_es())
     out = replace_block(template, "META", meta)
-    return replace_block(out, "CONTENIDO", "\n\n".join(frames))
+    return replace_block(out, "CONTENIDO", body), info
 
 
 def main() -> int:
@@ -353,7 +307,7 @@ def main() -> int:
         guide = OUTPUT / f"guia_{subject}.tex"
         deck = OUTPUT / f"beamer_{subject}.tex"
         guide.write_text(build_guide(subject, exams), encoding="utf-8")
-        deck_tex = build_deck(subject, exams)
+        deck_tex, deck_info = build_deck(subject, exams)
         deck.write_text(deck_tex, encoding="utf-8")
         frames = len(re.findall(r"\\begin\{frame\}", deck_tex)) + 1  # + portada
         n_sub = sum(len(e["subtemas"]) for e in vigente(load(subject))["ejes"])
@@ -366,8 +320,9 @@ def main() -> int:
         manifest.append({**common, "kind": "guia", "file": guide.name, "examples": examples,
                          "includes": ["Teoría y definiciones", "Fórmulas, leyes y mecanismos", "Ideas clave y método",
                                       "Trampas frecuentes del DEMRE", "Ejemplos resueltos paso a paso"]})
-        manifest.append({**common, "kind": "beamer", "file": deck.name, "slides": frames,
-                         "includes": ["Teoría esencial por subtema", "Desafíos tipo PAES", "Soluciones detalladas", "Distribución por eje"]})
+        manifest.append({**common, "kind": "beamer", "file": deck.name, "slides": frames, "examples": deck_info["exercises"],
+                         "includes": ["Qué se repite en las pruebas oficiales", "Teoría y reglas prácticas por tema",
+                                      "Ejercicios oficiales del DEMRE", "Soluciones paso a paso"]})
     if not args.subject:
         (OUTPUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return 0

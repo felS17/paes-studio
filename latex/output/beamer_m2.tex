@@ -1,15 +1,21 @@
 % =============================================================================
-%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  PAES Studio: resumen en láminas (plantilla Beamer 16:9)
 %  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
 %
 %  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
 %  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Estructura: portada, cómo usar, sumario, qué se repite en las pruebas y, por
+%  tema, teoría seguida de ejercicios oficiales (enunciado y luego solución).
 %  Comandos:
 %    \alternativa{A}{texto}       alternativa
 %    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
 %    \paso{n}{texto}      paso numerado del desarrollo
 %    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
-%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%    \respuesta{C}{fuente}        respuesta oficial al pie de una solución
+%    \recorte{img/ensayo/q01.png} recorte del folleto (si falta, un recuadro)
+%    \sumarioeje{Eje}  \sumariotema{Tema}{etiqueta}   líneas del sumario
+%  Entornos: cajaclave, cajaregla (regla práctica), notagris (error común),
+%  cajatrampa, lineatiempo (filas «fecha & hecho \\»).
 %
 %  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
 %  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
@@ -26,6 +32,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage[most]{tcolorbox}
+\usepackage{graphicx}
 
 % ── Paleta Zinc ──────────────────────────────────────────────────────────────
 \definecolor{zinc950}{HTML}{09090B}
@@ -43,6 +50,7 @@
 % ── Tema mínimo ──────────────────────────────────────────────────────────────
 \usefonttheme{professionalfonts}
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{\ifnum\insertcontinuationcount>1\ (cont.)\fi}
 \setbeamercolor{background canvas}{bg=white}
 \setbeamercolor{normal text}{fg=zinc900}
 \setbeamercolor{structure}{fg=zinc900}
@@ -62,8 +70,8 @@
 }
 \makeatother
 \setbeamertemplate{footline}{%
-  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
-  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle\ifx\insertsubsection\empty\else\ · \insertsubsection\fi}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertpagenumber\,/\,\insertpresentationendpage}\hspace*{1.6cm}\par\vspace*{0.7em}%
 }
 \setbeamertemplate{title page}{%
   \vfill
@@ -71,6 +79,7 @@
   {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
   {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
   {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc700}\portadaDetalle}\par\vspace{0.4em}
   {\small\color{zinc500}\insertdate}\par
   \vfill
 }
@@ -85,7 +94,7 @@
 \newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
-\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+\newtcolorbox{cajaclave}[1][]{enhanced, before upper={\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}\setlength{\abovedisplayshortskip}{1pt}\setlength{\belowdisplayshortskip}{1pt}}, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
   borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
   fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
 \newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
@@ -94,6 +103,27 @@
 \newenvironment{lineatiempo}
   {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
   {\end{tabular}}
+\newtcolorbox{cajaregla}[1][Regla práctica]{enhanced, boxrule=0.8pt, arc=2pt, colback=white, colframe=zinc900,
+  left=7pt, right=7pt, top=3pt, bottom=4pt, before skip=4pt, after skip=4pt,
+  fonttitle=\bfseries\small, coltitle=white, colbacktitle=zinc900, titlerule=0pt, title={#1}}
+\newtcolorbox{notagris}{enhanced, frame hidden, arc=2pt, colback=zinc50, left=6pt, right=6pt, top=3pt, bottom=3pt,
+  before skip=4pt, after skip=2pt, fontupper=\color{zinc500}, borderline west={1.5pt}{0pt}{zinc300}}
+\newcommand{\respuesta}[2]{\par\vspace{0.3em}\noindent\teclaok{#1}\hspace{0.5em}{\small\bfseries respuesta oficial}\hspace{0.5em}{\scriptsize\color{zinc500}#2}\par}
+\newcommand{\recorte}[1]{\IfFileExists{#1}%
+  {\includegraphics[width=0.9\textwidth,height=0.62\textheight,keepaspectratio]{#1}}%
+  {\fbox{\parbox{0.6\textwidth}{\centering\small\color{zinc500} Recorte del folleto oficial: #1\\(se genera con generate\_latex\_summary.py)}}}}
+\newcommand{\sumarioeje}[1]{\par\vspace{0.35em}\noindent{\bfseries #1}\par\vspace{0.1em}}
+\newcommand{\sumariotema}[2]{\noindent\hspace*{0.8em}\hyperlink{#2}{#1}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\sumarioitem}[2]{\noindent{\bfseries\hyperlink{#2}{#1}}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\portadaDetalle}{}
+% ajustar: el contenido va a todo el ancho y, solo si no cabe en la altura dada, se reduce entero (una lámina).
+\newsavebox{\ajustecaja}
+\newlength{\ajustealto}
+\newenvironment{ajustar}[1][0.74\textheight]
+  {\setlength{\ajustealto}{#1}\begin{lrbox}{\ajustecaja}\begin{minipage}{\textwidth}}
+  {\end{minipage}\end{lrbox}%
+   \ifdim\dimexpr\ht\ajustecaja+\dp\ajustecaja\relax>\ajustealto
+     \resizebox*{!}{\ajustealto}{\usebox{\ajustecaja}}\else\usebox{\ajustecaja}\fi}
 \newlength{\anchobarra}
 \newcommand{\ejebarra}[3]{%
   \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
@@ -102,9 +132,10 @@
   \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
 
 %%<META>%%
-\title[Repaso PAES: Competencia Matemática 2]{Repaso PAES}
+\title[Resumen PAES: Competencia Matemática 2]{Resumen PAES}
 \subtitle{Competencia Matemática 2 (M2)}
-\date{8 de noviembre de 2026}
+\date{19 de noviembre de 2026}
+\renewcommand{\portadaDetalle}{17 temas del temario 2027 y 27 ejercicios de pruebas oficiales del DEMRE (admisiones 2024 a 2027)}
 %%</META>%%
 
 \begin{document}
@@ -114,802 +145,1081 @@
 \end{frame}
 
 %%<CONTENIDO>%%
-\begin{frame}{Contenidos}
-
-  \framesubtitle{5 ejes, en el orden del temario}
-
-  \begin{enumerate}\small
-
-    \item \textbf{Números}: Números reales y racionalización, Logaritmos, Matemática financiera
-
-    \item \textbf{Álgebra y funciones}: Sistemas de ecuaciones: tipos de solución, Función potencia, exponencial y logarítmica, Funciones trigonométricas seno y coseno, Ecuación y función cuadrática (contenido de M1)
-
-    \item \textbf{Geometría}: Homotecia de figuras planas, Razones trigonométricas, Relaciones métricas en la circunferencia, Esfera: superficie y volumen, Rectas en el plano
-
-    \item \textbf{Probabilidad y estadística}: Medidas de dispersión, Probabilidad condicional, Permutación y combinatoria, Modelos binomial y normal
-
-    \item \textbf{Habilidades transversales}: Evaluación de suficiencia de datos
-
-  \end{enumerate}
-
+\begin{frame}{Cómo usar este resumen}
+\begin{columns}[T,onlytextwidth]
+\column{0.56\textwidth}\small
+\begin{enumerate}
+\item Parte por la tabla \emph{Qué se repite en las pruebas}: dice qué temas aparecen más y cuál es su trampa habitual.
+\item Cada tema trae una lámina de teoría y luego ejercicios oficiales del DEMRE: el enunciado en una lámina y la solución en la siguiente.
+\item Resuelve el ejercicio y anota tu alternativa \emph{antes} de avanzar. Si fallaste, vuelve a la teoría.
+\item Usa el sumario para saltar al tema que necesites.
+\end{enumerate}
+\column{0.4\textwidth}
+\begin{cajaregla}[Regla práctica]\footnotesize Las cajas con borde negro son reglas para aplicar directo en la prueba.\end{cajaregla}
+\begin{notagris}\footnotesize Las notas en gris son errores comunes.\end{notagris}
+\vspace{0.4em}{\scriptsize\color{zinc500} Datos: 7 aplicaciones oficiales (invierno 2027, regular 2026, invierno 2026, regular 2025, invierno 2025, regular 2024, invierno 2024; año de admisión). Las soluciones paso a paso fueron redactadas con IA y revisadas contra la respuesta oficial del DEMRE.\par}
+\end{columns}
 \end{frame}
 
-\begin{frame}{Qué evalúa la prueba}
+\begin{frame}{Sumario}
+\begin{columns}[T,onlytextwidth]
+\column{0.47\textwidth}\footnotesize
+\sumarioitem{Qué se repite en las pruebas}{repite}
+\sumarioeje{Números}
+\sumariotema{Números reales y racionalización}{tema-m2-reales}
+\sumariotema{Logaritmos}{tema-m2-logaritmos}
+\sumariotema{Matemática financiera}{tema-m2-financiera}
+\sumarioeje{Álgebra y funciones}
+\sumariotema{Sistemas de ecuaciones: tipos de solución}{tema-m2-sistemas}
+\sumariotema{Función potencia, exponencial y logarítmica}{tema-m2-exponencial}
+\sumariotema{Funciones trigonométricas seno y coseno}{tema-m2-funciones-trig}
+\sumariotema{Ecuación y función cuadrática (contenido de M1)}{tema-m2-cuadraticas}
+\column{0.47\textwidth}\footnotesize
+\sumarioeje{Geometría}
+\sumariotema{Homotecia de figuras planas}{tema-m2-homotecia}
+\sumariotema{Razones trigonométricas}{tema-m2-trigonometria}
+\sumariotema{Relaciones métricas en la circunferencia}{tema-m2-circunferencia}
+\sumariotema{Esfera: superficie y volumen}{tema-m2-esfera}
+\sumariotema{Rectas en el plano}{tema-m2-analitica}
+\sumarioeje{Probabilidad y estadística}
+\sumariotema{Medidas de dispersión}{tema-m2-dispersion}
+\sumariotema{Probabilidad condicional}{tema-m2-condicional}
+\sumariotema{Permutación y combinatoria}{tema-m2-combinatoria}
+\sumariotema{Modelos binomial y normal}{tema-m2-modelos}
+\sumarioeje{Habilidades transversales}
+\sumariotema{Evaluación de suficiencia de datos}{tema-m2-suficiencia}
+\end{columns}
+\end{frame}
 
-  \framesubtitle{Distribución por eje en 8 ensayos (363 preguntas)}
+\begin{frame}{Qué se repite en las pruebas}
+\label{repite}
+\framesubtitle{347 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (1/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Ecuación y función cuadrática (contenido de M1) & 10{,}6 & baja & Olvidar el factor 4 en $4ac$. \\
+Números reales y racionalización & 5{,}6 & media & Amplificar solo el denominador. \\
+Medidas de dispersión & 4{,}9 & alta & Creer que sumar una constante cambia la desviación estándar. \\
+Matemática financiera & 4{,}3 & media & Usar interés simple cuando el problema dice compuesto. \\
+Evaluación de suficiencia de datos & 4{,}1 & media & Usar sin darse cuenta datos de (1) al evaluar (2). \\
+Homotecia de figuras planas & 3{,}9 & alta & Multiplicar el área por $k$ en vez de $k^2$. \\
+\bottomrule\end{tabular}\end{ajustar}
+\end{frame}
 
-  \vspace{0.8em}
+\begin{frame}{Qué se repite en las pruebas}
+\framesubtitle{347 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (2/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Rectas en el plano & 3{,}6 & baja & Solo invertir o solo cambiar el signo de la pendiente para la perpendicular. \\
+Probabilidad condicional & 3{,}4 & media & Invertir la condición. \\
+Razones trigonométricas & 2{,}9 & alta & Usar el coseno cuando corresponde el seno (o viceversa). \\
+Logaritmos & 2{,}6 & baja & Distribuir el logaritmo sobre una suma. \\
+Sistemas de ecuaciones: tipos de solución & 1{,}4 & alta & Concluir «sin solución» solo porque las pendientes son iguales, sin revisar si las rectas coinciden. \\
+Relaciones métricas en la circunferencia & 0{,}7 & baja & Tomar el ángulo inscrito igual al del centro. \\
+\bottomrule\end{tabular}\end{ajustar}
+\end{frame}
 
-  \ejebarra{Álgebra y funciones}{0.284}{28 \%}
-
-  \ejebarra{Números}{0.264}{26 \%}
-
-  \ejebarra{Geometría}{0.251}{25 \%}
-
-  \ejebarra{Probabilidad y estadística}{0.201}{20 \%}
-
+\begin{frame}{Qué se repite en las pruebas}
+\framesubtitle{347 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (3/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Función potencia, exponencial y logarítmica & 0{,}6 & s/d & Contar mal los períodos (incluir el instante inicial). \\
+Esfera: superficie y volumen & 0{,}3 & alta & Usar el diámetro como radio. \\
+Funciones trigonométricas seno y coseno & 0{,}3 & media & Confundir la amplitud con la distancia entre máximo y mínimo (que es el doble). \\
+Permutación y combinatoria & 0{,}3 & baja & Usar combinaciones cuando los cargos son distintos. \\
+Modelos binomial y normal & 0{,}1 & s/d & Olvidar el coeficiente binomial. \\
+\bottomrule\end{tabular}\end{ajustar}
+\par\vspace{0.4em}{\tiny\color{zinc500} Dificultad relativa dentro de la materia, según el largo de la solución de sus preguntas oficiales.}
 \end{frame}
 
 \section{Números}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Números}\par\vspace{0.6em}
-  {\color{zinc700} Números reales, logaritmos y matemática financiera.}\par\vspace{1em}
-  {\small\color{zinc500} Números reales y racionalización, Logaritmos, Matemática financiera}
-  \vfill
+\subsection{Números reales y racionalización}
+
+\begin{frame}{Números reales y racionalización}
+\label{tema-m2-reales}
+\framesubtitle{Números · Teoría · 5,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item $\sqrt{2}\cdot\sqrt{8}=\sqrt{16}=4$ es racional: el producto de irracionales puede ser racional.
+\item El conjugado de $\sqrt{5}-1$ es $\sqrt{5}+1$.
+\item Para ordenar raíces, compara sus cuadrados.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Simplifica las raíces extrayendo factores.\item Identifica el tipo de denominador y amplifica por la raíz o el conjugado.\item Simplifica el resultado y verifica con una aproximación decimal.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Amplificar solo el denominador.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Racionalización]\footnotesize
+\[\frac{k}{\sqrt{a}}=\frac{k\sqrt{a}}{a} \quad\quad \frac{k}{\sqrt{a}-\sqrt{b}}=\frac{k(\sqrt{a}+\sqrt{b})}{a-b}\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Números reales y racionalización}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item $\sqrt{2}\cdot\sqrt{8}=\sqrt{16}=4$ es racional: el producto de irracionales puede ser racional.
-    \item El conjugado de $\sqrt{5}-1$ es $\sqrt{5}+1$.
-    \item Para ordenar raíces, compara sus cuadrados.
-  \end{itemize}
-  \begin{cajaclave}[Racionalización]\footnotesize
-\begin{gather*}
-\frac{k}{\sqrt{a}}=\frac{k\sqrt{a}}{a} \\
-\frac{k}{\sqrt{a}-\sqrt{b}}=\frac{k(\sqrt{a}+\sqrt{b})}{a-b}
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 1 · Números reales y racionalización}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 28}
+\begin{center}\recorte{img/m2-2027-invierno/q28.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Números reales y racionalización}
-  {\small ¿Cuál de las siguientes expresiones es igual a $\dfrac{6}{\sqrt{3}}$?}
-  \vspace{0.4em}
-  \alternativa{A}{$2\sqrt{3}$}
-  \alternativa{B}{$3\sqrt{2}$}
-  \alternativa{C}{$\sqrt{2}$}
-  \alternativa{D}{$6\sqrt{3}$}
+\begin{frame}{Solución 1 · Números reales y racionalización}
+\framesubtitle{La condición $E_c+E_p=0$ lleva a $v_e^{2}=\frac{2GM}{r}$; al despejar $v_e$ se toma la raíz cuadrada positiva.}
+\begin{ajustar}[0.70\textheight]
+{\small
+\paso{1}{Se reemplazan las energías: $\frac{1}{2}mv_e^{2}-\frac{GMm}{r}=0$.}
+\paso{2}{Como $m\neq 0$, se divide toda la ecuación por $m$: $\frac{1}{2}v_e^{2}-\frac{GM}{r}=0$.}
+\paso{3}{Se suma $\frac{GM}{r}$ a ambos lados: $\frac{1}{2}v_e^{2}=\frac{GM}{r}$.}
+\paso{4}{Se multiplica por $2$: $v_e^{2}=\frac{2GM}{r}$.}
+\paso{5}{Como la rapidez es positiva, se saca raíz cuadrada en ambos lados: $v_e=\sqrt{\frac{2GM}{r}}$. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, M2, pregunta 28}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} $\left(\frac{2GM}{r}\right)^{2}$: eleva al cuadrado en lugar de sacar raíz cuadrada.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Amplifica por $\sqrt{3}$ para eliminar la raíz del denominador.}
-  {\small
-  \paso{1}{$\dfrac{6}{\sqrt{3}}\cdot\dfrac{\sqrt{3}}{\sqrt{3}}=\dfrac{6\sqrt{3}}{3}$.}
-  \paso{2}{Simplifica: $2\sqrt{3}$.}
-  }
-  \alternativaok{A}{$2\sqrt{3}$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Amplificar solo el denominador.
-    \item Suponer que la suma o el producto de irracionales siempre es irracional.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Ejercicio 2 · Números reales y racionalización}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 17}
+\begin{center}\recorte{img/m2-2026-invierno/q17.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Logaritmos}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item $\log_2 32=5$ porque $2^5=32$.
-    \item Si el argumento está entre 0 y 1, el logaritmo es negativo.
-    \item $\log(x+y)\neq\log x+\log y$.
-  \end{itemize}
-  \begin{cajaclave}[Propiedades]\footnotesize
-\begin{gather*}
-\log_b(xy)=\log_b x+\log_b y \\
-\log_b\frac{x}{y}=\log_b x-\log_b y \\
-\log_b x^n=n\log_b x
-\end{gather*}
-
-\begin{gather*}
-\log_b b=1 \\
-\log_b 1=0 \\
-\log_b a=\frac{\log a}{\log b}
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Solución 2 · Números reales y racionalización}
+\framesubtitle{La recta directa relaciona $p$ con $q$ y la hipérbola inversa (producto $xy$ constante) relaciona $m$ con $p$ y $q$; al combinar ambas relaciones se obtiene $\frac{m}{c}$.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La recta directa pasa por el origen, así que todos sus puntos tienen el mismo cociente $\frac{y}{x}$. Usando $(p,q)$ y $(c,b)$: $\frac{q}{p}=\frac{b}{c}$.}
+\paso{2}{De $\frac{q}{p}=\frac{b}{c}$ se despeja $p$ multiplicando en cruz: $qc=bp$, luego $p=\frac{qc}{b}$, o equivalentemente $\frac{p}{c}=\frac{q}{b}$.}
+\paso{3}{La hipérbola inversa cumple $x\cdot y=\text{cte}$. Usando los puntos $(m,b)$ y $(p,q)$ en esa hipérbola: $m\cdot b=p\cdot q$, luego $m=\frac{pq}{b}$.}
+\paso{4}{Se reemplaza $p=\frac{qc}{b}$ en $m=\frac{pq}{b}$: $m=\frac{q}{b}\cdot\frac{qc}{b}=\frac{q^{2}c}{b^{2}}$.}
+\paso{5}{Se divide por $c$: $\frac{m}{c}=\frac{q^{2}}{b^{2}}$. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, M2, pregunta 17}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} $\frac{q}{b}$ confunde $m$ con $p$ y usa la razón de la recta, $\frac{p}{c}=\frac{q}{b}$, sin aplicar la relación de la hipérbola. Esa razón sirve para $p$, no para $m$.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Logaritmos}
-  {\small Si $\log 2\approx 0{,}301$, ¿cuál es el valor aproximado de $\log 50$?}
-  \vspace{0.4em}
-  \alternativa{A}{$0{,}602$}
-  \alternativa{B}{$1{,}398$}
-  \alternativa{C}{$1{,}699$}
-  \alternativa{D}{$2{,}301$}
+\subsection{Logaritmos}
+
+\begin{frame}{Logaritmos}
+\label{tema-m2-logaritmos}
+\framesubtitle{Números · Teoría · 2,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item $\log_2 32=5$ porque $2^5=32$.
+\item Si el argumento está entre 0 y 1, el logaritmo es negativo.
+\item $\log(x+y)\neq\log x+\log y$.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Escribe el argumento como potencia de la base o como producto de factores conocidos.\item Aplica las propiedades una por una.\item Verifica con la definición: base elevada al resultado.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Distribuir el logaritmo sobre una suma.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Propiedades]\footnotesize
+\[\log_b(xy)=\log_b x+\log_b y \quad\quad \log_b\frac{x}{y}=\log_b x-\log_b y \quad\quad \log_b x^n=n\log_b x\]
+
+\[\log_b b=1 \quad\quad \log_b 1=0 \quad\quad \log_b a=\frac{\log a}{\log b}\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{$50=\dfrac{100}{2}$, y $\log 100=2$.}
-  {\small
-  \paso{1}{$\log 50=\log 100-\log 2$.}
-  \paso{2}{$2-0{,}301=1{,}699$.}
-  }
-  \alternativaok{C}{$1{,}699$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Distribuir el logaritmo sobre una suma.
-    \item Olvidar que el argumento debe ser positivo.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Ejercicio 1 · Logaritmos}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 14}
+\begin{center}\recorte{img/m2-2027-invierno/q14.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Matemática financiera}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Con 2 \% mensual, en 3 meses: simple $\cdot 1{,}06$; compuesto $\cdot 1{,}02^3\approx 1{,}0612$.
-    \item El compuesto supera al simple desde el segundo período.
-    \item Depreciación de $p\,\%$ anual: $V_n=V_0(1-p/100)^n$.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-\text{simple: } C_n=C_0(1+n\,i) \\
-\text{compuesto: } C_n=C_0(1+i)^n
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Solución 1 · Logaritmos}
+\framesubtitle{Se reemplaza $C=0{,}5$ mg en la relación logarítmica para obtener el tiempo transcurrido, y luego ese tiempo se suma a las 6:00.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Reemplaza $C=0{,}5$ en la relación: $\log_{2}(0{,}5)=3-0{,}4\cdot t$.}
+\paso{2}{Como $0{,}5=2^{-1}$, se tiene $\log_{2}(0{,}5)=\log_{2}(2^{-1})=-1$. Entonces $-1=3-0{,}4\cdot t$.}
+\paso{3}{Despeja $t$: pasa el $3$ al otro lado, $-4=-0{,}4\cdot t$, y divide por $-0{,}4$: $t=\frac{-4}{-0{,}4}=10$ horas.}
+\paso{4}{Verificación: con $t=10$, $3-0{,}4\cdot 10=3-4=-1$, y $\log_{2}C=-1$ implica $C=2^{-1}=0{,}5$ mg.}
+\paso{5}{Sumando $10$ horas a las 6:00 se obtiene las 16:00. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, M2, pregunta 14}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} 10:00: olvida el coeficiente $0{,}4$ al despejar. Queda $-1=3-t$, luego $t=4$ horas, y eso da las 10:00.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Matemática financiera}
-  {\small Se invierten \$500 000 a un interés compuesto del 10 \% anual. ¿Cuánto interés se habrá ganado al cabo de 2 años?}
-  \vspace{0.4em}
-  \alternativa{A}{\$100 000}
-  \alternativa{B}{\$105 000}
-  \alternativa{C}{\$110 000}
-  \alternativa{D}{\$605 000}
+\begin{frame}{Ejercicio 2 · Logaritmos}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 12}
+\begin{center}\recorte{img/m2-2026-invierno/q12.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Calcula el monto final y réstale el capital.}
-  {\small
-  \paso{1}{$C_2=500\,000\cdot 1{,}1^2=500\,000\cdot 1{,}21=605\,000$.}
-  \paso{2}{Interés ganado: $605\,000-500\,000=105\,000$.}
-  }
-  \alternativaok{B}{\$105 000}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar interés simple cuando el problema dice compuesto.
-    \item Responder el monto final cuando se pide solo el interés ganado.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 2 · Logaritmos}
+\framesubtitle{A las 23:00 rige el límite nocturno de 45 dB; luego se reemplaza en la expresión dada, se despeja $\log I$ y se obtiene $I$ como potencia de 10.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{A las 23:00 se está dentro del tramo de 21:00 a 7:00, así que el límite es $\beta=45$ dB y no los 55 dB del día.}
+\paso{2}{Se reemplaza $\beta=45$ en la expresión: $45=10\cdot\log(I)+120$.}
+\paso{3}{Se resta 120 a ambos lados: $45-120=10\cdot\log(I)$, es decir, $-75=10\cdot\log(I)$.}
+\paso{4}{Se divide por 10: $\log(I)=-7{,}5$.}
+\paso{5}{Como $\log(I)=-7{,}5$ en base 10, se despeja $I=10^{-7{,}5}\ \frac{\mathrm{W}}{\mathrm{m}^{2}}$. El valor $\beta=45$ cumple la condición $\beta\ge 0$, así que el límite es válido. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, M2, pregunta 12}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} $10^{16{,}5}$ suma 45 y 120 en vez de restarlos: $\frac{45+120}{10}=16{,}5$. Confunde el despeje del término constante de la expresión.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Matemática financiera}
+
+\begin{frame}{Matemática financiera}
+\label{tema-m2-financiera}
+\framesubtitle{Números · Teoría · 4,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Con 2 \% mensual, en 3 meses: simple $\cdot 1{,}06$; compuesto $\cdot 1{,}02^3\approx 1{,}0612$.
+\item El compuesto supera al simple desde el segundo período.
+\item Depreciación de $p\,\%$ anual: $V_n=V_0(1-p/100)^n$.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica si el interés es simple o compuesto.\item Iguala las unidades de la tasa y de los períodos.\item Reemplaza en la fórmula y calcula; distingue interés ganado de monto final.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Usar interés simple cuando el problema dice compuesto.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[\text{simple: } C_n=C_0(1+n\,i) \quad\quad \text{compuesto: } C_n=C_0(1+i)^n\]
+\end{cajaclave}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 1 · Matemática financiera}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 24}
+\begin{center}\recorte{img/m2-2027-invierno/q24.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 1 · Matemática financiera}
+\framesubtitle{En el modelo, $s$ multiplica la cantidad de jeans, $20-x$, y el resultado está en pesos; por eso $s$ es el precio de cada jean.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Como son $20$ prendas en total, si $x$ es la cantidad de faldas, entonces $20-x$ es la cantidad de jeans.}
+\paso{2}{Como hay más faldas que jeans, la condición $x>10$ indica que $x$ cuenta las faldas (más de la mitad de las $20$ prendas), y por lo tanto $20-x$ cuenta los jeans.}
+\paso{3}{En el término $r\cdot x$, $r$ multiplica a $x$ (las faldas) y el resultado es un monto en pesos: $r$ es el precio de cada falda.}
+\paso{4}{En el término $s\cdot(20-x)$, $s$ multiplica a $20-x$ (los jeans). Como el total está en pesos y $20-x$ son prendas, $s$ tiene unidades de pesos por jean.}
+\paso{5}{Verificación con unidades: jeans por pesos por jean da pesos, igual que el total de $134\,000$ pesos. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, M2, pregunta 24}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Precio de cada falda: eso es $r$, que acompaña a $x$, es decir, a las faldas.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Matemática financiera}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 4}
+\begin{center}\recorte{img/m2-2026-invierno/q04.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Matemática financiera}
+\framesubtitle{Como la pregunta pide cuánto es M respecto de N, hay que despejar M en función de N y luego expresar el cociente $\frac{M}{N}$ como porcentaje.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Se traduce el enunciado a una ecuación: el $25\,\%$ de $M$ es $N$, luego $\frac{25}{100}\cdot M=N$, es decir, $\frac{1}{4}M=N$.}
+\paso{2}{Se despeja $M$ multiplicando ambos lados por $4$: $M=4N$.}
+\paso{3}{Se calcula la razón pedida: $\frac{M}{N}=\frac{4N}{N}=4$, siempre que $N\neq 0$ para que la razón exista.}
+\paso{4}{Comprobación con números: si $N=10$, entonces $M=40$, y el $25\,\%$ de $40$ es $10$, que coincide con $N$. Como $\frac{40}{10}=4$, $M$ es el $400\,\%$ de $N$. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, M2, pregunta 4}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} 25 \% repite el porcentaje del enunciado sin invertir la relación. El 25 \% es de $M$, no de $N$, así que no describe qué fracción de $N$ es $M$.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Álgebra y funciones}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Álgebra y funciones}\par\vspace{0.6em}
-  {\color{zinc700} Sistemas de ecuaciones, funciones potencia, exponencial, logarítmica y trigonométricas, y la ecuación cuadrática de M1.}\par\vspace{1em}
-  {\small\color{zinc500} Sistemas de ecuaciones: tipos de solución, Función potencia, exponencial y logarítmica, Funciones trigonométricas seno y coseno, Ecuación y función cuadrática (contenido de M1)}
-  \vfill
+\subsection{Sistemas de ecuaciones: tipos de solución}
+
+\begin{frame}{Sistemas de ecuaciones: tipos de solución}
+\label{tema-m2-sistemas}
+\framesubtitle{Álgebra y funciones · Teoría · 1,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Pendientes distintas: las rectas se cortan en un punto.
+\item Misma pendiente y distinto coeficiente de posición: rectas paralelas, sin solución.
+\item Una ecuación múltiplo de la otra: infinitas soluciones.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ordena ambas ecuaciones en la forma $ax+by=c$.\item Compara las razones entre coeficientes.\item Si hay un parámetro, despeja el valor que hace iguales las razones.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Concluir «sin solución» solo porque las pendientes son iguales, sin revisar si las rectas coinciden.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Criterio]\footnotesize
+\[\frac{a}{d}\neq\frac{b}{e}\ \Rightarrow\ \text{única} \quad\quad \frac{a}{d}=\frac{b}{e}\neq\frac{c}{f}\ \Rightarrow\ \text{ninguna} \quad\quad \frac{a}{d}=\frac{b}{e}=\frac{c}{f}\ \Rightarrow\ \text{infinitas}\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Sistemas de ecuaciones: tipos de solución}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Pendientes distintas: las rectas se cortan en un punto.
-    \item Misma pendiente y distinto coeficiente de posición: rectas paralelas, sin solución.
-    \item Una ecuación múltiplo de la otra: infinitas soluciones.
-  \end{itemize}
-  \begin{cajaclave}[Criterio]\footnotesize
-\begin{gather*}
-\frac{a}{d}\neq\frac{b}{e}\ \Rightarrow\ \text{única} \\
-\frac{a}{d}=\frac{b}{e}\neq\frac{c}{f}\ \Rightarrow\ \text{ninguna} \\
-\frac{a}{d}=\frac{b}{e}=\frac{c}{f}\ \Rightarrow\ \text{infinitas}
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 1 · Sistemas de ecuaciones: tipos de solución}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 22}
+\begin{center}\recorte{img/m2-2027-invierno/q22.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Sistemas de ecuaciones: tipos de solución}
-  {\small ¿Para qué valor de $k$ el sistema $2x+ky=5$ y $4x+6y=7$ no tiene solución?}
-  \vspace{0.4em}
-  \alternativa{A}{$k=2$}
-  \alternativa{B}{$k=3$}
-  \alternativa{C}{$k=6$}
-  \alternativa{D}{$k=12$}
+\begin{frame}{Solución 1 · Sistemas de ecuaciones: tipos de solución}
+\framesubtitle{El sistema tiene solución única cuando el determinante $a-b$ de sus coeficientes es distinto de cero, es decir, cuando $a\neq b$.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El determinante de la matriz de coeficientes es $\det = a\cdot 1 - b\cdot 1 = a-b$.}
+\paso{2}{Si $a-b\neq 0$, se despeja. De la segunda ecuación $y = d-x$; al reemplazar en la primera, $ax + b(d-x) = c$, luego $(a-b)x = c-bd$ y $x = \frac{c-bd}{a-b}$.}
+\paso{3}{Con el mismo despeje, $y = d - x = \frac{ad-c}{a-b}$. Ambos valores son únicos porque se divide por $a-b\neq 0$; por lo tanto, $a\neq b$ garantiza solución.}
+\paso{4}{Verificación con $a=2$, $b=1$, $c=3$, $d=1$: $x=\frac{3-1}{1}=2$ e $y=\frac{2-3}{1}=-1$. En el sistema, $2\cdot 2+1\cdot(-1)=3$ y $2+(-1)=1$. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, M2, pregunta 22}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Que $c$ sea distinto de $d$: las constantes del lado derecho no intervienen en el determinante. Con $a=b=1$, $c=3$ y $d=0$ se cumple $c\neq d$ y, aun así, no hay solución.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{No hay solución cuando las rectas son paralelas y distintas.}
-  {\small
-  \paso{1}{$\dfrac{2}{4}=\dfrac{k}{6}\Rightarrow k=3$.}
-  \paso{2}{Con $k=3$: $\dfrac{5}{7}\neq\dfrac{1}{2}$, así que son paralelas distintas.}
-  }
-  \alternativaok{B}{$k=3$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Concluir «sin solución» solo porque las pendientes son iguales, sin revisar si las rectas coinciden.
-    \item Comparar coeficientes sin ordenar antes las ecuaciones.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Ejercicio 2 · Sistemas de ecuaciones: tipos de solución}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 25}
+\begin{center}\recorte{img/m2-2026-invierno/q25.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Función potencia, exponencial y logarítmica}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item $f(0)=a$: el valor inicial.
-    \item Crecimiento de $r\,\%$ por período: $b=1+\frac{r}{100}$.
-    \item $\log_b x$ solo existe para $x>0$.
-  \end{itemize}
-  \begin{cajaclave}[Modelos]\footnotesize
-\begin{gather*}
-N(t)=N_0\cdot 2^{t/T}\ \text{(duplicación cada } T\text{)} \\
-N(t)=N_0\left(\tfrac{1}{2}\right)^{t/T}\ \text{(vida media } T\text{)}
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Solución 2 · Sistemas de ecuaciones: tipos de solución}
+\framesubtitle{Al añadir monedas, el total de monedas sube en 5 y la masa total sube en la masa de esas 5 monedas, que son de 500 pesos y pesan 6,5 g cada una.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Antes de añadir monedas, el sistema original es $x+y=50$ y $6{,}5x+9y=375$. Con esos valores, la cantidad inicial de monedas de 500 pesos es 30 y la de 100 pesos es 20, pues $6{,}5\cdot 30+9\cdot 20=195+180=375$.}
+\paso{2}{Una vez añadidas las monedas, $x$ representa la cantidad actual de monedas de 500 pesos, que ya incluye las 5 nuevas. El total actual de monedas es $x+y=50+5$, porque antes eran 50 y se añadieron 5.}
+\paso{3}{La masa actual es la masa anterior más la de las 5 monedas añadidas. Esas monedas son de 500 pesos y cada una pesa 6,5 g, así que suman $5\cdot 6{,}5$ g: $6{,}5x+9y=375+5\cdot 6{,}5$.}
+\paso{4}{Con ambas ecuaciones se forma el sistema $x+y=50+5$ y $6{,}5x+9y=375+5\cdot 6{,}5$. Su solución es $x=35$ e $y=20$: se verifica con $35+20=55$ y con $6{,}5\cdot 35+9\cdot 20=227{,}5+180=407{,}5=375+32{,}5$. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, M2, pregunta 25}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} $x+y=50+5$ plantea bien el total, pero asigna a las monedas añadidas la masa de la moneda de 100 pesos, $5\cdot 9$, en lugar de $5\cdot 6{,}5$. Como son de 500 pesos, su masa es 6,5 g.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Función potencia, exponencial y logarítmica}
-  {\small Una sustancia tiene una vida media de 5 años. Si hoy hay 80 g, ¿cuánta quedará en 15 años?}
-  \vspace{0.4em}
-  \alternativa{A}{40 g}
-  \alternativa{B}{20 g}
-  \alternativa{C}{10 g}
-  \alternativa{D}{5 g}
+\subsection{Función potencia, exponencial y logarítmica}
+
+\begin{frame}{Función potencia, exponencial y logarítmica}
+\label{tema-m2-exponencial}
+\framesubtitle{Álgebra y funciones · Teoría · 0,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item $f(0)=a$: el valor inicial.
+\item Crecimiento de $r\,\%$ por período: $b=1+\frac{r}{100}$.
+\item $\log_b x$ solo existe para $x>0$.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el valor inicial y el factor de cambio por período.\item Cuenta cuántos períodos transcurren.\item Evalúa la función o despeja el exponente con logaritmos.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Contar mal los períodos (incluir el instante inicial).\end{notagris}
+\end{columns}
+\begin{cajaclave}[Modelos]\footnotesize
+\[N(t)=N_0\cdot 2^{t/T}\ \text{(duplicación cada } T\text{)} \quad\quad N(t)=N_0\left(\tfrac{1}{2}\right)^{t/T}\ \text{(vida media } T\text{)}\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Cada 5 años la cantidad se reduce a la mitad.}
-  {\small
-  \paso{1}{En 15 años hay $\frac{15}{5}=3$ vidas medias.}
-  \paso{2}{$80\cdot\left(\tfrac{1}{2}\right)^3=10$ g.}
-  }
-  \alternativaok{C}{10 g}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Contar mal los períodos (incluir el instante inicial).
-    \item Modelar con una función lineal un crecimiento porcentual.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Función potencia, exponencial y logarítmica}
+\framesubtitle{Ejercicios}
+\vfill\centering{\small\color{zinc500} Aún no hay preguntas oficiales resueltas de este tema en PAES Studio.\par Practica con el ejemplo de la guía y con la sección temas de la app.}
+\vfill
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Funciones trigonométricas seno y coseno}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item $\sin 0=0$, $\sin 90^\circ=1$; $\cos 0=1$, $\cos 90^\circ=0$.
-    \item La gráfica del coseno es la del seno desplazada $90^\circ$.
-    \item Un $b$ mayor comprime la gráfica: más ciclos en el mismo intervalo.
-  \end{itemize}
-  \begin{cajaclave}[Parámetros]\footnotesize
-\begin{gather*}
-y=a\sin(bx)+c \\
-\text{amplitud}=|a| \\
-\text{período}=\frac{2\pi}{|b|} \\
-\text{recorrido}=[\,c-|a|,\ c+|a|\,]
-\end{gather*}
-  \end{cajaclave}
+\subsection{Funciones trigonométricas seno y coseno}
+
+\begin{frame}{Funciones trigonométricas seno y coseno}
+\label{tema-m2-funciones-trig}
+\framesubtitle{Álgebra y funciones · Teoría · 0,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item $\sin 0=0$, $\sin 90^\circ=1$; $\cos 0=1$, $\cos 90^\circ=0$.
+\item La gráfica del coseno es la del seno desplazada $90^\circ$.
+\item Un $b$ mayor comprime la gráfica: más ciclos en el mismo intervalo.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Lee en la gráfica el máximo, el mínimo y la distancia entre dos máximos.\item Amplitud: la mitad de máximo menos mínimo; $c$: el punto medio entre ambos.\item Período: distancia entre dos máximos consecutivos.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir la amplitud con la distancia entre máximo y mínimo (que es el doble).\end{notagris}
+\end{columns}
+\begin{cajaclave}[Parámetros]\footnotesize
+\[y=a\sin(bx)+c \quad\quad \text{amplitud}=|a| \quad\quad \text{período}=\frac{2\pi}{|b|} \quad\quad \text{recorrido}=[\,c-|a|,\ c+|a|\,]\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Funciones trigonométricas seno y coseno}
-  {\small La altura de la marea, en metros, se modela con $h(t)=1{,}5\sin\!\left(\dfrac{\pi t}{6}\right)+3$, con $t$ en horas. ¿Cuál es la altura máxima?}
-  \vspace{0.4em}
-  \alternativa{A}{1,5 m}
-  \alternativa{B}{3 m}
-  \alternativa{C}{4,5 m}
-  \alternativa{D}{6 m}
+\begin{frame}{Ejercicio 1 · Funciones trigonométricas seno y coseno}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 33}
+\begin{center}\recorte{img/m2-2027-invierno/q33.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El seno vale como máximo 1.}
-  {\small
-  \paso{1}{Máximo: $1{,}5\cdot 1+3=4{,}5$ m.}
-  \paso{2}{El período es $\dfrac{2\pi}{\pi/6}=12$ horas.}
-  }
-  \alternativaok{C}{4,5 m}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir la amplitud con la distancia entre máximo y mínimo (que es el doble).
-    \item Calcular el período como $2\pi\cdot b$ en vez de $\dfrac{2\pi}{b}$.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Funciones trigonométricas seno y coseno}
+\framesubtitle{La amplitud y la recta media dan $6$ y $1$; el periodo, medido entre el máximo en $x=\pi$ y el mínimo en $x=3\pi$, es $4\pi$, lo que fija $k=\frac{1}{2}$.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Amplitud: $\frac{7-(-5)}{2}=6$. Recta media: $\frac{7+(-5)}{2}=1$. Por lo tanto, $f(x)=6\,\mathrm{sen}(kx)+1$.}
+\paso{2}{Valor inicial: $f(0)=6\,\mathrm{sen}(0)+1=1$, que coincide con el gráfico, y la función crece desde $x=0$.}
+\paso{3}{Máximo en $x=\pi$: $6\,\mathrm{sen}(k\pi)+1=7$, luego $\mathrm{sen}(k\pi)=1$ y $k\pi=\frac{\pi}{2}$, así que $k=\frac{1}{2}$.}
+\paso{4}{Periodo: $T=\frac{2\pi}{k}=\frac{2\pi}{1/2}=4\pi$. Con ese periodo el mínimo cae en $x=3\pi$, medio periodo después del máximo, y el cruce con la recta media en $x=2\pi$, como muestra el gráfico.}
+\paso{5}{Comprobación: $f(3\pi)=6\,\mathrm{sen}\left(\frac{3\pi}{2}\right)+1=6(-1)+1=-5$, que coincide con el mínimo. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, M2, pregunta 33}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} $6\,\mathrm{sen}(x+4)+1$: cambia el valor inicial, pues $f(0)=6\,\mathrm{sen}(4)+1\approx -3{,}5$ y no $1$; además tiene periodo $2\pi$.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Ecuación y función cuadrática (contenido de M1)}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.
-    \item «Una única solución» $\iff \Delta=0$.
-    \item La parábola no corta el eje $X$ cuando $\Delta<0$.
-  \end{itemize}
-  \begin{cajaclave}[Discriminante]\footnotesize
+\subsection{Ecuación y función cuadrática (contenido de M1)}
+
+\begin{frame}{Ecuación y función cuadrática (contenido de M1)}
+\label{tema-m2-cuadraticas}
+\framesubtitle{Álgebra y funciones · Teoría · 10,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Ordena la ecuación en la forma $ax^2+bx+c=0$ antes de identificar coeficientes.
+\item «Una única solución» $\iff \Delta=0$.
+\item La parábola no corta el eje $X$ cuando $\Delta<0$.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ordena la ecuación igualando a cero.\item Calcula el discriminante o factoriza.\item Interpreta el resultado según lo pedido (número de soluciones, valores, parámetro).\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Olvidar el factor 4 en $4ac$.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Discriminante]\footnotesize
 $\Delta>0$: dos soluciones reales distintas. $\Delta=0$: una solución real (doble). $\Delta<0$: ninguna solución real.
 
-\begin{gather*}
-x=\frac{-b\pm\sqrt{\Delta}}{2a} \\
-x_1+x_2=-\frac{b}{a} \\
-x_1x_2=\frac{c}{a}
-\end{gather*}
-  \end{cajaclave}
+\[x=\frac{-b\pm\sqrt{\Delta}}{2a} \quad\quad x_1+x_2=-\frac{b}{a} \quad\quad x_1x_2=\frac{c}{a}\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Ecuación y función cuadrática (contenido de M1)}
-  {\small ¿Para qué valores de $k$ la ecuación $x^2-4x+k=0$ no tiene soluciones reales?}
-  \vspace{0.4em}
-  \alternativa{A}{$k<4$}
-  \alternativa{B}{$k=4$}
-  \alternativa{C}{$k>4$}
-  \alternativa{D}{$k>16$}
+\begin{frame}{Ejercicio 1 · Ecuación y función cuadrática (contenido de M1)}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 49}
+\begin{center}\recorte{img/m2-2027-invierno/q49.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{No hay soluciones reales cuando el discriminante es negativo.}
-  {\small
-  \paso{1}{$\Delta=(-4)^2-4\cdot 1\cdot k=16-4k$.}
-  \paso{2}{$16-4k<0 \Rightarrow k>4$.}
-  }
-  \alternativaok{C}{$k>4$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Olvidar el factor 4 en $4ac$.
-    \item Perder una solución al dividir por $x$.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Ecuación y función cuadrática (contenido de M1)}
+\framesubtitle{Un comité de dos personas es una combinación, así que el número de comités entre $n$ personas es $\binom{n}{2}$; se iguala a $21$ y se resuelve.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Como el orden no importa, el número de comités de dos personas entre $n$ es $\binom{n}{2}=\frac{n(n-1)}{2}$.}
+\paso{2}{Se iguala a $21$: $\frac{n(n-1)}{2}=21$.}
+\paso{3}{Se multiplica por $2$: $n(n-1)=42$.}
+\paso{4}{Se busca un entero con $n(n-1)=42$: si $n=7$, entonces $7\cdot 6=42$.}
+\paso{5}{Verificación: $\binom{7}{2}=\frac{7\cdot 6}{2}=21$, que coincide con el dato. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, M2, pregunta 49}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} $6$: con $n=6$ se obtiene $\binom{6}{2}=15$, no $21$.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Ecuación y función cuadrática (contenido de M1)}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 30}
+\begin{center}\recorte{img/m2-2026-invierno/q30.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Ecuación y función cuadrática (contenido de M1)}
+\framesubtitle{Como el coeficiente de $x^{2}$ es negativo, la parábola tiene un máximo en su vértice; la altura máxima es el valor de $h$ en la abscisa $x_v=-\frac{b}{2a}$.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El coeficiente principal es $-5<0$, así que la parábola abre hacia abajo y su vértice es un máximo: la altura máxima es la ordenada del vértice.}
+\paso{2}{Tiempo en que se alcanza el máximo: $x_v=-\frac{b}{2a}=-\frac{80}{2\cdot(-5)}=-\frac{80}{-10}=8$ s.}
+\paso{3}{Altura máxima: $h(8)=-5\cdot 8^{2}+80\cdot 8=-5\cdot 64+640=-320+640=320$ m.}
+\paso{4}{Comprobación: otros tiempos dan menos altura; por ejemplo, $h(7)=-5\cdot 49+560=-245+560=315$ m y $h(9)=-5\cdot 81+720=-405+720=315$ m, ambos menores que 320 m y simétricos respecto de $x=8$. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, M2, pregunta 30}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} 700 metros tampoco es alcanzable por el mismo motivo: el valor máximo de $h$ es 320 m, así que cualquier altura mayor queda fuera del recorrido de la función.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Geometría}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Geometría}\par\vspace{0.6em}
-  {\color{zinc700} Homotecia, razones trigonométricas, circunferencia, esfera y rectas en el plano.}\par\vspace{1em}
-  {\small\color{zinc500} Homotecia de figuras planas, Razones trigonométricas, Relaciones métricas en la circunferencia, Esfera: superficie y volumen, Rectas en el plano}
-  \vfill
-\end{frame}
+\subsection{Homotecia de figuras planas}
 
-\begin{frame}[allowframebreaks]{Homotecia de figuras planas}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item El signo de $k$ solo cambia el sentido, no el tamaño.
-    \item Razón $-1$: equivale a una rotación de $180^\circ$.
-    \item Un área nunca resulta negativa.
-  \end{itemize}
-  \begin{cajaclave}[Efecto de la razón]\footnotesize
+\begin{frame}{Homotecia de figuras planas}
+\label{tema-m2-homotecia}
+\framesubtitle{Geometría · Teoría · 3,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item El signo de $k$ solo cambia el sentido, no el tamaño.
+\item Razón $-1$: equivale a una rotación de $180^\circ$.
+\item Un área nunca resulta negativa.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el centro y la razón.\item Multiplica las distancias al centro por $k$.\item Para áreas, usa $k^2$.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Multiplicar el área por $k$ en vez de $k^2$.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Efecto de la razón]\footnotesize
 Longitudes $\times|k|$, áreas $\times k^2$, volúmenes $\times|k|^3$. Con centro en el origen: $(x,y)\mapsto(kx,\,ky)$.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Homotecia de figuras planas}
-  {\small Con centro en el origen y razón $k=3$, el punto $A(2,-1)$ se transforma en:}
-  \vspace{0.4em}
-  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
-  \alternativa{A}{$(5,2)$}
-  \alternativa{B}{$(6,-3)$}
-  \alternativa{C}{$(-6,3)$}
-  \alternativa{D}{$\left(\tfrac{2}{3},-\tfrac{1}{3}\right)$}
-  \end{tcbraster}
+\begin{frame}{Ejercicio 1 · Homotecia de figuras planas}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 10}
+\begin{center}\recorte{img/m2-2027-invierno/q10.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Con centro en el origen, se multiplican ambas coordenadas por $k$.}
-  {\small
-  \paso{1}{$(3\cdot 2,\ 3\cdot(-1))=(6,-3)$.}
-  }
-  \alternativaok{B}{$(6,-3)$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Multiplicar el área por $k$ en vez de $k^2$.
-    \item Arrastrar el signo de $k$ a las medidas.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Homotecia de figuras planas}
+\framesubtitle{Al aumentar la arista cuatro veces, el volumen se multiplica por $4^{3}=64$, no por $4$, porque el volumen de un cubo es la tercera potencia de la arista.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El volumen de un cubo es $V=a^{3}$, donde $a$ es la arista. Con arista original $a=4^{2}$ cm, el volumen original es $V=(4^{2})^{3}=4^{6}$ cm\textsuperscript{3}.}
+\paso{2}{La nueva arista es cuatro veces la original: $4\cdot 4^{2}=4^{1}\cdot 4^{2}=4^{3}$ cm.}
+\paso{3}{El nuevo volumen es $(4^{3})^{3}=4^{9}$ cm\textsuperscript{3}, por la regla de potencia de potencia $(a^{m})^{n}=a^{mn}$, con $3\cdot 3=9$.}
+\paso{4}{Comprobación: $\frac{4^{9}}{4^{6}}=4^{3}=64$, que es el factor por el que se multiplica el volumen al cuadruplicar la arista, como corresponde a $(4)^{3}$.}
+\paso{5}{El volumen $4^{9}$ cm\textsuperscript{3} coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, M2, pregunta 10}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} $4^{7}$ cm\textsuperscript{3}: multiplica el volumen por $4$ en vez de por $4^{3}=64$, es decir, trata el cambio como si fuera lineal.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Razones trigonométricas}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Identifica qué lado es opuesto y cuál adyacente \textbf{respecto del ángulo dado}.
-    \item Ningún cateto es mayor que la hipotenusa.
-    \item $\tan\alpha=\frac{\operatorname{sen}\alpha}{\cos\alpha}$.
-  \end{itemize}
-  \begin{cajaclave}[Razones y valores notables]\footnotesize
-\begin{gather*}
-\operatorname{sen}\alpha=\frac{\text{op}}{\text{hip}} \\
-\cos\alpha=\frac{\text{ady}}{\text{hip}} \\
-\tan\alpha=\frac{\text{op}}{\text{ady}} \\
-\operatorname{sen}^2\alpha+\cos^2\alpha=1
-\end{gather*}
+\begin{frame}{Ejercicio 2 · Homotecia de figuras planas}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 18}
+\begin{center}\recorte{img/m2-2026-invierno/q18.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Homotecia de figuras planas}
+\framesubtitle{La proporcionalidad inversa da $V\cdot p=20$ constante; la variación del volumen se obtiene restando el volumen inicial del final, con presión $p-2$ en el estado final.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{De la gráfica se obtiene la constante de proporcionalidad: $2\cdot 10=20$, $4\cdot 5=20$ y $10\cdot 2=20$, luego $V\cdot p=20$ y $V=\frac{20}{p}$.}
+\paso{2}{Al disminuir la presión en 2 atmósferas, la nueva presión es $p-2$ y el nuevo volumen es $\frac{20}{p-2}$. El volumen inicial, con presión $p$, es $\frac{20}{p}$.}
+\paso{3}{La variación absoluta es el volumen final menos el inicial: $\frac{20}{p-2}-\frac{20}{p}$.}
+\paso{4}{Se suma en común denominador $p(p-2)$: $\frac{20p-20(p-2)}{p(p-2)}=\frac{20p-20p+40}{p(p-2)}=\frac{40}{p(p-2)}$. Como la presión baja, el volumen aumenta y la variación es positiva, lo que se confirma con el signo de 40. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, M2, pregunta 18}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} $\frac{20}{p-2}$ es el volumen final, no la variación. Falta restar el volumen inicial $\frac{20}{p}$ para obtener cuánto cambia el volumen.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Razones trigonométricas}
+
+\begin{frame}{Razones trigonométricas}
+\label{tema-m2-trigonometria}
+\framesubtitle{Geometría · Teoría · 2,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Identifica qué lado es opuesto y cuál adyacente \textbf{respecto del ángulo dado}.
+\item Ningún cateto es mayor que la hipotenusa.
+\item $\tan\alpha=\frac{\operatorname{sen}\alpha}{\cos\alpha}$.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Dibuja el triángulo y marca el ángulo conocido.\item Elige la razón que relaciona el dato con la incógnita.\item Despeja y verifica que el resultado sea razonable.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Usar el coseno cuando corresponde el seno (o viceversa).\end{notagris}
+\end{columns}
+\begin{cajaclave}[Razones y valores notables]\footnotesize
+\[\operatorname{sen}\alpha=\frac{\text{op}}{\text{hip}} \quad\quad \cos\alpha=\frac{\text{ady}}{\text{hip}} \quad\quad \tan\alpha=\frac{\text{op}}{\text{ady}} \quad\quad \operatorname{sen}^2\alpha+\cos^2\alpha=1\]
 
 $\operatorname{sen}30^\circ=\cos 60^\circ=\frac{1}{2}$, $\operatorname{sen}60^\circ=\cos 30^\circ=\frac{\sqrt{3}}{2}$, $\tan 45^\circ=1$.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Razones trigonométricas}
-  {\small Desde un punto del suelo a 20 m de un edificio, se ve su azotea con un ángulo de elevación de $45^\circ$. ¿Cuál es la altura del edificio?}
-  \vspace{0.4em}
-  \alternativa{A}{10 m}
-  \alternativa{B}{20 m}
-  \alternativa{C}{$20\sqrt{2}$ m}
-  \alternativa{D}{40 m}
+\begin{frame}{Ejercicio 1 · Razones trigonométricas}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 41}
+\begin{center}\recorte{img/m2-2027-invierno/q41.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La altura es el cateto opuesto y la distancia, el adyacente: se usa la tangente.}
-  {\small
-  \paso{1}{$\tan 45^\circ=\dfrac{h}{20}$.}
-  \paso{2}{$h=20\cdot 1=20$ m.}
-  }
-  \alternativaok{B}{20 m}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar el coseno cuando corresponde el seno (o viceversa).
-    \item Dividir en vez de multiplicar al despejar.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Razones trigonométricas}
+\framesubtitle{El recorrido de $60$ m es la hipotenusa de un triángulo rectángulo; la diferencia de altura es el cateto opuesto al ángulo de $70^\circ$, y se expresa también como $60\cos(20^\circ)$.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{En el triángulo rectángulo, la hipotenusa es el recorrido de $60$ m. El cateto vertical es la diferencia de altura $h$, que es opuesto al ángulo de $70^\circ$ en la estación inferior.}
+\paso{2}{Por definición de seno (cateto opuesto sobre hipotenusa): $\mathrm{sen}(70^\circ)=\frac{h}{60}$.}
+\paso{3}{Se despeja $h$: $h=60\cdot\mathrm{sen}(70^\circ)$.}
+\paso{4}{Como $70^\circ+20^\circ=90^\circ$, se usa la identidad $\mathrm{sen}(70^\circ)=\cos(90^\circ-70^\circ)=\cos(20^\circ)$.}
+\paso{5}{Luego $h=60\cos(20^\circ)$ metros, que es aproximadamente $56{,}4$ m. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, M2, pregunta 41}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} $\frac{\cos(20^\circ)}{60}$: divide por $60$ en vez de multiplicar; el resultado es menor que un metro, cuando la diferencia de altura es de decenas de metros.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Relaciones métricas en la circunferencia}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Ángulo inscrito en una semicircunferencia: $90^\circ$.
-    \item Cuadrilátero inscrito: sus ángulos opuestos suman $180^\circ$.
-    \item Tangente y radio son perpendiculares en el punto de tangencia.
-  \end{itemize}
-  \begin{cajaclave}[Relaciones]\footnotesize
+\begin{frame}{Ejercicio 2 · Razones trigonométricas}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 33}
+\begin{center}\recorte{img/m2-2026-invierno/q33.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Razones trigonométricas}
+\framesubtitle{El error está en el Paso 2: en los triángulos ADC y CDB las hipotenusas son AC y CB, no CD, así que las igualdades del Paso 2 están mal planteadas.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El Paso 1 es correcto: por el teorema de Pitágoras, $AB=\sqrt{3^{2}+4^{2}}=\sqrt{25}=5$ cm, porque la hipotenusa es el lado opuesto al ángulo recto en $C$.}
+\paso{2}{En el triángulo $ADC$, el ángulo en $D$ es recto y la hipotenusa es $\overline{AC}=4$ cm, así que $AD^{2}+CD^{2}=4^{2}$. En el triángulo $CDB$, la hipotenusa es $\overline{CB}=3$ cm, así que $CD^{2}+DB^{2}=3^{2}$, con $DB=5-AD$.}
+\paso{3}{El Paso 2 escribe $4^{2}+AD^{2}=CD^{2}$ y $3^{2}+(5-AD)^{2}=CD^{2}$, es decir, pone $CD$ como hipotenusa en los dos triángulos. Eso no corresponde, porque $CD$ es un cateto en ambos.}
+\paso{4}{Los Pasos 3 y 4 son aritmética correcta sobre esas igualdades erradas. Con las igualdades correctas, $AD^{2}+CD^{2}=16$ y $CD^{2}+(5-AD)^{2}=9$, se obtiene $AD=\frac{16}{5}$ y, con $CD^{2}=AD\cdot DB$, $CD=\frac{12}{5}$ cm.}
+\paso{5}{Por lo tanto, el error está en el Paso 2 y la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, M2, pregunta 33}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} El Paso 1 es correcto, pues $\sqrt{3^{2}+4^{2}}=5$ cm. Creer que está mal puede venir de confundir $AB$ con un cateto, pero la hipotenusa de este triángulo mide 5 cm.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Relaciones métricas en la circunferencia}
+
+\begin{frame}{Relaciones métricas en la circunferencia}
+\label{tema-m2-circunferencia}
+\framesubtitle{Geometría · Teoría · 0,7 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Ángulo inscrito en una semicircunferencia: $90^\circ$.
+\item Cuadrilátero inscrito: sus ángulos opuestos suman $180^\circ$.
+\item Tangente y radio son perpendiculares en el punto de tangencia.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Marca el centro, los arcos y los ángulos conocidos.\item Decide si es un ángulo del centro, inscrito o una relación entre cuerdas o secantes.\item Plantea la ecuación y revisa que las medidas sean positivas.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Tomar el ángulo inscrito igual al del centro.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Relaciones]\footnotesize
 Ángulo inscrito $=\dfrac{\text{ángulo del centro}}{2}$. Longitud de arco $=\dfrac{\alpha}{360^\circ}\cdot 2\pi r$.
 
-\begin{gather*}
-\text{cuerdas: } PA\cdot PB=PC\cdot PD \\
-\text{secantes: } PA\cdot PB=PC\cdot PD\ (P \text{ exterior})
-\end{gather*}
-  \end{cajaclave}
+\[\text{cuerdas: } PA\cdot PB=PC\cdot PD \quad\quad \text{secantes: } PA\cdot PB=PC\cdot PD\ (P \text{ exterior})\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Relaciones métricas en la circunferencia}
-  {\small Dos cuerdas $AB$ y $CD$ se cortan en $P$. Si $PA=4$, $PB=6$ y $PC=3$, ¿cuánto mide $PD$?}
-  \vspace{0.4em}
-  \alternativa{A}{2}
-  \alternativa{B}{4,5}
-  \alternativa{C}{8}
-  \alternativa{D}{13}
+\begin{frame}{Ejercicio 1 · Relaciones métricas en la circunferencia}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 37}
+\begin{center}\recorte{img/m2-2027-invierno/q37.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{En cuerdas que se cortan, los productos de sus segmentos son iguales.}
-  {\small
-  \paso{1}{$PA\cdot PB=PC\cdot PD \Rightarrow 4\cdot 6=3\cdot PD$.}
-  \paso{2}{$PD=8$.}
-  }
-  \alternativaok{C}{8}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Tomar el ángulo inscrito igual al del centro.
-    \item En secantes, multiplicar los dos segmentos exteriores en vez del exterior por la secante completa.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Relaciones métricas en la circunferencia}
+\framesubtitle{Las áreas de los círculos son proporcionales a $r^{2}$; el área total es $\pi r^{2}$ por la suma de los cuadrados de $1$ a $7$, y la comparación con $35\pi x^{2}$ da $x$.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El área del círculo de radio $kr$ es $\pi(kr)^{2}=\pi r^{2}k^{2}$, para $k=1,\ldots,7$.}
+\paso{2}{Área total: $\pi r^{2}\,(1^{2}+2^{2}+3^{2}+4^{2}+5^{2}+6^{2}+7^{2}) = \pi r^{2}(1+4+9+16+25+36+49)$.}
+\paso{3}{Suma: $1+4=5$, $5+9=14$, $14+16=30$, $30+25=55$, $55+36=91$ y $91+49=140$. Entonces el área total es $140\pi r^{2}$ cm$^{2}$.}
+\paso{4}{Igualando con el dato: $140\pi r^{2}=35\pi x^{2}$. Se divide por $35\pi$: $4r^{2}=x^{2}$.}
+\paso{5}{Como $x$ y $r$ son positivos, se saca raíz cuadrada: $x=\sqrt{4r^{2}}=2r$. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, M2, pregunta 37}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} $7r$: toma el radio mayor sin hacer la comparación de áreas.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Esfera: superficie y volumen}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Duplicar el radio multiplica el volumen por 8.
-    \item El área de la esfera es igual a 4 círculos máximos.
-    \item Diámetro $=2\cdot$ radio.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-A=4\pi r^2 \\
-V=\frac{4}{3}\pi r^3 \\
-V_{\text{semiesfera}}=\frac{2}{3}\pi r^3
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 2 · Relaciones métricas en la circunferencia}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 35}
+\begin{center}\recorte{img/m2-2026-invierno/q35.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Esfera: superficie y volumen}
-  {\small Una pelota de radio 3 cm se cambia por otra de radio 6 cm. ¿Cuántas veces mayor es el volumen de la nueva pelota?}
-  \vspace{0.4em}
-  \alternativa{A}{2}
-  \alternativa{B}{4}
-  \alternativa{C}{6}
-  \alternativa{D}{8}
+\begin{frame}{Solución 2 · Relaciones métricas en la circunferencia}
+\framesubtitle{El área pedida es la del círculo menos la del hexágono regular inscrito, cuyo lado es igual al radio del círculo.}
+\begin{ajustar}[0.70\textheight]
+{\small
+\paso{1}{El radio es la mitad del diámetro: $R=\frac{40}{2}=20$ cm. En un hexágono regular inscrito, el lado es igual al radio, así que cada lado mide 20 cm.}
+\paso{2}{Área del círculo: $\pi R^{2}=\pi\cdot 20^{2}=400\pi$ cm\textsuperscript{2}.}
+\paso{3}{El hexágono regular se divide en seis triángulos equiláteros de lado 20 cm, con vértice común en el centro del círculo. El área de cada triángulo es $\frac{\sqrt{3}}{4}\cdot 20^{2}=\frac{\sqrt{3}}{4}\cdot 400=100\sqrt{3}$ cm\textsuperscript{2}.}
+\paso{4}{Área del hexágono: $6\cdot 100\sqrt{3}=600\sqrt{3}$ cm\textsuperscript{2}.}
+\paso{5}{La madera visible es la diferencia entre el círculo y el hexágono: $400\pi-600\sqrt{3}$ cm\textsuperscript{2}. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, M2, pregunta 35}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} $400\pi-100\sqrt{3}$ calcula el hexágono como un solo triángulo equilátero de lado 20 cm y olvida multiplicar por 6. El hexágono tiene seis triángulos iguales.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El volumen depende del cubo del radio.}
-  {\small
-  \paso{1}{La razón entre radios es $k=2$.}
-  \paso{2}{Los volúmenes están en razón $k^3=8$.}
-  }
-  \alternativaok{D}{8}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar el diámetro como radio.
-    \item Olvidar el factor $\dfrac{4}{3}$ del volumen.
-    \end{itemize}
-  \end{cajatrampa}
+\subsection{Esfera: superficie y volumen}
+
+\begin{frame}{Esfera: superficie y volumen}
+\label{tema-m2-esfera}
+\framesubtitle{Geometría · Teoría · 0,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Duplicar el radio multiplica el volumen por 8.
+\item El área de la esfera es igual a 4 círculos máximos.
+\item Diámetro $=2\cdot$ radio.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Obtén el radio (no el diámetro).\item Aplica la fórmula de área o de volumen según lo que se pide.\item Si comparas esferas, usa la razón $k^2$ o $k^3$ sin recalcular todo.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Usar el diámetro como radio.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[A=4\pi r^2 \quad\quad V=\frac{4}{3}\pi r^3 \quad\quad V_{\text{semiesfera}}=\frac{2}{3}\pi r^3\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Rectas en el plano}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Pendiente perpendicular: invierte y cambia el signo.
-    \item De $ax+by+c=0$: $m=-\frac{a}{b}$.
-    \item Comprueba que el punto dado satisfaga la ecuación.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \\
-M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)
-\end{gather*}
+\begin{frame}{Ejercicio 1 · Esfera: superficie y volumen}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 19}
+\begin{center}\recorte{img/m2-2026-invierno/q19.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 1 · Esfera: superficie y volumen}
+\framesubtitle{La densidad relaciona masa y volumen mediante $\rho=\frac{m}{V}$, así que la masa es $m=\rho\cdot V$; con el mismo volumen, la diferencia de masas depende solo de la diferencia de densidades.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Se despeja la masa de la definición de densidad: $\rho=\frac{m}{V}$; multiplicando ambos lados por $V$ se obtiene $m=\rho\cdot V$. Las unidades quedan en gramos, porque $\frac{\mathrm{g}}{\mathrm{cm}^{3}}\cdot\mathrm{cm}^{3}=\mathrm{g}$.}
+\paso{2}{Masa de la esfera de plata: $m_{\mathrm{plata}}=10{,}5\cdot 81$. Se calcula $10\cdot 81=810$ y $0{,}5\cdot 81=40{,}5$, luego $m_{\mathrm{plata}}=850{,}5$ g.}
+\paso{3}{Masa de la esfera de alabastro: $m_{\mathrm{alabastro}}=2{,}7\cdot 81$. Se calcula $2\cdot 81=162$ y $0{,}7\cdot 81=56{,}7$, luego $m_{\mathrm{alabastro}}=218{,}7$ g.}
+\paso{4}{Como ambas esferas tienen el mismo volumen, la diferencia también se puede escribir como $(\rho_{\mathrm{plata}}-\rho_{\mathrm{alabastro}})\cdot V=(10{,}5-2{,}7)\cdot 81=7{,}8\cdot 81=631{,}8$ g, que coincide con la resta directa de las masas.}
+\paso{5}{Diferencia positiva: $850{,}5-218{,}7=631{,}8$ g. La plata es la más masiva, así que la resta se hace en ese orden. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, M2, pregunta 19}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} 1069,2 g es la suma de ambas masas, $850{,}5+218{,}7$. La pregunta pide la diferencia y no el total de las dos esferas.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Rectas en el plano}
+
+\begin{frame}{Rectas en el plano}
+\label{tema-m2-analitica}
+\framesubtitle{Geometría · Teoría · 3,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Pendiente perpendicular: invierte y cambia el signo.
+\item De $ax+by+c=0$: $m=-\frac{a}{b}$.
+\item Comprueba que el punto dado satisfaga la ecuación.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Calcula la pendiente requerida (igual o recíproca opuesta).\item Usa la forma punto–pendiente $y-y_1=m(x-x_1)$.\item Reemplaza el punto para verificar.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Solo invertir o solo cambiar el signo de la pendiente para la perpendicular.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \quad\quad M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)\]
 
 Paralelas: $m_1=m_2$. Perpendiculares: $m_1\cdot m_2=-1$.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Rectas en el plano}
-  {\small ¿Cuál es la distancia entre los puntos $A(1,2)$ y $B(4,6)$?}
-  \vspace{0.4em}
-  \alternativa{A}{3}
-  \alternativa{B}{4}
-  \alternativa{C}{5}
-  \alternativa{D}{7}
+\begin{frame}{Ejercicio 1 · Rectas en el plano}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 39}
+\begin{center}\recorte{img/m2-2027-invierno/q39.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Aplica la fórmula de distancia (Pitágoras con las diferencias de coordenadas).}
-  {\small
-  \paso{1}{$\Delta x=3$, $\Delta y=4$.}
-  \paso{2}{$d=\sqrt{3^2+4^2}=\sqrt{25}=5$.}
-  }
-  \alternativaok{C}{5}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Solo invertir o solo cambiar el signo de la pendiente para la perpendicular.
-    \item Leer mal la pendiente de la forma general.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Rectas en el plano}
+\framesubtitle{Los vectores alternan entre $(1,0)$ y $(0,1)$ según la paridad de $n$; la suma de seis términos es $(3,3)$ y su magnitud sale con el teorema de Pitágoras.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Si $n$ es impar, $(-1)^{n}=-1$ y $v_n=\frac{1}{2}(1+1,\,1-1)=\frac{1}{2}(2,0)=(1,0)$.}
+\paso{2}{Si $n$ es par, $(-1)^{n}=1$ y $v_n=\frac{1}{2}(1-1,\,1+1)=\frac{1}{2}(0,2)=(0,1)$.}
+\paso{3}{Entre $n=1$ y $n=6$ hay tres impares ($1,3,5$) y tres pares ($2,4,6$).}
+\paso{4}{Suma: $3(1,0)+3(0,1)=(3,3)$.}
+\paso{5}{Magnitud: $\sqrt{3^{2}+3^{2}}=\sqrt{18}=\sqrt{9\cdot 2}=3\sqrt{2}$. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, M2, pregunta 39}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} $\sqrt{6}$: suma las componentes ($3+3=6$) en vez de sumar sus cuadrados y sacar raíz.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Rectas en el plano}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 37}
+\begin{center}\recorte{img/m2-2026-invierno/q37.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Rectas en el plano}
+\framesubtitle{Desde el gráfico se leen las coordenadas de $\vec{u}$, $\vec{v}$ y $\vec{w}$; luego se opera componente a componente en $\vec{v}-(\vec{u}+2\vec{w})$.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Lectura del gráfico: $\vec{u}$ termina en $x=4$ sobre el eje X; $\vec{v}$ termina en $y=3$ sobre el eje Y; $\vec{w}$ termina en $x=-2$ e $y=-2$, según las líneas punteadas.}
+\paso{2}{Se calcula $2\vec{w}=2\cdot(-2,-2)=(-4,-4)$, y luego $\vec{u}+2\vec{w}=(4,0)+(-4,-4)=(0,-4)$.}
+\paso{3}{Se opera componente a componente: $\vec{v}-(\vec{u}+2\vec{w})=(0,3)-(0,-4)=(0-0,\ 3-(-4))$.}
+\paso{4}{Se calcula la componente $y$: $3-(-4)=3+4=7$, y la componente $x$: $0-0=0$. Así el vector es $(0,7)$. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, M2, pregunta 37}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} $(0,-1)$ suma en lugar de restar: calcula $\vec{v}+(\vec{u}+2\vec{w})=(0,3)+(0,-4)=(0,-1)$.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Probabilidad y estadística}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Probabilidad y estadística}\par\vspace{0.6em}
-  {\color{zinc700} Dispersión, probabilidad condicional, permutación y combinatoria, y modelos binomial y normal.}\par\vspace{1em}
-  {\small\color{zinc500} Medidas de dispersión, Probabilidad condicional, Permutación y combinatoria, Modelos binomial y normal}
-  \vfill
+\subsection{Medidas de dispersión}
+
+\begin{frame}{Medidas de dispersión}
+\label{tema-m2-dispersion}
+\framesubtitle{Probabilidad y estadística · Teoría · 4,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Igual media no implica igual dispersión.
+\item Sumar 5 puntos a todos no cambia $\sigma$.
+\item Multiplicar todos los datos por 2 duplica $\sigma$ y cuadruplica la varianza.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Compara las distancias de los datos a la media.\item Aplica las propiedades ante transformaciones de los datos.\item Decide si conviene la desviación estándar, el rango o el rango intercuartílico.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Creer que sumar una constante cambia la desviación estándar.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[\sigma=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n}} \quad\quad \sigma^2=\text{varianza} \quad\quad \text{rango}=\text{máx}-\text{mín}\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Medidas de dispersión}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Igual media no implica igual dispersión.
-    \item Sumar 5 puntos a todos no cambia $\sigma$.
-    \item Multiplicar todos los datos por 2 duplica $\sigma$ y cuadruplica la varianza.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-\sigma=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n}} \\
-\sigma^2=\text{varianza} \\
-\text{rango}=\text{máx}-\text{mín}
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 1 · Medidas de dispersión}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 46}
+\begin{center}\recorte{img/m2-2027-invierno/q46.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Medidas de dispersión}
-  {\small Los puntajes de una prueba tienen media 60 y desviación estándar 8. Si a todos se les suman 5 puntos, ¿cuál es la nueva desviación estándar?}
-  \vspace{0.4em}
-  \alternativa{A}{3}
-  \alternativa{B}{8}
-  \alternativa{C}{13}
-  \alternativa{D}{40}
+\begin{frame}{Solución 1 · Medidas de dispersión}
+\framesubtitle{La desviación estándar mide la dispersión de las cinco asistencias alrededor de su media de $6$ veces; se obtiene con la varianza y luego se saca la raíz cuadrada.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Media: $\bar{x}=\frac{0+8+12+6+4}{5}=\frac{30}{5}=6$.}
+\paso{2}{Desviaciones respecto de la media: $0-6=-6$, $8-6=2$, $12-6=6$, $6-6=0$ y $4-6=-2$.}
+\paso{3}{Cuadrados de las desviaciones: $36$, $4$, $36$, $0$ y $4$. Su suma es $80$.}
+\paso{4}{Varianza (se divide entre $n=5$): $\sigma^{2}=\frac{80}{5}=16$.}
+\paso{5}{Desviación estándar: $\sigma=\sqrt{16}=4$. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, M2, pregunta 46}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} $16{,}0$: es la varianza; olvida sacar la raíz cuadrada.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Sumar una constante desplaza los datos sin cambiar sus distancias a la media.}
-  {\small
-  \paso{1}{La media pasa a 65, pero cada dato sigue a la misma distancia de ella.}
-  \paso{2}{La desviación estándar se mantiene en 8.}
-  }
-  \alternativaok{B}{8}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Creer que sumar una constante cambia la desviación estándar.
-    \item Confundir variedad de datos con dispersión.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Ejercicio 2 · Medidas de dispersión}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 11}
+\begin{center}\recorte{img/m2-2026-invierno/q11.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Probabilidad condicional}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La condición indica el denominador.
-    \item $P(A\mid B)\neq P(B\mid A)$ en general.
-    \item En un árbol, se multiplica a lo largo de una rama y se suma entre ramas.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-P(A\mid B)=\frac{P(A\cap B)}{P(B)} \\
-P(A\cap B)=P(B)\cdot P(A\mid B)
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Solución 2 · Medidas de dispersión}
+\framesubtitle{Cada cultivo se duplica en su propio periodo, así que el número de duplicaciones es el tiempo total dividido por el tiempo de duplicación, y cada cultivo se calcula por separado.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Para el cultivo A, en 40 minutos hay $\frac{40}{10}=4$ duplicaciones, porque cada periodo de 10 minutos duplica la cantidad.}
+\paso{2}{La cantidad final del cultivo A es $100\cdot 2^{4}=100\cdot 16=1600$ bacterias. Cada duplicación multiplica por 2, así que se usa la potencia de 2.}
+\paso{3}{Para el cultivo B, en 40 minutos hay $\frac{40}{20}=2$ duplicaciones, porque cada periodo de 20 minutos duplica la cantidad.}
+\paso{4}{La cantidad final del cultivo B es $200\cdot 2^{2}=200\cdot 4=800$ bacterias.}
+\paso{5}{El total de ambos cultivos es $1600+800=2400$ bacterias. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, M2, pregunta 11}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} 800 corresponde solo al cultivo B, $200\cdot 2^{2}$. Omite el cultivo A, por lo que no suma las bacterias de los dos cultivos que pide el enunciado.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Probabilidad condicional}
-  {\small En un curso de 40 estudiantes, 25 practican deporte; de ellos, 10 también tocan un instrumento. Si se elige al azar un estudiante que practica deporte, ¿cuál es la probabilidad de que toque un instrumento?}
-  \vspace{0.4em}
-  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
-  \alternativa{A}{$\dfrac{1}{4}$}
-  \alternativa{B}{$\dfrac{2}{5}$}
-  \alternativa{C}{$\dfrac{5}{8}$}
-  \alternativa{D}{$\dfrac{3}{5}$}
-  \end{tcbraster}
+\subsection{Probabilidad condicional}
+
+\begin{frame}{Probabilidad condicional}
+\label{tema-m2-condicional}
+\framesubtitle{Probabilidad y estadística · Teoría · 3,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item La condición indica el denominador.
+\item $P(A\mid B)\neq P(B\mid A)$ en general.
+\item En un árbol, se multiplica a lo largo de una rama y se suma entre ramas.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica qué se sabe (condición) y qué se pregunta.\item Construye una tabla o árbol con las probabilidades.\item Divide la intersección por la probabilidad de la condición.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Invertir la condición.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[P(A\mid B)=\frac{P(A\cap B)}{P(B)} \quad\quad P(A\cap B)=P(B)\cdot P(A\mid B)\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La condición «practica deporte» reduce el espacio muestral a 25 estudiantes.}
-  {\small
-  \paso{1}{Casos posibles: los 25 que practican deporte.}
-  \paso{2}{Favorables: 10. $P=\dfrac{10}{25}=\dfrac{2}{5}$.}
-  \paso{3}{$\frac{1}{4}=\frac{10}{40}$ usa el curso completo como espacio muestral, ignorando la condición.}
-  }
-  \alternativaok{B}{$\dfrac{2}{5}$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Invertir la condición.
-    \item Usar el total general como denominador cuando hay una condición.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Ejercicio 1 · Probabilidad condicional}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 48}
+\begin{center}\recorte{img/m2-2027-invierno/q48.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Permutación y combinatoria}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item ¿Importa el orden? Sí $\Rightarrow$ variación; no $\Rightarrow$ combinación.
-    \item $\binom{n}{k}=\binom{n}{n-k}$.
-    \item Con repetición: $n^k$.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-P_n=n! \\
-V^n_k=\frac{n!}{(n-k)!} \\
-\binom{n}{k}=\frac{n!}{k!\,(n-k)!}
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Solución 1 · Probabilidad condicional}
+\framesubtitle{La probabilidad total se obtiene sumando la probabilidad de llegar tarde en cada escenario de lluvia, ponderada por la probabilidad de que ese escenario ocurra.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{La probabilidad de que no llueva es $1-0{,}4=0{,}6$.}
+\paso{2}{Llegar tarde con lluvia: $P(\text{lluvia})\cdot P(\text{tarde}\mid\text{lluvia})=0{,}4\cdot 0{,}3=0{,}12$.}
+\paso{3}{Llegar tarde sin lluvia: $0{,}6\cdot 0{,}1=0{,}06$.}
+\paso{4}{Como llueve o no llueve, son casos excluyentes y se suman: $P(\text{tarde})=0{,}12+0{,}06=0{,}18$.}
+\paso{5}{Verificación: el resultado está entre $0{,}1$ y $0{,}3$, que son las probabilidades condicionales, como corresponde a un promedio ponderado. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, M2, pregunta 48}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} $0{,}12$: considera solo el caso de lluvia y olvida el caso de día sin lluvia.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Permutación y combinatoria}
-  {\small ¿Cuántos comités de 2 personas se pueden formar con un grupo de 6 personas?}
-  \vspace{0.4em}
-  \alternativa{A}{12}
-  \alternativa{B}{15}
-  \alternativa{C}{30}
-  \alternativa{D}{36}
+\begin{frame}{Ejercicio 2 · Probabilidad condicional}
+\framesubtitle{Fuente: PAES Regular 2024, M2, pregunta 47}
+\begin{center}\recorte{img/m2-2025-regular/q47.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{En un comité no importa el orden: es una combinación.}
-  {\small
-  \paso{1}{$\binom{6}{2}=\dfrac{6\cdot 5}{2}=15$.}
-  \paso{2}{30 contaría cada par dos veces (con orden).}
-  }
-  \alternativaok{B}{15}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar combinaciones cuando los cargos son distintos.
-    \item Permitir repeticiones que el problema prohíbe.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 2 · Probabilidad condicional}
+\framesubtitle{Como son dos personas escogidas sin reemplazo, la probabilidad es el producto de las dos probabilidades condicionadas, con 5800 personas no altas y 5999 personas restantes en la segunda elección.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Para que ninguna de las dos mida más de 1,8 m, las dos deben pertenecer al grupo de 5800 personas que no superan esa altura.}
+\paso{2}{Primera persona: $P_1 = \frac{5800}{6000}$.}
+\paso{3}{Como la segunda persona se escoge sin reemplazo, quedan 5999 personas, de las cuales 5799 no superan 1,8 m. Segunda persona: $P_2 = \frac{5799}{5999}$.}
+\paso{4}{Por la regla del producto para eventos sucesivos: $P = \frac{5800}{6000}\cdot\frac{5799}{5999}$.}
+\paso{5}{Esa es la expresión de la alternativa B. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Regular 2024, M2, pregunta 47}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} $\frac{5800}{6000}$: considera solo la primera elección y olvida la segunda persona.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Modelos binomial y normal}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item $\binom{n}{k}$ cuenta en qué ensayos caen los $k$ éxitos.
-    \item La normal es simétrica: la mitad de los datos está bajo la media.
-    \item Un $z$ negativo indica un dato bajo la media.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} \\
-E(X)=np \\
-z=\frac{x-\mu}{\sigma}
-\end{gather*}
+\subsection{Permutación y combinatoria}
+
+\begin{frame}{Permutación y combinatoria}
+\label{tema-m2-combinatoria}
+\framesubtitle{Probabilidad y estadística · Teoría · 0,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item ¿Importa el orden? Sí $\Rightarrow$ variación; no $\Rightarrow$ combinación.
+\item $\binom{n}{k}=\binom{n}{n-k}$.
+\item Con repetición: $n^k$.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Decide si importa el orden y si hay repetición.\item Aplica el principio multiplicativo o la fórmula correspondiente.\item Comprueba con un caso pequeño.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Usar combinaciones cuando los cargos son distintos.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[P_n=n! \quad\quad V^n_k=\frac{n!}{(n-k)!} \quad\quad \binom{n}{k}=\frac{n!}{k!\,(n-k)!}\]
+\end{cajaclave}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 1 · Permutación y combinatoria}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 50}
+\begin{center}\recorte{img/m2-2027-invierno/q50.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 1 · Permutación y combinatoria}
+\framesubtitle{Hay dos poses distintas y cada una admite $2\cdot 3!$ ordenaciones, pues los adultos y los niños se permutan dentro de sus posiciones; el total es $4\cdot 3!$.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Pose 1: los dos adultos ocupan los extremos y los tres niños, el centro. Los adultos se intercambian de $2!=2$ formas y los niños se ordenan de $3!=6$ formas.}
+\paso{2}{Ordenaciones de la pose 1: $2!\cdot 3!=2\cdot 6=12$.}
+\paso{3}{Pose 2: el orden es niño, adulto, niño, adulto, niño. Los adultos se ordenan de $2!$ formas y los niños de $3!$ formas.}
+\paso{4}{Ordenaciones de la pose 2: $2!\cdot 3!=12$.}
+\paso{5}{Como las poses son alternativas excluyentes, se suman: $2\cdot 3!+2\cdot 3!=12+12=24=4\cdot 3!$. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, M2, pregunta 50}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} $2\cdot 3!$: considera solo una de las dos poses.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Modelos binomial y normal}
+
+\begin{frame}{Modelos binomial y normal}
+\label{tema-m2-modelos}
+\framesubtitle{Probabilidad y estadística · Teoría · 0,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item $\binom{n}{k}$ cuenta en qué ensayos caen los $k$ éxitos.
+\item La normal es simétrica: la mitad de los datos está bajo la media.
+\item Un $z$ negativo indica un dato bajo la media.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Binomial: identifica $n$, $p$ y el número de éxitos $k$.\item Normal: estandariza con $z$ y usa los porcentajes de referencia o la tabla.\item Aprovecha la simetría: $P(Z\le -a)=P(Z\ge a)$.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Olvidar el coeficiente binomial.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} \quad\quad E(X)=np \quad\quad z=\frac{x-\mu}{\sigma}\]
 
 $P(\mu-\sigma\le X\le\mu+\sigma)\approx 0{,}68$; $P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0{,}95$.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Modelos binomial y normal}
-  {\small Los puntajes de un test siguen una distribución normal de media 500 y desviación estándar 100. ¿Qué porcentaje aproximado de los puntajes está entre 400 y 600?}
-  \vspace{0.4em}
-  \alternativa{A}{34 \%}
-  \alternativa{B}{50 \%}
-  \alternativa{C}{68 \%}
-  \alternativa{D}{95 \%}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{400 y 600 están a una desviación estándar de la media.}
-  {\small
-  \paso{1}{$z=\dfrac{400-500}{100}=-1$ y $z=\dfrac{600-500}{100}=1$.}
-  \paso{2}{Entre $z=-1$ y $z=1$ queda cerca del 68 \%.}
-  }
-  \alternativaok{C}{68 \%}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Olvidar el coeficiente binomial.
-    \item Leer el 95 \% como «a una desviación de la media» en vez de a dos.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Modelos binomial y normal}
+\framesubtitle{Ejercicios}
+\vfill\centering{\small\color{zinc500} Aún no hay preguntas oficiales resueltas de este tema en PAES Studio.\par Practica con el ejemplo de la guía y con la sección temas de la app.}
+\vfill
 \end{frame}
 
 \section{Habilidades transversales}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Habilidades transversales}\par\vspace{0.6em}
-  {\color{zinc700} Formatos de pregunta que exigen razonamiento más que cálculo.}\par\vspace{1em}
-  {\small\color{zinc500} Evaluación de suficiencia de datos}
-  \vfill
-\end{frame}
+\subsection{Evaluación de suficiencia de datos}
 
-\begin{frame}[allowframebreaks]{Evaluación de suficiencia de datos}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Suficiente = determina un valor único.
-    \item No mezcles la información de (1) al analizar (2).
-    \item «Ambas juntas» solo cuando ninguna basta sola.
-  \end{itemize}
-  \begin{cajaclave}[Orden de análisis]\footnotesize
+\begin{frame}{Evaluación de suficiencia de datos}
+\label{tema-m2-suficiencia}
+\framesubtitle{Habilidades transversales · Teoría · 4,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Suficiente = determina un valor único.
+\item No mezcles la información de (1) al analizar (2).
+\item «Ambas juntas» solo cuando ninguna basta sola.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Escribe qué se necesita para responder la pregunta.\item Evalúa la afirmación (1) por sí sola y luego la (2) por sí sola.\item Si ninguna basta, evalúa ambas juntas; si aún no basta, se requiere información adicional.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Usar sin darse cuenta datos de (1) al evaluar (2).\end{notagris}
+\end{columns}
+\begin{cajaclave}[Orden de análisis]\footnotesize
 1) Analiza (1) sola. 2) Analiza (2) sola. 3) Solo si ninguna basta, analiza ambas juntas.
 
 Si las dos bastan por separado, la respuesta es «cada una por sí sola».
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Evaluación de suficiencia de datos}
-  {\small Se puede determinar el valor de $x$ si:
-
-(1) $x^2=9$.
-
-(2) $x>0$.}
-  \vspace{0.4em}
-  \alternativa{A}{(1) por sí sola}
-  \alternativa{B}{(2) por sí sola}
-  \alternativa{C}{Ambas juntas, (1) y (2)}
-  \alternativa{D}{Se requiere información adicional}
+\begin{frame}{Ejercicio 1 · Evaluación de suficiencia de datos}
+\framesubtitle{Fuente: PAES Invierno 2026, M2, pregunta 52}
+\begin{center}\recorte{img/m2-2027-invierno/q52.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Con (1) hay dos valores posibles; con (2) infinitos; juntas, uno solo.}
-  {\small
-  \paso{1}{(1): $x=3$ o $x=-3$. No es único.}
-  \paso{2}{(2): cualquier positivo. No basta.}
-  \paso{3}{Juntas: $x=3$. Son suficientes ambas juntas.}
-  }
-  \alternativaok{C}{Ambas juntas, (1) y (2)}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar sin darse cuenta datos de (1) al evaluar (2).
-    \item Elegir «ambas juntas» cuando una sola ya era suficiente.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Evaluación de suficiencia de datos}
+\framesubtitle{La raíz $n$-ésima de un número primo es irracional para todo $n\geq 2$, así que la condición (1) basta por sí sola; la condición (2) no basta.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Con (1): sea $x=p$ primo y $n\geq 2$. Si $\sqrt[n]{p}=\frac{a}{b}$ fuera racional, entonces $p\,b^{n}=a^{n}$. El exponente de $p$ en el lado izquierdo es $1$ más un múltiplo de $n$, y en el derecho es un múltiplo de $n$; como $n\geq 2$, eso es imposible.}
+\paso{2}{Así, (1) por sí sola garantiza que $\sqrt[n]{x}$ es irracional.}
+\paso{3}{Con (2): $x\cdot n$ impar implica que $x$ y $n$ son impares, pero no que la raíz sea irracional.}
+\paso{4}{Contraejemplo: $x=1$ y $n=3$ cumplen (2), pues $1\cdot 3=3$ es impar; sin embargo, $\sqrt[3]{1}=1$ es racional. Por eso (2) no basta por sí sola.}
+\paso{5}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, M2, pregunta 52}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Ambas juntas: piensa que (2) aporta algo a (1), pero (1) ya basta por sí sola.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Evaluación de suficiencia de datos}
+\framesubtitle{Fuente: PAES Invierno 2025, M2, pregunta 52}
+\begin{center}\recorte{img/m2-2026-invierno/q52.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Evaluación de suficiencia de datos}
+\framesubtitle{Ambos logaritmos dependen solo del cociente $\frac{a}{b}$, porque $\log\frac{b}{a}$ es el opuesto de $\log\frac{a}{b}$. Por eso el dato (2) basta y el dato (1) no.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Usa la propiedad del logaritmo del inverso: $\log\frac{b}{a}=\log\left(\frac{a}{b}\right)^{-1}=-\log\frac{a}{b}$.}
+\paso{2}{Sea $u=\frac{a}{b}$. Entonces $z=\log_{u}5-\log u$: la expresión depende solo de $u$, no de $a$ y $b$ por separado.}
+\paso{3}{Con el dato (2), $u=\frac{a}{b}$ queda conocido y $z$ queda completamente determinado. Por lo tanto, (2) basta por sí sola.}
+\paso{4}{Con el dato (1) solo se conoce el producto $ab$. Con $ab=4$, las parejas $(a,b)=(4,1)$ y $(a,b)=(1,4)$ dan cocientes $u=4$ y $u=\frac{1}{4}$, que producen valores de $z$ opuestos en signo. Por lo tanto, (1) no determina $z$.}
+\paso{5}{Como (1) no basta por sí sola y (2) sí basta, solo el dato (2) permite conocer $z$. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, M2, pregunta 52}
+\begin{notagris}\scriptsize \textbf{Si marcaste E:} Se requiere información adicional: falsa, porque el dato (2) entrega $\frac{a}{b}$, y con ese valor $z$ queda determinado sin datos extra.\end{notagris}
+\end{ajustar}
 \end{frame}
 %%</CONTENIDO>%%
 

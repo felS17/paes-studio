@@ -1,15 +1,21 @@
 % =============================================================================
-%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  PAES Studio: resumen en láminas (plantilla Beamer 16:9)
 %  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
 %
 %  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
 %  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Estructura: portada, cómo usar, sumario, qué se repite en las pruebas y, por
+%  tema, teoría seguida de ejercicios oficiales (enunciado y luego solución).
 %  Comandos:
 %    \alternativa{A}{texto}       alternativa
 %    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
 %    \paso{n}{texto}      paso numerado del desarrollo
 %    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
-%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%    \respuesta{C}{fuente}        respuesta oficial al pie de una solución
+%    \recorte{img/ensayo/q01.png} recorte del folleto (si falta, un recuadro)
+%    \sumarioeje{Eje}  \sumariotema{Tema}{etiqueta}   líneas del sumario
+%  Entornos: cajaclave, cajaregla (regla práctica), notagris (error común),
+%  cajatrampa, lineatiempo (filas «fecha & hecho \\»).
 %
 %  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
 %  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
@@ -26,6 +32,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage[most]{tcolorbox}
+\usepackage{graphicx}
 
 % ── Paleta Zinc ──────────────────────────────────────────────────────────────
 \definecolor{zinc950}{HTML}{09090B}
@@ -43,6 +50,7 @@
 % ── Tema mínimo ──────────────────────────────────────────────────────────────
 \usefonttheme{professionalfonts}
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{\ifnum\insertcontinuationcount>1\ (cont.)\fi}
 \setbeamercolor{background canvas}{bg=white}
 \setbeamercolor{normal text}{fg=zinc900}
 \setbeamercolor{structure}{fg=zinc900}
@@ -62,8 +70,8 @@
 }
 \makeatother
 \setbeamertemplate{footline}{%
-  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
-  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle\ifx\insertsubsection\empty\else\ · \insertsubsection\fi}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertpagenumber\,/\,\insertpresentationendpage}\hspace*{1.6cm}\par\vspace*{0.7em}%
 }
 \setbeamertemplate{title page}{%
   \vfill
@@ -71,6 +79,7 @@
   {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
   {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
   {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc700}\portadaDetalle}\par\vspace{0.4em}
   {\small\color{zinc500}\insertdate}\par
   \vfill
 }
@@ -85,7 +94,7 @@
 \newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
-\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+\newtcolorbox{cajaclave}[1][]{enhanced, before upper={\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}\setlength{\abovedisplayshortskip}{1pt}\setlength{\belowdisplayshortskip}{1pt}}, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
   borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
   fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
 \newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
@@ -94,6 +103,27 @@
 \newenvironment{lineatiempo}
   {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
   {\end{tabular}}
+\newtcolorbox{cajaregla}[1][Regla práctica]{enhanced, boxrule=0.8pt, arc=2pt, colback=white, colframe=zinc900,
+  left=7pt, right=7pt, top=3pt, bottom=4pt, before skip=4pt, after skip=4pt,
+  fonttitle=\bfseries\small, coltitle=white, colbacktitle=zinc900, titlerule=0pt, title={#1}}
+\newtcolorbox{notagris}{enhanced, frame hidden, arc=2pt, colback=zinc50, left=6pt, right=6pt, top=3pt, bottom=3pt,
+  before skip=4pt, after skip=2pt, fontupper=\color{zinc500}, borderline west={1.5pt}{0pt}{zinc300}}
+\newcommand{\respuesta}[2]{\par\vspace{0.3em}\noindent\teclaok{#1}\hspace{0.5em}{\small\bfseries respuesta oficial}\hspace{0.5em}{\scriptsize\color{zinc500}#2}\par}
+\newcommand{\recorte}[1]{\IfFileExists{#1}%
+  {\includegraphics[width=0.9\textwidth,height=0.62\textheight,keepaspectratio]{#1}}%
+  {\fbox{\parbox{0.6\textwidth}{\centering\small\color{zinc500} Recorte del folleto oficial: #1\\(se genera con generate\_latex\_summary.py)}}}}
+\newcommand{\sumarioeje}[1]{\par\vspace{0.35em}\noindent{\bfseries #1}\par\vspace{0.1em}}
+\newcommand{\sumariotema}[2]{\noindent\hspace*{0.8em}\hyperlink{#2}{#1}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\sumarioitem}[2]{\noindent{\bfseries\hyperlink{#2}{#1}}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\portadaDetalle}{}
+% ajustar: el contenido va a todo el ancho y, solo si no cabe en la altura dada, se reduce entero (una lámina).
+\newsavebox{\ajustecaja}
+\newlength{\ajustealto}
+\newenvironment{ajustar}[1][0.74\textheight]
+  {\setlength{\ajustealto}{#1}\begin{lrbox}{\ajustecaja}\begin{minipage}{\textwidth}}
+  {\end{minipage}\end{lrbox}%
+   \ifdim\dimexpr\ht\ajustecaja+\dp\ajustecaja\relax>\ajustealto
+     \resizebox*{!}{\ajustealto}{\usebox{\ajustecaja}}\else\usebox{\ajustecaja}\fi}
 \newlength{\anchobarra}
 \newcommand{\ejebarra}[3]{%
   \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
@@ -102,7 +132,7 @@
   \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
 
 %%<META>%%
-\title[Repaso PAES: Matemática M1]{Repaso PAES}
+\title[Resumen PAES: Matemática M1]{Resumen PAES}
 \subtitle{Competencia Matemática 1 (M1)}
 \date{Plantilla de ejemplo}
 %%</META>%%

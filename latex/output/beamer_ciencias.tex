@@ -1,15 +1,21 @@
 % =============================================================================
-%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  PAES Studio: resumen en láminas (plantilla Beamer 16:9)
 %  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
 %
 %  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
 %  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Estructura: portada, cómo usar, sumario, qué se repite en las pruebas y, por
+%  tema, teoría seguida de ejercicios oficiales (enunciado y luego solución).
 %  Comandos:
 %    \alternativa{A}{texto}       alternativa
 %    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
 %    \paso{n}{texto}      paso numerado del desarrollo
 %    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
-%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%    \respuesta{C}{fuente}        respuesta oficial al pie de una solución
+%    \recorte{img/ensayo/q01.png} recorte del folleto (si falta, un recuadro)
+%    \sumarioeje{Eje}  \sumariotema{Tema}{etiqueta}   líneas del sumario
+%  Entornos: cajaclave, cajaregla (regla práctica), notagris (error común),
+%  cajatrampa, lineatiempo (filas «fecha & hecho \\»).
 %
 %  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
 %  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
@@ -26,6 +32,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage[most]{tcolorbox}
+\usepackage{graphicx}
 
 % ── Paleta Zinc ──────────────────────────────────────────────────────────────
 \definecolor{zinc950}{HTML}{09090B}
@@ -43,6 +50,7 @@
 % ── Tema mínimo ──────────────────────────────────────────────────────────────
 \usefonttheme{professionalfonts}
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{\ifnum\insertcontinuationcount>1\ (cont.)\fi}
 \setbeamercolor{background canvas}{bg=white}
 \setbeamercolor{normal text}{fg=zinc900}
 \setbeamercolor{structure}{fg=zinc900}
@@ -62,8 +70,8 @@
 }
 \makeatother
 \setbeamertemplate{footline}{%
-  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
-  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle\ifx\insertsubsection\empty\else\ · \insertsubsection\fi}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertpagenumber\,/\,\insertpresentationendpage}\hspace*{1.6cm}\par\vspace*{0.7em}%
 }
 \setbeamertemplate{title page}{%
   \vfill
@@ -71,6 +79,7 @@
   {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
   {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
   {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
+  {\small\color{zinc700}\portadaDetalle}\par\vspace{0.4em}
   {\small\color{zinc500}\insertdate}\par
   \vfill
 }
@@ -85,7 +94,7 @@
 \newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
-\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+\newtcolorbox{cajaclave}[1][]{enhanced, before upper={\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}\setlength{\abovedisplayshortskip}{1pt}\setlength{\belowdisplayshortskip}{1pt}}, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
   borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
   fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
 \newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
@@ -94,6 +103,27 @@
 \newenvironment{lineatiempo}
   {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
   {\end{tabular}}
+\newtcolorbox{cajaregla}[1][Regla práctica]{enhanced, boxrule=0.8pt, arc=2pt, colback=white, colframe=zinc900,
+  left=7pt, right=7pt, top=3pt, bottom=4pt, before skip=4pt, after skip=4pt,
+  fonttitle=\bfseries\small, coltitle=white, colbacktitle=zinc900, titlerule=0pt, title={#1}}
+\newtcolorbox{notagris}{enhanced, frame hidden, arc=2pt, colback=zinc50, left=6pt, right=6pt, top=3pt, bottom=3pt,
+  before skip=4pt, after skip=2pt, fontupper=\color{zinc500}, borderline west={1.5pt}{0pt}{zinc300}}
+\newcommand{\respuesta}[2]{\par\vspace{0.3em}\noindent\teclaok{#1}\hspace{0.5em}{\small\bfseries respuesta oficial}\hspace{0.5em}{\scriptsize\color{zinc500}#2}\par}
+\newcommand{\recorte}[1]{\IfFileExists{#1}%
+  {\includegraphics[width=0.9\textwidth,height=0.62\textheight,keepaspectratio]{#1}}%
+  {\fbox{\parbox{0.6\textwidth}{\centering\small\color{zinc500} Recorte del folleto oficial: #1\\(se genera con generate\_latex\_summary.py)}}}}
+\newcommand{\sumarioeje}[1]{\par\vspace{0.35em}\noindent{\bfseries #1}\par\vspace{0.1em}}
+\newcommand{\sumariotema}[2]{\noindent\hspace*{0.8em}\hyperlink{#2}{#1}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\sumarioitem}[2]{\noindent{\bfseries\hyperlink{#2}{#1}}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\portadaDetalle}{}
+% ajustar: el contenido va a todo el ancho y, solo si no cabe en la altura dada, se reduce entero (una lámina).
+\newsavebox{\ajustecaja}
+\newlength{\ajustealto}
+\newenvironment{ajustar}[1][0.74\textheight]
+  {\setlength{\ajustealto}{#1}\begin{lrbox}{\ajustecaja}\begin{minipage}{\textwidth}}
+  {\end{minipage}\end{lrbox}%
+   \ifdim\dimexpr\ht\ajustecaja+\dp\ajustecaja\relax>\ajustealto
+     \resizebox*{!}{\ajustealto}{\usebox{\ajustecaja}}\else\usebox{\ajustecaja}\fi}
 \newlength{\anchobarra}
 \newcommand{\ejebarra}[3]{%
   \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
@@ -102,9 +132,10 @@
   \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
 
 %%<META>%%
-\title[Repaso PAES: Ciencias]{Repaso PAES}
+\title[Resumen PAES: Ciencias]{Resumen PAES}
 \subtitle{Ciencias}
-\date{8 de noviembre de 2026}
+\date{19 de noviembre de 2026}
+\renewcommand{\portadaDetalle}{17 temas del temario 2027 y 34 ejercicios de pruebas oficiales del DEMRE (admisiones 2024 a 2027)}
 %%</META>%%
 
 \begin{document}
@@ -114,58 +145,121 @@
 \end{frame}
 
 %%<CONTENIDO>%%
-\begin{frame}{Contenidos}
-
-  \framesubtitle{4 ejes, en el orden del temario}
-
-  \begin{enumerate}\small
-
-    \item \textbf{Biología}: Organización, estructura y actividad celular, Sistema nervioso, Reproducción, sexualidad e ITS, Ciclo celular, meiosis y manipulación genética, Evolución: evidencias y selección natural, Fotosíntesis, respiración y flujo de energía
-
-    \item \textbf{Física}: Ondas electromagnéticas, luz y óptica, Movimiento: MRU y MRUA, Fuerzas y leyes de Newton, Sistema solar y universo, Tectónica de placas y sismos, Circuitos eléctricos y consumo de energía
-
-    \item \textbf{Química}: Materia y estructura atómica, Química orgánica, Reacciones químicas y estequiometría, Disoluciones y concentración
-
-    \item \textbf{Habilidades científicas}: Habilidades de pensamiento científico
-
-  \end{enumerate}
-
+\begin{frame}{Cómo usar este resumen}
+\begin{columns}[T,onlytextwidth]
+\column{0.56\textwidth}\small
+\begin{enumerate}
+\item Parte por la tabla \emph{Qué se repite en las pruebas}: dice qué temas aparecen más y cuál es su trampa habitual.
+\item Cada tema trae una lámina de teoría y luego ejercicios oficiales del DEMRE: el enunciado en una lámina y la solución en la siguiente.
+\item Resuelve el ejercicio y anota tu alternativa \emph{antes} de avanzar. Si fallaste, vuelve a la teoría.
+\item Usa el sumario para saltar al tema que necesites.
+\end{enumerate}
+\column{0.4\textwidth}
+\begin{cajaregla}[Regla práctica]\footnotesize Las cajas con borde negro son reglas para aplicar directo en la prueba.\end{cajaregla}
+\begin{notagris}\footnotesize Las notas en gris son errores comunes.\end{notagris}
+\vspace{0.4em}{\scriptsize\color{zinc500} Datos: 7 aplicaciones oficiales (invierno 2027, regular 2026, invierno 2026, regular 2025, invierno 2025, regular 2024, invierno 2024; año de admisión). Las soluciones paso a paso fueron redactadas con IA y revisadas contra la respuesta oficial del DEMRE.\par}
+\end{columns}
 \end{frame}
 
-\begin{frame}{Qué evalúa la prueba}
+\begin{frame}{Sumario}
+\begin{columns}[T,onlytextwidth]
+\column{0.47\textwidth}\footnotesize
+\sumarioitem{Qué se repite en las pruebas}{repite}
+\sumarioeje{Biología}
+\sumariotema{Organización, estructura y actividad celular}{tema-cs-celula}
+\sumariotema{Sistema nervioso}{tema-cs-nervioso}
+\sumariotema{Reproducción, sexualidad e ITS}{tema-cs-reproduccion}
+\sumariotema{Ciclo celular, meiosis y manipulación genética}{tema-cs-genetica}
+\sumariotema{Evolución: evidencias y selección natural}{tema-cs-evolucion}
+\sumariotema{Fotosíntesis, respiración y flujo de energía}{tema-cs-ecologia}
+\sumarioeje{Física}
+\sumariotema{Ondas electromagnéticas, luz y óptica}{tema-cs-luz}
+\sumariotema{Movimiento: MRU y MRUA}{tema-cs-cinematica}
+\sumariotema{Fuerzas y leyes de Newton}{tema-cs-dinamica}
+\sumariotema{Sistema solar y universo}{tema-cs-universo}
+\sumariotema{Tectónica de placas y sismos}{tema-cs-tierra}
+\sumariotema{Circuitos eléctricos y consumo de energía}{tema-cs-electricidad}
+\column{0.47\textwidth}\footnotesize
+\sumarioeje{Química}
+\sumariotema{Materia y estructura atómica}{tema-cs-atomo}
+\sumariotema{Química orgánica}{tema-cs-organica}
+\sumariotema{Reacciones químicas y estequiometría}{tema-cs-reacciones}
+\sumariotema{Disoluciones y concentración}{tema-cs-disoluciones}
+\sumarioeje{Habilidades científicas}
+\sumariotema{Habilidades de pensamiento científico}{tema-cs-habilidades}
+\end{columns}
+\end{frame}
 
-  \framesubtitle{Distribución por eje en 21 ensayos (1474 preguntas)}
+\begin{frame}{Qué se repite en las pruebas}
+\label{repite}
+\framesubtitle{837 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (1/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Habilidades de pensamiento científico & 21{,}9 & media & Confundir la variable que se mide con la que se manipula. \\
+Reacciones químicas y estequiometría & 12{,}3 & baja & Usar las proporciones de coeficientes directamente con gramos. \\
+Organización, estructura y actividad celular & 10{,}3 & alta & Atribuir cloroplastos o pared celular a células animales. \\
+Ondas electromagnéticas, luz y óptica & 9{,}0 & media & Pensar que la frecuencia cambia al pasar de un medio a otro (cambian la rapidez y la longitud de onda). \\
+Fuerzas y leyes de Newton & 8{,}7 & media & Creer que se necesita una fuerza para mantener la velocidad constante. \\
+Materia y estructura atómica & 8{,}1 & baja & Tomar $A$ como número de neutrones. \\
+\bottomrule\end{tabular}\end{ajustar}
+\end{frame}
 
-  \vspace{0.8em}
+\begin{frame}{Qué se repite en las pruebas}
+\framesubtitle{837 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (2/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Circuitos eléctricos y consumo de energía & 7{,}3 & baja & Sumar resistencias en paralelo como si estuvieran en serie. \\
+Ciclo celular, meiosis y manipulación genética & 7{,}1 & media & Atribuir a la mitosis la variabilidad genética. \\
+Química orgánica & 6{,}4 & baja & Confundir aldehído (carbonilo en el extremo) con cetona (carbonilo interno). \\
+Fotosíntesis, respiración y flujo de energía & 5{,}4 & media & Creer que las plantas no respiran. \\
+Disoluciones y concentración & 5{,}3 & baja & Usar mililitros en vez de litros en la molaridad. \\
+Reproducción, sexualidad e ITS & 4{,}4 & alta & Creer que los anticonceptivos hormonales protegen de las ITS. \\
+\bottomrule\end{tabular}\end{ajustar}
+\end{frame}
 
-  \ejebarra{Biología}{0.338}{34 \%}
-
-  \ejebarra{Física}{0.338}{34 \%}
-
-  \ejebarra{Química}{0.324}{32 \%}
-
+\begin{frame}{Qué se repite en las pruebas}
+\framesubtitle{837 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (3/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Evolución: evidencias y selección natural & 2{,}9 & alta & Pensar que el individuo cambia «para adaptarse». \\
+Movimiento: MRU y MRUA & 2{,}3 & baja & Mezclar km/h con m/s. \\
+Tectónica de placas y sismos & 2{,}1 & media & Confundir epicentro con hipocentro. \\
+Sistema nervioso & 0{,}4 & alta & Pensar que todo reflejo pasa por el cerebro. \\
+Sistema solar y universo & 0{,}4 & alta & Atribuir a Copérnico las órbitas elípticas, que son de Kepler. \\
+\bottomrule\end{tabular}\end{ajustar}
+\par\vspace{0.4em}{\tiny\color{zinc500} Dificultad relativa dentro de la materia, según el largo de la solución de sus preguntas oficiales.}
 \end{frame}
 
 \section{Biología}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Biología}\par\vspace{0.6em}
-  {\color{zinc700} Organización celular, procesos y funciones biológicas (sistema nervioso y reproducción), herencia y evolución, organismo y ambiente.}\par\vspace{1em}
-  {\small\color{zinc500} Organización, estructura y actividad celular, Sistema nervioso, Reproducción, sexualidad e ITS, Ciclo celular, meiosis y manipulación genética, Evolución: evidencias y selección natural, Fotosíntesis, respiración y flujo de energía}
-  \vfill
+\subsection{Organización, estructura y actividad celular}
+
+\begin{frame}{Organización, estructura y actividad celular}
+\label{tema-cs-celula}
+\framesubtitle{Biología · Teoría · 10,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Célula vegetal: pared celular, cloroplastos y vacuola grande.
+\item Osmosis: el agua pasa hacia el medio más concentrado en solutos.
+\item Los virus no son células.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el tipo de célula o estructura involucrada.\item Relaciona estructura con función.\item En transporte, determina el sentido del gradiente y si hay gasto de energía.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir cloroplastos o pared celular a células animales.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Organelos y función]\footnotesize
+Núcleo: material genético. Mitocondria: respiración celular (ATP). Cloroplasto: fotosíntesis (solo vegetales). Ribosoma: síntesis de proteínas. Retículo endoplasmático y aparato de Golgi: síntesis, modificación y transporte. Lisosoma: digestión celular.
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Organización, estructura y actividad celular}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Célula vegetal: pared celular, cloroplastos y vacuola grande.
-    \item Osmosis: el agua pasa hacia el medio más concentrado en solutos.
-    \item Los virus no son células.
-  \end{itemize}
-  \begin{cajaclave}[Organelos y función]\footnotesize
-Núcleo: material genético. Mitocondria: respiración celular (ATP). Cloroplasto: fotosíntesis (solo vegetales). Ribosoma: síntesis de proteínas. Retículo endoplasmático y aparato de Golgi: síntesis, modificación y transporte. Lisosoma: digestión celular.
-  \end{cajaclave}
+\begin{frame}{Organización, estructura y actividad celular}
+\framesubtitle{Biología · Esquema comparativo}
 \begin{center}\footnotesize
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
 \toprule
@@ -179,117 +273,238 @@ Ejemplos & bacterias & animales, plantas, hongos \\
 \end{center}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Organización, estructura y actividad celular}
-  {\small Un glóbulo rojo se coloca en agua destilada. ¿Qué ocurrirá con la célula?}
-  \vspace{0.4em}
-  \alternativa{A}{Se deshidrata, porque el agua sale de ella.}
-  \alternativa{B}{Se hincha y puede estallar, porque el agua entra en ella.}
-  \alternativa{C}{No cambia, porque la membrana es impermeable al agua.}
-  \alternativa{D}{Pierde sus sales hacia el agua por transporte activo.}
+\begin{frame}{Ejercicio 1 · Organización, estructura y actividad celular}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 9}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q09.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El agua destilada es hipotónica respecto del interior celular.}
-  {\small
-  \paso{1}{El interior del glóbulo rojo tiene más solutos que el agua destilada.}
-  \paso{2}{Por osmosis, el agua entra hacia el medio más concentrado: la célula se hincha (hemólisis).}
-  }
-  \alternativaok{B}{Se hincha y puede estallar, porque el agua entra en ella.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir cloroplastos o pared celular a células animales.
-    \item Pensar que en la osmosis se mueve el soluto (se mueve el agua).
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Organización, estructura y actividad celular}
+\framesubtitle{El test que reacciona solo con el VHS-1 es el que da positivo con ese virus y negativo con los demás orígenes de proteína de la tabla.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Leer la fila de VHS-1: el Test 1 (+), el Test 3 (+) y el Test 4 (+) reaccionan con la proteína del VHS-1, mientras que el Test 2 (–) no reacciona. Un test útil debe reaccionar con el virus objetivo, así que el Test 2 queda descartado.}
+\paso{2}{Revisar la especificidad del Test 1: reacciona con el VHS-1 (+), pero también con el VIH (+). Como reacciona con dos orígenes distintos, no es exclusivo del VHS-1.}
+\paso{3}{Revisar la especificidad del Test 4: reacciona con el VHS-1 (+) y con el virus de la hepatitis (+), así que tampoco es exclusivo del herpes genital.}
+\paso{4}{Revisar el Test 3: reacciona solo con el VHS-1 (+) y es negativo con la hepatitis, la influenza y el VIH (–). Es el único test que cumple la condición de especificidad exclusiva.}
+\paso{5}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 9}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Test 2: reconoce la proteína del virus de la hepatitis, no la del VHS-1; su resultado sería negativo para el herpes genital.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Sistema nervioso}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item En la sinapsis química el mensaje pasa con neurotransmisores.
-    \item El reflejo es rápido porque no lo procesa el cerebro.
-    \item Las drogas de abuso actúan sobre los neurotransmisores.
-  \end{itemize}
-  \begin{cajaclave}[Arco reflejo]\footnotesize
+\begin{frame}{Ejercicio 2 · Organización, estructura y actividad celular}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 58}
+\begin{ajustar}[0.7\textheight]
+{\small Un grupo de estudiantes necesitaba investigar experimentalmente la función celular de los nucléolos. Al planificar su estudio, decidieron bloquear enzimas involucradas específicamente en la síntesis de ácidos nucleicos de la zona nucleolar, para luego, analizar los efectos de este tratamiento. De acuerdo con estos antecedentes, ¿cuál de las siguientes opciones correspondería a un efecto directo del procedimiento planteado por los estudiantes?}
+\vspace{0.4em}
+\alternativa{A}{Se impedirá la síntesis de vesículas lisosomales.}
+\alternativa{B}{Se impedirá la síntesis de subunidades ribosomales.}
+\alternativa{C}{Se generará acumulación de proteínas en el citoplasma.}
+\alternativa{D}{Se generará acumulación de sustancias tóxicas en el citoplasma.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Organización, estructura y actividad celular}
+\framesubtitle{El nucléolo sintetiza el ARN ribosomal y ensambla las subunidades ribosomales; bloquear las enzimas que participan en esa síntesis impide justamente esa producción.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Identificar la función del nucléolo: es la región del núcleo donde se transcribe el ARN ribosomal (ARNr) a partir de genes específicos.}
+\paso{2}{Describir el ensamblaje: el ARNr se combina con proteínas dentro del nucléolo para formar las subunidades ribosomales, la mayor y la menor, que luego salen al citoplasma.}
+\paso{3}{Aplicar el bloqueo: si las enzimas que sintetizan ácidos nucleicos en el nucléolo están bloqueadas, no se produce el ARNr, y sin ARNr no se completan las subunidades.}
+\paso{4}{Clasificar los efectos: que no se formen subunidades ribosomales es el efecto directo, porque ocurre en el mismo sitio y en el mismo paso bloqueado. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Ciencias Biología, pregunta 58}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} La acumulación de proteínas en el citoplasma sería un efecto secundario posible, pero no es consecuencia directa de bloquear la síntesis de ARN ribosomal.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Sistema nervioso}
+
+\begin{frame}{Sistema nervioso}
+\label{tema-cs-nervioso}
+\framesubtitle{Biología · Teoría · 0,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item En la sinapsis química el mensaje pasa con neurotransmisores.
+\item El reflejo es rápido porque no lo procesa el cerebro.
+\item Las drogas de abuso actúan sobre los neurotransmisores.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ubica el estímulo, la vía y la respuesta.\item Identifica la estructura de la neurona o la etapa del arco reflejo involucrada.\item Predice qué pasa si esa estructura falla o una sustancia la altera.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Pensar que todo reflejo pasa por el cerebro.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Arco reflejo]\footnotesize
 Receptor $\rightarrow$ neurona sensitiva (aferente) $\rightarrow$ médula espinal (interneurona) $\rightarrow$ neurona motora (eferente) $\rightarrow$ efector (músculo o glándula).
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Sistema nervioso}
-  {\small Una persona toca una superficie caliente y retira la mano antes de sentir dolor. ¿Qué explica esa rapidez?}
-  \vspace{0.4em}
-  \alternativa{A}{El estímulo llega primero a la corteza cerebral.}
-  \alternativa{B}{La respuesta se integra en la médula espinal, en un arco reflejo.}
-  \alternativa{C}{Las hormonas actúan más rápido que los nervios.}
-  \alternativa{D}{La piel mueve los músculos por sí sola.}
+\begin{frame}{Ejercicio 1 · Sistema nervioso}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 57}
+\begin{ajustar}[0.7\textheight]
+{\small A finales del siglo XIX y comienzos del XX, no había evidencia concluyente que validara la existencia de las neuronas. Por esto, la comunidad científica estaba dividida entre quienes apoyaban la teoría reticularista, según la cual el tejido nervioso consistía en un continuo citoplasmático con múltiples núcleos, y quienes postulaban que estaba constituido por células. En el contexto de esta disyuntiva, ¿qué opción presenta un aspecto procedimental que explicaría las limitaciones en la investigación de aquella época?}
+\vspace{0.4em}
+\alternativa{A}{La ausencia de una teoría que abordara la existencia de estas células.}
+\alternativa{B}{El desconocimiento acerca de las funciones del sistema nervioso.}
+\alternativa{C}{La insuficiencia de las técnicas relacionadas con la microscopía.}
+\alternativa{D}{El conocimiento inexacto de los órganos del sistema nervioso.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Es un reflejo: la médula integra la respuesta sin esperar al cerebro.}
-  {\small
-  \paso{1}{La neurona sensitiva lleva el estímulo a la médula.}
-  \paso{2}{Desde ahí, una neurona motora activa el músculo; el dolor se percibe después.}
-  }
-  \alternativaok{B}{La respuesta se integra en la médula espinal, en un arco reflejo.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Pensar que todo reflejo pasa por el cerebro.
-    \item Confundir dendrita (recibe) con axón (conduce el impulso).
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Sistema nervioso}
+\framesubtitle{La limitación era técnica: la microscopía de la época no tenía la resolución necesaria para distinguir los límites entre células en el tejido nervioso.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Identificar el tipo de aspecto que se pide: procedimental significa relativo al método, es decir, a cómo se observa y se mide, no a lo que se sabe ni a lo que se teoriza.}
+\paso{2}{Identificar la disputa: se trata de decidir si el tejido nervioso es un continuo citoplasmático con varios núcleos o está formado por células. Esa distinción solo podía resolverse observando los límites de las estructuras.}
+\paso{3}{Evaluar la capacidad de observación: las estructuras del tejido nervioso son muy finas y densas, y la microscopía de la época no alcanzaba la resolución para distinguir sus límites. Eso es una limitación del método, no de la teoría.}
+\paso{4}{Comparar con el resultado histórico: la microscopía electrónica, de mayor resolución, permitió después ver las uniones entre neuronas y confirmar que el tejido está formado por células. Esto muestra que el obstáculo era técnico. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, Ciencias Biología, pregunta 57}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Desconocer las funciones del sistema nervioso es un vacío conceptual, no una falla del método de observación.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Reproducción, sexualidad e ITS}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Ovulación: liberación del ovocito, cerca del día 14.
-    \item Solo los métodos de barrera protegen de las ITS.
-    \item El VIH es un virus; la gonorrea y la clamidia, bacterias.
-  \end{itemize}
-  \begin{cajaclave}[Ciclo de 28 días]\footnotesize
+\begin{frame}{Ejercicio 2 · Sistema nervioso}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 57}
+\begin{ajustar}[0.7\textheight]
+{\small El científico español Santiago Ramón y Cajal postuló la teoría neuronal que proponía el carácter individual de las neuronas, es decir, que no estaban físicamente conectadas entre sí formando un solo tejido nervioso (sincicio). Considerando lo anterior, ¿cuál de las siguientes evidencias obtenidas desde cultivos de tejido cerebral sustentaría esta teoría de Ramón y Cajal?}
+\vspace{0.4em}
+\alternativa{A}{Luego de la incorporación de una molécula en las dendritas de una neurona, esta se detecta en toda la red de somas y axones.}
+\alternativa{B}{Luego de la incorporación de un marcador fluorescente en el medio extracelular, este es indetectable en toda la red de somas y axones.}
+\alternativa{C}{Luego de la incorporación de un marcador fluorescente en el soma de una neurona, este es indetectable en neuronas aledañas.}
+\alternativa{D}{Luego de la incorporación de un marcador fluorescente en un terminal axónico, este se detecta en el soma de neuronas aledañas.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Sistema nervioso}
+\framesubtitle{Si las neuronas formaran un sincicio, una sustancia debería difundirse de una neurona a sus vecinas por citoplasma continuo; que no lo haga es la evidencia a favor de la teoría de Ramón y Cajal.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Un sincicio es una red de citoplasma continuo: lo que se incorpora en una célula puede difundirse a las células vecinas a través de esa continuidad.}
+\paso{2}{Si la teoría de Ramón y Cajal es correcta, un marcador incorporado en el soma de una neurona debe quedar confinado a esa célula, sin pasar a las vecinas.}
+\paso{3}{Opción A: una molécula incorporada en las dendritas que se detecta en toda la red muestra que las neuronas están conectadas, lo que apoya el sincicio y no la individualidad.}
+\paso{4}{Opción B: un marcador en el medio extracelular no entra en las neuronas, así que su ausencia dentro de la red no dice nada sobre si las células están unidas. No es una prueba válida.}
+\paso{5}{Opción C: el marcador incorporado en el soma no aparece en las neuronas aledañas. Esto indica que no hay continuidad citoplasmática entre ellas, lo que sustenta la individualidad de cada neurona.}
+\paso{6}{Opción D: un marcador en un terminal axónico que aparece en el soma de neuronas vecinas indica transferencia entre células, lo que favorece la continuidad y no la independencia. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 57}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Pensar que una molécula detectada en toda la red demuestra individualidad, cuando precisamente indica que las células comparten citoplasma.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Reproducción, sexualidad e ITS}
+
+\begin{frame}{Reproducción, sexualidad e ITS}
+\label{tema-cs-reproduccion}
+\framesubtitle{Biología · Teoría · 4,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Ovulación: liberación del ovocito, cerca del día 14.
+\item Solo los métodos de barrera protegen de las ITS.
+\item El VIH es un virus; la gonorrea y la clamidia, bacterias.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ubica en qué fase del ciclo ocurre lo descrito.\item Identifica el método o el agente infeccioso y cómo actúa.\item Decide si previene embarazo, ITS o ambos.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Creer que los anticonceptivos hormonales protegen de las ITS.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Ciclo de 28 días]\footnotesize
 Días 1–5: menstruación. Días 6–13: fase folicular, el endometrio se engrosa. Día 14 aprox.: ovulación. Días 15–28: fase lútea; si no hay fecundación, bajan las hormonas y comienza un nuevo ciclo.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Reproducción, sexualidad e ITS}
-  {\small ¿Cuál de los siguientes métodos previene a la vez el embarazo y las infecciones de transmisión sexual?}
-  \vspace{0.4em}
-  \alternativa{A}{Píldora anticonceptiva.}
-  \alternativa{B}{Método del calendario.}
-  \alternativa{C}{Preservativo.}
-  \alternativa{D}{Ligadura de trompas.}
+\begin{frame}{Ejercicio 1 · Reproducción, sexualidad e ITS}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 63}
+\begin{ajustar}[0.7\textheight]
+{\small La estimulación ovárica (EO) consiste en un procedimiento que induce una ovulación múltiple en personas con problemas de fertilidad. Para esto, se usan fármacos que regulan el ciclo ovárico, promoviendo la expulsión de varios ovocitos maduros a fin de asegurar la fecundación. Estos fármacos deben aplicarse diariamente, durante 10 a 12 días previos al término de la fase folicular, para lograr una disponibilidad óptima de ovocitos. En este contexto, si una persona con ciclos ováricos de 32 días quiere someterse a un proceso de EO para lograr un embarazo, ¿en qué rango de días de su ciclo debería ser aplicado el fármaco correspondiente?}
+\vspace{0.4em}
+\alternativa{A}{Entre los días 6 y 17.}
+\alternativa{B}{Entre los días 1 y 12.}
+\alternativa{C}{Entre los días 18 y 29.}
+\alternativa{D}{Entre los días 21 y 32.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Solo una barrera física impide el contacto con fluidos y patógenos.}
-  {\small
-  \paso{1}{La píldora y la ligadura evitan el embarazo, pero no las ITS.}
-  \paso{2}{El calendario no protege de ninguna de las dos de forma confiable.}
-  }
-  \alternativaok{C}{Preservativo.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Creer que los anticonceptivos hormonales protegen de las ITS.
-    \item Ubicar la ovulación al inicio del ciclo.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Reproducción, sexualidad e ITS}
+\framesubtitle{Se cuentan los días hacia atrás desde la ovulación, que ocurre en el día 18 de un ciclo de 32 días si la fase lútea dura unos 14 días.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La fase folicular termina con la ovulación. Como la fase lútea dura alrededor de $14$ días, la ovulación ocurre en el día $32 - 14 = 18$. Este es el supuesto habitual que usan los rangos de las alternativas.}
+\paso{2}{Los $12$ días previos al término de la fase folicular van desde el día $18 - 12 = 6$ hasta el día $18 - 1 = 17$.}
+\paso{3}{La última aplicación es el día anterior a la ovulación, es decir, el día $17$. El intervalo de los días $6$ a $17$ contiene $12$ días de aplicación, dentro del rango de $10$ a $12$ días.}
+\paso{4}{La opción B termina el día $12$, seis días antes de la ovulación. Las opciones C y D comienzan después de la ovulación, en la fase lútea, así que tampoco sirven. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 63}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Elegir los días 21 a 32 por aplicar el fármaco en la fase lútea, que viene después de la ovulación y no antes.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Ciclo celular, meiosis y manipulación genética}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La replicación del ADN ocurre en la fase $S$, no en la mitosis.
-    \item La variabilidad viene de la meiosis, no de la mitosis.
-    \item Un transgénico porta un gen de otra especie.
-  \end{itemize}
-  \begin{cajaclave}[Mitosis y meiosis]\footnotesize
+\begin{frame}{Ejercicio 2 · Reproducción, sexualidad e ITS}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 8}
+\begin{ajustar}[0.7\textheight]
+{\small En la década de 1770, un investigador se dedicó a experimentar con muestras seminales, exponiéndolas a diferentes medios como ácido acético, bicarbonato de sodio y distintos alcoholes. El investigador concluyó que, al exponer las células sexuales a distintas concentraciones de estos medios, disminuía e incluso se inhibía la capacidad de fertilización. En este contexto, ¿cuál de las siguientes opciones indica un método anticonceptivo que pudo haber tenido como base el experimento descrito?}
+\vspace{0.4em}
+\alternativa{A}{Preservativo.}
+\alternativa{B}{Espermicida.}
+\alternativa{C}{Vasectomía.}
+\alternativa{D}{Diafragma.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Reproducción, sexualidad e ITS}
+\framesubtitle{Un espermicida es una sustancia química que inactiva o mata a los espermatozoides, y el experimento con ácido acético y alcoholes sugiere justamente ese efecto.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El investigador expuso células sexuales a sustancias químicas, y concluyó que la capacidad de fertilización disminuye e incluso se inhibe según la concentración. El efecto observado es químico y actúa sobre las células.}
+\paso{2}{Un método anticonceptivo que se apoye en ese principio debe actuar químicamente sobre los espermatozoides, de modo que pierdan la capacidad de fecundar.}
+\paso{3}{Un espermicida cumple exactamente esa función: es una sustancia que inmoviliza, inactiva o mata a los espermatozoides antes de que lleguen al óvulo.}
+\paso{4}{Los demás métodos no dependen de un efecto químico sobre las células: el preservativo y el diafragma son barreras físicas, y la vasectomía es una cirugía que interrumpe los conductos deferentes.}
+\paso{5}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Ciencias Biología, pregunta 8}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Preservativo: es una barrera física que impide que los espermatozoides lleguen al óvulo. No actúa químicamente sobre ellos, así que el experimento no lo explica.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Ciclo celular, meiosis y manipulación genética}
+
+\begin{frame}{Ciclo celular, meiosis y manipulación genética}
+\label{tema-cs-genetica}
+\framesubtitle{Biología · Teoría · 7,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item La replicación del ADN ocurre en la fase $S$, no en la mitosis.
+\item La variabilidad viene de la meiosis, no de la mitosis.
+\item Un transgénico porta un gen de otra especie.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica en qué fase del ciclo o de la división ocurre lo descrito.\item Cuenta cromosomas y moléculas de ADN en cada etapa.\item Relaciona el proceso con su función: crecimiento, reparación, gametos o aplicación biotecnológica.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir a la mitosis la variabilidad genética.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Mitosis y meiosis]\footnotesize
 Mitosis: $2n\rightarrow$ 2 células $2n$ idénticas. Meiosis: $2n\rightarrow$ 4 células $n$ distintas.
 
 Humanos: $2n=46$ en células somáticas y $n=23$ en gametos. La cromatina se compacta en cromosomas visibles durante la división.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ciclo celular, meiosis y manipulación genética}
+\framesubtitle{Biología · Esquema comparativo}
 \begin{center}\footnotesize
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
 \toprule
@@ -303,335 +518,602 @@ Función & crecimiento y reparación & formar gametos \\
 \end{center}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Ciclo celular, meiosis y manipulación genética}
-  {\small Una célula humana somática con 46 cromosomas completa una mitosis. ¿Cuántos cromosomas tiene cada célula hija?}
-  \vspace{0.4em}
-  \alternativa{A}{23}
-  \alternativa{B}{46}
-  \alternativa{C}{69}
-  \alternativa{D}{92}
+\begin{frame}{Ejercicio 1 · Ciclo celular, meiosis y manipulación genética}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 11}
+\begin{ajustar}[0.7\textheight]
+{\small Un grupo de estudiantes observa con un microscopio células en división mitótica. La profesora les solicita que seleccionen una célula de las que observan e identifiquen la etapa de la mitosis en la que se encuentra. Luego, ella indica que deben justificar su identificación escribiendo en su cuaderno la característica que utilizaron para ello. Al pasar unos minutos, un estudiante le comenta a la profesora que cree haber identificado correctamente una célula en telofase. En relación con lo anterior, ¿cuál de las siguientes opciones presenta una justificación correcta respecto de la etapa en la que se encuentra la célula seleccionada por el estudiante?}
+\vspace{0.4em}
+\alternativa{A}{La célula presenta dos zonas de reorganización de cariotecas.}
+\alternativa{B}{La célula presenta cromosomas dispersos aleatoriamente en el citoplasma.}
+\alternativa{C}{La célula presenta cromosomas dispuestos en el plano ecuatorial.}
+\alternativa{D}{La célula presenta centriolos ubicados en los polos.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La mitosis conserva el número de cromosomas.}
-  {\small
-  \paso{1}{Antes de dividirse, cada cromosoma se duplicó en la fase $S$.}
-  \paso{2}{En la anafase se separan las cromátidas y cada hija recibe 46 cromosomas.}
-  }
-  \alternativaok{B}{46}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir a la mitosis la variabilidad genética.
-    \item Confundir la duplicación del ADN (fase $S$) con la separación de cromátidas (anafase).
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Ciclo celular, meiosis y manipulación genética}
+\framesubtitle{En telofase los cromosomas llegan a los polos y se reorganiza una carioteca alrededor de cada grupo, así que la justificación correcta describe dos zonas de reorganización nuclear.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Recordar lo que ocurre en telofase. Los cromosomas llegan a los polos opuestos de la célula y comienzan a descondensarse.}
+\paso{2}{Recordar la reorganización nuclear. Alrededor de cada conjunto de cromosomas se forma una nueva envoltura nuclear (carioteca). Por eso se observan dos zonas de reorganización, una en cada polo.}
+\paso{3}{Evaluar la opción B. Los cromosomas dispersos en el citoplasma corresponden a prometafase, cuando la carioteca ya se desintegró y los cromosomas están libres; no son una característica de telofase.}
+\paso{4}{Evaluar las opciones C y D. Los cromosomas en el plano ecuatorial son característicos de metafase, y los centriolos en los polos aparecen en varias etapas, así que no justifican telofase.}
+\paso{5}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 11}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Cromosomas en el plano ecuatorial: es la característica de metafase, cuando los cromosomas se alinean antes de separarse.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Evolución: evidencias y selección natural}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Evolucionan las poblaciones, no los individuos.
-    \item Las mutaciones ocurren al azar; la selección no es azarosa.
-    \item Lamarck (caracteres adquiridos) fue descartado.
-  \end{itemize}
-  \begin{cajaclave}[Selección natural]\footnotesize
+\begin{frame}{Ejercicio 2 · Ciclo celular, meiosis y manipulación genética}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 71}
+\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q71.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Ciclo celular, meiosis y manipulación genética}
+\framesubtitle{Con el fármaco bajan las células diferenciadas y las que están en G1, mientras suben las de S y G2/M; eso indica más células en ciclo activo, es decir, proliferando.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Células diferenciadas: la barra con fármaco es más baja que la barra sin fármaco. El fármaco disminuye la proporción de células especializadas.}
+\paso{2}{Fase G1: la barra con fármaco también es menor; una proporción menor de células se queda en la fase de crecimiento previa a la replicación del ADN.}
+\paso{3}{Fases S y G2/M: las barras con fármaco son más altas que las sin fármaco. Más células están replicando su ADN o preparándose para dividirse, es decir, están en un ciclo activo.}
+\paso{4}{Relacionar los datos: una menor proporción de células diferenciadas y una mayor proporción en fases de replicación y división indica que el fármaco favorece la proliferación. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 71}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Promover la especialización celular: el fármaco disminuye las células diferenciadas, así que no favorece la especialización; la barra de células diferenciadas es menor con fármaco.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Evolución: evidencias y selección natural}
+
+\begin{frame}{Evolución: evidencias y selección natural}
+\label{tema-cs-evolucion}
+\framesubtitle{Biología · Teoría · 2,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Evolucionan las poblaciones, no los individuos.
+\item Las mutaciones ocurren al azar; la selección no es azarosa.
+\item Lamarck (caracteres adquiridos) fue descartado.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica la variación presente en la población.\item Determina qué presión ambiental favorece a qué variante.\item Concluye cómo cambia la frecuencia del rasgo en generaciones.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Pensar que el individuo cambia «para adaptarse».\end{notagris}
+\end{columns}
+\begin{cajaclave}[Selección natural]\footnotesize
 Variabilidad $\rightarrow$ presión del ambiente $\rightarrow$ supervivencia y reproducción diferencial $\rightarrow$ cambio en la frecuencia de los rasgos en la población.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Evolución: evidencias y selección natural}
-  {\small Tras usar un antibiótico por años, en un hospital predominan bacterias resistentes. ¿Cuál es la mejor explicación?}
-  \vspace{0.4em}
-  \alternativa{A}{El antibiótico produjo mutaciones dirigidas a la resistencia.}
-  \alternativa{B}{Las bacterias resistentes ya existían y sobrevivieron y se reprodujeron más.}
-  \alternativa{C}{Las bacterias aprendieron a resistir el antibiótico.}
-  \alternativa{D}{El antibiótico perdió su efecto por el paso del tiempo.}
+\begin{frame}{Ejercicio 1 · Evolución: evidencias y selección natural}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 4}
+\begin{center}\recorte{img/ciencias-biologia-2026-invierno/q04.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Es un ejemplo clásico de selección natural.}
-  {\small
-  \paso{1}{La resistencia surgió por variación previa (mutaciones al azar).}
-  \paso{2}{El antibiótico eliminó a las sensibles y las resistentes dejaron más descendencia.}
-  }
-  \alternativaok{B}{Las bacterias resistentes ya existían y sobrevivieron y se reprodujeron más.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Pensar que el individuo cambia «para adaptarse».
-    \item Explicar con herencia de caracteres adquiridos.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Evolución: evidencias y selección natural}
+\framesubtitle{Una conclusión poco confiable, obtenida con un solo individuo, se corrige aumentando el número de individuos de la misma especie.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La deficiencia señalada es la baja confiabilidad del protocolo. El enunciado indica que el fármaco se probó en «uno de estos individuos»: con un solo animal, la mejora observada puede deberse a la variación natural entre individuos y no al fármaco.}
+\paso{2}{La confiabilidad de un resultado depende del tamaño de la muestra. Al repetir el tratamiento en más individuos, el efecto promedio se separa de la variabilidad individual y la conclusión se vuelve más robusta.}
+\paso{3}{Además, la especie de interés es la especie en peligro. Para concluir algo sobre ella hay que trabajar con individuos de esa misma especie, bajo el mismo protocolo.}
+\paso{4}{Evaluar en otras especies cambia la población que se estudia y no añade datos de la especie en peligro, así que no corrige el problema original. Tampoco lo resuelve excluir a los individuos con problemas de conservación.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Ciencias Biología, pregunta 4}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Evaluar en individuos sin problemas acrosomales: un grupo de comparación puede ser útil, pero la deficiencia señalada es el tamaño de la muestra, que no aumenta con este cambio.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Fotosíntesis, respiración y flujo de energía}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Las plantas también respiran, día y noche.
-    \item El $\mathrm{O_2}$ liberado proviene del agua.
-    \item La energía fluye; la materia se recicla.
-  \end{itemize}
-  \begin{cajaclave}[Ecuaciones globales]\footnotesize
+\begin{frame}{Ejercicio 2 · Evolución: evidencias y selección natural}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 67}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q67.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Evolución: evidencias y selección natural}
+\framesubtitle{El núcleo, ubicado en la base, dirige la forma de la sombrilla que se regenera: al intercambiar solo los núcleos cambia la forma de la sombrilla, mientras que el tallo no define esa característica.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Del esquema original se deduce que la base, donde está el núcleo, controla la forma de la sombrilla: la especie 1 regenera una sombrilla ovalada aunque su tallo provenga de la especie 2, y la especie 2 regenera una dentada aunque reciba el tallo de la especie 1.}
+\paso{2}{Por lo tanto, el tallo no define la forma de la sombrilla. Lo que determina la regeneración es el núcleo.}
+\paso{3}{En el nuevo experimento se elimina la sombrilla de cada individuo y solo se intercambia el núcleo. El individuo que originalmente era de la especie 1 queda con el núcleo de la especie 2, y el de la especie 2 con el núcleo de la especie 1.}
+\paso{4}{Como la sombrilla se regenera según el núcleo, el individuo con núcleo de la especie 2 regenerará una sombrilla dentada, y el individuo con núcleo de la especie 1 regenerará una ovalada.}
+\paso{5}{Las alternativas A y C suponen una mezcla de caracteres, pero la regeneración no mezcla formas: cada sombrilla sale completa y con una forma definida. La D mantiene la forma original de cada individuo, lo que contradice que el núcleo sea quien decide. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 67}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Supone que cada sombrilla queda dividida en dos mitades de formas distintas. El esquema no muestra sombrillas mixtas: la regeneración depende de un solo núcleo.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Fotosíntesis, respiración y flujo de energía}
+
+\begin{frame}{Fotosíntesis, respiración y flujo de energía}
+\label{tema-cs-ecologia}
+\framesubtitle{Biología · Teoría · 5,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Las plantas también respiran, día y noche.
+\item El $\mathrm{O_2}$ liberado proviene del agua.
+\item La energía fluye; la materia se recicla.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica si el proceso fabrica materia orgánica o la degrada.\item Ubica la etapa y el organelo (cloroplasto o mitocondria).\item Predice el efecto de cambiar la luz, el $\mathrm{CO_2}$ o la temperatura.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Creer que las plantas no respiran.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Ecuaciones globales]\footnotesize
 \[6\,\mathrm{CO_2}+6\,\mathrm{H_2O}\xrightarrow{\text{luz}}\mathrm{C_6H_{12}O_6}+6\,\mathrm{O_2}\]
 
 Respiración: la reacción inversa, que libera la energía de la glucosa como ATP.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Fotosíntesis, respiración y flujo de energía}
-  {\small En un experimento, una planta acuática se ilumina con luz cada vez más intensa. ¿Qué es lo más probable que ocurra con la liberación de burbujas de oxígeno?}
-  \vspace{0.4em}
-  \alternativa{A}{Disminuye siempre.}
-  \alternativa{B}{Aumenta hasta un punto y luego se estabiliza.}
-  \alternativa{C}{No cambia.}
-  \alternativa{D}{Aumenta sin límite.}
+\begin{frame}{Ejercicio 1 · Fotosíntesis, respiración y flujo de energía}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 77}
+\begin{ajustar}[0.7\textheight]
+{\small En la zona austral de Chile investigadores registraron una reducción en la tasa fotosintética de diversas especies vegetales endémicas, aparentemente asociada con incrementos sostenidos de temperatura durante los últimos años. Para investigar este fenómeno analizaron muestras foliares de una especie, observando una disminución de la producción fotosintética de O\textsuperscript{2}. Al respecto, si los investigadores pretenden comparar la capacidad de producción de O\textsuperscript{2} de esta especie en el tiempo mediante la evaluación de la actividad enzimática, ¿en qué estructura del cloroplasto deberían focalizar el análisis?}
+\vspace{0.4em}
+\alternativa{A}{En el estroma.}
+\alternativa{B}{En los tilacoides.}
+\alternativa{C}{En la membrana externa.}
+\alternativa{D}{En el espacio intermembrana.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La luz es un factor limitante solo hasta que otro factor limita el proceso.}
-  {\small
-  \paso{1}{Más luz acelera la etapa luminosa y la liberación de $\mathrm{O_2}$.}
-  \paso{2}{Luego el $\mathrm{CO_2}$ o la temperatura limitan y la tasa se estabiliza.}
-  }
-  \alternativaok{B}{Aumenta hasta un punto y luego se estabiliza.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Creer que las plantas no respiran.
-    \item Decir que la energía se recicla en el ecosistema.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Fotosíntesis, respiración y flujo de energía}
+\framesubtitle{El oxígeno se libera durante la fotólisis del agua en los tilacoides; por eso el análisis enzimático para comparar la producción de $\mathrm{O_2}$ debe focalizarse en esa estructura.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La producción de $\mathrm{O_2}$ en la fotosíntesis proviene de la fotólisis del agua, que forma parte de la fase luminosa.}
+\paso{2}{La fase luminosa se realiza en las membranas de los tilacoides, donde están los fotosistemas y la cadena de transporte de electrones.}
+\paso{3}{Para comparar en el tiempo la capacidad de producir $\mathrm{O_2}$ mediante actividad enzimática, el análisis debe centrarse en los tilacoides, que es donde se libera el oxígeno.}
+\paso{4}{El estroma es el lugar del ciclo de Calvin, que fija $\mathrm{CO_2}$ pero no libera $\mathrm{O_2}$. La membrana externa y el espacio intermembrana no participan en la producción de oxígeno.}
+\paso{5}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 77}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} La membrana externa del cloroplasto no participa en la fotólisis del agua; la reacción que libera oxígeno ocurre en los tilacoides.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Fotosíntesis, respiración y flujo de energía}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 78}
+\begin{ajustar}[0.7\textheight]
+{\small En el contexto de una evaluación de productos de la fotosíntesis con fines alimentarios, un grupo de investigación cultivó tejidos fotosintéticamente activos, en los cuales midió la producción de hidratos de carbono bajo diferentes tratamientos. Al analizar los resultados, se constató que en uno de estos cultivos experimentales hubo una disminución en la magnitud de la variable dependiente. ¿Cuál podría ser el tratamiento asociado con este resultado?}
+\vspace{0.4em}
+\alternativa{A}{Baja disponibilidad de luz}
+\alternativa{B}{Alta concentración de CO\textsuperscript{2}}
+\alternativa{C}{Baja concentración de O\textsuperscript{2}}
+\alternativa{D}{Alta humedad ambiental}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Fotosíntesis, respiración y flujo de energía}
+\framesubtitle{La producción de hidratos de carbono depende de la luz, que impulsa la fase lumínica; si la luz disminuye, baja la fijación de carbono y con ella la producción de azúcares.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Identificar la variable dependiente: la producción de hidratos de carbono, que depende de la fotosíntesis de los tejidos.}
+\paso{2}{Relacionar la fotosíntesis con la luz: la fase lumínica usa energía luminosa para producir ATP y NADPH, que luego se utilizan en el ciclo de Calvin para fijar $\mathrm{CO_2}$ en azúcares.}
+\paso{3}{Aplicar cada tratamiento: con baja disponibilidad de luz se limita la fase lumínica y, con ella, la fijación de carbono; por eso disminuye la producción de hidratos de carbono.}
+\paso{4}{Revisar los demás tratamientos: el alto $\mathrm{CO_2}$ es sustrato y favorece la fotosíntesis; el bajo $\mathrm{O_2}$ no limita el proceso porque es un producto; la alta humedad no inhibe la fotosíntesis. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 78}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Alta concentración de $\mathrm{CO_2}$: el dióxido de carbono es sustrato de la fotosíntesis, y su abundancia la favorece en lugar de disminuirla.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Física}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Física}\par\vspace{0.6em}
-  {\color{zinc700} Ondas electromagnéticas, mecánica (movimiento, fuerzas y universo), energía y Tierra, y electricidad.}\par\vspace{1em}
-  {\small\color{zinc500} Ondas electromagnéticas, luz y óptica, Movimiento: MRU y MRUA, Fuerzas y leyes de Newton, Sistema solar y universo, Tectónica de placas y sismos, Circuitos eléctricos y consumo de energía}
-  \vfill
-\end{frame}
+\subsection{Ondas electromagnéticas, luz y óptica}
 
-\begin{frame}[allowframebreaks]{Ondas electromagnéticas, luz y óptica}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Todas las ondas electromagnéticas viajan a la misma rapidez en el vacío.
-    \item Los ángulos de reflexión y refracción se miden respecto de la normal.
-    \item El arcoíris se explica por refracción y dispersión.
-  \end{itemize}
-  \begin{cajaclave}[Relaciones]\footnotesize
-\begin{gather*}
-c=\lambda\,f \\
-T=\frac{1}{f} \\
-\theta_i=\theta_r \\
-n=\frac{c}{v}
-\end{gather*}
+\begin{frame}{Ondas electromagnéticas, luz y óptica}
+\label{tema-cs-luz}
+\framesubtitle{Física · Teoría · 9,0 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Todas las ondas electromagnéticas viajan a la misma rapidez en el vacío.
+\item Los ángulos de reflexión y refracción se miden respecto de la normal.
+\item El arcoíris se explica por refracción y dispersión.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica qué magnitud de la onda se pregunta y cuáles conoces.\item Ubica la radiación en el espectro o dibuja la normal y los rayos.\item Aplica $c=\lambda f$, la ley de reflexión o el tipo de imagen según el espejo o la lente.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Pensar que la frecuencia cambia al pasar de un medio a otro (cambian la rapidez y la longitud de onda).\end{notagris}
+\end{columns}
+\begin{cajaclave}[Relaciones]\footnotesize
+\[c=\lambda\,f \quad\quad T=\frac{1}{f} \quad\quad \theta_i=\theta_r \quad\quad n=\frac{c}{v}\]
 
 Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más energía (radio $<$ microondas $<$ infrarrojo $<$ visible $<$ UV $<$ X $<$ gamma).
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Ondas electromagnéticas, luz y óptica}
-  {\small Una radio transmite con una frecuencia de $100\ \text{MHz}=1\cdot 10^8$ Hz. ¿Cuál es la longitud de onda de esa señal en el aire?}
-  \vspace{0.4em}
-  \alternativa{A}{0,3 m}
-  \alternativa{B}{1 m}
-  \alternativa{C}{3 m}
-  \alternativa{D}{30 m}
+\begin{frame}{Ejercicio 1 · Ondas electromagnéticas, luz y óptica}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Física, pregunta 59}
+\begin{ajustar}[0.7\textheight]
+{\small Al observar una estrella, una astrónoma afirma que esta experimenta un corrimiento al rojo. ¿A qué se debe el nombre del fenómeno señalado?}
+\vspace{0.4em}
+\alternativa{A}{A que la frecuencia de la luz visible captada es menor que la emitida, por lo que está más cercana al rojo en el espectro electromagnético.}
+\alternativa{B}{A que la luz emitida corresponde a ondas de menor frecuencia ubicadas en el infrarrojo.}
+\alternativa{C}{A que la luz infrarroja captada corresponde a ondas de menor intensidad que las del espectro de luz visible.}
+\alternativa{D}{A que la luz emitida corresponde a radiación de menor intensidad, por lo que al ser percibida se aproxima al color rojo.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Las ondas de radio son electromagnéticas: viajan a unos $3\cdot 10^8$ m/s.}
-  {\small
-  \paso{1}{$\lambda=\dfrac{c}{f}=\dfrac{3\cdot 10^8}{1\cdot 10^8}$.}
-  \paso{2}{$\lambda=3$ m.}
-  }
-  \alternativaok{C}{3 m}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Pensar que la frecuencia cambia al pasar de un medio a otro (cambian la rapidez y la longitud de onda).
-    \item Creer que los rayos X o la luz necesitan un medio para propagarse.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Ondas electromagnéticas, luz y óptica}
+\framesubtitle{El corrimiento al rojo recibe ese nombre porque la luz recibida tiene menor frecuencia y mayor longitud de onda, desplazándose hacia el extremo rojo del espectro.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El corrimiento al rojo es un desplazamiento del espectro de la luz hacia las longitudes de onda más largas, que corresponden a una menor frecuencia.}
+\paso{2}{El color que percibimos depende de la frecuencia: una frecuencia menor hace que la luz recibida se ubique más cerca del extremo rojo del espectro visible.}
+\paso{3}{Por eso el fenómeno recibe su nombre de ese desplazamiento hacia el rojo, y no de un tipo de radiación ni de su intensidad.}
+\paso{4}{La opción B menciona infrarrojo como radiación emitida, y las opciones C y D hablan de intensidad, que no define el nombre del fenómeno. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Ciencias Física, pregunta 59}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Confunde color con intensidad: una menor intensidad no cambia la frecuencia ni el color de la luz.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Movimiento: MRU y MRUA}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Pendiente de $x$–$t$ = velocidad.
-    \item Área bajo $v$–$t$ = desplazamiento.
-    \item 72 km/h = 20 m/s (divide por 3,6).
-  \end{itemize}
-  \begin{cajaclave}[Ecuaciones]\footnotesize
-\begin{gather*}
-\text{MRU: } x=x_0+vt \\
-\text{MRUA: } v=v_0+at,\quad x=x_0+v_0t+\tfrac{1}{2}at^2
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 2 · Ondas electromagnéticas, luz y óptica}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 23}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q23.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Movimiento: MRU y MRUA}
-  {\small Un ciclista recorre 18 km en 45 minutos. ¿Cuál es su rapidez media?}
-  \vspace{0.4em}
-  \alternativa{A}{0,4 km/h}
-  \alternativa{B}{2,5 km/h}
-  \alternativa{C}{24 km/h}
-  \alternativa{D}{40 km/h}
+\begin{frame}{Solución 2 · Ondas electromagnéticas, luz y óptica}
+\framesubtitle{En un espejo cóncavo sin defectos, los rayos que parten del foco se reflejan paralelos al eje óptico; si la superficie tiene irregularidades, los rayos reflejados se desordenan y la prueba los detecta.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Identificar el comportamiento esperado: en un espejo cóncavo sin defectos, los rayos que parten del foco se reflejan paralelos al eje óptico.}
+\paso{2}{Interpretar la prueba: los obstáculos dejan pasar solo algunos rayos hacia el espejo, y lo que se observa es la dirección de los rayos reflejados. En la figura, esos rayos salen horizontales y ordenados.}
+\paso{3}{Analizar una falla: si la superficie tiene abolladuras, rayaduras o irregularidades, cada rayo rebota con un ángulo distinto y los rayos reflejados dejan de ser paralelos entre sí.}
+\paso{4}{Descartar las demás opciones: la prueba no mide la intensidad de la ampolleta, no evalúa la adecuación de los obstáculos ni permite conocer el material; solo revela la forma y regularidad de la superficie reflectora.}
+\paso{5}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 23}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Identificar el material del espejo: los rayos reflejados informan sobre la forma y regularidad de la superficie, no sobre su composición.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Rapidez media = distancia / tiempo, con unidades coherentes.}
-  {\small
-  \paso{1}{45 min = 0,75 h.}
-  \paso{2}{$v=\dfrac{18}{0{,}75}=24$ km/h.}
-  }
-  \alternativaok{C}{24 km/h}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Mezclar km/h con m/s.
-    \item Olvidar el factor $\frac{1}{2}$ en $\frac{1}{2}at^2$.
-    \end{itemize}
-  \end{cajatrampa}
+\subsection{Movimiento: MRU y MRUA}
+
+\begin{frame}{Movimiento: MRU y MRUA}
+\label{tema-cs-cinematica}
+\framesubtitle{Física · Teoría · 2,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Pendiente de $x$–$t$ = velocidad.
+\item Área bajo $v$–$t$ = desplazamiento.
+\item 72 km/h = 20 m/s (divide por 3,6).
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el tipo de movimiento y los datos con sus unidades.\item Elige la ecuación que relaciona datos e incógnita.\item En gráficos, usa la pendiente o el área según lo pedido.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Mezclar km/h con m/s.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Ecuaciones]\footnotesize
+\[\text{MRU: } x=x_0+vt \quad\quad \text{MRUA: } v=v_0+at,\quad x=x_0+v_0t+\tfrac{1}{2}at^2\]
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Fuerzas y leyes de Newton}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Acción y reacción actúan sobre cuerpos distintos: no se anulan.
-    \item Velocidad constante $\Rightarrow$ fuerza neta nula.
-    \item En la Luna cambia el peso, no la masa.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-F_{\text{neta}}=m\,a \\
-P=m\,g \\
-F_{\text{elástica}}=k\,x \\
-f_r=\mu\,N
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 1 · Movimiento: MRU y MRUA}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Física, pregunta 55}
+\begin{ajustar}[0.7\textheight]
+{\small El radar es un instrumento tecnológico que se utiliza ampliamente en el ámbito de la aeronáutica, navegación, meteorología y otras actividades, ya que permite determinar la posición de objetos así como sus velocidades y trayectorias. En relación a lo anterior, ¿qué fenómenos asociados a las ondas electromagnéticas explican el funcionamiento del radar?}
+\vspace{0.4em}
+\alternativa{A}{La difracción y la absorción}
+\alternativa{B}{La refracción y la absorción}
+\alternativa{C}{La propagación y la difracción}
+\alternativa{D}{La propagación y la reflexión}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Fuerzas y leyes de Newton}
-  {\small Un auto avanza en línea recta a 60 km/h constantes. ¿Qué se puede afirmar de la fuerza neta sobre él?}
-  \vspace{0.4em}
-  \alternativa{A}{Es nula.}
-  \alternativa{B}{Apunta en el sentido del movimiento.}
-  \alternativa{C}{Apunta en sentido contrario al movimiento.}
-  \alternativa{D}{Es igual a su peso.}
+\begin{frame}{Solución 1 · Movimiento: MRU y MRUA}
+\framesubtitle{El radar emite ondas electromagnéticas que viajan hasta el objeto y regresan por reflexión; el eco permite determinar posición y velocidad.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El radar emite pulsos de ondas electromagnéticas que se propagan por el aire hasta encontrar un objeto. La propagación es el fenómeno que permite que la onda viaje.}
+\paso{2}{Las ondas que chocan con el objeto se reflejan y vuelven al receptor. El tiempo de ida y vuelta da la distancia, y el cambio de frecuencia del eco da la velocidad.}
+\paso{3}{Descartar otros fenómenos: la difracción no es lo que devuelve el eco; la absorción impediría que el objeto devolviera señal; la refracción describe un cambio de dirección al cambiar de medio y no explica el retorno de la señal.}
+\paso{4}{Los dos fenómenos centrales son la propagación (el viaje de la onda) y la reflexión (el eco). Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Ciencias Física, pregunta 55}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Difracción y absorción: la difracción no es lo que devuelve el eco, y la absorción impediría que el objeto devolviera señal.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Velocidad constante significa aceleración cero.}
-  {\small
-  \paso{1}{Si $a=0$, por la segunda ley $F_{\text{neta}}=m\cdot 0=0$.}
-  \paso{2}{La fuerza del motor se equilibra con los roces.}
-  }
-  \alternativaok{A}{Es nula.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Creer que se necesita una fuerza para mantener la velocidad constante.
-    \item Sumar acción y reacción como si actuaran sobre el mismo cuerpo.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Ejercicio 2 · Movimiento: MRU y MRUA}
+\framesubtitle{Fuente: PAES Invierno 2024, Ciencias Biología, pregunta 26}
+\begin{center}\recorte{img/ciencias-biologia-2025-invierno/q26.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Sistema solar y universo}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Las lunas de Júpiter mostraron que no todo gira en torno a la Tierra.
-    \item Un planeta es más rápido en su perihelio que en su afelio.
-    \item Corrimiento al rojo: la galaxia se aleja.
-  \end{itemize}
-  \begin{cajaclave}[Leyes de Kepler]\footnotesize
+\begin{frame}{Solución 2 · Movimiento: MRU y MRUA}
+\framesubtitle{Al frenar mientras baja, el ascensor acelera hacia arriba: por eso la pesa marca más que el peso real de la persona.}
+\begin{ajustar}[0.70\textheight]
+{\footnotesize
+\paso{1}{Determina el sentido de la aceleración: el ascensor baja y frena, así que su rapidez disminuye. Para eso la aceleración debe apuntar en sentido contrario al movimiento, es decir, hacia arriba.}
+\paso{2}{Identifica las fuerzas sobre la persona: el peso $m \cdot g$ hacia abajo y la fuerza normal $N$ de la pesa hacia arriba. Esa fuerza $N$ es lo que indica la pesa.}
+\paso{3}{Aplica la segunda ley de Newton, con sentido positivo hacia arriba: $N - m \cdot g = m \cdot a$. Al despejar queda $N = m \cdot g + m \cdot a = m(g + a)$.}
+\paso{4}{Reemplaza los valores: $N = 60 \cdot (10 + 0{,}25) = 60 \cdot 10{,}25 = 615\ \mathrm{N}$.}
+\paso{5}{El resultado es mayor que el peso de $600\ \mathrm{N}$, como corresponde a una aceleración hacia arriba. Por lo tanto, la alternativa correcta es la E.}
+}
+\respuesta{E}{PAES Invierno 2024, Ciencias Biología, pregunta 26}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} $60\ \mathrm{N}$ repite el valor de la masa: confunde kilogramos con newtons y no considera ni la gravedad ni la aceleración.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Fuerzas y leyes de Newton}
+
+\begin{frame}{Fuerzas y leyes de Newton}
+\label{tema-cs-dinamica}
+\framesubtitle{Física · Teoría · 8,7 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Acción y reacción actúan sobre cuerpos distintos: no se anulan.
+\item Velocidad constante $\Rightarrow$ fuerza neta nula.
+\item En la Luna cambia el peso, no la masa.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Dibuja las fuerzas que actúan sobre el cuerpo (diagrama de cuerpo libre).\item Calcula la fuerza neta sumando con signo.\item Aplica $F=ma$ o la ley pertinente.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Creer que se necesita una fuerza para mantener la velocidad constante.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[F_{\text{neta}}=m\,a \quad\quad P=m\,g \quad\quad F_{\text{elástica}}=k\,x \quad\quad f_r=\mu\,N\]
+\end{cajaclave}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 1 · Fuerzas y leyes de Newton}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 26}
+\begin{ajustar}[0.7\textheight]
+{\small Una persona asiste a una feria de exhibición aeronáutica y luego de observar la caída de un grupo de paracaidistas, nota que, a pesar de que todos los paracaidistas abren sus paracaídas en el mismo instante, no todos llegan al suelo al mismo tiempo. Al investigar acerca del hecho, la persona constata que todos los paracaidistas tienen masas muy similares y que los paracaídas están hechos del mismo material, por lo que afirma que el tamaño de los paracaídas debe ser distinto. Al respecto, ¿a qué componente de la investigación científica corresponde la afirmación de la persona?}
+\vspace{0.4em}
+\alternativa{A}{A un marco conceptual.}
+\alternativa{B}{A un procedimiento.}
+\alternativa{C}{A una observación.}
+\alternativa{D}{A una inferencia.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 1 · Fuerzas y leyes de Newton}
+\framesubtitle{La persona explica un hecho observado con una causa que no vio directamente, el tamaño de los paracaídas; esa explicación deducida es una inferencia.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Identificar lo observado: todos los paracaidistas abren sus paracaídas en el mismo instante, pero no llegan al suelo al mismo tiempo. Eso es un hecho registrado por la persona.}
+\paso{2}{Identificar lo constatado: las masas son muy similares y el material de los paracaídas es el mismo. Con esos datos se descartan esas dos posibles causas.}
+\paso{3}{Identificar la afirmación: que el tamaño de los paracaídas debe ser distinto no se observó directamente. Es una explicación que se deduce de lo observado y de lo constatado, es decir, una inferencia.}
+\paso{4}{Diferenciar con las otras categorías: un procedimiento describe pasos de medición o prueba, un marco conceptual es un conjunto general de ideas, y una observación es lo que se ve directamente. La afirmación es una explicación puntual.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Ciencias Biología, pregunta 26}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Procedimiento: describe pasos para medir o probar algo; en el texto no hay pasos ni datos registrados, solo una conclusión.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Fuerzas y leyes de Newton}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 25}
+\begin{ajustar}[0.7\textheight]
+{\small Durante una actividad experimental, una estudiante fija un globo desinflado a los bordes de un plato hondo, cubriéndolo completamente hasta dejar tenso el globo, simulando una cama elástica. Luego deja caer, desde cierta altura, una canica sobre el globo tenso, observando que el globo se hunde levemente y que la canica rebota. Al respecto, ¿cuál de los siguientes hechos explica correctamente lo observado por la estudiante?}
+\vspace{0.4em}
+\alternativa{A}{La fuerza que la canica ejerce sobre el globo es proporcional a la altura desde donde se suelta la canica.}
+\alternativa{B}{La fuerza que ejerce la canica sobre el globo depende de cuan tenso esté el globo en la superficie del plato.}
+\alternativa{C}{La canica ejerce una fuerza sobre el globo en sentido contrario a la fuerza que el globo ejerce sobre la misma.}
+\alternativa{D}{La altura que alcanza la canica luego de rebotar sobre el globo se relaciona directamente con la tensión que el globo tiene en el plato.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Fuerzas y leyes de Newton}
+\framesubtitle{Al caer sobre el globo, la canica ejerce una fuerza sobre él, y el globo ejerce a su vez una fuerza igual y opuesta sobre la canica: es el par acción-reacción de la tercera ley de Newton.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Mientras la canica cae sobre el globo, lo empuja hacia abajo; por eso el globo se hunde levemente. Esa es la fuerza que la canica ejerce sobre el globo.}
+\paso{2}{El globo tenso responde con una fuerza hacia arriba sobre la canica, que la hace rebotar. Esa es la fuerza que el globo ejerce sobre la canica.}
+\paso{3}{Según la tercera ley de Newton, ambas fuerzas tienen igual magnitud y sentidos opuestos, y actúan sobre cuerpos distintos. Así, la interacción es un par acción-reacción.}
+\paso{4}{El hundimiento y el rebote describen el resultado del movimiento, pero no cambian la relación entre las dos fuerzas. La explicación del fenómeno está en el par de fuerzas.}
+\paso{5}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, Ciencias Biología, pregunta 25}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Altura de rebote relacionada con la tensión: el rebote depende de la energía con que llega la canica y de lo que el globo devuelve, no de una relación directa que explique la tercera ley.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Sistema solar y universo}
+
+\begin{frame}{Sistema solar y universo}
+\label{tema-cs-universo}
+\framesubtitle{Física · Teoría · 0,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Las lunas de Júpiter mostraron que no todo gira en torno a la Tierra.
+\item Un planeta es más rápido en su perihelio que en su afelio.
+\item Corrimiento al rojo: la galaxia se aleja.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica qué modelo o teoría describe la situación.\item Busca la evidencia que la apoya o la refuta.\item Relaciona la observación con la ley o el científico correspondiente.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir a Copérnico las órbitas elípticas, que son de Kepler.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Leyes de Kepler]\footnotesize
 1.ª: los planetas giran en órbitas elípticas con el Sol en un foco. 2.ª: la línea Sol–planeta barre áreas iguales en tiempos iguales (el planeta va más rápido cerca del Sol). 3.ª: el cuadrado del período es proporcional al cubo del semieje mayor, $T^2\propto a^3$.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Sistema solar y universo}
-  {\small ¿Qué observación de Galileo con su telescopio contradijo el modelo geocéntrico?}
-  \vspace{0.4em}
-  \alternativa{A}{Que la Tierra es redonda.}
-  \alternativa{B}{Que Júpiter tiene lunas que giran a su alrededor.}
-  \alternativa{C}{Que las órbitas son elípticas.}
-  \alternativa{D}{Que el universo se expande.}
+\begin{frame}{Ejercicio 1 · Sistema solar y universo}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Física, pregunta 71}
+\begin{ajustar}[0.7\textheight]
+{\small Según nuevos datos climáticos de la Organización Meteorológica Mundial (OMM), hay aproximadamente un 40 \% de probabilidades de que, por lo menos en uno de los próximos 5 años, la temperatura media anual del planeta supere en 1,5 \textdegree{}C los niveles preindustriales. En este contexto, ¿cuál es uno de los hechos que se puede esperar como consecuencia de este aumento en 1,5 \textdegree{}C?}
+\vspace{0.4em}
+\alternativa{A}{Una disminución de la concentración de gases de efecto invernadero}
+\alternativa{B}{Una disminución del volumen de nieve acumulada en las montañas}
+\alternativa{C}{Una disminución de la masa total del agua a nivel global}
+\alternativa{D}{Una disminución en el agujero de la capa de ozono}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El modelo geocéntrico afirmaba que todos los astros giraban en torno a la Tierra.}
-  {\small
-  \paso{1}{Las lunas de Júpiter giran en torno a otro cuerpo, no a la Tierra.}
-  \paso{2}{Las órbitas elípticas son de Kepler, y la expansión del universo es del siglo XX.}
-  }
-  \alternativaok{B}{Que Júpiter tiene lunas que giran a su alrededor.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir a Copérnico las órbitas elípticas, que son de Kepler.
-    \item Pensar que el Big Bang fue una explosión en un punto del espacio y no una expansión del espacio mismo.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Sistema solar y universo}
+\framesubtitle{Un aumento de 1,5 \textdegree{}C en la temperatura media derrite más nieve y hielo acumulados en las montañas, por lo que disminuye el volumen de nieve acumulada.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El dato indica que la temperatura media anual del planeta podría superar en 1,5 \textdegree{}C los niveles preindustriales. Ese aumento de temperatura es la causa que se analiza.}
+\paso{2}{Al subir la temperatura, la nieve y el hielo acumulados en la montaña pasan a fase líquida con más facilidad, porque la temperatura permanece por encima del punto de fusión durante más tiempo.}
+\paso{3}{Como consecuencia, se espera una disminución del volumen de nieve acumulada en las montañas, que es el hecho de la alternativa B.}
+\paso{4}{Las demás opciones no son consecuencias del aumento de temperatura. Una disminución de los gases de efecto invernadero sería lo contrario de lo que causa el calentamiento; el agua cambia de estado sin desaparecer del planeta; y el agujero de la capa de ozono depende de gases como los clorofluorocarbonos. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Ciencias Física, pregunta 71}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Menos agujero en la capa de ozono: el ozono se daña por gases como los clorofluorocarbonos, no por el aumento de temperatura.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Tectónica de placas y sismos}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Chile está sobre un borde convergente: la placa de Nazca subduce bajo la Sudamericana.
-    \item Magnitud: una por sismo; intensidad: distinta en cada lugar.
-    \item Las ondas sísmicas se propagan por el interior de la Tierra.
-  \end{itemize}
-  \begin{cajaclave}[Bordes de placa]\footnotesize
+\begin{frame}{Ejercicio 2 · Sistema solar y universo}
+\framesubtitle{Fuente: PAES Regular 2024, Ciencias Física, pregunta 60}
+\begin{center}\recorte{img/ciencias-fisica-2025-regular/q60.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Sistema solar y universo}
+\framesubtitle{Una estrella más luminosa pulsa menos veces en el mismo intervalo de tiempo; por eso, en el gráfico correcto, la curva más alta (la más luminosa) debe tener menos pulsos que la otra.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Según la relación descubierta, la estrella más luminosa tiene menor frecuencia de pulsación: pulsa menos veces en el mismo intervalo de tiempo.}
+\paso{2}{Para comparar, se cuentan los pulsos de cada curva en un mismo intervalo de $t$ y se compara la altura media de cada curva, que representa su luminosidad.}
+\paso{3}{En la alternativa A, la cefeida 2 está más arriba (mayor luminosidad) y pulsa dos veces en el intervalo, mientras que la cefeida 1, más abajo, pulsa tres o cuatro veces. Se cumple la relación.}
+\paso{4}{En la alternativa B, la cefeida 1 está arriba y pulsa más veces que la cefeida 2. La estrella más luminosa tendría mayor frecuencia, lo que contradice la relación.}
+\paso{5}{En la alternativa C, ambas cefeidas presentan una cantidad similar de pulsos en el intervalo, así que no se distingue una diferencia de frecuencia.}
+\paso{6}{En la alternativa D, las dos curvas tienen un número casi igual de pulsos y no hay una relación clara entre luminosidad y frecuencia.}
+\paso{7}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Regular 2024, Ciencias Física, pregunta 60}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Pulsos casi iguales en ambas curvas: no hay diferencia de frecuencia que justifique la relación, así que la alternativa no muestra lo que se pide.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Tectónica de placas y sismos}
+
+\begin{frame}{Tectónica de placas y sismos}
+\label{tema-cs-tierra}
+\framesubtitle{Física · Teoría · 2,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Chile está sobre un borde convergente: la placa de Nazca subduce bajo la Sudamericana.
+\item Magnitud: una por sismo; intensidad: distinta en cada lugar.
+\item Las ondas sísmicas se propagan por el interior de la Tierra.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el tipo de borde de placa.\item Relaciónalo con el fenómeno (sismo, volcán, relieve).\item Distingue epicentro de hipocentro y magnitud de intensidad.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir epicentro con hipocentro.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Bordes de placa]\footnotesize
 Convergente: las placas chocan; subducción, sismos, volcanes y cordilleras (Chile).
 
 Divergente: se separan; dorsales y nuevo suelo oceánico. Transformante: se deslizan de lado; sismos (falla de San Andrés).
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Tectónica de placas y sismos}
-  {\small ¿Por qué Chile tiene tantos sismos y volcanes?}
-  \vspace{0.4em}
-  \alternativa{A}{Porque está en el centro de una placa tectónica.}
-  \alternativa{B}{Porque la placa de Nazca subduce bajo la placa Sudamericana.}
-  \alternativa{C}{Porque las placas se separan bajo el país.}
-  \alternativa{D}{Porque el núcleo terrestre está más cerca de la superficie en Chile.}
+\begin{frame}{Ejercicio 1 · Tectónica de placas y sismos}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 31}
+\begin{ajustar}[0.7\textheight]
+{\small Una persona que desea comprar una casa en una de las comunas del sector precordillerano de Santiago, se entera de que esta es atravesada por la falla de San Ramón, una fractura geológica ubicada a los pies de la cordillera de los Andes. Se estima que la falla tiene una longitud de entre 30 y 50 km y una profundidad de entre 10 y 12 km. Ante esta información, la persona decide investigar si existe la posibilidad de que la falla genere sismos de gran magnitud. Al respecto, ¿cuál de los siguientes datos sería relevante para iniciar su investigación?}
+\vspace{0.4em}
+\alternativa{A}{Las características de los sismos generados por fallas similares a la de San Ramón.}
+\alternativa{B}{La cantidad de sismos registrados en la falla de San Ramón en los últimos 2 años.}
+\alternativa{C}{La cantidad de fallas similares a la de San Ramón que existen en la placa Sudamericana.}
+\alternativa{D}{La clasificación de la falla de San Ramón según la forma de desplazamiento de las rocas.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Chile está en un borde convergente.}
-  {\small
-  \paso{1}{En la subducción, la placa oceánica se hunde bajo la continental.}
-  \paso{2}{La fricción y la fusión del material generan sismos y volcanismo.}
-  }
-  \alternativaok{B}{Porque la placa de Nazca subduce bajo la placa Sudamericana.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir epicentro con hipocentro.
-    \item Pensar que la intensidad de un sismo es igual en todas las ciudades.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Tectónica de placas y sismos}
+\framesubtitle{Para estimar si la falla puede generar sismos de gran magnitud, lo más útil son los sismos registrados en fallas parecidas, porque muestran qué magnitudes alcanzan fallas de tamaño similar.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Identificar la pregunta: si la falla puede producir sismos de gran magnitud. Esto depende del tamaño de la superficie que puede romperse y desplazarse en un evento.}
+\paso{2}{Usar los datos de tamaño: la longitud de entre 30 y 50 km y la profundidad de entre 10 y 12 km describen el tamaño de la falla y permiten buscar fallas comparables.}
+\paso{3}{Identificar el dato que responde la pregunta: los sismos registrados en fallas similares, con longitud y profundidad parecidas, muestran qué magnitudes son posibles para ese tipo de falla.}
+\paso{4}{Evaluar las demás opciones: dos años de registros son un intervalo muy corto para conocer los sismos grandes; la cantidad de fallas similares no informa la magnitud; y la clasificación por desplazamiento describe el movimiento, pero no la energía liberada. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 31}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Fallas similares en la placa Sudamericana: su cantidad no informa sobre la magnitud que puede generar la falla de San Ramón.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Circuitos eléctricos y consumo de energía}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Las casas conectan los artefactos en paralelo (mismo voltaje).
-    \item 1 kWh es la energía de un artefacto de 1000 W funcionando una hora.
-    \item La resistencia equivalente en paralelo es menor que la menor de ellas.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-V=I\,R \\
-P=V\,I \\
-E=P\,t \\
-R_{\text{serie}}=R_1+R_2 \\
-\frac{1}{R_{\text{paralelo}}}=\frac{1}{R_1}+\frac{1}{R_2}
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 2 · Tectónica de placas y sismos}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Biología, pregunta 31}
+\begin{ajustar}[0.7\textheight]
+{\small En un océano que no presenta fosas oceánicas, pero que sí tiene una dorsal oceánica que pasa por su centro, existen dos islas que se ubican en sus costas opuestas. Al respecto, ¿cuál de las siguientes opciones es una predicción consistente con lo planteado por la Teoría de Tectónica de Placas?}
+\vspace{0.4em}
+\alternativa{A}{Ambas islas se debiesen estar alejando entre sí.}
+\alternativa{B}{Nuevas islas debiesen surgir en el océano.}
+\alternativa{C}{Debiese existir una gran sismicidad en ambas islas.}
+\alternativa{D}{Ambas islas debiesen mantenerse en la misma posición.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Tectónica de placas y sismos}
+\framesubtitle{En una dorsal oceánica el fondo se expande y las placas a ambos lados se alejan; por eso las islas ubicadas en costas opuestas deberían separarse.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La dorsal oceánica es un límite divergente: en ella asciende magma desde el manto, se solidifica y forma corteza oceánica nueva.}
+\paso{2}{Esa corteza nueva empuja hacia afuera a ambos lados de la dorsal, así que las placas se separan de forma continua.}
+\paso{3}{Las dos islas están en costas opuestas, es decir, sobre placas que se alejan entre sí. La predicción consistente con la teoría es que ambas se separen.}
+\paso{4}{Las demás alternativas no se siguen en este escenario: la aparición de nuevas islas no es una consecuencia directa de la dorsal (B); la gran sismicidad se asocia a fosas y zonas de subducción, que este océano no tiene (C); y mantener la posición contradice el movimiento de las placas (D).}
+\paso{5}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Ciencias Biología, pregunta 31}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Misma posición: contradice el movimiento de placas que indica la dorsal; confunde la ausencia de fosas con ausencia de movimiento.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Circuitos eléctricos y consumo de energía}
+
+\begin{frame}{Circuitos eléctricos y consumo de energía}
+\label{tema-cs-electricidad}
+\framesubtitle{Física · Teoría · 7,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Las casas conectan los artefactos en paralelo (mismo voltaje).
+\item 1 kWh es la energía de un artefacto de 1000 W funcionando una hora.
+\item La resistencia equivalente en paralelo es menor que la menor de ellas.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica si las resistencias están en serie o en paralelo.\item Calcula la resistencia equivalente y la corriente total.\item Aplica Ohm, la potencia o la energía consumida según lo que se pide.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Sumar resistencias en paralelo como si estuvieran en serie.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[V=I\,R \quad\quad P=V\,I \quad\quad E=P\,t \quad\quad R_{\text{serie}}=R_1+R_2 \quad\quad \frac{1}{R_{\text{paralelo}}}=\frac{1}{R_1}+\frac{1}{R_2}\]
+\end{cajaclave}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Circuitos eléctricos y consumo de energía}
+\framesubtitle{Física · Esquema comparativo}
 \begin{center}\footnotesize
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
 \toprule
@@ -645,249 +1127,413 @@ $R$ equivalente & $R_1+R_2$ & menor que cada una \\
 \end{center}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Circuitos eléctricos y consumo de energía}
-  {\small Un hervidor funciona con 220 V y por él circulan 10 A. ¿Cuál es su potencia?}
-  \vspace{0.4em}
-  \alternativa{A}{22 W}
-  \alternativa{B}{230 W}
-  \alternativa{C}{2200 W}
-  \alternativa{D}{22 000 W}
+\begin{frame}{Ejercicio 1 · Circuitos eléctricos y consumo de energía}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Física, pregunta 62}
+\begin{ajustar}[0.7\textheight]
+{\small Un guardabosques quiere estudiar el comportamiento de un grupo de chinchillas, que son animales nocturnos, por lo que decide utilizar una cámara infrarroja. ¿Qué característica de la cámara permite que se utilice durante la noche?}
+\vspace{0.4em}
+\alternativa{A}{Su tamaño compacto.}
+\alternativa{B}{El rango de radiación que capta.}
+\alternativa{C}{El amplio campo visual que tiene.}
+\alternativa{D}{Su resistencia a diferentes condiciones climáticas.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{$P=VI$.}
-  {\small
-  \paso{1}{$P=220\cdot 10=2200$ W.}
-  }
-  \alternativaok{C}{2200 W}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Sumar resistencias en paralelo como si estuvieran en serie.
-    \item Confundir potencia (W) con energía consumida (kWh).
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Circuitos eléctricos y consumo de energía}
+\framesubtitle{La cámara infrarroja capta radiación infrarroja, que emiten los cuerpos aunque no haya luz visible; por eso su rango de radiación le permite funcionar de noche.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Las chinchillas están activas de noche, cuando hay poca o nula luz visible; el guardabosques necesita detectarlas sin iluminarlas.}
+\paso{2}{Todos los cuerpos con temperatura emiten radiación infrarroja. La cámara está diseñada para captar ese rango de radiación, y eso no depende de que haya luz visible.}
+\paso{3}{El tamaño compacto facilita transportar la cámara, el campo visual determina cuánta área se abarca y la resistencia climática permite usarla a la intemperie. Ninguna de ellas explica que funcione en la oscuridad.}
+\paso{4}{La característica que permite su uso nocturno es el rango de radiación que capta. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, Ciencias Física, pregunta 62}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} La resistencia climática permite usar la cámara a la intemperie, pero no explica que funcione de noche.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Circuitos eléctricos y consumo de energía}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 36}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q36.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Circuitos eléctricos y consumo de energía}
+\framesubtitle{En la analogía, el área de la sección del tubo corresponde a su radio; para estudiar su efecto se cambia el radio y se mide la rapidez con que se llena el contenedor 2, manteniendo el resto del montaje igual.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Asociar las partes de la analogía: el agua que fluye corresponde a la corriente, el tubo corresponde al material conductor y la diferencia de altura entre los contenedores corresponde a la diferencia de potencial. El área de la sección del tubo corresponde a su radio.}
+\paso{2}{Identificar la variable que se quiere estudiar: el área de la sección transversal, que en la analogía se cambia variando el radio del tubo.}
+\paso{3}{Identificar la variable de respuesta: la capacidad de conducir corriente se asocia con el flujo de agua, es decir, con qué tan rápido se llena el contenedor 2.}
+\paso{4}{Verificar que el procedimiento aísla el efecto: se cambia solo el radio, y se mantienen la altura y el volumen de agua del contenedor 1. Así, la rapidez de llenado depende únicamente del tubo. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, Ciencias Biología, pregunta 36}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Largo del tubo y temperatura: ni el área ni el flujo se estudian así, y la temperatura no aparece en la analogía.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Química}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Química}\par\vspace{0.6em}
-  {\color{zinc700} Estructura atómica, química orgánica, reacciones y estequiometría, disoluciones.}\par\vspace{1em}
-  {\small\color{zinc500} Materia y estructura atómica, Química orgánica, Reacciones químicas y estequiometría, Disoluciones y concentración}
-  \vfill
-\end{frame}
+\subsection{Materia y estructura atómica}
 
-\begin{frame}[allowframebreaks]{Materia y estructura atómica}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Un catión perdió electrones; un anión los ganó.
-    \item La destilación separa líquidos por su punto de ebullición; la filtración, un sólido de un líquido.
-    \item El agua potable es una mezcla; el agua destilada, una sustancia pura.
-  \end{itemize}
-  \begin{cajaclave}[Relaciones]\footnotesize
-\begin{gather*}
-n=A-Z \\
-e^-=Z-\text{carga} \\
-\rho=\frac{m}{V}
-\end{gather*}
+\begin{frame}{Materia y estructura atómica}
+\label{tema-cs-atomo}
+\framesubtitle{Química · Teoría · 8,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Un catión perdió electrones; un anión los ganó.
+\item La destilación separa líquidos por su punto de ebullición; la filtración, un sólido de un líquido.
+\item El agua potable es una mezcla; el agua destilada, una sustancia pura.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Clasifica la muestra (elemento, compuesto o mezcla) o identifica el modelo.\item Elige el método de separación según la propiedad que distingue a los componentes.\item Calcula protones, neutrones y electrones con $Z$, $A$ y la carga.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Tomar $A$ como número de neutrones.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Relaciones]\footnotesize
+\[n=A-Z \quad\quad e^-=Z-\text{carga} \quad\quad \rho=\frac{m}{V}\]
 
 Modelos: Dalton $\rightarrow$ Thomson $\rightarrow$ Rutherford $\rightarrow$ Bohr.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Materia y estructura atómica}
-  {\small El ion ${}^{32}_{16}\mathrm{S}^{2-}$ tiene:}
-  \vspace{0.4em}
-  \alternativa{A}{16 protones y 16 electrones.}
-  \alternativa{B}{16 protones y 18 electrones.}
-  \alternativa{C}{18 protones y 16 electrones.}
-  \alternativa{D}{32 protones y 18 electrones.}
+\begin{frame}{Ejercicio 1 · Materia y estructura atómica}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 62}
+\begin{center}\recorte{img/ciencias-quimica-2027-invierno/q62.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La carga $2-$ indica que ganó dos electrones.}
-  {\small
-  \paso{1}{Protones: $Z=16$.}
-  \paso{2}{Electrones: $16+2=18$.}
-  }
-  \alternativaok{B}{16 protones y 18 electrones.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Tomar $A$ como número de neutrones.
-    \item Usar filtración para separar una mezcla homogénea.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Materia y estructura atómica}
+\framesubtitle{En un átomo neutro, el número atómico $Z$ es igual al número de protones del núcleo, que en la representación del profesor son 9.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El número atómico $Z$ es la cantidad de protones del núcleo, que la figura indica como 9 p.}
+\paso{2}{Como el átomo es neutro, su número de electrones también es 9: 2 en la capa interna y 7 en la externa, lo que concuerda con los protones.}
+\paso{3}{El número de neutrones (10) no es el número atómico, y tampoco lo es la suma de protones y neutrones, que da el número másico $A = 9 + 10 = 19$.}
+\paso{4}{Por lo tanto, el número atómico del átomo representado es 9, y la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Ciencias Química, pregunta 62}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Es el número másico ($9 + 10 = 19$), que suma protones y neutrones; no corresponde al número atómico.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Química orgánica}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Cada doble enlace aporta un enlace pi ($\pi$).
-    \item Carbono con doble enlace: $sp^2$.
-    \item Alcanos: solo enlaces simples ($\mathrm{C_nH_{2n+2}}$).
-  \end{itemize}
-  \begin{cajaclave}[Grupos funcionales]\footnotesize
+\begin{frame}{Ejercicio 2 · Materia y estructura atómica}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 40}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q40.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Materia y estructura atómica}
+\framesubtitle{La carga neta de una especie es el número de protones menos el de electrones; si hay más electrones que protones, la especie es un anión, y así resulta que X es un anión.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Calcular la carga neta de cada especie como número de protones menos número de electrones. Los neutrones no tienen carga y no intervienen. R: $11 - 10 = +1$; J: $13 - 13 = 0$; X: $16 - 17 = -1$; Z: $17 - 18 = -1$.}
+\paso{2}{Interpretar cada resultado: R tiene carga positiva, por lo que es un catión; J es neutra, es decir, un átomo neutro; X y Z tienen carga negativa, por lo que son aniones.}
+\paso{3}{Revisar la afirmación de la opción A: R es un catión, no un anión.}
+\paso{4}{Revisar las opciones B y D: J es un átomo neutro, no un catión, y Z es un anión, no un átomo neutro. Solo la afirmación sobre X se cumple. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 40}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Especie J como catión: tiene 13 protones y 13 electrones, por lo que es neutra.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Química orgánica}
+
+\begin{frame}{Química orgánica}
+\label{tema-cs-organica}
+\framesubtitle{Química · Teoría · 6,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Cada doble enlace aporta un enlace pi ($\pi$).
+\item Carbono con doble enlace: $sp^2$.
+\item Alcanos: solo enlaces simples ($\mathrm{C_nH_{2n+2}}$).
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el grupo funcional o los tipos de enlace.\item Cuenta carbonos y enlaces múltiples.\item Nombra o clasifica según las reglas IUPAC.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir aldehído (carbonilo en el extremo) con cetona (carbonilo interno).\end{notagris}
+\end{columns}
+\begin{cajaclave}[Grupos funcionales]\footnotesize
 Alcohol: $\mathrm{R{-}OH}$. Aldehído: $\mathrm{R{-}CHO}$. Cetona: $\mathrm{R{-}CO{-}R'}$. Ácido: $\mathrm{R{-}COOH}$. Éter: $\mathrm{R{-}O{-}R'}$. Éster: $\mathrm{R{-}COO{-}R'}$. Amina: $\mathrm{R{-}NH_2}$.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Química orgánica}
-  {\small ¿Cuál es la fórmula molecular del propano, un alcano de 3 carbonos?}
-  \vspace{0.4em}
-  \alternativa{A}{$\mathrm{C_3H_4}$}
-  \alternativa{B}{$\mathrm{C_3H_6}$}
-  \alternativa{C}{$\mathrm{C_3H_8}$}
-  \alternativa{D}{$\mathrm{C_3H_{10}}$}
+\begin{frame}{Ejercicio 1 · Química orgánica}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 42}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q42.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Alcanos: $\mathrm{C_nH_{2n+2}}$.}
-  {\small
-  \paso{1}{$n=3$: $2\cdot 3+2=8$ hidrógenos.}
-  \paso{2}{$\mathrm{C_3H_8}$.}
-  }
-  \alternativaok{C}{$\mathrm{C_3H_8}$}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir aldehído (carbonilo en el extremo) con cetona (carbonilo interno).
-    \item Contar mal los enlaces pi.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Química orgánica}
+\framesubtitle{El grupo –CHO está en el extremo de la cadena, así que el compuesto es un aldehído y la numeración parte en ese carbono; la cadena más larga tiene 7 carbonos, con metilos en las posiciones 3 y 6.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Identificar el grupo principal: el grupo –CHO está en el extremo de la cadena, lo que corresponde a un aldehído, con sufijo -al. El carbono de ese grupo es el C1, y la numeración parte desde él.}
+\paso{2}{Identificar la cadena principal: la cadena más larga que contiene el grupo –CHO tiene 7 carbonos, de C1 a C7, es decir, una heptana.}
+\paso{3}{Ubicar los sustituyentes: un metilo está en C3 y otro en C6. El carbono 6 tiene un metilo y el carbono 7 cierra la cadena, por lo que el extremo ramificado forma parte de la cadena principal.}
+\paso{4}{Formar el nombre: los sustituyentes con localizadores 3 y 6 dan 3,6-dimetilheptanal. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 42}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} 3-butil-3-butanona: combina un sufijo de cetona con un sustituyente y una cadena que no corresponden a la estructura.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Reacciones químicas y estequiometría}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Balancea antes de calcular.
-    \item Los coeficientes relacionan moles, no gramos.
-    \item Masa total de reactantes = masa total de productos.
-  \end{itemize}
-  \begin{cajaclave}[Relaciones]\footnotesize
-\begin{gather*}
-n=\frac{m}{M} \\
-N=n\cdot 6{,}02\cdot 10^{23} \\
-\%\,\text{elemento}=\frac{\text{masa del elemento}}{\text{masa molar}}\cdot 100
-\end{gather*}
+\begin{frame}{Ejercicio 2 · Química orgánica}
+\framesubtitle{Fuente: PAES Invierno 2025, Ciencias Química, pregunta 69}
+\begin{ajustar}[0.7\textheight]
+{\small El triclorometano, conocido tradicionalmente como cloroformo, es un compuesto orgánico usado antiguamente como anestésico por inhalación y como insecticida. Sin embargo, dada su toxicidad debió ser reemplazado por otras sustancias, aunque en la actualidad sigue teniendo otros usos, por ejemplo, como solvente en varios procesos industriales. Respecto del cloroformo, ¿cuál es su fórmula empírica?}
+\vspace{0.4em}
+\alternativa{A}{C\textsuperscript{2}HCl\textsuperscript{3}}
+\alternativa{B}{CHCl\textsuperscript{3}}
+\alternativa{C}{CH\textsuperscript{3}Cl}
+\alternativa{D}{C\textsuperscript{2}H\textsuperscript{3}Cl\textsuperscript{3}}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Química orgánica}
+\framesubtitle{La fórmula empírica da la proporción mínima de átomos; en el cloroformo, CHCl3, los subíndices 1, 1 y 3 no tienen divisor común, así que la fórmula empírica coincide con la molecular.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{La fórmula molecular del triclorometano es $\mathrm{CHCl_{3}}$: un carbono, un hidrógeno y tres átomos de cloro.}
+\paso{2}{La fórmula empírica se obtiene dividiendo los subíndices por su máximo común divisor. Los subíndices 1, 1 y 3 tienen máximo común divisor 1, así que no se pueden simplificar.}
+\paso{3}{Por lo tanto, la fórmula empírica coincide con la molecular: $\mathrm{CHCl_{3}}$.}
+\paso{4}{Las opciones A ($\mathrm{C_{2}HCl_{3}}$) y D ($\mathrm{C_{2}H_{3}Cl_{3}}$) tienen dos carbonos y no corresponden a la proporción del cloroformo; la C ($\mathrm{CH_{3}Cl}$) tiene un solo cloro. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Ciencias Química, pregunta 69}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} $\mathrm{CH_{3}Cl}$ es el clorometano, con un solo cloro; el error es confundir el número de cloros del compuesto.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Reacciones químicas y estequiometría}
+
+\begin{frame}{Reacciones químicas y estequiometría}
+\label{tema-cs-reacciones}
+\framesubtitle{Química · Teoría · 12,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Balancea antes de calcular.
+\item Los coeficientes relacionan moles, no gramos.
+\item Masa total de reactantes = masa total de productos.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Balancea la ecuación.\item Convierte los datos a moles.\item Usa la proporción de coeficientes y vuelve a la unidad pedida.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Usar las proporciones de coeficientes directamente con gramos.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Relaciones]\footnotesize
+\[n=\frac{m}{M} \quad\quad N=n\cdot 6{,}02\cdot 10^{23} \quad\quad \%\,\text{elemento}=\frac{\text{masa del elemento}}{\text{masa molar}}\cdot 100\]
 
 Leyes ponderales: conservación de la masa (Lavoisier), proporciones definidas (Proust) y múltiples (Dalton). La fórmula empírica es la proporción mínima entre átomos; la molecular, un múltiplo de ella.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Reacciones químicas y estequiometría}
-  {\small En la reacción balanceada $\mathrm{N_2}+3\,\mathrm{H_2}\rightarrow 2\,\mathrm{NH_3}$, ¿cuántos moles de $\mathrm{NH_3}$ se forman a partir de 6 mol de $\mathrm{H_2}$ con exceso de $\mathrm{N_2}$?}
-  \vspace{0.4em}
-  \alternativa{A}{2 mol}
-  \alternativa{B}{3 mol}
-  \alternativa{C}{4 mol}
-  \alternativa{D}{6 mol}
+\begin{frame}{Ejercicio 1 · Reacciones químicas y estequiometría}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 76}
+\begin{ajustar}[0.7\textheight]
+{\small Si 20 gg de NNNNNNNN (masa molar = 40 gg/mmmmmm) se disuelven en 500 gg de agua, ¿cuál de las siguientes opciones presenta el valor correcto de la concentración molal de la solución?}
+\vspace{0.4em}
+\alternativa{A}{5,0 mmmmmm/kkkk}
+\alternativa{B}{4,0 mmmmmm/kkkk}
+\alternativa{C}{1,0 mmmmmm/kkkk}
+\alternativa{D}{0,5 mmmmmm/kkkk}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La proporción entre $\mathrm{H_2}$ y $\mathrm{NH_3}$ es $3:2$.}
-  {\small
-  \paso{1}{$6\ \text{mol H}_2\cdot\dfrac{2\ \text{mol NH}_3}{3\ \text{mol H}_2}=4$ mol de $\mathrm{NH_3}$.}
-  }
-  \alternativaok{C}{4 mol}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar las proporciones de coeficientes directamente con gramos.
-    \item Olvidar balancear la ecuación.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Reacciones químicas y estequiometría}
+\framesubtitle{La molalidad es moles de soluto por kilogramo de disolvente (agua), no por kilogramo de solución: 0,5 mol en 0,5 kg de agua da $1{,}0\ \mathrm{mol/kg}$.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Moles de soluto: $n = \frac{20\ \mathrm{g}}{40\ \mathrm{g/mol}} = 0{,}5\ \mathrm{mol}$.}
+\paso{2}{La molalidad se refiere al disolvente, que es el agua: 500 g, es decir, 0,5 kg.}
+\paso{3}{Molalidad: $m = \frac{0{,}5\ \mathrm{mol}}{0{,}5\ \mathrm{kg}} = 1{,}0\ \mathrm{mol/kg}$.}
+\paso{4}{Verificación: la masa de la solución sería 520 g, pero la molalidad no usa esa masa, porque se define por kilogramo de disolvente. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Ciencias Química, pregunta 76}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} 5,0 mol/kg: divide los 0,5 mol entre 0,1 kg, como si el agua fuera de 100 g en lugar de 500 g.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Disoluciones y concentración}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Diluir no cambia los moles de soluto.
-    \item Molaridad: por litro de \textbf{disolución}; molalidad: por kilogramo de \textbf{disolvente}.
-    \item La solubilidad de los gases baja al subir la temperatura.
-  \end{itemize}
-  \begin{cajaclave}[Fórmulas]\footnotesize
-\begin{gather*}
-M=\frac{n_{\text{soluto}}}{V_{\text{disolución}}\,(\text{L})} \\
-m=\frac{n_{\text{soluto}}}{\text{kg disolvente}} \\
-\%\,m/v=\frac{g\ \text{soluto}}{mL\ \text{disolución}}\cdot 100 \\
-C_1V_1=C_2V_2
-\end{gather*}
-  \end{cajaclave}
+\begin{frame}{Ejercicio 2 · Reacciones químicas y estequiometría}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 43}
+\begin{center}\recorte{img/ciencias-biologia-2027-invierno/q43.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Disoluciones y concentración}
-  {\small Se diluyen 100 mL de una disolución 2 mol/L hasta 400 mL. ¿Cuál es la nueva concentración?}
-  \vspace{0.4em}
-  \alternativa{A}{0,5 mol/L}
-  \alternativa{B}{1 mol/L}
-  \alternativa{C}{4 mol/L}
-  \alternativa{D}{8 mol/L}
+\begin{frame}{Solución 2 · Reacciones químicas y estequiometría}
+\framesubtitle{La densidad es una propiedad intensiva: no depende de cuánta masa de aceite se use, así que la masa utilizada puede cambiar sin afectar la reproducibilidad de los resultados.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Recordar qué es la reproducibilidad: otro grupo, siguiendo el mismo procedimiento, debe obtener resultados equivalentes. Para eso, las condiciones que definen lo que se mide deben mantenerse.}
+\paso{2}{Analizar la densidad: se calcula como $\rho = \frac{m}{V}$. Es una propiedad intensiva: el cociente es el mismo si se usa más o menos masa de un mismo aceite a la misma temperatura.}
+\paso{3}{Identificar las condiciones que definen el experimento: el tipo de aceite y la temperatura son las que se comparan en la tabla, y cambiarlas sí cambia el resultado. Por ejemplo, el grupo 1 baja de $0{,}9107$ a $0{,}9033\ \mathrm{g/mL}$ al subir la temperatura de 38 a 49 \textdegree{}C.}
+\paso{4}{La masa utilizada es, por tanto, la única condición que puede variar sin afectar la reproducibilidad, y la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Ciencias Biología, pregunta 43}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Temperatura a la que se mide: la temperatura cambia la densidad en la tabla, así que modificarla altera los resultados.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Los moles de soluto se conservan: $C_1V_1=C_2V_2$.}
-  {\small
-  \paso{1}{$2\cdot 100=C_2\cdot 400$.}
-  \paso{2}{$C_2=0{,}5$ mol/L.}
-  }
-  \alternativaok{A}{0,5 mol/L}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Usar mililitros en vez de litros en la molaridad.
-    \item Confundir masa de disolvente con masa de disolución.
-    \end{itemize}
-  \end{cajatrampa}
+\subsection{Disoluciones y concentración}
+
+\begin{frame}{Disoluciones y concentración}
+\label{tema-cs-disoluciones}
+\framesubtitle{Química · Teoría · 5,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Diluir no cambia los moles de soluto.
+\item Molaridad: por litro de \textbf{disolución}; molalidad: por kilogramo de \textbf{disolvente}.
+\item La solubilidad de los gases baja al subir la temperatura.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Convierte los datos a moles, litros o gramos según la unidad pedida.\item Aplica la fórmula de concentración, de dilución o de mezcla.\item Revisa que el resultado tenga sentido (diluir siempre baja la concentración).\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Usar mililitros en vez de litros en la molaridad.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Fórmulas]\footnotesize
+\[M=\frac{n_{\text{soluto}}}{V_{\text{disolución}}\,(\text{L})} \quad\quad m=\frac{n_{\text{soluto}}}{\text{kg disolvente}} \quad\quad \%\,m/v=\frac{g\ \text{soluto}}{mL\ \text{disolución}}\cdot 100 \quad\quad C_1V_1=C_2V_2\]
+\end{cajaclave}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 1 · Disoluciones y concentración}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 51}
+\begin{ajustar}[0.7\textheight]
+{\small ¿Cuál es la concentración de una solución acuosa que contiene 1,0 mol de cloruro de sodio (NaCl) en 500 mL de solución?}
+\vspace{0.4em}
+\alternativa{A}{2,0 mol/L}
+\alternativa{B}{1,5 mol/L}
+\alternativa{C}{1,0 mol/L}
+\alternativa{D}{0,5 mol/L}
+\alternativa{E}{0,2 mol/L}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 1 · Disoluciones y concentración}
+\framesubtitle{La concentración molar es el cociente entre moles de soluto y litros de solución, así que hay que convertir los mililitros a litros antes de dividir.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Se usa la definición de concentración molar: $c = \frac{n}{V}$, con $V$ expresado en litros.}
+\paso{2}{Conversión: $500\ \mathrm{mL} = 500 \cdot 10^{-3}\ \mathrm{L} = 0{,}5\ \mathrm{L}$, porque un litro tiene $1000\ \mathrm{mL}$.}
+\paso{3}{Reemplazo de valores: $c = \frac{1{,}0\ \mathrm{mol}}{0{,}5\ \mathrm{L}}$.}
+\paso{4}{Dividir por $0{,}5$ equivale a multiplicar por $2$: $c = 1{,}0 \cdot 2 = 2{,}0\ \mathrm{mol/L}$.}
+\paso{5}{Verificación: $2{,}0\ \mathrm{mol/L} \cdot 0{,}5\ \mathrm{L} = 1{,}0\ \mathrm{mol}$, que recupera los moles de soluto. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Ciencias Biología, pregunta 51}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Elegir $1{,}0\ \mathrm{mol/L}$ por confundir la concentración con los moles de soluto, sin dividir por el volumen.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Disoluciones y concentración}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 79}
+\begin{ajustar}[0.7\textheight]
+{\small En un laboratorio se requiere preparar una solución acuosa de concentración 0,2 mmmmmm/LL, a partir de 0,5 LL de una solución acuosa de ácido sulfúrico (HH\textsuperscript{2}SSSS\textsuperscript{4}) de concentración 4,0 mmmmmm/LL. Si se considera que los volúmenes son aditivos, ¿qué volumen de agua se debe agregar para preparar la solución deseada?}
+\vspace{0.4em}
+\alternativa{A}{1,0 LL}
+\alternativa{B}{2,0 LL}
+\alternativa{C}{4,7 LL}
+\alternativa{D}{9,5 LL}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Disoluciones y concentración}
+\framesubtitle{Al diluir se conservan los moles de soluto, $C_1 V_1 = C_2 V_2$; con volúmenes aditivos, el agua que se agrega es el volumen final menos el inicial, es decir, 9,5 L.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{Moles de ácido sulfúrico en la solución inicial: $n = 4{,}0\ \mathrm{mol/L} \cdot 0{,}5\ \mathrm{L} = 2{,}0\ \mathrm{mol}$.}
+\paso{2}{Al diluir con agua, los moles de soluto no cambian, así que $n = C_2 \cdot V_2$.}
+\paso{3}{Volumen final: $V_2 = \frac{n}{C_2} = \frac{2{,}0\ \mathrm{mol}}{0{,}2\ \mathrm{mol/L}} = 10\ \mathrm{L}$.}
+\paso{4}{Como los volúmenes son aditivos, el agua agregada es $V_{agua} = V_2 - V_1 = 10\ \mathrm{L} - 0{,}5\ \mathrm{L} = 9{,}5\ \mathrm{L}$.}
+\paso{5}{Comprobación: la solución final tiene 2,0 mol en 10 L, es decir, 0,2 mol/L. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Ciencias Química, pregunta 79}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} 2,0 L: toma los 2,0 mol de soluto directamente como volumen en litros, sin dividir por la concentración final.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Habilidades científicas}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Habilidades científicas}\par\vspace{0.6em}
-  {\color{zinc700} Pensamiento científico: variables, hipótesis, procedimientos y conclusiones.}\par\vspace{1em}
-  {\small\color{zinc500} Habilidades de pensamiento científico}
-  \vfill
-\end{frame}
+\subsection{Habilidades de pensamiento científico}
 
-\begin{frame}[allowframebreaks]{Habilidades de pensamiento científico}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Independiente: lo que yo cambio. Dependiente: lo que mido.
-    \item Una conclusión solo puede afirmar lo que los datos muestran.
-    \item El grupo control permite comparar el efecto de la variable.
-  \end{itemize}
-  \begin{cajaclave}[Esquema de una investigación]\footnotesize
+\begin{frame}{Habilidades de pensamiento científico}
+\label{tema-cs-habilidades}
+\framesubtitle{Habilidades científicas · Teoría · 21,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Independiente: lo que yo cambio. Dependiente: lo que mido.
+\item Una conclusión solo puede afirmar lo que los datos muestran.
+\item El grupo control permite comparar el efecto de la variable.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica qué se cambia a propósito y qué se mide.\item Revisa qué factores se mantienen constantes.\item Evalúa si la conclusión se sigue de los datos, sin generalizar.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir la variable que se mide con la que se manipula.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Esquema de una investigación]\footnotesize
 Observación $\rightarrow$ pregunta de investigación $\rightarrow$ hipótesis $\rightarrow$ diseño experimental (variables y grupo control) $\rightarrow$ resultados $\rightarrow$ conclusión.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Habilidades de pensamiento científico}
-  {\small Una estudiante riega cuatro plantas iguales con distinta cantidad de agua y mide su altura después de un mes. ¿Cuál es la variable dependiente?}
-  \vspace{0.4em}
-  \alternativa{A}{La cantidad de agua.}
-  \alternativa{B}{El tipo de planta.}
-  \alternativa{C}{La altura de las plantas.}
-  \alternativa{D}{El tiempo de un mes.}
+\begin{frame}{Ejercicio 1 · Habilidades de pensamiento científico}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Biología, pregunta 28}
+\begin{ajustar}[0.7\textheight]
+{\small Una persona realiza un experimento, con el fin de determinar la relación que existe entre la masa de un objeto y la fuerza máxima horizontal que se le debe aplicar para que este comience a moverse, y recorra una cierta distancia sobre una superficie horizontal con roce. A partir de lo anterior, ¿cuál de los siguientes instrumentos de medición le permitiría registrar los valores de la variable dependiente?}
+\vspace{0.4em}
+\alternativa{A}{Una regla.}
+\alternativa{B}{Una balanza.}
+\alternativa{C}{Un cronómetro.}
+\alternativa{D}{Un dinamómetro.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La dependiente es la que se mide como respuesta.}
-  {\small
-  \paso{1}{Manipula: cantidad de agua (independiente).}
-  \paso{2}{Mide: altura (dependiente). Tipo de planta y tiempo son controladas.}
-  }
-  \alternativaok{C}{La altura de las plantas.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir la variable que se mide con la que se manipula.
-    \item Elegir una conclusión que generaliza más allá de los datos.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Habilidades de pensamiento científico}
+\framesubtitle{La variable dependiente es la fuerza horizontal máxima necesaria para iniciar el movimiento, y para medir una fuerza se usa un dinamómetro.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Identificar las variables: la masa del objeto es la independiente, porque se cambia deliberadamente; la fuerza horizontal máxima necesaria para iniciar el movimiento es la dependiente.}
+\paso{2}{Identificar la magnitud de la variable dependiente: es una fuerza, que se expresa en newtons. Por lo tanto, el instrumento debe medir fuerzas.}
+\paso{3}{Revisar los instrumentos: la regla mide longitudes, la balanza mide masa (la variable independiente) y el cronómetro mide tiempo. Ninguno de los tres mide fuerza.}
+\paso{4}{Un dinamómetro mide fuerzas y permite registrar el valor de la fuerza justo antes de que el objeto comience a moverse. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Ciencias Biología, pregunta 28}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Cronómetro: mide tiempo; el procedimiento busca la fuerza máxima y no cuánto dura el movimiento.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Habilidades de pensamiento científico}
+\framesubtitle{Fuente: PAES Invierno 2026, Ciencias Química, pregunta 80}
+\begin{center}\recorte{img/ciencias-quimica-2027-invierno/q80.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Habilidades de pensamiento científico}
+\framesubtitle{A 20 \textdegree{}C la solubilidad es de unos 21 g por 100 g de agua: en el matraz 3, los 23,0 g añadidos superan esa cantidad en 2,0 g, que quedan como precipitado.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Los matraces 1 (20,0 g) y 2 (21,0 g) no tienen precipitado: todo el sólido se disolvió, así que a 20 \textdegree{}C la solubilidad es de al menos 21,0 g por 100 g de agua.}
+\paso{2}{El matraz 3 (23,0 g) sí tiene precipitado: la solución está saturada, con una solubilidad menor que 23,0 g.}
+\paso{3}{Al evaporar el sobrenadante del matraz 3 se recuperan unos 21,0 g: esa es la cantidad disuelta, es decir, la solubilidad aproximada a 20 \textdegree{}C.}
+\paso{4}{Así, los 23,0 g añadidos superan la solubilidad en unos 2,0 g, que quedan como precipitado.}
+\paso{5}{Comparación: el matraz 1 tiene 1,0 g menos que la solubilidad (20,0 frente a 21,0), no 2,0 g, y el matraz 2 tiene aproximadamente la cantidad de la solubilidad. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Ciencias Química, pregunta 80}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} La diferencia entre el matraz 1 y la solubilidad es de 1,0 g (21,0 $-$ 20,0), no de 2,0 g.\end{notagris}
+\end{ajustar}
 \end{frame}
 %%</CONTENIDO>%%
 
