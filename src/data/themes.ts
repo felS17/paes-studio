@@ -32,7 +32,7 @@ export interface ThemeInfo {
   graph: GraphPalette
 }
 
-/** Los 10 temas, en el orden del selector. Sus tokens de interfaz viven en src/styles/index.css, bajo `[data-theme]`. */
+/** Los 15 temas, en el orden del selector. Sus tokens de interfaz viven en src/styles/index.css, bajo `[data-theme]`. */
 export const THEMES: readonly ThemeInfo[] = [
   {
     id: 'github-dark',
@@ -147,6 +147,54 @@ export const THEMES: readonly ThemeInfo[] = [
     },
   },
   {
+    id: 'everforest-dark',
+    label: 'Everforest',
+    hint: 'verde bosque y arena, descansa la vista',
+    dark: true,
+    canvas: '#2D353B',
+    surface: '#272E33',
+    text: '#D3C6AA',
+    accent: '#A7C080',
+    accent2: '#7FBBB3',
+    graph: {
+      bg: '#2D353B', surface: '#272E33', strong: '#D3C6AA', mid: '#9DA9A0', muted: '#7A8478', faint: '#475258', accent: '#A7C080',
+      tree: 'rgba(157,169,160,0.6)', leaf: 'rgba(122,132,120,0.6)', cross: 'rgba(167,192,128,0.32)', dim: 'rgba(71,82,88,0.35)',
+      correct: '#A7C080', incorrect: '#E67E80',
+    },
+  },
+  {
+    id: 'kanagawa',
+    label: 'Kanagawa',
+    hint: 'tinta oscura, azul ola y papel antiguo',
+    dark: true,
+    canvas: '#1F1F28',
+    surface: '#16161D',
+    text: '#DCD7BA',
+    accent: '#7E9CD8',
+    accent2: '#957FB8',
+    graph: {
+      bg: '#1F1F28', surface: '#16161D', strong: '#DCD7BA', mid: '#A6A69C', muted: '#727169', faint: '#363646', accent: '#7E9CD8',
+      tree: 'rgba(166,166,156,0.6)', leaf: 'rgba(114,113,105,0.6)', cross: 'rgba(126,156,216,0.32)', dim: 'rgba(54,54,70,0.35)',
+      correct: '#98BB6C', incorrect: '#E46876',
+    },
+  },
+  {
+    id: 'one-dark',
+    label: 'One Dark',
+    hint: 'gris carbón con azul y verde de editor',
+    dark: true,
+    canvas: '#282C34',
+    surface: '#21252B',
+    text: '#D7DAE0',
+    accent: '#61AFEF',
+    accent2: '#C678DD',
+    graph: {
+      bg: '#282C34', surface: '#21252B', strong: '#D7DAE0', mid: '#9AA1AD', muted: '#5C6370', faint: '#3E4451', accent: '#61AFEF',
+      tree: 'rgba(154,161,173,0.6)', leaf: 'rgba(92,99,112,0.6)', cross: 'rgba(97,175,239,0.32)', dim: 'rgba(62,68,81,0.35)',
+      correct: '#98C379', incorrect: '#E8848C',
+    },
+  },
+  {
     id: 'geist-dark',
     label: 'Geist Dark',
     hint: 'negro carbón monocromático',
@@ -191,6 +239,38 @@ export const THEMES: readonly ThemeInfo[] = [
     graph: {
       bg: '#F6F1E7', surface: '#EFE8D8', strong: '#2C2621', mid: '#6F6454', muted: '#8F826C', faint: '#CDC2A9', accent: '#2C2621',
       tree: 'rgba(111,100,84,0.55)', leaf: 'rgba(143,130,108,0.45)', cross: 'rgba(111,100,84,0.32)', dim: 'rgba(205,194,169,0.4)',
+      correct: 'rgba(5,150,105,0.9)', incorrect: 'rgba(190,18,60,0.9)',
+    },
+  },
+  {
+    id: 'catppuccin-latte',
+    label: 'Catppuccin Latte',
+    hint: 'claro y frío, con azul para lo activo',
+    dark: false,
+    canvas: '#EFF1F5',
+    surface: '#E6E9EF',
+    text: '#363849',
+    accent: '#1A56D1',
+    accent2: '#8839EF',
+    graph: {
+      bg: '#EFF1F5', surface: '#E6E9EF', strong: '#363849', mid: '#5C5F77', muted: '#9CA0B0', faint: '#CCD0DA', accent: '#1A56D1',
+      tree: 'rgba(92,95,119,0.55)', leaf: 'rgba(156,160,176,0.5)', cross: 'rgba(26,86,209,0.3)', dim: 'rgba(204,208,218,0.45)',
+      correct: 'rgba(5,150,105,0.9)', incorrect: 'rgba(190,18,60,0.9)',
+    },
+  },
+  {
+    id: 'solarized-light',
+    label: 'Solarized Light',
+    hint: 'crema clásica con tinta azul petróleo',
+    dark: false,
+    canvas: '#FDF6E3',
+    surface: '#EEE8D5',
+    text: '#073642',
+    accent: '#1A6A9E',
+    accent2: '#2AA198',
+    graph: {
+      bg: '#FDF6E3', surface: '#EEE8D5', strong: '#073642', mid: '#4F6369', muted: '#93A1A1', faint: '#DDD6C1', accent: '#1A6A9E',
+      tree: 'rgba(79,99,105,0.55)', leaf: 'rgba(147,161,161,0.5)', cross: 'rgba(26,106,158,0.3)', dim: 'rgba(221,214,193,0.45)',
       correct: 'rgba(5,150,105,0.9)', incorrect: 'rgba(190,18,60,0.9)',
     },
   },

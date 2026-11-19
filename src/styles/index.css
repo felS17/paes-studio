@@ -325,13 +325,161 @@
   --color-amber-500: #ffb86c;
 }
 
+/* Paletas agregadas en v2.5, con el texto y el acento verificados en WCAG AA (≥ 4,5:1 sobre el fondo y los paneles). */
+[data-theme='everforest-dark'] {
+  --canvas: #2d353b;
+  --surface: #272e33;
+  --accent: #a7c080;
+  --progress: #83c092;
+  --color-white: #fdf6e3;
+  --color-zinc-50: #e9e0c9;
+  --color-zinc-100: #d3c6aa;
+  --color-zinc-200: #c5b99c;
+  --color-zinc-300: #b3a98e;
+  --color-zinc-400: #9da9a0;
+  --color-zinc-500: #859289;
+  --color-zinc-600: #7a8478;
+  --color-zinc-700: #56635f;
+  --color-zinc-800: #475258;
+  --color-zinc-900: #343f44;
+  --color-zinc-950: #1e2326;
+  --color-emerald-100: #dce8c5;
+  --color-emerald-300: #b8cf93;
+  --color-emerald-400: #a7c080;
+  --color-emerald-500: #a7c080;
+  --color-emerald-600: #83a05e;
+  --color-rose-100: #f7d4d4;
+  --color-rose-300: #ee9fa0;
+  --color-rose-400: #e67e80;
+  --color-rose-500: #e67e80;
+  --color-rose-600: #b85c5e;
+  --color-amber-400: #dbbc7f;
+  --color-amber-500: #dbbc7f;
+}
+
+[data-theme='kanagawa'] {
+  --canvas: #1f1f28;
+  --surface: #16161d;
+  --accent: #7e9cd8;
+  --progress: #7fb4ca;
+  --color-white: #f2ecd0;
+  --color-zinc-50: #e8e3c8;
+  --color-zinc-100: #dcd7ba;
+  --color-zinc-200: #c8c093;
+  --color-zinc-300: #b5b19c;
+  --color-zinc-400: #a6a69c;
+  --color-zinc-500: #8a8980;
+  --color-zinc-600: #727169;
+  --color-zinc-700: #54546d;
+  --color-zinc-800: #363646;
+  --color-zinc-900: #2a2a37;
+  --color-zinc-950: #121218;
+  --color-emerald-100: #dbe8c8;
+  --color-emerald-300: #b3cd8e;
+  --color-emerald-400: #98bb6c;
+  --color-emerald-500: #98bb6c;
+  --color-emerald-600: #76946a;
+  --color-rose-100: #f6d0d6;
+  --color-rose-300: #ee8fa0;
+  --color-rose-400: #e46876;
+  --color-rose-500: #e46876;
+  --color-rose-600: #c34043;
+  --color-amber-400: #e6c384;
+  --color-amber-500: #e6c384;
+}
+
+[data-theme='one-dark'] {
+  --canvas: #282c34;
+  --surface: #21252b;
+  --accent: #61afef;
+  --progress: #98c379;
+  --color-white: #f0f2f5;
+  --color-zinc-50: #e6e9ee;
+  --color-zinc-100: #d7dae0;
+  --color-zinc-200: #c5cad3;
+  --color-zinc-300: #abb2bf;
+  --color-zinc-400: #9aa1ad;
+  --color-zinc-500: #7f848e;
+  --color-zinc-600: #5c6370;
+  --color-zinc-700: #4b5263;
+  --color-zinc-800: #3e4451;
+  --color-zinc-900: #2c313a;
+  --color-zinc-950: #181a1f;
+  --color-emerald-100: #d8ecc6;
+  --color-emerald-300: #b5d69a;
+  --color-emerald-400: #98c379;
+  --color-emerald-500: #98c379;
+  --color-emerald-600: #7a9f5e;
+  --color-rose-100: #f6d3d6;
+  --color-rose-300: #ec9aa1;
+  --color-rose-400: #e8848c;
+  --color-rose-500: #e06c75;
+  --color-rose-600: #be5046;
+  --color-amber-400: #e5c07b;
+  --color-amber-500: #e5c07b;
+}
+
+/* Claras: la escala zinc se tiñe como en Papel Cálido; zinc-900 es el texto y zinc-500 el secundario. */
+[data-theme='catppuccin-latte'] {
+  --canvas: #eff1f5;
+  --surface: #e6e9ef;
+  --accent: #1a56d1;
+  --progress: #1a56d1;
+  --color-white: #ffffff;
+  --color-zinc-50: #e9ecf2;
+  --color-zinc-100: #dce0e8;
+  --color-zinc-200: #ccd0da;
+  --color-zinc-300: #bcc0cc;
+  --color-zinc-400: #9ca0b0;
+  --color-zinc-500: #5c5f77;
+  --color-zinc-600: #54576e;
+  --color-zinc-700: #4c4f69;
+  --color-zinc-800: #41435a;
+  --color-zinc-900: #363849;
+  --color-zinc-950: #232634;
+  --heat-0: var(--color-zinc-200);
+  --heat-1: color-mix(in oklab, var(--accent) 30%, var(--canvas));
+  --heat-2: color-mix(in oklab, var(--accent) 52%, var(--canvas));
+  --heat-3: color-mix(in oklab, var(--accent) 76%, var(--canvas));
+  --heat-4: var(--accent);
+  --heat-edge: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='solarized-light'] {
+  --canvas: #fdf6e3;
+  --surface: #eee8d5;
+  --accent: #1a6a9e;
+  --progress: #1a6a9e;
+  --color-white: #fdf6e3;
+  --color-zinc-50: #f5eedb;
+  --color-zinc-100: #e6dfca;
+  --color-zinc-200: #ddd6c1;
+  --color-zinc-300: #c9c2ad;
+  --color-zinc-400: #93a1a1;
+  --color-zinc-500: #4f6369;
+  --color-zinc-600: #455a60;
+  --color-zinc-700: #3b4f56;
+  --color-zinc-800: #0f3f4b;
+  --color-zinc-900: #073642;
+  --color-zinc-950: #002b36;
+  --heat-0: var(--color-zinc-200);
+  --heat-1: color-mix(in oklab, var(--accent) 30%, var(--canvas));
+  --heat-2: color-mix(in oklab, var(--accent) 52%, var(--canvas));
+  --heat-3: color-mix(in oklab, var(--accent) 76%, var(--canvas));
+  --heat-4: var(--accent);
+  --heat-edge: rgba(0, 0, 0, 0.05);
+}
+
 /* El mapa de actividad de las paletas de editor sube desde el fondo hasta su acento. */
 [data-theme='catppuccin-mocha'],
 [data-theme='tokyo-night'],
 [data-theme='gruvbox-dark'],
 [data-theme='nord'],
 [data-theme='rose-pine'],
-[data-theme='dracula'] {
+[data-theme='dracula'],
+[data-theme='everforest-dark'],
+[data-theme='kanagawa'],
+[data-theme='one-dark'] {
   --heat-0: var(--color-zinc-800);
   --heat-1: color-mix(in oklab, var(--accent) 32%, var(--canvas));
   --heat-2: color-mix(in oklab, var(--accent) 55%, var(--canvas));
@@ -425,7 +573,9 @@
   /* Recortes en escala de grises: se invierten en modo oscuro para no encandilar. */
   .snapshot-mono { @apply dark:[filter:invert(0.93)_hue-rotate(180deg)]; }
   /* En Papel Cálido el blanco del recorte se funde con el papel. */
-  [data-theme='paper'] .snapshot-mono { mix-blend-mode: multiply; }
+  [data-theme='paper'] .snapshot-mono,
+  [data-theme='catppuccin-latte'] .snapshot-mono,
+  [data-theme='solarized-light'] .snapshot-mono { mix-blend-mode: multiply; }
   /* En los temas oscuros con fondo más claro (Nord, Dracula…) el negro invertido no debe verse como un recuadro. */
   .dark .snapshot-mono { mix-blend-mode: lighten; }
 }
