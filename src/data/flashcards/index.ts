@@ -3,13 +3,13 @@ import type { Deck, DeckId, DeckSubject } from '@/types/flashcards'
 /** Metadatos de los mazos (el contenido completo se carga bajo demanda). */
 /** `cards`: tarjetas del mazo (se mantiene a mano para mostrar totales sin descargar los mazos). */
 export const DECKS: { id: DeckId; title: string; mono: string; subject: DeckSubject; cards: number; description: string }[] = [
-  { id: 'm1', title: 'Matemática M1', mono: 'M1', subject: 'm1', cards: 63, description: 'Potencias y raíces, productos notables, sistemas, funciones afín y cuadrática, Pitágoras y Thales, vectores, posición y probabilidad.' },
-  { id: 'm2', title: 'Matemática M2', mono: 'M2', subject: 'm2', cards: 51, description: 'Logaritmos, interés compuesto, exponencial e inversa, trigonometría, homotecia, dispersión, combinatoria, binomial y suficiencia de datos.' },
-  { id: 'lectora', title: 'Competencia Lectora', mono: 'CL', subject: 'lectora', cards: 35, description: 'Lo que evalúa el DEMRE: localizar, interpretar y evaluar, inferencias válidas, distractores clásicos, tesis y argumentos, tono y gráficos.' },
-  { id: 'biologia', title: 'Ciencias: Biología', mono: 'BI', subject: 'ciencias', cards: 35, description: 'Célula, procesos y funciones, herencia y evolución, organismo y ambiente.' },
-  { id: 'fisica', title: 'Ciencias: Física', mono: 'FI', subject: 'ciencias', cards: 35, description: 'Ondas, mecánica, energía, electricidad y magnetismo.' },
-  { id: 'quimica', title: 'Ciencias: Química', mono: 'QU', subject: 'ciencias', cards: 35, description: 'Estructura atómica, química orgánica, reacciones y estequiometría, soluciones.' },
-  { id: 'historia', title: 'Historia y Ciencias Sociales', mono: 'HI', subject: 'historia', cards: 36, description: 'Chile y el mundo en los siglos XIX y XX, formación ciudadana y sistema económico.' },
+  { id: 'm1', title: 'Matemática M1', mono: 'M1', subject: 'm1', cards: 80, description: 'Potencias y raíces, productos notables, sistemas, funciones afín y cuadrática, Pitágoras y Thales, vectores, posición y probabilidad.' },
+  { id: 'm2', title: 'Matemática M2', mono: 'M2', subject: 'm2', cards: 68, description: 'Logaritmos, interés compuesto, exponencial e inversa, trigonometría, homotecia, dispersión, combinatoria, binomial y suficiencia de datos.' },
+  { id: 'lectora', title: 'Competencia Lectora', mono: 'CL', subject: 'lectora', cards: 42, description: 'Lo que evalúa el DEMRE: localizar, interpretar y evaluar, inferencias válidas, distractores clásicos, tesis y argumentos, tono y gráficos.' },
+  { id: 'biologia', title: 'Ciencias: Biología', mono: 'BI', subject: 'ciencias', cards: 61, description: 'Célula, procesos y funciones, reproducción, herencia y evolución, organismo y ambiente, y habilidades científicas.' },
+  { id: 'fisica', title: 'Ciencias: Física', mono: 'FI', subject: 'ciencias', cards: 55, description: 'Ondas, mecánica, energía, electricidad y magnetismo.' },
+  { id: 'quimica', title: 'Ciencias: Química', mono: 'QU', subject: 'ciencias', cards: 40, description: 'Estructura atómica, química orgánica, reacciones y estequiometría, soluciones.' },
+  { id: 'historia', title: 'Historia y Ciencias Sociales', mono: 'HI', subject: 'historia', cards: 62, description: 'Chile y el mundo en los siglos XIX y XX, formación ciudadana y sistema económico.' },
 ]
 
 const loaders: Record<DeckId, () => Promise<Deck>> = {
