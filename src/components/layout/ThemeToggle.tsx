@@ -1,3 +1,4 @@
+import { PixelIcon } from '@/components/icons/PixelIcon'
 import { THEME_BY_ID } from '@/data/themes'
 import { useTheme } from '@/hooks/useTheme'
 import { cn } from '@/lib/utils'
@@ -18,7 +19,8 @@ export function ThemeToggle({ compact }: { compact?: boolean }) {
       aria-label={compact ? title : undefined}
       className={cn(DOCK_ITEM, DOCK_IDLE, compact ? DOCK_RAIL : 'w-full')}
     >
-      {compact ? <span aria-hidden>ap</span> : 'apariencia'}
+      <PixelIcon name="palette" />
+      {!compact && 'apariencia'}
     </button>
   )
 }

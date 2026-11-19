@@ -33,7 +33,8 @@ function ResumeItem({ rail }: { rail: boolean }) {
       aria-label={title}
       className={cn(DOCK_ITEM, DOCK_IDLE, rail && DOCK_RAIL)}
     >
-      {rail ? <span aria-hidden>re</span> : (
+      <PixelIcon name="play" />
+      {!rail && (
         <>
           retomar
           <span className="ml-auto text-[11px] tabular-nums">{answered}/{total}</span>
@@ -49,7 +50,8 @@ function StreakItem({ rail }: { rail: boolean }) {
   const title = `racha de estudio: ${current} ${current === 1 ? 'día' : 'días'}`
   return (
     <Link to="/" title={title} aria-label={title} className={cn(DOCK_ITEM, DOCK_IDLE, rail && DOCK_RAIL)}>
-      {rail ? <span aria-hidden className="text-zinc-900 tabular-nums dark:text-zinc-100">{current}</span> : (
+      <PixelIcon name="flame" />
+      {!rail && (
         <>
           racha
           <span className="ml-auto text-zinc-900 tabular-nums dark:text-zinc-100">{current}</span>
@@ -65,7 +67,7 @@ function DockBody({ rail, header }: { rail: boolean; header: React.ReactNode }) 
     <>
       {header}
       <nav className={cn('mt-4 min-h-0 flex-1 space-y-0.5 overflow-x-hidden overflow-y-auto', padding)} aria-label="Principal">
-        {NAV_ITEMS.map(({ to, label, short, end }) => (
+        {NAV_ITEMS.map(({ to, label, icon, end }) => (
           <NavLink
             key={to}
             to={to}
@@ -77,7 +79,8 @@ function DockBody({ rail, header }: { rail: boolean; header: React.ReactNode }) 
             {({ isActive }) => (
               <>
                 {isActive && <span aria-hidden className="absolute top-1.5 bottom-1.5 -left-2 w-0.5 rounded-full bg-accent shadow-[0_0_6px_var(--accent)]" />}
-                {rail ? <span aria-hidden>{short}</span> : label}
+                <PixelIcon name={icon} />
+                {!rail && label}
               </>
             )}
           </NavLink>
@@ -95,7 +98,7 @@ function DockBody({ rail, header }: { rail: boolean; header: React.ReactNode }) 
 const SURFACE = 'border-zinc-200/80 bg-canvas dark:border-zinc-800/80'
 
 /**
- * Barra de tareas, solo con texto: columna fija y colapsable a rótulos de dos letras en escritorio, cajón en pantallas angostas y oculta durante un
+ * Barra de tareas: columna fija y colapsable a íconos en escritorio, cajón en pantallas angostas y oculta durante un
  * ensayo cronometrado (Modo Zen) hasta que el estudiante la despliegue.
  */
 export function Sidebar() {

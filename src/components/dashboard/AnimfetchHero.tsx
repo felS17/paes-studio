@@ -5,6 +5,7 @@ import { HubShell } from '@/components/dashboard/HubShell'
 import { SessionName } from '@/components/dashboard/SessionName'
 import { NebulaCanvas } from '@/components/dashboard/NebulaCanvas'
 import { PaesCountdown } from '@/components/dashboard/PaesCountdown'
+import { PixelIcon, type PixelIconName } from '@/components/icons/PixelIcon'
 import { EXAMS } from '@/data/catalog'
 import { TOTAL_CARDS } from '@/data/flashcards'
 import { QUOTES, quoteIndexOf } from '@/data/quotes'
@@ -22,22 +23,23 @@ import { quickDrillDraft, quickDrillSubject } from '@/utils/subtopics'
 
 const curated = EXAMS.filter((e) => e.source === 'curado').length
 
-const COMMANDS: { label: string; hint: string; to: string }[] = [
-  { label: 'ensayos', hint: `${EXAMS.length - curated} pruebas oficiales demre y ${curated} curados`, to: '/ensayos' },
-  { label: 'temas', hint: `${SUBTOPICS.length} subtemas, con resumen y práctica`, to: '/subtemas' },
-  { label: 'flashcards', hint: `${TOTAL_CARDS} tarjetas de memoria`, to: '/flashcards' },
-  { label: 'mapa', hint: 'cómo se conecta lo que sabes', to: '/zettelkasten' },
-  { label: 'guías', hint: 'resúmenes pdf y formulario express', to: '/material' },
-  { label: 'stats (task manager)', hint: 'ritmo, errores y progreso', to: '/analitica' },
+const COMMANDS: { label: string; hint: string; icon: PixelIconName; to: string }[] = [
+  { label: 'ensayos', hint: `${EXAMS.length - curated} pruebas oficiales demre y ${curated} curados`, icon: 'document', to: '/ensayos' },
+  { label: 'temas', hint: `${SUBTOPICS.length} subtemas, con resumen y práctica`, icon: 'tree', to: '/subtemas' },
+  { label: 'flashcards', hint: `${TOTAL_CARDS} tarjetas de memoria`, icon: 'cards', to: '/flashcards' },
+  { label: 'mapa', hint: 'cómo se conecta lo que sabes', icon: 'constellation', to: '/zettelkasten' },
+  { label: 'guías', hint: 'resúmenes pdf y formulario express', icon: 'book', to: '/material' },
+  { label: 'stats (task manager)', hint: 'ritmo, errores y progreso', icon: 'monitor', to: '/analitica' },
 ]
 
 const ROW =
   'group flex h-11 w-full min-w-0 items-center gap-2.5 px-5 text-left text-zinc-700 transition-colors focus-visible:-outline-offset-2 hover:bg-zinc-900/[0.04] hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-100/[0.05] dark:hover:text-zinc-100'
 
-function CommandBody({ label, hint }: { label: string; hint: string }) {
+function CommandBody({ icon, label, hint }: { icon: PixelIconName; label: string; hint: string }) {
   return (
     <>
       <span aria-hidden className="text-zinc-400 group-hover:text-accent dark:text-zinc-500">❯</span>
+      <PixelIcon name={icon} className="text-zinc-500 group-hover:text-accent dark:text-zinc-400" />
       <span className="shrink-0 @md:w-[21ch]">{label}</span>
       <span className="hidden min-w-0 truncate text-[12px] text-zinc-500 @md:block dark:text-zinc-400">{hint}</span>
     </>
@@ -123,11 +125,11 @@ export function AnimfetchHero() {
 
       <nav aria-label="Comandos" className="grid border-t border-zinc-200/80 py-2 font-mono text-[13.5px] @3xl:grid-cols-2 dark:border-zinc-800/80">
         <button type="button" className={`${ROW} @3xl:col-span-2`} onClick={() => train(10)}>
-          <CommandBody label="entrenar 10 rápidas" hint={trainHint} />
+          <CommandBody icon="bolt" label="entrenar 10 rápidas" hint={trainHint} />
         </button>
-        {COMMANDS.map(({ label, hint, to }) => (
+        {COMMANDS.map(({ label, hint, icon, to }) => (
           <Link key={to} to={to} className={ROW}>
-            <CommandBody label={label} hint={hint} />
+            <CommandBody icon={icon} label={label} hint={hint} />
           </Link>
         ))}
       </nav>
