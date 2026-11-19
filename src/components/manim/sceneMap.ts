@@ -1,7 +1,9 @@
 import type { Question } from '@/types/exam'
 import { EXTRACTORS, questionText } from './sceneExtract'
 
-export type SceneId = 'figuras' | 'thales' | 'vectores' | 'boxplot' | 'probabilidad' | 'recta' | 'homotecia' | 'trigonometria' | 'dispersion' | 'condicional'
+export type SceneId =
+  | 'figuras' | 'thales' | 'vectores' | 'boxplot' | 'probabilidad' | 'recta' | 'homotecia' | 'trigonometria' | 'dispersion' | 'condicional'
+  | 'funciones' | 'ondas' | 'reaccion' | 'tectonica' | 'movimiento'
 export type SceneValues = Record<string, string | number>
 
 export interface SceneEntry {
@@ -13,8 +15,9 @@ export interface SceneEntry {
 }
 
 /**
- * Solo los temas donde ver la figura ayuda de verdad: geometría, plano, posición y probabilidad de M1 y M2. El álgebra
- * mecánica, la aritmética y las demás materias no llevan animación a propósito.
+ * Solo los temas donde ver la figura ayuda de verdad: geometría, plano, funciones, posición y probabilidad de M1 y M2, y
+ * en Ciencias los procesos que se entienden mejor en movimiento (ondas y luz, movimiento, reacciones, placas). El álgebra
+ * mecánica, la aritmética, Lectora e Historia no llevan animación a propósito.
  */
 const BY_SUBTOPIC: Record<string, SceneEntry> = {
   'm1-areas': { scene: 'figuras' },
@@ -33,7 +36,22 @@ const BY_SUBTOPIC: Record<string, SceneEntry> = {
   'm2-funciones-trig': { scene: 'trigonometria', initial: { modo: 'unitaria' } },
   'm2-circunferencia': { scene: 'trigonometria', initial: { modo: 'cuerda' } },
   'm2-esfera': { scene: 'figuras', initial: { forma: 'esfera' } },
+  'm1-funcion-afin': { scene: 'funciones' },
+  'm1-cuadratica': { scene: 'funciones', initial: { modo: 'cuadratica' } },
+  'm2-cuadraticas': { scene: 'funciones', initial: { modo: 'cuadratica' } },
+  'm2-exponencial': { scene: 'funciones', initial: { modo: 'exponencial' } },
+  'm2-inversa': { scene: 'funciones', initial: { modo: 'inversa' } },
+  'cs-luz': { scene: 'ondas' },
+  'cs-cinematica': { scene: 'movimiento' },
+  'cs-reacciones': { scene: 'reaccion' },
+  'cs-tierra': { scene: 'tectonica' },
 }
+
+/**
+ * Escenas que solo van en el resumen del tema y el formulario: no tienen extractor de cifras, así que dentro de la
+ * solución de una pregunta mostrarían valores que no son los suyos.
+ */
+const SUMMARY_ONLY = new Set<SceneId>(['funciones', 'ondas', 'reaccion', 'tectonica', 'movimiento'])
 
 /** La escena de un subtema, o null si no tiene. Vive aparte de las escenas para no cargarlas si no se usan. */
 export const sceneForSubtopic = (id: string | null | undefined): SceneEntry | null => (id ? BY_SUBTOPIC[id] ?? null : null)
@@ -53,7 +71,7 @@ const realYear = (questionId: string) => {
 export function sceneForQuestion(question: Pick<Question, 'id' | 'subtopic' | 'stem' | 'explanation'>): SceneEntry | null {
   const base = sceneForSubtopic(question.subtopic)
   const year = realYear(question.id)
-  if (!base || !question.explanation || year === null || year < FIRST_YEAR || year > LAST_YEAR) return null
+  if (!base || SUMMARY_ONLY.has(base.scene) || !question.explanation || year === null || year < FIRST_YEAR || year > LAST_YEAR) return null
   const found = EXTRACTORS[question.subtopic as string]?.(questionText(question))
   return { scene: found?.scene ?? base.scene, initial: { ...base.initial, ...found?.values }, fromQuestion: found?.complete ?? false }
 }

@@ -23,8 +23,8 @@
         var raw = localStorage.getItem('paes-studio-storage');
         var saved = raw ? (JSON.parse(raw).settings || {}).state?.theme : null;
         var theme = saved === 'light' ? 'geist-light' : saved === 'dark' ? 'geist-dark' : saved;
-        var lightThemes = ['geist-light', 'paper'];
-        var darkThemes = ['github-dark', 'catppuccin-mocha', 'tokyo-night', 'gruvbox-dark', 'nord', 'rose-pine', 'dracula', 'geist-dark'];
+        var lightThemes = ['geist-light', 'paper', 'catppuccin-latte', 'solarized-light'];
+        var darkThemes = ['github-dark', 'catppuccin-mocha', 'tokyo-night', 'gruvbox-dark', 'nord', 'rose-pine', 'dracula', 'everforest-dark', 'kanagawa', 'one-dark', 'geist-dark'];
         if (lightThemes.indexOf(theme) < 0 && darkThemes.indexOf(theme) < 0) {
           theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'geist-dark' : 'geist-light';
         }

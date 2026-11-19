@@ -1,15 +1,21 @@
 % =============================================================================
-%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  PAES Studio: resumen en láminas (plantilla Beamer 16:9)
 %  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
 %
 %  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
 %  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Estructura: portada, cómo usar, sumario, qué se repite en las pruebas y, por
+%  tema, teoría seguida de ejercicios oficiales (enunciado y luego solución).
 %  Comandos:
 %    \alternativa{A}{texto}       alternativa
 %    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
 %    \paso{n}{texto}      paso numerado del desarrollo
 %    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
-%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%    \respuesta{C}{fuente}        respuesta oficial al pie de una solución
+%    \recorte{img/ensayo/q01.png} recorte del folleto (si falta, un recuadro)
+%    \sumarioeje{Eje}  \sumariotema{Tema}{etiqueta}   líneas del sumario
+%  Entornos: cajaclave, cajaregla (regla práctica), notagris (error común),
+%  cajatrampa, lineatiempo (filas «fecha & hecho \\»).
 %
 %  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
 %  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
@@ -26,6 +32,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage[most]{tcolorbox}
+\usepackage{graphicx}
 
 % ── Paleta Zinc ──────────────────────────────────────────────────────────────
 \definecolor{zinc950}{HTML}{09090B}
@@ -43,6 +50,7 @@
 % ── Tema mínimo ──────────────────────────────────────────────────────────────
 \usefonttheme{professionalfonts}
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{\ifnum\insertcontinuationcount>1\ (cont.)\fi}
 \setbeamercolor{background canvas}{bg=white}
 \setbeamercolor{normal text}{fg=zinc900}
 \setbeamercolor{structure}{fg=zinc900}
@@ -62,16 +70,39 @@
 }
 \makeatother
 \setbeamertemplate{footline}{%
-  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
-  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle\ifx\insertsubsection\empty\else\ · \insertsubsection\fi}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertpagenumber\,/\,\insertpresentationendpage}\hspace*{1.6cm}\par\vspace*{0.7em}%
 }
+% Portada: banda vertical con el color de la materia (\definecolor{acento} en META), título grande en Latin
+% Modern Sans Quotation y el nombre del sitio. Un solo diseño para todas las guías: solo cambia el color. El texto blanco va
+% sobre acentos oscuros (contraste ≥ 6,9:1), así que también se lee impresa en blanco y negro.
+\newcommand{\portadaMateria}{Matemática M1}
+\newcommand{\portadaProceso}{Proceso de Admisión 2027}
+\newcommand{\portadaFuente}[1]{{\fontfamily{lmssq}\selectfont #1}}
+\newcommand{\logoSitio}[1]{%
+  \begin{tikzpicture}[baseline=-0.6ex]
+    \fill[#1, rounded corners=1.2pt] (0,-0.17) rectangle (0.34,0.17);
+    \foreach \x/\h in {0.08/0.10, 0.17/0.18, 0.26/0.06} \fill[acento] (\x-0.025,-0.11) rectangle (\x+0.025,-0.11+\h);
+  \end{tikzpicture}}
 \setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[acento] (current page.north west) rectangle ([xshift=4.4cm]current page.south west);
+    \fill[acento!14] ([xshift=-0.2cm,yshift=0.2cm]current page.south east) circle (2.6cm);
+    \fill[white, opacity=0.12] ([xshift=4.4cm,yshift=-2.1cm]current page.north west) circle (1.5cm);
+    \node[anchor=north west, text=white, inner sep=0, align=left] at ([xshift=0.7cm,yshift=-0.75cm]current page.north west)
+      {\portadaFuente{\bfseries\fontsize{26}{26}\selectfont PAES}\\[5pt]\portadaFuente{\fontsize{26}{26}\selectfont 2027}};
+    \node[anchor=south west, text=white, inner sep=0] at ([xshift=0.7cm,yshift=0.65cm]current page.south west)
+      {\logoSitio{white}\hspace{4pt}{\sffamily\small\bfseries PAES Studio}};
+  \end{tikzpicture}%
   \vfill
-  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
-  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
-  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
-  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
-  {\small\color{zinc500}\insertdate}\par
+  \hspace*{3.4cm}\begin{minipage}{9.2cm}\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+    {\sffamily\scriptsize\bfseries\color{acento} RESUMEN PAES\quad·\quad TEORÍA Y EJERCICIOS OFICIALES}\par\vspace{0.7em}
+    {\portadaFuente{\bfseries\fontsize{25}{29}\selectfont\color{zinc950}\portadaMateria\par}}\vspace{0.55em}
+    {\color{acento}\rule{2.2cm}{2pt}}\par\vspace{0.55em}
+    {\sffamily\large\color{zinc700}\portadaProceso}\par\vspace{0.9em}
+    {\sffamily\footnotesize\color{zinc700}\portadaDetalle}\par\vspace{0.35em}
+    {\sffamily\scriptsize\color{zinc500}\insertdate}
+  \end{minipage}
   \vfill
 }
 
@@ -85,7 +116,7 @@
 \newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
-\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+\newtcolorbox{cajaclave}[1][]{enhanced, before upper={\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}\setlength{\abovedisplayshortskip}{1pt}\setlength{\belowdisplayshortskip}{1pt}}, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
   borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
   fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
 \newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
@@ -94,6 +125,33 @@
 \newenvironment{lineatiempo}
   {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
   {\end{tabular}}
+\newtcolorbox{cajaregla}[1][Regla práctica]{enhanced, boxrule=0.8pt, arc=2pt, colback=white, colframe=zinc900,
+  left=7pt, right=7pt, top=3pt, bottom=4pt, before skip=4pt, after skip=4pt,
+  fonttitle=\bfseries\small, coltitle=white, colbacktitle=zinc900, titlerule=0pt, title={#1}}
+\newtcolorbox{notagris}{enhanced, frame hidden, arc=2pt, colback=zinc50, left=6pt, right=6pt, top=3pt, bottom=3pt,
+  before skip=4pt, after skip=2pt, fontupper=\color{zinc500}, borderline west={1.5pt}{0pt}{zinc300}}
+\newcommand{\respuesta}[2]{\par\vspace{0.3em}\noindent\teclaok{#1}\hspace{0.5em}{\small\bfseries respuesta oficial}\hspace{0.5em}{\scriptsize\color{zinc500}#2}\par}
+\newcommand{\recorte}[1]{\IfFileExists{#1}%
+  {\includegraphics[width=0.9\textwidth,height=0.62\textheight,keepaspectratio]{#1}}%
+  {\fbox{\parbox{0.6\textwidth}{\centering\small\color{zinc500} Recorte del folleto oficial: #1\\(se genera con generate\_latex\_summary.py)}}}}
+\newcommand{\sumarioeje}[1]{\par\vspace{0.35em}\noindent{\bfseries #1}\par\vspace{0.1em}}
+\newcommand{\sumariotema}[2]{\noindent\hspace*{0.8em}\hyperlink{#2}{#1}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\sumarioitem}[2]{\noindent{\bfseries\hyperlink{#2}{#1}}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\portadaDetalle}{}
+\colorlet{acento}{zinc900}
+\newcommand{\esquema}[2]{{#1}\par\vspace{3pt}{\tiny\color{zinc500}#2}}
+\newcommand{\recortechico}[1]{\IfFileExists{#1}{\includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{#1}}{\fbox{\tiny recorte: #1}}}
+%%<ESQUEMAS>%%
+
+%%</ESQUEMAS>%%
+% ajustar: el contenido va a todo el ancho y, solo si no cabe en la altura dada, se reduce entero (una lámina).
+\newsavebox{\ajustecaja}
+\newlength{\ajustealto}
+\newenvironment{ajustar}[1][0.74\textheight]
+  {\setlength{\ajustealto}{#1}\begin{lrbox}{\ajustecaja}\begin{minipage}{\textwidth}}
+  {\end{minipage}\end{lrbox}%
+   \ifdim\dimexpr\ht\ajustecaja+\dp\ajustecaja\relax>\ajustealto
+     \resizebox*{!}{\ajustealto}{\usebox{\ajustecaja}}\else\usebox{\ajustecaja}\fi}
 \newlength{\anchobarra}
 \newcommand{\ejebarra}[3]{%
   \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
@@ -102,9 +160,13 @@
   \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
 
 %%<META>%%
-\title[Repaso PAES: Historia y Ciencias Sociales]{Repaso PAES}
+\title[Resumen PAES: Historia y Ciencias Sociales]{Resumen PAES}
 \subtitle{Historia y Ciencias Sociales}
-\date{8 de noviembre de 2026}
+\date{19 de noviembre de 2026}
+\definecolor{acento}{HTML}{7A4310}
+\renewcommand{\portadaMateria}{Historia y Ciencias Sociales}
+\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}
+\renewcommand{\portadaDetalle}{15 temas del temario 2027 y 30 ejercicios de pruebas oficiales del DEMRE (admisiones 2024 a 2027)}
 %%</META>%%
 
 \begin{document}
@@ -114,449 +176,774 @@
 \end{frame}
 
 %%<CONTENIDO>%%
-\begin{frame}{Contenidos}
-
-  \framesubtitle{4 ejes, en el orden del temario}
-
-  \begin{enumerate}\small
-
-    \item \textbf{Historia: mundo, América y Chile}: Siglo XIX: ideas liberales, republicanas y Estado-nación, Chile en el siglo XIX: formación de la República y economía, Del siglo XIX al XX: transformaciones y cuestión social, Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo, Posguerra, Guerra Fría y América Latina, Chile a mediados del siglo XX: Estado, reformas y democratización, Dictadura militar y retorno a la democracia
-
-    \item \textbf{Formación ciudadana}: Democracia: fundamentos, atributos y dimensiones, Institucionalidad democrática en Chile, Democracia en la sociedad de la información, Sistema judicial y acceso a la justicia
-
-    \item \textbf{Sistema económico}: Funcionamiento del mercado, Estado, mercado y modelos de desarrollo, Derechos laborales
-
-    \item \textbf{Habilidades de pensamiento histórico}: Pensamiento temporal, espacial y crítico; análisis de fuentes
-
-  \end{enumerate}
-
+\begin{frame}{Cómo usar este resumen}
+\begin{columns}[T,onlytextwidth]
+\column{0.56\textwidth}\small
+\begin{enumerate}
+\item Parte por la tabla \emph{Qué se repite en las pruebas}: dice qué temas aparecen más y cuál es su trampa habitual.
+\item Cada tema trae una lámina de teoría y luego ejercicios oficiales del DEMRE: el enunciado en una lámina y la solución en la siguiente.
+\item Resuelve el ejercicio y anota tu alternativa \emph{antes} de avanzar. Si fallaste, vuelve a la teoría.
+\item Usa el sumario para saltar al tema que necesites.
+\end{enumerate}
+\column{0.4\textwidth}
+\begin{cajaregla}[Regla práctica]\footnotesize Las cajas con borde negro son reglas para aplicar directo en la prueba.\end{cajaregla}
+\begin{notagris}\footnotesize Las notas en gris son errores comunes.\end{notagris}
+\vspace{0.4em}{\scriptsize\color{zinc500} Datos: 7 aplicaciones oficiales (invierno 2027, regular 2026, invierno 2026, regular 2025, invierno 2025, regular 2024, invierno 2024; año de admisión). Las soluciones paso a paso fueron redactadas con IA y revisadas contra la respuesta oficial del DEMRE.\par}
+\end{columns}
 \end{frame}
 
-\begin{frame}{Qué evalúa la prueba}
+\begin{frame}{Sumario}
+\begin{columns}[T,onlytextwidth]
+\column{0.47\textwidth}\footnotesize
+\sumarioitem{Qué se repite en las pruebas}{repite}
+\sumarioeje{Historia: mundo, América y Chile}
+\sumariotema{Siglo XIX: ideas liberales, republicanas y Estado-nación}{tema-hi-revoluciones}
+\sumariotema{Chile en el siglo XIX: formación de la República y economía}{tema-hi-chile-xix}
+\sumariotema{Del siglo XIX al XX: transformaciones y cuestión social}{tema-hi-cuestion-social}
+\sumariotema{Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}{tema-hi-guerras}
+\sumariotema{Posguerra, Guerra Fría y América Latina}{tema-hi-guerra-fria}
+\sumariotema{Chile a mediados del siglo XX: Estado, reformas y democratización}{tema-hi-chile-xx}
+\sumariotema{Dictadura militar y retorno a la democracia}{tema-hi-dictadura}
+\column{0.47\textwidth}\footnotesize
+\sumarioeje{Formación ciudadana}
+\sumariotema{Democracia: fundamentos, atributos y dimensiones}{tema-hi-democracia}
+\sumariotema{Institucionalidad democrática en Chile}{tema-hi-estado}
+\sumariotema{Democracia en la sociedad de la información}{tema-hi-informacion}
+\sumariotema{Sistema judicial y acceso a la justicia}{tema-hi-justicia}
+\sumarioeje{Sistema económico}
+\sumariotema{Funcionamiento del mercado}{tema-hi-mercado}
+\sumariotema{Estado, mercado y modelos de desarrollo}{tema-hi-macro}
+\sumariotema{Derechos laborales}{tema-hi-laborales}
+\sumarioeje{Habilidades de pensamiento histórico}
+\sumariotema{Pensamiento temporal, espacial y crítico; análisis de fuentes}{tema-hi-fuentes}
+\end{columns}
+\end{frame}
 
-  \framesubtitle{Distribución por eje en 8 ensayos (431 preguntas)}
+\begin{frame}{Qué se repite en las pruebas}
+\label{repite}
+\framesubtitle{415 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (1/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Institucionalidad democrática en Chile & 10{,}9 & media & Atribuir al Senado la fiscalización del Gobierno. \\
+Funcionamiento del mercado & 9{,}1 & baja & Confundir un cambio de precio (movimiento a lo largo de la curva) con un desplazamiento de la curva. \\
+Democracia: fundamentos, atributos y dimensiones & 8{,}6 & baja & Confundir la elección de representantes con democracia directa. \\
+Siglo XIX: ideas liberales, republicanas y Estado-nación & 4{,}3 & media & Atribuir a la Revolución Francesa el sufragio universal femenino. \\
+Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo & 4{,}0 & alta & Presentar el detonante como la única causa de la guerra. \\
+\bottomrule\end{tabular}\end{ajustar}
+\end{frame}
 
-  \vspace{0.8em}
+\begin{frame}{Qué se repite en las pruebas}
+\framesubtitle{415 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (2/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Dictadura militar y retorno a la democracia & 3{,}6 & alta & Atribuir la Constitución de 1980 a la transición. \\
+Democracia en la sociedad de la información & 3{,}4 & baja & Creer que más información equivale siempre a más democracia. \\
+Derechos laborales & 3{,}1 & media & Confundir la Dirección del Trabajo con un tribunal. \\
+Chile en el siglo XIX: formación de la República y economía & 2{,}6 & baja & Creer que la Junta de 1810 declaró la independencia. \\
+Sistema judicial y acceso a la justicia & 2{,}4 & baja & Confundir la Fiscalía con un tribunal. \\
+\bottomrule\end{tabular}\end{ajustar}
+\end{frame}
 
-  \ejebarra{Formación ciudadana}{0.422}{42 \%}
-
-  \ejebarra{Historia: mundo, América y Chile}{0.297}{30 \%}
-
-  \ejebarra{Sistema económico}{0.237}{24 \%}
-
-  \ejebarra{Geografía y espacio}{0.044}{4 \%}
-
+\begin{frame}{Qué se repite en las pruebas}
+\framesubtitle{415 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (3/3)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Estado, mercado y modelos de desarrollo & 1{,}7 & media & Atribuir al Banco Central decisiones de gasto público. \\
+Del siglo XIX al XX: transformaciones y cuestión social & 1{,}3 & alta & Ubicar la cuestión social en la segunda mitad del siglo XX. \\
+Posguerra, Guerra Fría y América Latina & 0{,}9 & media & Describir la Guerra Fría como un enfrentamiento militar directo entre EE. UU. y la URSS. \\
+Pensamiento temporal, espacial y crítico; análisis de fuentes & 0{,}4 & alta & Elegir una afirmación verdadera históricamente, pero que la fuente no respalda. \\
+Chile a mediados del siglo XX: Estado, reformas y democratización & 0{,}3 & alta & Confundir chilenización (1966) con nacionalización (1971) del cobre. \\
+\bottomrule\end{tabular}\end{ajustar}
+\par\vspace{0.4em}{\tiny\color{zinc500} Dificultad relativa dentro de la materia, según el largo de la solución de sus preguntas oficiales.}
 \end{frame}
 
 \section{Historia: mundo, América y Chile}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Historia: mundo, América y Chile}\par\vspace{0.6em}
-  {\color{zinc700} Siglo XIX en Europa, América y Chile; primera mitad del siglo XX; posguerra, Guerra Fría, dictadura y retorno a la democracia.}\par\vspace{1em}
-  {\small\color{zinc500} Siglo XIX: ideas liberales, republicanas y Estado-nación, Chile en el siglo XIX: formación de la República y economía, Del siglo XIX al XX: transformaciones y cuestión social, Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo, Posguerra, Guerra Fría y América Latina, Chile a mediados del siglo XX: Estado, reformas y democratización, Dictadura militar y retorno a la democracia}
-  \vfill
-\end{frame}
+\subsection{Siglo XIX: ideas liberales, republicanas y Estado-nación}
 
-\begin{frame}[allowframebreaks]{Siglo XIX: ideas liberales, republicanas y Estado-nación}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item 1789: fin del Antiguo Régimen en Francia.
-    \item Industrialización $\rightarrow$ urbanización y cuestión obrera.
-    \item Imperialismo: reparto de África en la Conferencia de Berlín (1884–1885).
-  \end{itemize}
-  \begin{cajaclave}[Ideas clave del liberalismo]\footnotesize
+\begin{frame}{Siglo XIX: ideas liberales, republicanas y Estado-nación}
+\label{tema-hi-revoluciones}
+\framesubtitle{Historia: mundo, América y Chile · Teoría · 4,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item 1789: fin del Antiguo Régimen en Francia.
+\item Industrialización $\rightarrow$ urbanización y cuestión obrera.
+\item Imperialismo: reparto de África en la Conferencia de Berlín (1884–1885).
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ubica el proceso en el tiempo y el espacio.\item Identifica sus causas (políticas, económicas, sociales, ideológicas).\item Relaciona sus consecuencias con procesos posteriores.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir a la Revolución Francesa el sufragio universal femenino.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Ideas clave del liberalismo]\footnotesize
 Soberanía nacional, separación de poderes, derechos individuales (libertad, propiedad, igualdad ante la ley), constitución escrita y libre mercado.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
 \begin{frame}{Siglo XIX: ideas liberales, republicanas y Estado-nación}
-  \framesubtitle{Línea de tiempo}
-  \begin{lineatiempo}
-  1789 & Revolución Francesa y Declaración de los Derechos del Hombre \\
-  c. 1760–1840 & Primera Revolución Industrial en Inglaterra \\
-  1815 & Congreso de Viena \\
-  1848 & Revoluciones liberales en Europa \\
-  1871 & Unificación alemana \\
-  1884–1885 & Conferencia de Berlín \\
-  \end{lineatiempo}
+\framesubtitle{Historia: mundo, América y Chile · Línea de tiempo}
+\begin{lineatiempo}
+1789 & Revolución Francesa y Declaración de los Derechos del Hombre \\
+c. 1760–1840 & Primera Revolución Industrial en Inglaterra \\
+1815 & Congreso de Viena \\
+1848 & Revoluciones liberales en Europa \\
+1871 & Unificación alemana \\
+1884–1885 & Conferencia de Berlín \\
+\end{lineatiempo}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Siglo XIX: ideas liberales, republicanas y Estado-nación}
-  {\small ¿Cuál fue una consecuencia social directa de la Revolución Industrial en Inglaterra?}
-  \vspace{0.4em}
-  \alternativa{A}{El fortalecimiento de los gremios artesanales.}
-  \alternativa{B}{La formación de una clase obrera concentrada en ciudades.}
-  \alternativa{C}{La desaparición de la burguesía.}
-  \alternativa{D}{El retorno de la población al campo.}
+\begin{frame}{Ejercicio 1 · Siglo XIX: ideas liberales, republicanas y Estado-nación}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 18}
+\begin{ajustar}[0.7\textheight]
+{\small Durante la primera mitad del siglo XIX, en el marco del proceso de formación de los nuevos Estados latinoamericanos se originaron diversos conflictos. En este contexto, ¿cuál fue uno de los problemas existentes entre los nuevos países vecinos?}
+\vspace{0.4em}
+\alternativa{A}{Las diferencias de criterio para la demarcación de límites territoriales.}
+\alternativa{B}{Las desigualdades en las condiciones de acceso al mercado internacional.}
+\alternativa{C}{Las tensiones provocadas por los desplazamientos migratorios en la región.}
+\alternativa{D}{Las distintas concepciones respecto a las ventajas de la influencia extranjera.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Las fábricas concentraron trabajadores asalariados en las ciudades.}
-  {\small
-  \paso{1}{La producción fabril requería mano de obra cercana.}
-  \paso{2}{La migración campo–ciudad formó el proletariado urbano.}
-  }
-  \alternativaok{B}{La formación de una clase obrera concentrada en ciudades.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir a la Revolución Francesa el sufragio universal femenino.
-    \item Confundir liberalismo político con socialismo.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Siglo XIX: ideas liberales, republicanas y Estado-nación}
+\framesubtitle{Tras la independencia, los nuevos Estados latinoamericanos disputaron sus límites territoriales, lo que originó conflictos entre países vecinos.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{La pregunta pide un problema existente entre países vecinos durante la formación de los nuevos Estados en la primera mitad del siglo XIX, es decir, un conflicto entre dos naciones que compartían una frontera.}
+\paso{2}{Las antiguas divisiones coloniales no siempre eran claras. Al heredar esas divisiones, los nuevos países discrepaban sobre dónde debía trazarse la frontera entre ellos, lo que daba lugar a disputas territoriales.}
+\paso{3}{Esas diferencias de criterio para la demarcación de límites generaron tensiones diplomáticas y, en algunos casos, enfrentamientos entre vecinos por la posesión de territorios poco poblados.}
+\paso{4}{Las demás alternativas describen temas del período, pero no disputas limítrofes: el acceso al mercado internacional (B), los desplazamientos migratorios (C) y la influencia extranjera (D) no definen fronteras entre vecinos.}
+\paso{5}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Historia, pregunta 18}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Asumir que las migraciones generaron conflictos territoriales directos; fueron tensiones sociales y no disputas por límites. Es una trampa porque las migraciones sí generaban tensiones internas.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Chile en el siglo XIX: formación de la República y economía}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item 1810: Primera Junta, en nombre de Fernando VII.
-    \item 1833: Constitución de orden conservador y presidencialista.
-    \item Guerra del Pacífico $\rightarrow$ riqueza salitrera para el Estado.
-  \end{itemize}
-  \begin{cajaclave}[Ciclo del salitre]\footnotesize
+\begin{frame}{Ejercicio 2 · Siglo XIX: ideas liberales, republicanas y Estado-nación}
+\framesubtitle{Fuente: PAES Invierno 2024, Historia, pregunta 27}
+\begin{center}\recorte{img/historia-2025-invierno/q27.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Siglo XIX: ideas liberales, republicanas y Estado-nación}
+\framesubtitle{Tras la independencia, el Estado usó la escuela para difundir símbolos, historia y lealtades comunes, con el fin de construir un sentido de pertenencia a la nación.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{Para formar un Estado nación se necesita que la población se sienta parte de una comunidad común, con símbolos, historia y lealtades compartidas.}
+\paso{2}{En Chile del siglo XIX, el Estado impulsó la educación pública y la enseñanza de la historia patria, los símbolos y la lengua, lo que difundió un sentido de pertenencia a la nación entre niños y familias.}
+\paso{3}{Por eso, el uso del sistema educativo para construir un sentido de pertenencia corresponde a la estrategia buscada, alternativa C.}
+\paso{4}{Las demás opciones no corresponden: la guerra fue una experiencia frecuente que se usó para cohesionar, los inmigrantes podían usar sus símbolos y no se legisló para excluir a los pueblos originarios de la identidad nacional como estrategia de fortalecimiento.}
+\paso{5}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2024, Historia, pregunta 27}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Afirma que se impidió que los inmigrantes emplearan sus símbolos patrios. La estrategia buscó integrar a los inmigrantes, no prohibirles sus símbolos.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Chile en el siglo XIX: formación de la República y economía}
+
+\begin{frame}{Chile en el siglo XIX: formación de la República y economía}
+\label{tema-hi-chile-xix}
+\framesubtitle{Historia: mundo, América y Chile · Teoría · 2,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item 1810: Primera Junta, en nombre de Fernando VII.
+\item 1833: Constitución de orden conservador y presidencialista.
+\item Guerra del Pacífico $\rightarrow$ riqueza salitrera para el Estado.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ordena los hechos y ubica el período de la república.\item Relaciona el hecho con su causa y sus consecuencias.\item Distingue lo político, lo económico y lo territorial.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Creer que la Junta de 1810 declaró la independencia.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Ciclo del salitre]\footnotesize
 Exportación de salitre $\rightarrow$ impuestos de exportación $\rightarrow$ grandes ingresos fiscales $\rightarrow$ obras públicas, educación y ferrocarriles. Gran parte de las oficinas eran de capitales extranjeros.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
 \begin{frame}{Chile en el siglo XIX: formación de la República y economía}
-  \framesubtitle{Línea de tiempo}
-  \begin{lineatiempo}
-  1810 & Primera Junta Nacional de Gobierno \\
-  1814 & Desastre de Rancagua: Reconquista \\
-  1818 & Proclamación de la independencia y batalla de Maipú \\
-  1833 & Constitución de 1833 \\
-  1879–1884 & Guerra del Pacífico \\
-  1888 & Incorporación de Rapa Nui \\
-  1891 & Guerra Civil \\
-  \end{lineatiempo}
+\framesubtitle{Historia: mundo, América y Chile · Línea de tiempo}
+\begin{lineatiempo}
+1810 & Primera Junta Nacional de Gobierno \\
+1814 & Desastre de Rancagua: Reconquista \\
+1818 & Proclamación de la independencia y batalla de Maipú \\
+1833 & Constitución de 1833 \\
+1879–1884 & Guerra del Pacífico \\
+1888 & Incorporación de Rapa Nui \\
+1891 & Guerra Civil \\
+\end{lineatiempo}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Chile en el siglo XIX: formación de la República y economía}
-  {\small ¿Qué hecho desencadenó la formación de juntas de gobierno en América en 1810?}
-  \vspace{0.4em}
-  \alternativa{A}{La Revolución Industrial.}
-  \alternativa{B}{La invasión napoleónica a España y la captura de Fernando VII.}
-  \alternativa{C}{La Guerra del Pacífico.}
-  \alternativa{D}{La Constitución de 1833.}
+\begin{frame}{Ejercicio 1 · Chile en el siglo XIX: formación de la República y economía}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 2}
+\begin{ajustar}[0.7\textheight]
+{\small El desarrollo de las Tecnologías de la Información y la Comunicación ha permitido que exista una proliferación de medios que han utilizado plataformas virtuales para darse a conocer en forma independiente a los medios tradicionales. En este sentido, ¿cuál es una ventaja de la proliferación de este tipo de medios?}
+\vspace{0.4em}
+\alternativa{A}{La entrega de información objetiva.}
+\alternativa{B}{La protección de información privada.}
+\alternativa{C}{La veracidad de los contenidos publicados.}
+\alternativa{D}{La diversificación de los contenidos difundidos.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Sin rey legítimo, surgió la pregunta por quién gobernaba en su nombre.}
-  {\small
-  \paso{1}{1808: Napoleón invade España y Fernando VII queda cautivo.}
-  \paso{2}{Los cabildos americanos forman juntas que gobiernan en nombre del rey.}
-  }
-  \alternativaok{B}{La invasión napoleónica a España y la captura de Fernando VII.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Creer que la Junta de 1810 declaró la independencia.
-    \item Pensar que el Estado explotó directamente las salitreras.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Chile en el siglo XIX: formación de la República y economía}
+\framesubtitle{La proliferación de medios independientes en plataformas virtuales tiene como ventaja principal la diversificación de los contenidos que llegan a la ciudadanía.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{El enunciado señala que estos medios se dan a conocer «en forma independiente a los medios tradicionales». Eso significa que ya no dependen de un único canal o de unos pocos grupos para llegar al público.}
+\paso{2}{Cuando aumenta el número de emisores, también aumenta la variedad de temas, enfoques, lenguajes y puntos de vista que circulan en la sociedad. Esa diversidad es la principal ventaja que describe el enunciado.}
+\paso{3}{La objetividad (A) y la veracidad (C) no se garantizan por el solo hecho de multiplicar medios: dependen de cómo se verifica la información. La protección de información privada (B) tampoco es una ventaja de los medios, pues se relaciona con la privacidad de las personas.}
+\paso{4}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Historia, pregunta 2}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Confundir cantidad de medios con calidad: que haya más medios no garantiza que sus contenidos sean verdaderos. La veracidad depende de la verificación de cada medio.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Del siglo XIX al XX: transformaciones y cuestión social}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item 1907: matanza de la Escuela Santa María de Iquique.
-    \item 1924: leyes sociales; 1925: nueva Constitución.
-    \item Conventillo = símbolo de la vivienda popular urbana.
-  \end{itemize}
-  \begin{cajaclave}[Respuestas a la cuestión social]\footnotesize
+\begin{frame}{Ejercicio 2 · Chile en el siglo XIX: formación de la República y economía}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 23}
+\begin{center}\recorte{img/historia-2026-invierno/q23.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Chile en el siglo XIX: formación de la República y economía}
+\framesubtitle{La falta de coherencia y de un programa común entre facciones de una misma elite dificultó dar a la república un ordenamiento institucional sólido y duradero.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{El texto afirma que la característica más prominente de estas asociaciones o facciones es «su falta de coherencia», y que no se distinguen «en términos doctrinarios muy estrictos» ni «en relación a factores socioeconómicos».}
+\paso{2}{Además, el autor señala que, «sin excepción, se trata de facciones dentro del grupo dirigente». Eso significa que no había un proyecto alternativo enfrentado al de la elite, sino disputas internas dentro de la misma elite.}
+\paso{3}{Una elite dividida en facciones sin un programa común dificulta acordar constituciones, leyes y procedimientos que duren en el tiempo. Ese es el problema institucional que pregunta el enunciado para la organización de la nueva república.}
+\paso{4}{El contexto confirma esta lectura: en los primeros años de la república se sucedieron constituciones de vida breve, como las de 1822 y 1823, lo que refleja la dificultad de consensuar un orden común.}
+\paso{5}{La alternativa C, la dificultad de otorgar un ordenamiento institucional sólido al país, es la consecuencia que se desprende del texto y de ese contexto.}
+\paso{6}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, Historia, pregunta 23}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Menciona a caudillos militares, pero el texto no habla de militares. La fragmentación descrita es política y doctrinal, no un conflicto de mando armado.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Del siglo XIX al XX: transformaciones y cuestión social}
+
+\begin{frame}{Del siglo XIX al XX: transformaciones y cuestión social}
+\label{tema-hi-cuestion-social}
+\framesubtitle{Historia: mundo, América y Chile · Teoría · 1,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item 1907: matanza de la Escuela Santa María de Iquique.
+\item 1924: leyes sociales; 1925: nueva Constitución.
+\item Conventillo = símbolo de la vivienda popular urbana.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica las condiciones de vida y trabajo descritas.\item Relaciónalas con sus causas (urbanización, industrialización).\item Reconoce las respuestas de los distintos actores.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Ubicar la cuestión social en la segunda mitad del siglo XX.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Respuestas a la cuestión social]\footnotesize
 Movimiento obrero (huelgas, organización), Iglesia (encíclica \emph{Rerum Novarum}, 1891), Estado (leyes sociales de 1924) y partidos políticos de base popular.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
 \begin{frame}{Del siglo XIX al XX: transformaciones y cuestión social}
-  \framesubtitle{Línea de tiempo}
-  \begin{lineatiempo}
-  1891–1925 & República parlamentaria \\
-  1907 & Matanza de la Escuela Santa María de Iquique \\
-  1920 & Ley de Instrucción Primaria Obligatoria \\
-  1924 & Leyes sociales \\
-  1925 & Constitución de 1925 \\
-  \end{lineatiempo}
+\framesubtitle{Historia: mundo, América y Chile · Línea de tiempo}
+\begin{lineatiempo}
+1891–1925 & República parlamentaria \\
+1907 & Matanza de la Escuela Santa María de Iquique \\
+1920 & Ley de Instrucción Primaria Obligatoria \\
+1924 & Leyes sociales \\
+1925 & Constitución de 1925 \\
+\end{lineatiempo}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Del siglo XIX al XX: transformaciones y cuestión social}
-  {\small ¿Qué cambio institucional introdujo la Constitución de 1925 en Chile?}
-  \vspace{0.4em}
-  \alternativa{A}{Estableció el parlamentarismo.}
-  \alternativa{B}{Fortaleció el presidencialismo y separó la Iglesia del Estado.}
-  \alternativa{C}{Creó la monarquía constitucional.}
-  \alternativa{D}{Suprimió el Congreso Nacional.}
+\begin{frame}{Ejercicio 1 · Del siglo XIX al XX: transformaciones y cuestión social}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 46}
+\begin{center}\recorte{img/historia-2027-invierno/q46.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La Constitución de 1925 respondió a la crisis del parlamentarismo.}
-  {\small
-  \paso{1}{Devolvió atribuciones al Presidente frente al Congreso.}
-  \paso{2}{Estableció la separación entre la Iglesia y el Estado.}
-  }
-  \alternativaok{B}{Fortaleció el presidencialismo y separó la Iglesia del Estado.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Ubicar la cuestión social en la segunda mitad del siglo XX.
-    \item Confundir el período parlamentario con el presidencial.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Del siglo XIX al XX: transformaciones y cuestión social}
+\framesubtitle{La situación descrita, con pobladores que autoconstruyen calzadas, agua y luz, es propia de las poblaciones callampas: asentamientos informales que se multiplicaron en las ciudades a mediados del siglo XX.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{La cita describe obras que los propios pobladores realizan: arreglos de calzadas, plantaciones de árboles y cañerías de agua hacia el interior de sus domicilios. Son tareas que normalmente corresponden a la urbanización formal.}
+\paso{2}{Estas obras se hacen «con fondos propios» y «en sus tiempos libres», lo que muestra que el Estado no entregaba la infraestructura básica a ese sector. Los habitantes debían construirla por su cuenta.}
+\paso{3}{Los vecinos obtuvieron «medidores colectivos» y «luz eléctrica en algunas habitaciones». Esto indica servicios precarios, compartidos y parciales, típicos de un asentamiento de ocupación irregular.}
+\paso{4}{Ese conjunto de rasgos corresponde a las poblaciones callampas, asentamientos informales que proliferaron en las ciudades chilenas a mediados del siglo XX, ante la falta de viviendas y de urbanización formal.}
+\paso{5}{La alternativa A se refiere a los conventillos, que eran casas de arriendo con piezas compartidas en el centro; la cita no describe esa forma de habitar. La alternativa B tampoco explica la situación, porque la autoconstrucción con fondos propios no responde a un mercado inmobiliario privado organizado. La C tampoco, porque una planificación urbana habría traído servicios desde el Estado. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Historia, pregunta 46}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Propone la masificación de un mercado inmobiliario privado. Es un error de causa: la cita describe autoconstrucción con fondos propios, no viviendas compradas o arrendadas en un mercado organizado.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Causa estructural $\neq$ detonante.
-    \item La crisis de 1929 golpeó fuertemente a Chile por la caída de sus exportaciones.
-    \item 1945: fin de la guerra y fundación de la ONU.
-  \end{itemize}
-  \begin{cajaclave}[Multicausalidad de la Primera Guerra Mundial]\footnotesize
+\begin{frame}{Ejercicio 2 · Del siglo XIX al XX: transformaciones y cuestión social}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 50}
+\begin{ajustar}[0.7\textheight]
+{\small En 1955 se realizó la Conferencia de Bandung en Indonesia, la cual constituyó un antecedente de la conformación del Movimiento de Países No Alineados. En un primer momento, este movimiento reunió a países africanos y asiáticos, a los que se unieron posteriormente países de otras regiones del mundo. Considerando el escenario geopolítico de la época, ¿cuál fue uno de los propósitos de los países que adhirieron a este movimiento?}
+\vspace{0.4em}
+\alternativa{A}{Debilitar la hegemonía militar de las superpotencias emergentes.}
+\alternativa{B}{Rechazar el establecimiento de dictaduras lideradas por militares.}
+\alternativa{C}{Crear una institucionalidad alternativa al orden político predominante.}
+\alternativa{D}{Recuperar el sistema mundial existente en el periodo de entreguerras.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Del siglo XIX al XX: transformaciones y cuestión social}
+\framesubtitle{Los países de Bandung buscaban una vía propia frente a la rivalidad de Estados Unidos y la Unión Soviética, por lo que querían crear una institucionalidad alternativa.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{El enunciado sitúa el origen del movimiento en 1955, en Bandung, y lo describe como una agrupación de países africanos y asiáticos, a la que luego se sumaron otros. Muchos de esos países surgían de la descolonización.}
+\paso{2}{En 1955 el mundo estaba dividido en dos bloques: el occidental, liderado por Estados Unidos, y el soviético. Alinearse con cualquiera significaba quedar sujeto a sus decisiones políticas y militares.}
+\paso{3}{El nombre del movimiento indica el propósito: mantenerse fuera de los bloques y construir una vía propia de desarrollo y autonomía. Eso implica una institucionalidad alternativa al orden bipolar que dominaba la política mundial.}
+\paso{4}{Al evaluar las opciones: las superpotencias ya estaban consolidadas, así que el movimiento no buscaba debilitar su hegemonía militar (A); el rechazo a las dictaduras militares (B) no era su eje; y no buscaba restaurar el sistema de entreguerras (D), que había colapsado. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, Historia, pregunta 50}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Las superpotencias ya estaban consolidadas en 1955; el movimiento no buscaba debilitar su poder militar, sino mantenerse fuera de sus bloques. Confundir la neutralidad con un afán de desarmar a las potencias es el error típico.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
+
+\begin{frame}{Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
+\label{tema-hi-guerras}
+\framesubtitle{Historia: mundo, América y Chile · Teoría · 4,0 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Causa estructural $\neq$ detonante.
+\item La crisis de 1929 golpeó fuertemente a Chile por la caída de sus exportaciones.
+\item 1945: fin de la guerra y fundación de la ONU.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Distingue causas de largo plazo y hechos detonantes.\item Relaciona las consecuencias económicas con las políticas.\item Ubica a Chile dentro del proceso mundial.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Presentar el detonante como la única causa de la guerra.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Multicausalidad de la Primera Guerra Mundial]\footnotesize
 Causas estructurales: imperialismo, nacionalismo, paz armada, alianzas. Detonante: asesinato del archiduque Francisco Fernando en Sarajevo (1914).
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
 \begin{frame}{Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
-  \framesubtitle{Línea de tiempo}
-  \begin{lineatiempo}
-  1914–1918 & Primera Guerra Mundial \\
-  1917 & Revolución Rusa \\
-  1919 & Tratado de Versalles \\
-  1929 & Caída de la bolsa de Nueva York \\
-  1939–1945 & Segunda Guerra Mundial \\
-  1945 & Creación de la ONU \\
-  \end{lineatiempo}
+\framesubtitle{Historia: mundo, América y Chile · Línea de tiempo}
+\begin{lineatiempo}
+1914–1918 & Primera Guerra Mundial \\
+1917 & Revolución Rusa \\
+1919 & Tratado de Versalles \\
+1929 & Caída de la bolsa de Nueva York \\
+1939–1945 & Segunda Guerra Mundial \\
+1945 & Creación de la ONU \\
+\end{lineatiempo}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
-  {\small ¿Qué efecto tuvo la crisis de 1929 en la economía chilena?}
-  \vspace{0.4em}
-  \alternativa{A}{Un auge de las exportaciones de salitre.}
-  \alternativa{B}{Una fuerte caída de las exportaciones y alto desempleo.}
-  \alternativa{C}{La inmediata industrialización del país.}
-  \alternativa{D}{No tuvo efectos por el aislamiento de Chile.}
+\begin{frame}{Ejercicio 1 · Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
+\framesubtitle{Fuente: PAES Invierno 2024, Historia, pregunta 41}
+\begin{center}\recorte{img/historia-2025-invierno/q41.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Chile dependía de exportar materias primas, cuya demanda se desplomó.}
-  {\small
-  \paso{1}{La contracción mundial redujo la demanda de cobre y salitre.}
-  \paso{2}{Cayeron los ingresos y aumentó el desempleo.}
-  }
-  \alternativaok{B}{Una fuerte caída de las exportaciones y alto desempleo.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Presentar el detonante como la única causa de la guerra.
-    \item Confundir los bandos de ambas guerras.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
+\framesubtitle{Alemania nazi y la Unión Soviética compartían el partido único y el control estatal, pero se diferenciaban en su ideología: el nacionalismo racial en un caso y el marxismo en el otro.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{Alemania nazi y la Unión Soviética compartían características como el partido único, el control estatal de la vida pública y el uso intensivo de la propaganda.}
+\paso{2}{Sin embargo, se sustentaban en ideologías diferentes: el nazismo en el nacionalismo racial, el antisemitismo y la idea de superioridad de una raza; la Unión Soviética en el marxismo-leninismo, con la lucha de clases y la socialización de los medios de producción.}
+\paso{3}{Por eso, la diferencia clave está en el tipo de ideología que sostenía el poder político, lo que corresponde a la alternativa A.}
+\paso{4}{Las alternativas B, C y D son rasgos compartidos o generales del totalitarismo: el control estatal de la vida diaria y la primacía de la colectividad aparecían en ambos regímenes, y el expansionismo fue una política de los dos, aunque con diferencias de contexto.}
+\paso{5}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2024, Historia, pregunta 41}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Propone el control estatal sobre el conjunto de aspectos de la vida diaria. Es una característica común de ambos regímenes, por lo que no sirve para diferenciarlos.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Posguerra, Guerra Fría y América Latina}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Guerra «fría»: sin enfrentamiento directo entre superpotencias.
-    \item 1962: crisis de los misiles en Cuba.
-    \item 1989: caída del Muro de Berlín.
-  \end{itemize}
-  \begin{cajaclave}[Bloques]\footnotesize
+\begin{frame}{Ejercicio 2 · Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 42}
+\begin{center}\recorte{img/historia-2027-invierno/q42.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Primera mitad del siglo XX: crisis del Estado liberal, totalitarismos y populismo}
+\framesubtitle{Tras la Segunda Guerra Mundial, la urgencia de contar con principios comunes de convivencia explica el amplio respaldo a la Declaración Universal de 1948.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{La cita destaca que la Declaración fue respaldada por Estados con «concepciones políticas distintas e incluso antagónicas», lo que muestra que se trataba de un acuerdo mínimo, aceptado pese a las diferencias.}
+\paso{2}{Tras la Segunda Guerra Mundial y las atrocidades cometidas, la comunidad internacional buscaba un marco moral compartido para evitar nuevas violaciones a los derechos humanos.}
+\paso{3}{El texto habla de un «elemento moral y político» con «insólita capacidad de atracción», lo que apunta a una necesidad compartida de principios de convivencia entre las naciones.}
+\paso{4}{La alternativa A contradice la cita, porque las superpotencias tenían posturas antagónicas, no afinidad ideológica. La alternativa B no es un motivo: la reconstrucción europea no fue el origen de la Declaración.}
+\paso{5}{La alternativa D tampoco encaja: el ambiente de posguerra no era pacifista, porque ya comenzaba la Guerra Fría. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Historia, pregunta 42}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Propone el progreso material que facilitó la reconstrucción europea. La reconstrucción fue un proceso paralelo, pero no es el factor que explica el respaldo moral a la declaración.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Posguerra, Guerra Fría y América Latina}
+
+\begin{frame}{Posguerra, Guerra Fría y América Latina}
+\label{tema-hi-guerra-fria}
+\framesubtitle{Historia: mundo, América y Chile · Teoría · 0,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Guerra «fría»: sin enfrentamiento directo entre superpotencias.
+\item 1962: crisis de los misiles en Cuba.
+\item 1989: caída del Muro de Berlín.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica los bloques y su ideología.\item Reconoce cómo se expresó el conflicto en cada región.\item Relaciónalo con procesos de Chile y América Latina.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Describir la Guerra Fría como un enfrentamiento militar directo entre EE. UU. y la URSS.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Bloques]\footnotesize
 Occidental: Estados Unidos, OTAN (1949), Plan Marshall. Oriental: URSS, Pacto de Varsovia (1955). Fin: caída del Muro de Berlín (1989) y disolución de la URSS (1991).
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
 \begin{frame}{Posguerra, Guerra Fría y América Latina}
-  \framesubtitle{Línea de tiempo}
-  \begin{lineatiempo}
-  1947 & Doctrina Truman y Plan Marshall \\
-  1949 & Creación de la OTAN \\
-  1959 & Revolución Cubana \\
-  1961 & Construcción del Muro de Berlín \\
-  1962 & Crisis de los misiles \\
-  1989 & Caída del Muro de Berlín \\
-  1991 & Disolución de la URSS \\
-  \end{lineatiempo}
+\framesubtitle{Historia: mundo, América y Chile · Línea de tiempo}
+\begin{lineatiempo}
+1947 & Doctrina Truman y Plan Marshall \\
+1949 & Creación de la OTAN \\
+1959 & Revolución Cubana \\
+1961 & Construcción del Muro de Berlín \\
+1962 & Crisis de los misiles \\
+1989 & Caída del Muro de Berlín \\
+1991 & Disolución de la URSS \\
+\end{lineatiempo}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Posguerra, Guerra Fría y América Latina}
-  {\small ¿Qué característica define a la Guerra Fría?}
-  \vspace{0.4em}
-  \alternativa{A}{Un enfrentamiento armado directo entre EE. UU. y la URSS.}
-  \alternativa{B}{La rivalidad entre dos bloques que evitaron una guerra directa.}
-  \alternativa{C}{La alianza entre EE. UU. y la URSS contra el fascismo.}
-  \alternativa{D}{El conflicto entre Francia e Inglaterra por colonias.}
+\begin{frame}{Ejercicio 1 · Posguerra, Guerra Fría y América Latina}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 47}
+\begin{center}\recorte{img/historia-2026-invierno/q47.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La disuasión nuclear evitó la guerra directa.}
-  {\small
-  \paso{1}{El conflicto se libró con propaganda, carreras armamentista y espacial y guerras indirectas.}
-  \paso{2}{La alternativa C describe la Segunda Guerra Mundial.}
-  }
-  \alternativaok{B}{La rivalidad entre dos bloques que evitaron una guerra directa.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Describir la Guerra Fría como un enfrentamiento militar directo entre EE. UU. y la URSS.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Posguerra, Guerra Fría y América Latina}
+\framesubtitle{La carta de la ONU busca impedir agresiones entre Estados, lo que responde a las guerras provocadas por nacionalismos belicistas, como la Segunda Guerra Mundial.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La cita establece los propósitos de la organización: prevenir amenazas a la paz, suprimir actos de agresión y resolver controversias por medios pacíficos antes de que se conviertan en guerras.}
+\paso{2}{Esa preocupación se entiende por la experiencia de la Segunda Guerra Mundial, desatada por Estados que impulsaban expansiones territoriales y nacionalismos agresivos, como Alemania, Italia y Japón.}
+\paso{3}{La Sociedad de Naciones no logró contener esas agresiones. La ONU surge para evitar una nueva guerra mundial, y para eso propone un mecanismo de prevención y arreglo pacífico de las disputas.}
+\paso{4}{Entre las alternativas, la descolonización (A), las dictaduras militares (B) y el enfrentamiento bipolar (C) no justifican la creación de la organización en 1945: la cita no menciona colonias ni regímenes, y la bipolaridad se consolida después. El punto que explica la creación es el protagonismo de los nacionalismos belicistas (D).}
+\paso{5}{Comprobación: la carta responde a agresiones entre Estados nacidas de nacionalismos belicistas, y por eso su énfasis está en prevenir la guerra. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Historia, pregunta 47}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Las dictaduras militares no aparecen en la cita; la ONU condena las agresiones entre Estados y no respalda regímenes. Confundir un documento de paz con un apoyo a gobiernos autoritarios es el error típico.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Chile a mediados del siglo XX: Estado, reformas y democratización}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item 1939: CORFO, símbolo del Estado empresario.
-    \item 1971: nacionalización del cobre, aprobada por unanimidad en el Congreso.
-    \item 1988: triunfo del «No» en el plebiscito.
-  \end{itemize}
-  \begin{cajaclave}[Modelos económicos]\footnotesize
+\begin{frame}{Ejercicio 2 · Posguerra, Guerra Fría y América Latina}
+\framesubtitle{Fuente: PAES Regular 2024, Historia, pregunta 45}
+\begin{ajustar}[0.7\textheight]
+{\small A partir de 1945 se inició un proceso de reconfiguración del orden mundial, que marcó el devenir de las relaciones internacionales durante la segunda mitad del siglo XX. En este contexto, ¿cuál fue una de las transformaciones geopolíticas que dieron origen a este nuevo orden internacional?}
+\vspace{0.4em}
+\alternativa{A}{El surgimiento de los imperios europeos.}
+\alternativa{B}{El aislamiento de los países subdesarrollados.}
+\alternativa{C}{La culminación del proceso de descolonización.}
+\alternativa{D}{La división en bloques ideológicos antagónicos.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Posguerra, Guerra Fría y América Latina}
+\framesubtitle{Tras 1945, el mundo se dividió entre el bloque capitalista liderado por Estados Unidos y el bloque socialista liderado por la Unión Soviética.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Tras la guerra, Europa quedó debilitada y las dos potencias con mayor poder militar y económico fueron Estados Unidos y la Unión Soviética.}
+\paso{2}{Cada potencia lideró un bloque: el occidental, de economía de mercado y democracia liberal, y el oriental, de economía planificada y partido único.}
+\paso{3}{La rivalidad entre ambos bloques, conocida como Guerra Fría, se expresó en alianzas militares como la OTAN y el Pacto de Varsovia, en carreras armamentistas y en conflictos indirectos.}
+\paso{4}{Esta división en bloques ideológicos antagónicos es la transformación que da origen al nuevo orden, por lo que corresponde la alternativa D.}
+\paso{5}{La alternativa A se descarta porque los imperios europeos perdieron su centralidad tras la guerra y no fueron la base del nuevo orden.}
+\paso{6}{La alternativa B invierte el proceso, porque los países subdesarrollados no quedaron aislados: fueron disputados por ambos bloques mediante ayuda e influencia.}
+\paso{7}{La alternativa C corresponde a un proceso posterior: la descolonización se desarrolló sobre todo en las décadas de 1950 y 1960, como consecuencia del nuevo orden y no como su origen.}
+\paso{8}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Regular 2024, Historia, pregunta 45}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Afirma el surgimiento de los imperios europeos. La trampa es pensar que Europa seguía siendo el centro del poder; tras 1945 el poder se concentró en dos superpotencias.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Chile a mediados del siglo XX: Estado, reformas y democratización}
+
+\begin{frame}{Chile a mediados del siglo XX: Estado, reformas y democratización}
+\label{tema-hi-chile-xx}
+\framesubtitle{Historia: mundo, América y Chile · Teoría · 0,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item 1939: CORFO, símbolo del Estado empresario.
+\item 1971: nacionalización del cobre, aprobada por unanimidad en el Congreso.
+\item 1988: triunfo del «No» en el plebiscito.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ubica el hecho en su período (Estado de compromiso, reformas, dictadura, transición).\item Identifica el modelo económico y político vigente.\item Relaciona continuidades y cambios entre períodos.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir chilenización (1966) con nacionalización (1971) del cobre.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Modelos económicos]\footnotesize
 ISI (1938–1973): Estado empresario y protección arancelaria. Neoliberal (desde 1975): apertura comercial, privatizaciones y rol subsidiario del Estado.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
 \begin{frame}{Chile a mediados del siglo XX: Estado, reformas y democratización}
-  \framesubtitle{Línea de tiempo}
-  \begin{lineatiempo}
-  1938 & Frente Popular: gobierno de Pedro Aguirre Cerda \\
-  1939 & Creación de la CORFO \\
-  1967 & Ley de reforma agraria \\
-  1971 & Nacionalización del cobre \\
-  1949 & Voto femenino en elecciones presidenciales \\
-  1973 & Golpe de Estado: quiebre de la democracia \\
-  \end{lineatiempo}
+\framesubtitle{Historia: mundo, América y Chile · Línea de tiempo}
+\begin{lineatiempo}
+1938 & Frente Popular: gobierno de Pedro Aguirre Cerda \\
+1939 & Creación de la CORFO \\
+1967 & Ley de reforma agraria \\
+1971 & Nacionalización del cobre \\
+1949 & Voto femenino en elecciones presidenciales \\
+1973 & Golpe de Estado: quiebre de la democracia \\
+\end{lineatiempo}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Chile a mediados del siglo XX: Estado, reformas y democratización}
-  {\small ¿Qué política económica caracterizó a Chile entre 1938 y comienzos de los años setenta?}
-  \vspace{0.4em}
-  \alternativa{A}{La apertura comercial irrestricta.}
-  \alternativa{B}{La industrialización por sustitución de importaciones con un Estado empresario.}
-  \alternativa{C}{La privatización de las empresas estatales.}
-  \alternativa{D}{La economía basada exclusivamente en el salitre.}
+\begin{frame}{Ejercicio 1 · Chile a mediados del siglo XX: Estado, reformas y democratización}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 62}
+\begin{ajustar}[0.7\textheight]
+{\small En 2016 se firmó un acuerdo internacional denominado Acuerdo de París, en el cual los países firmantes se comprometieron a reducir las emisiones de gases de efecto invernadero. Considerando lo anterior, ¿cuál es uno de los propósitos que persiguen este tipo de acuerdos?}
+\vspace{0.4em}
+\alternativa{A}{Desincentivar la firma de tratados comerciales bilaterales.}
+\alternativa{B}{Limitar la creación de sistemas de producción alternativos.}
+\alternativa{C}{Estimular la aplicación de medidas de desarrollo sostenible.}
+\alternativa{D}{Promover el crecimiento de la industria de carácter extractivo.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Tras la crisis de 1929, el Estado impulsó la industria nacional.}
-  {\small
-  \paso{1}{La CORFO (1939) creó y financió industrias.}
-  \paso{2}{Se protegió la producción nacional con aranceles.}
-  }
-  \alternativaok{B}{La industrialización por sustitución de importaciones con un Estado empresario.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir chilenización (1966) con nacionalización (1971) del cobre.
-    \item Atribuir la Constitución de 1980 a la transición.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Chile a mediados del siglo XX: Estado, reformas y democratización}
+\framesubtitle{Los acuerdos climáticos como el de París buscan estimular medidas de desarrollo sostenible, que permitan crecer reduciendo emisiones y sin degradar los recursos naturales.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{El enunciado dice que los países firmantes del Acuerdo de París (2016) se comprometieron a «reducir las emisiones de gases de efecto invernadero». Ese es el dato central para inferir su propósito.}
+\paso{2}{Reducir emisiones exige cambiar la forma de producir y consumir, por lo que el acuerdo impulsa la mitigación del cambio climático y el uso de tecnologías más limpias.}
+\paso{3}{Ese cambio corresponde al desarrollo sostenible: crecer sin degradar los recursos naturales ni comprometer las necesidades de las generaciones futuras.}
+\paso{4}{La alternativa A no es el objeto del acuerdo: el texto no habla de tratados comerciales bilaterales. La alternativa B tampoco: el acuerdo no limita sistemas de producción alternativos, sino que promueve tecnologías más limpias. La alternativa D va en sentido opuesto a reducir emisiones, porque promover la industria extractiva no contribuye a ese propósito.}
+\paso{5}{La alternativa que describe ese propósito es estimular la aplicación de medidas de desarrollo sostenible. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Historia, pregunta 62}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Propone desincentivar la firma de tratados comerciales bilaterales. Los tratados comerciales no son el objeto del acuerdo; el error es pensar que el acuerdo busca frenar otros tratados.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Dictadura militar y retorno a la democracia}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Los informes Rettig (1991) y Valech (2004) documentaron las violaciones a los derechos humanos.
-    \item El modelo neoliberal redujo el rol del Estado en la economía.
-    \item La transición se hizo dentro de la Constitución de 1980.
-  \end{itemize}
-  \begin{cajaclave}[Etapas]\footnotesize
+\begin{frame}{Ejercicio 2 · Chile a mediados del siglo XX: Estado, reformas y democratización}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 43}
+\begin{ajustar}[0.7\textheight]
+{\small A inicios de la década de 1940 en Chile, la población urbana alcanzó un 52 \% del total nacional debido, entre otros factores, a un proceso de migración campociudad. Al respecto, ¿cuál de las siguientes situaciones se enmarca en el contexto del espacio urbano de la época?}
+\vspace{0.4em}
+\alternativa{A}{El gobierno otorgó subsidios para financiar la autoconstrucción.}
+\alternativa{B}{Un grupo de familias decidió construir sus viviendas en un sitio eriazo.}
+\alternativa{C}{Un partido político donó un terreno para edificar un conjunto habitacional.}
+\alternativa{D}{El conjunto de empresas privadas financió la compra de terrenos fiscales.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Chile a mediados del siglo XX: Estado, reformas y democratización}
+\framesubtitle{La migración campo-ciudad creó una demanda de vivienda que el Estado no alcanzó a satisfacer, por lo que muchas familias ocuparon terrenos sin uso para levantar sus casas.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{A inicios de la década de 1940, la población urbana crecía con rapidez por la migración campo-ciudad. La oferta de vivienda popular era insuficiente frente a la llegada de nuevos habitantes a las ciudades, sobre todo a Santiago y Valparaíso.}
+\paso{2}{Sin acceso al mercado formal de vivienda, muchas familias ocupaban sitios eriazos o terrenos periféricos para levantar sus casas. Esa práctica dio origen a campamentos y poblaciones informales, propias del espacio urbano de la época.}
+\paso{3}{La alternativa B describe exactamente ese fenómeno: un grupo de familias decide construir sus viviendas en un sitio eriazo, lo que refleja la respuesta espontánea de la población a la escasez de vivienda.}
+\paso{4}{La alternativa A describe subsidios estatales para la autoconstrucción. Es una política posible, pero la pregunta busca una situación característica del espacio urbano de la época, y la ocupación espontánea de terrenos era la respuesta más visible de las familias.}
+\paso{5}{La alternativa C describe la donación de un terreno por un partido político para edificar un conjunto habitacional. Ese mecanismo no era el habitual para la vivienda popular, que se resolvía sobre todo por ocupación espontánea o arriendo de piezas.}
+\paso{6}{La alternativa D describe a empresas privadas financiando la compra de terrenos fiscales. Ese tipo de operación no corresponde a la dinámica de vivienda popular de la época, que se caracterizó por la informalidad.}
+\paso{7}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Historia, pregunta 43}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Atribuye a empresas privadas la compra de terrenos fiscales para vivienda popular. Esa dinámica no coincide con la informalidad que caracterizaba la vivienda popular de la época.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Dictadura militar y retorno a la democracia}
+
+\begin{frame}{Dictadura militar y retorno a la democracia}
+\label{tema-hi-dictadura}
+\framesubtitle{Historia: mundo, América y Chile · Teoría · 3,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Los informes Rettig (1991) y Valech (2004) documentaron las violaciones a los derechos humanos.
+\item El modelo neoliberal redujo el rol del Estado en la economía.
+\item La transición se hizo dentro de la Constitución de 1980.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ubica el hecho en la etapa de la dictadura o de la transición.\item Distingue la dimensión política, económica o de derechos humanos.\item Si hay fuentes, identifica qué interpretación del período sostienen.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir la Constitución de 1980 a la transición.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Etapas]\footnotesize
 1973: golpe de Estado. 1975 en adelante: reformas neoliberales. 1980: nueva Constitución. 1982: crisis económica. 1983–1986: protestas nacionales. 1988: plebiscito, triunfo del «No». 1990: retorno a la democracia.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
 \begin{frame}{Dictadura militar y retorno a la democracia}
-  \framesubtitle{Línea de tiempo}
-  \begin{lineatiempo}
-  1973 & Golpe de Estado \\
-  1980 & Constitución de 1980 \\
-  1982 & Crisis económica \\
-  1983 & Primeras protestas nacionales \\
-  1988 & Plebiscito: triunfo del «No» \\
-  1990 & Asume Patricio Aylwin \\
-  \end{lineatiempo}
+\framesubtitle{Historia: mundo, América y Chile · Línea de tiempo}
+\begin{lineatiempo}
+1973 & Golpe de Estado \\
+1980 & Constitución de 1980 \\
+1982 & Crisis económica \\
+1983 & Primeras protestas nacionales \\
+1988 & Plebiscito: triunfo del «No» \\
+1990 & Asume Patricio Aylwin \\
+\end{lineatiempo}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Dictadura militar y retorno a la democracia}
-  {\small ¿Qué hecho abrió formalmente el proceso de transición a la democracia en Chile?}
-  \vspace{0.4em}
-  \alternativa{A}{La crisis económica de 1982.}
-  \alternativa{B}{El triunfo del «No» en el plebiscito de 1988.}
-  \alternativa{C}{La promulgación de la Constitución de 1980.}
-  \alternativa{D}{La nacionalización del cobre.}
+\begin{frame}{Ejercicio 1 · Dictadura militar y retorno a la democracia}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 50}
+\begin{center}\recorte{img/historia-2027-invierno/q50.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El plebiscito decidía si el régimen continuaba.}
-  {\small
-  \paso{1}{Ganó la opción «No» con cerca del 56 \%.}
-  \paso{2}{Se convocó a elecciones presidenciales y parlamentarias en 1989.}
-  }
-  \alternativaok{B}{El triunfo del «No» en el plebiscito de 1988.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir la Constitución de 1980 a la transición.
-    \item Presentar una sola interpretación del golpe como la única posible.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Dictadura militar y retorno a la democracia}
+\framesubtitle{La cita describe un país bloqueado, con parálisis institucional, ocupaciones de fábricas, grupos armados y manifestaciones crecientes: una crisis de gobernabilidad que explica el quiebre democrático.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La cita muestra que «el Congreso y el presidente se trenzaban una vez más en sus discusiones constitucionales» y que el país «parecía atascarse en una parálisis creciente». Los poderes del Estado no logran acuerdos.}
+\paso{2}{Al mismo tiempo, «los trabajadores seguían ocupando las fábricas, extendiendo los cordones industriales» y «las demostraciones callejeras se intensificaban». El orden social se debilita y el conflicto se multiplica.}
+\paso{3}{Aparecen «grupos paramilitares tanto de derecha como de izquierda» que se preparaban para la lucha armada. La violencia organizada se suma a la parálisis institucional.}
+\paso{4}{Un sistema en el que los poderes no logran acuerdos, con paralización y violencia social creciente, enfrenta una crisis de gobernabilidad: el Estado ya no puede tomar decisiones ni garantizar el orden. Esa crisis es el factor que permite explicar el quiebre. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Historia, pregunta 50}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Propone la dependencia de la economía nacional del mercado exterior. Esa dependencia no aparece en la cita, que se centra en la política interna y en el conflicto social.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Dictadura militar y retorno a la democracia}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 52}
+\begin{center}\recorte{img/historia-2026-invierno/q52.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Dictadura militar y retorno a la democracia}
+\framesubtitle{Según el texto, sectores de las Fuerzas Armadas participaron en la sedición y el motín, lo que generó inestabilidad política, y el general Prats logró frenarlos.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El texto describe una escalada: las elecciones parlamentarias de marzo de 1973 eran la última esperanza de la derecha, y como no consiguió la mayoría, la oposición recurrió a «la sedición abierta» y al «llamado a la insubordinación militar».}
+\paso{2}{Esa insubordinación se expresó en un motín militar. La intervención del general Prats impidió que la rebelión se extendiera a otros cuarteles y detuvo el motín, lo que muestra que hubo sectores militares sublevados.}
+\paso{3}{Tras esa crisis, Allende debió apoyarse en «los últimos elementos leales» de las Fuerzas Armadas. Esto revela que las Fuerzas Armadas no eran un bloque unido, sino que tenían sectores rebeldes que aumentaban la inestabilidad política.}
+\paso{4}{Al evaluar las alternativas, la A (críticas a políticas públicas), la C (centro político) y la D (solución constitucional) no aparecen en el fragmento. La opción B recoge el rol de sedición y motín que el texto describe. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Historia, pregunta 52}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} El texto no presenta a las Fuerzas Armadas como centro político; la polarización es la fuente de la crisis, no la solución. Confundir a los militares con un actor moderador es el error típico.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Formación ciudadana}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Formación ciudadana}\par\vspace{0.6em}
-  {\color{zinc700} Democracia, institucionalidad democrática en Chile, sociedad de la información y sistema judicial.}\par\vspace{1em}
-  {\small\color{zinc500} Democracia: fundamentos, atributos y dimensiones, Institucionalidad democrática en Chile, Democracia en la sociedad de la información, Sistema judicial y acceso a la justicia}
-  \vfill
-\end{frame}
+\subsection{Democracia: fundamentos, atributos y dimensiones}
 
-\begin{frame}[allowframebreaks]{Democracia: fundamentos, atributos y dimensiones}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Estado de derecho: todos, incluidas las autoridades, se someten a la ley.
-    \item Universalidad: los DD. HH. corresponden a toda persona.
-    \item Plebiscito = mecanismo de democracia directa.
-  \end{itemize}
-  \begin{cajaclave}[Democracia directa y representativa]\footnotesize
+\begin{frame}{Democracia: fundamentos, atributos y dimensiones}
+\label{tema-hi-democracia}
+\framesubtitle{Formación ciudadana · Teoría · 8,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Estado de derecho: todos, incluidas las autoridades, se someten a la ley.
+\item Universalidad: los DD. HH. corresponden a toda persona.
+\item Plebiscito = mecanismo de democracia directa.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el principio o mecanismo descrito.\item Distingue entre democracia directa y representativa.\item Evalúa si la situación respeta o vulnera derechos.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir la elección de representantes con democracia directa.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Democracia directa y representativa]\footnotesize
 Representativa: la ciudadanía elige autoridades que deciden. Directa: la ciudadanía decide por sí misma (plebiscito, iniciativa popular, consulta).
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Democracia: fundamentos, atributos y dimensiones}
-  {\small Que los derechos humanos sean inalienables significa que:}
-  \vspace{0.4em}
-  \alternativa{A}{Solo los reconocen algunos países.}
-  \alternativa{B}{No se puede renunciar a ellos ni ser privado de ellos.}
-  \alternativa{C}{Se adquieren al cumplir 18 años.}
-  \alternativa{D}{Pueden venderse o transferirse.}
+\begin{frame}{Ejercicio 1 · Democracia: fundamentos, atributos y dimensiones}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 14}
+\begin{ajustar}[0.7\textheight]
+{\small Una de las características de los sistemas políticos democráticos es la existencia de garantías jurídicas para el ejercicio de un conjunto de derechos. Respecto del derecho a voto en Chile, ¿cuál es una medida que aplica el Estado para que la ciudadanía pueda ejercerlo?}
+\vspace{0.4em}
+\alternativa{A}{Permite la votación a las personas condenadas a pena aflictiva.}
+\alternativa{B}{Establece el voto electrónico en comunidades de territorios aislados.}
+\alternativa{C}{Autoriza el voto asistido a las personas en situación de discapacidad.}
+\alternativa{D}{Exige a los partidos disponer de vocales de mesa en los locales de votación.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{«Inalienable» significa que no se puede enajenar ni perder.}
-  {\small
-  \paso{1}{Nadie puede renunciar a sus derechos humanos ni ser despojado de ellos legítimamente.}
-  }
-  \alternativaok{B}{No se puede renunciar a ellos ni ser privado de ellos.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir la elección de representantes con democracia directa.
-    \item Creer que los Estados deciden qué derechos humanos reconocer.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Democracia: fundamentos, atributos y dimensiones}
+\framesubtitle{El voto asistido es una medida que permite a las personas con discapacidad ejercer su derecho a voto, garantizando el acceso igualitario al sufragio.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La pregunta busca una medida que facilite el ejercicio del sufragio, es decir, una garantía que haga posible votar a quienes enfrentan barreras de acceso.}
+\paso{2}{La opción C establece el voto asistido para personas en situación de discapacidad: pueden emitir su voto con apoyo, lo que elimina una barrera concreta que les impediría votar por sí solas.}
+\paso{3}{La opción A es incorrecta porque las personas condenadas a pena aflictiva están privadas del derecho a sufragio en Chile; la B (voto electrónico en territorios aislados) no corresponde a la medida que la pregunta busca, y la D (exigir vocales de mesa a los partidos) no es una garantía de acceso al sufragio.}
+\paso{4}{Ninguna de esas alternativas amplía el acceso al voto de manera efectiva, salvo la del voto asistido. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Historia, pregunta 14}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Creer que el derecho a voto se amplía a las personas condenadas a pena aflictiva; en Chile esa condena suspende el derecho a sufragio. Es una restricción, no una garantía.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Institucionalidad democrática en Chile}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Fiscalizar los actos del Gobierno es atribución exclusiva de la Cámara.
-    \item La Contraloría controla la legalidad de los actos de la administración.
-    \item El Tribunal Constitucional vela por que las leyes respeten la Constitución.
-  \end{itemize}
-  \begin{cajaclave}[Formación de la ley]\footnotesize
+\begin{frame}{Ejercicio 2 · Democracia: fundamentos, atributos y dimensiones}
+\framesubtitle{Fuente: PAES Invierno 2024, Historia, pregunta 7}
+\begin{center}\recorte{img/historia-2025-invierno/q07.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Democracia: fundamentos, atributos y dimensiones}
+\framesubtitle{Con la regla de la mayoría absoluta, si ninguna candidatura supera el 50 \% de los votos válidos, las dos más votadas pasan a segunda vuelta. El gráfico muestra exactamente ese escenario.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Según la normativa chilena, para ser electo en primera vuelta una candidatura debe superar el $50\%$ de los votos válidos emitidos. La mayor votación del gráfico es la de Bachelet, con $45{,}96\%$, así que ninguna candidatura alcanza la mayoría absoluta.}
+\paso{2}{Como nadie supera ese umbral, la elección se decide en segunda vuelta entre las dos candidaturas más votadas: Bachelet ($45{,}96\%$) y Piñera ($25{,}41\%$).}
+\paso{3}{Lavín ($23{,}23\%$) queda en el tercer lugar y Hirsch ($5{,}40\%$) en el cuarto, por lo que ninguno de ellos pasa a la segunda vuelta.}
+\paso{4}{La conclusión correcta es que las dos candidaturas más votadas pasaron a segunda vuelta.}
+\paso{5}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2024, Historia, pregunta 7}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Afirma que la primera mayoría fue electa de manera inapelable. Bachelet tuvo la primera votación, pero no superó el 50 \%, por lo que no fue electa en primera vuelta.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Institucionalidad democrática en Chile}
+
+\begin{frame}{Institucionalidad democrática en Chile}
+\label{tema-hi-estado}
+\framesubtitle{Formación ciudadana · Teoría · 10,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Fiscalizar los actos del Gobierno es atribución exclusiva de la Cámara.
+\item La Contraloría controla la legalidad de los actos de la administración.
+\item El Tribunal Constitucional vela por que las leyes respeten la Constitución.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica la función descrita (legislar, ejecutar, juzgar, fiscalizar, controlar).\item Asóciala al órgano que la ejerce.\item Verifica si es una atribución exclusiva o compartida.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir al Senado la fiscalización del Gobierno.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Formación de la ley]\footnotesize
 Iniciativa (mensaje del Presidente o moción parlamentaria) $\rightarrow$ discusión y aprobación en ambas cámaras $\rightarrow$ sanción (o veto) del Presidente $\rightarrow$ promulgación $\rightarrow$ publicación en el Diario Oficial.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Institucionalidad democrática en Chile}
+\framesubtitle{Formación ciudadana · Esquema comparativo}
 \begin{center}\footnotesize
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}>{\raggedright\arraybackslash}p{\dimexpr(\linewidth-4\tabcolsep)/3\relax}@{}}
 \toprule
@@ -570,277 +957,494 @@ Judicial & Tribunales de justicia & resolver conflictos aplicando la ley \\
 \end{center}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Institucionalidad democrática en Chile}
-  {\small ¿Qué órgano controla la legalidad de los actos de la administración del Estado en Chile?}
-  \vspace{0.4em}
-  \alternativa{A}{El Senado.}
-  \alternativa{B}{La Contraloría General de la República.}
-  \alternativa{C}{El Banco Central.}
-  \alternativa{D}{El Servicio Electoral.}
+\begin{frame}{Ejercicio 1 · Institucionalidad democrática en Chile}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 38}
+\begin{center}\recorte{img/historia-2027-invierno/q38.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La Contraloría es un órgano autónomo de control.}
-  {\small
-  \paso{1}{Revisa que los actos de la administración se ajusten a la ley (toma de razón).}
-  \paso{2}{No legisla ni juzga: controla legalidad.}
-  }
-  \alternativaok{B}{La Contraloría General de la República.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir al Senado la fiscalización del Gobierno.
-    \item Confundir el Tribunal Constitucional con la Corte Suprema.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Institucionalidad democrática en Chile}
+\framesubtitle{La ilustración muestra a un líder en posición central y paternal frente a una multitud de jóvenes que lo miran con admiración, lo que representa el liderazgo paternalista del populismo.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La ilustración, usada en la propaganda del Estado Novo, presenta a un hombre de traje a la izquierda, con gesto de conducción, dirigiéndose a una multitud.}
+\paso{2}{Frente a él, la multitud de jóvenes con banderas de Brasil mira hacia arriba y sonríe, en actitud de admiración y de atención al mensaje del líder.}
+\paso{3}{La composición ubica al líder como centro de la atención y a los jóvenes como receptores de su palabra. Esa relación, de guía que protege y de pueblo que admira y obedece, es paternalista.}
+\paso{4}{La alternativa B no se infiere: la multitud aparece como público del líder y no como parte del gobierno. La alternativa C tampoco: aunque aparecen jóvenes, la ilustración no permite afirmar que se ampliaran organizaciones de representación juvenil.}
+\paso{5}{La alternativa D tampoco: la ilustración no muestra un rechazo a potencias extranjeras. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Historia, pregunta 38}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Propone la integración de los sectores populares al gobierno. Es tentadora porque hay una multitud, pero esta aparece como público del líder y no como parte del gobierno.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Democracia en la sociedad de la información}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La libertad de expresión no ampara la difamación ni el discurso de odio.
-    \item Contrastar fuentes es la principal defensa contra la desinformación.
-    \item Los datos personales están protegidos por ley.
-  \end{itemize}
-  \begin{cajaclave}[Oportunidades y riesgos]\footnotesize
+\begin{frame}{Ejercicio 2 · Institucionalidad democrática en Chile}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 56}
+\begin{ajustar}[0.7\textheight]
+{\small Durante la primera mitad de la década de 1980 en Chile se desarrollaron numerosas jornadas de protesta en todo el país. ¿Por qué estas protestas son consideradas un factor que permitió el retorno a la democracia en Chile?}
+\vspace{0.4em}
+\alternativa{A}{Porque consolidaron el rol mediador de la Iglesia Católica.}
+\alternativa{B}{Porque lograron captar el apoyo de los gobiernos sudamericanos.}
+\alternativa{C}{Porque validaron la nueva institucionalidad de la Constitución de 1980.}
+\alternativa{D}{Porque permitieron la rearticulación de las fuerzas opositoras al régimen.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Institucionalidad democrática en Chile}
+\framesubtitle{Las jornadas de protesta reactivaron a los partidos y organizaciones opositoras, que se reorganizaron y presionaron por el cambio político hacia la democracia.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Tras años de represión, la actividad política estaba restringida. Partidos, sindicatos y organizaciones sociales no podían actuar con libertad, y la población había perdido espacios de expresión colectiva.}
+\paso{2}{Las jornadas de protesta, que se multiplicaron en todo el país a comienzos de los años ochenta, recuperaron espacios públicos y mostraron que la oposición tenía base social.}
+\paso{3}{Esa movilización permitió rearticular a las fuerzas opositoras: partidos, sindicatos y organizaciones se reagruparon y coordinaron demandas comunes. Esa reorganización dio paso a acuerdos políticos que presionaron al régimen.}
+\paso{4}{La presión culminó en el plebiscito de 1988, en que triunfó el No y se abrió la transición. Por eso las protestas son un factor del retorno, al permitir la rearticulación de la oposición. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Historia, pregunta 56}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Algunos gobiernos sudamericanos criticaron al régimen, pero el factor directo fue la movilización interna y no el apoyo externo. Se elige por asociar el retorno a la democracia con presiones internacionales.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Democracia en la sociedad de la información}
+
+\begin{frame}{Democracia en la sociedad de la información}
+\label{tema-hi-informacion}
+\framesubtitle{Formación ciudadana · Teoría · 3,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item La libertad de expresión no ampara la difamación ni el discurso de odio.
+\item Contrastar fuentes es la principal defensa contra la desinformación.
+\item Los datos personales están protegidos por ley.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica si la situación muestra una oportunidad o un riesgo.\item Relaciónala con un valor democrático (libertad, pluralismo, participación).\item Evalúa qué acción ciudadana o institucional responde mejor.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Creer que más información equivale siempre a más democracia.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Oportunidades y riesgos]\footnotesize
 Oportunidades: acceso a información, libertad de expresión, participación y fiscalización.
 
 Riesgos: noticias falsas, concentración de medios, algoritmos que filtran lo que vemos, privacidad y discursos de odio.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Democracia en la sociedad de la información}
-  {\small Una noticia falsa sobre un candidato se viraliza en redes sociales días antes de una elección. ¿Qué riesgo para la democracia ilustra?}
-  \vspace{0.4em}
-  \alternativa{A}{La concentración de la propiedad de los medios.}
-  \alternativa{B}{La desinformación que puede afectar la decisión de los votantes.}
-  \alternativa{C}{La falta de acceso a internet.}
-  \alternativa{D}{La censura del Estado.}
+\begin{frame}{Ejercicio 1 · Democracia en la sociedad de la información}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 7}
+\begin{ajustar}[0.7\textheight]
+{\small En un sistema democrático los medios de comunicación representan una oportunidad para la libre expresión de la ciudadanía. Sin embargo, existen algunos riesgos asociados a su uso. En este contexto, ¿en cuál de las siguientes situaciones es posible evidenciar un riesgo para la democracia?}
+\vspace{0.4em}
+\alternativa{A}{Una revista publicó artículos relacionados con la corrupción política.}
+\alternativa{B}{Un canal de televisión emitió contenido dirigido a criticar al gobierno.}
+\alternativa{C}{Una red social admitió opiniones en contra de la población extranjera.}
+\alternativa{D}{Un diario declaró una línea editorial con ideas políticas conservadoras.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El problema es la información falsa que circula, no quién es dueño del medio.}
-  {\small
-  \paso{1}{Una decisión informada requiere información veraz.}
-  \paso{2}{La noticia falsa distorsiona esa decisión.}
-  }
-  \alternativaok{B}{La desinformación que puede afectar la decisión de los votantes.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Creer que más información equivale siempre a más democracia.
-    \item Confundir censura con regulación de la privacidad.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Democracia en la sociedad de la información}
+\framesubtitle{El riesgo para la democracia aparece cuando un medio difunde opiniones que promueven la discriminación contra un grupo de personas, y no cuando ejerce el pluralismo o la crítica.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La pregunta busca una situación que muestre un riesgo, es decir, un uso de los medios que afecte la convivencia democrática, y no un ejercicio legítimo de la libertad de expresión.}
+\paso{2}{Denunciar corrupción (A), criticar al gobierno (B) y tener una línea editorial conservadora (D) son expresiones propias de una democracia plural: la prensa cumple un rol de contrapeso y de pluralismo de ideas.}
+\paso{3}{En la opción C, una red social admite «opiniones en contra de la población extranjera». Esto difunde discriminación contra un grupo y puede excluirlo de la deliberación pública, lo que debilita la igualdad que sostiene la democracia.}
+\paso{4}{Por eso la situación que evidencia un riesgo es la de la red social que admite discriminación. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Historia, pregunta 7}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Creer que criticar al gobierno es un riesgo; la crítica es un contrapeso propio de la democracia. Confundir la oposición con una amenaza es el error típico.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Sistema judicial y acceso a la justicia}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Toda persona tiene derecho a defensa, aunque no pueda pagarla.
-    \item El Ministerio Público no es parte del Poder Judicial.
-    \item Presunción de inocencia: nadie es culpable hasta la sentencia.
-  \end{itemize}
-  \begin{cajaclave}[Quién hace qué]\footnotesize
+\begin{frame}{Ejercicio 2 · Democracia en la sociedad de la información}
+\framesubtitle{Fuente: PAES Invierno 2024, Historia, pregunta 14}
+\begin{center}\recorte{img/historia-2025-invierno/q14.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Democracia en la sociedad de la información}
+\framesubtitle{Verificar datos antes de difundirlos permite que el debate ciudadano se apoye en información comprobada, lo que protege la calidad de las decisiones democráticas frente a las noticias falsas.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Verificar consiste en comprobar, con fuentes confiables, si un dato, hecho o información es preciso y verdadero antes de darlo por cierto o difundirlo.}
+\paso{2}{En democracia, las decisiones de la ciudadanía, como votar, opinar o exigir cuentas, dependen de la información disponible. Si esa información es falsa, el debate se distorsiona.}
+\paso{3}{Al verificar, se separa lo comprobado de lo falso y el debate se apoya en datos validados. Por eso la verificación valida la información que sustenta el debate ciudadano.}
+\paso{4}{Las demás alternativas no corresponden: la verificación no impide la censura previa ni evita canales alternativos, y tampoco garantiza el derecho de acceso a la información, que es un derecho distinto.}
+\paso{5}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2024, Historia, pregunta 14}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Afirma que garantiza el derecho a acceder a la información. El acceso se garantiza por ley, mientras que la verificación mejora la calidad de lo que circula.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Sistema judicial y acceso a la justicia}
+
+\begin{frame}{Sistema judicial y acceso a la justicia}
+\label{tema-hi-justicia}
+\framesubtitle{Formación ciudadana · Teoría · 2,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Toda persona tiene derecho a defensa, aunque no pueda pagarla.
+\item El Ministerio Público no es parte del Poder Judicial.
+\item Presunción de inocencia: nadie es culpable hasta la sentencia.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el conflicto (penal, civil, de familia, laboral).\item Ubica la institución que debe intervenir.\item Relaciona con el derecho que protege (defensa, debido proceso, acceso).\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir la Fiscalía con un tribunal.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Quién hace qué]\footnotesize
 Fiscalía (Ministerio Público): investiga y acusa. Defensoría Penal Pública: defiende. Juez de garantía: protege los derechos del imputado. Tribunal oral: dicta sentencia en el juicio.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Sistema judicial y acceso a la justicia}
-  {\small En el sistema procesal penal chileno, ¿qué institución dirige la investigación de un delito?}
-  \vspace{0.4em}
-  \alternativa{A}{La Corte Suprema.}
-  \alternativa{B}{El Ministerio Público.}
-  \alternativa{C}{La Defensoría Penal Pública.}
-  \alternativa{D}{El Tribunal Constitucional.}
+\begin{frame}{Ejercicio 1 · Sistema judicial y acceso a la justicia}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 10}
+\begin{center}\recorte{img/historia-2027-invierno/q10.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Desde la reforma procesal penal, investigar y juzgar están separados.}
-  {\small
-  \paso{1}{El Ministerio Público (Fiscalía) investiga y acusa.}
-  \paso{2}{Los tribunales juzgan y la Defensoría defiende.}
-  }
-  \alternativaok{B}{El Ministerio Público.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir la Fiscalía con un tribunal.
-    \item Creer que el Tribunal Constitucional juzga delitos.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Sistema judicial y acceso a la justicia}
+\framesubtitle{Un juez que opina públicamente sobre la actuación de un imputado en una causa que debe sentenciar pierde la imparcialidad, principio que exige resolver sin prejuicios.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La situación describe a un juez que comenta en redes sociales la actuación de un imputado en un caso en el que «debía dictar sentencia». Es decir, el juez se pronuncia antes de resolver.}
+\paso{2}{Una opinión pública previa sobre el imputado puede generar un prejuicio, es decir, una inclinación a favor o en contra antes de conocer toda la prueba. Eso compromete la neutralidad con que debe decidirse el caso.}
+\paso{3}{La imparcialidad es el principio que exige que el juez resuelva sin prejuicios y con equidistancia de las partes. Es el principio que se transgrede aquí.}
+\paso{4}{Las opciones A (privacidad de los litigantes) y C (autonomía de las instituciones) no se transgreden, pues la situación no describe una filtración de datos ni una presión externa. La opción D se refiere a un vínculo personal con el inculpado, algo que la situación no menciona.}
+\paso{5}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, Historia, pregunta 10}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Confundir imparcialidad con independencia: la independencia protege frente a presiones externas o vínculos, pero aquí el problema es el prejuicio expresado por el propio juez. La situación no menciona vínculos con el inculpado.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Sistema judicial y acceso a la justicia}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 54}
+\begin{center}\recorte{img/historia-2026-invierno/q54.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Sistema judicial y acceso a la justicia}
+\framesubtitle{El texto muestra que la cúpula del régimen dirigía y conocía los servicios de inteligencia, por lo que las autoridades sabían de los actos represivos.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El texto establece tres hechos: Pinochet era la autoridad suprema del Estado, los servicios de información le rendían cuentas directamente y estaba «plenamente al mando».}
+\paso{2}{Además, la cita afirma que estaba «perfectamente enterado de lo que hacían los servicios de información». La cúpula, entonces, no ignoraba la actividad de sus aparatos de inteligencia.}
+\paso{3}{La confirmación proviene de la declaración de 1998 del ex jefe de la DINA ante la Corte Suprema, quien dijo que Pinochet estaba al mando del conjunto de las operaciones de la DINA.}
+\paso{4}{Los actos represivos ejecutados por la DINA eran conocidos y dirigidos por las autoridades del régimen. Esa es la característica relacionada con el texto: el conocimiento de los actos represivos por el mando.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Historia, pregunta 54}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} El texto no habla de selectividad en los apremios; se enfoca en el conocimiento y el mando de las operaciones. Aparece como tentación porque la represión tuvo víctimas muy distintas, pero la cita no lo menciona.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Sistema económico}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Sistema económico}\par\vspace{0.6em}
-  {\color{zinc700} Funcionamiento del mercado, Estado y modelos de desarrollo, y derechos laborales.}\par\vspace{1em}
-  {\small\color{zinc500} Funcionamiento del mercado, Estado, mercado y modelos de desarrollo, Derechos laborales}
-  \vfill
-\end{frame}
+\subsection{Funcionamiento del mercado}
 
-\begin{frame}[allowframebreaks]{Funcionamiento del mercado}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Escasez: razón de ser de la economía.
-    \item Costo de oportunidad: lo que dejas de ganar al elegir.
-    \item Agentes económicos: familias, empresas y Estado.
-  \end{itemize}
-  \begin{cajaclave}[Desplazamientos]\footnotesize
+\begin{frame}{Funcionamiento del mercado}
+\label{tema-hi-mercado}
+\framesubtitle{Sistema económico · Teoría · 9,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Escasez: razón de ser de la economía.
+\item Costo de oportunidad: lo que dejas de ganar al elegir.
+\item Agentes económicos: familias, empresas y Estado.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica qué cambió: la demanda o la oferta.\item Determina la dirección del desplazamiento.\item Deduce el efecto sobre el precio y la cantidad.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir un cambio de precio (movimiento a lo largo de la curva) con un desplazamiento de la curva.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Desplazamientos]\footnotesize
 Demanda $\uparrow$ $\Rightarrow$ precio $\uparrow$ y cantidad $\uparrow$. Oferta $\uparrow$ $\Rightarrow$ precio $\downarrow$ y cantidad $\uparrow$.
 
 Factores de la demanda: ingreso, gustos, precio de bienes relacionados. De la oferta: costos, tecnología, clima.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Funcionamiento del mercado}
-  {\small Una helada destruye gran parte de la cosecha de paltas. Según el modelo de oferta y demanda, ¿qué ocurrirá?}
-  \vspace{0.4em}
-  \alternativa{A}{El precio de la palta baja.}
-  \alternativa{B}{El precio de la palta sube.}
-  \alternativa{C}{La demanda de paltas aumenta.}
-  \alternativa{D}{No hay cambios en el precio.}
+\begin{frame}{Ejercicio 1 · Funcionamiento del mercado}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 39}
+\begin{ajustar}[0.7\textheight]
+{\small Tras la crisis económica de 1929 se implementó el modelo de Estado de bienestar en distintos países, reorientando el rol del Estado en la economía y la sociedad. En este contexto, ¿cuál fue una de las estrategias adoptadas por los Estados bajo este nuevo modelo?}
+\vspace{0.4em}
+\alternativa{A}{La aplicación de restricciones a la producción manufacturera.}
+\alternativa{B}{La eliminación de las regulaciones aplicadas al mercado laboral.}
+\alternativa{C}{El término de los impuestos aplicados al consumo de la población.}
+\alternativa{D}{El aumento del gasto público destinado a las prestaciones sociales.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La helada reduce la oferta.}
-  {\small
-  \paso{1}{Menos paltas disponibles: la oferta disminuye.}
-  \paso{2}{Con la misma demanda, el precio de equilibrio sube.}
-  }
-  \alternativaok{B}{El precio de la palta sube.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir un cambio de precio (movimiento a lo largo de la curva) con un desplazamiento de la curva.
-    \item Creer que lo gratuito no tiene costo de oportunidad.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Funcionamiento del mercado}
+\framesubtitle{El Estado de bienestar respondió a la crisis de 1929 aumentando el gasto público en prestaciones sociales, como salud, previsión y subsidios.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Tras 1929, el Estado asumió un rol activo en la economía y en la protección de la sociedad. Hay que identificar qué medida concreta caracteriza ese modelo.}
+\paso{2}{El modelo de bienestar requería recursos para financiar las prestaciones sociales, como pensiones, seguros de salud, subsidios y apoyo al desempleo. Por eso el gasto público destinado a esas prestaciones aumentó de forma sostenida.}
+\paso{3}{En Chile existe un antecedente de esa orientación: el Seguro Obrero obligatorio de 1924, que amplió la protección social de los trabajadores.}
+\paso{4}{Las alternativas A, B y C describen lo contrario del Estado de bienestar. Restringir la producción manufacturera, eliminar la regulación del mercado laboral o quitar impuestos al consumo debilitaría la protección social y los recursos para financiarla.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Historia, pregunta 39}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Propone eliminar las regulaciones del mercado laboral. Un Estado de bienestar regulaba el trabajo, por ejemplo con normas de jornada y seguros; eliminarlas sería contrario al modelo.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Estado, mercado y modelos de desarrollo}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Subir la tasa de interés frena la inflación.
-    \item Inflación alta perjudica a quienes tienen ingresos fijos.
-    \item Un modelo de desarrollo se evalúa también por sus efectos sociales y ambientales.
-  \end{itemize}
-  \begin{cajaclave}[Instrumentos]\footnotesize
+\begin{frame}{Ejercicio 2 · Funcionamiento del mercado}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 64}
+\begin{ajustar}[0.7\textheight]
+{\small En una economía de libre mercado, la iniciativa privada tiene un rol protagónico en el comportamiento de la oferta de bienes y servicios en el mercado. No obstante, los Estados también tienen una participación relevante en estos sistemas económicos. Al respecto, ¿cuál de las siguientes opciones corresponde a uno de los roles del Estado en este tipo de economía?}
+\vspace{0.4em}
+\alternativa{A}{Establecer las normas que regulan la actividad productiva.}
+\alternativa{B}{Definir cuotas de venta en artículos de primera necesidad.}
+\alternativa{C}{Fijar las técnicas de explotación de los recursos naturales.}
+\alternativa{D}{Determinar una banda de precios en productos suntuarios.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Funcionamiento del mercado}
+\framesubtitle{En una economía de libre mercado el Estado cumple un rol regulador: establece las normas que ordenan la actividad productiva, sin reemplazar a la iniciativa privada.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El enunciado afirma que la iniciativa privada es protagonista de la oferta, y que el Estado también tiene una participación relevante. La pregunta busca la forma de participación compatible con el libre mercado.}
+\paso{2}{Esa participación corresponde a la regulación: el Estado fija reglas del juego para que las empresas compitan de forma justa, proteja a consumidores y trabajadores y prevenga abusos.}
+\paso{3}{Las intervenciones directas en el mercado, como definir cuotas de venta (B) o determinar bandas de precios (D), limitan la libre formación de precios y la iniciativa privada, por lo que no son roles típicos de un libre mercado.}
+\paso{4}{Fijar las técnicas de explotación de recursos (C) es una decisión técnica específica, no el rol general del Estado, que regula con normas generales. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Historia, pregunta 64}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Definir cuotas de venta es una intervención directa que limita el mercado; no es un rol típico de una economía de libre mercado. Se elige por confundir el rol regulador con el control directo de la oferta.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Estado, mercado y modelos de desarrollo}
+
+\begin{frame}{Estado, mercado y modelos de desarrollo}
+\label{tema-hi-macro}
+\framesubtitle{Sistema económico · Teoría · 1,7 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Subir la tasa de interés frena la inflación.
+\item Inflación alta perjudica a quienes tienen ingresos fijos.
+\item Un modelo de desarrollo se evalúa también por sus efectos sociales y ambientales.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el fenómeno (inflación, crecimiento, desempleo).\item Reconoce el instrumento y quién lo aplica.\item Deduce el efecto esperado sobre el gasto y los precios.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir al Banco Central decisiones de gasto público.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Instrumentos]\footnotesize
 Política monetaria (Banco Central): tasa de interés, meta de inflación de 3 \%. Política fiscal (Gobierno): presupuesto, gasto e impuestos.
 
 Balanza comercial = exportaciones $-$ importaciones.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Estado, mercado y modelos de desarrollo}
-  {\small Para controlar una inflación alta, el Banco Central de Chile suele:}
-  \vspace{0.4em}
-  \alternativa{A}{Bajar la tasa de política monetaria.}
-  \alternativa{B}{Subir la tasa de política monetaria.}
-  \alternativa{C}{Aumentar el gasto público.}
-  \alternativa{D}{Fijar los precios por ley.}
+\begin{frame}{Ejercicio 1 · Estado, mercado y modelos de desarrollo}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 65}
+\begin{ajustar}[0.7\textheight]
+{\small Una agroindustria ha proyectado instalar un sistema de extracción de agua desde las napas subterráneas y ha solicitado a las autoridades iniciar la etapa de factibilidad ambiental para acceder al agua. Considerando la aplicación en Chile del modelo de desarrollo sostenible, ¿por qué este proyecto debe ser sometido a una evaluación de impacto ambiental?}
+\vspace{0.4em}
+\alternativa{A}{Porque provoca un conjunto de variaciones en los costos de producción.}
+\alternativa{B}{Porque produce algunas distorsiones en la competitividad a escala local.}
+\alternativa{C}{Porque representa una amenaza a la calidad de los productos obtenidos.}
+\alternativa{D}{Porque implica posibles riesgos a la disponibilidad futura de este recurso.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Una tasa más alta encarece el crédito y modera el gasto.}
-  {\small
-  \paso{1}{Menos crédito y más ahorro reducen la demanda agregada.}
-  \paso{2}{Con menor demanda, los precios suben más lento.}
-  }
-  \alternativaok{B}{Subir la tasa de política monetaria.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir al Banco Central decisiones de gasto público.
-    \item Confundir alza de un precio con inflación.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Estado, mercado y modelos de desarrollo}
+\framesubtitle{La evaluación de impacto ambiental se exige porque extraer agua subterránea puede comprometer la disponibilidad futura del recurso.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El proyecto busca extraer agua desde las napas subterráneas, un recurso natural que se renueva lentamente y que puede agotarse o degradarse si se usa en exceso.}
+\paso{2}{El modelo de desarrollo sostenible exige que el crecimiento productivo no comprometa los recursos de las generaciones futuras. Por eso las decisiones productivas deben evaluar su efecto sobre el recurso a largo plazo.}
+\paso{3}{Como la extracción puede afectar la disponibilidad futura de agua, el proyecto debe someterse a una evaluación de impacto ambiental, que analiza los riesgos antes de autorizarlo.}
+\paso{4}{Las demás alternativas no son el motivo ambiental: los costos de producción (A) y la competitividad local (B) son asuntos económicos, y la calidad del producto (C) no es el centro de la evaluación, que se enfoca en el recurso natural. Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Historia, pregunta 65}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} La calidad del producto no es el motivo central; la preocupación de la evaluación está en el recurso natural y su disponibilidad. Es una preocupación del consumidor, pero no del marco ambiental.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Derechos laborales}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La negociación colectiva la hacen los sindicatos.
-    \item Un trabajo informal no tiene cotizaciones ni seguro de cesantía.
-    \item Las leyes sociales de 1924 iniciaron la legislación laboral chilena.
-  \end{itemize}
-  \begin{cajaclave}[Instituciones]\footnotesize
+\begin{frame}{Ejercicio 2 · Estado, mercado y modelos de desarrollo}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 59}
+\begin{ajustar}[0.7\textheight]
+{\small Cuando en el contexto de una economía de libre mercado la tasa de inflación varía de un 3 \% a un 12,5 \% en un año, ¿qué consecuencia ocasiona en el funcionamiento de esta economía?}
+\vspace{0.4em}
+\alternativa{A}{Crece la cantidad de personas empleadas.}
+\alternativa{B}{Disminuye la tasa de interés de los créditos.}
+\alternativa{C}{Reduce el poder adquisitivo de las personas.}
+\alternativa{D}{Aumenta la capacidad de ahorro de las familias.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Estado, mercado y modelos de desarrollo}
+\framesubtitle{Una inflación que sube de $3\%$ a $12{,}5\%$ reduce el poder adquisitivo de las personas, porque con el mismo ingreso se compra menos.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{La inflación pasa de $3\%$ a $12{,}5\%$ en un año, es decir, sube $12{,}5 - 3 = 9{,}5$ puntos porcentuales. Esa aceleración de los precios es el dato central del enunciado.}
+\paso{2}{La inflación mide el aumento general de los precios. Si los precios suben más rápido que los ingresos, cada peso alcanza para comprar menos bienes y servicios.}
+\paso{3}{Para cuantificarlo, si el ingreso se mantiene nominal y los precios suben un $12{,}5\%$, el mismo ingreso compra $\frac{1}{1{,}125} \approx 0{,}889$ de lo que compraba antes, es decir, alrededor de un $11\%$ menos de poder adquisitivo.}
+\paso{4}{Las demás consecuencias no siguen de esa variación: un alza de la inflación no hace crecer el empleo por sí misma, no baja las tasas de interés y no incentiva el ahorro, porque el dinero guardado pierde valor.}
+\paso{5}{La consecuencia para el funcionamiento de la economía es la reducción del poder adquisitivo de las personas. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Historia, pregunta 59}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Propone que aumenta la capacidad de ahorro de las familias. La inflación erosiona el ahorro, porque el dinero guardado vale menos; el error es creer que más inflación incentiva el ahorro.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Derechos laborales}
+
+\begin{frame}{Derechos laborales}
+\label{tema-hi-laborales}
+\framesubtitle{Sistema económico · Teoría · 3,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item La negociación colectiva la hacen los sindicatos.
+\item Un trabajo informal no tiene cotizaciones ni seguro de cesantía.
+\item Las leyes sociales de 1924 iniciaron la legislación laboral chilena.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el derecho involucrado.\item Ubica la institución o mecanismo que lo resguarda.\item Relaciónalo con su origen histórico o con una tendencia actual.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir la Dirección del Trabajo con un tribunal.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Instituciones]\footnotesize
 Código del Trabajo: reúne las normas laborales. Dirección del Trabajo: fiscaliza y recibe denuncias. Juzgados de letras del trabajo: resuelven conflictos laborales. Sindicatos: negocian colectivamente.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Derechos laborales}
-  {\small Un trabajador de una aplicación de reparto no tiene contrato ni cotizaciones. ¿Qué tendencia del mundo del trabajo ilustra?}
-  \vspace{0.4em}
-  \alternativa{A}{La sindicalización masiva.}
-  \alternativa{B}{El trabajo en plataformas digitales con menor protección laboral.}
-  \alternativa{C}{La reducción de la jornada laboral.}
-  \alternativa{D}{El aumento del empleo público.}
+\begin{frame}{Ejercicio 1 · Derechos laborales}
+\framesubtitle{Fuente: PAES Invierno 2025, Historia, pregunta 53}
+\begin{ajustar}[0.7\textheight]
+{\small Tras el Golpe de Estado de 1973 la Junta Militar se autoproclamó como un gobierno de carácter refundacional, lo que implicaba llevar a cabo reformas de tipo estructural. En el plano económico, ¿cuál fue uno de los principios que sustentaron estas reformas?}
+\vspace{0.4em}
+\alternativa{A}{El mayor énfasis en la autorregulación del mercado.}
+\alternativa{B}{El corporativismo estatal para disminuir la presión sindical.}
+\alternativa{C}{La supresión de las políticas de redistribución de la riqueza.}
+\alternativa{D}{La ampliación del gasto público en áreas sociales prioritarias.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Las plataformas digitales crean nuevas formas de empleo.}
-  {\small
-  \paso{1}{Muchas no reconocen una relación laboral formal.}
-  \paso{2}{Por eso faltan contrato, cotizaciones y otros derechos.}
-  }
-  \alternativaok{B}{El trabajo en plataformas digitales con menor protección laboral.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir la Dirección del Trabajo con un tribunal.
-    \item Creer que los derechos laborales existieron siempre.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Derechos laborales}
+\framesubtitle{La Junta impulsó un modelo de libre mercado en el que el Estado se retira de la producción y deja que los precios y la oferta se autorregulen.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El enunciado indica que la Junta buscó reformas estructurales, es decir, cambios profundos en la forma en que funciona la economía. Para eso debía abandonar el Estado interventor que existía hasta 1973.}
+\paso{2}{En el plano económico se aplicó un modelo de libre mercado, con apertura comercial, privatización de empresas estatales y reducción de aranceles.}
+\paso{3}{El principio que sostiene ese modelo es la autorregulación del mercado: los precios, la oferta y la demanda se ajustan por sí solos, mientras el Estado cumple un rol subsidiario, limitado a crear condiciones y no a producir.}
+\paso{4}{Al revisar las alternativas: el corporativismo estatal (B) es lo contrario al modelo; la supresión de la redistribución (C) fue una consecuencia y no el principio que sustenta las reformas; y ampliar el gasto social (D) contradice la reducción del Estado. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Historia, pregunta 53}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} La ampliación del gasto público en áreas sociales contradice la lógica de reducir el Estado que sustentó las reformas. Confundir el rol social del Estado con el modelo económico lleva a esta opción.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Derechos laborales}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 61}
+\begin{center}\recorte{img/historia-2027-invierno/q61.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Derechos laborales}
+\framesubtitle{La Ley 21.645 ofrece teletrabajo a quienes cuidan a niños o a personas con discapacidad o dependencia, con el fin de conciliar la vida laboral con la vida familiar.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El texto indica que el empleador «deberá ofrecer» trabajo a distancia o teletrabajo a quien tenga «el cuidado personal de un niño o niña menor de catorce años» o «el cuidado de una persona con discapacidad o en situación de dependencia severa o moderada».}
+\paso{2}{La ley permite que «todo o parte de su jornada diaria o semanal» se realice a distancia, lo que facilita atender el cuidado de la familia sin tener que dejar el empleo.}
+\paso{3}{El título de la ley es «de la protección a la maternidad, paternidad y vida familiar», lo que refleja su propósito de compatibilizar el trabajo remunerado con las responsabilidades de cuidado.}
+\paso{4}{Las demás alternativas no se desprenden del texto. La B pone como beneficiarias a las personas con discapacidad, cuando ellas aparecen como personas cuidadas y no como sujetos de inserción laboral. La C menciona a los sindicalizados, tema ausente. La D supone que la ley corrige la dependencia laboral, cuando solo regula la forma de la jornada.}
+\paso{5}{El objetivo que se persigue es conciliar la vida laboral con la vida familiar. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Historia, pregunta 61}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Propone resguardar la estabilidad laboral de las personas sindicalizadas. La estabilidad de los sindicalizados no aparece en el texto, que trata del cuidado familiar y de la forma de la jornada.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Habilidades de pensamiento histórico}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Habilidades de pensamiento histórico}\par\vspace{0.6em}
-  {\color{zinc700} Análisis de fuentes, multicausalidad, continuidad y cambio.}\par\vspace{1em}
-  {\small\color{zinc500} Pensamiento temporal, espacial y crítico; análisis de fuentes}
-  \vfill
-\end{frame}
+\subsection{Pensamiento temporal, espacial y crítico; análisis de fuentes}
 
-\begin{frame}[allowframebreaks]{Pensamiento temporal, espacial y crítico; análisis de fuentes}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La respuesta debe sostenerse en la fuente, no en conocimientos externos.
-    \item Una fuente refleja la perspectiva de su autor.
-    \item Multicausalidad: evita explicaciones de una sola causa.
-  \end{itemize}
-  \begin{cajaclave}[Preguntas para una fuente]\footnotesize
+\begin{frame}{Pensamiento temporal, espacial y crítico; análisis de fuentes}
+\label{tema-hi-fuentes}
+\framesubtitle{Habilidades de pensamiento histórico · Teoría · 0,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item La respuesta debe sostenerse en la fuente, no en conocimientos externos.
+\item Una fuente refleja la perspectiva de su autor.
+\item Multicausalidad: evita explicaciones de una sola causa.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el tipo de fuente y su contexto.\item Resume qué afirma o muestra.\item Elige la alternativa que la fuente respalda, sin agregar información externa.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir una afirmación verdadera históricamente, pero que la fuente no respalda.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Preguntas para una fuente]\footnotesize
 ¿Quién la produjo? ¿Cuándo y dónde? ¿Con qué propósito y para quién? ¿Qué afirma explícitamente? ¿Qué se puede inferir? ¿Qué no permite concluir?
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Pensamiento temporal, espacial y crítico; análisis de fuentes}
-  {\small Un historiador analiza una carta escrita por un soldado durante la Guerra del Pacífico. ¿Qué tipo de fuente es?}
-  \vspace{0.4em}
-  \alternativa{A}{Secundaria, porque la analiza un historiador.}
-  \alternativa{B}{Primaria, porque fue producida en la época estudiada.}
-  \alternativa{C}{Secundaria, porque es un texto escrito.}
-  \alternativa{D}{Primaria, porque la escribió un militar de alto rango.}
+\begin{frame}{Ejercicio 1 · Pensamiento temporal, espacial y crítico; análisis de fuentes}
+\framesubtitle{Fuente: PAES Invierno 2026, Historia, pregunta 37}
+\begin{center}\recorte{img/historia-2027-invierno/q37.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El criterio es la época de producción, no quién la analiza.}
-  {\small
-  \paso{1}{La carta se escribió durante el hecho estudiado: es primaria.}
-  \paso{2}{El análisis del historiador sería una fuente secundaria.}
-  }
-  \alternativaok{B}{Primaria, porque fue producida en la época estudiada.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir una afirmación verdadera históricamente, pero que la fuente no respalda.
-    \item Tomar la opinión del autor como un hecho comprobado.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Pensamiento temporal, espacial y crítico; análisis de fuentes}
+\framesubtitle{La fuente muestra el culto al líder en la educación fascista: la voluntad personal se subordina a la figura del Duce, a quien se exige obediencia absoluta.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{El fragmento es un recurso educativo del régimen fascista. Hay que identificar qué idea se transmite a los alumnos a través de la matemática y de la lectura.}
+\paso{2}{El problema de matemática presenta a «Mussolini profesor» como figura central de la enseñanza. Así, el líder aparece dentro del sistema escolar como un referente cotidiano para los estudiantes.}
+\paso{3}{El libro de lectura enseña «Obedece porque debes obedecer», una frase que exige sumisión sin cuestionamiento y no entrega razones.}
+\paso{4}{La frase final habla de «entregar al Duce el regalo de nuestra voluntad fortalecida». La voluntad personal se pone al servicio del líder, lo que refleja la exaltación de su figura como autoridad suprema.}
+\paso{5}{La alternativa A no se evidencia: la fuente habla de adoctrinamiento de todo el alumnado y no separa a los estudiantes según su condición social. La alternativa C tampoco: la fuente muestra adoctrinamiento por obediencia, no violencia física o castigo directo. La alternativa D no corresponde: el fragmento no describe una organización colectivista de la enseñanza.}
+\paso{6}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2026, Historia, pregunta 37}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Propone la segregación social del sistema escolar. La fuente habla de adoctrinamiento de todos los alumnos, sin distinguir grupos sociales.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Pensamiento temporal, espacial y crítico; análisis de fuentes}
+\framesubtitle{Fuente: PAES Invierno 2024, Historia, pregunta 2}
+\begin{center}\recorte{img/historia-2025-invierno/q02.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Pensamiento temporal, espacial y crítico; análisis de fuentes}
+\framesubtitle{La caricatura critica una democracia que reduce la participación a votar cada cierto tiempo, mientras que las protestas y otras formas de expresión quedan sin valor institucional.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{La caricatura contrasta dos actores: a la izquierda, dos megáfonos que representan la autoridad y hablan desde arriba, y abajo, una multitud que sostiene carteles de protesta. El centro de la crítica está en lo que se le pide a la ciudadanía.}
+\paso{2}{El mensaje de los megáfonos asocia la participación con el voto: la población debe quedarse en casa hasta las próximas elecciones. Así, la elección aparece como la única instancia legítima de intervención política.}
+\paso{3}{Los carteles «NO», «BASTA» e «YA NOS VALE» y la multitud muestran otras formas de participación, como la manifestación pública, la protesta y la expresión colectiva, que el discurso oficial no reconoce como canal válido.}
+\paso{4}{Por lo tanto, el rasgo criticado es que el sistema político le asigna poca importancia a otras formas de participación distintas del sufragio. Eso corresponde a la alternativa B.}
+\paso{5}{La alternativa A habla de baja participación electoral, algo que la caricatura no muestra ni cuantifica; su foco es el silencio impuesto a quienes protestan.}
+\paso{6}{La alternativa C afirma que el sufragio pierde relevancia, pero el megáfono asume que la elección es el único canal que importa, lo que pone al voto en el centro del sistema.}
+\paso{7}{La alternativa D habla de oposición a formas violentas. Los carteles son pacíficos y la caricatura no alude a violencia, por lo que esta idea no aparece en la fuente.}
+\paso{8}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2024, Historia, pregunta 2}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Habla de oposición a formas violentas de participación. Los carteles son pacíficos, por lo que la trampa es suponer que toda protesta se asocia con violencia.\end{notagris}
+\end{ajustar}
 \end{frame}
 %%</CONTENIDO>%%
 

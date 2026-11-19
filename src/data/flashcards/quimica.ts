@@ -50,5 +50,11 @@ export const quimica: Deck = {
     card('qui-33', SOL, r`Si el pH baja de 5 a 3, ¿cuánto cambia $[\mathrm{H^+}]$?`, r`Aumenta **100 veces**: cada unidad de pH es un factor 10.`),
     card('qui-34', SOL, r`Relación entre pH y pOH a 25 °C`, r`$$\mathrm{pH}+\mathrm{pOH}=14$$`),
     card('qui-35', SOL, r`Propiedades coligativas`, r`Dependen de la **cantidad de partículas** de soluto: descenso del punto de congelación, aumento del punto de ebullición, descenso de la presión de vapor y presión osmótica.`, [r`Por eso la sal derrite el hielo de las calles.`]),
+    // Agregadas en v2.5: subtemas con menos tarjetas y más frecuentes en los ensayos oficiales (texto del temario).
+    card('qui-36', REA, r`Leyes ponderales`, r`Conservación de la masa (**Lavoisier**), proporciones definidas (**Proust**) y proporciones múltiples (**Dalton**).`),
+    card('qui-37', REA, r`Fórmula empírica vs. fórmula molecular`, r`La **empírica** es la proporción mínima entre átomos; la **molecular**, un múltiplo de ella.`),
+    card('qui-38', REA, r`Número de partículas a partir de los moles`, r`$$N=n\cdot 6{,}02\cdot 10^{23}$$`),
+    card('qui-39', REA, r`Porcentaje en masa de un elemento en un compuesto`, r`$$\%\,\text{elemento}=\frac{\text{masa del elemento}}{\text{masa molar}}\cdot 100$$`),
+    card('qui-40', REA, r`¿Los coeficientes de una ecuación relacionan gramos o moles?`, r`**Moles.** Para pasar a gramos se usa la masa molar.`, [r`Trampa: usar las proporciones de coeficientes directamente con gramos.`, r`Balancea antes de calcular.`]),
   ],
 }

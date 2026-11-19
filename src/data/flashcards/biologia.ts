@@ -5,6 +5,7 @@ const CEL = 'Organización celular'
 const PRO = 'Procesos y funciones biológicas'
 const HER = 'Herencia y evolución'
 const AMB = 'Organismo y ambiente'
+const HAB = 'Habilidades científicas'
 const r = String.raw
 
 export const biologia: Deck = {
@@ -12,8 +13,8 @@ export const biologia: Deck = {
   title: 'Ciencias: Biología',
   subject: 'ciencias',
   mono: 'BI',
-  description: 'Célula, procesos y funciones, herencia y evolución, organismo y ambiente.',
-  units: [CEL, PRO, HER, AMB],
+  description: 'Célula, procesos y funciones, reproducción, herencia y evolución, organismo y ambiente, y habilidades científicas.',
+  units: [CEL, PRO, HER, AMB, HAB],
   cards: [
     card('bio-01', CEL, r`¿Qué diferencia estructural principal hay entre una célula procarionte y una eucarionte?`, r`La eucarionte tiene **núcleo** delimitado por membrana y organelos membranosos; la procarionte no (su ADN está en el nucleoide).`, [r`Procariontes: bacterias y arqueas.`, r`Ambas tienen membrana plasmática, citoplasma, ribosomas y ADN.`]),
     card('bio-02', CEL, r`¿Qué estructuras tiene la célula vegetal que no tiene la animal?`, r`**Pared celular** de celulosa, **cloroplastos** y una **vacuola central** grande.`, [r`La animal tiene centríolos; la mayoría de las vegetales no.`]),
@@ -50,5 +51,32 @@ export const biologia: Deck = {
     card('bio-33', AMB, r`Factores que determinan el tamaño de una población`, r`Natalidad e inmigración (lo aumentan); mortalidad y emigración (lo disminuyen).`, [r`La capacidad de carga es el tamaño máximo que el ambiente puede sostener.`]),
     card('bio-34', AMB, r`¿Qué es la capacidad de carga?`, r`El **tamaño máximo de población** que un ambiente puede sostener en el tiempo con sus recursos.`, [r`En el modelo logístico, la curva de crecimiento se estabiliza en ella.`]),
     card('bio-35', AMB, r`Efecto invernadero vs. calentamiento global`, r`El **efecto invernadero** es natural y retiene calor gracias a gases como el $\mathrm{CO_2}$; el **calentamiento global** es su intensificación por emisiones humanas.`),
+    // Agregadas en v2.5: subtemas con menos tarjetas y más frecuentes en los ensayos oficiales (texto del temario).
+    card('bio-36', HAB, r`Variable **independiente**, **dependiente** y **controlada**`, r`Independiente: la que el investigador **manipula**. Dependiente: la que **mide** como respuesta. Controladas: las que se **mantienen constantes**.`, [r`Independiente: lo que yo cambio. Dependiente: lo que mido.`, r`Trampa: confundir la variable que se mide con la que se manipula.`]),
+    card('bio-37', HAB, r`¿Qué es una **hipótesis**?`, r`Una respuesta **tentativa y comprobable** a una pregunta de investigación.`),
+    card('bio-38', HAB, r`¿Hasta dónde puede llegar una **conclusión**?`, r`Se deriva de los resultados obtenidos y **no debe ir más allá** de ellos: solo afirma lo que los datos muestran.`, [r`Trampa: elegir una conclusión que generaliza más allá de los datos.`]),
+    card('bio-39', HAB, r`Teoría vs. ley científica`, r`Una **teoría** explica un conjunto amplio de fenómenos; una **ley** describe una regularidad, a menudo matemática.`),
+    card('bio-40', HAB, r`¿Para qué sirve el **grupo control**?`, r`Permite **comparar** y así atribuir el efecto observado a la variable independiente.`),
+    card('bio-41', HAB, r`Etapas de una investigación científica`, r`Observación $\rightarrow$ pregunta de investigación $\rightarrow$ hipótesis $\rightarrow$ diseño experimental (variables y grupo control) $\rightarrow$ resultados $\rightarrow$ conclusión.`),
+    card('bio-42', PRO, r`¿Qué es la **fecundación**?`, r`La unión de un ovocito y un espermatozoide, ambos **haploides**, que forma un **cigoto diploide**.`),
+    card('bio-43', PRO, r`Fases del ciclo ovárico y del ciclo uterino`, r`Ovárico: fase folicular, **ovulación** y fase lútea. Uterino: menstruación, proliferación y fase secretora. Se coordinan cada unos 28 días.`),
+    card('bio-44', PRO, r`Ciclo de 28 días: ¿qué ocurre en cada etapa?`, r`Días 1–5: menstruación. Días 6–13: fase folicular, el endometrio se engrosa. Día 14 aprox.: **ovulación**. Días 15–28: fase lútea; si no hay fecundación, bajan las hormonas y comienza un nuevo ciclo.`, [r`Trampa: ubicar la ovulación al inicio del ciclo.`]),
+    card('bio-45', PRO, r`Tipos de métodos de control de la natalidad`, r`**Naturales** (Billings, calendario, temperatura basal), **artificiales reversibles** (hormonales y de barrera) y **parcialmente reversibles** (quirúrgicos).`),
+    card('bio-46', PRO, r`¿Qué métodos previenen las infecciones de transmisión sexual (ITS)?`, r`Solo los de **barrera**, como el condón.`, [r`Los anticonceptivos hormonales no protegen de las ITS.`]),
+    card('bio-47', PRO, r`VIH, gonorrea y clamidia: ¿qué tipo de agente causa cada una?`, r`El **VIH** es un virus; la **gonorrea** y la **clamidia**, bacterias.`),
+    card('bio-48', HER, r`Etapas del ciclo celular`, r`**Interfase** ($G_1$, $S$ y $G_2$) y **mitosis** (profase, metafase, anafase y telofase).`, [r`La replicación del ADN ocurre en la fase $S$, no en la mitosis.`]),
+    card('bio-49', HER, r`¿Qué revisan los puntos de control del ciclo celular?`, r`Los puntos $G_1$–$S$, $G_2$–$M$ y de metafase revisan que todo esté en orden; si fallan, la célula puede **dividirse sin control**, como en el cáncer.`),
+    card('bio-50', HER, r`¿De dónde viene la variabilidad genética de los gametos?`, r`De la **meiosis**: el entrecruzamiento y la permutación cromosómica generan variabilidad.`, [r`Trampa: atribuir a la mitosis la variabilidad genética.`]),
+    card('bio-51', HER, r`¿Qué es la manipulación genética y un organismo transgénico?`, r`Insertar, modificar o eliminar genes de un organismo. Un **transgénico** porta un gen de otra especie.`, [r`Usos: alimentos transgénicos, insulina humana producida en bacterias, detergentes con enzimas, fibras para vestuario.`]),
+    card('bio-52', HER, r`Evidencias de la evolución`, r`Registro **fósil**, estructuras **homólogas**, **embriología** comparada y semejanzas en el **ADN**.`),
+    card('bio-53', HER, r`¿Quién evoluciona: el individuo o la población?`, r`La **población**: cambia la frecuencia de los rasgos de una generación a otra.`, [r`Trampa: pensar que el individuo cambia «para adaptarse».`]),
+    card('bio-54', HER, r`¿Son azarosas las mutaciones? ¿Y la selección natural?`, r`Las mutaciones ocurren **al azar**; la selección natural **no** es azarosa.`),
+    card('bio-55', HER, r`¿Por qué se descartó la explicación de Lamarck?`, r`Proponía la herencia de **caracteres adquiridos**, que fue descartada; la evolución se explica por variabilidad heredable y selección natural.`),
+    card('bio-56', PRO, r`Etapas de la fotosíntesis y dónde ocurren`, r`Dependiente de la luz: en los **tilacoides** (libera $\mathrm{O_2}$ y forma ATP). Independiente de la luz: en el **estroma** (fija el $\mathrm{CO_2}$ en el ciclo de Calvin).`),
+    card('bio-57', PRO, r`¿De dónde proviene el $\mathrm{O_2}$ que libera la fotosíntesis?`, r`Del **agua**.`),
+    card('bio-58', PRO, r`¿Las plantas respiran?`, r`Sí, **día y noche**: la respiración celular ocurre en sus mitocondrias, aunque también hagan fotosíntesis.`),
+    card('bio-59', PRO, r`Factores que limitan la rapidez de la fotosíntesis`, r`La **intensidad de la luz**, la concentración de $\mathrm{CO_2}$ y la **temperatura**.`),
+    card('bio-60', CEL, r`Función del aparato de Golgi, el retículo endoplasmático y el lisosoma`, r`Retículo endoplasmático y aparato de Golgi: **síntesis, modificación y transporte**. Lisosoma: **digestión celular**.`),
+    card('bio-61', CEL, r`¿Los virus son células?`, r`**No.** Los virus no son células.`),
   ],
 }

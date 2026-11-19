@@ -1,6 +1,8 @@
 import type { Deck } from '@/types/flashcards'
 import { card } from './helpers'
 
+const r = String.raw
+
 const LOC = 'Localizar'
 const INT = 'Interpretar'
 const EVA = 'Evaluar'
@@ -111,5 +113,13 @@ export const lectora: Deck = {
     card('cl-35', DIS, '¿Cuál es la trampa típica al cruzar un texto con un gráfico?', 'Una alternativa verdadera según el párrafo pero que el gráfico no muestra, o concluir una causa cuando el gráfico solo muestra que dos cosas cambian juntas.', [
       'Lee de qué fuente te piden responder.',
     ]),
+    // Agregadas en v2.5: subtemas con menos tarjetas y más frecuentes en los ensayos oficiales (texto del temario).
+    card('cl-36', INF, r`Conectores de **causa** y de **consecuencia**`, r`Causa: porque, ya que, debido a. Consecuencia: por lo tanto, así, en consecuencia.`, [r`Trampa: confundir causa con consecuencia.`]),
+    card('cl-37', INF, r`Conectores de **contraste** y de **adición**`, r`Contraste: sin embargo, pero, no obstante, en cambio. Adición: además, asimismo.`),
+    card('cl-38', INF, r`Conclusión **posible** vs. conclusión **necesaria**`, r`La inferencia correcta se deduce **necesariamente** del texto; una conclusión solo posible es un distractor.`),
+    card('cl-39', INT, r`Criterio de amplitud de la idea central`, r`No puede ser demasiado **específica** (un ejemplo o dato) ni demasiado **general** (aplicable a cualquier texto del tema): debe cubrir todo lo que plantea el párrafo o texto.`),
+    card('cl-40', EVA, r`¿Qué combina la alternativa correcta en una pregunta de propósito?`, r`El **verbo** adecuado (ilustrar, introducir, contrastar, concluir, justificar, refutar…) con el **contenido** correcto.`, [r`Trampa: acertar el verbo pero no el contenido.`]),
+    card('cl-41', EVA, r`Función típica de una anécdota inicial, un ejemplo y una cita de autoridad`, r`Anécdota inicial: **introducir** el tema. Ejemplo: **ilustrar** la idea anterior. Cita de autoridad: **respaldar** una afirmación.`),
+    card('cl-42', LOC, r`Lo que dice el emisor vs. lo que dice una voz citada`, r`Son distintos: una opinión entre comillas o atribuida a otro no es necesariamente la del emisor.`, [r`Trampa frecuente en preguntas de Localizar.`]),
   ],
 }

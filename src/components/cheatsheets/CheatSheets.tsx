@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ManimEmbed } from '@/components/manim/ManimEmbed'
 import { MathText } from '@/components/math/MathText'
@@ -22,10 +22,13 @@ function searchCards(cards: CheatCard[], terms: string[]): CheatCard[] {
   })
 }
 
-function CheatCardView({ card }: { card: CheatCard }) {
+function CheatCardView({ card, showAxis }: { card: CheatCard; showAxis: boolean }) {
   return (
-    <article className="@container mb-3 break-inside-avoid rounded-lg border border-zinc-200/80 bg-surface dark:border-zinc-800/80">
-      <h4 className="border-b border-zinc-200/80 px-3 py-2 text-[13px] font-semibold tracking-tight dark:border-zinc-800/80">{card.title}</h4>
+    <article className="@container rounded-lg border border-zinc-200/80 bg-surface dark:border-zinc-800/80">
+      <header className="flex items-baseline justify-between gap-3 border-b border-zinc-200/80 px-3 py-2 dark:border-zinc-800/80">
+        <h4 className="text-[13px] font-semibold tracking-tight">{card.title}</h4>
+        {showAxis && <span className="shrink-0 truncate text-[11px] text-zinc-500 dark:text-zinc-400">{card.axis}</span>}
+      </header>
       <dl className="divide-y divide-zinc-200/60 dark:divide-zinc-800/60">
         {card.rows.map(([label, value]) => (
           <div key={label} className="grid gap-x-3 gap-y-0.5 px-3 py-1.5 @sm:grid-cols-[7.5rem_minmax(0,1fr)] @sm:items-baseline">
@@ -39,18 +42,87 @@ function CheatCardView({ card }: { card: CheatCard }) {
   )
 }
 
-/** Tarjetas agrupadas por eje; las columnas se ajustan al espacio disponible. */
-function CardGroups({ cards }: { cards: CheatCard[] }) {
-  const axes = [...new Set(cards.map((c) => c.axis))]
+/** Columnas según el ancho del contenedor (no de la ventana: el resumen lateral es angosto). */
+function columnsFor(width: number): number {
+  if (width >= 1040) return 3
+  if (width >= 620) return 2
+  return 1
+}
+
+/** Altura aproximada de una tarjeta antes de medirla: título más filas, que crecen con el largo del texto. */
+function estimate(card: CheatCard): number {
+  return 40 + card.rows.reduce((h, [label, value]) => h + 30 + Math.floor((label.length + value.length) / 70) * 20, 0)
+}
+
+/**
+ * Reparte por altura: de la tarjeta más alta a la más baja, cada una va a la columna más corta, y dentro de cada
+ * columna se recupera el orden original. Así las columnas terminan casi parejas y se siguen leyendo de arriba abajo.
+ */
+function distribute(heights: number[], cols: number): number[][] {
+  const columns: number[][] = Array.from({ length: cols }, () => [])
+  const filled = new Array<number>(cols).fill(0)
+  const byHeight = heights.map((h, i) => [h, i] as const).sort((a, b) => b[0] - a[0] || a[1] - b[1])
+  for (const [h, i] of byHeight) {
+    const col = filled.indexOf(Math.min(...filled))
+    columns[col].push(i)
+    filled[col] += h + 12
+  }
+  return columns.map((c) => c.sort((a, b) => a - b))
+}
+
+/**
+ * Masonry: las tarjetas se reparten por altura en columnas independientes. Se mide antes de pintar
+ * (`useLayoutEffect`) y solo al cambiar las tarjetas o el número de columnas, así que no salta al cargar
+ * las fórmulas ni al abrir una animación dentro de una tarjeta.
+ */
+function CardMasonry({ cards }: { cards: CheatCard[] }) {
+  const rootRef = useRef<HTMLDivElement>(null)
+  const itemRefs = useRef(new Map<string, HTMLElement>())
+  const [cols, setCols] = useState(1)
+  const [order, setOrder] = useState<{ key: string; columns: number[][] } | null>(null)
+  const key = `${cols}:${cards.map((c) => `${c.id}.${c.rows.length}`).join(',')}`
+
+  useLayoutEffect(() => {
+    const el = rootRef.current
+    if (!el) return
+    const update = () => setCols(columnsFor(el.getBoundingClientRect().width))
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  // Con la estimación ya pintada en columnas del ancho real, se mide cada tarjeta y se reparte de nuevo.
+  useLayoutEffect(() => {
+    if (cols === 1 || order?.key === key) return
+    const heights = cards.map((c) => itemRefs.current.get(c.id)?.offsetHeight ?? estimate(c))
+    setOrder({ key, columns: distribute(heights, cols) })
+  }, [cards, cols, key, order?.key])
+
+  const columns = cols === 1
+    ? [cards.map((_, i) => i)]
+    : order?.key === key ? order.columns : distribute(cards.map(estimate), cols)
+  const showAxis = new Set(cards.map((c) => c.axis)).size > 1
+
   return (
-    <div className="@container space-y-4">
-      {axes.map((axis) => (
-        <section key={axis} aria-label={axis}>
-          <h3 className="mb-1.5 px-1 text-xs font-medium text-zinc-500 dark:text-zinc-400">{axis}</h3>
-          <div className="gap-3 @3xl:columns-2 @6xl:columns-3">
-            {cards.filter((c) => c.axis === axis).map((card) => <CheatCardView key={card.id} card={card} />)}
-          </div>
-        </section>
+    <div ref={rootRef} className="grid items-start gap-3" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
+      {columns.map((idx, c) => (
+        <div key={c} className="flex min-w-0 flex-col gap-3">
+          {idx.map((i) => {
+            const card = cards[i]
+            return (
+              <div
+                key={card.id}
+                ref={(node) => {
+                  if (node) itemRefs.current.set(card.id, node)
+                  else itemRefs.current.delete(card.id)
+                }}
+              >
+                <CheatCardView card={card} showAxis={showAxis} />
+              </div>
+            )
+          })}
+        </div>
       ))}
     </div>
   )
@@ -84,7 +156,7 @@ export function CheatSheets() {
         groups.map((g) => (
           <section key={g.id} aria-label={g.label} className="space-y-2">
             {groups.length > 1 && <h2 className="px-1 text-[15px] font-semibold tracking-tight">{g.label}</h2>}
-            <CardGroups cards={g.cards} />
+            <CardMasonry cards={g.cards} />
           </section>
         ))
       ) : (
@@ -109,7 +181,7 @@ export function TopicCheatCards({ subtopicIds }: { subtopicIds: string[] }) {
         <SearchInput value={query} onChange={setQuery} placeholder="Buscar fórmula o concepto..." label="Buscar fórmula o concepto" />
       )}
       {found.length ? (
-        <CardGroups cards={found} />
+        <CardMasonry cards={found} />
       ) : (
         <p className={cn('text-[13px] text-zinc-500 dark:text-zinc-400')}>
           {cards.length ? `No encontramos «${query.trim()}» en este tema.` : 'Este tema aún no tiene formulario.'}

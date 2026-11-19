@@ -107,14 +107,50 @@
 % Barra horizontal proporcional (para tablas de frecuencia).
 \newcommand{\barra}[1]{{\color{zinc900}\rule[0.15ex]{#1\linewidth}{0.9ex}}}
 
+% Portada: el mismo diseño de las presentaciones (banda con el color de la materia, título grande y nombre del
+% sitio). El generador fija \definecolor{acento} y los textos en META.
+\colorlet{acento}{zinc900}
+\newcommand{\portadaMateria}{Matemática M1}
+\newcommand{\portadaProceso}{Proceso de Admisión 2027}
+\newcommand{\portadaDetalle}{}
+\newcommand{\portadaFuente}[1]{{\fontfamily{lmssq}\selectfont #1}}
+\newcommand{\logoSitio}[1]{%
+  \begin{tikzpicture}[baseline=-0.6ex]
+    \fill[#1, rounded corners=1.5pt] (0,-0.21) rectangle (0.42,0.21);
+    \foreach \x/\h in {0.10/0.12, 0.21/0.22, 0.32/0.08} \fill[acento] (\x-0.03,-0.14) rectangle (\x+0.03,-0.14+\h);
+  \end{tikzpicture}}
+
 %%<META>%%
 \newcommand{\guiaTitulo}{Compendio de estudio}
 \newcommand{\guiaAsignatura}{Competencia Lectora}
 \newcommand{\guiaDescripcion}{La prueba evalúa tres habilidades sobre textos literarios y no literarios, continuos y discontinuos: localizar información, interpretar el sentido y evaluar la forma y el contenido. Tiene 65 preguntas de 4 alternativas y dura 2 h 30 min.}
-\newcommand{\guiaFuente}{3 ejes y 12 subtemas. Frecuencias calculadas sobre 8 ensayos (7 oficiales DEMRE), 434 preguntas. Generado el 8 de noviembre de 2026.}
+\newcommand{\guiaFuente}{3 ejes y 12 subtemas. Frecuencias calculadas sobre 8 ensayos (7 oficiales DEMRE), 434 preguntas. Generado el 19 de noviembre de 2026.}
+\definecolor{acento}{HTML}{8A1C3B}
+\renewcommand{\portadaMateria}{Competencia Lectora}
+\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}
+\renewcommand{\portadaDetalle}{3 ejes y 12 subtemas del temario 2027, con teoría, método, trampas frecuentes y ejemplos resueltos. 19 de noviembre de 2026.}
 %%</META>%%
 
 \begin{document}
+
+\begin{titlepage}
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[acento] (current page.north west) rectangle ([xshift=5.6cm]current page.south west);
+    \fill[acento!14] ([xshift=-0.4cm,yshift=0.4cm]current page.south east) circle (5.2cm);
+    \fill[white, opacity=0.12] ([xshift=5.6cm,yshift=-7.5cm]current page.north west) circle (2.8cm);
+    \node[anchor=north west, text=white, inner sep=0, align=left] at ([xshift=1cm,yshift=-2cm]current page.north west)
+      {\portadaFuente{\bfseries\fontsize{34}{34}\selectfont PAES}\\[8pt]\portadaFuente{\fontsize{34}{34}\selectfont 2027}};
+    \node[anchor=south west, text=white, inner sep=0] at ([xshift=1cm,yshift=1.6cm]current page.south west)
+      {\logoSitio{white}\hspace{6pt}{\sffamily\large\bfseries PAES Studio}};
+  \end{tikzpicture}%
+  \vspace*{7.2cm}\par\noindent\hspace*{5.2cm}\begin{minipage}{12.6cm}\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+    {\sffamily\small\bfseries\color{acento} COMPENDIO PAES\quad·\quad TEORÍA, MÉTODO Y EJEMPLOS}\par\vspace{1.1em}
+    {\portadaFuente{\bfseries\fontsize{32}{37}\selectfont\color{zinc950}\portadaMateria\par}}\vspace{0.9em}
+    {\color{acento}\rule{3.2cm}{3pt}}\par\vspace{0.9em}
+    {\sffamily\LARGE\color{zinc700}\portadaProceso}\par\vspace{1.4em}
+    {\sffamily\normalsize\color{zinc700}\portadaDetalle}
+  \end{minipage}
+\end{titlepage}
 
 \twocolumn[{%
   \begin{tcolorbox}[enhanced, frame hidden, colback=white, left=0pt, right=0pt, top=0pt, bottom=6pt,

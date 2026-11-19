@@ -1,7 +1,20 @@
-import { Fragment, memo, useMemo } from 'react'
+import { Fragment, memo, useContext, useMemo } from 'react'
 import { cn } from '@/lib/utils'
 import { numberableParagraphs, parseBlocks, parseInline, type Block, type Inline } from '@/utils/markdown'
+import { GlossaryContext } from './glossaryContext'
+import { GlossaryTerm } from './GlossaryTerm'
 import { renderTex } from './katex'
+
+/** Texto plano; dentro de un área con glosario (explicaciones de Ciencias), los términos se pueden tocar. */
+function PlainText({ text }: { text: string }) {
+  const glossary = useContext(GlossaryContext)
+  if (!glossary) return <>{text}</>
+  return (
+    <>
+      {glossary(text).map((seg, i) => (seg.entry ? <GlossaryTerm key={i} text={seg.text} entry={seg.entry} /> : <Fragment key={i}>{seg.text}</Fragment>))}
+    </>
+  )
+}
 
 function InlineNodes({ nodes }: { nodes: Inline[] }) {
   return (
@@ -9,7 +22,7 @@ function InlineNodes({ nodes }: { nodes: Inline[] }) {
       {nodes.map((n, i) => {
         switch (n.t) {
           case 'text':
-            return <Fragment key={i}>{n.v}</Fragment>
+            return <PlainText key={i} text={n.v} />
           case 'math':
             return (
               <span

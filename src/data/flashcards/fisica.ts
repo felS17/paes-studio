@@ -59,5 +59,18 @@ export const fisica: Deck = {
     card('fis-41', TIE, r`Primera y segunda ley de Kepler`, r`1.ª: las órbitas son **elipses** con el Sol en un foco. 2.ª: el planeta barre **áreas iguales en tiempos iguales** (va más rápido cerca del Sol).`),
     card('fis-42', TIE, r`Tercera ley de Kepler`, r`$$T^2\propto a^3$$`, [r`El cuadrado del período orbital es proporcional al cubo del semieje mayor.`]),
     card('fis-43', TIE, r`Evidencias del Big Bang`, r`El **alejamiento de las galaxias** (corrimiento al rojo) y la **radiación de fondo de microondas**.`, [r`El universo se originó hace unos 13 800 millones de años y sigue expandiéndose.`]),
+    // Agregadas en v2.5: subtemas con menos tarjetas y más frecuentes en los ensayos oficiales (texto del temario).
+    card('fis-44', OND, r`Espectro electromagnético ordenado de menor a mayor frecuencia`, r`Ondas de radio, microondas, infrarrojo, luz visible, ultravioleta, rayos X y gamma.`, [r`Más frecuencia $\Leftrightarrow$ menor longitud de onda $\Leftrightarrow$ más energía.`]),
+    card('fis-45', OND, r`¿Con qué rapidez viajan las ondas electromagnéticas en el vacío?`, r`Todas a la misma: $c=3\cdot 10^8$ m/s, y cumplen $c=\lambda f$.`, [r`No necesitan un medio para propagarse: la luz y los rayos X viajan en el vacío.`]),
+    card('fis-46', OND, r`Imágenes en espejos planos, cóncavos y convexos`, r`Plano: imagen **virtual** del mismo tamaño. Cóncavo: puede formar imágenes **reales o virtuales**. Convexo: siempre **virtuales y menores**.`),
+    card('fis-47', OND, r`Lente convergente vs. divergente`, r`La convergente **concentra** la luz; la divergente la **dispersa**.`),
+    card('fis-48', OND, r`Índice de refracción`, r`$$n=\frac{c}{v}$$ donde $v$ es la rapidez de la luz en el medio.`, [r`Los ángulos de reflexión y refracción se miden respecto de la **normal**.`]),
+    card('fis-49', OND, r`¿Por qué un prisma o el arcoíris separan los colores?`, r`Por **refracción y dispersión** de la luz blanca.`, [r`El color de un objeto es la luz que refleja.`]),
+    card('fis-50', MEC, r`Rapidez media vs. velocidad`, r`Rapidez media: **distancia recorrida** dividida por el tiempo. La velocidad considera además la **dirección**.`),
+    card('fis-51', MEC, r`En un gráfico posición–tiempo, ¿qué representa la pendiente?`, r`La **velocidad**.`),
+    card('fis-52', MEC, r`Ecuación del MRU`, r`$$x=x_0+vt$$ La velocidad es constante.`, [r`En el MRUA la constante es la aceleración.`]),
+    card('fis-53', TIE, r`¿Qué mueve las placas tectónicas?`, r`La litosfera (corteza y parte superior del manto) está dividida en placas que se desplazan sobre la **astenosfera**, impulsadas por **corrientes de convección** del manto.`),
+    card('fis-54', TIE, r`Bordes de placa: convergente, divergente y transformante`, r`Convergente: chocan (subducción, sismos, volcanes, cordilleras). Divergente: se separan (dorsales, nuevo suelo oceánico). Transformante: se deslizan de lado (sismos, falla de San Andrés).`),
+    card('fis-55', TIE, r`Magnitud vs. intensidad de un sismo`, r`**Magnitud**: energía liberada, una por sismo. **Intensidad**: efectos en cada lugar, distinta según la ciudad.`),
   ],
 }

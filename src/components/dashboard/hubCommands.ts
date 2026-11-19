@@ -33,6 +33,7 @@ export const HUB_COMMANDS: HubCommand[] = [
   { name: 'stats', hint: 'abrir administrador de tareas y errores', action: { kind: 'route', to: '/analitica' } },
   { name: 'plan', aliases: ['repaso'], hint: 'armar tu plan de repaso hasta la prueba, lo más débil primero', action: { kind: 'route', to: '/plan' } },
   { name: 'prueba', aliases: ['dia', 'horarios'], hint: 'ver horarios, qué llevar y estrategia del día de la prueba', action: { kind: 'route', to: '/dia-prueba' } },
+  { name: 'atajos', aliases: ['manual', 'teclas'], hint: 'ver todos los comandos y los atajos de teclado', action: { kind: 'route', to: '/ayuda' } },
   { name: 'tema', aliases: ['theme'], hint: 'cambiar paleta de colores y fuente', action: { kind: 'theme' } },
   { name: 'fuente', aliases: ['font'], hint: 'cambiar la tipografía', action: { kind: 'font' }, hidden: true },
   { name: 'nombre', label: '/nombre <alias>', aliases: ['nick'], hint: 'ponle tu nombre a esta sesión', action: { kind: 'name' } },

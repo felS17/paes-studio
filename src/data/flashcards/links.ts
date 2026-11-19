@@ -28,6 +28,7 @@ const BY_SUBTOPIC: Record<string, { deck: DeckId; unit: string }> = {
   'cl-multimodal': lectora('Textos discontinuos'),
   'cl-argumentos': lectora('Tesis, argumentos y tono'),
   'cl-forma': lectora('Evaluar'),
+  'cs-habilidades': biologia('Habilidades científicas'),
   'cs-celula': biologia('Organización celular'),
   'cs-biomoleculas': biologia('Organización celular'),
   'cs-sistemas': biologia('Procesos y funciones biológicas'),

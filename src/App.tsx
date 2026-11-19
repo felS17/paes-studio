@@ -15,6 +15,7 @@ const FlashcardsPage = lazy(() => import('@/pages/FlashcardsPage').then((m) => (
 const FlashcardStudyPage = lazy(() => import('@/pages/FlashcardStudyPage').then((m) => ({ default: m.FlashcardStudyPage })))
 const MaterialPage = lazy(() => import('@/pages/MaterialPage').then((m) => ({ default: m.MaterialPage })))
 const TestDayPage = lazy(() => import('@/pages/TestDayPage').then((m) => ({ default: m.TestDayPage })))
+const HelpPage = lazy(() => import('@/pages/HelpPage').then((m) => ({ default: m.HelpPage })))
 const StudyPlanPage = lazy(() => import('@/pages/StudyPlanPage').then((m) => ({ default: m.StudyPlanPage })))
 // El grafo (react-force-graph-2d, Canvas) vive en su propio chunk.
 const ZettelkastenPage = lazy(() => import('@/pages/ZettelkastenPage').then((m) => ({ default: m.ZettelkastenPage })))
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/material" element={<MaterialPage />} />
           <Route path="/dia-prueba" element={<TestDayPage />} />
           <Route path="/plan" element={<StudyPlanPage />} />
+          <Route path="/ayuda" element={<HelpPage />} />
           <Route path="/zettelkasten" element={<ZettelkastenPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

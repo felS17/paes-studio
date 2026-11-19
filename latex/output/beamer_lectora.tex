@@ -1,15 +1,21 @@
 % =============================================================================
-%  PAES Studio: presentación de repaso (plantilla Beamer 16:9)
+%  PAES Studio: resumen en láminas (plantilla Beamer 16:9)
 %  Lista para Overleaf: Nuevo proyecto → Subir proyecto → compilar con pdfLaTeX.
 %
 %  Estética minimalista con la paleta Zinc de la app: sin degradados, sin
 %  símbolos de navegación, líneas finas y alternativas con su tecla A–E.
+%  Estructura: portada, cómo usar, sumario, qué se repite en las pruebas y, por
+%  tema, teoría seguida de ejercicios oficiales (enunciado y luego solución).
 %  Comandos:
 %    \alternativa{A}{texto}       alternativa
 %    \alternativaok{C}{texto}     alternativa correcta (para la diapositiva de solución)
 %    \paso{n}{texto}      paso numerado del desarrollo
 %    \ejebarra{Eje}{0.42}{42 %}   barra proporcional de frecuencia
-%  Entornos: cajaclave, cajatrampa, lineatiempo (filas «fecha & hecho \\»).
+%    \respuesta{C}{fuente}        respuesta oficial al pie de una solución
+%    \recorte{img/ensayo/q01.png} recorte del folleto (si falta, un recuadro)
+%    \sumarioeje{Eje}  \sumariotema{Tema}{etiqueta}   líneas del sumario
+%  Entornos: cajaclave, cajaregla (regla práctica), notagris (error común),
+%  cajatrampa, lineatiempo (filas «fecha & hecho \\»).
 %
 %  El generador scripts/pipeline/generate_latex_summary.py reemplaza los bloques
 %  delimitados por %%<NOMBRE>%% … %%</NOMBRE>%%.
@@ -26,6 +32,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage[most]{tcolorbox}
+\usepackage{graphicx}
 
 % ── Paleta Zinc ──────────────────────────────────────────────────────────────
 \definecolor{zinc950}{HTML}{09090B}
@@ -43,6 +50,7 @@
 % ── Tema mínimo ──────────────────────────────────────────────────────────────
 \usefonttheme{professionalfonts}
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{\ifnum\insertcontinuationcount>1\ (cont.)\fi}
 \setbeamercolor{background canvas}{bg=white}
 \setbeamercolor{normal text}{fg=zinc900}
 \setbeamercolor{structure}{fg=zinc900}
@@ -62,16 +70,39 @@
 }
 \makeatother
 \setbeamertemplate{footline}{%
-  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle}\hfill
-  {\color{zinc500}\tiny\ttfamily\insertframenumber/\inserttotalframenumber}\hspace*{1.6cm}\par\vspace*{0.7em}%
+  \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle\ifx\insertsubsection\empty\else\ · \insertsubsection\fi}\hfill
+  {\color{zinc500}\tiny\ttfamily\insertpagenumber\,/\,\insertpresentationendpage}\hspace*{1.6cm}\par\vspace*{0.7em}%
 }
+% Portada: banda vertical con el color de la materia (\definecolor{acento} en META), título grande en Latin
+% Modern Sans Quotation y el nombre del sitio. Un solo diseño para todas las guías: solo cambia el color. El texto blanco va
+% sobre acentos oscuros (contraste ≥ 6,9:1), así que también se lee impresa en blanco y negro.
+\newcommand{\portadaMateria}{Matemática M1}
+\newcommand{\portadaProceso}{Proceso de Admisión 2027}
+\newcommand{\portadaFuente}[1]{{\fontfamily{lmssq}\selectfont #1}}
+\newcommand{\logoSitio}[1]{%
+  \begin{tikzpicture}[baseline=-0.6ex]
+    \fill[#1, rounded corners=1.2pt] (0,-0.17) rectangle (0.34,0.17);
+    \foreach \x/\h in {0.08/0.10, 0.17/0.18, 0.26/0.06} \fill[acento] (\x-0.025,-0.11) rectangle (\x+0.025,-0.11+\h);
+  \end{tikzpicture}}
 \setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[acento] (current page.north west) rectangle ([xshift=4.4cm]current page.south west);
+    \fill[acento!14] ([xshift=-0.2cm,yshift=0.2cm]current page.south east) circle (2.6cm);
+    \fill[white, opacity=0.12] ([xshift=4.4cm,yshift=-2.1cm]current page.north west) circle (1.5cm);
+    \node[anchor=north west, text=white, inner sep=0, align=left] at ([xshift=0.7cm,yshift=-0.75cm]current page.north west)
+      {\portadaFuente{\bfseries\fontsize{26}{26}\selectfont PAES}\\[5pt]\portadaFuente{\fontsize{26}{26}\selectfont 2027}};
+    \node[anchor=south west, text=white, inner sep=0] at ([xshift=0.7cm,yshift=0.65cm]current page.south west)
+      {\logoSitio{white}\hspace{4pt}{\sffamily\small\bfseries PAES Studio}};
+  \end{tikzpicture}%
   \vfill
-  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
-  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
-  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
-  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
-  {\small\color{zinc500}\insertdate}\par
+  \hspace*{3.4cm}\begin{minipage}{9.2cm}\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+    {\sffamily\scriptsize\bfseries\color{acento} RESUMEN PAES\quad·\quad TEORÍA Y EJERCICIOS OFICIALES}\par\vspace{0.7em}
+    {\portadaFuente{\bfseries\fontsize{25}{29}\selectfont\color{zinc950}\portadaMateria\par}}\vspace{0.55em}
+    {\color{acento}\rule{2.2cm}{2pt}}\par\vspace{0.55em}
+    {\sffamily\large\color{zinc700}\portadaProceso}\par\vspace{0.9em}
+    {\sffamily\footnotesize\color{zinc700}\portadaDetalle}\par\vspace{0.35em}
+    {\sffamily\scriptsize\color{zinc500}\insertdate}
+  \end{minipage}
   \vfill
 }
 
@@ -85,7 +116,7 @@
 \newcommand{\alternativa}[2]{\begin{opcion}\tecla{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\alternativaok}[2]{\begin{opcion}[colframe=esmeralda!60, colback=esmeralda!5]\teclaok{#1}\hspace{0.6em}#2\end{opcion}}
 \newcommand{\paso}[2]{\par\noindent\makebox[1.4em][l]{\color{zinc500}\ttfamily\small #1}\parbox[t]{\dimexpr\linewidth-1.4em}{#2}\par\vspace{0.45em}}
-\newtcolorbox{cajaclave}[1][]{enhanced, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
+\newtcolorbox{cajaclave}[1][]{enhanced, before upper={\setlength{\abovedisplayskip}{2pt}\setlength{\belowdisplayskip}{2pt}\setlength{\abovedisplayshortskip}{1pt}\setlength{\belowdisplayshortskip}{1pt}}, boxrule=0.4pt, arc=2pt, colback=zinc50, colframe=zinc300,
   borderline west={2pt}{0pt}{zinc900}, left=7pt, right=7pt, top=3pt, bottom=4pt,
   fonttitle=\bfseries\small, coltitle=zinc900, colbacktitle=zinc50, titlerule=0pt, title={#1}}
 \newtcolorbox{cajatrampa}[1][Trampas frecuentes]{enhanced, boxrule=0.4pt, arc=2pt, colback=white, colframe=rosa!35,
@@ -94,6 +125,33 @@
 \newenvironment{lineatiempo}
   {\footnotesize\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}>{\leavevmode\bfseries\color{zinc700}}p{0.14\textwidth}p{0.74\textwidth}@{}}}
   {\end{tabular}}
+\newtcolorbox{cajaregla}[1][Regla práctica]{enhanced, boxrule=0.8pt, arc=2pt, colback=white, colframe=zinc900,
+  left=7pt, right=7pt, top=3pt, bottom=4pt, before skip=4pt, after skip=4pt,
+  fonttitle=\bfseries\small, coltitle=white, colbacktitle=zinc900, titlerule=0pt, title={#1}}
+\newtcolorbox{notagris}{enhanced, frame hidden, arc=2pt, colback=zinc50, left=6pt, right=6pt, top=3pt, bottom=3pt,
+  before skip=4pt, after skip=2pt, fontupper=\color{zinc500}, borderline west={1.5pt}{0pt}{zinc300}}
+\newcommand{\respuesta}[2]{\par\vspace{0.3em}\noindent\teclaok{#1}\hspace{0.5em}{\small\bfseries respuesta oficial}\hspace{0.5em}{\scriptsize\color{zinc500}#2}\par}
+\newcommand{\recorte}[1]{\IfFileExists{#1}%
+  {\includegraphics[width=0.9\textwidth,height=0.62\textheight,keepaspectratio]{#1}}%
+  {\fbox{\parbox{0.6\textwidth}{\centering\small\color{zinc500} Recorte del folleto oficial: #1\\(se genera con generate\_latex\_summary.py)}}}}
+\newcommand{\sumarioeje}[1]{\par\vspace{0.35em}\noindent{\bfseries #1}\par\vspace{0.1em}}
+\newcommand{\sumariotema}[2]{\noindent\hspace*{0.8em}\hyperlink{#2}{#1}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\sumarioitem}[2]{\noindent{\bfseries\hyperlink{#2}{#1}}\dotfill{\ttfamily\color{zinc500}\pageref{#2}}\par}
+\newcommand{\portadaDetalle}{}
+\colorlet{acento}{zinc900}
+\newcommand{\esquema}[2]{{#1}\par\vspace{3pt}{\tiny\color{zinc500}#2}}
+\newcommand{\recortechico}[1]{\IfFileExists{#1}{\includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{#1}}{\fbox{\tiny recorte: #1}}}
+%%<ESQUEMAS>%%
+
+%%</ESQUEMAS>%%
+% ajustar: el contenido va a todo el ancho y, solo si no cabe en la altura dada, se reduce entero (una lámina).
+\newsavebox{\ajustecaja}
+\newlength{\ajustealto}
+\newenvironment{ajustar}[1][0.74\textheight]
+  {\setlength{\ajustealto}{#1}\begin{lrbox}{\ajustecaja}\begin{minipage}{\textwidth}}
+  {\end{minipage}\end{lrbox}%
+   \ifdim\dimexpr\ht\ajustecaja+\dp\ajustecaja\relax>\ajustealto
+     \resizebox*{!}{\ajustealto}{\usebox{\ajustecaja}}\else\usebox{\ajustecaja}\fi}
 \newlength{\anchobarra}
 \newcommand{\ejebarra}[3]{%
   \par\noindent\makebox[0.34\linewidth][l]{\small #1}%
@@ -102,9 +160,13 @@
   \hspace{0.8em}{\small\ttfamily #3}\par\vspace{0.5em}}
 
 %%<META>%%
-\title[Repaso PAES: Competencia Lectora]{Repaso PAES}
+\title[Resumen PAES: Competencia Lectora]{Resumen PAES}
 \subtitle{Competencia Lectora}
-\date{8 de noviembre de 2026}
+\date{19 de noviembre de 2026}
+\definecolor{acento}{HTML}{8A1C3B}
+\renewcommand{\portadaMateria}{Competencia Lectora}
+\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}
+\renewcommand{\portadaDetalle}{12 temas del temario 2027 y 23 ejercicios de pruebas oficiales del DEMRE (admisiones 2024 a 2027)}
 %%</META>%%
 
 \begin{document}
@@ -114,540 +176,990 @@
 \end{frame}
 
 %%<CONTENIDO>%%
-\begin{frame}{Contenidos}
-
-  \framesubtitle{3 ejes, en el orden del temario}
-
-  \begin{enumerate}\small
-
-    \item \textbf{Localizar}: Información explícita
-
-    \item \textbf{Interpretar}: Relaciones e inferencias, Significado de palabras y expresiones, Ideas centrales, síntesis y jerarquía, Función de un fragmento o recurso, Lectura de relatos: personajes, tiempo y espacio
-
-    \item \textbf{Evaluar}: Intención comunicativa del emisor, Juzgar la información y los argumentos, Juzgar la forma: registro, estructura y recursos, Posición, actitud y tono del emisor, Recursos no lingüísticos: imágenes, tablas y diseño, Relación con nuevos textos y contextos
-
-  \end{enumerate}
-
+\begin{frame}{Cómo usar este resumen}
+\begin{columns}[T,onlytextwidth]
+\column{0.56\textwidth}\small
+\begin{enumerate}
+\item Parte por la tabla \emph{Qué se repite en las pruebas}: dice qué temas aparecen más y cuál es su trampa habitual.
+\item Cada tema trae una lámina de teoría y luego ejercicios oficiales del DEMRE: el enunciado en una lámina y la solución en la siguiente.
+\item Resuelve el ejercicio y anota tu alternativa \emph{antes} de avanzar. Si fallaste, vuelve a la teoría.
+\item Usa el sumario para saltar al tema que necesites.
+\end{enumerate}
+\column{0.4\textwidth}
+\begin{cajaregla}[Regla práctica]\footnotesize Las cajas con borde negro son reglas para aplicar directo en la prueba.\end{cajaregla}
+\begin{notagris}\footnotesize Las notas en gris son errores comunes.\end{notagris}
+\vspace{0.4em}{\scriptsize\color{zinc500} Datos: 7 aplicaciones oficiales (invierno 2027, regular 2026, invierno 2026, regular 2025, invierno 2025, regular 2024, invierno 2024; año de admisión). Las soluciones paso a paso fueron redactadas con IA y revisadas contra la respuesta oficial del DEMRE.\par}
+\end{columns}
 \end{frame}
 
-\begin{frame}{Qué evalúa la prueba}
+\begin{frame}{Sumario}
+\begin{columns}[T,onlytextwidth]
+\column{0.47\textwidth}\footnotesize
+\sumarioitem{Qué se repite en las pruebas}{repite}
+\sumarioeje{Localizar}
+\sumariotema{Información explícita}{tema-cl-localizar}
+\sumarioeje{Interpretar}
+\sumariotema{Relaciones e inferencias}{tema-cl-inferencia}
+\sumariotema{Significado de palabras y expresiones}{tema-cl-vocabulario}
+\sumariotema{Ideas centrales, síntesis y jerarquía}{tema-cl-idea-central}
+\sumariotema{Función de un fragmento o recurso}{tema-cl-proposito}
+\sumariotema{Lectura de relatos: personajes, tiempo y espacio}{tema-cl-literario}
+\column{0.47\textwidth}\footnotesize
+\sumarioeje{Evaluar}
+\sumariotema{Intención comunicativa del emisor}{tema-cl-intencion}
+\sumariotema{Juzgar la información y los argumentos}{tema-cl-argumentos}
+\sumariotema{Juzgar la forma: registro, estructura y recursos}{tema-cl-forma}
+\sumariotema{Posición, actitud y tono del emisor}{tema-cl-postura}
+\sumariotema{Recursos no lingüísticos: imágenes, tablas y diseño}{tema-cl-multimodal}
+\sumariotema{Relación con nuevos textos y contextos}{tema-cl-contextos}
+\end{columns}
+\end{frame}
 
-  \framesubtitle{Distribución por eje en 8 ensayos (434 preguntas)}
+\begin{frame}{Qué se repite en las pruebas}
+\label{repite}
+\framesubtitle{419 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (1/2)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Relaciones e inferencias & 21{,}0 & media & Elegir una conclusión posible, pero no necesaria. \\
+Función de un fragmento o recurso & 8{,}7 & baja & Elegir una alternativa que resume el fragmento en vez de explicar para qué está. \\
+Ideas centrales, síntesis y jerarquía & 5{,}4 & media & Elegir un detalle llamativo como idea central. \\
+Información explícita & 5{,}3 & baja & Elegir una alternativa con palabras copiadas del texto pero con otro sentido. \\
+Lectura de relatos: personajes, tiempo y espacio & 4{,}6 & media & Atribuir al narrador ideas de un personaje. \\
+Juzgar la información y los argumentos & 3{,}9 & alta & Elegir una alternativa sobre el tema que no toca el argumento central. \\
+\bottomrule\end{tabular}\end{ajustar}
+\end{frame}
 
-  \vspace{0.8em}
-
-  \ejebarra{Interpretar}{0.707}{71 \%}
-
-  \ejebarra{Evaluar}{0.198}{20 \%}
-
-  \ejebarra{Localizar}{0.094}{9 \%}
-
+\begin{frame}{Qué se repite en las pruebas}
+\framesubtitle{419 preguntas de 7 aplicaciones oficiales, de la más frecuente a la menos (2/2)}
+\begin{ajustar}[0.72\textheight]\scriptsize\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}p{0.1\textwidth}>{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
+\toprule \textbf{Tema} & \textbf{Frecuencia}\newline{\tiny preguntas por prueba} & \textbf{Dificultad} & \textbf{Trampa habitual} \\ \midrule
+Intención comunicativa del emisor & 3{,}0 & baja & Confundir el tema del texto con su intención. \\
+Significado de palabras y expresiones & 2{,}9 & media & Elegir el sinónimo de otra acepción («grave» como «serio» y no como «de tono bajo»). \\
+Posición, actitud y tono del emisor & 2{,}3 & baja & Atribuir al emisor la opinión de una persona que él cita. \\
+Juzgar la forma: registro, estructura y recursos & 1{,}7 & alta & Elegir una valoración subjetiva sin respaldo en el texto. \\
+Recursos no lingüísticos: imágenes, tablas y diseño & 1{,}0 & alta & Leer un dato de la columna o fila equivocada. \\
+Relación con nuevos textos y contextos & 0{,}1 & alta & Elegir una alternativa del mismo tema pero con otra idea. \\
+\bottomrule\end{tabular}\end{ajustar}
+\par\vspace{0.4em}{\tiny\color{zinc500} Dificultad relativa dentro de la materia, según el largo de la solución de sus preguntas oficiales.}
 \end{frame}
 
 \section{Localizar}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Localizar}\par\vspace{0.6em}
-  {\color{zinc700} Encontrar información explícita y reconocer cómo se presenta.}\par\vspace{1em}
-  {\small\color{zinc500} Información explícita}
-  \vfill
-\end{frame}
+\subsection{Información explícita}
 
-\begin{frame}[allowframebreaks]{Información explícita}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Busca palabras clave del enunciado en el texto.
-    \item La correcta es una paráfrasis fiel, no una copia literal.
-    \item Una alternativa verdadera en la realidad pero ausente del texto es incorrecta.
-  \end{itemize}
-  \begin{cajaclave}[Cómo reconocer la correcta]\footnotesize
+\begin{frame}{Información explícita}
+\label{tema-cl-localizar}
+\framesubtitle{Localizar · Teoría · 5,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Busca palabras clave del enunciado en el texto.
+\item La correcta es una paráfrasis fiel, no una copia literal.
+\item Una alternativa verdadera en la realidad pero ausente del texto es incorrecta.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica qué dato se pide y en qué parte del texto se ubica.\item Relee esa parte completa, no solo la oración con la palabra clave.\item Contrasta cada alternativa con el texto y descarta las que agregan o distorsionan.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir una alternativa con palabras copiadas del texto pero con otro sentido.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Cómo reconocer la correcta]\footnotesize
 La alternativa correcta \textbf{reformula} lo que dice el texto sin agregar, quitar ni cambiar el alcance. Desconfía de las que generalizan («siempre», «todos») o que usan las mismas palabras del texto con otro sentido.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Información explícita}
-  {\small «Las abejas visitan cerca de un tercio de los cultivos que consumimos. Sin embargo, el uso de ciertos plaguicidas ha reducido sus colonias en varias regiones del país.»
-
-Según el fragmento, ¿qué ha provocado la disminución de las colonias de abejas?}
-  \vspace{0.4em}
-  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
-  \alternativa{A}{La disminución de los cultivos.}
-  \alternativa{B}{El uso de ciertos plaguicidas.}
-  \alternativa{C}{El cambio climático.}
-  \alternativa{D}{La sobreexplotación de la miel.}
-  \end{tcbraster}
+\begin{frame}{Ejercicio 1 · Información explícita}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 34}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 4»:} «primera guerra» [\ldots] «La voz de su llegada se corrió más rápido que el anuncio de la primera guerra» [\ldots] «seis horas antes de que la lectura empezara»\end{notagris}
+{\small ¿Con qué finalidad se menciona la “primera guerra” en el cuento?}
+\vspace{0.4em}
+\alternativa{A}{Para exponer la motivación de la diva para viajar a Europa.}
+\alternativa{B}{Para fundamentar la necesidad de un evento alegre en el pueblo.}
+\alternativa{C}{Para explicar que el pueblo se ha mantenido igual durante décadas.}
+\alternativa{D}{Para evidenciar el impacto que tuvo la noticia de la llegada de la diva.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La causa está explícita en la segunda oración.}
-  {\small
-  \paso{1}{Ubica la oración que habla de la reducción de colonias.}
-  \paso{2}{«El uso de ciertos plaguicidas ha reducido sus colonias»: es la alternativa B.}
-  \paso{3}{C es plausible en la realidad, pero el fragmento no lo menciona.}
-  }
-  \alternativaok{B}{El uso de ciertos plaguicidas.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir una alternativa con palabras copiadas del texto pero con otro sentido.
-    \item Elegir información correcta según tus conocimientos, pero que el texto no dice.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Información explícita}
+\framesubtitle{La primera guerra se menciona como término de comparación: la noticia de la llegada de la diva se difundió más rápido y con más interés que el anuncio de un conflicto.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El texto dice que la voz de la llegada de la diva «se corrió más rápido que el anuncio de la primera guerra». La guerra sirve como punto de comparación.}
+\paso{2}{Lo que se compara es la velocidad y el alcance de la noticia: un anuncio de guerra, que normalmente concentra la atención, fue superado por la noticia de la diva.}
+\paso{3}{El impacto se confirma después: decenas de personas formaron filas silenciosas seis horas antes de la lectura, lo que muestra la repercusión del suceso.}
+\paso{4}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Competencia Lectora, pregunta 34}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Necesidad de un evento alegre: el recital es un evento de gran interés, pero la guerra se usa como contraste de la noticia y no como motivo de alegría.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Información explícita}
+\framesubtitle{Fuente: PAES Invierno 2024, Competencia Lectora, pregunta 49}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «El rey y yo» [\ldots] «contribuyó a realzar el prestigio de la seda tailandesa utilizándola en muchos otros filmes»\end{notagris}
+{\small ¿Con qué propósito se menciona a Irene Sharaff en el artículo?}
+\vspace{0.4em}
+\alternativa{A}{Para describir el ingreso de la seda tailandesa al mundo de la moda.}
+\alternativa{B}{Para explicar la difusión del uso de la seda tailandesa a través del cine.}
+\alternativa{C}{Para exponer el impulso de la seda tailandesa como patrimonio cultural.}
+\alternativa{D}{Para justificar la incorporación de la seda tailandesa en el vestuario europeo. 41}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Información explícita}
+\framesubtitle{Irene Sharaff se menciona porque, con el vestuario de películas, contribuyó a difundir y dar prestigio a la seda tailandesa a través del cine.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El párrafo habla de cómo la seda tailandesa se hizo conocida en Europa y en Estados Unidos, a través de la reina y de creadores de moda.}
+\paso{2}{En Estados Unidos, Sharaff es la figura que lleva la seda a la pantalla: crea el vestuario de una película y luego la usa en otras.}
+\paso{3}{Su mención explica, entonces, la difusión del uso de la seda tailandesa a través del cine. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2024, Competencia Lectora, pregunta 49}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Para exponer el impulso de la seda como patrimonio cultural: ese impulso lo da la reina con la Fundación SUPPORT, no Sharaff.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Interpretar}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Interpretar}\par\vspace{0.6em}
-  {\color{zinc700} Relacionar partes del texto, inferir, determinar significados, sintetizar y reconocer la función de un elemento.}\par\vspace{1em}
-  {\small\color{zinc500} Relaciones e inferencias, Significado de palabras y expresiones, Ideas centrales, síntesis y jerarquía, Función de un fragmento o recurso, Lectura de relatos: personajes, tiempo y espacio}
-  \vfill
-\end{frame}
+\subsection{Relaciones e inferencias}
 
-\begin{frame}[allowframebreaks]{Relaciones e inferencias}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La inferencia correcta se apoya en el texto, no en suposiciones.
-    \item Descarta alternativas que exageran o generalizan.
-    \item El conector revela la relación lógica.
-  \end{itemize}
-  \begin{cajaclave}[Conectores frecuentes]\footnotesize
+\begin{frame}{Relaciones e inferencias}
+\label{tema-cl-inferencia}
+\framesubtitle{Interpretar · Teoría · 21,0 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item La inferencia correcta se apoya en el texto, no en suposiciones.
+\item Descarta alternativas que exageran o generalizan.
+\item El conector revela la relación lógica.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Reúne los datos del texto relacionados con la pregunta.\item Pregúntate qué se sigue necesariamente de ellos.\item Elige la alternativa que puedas justificar con una cita.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir una conclusión posible, pero no necesaria.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Conectores frecuentes]\footnotesize
 Causa: porque, ya que, debido a. Consecuencia: por lo tanto, así, en consecuencia. Contraste: sin embargo, pero, no obstante, en cambio. Adición: además, asimismo.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Relaciones e inferencias}
-  {\small «Desde que la biblioteca amplió su horario hasta las 22:00, la sala de estudio se llena cada noche, sobre todo en época de exámenes.»
-
-¿Qué se puede inferir del fragmento?}
-  \vspace{0.4em}
-  \alternativa{A}{Antes la biblioteca cerraba antes de las 22:00.}
-  \alternativa{B}{La biblioteca tiene más libros que antes.}
-  \alternativa{C}{Los estudiantes prefieren estudiar de noche que de día.}
-  \alternativa{D}{La biblioteca abre solo en época de exámenes.}
+\begin{frame}{Ejercicio 1 · Relaciones e inferencias}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 54}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «los litigantes ponían físicamente una mano sobre ella ante el magistrado» [\ldots] «Cruzar las manos sobre la cosa en disputa, Conserere manum, era un gesto estrechamente relacionado con el acto físico de tomarla»\end{notagris}
+{\small En la sociedad romana, ¿cómo se llamaba al acto de reclamación de propiedad de un objeto en disputa?}
+\vspace{0.4em}
+\alternativa{A}{\emph{Res repetere}.}
+\alternativa{B}{Derecho quiritario.}
+\alternativa{C}{\emph{Conserere manum}.}
+\alternativa{D}{Criterio de propiedad.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{«Amplió su horario hasta las 22:00» implica que antes cerraba más temprano.}
-  {\small
-  \paso{1}{Ampliar significa extender: el horario anterior terminaba antes.}
-  \paso{2}{C exagera: el texto no compara preferencias de día y de noche.}
-  }
-  \alternativaok{A}{Antes la biblioteca cerraba antes de las 22:00.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir una conclusión posible, pero no necesaria.
-    \item Confundir causa con consecuencia.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Relaciones e inferencias}
+\framesubtitle{El acto de reclamar la propiedad de una cosa en disputa, poniendo la mano sobre ella ante el magistrado, se llamaba conserere manum.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El texto describe el acto: para reclamar la pertenencia disputada de una cosa en el Foro Romano, los litigantes ponían físicamente una mano sobre ella ante el magistrado.}
+\paso{2}{Luego da el nombre del gesto: «Cruzar las manos sobre la cosa en disputa, Conserere manum, era un gesto estrechamente relacionado con el acto físico de tomarla».}
+\paso{3}{Las otras expresiones cumplen otra función: res repetere era la petición de restitución que precedía a la guerra, el derecho quiritario es el marco jurídico invocado en la fórmula y el criterio de propiedad es un principio que prevalece sobre la identidad de la cosa.}
+\paso{4}{Como el acto de reclamación tiene nombre propio y se realiza ante el magistrado, la respuesta es conserere manum. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Competencia Lectora, pregunta 54}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Es el principio según el cual la propiedad prevalece incluso sobre la identidad de la cosa. Describe un criterio jurídico, no el gesto con que se reclama la cosa.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Significado de palabras y expresiones}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Importa el sentido en el texto, no el del diccionario.
-    \item La correcta debe funcionar gramaticalmente en la oración.
-    \item Cuidado con los sinónimos de otra acepción de la palabra.
-  \end{itemize}
-  \begin{cajaclave}[Prueba de sustitución]\footnotesize
+\begin{frame}{Ejercicio 2 · Relaciones e inferencias}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 36}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 4»:} «que no sabemos si llegan» [\ldots] «alegando problemas de mapas y algo de un muro»\end{notagris}
+{\small ¿Cómo es la reacción del gobierno frente a la solicitud del pueblo?}
+\vspace{0.4em}
+\alternativa{A}{Displicente, ya que es indiferente hacia el deseo del pueblo.}
+\alternativa{B}{Violenta, ya que impone su voluntad ante la del pueblo.}
+\alternativa{C}{Negligente, ya que descuida los derechos del pueblo.}
+\alternativa{D}{Indulgente, ya que perdona las acciones del pueblo.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Relaciones e inferencias}
+\framesubtitle{El gobierno responde con excusas y sin atender la solicitud, lo que muestra una actitud displicente, de indiferencia hacia el deseo del pueblo.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El pueblo pide cambiar el nombre de la ciudad por el de Etelvina González y, año a año, envía cartas que no sabe si llegan.}
+\paso{2}{El gobierno responde con una negativa que se apoya en excusas vagas: «problemas de mapas y algo de un muro», sin discutir el fondo de la petición.}
+\paso{3}{La respuesta evita atender el deseo del pueblo y lo trata con indiferencia. Esa actitud corresponde a la displicencia, alternativa A.}
+\paso{4}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Competencia Lectora, pregunta 36}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Indulgente, por perdonar las acciones del pueblo: el gobierno no perdona nada; simplemente no accede a la petición.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Significado de palabras y expresiones}
+
+\begin{frame}{Significado de palabras y expresiones}
+\label{tema-cl-vocabulario}
+\framesubtitle{Interpretar · Teoría · 2,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Importa el sentido en el texto, no el del diccionario.
+\item La correcta debe funcionar gramaticalmente en la oración.
+\item Cuidado con los sinónimos de otra acepción de la palabra.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ubica la palabra y lee el contexto (oración anterior y posterior).\item Formula su sentido con tus propias palabras.\item Sustituye por cada alternativa y elige la que conserva el sentido.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir el sinónimo de otra acepción («grave» como «serio» y no como «de tono bajo»).\end{notagris}
+\end{columns}
+\begin{cajaclave}[Prueba de sustitución]\footnotesize
 1) Lee la oración y la siguiente. 2) Formula con tus palabras qué quiere decir. 3) Reemplaza por cada alternativa. 4) Elige la que conserva el sentido exacto, no solo uno parecido.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Significado de palabras y expresiones}
-  {\small «El ministro intentó ZANJAR la discusión con un anuncio inesperado, pero los parlamentarios siguieron debatiendo hasta la medianoche.»
-
-¿Cuál de las siguientes palabras puede reemplazar a ZANJAR sin que cambie el sentido del texto?}
-  \vspace{0.4em}
-  \alternativa{A}{Excavar}
-  \alternativa{B}{Iniciar}
-  \alternativa{C}{Terminar}
-  \alternativa{D}{Postergar}
+\begin{frame}{Ejercicio 1 · Significado de palabras y expresiones}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 44}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 5»:} «se consuma cuando toma la forma de un evento verbal» [\ldots] «un poema se consuma cuando toma la forma de un evento verbal, un acontecimiento en el tiempo»\end{notagris}
+{\small Considerando la lectura, ¿qué significa que la poesía «se consuma cuando toma la forma de un evento verbal»?}
+\vspace{0.4em}
+\alternativa{A}{Que es un recuerdo.}
+\alternativa{B}{Que es una representación.}
+\alternativa{C}{Que es una anécdota.}
+\alternativa{D}{Que es una experiencia.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{«Zanjar una discusión» es darla por concluida; el «pero» confirma que no lo logró.}
-  {\small
-  \paso{1}{Contexto: tras el intento, los parlamentarios \textbf{siguieron} debatiendo.}
-  \paso{2}{El contraste indica que el ministro quería ponerle fin.}
-  \paso{3}{«Terminar la discusión» conserva el sentido; «excavar» es otra acepción de «zanjar».}
-  }
-  \alternativaok{C}{Terminar}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir el sinónimo de otra acepción («grave» como «serio» y no como «de tono bajo»).
-    \item Elegir una palabra con matiz más fuerte o más débil que el original.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Significado de palabras y expresiones}
+\framesubtitle{La expresión alude a que el poema se vive como un acontecimiento que ocurre mientras se lee, y por eso se entiende como una experiencia.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El emisor define el poema como un evento: «un acontecimiento en el tiempo». La palabra clave es «en el tiempo»: el poema ocurre mientras se lee, como un suceso que se desarrolla.}
+\paso{2}{Lo explica enseguida: «leer un poema es, de este modo, experimentar la repetición de dicho evento en toda su duración». Leer es vivir el evento durante su duración, y no recordarlo ni describirlo después.}
+\paso{3}{Consumarse como evento significa, entonces, que el poema se completa cuando alguien lo experimenta. Lo que se vive mientras ocurre es, por definición, una experiencia de quien lee.}
+\paso{4}{Las demás alternativas describen otra cosa: el recuerdo es lo que queda después de la lectura, la representación es una imagen o copia de algo y la anécdota es un relato que se cuenta. Ninguna corresponde a un suceso vivido mientras se lee.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Competencia Lectora, pregunta 44}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} Toma «representación» como una imagen de algo, pero el emisor no habla de copiar ni de reproducir un contenido. Habla de un acontecimiento que sucede en el tiempo mientras se lee.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Ideas centrales, síntesis y jerarquía}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Tema: frase nominal. Idea central: afirmación completa.
-    \item Los ejemplos y datos apoyan la idea central; no lo son.
-    \item El título suele anticipar el tema.
-  \end{itemize}
-  \begin{cajaclave}[Criterio de amplitud]\footnotesize
+\begin{frame}{Ejercicio 2 · Significado de palabras y expresiones}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 59}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 7»:} «¿Había innovaciones? Sí, pero de manera pragmática, para resolver algún problema técnico. Fue de esta forma como nacieron la rueda hidráulica, el molino de viento y hasta la máquina a vapor»\end{notagris}
+{\small A partir de la lectura, ¿cuál es un aspecto común en invenciones como la rueda hidráulica, el molino de viento y la máquina de vapor?}
+\vspace{0.4em}
+\alternativa{A}{Se situaron como ejemplos del avance del conocimiento, sin importar su técnica.}
+\alternativa{B}{Emergieron como artefactos de uso prolongado en el tiempo, sin que se requiriera reemplazar su técnica.}
+\alternativa{C}{Se instalaron como grandes innovaciones de su época, sin revelar la técnica utilizada en su desarrollo.}
+\alternativa{D}{Surgieron como soluciones prácticas a problemas técnicos, sin estar respaldadas por fundamentos teóricos.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Significado de palabras y expresiones}
+\framesubtitle{La rueda hidráulica, el molino de viento y la máquina de vapor nacieron como soluciones prácticas a problemas técnicos, sin fundamento teórico.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El texto ubica estas invenciones antes de la Revolución Industrial, cuando «la ciencia y la técnica iban por carriles distintos».}
+\paso{2}{La técnica era «un saber empírico nacido desde la práctica», que se transmitía de maestro a aprendiz «sin preguntarse por los fundamentos teóricos».}
+\paso{3}{Las innovaciones eran «pragmáticas, para resolver algún problema técnico». Por eso la rueda hidráulica, el molino y la máquina de vapor surgieron como soluciones prácticas, sin respaldo teórico.}
+\paso{4}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2025, Competencia Lectora, pregunta 59}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} El uso prolongado y la falta de reemplazo de la técnica no aparecen en el texto. Lo que el texto describe es una técnica artesanal y empírica, no una permanencia de los artefactos.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Ideas centrales, síntesis y jerarquía}
+
+\begin{frame}{Ideas centrales, síntesis y jerarquía}
+\label{tema-cl-idea-central}
+\framesubtitle{Interpretar · Teoría · 5,4 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Tema: frase nominal. Idea central: afirmación completa.
+\item Los ejemplos y datos apoyan la idea central; no lo son.
+\item El título suele anticipar el tema.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Resume cada párrafo en una frase.\item Identifica qué idea agrupa a las demás.\item Descarta alternativas demasiado específicas o demasiado generales.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir un detalle llamativo como idea central.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Criterio de amplitud]\footnotesize
 La idea central no puede ser demasiado específica (un ejemplo o dato) ni demasiado general (aplicable a cualquier texto del tema). Debe cubrir todo lo que el párrafo o texto plantea.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Ideas centrales, síntesis y jerarquía}
-  {\small «Muchos creen que los murciélagos son plagas. Sin embargo, una sola colonia puede consumir toneladas de insectos al año, y varias especies polinizan plantas como el agave. Además, su guano se ha usado por siglos como fertilizante.»
-
-¿Cuál es la idea central del fragmento?}
-  \vspace{0.4em}
-  \begin{tcbraster}[raster columns=2, raster column skip=0.6em, raster row skip=0.35em]
-  \alternativa{A}{Los murciélagos polinizan el agave.}
-  \alternativa{B}{Los murciélagos son beneficiosos, pese a la mala fama que tienen.}
-  \alternativa{C}{El guano de murciélago es un fertilizante.}
-  \alternativa{D}{Los animales suelen ser incomprendidos.}
-  \end{tcbraster}
+\begin{frame}{Ejercicio 1 · Ideas centrales, síntesis y jerarquía}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 55}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «En definitiva, la guerra misma se hacía siempre por las cosas; para defender las propias o para adquirir mediante la violencia las cosas del otro»\end{notagris}
+{\small Respecto de la guerra, ¿cuál es la idea principal del penúltimo párrafo de la lectura?}
+\vspace{0.4em}
+\alternativa{A}{El saqueo es la estrategia de guerra para invadir y conquistar.}
+\alternativa{B}{La guerra es declarada después de una advertencia ignorada.}
+\alternativa{C}{La forma más rápida de crecimiento de un pueblo es la guerra.}
+\alternativa{D}{El motivo de la guerra es la obtención y resguardo de las cosas.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Cada oración aporta un beneficio que contradice la creencia inicial.}
-  {\small
-  \paso{1}{La primera oración plantea la creencia; «Sin embargo» introduce la postura del texto.}
-  \paso{2}{Insectos, polinización y guano son ejemplos de beneficios.}
-  \paso{3}{A y C son detalles; D es demasiado general.}
-  }
-  \alternativaok{B}{Los murciélagos son beneficiosos, pese a la mala fama que tienen.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir un detalle llamativo como idea central.
-    \item Elegir una afirmación tan general que serviría para cualquier texto.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Ideas centrales, síntesis y jerarquía}
+\framesubtitle{El penúltimo párrafo explica que la guerra se hacía siempre por las cosas: para defender las propias o para adquirir las del enemigo.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El párrafo empieza con el ritual previo a la guerra: «Pedir las cosas, Res repetere, era la última advertencia antes de tomarlas por la fuerza».}
+\paso{2}{Esa advertencia es un detalle del procedimiento: si las cosas no se entregaban, venía la declaración de guerra. El párrafo usa el ejemplo para mostrar que el objeto de la guerra eran las cosas.}
+\paso{3}{La conclusión explícita es: «la guerra misma se hacía siempre por las cosas; para defender las propias o para adquirir mediante la violencia las cosas del otro».}
+\paso{4}{El saqueo, la conquista de territorios y la cita de Canetti sobre el crecimiento aparecen como formas de ese mismo motivo: el «principal móvil de la guerra era el saqueo» y el territorio se toma junto con las cosas que contiene.}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Competencia Lectora, pregunta 55}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} La advertencia previa es un detalle del párrafo: describe la petición de restitución que precedía a la declaración de guerra, y no sostiene la idea central.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Función de un fragmento o recurso}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Propósito = intención, no contenido.
-    \item Mira el lugar del fragmento en el texto (inicio, desarrollo, cierre).
-    \item Revisa los conectores que lo rodean.
-  \end{itemize}
-  \begin{cajaclave}[Verbos de propósito]\footnotesize
+\begin{frame}{Ejercicio 2 · Ideas centrales, síntesis y jerarquía}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 49}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «¿Qué es un escritor?» [\ldots] «¿cómo escribir? ¿Acerca de qué escribir? ¿Para quién escribir?»\end{notagris}
+{\small ¿Qué recurso utiliza la emisora para involucrar al lector en la temática que aborda?}
+\vspace{0.4em}
+\alternativa{A}{Utiliza ejemplos de la vida cotidiana.}
+\alternativa{B}{Menciona a algunos escritores de renombre.}
+\alternativa{C}{Formula preguntas para articular la lectura.}
+\alternativa{D}{Explica con precisión los conceptos que incorpora.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Ideas centrales, síntesis y jerarquía}
+\framesubtitle{La emisora interpela al lector con preguntas que articulan la reflexión, desde «¿Qué es un escritor?» hasta «¿Para quién escribir?».}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El ensayo abre con preguntas: «¿Qué es un escritor?», «¿Escribe?», «¿Qué ha pasado?». Cada una lleva al lector a seguir el razonamiento.}
+\paso{2}{Más adelante plantea «¿cómo escribir? ¿Acerca de qué escribir? ¿Para quién escribir?», y luego discute cada una de esas preguntas.}
+\paso{3}{Al formular preguntas en lugar de afirmar, la emisora invita al lector a pensar junto con ella, lo que articula la lectura y la organiza en torno a problemas concretos.}
+\paso{4}{El recurso que involucra al lector es, por tanto, la formulación de preguntas. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, Competencia Lectora, pregunta 49}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} El texto cita a López Velarde, José Gorostiza y Simone Weil, pero esas citas sostienen su argumento. No son el recurso que convoca al lector a la reflexión.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Función de un fragmento o recurso}
+
+\begin{frame}{Función de un fragmento o recurso}
+\label{tema-cl-proposito}
+\framesubtitle{Interpretar · Teoría · 8,7 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Propósito = intención, no contenido.
+\item Mira el lugar del fragmento en el texto (inicio, desarrollo, cierre).
+\item Revisa los conectores que lo rodean.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Ubica el fragmento y lee qué hay antes y después.\item Pregúntate qué hace ese fragmento por la idea vecina (la ilustra, la contradice, la introduce).\item Elige la alternativa cuyo verbo y contenido coincidan con esa relación.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir una alternativa que resume el fragmento en vez de explicar para qué está.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Verbos de propósito]\footnotesize
 Ilustrar o ejemplificar, introducir, contrastar, concluir, justificar, refutar, describir, advertir. La alternativa correcta combina el verbo adecuado con el contenido correcto.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Función de un fragmento o recurso}
-  {\small «Los hábitos pequeños transforman la salud. Pedro, por ejemplo, comenzó a caminar diez minutos al día y, al cabo de un año, había bajado su presión arterial.»
-
-¿Qué función cumple la mención de Pedro?}
-  \vspace{0.4em}
-  \alternativa{A}{Introducir un tema nuevo.}
-  \alternativa{B}{Contradecir la idea anterior.}
-  \alternativa{C}{Ejemplificar la afirmación previa.}
-  \alternativa{D}{Concluir el texto.}
+\begin{frame}{Ejercicio 1 · Función de un fragmento o recurso}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 52}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «un bien no es alguna entidad positiva ni un modo de ser, sino aquello que se posee» [\ldots] «la absoluta primacía del tener sobre el ser, que desde hace mucho tiempo ha caracterizado a nuestra cultura»\end{notagris}
+{\small ¿Para qué se reflexiona sobre la idea de “bien” en la lectura?}
+\vspace{0.4em}
+\alternativa{A}{Para destacar la valoración cultural de la posesión.}
+\alternativa{B}{Para ilustrar la evolución del concepto de posesión.}
+\alternativa{C}{Para resaltar el estatus social que otorga la posesión.}
+\alternativa{D}{Para graficar el poder absoluto que brinda la posesión.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El conector «por ejemplo» anuncia la función.}
-  {\small
-  \paso{1}{La primera oración afirma que los hábitos pequeños transforman la salud.}
-  \paso{2}{El caso de Pedro muestra esa afirmación en una situación concreta: la ejemplifica.}
-  }
-  \alternativaok{C}{Ejemplificar la afirmación previa.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir una alternativa que resume el fragmento en vez de explicar para qué está.
-    \item Acertar el verbo pero no el contenido (ilustrar, sí, pero otra idea).
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Función de un fragmento o recurso}
+\framesubtitle{Al reflexionar sobre el bien, el emisor muestra que nuestra cultura valora las cosas por lo que se poseen, más que por lo que son.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El texto parte del origen de la palabra: las cosas que se poseen son «bienes», y su totalidad constituye el «patrimonio», con referencia al pater.}
+\paso{2}{Pero la reflexión no es etimológica. El texto afirma que «la idea de “bien” coincide con la de cosa poseída»: un bien no es una entidad positiva ni un modo de ser, sino algo que se posee.}
+\paso{3}{De ahí concluye que se da «la absoluta primacía del tener sobre el ser, que desde hace mucho tiempo ha caracterizado a nuestra cultura». El concepto sirve para mostrar una valoración cultural de la posesión.}
+\paso{4}{Las demás opciones no corresponden: el texto no narra una historia del concepto (B), no menciona el estatus social (C) y el poder absoluto (D) aparece en otro punto. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Competencia Lectora, pregunta 52}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} El texto no menciona el estatus social. Su énfasis está en el tener frente al ser, una valoración cultural, y no en un prestigio que otorga la posesión.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Lectura de relatos: personajes, tiempo y espacio}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Caracteriza a un personaje por sus acciones y palabras.
-    \item El narrador en primera persona solo conoce lo que vive.
-    \item Interpreta la figura según el contexto del relato.
-  \end{itemize}
-  \begin{cajaclave}[Figuras frecuentes]\footnotesize
+\begin{frame}{Ejercicio 2 · Función de un fragmento o recurso}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 31}
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 4»:} «enmudecieron los relojes, los vendedores de frutas y balcones» [\ldots] «silencioso, fuera de toda voluntad»\end{notagris}
+\begin{center}\recorte{img/lectora-2026-invierno/q31.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Función de un fragmento o recurso}
+\framesubtitle{La detención de autos, bicicletas, relojes y personas, junto con el seguimiento silencioso de la gente, muestra una fascinación colectiva ante la diva.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El fragmento describe una detención general: los autos y las bicicletas se detienen y hasta los relojes y los vendedores enmudecen, como si el tiempo cotidiano quedara en suspenso.}
+\paso{2}{Antes del fragmento el texto explica el comportamiento de la gente: los que miraban a la diva la seguían en silencio, «fuera de toda voluntad».}
+\paso{3}{Esa mezcla de quietud, silencio y seguimiento sin voluntad propia es la reacción de quien queda atrapado por la mirada de otro: una fascinación al mirarla, alternativa C.}
+\paso{4}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2025, Competencia Lectora, pregunta 31}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Inquietud por su recorrido: el recorrido genera atención, pero el texto no describe inquietud; la gente la mira y la acompaña.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Lectura de relatos: personajes, tiempo y espacio}
+
+\begin{frame}{Lectura de relatos: personajes, tiempo y espacio}
+\label{tema-cl-literario}
+\framesubtitle{Interpretar · Teoría · 4,6 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Caracteriza a un personaje por sus acciones y palabras.
+\item El narrador en primera persona solo conoce lo que vive.
+\item Interpreta la figura según el contexto del relato.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica quién narra y desde qué perspectiva.\item Reúne las acciones y palabras del personaje o el contexto de la figura.\item Elige la interpretación que se sostiene en todo el texto.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir al narrador ideas de un personaje.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Figuras frecuentes]\footnotesize
 Comparación: «sonó como una respiración». Metáfora: «la ciudad es un hormiguero». Personificación: «el viento susurraba». Hipérbole: «te lo dije mil veces».
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Lectura de relatos: personajes, tiempo y espacio}
-  {\small «Mi abuelo era un roble: había resistido dos guerras, tres mudanzas y la muerte de su mejor amigo sin que nadie lo viera llorar.»
-
-¿Qué se destaca del abuelo con la expresión «era un roble»?}
-  \vspace{0.4em}
-  \alternativa{A}{Su gran estatura.}
-  \alternativa{B}{Su fortaleza ante la adversidad.}
-  \alternativa{C}{Su amor por la naturaleza.}
-  \alternativa{D}{Su edad avanzada.}
+\begin{frame}{Ejercicio 1 · Lectura de relatos: personajes, tiempo y espacio}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 37}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 4»:} «se conservan en vitrinas custodiadas» [\ldots] «las llaves de la suite nupcial, la toalla, los cortinajes, son parte del inapreciable tesoro, patrimonio que yo cuido fervorosamente»\end{notagris}
+{\small ¿Qué tesoro del museo cuida la narradora?}
+\vspace{0.4em}
+\alternativa{A}{Los mapas de las ciudades que recorrió la diva.}
+\alternativa{B}{Los objetos cotidianos usados por la diva.}
+\alternativa{C}{La estatua de la figura de la diva.}
+\alternativa{D}{El cuaderno de poemas que utilizó la diva.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La metáfora se explica en lo que sigue: resistió hechos duros sin quebrarse.}
-  {\small
-  \paso{1}{Identifica la metáfora: el abuelo es un roble (árbol resistente).}
-  \paso{2}{Los ejemplos que siguen (guerras, mudanzas, pérdidas) apuntan a la fortaleza.}
-  }
-  \alternativaok{B}{Su fortaleza ante la adversidad.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir al narrador ideas de un personaje.
-    \item Interpretar literalmente una expresión figurada.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Lectura de relatos: personajes, tiempo y espacio}
+\framesubtitle{La narradora cuida los objetos cotidianos que usó la diva, como las llaves, la toalla y los cortinajes, que forman parte del tesoro del museo.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{El museo del pueblo está dedicado a la diva y contiene las sábanas que ella usó para dormir, que se conservan en vitrinas custodiadas.}
+\paso{2}{La narradora dice que el «inapreciable tesoro» incluye «las llaves de la suite nupcial, la toalla, los cortinajes», y que ella lo cuida «fervorosamente».}
+\paso{3}{Son objetos de uso cotidiano de la diva y no mapas, obras de arte ni documentos; el texto los presenta como reliquias personales que la narradora protege.}
+\paso{4}{Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Competencia Lectora, pregunta 37}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} La estatua de la diva: la estatua es «orgullo de la ciudad» y se ubica en el espacio público, no en el museo, y la narradora no dice que la cuide.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\begin{frame}{Ejercicio 2 · Lectura de relatos: personajes, tiempo y espacio}
+\framesubtitle{Fuente: PAES Regular 2024, Competencia Lectora, pregunta 63}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 8»:} «Concesiones públicas e inversiones privadas» [\ldots] «sumado a la preferencia por la gestión ferroviaria, el Estado, representado por la Intendencia de Valparaíso, no se comprometía con el desarrollo de los balnearios porteños»\end{notagris}
+{\small ¿Cuál es la intención de la sección “\textbf{Concesiones públicas e inversiones privadas}”?}
+\vspace{0.4em}
+\alternativa{A}{Explicar los daños que causó la extensión de la línea férrea en la zona costera.}
+\alternativa{B}{Criticar la acción de las empresas que intervinieron los balnearios de la ciudad.}
+\alternativa{C}{Evidenciar el desinterés del Estado en el desarrollo de actividades recreativas.}
+\alternativa{D}{Describir la infraestructura del borde costero de Valparaíso durante el año 1870.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Lectura de relatos: personajes, tiempo y espacio}
+\framesubtitle{La sección muestra que el Estado no se comprometió con los balnearios: dejó las concesiones a los intereses privados y ferroviarios.}
+\begin{ajustar}[0.64\textheight]
+{\small
+\paso{1}{La sección explica que las concesiones estatales permitían a privados cobrar entradas para financiar sus inversiones, pero que también debían ser autorizadas por el superintendente del ferrocarril y no perjudicar el funcionamiento del tren.}
+\paso{2}{Muestra un caso en que la concesión fue rechazada por causar molestias al tráfico de la estación Bellavista. Luego afirma que el Estado no se comprometió con el desarrollo de los balnearios, aunque conocía sus beneficios higiénicos, terapéuticos y recreativos.}
+\paso{3}{Así, la sección evidencia el desinterés del Estado en el desarrollo de actividades recreativas. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Regular 2024, Competencia Lectora, pregunta 63}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Explicar los daños que causó la extensión de la línea férrea en la zona costera. Ese daño se describe en la sección anterior. Esta sección trata de las concesiones y de la autorización de la empresa ferroviaria.\end{notagris}
+\end{ajustar}
 \end{frame}
 
 \section{Evaluar}
 
-\begin{frame}[plain]
-  \vfill
-  {\color{zinc500}\small Eje}\par\vspace{0.3em}{\Large\bfseries Evaluar}\par\vspace{0.6em}
-  {\color{zinc700} Juzgar la intención, la información, la forma, la postura del emisor y la relación con nuevos contextos.}\par\vspace{1em}
-  {\small\color{zinc500} Intención comunicativa del emisor, Juzgar la información y los argumentos, Juzgar la forma: registro, estructura y recursos, Posición, actitud y tono del emisor, Recursos no lingüísticos: imágenes, tablas y diseño, Relación con nuevos textos y contextos}
-  \vfill
-\end{frame}
+\subsection{Intención comunicativa del emisor}
 
-\begin{frame}[allowframebreaks]{Intención comunicativa del emisor}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Intención = para qué se escribió el texto completo.
-    \item El cierre del texto suele revelar lo que el emisor quiere lograr.
-    \item Un texto puede informar como medio para convencer.
-  \end{itemize}
-  \begin{cajaclave}[Intenciones frecuentes]\footnotesize
+\begin{frame}{Intención comunicativa del emisor}
+\label{tema-cl-intencion}
+\framesubtitle{Evaluar · Teoría · 3,0 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Intención = para qué se escribió el texto completo.
+\item El cierre del texto suele revelar lo que el emisor quiere lograr.
+\item Un texto puede informar como medio para convencer.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el tipo de texto y su posible destinatario.\item Pregúntate qué cambio busca el emisor en quien lee.\item Descarta alternativas que solo describen el contenido o una parte del texto.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Confundir el tema del texto con su intención.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Intenciones frecuentes]\footnotesize
 Informar o dar a conocer, explicar, persuadir o convencer, criticar o denunciar, advertir, exhortar (llamar a actuar), conmover. La alternativa correcta nombra la intención \textbf{y} su destinatario o tema.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Intención comunicativa del emisor}
-  {\small Una carta al director termina así: «Por eso, antes de aprobar el nuevo cobro, pido a las autoridades que escuchen a los vecinos del sector».
-
-¿Cuál es el propósito principal de la carta?}
-  \vspace{0.4em}
-  \alternativa{A}{Informar sobre el nuevo cobro.}
-  \alternativa{B}{Describir el barrio de los vecinos.}
-  \alternativa{C}{Solicitar a las autoridades que consideren la opinión de los vecinos.}
-  \alternativa{D}{Explicar cómo se aprueba un cobro.}
+\begin{frame}{Ejercicio 1 · Intención comunicativa del emisor}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 48}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «¿Qué es un escritor?» [\ldots] «cómo escribir» [\ldots] «La respuesta, por desgracia, no es una»\end{notagris}
+{\small Respecto de la acción de escribir, ¿cuál es el propósito de la emisora?}
+\vspace{0.4em}
+\alternativa{A}{Justificar el rol del escritor en la sociedad.}
+\alternativa{B}{Reflexionar sobre el oficio del escritor.}
+\alternativa{C}{Proponer un método para la escritura.}
+\alternativa{D}{Analizar el proceso de escritura.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El cierre expresa lo que el emisor pide.}
-  {\small
-  \paso{1}{La carta menciona el cobro, pero no busca solo informarlo.}
-  \paso{2}{El verbo «pido» y el destinatario («las autoridades») muestran una solicitud.}
-  }
-  \alternativaok{C}{Solicitar a las autoridades que consideren la opinión de los vecinos.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Confundir el tema del texto con su intención.
-    \item Elegir la intención de un párrafo y no la del texto completo.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Intención comunicativa del emisor}
+\framesubtitle{La emisora reflexiona sobre qué es un escritor y sobre las dificultades del oficio de escribir, sin proponer un método.}
+\begin{ajustar}[0.70\textheight]
+{\small
+\paso{1}{El ensayo parte con la pregunta «¿Qué es un escritor?» y describe la experiencia de escribir, desde «la página en blanco» hasta que «surge la primera letra».}
+\paso{2}{Luego distingue entre quien escribe y quien tiene «facilidad para escribir», y advierte que el aprendizaje «consume tiempo, exige sacrificios y muy frecuentemente rinde fracasos».}
+\paso{3}{Cuando pregunta «cómo escribir», responde que «la respuesta, por desgracia, no es una»: no entrega una receta ni un método, sino que examina posturas distintas sobre el oficio.}
+\paso{4}{Todo el texto está orientado a pensar qué significa el oficio de escritor y sus exigencias. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Competencia Lectora, pregunta 48}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} La emisora afirma que «la respuesta, por desgracia, no es una», lo que va en contra de ofrecer un método. Por eso esta alternativa no coincide con la lectura.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Juzgar la información y los argumentos}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Primero identifica la tesis; después evalúa cada alternativa contra ella.
-    \item La concesión reconoce algo del adversario antes de refutarlo.
-    \item «Debilita» exige que el dato afecte directamente el argumento central.
-  \end{itemize}
-  \begin{cajaclave}[Estrategias argumentativas]\footnotesize
+\begin{frame}{Ejercicio 2 · Intención comunicativa del emisor}
+\framesubtitle{Fuente: PAES Regular 2024, Competencia Lectora, pregunta 56}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 7»:} «Ruta de la Seguridad Social. Guía informativa de derechos y beneficios» [\ldots] «Mi Primer Contrato de Trabajo»\end{notagris}
+{\small Con respecto a la Seguridad Social, ¿cuál es el propósito de la cartilla informativa?}
+\vspace{0.4em}
+\alternativa{A}{Detallar las responsabilidades contractuales que debe asumir un empleador.}
+\alternativa{B}{Describir los beneficios previsionales que deben otorgarse a los trabajadores.}
+\alternativa{C}{Explicar los derechos que posee una persona que firma un contrato laboral.}
+\alternativa{D}{Presentar las leyes que protegen a las personas que ingresan al mundo laboral.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Intención comunicativa del emisor}
+\framesubtitle{La cartilla es una guía para que la persona trabajadora conozca sus derechos y beneficios desde que firma un contrato.}
+\begin{ajustar}[0.70\textheight]
+{\small
+\paso{1}{Revisa el título y la portada: se trata de una guía informativa de derechos y beneficios, dirigida a la persona que trabaja.}
+\paso{2}{Revisa las estaciones: la 1 explica qué es el contrato de trabajo, qué debe contener y en qué plazo debe firmarse; la 2 explica las cotizaciones; la 3 explica las causales de término. Todas describen derechos y deberes del trabajador frente a su contrato.}
+\paso{3}{Como el contenido se organiza en torno a los derechos que posee quien firma un contrato, esa es la finalidad de la cartilla. Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Regular 2024, Competencia Lectora, pregunta 56}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Presenta las leyes que protegen a las personas que ingresan al mundo laboral. La cartilla cita normas, pero su propósito es informar derechos y beneficios de forma práctica, no presentar leyes como tema central.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Juzgar la información y los argumentos}
+
+\begin{frame}{Juzgar la información y los argumentos}
+\label{tema-cl-argumentos}
+\framesubtitle{Evaluar · Teoría · 3,9 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Primero identifica la tesis; después evalúa cada alternativa contra ella.
+\item La concesión reconoce algo del adversario antes de refutarlo.
+\item «Debilita» exige que el dato afecte directamente el argumento central.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Formula la tesis del emisor en una oración.\item Identifica el argumento central que la sostiene.\item Evalúa qué alternativa afecta (apoya o debilita) directamente ese argumento.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir una alternativa sobre el tema que no toca el argumento central.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Estrategias argumentativas]\footnotesize
 Ejemplificación, cita de autoridad, datos o estadísticas, analogía, concesión («es cierto que\ldots{} pero\ldots{}»), contraargumentación y apelación a valores.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Juzgar la información y los argumentos}
-  {\small «Las ciudades deberían reemplazar los estacionamientos del centro por ciclovías: así se reduce la congestión, porque más personas dejarían el auto.»
-
-¿Cuál de las siguientes afirmaciones, de ser verdadera, DEBILITA el argumento?}
-  \vspace{0.4em}
-  \alternativa{A}{Las ciclovías son más baratas que los estacionamientos.}
-  \alternativa{B}{En ciudades que lo hicieron, la cantidad de autos en el centro no varió.}
-  \alternativa{C}{Andar en bicicleta mejora la salud.}
-  \alternativa{D}{Muchas personas ya usan bicicleta en el centro.}
+\begin{frame}{Ejercicio 1 · Juzgar la información y los argumentos}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 56}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «durante centurias la guerra fue el único medio de adquirir algo inaccesible para los pueblos sin otros recursos» [\ldots] «durante mucho tiempo la piratería fue considerada más honorable que el comercio»\end{notagris}
+{\small A partir de la lectura, ¿qué similitud existió entre la piratería y la guerra?}
+\vspace{0.4em}
+\alternativa{A}{Ambas buscaban la conquista de territorio.}
+\alternativa{B}{Ambas impulsaron el crecimiento comercial.}
+\alternativa{C}{Ambas fueron formas válidas de apropiación.}
+\alternativa{D}{Ambas fueron potenciadas como medida estatal.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El argumento supone que más personas dejarían el auto; B muestra que no ocurre.}
-  {\small
-  \paso{1}{Tesis: reemplazar estacionamientos por ciclovías reduce la congestión.}
-  \paso{2}{Razón: más personas dejarían el auto.}
-  \paso{3}{B contradice esa razón con evidencia; A y C hablan de otros beneficios.}
-  }
-  \alternativaok{B}{En ciudades que lo hicieron, la cantidad de autos en el centro no varió.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir una alternativa sobre el tema que no toca el argumento central.
-    \item Confundir la opinión del emisor con la de una voz citada.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Juzgar la información y los argumentos}
+\framesubtitle{Según el texto, la piratería y la guerra fueron formas válidas de apropiarse de cosas, y la propiedad nace de una apropiación previa.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El último párrafo presenta la guerra como medio de adquirir: «durante centurias la guerra fue el único medio de adquirir algo inaccesible para los pueblos sin otros recursos».}
+\paso{2}{Después dice que ese era «el modo más común de adquirir propiedad», y que por eso «la piratería fue considerada más honorable que el comercio».}
+\paso{3}{Así, ambas aparecen como maneras de apropiarse de cosas, y el texto lo resume: «en su forma primordial, la propiedad no es transmitida ni heredada, es arrebatada».}
+\paso{4}{Se descartan las demás opciones: la conquista de territorio es propia de la guerra y no de la piratería; el texto compara la piratería con el comercio solo para decir que era más honorable, no que impulsara el comercio; y no hay mención de una potenciación estatal.}
+\paso{5}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Competencia Lectora, pregunta 56}
+\begin{notagris}\scriptsize \textbf{Si marcaste B:} El texto compara la piratería con el comercio para decir que la primera era más honorable, no que ambas impulsaran el crecimiento comercial.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Juzgar la forma: registro, estructura y recursos}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Identifica primero el propósito y el destinatario.
-    \item Juzga el recurso por su aporte, no por tu gusto.
-    \item Un título adecuado anticipa el tema y la intención.
-  \end{itemize}
-  \begin{cajaclave}[Criterios]\footnotesize
+\begin{frame}{Ejercicio 2 · Juzgar la información y los argumentos}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 28}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 4»:} «Las mujeres asistieron por una curiosidad punzante, dispuestas a encontrarla fea, mal vestida o por lo menos, decir que no era para tanto» [\ldots] «enmudecieron de gozo y de tristeza por no ser ella»\end{notagris}
+{\small Una lectora afirma que el cuento transmite un estereotipo sobre la competitividad en el género femenino, ¿en cuál de las siguientes situaciones se fundamenta esta opinión?}
+\vspace{0.4em}
+\alternativa{A}{En la actitud de la recepcionista al atender a la diva en el hotel.}
+\alternativa{B}{En la motivación de las mujeres para asistir al recital de la diva.}
+\alternativa{C}{En el afán de la narradora por destacar su diferencia de edad con la diva.}
+\alternativa{D}{En el hecho de que algunas opinan que la diva es una vieja poeta fracasada.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Juzgar la información y los argumentos}
+\framesubtitle{La competitividad aparece en la reacción de las mujeres que acuden al recital, dispuestas a encontrar defectos en la diva, y esa situación sostiene la opinión de la lectora.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El texto describe la llegada de las mujeres al recital con una actitud crítica: van «dispuestas a encontrarla fea, mal vestida» o a decir que «no era para tanto».}
+\paso{2}{Al ver a la diva, reaccionan con «gozo y tristeza por no ser ella». La comparación con la diva se vuelve el eje de la reacción femenina, y eso es lo que la lectora interpreta como rivalidad.}
+\paso{3}{Las otras situaciones no muestran competencia entre mujeres: la recepcionista muestra devoción al entregar las llaves, la narradora se presenta como la más pequeña del auditorio y la opinión de la poeta fracasada proviene de un visitante, no de las mujeres del pueblo.}
+\paso{4}{Así, la opinión se apoya en la motivación de las mujeres para asistir al recital. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Competencia Lectora, pregunta 28}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} La actitud de la recepcionista: al entregar las llaves de la habitación nupcial «en un impulso irresistible», muestra devoción ante la diva y no competencia entre mujeres.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Juzgar la forma: registro, estructura y recursos}
+
+\begin{frame}{Juzgar la forma: registro, estructura y recursos}
+\label{tema-cl-forma}
+\framesubtitle{Evaluar · Teoría · 1,7 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Identifica primero el propósito y el destinatario.
+\item Juzga el recurso por su aporte, no por tu gusto.
+\item Un título adecuado anticipa el tema y la intención.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el propósito del texto y su destinatario.\item Describe qué aporta el recurso evaluado.\item Elige la alternativa que justifica el juicio con ese aporte.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir una valoración subjetiva sin respaldo en el texto.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Criterios]\footnotesize
 Pertinencia: ¿aporta al propósito? Adecuación: ¿corresponde al destinatario y la situación? Coherencia: ¿es consistente con el resto del texto?
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Juzgar la forma: registro, estructura y recursos}
-  {\small Un afiche municipal para niños sobre el lavado de manos usa dibujos coloridos y la frase «¡Jabón y agua, y los bichos se van a casa!».
-
-¿Por qué el lenguaje del afiche es adecuado?}
-  \vspace{0.4em}
-  \alternativa{A}{Porque usa términos científicos precisos.}
-  \alternativa{B}{Porque es simple y lúdico, acorde a su público infantil.}
-  \alternativa{C}{Porque está escrito en un registro formal.}
-  \alternativa{D}{Porque presenta estadísticas de enfermedades.}
+\begin{frame}{Ejercicio 1 · Juzgar la forma: registro, estructura y recursos}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 60}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 7»:} «no se trata solo de levantar un techo o entregar alimentos, es también entregar un apoyo emocional; es compartir una sonrisa, extender una mano y entregar una palabra que marca una diferencia importante»\end{notagris}
+{\small ¿Qué aspecto destaca Isidora Lazcano en su visión sobre el voluntariado?}
+\vspace{0.4em}
+\alternativa{A}{El componente afectivo.}
+\alternativa{B}{El componente organizativo.}
+\alternativa{C}{El componente motivacional.}
+\alternativa{D}{El componente territorial.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La adecuación se juzga respecto del destinatario: niños.}
-  {\small
-  \paso{1}{Destinatario: niños; propósito: promover el lavado de manos.}
-  \paso{2}{La rima y los «bichos» simplifican el mensaje y lo vuelven memorable.}
-  }
-  \alternativaok{B}{Porque es simple y lúdico, acorde a su público infantil.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir una valoración subjetiva sin respaldo en el texto.
-    \item Ignorar el destinatario al evaluar el registro.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Juzgar la forma: registro, estructura y recursos}
+\framesubtitle{La cita de Isidora Lazcano pone el acento en el apoyo emocional que entrega el voluntariado: compartir una sonrisa, extender una mano y dar esperanza a quienes lo han perdido todo.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{Lazcano parte delimitando el voluntariado: «no se trata solo de levantar un techo o entregar alimentos». Con esa frase separa lo material de otra dimensión que quiere destacar.}
+\paso{2}{Esa otra dimensión es «es también entregar un apoyo emocional», que describe con gestos concretos: «compartir una sonrisa, extender una mano y entregar una palabra».}
+\paso{3}{Remata con la idea de que ese apoyo es «la esperanza que tanto se necesita en momentos de desesperación», dirigida a quienes «lo han perdido todo». El énfasis está en el efecto emocional sobre las personas afectadas.}
+\paso{4}{Las demás dimensiones no son el énfasis de la cita: no describe cómo se organiza el trabajo, ni el lugar de intervención, y la motivación aparece solo de paso, al hablar del compromiso de los jóvenes. Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2026, Competencia Lectora, pregunta 60}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} La frase sobre los territorios afectados pertenece al relato de la crónica y no a la cita de Lazcano. Ella no habla del lugar de intervención, sino de lo que se entrega a las personas.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Posición, actitud y tono del emisor}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item La actitud se infiere de cómo se dice, no solo de qué se dice.
-    \item Ironía: se dice lo contrario de lo que se piensa.
-    \item Un texto informativo puede tener tono neutro y aun así dejar ver una postura.
-  \end{itemize}
-  \begin{cajaclave}[Marcas de valoración]\footnotesize
+\begin{frame}{Ejercicio 2 · Juzgar la forma: registro, estructura y recursos}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 45}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 5»:} «Agentes privados (empresas, asociaciones privadas, profesionales, artistas, cultores y cultoras e industrias culturales)»\end{notagris}
+{\small Según la lectura, ¿cuál de los siguientes es un agente cultural privado?}
+\vspace{0.4em}
+\alternativa{A}{Cultores.}
+\alternativa{B}{Fundaciones.}
+\alternativa{C}{Gobiernos comunales.}
+\alternativa{D}{Organizaciones comunitarias.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Juzgar la forma: registro, estructura y recursos}
+\framesubtitle{El texto clasifica a los agentes en públicos, privados y del tercer sector; los cultores son agentes privados.}
+\begin{ajustar}[0.70\textheight]
+{\small
+\paso{1}{El texto distingue tres grupos: agentes públicos («servicios del Estado, gobiernos regionales, gobiernos comunales»), agentes privados («empresas, asociaciones privadas, profesionales, artistas, cultores y cultoras e industrias culturales») y agentes del tercer sector («fundaciones, asociaciones, ONG, organizaciones comunitarias y agrupaciones varias»).}
+\paso{2}{La opción A, «cultores», figura en la lista de agentes privados.}
+\paso{3}{Los gobiernos comunales son agentes públicos, mientras que las fundaciones y las organizaciones comunitarias pertenecen al tercer sector.}
+\paso{4}{Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Competencia Lectora, pregunta 45}
+\begin{notagris}\scriptsize \textbf{Si marcaste C:} Los gobiernos comunales son parte del Estado, por eso aparecen como agentes públicos. Un agente privado no es estatal ni pertenece al tercer sector.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Posición, actitud y tono del emisor}
+
+\begin{frame}{Posición, actitud y tono del emisor}
+\label{tema-cl-postura}
+\framesubtitle{Evaluar · Teoría · 2,3 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item La actitud se infiere de cómo se dice, no solo de qué se dice.
+\item Ironía: se dice lo contrario de lo que se piensa.
+\item Un texto informativo puede tener tono neutro y aun así dejar ver una postura.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Subraya las palabras que valoran (positivas o negativas).\item Decide hacia qué elemento o idea apuntan.\item Elige el adjetivo de actitud que resume esas marcas.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Atribuir al emisor la opinión de una persona que él cita.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Marcas de valoración]\footnotesize
 Adjetivos (absurdo, valioso), adverbios (lamentablemente), verbos de opinión (creo, parece evidente), comillas irónicas, preguntas retóricas, exclamaciones. Un mismo hecho contado con distintas marcas revela posturas distintas.
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Posición, actitud y tono del emisor}
-  {\small «Otra vez el municipio "solucionó" el problema de los baches: pintó las calles y dejó los hoyos intactos.»
-
-¿Qué actitud adopta el emisor frente al municipio?}
-  \vspace{0.4em}
-  \alternativa{A}{Admirativa.}
-  \alternativa{B}{Neutral.}
-  \alternativa{C}{Irónica y crítica.}
-  \alternativa{D}{Temerosa.}
+\begin{frame}{Ejercicio 1 · Posición, actitud y tono del emisor}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 45}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 5»:} «cargada de sentido al máximo posible» [\ldots] «Si poetizar es sintetizar, si la gracia de la poesía radica en su capacidad de condensar el pensamiento en imagen y sonido, no puede ser adecuada la lectura analítica de un poema»\end{notagris}
+{\small ¿Con qué postura sobre la poesía el emisor manifiesta afinidad?}
+\vspace{0.4em}
+\alternativa{A}{Con la de George Steiner.}
+\alternativa{B}{Con la de su amigo artista.}
+\alternativa{C}{Con la de los poetas.}
+\alternativa{D}{Con la de Ezra Pound.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{Las comillas en «solucionó» indican que dice lo contrario de lo que piensa.}
-  {\small
-  \paso{1}{«Otra vez» sugiere que el error se repite.}
-  \paso{2}{Las comillas y el contraste final (pintó, pero dejó los hoyos) muestran crítica irónica.}
-  }
-  \alternativaok{C}{Irónica y crítica.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Atribuir al emisor la opinión de una persona que él cita.
-    \item Elegir una actitud demasiado intensa para marcas leves.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Posición, actitud y tono del emisor}
+\framesubtitle{El emisor se alinea con Ezra Pound, para quien la poesía es palabra cargada de sentido y condensación, y por eso rechaza la lectura analítica de los poemas.}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El texto presenta a Pound: la poesía es «palabra cargada de sentido al máximo posible» y el término alemán «Dichtung» significa «condensar».}
+\paso{2}{El emisor usa esa misma idea como premisa: si poetizar es sintetizar y la gracia de la poesía está en condensar el pensamiento, la lectura analítica no es adecuada para un poema.}
+\paso{3}{Esa conclusión coincide con la de Pound: la poesía concentra sentido y, por lo tanto, no debe descomponerse. Esa es la afinidad que el emisor declara al citarlo.}
+\paso{4}{Steiner y el amigo artista aparecen para discrepar y no para compartir postura: Steiner representa el lápiz en mano, y el amigo raya libros de pintura «con consternación».}
+\paso{5}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Competencia Lectora, pregunta 45}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Steiner representa la lectura «lápiz en mano» que el emisor rechaza para la poesía. Citarlo sirve para discrepar, no para manifestar afinidad con él.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Recursos no lingüísticos: imágenes, tablas y diseño}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item El título dice qué representa el gráfico.
-    \item Fíjate en las unidades y en la fuente.
-    \item Integra la información de dos bloques cuando la pregunta lo pide.
-  \end{itemize}
-  \begin{cajaclave}[Orden de lectura]\footnotesize
+\begin{frame}{Ejercicio 2 · Posición, actitud y tono del emisor}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 51}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 6»:} «rectifiquemos» [\ldots] «procuraremos» [\ldots] «quedamos»\end{notagris}
+{\small En la lectura, ¿qué efecto busca lograr en el lector la incorporación de expresiones como “rectifiquemos”, “procuraremos”, “quedamos” y “entendemos”?}
+\vspace{0.4em}
+\alternativa{A}{Que se incline por una postura sobre los escritores.}
+\alternativa{B}{Que se involucre en la reflexión acerca de los escritores.}
+\alternativa{C}{Que se incluya en la tarea de definir la labor de los escritores.}
+\alternativa{D}{Que se interese por profundizar en el estudio de los escritores.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Posición, actitud y tono del emisor}
+\framesubtitle{Las formas de primera persona plural asocian al lector con la reflexión, en lugar de entregarle una tesis cerrada.}
+\begin{ajustar}[0.70\textheight]
+{\small
+\paso{1}{Las cuatro expresiones están en primera persona plural: la emisora rectifica, fija acuerdos o aclara conceptos en conjunto. El yo de la autora se convierte en un nosotros.}
+\paso{2}{Ese nosotros incluye al lector en el razonamiento: se corrige una idea («rectifiquemos»), se fijan acuerdos («quedamos en que\ldots{}») y se precisan conceptos («entendemos aquí\ldots{}»).}
+\paso{3}{El efecto es que el lector acompaña el proceso de pensar y evaluar posturas, en lugar de recibir una tesis ya cerrada. Por lo tanto, la alternativa correcta es la B.}
+}
+\respuesta{B}{PAES Invierno 2025, Competencia Lectora, pregunta 51}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} La emisora no busca que el lector se incline por una postura. Presenta el arte purista y el comprometido y concluye que «ninguno» está en lo justo.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Recursos no lingüísticos: imágenes, tablas y diseño}
+
+\begin{frame}{Recursos no lingüísticos: imágenes, tablas y diseño}
+\label{tema-cl-multimodal}
+\framesubtitle{Evaluar · Teoría · 1,0 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item El título dice qué representa el gráfico.
+\item Fíjate en las unidades y en la fuente.
+\item Integra la información de dos bloques cuando la pregunta lo pide.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Identifica el tema y la organización de la infografía.\item Ubica los bloques relevantes para la pregunta.\item Integra la información y contrasta con las alternativas.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Leer un dato de la columna o fila equivocada.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Orden de lectura]\footnotesize
 Título $\rightarrow$ subtítulos y leyendas $\rightarrow$ datos destacados $\rightarrow$ notas y fuentes. Pregunta: ¿qué relación muestra el gráfico o la imagen con el texto?
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Recursos no lingüísticos: imágenes, tablas y diseño}
-  {\small Una infografía titulada «Agua que no ves» indica: «1 kg de carne de vacuno: 15 000 L de agua. 1 kg de trigo: 1500 L. 1 taza de café: 140 L».
-
-¿Qué propósito tiene presentar estas cifras?}
-  \vspace{0.4em}
-  \alternativa{A}{Mostrar cuánta agua se usa al producir alimentos.}
-  \alternativa{B}{Recomendar no consumir café.}
-  \alternativa{C}{Comparar precios de alimentos.}
-  \alternativa{D}{Explicar cómo se cultiva el trigo.}
+\begin{frame}{Ejercicio 1 · Recursos no lingüísticos: imágenes, tablas y diseño}
+\framesubtitle{Fuente: PAES Invierno 2025, Competencia Lectora, pregunta 4}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 1»:} «bono demográfico» [\ldots] «el grueso de la población se concentra en edades jóvenes» [\ldots] «amplía el tamaño de la población económicamente activa»\end{notagris}
+{\small A partir de la lectura, ¿qué implica el “bono demográfico” para una sociedad?}
+\vspace{0.4em}
+\alternativa{A}{Que aumenta su población en edad laboral.}
+\alternativa{B}{Que entrega incentivos para aumentar la natalidad.}
+\alternativa{C}{Que impulsa el incremento de la esperanza de vida.}
+\alternativa{D}{Que intenta frenar el envejecimiento de la población.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{El título («Agua que no ves») y las cifras apuntan al agua usada en la producción.}
-  {\small
-  \paso{1}{Las cifras son litros de agua asociados a cada alimento.}
-  \paso{2}{El título destaca que esa agua no es visible para el consumidor: informa sobre el agua usada al producir.}
-  }
-  \alternativaok{A}{Mostrar cuánta agua se usa al producir alimentos.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Leer un dato de la columna o fila equivocada.
-    \item Ignorar las notas o la fuente, que pueden cambiar la interpretación.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Recursos no lingüísticos: imágenes, tablas y diseño}
+\framesubtitle{El bono demográfico describe una población en que hay muchas personas en edad de trabajar y pocas dependientes, lo que amplía la población económicamente activa.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{Ubica el concepto: en la etapa plena la estructura etaria envejece lentamente y el texto afirma que «esta situación ha sido denominada como el “bono demográfico”». Se trata de una característica de la población, no de una política pública.}
+\paso{2}{Explica qué lo define: hay bajos niveles de dependencia en ambos extremos de la edad, es decir, pocos menores de 15 años y pocos mayores de 60 años en proporción al total de la población.}
+\paso{3}{Conecta con la consecuencia: al concentrarse la población en edades jóvenes, se amplía el tamaño de la población económicamente activa. En otras palabras, la proporción de personas en edad de trabajar aumenta.}
+\paso{4}{El texto concluye que esta situación es «especialmente favorable para el desarrollo económico». Por lo tanto, la alternativa correcta es la A.}
+}
+\respuesta{A}{PAES Invierno 2025, Competencia Lectora, pregunta 4}
+\begin{notagris}\scriptsize \textbf{Si marcaste D:} Frenar el envejecimiento: el bono convive con un envejecimiento lento de la población; el texto lo describe como una situación que se produce mientras la fecundidad desciende, no como un mecanismo para detener el envejecimiento.\end{notagris}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Relación con nuevos textos y contextos}
-  \framesubtitle{Teoría esencial}
-  \begin{itemize}\small
-    \item Primero resume en una línea la idea del texto.
-    \item El caso nuevo debe cumplir esa idea, no solo compartir el tema.
-    \item Compartir palabras no es lo mismo que compartir la idea.
-  \end{itemize}
-  \begin{cajaclave}[Tipos de relación]\footnotesize
+\begin{frame}{Ejercicio 2 · Recursos no lingüísticos: imágenes, tablas y diseño}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 17}
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 2»:} «la síntesis de la perfección anatómica»\end{notagris}
+\begin{center}\recorte{img/lectora-2027-invierno/q17.png}\end{center}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
+\end{frame}
+
+\begin{frame}{Solución 2 · Recursos no lingüísticos: imágenes, tablas y diseño}
+\framesubtitle{La obra es el Hombre de Vitruvio de Leonardo, que la lectura presenta como síntesis de la perfección anatómica del cuerpo humano. Por eso representa el intento de ilustrar esa perfección.}
+\begin{ajustar}[0.58\textheight]
+{\footnotesize
+\paso{1}{La obra mostrada es el Hombre de Vitruvio, identificado en el pie de la imagen como de Da Vinci (c. 1490). La lectura se refiere a ella como el célebre Studio de Leonardo, en la Real Academia de Venecia.}
+\paso{2}{El dibujo presenta una figura humana con sus proporciones precisas, inscrita en un círculo y en un cuadrado. Esa inscripción refleja la visión del hombre como centro del Universo y la aplicación de la sección áurea que el texto describe.}
+\paso{3}{La lectura lo define como «la síntesis de la perfección anatómica», y explica que la aplicación de las proporciones tuvo gran resonancia durante el Renacimiento. El dibujo es, entonces, una ilustración de esa perfección.}
+\paso{4}{Las otras opciones no corresponden a la obra: la intención de esquematizar la visión medieval, la base de la medicina y la tradición galénica no se representan en este dibujo. Por lo tanto, la temática representada es el intento de ilustrar la perfección anatómica del cuerpo humano.}
+\paso{5}{Se descartan las demás opciones. La A contrasta el Renacimiento con la visión medieval, pero el dibujo es una obra renacentista y no un esquema medieval. La B es el tema general de la lectura, que retoma el cuerpo humano como base del saber médico, pero la obra ilustra la perfección de las proporciones y no su aplicación médica. La D contrasta a Leonardo con la doctrina galénica en el texto, pero el Hombre de Vitruvio no es una representación de esa doctrina.}
+\paso{6}{Por lo tanto, la alternativa correcta es la C.}
+}
+\respuesta{C}{PAES Invierno 2026, Competencia Lectora, pregunta 17}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Afirma que la obra intenta esquematizar la visión medieval del cuerpo. La lectura sí contrasta el Renacimiento con la visión medieval, lo que tienta a elegirla. Pero el dibujo es una obra renacentista de Leonardo, no un esquema de la Edad Media.\end{notagris}
+\end{ajustar}
+\end{frame}
+
+\subsection{Relación con nuevos textos y contextos}
+
+\begin{frame}{Relación con nuevos textos y contextos}
+\label{tema-cl-contextos}
+\framesubtitle{Evaluar · Teoría · 0,1 preguntas por prueba}
+\begin{ajustar}
+\begin{columns}[T,onlytextwidth]
+\column{0.52\textwidth}
+\begin{itemize}\footnotesize
+\item Primero resume en una línea la idea del texto.
+\item El caso nuevo debe cumplir esa idea, no solo compartir el tema.
+\item Compartir palabras no es lo mismo que compartir la idea.
+\end{itemize}
+\column{0.44\textwidth}
+\begin{cajaregla}[Regla práctica]\scriptsize \begin{enumerate}\item Formula la idea central o la tesis del texto.\item Prueba cada alternativa: ¿la idea se cumple en ese caso o en ese texto?\item Descarta las que solo coinciden en el tema.\end{enumerate}\end{cajaregla}
+\begin{notagris}\scriptsize \textbf{Error común:} Elegir una alternativa del mismo tema pero con otra idea.\end{notagris}
+\end{columns}
+\begin{cajaclave}[Tipos de relación]\footnotesize
 Similitud (dicen lo mismo con otros ejemplos), diferencia u oposición (sostienen ideas contrarias), complementariedad (una aporta lo que a la otra le falta), aplicación (un caso nuevo que cumple la idea del texto).
-  \end{cajaclave}
+\end{cajaclave}
+\end{ajustar}
 \end{frame}
 
-\begin{frame}{Desafío}
-  \framesubtitle{Relación con nuevos textos y contextos}
-  {\small Un texto sostiene que «la memoria se fortalece cuando se recupera la información, no cuando se relee».
-
-¿Cuál de las siguientes situaciones ilustra mejor esa idea?}
-  \vspace{0.4em}
-  \alternativa{A}{Leer tres veces un resumen antes de la prueba.}
-  \alternativa{B}{Subrayar con colores el libro de estudio.}
-  \alternativa{C}{Responder preguntas de práctica sin mirar los apuntes.}
-  \alternativa{D}{Copiar a mano las definiciones.}
+\begin{frame}{Ejercicio 1 · Relación con nuevos textos y contextos}
+\framesubtitle{Fuente: PAES Invierno 2026, Competencia Lectora, pregunta 19}
+\begin{ajustar}[0.7\textheight]
+\begin{notagris}\scriptsize \textbf{Fragmento clave de «Lectura 3»:} «Era el hombre que yo había estado dibujando, aquel cuyo retrato estaba en mi bolsillo» [\ldots] «Había algo antinatural, siniestro, en haber encontrado a aquel hombre»\end{notagris}
+{\small ¿En qué situación el protagonista siente por primera vez que sucede algo sobrenatural?}
+\vspace{0.4em}
+\alternativa{A}{Cuando despierta de su ensoñación tras hablar con un niño.}
+\alternativa{B}{Cuando descubre una lápida con sus datos de nacimiento.}
+\alternativa{C}{Cuando se siente afectado por las temperaturas extremas.}
+\alternativa{D}{Cuando se encuentra con el mismo hombre de su dibujo.}
+\end{ajustar}
+\vfill{\tiny\color{zinc500}\hfill Anota tu alternativa: la solución está en la lámina siguiente.}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Solución}
-  \framesubtitle{La idea es recuperar información, no volver a leerla.}
-  {\small
-  \paso{1}{A, B y D son formas de releer o repasar.}
-  \paso{2}{Solo C obliga a recuperar lo aprendido desde la memoria.}
-  }
-  \alternativaok{C}{Responder preguntas de práctica sin mirar los apuntes.}
-  \begin{cajatrampa}\footnotesize
-    \begin{itemize}
-    \item Elegir una alternativa del mismo tema pero con otra idea.
-    \item Llevar la idea más allá de lo que el texto permite.
-    \end{itemize}
-  \end{cajatrampa}
+\begin{frame}{Solución 1 · Relación con nuevos textos y contextos}
+\framesubtitle{La primera señal de algo sobrenatural aparece al ver al hombre idéntico a su dibujo, antes de leer la lápida. Lo que el narrador siente primero es un «algo antinatural, siniestro».}
+\begin{ajustar}[0.64\textheight]
+{\footnotesize
+\paso{1}{El narrador había dibujado a un criminal en el banquillo tras un ensueño provocado por el calor. Guardó el boceto en el bolsillo sin saber por qué, de modo que el dibujo es el punto de partida de la extrañeza.}
+\paso{2}{Al entrar al patio, el narrador ve a un hombre que es «el hombre que yo había estado dibujando». La coincidencia física entre el dibujo y la persona real es el primer hecho inexplicable del relato.}
+\paso{3}{Enseguida, el narrador anota que «había algo antinatural, siniestro, en haber encontrado a aquel hombre», y trata de convencerse de que debió verlo antes. Esa es la primera sensación de algo sobrenatural, porque no hay una explicación racional que la resuelva.}
+\paso{4}{El escalofrío que recorre su espalda viene después, cuando lee la lápida con su propio nombre. Por eso ese momento no es el primero, sino la confirmación del presentimiento.}
+\paso{5}{Por lo tanto, la primera sensación de algo sobrenatural ocurre al encontrarse con el mismo hombre de su dibujo, y la alternativa correcta es la D.}
+\paso{6}{Se descartan las demás opciones. La A corresponde al niño que lo despierta preguntándole la hora, que no tiene nada sobrenatural y solo pone fin al ensueño. La B corresponde a la lápida, donde el miedo se confirma, pero no es el primer momento. La C confunde el calor, que es un malestar físico real descrito como «un calor infernal», con algo inexplicable.}
+\paso{7}{Por lo tanto, la alternativa correcta es la D.}
+}
+\respuesta{D}{PAES Invierno 2026, Competencia Lectora, pregunta 19}
+\begin{notagris}\scriptsize \textbf{Si marcaste A:} Asocia la sensación con el momento en que despierta de su ensoñación. El niño solo lo despierta preguntándole la hora; allí no hay nada sobrenatural. El relato presenta ese despertar como el fin de un ensueño causado por el calor, no como una señal de algo extraño.\end{notagris}
+\end{ajustar}
 \end{frame}
 %%</CONTENIDO>%%
 

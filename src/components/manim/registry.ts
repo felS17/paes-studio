@@ -2,7 +2,9 @@ import type { SceneId, SceneValues } from './sceneMap'
 import type { SceneProps } from './sceneProps'
 import { ConditionalScene, BoxplotScene, DispersionScene, ProbabilityScene } from './scenesData'
 import { FigurasScene, ThalesScene } from './scenesGeometry'
+import { FunctionsScene } from './scenesFunctions'
 import { HomotheticScene, LineScene, TrigonometryScene, VectorsScene } from './scenesPlane'
+import { MotionScene, ReactionScene, TectonicsScene, WavesScene } from './scenesScience'
 import { fmt } from './manimMath'
 
 export interface ChoiceParam {
@@ -163,6 +165,58 @@ export const SCENES: Record<SceneId, SceneMeta> = {
       { kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'arbol', label: 'árbol' }, { value: 'binomial', label: 'binomial' }, { value: 'conteo', label: 'conteo' }] },
       { kind: 'choice', key: 'n', label: 'n', when: modeIs('binomial'), custom: String, options: [{ value: '4', label: '4' }, { value: '6', label: '6' }, { value: '10', label: '10' }] },
       { kind: 'choice', key: 'p', label: 'p', when: modeIs('binomial'), custom: String, options: [{ value: '1/4', label: '1/4' }, { value: '1/2', label: '1/2' }, { value: '3/4', label: '3/4' }] },
+    ],
+  },
+  funciones: {
+    title: 'funciones',
+    description: 'Gráficas de la función afín (pendiente y coeficiente de posición), la cuadrática (vértice, eje de simetría y discriminante), la exponencial y la inversa.',
+    durationMs: 5500,
+    defaults: { modo: 'afin', m: '2', caso: 'dos', base: '2' },
+    Component: FunctionsScene,
+    params: [
+      { kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'afin', label: 'afín' }, { value: 'cuadratica', label: 'cuadrática' }, { value: 'exponencial', label: 'exponencial' }, { value: 'inversa', label: 'inversa' }] },
+      { kind: 'choice', key: 'm', label: 'pendiente', when: modeIs('afin'), options: [{ value: '2', label: 'm = 2' }, { value: '0.5', label: 'm = 0,5' }, { value: '-1', label: 'm = −1' }] },
+      { kind: 'choice', key: 'caso', label: 'discriminante', when: modeIs('cuadratica'), options: [{ value: 'dos', label: 'Δ > 0' }, { value: 'una', label: 'Δ = 0' }, { value: 'ninguna', label: 'Δ < 0' }, { value: 'abajo', label: 'a < 0' }] },
+      { kind: 'choice', key: 'base', label: 'base', when: modeIs('exponencial'), options: [{ value: '2', label: 'b = 2' }, { value: '0.5', label: 'b = 1/2' }] },
+    ],
+  },
+  ondas: {
+    title: 'ondas y luz',
+    description: 'Una onda que avanza con su longitud de onda y amplitud, y la luz que se refleja en un espejo o se refracta al entrar al agua.',
+    durationMs: 6000,
+    defaults: { modo: 'onda', f: 'baja', theta: 40 },
+    Component: WavesScene,
+    params: [
+      { kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'onda', label: 'onda' }, { value: 'reflexion', label: 'reflexión' }, { value: 'refraccion', label: 'refracción' }] },
+      { kind: 'choice', key: 'f', label: 'frecuencia', when: modeIs('onda'), options: [{ value: 'baja', label: 'baja' }, { value: 'alta', label: 'alta' }] },
+      { kind: 'range', key: 'theta', label: 'ángulo', min: 15, max: 75, step: 5, format: (value) => `${value}°`, when: modeIs('reflexion', 'refraccion') },
+    ],
+  },
+  reaccion: {
+    title: 'reacción química',
+    description: 'Los átomos de los reactantes se reordenan en los productos: se conserva la masa y se ve qué reactivo se acaba primero.',
+    durationMs: 6000,
+    defaults: { modo: 'balance' },
+    Component: ReactionScene,
+    params: [{ kind: 'choice', key: 'modo', label: 'qué ver', options: [{ value: 'balance', label: 'conservación' }, { value: 'limitante', label: 'reactivo limitante' }] }],
+  },
+  tectonica: {
+    title: 'tectónica de placas',
+    description: 'Bordes de placa en corte: la subducción de Nazca bajo la Sudamericana con hipocentro y epicentro, un borde divergente y uno transformante.',
+    durationMs: 6000,
+    defaults: { modo: 'convergente' },
+    Component: TectonicsScene,
+    params: [{ kind: 'choice', key: 'modo', label: 'borde', options: [{ value: 'convergente', label: 'convergente' }, { value: 'divergente', label: 'divergente' }, { value: 'transformante', label: 'transformante' }] }],
+  },
+  movimiento: {
+    title: 'mru y mrua',
+    description: 'Un móvil marca su posición cada segundo; al lado, su gráfico posición–tiempo (MRU) o velocidad–tiempo con el área como desplazamiento (MRUA).',
+    durationMs: 6500,
+    defaults: { modo: 'mru', v: '4' },
+    Component: MotionScene,
+    params: [
+      { kind: 'choice', key: 'modo', label: 'movimiento', options: [{ value: 'mru', label: 'mru' }, { value: 'mrua', label: 'mrua' }] },
+      { kind: 'choice', key: 'v', label: 'velocidad', when: modeIs('mru'), options: [{ value: '2', label: '2 m/s' }, { value: '4', label: '4 m/s' }] },
     ],
   },
 }
