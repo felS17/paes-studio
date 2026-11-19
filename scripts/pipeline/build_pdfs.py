@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Compila los compendios y presentaciones de latex/output/ a PDF y los publica en public/pdfs/.
 
-Los .tex se compilan tal cual (pdfLaTeX, dos pasadas para el índice y el total de diapositivas).
+Los .tex se compilan tal cual (pdfLaTeX, dos pasadas para el índice y el total de diapositivas, y una tercera si
+LaTeX la pide).
 Si al TeX Live local le faltan dependencias que tcolorbox carga pero estos documentos no usan
 (tikzfill.image, pdfcol, listingsutf8), se agregan a TEXINPUTS solo los sustitutos de latex/compat/
 que correspondan; si el paquete real existe, se usa el real.
@@ -42,7 +43,10 @@ def needed_shims() -> list[Path]:
 
 def compile_one(tex: Path, build: Path, env: dict[str, str]) -> tuple[Path, int, list[str]]:
     log_path = build / f"{tex.stem}.log"
-    for _ in range(2):
+    # Dos pasadas (índice y total de láminas) y una tercera solo si LaTeX la pide (posiciones de TikZ en la portada).
+    for attempt in range(3):
+        if attempt == 2 and "Rerun to get" not in log_path.read_text(errors="replace"):
+            break
         r = subprocess.run(
             ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", f"-output-directory={build}", tex.name],
             cwd=OUTPUT, env=env, capture_output=True, text=True, errors="replace",

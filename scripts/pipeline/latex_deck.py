@@ -32,6 +32,12 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
+
+# Acento de cada materia en las portadas (y en los esquemas de Ciencias). Todos oscuros: el texto blanco de la
+# banda tiene contraste ≥ 6,9:1 y en blanco y negro se imprime como un gris medio.
+ACCENTS = {"m1": "1D4E89", "m2": "4B2A7B", "lectora": "8A1C3B", "ciencias": "0E6655", "historia": "7A4310"}
+COVER_NAMES = {"m1": "Matemática M1", "m2": "Matemática M2", "lectora": "Competencia Lectora", "ciencias": "Ciencias",
+               "historia": "Historia y Ciencias Sociales"}
 PUBLIC = ROOT / "public"
 OUTPUT = ROOT / "latex" / "output"
 IMG_DIR = OUTPUT / "img"
@@ -173,6 +179,9 @@ def build_deck(subject: str, temario: dict, exams: list[dict], tx, *, text_ok, d
         rf"\title[Resumen PAES: {esc(short)}]{{Resumen PAES}}",
         rf"\subtitle{{{esc(temario['nombre'])}}}",
         rf"\date{{{esc(date_text)}}}",
+        rf"\definecolor{{acento}}{{HTML}}{{{ACCENTS.get(subject, '18181B')}}}",
+        rf"\renewcommand{{\portadaMateria}}{{{esc(COVER_NAMES.get(subject, short))}}}",
+        r"\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}",
         rf"\renewcommand{{\portadaDetalle}}{{{esc(f'{len(subs)} temas del temario 2027 y {n_ex} ejercicios de pruebas oficiales del DEMRE (admisiones {years[0]} a {years[-1]})')}}}",
     ])
 

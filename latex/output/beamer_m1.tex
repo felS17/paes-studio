@@ -73,14 +73,36 @@
   \hspace*{1.6cm}{\color{zinc500}\tiny\insertshorttitle\ifx\insertsubsection\empty\else\ · \insertsubsection\fi}\hfill
   {\color{zinc500}\tiny\ttfamily\insertpagenumber\,/\,\insertpresentationendpage}\hspace*{1.6cm}\par\vspace*{0.7em}%
 }
+% Portada: banda vertical con el color de la materia (\definecolor{acento} en META), título grande en Latin
+% Modern Sans Quotation y el nombre del sitio. Un solo diseño para todas las guías: solo cambia el color. El texto blanco va
+% sobre acentos oscuros (contraste ≥ 6,9:1), así que también se lee impresa en blanco y negro.
+\newcommand{\portadaMateria}{Matemática M1}
+\newcommand{\portadaProceso}{Proceso de Admisión 2027}
+\newcommand{\portadaFuente}[1]{{\fontfamily{lmssq}\selectfont #1}}
+\newcommand{\logoSitio}[1]{%
+  \begin{tikzpicture}[baseline=-0.6ex]
+    \fill[#1, rounded corners=1.2pt] (0,-0.17) rectangle (0.34,0.17);
+    \foreach \x/\h in {0.08/0.10, 0.17/0.18, 0.26/0.06} \fill[acento] (\x-0.025,-0.11) rectangle (\x+0.025,-0.11+\h);
+  \end{tikzpicture}}
 \setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[acento] (current page.north west) rectangle ([xshift=4.4cm]current page.south west);
+    \fill[acento!14] ([xshift=-0.2cm,yshift=0.2cm]current page.south east) circle (2.6cm);
+    \fill[white, opacity=0.12] ([xshift=4.4cm,yshift=-2.1cm]current page.north west) circle (1.5cm);
+    \node[anchor=north west, text=white, inner sep=0, align=left] at ([xshift=0.7cm,yshift=-0.75cm]current page.north west)
+      {\portadaFuente{\bfseries\fontsize{26}{26}\selectfont PAES}\\[5pt]\portadaFuente{\fontsize{26}{26}\selectfont 2027}};
+    \node[anchor=south west, text=white, inner sep=0] at ([xshift=0.7cm,yshift=0.65cm]current page.south west)
+      {\logoSitio{white}\hspace{4pt}{\sffamily\small\bfseries PAES Studio}};
+  \end{tikzpicture}%
   \vfill
-  {\color{zinc500}\small PAES Studio}\par\vspace{0.6em}
-  {\usebeamerfont{title}\bfseries\Huge\color{zinc950}\inserttitle}\par\vspace{0.5em}
-  {\large\color{zinc700}\insertsubtitle}\par\vspace{1.2em}
-  {\color{zinc300}\rule{0.35\textwidth}{0.4pt}}\par\vspace{0.6em}
-  {\small\color{zinc700}\portadaDetalle}\par\vspace{0.4em}
-  {\small\color{zinc500}\insertdate}\par
+  \hspace*{3.4cm}\begin{minipage}{9.2cm}\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+    {\sffamily\scriptsize\bfseries\color{acento} RESUMEN PAES\quad·\quad TEORÍA Y EJERCICIOS OFICIALES}\par\vspace{0.7em}
+    {\portadaFuente{\bfseries\fontsize{25}{29}\selectfont\color{zinc950}\portadaMateria\par}}\vspace{0.55em}
+    {\color{acento}\rule{2.2cm}{2pt}}\par\vspace{0.55em}
+    {\sffamily\large\color{zinc700}\portadaProceso}\par\vspace{0.9em}
+    {\sffamily\footnotesize\color{zinc700}\portadaDetalle}\par\vspace{0.35em}
+    {\sffamily\scriptsize\color{zinc500}\insertdate}
+  \end{minipage}
   \vfill
 }
 
@@ -141,6 +163,9 @@
 \title[Resumen PAES: Competencia Matemática 1]{Resumen PAES}
 \subtitle{Competencia Matemática 1 (M1)}
 \date{19 de noviembre de 2026}
+\definecolor{acento}{HTML}{1D4E89}
+\renewcommand{\portadaMateria}{Matemática M1}
+\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}
 \renewcommand{\portadaDetalle}{16 temas del temario 2027 y 30 ejercicios de pruebas oficiales del DEMRE (admisiones 2024 a 2027)}
 %%</META>%%
 

@@ -245,6 +245,10 @@ def build_guide(subject: str, exams: list[dict]) -> str:
         rf"\newcommand{{\guiaAsignatura}}{{{_escape_text(temario['nombre'])}}}",
         rf"\newcommand{{\guiaDescripcion}}{{{_escape_text(temario['intro'])}}}",
         rf"\newcommand{{\guiaFuente}}{{{_escape_text(f'{len(temario['ejes'])} ejes y {n_sub} subtemas. Frecuencias calculadas sobre {len(exams)} ensayos ({official} oficiales DEMRE), {total} preguntas. Generado el {today_es()}.')}}}",
+        rf"\definecolor{{acento}}{{HTML}}{{{latex_deck.ACCENTS.get(subject, '18181B')}}}",
+        rf"\renewcommand{{\portadaMateria}}{{{_escape_text(latex_deck.COVER_NAMES.get(subject, temario['nombre']))}}}",
+        r"\renewcommand{\portadaProceso}{Proceso de Admisión 2027 · PAES Regular}",
+        rf"\renewcommand{{\portadaDetalle}}{{{_escape_text(f'{len(temario['ejes'])} ejes y {n_sub} subtemas del temario 2027, con teoría, método, trampas frecuentes y ejemplos resueltos. {today_es()}.')}}}",
     ])
     body = [r"\section*{Cómo usar este compendio}",
             "Cada subtema sigue el mismo orden: teoría, recuadro con las fórmulas, leyes o mecanismos centrales, "
