@@ -1,13 +1,22 @@
+import { lazy, Suspense } from 'react'
 import { MathText } from '@/components/math/MathText'
 import type { SubtopicNote } from '@/types/temario'
 
-/** Nota del subtema: teoría, recuadro, ideas clave y trampas frecuentes del DEMRE. */
+// Los diagramas de Ciencias viven en su propio chunk: solo se descargan al abrir un tema de Ciencias.
+const ScienceDiagram = lazy(() => import('@/components/science/ScienceDiagram').then((m) => ({ default: m.ScienceDiagram })))
+
+/** Nota del subtema: esquema (Ciencias), teoría, recuadro, ideas clave y trampas frecuentes del DEMRE. */
 export function SubtopicNoteView({ id, notes }: { id: string; notes: Record<string, SubtopicNote> | null }) {
   const note = notes?.[id]
   if (!notes) return <p className="text-[13px] text-zinc-500">Cargando la nota…</p>
   if (!note) return null
   return (
     <div className="space-y-3 text-[13.5px] leading-relaxed">
+      {id.startsWith('cs-') && (
+        <Suspense fallback={<div className="aspect-[9/5] rounded-lg border border-zinc-200/80 dark:border-zinc-800/80" aria-hidden />}>
+          <ScienceDiagram id={id} />
+        </Suspense>
+      )}
       {note.theory.map((p, i) => (
         <MathText key={i} text={p} className="text-zinc-700 dark:text-zinc-300" />
       ))}
