@@ -61,6 +61,8 @@ export interface Question {
   snapshot?: Snapshot
   textQuality?: 'clean' | 'approximate'
   explanation?: Explanation
+  /** Pregunta oficial copiada en un ensayo curado: id de la original (`m1-2025-regular-q06`). */
+  origin?: string
 }
 
 export interface Passage {

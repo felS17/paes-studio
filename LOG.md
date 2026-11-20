@@ -24,6 +24,7 @@
 - **v2.7.1 (2026-11-08):** auditoría del pipeline contra el banco (sin cambios en los datos), carpetas y clavijeros verificados y `README.md` con badges e instalación desde `git clone`.
 - **v2.7.2 (2026-11-08):** sin nombre completo ni correo personal en el código y la documentación, video de presentación de 30 s y borrador del post para Reddit.
 - **v2.8 (2026-11-09):** temario alineado al DEMRE de la Admisión 2027 en las 5 materias: 77 subtemas vigentes (23 nuevos), 8 fuera del temario aparte, 868 preguntas reclasificadas, guías PDF recompiladas.
+- **v2.9 (2026-11-20):** revisión de intentos en flujo vertical a todo el ancho, flashcards más grandes en escritorio, tipografía con más presencia en `/ensayos`, 10 ensayos curados nuevos con preguntas oficiales del banco (63 ensayos, 15 curados) y 12 guías de ejercicios resueltos (48 ejercicios).
 
 ---
 
@@ -732,6 +733,13 @@ El rediseño de la Fase 3 (íconos y colores por asignatura, portadas y barras m
 
 ---
 
+### [2026-11-20] - v2.9: revisión ancha, flashcards grandes, más curados y ejercicios resueltos
+- **Revisión de intentos:** se eliminó el grid lado a lado (`lg:grid-cols-[1fr_1.4fr]`) que dejaba estrecha la columna de revisión. `cómo te fue por eje` ocupa todo el ancho con `AxisRadar` en 2 o 3 columnas, y `revisa tus respuestas` va debajo. `QuestionCard` y `SolutionAccordion` aceptan `wide`: tope de 1040 px, enunciado de 16,5 px (`max-w-[75ch]`) y explicación de 15,5 px; la escena Manim, que es `w-full`, crece con ellos.
+- **Flashcards:** la sesión pasa de `max-w-2xl` a `lg:max-w-4xl xl:max-w-5xl`; la tarjeta, a `lg:min-h-[27rem]` con `lg:p-12`, frente de 27 px y reverso de 20 px limitados a 52 y 68 caracteres por línea. Los botones de calificación quedan centrados en `max-w-3xl`.
+- **`/ensayos`:** `PageHeader` admite `large` (28/34 px); los grupos pasan del mono de 12 px a 21/24 px semibold y las filas a 16/17 px medium, con más aire (`min-h-12`, `space-y-10`). `Segmented` suma el tamaño `lg`, usado en el filtro de materia. Sin cajas nuevas.
+- **Ensayos curados 2 y 3 (`build_curated_bank.py`):** 10 ensayos con 281 preguntas oficiales que tienen explicación, puntúan y caen en un subtema vigente. Reparto por eje según el peso de cada eje en las pruebas oficiales y rotación por subtema (de la prueba más reciente a la más antigua), sin repetir preguntas entre curados. Lectora toma 3 lecturas completas de pruebas distintas. Cada copia lleva id propio (`m1-curado-2-q01`) y `origin` con el id oficial: el índice no la cuenta en `subtopicQuestions` ni en `explainedQuestions`, `assign_subtopics.py` la salta (sigue en 3.137 preguntas asignadas y 0 ensayos actualizados), `sceneForQuestion` usa el año de la original y `QuestionCard` muestra «PAES Invierno 2024, pregunta 6». `validate:exams` comprueba que cada copia conserve clave y alternativas. `sortExams` desempata por id para que el curado 1 vaya antes que el 2.
+- **Ejercicios resueltos (`build_guides.py`):** 12 guías (M1: porcentaje, potencias y raíces, ecuaciones e inecuaciones, función afín, Pitágoras y áreas, tablas y promedio; M2: logaritmos, cuadrática, razones trigonométricas, probabilidad condicional; Ciencias: MRU y MRUA, estequiometría) con 4 ejercicios cada una: alternativas en el formato de la prueba, resumen, pasos y trampas. Se muestran en la pestaña `ejercicios resueltos` de `guías` con `QuestionCard` en modo práctica (elegir, verificar y abrir la explicación con voz), más `resumen` y `practicar oficiales`. Las explicaciones van con la etiqueta de redactadas con IA. `validate:exams` compila en KaTeX los enunciados, alternativas y pasos.
+
 ## Comandos
 | Comando | Qué hace |
 | --- | --- |
@@ -956,3 +964,12 @@ APP_PAES/
 - [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores.
 - [ ] Revisar en la app el desplegable `fuera del temario 2027` y los resúmenes nuevos (a cargo del autor).
 - [ ] Revisión docente de los 23 resúmenes nuevos y de una muestra de la reclasificación (a cargo del autor).
+
+### v2.9
+- [x] `ResultsPage`: `cómo te fue por eje` a todo el ancho y compacto; `revisa tus respuestas` debajo, con pregunta, explicación, voz y escena en `wide`.
+- [x] Flashcards: sesión hasta `max-w-5xl`, tarjeta de 27 rem, frente a 27 px y reverso a 20 px en escritorio.
+- [x] `/ensayos`: título de portada, grupos y filas más grandes; filtro de materia en tamaño `lg`; curados distinguidos por número.
+- [x] `build_curated_bank.py`: curados 2 y 3 de las 5 materias (281 preguntas oficiales copiadas con `origin`), sin duplicarse en temas, prácticas ni desafío.
+- [x] `build_guides.py` + pestaña `ejercicios resueltos`: 12 guías y 48 ejercicios con KaTeX validado.
+- [x] `npm run lint`, `npm run build` y `npm run validate:exams` con 0 errores; `assign_subtopics.py --dry-run` con 0 ensayos actualizados.
+- [ ] Revisión visual en local (revisión ancha, flashcards y `/ensayos`, en escritorio y móvil) y revisión docente de los 48 ejercicios (a cargo del autor).

@@ -1,0 +1,1579 @@
+{
+ "id": "ciencias-curado-2",
+ "subject": "ciencias",
+ "title": "Ensayo curado 2",
+ "description": "30 preguntas oficiales del DEMRE (pruebas rendidas de 2025 a 2026) que recorren los ejes de Ciencias, cada una con su explicación paso a paso y la prueba de la que viene.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 60,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   108,
+   132,
+   153,
+   173,
+   191,
+   209,
+   225,
+   240,
+   253,
+   267,
+   281,
+   296,
+   309,
+   320,
+   329,
+   337,
+   347,
+   358,
+   371,
+   385,
+   396,
+   405,
+   411,
+   417,
+   423,
+   430,
+   440,
+   452,
+   465,
+   477,
+   486,
+   493,
+   497,
+   502,
+   506,
+   512,
+   521,
+   532,
+   545,
+   557,
+   567,
+   575,
+   580,
+   585,
+   589,
+   595,
+   602,
+   613,
+   625,
+   638,
+   649,
+   658,
+   665,
+   670,
+   676,
+   684,
+   694,
+   706,
+   720,
+   732,
+   743,
+   752,
+   761,
+   772,
+   784,
+   798,
+   813,
+   828,
+   842,
+   857,
+   874,
+   893,
+   913,
+   934,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated_bank.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-curado-2-q01",
+   "number": 1,
+   "origin": "ciencias-biologia-2027-invierno-q01",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-celula",
+   "stem": "La científica estadounidense Lynn Margulis propuso la teoría endosimbiótica, para explicar el origen de algunos organelos celulares. Su propuesta consiste en que, hace unos 2500 millones de 𝑎ñ𝑜𝑠, la atmósfera terrestre ya poseía bastante oxígeno y algunos procariontes lo habrían utilizado para sus procesos metabólicos. En algún momento, estos organismos habrían sido ingeridos por células de mayor tamaño sin ser digeridos, dando origen a estructuras celulares y estableciéndose una relación de beneficio mutuo. En relación con lo anterior, ¿cuál de las siguientes opciones corresponde a la estructura celular que hacía referencia Lynn Margulis?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ribosoma."
+    },
+    {
+     "key": "B",
+     "text": "Mitocondria."
+    },
+    {
+     "key": "C",
+     "text": "Peroxisoma."
+    },
+    {
+     "key": "D",
+     "text": "Lisosoma."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La endosimbiosis explica el origen de la mitocondria: un procarionte que usaba oxígeno fue incorporado por una célula mayor sin ser digerido y se mantuvo dentro de ella.",
+    "planteamiento": "Se pide identificar el organelo al que se refiere la teoría endosimbiótica de Lynn Margulis. Datos del enunciado: hace unos $2\\,500$ millones de años la atmósfera ya tenía bastante oxígeno; los procariontes lo usaban en sus procesos metabólicos; fueron ingeridos sin ser digeridos y la relación terminó siendo de beneficio mutuo.",
+    "steps": [
+     "Identificar la primera pista metabólica: los procariontes usaban el oxígeno atmosférico «para sus procesos metabólicos». Eso corresponde a respiración aerobia, es decir, a obtener energía a partir de moléculas orgánicas con oxígeno.",
+     "Identificar la pista de origen: los organismos fueron «ingeridos por células de mayor tamaño sin ser digeridos» y la relación se volvió de «beneficio mutuo». Por lo tanto, el organelo es un antiguo procarionte que pasó a vivir dentro de una célula eucarionte.",
+     "Comparar con las opciones: el ribosoma sintetiza proteínas y no realiza respiración con oxígeno; el peroxisoma usa oxígeno en algunas oxidaciones, pero no tiene un origen endosimbiótico; el lisosoma digiere materiales, y el texto dice justamente que los procariontes no fueron digeridos.",
+     "Verificar que la mitocondria cumple las dos condiciones: realiza la respiración celular con oxígeno y conserva su propio ADN circular y ribosomas de tipo procarionte, que son evidencias de su origen endosimbiótico.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Ribosoma: sintetiza proteínas y no realiza metabolismo con oxígeno; se confunde solo porque también tiene características de origen bacteriano.",
+     "C": "Peroxisoma: realiza oxidaciones con oxígeno, lo que lo hace tentador, pero no se origina por endosimbiosis según el texto.",
+     "D": "Lisosoma: digiere materiales; el texto dice justamente que los procariontes no fueron digeridos, así que el lisosoma contradice el relato."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q02",
+   "number": 2,
+   "origin": "ciencias-biologia-2027-invierno-q03",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-celula",
+   "stem": "En un criadero de ganado de raza ocurrió un percance al quedar abiertos los corrales y se sospecha que existió una cruza no deseada entre animales. Con el fin de identificar a los toros que realizaron la inseminación, se recuperaron muestras vaginales de las vacas, para separar las fracciones hembra (células epiteliales) y macho (espermatozoides). De este modo se puede analizar el ADN de las células purificadas y obtener patrones genéticos puros. La siguiente figura ilustra las células involucradas y la tabla presenta algunas metodologías potencialmente utilizables para su análisis individual:\n\nCélula epitelial Espermatozoide\n\n10 𝑚𝑖𝑐𝑟ó𝑚𝑒𝑡𝑟𝑜𝑠 10 𝑚𝑖𝑐𝑟ó𝑚𝑒𝑡𝑟𝑜𝑠\n\nMétodo Fundamentación Se siembran las células en un medio de cultivo para que estas Cultivo celular proliferen y se dividan. Se aplica una solución de detergente suave que solubiliza las Solubilización células selectivamente según el tipo de lípidos presentes en sus membranas. Se aplica una centrifugación diferencial para que las células se Centrifugación distribuyan según su tamaño y peso. Se observan al microscopio las muestras de espermatozoides Microscopía de los machos.\n\nDe acuerdo con lo anterior, ¿cuál de las siguientes opciones indica el método apropiado para separar dichas células?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cultivo celular."
+    },
+    {
+     "key": "B",
+     "text": "Solubilización."
+    },
+    {
+     "key": "C",
+     "text": "Centrifugación."
+    },
+    {
+     "key": "D",
+     "text": "Microscopía."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q03.webp",
+    "width": 907,
+    "height": 1073,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La centrifugación diferencial separa células por tamaño y masa, y la célula epitelial, mucho más grande y pesada que el espermatozoide, se distingue fácilmente de él.",
+    "planteamiento": "Se pide el método apropiado para separar las células epiteliales (fracción hembra) de los espermatozoides (fracción macho) de una muestra vaginal. Datos: la figura dibuja ambas células con la misma barra de $10$ micrómetros; la célula epitelial es ancha y tiene un núcleo grande, y el espermatozoide tiene una cabeza pequeña y una cola muy delgada. La tabla entrega cuatro métodos con su fundamentación.",
+    "steps": [
+     "Comparar tamaño y masa con la escala. Ambas células están dibujadas con la misma barra de $10$ micrómetros: la célula epitelial es voluminosa, mientras que el espermatozoide tiene una cabeza pequeña y una cola muy delgada. Hay, por tanto, una diferencia clara de tamaño y de masa entre ambas.",
+     "Evaluar el cultivo celular: sembrar en un medio hace proliferar y dividirse a las células, pero no separa un tipo de otro. Además, los espermatozoides no se dividen en cultivo, así que la mezcla seguiría junta.",
+     "Evaluar la solubilización: el detergente suave disuelve lípidos de membrana, y ambas células tienen membrana lipídica. Por lo tanto, el detergente no discrimina entre ellas y no sirve para separarlas.",
+     "Evaluar la microscopía: permite observar y diferenciar visualmente las células, pero no las separa físicamente para analizar su ADN. Sirve para identificar, no para purificar cada fracción.",
+     "Aplicar la centrifugación diferencial: al centrifugar, las partículas más grandes y pesadas sedimentan antes que las pequeñas y livianas. Así se obtiene una fracción enriquecida en células epiteliales y otra con espermatozoides, que luego pueden analizarse por separado. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Cultivo celular: los espermatozoides no se dividen en cultivo y el método no separa las células; la mezcla queda igual que al inicio.",
+     "B": "Solubilización: el detergente disuelve lípidos de membrana, pero ambas células los tienen, así que no discrimina entre ellas.",
+     "D": "Microscopía: permite observar y diferenciar las células, pero no las separa para analizar su ADN; confundir observar con separar es el error típico."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q03",
+   "number": 3,
+   "origin": "ciencias-biologia-2027-invierno-q16",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-ecologia",
+   "stem": "Al interior de las células de una especie de salamandra (*Ambystoma maculatum*), coexisten células de un tipo de alga unicelular (*Oophila amblystomatis*). Mientras la salamandra presenta una dieta basada en pequeños organismos invertebrados (como gusanos o insectos), el alga realiza fotosíntesis en el interior de las células de este animal. En este contexto, si existiera evidencia de que estos organismos unicelulares están proporcionando los productos de la fotosíntesis a las células de la salamandra con las que coexisten, y de que las mitocondrias de la salamandra proveen los reactantes que necesitan las algas para este proceso, ¿cuál de las siguientes inferencias sería correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La nutrición del alga al interior de las células de la salamandra es de tipo heterótrofa."
+    },
+    {
+     "key": "B",
+     "text": "La nutrición de la salamandra al coexistir con las células del alga es de tipo autótrofa."
+    },
+    {
+     "key": "C",
+     "text": "La fotosíntesis del alga al interior de las células de la salamandra es más eficiente que la que podría realizar fuera de ellas."
+    },
+    {
+     "key": "D",
+     "text": "El carbono de las moléculas orgánicas producidas por el alga proviene de la respiración celular de la salamandra."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q16.webp",
+    "width": 907,
+    "height": 465,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si el alga entrega productos de la fotosíntesis y la mitocondria de la salamandra aporta el $\\mathrm{CO}_2$ que el alga necesita, el carbono orgánico del alga proviene de la respiración de la salamandra.",
+    "planteamiento": "Se pide la inferencia correcta, suponiendo que el alga entrega productos de la fotosíntesis a la salamandra y que las mitocondrias de la salamandra aportan los reactantes que el alga necesita. Datos: la fotosíntesis usa $\\mathrm{CO}_2$ y agua para producir materia orgánica; la salamandra se alimenta de invertebrados.",
+    "steps": [
+     "Identificar el tipo de nutrición del alga. Al realizar fotosíntesis, fabrica sus moléculas orgánicas a partir de $\\mathrm{CO}_2$ y agua; por lo tanto, es autótrofa y no heterótrofa.",
+     "Identificar el origen de un reactante. La mitocondria de la salamandra realiza respiración celular, proceso que libera $\\mathrm{CO}_2$. El enunciado indica que esas mitocondrias proveen los reactantes que el alga necesita.",
+     "Seguir el átomo de carbono. De los reactantes que aporta la mitocondria, el $\\mathrm{CO}_2$ es el que contiene carbono. Por lo tanto, el carbono que el alga incorpora a sus moléculas orgánicas proviene de la respiración celular de la salamandra.",
+     "Evaluar las demás opciones. La A confunde autótrofo con heterótrofo; la B asigna autotrofía a la salamandra, cuya dieta de invertebrados la hace heterótrofa; la C compara eficiencias que el texto no mide.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Nutrición heterótrofa del alga: el alga fotosintetiza, lo que la hace autótrofa; heterótrofa sería la que incorpora materia orgánica ya elaborada.",
+     "B": "Salamandra autótrofa: su dieta de gusanos e insectos la hace heterótrofa; la fotosíntesis la realiza el alga, no el animal.",
+     "C": "Mayor eficiencia dentro de la célula: el texto no compara eficiencias ni entrega datos que permitan afirmarlo; es una afirmación no respaldada."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q04",
+   "number": 4,
+   "origin": "ciencias-biologia-2027-invierno-q14",
+   "axis": "Biología",
+   "topic": "Biología",
+   "subtopic": "cs-evolucion",
+   "stem": "En la Isla Grande de Tierra del Fuego, un equipo de biólogos estudia las adaptaciones de comportamiento del pingüino rey (*Aptenodytes patagonicus*). Durante el período de crianza, observaron una conducta no documentada anteriormente: la formación de guarderías de polluelos, que parece ser una respuesta adaptativa a las duras condiciones climáticas y a la disponibilidad de su principal componente dietario, los peces mictófidos (peces fueguinos). El equipo indica que **este comportamiento sugiere un proceso de selección natural en**\n\n**desarrollo, donde los progenitores logran ubicar a sus polluelos en guarderías, lo que podría estar incrementando las posibilidades de**\n\n**sobrevivencia de su progenie**. Considerando lo anterior, ¿a qué componente de la investigación corresponde la frase en negrita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A una teoría."
+    },
+    {
+     "key": "B",
+     "text": "A una inferencia."
+    },
+    {
+     "key": "C",
+     "text": "A un modelo."
+    },
+    {
+     "key": "D",
+     "text": "A un resultado."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una conclusión deducida de una observación que todavía debe probarse corresponde a una inferencia, y así está formulada la frase en negrita.",
+    "planteamiento": "Se pide identificar el componente de la investigación al que corresponde la frase en negrita. Datos: la frase habla de un proceso de selección natural «en desarrollo» y de una posibilidad de que las guarderías incrementen la sobrevivencia de la progenie; usa expresiones como «sugiere» y «podría estar».",
+    "steps": [
+     "Identificar el tipo de afirmación. La frase no describe lo que se midió directamente, sino lo que el equipo deduce. Las expresiones «sugiere» y «podría estar incrementando» indican una posibilidad y no una comprobación.",
+     "Ubicar el punto de partida. La observación es la conducta de formar guarderías. A partir de ella se propone un proceso de selección natural, que es una conclusión deducida y no un dato medido.",
+     "Comparar con las otras categorías. Un resultado es un dato medido directamente, un modelo es una representación simplificada del sistema y una teoría tiene amplio respaldo; la frase no cumple esas definiciones.",
+     "Concluir que una deducción a partir de observaciones, que todavía debe contrastarse, corresponde a una inferencia. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Una teoría: la selección natural lo es, pero la frase habla de un proceso «en desarrollo» y sin ese respaldo; la trampa es confundir el concepto general con la afirmación específica.",
+     "C": "Un modelo: la frase no presenta una representación simplificada del sistema; solo propone una explicación para una conducta observada.",
+     "D": "Un resultado: la conducta de formar guarderías sí es un resultado observado, pero la frase en negrita agrega una explicación que no se midió."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q05",
+   "number": 5,
+   "origin": "ciencias-biologia-2027-invierno-q10",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-genetica",
+   "stem": "En un estudio desarrollado en cultivos celulares, un grupo de investigación descubrió un posible mecanismo de acción de una toxina sobre la división celular. Un primer hallazgo apunta al efecto inhibitorio sobre un grupo de proteínas que tienen un efecto sobre la segregación cromosómica. Sumado a esto, se demostró una inhibición de moléculas que modulan la apoptosis (muerte celular programada). A partir de los resultados obtenidos por el grupo de investigación, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las células tratadas con la toxina detendrán su ciclo celular en la etapa de replicación, inhibiendo la mitosis en profase."
+    },
+    {
+     "key": "B",
+     "text": "Las células tratadas con la toxina presentarán una metafase más prolongada, a la espera de una reparación del material genético."
+    },
+    {
+     "key": "C",
+     "text": "Las células tratadas con la toxina experimentarán una anafase defectuosa, seguido de un proceso de división celular descontrolado."
+    },
+    {
+     "key": "D",
+     "text": "Las células tratadas con la toxina retornarán a un estado metafásico para proceder a reparar el ADN dañado y así continuar con el ciclo celular."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una toxina que inhibe proteínas de segregación cromosómica deja defectuosa la anafase, y al bloquear la apoptosis las células dañadas sobreviven y siguen dividiéndose.",
+    "planteamiento": "Se pide la inferencia correcta a partir de dos hallazgos: la inhibición de proteínas que participan en la segregación cromosómica y la inhibición de moléculas que modulan la apoptosis. Datos: ambos efectos se atribuyen a la misma toxina.",
+    "steps": [
+     "Ubicar la segregación cromosómica en el ciclo. Las proteínas que la controlan actúan en la anafase, etapa en la que las cromátidas hermanas se separan y se dirigen a polos opuestos.",
+     "Inferir el efecto del primer hallazgo. Si esas proteínas están inhibidas, las cromátidas no se separan correctamente y la anafase queda defectuosa. Es un error en la separación de los cromosomas, no una detención en la replicación.",
+     "Inferir el efecto del segundo hallazgo. La apoptosis elimina las células con errores. Si sus moléculas reguladoras están inhibidas, las células dañadas no mueren y continúan dividiéndose.",
+     "Combinar ambos efectos. La anafase defectuosa produce células con cromosomas mal repartidos, y la falta de apoptosis permite que esas células sobrevivan, lo que se traduce en una división celular descontrolada.",
+     "Descartar las demás. La replicación ocurre en la fase S y no en la profase; el texto tampoco menciona reparación del ADN ni retención en metafase. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Detención en replicación con inhibición en profase: la replicación ocurre en la fase S, y el dato apunta a la segregación de cromosomas, propia de la anafase; la opción mezcla etapas distintas.",
+     "B": "Metafase prolongada a la espera de reparación: el texto no menciona reparación del ADN ni una retención en metafase; es una inferencia sin base en los hallazgos.",
+     "D": "Retorno a metafase para reparar el ADN: los datos no describen que las células regresen a etapas anteriores; el ciclo avanza y la falla aparece en la anafase."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q06",
+   "number": 6,
+   "origin": "ciencias-biologia-2027-invierno-q11",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-genetica",
+   "stem": "Un grupo de estudiantes observa con un microscopio células en división mitótica. La profesora les solicita que seleccionen una célula de las que observan e identifiquen la etapa de la mitosis en la que se encuentra. Luego, ella indica que deben justificar su identificación escribiendo en su cuaderno la característica que utilizaron para ello. Al pasar unos minutos, un estudiante le comenta a la profesora que cree haber identificado correctamente una célula en telofase. En relación con lo anterior, ¿cuál de las siguientes opciones presenta una justificación correcta respecto de la etapa en la que se encuentra la célula seleccionada por el estudiante?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La célula presenta dos zonas de reorganización de cariotecas."
+    },
+    {
+     "key": "B",
+     "text": "La célula presenta cromosomas dispersos aleatoriamente en el citoplasma."
+    },
+    {
+     "key": "C",
+     "text": "La célula presenta cromosomas dispuestos en el plano ecuatorial."
+    },
+    {
+     "key": "D",
+     "text": "La célula presenta centriolos ubicados en los polos."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En telofase los cromosomas llegan a los polos y se reorganiza una carioteca alrededor de cada grupo, así que la justificación correcta describe dos zonas de reorganización nuclear.",
+    "planteamiento": "Se pide la justificación correcta para identificar una célula en telofase. Datos: un estudiante observó una célula al microscopio y cree que está en telofase; la característica que escriba debe corresponder a esa etapa y no a otra de la mitosis.",
+    "steps": [
+     "Recordar lo que ocurre en telofase. Los cromosomas llegan a los polos opuestos de la célula y comienzan a descondensarse.",
+     "Recordar la reorganización nuclear. Alrededor de cada conjunto de cromosomas se forma una nueva envoltura nuclear (carioteca). Por eso se observan dos zonas de reorganización, una en cada polo.",
+     "Evaluar la opción B. Los cromosomas dispersos en el citoplasma corresponden a prometafase, cuando la carioteca ya se desintegró y los cromosomas están libres; no son una característica de telofase.",
+     "Evaluar las opciones C y D. Los cromosomas en el plano ecuatorial son característicos de metafase, y los centriolos en los polos aparecen en varias etapas, así que no justifican telofase.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Cromosomas dispersos en el citoplasma: corresponde a prometafase, cuando la carioteca ya se desintegró y los cromosomas están libres; no es una característica de telofase.",
+     "C": "Cromosomas en el plano ecuatorial: es la característica de metafase, cuando los cromosomas se alinean antes de separarse.",
+     "D": "Centriolos en los polos: aparecen en distintas etapas de la mitosis, así que no permiten distinguir la telofase de otras fases."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q07",
+   "number": 7,
+   "origin": "ciencias-biologia-2027-invierno-q02",
+   "axis": "Biología",
+   "topic": "Proteínas",
+   "subtopic": "cs-habilidades",
+   "stem": "Un grupo de investigación decide analizar el proceso de transporte de proteínas secretoras entre el retículo endoplasmático rugoso (RER), el complejo de Golgi (CG) y la membrana plasmática (MP). Para este fin utilizan cultivos con la misma cantidad de células y distintas temperaturas ambientales. Además, en algunos de estos cultivos se utiliza la droga Brefeldina A (BFA), que bloquea la secreción de proteínas en el RER. Posteriormente, se realiza el seguimiento de las proteínas recientemente sintetizadas en el RER, marcadas con aminoácidos radiactivos. Luego de 30 𝑚𝑖𝑛𝑢𝑡𝑜𝑠 de incubación, se cuantifica la radiactividad presente en las estructuras celulares ya mencionadas. Los resultados se resumen en la siguiente tabla:\n\nCondiciones de incubación Porcentaje de radiactividad (%) Medio Temperatura (°𝐶) RER CG MP Sin BFA 15 5 95 0 Sin BFA 37 5 5 90 Con BFA 15 100 0 0 Con BFA 37 100 0 0\n\nConsiderando este diseño experimental, ¿cuál de las siguientes opciones corresponde a una variable controlada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La presencia de droga BFA."
+    },
+    {
+     "key": "B",
+     "text": "La temperatura."
+    },
+    {
+     "key": "C",
+     "text": "El tiempo de incubación."
+    },
+    {
+     "key": "D",
+     "text": "El porcentaje de radiactividad."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q02.webp",
+    "width": 907,
+    "height": 675,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una variable controlada es la que se mantiene igual en todos los cultivos; en este diseño es el tiempo de incubación, fijado en 30 minutos para todos.",
+    "planteamiento": "Se pide identificar cuál de las opciones corresponde a una variable controlada. Datos: los cultivos tienen la misma cantidad de células; se varían la temperatura ($15\\,^{\\circ}\\mathrm{C}$ y $37\\,^{\\circ}\\mathrm{C}$) y la presencia de BFA; la radiactividad se mide tras $30$ minutos de incubación en todos los cultivos.",
+    "steps": [
+     "Clasificar las variables que cambian entre cultivos. La presencia de BFA cambia (con y sin BFA) y la temperatura cambia ($15\\,^{\\circ}\\mathrm{C}$ y $37\\,^{\\circ}\\mathrm{C}$). Ambas son variables manipuladas, porque el investigador decide sus valores.",
+     "Identificar la variable respuesta. El porcentaje de radiactividad en el RER, el CG y la MP es lo que se mide en cada cultivo; corresponde a la variable dependiente, la que se observa como consecuencia de las condiciones.",
+     "Identificar la variable que se mantiene fija. El enunciado indica que la radiactividad se cuantifica «luego de 30 minutos de incubación» en todos los cultivos, por lo que el tiempo de incubación no cambia entre ellos.",
+     "Verificar con la tabla: en cada fila, la suma de los porcentajes de RER, CG y MP da $100\\,\\%$ (por ejemplo, $5 + 95 + 0 = 100$ y $5 + 5 + 90 = 100$). Esto confirma que las mediciones se hicieron bajo las mismas condiciones temporales y que solo cambian el medio y la temperatura.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La presencia de BFA: es la variable que se cambia entre cultivos (con y sin BFA), por lo que es manipulada y no controlada; confundir ambas categorías es un error habitual.",
+     "B": "La temperatura: también cambia entre cultivos ($15\\,^{\\circ}\\mathrm{C}$ y $37\\,^{\\circ}\\mathrm{C}$), así que no se mantiene constante; la trampa es pensar que, por ser un factor ambiental, debe fijarse.",
+     "D": "El porcentaje de radiactividad: es el resultado medido, es decir, la variable dependiente; no se controla, sino que se observa."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q08",
+   "number": 8,
+   "origin": "ciencias-biologia-2027-invierno-q06",
+   "axis": "Biología",
+   "topic": "Genética",
+   "subtopic": "cs-habilidades",
+   "stem": "Un grupo de investigación biomédico evaluó los efectos del tabaquismo en el ciclo ovárico. En particular, el estudio se enfocó en analizar en los tejidos uterinos, la síntesis de la proteína VEGF, cuya función es promover la generación de vasos sanguíneos y aumentar el flujo sanguíneo. Un resultado clave reportado a partir del estudio en mujeres fumadoras habituales, es que sus niveles de VEGF disminuyeron significativamente. En relación con la investigación, ¿cuál de las siguientes opciones es una inferencia correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El tabaquismo incrementaría la menstruación."
+    },
+    {
+     "key": "B",
+     "text": "El tabaquismo aumentaría la cantidad de folículos ováricos."
+    },
+    {
+     "key": "C",
+     "text": "El tabaquismo impediría la implantación del blastocisto."
+    },
+    {
+     "key": "D",
+     "text": "El tabaquismo disminuiría la cantidad de hormonas sexuales."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El VEGF favorece la formación de vasos en el útero; si el tabaquismo lo reduce, el endometrio recibe menos sangre y la implantación puede verse impedida.",
+    "planteamiento": "Se pide una inferencia correcta a partir del estudio. Datos: el VEGF promueve la generación de vasos sanguíneos y aumenta el flujo sanguíneo en los tejidos uterinos; en mujeres fumadoras habituales sus niveles «disminuyeron significativamente». El estudio mide VEGF, no implantación ni hormonas.",
+    "steps": [
+     "Identificar la función del VEGF. El enunciado dice que promueve la generación de vasos sanguíneos y aumenta el flujo sanguíneo, así que es un factor que favorece la irrigación del tejido en el que actúa.",
+     "Identificar el efecto observado. En mujeres fumadoras habituales el VEGF «disminuyó significativamente» en tejido uterino. Es un dato medido directamente, no una suposición.",
+     "Encadenar la inferencia. Si hay menos VEGF, se forman menos vasos y circula menos sangre en el útero. El endometrio queda menos irrigado, y ese es el tejido donde el blastocisto se implanta.",
+     "Evaluar el alcance. La inferencia es razonable pero no es un hecho medido, porque el estudio reporta VEGF y no implantación. Aun así, es la única opción que conecta el cambio medido con un efecto sobre la reproducción.",
+     "Descartar las demás. La menstruación, los folículos ováricos y las hormonas sexuales no aparecen en el texto como variables medidas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El tabaquismo incrementaría la menstruación: el texto no reporta relación con el sangrado menstrual; la opción agrega un efecto que no se midió.",
+     "B": "El tabaquismo aumentaría la cantidad de folículos ováricos: el dato describe una disminución del VEGF, no un aumento de folículos; invierte la dirección de lo que sugiere el estudio.",
+     "D": "El tabaquismo disminuiría las hormonas sexuales: el VEGF es un factor de crecimiento vascular, no una hormona sexual, y el estudio no mide hormonas; la trampa es asumir un efecto hormonal."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q09",
+   "number": 9,
+   "origin": "ciencias-biologia-2027-invierno-q57",
+   "axis": "Biología",
+   "topic": "Tejidos",
+   "subtopic": "cs-nervioso",
+   "stem": "El científico español Santiago Ramón y Cajal postuló la teoría neuronal que proponía el carácter individual de las neuronas, es decir, que no estaban físicamente conectadas entre sí formando un solo tejido nervioso (sincicio). Considerando lo anterior, ¿cuál de las siguientes evidencias obtenidas desde cultivos de tejido cerebral sustentaría esta teoría de Ramón y Cajal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Luego de la incorporación de una molécula en las dendritas de una neurona, esta se detecta en toda la red de somas y axones."
+    },
+    {
+     "key": "B",
+     "text": "Luego de la incorporación de un marcador fluorescente en el medio extracelular, este es indetectable en toda la red de somas y axones."
+    },
+    {
+     "key": "C",
+     "text": "Luego de la incorporación de un marcador fluorescente en el soma de una neurona, este es indetectable en neuronas aledañas."
+    },
+    {
+     "key": "D",
+     "text": "Luego de la incorporación de un marcador fluorescente en un terminal axónico, este se detecta en el soma de neuronas aledañas."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si las neuronas formaran un sincicio, una sustancia debería difundirse de una neurona a sus vecinas por citoplasma continuo; que no lo haga es la evidencia a favor de la teoría de Ramón y Cajal.",
+    "planteamiento": "Se pide la evidencia que sustenta que cada neurona es una unidad independiente, sin continuidad física con sus vecinas. La prueba debe observar si un marcador incorporado en una neurona pasa o no a las neuronas contiguas.",
+    "steps": [
+     "Un sincicio es una red de citoplasma continuo: lo que se incorpora en una célula puede difundirse a las células vecinas a través de esa continuidad.",
+     "Si la teoría de Ramón y Cajal es correcta, un marcador incorporado en el soma de una neurona debe quedar confinado a esa célula, sin pasar a las vecinas.",
+     "Opción A: una molécula incorporada en las dendritas que se detecta en toda la red muestra que las neuronas están conectadas, lo que apoya el sincicio y no la individualidad.",
+     "Opción B: un marcador en el medio extracelular no entra en las neuronas, así que su ausencia dentro de la red no dice nada sobre si las células están unidas. No es una prueba válida.",
+     "Opción C: el marcador incorporado en el soma no aparece en las neuronas aledañas. Esto indica que no hay continuidad citoplasmática entre ellas, lo que sustenta la individualidad de cada neurona.",
+     "Opción D: un marcador en un terminal axónico que aparece en el soma de neuronas vecinas indica transferencia entre células, lo que favorece la continuidad y no la independencia. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Pensar que una molécula detectada en toda la red demuestra individualidad, cuando precisamente indica que las células comparten citoplasma.",
+     "B": "Pensar que el marcador ausente demuestra independencia. El marcador nunca entró en las células, así que no comprueba nada sobre conexiones entre ellas.",
+     "D": "Pensar que el marcador en el terminal axónico que aparece en neuronas vecinas es prueba de independencia, cuando indica transferencia entre células."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q10",
+   "number": 10,
+   "origin": "ciencias-biologia-2027-invierno-q05",
+   "axis": "Biología",
+   "topic": "Biología",
+   "subtopic": "cs-reproduccion",
+   "stem": "Durante la fecundación, los espermatozoides presentan distintos mecanismos de orientación que los guían dentro del oviducto y facilitan su encuentro con el ovocito. Uno de estos mecanismos se conoce como quimiotaxis, en el cual el espermatozoide cambia la dirección de su movimiento migrando hacia un atrayente químico. En este contexto, un grupo de investigación ha estudiado *in vitro* la migración de los espermatozoides a concentraciones crecientes de un quimioatrayente y en presencia de decenas de ovocitos, obteniendo los siguientes resultados:\n\nConcentración del Porcentaje de migración de espermatozoides quimioatrayente (𝑢. 𝑎.) hacia el quimioatrayente (%) 0 30 50 50 100 70 200 90\n\nConsiderando lo anterior, ¿cuál de las siguientes predicciones es correcta con respecto a la fertilización *in vitro* asistida con el quimioatrayente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los espermatozoides aumentarán su movimiento flagelar a concentraciones mayores del quimioatrayente."
+    },
+    {
+     "key": "B",
+     "text": "El tiempo necesario para que se efectúe la fecundación disminuirá a concentraciones mayores del quimioatrayente."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de espermatozoides próximos al ovocito disminuirá a medida que aumente la concentración del quimioatrayente."
+    },
+    {
+     "key": "D",
+     "text": "La probabilidad de fecundación aumentará a medida que la concentración del quimioatrayente sea mayor."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q05.webp",
+    "width": 907,
+    "height": 692,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si la migración hacia el quimioatrayente aumenta con su concentración, más espermatozoides llegan al ovocito y la probabilidad de fecundación sube.",
+    "planteamiento": "Se pide la predicción correcta sobre la fertilización in vitro asistida con el quimioatrayente. Datos de la tabla: con $0$ u. a. migra el $30\\,\\%$ de los espermatozoides; con $50$ u. a., el $50\\,\\%$; con $100$ u. a., el $70\\,\\%$; y con $200$ u. a., el $90\\,\\%$. El ensayo se hizo en presencia de decenas de ovocitos.",
+    "steps": [
+     "Leer la tabla en orden creciente de concentración: $0 \\to 30\\,\\%$, $50 \\to 50\\,\\%$, $100 \\to 70\\,\\%$ y $200 \\to 90\\,\\%$. El porcentaje de migración hacia el atrayente aumenta de forma continua al subir la concentración.",
+     "Interpretar el contexto experimental. El estudio se hizo «en presencia de decenas de ovocitos», así que migrar hacia el quimioatrayente equivale a acercarse al ovocito. Más migración implica más espermatozoides cerca del gameto femenino.",
+     "Inferir la consecuencia para la fecundación. Si llegan más espermatozoides al ovocito, aumenta la cantidad de gametos disponibles para fecundarlo y, por lo tanto, la probabilidad de que al menos uno lo haga.",
+     "Evaluar las predicciones. La A habla de movimiento flagelar, que no se mide; la B habla de tiempos de fecundación, que no aparecen en la tabla; la C invierte el resultado, porque la migración crece con la concentración. Solo la D se sostiene con los datos. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Aumento del movimiento flagelar: el estudio mide el porcentaje de migración, no la actividad del flagelo; la trampa es suponer un mecanismo que no se observó.",
+     "B": "Menor tiempo de fecundación: la tabla no mide ningún tiempo, así que la predicción carece de respaldo; es plausible, pero no se deduce de los datos.",
+     "C": "Disminución de espermatozoides cerca del ovocito: es lo contrario de lo que muestran los datos, porque la migración hacia el atrayente aumenta con la concentración. Es un error de lectura de la tendencia."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q11",
+   "number": 11,
+   "origin": "ciencias-fisica-2026-invierno-q55",
+   "axis": "Física",
+   "topic": "Cinemática",
+   "subtopic": "cs-cinematica",
+   "stem": "El radar es un instrumento tecnológico que se utiliza ampliamente en el ámbito de la aeronáutica, navegación, meteorología y otras actividades, ya que permite determinar la posición de objetos así como sus velocidades y trayectorias. En relación a lo anterior, ¿qué fenómenos asociados a las ondas electromagnéticas explican el funcionamiento del radar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La difracción y la absorción"
+    },
+    {
+     "key": "B",
+     "text": "La refracción y la absorción"
+    },
+    {
+     "key": "C",
+     "text": "La propagación y la difracción"
+    },
+    {
+     "key": "D",
+     "text": "La propagación y la reflexión"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El radar emite ondas electromagnéticas que viajan hasta el objeto y regresan por reflexión; el eco permite determinar posición y velocidad.",
+    "planteamiento": "Se pide identificar los fenómenos asociados a las ondas electromagnéticas que explican el funcionamiento del radar. Datos: el radar determina la posición, la velocidad y la trayectoria de objetos a partir de la señal que regresa.",
+    "steps": [
+     "El radar emite pulsos de ondas electromagnéticas que se propagan por el aire hasta encontrar un objeto. La propagación es el fenómeno que permite que la onda viaje.",
+     "Las ondas que chocan con el objeto se reflejan y vuelven al receptor. El tiempo de ida y vuelta da la distancia, y el cambio de frecuencia del eco da la velocidad.",
+     "Descartar otros fenómenos: la difracción no es lo que devuelve el eco; la absorción impediría que el objeto devolviera señal; la refracción describe un cambio de dirección al cambiar de medio y no explica el retorno de la señal.",
+     "Los dos fenómenos centrales son la propagación (el viaje de la onda) y la reflexión (el eco). Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Difracción y absorción: la difracción no es lo que devuelve el eco, y la absorción impediría que el objeto devolviera señal.",
+     "B": "Refracción y absorción: la refracción describe el cambio de dirección al cambiar de medio, y la absorción quita energía a la onda; ninguna de las dos explica el retorno de la señal.",
+     "C": "Propagación y difracción: la propagación es correcta, pero la difracción no explica el regreso de la onda desde el objeto; el eco se debe a la reflexión."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q12",
+   "number": 12,
+   "origin": "ciencias-biologia-2027-invierno-q26",
+   "axis": "Física",
+   "topic": "Masa y peso",
+   "subtopic": "cs-dinamica",
+   "stem": "Una persona asiste a una feria de exhibición aeronáutica y luego de observar la caída de un grupo de paracaidistas, nota que, a pesar de que todos los paracaidistas abren sus paracaídas en el mismo instante, no todos llegan al suelo al mismo tiempo. Al investigar acerca del hecho, la persona constata que todos los paracaidistas tienen masas muy similares y que los paracaídas están hechos del mismo material, por lo que afirma que el tamaño de los paracaídas debe ser distinto. Al respecto, ¿a qué componente de la investigación científica corresponde la afirmación de la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un marco conceptual."
+    },
+    {
+     "key": "B",
+     "text": "A un procedimiento."
+    },
+    {
+     "key": "C",
+     "text": "A una observación."
+    },
+    {
+     "key": "D",
+     "text": "A una inferencia."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La persona explica un hecho observado con una causa que no vio directamente, el tamaño de los paracaídas; esa explicación deducida es una inferencia.",
+    "planteamiento": "Se pide el componente de la investigación al que corresponde la afirmación de la persona. Datos: los paracaidistas abren los paracaídas en el mismo instante pero no llegan juntos al suelo; tienen masas muy similares y los paracaídas son del mismo material; la persona concluye que el tamaño de los paracaídas debe ser distinto.",
+    "steps": [
+     "Identificar lo observado: todos los paracaidistas abren sus paracaídas en el mismo instante, pero no llegan al suelo al mismo tiempo. Eso es un hecho registrado por la persona.",
+     "Identificar lo constatado: las masas son muy similares y el material de los paracaídas es el mismo. Con esos datos se descartan esas dos posibles causas.",
+     "Identificar la afirmación: que el tamaño de los paracaídas debe ser distinto no se observó directamente. Es una explicación que se deduce de lo observado y de lo constatado, es decir, una inferencia.",
+     "Diferenciar con las otras categorías: un procedimiento describe pasos de medición o prueba, un marco conceptual es un conjunto general de ideas, y una observación es lo que se ve directamente. La afirmación es una explicación puntual.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Marco conceptual: sería un conjunto general de ideas que organiza una investigación; la afirmación es una explicación puntual de un hecho concreto.",
+     "B": "Procedimiento: describe pasos para medir o probar algo; en el texto no hay pasos ni datos registrados, solo una conclusión.",
+     "C": "Observación: confunde lo que se ve (los paracaidistas llegan en tiempos distintos) con la explicación que la persona da de ese hecho."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q13",
+   "number": 13,
+   "origin": "ciencias-biologia-2027-invierno-q29",
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "subtopic": "cs-dinamica",
+   "stem": "Un grupo de estudiantes realiza un experimento en el cual determinan la deformación que experimenta un resorte al ser estirado mediante la aplicación de fuerzas, pero no pudieron registrar los datos entre 3,0 y 6,0 𝑁. Los resultados obtenidos se representan en el siguiente gráfico:\n\nBasándose en los resultados obtenidos, ¿qué se espera que ocurra con la deformación del resorte si se aplican fuerzas entre 3,0 y 6,0 𝑁?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Tomará valores entre 0,3 y 0,7 𝑚."
+    },
+    {
+     "key": "B",
+     "text": "Superará el límite elástico al alcanzar 0,7 𝑚 de deformación."
+    },
+    {
+     "key": "C",
+     "text": "Será mayor que la registrada al aplicarle fuerzas sobre 8,5 𝑁."
+    },
+    {
+     "key": "D",
+     "text": "Decrecerá a medida que la fuerza aplicada aumenta."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q29.webp",
+    "width": 907,
+    "height": 770,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los puntos muestran una tendencia creciente y casi lineal; interpolando entre los dos tramos medidos, la deformación para fuerzas entre 3,0 y 6,0 N queda entre 0,3 y 0,7 m.",
+    "planteamiento": "Se pide qué se espera para la deformación con fuerzas entre $3{,}0$ y $6{,}0\\ \\mathrm{N}$, rango sin datos. Datos del gráfico: con $0{,}5$ N la deformación es de unos $0{,}03$ m; con $2{,}4$ N, unos $0{,}27$ m; con $7{,}0$ N, unos $0{,}78$ m; y con $8{,}4$ N, unos $0{,}95$ m.",
+    "steps": [
+     "Leer el tramo inferior: entre $0{,}5$ y $2{,}4$ N la deformación sube de forma regular, desde unos $0{,}03$ m hasta unos $0{,}27$ m. La tendencia es creciente y casi lineal.",
+     "Leer el tramo superior: entre $7{,}0$ y $8{,}4$ N la deformación va de unos $0{,}78$ m a unos $0{,}95$ m, también con tendencia creciente.",
+     "Estimar la pendiente uniendo ambos tramos: $\\frac{0{,}78 - 0{,}27}{7{,}0 - 2{,}4} \\approx 0{,}11\\ \\mathrm{m/N}$.",
+     "Interpolar en el rango faltante: para $3{,}0$ N la deformación sería $0{,}27 + 0{,}11 \\cdot 0{,}6 \\approx 0{,}33$ m, y para $6{,}0$ N sería $0{,}27 + 0{,}11 \\cdot 3{,}6 \\approx 0{,}67$ m.",
+     "Evaluar las opciones: la B supone un límite elástico que el gráfico no muestra; la C invierte la comparación, porque la deformación entre 3,0 y 6,0 N es menor que la de 8,5 N; y la D lee la tendencia al revés. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Límite elástico: supone un cambio de comportamiento que el gráfico no muestra; los puntos siguen la misma tendencia lineal hasta cerca de 0,95 m, sin quiebre visible.",
+     "C": "Mayor que con 8,5 N: invierte la comparación, porque la deformación entre 3,0 y 6,0 N (cerca de 0,33 a 0,67 m) es menor que la de 8,5 N, cercana a 0,95 m.",
+     "D": "Decrecerá al aumentar la fuerza: lee la tendencia con el signo cambiado; en el gráfico la deformación aumenta con la fuerza aplicada."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q14",
+   "number": 14,
+   "origin": "ciencias-biologia-2027-invierno-q34",
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "subtopic": "cs-electricidad",
+   "stem": "Un grupo de estudiantes conecta tres resistencias en un circuito a una batería y mide distintas variables eléctricas, obteniendo los resultados que se muestran en la siguiente tabla:\n\nIntensidad de Diferencia de Potencia Resistencia corriente potencial eléctrica (Ω) eléctrica eléctrico (𝑊) (𝐴) (𝑉) Resistencia 1 4 3 12 36 Resistencia 2 6 2 12 24 Resistencia 3 12 1 12 12 Valores del circuito 2 6 12 72 equivalente\n\nA partir de estos datos, ¿cuál de las siguientes conclusiones es correcta respecto al circuito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La potencia eléctrica disipada por el circuito es igual a la disipada por cada resistencia conectada."
+    },
+    {
+     "key": "B",
+     "text": "La resistencia equivalente del circuito es mayor que la mayor de las resistencias individuales."
+    },
+    {
+     "key": "C",
+     "text": "La diferencia de potencial eléctrico del circuito es igual a la suma de las diferencias de potencial eléctrico en cada resistencia."
+    },
+    {
+     "key": "D",
+     "text": "La intensidad de corriente eléctrica total del circuito es igual a la suma de las intensidades de corriente en cada resistencia."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q34.webp",
+    "width": 907,
+    "height": 668,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las tablas cumplen $V = I \\cdot R$ y $P = V \\cdot I$; la diferencia de potencial es la misma (12 V) en las tres resistencias y la corriente total es la suma de las corrientes, lo que indica conexión en paralelo.",
+    "planteamiento": "Se pide la conclusión correcta sobre el circuito. Datos de la tabla: las resistencias son $4\\ \\Omega$, $6\\ \\Omega$ y $12\\ \\Omega$; cada una tiene $12\\ \\mathrm{V}$, con corrientes de $3$, $2$ y $1\\ \\mathrm{A}$, y potencias de $36$, $24$ y $12\\ \\mathrm{W}$. El circuito equivalente tiene $2\\ \\Omega$, $6\\ \\mathrm{A}$, $12\\ \\mathrm{V}$ y $72\\ \\mathrm{W}$.",
+    "steps": [
+     "Verificar la ley de Ohm en cada resistencia: $V = I \\cdot R$ da $3 \\cdot 4 = 12$, $2 \\cdot 6 = 12$ y $1 \\cdot 12 = 12\\ \\mathrm{V}$. Las potencias confirman $P = V \\cdot I$: $12 \\cdot 3 = 36$, $12 \\cdot 2 = 24$ y $12 \\cdot 1 = 12\\ \\mathrm{W}$.",
+     "Identificar la conexión: la diferencia de potencial es $12\\ \\mathrm{V}$ en las tres resistencias, lo que corresponde a una conexión en paralelo.",
+     "Comprobar el equivalente en paralelo: $\\frac{1}{R_{eq}} = \\frac{1}{4} + \\frac{1}{6} + \\frac{1}{12} = \\frac{1}{2}$, así que $R_{eq} = 2\\ \\Omega$. La corriente total es $3 + 2 + 1 = 6\\ \\mathrm{A}$, y $V = I \\cdot R_{eq}$ da $6 \\cdot 2 = 12\\ \\mathrm{V}$, lo que confirma la tabla.",
+     "Verificar la potencia total: $36 + 24 + 12 = 72\\ \\mathrm{W}$, que es la suma de las potencias individuales y no igual a la de cada resistencia.",
+     "Evaluar las opciones: la A compara la potencia total con la de cada resistencia, lo que es falso; la B invierte la comparación, porque $2\\ \\Omega$ es menor que la menor resistencia; la C suma diferencias de potencial, lo que solo ocurre en serie. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Potencia total igual a la de cada resistencia: la potencia total es $72\\ \\mathrm{W}$, suma de las potencias individuales; ninguna resistencia disipa esa cantidad.",
+     "B": "Resistencia equivalente mayor que la mayor: en paralelo el equivalente es menor que la menor de las resistencias; $2\\ \\Omega$ es menor que $4\\ \\Omega$.",
+     "C": "Suma de diferencias de potencial: la suma de voltajes corresponde a una conexión en serie; en paralelo cada rama tiene los mismos $12\\ \\mathrm{V}$."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q15",
+   "number": 15,
+   "origin": "ciencias-biologia-2027-invierno-q19",
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "subtopic": "cs-habilidades",
+   "stem": "Una investigadora coloca un recipiente con agua a temperatura ambiente sobre la llama de un mechero. Inmediatamente después introduce un termómetro para registrar la temperatura y usa un puntero láser de intensidad conocida, para hacer incidir la luz de este sobre la superficie del agua. Finalmente, la investigadora registra observaciones sobre el comportamiento del haz de luz refractado. A partir de lo anterior, ¿cuál de las siguientes hipótesis pudo dar origen al procedimiento anteriormente descrito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A medida que el ángulo incidente aumenta, el haz de luz refractado se aproxima a la normal."
+    },
+    {
+     "key": "B",
+     "text": "A medida que el agua aumenta su temperatura, el haz de luz refractado se acerca a la normal."
+    },
+    {
+     "key": "C",
+     "text": "A medida que el ángulo incidente aumenta, el haz de luz refractado disminuye en intensidad."
+    },
+    {
+     "key": "D",
+     "text": "A medida que el agua aumenta su temperatura, el haz de luz incidente disminuye en intensidad."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La hipótesis debe unir la variable que se modifica, la temperatura del agua, con la respuesta que se observa, la trayectoria del haz refractado.",
+    "planteamiento": "Se pide la hipótesis que pudo dar origen al procedimiento. Datos: se calienta agua desde temperatura ambiente y se registra su temperatura con un termómetro; un láser de intensidad conocida incide sobre la superficie y se observa el comportamiento del haz refractado.",
+    "steps": [
+     "Identificar la variable que cambia. La investigadora calienta el agua y registra su temperatura con el termómetro; es la variable manipulada.",
+     "Identificar la respuesta observada. Es el comportamiento del haz refractado, es decir, si se acerca o se aleja de la normal. El láser de intensidad conocida es el instrumento que produce ese haz.",
+     "Buscar la hipótesis que relacione ambas. La opción B afirma que, al aumentar la temperatura, el haz refractado se acerca a la normal. Es la única que une la temperatura con la trayectoria del haz, y puede contrastarse con las mediciones.",
+     "Descartar las demás. La A y la C tratan del ángulo incidente o de la intensidad del haz refractado, que el procedimiento no varía ni mide; la D habla de la intensidad del haz incidente, que se conoce de antemano.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Ángulo incidente y normal: suena a la ley de refracción, pero no involucra la temperatura que el procedimiento modifica; la trampa es elegir una relación física conocida que no se estudia aquí.",
+     "C": "Intensidad del haz refractado: el procedimiento observa la trayectoria del haz refractado, no su intensidad; la hipótesis debe apuntar a lo que se observa.",
+     "D": "Intensidad del haz incidente: el láser tiene intensidad conocida y no se estudia cómo cambia con la temperatura; la opción no corresponde a la variable que se manipula."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q16",
+   "number": 16,
+   "origin": "ciencias-biologia-2027-invierno-q25",
+   "axis": "Física",
+   "topic": "Cinemática",
+   "subtopic": "cs-habilidades",
+   "stem": "Una persona ubica un bloque sobre una superficie horizontal unido a un resorte fijo, tal como se representa en la siguiente figura:\n\nLuego, la persona empuja el bloque hasta comprimir 2 𝑐𝑚 el resorte respecto de su longitud natural, para finalmente, soltarlo y medir con un sensor la aceleración que el bloque alcanza. Si la persona repite el procedimiento cambiando el bloque por otros de distinta masa, ¿cuál de las siguientes opciones presenta una variable controlada en el procedimiento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La masa del bloque."
+    },
+    {
+     "key": "B",
+     "text": "La aceleración que adquiere el bloque."
+    },
+    {
+     "key": "C",
+     "text": "La superficie donde se encuentra el bloque."
+    },
+    {
+     "key": "D",
+     "text": "La fuerza normal ejercida por la superficie sobre el bloque."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q25.webp",
+    "width": 907,
+    "height": 566,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al cambiar la masa del bloque, la aceleración es la variable que se mide; la compresión del resorte y la superficie de apoyo deben mantenerse iguales, y por eso son variables controladas.",
+    "planteamiento": "Se pide la variable controlada del procedimiento. Datos: el bloque se apoya sobre una superficie horizontal y se conecta a un resorte; en cada ensayo el resorte se comprime $2\\ \\mathrm{cm}$ respecto de su longitud natural, se suelta el bloque y se mide su aceleración con un sensor; se cambia la masa del bloque.",
+    "steps": [
+     "Identificar la variable que se cambia: el bloque se reemplaza por otros de distinta masa. Esa es la variable independiente, porque la decide el experimentador.",
+     "Identificar la variable que se mide: la aceleración que adquiere el bloque, registrada con el sensor. Es la variable dependiente, porque responde al cambio de masa.",
+     "Identificar las condiciones que se mantienen: la compresión del resorte es siempre de $2\\ \\mathrm{cm}$ respecto de su longitud natural, y la superficie horizontal es la misma en todos los ensayos. Ambas son variables controladas.",
+     "Descartar la fuerza normal: en una superficie horizontal, la normal equilibra el peso, es decir, $N = m\\,g$. Como depende de la masa, cambia en cada ensayo y no puede controlarse.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "La masa del bloque: es la variable que se cambia a propósito, es decir, la independiente, y no la que se mantiene fija.",
+     "B": "La aceleración que adquiere el bloque: es la variable que se mide con el sensor, por lo que es la dependiente y no se controla.",
+     "D": "La fuerza normal ejercida por la superficie: en una superficie horizontal vale $m\\,g$, así que depende de la masa del bloque y cambia en cada ensayo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q17",
+   "number": 17,
+   "origin": "ciencias-biologia-2027-invierno-q20",
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "subtopic": "cs-luz",
+   "stem": "El experimento de la doble rendija de Young consiste en hacer pasar luz emitida por un único foco luminoso a través de una tarjeta con dos rendijas estrechas, cuyos grosores son comparables con la longitud de onda de la luz que los atraviesa. Detrás de la tarjeta, se coloca una pantalla en la que se observa el patrón de luz formado, tal como se representa en la siguiente figura:\n\nConsiderando que la longitud de onda del espectro visible es del orden de los cientos de nanómetros, ¿cuál de las siguientes situaciones permitiría obtener un patrón de luz equivalente al observado en la pantalla?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La luz del Sol pasando por dos ventanales paralelos entre sí."
+    },
+    {
+     "key": "B",
+     "text": "La luz proveniente de una estrella pasando por la lente de una cámara."
+    },
+    {
+     "key": "C",
+     "text": "La luz de un láser pasando a través del agujero de una pared en una habitación oscura."
+    },
+    {
+     "key": "D",
+     "text": "La luz de un láser pasando por dos ranuras del grosor de un cabello fino en un papel de aluminio."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q20.webp",
+    "width": 907,
+    "height": 696,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El patrón de dos rendijas exige luz coherente y monocromática que atraviese dos aberturas; de las opciones, solo el láser que pasa por dos ranuras reúne ambas condiciones.",
+    "planteamiento": "Se pide la situación que reproduce el patrón de interferencia de la doble rendija. Datos: un foco emite luz que atraviesa dos rendijas estrechas, cuyo grosor es comparable con la longitud de onda; la longitud de onda visible es del orden de cientos de nanómetros.",
+    "steps": [
+     "Identificar el fenómeno de la figura. El patrón de franjas claras y oscuras que se forma en la pantalla es interferencia producida por dos fuentes de onda separadas por una distancia pequeña.",
+     "Identificar las condiciones necesarias. La luz debe ser coherente (sus ondas mantienen una relación de fase constante) y de longitud de onda bien definida, y debe atravesar dos aberturas de tamaño comparable con esa longitud.",
+     "Descartar las situaciones con luz policromática y no coherente. La luz del Sol que pasa por dos ventanales y la luz de una estrella que pasa por una lente no producen franjas de dos rendijas.",
+     "Descartar la situación con un solo orificio. La luz de un láser que pasa por un agujero en una pared produce difracción por una sola abertura, no el patrón de dos rendijas.",
+     "Concluir que el láser que pasa por dos ranuras cumple la configuración. Aunque el grosor de un cabello es bastante mayor que la longitud de onda, lo que solo afectaría la separación de las franjas, la opción es la única que reúne una fuente coherente y dos aberturas. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La luz del Sol por dos ventanales: son aberturas grandes con luz no coherente y policromática, y no se forman franjas de interferencia; la trampa es confundir dos aberturas con dos rendijas.",
+     "B": "La luz de una estrella por la lente de una cámara: la lente enfoca la luz, pero no hay dos rendijas ni luz coherente; el patrón que se produce no es de interferencia.",
+     "C": "La luz de un láser por un agujero en una pared: un solo orificio produce difracción, no el patrón de dos rendijas; la trampa es que el láser sí es coherente."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q18",
+   "number": 18,
+   "origin": "ciencias-biologia-2027-invierno-q21",
+   "axis": "Física",
+   "topic": "Ondas",
+   "subtopic": "cs-luz",
+   "stem": "Un equipo de ingeniería biomédica trabaja en el desarrollo de una técnica para realizar intervenciones médicas utilizando un conjunto de láseres de alta energía. Para esto, apuntan láseres de determinada frecuencia a un tejido y miden la intensidad de cada haz emitido y la profundidad del corte en el tejido. Si el equipo de ingeniería biomédica quiere mostrar los resultados de esta investigación en un informe, ¿cuál de los siguientes recursos les permite lograr su propósito?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una representación visual de las ondas emitidas, en que se muestre su amplitud, frecuencia y longitud de onda."
+    },
+    {
+     "key": "B",
+     "text": "Un esquema del montaje experimental, mostrando la disposición de los láseres y sus características."
+    },
+    {
+     "key": "C",
+     "text": "Un gráfico que muestre la profundidad del corte en función de la intensidad del haz de luz emitido."
+    },
+    {
+     "key": "D",
+     "text": "Una tabla con los datos de la frecuencia de la luz láser y la profundidad del corte."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para mostrar en un informe cómo cambia la profundidad del corte al variar la intensidad del láser, el recurso adecuado es un gráfico con la intensidad en el eje horizontal y la profundidad en el vertical.",
+    "planteamiento": "Se pide el recurso que permite mostrar los resultados del estudio en un informe. Datos: se apuntan láseres de una frecuencia determinada a un tejido, y se miden la intensidad de cada haz emitido y la profundidad del corte resultante.",
+    "steps": [
+     "Identificar las variables del estudio. La intensidad de cada haz es la variable que se cambia y la profundidad del corte es la que se mide. El informe debe mostrar cómo una depende de la otra.",
+     "Elegir el recurso adecuado. Para comunicar la relación entre dos variables medidas, lo más claro es un gráfico, con la intensidad en un eje y la profundidad en el otro.",
+     "Revisar la opción A. Muestra ondas teóricas con amplitud, frecuencia y longitud de onda, pero no muestra la relación con la profundidad del corte; no corresponde a un resultado del experimento.",
+     "Revisar las opciones B y D. El esquema del montaje describe cómo se hizo el experimento, no sus resultados; y la tabla de frecuencia no contiene la variable que se compara con el corte, porque la frecuencia no es la que se hace variar.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Representación visual de las ondas: muestra amplitud, frecuencia y longitud de onda, pero no la relación entre intensidad y profundidad del corte; es un recurso teórico.",
+     "B": "Esquema del montaje experimental: describe cómo se hizo el experimento, no sus resultados; un informe de resultados necesita mostrar datos.",
+     "D": "Tabla con frecuencia y profundidad: una tabla es válida, pero la frecuencia no es la variable que se hace variar y la tabla omite la intensidad, que es la variable comparada con el corte."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q19",
+   "number": 19,
+   "origin": "ciencias-biologia-2027-invierno-q31",
+   "axis": "Física",
+   "topic": "Sismos",
+   "subtopic": "cs-tierra",
+   "stem": "Una persona que desea comprar una casa en una de las comunas del sector precordillerano de Santiago, se entera de que esta es atravesada por la falla de San Ramón, una fractura geológica ubicada a los pies de la cordillera de los Andes. Se estima que la falla tiene una longitud de entre 30 y 50 𝑘𝑚 y una profundidad de entre 10 y 12 𝑘𝑚. Ante esta información, la persona decide investigar si existe la posibilidad de que la falla genere sismos de gran magnitud. Al respecto, ¿cuál de los siguientes datos sería relevante para iniciar su investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las características de los sismos generados por fallas similares a la de San Ramón."
+    },
+    {
+     "key": "B",
+     "text": "La cantidad de sismos registrados en la falla de San Ramón en los últimos 2 𝑎ñ𝑜𝑠."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de fallas similares a la de San Ramón que existen en la placa Sudamericana."
+    },
+    {
+     "key": "D",
+     "text": "La clasificación de la falla de San Ramón según la forma de desplazamiento de las rocas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para estimar si la falla puede generar sismos de gran magnitud, lo más útil son los sismos registrados en fallas parecidas, porque muestran qué magnitudes alcanzan fallas de tamaño similar.",
+    "planteamiento": "Se pide el dato relevante para iniciar la investigación sobre sismos de gran magnitud. Datos: la falla de San Ramón tiene entre $30$ y $50$ km de longitud y entre $10$ y $12$ km de profundidad; la pregunta es si puede generar sismos de gran magnitud.",
+    "steps": [
+     "Identificar la pregunta: si la falla puede producir sismos de gran magnitud. Esto depende del tamaño de la superficie que puede romperse y desplazarse en un evento.",
+     "Usar los datos de tamaño: la longitud de entre 30 y 50 km y la profundidad de entre 10 y 12 km describen el tamaño de la falla y permiten buscar fallas comparables.",
+     "Identificar el dato que responde la pregunta: los sismos registrados en fallas similares, con longitud y profundidad parecidas, muestran qué magnitudes son posibles para ese tipo de falla.",
+     "Evaluar las demás opciones: dos años de registros son un intervalo muy corto para conocer los sismos grandes; la cantidad de fallas similares no informa la magnitud; y la clasificación por desplazamiento describe el movimiento, pero no la energía liberada. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Sismos en los últimos 2 años: es un intervalo muy corto para conocer los sismos grandes, que ocurren con mucha menos frecuencia.",
+     "C": "Fallas similares en la placa Sudamericana: su cantidad no informa sobre la magnitud que puede generar la falla de San Ramón.",
+     "D": "Clasificación según el desplazamiento: describe el tipo de movimiento de las rocas, pero no indica por sí sola cuánta energía liberaría la falla en un sismo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q20",
+   "number": 20,
+   "origin": "ciencias-fisica-2026-invierno-q71",
+   "axis": "Física",
+   "topic": "Calor y temperatura",
+   "subtopic": "cs-universo",
+   "stem": "Según nuevos datos climáticos de la Organización Meteorológica Mundial (OMM), hay aproximadamente un 40 % de probabilidades de que, por lo menos en uno de los próximos 5 años, la temperatura media anual del planeta supere en 1,5 °C los niveles preindustriales. En este contexto, ¿cuál es uno de los hechos que se puede esperar como consecuencia de este aumento en 1,5 °C?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una disminución de la concentración de gases de efecto invernadero"
+    },
+    {
+     "key": "B",
+     "text": "Una disminución del volumen de nieve acumulada en las montañas"
+    },
+    {
+     "key": "C",
+     "text": "Una disminución de la masa total del agua a nivel global"
+    },
+    {
+     "key": "D",
+     "text": "Una disminución en el agujero de la capa de ozono"
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un aumento de 1,5 °C en la temperatura media derrite más nieve y hielo acumulados en las montañas, por lo que disminuye el volumen de nieve acumulada.",
+    "planteamiento": "Se pide un hecho que puede esperarse como consecuencia de un aumento de 1,5 °C de la temperatura media anual sobre los niveles preindustriales. Datos: según la OMM, hay cerca de un 40 % de probabilidades de que ese aumento se supere en alguno de los próximos 5 años.",
+    "steps": [
+     "El dato indica que la temperatura media anual del planeta podría superar en 1,5 °C los niveles preindustriales. Ese aumento de temperatura es la causa que se analiza.",
+     "Al subir la temperatura, la nieve y el hielo acumulados en la montaña pasan a fase líquida con más facilidad, porque la temperatura permanece por encima del punto de fusión durante más tiempo.",
+     "Como consecuencia, se espera una disminución del volumen de nieve acumulada en las montañas, que es el hecho de la alternativa B.",
+     "Las demás opciones no son consecuencias del aumento de temperatura. Una disminución de los gases de efecto invernadero sería lo contrario de lo que causa el calentamiento; el agua cambia de estado sin desaparecer del planeta; y el agujero de la capa de ozono depende de gases como los clorofluorocarbonos. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Disminución de gases de efecto invernadero: el calentamiento es consecuencia del aumento de esos gases, no su causa, así que no puede ser un efecto del calentamiento.",
+     "C": "Disminución de la masa total de agua: el calentamiento cambia el agua de estado, pero no la hace desaparecer; la masa total de agua del planeta se conserva.",
+     "D": "Menos agujero en la capa de ozono: el ozono se daña por gases como los clorofluorocarbonos, no por el aumento de temperatura."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q21",
+   "number": 21,
+   "origin": "ciencias-biologia-2027-invierno-q40",
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "subtopic": "cs-atomo",
+   "stem": "Durante una clase, a un estudiante le piden analizar cuatro especies químicas (𝑅, 𝐽, 𝑋 y 𝑍) de acuerdo a sus partículas subatómicas. La información disponible sobre estas especies se presenta a continuación:\n\nCantidad de Cantidad de Cantidad de Especie protones neutrones electrones 𝑅 11 12 10 𝐽 13 14 13 𝑋 16 16 17 𝑍 17 18 18\n\nA partir de los datos de la tabla, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La especie 𝑅 es un anión."
+    },
+    {
+     "key": "B",
+     "text": "La especie 𝐽 es un catión."
+    },
+    {
+     "key": "C",
+     "text": "La especie 𝑋 es un anión."
+    },
+    {
+     "key": "D",
+     "text": "La especie 𝑍 es un átomo neutro."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q40.webp",
+    "width": 907,
+    "height": 477,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La carga neta de una especie es el número de protones menos el de electrones; si hay más electrones que protones, la especie es un anión, y así resulta que X es un anión.",
+    "planteamiento": "Se pide la inferencia correcta a partir de protones, neutrones y electrones de cuatro especies. Datos: $R$ tiene 11 protones y 10 electrones; $J$, 13 y 13; $X$, 16 y 17; $Z$, 17 y 18. Los neutrones no tienen carga y no intervienen en la carga neta.",
+    "steps": [
+     "Calcular la carga neta de cada especie como número de protones menos número de electrones. Los neutrones no tienen carga y no intervienen. R: $11 - 10 = +1$; J: $13 - 13 = 0$; X: $16 - 17 = -1$; Z: $17 - 18 = -1$.",
+     "Interpretar cada resultado: R tiene carga positiva, por lo que es un catión; J es neutra, es decir, un átomo neutro; X y Z tienen carga negativa, por lo que son aniones.",
+     "Revisar la afirmación de la opción A: R es un catión, no un anión.",
+     "Revisar las opciones B y D: J es un átomo neutro, no un catión, y Z es un anión, no un átomo neutro. Solo la afirmación sobre X se cumple. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Especie R como anión: tiene 11 protones y 10 electrones, así que su carga es $+1$ y es un catión.",
+     "B": "Especie J como catión: tiene 13 protones y 13 electrones, por lo que es neutra.",
+     "D": "Especie Z como átomo neutro: tiene 17 protones y 18 electrones; su carga es $-1$, es decir, es un anión."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q22",
+   "number": 22,
+   "origin": "ciencias-biologia-2027-invierno-q53",
+   "axis": "Química",
+   "topic": "Química general",
+   "subtopic": "cs-atomo",
+   "stem": "En una clase de química, una profesora le entrega a un grupo de estudiantes cuatro muestras líquidas desconocidas, rotuladas como 𝑊, 𝑋, 𝑌 y 𝑍. El grupo realiza cuatro ensayos de solubilidad con las muestras antes mencionadas, cuyos resultados se representan en la siguiente imagen:\n\nConsiderando los resultados anteriores y considerando que los ensayos de solubilidad se hicieron correctamente, ¿cuál de las siguientes opciones representa la figura con el aspecto que tendría la mezcla entre 𝑋, 𝑌 y 𝑍?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q53.webp",
+    "width": 907,
+    "height": 1141,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una sola capa indica líquidos miscibles y dos capas indican inmiscibles: $X$ y $Z$ forman una fase única, mientras que $X$ e $Y$ forman dos capas.",
+    "planteamiento": "Se pide la figura que muestra la mezcla de $X$, $Y$ y $Z$. Datos de los ensayos: en $W+Y$ y en $X+Y$ aparecen dos superficies de separación (dos capas); en $X+Z$ y en $W+X$ aparece una sola superficie (una fase).",
+    "steps": [
+     "En $W+Y$ aparecen dos superficies, es decir, dos capas: $W$ e $Y$ son inmiscibles.",
+     "En $X+Y$ también aparecen dos capas: $X$ e $Y$ son inmiscibles.",
+     "En $X+Z$ hay una sola superficie: $X$ y $Z$ son miscibles y forman una fase única.",
+     "En $W+X$ hay una sola superficie, así que $W$ y $X$ también se mezclan. Este dato no cambia la respuesta, porque $W$ no participa en la mezcla pedida.",
+     "En la mezcla de $X$, $Y$ y $Z$, la fase $X+Z$ es una sola capa y $Y$ no se mezcla con $X$, así que queda como capa separada: en total, dos capas. Como el enunciado no entrega densidades, el orden de las capas se lee directamente de la figura D, con $Y$ arriba.",
+     "La opción A muestra $X+Y$ como una sola capa, lo que contradice que $X$ e $Y$ formen dos capas. La opción B muestra tres capas y separa $X$ y $Z$, que son miscibles. La opción C muestra una sola fase, lo que ignora la capa de $Y$. Solo la D muestra dos capas. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Mostrar $X+Y$ como una sola capa contradice los ensayos, en los que $X+Y$ forma dos capas. Además, separa $Z$ como si no se mezclara con $X$.",
+     "B": "Dibujar tres capas separadas ($Z$, $X$ e $Y$) supone que $X$ y $Z$ son inmiscibles, pero el ensayo $X+Z$ muestra una sola capa.",
+     "C": "Dibujar una sola fase con $X+Y+Z$ es la trampa de suponer que todo se mezcla porque $X$ se mezcla con $Z$, sin notar que $Y$ forma capa aparte con $X$."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q23",
+   "number": 23,
+   "origin": "ciencias-biologia-2027-invierno-q50",
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "subtopic": "cs-disoluciones",
+   "stem": "En una clase de química, la profesora les solicita a sus estudiantes preparar una solución de glucosa en agua de concentración 6 𝑚𝑜𝑙/𝐿. Para ello, realizaron la preparación utilizando 108 𝑔 de glucosa (masa molar = 180 𝑔/𝑚𝑜𝑙) y la disolvieron agregando 100 𝑚𝐿 de agua. Luego, al revisar el procedimiento realizado por los estudiantes, la profesora les comenta que este no es correcto. Al respecto, ¿cuál de las siguientes opciones corresponde al procedimiento adecuado para lograr el objetivo propuesto por la profesora?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Masar 108 𝑔 de glucosa y disolverlos en 0,5 𝐿 de agua y luego agregar 0,5 𝐿 de agua."
+    },
+    {
+     "key": "B",
+     "text": "Masar 100 𝑔 de agua, considerando una densidad de 1 𝑔/𝑚𝐿, y agregarla a los 108 𝑔 de glucosa."
+    },
+    {
+     "key": "C",
+     "text": "Agregar agua sobre los 108 𝑔 de glucosa hasta completar un volumen de 100 𝑚𝐿."
+    },
+    {
+     "key": "D",
+     "text": "Disolver previamente 108 𝑔 de glucosa en agua, tomar 2 𝑚𝐿 de esta solución y disolverlos en 100 𝑚𝐿 de agua."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La molaridad se refiere al volumen final de la solución, no al volumen de agua agregada: el procedimiento correcto es llevar la glucosa a un volumen total de $100\\ \\mathrm{mL}$.",
+    "planteamiento": "Se pide el procedimiento que logra una solución de $6\\ \\mathrm{mol/L}$. Datos: $m = 108\\ \\mathrm{g}$ de glucosa, $M = 180\\ \\mathrm{g/mol}$ y $c = 6\\ \\mathrm{mol/L}$; el grupo original agregó $100\\ \\mathrm{mL}$ de agua sobre la glucosa.",
+    "steps": [
+     "Se calcula la cantidad de sustancia: $n = \\frac{m}{M} = \\frac{108\\ \\mathrm{g}}{180\\ \\mathrm{g/mol}} = 0{,}6\\ \\mathrm{mol}$.",
+     "Se calcula el volumen de solución final: $V = \\frac{n}{c} = \\frac{0{,}6\\ \\mathrm{mol}}{6\\ \\mathrm{mol/L}} = 0{,}1\\ \\mathrm{L} = 100\\ \\mathrm{mL}$.",
+     "Por lo tanto, el volumen total de la solución debe ser de $100\\ \\mathrm{mL}$, con los $108\\ \\mathrm{g}$ de glucosa incluidos.",
+     "El error del procedimiento original: al agregar $100\\ \\mathrm{mL}$ de agua sobre la glucosa, esta ocupa además un volumen propio, así que el volumen final supera los $100\\ \\mathrm{mL}$. Como $c = \\frac{n}{V}$, al aumentar $V$ la concentración baja por debajo de $6\\ \\mathrm{mol/L}$.",
+     "El procedimiento adecuado es agregar agua sobre los $108\\ \\mathrm{g}$ de glucosa hasta completar un volumen total de $100\\ \\mathrm{mL}$, que corresponde a la opción C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Disolver $108\\ \\mathrm{g}$ en $0{,}5\\ \\mathrm{L}$ y luego agregar otros $0{,}5\\ \\mathrm{L}$ da $1\\ \\mathrm{L}$ de solución: $c = \\frac{0{,}6\\ \\mathrm{mol}}{1\\ \\mathrm{L}} = 0{,}6\\ \\mathrm{mol/L}$, diez veces menos que lo pedido.",
+     "B": "Masar $100\\ \\mathrm{g}$ de agua parece medir el volumen con precisión, pero el volumen final sigue superando los $100\\ \\mathrm{mL}$ porque la glucosa ocupa volumen. La concentración queda por debajo de $6\\ \\mathrm{mol/L}$.",
+     "D": "Tomar una alícuota de $2\\ \\mathrm{mL}$ de una solución previa y disolverla en $100\\ \\mathrm{mL}$ de agua no asegura los $0{,}6\\ \\mathrm{mol}$ en $0{,}1\\ \\mathrm{L}$: solo una parte de la glucosa pasa a la alícuota. Es la trampa de confundir dilución con preparación."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q24",
+   "number": 24,
+   "origin": "ciencias-biologia-2027-invierno-q51",
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "subtopic": "cs-disoluciones",
+   "stem": "¿Cuál es la concentración de una solución acuosa que contiene 1,0 𝑚𝑜𝑙 de cloruro de sodio (𝑁𝑎𝐶𝑙) en 500 𝑚𝐿 de solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,0 𝑚𝑜𝑙/𝐿"
+    },
+    {
+     "key": "B",
+     "text": "1,5 𝑚𝑜𝑙/𝐿"
+    },
+    {
+     "key": "C",
+     "text": "1,0 𝑚𝑜𝑙/𝐿"
+    },
+    {
+     "key": "D",
+     "text": "0,5 𝑚𝑜𝑙/𝐿"
+    },
+    {
+     "key": "E",
+     "text": "0,2 𝑚𝑜𝑙/𝐿"
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La concentración molar es el cociente entre moles de soluto y litros de solución, así que hay que convertir los mililitros a litros antes de dividir.",
+    "planteamiento": "Se pide la concentración de una solución de $\\mathrm{NaCl}$. Datos: $n = 1{,}0\\ \\mathrm{mol}$ de soluto y $V = 500\\ \\mathrm{mL}$ de solución.",
+    "steps": [
+     "Se usa la definición de concentración molar: $c = \\frac{n}{V}$, con $V$ expresado en litros.",
+     "Conversión: $500\\ \\mathrm{mL} = 500 \\cdot 10^{-3}\\ \\mathrm{L} = 0{,}5\\ \\mathrm{L}$, porque un litro tiene $1000\\ \\mathrm{mL}$.",
+     "Reemplazo de valores: $c = \\frac{1{,}0\\ \\mathrm{mol}}{0{,}5\\ \\mathrm{L}}$.",
+     "Dividir por $0{,}5$ equivale a multiplicar por $2$: $c = 1{,}0 \\cdot 2 = 2{,}0\\ \\mathrm{mol/L}$.",
+     "Verificación: $2{,}0\\ \\mathrm{mol/L} \\cdot 0{,}5\\ \\mathrm{L} = 1{,}0\\ \\mathrm{mol}$, que recupera los moles de soluto. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Elegir $1{,}5\\ \\mathrm{mol/L}$ por sumar $1{,}0 + 0{,}5$ en vez de dividir. Sumar moles y litros no tiene sentido físico en una concentración.",
+     "C": "Elegir $1{,}0\\ \\mathrm{mol/L}$ por confundir la concentración con los moles de soluto, sin dividir por el volumen.",
+     "D": "Elegir $0{,}5\\ \\mathrm{mol/L}$ por invertir el cociente y calcular $\\frac{V}{n} = \\frac{0{,}5}{1{,}0}$, usando el volumen como si fuera la concentración.",
+     "E": "Elegir $0{,}2\\ \\mathrm{mol/L}$ por tomar $500\\ \\mathrm{mL}$ como $5\\ \\mathrm{L}$, lo que multiplica el volumen por diez: $\\frac{1{,}0}{5} = 0{,}2$."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q25",
+   "number": 25,
+   "origin": "ciencias-biologia-2027-invierno-q39",
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "subtopic": "cs-habilidades",
+   "stem": "Según el modelo de Bohr, los átomos están constituidos por un núcleo, de carga positiva, alrededor del cual giran en órbitas los electrones, de carga negativa. En cada órbita, los electrones poseen diferente energía, y “a medida que el electrón se encuentra más alejado del núcleo se requiere de menor energía para separarlo del átomo, en relación a los electrones más cercanos al núcleo”. Si un estudiante requiere visualizar en un gráfico la relación que se describe entre comillas para distintas órbitas de los electrones de un átomo, ¿cuál de las siguientes opciones muestra correctamente las variables de este gráfico?\n\nVariable independiente Variable dependiente",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cantidad de electrones Número de órbitas"
+    },
+    {
+     "key": "B",
+     "text": "Energía Cantidad de electrones"
+    },
+    {
+     "key": "C",
+     "text": "Número de órbitas Distancia del electrón al núcleo"
+    },
+    {
+     "key": "D",
+     "text": "Distancia del electrón al núcleo Energía"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q39.webp",
+    "width": 907,
+    "height": 396,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el gráfico, la variable independiente es la que se cambia (la distancia del electrón al núcleo) y la dependiente es la que responde (la energía necesaria para separarlo).",
+    "planteamiento": "Se pide identificar las variables del gráfico que describe la relación entre comillas. Datos del texto: a medida que el electrón está más alejado del núcleo, se requiere menor energía para separarlo del átomo; esto se compara entre distintas órbitas.",
+    "steps": [
+     "Identificar la relación del texto: «a medida que el electrón se encuentra más alejado del núcleo se requiere de menor energía para separarlo». Una variable cambia y la otra responde.",
+     "Asignar la variable independiente: al comparar órbitas, lo que cambia es la distancia del electrón al núcleo, porque cada órbita tiene una distancia distinta.",
+     "Asignar la variable dependiente: la energía necesaria para separar el electrón es la que responde al cambio de distancia.",
+     "Descartar las demás opciones: la cantidad de electrones y el número de órbitas no son las variables de la relación que describe el texto, y las opciones B y C invierten los roles o dejan fuera la energía. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Cantidad de electrones y número de órbitas: no son las variables de la relación que describe el texto.",
+     "B": "Energía como independiente y cantidad de electrones como dependiente: invierte los roles y no corresponde a la relación descrita.",
+     "C": "Número de órbitas como independiente y distancia como dependiente: la distancia es la variable que cambia entre órbitas, y la energía, que es la que responde, no aparece."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q26",
+   "number": 26,
+   "origin": "ciencias-biologia-2027-invierno-q49",
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "subtopic": "cs-habilidades",
+   "stem": "En un laboratorio, un grupo de estudiantes preparó 100 𝑚𝐿 de cuatro soluciones acuosas de permanganato de potasio (𝐾𝑀𝑛𝑂⁴) con concentraciones 1,0; 0,2; 0,01 y 0,002 𝑚𝑜𝑙/𝐿, respectivamente. Durante su preparación, se aseguraron de que todas las soluciones se mantuvieran a una temperatura constante de 25 °𝐶. Luego, agitaron cada solución uniformemente por 60 𝑠𝑒𝑔𝑢𝑛𝑑𝑜𝑠 y las almacenaron por separado en frascos de vidrio del mismo material y tamaño. Posteriormente, las dejaron reposar por 5 𝑚𝑖𝑛𝑢𝑡𝑜𝑠 en un cuarto a la misma intensidad de luz, y finalmente observaron la tonalidad de cada solución. A partir de lo anterior, ¿cuál de las siguientes hipótesis es pertinente considerando el experimento realizado por el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El tiempo de agitación de una solución afecta la tonalidad de su color."
+    },
+    {
+     "key": "B",
+     "text": "La variación de la concentración de una solución afecta la tonalidad de su color."
+    },
+    {
+     "key": "C",
+     "text": "El tiempo de exposición a la luz solar de una solución afecta la tonalidad de su color."
+    },
+    {
+     "key": "D",
+     "text": "La variación de la temperatura de una solución cambia la tonalidad de su color."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una hipótesis pertinente relaciona la única variable que cambia entre los frascos, la concentración, con el efecto observado, la tonalidad del color.",
+    "planteamiento": "Se pide la hipótesis que corresponde al experimento. Datos: cuatro soluciones de $\\mathrm{KMnO_4}$ de $100\\ \\mathrm{mL}$ con concentraciones de $1{,}0$; $0{,}2$; $0{,}01$ y $0{,}002\\ \\mathrm{mol/L}$, todas a $25\\,^\\circ\\mathrm{C}$, agitadas $60\\ \\mathrm{s}$, en reposo $5\\ \\mathrm{min}$ y con la misma intensidad de luz.",
+    "steps": [
+     "Se identifica la variable independiente, la que el grupo cambió a propósito: la concentración de cada solución de $\\mathrm{KMnO_4}$.",
+     "Se revisa que el resto de condiciones se mantuvo igual: temperatura ($25\\,^\\circ\\mathrm{C}$), volumen ($100\\ \\mathrm{mL}$), tiempo de agitación ($60\\ \\mathrm{s}$), tiempo de reposo ($5\\ \\mathrm{min}$), intensidad de luz y tipo de frasco.",
+     "La variable dependiente es la tonalidad observada en cada solución.",
+     "Una hipótesis pertinente debe proponer una relación entre la variable que se cambió y la que se observó. La opción B afirma que la concentración afecta la tonalidad, y el experimento permite contrastarla.",
+     "Las otras opciones proponen variables que no cambiaron entre frascos: el tiempo de agitación (A), la luz (C) y la temperatura (D). Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone que el tiempo de agitación afecta el color. Ese tiempo fue el mismo ($60\\ \\mathrm{s}$) en todas las soluciones, así que el experimento no puede contrastar esa hipótesis.",
+     "C": "Propone que la exposición a la luz solar cambia el color. Los frascos recibieron la misma intensidad de luz en el mismo cuarto; esa variable no cambió.",
+     "D": "Propone que la temperatura cambia el color. La temperatura se mantuvo en $25\\,^\\circ\\mathrm{C}$ en todas las soluciones, así que no hay variación que comparar."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q27",
+   "number": 27,
+   "origin": "ciencias-biologia-2027-invierno-q41",
+   "axis": "Química",
+   "topic": "Moléculas",
+   "subtopic": "cs-organica",
+   "stem": "La siguiente figura representa a la molécula de estireno.\n\nAl respecto, ¿qué opción contiene el número correcto de enlaces en la molécula?\n\n𝜎 (𝐶– 𝐶) 𝜋 (𝐶– 𝐶) 𝜎 (𝐶– 𝐻)",
+   "options": [
+    {
+     "key": "A",
+     "text": "6 1 5"
+    },
+    {
+     "key": "B",
+     "text": "6 4 7"
+    },
+    {
+     "key": "C",
+     "text": "8 3 7"
+    },
+    {
+     "key": "D",
+     "text": "8 1 8"
+    },
+    {
+     "key": "E",
+     "text": "8 4 8"
+    }
+   ],
+   "answer": "E",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q41.webp",
+    "width": 907,
+    "height": 509,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que separar los enlaces sigma, que todo enlace tiene, de los pi, que aparecen en los dobles enlaces; el estireno tiene 8 carbonos y 8 hidrógenos, con 8 enlaces σ C–C, 4 π C–C y 8 σ C–H.",
+    "planteamiento": "Se pide la opción con el número correcto de enlaces $\\sigma$ C–C, $\\pi$ C–C y $\\sigma$ C–H de la molécula de estireno. Datos: la figura muestra un anillo bencénico con un grupo vinilo unido a él; la molécula es $\\mathrm{C_8H_8}$.",
+    "steps": [
+     "Contar los átomos: el anillo bencénico tiene 6 carbonos y el grupo vinilo aporta 2 más, así que hay 8 carbonos. El anillo tiene 5 hidrógenos, porque un carbono está unido al vinilo, y el vinilo aporta 3 hidrógenos: en total hay 8 hidrógenos, es decir, $\\mathrm{C_8H_8}$.",
+     "Contar los enlaces $\\sigma$ C–C: 6 del anillo, 1 que une el anillo con el vinilo y 1 del enlace $\\sigma$ dentro del doble enlace del vinilo. Total: $6 + 1 + 1 = 8$.",
+     "Contar los enlaces $\\pi$ C–C: en la forma de Kekulé, el anillo tiene 3 dobles enlaces, y el doble enlace del vinilo aporta 1 más. Total: $3 + 1 = 4$.",
+     "Contar los enlaces $\\sigma$ C–H: 5 hidrógenos del anillo y 3 del vinilo, en total 8. Los valores 8, 4 y 8 corresponden a la opción E. Por lo tanto, la alternativa correcta es la E."
+    ],
+    "distractors": {
+     "A": "6, 1 y 5: cuenta solo los enlaces del anillo y omite el grupo vinilo.",
+     "B": "6, 4 y 7: omite los dos enlaces $\\sigma$ C–C que involucran al grupo vinilo y cuenta un hidrógeno menos.",
+     "C": "8, 3 y 7: cuenta solo tres enlaces $\\pi$, omitiendo el del grupo vinilo, y solo siete enlaces $\\sigma$ C–H.",
+     "D": "8, 1 y 8: cuenta solo el doble enlace del vinilo como $\\pi$ y olvida los tres dobles enlaces del anillo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q28",
+   "number": 28,
+   "origin": "ciencias-biologia-2027-invierno-q42",
+   "axis": "Química",
+   "topic": "Compuestos",
+   "subtopic": "cs-organica",
+   "stem": "Respecto de la siguiente estructura de un compuesto orgánico:\n\n¿Cuál es su nombre correcto, según la IUPAC?",
+   "options": [
+    {
+     "key": "A",
+     "text": "3,6-dimetilheptanal."
+    },
+    {
+     "key": "B",
+     "text": "3-metil-5-isopropilpentanona."
+    },
+    {
+     "key": "C",
+     "text": "3-butil-3-butanal."
+    },
+    {
+     "key": "D",
+     "text": "3-butil-3-butanona."
+    },
+    {
+     "key": "E",
+     "text": "3,6-dimetilheptanona."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q42.webp",
+    "width": 907,
+    "height": 554,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El grupo –CHO está en el extremo de la cadena, así que el compuesto es un aldehído y la numeración parte en ese carbono; la cadena más larga tiene 7 carbonos, con metilos en las posiciones 3 y 6.",
+    "planteamiento": "Se pide el nombre IUPAC correcto del compuesto. Datos: la estructura tiene un grupo –CHO en un extremo, dos grupos metilo como ramificaciones y una cadena cuya parte más larga tiene 7 átomos de carbono.",
+    "steps": [
+     "Identificar el grupo principal: el grupo –CHO está en el extremo de la cadena, lo que corresponde a un aldehído, con sufijo -al. El carbono de ese grupo es el C1, y la numeración parte desde él.",
+     "Identificar la cadena principal: la cadena más larga que contiene el grupo –CHO tiene 7 carbonos, de C1 a C7, es decir, una heptana.",
+     "Ubicar los sustituyentes: un metilo está en C3 y otro en C6. El carbono 6 tiene un metilo y el carbono 7 cierra la cadena, por lo que el extremo ramificado forma parte de la cadena principal.",
+     "Formar el nombre: los sustituyentes con localizadores 3 y 6 dan 3,6-dimetilheptanal. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "3-metil-5-isopropilpentanona: elige una cadena de 5 carbonos con un isopropilo, que no es la cadena más larga, y usa el sufijo -ona, que corresponde a una cetona.",
+     "C": "3-butil-3-butanal: usa un sustituyente butilo y una cadena de 4 carbonos, lo que no coincide con la cadena de 7 carbonos del compuesto.",
+     "D": "3-butil-3-butanona: combina un sufijo de cetona con un sustituyente y una cadena que no corresponden a la estructura.",
+     "E": "3,6-dimetilheptanona: tiene la cadena y los sustituyentes correctos, pero usa el sufijo -ona (cetona); el grupo del extremo es un aldehído."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q29",
+   "number": 29,
+   "origin": "ciencias-biologia-2027-invierno-q37",
+   "axis": "Química",
+   "topic": "Química",
+   "subtopic": "cs-reacciones",
+   "stem": "Como parte de un proyecto científico escolar, un grupo de estudiantes midió la masa y el volumen de distintas muestras de cobre provenientes de una empresa minera del país, la cual comercializa cobre refinado etiquetado con una pureza del 99,99 %. Con estos valores de masa y volumen, determinaron la densidad de cada muestra y las compararon con el valor de densidad referencial que corresponde a 8,96 𝑔/𝑚𝐿. Las mediciones fueron realizadas utilizando los mismos materiales e instrumentos de laboratorio, una balanza y una probeta, dentro de una sala calefaccionada a temperatura constante, obteniendo los siguientes datos:\n\nMuestra Masa (𝑔) Volumen (𝑚𝐿) Densidad (𝑔/𝑚𝐿) 1 8,801 1,0 8,8 2 9,533 1,0 9,5 3 18,512 2,0 9,2 4 12,632 1,5 8,4 5 13,119 1,5 8,7\n\nLa profesora a cargo del grupo les comenta que existe un problema de confiabilidad. Al respecto, ¿cuál de los siguientes factores perjudicó la confiabilidad del trabajo realizado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La cantidad de muestras utilizadas."
+    },
+    {
+     "key": "B",
+     "text": "Los valores de volúmenes registrados."
+    },
+    {
+     "key": "C",
+     "text": "El uso de un valor de densidad referencial."
+    },
+    {
+     "key": "D",
+     "text": "La procedencia de las muestras desde una empresa."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q37.webp",
+    "width": 907,
+    "height": 647,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las masas se miden con una balanza precisa, pero los volúmenes se leen en una probeta; un error pequeño de lectura sobre volúmenes de 1,0 a 2,0 mL cambia mucho la densidad, y por eso los valores se dispersan.",
+    "planteamiento": "Se pide el factor que perjudicó la confiabilidad del trabajo. Datos: las masas tienen tres decimales; los volúmenes (1,0; 1,5 y 2,0 mL) son lecturas de una probeta; la densidad referencial es $8{,}96\\ \\mathrm{g/mL}$; la balanza, los materiales y la temperatura se mantuvieron constantes.",
+    "steps": [
+     "Calcular la densidad como $\\rho = \\frac{m}{V}$. Por ejemplo, la muestra 1 da $\\frac{8{,}801}{1{,}0} = 8{,}8$ g/mL y la muestra 3 da $\\frac{18{,}512}{2{,}0} \\approx 9{,}26$ g/mL. Las muestras de un mismo metal dan valores entre $8{,}4$ y $9{,}5$ g/mL.",
+     "Comparar la precisión de los instrumentos: las masas tienen tres decimales y provienen de una balanza precisa, mientras que los volúmenes son lecturas de una probeta, un instrumento de menor precisión.",
+     "Evaluar el efecto del error: un error de lectura de $0{,}1$ mL sobre $1{,}0$ mL equivale a un $10\\,\\%$ en el volumen, y ese error pasa directamente a la densidad. Por eso los valores se dispersan aunque se trate del mismo metal.",
+     "Descartar las demás: la balanza, la temperatura constante y el uso de los mismos instrumentos y materiales fueron controlados; la cantidad de muestras afecta la representatividad y la procedencia afecta la pureza, pero ninguna de las dos hace menos repetibles las mediciones. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Cantidad de muestras: afecta la representatividad del estudio, pero no hace menos repetibles las mediciones de cada muestra.",
+     "C": "Valor de densidad referencial: sirve para comparar los resultados y no modifica las mediciones realizadas por el grupo.",
+     "D": "Procedencia de las muestras: afecta la pureza del material, es decir, la exactitud del valor de referencia, pero no la confiabilidad de las mediciones hechas."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-2-q30",
+   "number": 30,
+   "origin": "ciencias-biologia-2027-invierno-q38",
+   "axis": "Química",
+   "topic": "Química",
+   "subtopic": "cs-reacciones",
+   "stem": "Los trucos de magia han sido utilizados para crear ilusiones en espectáculos de entretenimiento, como el truco de doblar una cuchara metálica “con la mente” o el de “hacerla desaparecer”. Aunque el espectador puede desconocer la estrategia utilizada por el mago, existe un fundamento científico detrás. Sabiendo que el galio es un metal de color gris brillante, que se funde a una temperatura de 29,76 °𝐶, un científico dice que: un utensilio como una cuchara hecha de este material, podría doblarse si permanece en contacto con el calor generado por las manos o incluso “desaparecer” si se introduce en una sopa líquida caliente. Al respecto, ¿a qué componente de la investigación corresponde la frase dicha por el científico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A una predicción."
+    },
+    {
+     "key": "B",
+     "text": "A una evidencia."
+    },
+    {
+     "key": "C",
+     "text": "A una observación."
+    },
+    {
+     "key": "D",
+     "text": "A una teoría."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La frase del científico anticipa lo que ocurriría con una cuchara de galio al calentarla, a partir de una propiedad conocida; eso es una predicción.",
+    "planteamiento": "Se pide el componente de la investigación al que corresponde la frase del científico. Datos: el galio es un metal gris brillante que se funde a $29{,}76\\ ^{\\circ}\\mathrm{C}$; el científico afirma que una cuchara de galio podría doblarse con el calor de las manos o desaparecer en una sopa caliente.",
+    "steps": [
+     "Identificar la base de la frase: el científico parte de una propiedad conocida del galio, que es un metal gris que se funde a $29{,}76\\ ^{\\circ}\\mathrm{C}$.",
+     "Identificar lo que afirma: que una cuchara de galio se doblaría con el calor de las manos o desaparecería en una sopa caliente. Esas frases describen un resultado futuro que todavía no se ha observado.",
+     "Relacionar la afirmación con la condición: el enunciado anticipa qué ocurriría si se da una condición, el contacto con calor, lo que corresponde a una predicción.",
+     "Comparar con las otras categorías: una evidencia y una observación son resultados ya obtenidos, y una teoría es un modelo general que explica muchos fenómenos; la frase es una anticipación puntual. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Evidencia: es un resultado ya obtenido en el laboratorio; la frase no entrega datos de experimentos realizados.",
+     "C": "Observación: es lo que se ve directamente; la frase habla de lo que podría pasar y no de lo que se vio.",
+     "D": "Teoría: es un modelo general que explica muchos fenómenos; la frase es una afirmación puntual sobre un caso concreto."
+    }
+   }
+  }
+ ]
+}

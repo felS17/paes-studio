@@ -19,7 +19,7 @@ export function Segmented<T extends string>({
   onChange: (value: T) => void
   options: SegmentOption<T>[]
   label: string
-  size?: 'sm' | 'md'
+  size?: 'sm' | 'md' | 'lg'
   className?: string
 }) {
   return (
@@ -55,7 +55,7 @@ export function Segmented<T extends string>({
             onClick={() => onChange(o.value)}
             className={cn(
               'shrink-0 rounded-md font-medium whitespace-nowrap transition-colors duration-150',
-              size === 'sm' ? 'h-6 px-2 text-[11px]' : 'h-7 px-2.5 text-xs',
+              size === 'sm' ? 'h-6 px-2 text-[11px]' : size === 'lg' ? 'h-8 px-3.5 text-[14px]' : 'h-7 px-2.5 text-xs',
               active
                 ? 'bg-white text-zinc-900 shadow-[0_0_0_1px_rgba(24,24,27,0.08)] dark:bg-zinc-800 dark:text-zinc-100 dark:shadow-[0_0_0_1px_rgba(255,255,255,0.06)]'
                 : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100',

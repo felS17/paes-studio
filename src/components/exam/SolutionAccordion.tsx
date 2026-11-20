@@ -21,7 +21,7 @@ const READING = 'rounded-md bg-accent/[0.07] ring-1 ring-accent/25'
  * «Solución del ejercicio»: desarrollo específico de la pregunta (curado o redactado con IA y validado
  * contra la clave oficial). Si la pregunta no tiene solución, se muestra solo la clave del clavijero.
  */
-export function SolutionAccordion({ question, defaultOpen = false }: { question: Question; defaultOpen?: boolean }) {
+export function SolutionAccordion({ question, defaultOpen = false, wide = false }: { question: Question; defaultOpen?: boolean; wide?: boolean }) {
   const ex = question.explanation
 
   if (!ex) {
@@ -32,10 +32,10 @@ export function SolutionAccordion({ question, defaultOpen = false }: { question:
       </p>
     )
   }
-  return <ExplanationView question={question} ex={ex} defaultOpen={defaultOpen} />
+  return <ExplanationView question={question} ex={ex} defaultOpen={defaultOpen} wide={wide} />
 }
 
-function ExplanationView({ question, ex, defaultOpen }: { question: Question; ex: Explanation; defaultOpen: boolean }) {
+function ExplanationView({ question, ex, defaultOpen, wide }: { question: Question; ex: Explanation; defaultOpen: boolean; wide: boolean }) {
   const [open, setOpen] = useState(defaultOpen)
   const id = useId()
   const blocks = useMemo(() => explanationSpeech(ex), [ex])
@@ -79,7 +79,11 @@ function ExplanationView({ question, ex, defaultOpen }: { question: Question; ex
           )}
         </div>
         {open && (
-          <div ref={body} id={id} className="animate-fade-in border-t border-zinc-200/80 px-3.5 pt-3 pb-4 text-[14px] leading-relaxed dark:border-zinc-800/80">
+          <div ref={body} id={id} className={cn(
+            'animate-fade-in border-t border-zinc-200/80 dark:border-zinc-800/80',
+            // En la revisión a todo el ancho la explicación se lee como un texto, no como una nota al margen.
+            wide ? 'px-5 pt-4 pb-5 text-[15.5px] leading-[1.75]' : 'px-3.5 pt-3 pb-4 text-[14px] leading-relaxed',
+          )}>
             <MathText text={ex.summary} className="text-zinc-700 dark:text-zinc-300" />
             {ex.planteamiento && (
               <section

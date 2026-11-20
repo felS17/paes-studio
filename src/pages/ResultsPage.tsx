@@ -163,96 +163,100 @@ export function ResultsPage() {
         </Panel>
       )}
 
-      <div className={cn('grid items-start gap-6', !daily && 'lg:grid-cols-[1fr_1.4fr]')}>
-        {!daily && (
-          <Panel>
-            <PanelHeader title="Cómo te fue por eje" description={attempt.mode === 'practica' ? 'Solo preguntas respondidas' : undefined} />
-            <AxisRadar stats={attempt.perAxis} order={SUBJECTS[attempt.subject].axes} className="p-4" />
-          </Panel>
-        )}
-
+      {/* Flujo vertical: los ejes arriba, a todo el ancho y compactos; la revisión debajo, sin columna estrecha. */}
+      {!daily && (
         <Panel>
-          <PanelHeader
-            title="Revisa tus respuestas"
-            description="Abre las que fallaste o dejaste en blanco: la explicación aparece al tiro."
+          <PanelHeader title="Cómo te fue por eje" description={attempt.mode === 'practica' ? 'Solo preguntas respondidas' : undefined} />
+          <AxisRadar
+            stats={attempt.perAxis}
+            order={SUBJECTS[attempt.subject].axes}
+            className="grid gap-x-8 gap-y-3 space-y-0 p-4 sm:grid-cols-2 sm:p-5 xl:grid-cols-3"
           />
-          <div className="border-b border-zinc-200/80 px-4 py-2.5 dark:border-zinc-800/80">
-            <Segmented<ReviewFilter>
-              label="Filtrar revisión"
-              size="sm"
-              value={filter}
-              onChange={setFilter}
-              options={[
-                { value: 'repasar', label: `Para repasar (${toReview.length})` },
-                { value: 'todas', label: 'Todas' },
-                { value: 'incorrectas', label: 'Incorrectas' },
-                { value: 'omitidas', label: 'Sin responder' },
-                { value: 'duda', label: 'Con duda' },
-              ]}
-            />
-          </div>
-          {list.length === 0 ? (
-            <p className="px-4 py-6 text-[13px] text-zinc-500 dark:text-zinc-400">No hay preguntas en este filtro.</p>
-          ) : (
-            <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
-              {list.map((q) => {
-                const full = questionsById.get(q.id)
-                const isOpen = open === q.id
-                const t = readTelemetry(q)
-                return (
-                  <li key={q.id} id={`revision-${q.id}`} className="scroll-mt-4">
-                    <button
-                      type="button"
-                      aria-expanded={isOpen}
-                      onClick={() => setOpen(isOpen ? null : q.id)}
-                      className="flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors hover:bg-zinc-50/80 dark:hover:bg-zinc-900/40"
-                    >
-                      <span className="w-7 font-mono text-[12.5px] font-medium tabular-nums">{q.number}</span>
-                      <StatusIcon q={q} />
-                      <span className="min-w-0 flex-1 truncate text-[13px]">
-                        {q.topic}
-                        {q.topic !== q.axis && <span className="ml-2 text-zinc-500 dark:text-zinc-400">{q.axis}</span>}
-                      </span>
-                      {t && t.selectionChanges > 0 && (
-                        <span className="hidden text-xs text-zinc-500 md:inline dark:text-zinc-400">{plural(t.selectionChanges, 'cambio')}</span>
-                      )}
-                      {t && (
-                        <span className="hidden font-mono text-xs text-zinc-500 tabular-nums sm:inline dark:text-zinc-400" title="Tiempo en esta pregunta">{formatClock(t.timeSpentMs)}</span>
-                      )}
-                      {q.flagged && <Flag className="size-3.5 fill-zinc-900 text-zinc-900 dark:fill-zinc-100 dark:text-zinc-100" aria-label="Con duda" />}
-                      <span className="font-mono text-xs text-zinc-500 tabular-nums normal-case dark:text-zinc-400">
-                        {q.selected ?? '–'}
-                        <span className="mx-1 text-zinc-300 dark:text-zinc-700">/</span>
-                        <span className="text-zinc-900 dark:text-zinc-100">{q.correct}</span>
-                      </span>
-                      <ChevronDown className={cn('size-4 text-zinc-400 transition-transform', isOpen && 'rotate-180')} />
-                    </button>
-                    {isOpen && (
-                      <div className="border-t border-zinc-200/80 bg-canvas px-4 py-5 dark:border-zinc-800/80">
-                        {full ? (
-                          <QuestionCard
-                            question={full}
-                            mode="revision"
-                            position={attempt.questions.indexOf(q) + 1}
-                            total={attempt.questions.length}
-                            selected={q.selected ?? undefined}
-                            revealed
-                            flagged={q.flagged}
-                            theory
-                            subject={attempt.subject}
-                          />
-                        ) : (
-                          <p className="text-[13px] text-zinc-500">Cargando pregunta…</p>
-                        )}
-                      </div>
-                    )}
-                  </li>
-                )
-              })}
-            </ul>
-          )}
         </Panel>
-      </div>
+      )}
+
+      <Panel>
+        <PanelHeader
+          title="Revisa tus respuestas"
+          description="Abre las que fallaste o dejaste en blanco: la explicación aparece al tiro."
+        />
+        <div className="border-b border-zinc-200/80 px-4 py-2.5 dark:border-zinc-800/80">
+          <Segmented<ReviewFilter>
+            label="Filtrar revisión"
+            size="sm"
+            value={filter}
+            onChange={setFilter}
+            options={[
+              { value: 'repasar', label: `Para repasar (${toReview.length})` },
+              { value: 'todas', label: 'Todas' },
+              { value: 'incorrectas', label: 'Incorrectas' },
+              { value: 'omitidas', label: 'Sin responder' },
+              { value: 'duda', label: 'Con duda' },
+            ]}
+          />
+        </div>
+        {list.length === 0 ? (
+          <p className="px-4 py-6 text-[13px] text-zinc-500 dark:text-zinc-400">No hay preguntas en este filtro.</p>
+        ) : (
+          <ul className="divide-y divide-zinc-200/80 dark:divide-zinc-800/80">
+            {list.map((q) => {
+              const full = questionsById.get(q.id)
+              const isOpen = open === q.id
+              const t = readTelemetry(q)
+              return (
+                <li key={q.id} id={`revision-${q.id}`} className="scroll-mt-4">
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    onClick={() => setOpen(isOpen ? null : q.id)}
+                    className="flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors hover:bg-zinc-50/80 dark:hover:bg-zinc-900/40"
+                  >
+                    <span className="w-7 font-mono text-[12.5px] font-medium tabular-nums">{q.number}</span>
+                    <StatusIcon q={q} />
+                    <span className="min-w-0 flex-1 truncate text-[13px]">
+                      {q.topic}
+                      {q.topic !== q.axis && <span className="ml-2 text-zinc-500 dark:text-zinc-400">{q.axis}</span>}
+                    </span>
+                    {t && t.selectionChanges > 0 && (
+                      <span className="hidden text-xs text-zinc-500 md:inline dark:text-zinc-400">{plural(t.selectionChanges, 'cambio')}</span>
+                    )}
+                    {t && (
+                      <span className="hidden font-mono text-xs text-zinc-500 tabular-nums sm:inline dark:text-zinc-400" title="Tiempo en esta pregunta">{formatClock(t.timeSpentMs)}</span>
+                    )}
+                    {q.flagged && <Flag className="size-3.5 fill-zinc-900 text-zinc-900 dark:fill-zinc-100 dark:text-zinc-100" aria-label="Con duda" />}
+                    <span className="font-mono text-xs text-zinc-500 tabular-nums normal-case dark:text-zinc-400">
+                      {q.selected ?? '–'}
+                      <span className="mx-1 text-zinc-300 dark:text-zinc-700">/</span>
+                      <span className="text-zinc-900 dark:text-zinc-100">{q.correct}</span>
+                    </span>
+                    <ChevronDown className={cn('size-4 text-zinc-400 transition-transform', isOpen && 'rotate-180')} />
+                  </button>
+                  {isOpen && (
+                    <div className="border-t border-zinc-200/80 bg-canvas px-4 py-6 sm:px-8 dark:border-zinc-800/80">
+                      {full ? (
+                        <QuestionCard
+                          question={full}
+                          mode="revision"
+                          position={attempt.questions.indexOf(q) + 1}
+                          total={attempt.questions.length}
+                          selected={q.selected ?? undefined}
+                          revealed
+                          flagged={q.flagged}
+                          theory
+                          subject={attempt.subject}
+                          wide
+                        />
+                      ) : (
+                        <p className="text-[13px] text-zinc-500">Cargando pregunta…</p>
+                      )}
+                    </div>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        )}
+      </Panel>
     </div>
   )
 }

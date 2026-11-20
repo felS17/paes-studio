@@ -470,6 +470,9 @@ def main() -> int:
             continue
         changed = False
         for q in exam["questions"]:
+            # Copia de una pregunta oficial en un ensayo curado: conserva el subtema de la original y no suma dos veces.
+            if q.get("origin"):
+                continue
             sub = classify(exam["subject"], q, temarios[exam["subject"]], is_current(exam))
             counts[sub] += 1
             if args.sample and sub == args.sample:

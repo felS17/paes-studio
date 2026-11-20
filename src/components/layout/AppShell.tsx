@@ -131,15 +131,17 @@ export function AppShell() {
   )
 }
 
-export function PageHeader({ title, description, actions }: {
+export function PageHeader({ title, description, actions, large }: {
   title: string
   description?: React.ReactNode
   actions?: React.ReactNode
+  /** Título de portada (p. ej. `/ensayos`), con más presencia que el de las demás vistas. */
+  large?: boolean
 }) {
   return (
     <div className="flex flex-wrap items-end justify-between gap-4">
       <div className="min-w-0">
-        <h1 className="text-[20px] font-semibold tracking-tight">{title}</h1>
+        <h1 className={cn('font-semibold tracking-tight', large ? 'text-[28px] leading-none sm:text-[34px]' : 'text-[20px]')}>{title}</h1>
         {description && <p className="mt-1.5 max-w-2xl text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400">{description}</p>}
       </div>
       {actions && <div className="flex items-center gap-2">{actions}</div>}

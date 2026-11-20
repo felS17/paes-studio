@@ -1,0 +1,1831 @@
+[
+ {
+  "id": "m1-porcentajes",
+  "subject": "m1",
+  "subtopic": "m1-porcentajes",
+  "axis": "Números",
+  "title": "Porcentaje",
+  "pattern": "alzas, descuentos encadenados y variación porcentual en contextos de compra",
+  "officialCount": 63,
+  "exercises": [
+   {
+    "stem": "El valor de una entrada al cine subió de \\$4 000 a \\$5 000. ¿En qué porcentaje aumentó su valor?",
+    "options": [
+     {
+      "key": "A",
+      "text": "25 %"
+     },
+     {
+      "key": "B",
+      "text": "20 %"
+     },
+     {
+      "key": "C",
+      "text": "1 000 %"
+     },
+     {
+      "key": "D",
+      "text": "80 %"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "La variación porcentual se calcula siempre sobre el valor inicial.",
+     "steps": [
+      "Calcula el aumento: $5\\,000 - 4\\,000 = 1\\,000$.",
+      "Divídelo por el valor inicial: $\\dfrac{1\\,000}{4\\,000} = 0{,}25$.",
+      "Escríbelo como porcentaje: $0{,}25 = 25\\,\\%$."
+     ],
+     "distractors": {
+      "B": "Es $\\dfrac{1\\,000}{5\\,000}$: compara el aumento con el valor final, no con el inicial.",
+      "D": "Es $\\dfrac{4\\,000}{5\\,000}$, la razón entre los precios, que no mide el aumento."
+     }
+    }
+   },
+   {
+    "stem": "Una tienda rebaja un 30 % el precio de un polerón y, sobre ese nuevo precio, aplica un 10 % de descuento adicional. ¿A qué descuento único equivalen ambas rebajas?",
+    "options": [
+     {
+      "key": "A",
+      "text": "40 %"
+     },
+     {
+      "key": "B",
+      "text": "37 %"
+     },
+     {
+      "key": "C",
+      "text": "33 %"
+     },
+     {
+      "key": "D",
+      "text": "63 %"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Los descuentos sucesivos se multiplican como factores: cada uno se aplica sobre el precio que dejó el anterior.",
+     "steps": [
+      "Rebajar un 30 % deja el $70\\,\\%$ del precio: factor $0{,}7$.",
+      "Rebajar luego un 10 % deja el $90\\,\\%$ de ese precio: factor $0{,}9$.",
+      "En total se paga $0{,}7\\cdot 0{,}9 = 0{,}63$, es decir, el $63\\,\\%$ del precio original.",
+      "El descuento único es $100\\,\\% - 63\\,\\% = 37\\,\\%$."
+     ],
+     "distractors": {
+      "A": "Sumar $30\\,\\% + 10\\,\\%$ supone que el segundo descuento se calcula sobre el precio original, y no es así.",
+      "D": "El $63\\,\\%$ es lo que se paga, no lo que se descuenta."
+     }
+    }
+   },
+   {
+    "stem": "En un curso de 40 estudiantes, el 35 % practica algún deporte y, de ellos, la mitad juega fútbol. ¿Cuántos estudiantes del curso juegan fútbol?",
+    "options": [
+     {
+      "key": "A",
+      "text": "14"
+     },
+     {
+      "key": "B",
+      "text": "20"
+     },
+     {
+      "key": "C",
+      "text": "7"
+     },
+     {
+      "key": "D",
+      "text": "34"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Un porcentaje de un porcentaje se calcula en cadena: primero la parte que practica deporte y luego la mitad de esa parte.",
+     "steps": [
+      "Estudiantes que practican deporte: $40\\cdot 0{,}35 = 14$.",
+      "La mitad de ellos juega fútbol: $\\dfrac{14}{2} = 7$."
+     ],
+     "distractors": {
+      "A": "Son los que practican deporte; falta tomar la mitad.",
+      "B": "Es la mitad del curso completo, no de los que practican deporte.",
+      "D": "Resulta de sumar $35\\,\\% + 50\\,\\%$ y aplicarlo a 40: los porcentajes en cadena no se suman."
+     }
+    }
+   },
+   {
+    "stem": "Después de un alza de 20 %, un artículo cuesta \\$36 000. ¿Cuál era su precio antes del alza?",
+    "options": [
+     {
+      "key": "A",
+      "text": "\\$28 800"
+     },
+     {
+      "key": "B",
+      "text": "\\$43 200"
+     },
+     {
+      "key": "C",
+      "text": "\\$7 200"
+     },
+     {
+      "key": "D",
+      "text": "\\$30 000"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Si el precio subió un 20 %, el precio nuevo es el 120 % del antiguo: para volver atrás se divide por $1{,}2$.",
+     "steps": [
+      "Plantea la ecuación: $1{,}2\\cdot p = 36\\,000$.",
+      "Despeja: $p = \\dfrac{36\\,000}{1{,}2} = 30\\,000$.",
+      "Comprueba: $30\\,000\\cdot 1{,}2 = 36\\,000$."
+     ],
+     "distractors": {
+      "A": "Es restar el 20 % de \\$36 000. El 20 % se calculó sobre el precio antiguo, no sobre el nuevo.",
+      "B": "Es volver a subir un 20 % el precio nuevo."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m1-potencias",
+  "subject": "m1",
+  "subtopic": "m1-potencias",
+  "axis": "Números",
+  "title": "Potencias y raíces",
+  "pattern": "propiedades de potencias con igual base, exponente negativo y notación científica",
+  "officialCount": 5,
+  "exercises": [
+   {
+    "stem": "¿Cuál es el valor de $\\dfrac{3^{4}\\cdot 9^{-1}}{27}$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$\\dfrac{1}{3}$"
+     },
+     {
+      "key": "B",
+      "text": "$3$"
+     },
+     {
+      "key": "C",
+      "text": "$\\dfrac{1}{9}$"
+     },
+     {
+      "key": "D",
+      "text": "$9$"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Escribe todo en base 3 y opera con los exponentes.",
+     "steps": [
+      "Como $9 = 3^{2}$ y $27 = 3^{3}$: $9^{-1} = 3^{-2}$.",
+      "Numerador: $3^{4}\\cdot 3^{-2} = 3^{4-2} = 3^{2}$.",
+      "División de igual base: $\\dfrac{3^{2}}{3^{3}} = 3^{2-3} = 3^{-1} = \\dfrac{1}{3}$."
+     ],
+     "distractors": {
+      "B": "Aparece al tratar $9^{-1}$ como $3^{2}$, ignorando el signo del exponente.",
+      "C": "Resulta de restar mal los exponentes del final: $3^{2-4}$."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuál es el resultado de $(4\\cdot 10^{5})\\cdot(3\\cdot 10^{-2})$ escrito en notación científica?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$12\\cdot 10^{-10}$"
+     },
+     {
+      "key": "B",
+      "text": "$1{,}2\\cdot 10^{3}$"
+     },
+     {
+      "key": "C",
+      "text": "$1{,}2\\cdot 10^{4}$"
+     },
+     {
+      "key": "D",
+      "text": "$7\\cdot 10^{3}$"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Multiplica los coeficientes entre sí y las potencias de 10 entre sí; al final, deja el coeficiente entre 1 y 10.",
+     "steps": [
+      "Coeficientes: $4\\cdot 3 = 12$.",
+      "Potencias de 10: $10^{5}\\cdot 10^{-2} = 10^{5+(-2)} = 10^{3}$.",
+      "Producto: $12\\cdot 10^{3}$. Como $12 = 1{,}2\\cdot 10$, queda $1{,}2\\cdot 10^{4}$."
+     ],
+     "distractors": {
+      "A": "Multiplica los exponentes ($5\\cdot(-2)$) en vez de sumarlos.",
+      "B": "Pasa 12 a $1{,}2$ sin compensar con un factor 10 más."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuál es el resultado de $\\sqrt{12} + \\sqrt{27} - \\sqrt{3}$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$\\sqrt{36}$"
+     },
+     {
+      "key": "B",
+      "text": "$4\\sqrt{3}$"
+     },
+     {
+      "key": "C",
+      "text": "$6$"
+     },
+     {
+      "key": "D",
+      "text": "$5\\sqrt{3}$"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Solo se suman o restan raíces semejantes: primero se simplifica cada raíz hasta que todas tengan $\\sqrt{3}$.",
+     "steps": [
+      "$\\sqrt{12} = \\sqrt{4\\cdot 3} = 2\\sqrt{3}$ y $\\sqrt{27} = \\sqrt{9\\cdot 3} = 3\\sqrt{3}$.",
+      "Suma y resta los coeficientes: $2\\sqrt{3} + 3\\sqrt{3} - \\sqrt{3} = 4\\sqrt{3}$."
+     ],
+     "distractors": {
+      "A": "Opera las cantidades subradicales ($12 + 27 - 3 = 36$): la raíz no se distribuye sobre la suma.",
+      "D": "Olvida restar el último $\\sqrt{3}$."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuál es el valor de $\\left(\\dfrac{2}{3}\\right)^{-2}$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$-\\dfrac{4}{9}$"
+     },
+     {
+      "key": "B",
+      "text": "$\\dfrac{4}{9}$"
+     },
+     {
+      "key": "C",
+      "text": "$-\\dfrac{9}{4}$"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{9}{4}$"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Un exponente negativo invierte la base; no cambia el signo del resultado.",
+     "steps": [
+      "Invierte la fracción y deja el exponente positivo: $\\left(\\dfrac{2}{3}\\right)^{-2} = \\left(\\dfrac{3}{2}\\right)^{2}$.",
+      "Eleva numerador y denominador: $\\dfrac{3^{2}}{2^{2}} = \\dfrac{9}{4}$."
+     ],
+     "distractors": {
+      "A": "Confunde el exponente negativo con un resultado negativo y además no invierte la base.",
+      "B": "Eleva al cuadrado sin invertir la fracción."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m1-ecuaciones",
+  "subject": "m1",
+  "subtopic": "m1-ecuaciones",
+  "axis": "Álgebra y funciones",
+  "title": "Ecuaciones e inecuaciones lineales",
+  "pattern": "ecuaciones con fracciones, planteamiento de problemas y cambio de sentido en inecuaciones",
+  "officialCount": 15,
+  "exercises": [
+   {
+    "stem": "¿Cuál es la solución de la ecuación $\\dfrac{x}{3} + \\dfrac{x}{4} = 14$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$x = 12$"
+     },
+     {
+      "key": "B",
+      "text": "$x = 24$"
+     },
+     {
+      "key": "C",
+      "text": "$x = 2$"
+     },
+     {
+      "key": "D",
+      "text": "$x = 98$"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Multiplica toda la ecuación por el mínimo común múltiplo de los denominadores para trabajar sin fracciones.",
+     "steps": [
+      "El m.c.m. de 3 y 4 es 12: $12\\cdot\\dfrac{x}{3} + 12\\cdot\\dfrac{x}{4} = 12\\cdot 14$.",
+      "Simplifica: $4x + 3x = 168$, es decir, $7x = 168$.",
+      "Despeja: $x = \\dfrac{168}{7} = 24$. Comprueba: $8 + 6 = 14$."
+     ],
+     "distractors": {
+      "C": "Resulta de sumar las fracciones como $\\dfrac{7x}{12}$ y luego olvidar el 12: $7x = 14$.",
+      "D": "Multiplica $14\\cdot 7$ en vez de dividir."
+     }
+    }
+   },
+   {
+    "stem": "La suma de tres números enteros consecutivos es 87. ¿Cuál es el mayor de ellos?",
+    "options": [
+     {
+      "key": "A",
+      "text": "28"
+     },
+     {
+      "key": "B",
+      "text": "29"
+     },
+     {
+      "key": "C",
+      "text": "30"
+     },
+     {
+      "key": "D",
+      "text": "31"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Nombra al menor con una letra y escribe los otros dos a partir de él.",
+     "steps": [
+      "Si el menor es $n$, los números son $n$, $n+1$ y $n+2$.",
+      "Plantea: $n + (n+1) + (n+2) = 87$, o sea, $3n + 3 = 87$.",
+      "Despeja: $3n = 84$, $n = 28$. Los números son 28, 29 y 30, y el mayor es 30."
+     ],
+     "distractors": {
+      "A": "Es el menor de los tres, no el mayor.",
+      "B": "Es el del medio ($87 : 3$)."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuál es el conjunto solución de la inecuación $5 - 2x \\le 11$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$x \\le -3$"
+     },
+     {
+      "key": "B",
+      "text": "$x \\ge -3$"
+     },
+     {
+      "key": "C",
+      "text": "$x \\ge 3$"
+     },
+     {
+      "key": "D",
+      "text": "$x \\le 8$"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Se resuelve como una ecuación, pero al multiplicar o dividir por un número negativo se invierte el sentido de la desigualdad.",
+     "steps": [
+      "Resta 5 a ambos lados: $-2x \\le 6$.",
+      "Divide por $-2$ e invierte el signo: $x \\ge -3$.",
+      "Comprueba con $x = 0$, que cumple $x \\ge -3$: $5 - 0 = 5 \\le 11$."
+     ],
+     "distractors": {
+      "A": "Divide por $-2$ sin invertir el sentido de la desigualdad.",
+      "C": "Pierde el signo negativo al dividir: $\\dfrac{6}{-2} = -3$, no 3."
+     }
+    }
+   },
+   {
+    "stem": "Un plan de telefonía cobra \\$8 000 fijos al mes más \\$50 por cada minuto de llamadas. ¿Cuál es la mayor cantidad de minutos que se pueden usar en un mes para no pagar más de \\$15 000?",
+    "options": [
+     {
+      "key": "A",
+      "text": "300"
+     },
+     {
+      "key": "B",
+      "text": "160"
+     },
+     {
+      "key": "C",
+      "text": "460"
+     },
+     {
+      "key": "D",
+      "text": "140"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Traduce «no pagar más de» a una desigualdad $\\le$ y despeja los minutos.",
+     "steps": [
+      "Si $m$ son los minutos, el cobro es $8\\,000 + 50m$.",
+      "Plantea: $8\\,000 + 50m \\le 15\\,000$, de donde $50m \\le 7\\,000$.",
+      "Despeja: $m \\le \\dfrac{7\\,000}{50} = 140$. Lo máximo son 140 minutos."
+     ],
+     "distractors": {
+      "A": "Divide \\$15 000 por \\$50 sin descontar el cargo fijo.",
+      "B": "Divide el cargo fijo por \\$50, que no responde la pregunta."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m1-funcion-afin",
+  "subject": "m1",
+  "subtopic": "m1-funcion-afin",
+  "axis": "Álgebra y funciones",
+  "title": "Función lineal y afín",
+  "pattern": "evaluar, encontrar la función a partir de dos puntos e interpretar pendiente y coeficiente de posición",
+  "officialCount": 13,
+  "exercises": [
+   {
+    "stem": "Si $f(x) = 3x - 5$, ¿cuál es el valor de $f(-2)$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$1$"
+     },
+     {
+      "key": "B",
+      "text": "$-1$"
+     },
+     {
+      "key": "C",
+      "text": "$-11$"
+     },
+     {
+      "key": "D",
+      "text": "$11$"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Evaluar es reemplazar $x$ por el número, entre paréntesis, y respetar el orden de las operaciones.",
+     "steps": [
+      "Reemplaza: $f(-2) = 3\\cdot(-2) - 5$.",
+      "Multiplica: $3\\cdot(-2) = -6$.",
+      "Resta: $-6 - 5 = -11$."
+     ],
+     "distractors": {
+      "B": "Resulta de calcular $-6 + 5$: el $-5$ no cambia de signo.",
+      "D": "Pierde el signo del producto: $6 + 5$."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuál es la función afín cuyo gráfico pasa por los puntos $(1, 4)$ y $(3, 10)$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$f(x) = 3x + 1$"
+     },
+     {
+      "key": "B",
+      "text": "$f(x) = \\dfrac{1}{3}x + \\dfrac{11}{3}$"
+     },
+     {
+      "key": "C",
+      "text": "$f(x) = 3x + 4$"
+     },
+     {
+      "key": "D",
+      "text": "$f(x) = 2x + 2$"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Con dos puntos se calcula la pendiente y luego el coeficiente de posición reemplazando uno de ellos.",
+     "steps": [
+      "Pendiente: $m = \\dfrac{10 - 4}{3 - 1} = \\dfrac{6}{2} = 3$.",
+      "Reemplaza $(1, 4)$ en $f(x) = 3x + n$: $4 = 3\\cdot 1 + n$, así que $n = 1$.",
+      "La función es $f(x) = 3x + 1$. Comprueba con $(3, 10)$: $3\\cdot 3 + 1 = 10$."
+     ],
+     "distractors": {
+      "B": "Invierte la pendiente: calcula $\\dfrac{\\Delta x}{\\Delta y}$ en vez de $\\dfrac{\\Delta y}{\\Delta x}$.",
+      "D": "Pasa por $(1, 4)$, pero en $x = 3$ vale 8, no 10: hay que verificar los dos puntos."
+     }
+    }
+   },
+   {
+    "stem": "Un taxi cobra \\$350 al subir y \\$150 por cada 200 metros recorridos. Si el cobro es proporcional a la distancia, ¿qué función entrega el costo $C$, en pesos, de un viaje de $x$ metros?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$C(x) = 350 + 150x$"
+     },
+     {
+      "key": "B",
+      "text": "$C(x) = 350 + 0{,}75x$"
+     },
+     {
+      "key": "C",
+      "text": "$C(x) = 500x$"
+     },
+     {
+      "key": "D",
+      "text": "$C(x) = 150 + 350x$"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "El cargo fijo es el coeficiente de posición y el costo por metro es la pendiente.",
+     "steps": [
+      "Costo por metro: $\\dfrac{150}{200} = 0{,}75$ pesos.",
+      "Por $x$ metros se pagan $0{,}75x$ pesos, más el cargo fijo de \\$350.",
+      "La función es $C(x) = 350 + 0{,}75x$."
+     ],
+     "distractors": {
+      "A": "Cobra \\$150 por cada metro, no por cada 200 metros.",
+      "D": "Intercambia el cargo fijo con el cobro por distancia."
+     }
+    }
+   },
+   {
+    "stem": "La temperatura de un horno, en °C, sigue la función $T(t) = 20 + 15t$, con $t$ en minutos desde que se enciende. ¿Qué representa el número 15?",
+    "options": [
+     {
+      "key": "A",
+      "text": "La temperatura inicial del horno."
+     },
+     {
+      "key": "B",
+      "text": "La temperatura del horno después de un minuto."
+     },
+     {
+      "key": "C",
+      "text": "El tiempo que tarda el horno en calentarse."
+     },
+     {
+      "key": "D",
+      "text": "El aumento de la temperatura por cada minuto."
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "En una función afín, la pendiente es lo que cambia la variable dependiente por cada unidad de la independiente.",
+     "steps": [
+      "El 20 es $T(0)$: la temperatura al encender el horno.",
+      "El 15 multiplica a $t$: cada minuto que pasa, la temperatura sube 15 °C.",
+      "Por eso 15 es la tasa de aumento, en °C por minuto."
+     ],
+     "distractors": {
+      "A": "La temperatura inicial es 20, el coeficiente de posición.",
+      "B": "Después de un minuto la temperatura es $T(1) = 35$ °C, no 15."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m1-areas",
+  "subject": "m1",
+  "subtopic": "m1-areas",
+  "axis": "Geometría",
+  "title": "Figuras geométricas: Pitágoras, perímetros y áreas",
+  "pattern": "teorema de Pitágoras en contextos y áreas o perímetros de figuras compuestas",
+  "officialCount": 53,
+  "exercises": [
+   {
+    "stem": "Una escalera de 5 m de largo está apoyada en un muro vertical. Si su base está a 3 m del muro, ¿a qué altura toca el muro?",
+    "options": [
+     {
+      "key": "A",
+      "text": "2 m"
+     },
+     {
+      "key": "B",
+      "text": "4 m"
+     },
+     {
+      "key": "C",
+      "text": "$\\sqrt{34}$ m"
+     },
+     {
+      "key": "D",
+      "text": "8 m"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "La escalera, el muro y el suelo forman un triángulo rectángulo: la escalera es la hipotenusa.",
+     "steps": [
+      "Por Pitágoras: $h^{2} + 3^{2} = 5^{2}$.",
+      "Despeja: $h^{2} = 25 - 9 = 16$.",
+      "Entonces $h = 4$ m."
+     ],
+     "distractors": {
+      "A": "Resta los lados ($5 - 3$) sin elevarlos al cuadrado.",
+      "C": "Trata la escalera como cateto: $\\sqrt{5^{2} + 3^{2}}$."
+     }
+    }
+   },
+   {
+    "stem": "Una figura está formada por un rectángulo de 10 cm por 6 cm y un semicírculo cuyo diámetro es uno de los lados de 6 cm. ¿Cuál es el área de la figura?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$(60 + 9\\pi)$ cm²"
+     },
+     {
+      "key": "B",
+      "text": "$(60 + 3\\pi)$ cm²"
+     },
+     {
+      "key": "C",
+      "text": "$(60 + 4{,}5\\pi)$ cm²"
+     },
+     {
+      "key": "D",
+      "text": "$(60 + 36\\pi)$ cm²"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "El área de una figura compuesta es la suma de las áreas de sus partes.",
+     "steps": [
+      "Rectángulo: $10\\cdot 6 = 60$ cm².",
+      "El semicírculo tiene diámetro 6 cm, así que su radio es 3 cm.",
+      "Semicírculo: $\\dfrac{\\pi\\cdot 3^{2}}{2} = 4{,}5\\pi$ cm².",
+      "Total: $(60 + 4{,}5\\pi)$ cm²."
+     ],
+     "distractors": {
+      "A": "Usa el círculo completo y no la mitad.",
+      "D": "Toma 6 como radio en vez de diámetro."
+     }
+    }
+   },
+   {
+    "stem": "Un cuadrado tiene un área de 49 cm². ¿Cuál es su perímetro?",
+    "options": [
+     {
+      "key": "A",
+      "text": "28 cm"
+     },
+     {
+      "key": "B",
+      "text": "14 cm"
+     },
+     {
+      "key": "C",
+      "text": "49 cm"
+     },
+     {
+      "key": "D",
+      "text": "196 cm"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Del área se obtiene el lado y del lado, el perímetro.",
+     "steps": [
+      "Lado: $\\sqrt{49} = 7$ cm.",
+      "Perímetro: $4\\cdot 7 = 28$ cm."
+     ],
+     "distractors": {
+      "B": "Suma solo dos lados.",
+      "D": "Multiplica el área por 4 en vez de usar el lado."
+     }
+    }
+   },
+   {
+    "stem": "La diagonal de un rectángulo mide 10 cm y uno de sus lados mide 6 cm. ¿Cuál es el perímetro del rectángulo?",
+    "options": [
+     {
+      "key": "A",
+      "text": "32 cm"
+     },
+     {
+      "key": "B",
+      "text": "24 cm"
+     },
+     {
+      "key": "C",
+      "text": "48 cm"
+     },
+     {
+      "key": "D",
+      "text": "28 cm"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "La diagonal divide al rectángulo en dos triángulos rectángulos: con Pitágoras se obtiene el lado que falta.",
+     "steps": [
+      "Lado desconocido: $b^{2} = 10^{2} - 6^{2} = 64$, así que $b = 8$ cm.",
+      "Perímetro: $2\\cdot(6 + 8) = 28$ cm."
+     ],
+     "distractors": {
+      "A": "Usa la diagonal como si fuera un lado: $2\\cdot(10 + 6)$.",
+      "C": "Es el área, $6\\cdot 8$, no el perímetro."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m1-tendencia",
+  "subject": "m1",
+  "subtopic": "m1-tendencia",
+  "axis": "Probabilidad y estadística",
+  "title": "Representación de datos: tablas, gráficos y promedio",
+  "pattern": "promedio, nota necesaria y lectura de tablas de frecuencia",
+  "officialCount": 68,
+  "exercises": [
+   {
+    "stem": "Ana tiene tres notas: 5,0; 6,2 y 4,8. ¿Qué nota necesita en la cuarta evaluación para que su promedio sea 5,5?",
+    "options": [
+     {
+      "key": "A",
+      "text": "5,3"
+     },
+     {
+      "key": "B",
+      "text": "5,5"
+     },
+     {
+      "key": "C",
+      "text": "6,5"
+     },
+     {
+      "key": "D",
+      "text": "6,0"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Trabaja con la suma: un promedio de 5,5 en cuatro notas exige que las notas sumen $4\\cdot 5{,}5$.",
+     "steps": [
+      "Suma necesaria: $4\\cdot 5{,}5 = 22$.",
+      "Suma actual: $5{,}0 + 6{,}2 + 4{,}8 = 16$.",
+      "Nota necesaria: $22 - 16 = 6{,}0$."
+     ],
+     "distractors": {
+      "A": "Es el promedio de las tres notas actuales, $\\dfrac{16}{3} \\approx 5{,}3$.",
+      "B": "Sacar 5,5 no basta: el promedio actual es menor que 5,5."
+     }
+    }
+   },
+   {
+    "stem": "La tabla muestra el número de hermanos de los 20 estudiantes de un taller.\n\n| Número de hermanos | 0 | 1 | 2 | 3 |\n|---|---|---|---|---|\n| Estudiantes | 4 | 9 | 6 | 1 |\n\n¿Cuál es el promedio de hermanos por estudiante?",
+    "options": [
+     {
+      "key": "A",
+      "text": "1,5"
+     },
+     {
+      "key": "B",
+      "text": "5"
+     },
+     {
+      "key": "C",
+      "text": "1,2"
+     },
+     {
+      "key": "D",
+      "text": "6"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "En una tabla de frecuencias, cada valor se cuenta tantas veces como estudiantes lo tienen.",
+     "steps": [
+      "Suma total de hermanos: $0\\cdot 4 + 1\\cdot 9 + 2\\cdot 6 + 3\\cdot 1 = 0 + 9 + 12 + 3 = 24$.",
+      "Promedio: $\\dfrac{24}{20} = 1{,}2$ hermanos por estudiante."
+     ],
+     "distractors": {
+      "A": "Promedia los valores 0, 1, 2 y 3 sin considerar cuántos estudiantes tiene cada uno.",
+      "B": "Promedia las frecuencias: $\\dfrac{20}{4}$."
+     }
+    }
+   },
+   {
+    "stem": "La tabla muestra el número de hermanos de los 20 estudiantes de un taller.\n\n| Número de hermanos | 0 | 1 | 2 | 3 |\n|---|---|---|---|---|\n| Estudiantes | 4 | 9 | 6 | 1 |\n\n¿Qué porcentaje de los estudiantes tiene 2 hermanos o más?",
+    "options": [
+     {
+      "key": "A",
+      "text": "7 %"
+     },
+     {
+      "key": "B",
+      "text": "35 %"
+     },
+     {
+      "key": "C",
+      "text": "30 %"
+     },
+     {
+      "key": "D",
+      "text": "65 %"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "«2 o más» incluye a los que tienen 2 y a los que tienen 3.",
+     "steps": [
+      "Estudiantes con 2 o más hermanos: $6 + 1 = 7$.",
+      "Porcentaje: $\\dfrac{7}{20} = 0{,}35 = 35\\,\\%$."
+     ],
+     "distractors": {
+      "A": "Es la cantidad de estudiantes, no el porcentaje.",
+      "C": "Cuenta solo a los que tienen exactamente 2 hermanos.",
+      "D": "Es el porcentaje de los que tienen menos de 2."
+     }
+    }
+   },
+   {
+    "stem": "El promedio de 5 números es 12. Si se agrega el número 18, ¿cuál es el promedio de los 6 números?",
+    "options": [
+     {
+      "key": "A",
+      "text": "13"
+     },
+     {
+      "key": "B",
+      "text": "15"
+     },
+     {
+      "key": "C",
+      "text": "30"
+     },
+     {
+      "key": "D",
+      "text": "12"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Recupera la suma a partir del promedio, agrega el dato nuevo y vuelve a dividir.",
+     "steps": [
+      "Suma de los 5 números: $5\\cdot 12 = 60$.",
+      "Nueva suma: $60 + 18 = 78$.",
+      "Nuevo promedio: $\\dfrac{78}{6} = 13$."
+     ],
+     "distractors": {
+      "B": "Promedia 12 con 18 como si fueran dos datos con el mismo peso.",
+      "D": "Supone que un dato mayor que el promedio no lo cambia."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m2-logaritmos",
+  "subject": "m2",
+  "subtopic": "m2-logaritmos",
+  "axis": "Números",
+  "title": "Logaritmos",
+  "pattern": "calcular logaritmos exactos, expresar uno en función de otros y resolver ecuaciones simples",
+  "officialCount": 20,
+  "exercises": [
+   {
+    "stem": "¿Cuál es el valor de $\\log_{2} 32 - \\log_{3}\\dfrac{1}{9}$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$3$"
+     },
+     {
+      "key": "B",
+      "text": "$7$"
+     },
+     {
+      "key": "C",
+      "text": "$-7$"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{5}{2}$"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Calcula cada logaritmo por separado, preguntándote a qué exponente hay que elevar la base.",
+     "steps": [
+      "$\\log_{2} 32 = 5$, porque $2^{5} = 32$.",
+      "$\\log_{3}\\dfrac{1}{9} = -2$, porque $3^{-2} = \\dfrac{1}{9}$.",
+      "Resta: $5 - (-2) = 7$."
+     ],
+     "distractors": {
+      "A": "Calcula $5 - 2$: olvida que el logaritmo de $\\dfrac{1}{9}$ es negativo.",
+      "C": "Cambia el signo del resultado al restar."
+     }
+    }
+   },
+   {
+    "stem": "Si $\\log 2 = a$ y $\\log 3 = b$, ¿cuál de las siguientes expresiones es igual a $\\log 72$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$6ab$"
+     },
+     {
+      "key": "B",
+      "text": "$2a + 3b$"
+     },
+     {
+      "key": "C",
+      "text": "$3a + 2b$"
+     },
+     {
+      "key": "D",
+      "text": "$5ab$"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Descompón 72 en factores primos y usa las propiedades del producto y de la potencia.",
+     "steps": [
+      "$72 = 8\\cdot 9 = 2^{3}\\cdot 3^{2}$.",
+      "Logaritmo de un producto: $\\log 72 = \\log 2^{3} + \\log 3^{2}$.",
+      "Logaritmo de una potencia: $3\\log 2 + 2\\log 3 = 3a + 2b$."
+     ],
+     "distractors": {
+      "A": "Multiplica los logaritmos: el logaritmo de un producto es una suma.",
+      "B": "Intercambia los exponentes de 2 y de 3."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuál es la solución de la ecuación $\\log_{3}(x + 1) = 2$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$x = 5$"
+     },
+     {
+      "key": "B",
+      "text": "$x = 9$"
+     },
+     {
+      "key": "C",
+      "text": "$x = 7$"
+     },
+     {
+      "key": "D",
+      "text": "$x = 8$"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Pasa de la forma logarítmica a la exponencial: $\\log_{b} A = c$ significa $b^{c} = A$.",
+     "steps": [
+      "Escribe la potencia: $3^{2} = x + 1$.",
+      "Resuelve: $9 = x + 1$, así que $x = 8$.",
+      "Comprueba: $\\log_{3} 9 = 2$."
+     ],
+     "distractors": {
+      "A": "Multiplica la base por el resultado ($3\\cdot 2 - 1$) en vez de elevar.",
+      "B": "Es el valor de $x + 1$, no de $x$."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuál de las siguientes igualdades es verdadera para todo $b > 0$, $b \\neq 1$ y todo número real $n$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$\\log_{b}\\left(b^{n}\\right) = n$"
+     },
+     {
+      "key": "B",
+      "text": "$\\log(a + c) = \\log a + \\log c$"
+     },
+     {
+      "key": "C",
+      "text": "$\\log(a\\cdot c) = \\log a\\cdot\\log c$"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{\\log a}{\\log c} = \\log(a - c)$"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "El logaritmo en base $b$ es la operación inversa de elevar $b$ a una potencia.",
+     "steps": [
+      "$\\log_{b}\\left(b^{n}\\right)$ pregunta a qué exponente hay que elevar $b$ para obtener $b^{n}$: la respuesta es $n$.",
+      "Las otras igualdades confunden las propiedades: el logaritmo de un producto es la suma de los logaritmos, y no hay propiedad para el logaritmo de una suma ni de una resta."
+     ],
+     "distractors": {
+      "B": "La propiedad de la suma de logaritmos corresponde al producto, $\\log(a\\cdot c)$, no a $\\log(a + c)$.",
+      "C": "El logaritmo de un producto es una suma de logaritmos, no un producto."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m2-cuadraticas",
+  "subject": "m2",
+  "subtopic": "m2-cuadraticas",
+  "axis": "Álgebra y funciones",
+  "title": "Ecuación y función cuadrática (contenido de M1)",
+  "pattern": "vértice y ceros de una parábola, discriminante y problemas que llevan a una ecuación de segundo grado",
+  "officialCount": 75,
+  "exercises": [
+   {
+    "stem": "¿Cuáles son las coordenadas del vértice de la parábola $f(x) = x^{2} - 6x + 5$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$(-3, 32)$"
+     },
+     {
+      "key": "B",
+      "text": "$(3, 4)$"
+     },
+     {
+      "key": "C",
+      "text": "$(3, -4)$"
+     },
+     {
+      "key": "D",
+      "text": "$(6, 5)$"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "La abscisa del vértice es $x_v = -\\dfrac{b}{2a}$; la ordenada se obtiene evaluando la función en ella.",
+     "steps": [
+      "Con $a = 1$ y $b = -6$: $x_v = -\\dfrac{-6}{2\\cdot 1} = 3$.",
+      "Evalúa: $f(3) = 9 - 18 + 5 = -4$.",
+      "El vértice es $(3, -4)$."
+     ],
+     "distractors": {
+      "A": "Calcula $x_v = \\dfrac{b}{2a}$ sin el signo menos.",
+      "B": "Equivoca el signo al evaluar $f(3)$."
+     }
+    }
+   },
+   {
+    "stem": "¿Para qué valor de $k$ la ecuación $x^{2} + 4x + k = 0$ tiene exactamente una solución real?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$k = 4$"
+     },
+     {
+      "key": "B",
+      "text": "$k = -4$"
+     },
+     {
+      "key": "C",
+      "text": "$k = 16$"
+     },
+     {
+      "key": "D",
+      "text": "$k = 2$"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Una ecuación cuadrática tiene una única solución real cuando su discriminante $\\Delta = b^{2} - 4ac$ es cero.",
+     "steps": [
+      "Discriminante: $\\Delta = 4^{2} - 4\\cdot 1\\cdot k = 16 - 4k$.",
+      "Iguala a cero: $16 - 4k = 0$, así que $k = 4$.",
+      "Comprueba: $x^{2} + 4x + 4 = (x + 2)^{2}$, con la única solución $x = -2$."
+     ],
+     "distractors": {
+      "C": "Iguala $b^{2}$ con $k$ y olvida el factor $4a$.",
+      "B": "Equivoca el signo al despejar $k$."
+     }
+    }
+   },
+   {
+    "stem": "¿En qué puntos el gráfico de $f(x) = 2x^{2} - 8$ intersecta al eje $x$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "Solo en $x = 2$."
+     },
+     {
+      "key": "B",
+      "text": "En $x = -2$ y en $x = 2$."
+     },
+     {
+      "key": "C",
+      "text": "En $x = -4$ y en $x = 4$."
+     },
+     {
+      "key": "D",
+      "text": "No intersecta al eje $x$."
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "El gráfico corta al eje $x$ donde $f(x) = 0$.",
+     "steps": [
+      "Iguala a cero: $2x^{2} - 8 = 0$, es decir, $x^{2} = 4$.",
+      "Las soluciones son $x = 2$ y $x = -2$: la raíz cuadrada tiene dos signos."
+     ],
+     "distractors": {
+      "A": "Olvida la solución negativa de $x^{2} = 4$.",
+      "C": "Despeja $x^{2} = 8 : 2$ y luego toma $x = \\pm 4$ sin calcular la raíz."
+     }
+    }
+   },
+   {
+    "stem": "El largo de un rectángulo mide 3 cm más que su ancho y su área es 40 cm². ¿Cuánto mide el ancho?",
+    "options": [
+     {
+      "key": "A",
+      "text": "8 cm"
+     },
+     {
+      "key": "B",
+      "text": "3 cm"
+     },
+     {
+      "key": "C",
+      "text": "4 cm"
+     },
+     {
+      "key": "D",
+      "text": "5 cm"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Escribe el área en función del ancho: aparece una ecuación de segundo grado; descarta la solución que no tiene sentido como medida.",
+     "steps": [
+      "Si el ancho es $x$, el largo es $x + 3$ y el área es $x(x + 3) = 40$.",
+      "Ordena: $x^{2} + 3x - 40 = 0$.",
+      "Factoriza: $(x + 8)(x - 5) = 0$, con soluciones $x = -8$ y $x = 5$.",
+      "Una medida no puede ser negativa: el ancho es 5 cm (y el largo, 8 cm)."
+     ],
+     "distractors": {
+      "A": "Es el largo, no el ancho."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m2-trigonometria",
+  "subject": "m2",
+  "subtopic": "m2-trigonometria",
+  "axis": "Geometría",
+  "title": "Razones trigonométricas",
+  "pattern": "seno, coseno y tangente en triángulos rectángulos, ángulos de elevación y la identidad fundamental",
+  "officialCount": 21,
+  "exercises": [
+   {
+    "stem": "En un triángulo rectángulo, la hipotenusa mide 10 cm y uno de sus ángulos agudos mide 30°. ¿Cuánto mide el cateto opuesto a ese ángulo?",
+    "options": [
+     {
+      "key": "A",
+      "text": "5 cm"
+     },
+     {
+      "key": "B",
+      "text": "$5\\sqrt{3}$ cm"
+     },
+     {
+      "key": "C",
+      "text": "10 cm"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{10\\sqrt{3}}{3}$ cm"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "El seno de un ángulo agudo relaciona el cateto opuesto con la hipotenusa.",
+     "steps": [
+      "$\\sen 30° = \\dfrac{\\text{cateto opuesto}}{\\text{hipotenusa}}$.",
+      "Como $\\sen 30° = \\dfrac{1}{2}$: cateto opuesto $= 10\\cdot\\dfrac{1}{2} = 5$ cm."
+     ],
+     "distractors": {
+      "B": "Usa el coseno: $10\\cdot\\cos 30° = 5\\sqrt{3}$ es el cateto adyacente."
+     }
+    }
+   },
+   {
+    "stem": "Si $\\alpha$ es un ángulo agudo y $\\sen\\alpha = \\dfrac{3}{5}$, ¿cuál es el valor de $\\tg\\alpha$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$\\dfrac{4}{5}$"
+     },
+     {
+      "key": "B",
+      "text": "$\\dfrac{3}{4}$"
+     },
+     {
+      "key": "C",
+      "text": "$\\dfrac{4}{3}$"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{5}{3}$"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Dibuja un triángulo rectángulo con cateto opuesto 3 e hipotenusa 5 y calcula el lado que falta.",
+     "steps": [
+      "Cateto adyacente: $\\sqrt{5^{2} - 3^{2}} = \\sqrt{16} = 4$.",
+      "Tangente: $\\tg\\alpha = \\dfrac{\\text{opuesto}}{\\text{adyacente}} = \\dfrac{3}{4}$."
+     ],
+     "distractors": {
+      "A": "Es $\\cos\\alpha$.",
+      "C": "Invierte la tangente: es adyacente sobre opuesto."
+     }
+    }
+   },
+   {
+    "stem": "Desde un punto del suelo, a 12 m de la base de un árbol, se observa su copa con un ángulo de elevación de 60°. ¿Cuál es la altura del árbol?",
+    "options": [
+     {
+      "key": "A",
+      "text": "6 m"
+     },
+     {
+      "key": "B",
+      "text": "$4\\sqrt{3}$ m"
+     },
+     {
+      "key": "C",
+      "text": "$12\\sqrt{3}$ m"
+     },
+     {
+      "key": "D",
+      "text": "24 m"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "La altura es el cateto opuesto al ángulo de elevación y la distancia al árbol es el adyacente: se usa la tangente.",
+     "steps": [
+      "$\\tg 60° = \\dfrac{h}{12}$.",
+      "Como $\\tg 60° = \\sqrt{3}$: $h = 12\\sqrt{3}$ m (cerca de 20,8 m)."
+     ],
+     "distractors": {
+      "A": "Usa el coseno de 60°: $12\\cdot\\dfrac{1}{2}$.",
+      "B": "Usa la tangente de 30°, el ángulo complementario."
+     }
+    }
+   },
+   {
+    "stem": "Si $\\alpha$ es un ángulo agudo y $\\cos\\alpha = 0{,}6$, ¿cuál es el valor de $\\sen\\alpha$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "0,4"
+     },
+     {
+      "key": "B",
+      "text": "0,64"
+     },
+     {
+      "key": "C",
+      "text": "1,6"
+     },
+     {
+      "key": "D",
+      "text": "0,8"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Usa la identidad fundamental $\\sen^{2}\\alpha + \\cos^{2}\\alpha = 1$.",
+     "steps": [
+      "$\\sen^{2}\\alpha = 1 - 0{,}6^{2} = 1 - 0{,}36 = 0{,}64$.",
+      "Como $\\alpha$ es agudo, el seno es positivo: $\\sen\\alpha = \\sqrt{0{,}64} = 0{,}8$."
+     ],
+     "distractors": {
+      "A": "Calcula $1 - 0{,}6$, sin elevar al cuadrado.",
+      "B": "Es $\\sen^{2}\\alpha$: falta sacar la raíz."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "m2-condicional",
+  "subject": "m2",
+  "subtopic": "m2-condicional",
+  "axis": "Probabilidad y estadística",
+  "title": "Probabilidad condicional",
+  "pattern": "probabilidad condicional en tablas de doble entrada y extracciones sin reposición",
+  "officialCount": 26,
+  "exercises": [
+   {
+    "stem": "La tabla muestra a los 30 estudiantes de un curso según si usan lentes.\n\n| | Usa lentes | No usa lentes |\n|---|---|---|\n| Mujeres | 8 | 4 |\n| Hombres | 6 | 12 |\n\nSe elige al azar un estudiante y resulta que usa lentes. ¿Cuál es la probabilidad de que sea mujer?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$\\dfrac{4}{15}$"
+     },
+     {
+      "key": "B",
+      "text": "$\\dfrac{2}{3}$"
+     },
+     {
+      "key": "C",
+      "text": "$\\dfrac{4}{7}$"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{7}{15}$"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "La condición («usa lentes») reduce los casos posibles a la columna de quienes usan lentes.",
+     "steps": [
+      "Casos posibles: los que usan lentes, $8 + 6 = 14$.",
+      "Casos favorables: mujeres que usan lentes, 8.",
+      "Probabilidad: $\\dfrac{8}{14} = \\dfrac{4}{7}$."
+     ],
+     "distractors": {
+      "A": "Es $\\dfrac{8}{30}$, la probabilidad de ser mujer y usar lentes, sin la condición.",
+      "B": "Es $\\dfrac{8}{12}$: la probabilidad de usar lentes sabiendo que es mujer, la condición al revés.",
+      "D": "Es $\\dfrac{14}{30}$, la probabilidad de usar lentes."
+     }
+    }
+   },
+   {
+    "stem": "Una caja tiene 4 bolitas rojas y 6 azules. Se sacan dos bolitas al azar, una tras otra y sin reposición. ¿Cuál es la probabilidad de que ambas sean rojas?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$\\dfrac{4}{25}$"
+     },
+     {
+      "key": "B",
+      "text": "$\\dfrac{2}{15}$"
+     },
+     {
+      "key": "C",
+      "text": "$\\dfrac{2}{5}$"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{7}{15}$"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Sin reposición, la segunda extracción depende de la primera: se multiplica la probabilidad de la primera por la de la segunda dado lo ocurrido.",
+     "steps": [
+      "Primera roja: $\\dfrac{4}{10}$.",
+      "Segunda roja, sabiendo que ya salió una: quedan 3 rojas de 9 bolitas, $\\dfrac{3}{9}$.",
+      "Ambas rojas: $\\dfrac{4}{10}\\cdot\\dfrac{3}{9} = \\dfrac{12}{90} = \\dfrac{2}{15}$."
+     ],
+     "distractors": {
+      "A": "Es $\\left(\\dfrac{4}{10}\\right)^{2}$: corresponde a extraer con reposición.",
+      "C": "Es solo la probabilidad de que la primera sea roja."
+     }
+    }
+   },
+   {
+    "stem": "Si $P(A\\cap B) = 0{,}12$ y $P(B) = 0{,}4$, ¿cuál es el valor de $P(A\\mid B)$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "0,048"
+     },
+     {
+      "key": "B",
+      "text": "0,52"
+     },
+     {
+      "key": "C",
+      "text": "0,28"
+     },
+     {
+      "key": "D",
+      "text": "0,3"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "La probabilidad condicional es $P(A\\mid B) = \\dfrac{P(A\\cap B)}{P(B)}$.",
+     "steps": [
+      "Reemplaza: $P(A\\mid B) = \\dfrac{0{,}12}{0{,}4}$.",
+      "Divide: $\\dfrac{0{,}12}{0{,}4} = \\dfrac{12}{40} = 0{,}3$."
+     ],
+     "distractors": {
+      "A": "Multiplica en vez de dividir.",
+      "C": "Resta las probabilidades: $0{,}4 - 0{,}12$."
+     }
+    }
+   },
+   {
+    "stem": "Se lanzan dos dados comunes, uno después del otro. Si el primero muestra un 3, ¿cuál es la probabilidad de que la suma de ambos sea 8?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$\\dfrac{1}{6}$"
+     },
+     {
+      "key": "B",
+      "text": "$\\dfrac{5}{36}$"
+     },
+     {
+      "key": "C",
+      "text": "$\\dfrac{1}{36}$"
+     },
+     {
+      "key": "D",
+      "text": "$\\dfrac{1}{3}$"
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Saber el primer resultado deja solo los 6 resultados posibles del segundo dado.",
+     "steps": [
+      "Con un 3 en el primer dado, la suma es 8 solo si el segundo muestra un 5.",
+      "El segundo dado tiene 6 resultados igualmente probables: $P = \\dfrac{1}{6}$."
+     ],
+     "distractors": {
+      "B": "Es la probabilidad de sumar 8 sin la información del primer dado: 5 de 36 casos.",
+      "C": "Es la probabilidad de obtener 3 y luego 5 antes de lanzar, sin la condición."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "cs-cinematica",
+  "subject": "ciencias",
+  "subtopic": "cs-cinematica",
+  "axis": "Física",
+  "title": "Movimiento: MRU y MRUA",
+  "pattern": "distancia y velocidad en MRU y MRUA, conversión de unidades y lectura de gráficos",
+  "officialCount": 28,
+  "exercises": [
+   {
+    "stem": "Un automóvil parte del reposo y acelera uniformemente a $2\\ \\mathrm{m/s^2}$ durante 5 s. ¿Qué distancia recorre en ese tiempo?",
+    "options": [
+     {
+      "key": "A",
+      "text": "10 m"
+     },
+     {
+      "key": "B",
+      "text": "25 m"
+     },
+     {
+      "key": "C",
+      "text": "50 m"
+     },
+     {
+      "key": "D",
+      "text": "5 m"
+     },
+     {
+      "key": "E",
+      "text": "20 m"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "En un MRUA que parte del reposo, la distancia es $d = \\dfrac{1}{2}at^{2}$.",
+     "steps": [
+      "Datos: $v_0 = 0$, $a = 2\\ \\mathrm{m/s^2}$, $t = 5\\ \\mathrm{s}$.",
+      "Reemplaza: $d = \\dfrac{1}{2}\\cdot 2\\cdot 5^{2} = 25\\ \\mathrm{m}$."
+     ],
+     "distractors": {
+      "A": "Es la rapidez final, $v = at = 10\\ \\mathrm{m/s}$, no la distancia.",
+      "C": "Olvida el factor $\\dfrac{1}{2}$."
+     }
+    }
+   },
+   {
+    "stem": "Una ciclista avanza con velocidad constante de 18 km/h. ¿Cuánto tiempo demora en recorrer 900 m?",
+    "options": [
+     {
+      "key": "A",
+      "text": "50 s"
+     },
+     {
+      "key": "B",
+      "text": "18 s"
+     },
+     {
+      "key": "C",
+      "text": "5 min"
+     },
+     {
+      "key": "D",
+      "text": "3 min"
+     },
+     {
+      "key": "E",
+      "text": "162 s"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "En un MRU, $t = \\dfrac{d}{v}$, con todas las magnitudes en unidades compatibles.",
+     "steps": [
+      "Convierte la rapidez: $18\\ \\mathrm{km/h} = \\dfrac{18\\,000\\ \\mathrm{m}}{3\\,600\\ \\mathrm{s}} = 5\\ \\mathrm{m/s}$.",
+      "Tiempo: $t = \\dfrac{900\\ \\mathrm{m}}{5\\ \\mathrm{m/s}} = 180\\ \\mathrm{s}$.",
+      "$180\\ \\mathrm{s} = 3\\ \\mathrm{min}$."
+     ],
+     "distractors": {
+      "A": "Divide 900 por 18 mezclando metros con kilómetros por hora."
+     }
+    }
+   },
+   {
+    "stem": "Un cuerpo que se mueve a $4\\ \\mathrm{m/s}$ acelera uniformemente a $3\\ \\mathrm{m/s^2}$ durante 6 s, en el mismo sentido de su movimiento. ¿Cuál es su rapidez al final de ese intervalo?",
+    "options": [
+     {
+      "key": "A",
+      "text": "$18\\ \\mathrm{m/s}$"
+     },
+     {
+      "key": "B",
+      "text": "$13\\ \\mathrm{m/s}$"
+     },
+     {
+      "key": "C",
+      "text": "$22\\ \\mathrm{m/s}$"
+     },
+     {
+      "key": "D",
+      "text": "$72\\ \\mathrm{m/s}$"
+     },
+     {
+      "key": "E",
+      "text": "$7\\ \\mathrm{m/s}$"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "En un MRUA, la rapidez final es $v = v_0 + at$.",
+     "steps": [
+      "Reemplaza: $v = 4 + 3\\cdot 6$.",
+      "Calcula: $v = 4 + 18 = 22\\ \\mathrm{m/s}$."
+     ],
+     "distractors": {
+      "A": "Es solo el aumento de rapidez, $at$; falta sumar la rapidez inicial.",
+      "E": "Suma la rapidez inicial con la aceleración, que son magnitudes distintas."
+     }
+    }
+   },
+   {
+    "stem": "En un gráfico de velocidad en función del tiempo, un tramo horizontal y por sobre el eje del tiempo indica que, en ese intervalo, el móvil",
+    "options": [
+     {
+      "key": "A",
+      "text": "se mueve con velocidad constante."
+     },
+     {
+      "key": "B",
+      "text": "está detenido."
+     },
+     {
+      "key": "C",
+      "text": "acelera uniformemente."
+     },
+     {
+      "key": "D",
+      "text": "frena hasta detenerse."
+     },
+     {
+      "key": "E",
+      "text": "cambia el sentido de su movimiento."
+     }
+    ],
+    "answer": "A",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "En un gráfico $v$–$t$, la pendiente es la aceleración: un tramo horizontal tiene pendiente cero.",
+     "steps": [
+      "Un tramo horizontal significa que la velocidad no cambia: la aceleración es cero.",
+      "Como está sobre el eje, la velocidad es distinta de cero: el móvil avanza con velocidad constante (MRU)."
+     ],
+     "distractors": {
+      "B": "Sería así en un gráfico de posición en función del tiempo, o si el tramo estuviera sobre el eje ($v = 0$).",
+      "C": "Una aceleración uniforme se ve como un tramo inclinado, no horizontal."
+     }
+    }
+   }
+  ]
+ },
+ {
+  "id": "cs-reacciones",
+  "subject": "ciencias",
+  "subtopic": "cs-reacciones",
+  "axis": "Química",
+  "title": "Reacciones químicas y estequiometría",
+  "pattern": "balance de ecuaciones, masa molar y cálculos estequiométricos con reactivo limitante",
+  "officialCount": 155,
+  "exercises": [
+   {
+    "stem": "Al balancear la ecuación de combustión del propano, $\\mathrm{C_3H_8 + O_2 \\longrightarrow CO_2 + H_2O}$, con los menores coeficientes enteros, ¿qué coeficiente acompaña al $\\mathrm{O_2}$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "3"
+     },
+     {
+      "key": "B",
+      "text": "4"
+     },
+     {
+      "key": "C",
+      "text": "10"
+     },
+     {
+      "key": "D",
+      "text": "7"
+     },
+     {
+      "key": "E",
+      "text": "5"
+     }
+    ],
+    "answer": "E",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Balancea primero el carbono y el hidrógeno, y deja el oxígeno, que aparece solo como $\\mathrm{O_2}$, para el final.",
+     "steps": [
+      "Carbono: 3 átomos a la izquierda, así que se forman $3\\,\\mathrm{CO_2}$.",
+      "Hidrógeno: 8 átomos a la izquierda, así que se forman $4\\,\\mathrm{H_2O}$.",
+      "Oxígeno a la derecha: $3\\cdot 2 + 4\\cdot 1 = 10$ átomos, que salen de $5\\,\\mathrm{O_2}$.",
+      "Ecuación balanceada: $\\mathrm{C_3H_8 + 5\\,O_2 \\longrightarrow 3\\,CO_2 + 4\\,H_2O}$."
+     ],
+     "distractors": {
+      "C": "Es el número de átomos de oxígeno, no de moléculas de $\\mathrm{O_2}$.",
+      "A": "Es el coeficiente del $\\mathrm{CO_2}$."
+     }
+    }
+   },
+   {
+    "stem": "¿Cuántos moles de $\\mathrm{CO_2}$ hay en 88 g de esta sustancia? (Masas atómicas: C = 12; O = 16)",
+    "options": [
+     {
+      "key": "A",
+      "text": "0,5 mol"
+     },
+     {
+      "key": "B",
+      "text": "2 mol"
+     },
+     {
+      "key": "C",
+      "text": "44 mol"
+     },
+     {
+      "key": "D",
+      "text": "88 mol"
+     },
+     {
+      "key": "E",
+      "text": "4 mol"
+     }
+    ],
+    "answer": "B",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "El número de moles es la masa dividida por la masa molar: $n = \\dfrac{m}{M}$.",
+     "steps": [
+      "Masa molar: $M = 12 + 2\\cdot 16 = 44\\ \\mathrm{g/mol}$.",
+      "Moles: $n = \\dfrac{88\\ \\mathrm{g}}{44\\ \\mathrm{g/mol}} = 2\\ \\mathrm{mol}$."
+     ],
+     "distractors": {
+      "A": "Divide la masa molar por la masa, al revés.",
+      "C": "Es la masa molar, no la cantidad de moles."
+     }
+    }
+   },
+   {
+    "stem": "Según la ecuación $\\mathrm{2\\,H_2 + O_2 \\longrightarrow 2\\,H_2O}$, ¿qué masa de agua se forma a partir de 4 mol de $\\mathrm{H_2}$, con oxígeno en exceso? (Masa molar del agua: 18 g/mol)",
+    "options": [
+     {
+      "key": "A",
+      "text": "36 g"
+     },
+     {
+      "key": "B",
+      "text": "18 g"
+     },
+     {
+      "key": "C",
+      "text": "144 g"
+     },
+     {
+      "key": "D",
+      "text": "72 g"
+     },
+     {
+      "key": "E",
+      "text": "4 g"
+     }
+    ],
+    "answer": "D",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Los coeficientes de la ecuación dan la proporción en moles; luego se pasa a gramos con la masa molar.",
+     "steps": [
+      "Proporción: 2 mol de $\\mathrm{H_2}$ forman 2 mol de $\\mathrm{H_2O}$, es decir, 1 a 1.",
+      "Con 4 mol de $\\mathrm{H_2}$ se forman 4 mol de agua.",
+      "Masa: $4\\ \\mathrm{mol}\\cdot 18\\ \\mathrm{g/mol} = 72\\ \\mathrm{g}$."
+     ],
+     "distractors": {
+      "A": "Usa la proporción 2 a 1, como si fuera la del oxígeno.",
+      "C": "Multiplica por el coeficiente 2 de la ecuación además de por los 4 mol."
+     }
+    }
+   },
+   {
+    "stem": "Según la ecuación $\\mathrm{N_2 + 3\\,H_2 \\longrightarrow 2\\,NH_3}$, ¿cuántos moles de $\\mathrm{NH_3}$ se forman como máximo a partir de 2 mol de $\\mathrm{N_2}$ y 3 mol de $\\mathrm{H_2}$?",
+    "options": [
+     {
+      "key": "A",
+      "text": "4 mol"
+     },
+     {
+      "key": "B",
+      "text": "6 mol"
+     },
+     {
+      "key": "C",
+      "text": "2 mol"
+     },
+     {
+      "key": "D",
+      "text": "3 mol"
+     },
+     {
+      "key": "E",
+      "text": "1 mol"
+     }
+    ],
+    "answer": "C",
+    "explanation": {
+     "kind": "solucion",
+     "summary": "Primero identifica el reactivo limitante: el que se acaba antes según la proporción de la ecuación.",
+     "steps": [
+      "Para 2 mol de $\\mathrm{N_2}$ se necesitarían $2\\cdot 3 = 6$ mol de $\\mathrm{H_2}$, y solo hay 3.",
+      "El reactivo limitante es el $\\mathrm{H_2}$: 3 mol reaccionan con 1 mol de $\\mathrm{N_2}$.",
+      "Proporción $\\mathrm{H_2}$ a $\\mathrm{NH_3}$: 3 a 2. Con 3 mol de $\\mathrm{H_2}$ se forman 2 mol de $\\mathrm{NH_3}$."
+     ],
+     "distractors": {
+      "A": "Calcula con el $\\mathrm{N_2}$ como si el hidrógeno alcanzara.",
+      "B": "Suma los moles de los reactivos que no reaccionan en esa proporción."
+     }
+    }
+   }
+  ]
+ }
+]

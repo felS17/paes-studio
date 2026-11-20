@@ -68,9 +68,10 @@ const realYear = (questionId: string) => {
 }
 
 /** Escena de una pregunta: solo en las oficiales de 2024 a 2026 con solución, y con sus propias cifras cuando se pueden leer. */
-export function sceneForQuestion(question: Pick<Question, 'id' | 'subtopic' | 'stem' | 'explanation'>): SceneEntry | null {
+export function sceneForQuestion(question: Pick<Question, 'id' | 'subtopic' | 'stem' | 'explanation' | 'origin'>): SceneEntry | null {
   const base = sceneForSubtopic(question.subtopic)
-  const year = realYear(question.id)
+  // Una pregunta oficial copiada en un ensayo curado se trata como la original.
+  const year = realYear(question.origin ?? question.id)
   if (!base || SUMMARY_ONLY.has(base.scene) || !question.explanation || year === null || year < FIRST_YEAR || year > LAST_YEAR) return null
   const found = EXTRACTORS[question.subtopic as string]?.(questionText(question))
   return { scene: found?.scene ?? base.scene, initial: { ...base.initial, ...found?.values }, fromQuestion: found?.complete ?? false }

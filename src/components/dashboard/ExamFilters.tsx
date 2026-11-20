@@ -15,6 +15,7 @@ export function ExamFilters({ value, onChange }: { value: FilterState; onChange:
     <div className="flex flex-wrap items-center gap-2">
       <Segmented<FilterState['subject']>
         label="Materia"
+        size="lg"
         value={value.subject}
         onChange={(subject) => onChange({ ...value, subject })}
         className="max-w-full overflow-x-auto"

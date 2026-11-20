@@ -95,13 +95,17 @@ function DocumentRow({ entry, onView }: { entry: ManifestEntry; onView: (name: s
 
 // El formulario (KaTeX y sus tarjetas) se descarga solo si se abre su pestaña.
 const CheatSheets = lazy(() => import('@/components/cheatsheets/CheatSheets').then((m) => ({ default: m.CheatSheets })))
+// Igual con las guías de ejercicios resueltos: sus enunciados y explicaciones viajan en un chunk aparte.
+const SolvedGuides = lazy(() => import('@/components/guides/SolvedGuides').then((m) => ({ default: m.SolvedGuides })))
 
-type View = 'resumenes' | 'formulario'
+type View = 'resumenes' | 'ejercicios' | 'formulario'
+const VIEWS: View[] = ['resumenes', 'ejercicios', 'formulario']
 
 export function MaterialPage() {
   const [viewing, setViewing] = useState<Viewing | null>(null)
   const [params, setParams] = useSearchParams()
-  const view: View = params.get('vista') === 'formulario' ? 'formulario' : 'resumenes'
+  const asked = params.get('vista') as View
+  const view: View = VIEWS.includes(asked) ? asked : 'resumenes'
   const setView = (v: View) => setParams(v === 'resumenes' ? {} : { vista: v }, { replace: true })
   const templateEntries = Object.entries(templates).sort(([a], [b]) => a.localeCompare(b))
   const documents = SUBJECT_TABS.flatMap((subject) =>
@@ -123,12 +127,13 @@ export function MaterialPage() {
         panelClassName="pt-4"
         items={[
           { value: 'resumenes', label: 'resúmenes pdf' },
+          { value: 'ejercicios', label: 'ejercicios resueltos' },
           { value: 'formulario', label: 'formulario express' },
         ]}
       >
-        {view === 'formulario' ? (
+        {view !== 'resumenes' ? (
           <Suspense fallback={<p className="text-[13px] text-zinc-500" role="status">cargando…</p>}>
-            <CheatSheets />
+            {view === 'formulario' ? <CheatSheets /> : <SolvedGuides />}
           </Suspense>
         ) : (
           <div className="space-y-4">

@@ -5,13 +5,13 @@
 ![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
 ![KaTeX](https://img.shields.io/badge/KaTeX-0.19-44cc11)
-![Ensayos validados](https://img.shields.io/badge/ensayos%20validados-53-success)
+![Ensayos validados](https://img.shields.io/badge/ensayos%20validados-63-success)
 
 Entorno abierto e interactivo de preparación para la PAES (DEMRE, Chile), con las pruebas oficiales, explicaciones paso a paso y material de síntesis. Es un sitio estático con una sola función serverless para la voz: no tiene cuentas ni base de datos, y tu progreso se guarda en tu navegador.
 
 | Contenido | Cantidad |
 | --- | ---: |
-| Ensayos (48 oficiales y 5 curados) | 53 |
+| Ensayos (48 oficiales y 15 curados) | 63 |
 | Preguntas | 3.137 |
 | Soluciones paso a paso | 1.892+ |
 | Subtemas del temario DEMRE vigente (Admisión 2027) | 77 |
@@ -29,7 +29,7 @@ Las explicaciones oficiales las redactó una IA y se validaron contra la clave d
 - **Animaciones al estilo Manim** en SVG nativo, solo donde ver la figura ayuda: geometría y probabilidad de M1 y M2, con los datos de la pregunta cuando se pueden leer y sincronizadas con la voz.
 - **Zettelkasten:** mapa interactivo de cómo se conectan los subtemas, con tu dominio de cada uno.
 - **Task Manager:** estadísticas como un administrador de tareas, con procesos por eje, telemetría de ritmo, cuaderno de errores y descarga de tu progreso.
-- **Flashcards** con repaso espaciado, **Formulario Express** y **guías en PDF** compiladas con LaTeX.
+- **Flashcards** con repaso espaciado, **Formulario Express**, **guías en PDF** compiladas con LaTeX y 12 guías de **ejercicios resueltos** paso a paso.
 
 ## Instalación
 
@@ -41,7 +41,7 @@ cd paes-studio
 npm install
 npm run dev              # servidor de desarrollo, con /api/tts incluido
 npm run build            # compilación estática en dist/
-npm run validate:exams   # valida los 53 ensayos: claves, fórmulas y soluciones
+npm run validate:exams   # valida los 63 ensayos y las guías: claves, fórmulas y soluciones
 ```
 
 Otros comandos:

@@ -1,0 +1,1246 @@
+{
+ "id": "lectora-curado-2",
+ "subject": "lectora",
+ "title": "Ensayo curado 2",
+ "description": "3 lecturas completas (24 preguntas) oficiales del DEMRE (pruebas rendidas de 2024 a 2026) que recorren los ejes de Competencia Lectora, cada una con su explicación paso a paso y la prueba de la que viene.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 55,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   186,
+   210,
+   232,
+   253,
+   271,
+   288,
+   304,
+   322,
+   339,
+   355,
+   369,
+   380,
+   391,
+   402,
+   415,
+   430,
+   446,
+   460,
+   471,
+   479,
+   486,
+   494,
+   502,
+   514,
+   528,
+   543,
+   557,
+   569,
+   577,
+   583,
+   589,
+   596,
+   605,
+   617,
+   631,
+   647,
+   660,
+   671,
+   680,
+   687,
+   694,
+   703,
+   715,
+   730,
+   746,
+   761,
+   773,
+   785,
+   795,
+   808,
+   823,
+   840,
+   858,
+   876,
+   893,
+   911,
+   931,
+   954,
+   978,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated_bank.py",
+ "passages": [
+  {
+   "id": "lectura-1",
+   "title": "Lectura 1",
+   "body": "Artículo de divulgación científica, publicado en la revista *La Chiricoca* el año 2022.\n\n**Conservación de insectos en Chile: desafíos y esperanzas para un país en metamorfosis**\n\nPor Constanza Schapheer\n\n**¿Por qué son importantes los insectos?**\n\nLos insectos aparecieron en la Tierra hace 420 millones de años a finales del Silúrico¹; fueron los primeros animales en volar y no tardaron en poblar cada rincón del planeta (Grimaldi & Engel, 2005). En la actualidad constituyen el grupo de animales más diverso y abundante. De hecho, si se hace una lista de todas las especies conocidas, más de la mitad son insectos, 19 % corresponde a otros invertebrados, 16 % a plantas, 6 % a hongos y líquenes, 3 % a microrganismos (bacterias, virus, etc.) y 3 % a cordados. En este último grupo están todos los animales vertebrados incluyendo al humano (Chapman *et al*., 2012). Asimismo, los insectos corresponden al 10 % de la biomasa de animales, equivalente a 200 megatoneladas de carbono. Para poner las cosas en perspectiva, los mamíferos silvestres corresponden al 0,35 % de la biomasa animal, equivalente a 7 megatoneladas de carbono (Eggleton, 2020; Bar-On *et al*., 2018).\n\nRespecto a sus roles, los insectos llevan a cabo funciones clave para el funcionamiento de los ecosistemas tales como la polinización (Henríquez-Piskulich *et al*., 2021), ciclaje de nutrientes² (Schapheer *et al*., 2021), control de plagas (Tillman *et al*., 2012), entre otros. Es tanta la importancia de estos animales que algunos autores los han propuesto como los principales proveedores de servicios ecosistémicos y que su conservación debiera ser tomada en consideración, si es que se quiere cumplir con los objetivos de desarrollo sostenible adoptados por todos los Estados Miembros del Programa de las Naciones Unidas para el Desarrollo (PNUD) en 2015, como “un llamado universal para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas gocen de paz y prosperidad para el 2030”.\n\n**Amenazas a nivel mundial**\n\nLamentablemente, la evidencia a nivel mundial no es alentadora. Amenazas propias del Antropoceno³ como la escasez hídrica, los incendios, la contaminación (química, lumínica, atmosférica, etc.) y la agricultura intensiva tienen un impacto negativo en las poblaciones de insectos (Wagner *et al*., 2021). A esto le podemos sumar la dificultad que existe a la hora de sacar conclusiones con relación a las oscilaciones de sus tamaños poblacionales. Sucede que la aproximación clásica a la conservación de animales está basada en vertebrados, los cuales en general tienen ciclos de vida largos en comparación con los insectos, por lo que el reporte de una gran fluctuación de una temporada a otra sí es informativo. En contraste, en el caso de los insectos se requieren estudios a largo plazo, ya que por su biología las grandes oscilaciones en el tamaño poblacional de una temporada a otra son esperables y conclusiones fiables solo se pueden extraer a base de las tendencias obtenidas luego de varios años de muestreo sistemático. Un ejemplo paradigmático de este tipo de investigación fue publicado por Hallmann y colaboradores en 2017, donde luego de hacer un muestreo de 27 años en áreas protegidas de Alemania pudieron concluir que hubo una disminución de más del 75 % de la biomasa de insectos voladores.\n\nEs sumamente relevante recalcar que para este tipo de estudios se requieren recursos y voluntad de las instituciones, dos factores que rara vez están presentes. Otra alternativa, más allá del estudio de los tamaños poblacionales, es evaluar el estado en el cual se encuentran los individuos y cómo las presiones antrópicas⁴ pueden afectar su desempeño. Un ejemplo es el daño cognitivo causado a las abejas por la exposición a dosis subletales de plaguicidas, que muchas veces tienen como efecto la desorientación, la cual impide que el insecto vuelva a su colonia y desencadena finalmente su muerte. Además, se ha probado que los antibióticos de uso veterinario y humano impactan negativamente la microbiota de los insectos, pudiendo aumentar su susceptibilidad a enfermedades.\n\nEste tipo de análisis demanda una mirada integrativa y transdisciplinar, y podría ser la clave para tener una idea más certera y a corto plazo del impacto del humano sobre la salud de los insectos. Pero ambas aproximaciones, ya sean estudios poblacionales a largo plazo junto a investigaciones integrativas enfocadas en la salud y desempeño, son –a mi juicio– complementarias. En conjunto podrían proveer información robusta para apoyar la toma de decisiones, por lo que debieran potenciarse y financiarse por entes públicos en un plan que tenga como objetivo final la acción de conservación basada en la evidencia científica.\n\n**Conservación de insectos en Chile**\n\nAfortunadamente, en Chile existen grupos de investigadores trabajando en levantar información científica respecto a la conservación de insectos, lo que ha permitido la identificación de diversas causas que impactan negativamente a estos artrópodos. Entre las que más destacan, se encuentra la pérdida del hábitat, contaminación y especies exóticas invasoras (González *et al*., 2014; Grez *et al*., 2016). A pesar de estos importantísimos avances, la labor de la entomología (estudio de los insectos) es inconmensurable, en gran parte debido a la enorme diversidad de este grupo de animales. Para ilustrar este problema, en las siguientes líneas haré el ejercicio de comparar las especies de insectos y mamíferos categorizadas en los procesos de clasificación de especies del Ministerio del Medio Ambiente (MMA) (Figura 1), en relación con el número total de especies presentes en Chile de ambos grupos.\n\n![Figura 1. Porcentaje de especies clasificadas por el MMA,](/exam-assets/lectora-2027-invierno/passage-1-fig1.webp){w=696 h=467 mono}\n\nUna aproximación muy subestimada y desactualizada del número de especies de insectos de Chile proviene de la Comisión Nacional del Medio Ambiente (CONAMA) (2008), la cual estimó que hay aproximadamente 10 000 especies de insectos presentes en el país. Sin embargo, al no existir una mejor fuente utilizaré este número con fines ilustrativos. Respecto al número total de mamíferos presentes en Chile, el catálogo de D’Elía y colaboradores (2020) cita 163 especies. Luego revisé la cantidad de las especies clasificadas en los procesos del MMA y los resultados fueron los siguientes: del total de las especies de insectos presentes en Chile apenas el 0,76 % ha sido clasificado según su estado de conservación (Figura 1), en contraste con el 74,23 % en el caso de los mamíferos (Figura 1). Estos resultados reflejan el enorme vacío de información que existe respecto al estado de conservación de los insectos. Si nos vamos al detalle según categoría, en el caso de los insectos más de la mitad (66 %) se encuentra en una categoría de amenaza, ya sea en Peligro crítico, En peligro o Vulnerable (Figura 2). En ese sentido, es imperativo que el país destine recursos para saber qué sucede con ese 99,24 % de especies que aún no han sido categorizadas y tome acciones para su conservación, ya que es muy probable que esos organismos estén llevando a cabo procesos ecológicos que permiten la supervivencia de nuestra especie (Dangles & Casas, 2019).\n\n![Figura 2. Porcentaje de especies de insectos según categoría.](/exam-assets/lectora-2027-invierno/passage-1-fig2.webp){w=540 h=340 mono}\n\n**¿Qué podemos hacer?**\n\nComo país estamos en un momento de grandes cambios y oportunidades. La conservación de todos los componentes de la naturaleza es vital para la supervivencia de nuestra especie, que por cierto también forma parte de la naturaleza. En lo concreto, es necesario que se actualicen las prácticas productivas, por ejemplo, la agricultura industrial debe transitar hacia la agroecología, la cual, además de respetar el entorno y los saberes ancestrales, se retroalimenta de las contribuciones de la biodiversidad. En ese sentido, los “impuestos verdes” son insuficientes, por lo que es preciso integrar estrategias diversas, como la planificación territorial y agroecología. Por último, pero no por ello menos importante, se requiere más investigación y desarrollo de tecnologías destinadas a solucionar problemas locales (Henríquez-Piskulich *et al*., 2021).",
+   "footnotes": [
+    "¹ Período geológico que se caracteriza por el calentamiento de la Tierra y la recuperación de la vida tras el congelamiento del período Ordovícico.",
+    "² Movimiento de intercambio entre materia orgánica e inorgánica para regresar a la producción de materia viva.",
+    "³ Término utilizado para describir el período geológico actual, caracterizado por el impacto global y significativo de las actividades humanas sobre el ecosistema y la geología de la Tierra.",
+    "⁴ Actividades económicas que generan impactos negativos sobre las coberturas vegetales naturales del suelo, alterando así los ecosistemas originales y los servicios que estos prestan. según su estado de conservación en relación al total de especies presentes en Chile. A la izquierda los insectos y a la derecha los mamíferos.",
+    "Schapheer, C. (2002). Conservación de insectos en Chile: Desafíos y esperanzas para un país en metamorfosis. La Chiricoca, (28), 29-34. http://www.lachiricoca.cl/wp-content/uploads/2022/09/4.-LaChiricoca28-Desaf%C3%ADos.pdf"
+   ],
+   "source": "PAES Invierno 2026, lectura 1",
+   "questionRange": [
+    1,
+    7
+   ]
+  },
+  {
+   "id": "lectura-2",
+   "title": "Lectura 2",
+   "body": "Fragmento del informe *Envejecimiento en Chile*, publicado por el Instituto Nacional de Estadísticas (INE) el año 2022.\n\n**Antecedentes conceptuales sobre el envejecimiento demográfico**\n\n**La transición demográfica y el envejecimiento de la población**\n\nGeneralmente, el envejecimiento demográfico es visto como una consecuencia inevitable de la transición hacia una población que presenta bajas tasas de crecimiento demográfico, lo cual es configurado tras un proceso resultante desde una situación de altos niveles de fecundidad y de mortalidad, a otra situación de bajos niveles de fecundidad y mortalidad (CEPAL¹, 2008; Goldstein, 2009). Es esta transformación lo que generalmente se denomina como el proceso de **transición demográfica**, el cual fue utilizado inicialmente como marco teórico para explicar las transformaciones demográficas desde las sociedades pre-industriales a las sociedades modernas desarrolladas en Europa, pero que a lo largo de las décadas se ha convertido en un importante paradigma para explicar las transformaciones demográficas en las distintas regiones del mundo, así como los cambios evidenciados en la estructura de la población y las implicancias para el desarrollo económico y social desde una perspectiva demográfica (Villa y Rivadeneira, 2000; Miró, 2003; CEPAL, 2008; Cotlear, 2011).\n\nLa teoría de la transición demográfica da cuenta de las transformaciones acontecidas en la estructura de la población resultante de la interacción de los distintos componentes de la dinámica demográfica, principalmente los relativos a la fecundidad y la mortalidad. Como señala Miró (2003), según el grado de avance observado en la disminución de la mortalidad y la fecundidad es posible evidenciar cuatro etapas de la transición demográfica: **incipiente**, **moderada**, **plena** y **avanzada**. Mientras en las etapas incipiente y moderada la mortalidad ha bajado lentamente, la fecundidad aún no ha comenzado a declinar o lo hace lentamente; en la etapa avanzada los valores tanto de la fecundidad como la mortalidad tienden a equilibrarse presentando importantes descensos que son sostenidos en el tiempo. En los años posteriores, debido a los importantes cambios observados en las estructuras por edades de la mayoría de los países que conforman la región latinoamericana y el consecuente avance del envejecimiento de la población, se han planteado nuevos indicadores y etapas para la definición del proceso de transición demográfica. Estos están basados en las tasas de fecundidad y la esperanza de vida de la población, indicadores que se ven menos afectados por la estructura por edades de la población, y al mismo tiempo, muestran con mayor precisión los desafíos demográficos que enfrentan los países en cada una de las etapas de la transición demográfica. Bajo esta premisa, las cuatro etapas de la transición demográfica se definen como **moderada**, **plena**, **avanzada** y **muy avanzada** (CEPAL, 2008).\n\nLa transición demográfica en América Latina está marcada por la heterogeneidad y los distintos niveles de avance entre los países que conforman la región. Sin embargo, una marcada característica de este proceso es la rapidez que dicha transformación ha tenido en comparación con otras regiones (CEPAL, 2008). A mediados del siglo XX, las mejoras en las condiciones de vida, higiene, salubridad y principalmente los adelantos de la ciencia y la medicina produjeron descensos importantes en la mortalidad, principalmente en la de los más jóvenes y la mortalidad infantil, lo que da inicio al proceso de transición demográfica en su **etapa incipiente** (Chackiel, 2004). En situaciones de altas tasas de fecundidad, el descenso de la mortalidad de los más jóvenes implica un acelerado crecimiento de la población. Dichos elementos dan como resultado una estructura poblacionalmente más joven, en cuanto la mortalidad de las personas mayores continúa siendo elevada, con una esperanza de vida de la población que no supera los 60 años. Bajo la clasificación actualizada de las etapas de la transición demográfica (CEPAL, 2008) esta etapa ya habría sido superada por todos los países de la región latinoamericana.\n\nA medida que los avances en la medicina y las condiciones de vida siguen desarrollándose, la mortalidad continúa reduciéndose paulatinamente, lo que contribuye a un leve aumento de la esperanza de vida de la población, que comienza a superar los 60 años. A la par de esto, distintas transformaciones sociales, culturales y económicas comienzan a reducir las tasas globales de fecundidad de la población. Los planes de control de la natalidad de la población, la promoción y aumento de mecanismos anticonceptivos, la mayor inserción de la mujer en el mercado laboral, así como los cambios culturales asociados a la nupcialidad, la conformación de familias y la crianza, son algunos de los factores que han contribuido a la reducción paulatina de los niveles de fecundidad, los que, sin embargo, se mantienen por sobre los niveles de reemplazo generacional, dando cuenta así de una **etapa moderada** de la transición demográfica.\n\nEn cuanto la fecundidad y la mortalidad infantil continúan descendiendo paulatinamente, la estructura etaria de la población comienza a envejecer lentamente, entrando a una **etapa plena** de la transición demográfica. La mortalidad de las personas mayores, si bien mantiene una leve tendencia hacia la baja, da cuenta de una esperanza de vida que se mantiene en torno a los 70 años, aunque el grueso de la población se concentra en edades jóvenes, ampliando así el tamaño de la población económicamente activa. Esta situación ha sido denominada como el “bono demográfico”, en cuanto existen bajos niveles de dependencia demográfica, tanto a nivel de menores de 15 años, como de mayores de 60 años, lo que configura una situación especialmente favorable para el desarrollo económico de las sociedades (Chackiel, 2000; Cotlear, 2011).\n\nA medida que las tasas globales de fecundidad continúan reduciéndose, incluso por debajo de los niveles de reemplazo generacional, la reducción de los niveles de mortalidad comienza a hacerse extensiva a todos los grupos de edades, lo cual es acompañado por una esperanza de vida que comienza a superar los 75 años, dando paso a la **etapa avanzada** de la transición demográfica. Así, la esperanza de vida aumenta considerablemente, lo que determina una mayor cantidad de población que tiende a vivir más años y que tiende a tener menos hijos. De esta forma, los bajos niveles de fecundidad y de mortalidad causan importantes cambios en la estructura etaria de la población, en cuanto las cohortes² dominantes comienzan a tener cada vez una mayor cantidad de años, y la proporción de población en edades mayores sobre el total de la población comienza a aumentar, impulsando así el proceso de envejecimiento poblacional (CEPAL, 2008; Goldstein, 2009; Naciones Unidas, 2012).\n\nFinalmente, en una **etapa muy avanzada** de la transición demográfica es posible ubicar aquellos países que bajaron muy tempranamente sus niveles de fecundidad, mostrando tasas globales de fecundidad muy por debajo del nivel de reemplazo, cercanos a los 1,5 hijos por mujer y con una esperanza de vida que se aproxima a los 80 años, lo que al mismo tiempo influye en que el crecimiento demográfico de la población baje considerablemente y sea cercano al 0 %. De esta forma, la disminución de las tasas de fecundidad y de mortalidad, así como el consecuente aumento de la supervivencia de los adultos hasta edades más avanzadas, son consideradas como las principales causas del envejecimiento de la población (Goldstein, 2009; Naciones Unidas, 2012).\n\nRojas, H., Rodríguez, L. y Rodríguez, J. (2022). *Envejecimiento en Chile: evolución, características de las* *personas mayores y desafíos demográficos para la población*. Instituto Nacional de Estadísticas.",
+   "footnotes": [
+    "¹ Comisión Económica para América Latina y el Caribe. https://www.ine.gob.cl/docs/default-source/documentos-de-trabajo/envejecimiento-en-chile-evolucion-y-caracteristicas-de-las-personas-mayores.pdf?sfvrsn=fa394551_2",
+    "² Grupos."
+   ],
+   "source": "PAES Invierno 2025, lectura 1",
+   "questionRange": [
+    8,
+    15
+   ]
+  },
+  {
+   "id": "lectura-3",
+   "title": "Lectura 3",
+   "body": "Fragmento del manual de estudio escrito por Jaume Colomer, publicado el año 2010.\n\n**Módulo 1**\n\nIntroducción a la gestión de las artes escénicas\n\n**1. Delimitación del objeto de análisis**\n\n1.1. Los lenguajes de las artes escénicas\n\nLas artes escénicas incluyen un conjunto de lenguajes artísticos que tienen en común **el hecho escénico**. Podemos considerar el arte como la expresión de percepciones, sentimientos y emociones sobre la realidad, a través de una gran diversidad de lenguajes que se derivaron de las acciones rituales de carácter mágico de muchas religiones primitivas y, con el tiempo, fueron perdiendo su dimensión religiosa para adquirir una nueva dimensión cultural.\n\nUna parte de las artes tiene su punto de mira en la búsqueda de la belleza. El concepto de “bellas artes”, propuesto por Charles Batteux el año 1746, se aplicó originariamente a la danza, la música, la escultura, la pintura, la poesía y también a la floricultura. Más adelante se amplió a la arquitectura, a la retórica y a otros géneros literarios. A partir del siglo XX también al cine, a la fotografía y a la historieta. Actualmente, se considera que también deben formar parte de las bellas artes la televisión, la moda, la publicidad, la animación, los videojuegos y las artes escénicas. Las artes escénicas, aunque no forman parte oficialmente de las bellas artes, tienen *de facto* esta consideración en muchos ámbitos sociales.\n\nLos lenguajes artísticos, como **conjuntos de símbolos**, requieren el dominio de sus respectivas **técnicas** (“técnica” deriva de *tekné*, término que en la Grecia Clásica se usaba para denominar al arte). Se considera el arte como el resultado de una acción creativa a partir de un lenguaje o técnica expresiva determinada. Incluso se usa el concepto en diversos ámbitos sociales para expresar la capacidad creativa en cualquier actividad humana, como “el arte de vivir”, el “arte de los negocios” o incluso “el arte de la guerra”. En este sentido, podríamos considerar que arte es cualquier creación humana.\n\nLas artes escénicas forman parte del universo de las artes y, parcialmente, del subconjunto de las artes de lo bello. Agrupan a un conjunto muy diverso de lenguajes que tienen en común el hecho escénico. Sin ánimo de exhaustividad, podemos considerar que forman parte de las artes escénicas las siguientes expresiones artísticas: el teatro (teatro de texto, teatro visual, teatro musical, teatro de objetos, teatro de sombras…), la danza (clásica, contemporánea, tradicional, popular, flamenco, nuevas tendencias…), la lírica (ópera, opereta, zarzuela…), el circo (en cualquiera de sus formatos y estilos), el cabaret, la magia, etc.\n\nEn las creaciones escénicas, se puede usar un solo lenguaje o un conjunto de ellos. La mezcla de lenguajes y formatos artísticos ha desarrollado una gran diversidad de géneros escénicos que se entrelazan y confunden. El cabaret, por ejemplo, es un formato escénico de proximidad en el que se combinan canciones, acciones dramáticas, monólogos y otros elementos en interacción continua con los espectadores y con una cierta intención de transgresión moral y política.\n\nLa música, en nuestro contexto⁶, no forma parte de las artes escénicas porque su expresión no está supeditada a la escena ni a ninguna materialidad, aunque, como lenguaje, puede formar parte de un espectáculo escénico (el teatro musical por ejemplo). Lo mismo pasa con las artes visuales y audiovisuales, que también pueden formar parte de espectáculos. Sin embargo, el valor añadido que aportan a una puesta en escena no las convierte en artes escénicas. Lo que tienen en común todos los lenguajes y formatos que hemos incluido en la descripción de las artes escénicas es el hecho escénico, concepto abstracto que es necesario definir.\n\n1.2. El hecho escénico\n\nPodemos considerar el hecho escénico como “aquello que ocurre cuando intérpretes y espectadores se encuentran” (McAuley, 2002). Además del intérprete y del espectador, hay un tercer elemento imprescindible: el escenario. El espectador no es receptor pasivo, sino sujeto activo en un proceso de comunicación donde el intérprete toma la iniciativa. El intérprete es un creador, aunque no sea el autor literario ni sea suya la idea de partida, pero crea una expresión y la transmite, con su técnica, a un espectador que le contesta con su mirada, su respiración, sus gestos, su complicidad… La interacción con los espectadores hace que cada representación se configure de una manera singular y que sea una experiencia única e irrepetible.\n\nLas artes escénicas, y todas las artes en vivo, buscan la singularidad de cada experiencia y huyen de la producción seriada. Según McAuley (2002), “el teatro requiere de la presencia real tanto del actor como del espectador, este último es un agente activo, un participante, más que un simple espectador”. En este sentido, la representación es un acontecimiento de participantes vivos que debe tener sede en un lugar “concreto” que implica “un intercambio de energías entre ambos” y se convierte en un evento social. La autora añade que “los actores reciben la energía que se desprende de la sola presencia de los espectadores, y los espectadores a su vez reciben energía de los actores que están en el escenario, así como de los demás espectadores” (McAuley, 2002). La energía se transmite básicamente por el intercambio de miradas.\n\nLa comunicación interactiva entre unos intérpretes y unos espectadores crea una atmósfera relacional donde pasan cosas en un plano distinto al de la realidad cotidiana. Una representación es una experiencia vital de una comunidad virtual que contribuye al desarrollo personal de los intérpretes y los espectadores. Lo que se representa es tanto real (hay unos intérpretes en el escenario y un público en la sala) como irreal (los personajes del evento escénico).\n\nEl espectador puede aprender a ser espectador avanzado. Según argumenta Anne Ubersfield (1997), a medida que el espectador va conociendo los símbolos y mecanismos de una representación, incrementa el placer intrínseco de la actividad sin llegar, en ningún caso, a perder el atractivo y la magia de la expresión y la comunicación escénica. El hecho escénico se consigue con la creación de un espacio escénico, tercer elemento constitutivo del hecho escénico.\n\n1.3. El espacio escénico\n\nEl espacio escénico es el espacio mental que se crea en un hecho escénico. Nuestra materialidad obliga a la percepción espacial de la experiencia vital. Los hechos no pueden existir sin espacios. Aunque el espacio escénico es una construcción mental, exige que se ubique en un espacio físico aislado del entorno cotidiano donde pueda crearse el contexto de la acción. La escena es el espacio de la acción. El teatro, del griego *theatron*, es “el lugar para contemplar”. El espacio del teatro se divide en “espacio del público” (la sala y los espacios sociales adjuntos) y el “espacio de los actores” (los camerinos y el escenario). El centro vital del edificio es donde se encuentran ambos espacios, donde se acopla el escenario con la sala y conforma el espacio de representación. Aunque esta división de espacios se da físicamente en los teatros a la italiana, funcionalmente también se da en espacios de un solo volumen.\n\nEl espacio escénico es, inicialmente, un espacio vacío. Vacío de los elementos de la cotidianidad. Vacío de luz y de objetos. Los elementos escenográficos que pueda contener deben ayudar a crear el espacio mental necesario para desarrollar el hecho escénico. El espacio escénico es un espacio mental similar al espacio ritual sagrado de muchas religiones. El hecho escénico, derivado del ritual religioso, mantiene la misma condición espacial. El espacio vacío puede ubicarse en un equipamiento especializado o en una infraestructura multifuncional, pero debe ofrecer un espacio vacío. Su carencia de contenido se va llenando con elementos escenográficos y con las construcciones mentales que surgen de la interacción entre intérpretes y espectadores.",
+   "footnotes": [
+    "⁶ En otros contextos, la música es considerada un arte de la escena, porque habitualmente se interpreta en espacios escénicos y, además, forma parte de las artes en vivo.",
+    "Colomer, J. (2010). Módulo 1: Introducción a la gestión de las artes escénicas. PID_00164153, Master interuniversitario en gestión cultural (pp. 3-6). Universidad de Cataluña, Universidad de Girona y Universidad de las Islas Baleares."
+   ],
+   "source": "PAES Regular 2024, lectura 6",
+   "questionRange": [
+    16,
+    24
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "lectora-curado-2-q01",
+   "number": 1,
+   "origin": "lectora-2027-invierno-q01",
+   "axis": "Interpretar",
+   "topic": "Relación entre ideas",
+   "subtopic": "cl-inferencia",
+   "stem": "¿De qué manera el primer párrafo destaca la importancia de los insectos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Detallando sus características más relevantes."
+    },
+    {
+     "key": "B",
+     "text": "Describiendo la antigüedad de sus orígenes."
+    },
+    {
+     "key": "C",
+     "text": "Evidenciando su superioridad numérica."
+    },
+    {
+     "key": "D",
+     "text": "Analizando su relación con otras especies."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El primer párrafo destaca a los insectos con cifras: son la mayor parte de las especies conocidas y su peso en la biomasa animal también es mayor que el de otros grupos, de modo que la idea clave es su superioridad numérica.",
+    "planteamiento": "Se pide la forma en que el primer párrafo de la lectura destaca la importancia de los insectos. Fragmento clave: «más de la mitad son insectos», frente a un 19 % de otros invertebrados, un 16 % de plantas, un 6 % de hongos y líquenes, un 3 % de microorganismos y un 3 % de cordados. Ese párrafo está bajo el subtítulo «¿Por qué son importantes los insectos?».",
+    "steps": [
+     "El primer párrafo abre con una afirmación general: los insectos «constituyen el grupo de animales más diverso y abundante». Antes de respaldarla, el autor debe mostrar en qué sentido son los más numerosos, y para eso recurre a datos.",
+     "Enseguida construye un conteo de todas las especies conocidas. Los insectos aparecen con «más de la mitad» del total, mientras que los demás grupos reciben porcentajes muy inferiores: 19 % otros invertebrados, 16 % plantas, 6 % hongos y líquenes, 3 % microorganismos y 3 % cordados.",
+     "Al comparar grupos con cifras, el párrafo muestra que el número de especies de insectos supera al de cualquier otro grupo, incluidos los vertebrados al que pertenece el ser humano. Eso es lo que se entiende por superioridad numérica.",
+     "El párrafo refuerza el argumento con la biomasa: los insectos representan el 10 % de la biomasa animal, mientras que los mamíferos silvestres solo llegan al 0,35 %. Aquí la comparación ya no se hace por cantidad de especies sino por peso total, y vuelve a favorecer a los insectos.",
+     "Se descartan las demás alternativas. La A y la B aparecen en el párrafo, pero solo como detalles: el origen hace 420 millones de años y la condición de primeros animales en volar. Son datos descriptivos y no el modo en que el párrafo destaca su importancia. La D corresponde al segundo párrafo, donde se habla de polinización, control de plagas y otros roles ecológicos.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Afirma que el párrafo detalla características relevantes de los insectos. Sí menciona alguna, como ser «los primeros animales en volar», pero es un dato sobre su origen y no el recurso con que se destaca su importancia. La trampa está en confundir un dato descriptivo con el énfasis del párrafo.",
+     "B": "Afirma que el párrafo describe la antigüedad de sus orígenes. Aparece la cifra de 420 millones de años, lo que tienta a elegirla. Pero el párrafo la usa como contexto y no como argumento; la importancia se construye con los conteos de especies y de biomasa. Es una alternativa que toma un detalle secundario como eje.",
+     "D": "Afirma que el párrafo analiza la relación de los insectos con otras especies. La trampa es que sí se comparan grupos, pero solo en número de especies y en biomasa, no en interacciones. Las relaciones ecológicas, como la polinización o el control de plagas, están en el segundo párrafo, así que la alternativa confunde ambos párrafos."
+    }
+   },
+   "passageId": "lectura-1"
+  },
+  {
+   "id": "lectora-curado-2-q02",
+   "number": 2,
+   "origin": "lectora-2027-invierno-q02",
+   "axis": "Interpretar",
+   "topic": "Causas y razones",
+   "subtopic": "cl-inferencia",
+   "stem": "Respecto de las oscilaciones en la población de insectos, ¿por qué es complejo establecer conclusiones?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque los insectos necesitan ser estudiados por mucho tiempo."
+    },
+    {
+     "key": "B",
+     "text": "Porque la biomasa de insectos entrega información limitada."
+    },
+    {
+     "key": "C",
+     "text": "Porque la biomasa de insectos ha disminuido drásticamente."
+    },
+    {
+     "key": "D",
+     "text": "Porque los insectos requieren de un área protegida para su estudio."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las grandes oscilaciones anuales de las poblaciones de insectos son esperables, así que solo las tendencias de varios años permiten sacar conclusiones fiables; de ahí la dificultad.",
+    "planteamiento": "Se pide por qué resulta complejo establecer conclusiones sobre las oscilaciones de la población de insectos. Fragmento clave: «las grandes oscilaciones en el tamaño poblacional de una temporada a otra son esperables» y «conclusiones fiables solo se pueden extraer a base de las tendencias obtenidas luego de varios años de muestreo sistemático». Está en el segundo bloque del primer artículo, en el párrafo que compara insectos y vertebrados.",
+    "steps": [
+     "El texto parte señalando que la aproximación clásica a la conservación se basa en vertebrados, que tienen ciclos de vida largos. En ellos, una gran fluctuación de una temporada a otra sí es informativa, porque no suele ser un movimiento normal del grupo.",
+     "Con los insectos ocurre lo contrario: sus ciclos son cortos, así que las grandes oscilaciones de una temporada a otra son esperables. Una caída o un aumento en un año no permite, por sí solo, saber si hay un cambio real o solo una variación natural.",
+     "Por eso el texto concluye que «conclusiones fiables solo se pueden extraer a base de las tendencias obtenidas luego de varios años de muestreo sistemático». Para distinguir una tendencia de una fluctuación normal se necesitan muchos años de observación.",
+     "La causa de la dificultad es, entonces, la variabilidad natural entre temporadas combinada con la necesidad de estudios de largo plazo. El ejemplo del estudio alemán, con 27 años de muestreo, ilustra justamente esa exigencia.",
+     "Se descartan las demás alternativas comparando cada una con el texto. La B dice que la biomasa entrega poca información, pero el texto la usa como dato sólido al hablar de la caída de más del 75 % en insectos voladores. La C toma un resultado como causa de la dificultad, cuando la dificultad es metodológica y no la caída misma. La D menciona áreas protegidas, pero el texto no presenta esa exigencia como obstáculo para concluir.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Sugiere que la biomasa de insectos es poco informativa. La trampa es que el texto la utiliza como evidencia robusta: el estudio alemán midió una disminución de más del 75 % de la biomasa de insectos voladores. Lo que el texto dificulta es el tiempo necesario para interpretar las cifras, no su valor.",
+     "C": "Toma una consecuencia del texto, la caída de la biomasa, como si fuera la causa de la dificultad para concluir. La dificultad se debe a la variabilidad natural entre temporadas, por lo que una caída grande aparece justamente como un dato que hay que interpretar con cautela, no como la razón del problema.",
+     "D": "Recuerda que el estudio alemán se hizo en áreas protegidas y la asocia con la dificultad. Es un detalle real del estudio, pero el texto no plantea que se requiera un área protegida para estudiar insectos ni que ello dificulte las conclusiones. Es un dato que se cruza con la idea central sin responder la pregunta."
+    }
+   },
+   "passageId": "lectura-1"
+  },
+  {
+   "id": "lectora-curado-2-q03",
+   "number": 3,
+   "origin": "lectora-2027-invierno-q03",
+   "axis": "Evaluar",
+   "topic": "Evaluación",
+   "subtopic": "cl-argumentos",
+   "stem": "En el cuarto párrafo, ¿qué ejemplifica la emisora a través de la investigación sobre el daño cognitivo de las abejas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El estudio sobre tamaños de poblaciones."
+    },
+    {
+     "key": "B",
+     "text": "La evaluación de las presiones antrópicas."
+    },
+    {
+     "key": "C",
+     "text": "El análisis sobre las causas de muerte de insectos."
+    },
+    {
+     "key": "D",
+     "text": "La manera de distribuir recursos de las instituciones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El cuarto párrafo propone evaluar el estado de los individuos frente a presiones humanas, y el daño cognitivo de las abejas por plaguicidas es el ejemplo que lo ilustra.",
+    "planteamiento": "Se pide qué ejemplifica el autor en el cuarto párrafo con la investigación sobre el daño cognitivo de las abejas. Fragmento clave: «el daño cognitivo causado a las abejas por la exposición a dosis subletales de plaguicidas», dentro de la frase que propone «evaluar el estado en el cual se encuentran los individuos y cómo las presiones antrópicas pueden afectar su desempeño». Es el párrafo que comienza con «Es sumamente relevante recalcar».",
+    "steps": [
+     "El párrafo empieza reconociendo que los estudios sobre tamaños poblacionales requieren recursos y voluntad institucional, que rara vez existen. Luego presenta una alternativa: evaluar el estado de los individuos y cómo las presiones humanas afectan su desempeño.",
+     "El ejemplo que se da es el daño cognitivo de las abejas expuestas a dosis subletales de plaguicidas. La dosis no mata de inmediato, pero altera el funcionamiento del individuo.",
+     "Los plaguicidas son una presión antrópica, es decir, una actividad humana que afecta a los ecosistemas. El daño se mide en el desempeño del individuo: la desorientación impide que la abeja regrese a su colonia.",
+     "Por lo tanto, el ejemplo ilustra la evaluación de las presiones antrópicas sobre la salud individual de los insectos. Eso corresponde exactamente a la alternativa B.",
+     "Se descartan las otras opciones. La A es una confusión, porque el párrafo parte mencionando estudios poblacionales, pero el ejemplo de las abejas trata de la salud individual y no del tamaño de las poblaciones. La C se explica por la frase que dice que la desorientación «desencadena finalmente su muerte», pero el ejemplo se centra en el daño cognitivo y no en las causas de muerte. La D toma la mención de «recursos y voluntad de las instituciones», que aparece en el mismo párrafo, pero como condición para los estudios a largo plazo y no como ejemplo.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Asocia el ejemplo con el estudio sobre tamaños de poblaciones, porque el párrafo empieza hablando de esos estudios. La trampa es que el autor contrapone esos estudios con otra alternativa. El caso de las abejas muestra cómo se evalúa la salud y el desempeño de cada individuo, no cuántos individuos hay en una población.",
+     "C": "Se apoya en la frase que indica que la desorientación «desencadena finalmente su muerte». Esa frase existe, pero describe la consecuencia del daño y no el tema del ejemplo, que es el daño cognitivo. Confundir el efecto final con el objeto de la investigación es la trampa típica de esta alternativa.",
+     "D": "Toma la mención de los recursos y la voluntad de las instituciones y la presenta como un ejemplo de distribución de recursos. En el texto esa mención es una condición para los estudios a largo plazo, no un caso que se ilustre. El error está en tratar una condición como si fuera un ejemplo."
+    }
+   },
+   "passageId": "lectura-1"
+  },
+  {
+   "id": "lectora-curado-2-q04",
+   "number": 4,
+   "origin": "lectora-2027-invierno-q04",
+   "axis": "Interpretar",
+   "topic": "Interpretar",
+   "subtopic": "cl-inferencia",
+   "stem": "Según la lectura, ¿qué efecto tienen los antibióticos de uso veterinario y humano en los insectos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Provocan su muerte."
+    },
+    {
+     "key": "B",
+     "text": "Alteran su microbiota."
+    },
+    {
+     "key": "C",
+     "text": "Causan daño a su hábitat."
+    },
+    {
+     "key": "D",
+     "text": "Generan su desorientación."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Según el texto, los antibióticos de uso veterinario y humano alteran la microbiota de los insectos y pueden aumentar su susceptibilidad a enfermedades. El efecto se describe sobre la microbiota, no sobre la vida del insecto de forma directa.",
+    "planteamiento": "Se pide qué efecto tienen los antibióticos de uso veterinario y humano en los insectos. Fragmento clave: «se ha probado que los antibióticos de uso veterinario y humano impactan negativamente la microbiota de los insectos, pudiendo aumentar su susceptibilidad a enfermedades». Aparece en el cuarto párrafo del primer artículo, justo después del ejemplo de las abejas.",
+    "steps": [
+     "El cuarto párrafo presenta una serie de evidencias para evaluar la salud de los insectos. Una de ellas se introduce con la frase «además, se ha probado que los antibióticos…», lo que indica que el texto la considera un hecho comprobado.",
+     "El sujeto de la oración es el antibiótico y el verbo es «impactan negativamente», seguido del complemento «la microbiota de los insectos». Por tanto, el efecto directo recae sobre la microbiota, es decir, sobre el conjunto de microorganismos que habitan el insecto.",
+     "La oración agrega una consecuencia: la alteración de la microbiota «pudiendo aumentar su susceptibilidad a enfermedades». Este efecto es indirecto y depende del cambio en la microbiota.",
+     "Al juntar ambas partes, el efecto de los antibióticos es alterar la microbiota de los insectos, con la posible consecuencia de volverlos más vulnerables a enfermedades.",
+     "Se descartan las demás alternativas. La A tiene su origen en el ejemplo de las abejas, pero la muerte se asocia a la desorientación causada por los plaguicidas y no a los antibióticos. La C menciona la pérdida de hábitat, que el texto presenta en la sección sobre Chile como una causa general de deterioro y no como efecto de los antibióticos. La D corresponde a la desorientación, que es el efecto de los plaguicidas en las abejas.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Atribuye a los antibióticos la muerte de los insectos. La trampa surge porque el texto habla de muerte en las abejas, pero esa relación se establece con los plaguicidas: la desorientación impide el regreso a la colonia y lleva a la muerte. Los antibióticos solo se asocian con la microbiota y la susceptibilidad a enfermedades.",
+     "C": "Atribuye a los antibióticos un daño al hábitat. La pérdida de hábitat aparece en la sección sobre Chile como causa general de la disminución de insectos, junto con la contaminación y las especies exóticas invasoras. No se vincula a los antibióticos, por lo que la alternativa mezcla un factor general con un efecto específico.",
+     "D": "Atribuye a los antibióticos la desorientación de los insectos. Esa desorientación es el efecto de los plaguicidas sobre las abejas, descrito en la oración anterior. La alternativa cambia el químico equivocado y por eso no responde a la pregunta."
+    }
+   },
+   "passageId": "lectura-1"
+  },
+  {
+   "id": "lectora-curado-2-q05",
+   "number": 5,
+   "origin": "lectora-2027-invierno-q05",
+   "axis": "Interpretar",
+   "topic": "Causas y razones",
+   "subtopic": "cl-inferencia",
+   "stem": "Según la sección “**Conservación de insectos en Chile**”, ¿por qué se deben tomar acciones para la conservación de insectos no clasificados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque se requiere una actualización de su variedad."
+    },
+    {
+     "key": "B",
+     "text": "Porque se encuentran en una categoría de amenaza."
+    },
+    {
+     "key": "C",
+     "text": "Porque su diversidad es mayor a la de los mamíferos."
+    },
+    {
+     "key": "D",
+     "text": "Porque su existencia es importante para los humanos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los insectos no clasificados deben protegerse porque probablemente cumplen procesos ecológicos que sostienen la supervivencia humana. La justificación es su utilidad para las personas.",
+    "planteamiento": "Se pide por qué se deben tomar acciones de conservación con los insectos no clasificados, según la sección «Conservación de insectos en Chile». Fragmento clave: «es muy probable que esos organismos estén llevando a cabo procesos ecológicos que permiten la supervivencia de nuestra especie». Los no clasificados corresponden al 99,24 % de las especies de insectos.",
+    "steps": [
+     "La sección calcula que solo el 0,76 % de los insectos de Chile ha sido clasificado según su estado de conservación. Por eso el texto habla del «99,24 % de especies que aún no han sido categorizadas».",
+     "Frente a ese vacío, el autor pide que el país destine recursos para saber qué ocurre con esas especies y que tome acciones para su conservación. Hay que identificar cuál es la razón de esa exigencia.",
+     "La razón aparece en la misma oración: es muy probable que esas especies lleven a cabo «procesos ecológicos que permiten la supervivencia de nuestra especie». Es decir, se justifican por su función, que es beneficiosa para las personas.",
+     "Por lo tanto, la justificación no es una amenaza ni un problema de clasificación, sino que su existencia es importante para los humanos, porque sostiene procesos ecológicos de los que depende la supervivencia de la especie.",
+     "Se descartan las demás opciones. La A toma la idea de falta de información, pero el texto habla de falta de categorización, no de actualizar la variedad de especies. La B confunde la razón: la categoría de amenaza corresponde al 66 % de los insectos ya clasificados, no a los que aún no se han categorizado. La C recoge la comparación de diversidad con los mamíferos, pero es un dato de contexto y no el fundamento de la acción.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Afirma que se requiere actualizar la variedad de especies. La alternativa toma la idea de falta de información, pero el texto habla de carencia de categorización, es decir, de especies que nadie ha evaluado todavía. No se pide actualizar un catálogo de variedades, sino saber qué estado de conservación tienen.",
+     "B": "Afirma que están en una categoría de amenaza. La confusión está en el porcentaje: la categoría de amenaza (Peligro crítico, En peligro o Vulnerable) corresponde al 66 % de los insectos que sí fueron clasificados. Los no clasificados justamente no tienen categoría asignada, así que la razón no puede ser esa.",
+     "C": "Afirma que la diversidad de los insectos supera a la de los mamíferos. El texto sí hace esa comparación, pero como contexto para mostrar la brecha de información. La alternativa convierte un dato de contraste en fundamento para actuar, lo que no es lo que el autor argumenta."
+    }
+   },
+   "passageId": "lectura-1"
+  },
+  {
+   "id": "lectora-curado-2-q06",
+   "number": 6,
+   "origin": "lectora-2027-invierno-q06",
+   "axis": "Evaluar",
+   "topic": "Validez de afirmaciones",
+   "subtopic": "cl-argumentos",
+   "stem": "En la sección “**Conservación de insectos en Chile**”, ¿cuál es la estrategia utilizada para destacar la escasez de información sobre los insectos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Contrastar los porcentajes de clasificación de insectos con los de mamíferos."
+    },
+    {
+     "key": "B",
+     "text": "Cuestionar la validez de la información de organismos públicos sobre insectos."
+    },
+    {
+     "key": "C",
+     "text": "Ilustrar los tipos de insectos que se encuentran en una categoría de amenaza."
+    },
+    {
+     "key": "D",
+     "text": "Revisar la situación histórica de la población de especies de insectos en Chile."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El autor contrasta el porcentaje de especies clasificadas de insectos con el de mamíferos para mostrar el enorme vacío de información sobre los insectos. Esa es la estrategia que la sección usa.",
+    "planteamiento": "Se pide cuál es la estrategia usada en la sección «Conservación de insectos en Chile» para destacar la escasez de información sobre los insectos. Fragmento clave: «apenas el 0,76 % ha sido clasificado» en insectos, «en contraste con el 74,23 %» de los mamíferos, y la frase «Estos resultados reflejan el enorme vacío de información».",
+    "steps": [
+     "La sección se propone «hacer el ejercicio de comparar» las especies de insectos y mamíferos categorizadas por el Ministerio del Medio Ambiente, en relación con el número total de especies presentes en Chile de cada grupo.",
+     "Para cada grupo se calcula la proporción clasificada: en los insectos, según el texto, apenas el 0,76 % del total ha sido clasificado; en los mamíferos, el 74,23 %. Son dos porcentajes que se ponen uno frente al otro.",
+     "Ese contraste es el recurso central: al poner juntos un grupo casi sin clasificar y otro casi completamente clasificado, la diferencia se vuelve evidente. El texto lo interpreta de inmediato como un «enorme vacío de información».",
+     "Por lo tanto, la estrategia consiste en contrastar los porcentajes de clasificación de insectos y mamíferos, que es lo que describe la alternativa A.",
+     "Se descartan las demás opciones. La B menciona la crítica del autor a la estimación de CONAMA, pero esa crítica se refiere al número de especies, no a la validez de la información pública sobre insectos. La C aparece en la Figura 2, pero describe el estado de las especies ya clasificadas y no sirve para mostrar la escasez de información. La D habla de la situación histórica de las poblaciones, y en esta sección no hay una revisión histórica: el texto compara la situación actual.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Afirma que el autor cuestiona la validez de la información de organismos públicos. La trampa es real: el autor califica la estimación de CONAMA como «subestimada y desactualizada». Pero esa crítica apunta al número de especies, y el recurso de la sección es el contraste de porcentajes, no un juicio sobre la validez de todas las fuentes.",
+     "C": "Afirma que el texto ilustra los tipos de insectos con alguna categoría de amenaza. La Figura 2 y el dato del 66 % sí aparecen, pero describen las especies clasificadas. Ese dato no muestra escasez, sino el estado de las especies que ya se conocen, por lo que no responde a la estrategia pedida.",
+     "D": "Afirma que el texto revisa la situación histórica de las poblaciones. Esa revisión no aparece en la sección, que se concentra en comparar proporciones actuales de clasificación. La alternativa describe un tipo de análisis que el texto no realiza en este punto."
+    }
+   },
+   "passageId": "lectura-1"
+  },
+  {
+   "id": "lectora-curado-2-q07",
+   "number": 7,
+   "origin": "lectora-2027-invierno-q07",
+   "axis": "Evaluar",
+   "topic": "Opiniones",
+   "subtopic": "cl-argumentos",
+   "stem": "A lo largo de la lectura, la emisora incluye su opinión respecto de la información que entrega. ¿En cuál de los siguientes momentos está presente este recurso?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cuando se refiere a la aproximación clásica a la conservación de animales."
+    },
+    {
+     "key": "B",
+     "text": "Cuando se refiere al efecto de los antibióticos en los insectos."
+    },
+    {
+     "key": "C",
+     "text": "Cuando se refiere a la aparición de los insectos en la Tierra."
+    },
+    {
+     "key": "D",
+     "text": "Cuando se refiere al trabajo realizado por los investigadores chilenos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La emisora expresa una valoración positiva al referirse a los investigadores chilenos, con expresiones como «Afortunadamente» y «importantísimos avances». Ese es el momento en que aparece su opinión.",
+    "planteamiento": "Se pide en qué momento de la lectura está presente la opinión de la emisora. Fragmentos clave: «Afortunadamente, en Chile existen grupos de investigadores trabajando en levantar información científica» y «A pesar de estos importantísimos avances». Ambos están en la sección «Conservación de insectos en Chile».",
+    "steps": [
+     "Para responder hay que distinguir entre hechos y valoraciones. Un hecho se presenta con datos o con verbos de comprobación; una opinión incluye un juicio de valor de quien escribe.",
+     "En la sección «Conservación de insectos en Chile» el texto afirma: «Afortunadamente, en Chile existen grupos de investigadores trabajando en levantar información científica». El adverbio «afortunadamente» expresa una evaluación positiva.",
+     "Luego califica el trabajo con la expresión «importantísimos avances». Es una valoración explícita, porque el autor no describe el trabajo, sino que le atribuye una importancia alta.",
+     "Los otros momentos son descriptivos: la aproximación clásica se explica por el hecho de que está basada en vertebrados; el efecto de los antibióticos se presenta como algo «probado»; y la aparición de los insectos se narra con datos sobre su origen y su vuelo.",
+     "Por lo tanto, la opinión aparece al referirse al trabajo de los investigadores chilenos.",
+     "Se descartan las demás opciones. La A tiene la palabra «subestimada», pero en ese punto el autor solo describe la aproximación clásica basada en vertebrados, sin juicio. La B menciona «a mi juicio», que sí es una opinión, pero aparece en el párrafo que propone complementar ambas aproximaciones, no en el momento del efecto de los antibióticos, que se presenta como hecho comprobado. La C habla de la aparición de los insectos, un tema con alto valor narrativo, pero el texto solo entrega datos de origen y de vuelo.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Asocia el momento con la aproximación clásica a la conservación de animales. El autor usa la palabra «subestimada» en otra parte, referida a la estimación de especies, pero en el momento de la aproximación clásica solo describe que se basa en vertebrados. No hay una valoración en ese punto.",
+     "B": "Asocia la opinión con el efecto de los antibióticos. La trampa es que la expresión «a mi juicio» aparece en el párrafo siguiente, cuando el autor propone integrar ambas aproximaciones. Sin embargo, el efecto de los antibióticos se presenta como un hecho probado, sin juicio personal del autor.",
+     "C": "Asocia la opinión con la aparición de los insectos en la Tierra. Es un tema con alto valor narrativo, pero el texto solo entrega datos sobre su origen, su antigüedad y su capacidad de volar. Un dato, por interesante que sea, no es una valoración de quien escribe."
+    }
+   },
+   "passageId": "lectura-1"
+  },
+  {
+   "id": "lectora-curado-2-q08",
+   "number": 8,
+   "origin": "lectora-2026-invierno-q01",
+   "axis": "Interpretar",
+   "topic": "Relación entre ideas",
+   "subtopic": "cl-inferencia",
+   "stem": "Con respecto al análisis demográfico, ¿cuál es la relación establecida entre el primer y segundo párrafo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El primero presenta el problema del envejecimiento de la población; el segundo muestra formas de medir su alcance."
+    },
+    {
+     "key": "B",
+     "text": "El primero explica las tasas de crecimiento poblacional de Europa; el segundo las compara con las de América Latina."
+    },
+    {
+     "key": "C",
+     "text": "El primero define la transición demográfica; el segundo plantea los indicadores que permiten observarla en un territorio."
+    },
+    {
+     "key": "D",
+     "text": "El primero categoriza los factores de medición demográfica; el segundo explica las razones por las que estos han sido reemplazados."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La clave es distinguir la función de cada párrafo: el primero introduce el concepto de transición demográfica y el segundo muestra cómo se observa, mediante etapas e indicadores.",
+    "planteamiento": "Se pide la relación entre el primer y el segundo párrafo de la lectura 1, un fragmento del informe del INE sobre el envejecimiento en Chile. El primer párrafo presenta el envejecimiento como consecuencia del paso de «altos niveles de fecundidad y de mortalidad» a «bajos niveles de fecundidad y mortalidad», y da nombre a ese proceso: «transición demográfica». El segundo párrafo desarrolla la teoría, las etapas y los indicadores con que se reconoce esa transición.",
+    "steps": [
+     "El primer párrafo sitúa el tema: el envejecimiento aparece como consecuencia de la transformación demográfica, y esa transformación «generalmente se denomina como el proceso de transición demográfica».",
+     "El segundo párrafo parte con la teoría: la transición se observa en la estructura de la población, a partir de la fecundidad y la mortalidad. Según Miró, esos dos componentes permiten distinguir cuatro etapas: incipiente, moderada, plena y avanzada.",
+     "Luego el mismo párrafo plantea «nuevos indicadores y etapas» para definir el proceso, basados en la fecundidad y la esperanza de vida, que muestran con mayor precisión los desafíos que enfrenta cada país en cada etapa.",
+     "Así, el primer párrafo define el concepto y el segundo explica con qué criterios se identifica la transición en un país o territorio. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Invierte la relación: el primer párrafo no presenta el envejecimiento como problema a resolver, sino como consecuencia de una transición, y el segundo no muestra formas de medir su alcance en general. La trampa es quedarse con el tema del envejecimiento y no con la función de cada párrafo.",
+     "B": "Toma como tema central las tasas de Europa, pero el texto solo menciona a Europa como origen de la teoría de la transición, sin describir sus tasas ni compararlas con las de América Latina. Es un error por confundir una mención con el tema.",
+     "D": "Atribuye al primer párrafo una categorización de factores de medición y al segundo una explicación de por qué esos factores fueron reemplazados. El texto no hace ninguna de las dos cosas: los nuevos indicadores se proponen como actualización del marco de Miró y no como reemplazo de factores."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q09",
+   "number": 9,
+   "origin": "lectora-2026-invierno-q02",
+   "axis": "Evaluar",
+   "topic": "Interpretar",
+   "subtopic": "cl-forma",
+   "stem": "A diferencia de Miró, ¿qué indicador considera la CEPAL al definir las etapas de transición demográfica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La estructura por edades."
+    },
+    {
+     "key": "B",
+     "text": "La tasa de fecundidad."
+    },
+    {
+     "key": "C",
+     "text": "La tasa de mortalidad."
+    },
+    {
+     "key": "D",
+     "text": "La esperanza de vida."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para comparar los dos enfoques hay que listar el criterio de cada uno: el indicador que aparece solo en la CEPAL es la diferencia buscada.",
+    "planteamiento": "Se pide el indicador que considera la CEPAL, a diferencia de Miró, para definir las etapas de la transición demográfica. Datos del texto: Miró define las etapas «según el grado de avance observado en la disminución de la mortalidad y la fecundidad»; la CEPAL propone indicadores «basados en las tasas de fecundidad y la esperanza de vida de la población».",
+    "steps": [
+     "Identifica el criterio de Miró: las cuatro etapas se definen según el avance en la disminución de la mortalidad y de la fecundidad. El conjunto de indicadores de Miró es, entonces, mortalidad y fecundidad.",
+     "Identifica el criterio de la CEPAL: los nuevos indicadores se basan en las tasas de fecundidad y en la esperanza de vida de la población. El conjunto de la CEPAL es fecundidad y esperanza de vida.",
+     "Compara ambos conjuntos. La fecundidad aparece en los dos, así que no diferencia a los enfoques. La mortalidad aparece solo en Miró, y la esperanza de vida aparece solo en la CEPAL. Como la pregunta busca lo que la CEPAL considera «a diferencia de Miró», la respuesta es la esperanza de vida.",
+     "Descarta la estructura por edades: el texto dice que los indicadores de la CEPAL «se ven menos afectados por la estructura por edades», es decir, se diseñan para no depender de ella. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La estructura por edades: es justamente lo que los indicadores de la CEPAL buscan no usar, pues se ven «menos afectados» por ella. El error consiste en tomar un factor que influye en el análisis por un indicador que se adopta.",
+     "B": "La tasa de fecundidad: aparece en ambos enfoques, en Miró como parte del criterio de las etapas y en la CEPAL como indicador base, por lo que no es una diferencia. El error típico es leer solo la propuesta de la CEPAL y olvidar el criterio de Miró.",
+     "C": "La tasa de mortalidad: es parte del criterio de Miró y no de la CEPAL. Elegirla invierte los dos enfoques, porque sería justamente lo que la CEPAL reemplaza por la esperanza de vida."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q10",
+   "number": 10,
+   "origin": "lectora-2026-invierno-q03",
+   "axis": "Interpretar",
+   "topic": "Interpretar",
+   "subtopic": "cl-inferencia",
+   "stem": "¿Cuál es una de las características de la **etapa incipiente** de la transición demográfica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Alta mortalidad infantil."
+    },
+    {
+     "key": "B",
+     "text": "Aumento de la esperanza de vida."
+    },
+    {
+     "key": "C",
+     "text": "Acelerado crecimiento de la población."
+    },
+    {
+     "key": "D",
+     "text": "Bajo índice de fecundidad."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En la etapa incipiente la mortalidad baja mientras la fecundidad sigue alta, y esa combinación produce un crecimiento acelerado de la población.",
+    "planteamiento": "Se pide una característica de la etapa incipiente de la transición demográfica. Datos del texto (párrafo 3 de la lectura 1): la etapa se inicia con «descensos importantes en la mortalidad, principalmente en la de los más jóvenes y la mortalidad infantil»; ese descenso ocurre en «situaciones de altas tasas de fecundidad»; y la esperanza de vida «no supera los 60 años».",
+    "steps": [
+     "Revisa lo que el texto dice sobre esta etapa: a mediados del siglo XX, las mejoras en las condiciones de vida y los avances de la medicina produjeron descensos importantes en la mortalidad, sobre todo de los más jóvenes y la mortalidad infantil.",
+     "Relaciona ese descenso con la fecundidad: el texto precisa que ocurre en «situaciones de altas tasas de fecundidad». Si los nacimientos siguen siendo numerosos y las muertes tempranas disminuyen, la población crece cada vez más rápido.",
+     "Consecuencia directa: el texto afirma que, en ese contexto, «el descenso de la mortalidad de los más jóvenes implica un acelerado crecimiento de la población». Esa frase corresponde a la alternativa C.",
+     "Descarta las otras opciones con el propio texto: la esperanza de vida en esta etapa «no supera los 60 años», así que su aumento no es rasgo de la incipiente (B); la fecundidad todavía no ha comenzado a declinar, así que no hay baja fecundidad (D); y la mortalidad infantil es lo que esta etapa empieza a reducir, no lo que se mantiene alto (A).",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Alta mortalidad infantil: es justamente lo que la etapa incipiente empieza a reducir. La trampa consiste en tomar el punto de partida (mortalidad alta) como característica de la etapa, cuando es el problema que la etapa comienza a resolver.",
+     "B": "Aumento de la esperanza de vida: en la incipiente la esperanza de vida no supera los 60 años. Su leve aumento, que sí supera esa cifra, se describe en la etapa moderada, y confundir ambas etapas es el error típico.",
+     "D": "Bajo índice de fecundidad: en la incipiente la fecundidad todavía no ha empezado a declinar, así que la baja fecundidad corresponde a etapas posteriores y no a esta."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q11",
+   "number": 11,
+   "origin": "lectora-2026-invierno-q04",
+   "axis": "Evaluar",
+   "topic": "Interpretar",
+   "subtopic": "cl-multimodal",
+   "stem": "A partir de la lectura, ¿qué implica el “bono demográfico” para una sociedad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que aumenta su población en edad laboral."
+    },
+    {
+     "key": "B",
+     "text": "Que entrega incentivos para aumentar la natalidad."
+    },
+    {
+     "key": "C",
+     "text": "Que impulsa el incremento de la esperanza de vida."
+    },
+    {
+     "key": "D",
+     "text": "Que intenta frenar el envejecimiento de la población."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El bono demográfico describe una población en que hay muchas personas en edad de trabajar y pocas dependientes, lo que amplía la población económicamente activa.",
+    "planteamiento": "Se pide qué implica el «bono demográfico» para una sociedad. Datos del texto (párrafo 5 de la lectura 1): en la etapa plena «el grueso de la población se concentra en edades jóvenes», lo que «amplía el tamaño de la población económicamente activa», y existen «bajos niveles de dependencia demográfica, tanto a nivel de menores de 15 años, como de mayores de 60 años».",
+    "steps": [
+     "Ubica el concepto: en la etapa plena la estructura etaria envejece lentamente y el texto afirma que «esta situación ha sido denominada como el “bono demográfico”». Se trata de una característica de la población, no de una política pública.",
+     "Explica qué lo define: hay bajos niveles de dependencia en ambos extremos de la edad, es decir, pocos menores de 15 años y pocos mayores de 60 años en proporción al total de la población.",
+     "Conecta con la consecuencia: al concentrarse la población en edades jóvenes, se amplía el tamaño de la población económicamente activa. En otras palabras, la proporción de personas en edad de trabajar aumenta.",
+     "El texto concluye que esta situación es «especialmente favorable para el desarrollo económico». Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Incentivos para aumentar la natalidad: el texto menciona los planes de control de la natalidad, que buscan reducir los nacimientos, y en la etapa plena la fecundidad ya está en descenso. El error es invertir la dirección de la natalidad.",
+     "C": "Aumento de la esperanza de vida: en la etapa plena la esperanza de vida «se mantiene en torno a los 70 años». El bono se define por la estructura de edades y no por la esperanza de vida, así que el rasgo es un dato de la etapa y no su efecto.",
+     "D": "Frenar el envejecimiento: el bono convive con un envejecimiento lento de la población; el texto lo describe como una situación que se produce mientras la fecundidad desciende, no como un mecanismo para detener el envejecimiento."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q12",
+   "number": 12,
+   "origin": "lectora-2026-invierno-q05",
+   "axis": "Interpretar",
+   "topic": "Interpretar",
+   "subtopic": "cl-inferencia",
+   "stem": "Según la lectura, ¿en cuál de las etapas de transición demográfica la economía se ve beneficiada por el tamaño de la población económicamente activa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En la **etapa plena**."
+    },
+    {
+     "key": "B",
+     "text": "En la **etapa incipiente**."
+    },
+    {
+     "key": "C",
+     "text": "En la **etapa avanzada**."
+    },
+    {
+     "key": "D",
+     "text": "En la **etapa moderada**."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La economía se beneficia del tamaño de la población económicamente activa cuando la población es mayoritariamente joven y la dependencia es baja, condición que se da en la etapa plena.",
+    "planteamiento": "Se pide en qué etapa de la transición demográfica la economía se beneficia del tamaño de la población económicamente activa. Datos del texto (párrafo 5 de la lectura 1): en la etapa plena «el grueso de la población se concentra en edades jóvenes, ampliando así el tamaño de la población económicamente activa», con bajos niveles de dependencia. Las otras etapas se describen en los párrafos 3, 4, 6 y 7.",
+    "steps": [
+     "La lectura dice que, en la etapa plena, el grueso de la población se concentra en edades jóvenes, «ampliando así el tamaño de la población económicamente activa».",
+     "Ese escenario corresponde al bono demográfico, con bajos niveles de dependencia, que el texto califica como «especialmente favorable para el desarrollo económico».",
+     "Revisa las otras etapas: en la incipiente la población es muy joven, pero la fecundidad alta eleva la dependencia de los menores de 15 años; en la moderada la fecundidad sigue por sobre el nivel de reemplazo; y en la avanzada aumenta la proporción de adultos mayores, lo que sube la dependencia.",
+     "Solo la etapa plena reúne población joven numerosa y baja dependencia. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "En la etapa incipiente: la población es muy joven, pero aún no hay bono porque la dependencia de los menores de 15 años es alta y la fecundidad sigue elevada. El error es confundir juventud con población económicamente activa.",
+     "C": "En la etapa avanzada: aumenta la proporción de población mayor y, con ella, la dependencia. El error es confundir envejecimiento con crecimiento de la población activa.",
+     "D": "En la etapa moderada: la fecundidad se mantiene por sobre el nivel de reemplazo y la dependencia todavía no es baja. La trampa es asociar cualquier reducción de la fecundidad con el bono demográfico, cuando el bono exige dependencia baja."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q13",
+   "number": 13,
+   "origin": "lectora-2026-invierno-q06",
+   "axis": "Evaluar",
+   "topic": "Postura del emisor",
+   "subtopic": "cl-postura",
+   "stem": "De acuerdo con la lectura, ¿en qué etapa de transición demográfica la esperanza de vida comienza a superar los 75 años?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En la **etapa muy avanzada**."
+    },
+    {
+     "key": "B",
+     "text": "En la **etapa moderada**."
+    },
+    {
+     "key": "C",
+     "text": "En la **etapa avanzada**."
+    },
+    {
+     "key": "D",
+     "text": "En la **etapa plena**."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El umbral de 75 años de esperanza de vida marca el inicio de la etapa avanzada, así que basta ordenar los umbrales de cada etapa para responder.",
+    "planteamiento": "Se pide la etapa en que la esperanza de vida comienza a superar los 75 años. Datos del texto (párrafos 4 a 7 de la lectura 1): en la moderada la esperanza de vida «comienza a superar los 60 años»; en la plena «se mantiene en torno a los 70 años»; en la avanzada «comienza a superar los 75 años»; y en la muy avanzada «se aproxima a los 80 años».",
+    "steps": [
+     "Recorre los umbrales de esperanza de vida en orden. La etapa moderada comienza a superar los 60 años y la plena se mantiene en torno a los 70 años.",
+     "La etapa avanzada es la que dice que la esperanza de vida «comienza a superar los 75 años», acompañada de una mortalidad que baja en todos los grupos de edades.",
+     "La muy avanzada tiene una esperanza de vida que «se aproxima a los 80 años». Ordenados, los umbrales quedan en 60, 70, 75 y 80, y el de 75 corresponde a la etapa avanzada.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "En la etapa muy avanzada: en esa etapa la esperanza de vida ya supera los 75 años, pero el umbral que marca su inicio corresponde a la etapa avanzada. La trampa es confundir el estado de una etapa posterior con el momento en que se cruza el umbral.",
+     "B": "En la etapa moderada: en esta etapa la esperanza de vida supera los 60 años, no los 75. Confundir el umbral de la moderada con el de la avanzada es un error frecuente.",
+     "D": "En la etapa plena: en esa etapa la esperanza de vida se mantiene en torno a los 70 años, por debajo del umbral pedido, así que no corresponde."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q14",
+   "number": 14,
+   "origin": "lectora-2026-invierno-q07",
+   "axis": "Interpretar",
+   "topic": "Vocabulario contextual",
+   "subtopic": "cl-vocabulario",
+   "stem": "¿Cuál es una característica de la **etapa avanzada** de la transición demográfica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El aumento de las tasas de fecundidad."
+    },
+    {
+     "key": "B",
+     "text": "El estancamiento de la estructura etaria."
+    },
+    {
+     "key": "C",
+     "text": "El incremento del reemplazo generacional."
+    },
+    {
+     "key": "D",
+     "text": "El envejecimiento de las cohortes dominantes."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La etapa avanzada se caracteriza por el envejecimiento de la población, porque las cohortes dominantes tienen cada vez más años y aumenta la proporción de adultos mayores.",
+    "planteamiento": "Se pide un rasgo de la etapa avanzada. Datos del texto (párrafo 6 de la lectura 1): en esta etapa la fecundidad queda por debajo del nivel de reemplazo, «las cohortes dominantes comienzan a tener cada vez una mayor cantidad de años» y «la proporción de población en edades mayores sobre el total de la población comienza a aumentar».",
+    "steps": [
+     "El texto dice que, en la etapa avanzada, las cohortes dominantes comienzan a tener cada vez una mayor cantidad de años. Es decir, el grupo de edad más numeroso se va haciendo más viejo.",
+     "A esto se suma que la proporción de población en edades mayores comienza a aumentar, «impulsando así el proceso de envejecimiento poblacional».",
+     "Ambas frases describen el mismo fenómeno: la población se envejece. Por eso la opción D, «el envejecimiento de las cohortes dominantes», es el rasgo característico de la etapa.",
+     "Las demás opciones van en sentido contrario a la etapa: la fecundidad baja, no sube; la estructura por edades cambia de forma importante, no se estanca; y la fecundidad queda por debajo del reemplazo, no lo incrementa. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Aumento de las tasas de fecundidad: en la avanzada la fecundidad baja y queda por debajo del nivel de reemplazo. Un aumento sería lo contrario de la transición, y el error consiste en invertir la dirección del cambio.",
+     "B": "Estancamiento de la estructura etaria: la estructura por edades cambia de forma importante en esta etapa, porque las cohortes envejecen. Es una trampa de palabras, pues el texto describe un cambio y no un estancamiento.",
+     "C": "Incremento del reemplazo generacional: la fecundidad queda por debajo del nivel de reemplazo, así que la opción confunde un nivel de referencia con un aumento del reemplazo."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q15",
+   "number": 15,
+   "origin": "lectora-2026-invierno-q08",
+   "axis": "Localizar",
+   "topic": "Interpretar",
+   "subtopic": "cl-localizar",
+   "stem": "¿De qué manera se organiza la información respecto de las etapas de transición demográfica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Se expone una discusión teórica acerca de las etapas propuestas por la CEPAL y luego se ejemplifican estas etapas con la situación demográfica de América Latina."
+    },
+    {
+     "key": "B",
+     "text": "Se explican los criterios que definen las etapas propuestas por la CEPAL y luego se detallan las características demográficas de dichas etapas."
+    },
+    {
+     "key": "C",
+     "text": "Se contrastan distintas definiciones de las etapas de transición demográfica y luego se presenta el informe elaborado por la CEPAL."
+    },
+    {
+     "key": "D",
+     "text": "Se presenta la evolución en la concepción de las etapas demográficas y luego se establece la visión actual propuesta por la CEPAL."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto avanza de los criterios que definen las etapas a las características de cada una, así que la organización es de criterios a características.",
+    "planteamiento": "Se pide cómo se organiza la información sobre las etapas de la transición demográfica. Datos del texto: primero se presentan los criterios (Miró, con mortalidad y fecundidad, y luego la CEPAL, con fecundidad y esperanza de vida) y después se describe cada etapa con sus rasgos, desde la incipiente hasta la muy avanzada (párrafos 2 a 7 de la lectura 1).",
+    "steps": [
+     "El segundo párrafo presenta la teoría: Miró define cuatro etapas según el avance de la mortalidad y de la fecundidad, y luego se proponen nuevos indicadores basados en la fecundidad y la esperanza de vida.",
+     "El tercer párrafo menciona a América Latina dentro de la explicación de las etapas, no como un ejemplo que cierre el texto, y a partir de ahí se describen las etapas una por una.",
+     "Cada párrafo posterior se dedica a una etapa con sus rasgos: la incipiente con mortalidad en descenso, la moderada con fecundidad todavía alta, la plena con bono demográfico, la avanzada con envejecimiento de las cohortes y la muy avanzada con un crecimiento cercano a 0 %.",
+     "La secuencia va, entonces, de los criterios a las características de cada etapa, lo que corresponde a la opción B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Ejemplificar al final con América Latina: la región aparece en medio de la explicación de las etapas, no como cierre, y el texto no presenta una discusión teórica separada de los ejemplos.",
+     "C": "Contrastar definiciones y luego presentar el informe de la CEPAL: el texto cita a Miró y a la CEPAL para construir los criterios, pero no contrasta definiciones ni termina con el informe.",
+     "D": "Evolución del concepto y luego visión actual: el texto menciona el paso de Miró a la CEPAL, pero su foco son los criterios y las características de las etapas, no la historia del concepto."
+    }
+   },
+   "passageId": "lectura-2"
+  },
+  {
+   "id": "lectora-curado-2-q16",
+   "number": 16,
+   "origin": "lectora-2025-regular-q41",
+   "axis": "Evaluar",
+   "topic": "Interpretar",
+   "subtopic": "cl-postura",
+   "stem": "¿Cuál es el aporte teórico de Charles Batteux a la concepción de arte?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Entregó una definición de las artes escénicas como “bellas artes”."
+    },
+    {
+     "key": "B",
+     "text": "Promovió la valoración de las bellas artes entre los espectadores."
+    },
+    {
+     "key": "C",
+     "text": "Incorporó la clasificación de “bellas artes” dentro de las manifestaciones artísticas."
+    },
+    {
+     "key": "D",
+     "text": "Generó las distintas clasificaciones para manifestaciones artísticas consideradas bellas."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Batteux propuso el concepto de «bellas artes» y lo incorporó como una clasificación dentro de las manifestaciones artísticas, lo que organizó la idea de arte.",
+    "planteamiento": "Se pide el aporte teórico de Charles Batteux a la concepción de arte. Datos: el texto dice que el concepto de «bellas artes» fue propuesto por Batteux en 1746 y que se aplicó originariamente a la danza, la música, la escultura, la pintura, la poesía y la floricultura.",
+    "steps": [
+     "El primer párrafo ubica a Batteux: propuso en 1746 el concepto de «bellas artes», que agrupa las manifestaciones que tienen su punto de mira en la búsqueda de la belleza.",
+     "Originalmente, ese concepto se aplicó a la danza, la música, la escultura, la pintura, la poesía y la floricultura, y más tarde se amplió a la arquitectura, la retórica y otros géneros literarios.",
+     "Esta ampliación muestra que la clasificación se incorporó como un modo de ordenar las artes según la búsqueda de la belleza, y ese es el aporte teórico del autor.",
+     "Por lo tanto, su aporte fue incorporar la clasificación de bellas artes dentro de las manifestaciones artísticas, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Definir las artes escénicas como bellas artes. Es una trampa: el texto dice que las artes escénicas no forman parte oficialmente de las bellas artes, así que Batteux no las definió así.",
+     "B": "Promover la valoración de las bellas artes entre los espectadores. El texto no atribuye a Batteux un trabajo de difusión entre el público; solo menciona su propuesta de clasificación.",
+     "D": "Generar las distintas clasificaciones de manifestaciones artísticas. Es una trampa de exceso: el texto atribuye a Batteux una propuesta, no la creación de varias clasificaciones; las ampliaciones son posteriores."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q17",
+   "number": 17,
+   "origin": "lectora-2025-regular-q42",
+   "axis": "Interpretar",
+   "topic": "Interpretar",
+   "subtopic": "cl-vocabulario",
+   "stem": "¿Cuál de las siguientes expresiones es categorizada oficialmente como “bellas artes”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El cabaret."
+    },
+    {
+     "key": "B",
+     "text": "El teatro."
+    },
+    {
+     "key": "C",
+     "text": "El cine."
+    },
+    {
+     "key": "D",
+     "text": "El circo."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El cine figura entre las manifestaciones que se incorporaron a las bellas artes desde el siglo XX, mientras que el teatro, el circo y el cabaret son artes escénicas que no forman parte oficialmente de ellas.",
+    "planteamiento": "Se pide cuál de las expresiones es categorizada oficialmente como bellas artes. Datos: el texto menciona el cine junto a la fotografía y la historieta desde el siglo XX, y aclara que las artes escénicas «no forman parte oficialmente de las bellas artes».",
+    "steps": [
+     "El texto indica que, a partir del siglo XX, el cine, la fotografía y la historieta pasaron a formar parte de las bellas artes.",
+     "Las artes escénicas, en cambio, aunque tienen esa consideración de facto en muchos ámbitos sociales, no forman parte oficialmente de las bellas artes.",
+     "Las opciones A, B y D corresponden a artes escénicas según la lista del texto: el cabaret, el teatro y el circo, por lo que no son categorías oficiales de bellas artes.",
+     "Por lo tanto, la única expresión oficialmente categorizada como bellas artes es el cine, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El cabaret. Es una trampa: el texto lo incluye entre las artes escénicas, que no forman parte oficialmente de las bellas artes, aunque tengan consideración de facto.",
+     "B": "El teatro. Es una trampa de lectura: el teatro es un ejemplo central de artes escénicas, y el texto aclara que esas artes no son oficialmente bellas artes.",
+     "D": "El circo. Es una trampa: el circo aparece en la lista de artes escénicas, en cualquiera de sus formatos, y no en la categoría oficial de bellas artes."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q18",
+   "number": 18,
+   "origin": "lectora-2025-regular-q43",
+   "axis": "Interpretar",
+   "topic": "Idea central",
+   "subtopic": "cl-idea-central",
+   "stem": "En el tercer párrafo, ¿cuál de las siguientes opciones representa la idea central respecto del arte?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Es una creación humana que utiliza un lenguaje expresivo."
+    },
+    {
+     "key": "B",
+     "text": "Es una manifestación del dominio de una técnica determinada."
+    },
+    {
+     "key": "C",
+     "text": "Es una forma de expresión usada en distintos ámbitos sociales."
+    },
+    {
+     "key": "D",
+     "text": "Es una conceptualización que tuvo su origen en la Grecia Clásica."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tercer párrafo define el arte como una creación humana que se expresa mediante un lenguaje o una técnica, por lo que cualquier creación humana puede considerarse arte.",
+    "planteamiento": "Se pide la idea central del tercer párrafo respecto del arte. Datos: el párrafo dice que los lenguajes artísticos son conjuntos de símbolos que requieren el dominio de técnicas, que el arte es el resultado de una acción creativa a partir de un lenguaje o técnica expresiva, y que, en este sentido, arte es cualquier creación humana.",
+    "steps": [
+     "El párrafo parte señalando que los lenguajes artísticos son conjuntos de símbolos que requieren el dominio de sus técnicas, y recuerda que «técnica» deriva de «tekné», término que en la Grecia Clásica se usaba para denominar al arte.",
+     "Luego sostiene que el arte es el resultado de una acción creativa a partir de un lenguaje o de una técnica expresiva determinada.",
+     "El concepto se usa también en otros ámbitos, como «el arte de vivir» o «el arte de la guerra», para expresar la capacidad creativa de cualquier actividad humana.",
+     "La conclusión es que, en este sentido, arte es cualquier creación humana que se expresa mediante un lenguaje, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Una manifestación del dominio de una técnica. Es una trampa: el texto dice que el arte requiere dominar una técnica, pero no que sea la manifestación de ese dominio; el énfasis está en la creación.",
+     "C": "Una forma de expresión usada en distintos ámbitos sociales. Es verdadera en parte, porque el concepto se usa en otros ámbitos, pero es un uso del término y no la idea central sobre el arte.",
+     "D": "Una conceptualización que tuvo su origen en la Grecia Clásica. Es una trampa: el texto solo señala que la palabra «tekné» se usaba en Grecia; no sostiene que el concepto de arte tenga su origen allí."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q19",
+   "number": 19,
+   "origin": "lectora-2025-regular-q44",
+   "axis": "Interpretar",
+   "topic": "Causas y razones",
+   "subtopic": "cl-inferencia",
+   "stem": "¿Por qué el emisor excluye la música de las artes escénicas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque es cuestionada desde la perspectiva de su valor."
+    },
+    {
+     "key": "B",
+     "text": "Porque puede expresarse sin necesidad de soporte material."
+    },
+    {
+     "key": "C",
+     "text": "Porque tiene un lenguaje distinto del que se utiliza en el espectáculo."
+    },
+    {
+     "key": "D",
+     "text": "Porque es complementaria a la puesta en escena de una representación."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La música queda fuera de las artes escénicas porque su expresión no depende de la escena ni de un soporte material, aunque pueda formar parte de un espectáculo.",
+    "planteamiento": "Se pide por qué el emisor excluye la música de las artes escénicas. Datos: el texto dice que la música «no forma parte de las artes escénicas porque su expresión no está supeditada a la escena ni a ninguna materialidad», aunque puede integrarse en un espectáculo.",
+    "steps": [
+     "El apartado define que las artes escénicas tienen en común el hecho escénico, que requiere la presencia real de intérpretes y espectadores en un espacio escénico.",
+     "La música se excluye por una razón específica: su expresión no está supeditada a la escena ni a ninguna materialidad, es decir, no depende de un soporte material.",
+     "El texto aclara que la música puede formar parte de un espectáculo escénico, como el teatro musical, pero ese valor añadido no la convierte en arte escénica.",
+     "Por lo tanto, la razón es que la música puede expresarse sin necesidad de soporte material, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Porque es cuestionada desde la perspectiva de su valor. Es una trampa: el texto no discute el valor de la música; la exclusión se basa en su relación con la escena y la materialidad.",
+     "C": "Porque tiene un lenguaje distinto del que se utiliza en el espectáculo. El texto no fundamenta la exclusión en el lenguaje; la música puede formar parte del espectáculo, así que no es un problema de lenguaje.",
+     "D": "Porque es complementaria a la puesta en escena. Es una trampa: el texto reconoce que puede acompañar la puesta en escena, pero esa complementariedad no es el motivo de la exclusión."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q20",
+   "number": 20,
+   "origin": "lectora-2025-regular-q45",
+   "axis": "Interpretar",
+   "topic": "Causas y razones",
+   "subtopic": "cl-inferencia",
+   "stem": "¿Por qué razón el emisor afirma que el espectador tiene un rol activo en el teatro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Porque perfecciona sus conocimientos para apreciar el hecho escénico."
+    },
+    {
+     "key": "B",
+     "text": "Porque interactúa con los actores para dar vida a la representación."
+    },
+    {
+     "key": "C",
+     "text": "Porque participa de los eventos sociales que rodean a una obra."
+    },
+    {
+     "key": "D",
+     "text": "Porque accede a un plano distinto al de la realidad cotidiana."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El espectador es activo porque responde al intérprete con su mirada, sus gestos y su complicidad, y así interactúa con los actores en la construcción de la representación.",
+    "planteamiento": "Se pide la razón por la que el emisor afirma que el espectador tiene un rol activo en el teatro. Datos: el texto dice que el espectador «no es receptor pasivo, sino sujeto activo en un proceso de comunicación», y que la interacción hace que cada representación sea única e irrepetible.",
+    "steps": [
+     "El texto define el hecho escénico como lo que ocurre cuando intérpretes y espectadores se encuentran, y señala que el espectador no es un receptor pasivo.",
+     "El intérprete toma la iniciativa, pero el espectador le contesta con su mirada, su respiración, sus gestos y su complicidad.",
+     "Esa interacción hace que cada representación se configure de manera singular y sea una experiencia única e irrepetible, porque el público participa en el evento.",
+     "Por lo tanto, el espectador es activo porque interactúa con los actores para dar vida a la representación, lo que corresponde a la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Porque perfecciona sus conocimientos para apreciar el hecho escénico. Es una trampa: el texto dice que el espectador puede llegar a ser avanzado, pero esa es una vía de aprendizaje y no la razón de su rol activo.",
+     "C": "Porque participa de los eventos sociales que rodean a una obra. El texto menciona los espacios sociales del teatro, pero el rol activo se explica por la comunicación con el intérprete, no por los eventos sociales.",
+     "D": "Porque accede a un plano distinto al de la realidad cotidiana. Es una trampa: el texto dice que la comunicación crea una atmósfera en un plano distinto, pero eso describe la experiencia, no el rol del espectador."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q21",
+   "number": 21,
+   "origin": "lectora-2025-regular-q46",
+   "axis": "Interpretar",
+   "topic": "Interpretar",
+   "subtopic": "cl-inferencia",
+   "stem": "Según la lectura, ¿cuál es el centro vital del espacio escénico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El espacio mental."
+    },
+    {
+     "key": "B",
+     "text": "El espacio del público."
+    },
+    {
+     "key": "C",
+     "text": "El espacio de los actores."
+    },
+    {
+     "key": "D",
+     "text": "El espacio de representación."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El centro vital del edificio es el lugar donde se encuentran el espacio del público y el de los actores, y allí se conforma el espacio de representación.",
+    "planteamiento": "Se pide el centro vital del espacio escénico según la lectura. Datos: el texto distingue el espacio del público (la sala y los espacios sociales adjuntos) y el espacio de los actores (los camerinos y el escenario), y dice que el centro vital es donde ambos se encuentran.",
+    "steps": [
+     "El texto divide el espacio del teatro en dos: el espacio del público, que es la sala y los espacios sociales adjuntos, y el espacio de los actores, que son los camerinos y el escenario.",
+     "Luego indica que el centro vital del edificio es donde se encuentran ambos espacios, donde se acopla el escenario con la sala.",
+     "Ese encuentro conforma el espacio de representación, que es el núcleo de la experiencia escénica.",
+     "Por lo tanto, el centro vital es el espacio de representación, lo que corresponde a la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "El espacio mental. Es una trampa: el espacio mental es la construcción que crea el hecho escénico, pero el texto no lo llama centro vital del edificio.",
+     "B": "El espacio del público. Es una de las dos partes que se encuentran, no el punto donde se unen ambas; el texto la presenta como una mitad del edificio.",
+     "C": "El espacio de los actores. Es también una de las dos partes, con camerinos y escenario, pero el centro vital es el punto de encuentro, no una de sus mitades."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q22",
+   "number": 22,
+   "origin": "lectora-2025-regular-q47",
+   "axis": "Evaluar",
+   "topic": "Propósito",
+   "subtopic": "cl-intencion",
+   "stem": "¿Con qué propósito se hace referencia al “*theatron*”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Para introducir la descripción del espacio del teatro."
+    },
+    {
+     "key": "B",
+     "text": "Para caracterizar la construcción mental del espacio escénico."
+    },
+    {
+     "key": "C",
+     "text": "Para demostrar que el concepto de espacio escénico es antiguo."
+    },
+    {
+     "key": "D",
+     "text": "Para comprobar que los griegos inventaron el espacio del teatro."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La referencia al término griego theatron sirve para introducir la descripción del espacio del teatro, al definirlo como el lugar para contemplar.",
+    "planteamiento": "Se pide el propósito de la referencia al «theatron». Datos: el texto escribe «El teatro, del griego theatron, es “el lugar para contemplar”» y, en la frase siguiente, comienza a dividir el espacio del teatro en espacio del público y espacio de los actores.",
+    "steps": [
+     "El apartado 1.3 trata del espacio escénico como construcción mental que requiere un espacio físico aislado del entorno cotidiano.",
+     "Luego aparece la referencia al origen griego: «theatron» significa «el lugar para contemplar», lo que ubica el concepto en su dimensión física.",
+     "A continuación, el texto describe cómo se divide ese espacio, en espacio del público y espacio de los actores, y cuáles son sus partes.",
+     "Por lo tanto, la mención introduce la descripción del espacio del teatro, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Caracterizar la construcción mental del espacio escénico. Es una trampa: la construcción mental se describe en el mismo apartado, pero la referencia griega se usa para el lugar físico, no para la mente.",
+     "C": "Demostrar que el concepto de espacio escénico es antiguo. El texto no sostiene la antigüedad del concepto con esa mención; solo indica el origen de la palabra teatro.",
+     "D": "Comprobar que los griegos inventaron el espacio del teatro. El texto no afirma que los griegos inventaran el espacio; solo señala el origen etimológico de la palabra."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q23",
+   "number": 23,
+   "origin": "lectora-2025-regular-q48",
+   "axis": "Interpretar",
+   "topic": "Inferencias",
+   "subtopic": "cl-inferencia",
+   "stem": "¿Qué se puede inferir del rol del espectador en el teatro?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que necesita estar preparado para dialogar con los actores."
+    },
+    {
+     "key": "B",
+     "text": "Que requiere estar familiarizado con los objetos del escenario."
+    },
+    {
+     "key": "C",
+     "text": "Que completa activamente el espacio escénico con su imaginario."
+    },
+    {
+     "key": "D",
+     "text": "Que percibe el hecho escénico como una experiencia de tipo sagrado."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El espectador completa activamente el espacio escénico, que es vacío, con sus construcciones mentales surgidas de la interacción con los intérpretes.",
+    "planteamiento": "Se pide qué se puede inferir del rol del espectador en el teatro. Datos: el espacio escénico es inicialmente vacío y su carencia de contenido «se va llenando con elementos escenográficos y con las construcciones mentales que surgen de la interacción entre intérpretes y espectadores».",
+    "steps": [
+     "El texto dice que el espacio escénico es inicialmente vacío, sin elementos de la cotidianidad, sin luz y sin objetos.",
+     "Ese vacío se llena con elementos escenográficos y con las construcciones mentales que surgen de la interacción entre intérpretes y espectadores.",
+     "Como el espectador participa en esa interacción, aporta las construcciones mentales que completan el espacio con su imaginario.",
+     "Por lo tanto, se infiere que el espectador completa activamente el espacio escénico con su imaginario, lo que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Que necesita estar preparado para dialogar con los actores. Es una trampa: el texto habla de comunicación y de intercambio de miradas, pero no exige preparación previa para dialogar.",
+     "B": "Que requiere estar familiarizado con los objetos del escenario. Es una trampa: el espacio escénico es vacío de objetos; los elementos escenográficos ayudan a crear el espacio, pero no son requisito del público.",
+     "D": "Que percibe el hecho escénico como una experiencia de tipo sagrado. El texto compara el espacio escénico con el espacio ritual sagrado, pero no afirma que el espectador lo perciba así; es una comparación de la condición espacial."
+    }
+   },
+   "passageId": "lectura-3"
+  },
+  {
+   "id": "lectora-curado-2-q24",
+   "number": 24,
+   "origin": "lectora-2025-regular-q49",
+   "axis": "Interpretar",
+   "topic": "Tema",
+   "subtopic": "cl-idea-central",
+   "stem": "Considerando el tratamiento del tema, ¿qué tono adopta el emisor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reflexivo, porque analiza los componentes de las artes escénicas."
+    },
+    {
+     "key": "B",
+     "text": "Comprometido, porque promueve la revalorización de las artes escénicas."
+    },
+    {
+     "key": "C",
+     "text": "Crítico, porque cuestiona la exclusión de algunas manifestaciones artísticas."
+    },
+    {
+     "key": "D",
+     "text": "Escéptico, porque desconfía de la categorización de las manifestaciones artísticas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El tono es reflexivo porque el emisor analiza los componentes de las artes escénicas y del hecho escénico, sin tomar partido ni criticar.",
+    "planteamiento": "Se pide el tono del emisor considerando el tratamiento del tema. Datos: el texto es un fragmento de manual de estudio que delimita el objeto de análisis, define las artes escénicas, examina el hecho escénico y el espacio escénico, y sostiene sus argumentos con citas de especialistas.",
+    "steps": [
+     "El texto está organizado como un manual de estudio: delimita el objeto de análisis, define las artes escénicas y las distingue de otras artes.",
+     "Luego analiza los componentes del hecho escénico, como el intérprete, el espectador y el escenario, y después el espacio escénico como construcción mental.",
+     "Los argumentos se sostienen con citas de McAuley, Ubersfield y otros autores, lo que muestra una exposición meditada y no militante.",
+     "No hay una denuncia ni una defensa explícita de las artes escénicas, ni una crítica a la exclusión de algunas manifestaciones, por lo que el tono es reflexivo, lo que corresponde a la alternativa A. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Comprometido, porque promueve la revalorización de las artes escénicas. Es una trampa: el texto valora las artes escénicas, pero no las promueve como causa; su propósito es analítico.",
+     "C": "Crítico, porque cuestiona la exclusión de algunas manifestaciones artísticas. El texto constata que la música y las artes visuales quedan fuera, pero no lo cuestiona; explica el criterio de exclusión.",
+     "D": "Escéptico, porque desconfía de la categorización de las manifestaciones artísticas. El texto usa categorías y las explica, sin mostrar desconfianza hacia ellas; la clasificación es la base del análisis."
+    }
+   },
+   "passageId": "lectura-3"
+  }
+ ]
+}

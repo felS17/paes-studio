@@ -1,5 +1,5 @@
 import { EXAMS_BY_ID } from '@/data/catalog'
-import { SUBJECTS } from '@/data/subjects'
+import { AREA_LABEL, SUBJECTS } from '@/data/subjects'
 import type { PracticeSet, SubjectId } from '@/types/exam'
 import type { MistakeEntry } from './analytics'
 
@@ -24,4 +24,11 @@ export function revengeDraft(subject: SubjectId, entries: MistakeEntry[], size =
 
 export function sourceTitle(examId: string): string {
   return EXAMS_BY_ID.get(examId)?.title ?? 'Ensayo'
+}
+
+/** Procedencia de una pregunta oficial copiada en un ensayo curado: «PAES Invierno 2024 (Física), pregunta 6». */
+export function originLabel(questionId: string): string {
+  const exam = EXAMS_BY_ID.get(examIdOfQuestion(questionId))
+  const area = exam?.area ? ` (${AREA_LABEL[exam.area]})` : ''
+  return `${exam?.title ?? 'Prueba oficial'}${area}, pregunta ${numberOfQuestion(questionId)}`
 }

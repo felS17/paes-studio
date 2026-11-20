@@ -1,0 +1,1428 @@
+{
+ "id": "m2-curado-2",
+ "subject": "m2",
+ "title": "Ensayo curado 2",
+ "description": "25 preguntas oficiales del DEMRE (pruebas rendidas de 2024 a 2026) que recorren los ejes de M2, cada una con su explicación paso a paso y la prueba de la que viene.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 65,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   161,
+   192,
+   220,
+   245,
+   268,
+   289,
+   308,
+   326,
+   344,
+   362,
+   378,
+   392,
+   405,
+   418,
+   432,
+   448,
+   462,
+   475,
+   486,
+   495,
+   506,
+   519,
+   533,
+   547,
+   560,
+   571,
+   580,
+   590,
+   601,
+   614,
+   629,
+   643,
+   656,
+   667,
+   678,
+   690,
+   704,
+   719,
+   735,
+   750,
+   765,
+   780,
+   797,
+   816,
+   836,
+   857,
+   879,
+   903,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated_bank.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m2-curado-2-q01",
+   "number": 1,
+   "origin": "m2-2027-invierno-q04",
+   "axis": "Números",
+   "topic": "Álgebra y funciones",
+   "subtopic": "m2-financiera",
+   "stem": "El 2015, la cantidad de turistas extranjeros que ingresaron a Chile en la temporada\n\nde verano fue 1 333 532, lo que significó un aumento del 18,7 % con respecto a los\n\nturistas extranjeros que ingresaron a Chile en la temporada de verano del 2014.\n\n¿Cuál de las siguientes expresiones representa la cantidad de turistas extranjeros\n\nque llegaron a Chile en la temporada de verano del 2014?\n\n1 333 532",
+   "options": [
+    {
+     "key": "A",
+     "text": "118,7 1 333 532"
+    },
+    {
+     "key": "B",
+     "text": "0,187 1 333 532"
+    },
+    {
+     "key": "C",
+     "text": "18,7 1 333 532"
+    },
+    {
+     "key": "D",
+     "text": "1,187"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q04.webp",
+    "width": 907,
+    "height": 544,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un aumento de $18{,}7\\,\\%$ significa que la cifra nueva es $1{,}187$ veces la anterior. Por eso la cifra de $2014$ se obtiene dividiendo la de $2015$ entre $1{,}187$.",
+    "planteamiento": "Se pide la cantidad de turistas extranjeros del verano de 2014. Datos: en el verano de 2015 ingresaron $1\\,333\\,532$ turistas extranjeros, con un aumento de $18{,}7\\,\\%$ respecto de 2014.",
+    "steps": [
+     "Sea $x$ la cantidad de turistas extranjeros del verano de 2014.",
+     "Un aumento de $18{,}7\\,\\%$ significa que la cifra de 2015 es $x+0{,}187\\,x=1{,}187\\,x$. El factor multiplicativo es $1+0{,}187=1{,}187$.",
+     "Igualando con la cifra de 2015: $1\\,333\\,532=1{,}187\\cdot x$.",
+     "Despeja $x$ dividiendo ambos lados por $1{,}187$: $x=\\frac{1\\,333\\,532}{1{,}187}$.",
+     "Verificación de orden de magnitud: $\\frac{1\\,333\\,532}{1{,}187}\\approx 1\\,123\\,200$, menor que la cifra de 2015, como corresponde a un aumento.",
+     "La expresión obtenida coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\frac{1\\,333\\,532}{118{,}7}$: usa $118{,}7$ (es decir, $100+18{,}7$) como factor, mezclando el porcentaje con el factor. El factor correcto es $1{,}187$, y con $118{,}7$ la cifra sale de unos $11\\,200$, algo imposible.",
+     "B": "$\\frac{1\\,333\\,532}{0{,}187}$: divide por el aumento y no por el factor $1{,}187$. Confunde la variación con la cifra total, y el resultado es de unos $7{,}1$ millones.",
+     "C": "$\\frac{1\\,333\\,532}{18{,}7}$: divide por $18{,}7$ sin pasar el porcentaje a decimal. La cifra resultante es de unos $71\\,300$, mucho menor que la de 2015, algo imposible si hubo un aumento."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q02",
+   "number": 2,
+   "origin": "m2-2027-invierno-q05",
+   "axis": "Números",
+   "topic": "Problemas con dinero",
+   "subtopic": "m2-financiera",
+   "stem": "En una tienda comercial, el precio de cierto artículo es de \\$100 000, el cual se rebaja\n\npor error en un p %. Alguien lo nota y da aviso, por lo que se intenta volver al precio\n\noriginal aumentando el precio rebajado en un p %.\n\nLuego de aumentar el precio, se dieron cuenta de que la diferencia entre el precio\n\noriginal y el precio final es de \\$4000.\n\n¿Cuál de las siguientes ecuaciones permite determinar el porcentaje p de rebaja?\n\n� �� � 1 −p 1 + p",
+   "options": [
+    {
+     "key": "A",
+     "text": "100 000 −100 000 = 4000 100 100 � �� � 1 −p 1 + p"
+    },
+    {
+     "key": "B",
+     "text": "100 000 − = 4000 100 100 �p ��p �"
+    },
+    {
+     "key": "C",
+     "text": "100 000 −100 000 = 4000 100 100 � �� � 1 −p 1 + p"
+    },
+    {
+     "key": "D",
+     "text": "100 000 = 4000 100 100"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q05.webp",
+    "width": 907,
+    "height": 624,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Rebajar y luego subir el precio en el mismo porcentaje no devuelve el precio original. El precio final es el original multiplicado por $\\left(1-\\frac{p}{100}\\right)\\left(1+\\frac{p}{100}\\right)$, y la ecuación debe igualar la diferencia, no el precio final, a $4000$.",
+    "planteamiento": "Se pide la ecuación que determina $p$. Datos: precio original de 100 000 pesos; primero se rebaja en $p\\,\\%$ y luego el precio rebajado se aumenta en $p\\,\\%$; la diferencia entre el precio original y el precio final es de 4000 pesos.",
+    "steps": [
+     "El precio rebajado es $100\\,000\\left(1-\\frac{p}{100}\\right)$ pesos.",
+     "Al aumentar ese precio en $p\\,\\%$ se multiplica por $\\left(1+\\frac{p}{100}\\right)$, así que el precio final es $100\\,000\\left(1-\\frac{p}{100}\\right)\\left(1+\\frac{p}{100}\\right)$ pesos.",
+     "La diferencia entre el precio original y el precio final es 4000 pesos: $100\\,000-100\\,000\\left(1-\\frac{p}{100}\\right)\\left(1+\\frac{p}{100}\\right)=4000$. Esta es la ecuación de la alternativa A.",
+     "Se puede simplificar con la diferencia de cuadrados: $\\left(1-\\frac{p}{100}\\right)\\left(1+\\frac{p}{100}\\right)=1-\\frac{p^{2}}{10\\,000}$. Luego $100\\,000\\cdot\\frac{p^{2}}{10\\,000}=4000$, es decir, $10p^{2}=4000$ y $p^{2}=400$.",
+     "Como $p$ es un porcentaje positivo, $p=20$.",
+     "Comprobación: $100\\,000\\cdot 0{,}8\\cdot 1{,}2=96\\,000$ pesos, y $100\\,000-96\\,000=4000$ pesos. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$100\\,000-\\left(1-\\frac{p}{100}\\right)\\left(1+\\frac{p}{100}\\right)=4000$: olvida multiplicar el producto por $100\\,000$, por lo que la ecuación mezcla pesos con una fracción sin dimensión.",
+     "C": "$100\\,000-100\\,000\\left(\\frac{p}{100}\\right)\\left(\\frac{p}{100}\\right)=4000$: reemplaza $\\left(1-\\frac{p}{100}\\right)\\left(1+\\frac{p}{100}\\right)$ por $\\left(\\frac{p}{100}\\right)^{2}$. Ese cambio da $p\\approx 98$ y no $p=20$.",
+     "D": "$100\\,000\\left(1-\\frac{p}{100}\\right)\\left(1+\\frac{p}{100}\\right)=4000$: iguala el precio final, y no la diferencia, a $4000$ pesos. Esa ecuación describe un precio final de 4000 pesos, no la diferencia pedida."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q03",
+   "number": 3,
+   "origin": "m2-2027-invierno-q12",
+   "axis": "Números",
+   "topic": "Funciones",
+   "subtopic": "m2-logaritmos",
+   "stem": "El volumen V de una esfera se modela en función de su radio r de acuerdo con la función potencia V(r) = ⁴π 3 r³.\n\nPara “linealizar” la función anterior, se aplica la función logaritmo y se grafica log V(r)\n\nversus log r, como se representa a continuación:\n\n� � 0, log ⁴π ¿Qué valor debe tomar el radio de la esfera para obtener el punto en 3 el gráfico “linealizado”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0 log ⁴π"
+    },
+    {
+     "key": "B",
+     "text": "3"
+    },
+    {
+     "key": "C",
+     "text": "1 4π"
+    },
+    {
+     "key": "D",
+     "text": "3"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q12.webp",
+    "width": 907,
+    "height": 1099,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El punto tiene abscisa $0$, y en el gráfico linealizado la abscisa es $\\log r$. Como $\\log r=0$, el radio es $r=1$.",
+    "planteamiento": "Se pide el radio que corresponde al punto $\\left(0,\\log\\frac{4\\pi}{3}\\right)$ del gráfico de $\\log V(r)$ versus $\\log r$. Datos: $V(r)=\\frac{4\\pi}{3}r^{3}$; en el gráfico la abscisa es $\\log r$ y la ordenada es $\\log V(r)$.",
+    "steps": [
+     "En el gráfico linealizado, el eje horizontal es $\\log r$ y el vertical es $\\log V(r)$. El punto dado tiene abscisa $0$ y ordenada $\\log\\frac{4\\pi}{3}$.",
+     "Igualando la abscisa: $\\log r=0$. Como $\\log 1=0$, se tiene $r=1$, porque el logaritmo es inyectivo.",
+     "Comprobación: $V(1)=\\frac{4\\pi}{3}\\cdot 1^{3}=\\frac{4\\pi}{3}$, cuyo logaritmo es la ordenada $\\log\\frac{4\\pi}{3}$. El punto $\\left(0,\\log\\frac{4\\pi}{3}\\right)$ corresponde, por tanto, a $r=1$.",
+     "El radio pedido es $r=1$, que coincide con la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$0$: es la abscisa del punto, es decir, $\\log r=0$. Tomarla directamente como radio omite deshacer el logaritmo, y $r=0$ no tiene sentido para una esfera.",
+     "B": "$\\log\\frac{4\\pi}{3}$: es la ordenada del punto, es decir, $\\log V(1)$. Tomarla como radio confunde los ejes del gráfico.",
+     "D": "$\\frac{4\\pi}{3}$: es la constante de $V(r)$ y no el radio. Confunde el valor del intercepto con el radio de la esfera."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q04",
+   "number": 4,
+   "origin": "m2-2027-invierno-q13",
+   "axis": "Números",
+   "topic": "Medidas de tendencia central",
+   "subtopic": "m2-logaritmos",
+   "stem": "El nivel de la intensidad acústica, en decibeles, se calcula mediante la siguiente\n\nexpresión:\n\n�I � 10 · log , I⁰\n\ntal que I corresponde a la intensidad acústica, en W m², eI⁰ correspoⁿde al umbral de audición y su valor es de 10⁻¹² W m².\n\nSegún cierta normativa, el nivel de exposición a ruidos debe ser menor o igual que\n\n65 decibeles.\n\n¿Cuál es la intensidad acústica máxima, en W m², que permite cumplir coⁿ la normativa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "10⁶,⁵"
+    },
+    {
+     "key": "B",
+     "text": "10⁻⁵,⁵"
+    },
+    {
+     "key": "C",
+     "text": "10⁻¹²·⁶,⁵"
+    },
+    {
+     "key": "D",
+     "text": "10¹⁸,⁵"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q13.webp",
+    "width": 907,
+    "height": 723,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La condición $10\\cdot\\log\\left(\\frac{I}{I_0}\\right)\\le 65$ se transforma en una desigualdad para $I$. Luego se despeja la potencia de diez usando $I_0=10^{-12}$.",
+    "planteamiento": "Se pide la intensidad máxima $I$, en W/m², que cumple con un nivel de exposición menor o igual que $65$ dB. Datos: nivel $=10\\cdot\\log\\left(\\frac{I}{I_0}\\right)$ dB y umbral de audición $I_0=10^{-12}\\ \\mathrm{W/m}^{2}$.",
+    "steps": [
+     "La condición es $10\\cdot\\log\\left(\\frac{I}{I_0}\\right)\\le 65$. Divide por $10$: $\\log\\left(\\frac{I}{I_0}\\right)\\le 6{,}5$.",
+     "Como la función logaritmo es creciente, la desigualdad se conserva al aplicar la potencia de base $10$: $\\frac{I}{I_0}\\le 10^{6{,}5}$.",
+     "Multiplica por $I_0>0$ para despejar $I$: $I\\le I_0\\cdot 10^{6{,}5}$.",
+     "Reemplaza $I_0=10^{-12}$ y suma exponentes de igual base: $I\\le 10^{-12}\\cdot 10^{6{,}5}=10^{-12+6{,}5}=10^{-5{,}5}$ W/m².",
+     "Comprobación: con $I=10^{-5{,}5}$, $\\frac{I}{I_0}=10^{6{,}5}$ y el nivel es $10\\cdot 6{,}5=65$ dB, justo el límite de la normativa.",
+     "La intensidad máxima $10^{-5{,}5}$ coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$10^{6{,}5}$: olvida multiplicar por el umbral $I_0$ y deja $I\\le 10^{6{,}5}$, una intensidad enorme que no corresponde al límite de la normativa.",
+     "C": "$10^{-12\\cdot 6{,}5}$: multiplica los exponentes ($-12\\cdot 6{,}5$) en vez de sumarlos al pasar de $10^{-12}\\cdot 10^{6{,}5}$.",
+     "D": "$10^{18{,}5}$: trata $I_0$ como $10^{12}$, cambiando el signo del exponente. Como $10^{6{,}5}\\cdot 10^{12}=10^{18{,}5}$, el resultado queda muy por encima del límite."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q05",
+   "number": 5,
+   "origin": "m2-2027-invierno-q01",
+   "axis": "Números",
+   "topic": "Números enteros",
+   "subtopic": "m2-reales",
+   "stem": "Considera los números enteros positivos que tienen resto 2 al dividirlos por 5 y\n\nresto 4 al dividirlos por 7.\n\nSi los números anteriores se ordenan en una lista de manera creciente, ¿cuál es el\n\nsegundo número de esa lista?",
+   "options": [
+    {
+     "key": "A",
+     "text": "17"
+    },
+    {
+     "key": "B",
+     "text": "32"
+    },
+    {
+     "key": "C",
+     "text": "67"
+    },
+    {
+     "key": "D",
+     "text": "137"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q01.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los números buscados son los que dejan resto $4$ al dividir por $7$ y resto $2$ al dividir por $5$. Ambas condiciones se repiten cada $5\\cdot 7=35$ unidades, así que basta hallar el primero y sumar $35$.",
+    "planteamiento": "Se pide el segundo número, en orden creciente, de los enteros positivos que dejan resto $2$ al dividirlos por $5$ y resto $4$ al dividirlos por $7$. Datos: los restos $2$ (módulo $5$) y $4$ (módulo $7$).",
+    "steps": [
+     "Escribe las dos condiciones como congruencias: $n\\equiv 2\\pmod{5}$ y $n\\equiv 4\\pmod{7}$. La primera equivale a $n=5k+2$ y la segunda a $n=7j+4$, con $k$ y $j$ enteros no negativos.",
+     "Lista los números que cumplen la segunda condición, es decir, los que dejan resto $4$ al dividir por $7$: $4,\\,11,\\,18,\\,25,\\,32,\\,39,\\dots$",
+     "Revisa cuál de ellos deja resto $2$ al dividir por $5$: $4=5\\cdot 0+4$, $11=5\\cdot 2+1$, $18=5\\cdot 3+3$, $25=5\\cdot 5+0$ y $32=5\\cdot 6+2$. El primero que cumple ambas condiciones es $32$.",
+     "Las dos condiciones se repiten cada $\\mathrm{mcm}(5,7)=35$ unidades, porque $5$ y $7$ son primos entre sí. Por eso el siguiente número de la lista es $32+35=67$.",
+     "Comprobación: $67=5\\cdot 13+2$ y $67=7\\cdot 9+4$, así que $67$ cumple ambas condiciones y es el segundo número de la lista. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$17$: cumple el resto $2$ al dividir por $5$ ($17=5\\cdot 3+2$), pero $17=7\\cdot 2+3$ deja resto $3$ al dividir por $7$. Es el error de no revisar la segunda condición.",
+     "B": "$32$: es el primer número de la lista, no el segundo. Cumple ambas condiciones, pero es el primero.",
+     "D": "$137$: es el cuarto número de la lista ($32$, $67$, $102$, $137$), no el segundo. Es un error de conteo de posiciones."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q06",
+   "number": 6,
+   "origin": "m2-2027-invierno-q03",
+   "axis": "Números",
+   "topic": "Números decimales",
+   "subtopic": "m2-reales",
+   "stem": "Considera el número A = pq, tal que p es el dígito de las decenas y q es el dígito\n\nde las unidades; y el número B = p,q, tal que p es el dígito de las unidades y q es\n\nel dígito decimal periódico.\n\n¿Cuál de las siguientes expresiones representa al número A −B?\n\n79p + 10q",
+   "options": [
+    {
+     "key": "A",
+     "text": "9 81p + 8q"
+    },
+    {
+     "key": "B",
+     "text": "9 100p + 9q"
+    },
+    {
+     "key": "C",
+     "text": "9 30p + 11q"
+    },
+    {
+     "key": "D",
+     "text": "9"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q03.webp",
+    "width": 907,
+    "height": 500,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para restar hay que escribir ambos números como expresiones algebraicas: $A=10p+q$ y, con el decimal periódico, $B=p+\\frac{q}{9}$. Luego se opera con denominador común $9$.",
+    "planteamiento": "Se pide la expresión de $A-B$. Datos: $A$ es el número de dos cifras $pq$, con $p$ el dígito de las decenas y $q$ el de las unidades; $B=p,\\overline{q}$, con $p$ el dígito de las unidades y $q$ el dígito del período decimal.",
+    "steps": [
+     "Como $p$ es el dígito de las decenas de $A$, su valor posicional es $10$, y $q$ es el dígito de las unidades. Por lo tanto, $A=10p+q$.",
+     "En $B$, $p$ es la parte entera y $q$ es el único dígito del período decimal. Como $0{,}\\overline{q}=\\frac{q}{9}$, se tiene $B=p+\\frac{q}{9}$.",
+     "Resta ambas expresiones: $A-B=10p+q-p-\\frac{q}{9}=9p+q-\\frac{q}{9}=9p+\\frac{8q}{9}$.",
+     "Escribe todo con denominador $9$: $9p=\\frac{81p}{9}$. Entonces $A-B=\\frac{81p}{9}+\\frac{8q}{9}=\\frac{81p+8q}{9}$.",
+     "Comprobación con números: si $p=1$ y $q=2$, entonces $A=12$ y $B=1{,}2222\\ldots=1+\\frac{2}{9}=\\frac{11}{9}$. Así, $A-B=12-\\frac{11}{9}=\\frac{97}{9}$, y $\\frac{81\\cdot 1+8\\cdot 2}{9}=\\frac{97}{9}$, que coincide.",
+     "La expresión $\\frac{81p+8q}{9}$ coincide con la alternativa B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{79p+10q}{9}$: error de aritmética en el término de $p$. Escribe $9p$ como $\\frac{79p}{9}$ en vez de $\\frac{81p}{9}$, y el término de $q$ tampoco está bien restado.",
+     "C": "$\\frac{100p+9q}{9}$: al pasar $10p$ a una fracción de denominador $9$ usa $100p$ en vez de $90p$. Con ese error el numerador queda mal, aunque el término de $q$ parezca correcto.",
+     "D": "$\\frac{30p+11q}{9}$: no resulta de un error típico identificable al operar $A-B$. El valor correcto se obtiene al restar $p+\\frac{q}{9}$ de $10p+q$, y esa resta no produce este numerador."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q07",
+   "number": 7,
+   "origin": "m2-2027-invierno-q52",
+   "axis": "Números",
+   "topic": "Números irracionales",
+   "subtopic": "m2-suficiencia",
+   "stem": "n√x representa un número irracional, si se sabe que: Se puede determinar que\n\n(1) x es un número primo y n es un número entero positivo mayor que 1.\n\n(2) x · n es un número impar.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q52.webp",
+    "width": 907,
+    "height": 435,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La raíz $n$-ésima de un número primo es irracional para todo $n\\geq 2$, así que la condición (1) basta por sí sola; la condición (2) no basta.",
+    "planteamiento": "Se pide decidir si los datos permiten afirmar que $\\sqrt[n]{x}$ es irracional. Datos: (1) $x$ es primo y $n$ es entero mayor que $1$; (2) $x\\cdot n$ es impar.",
+    "steps": [
+     "Con (1): sea $x=p$ primo y $n\\geq 2$. Si $\\sqrt[n]{p}=\\frac{a}{b}$ fuera racional, entonces $p\\,b^{n}=a^{n}$. El exponente de $p$ en el lado izquierdo es $1$ más un múltiplo de $n$, y en el derecho es un múltiplo de $n$; como $n\\geq 2$, eso es imposible.",
+     "Así, (1) por sí sola garantiza que $\\sqrt[n]{x}$ es irracional.",
+     "Con (2): $x\\cdot n$ impar implica que $x$ y $n$ son impares, pero no que la raíz sea irracional.",
+     "Contraejemplo: $x=1$ y $n=3$ cumplen (2), pues $1\\cdot 3=3$ es impar; sin embargo, $\\sqrt[3]{1}=1$ es racional. Por eso (2) no basta por sí sola.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "(2) por sí sola: cree que un producto impar garantiza irracionalidad, sin considerar que $x=1$ da una raíz racional.",
+     "C": "Ambas juntas: piensa que (2) aporta algo a (1), pero (1) ya basta por sí sola.",
+     "D": "Cada una por sí sola, (1) ó (2): afirma que (2) también basta; el contraejemplo $x=1$, $n=3$ lo descarta.",
+     "E": "Se requiere información adicional: no se necesita más información, porque (1) ya determina la irracionalidad."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q08",
+   "number": 8,
+   "origin": "m2-2027-invierno-q02",
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "subtopic": "m2-cuadraticas",
+   "stem": "En un cumpleaños hay 13 asistentes, entre los cuales se reparte de manera\n\nequitativa el contenido de una bolsa abierta de 100 caramelos a la que ya le habían\n\nsacado algunos. En esta repartición sobró 1 caramelo.\n\nSi se hubiesen repartido los caramelos de manera equitativa entre 11 asistentes\n\nno hubiese sobrado ningún caramelo.\n\n¿Cuántos caramelos recibió cada uno de los 13 asistentes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "8"
+    },
+    {
+     "key": "B",
+     "text": "7"
+    },
+    {
+     "key": "C",
+     "text": "6"
+    },
+    {
+     "key": "D",
+     "text": "5"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q02.webp",
+    "width": 907,
+    "height": 482,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los caramelos que quedan en la bolsa son un múltiplo de $11$ que, al repartirlos entre $13$ asistentes, deja resto $1$. Basta probar los múltiplos de $11$ menores o iguales que $100$.",
+    "planteamiento": "Se pide cuántos caramelos recibió cada asistente en la primera repartición. Datos: son $13$ asistentes; la bolsa tenía $100$ caramelos antes de que se sacaran algunos; al repartir entre $13$ sobró $1$; al repartir entre $11$ no sobra ninguno.",
+    "steps": [
+     "Sea $m$ la cantidad de caramelos que quedan en la bolsa al momento de repartir. Como al repartirlos entre $11$ no sobra ninguno, $m$ es múltiplo de $11$.",
+     "Como al repartirlos entre $13$ sobra $1$, se cumple $m=13k+1$ para algún entero $k\\ge 0$, es decir, $m\\equiv 1\\pmod{13}$. Además, $m\\le 100$.",
+     "Prueba los múltiplos de $11$ menores o iguales que $100$: $11,\\,22,\\,33,\\,44,\\,55,\\,66,\\,77,\\,88,\\,99$. Sus restos al dividir por $13$ son $11,\\,9,\\,7,\\,5,\\,3,\\,1,\\,12,\\,10,\\,8$.",
+     "Solo $66$ deja resto $1$, porque $66=13\\cdot 5+1$. Por lo tanto, quedaban $66$ caramelos en la bolsa y se habían sacado $100-66=34$.",
+     "Cada asistente recibe $\\frac{66-1}{13}=\\frac{65}{13}=5$ caramelos, porque el caramelo que sobra no se reparte.",
+     "Comprobación: $13\\cdot 5+1=66$, y $66=11\\cdot 6$, así que el reparto entre $11$ no deja sobrante. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$8$: si cada asistente recibiera $8$ caramelos, se necesitarían $13\\cdot 8=104$, más que los $100$ caramelos de la bolsa original. No es posible.",
+     "B": "$7$: olvida los caramelos ya sacados y reparte $100$ entre $13$: $100=13\\cdot 7+9$, lo que da $7$. Ignora que la bolsa tenía menos caramelos que al inicio.",
+     "C": "$6$: divide los $66$ caramelos entre $11$ asistentes en vez de $13$, lo que da $6$. Usa el divisor de la segunda situación en lugar del de la primera."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q09",
+   "number": 9,
+   "origin": "m2-2027-invierno-q09",
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "subtopic": "m2-cuadraticas",
+   "stem": "¿Cuál es el valor de √ ? 2\n\n⁵√",
+   "options": [
+    {
+     "key": "A",
+     "text": "2² ⁹√"
+    },
+    {
+     "key": "B",
+     "text": "2⁴ √"
+    },
+    {
+     "key": "C",
+     "text": "2 √"
+    },
+    {
+     "key": "D",
+     "text": "2³"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q09.webp",
+    "width": 907,
+    "height": 267,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las dos raíces del numerador tienen índice $6$ y se pueden juntar en una sola raíz. El numerador vale $2$, así que la expresión queda $\\frac{2}{\\sqrt{2}}$, que es $\\sqrt{2}$.",
+    "planteamiento": "Se pide el valor de $\\frac{\\sqrt[6]{2^{4}}\\cdot\\sqrt[6]{2^{2}}}{\\sqrt{2}}$. Datos: el numerador es el producto de dos raíces de índice $6$ con base $2$, y el denominador es la raíz cuadrada de $2$.",
+    "steps": [
+     "Las dos raíces del numerador tienen índice $6$, así que se pueden multiplicar bajo una misma raíz: $\\sqrt[6]{2^{4}}\\cdot\\sqrt[6]{2^{2}}=\\sqrt[6]{2^{4}\\cdot 2^{2}}$.",
+     "Por producto de potencias de igual base, $2^{4}\\cdot 2^{2}=2^{6}$. Entonces el numerador es $\\sqrt[6]{2^{6}}$.",
+     "Una raíz de índice $6$ de una potencia de exponente $6$ es la base: $\\sqrt[6]{2^{6}}=2$.",
+     "La expresión queda $\\frac{2}{\\sqrt{2}}$. Multiplica numerador y denominador por $\\sqrt{2}$: $\\frac{2\\sqrt{2}}{\\sqrt{2}\\cdot\\sqrt{2}}=\\frac{2\\sqrt{2}}{2}$.",
+     "Simplifica: $\\frac{2\\sqrt{2}}{2}=\\sqrt{2}$.",
+     "Comprobación numérica: $\\frac{2}{\\sqrt{2}}\\approx\\frac{2}{1{,}414}\\approx 1{,}414$, igual a $\\sqrt{2}$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\sqrt[5]{2^{2}}$: confunde el índice de la raíz (5 en vez de 6) y no simplifica bien el numerador. El valor resultante no es $\\sqrt{2}$.",
+     "B": "$\\sqrt[9]{2^{4}}$: aparece un índice $9$ que no existe en la expresión original. Se obtiene al mezclar mal los índices de las raíces y no al aplicar la regla de raíces de igual índice.",
+     "D": "$\\sqrt{2^{3}}$: multiplica por $\\sqrt{2}$ en vez de dividir, es decir, $2\\cdot\\sqrt{2}=\\sqrt{2^{3}}$. Ese es el error de invertir la operación con el denominador."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q10",
+   "number": 10,
+   "origin": "m2-2027-invierno-q33",
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "subtopic": "m2-funciones-trig",
+   "stem": "En la siguiente figura se representa la gráfica de una función trigonométrica.\n\n¿Cuál de las siguientes funciones corresponde a esta gráfica?",
+   "options": [
+    {
+     "key": "A",
+     "text": "f(x) = 6 · sen(x) + 1"
+    },
+    {
+     "key": "B",
+     "text": "f(x) = 7 · sen(x) + 1 �x �"
+    },
+    {
+     "key": "C",
+     "text": "f(x) = 6 · sen + 1 2"
+    },
+    {
+     "key": "D",
+     "text": "f(x) = 6 · sen(x + 4) + 1"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q33.webp",
+    "width": 907,
+    "height": 958,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La amplitud y la recta media dan $6$ y $1$; el periodo, medido entre el máximo en $x=\\pi$ y el mínimo en $x=3\\pi$, es $4\\pi$, lo que fija $k=\\frac{1}{2}$.",
+    "planteamiento": "Se pide la función senoidal que corresponde a la gráfica. Datos del gráfico: máximo $7$ en $x=\\pi$, mínimo $-5$ en $x=3\\pi$, y $f(0)=1$ con la función creciente desde ahí.",
+    "steps": [
+     "Amplitud: $\\frac{7-(-5)}{2}=6$. Recta media: $\\frac{7+(-5)}{2}=1$. Por lo tanto, $f(x)=6\\,\\mathrm{sen}(kx)+1$.",
+     "Valor inicial: $f(0)=6\\,\\mathrm{sen}(0)+1=1$, que coincide con el gráfico, y la función crece desde $x=0$.",
+     "Máximo en $x=\\pi$: $6\\,\\mathrm{sen}(k\\pi)+1=7$, luego $\\mathrm{sen}(k\\pi)=1$ y $k\\pi=\\frac{\\pi}{2}$, así que $k=\\frac{1}{2}$.",
+     "Periodo: $T=\\frac{2\\pi}{k}=\\frac{2\\pi}{1/2}=4\\pi$. Con ese periodo el mínimo cae en $x=3\\pi$, medio periodo después del máximo, y el cruce con la recta media en $x=2\\pi$, como muestra el gráfico.",
+     "Comprobación: $f(3\\pi)=6\\,\\mathrm{sen}\\left(\\frac{3\\pi}{2}\\right)+1=6(-1)+1=-5$, que coincide con el mínimo. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$6\\,\\mathrm{sen}(x)+1$: amplitud y recta media correctas, pero periodo $2\\pi$ en vez de $4\\pi$; su máximo está en $x=\\frac{\\pi}{2}$, no en $x=\\pi$.",
+     "B": "$7\\,\\mathrm{sen}(x)+1$: usa el máximo $7$ como amplitud, cuando la amplitud es la mitad de la distancia entre máximo y mínimo; además mantiene el periodo de $2\\pi$.",
+     "D": "$6\\,\\mathrm{sen}(x+4)+1$: cambia el valor inicial, pues $f(0)=6\\,\\mathrm{sen}(4)+1\\approx -3{,}5$ y no $1$; además tiene periodo $2\\pi$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q11",
+   "number": 11,
+   "origin": "m2-2027-invierno-q22",
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "subtopic": "m2-sistemas",
+   "stem": "Considera el siguiente sistema de ecuaciones en x e y, con a, b, c y d números\n\nreales.\n\nax + by = c\n\nx + y = d\n\n¿Cuál de las siguientes condiciones garantiza que este sistema tiene solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que a sea distinto de b."
+    },
+    {
+     "key": "B",
+     "text": "Que a + b sea distinto de c."
+    },
+    {
+     "key": "C",
+     "text": "Que c sea distinto de d."
+    },
+    {
+     "key": "D",
+     "text": "Que a sea proporcional a b."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q22.webp",
+    "width": 907,
+    "height": 450,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El sistema tiene solución única cuando el determinante $a-b$ de sus coeficientes es distinto de cero, es decir, cuando $a\\neq b$.",
+    "planteamiento": "Se pide la condición que garantiza que el sistema $ax+by=c$, $x+y=d$ tiene solución. Datos: $a, b, c, d$ son números reales; la matriz de coeficientes es $\\begin{pmatrix}a & b\\\\ 1 & 1\\end{pmatrix}$.",
+    "steps": [
+     "El determinante de la matriz de coeficientes es $\\det = a\\cdot 1 - b\\cdot 1 = a-b$.",
+     "Si $a-b\\neq 0$, se despeja. De la segunda ecuación $y = d-x$; al reemplazar en la primera, $ax + b(d-x) = c$, luego $(a-b)x = c-bd$ y $x = \\frac{c-bd}{a-b}$.",
+     "Con el mismo despeje, $y = d - x = \\frac{ad-c}{a-b}$. Ambos valores son únicos porque se divide por $a-b\\neq 0$; por lo tanto, $a\\neq b$ garantiza solución.",
+     "Verificación con $a=2$, $b=1$, $c=3$, $d=1$: $x=\\frac{3-1}{1}=2$ e $y=\\frac{2-3}{1}=-1$. En el sistema, $2\\cdot 2+1\\cdot(-1)=3$ y $2+(-1)=1$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Que $a+b$ sea distinto de $c$: esa comparación no interviene en el determinante. Con $a=b=1$, $c=3$ y $d=0$ se cumple $a+b\\neq c$, pero el sistema $x+y=3$, $x+y=0$ no tiene solución.",
+     "C": "Que $c$ sea distinto de $d$: las constantes del lado derecho no intervienen en el determinante. Con $a=b=1$, $c=3$ y $d=0$ se cumple $c\\neq d$ y, aun así, no hay solución.",
+     "D": "Que $a$ sea proporcional a $b$: con la razón de los coeficientes $(1,1)$, eso equivale a $a=b$. Entonces el determinante se anula y, si además $c\\neq d$, el sistema no tiene solución."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q12",
+   "number": 12,
+   "origin": "m2-2027-invierno-q23",
+   "axis": "Álgebra y funciones",
+   "topic": "Sistemas de ecuaciones",
+   "subtopic": "m2-sistemas",
+   "stem": "Una empresa láctea produce queso y crema. Para fabricar un kilogramo de queso,\n\nla empresa requiere 12 litros de leche y para fabricar un kilogramo de crema\n\nrequiere 10 litros de leche. Además, en una hora de procesamiento se pueden\n\nfabricar 3 kilogramos de queso o 2 kilogramos de crema.\n\nSi se ocuparán 9200 litros de leche y 300 horas para el procesamiento de esta leche,\n\n¿cuál de los siguientes sistemas permite calcular la cantidad x de kilogramos de\n\nqueso y la cantidad y de kilogramos de crema que se pueden fabricar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "6x + 5y = 4600 3x + 2y = 300"
+    },
+    {
+     "key": "B",
+     "text": "6x + 5y = 9200 3x + 2y = 300"
+    },
+    {
+     "key": "C",
+     "text": "6x + 5y = 4600 1 3x ⁺ ¹ 2y = ³⁰⁰"
+    },
+    {
+     "key": "D",
+     "text": "6x + 5y = 9200 1 3x ⁺ ¹ 2y = ³⁰⁰"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q23.webp",
+    "width": 907,
+    "height": 903,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay dos restricciones lineales: la leche usada, en litros, y las horas de procesamiento, cada una igualada a su total disponible.",
+    "planteamiento": "Se pide el sistema que permite calcular $x$ (kilogramos de queso) e $y$ (kilogramos de crema). Datos: un kilogramo de queso usa $12$ litros de leche y uno de crema $10$ litros; en una hora se procesan $3$ kg de queso o $2$ kg de crema. Se disponen de $9200$ litros de leche y $300$ horas.",
+    "steps": [
+     "Consumo de leche: $12x+10y = 9200$ litros, porque cada kilogramo de queso usa $12$ litros y cada kilogramo de crema usa $10$ litros.",
+     "Se divide toda la ecuación por $2$, tanto el lado izquierdo como el derecho: $\\frac{12x}{2}+\\frac{10y}{2}=\\frac{9200}{2}$, es decir, $6x+5y=4600$.",
+     "Horas de procesamiento del queso: en una hora se fabrican $3$ kg, así que $x$ kilogramos requieren $\\frac{x}{3}$ horas.",
+     "Horas de procesamiento de la crema: en una hora se fabrican $2$ kg, así que $y$ kilogramos requieren $\\frac{y}{2}$ horas.",
+     "Como el total de horas disponibles es $300$, se obtiene $\\frac{1}{3}x+\\frac{1}{2}y = 300$. Comprobación de unidades: kg dividido entre kg por hora da horas, igual que los $300$ horas.",
+     "El sistema es $6x+5y=4600$ y $\\frac{1}{3}x+\\frac{1}{2}y=300$, que corresponde a la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$6x+5y=4600$ con $3x+2y=300$: usa las tasas de producción ($3$ y $2$ kg por hora) como coeficientes de las horas, en lugar de sus inversas, que son las horas por kilogramo.",
+     "B": "$6x+5y=9200$ con $3x+2y=300$: combina dos errores, la ecuación de la leche sin dividir por $2$ (debía quedar $4600$) y las tasas de producción como coeficientes de las horas.",
+     "D": "$6x+5y=9200$ con $\\frac{1}{3}x+\\frac{1}{2}y=300$: solo falla la ecuación de la leche, que se deja sin dividir por $2$; el lado derecho debe ser $4600$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q13",
+   "number": 13,
+   "origin": "m2-2026-invierno-q53",
+   "axis": "Álgebra y funciones",
+   "topic": "Álgebra y funciones",
+   "subtopic": "m2-suficiencia",
+   "stem": "Considera los números reales x e y, con x̸ = y y x̸ = −y.\n\n�x² −y²�² Se puede determinar el número que representa la expresión (x + y)², si se sabe que:\n\n(1) x −y = 10\n\n(2) x + y = 6",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q53.webp",
+    "width": 907,
+    "height": 542,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La expresión se simplifica a $(x-y)^2$, porque el numerador es el cuadrado de $(x+y)(x-y)$. Entonces solo importa conocer $x-y$, y el dato (1) lo entrega directamente.",
+    "planteamiento": "Se pide determinar $\\frac{(x^2-y^2)^2}{(x+y)^2}$ con el dato (1) $x-y=10$ o con el dato (2) $x+y=6$. Datos: $x\\neq y$ y $x\\neq -y$, así que $x+y\\neq 0$ y la fracción está bien definida.",
+    "steps": [
+     "Factoriza la diferencia de cuadrados: $x^2-y^2=(x+y)(x-y)$.",
+     "Eleva al cuadrado: $(x^2-y^2)^2=(x+y)^2(x-y)^2$.",
+     "Divide por $(x+y)^2$, que es distinto de $0$ porque $x\\neq -y$: $\\frac{(x+y)^2(x-y)^2}{(x+y)^2}=(x-y)^2$. La expresión vale $(x-y)^2$.",
+     "Con el dato (1), $x-y=10$, luego la expresión vale $10^2=100$. El dato basta por sí solo.",
+     "Con el dato (2) solo se conoce $x+y=6$, y $x-y$ no queda fijo. Por ejemplo, $x=4$, $y=2$ da $(x-y)^2=2^2=4$, mientras que $x=5$, $y=1$ da $(x-y)^2=4^2=16$. Ambos cumplen $x+y=6$, así que (2) no basta.",
+     "Solo el dato (1) basta por sí solo. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "(2) por sí sola: se cree que la expresión depende de $x+y$, pero el numerador y el denominador se cancelan y solo queda $(x-y)^2$, que $x+y$ no determina.",
+     "C": "Ambas juntas: como (1) ya basta, sumar (2) no cambia el resultado. La opción C solo sería correcta si ninguno de los datos bastara por separado.",
+     "D": "Cada una por sí sola: falsa, porque (2) no basta, como muestran los contraejemplos $x=4$, $y=2$ y $x=5$, $y=1$.",
+     "E": "Se requiere información adicional: falsa, porque el dato (1) ya entrega $x-y=10$, y con él la expresión queda determinada."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q14",
+   "number": 14,
+   "origin": "m2-2025-regular-q53",
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "subtopic": "m2-suficiencia",
+   "stem": "Considera la función f, cuyo dominio es el conjunto de los números reales, definida por () 2 y que () y () . f x = ax + bx + c f 13 = p f 14 = q\n\nSe pueden determinar los valores de p y q, si se conoce el valor de:\n\n(1) a y b\n\n(2) f () 0",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2025-regular/q53.webp",
+    "width": 903,
+    "height": 461,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para calcular $p = f(13)$ y $q = f(14)$ hacen falta los tres coeficientes $a$, $b$ y $c$; cada afirmación aporta solo parte de ellos, pero juntas los completan.",
+    "planteamiento": "Se pide si se pueden determinar $p$ y $q$ con cada afirmación. Datos: $f(x) = ax^2 + bx + c$, $p = f(13)$ y $q = f(14)$. (1) conoce $a$ y $b$; (2) conoce $f(0)$.",
+    "steps": [
+     "Las expresiones son $p = 169a + 13b + c$ y $q = 196a + 14b + c$, así que se necesitan $a$, $b$ y $c$.",
+     "(1) da $a$ y $b$, pero no $c$. Sin $c$, $p$ y $q$ dependen de un valor desconocido, así que (1) sola no alcanza.",
+     "(2) da $f(0) = c$, pero no $a$ ni $b$. Sin ellos, $169a + 13b$ y $196a + 14b$ siguen indeterminados; (2) sola no alcanza.",
+     "Juntas se conocen $a$, $b$ y $c$, y entonces $p$ y $q$ se calculan directamente. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: falta $c$, como se vio en el segundo paso, así que no se determinan $p$ ni $q$.",
+     "B": "(2) por sí sola: conoce $c$, pero faltan $a$ y $b$ para calcular $169a + 13b$ y $196a + 14b$.",
+     "D": "Cada una por sí sola: ninguna basta, así que la opción es falsa.",
+     "E": "Se requiere información adicional: es falso, porque con (1) y (2) juntas sí se determinan $p$ y $q$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q15",
+   "number": 15,
+   "origin": "m2-2027-invierno-q36",
+   "axis": "Geometría",
+   "topic": "Álgebra y funciones",
+   "subtopic": "m2-analitica",
+   "stem": "En un partido de fútbol, la pelota está ubicada en un lugar llamado punto penal, tal\n\ncomo se representa a continuación.\n\nLa altura del arco de fútbol es h metros y la distancia entre el punto penal y el punto\n\nmedio entre ambos postes es d metros.\n\nSi un jugador patea la pelota de manera que su trayectoria hasta que pasa 1 m\n\nsobre el centro del travesaño es una línea recta, ¿cuál de las siguientes expresiones\n\nrepresenta la distancia recorrida por la pelota hasta que pasa por sobre el travesaño,\n\nen metros?\n\n√ d² + h²",
+   "options": [
+    {
+     "key": "A",
+     "text": "√ d² + h² + 1"
+    },
+    {
+     "key": "B",
+     "text": "√ d² + 2d + 1 + h²"
+    },
+    {
+     "key": "C",
+     "text": "√ d² + h² + 2h + 1"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q36.webp",
+    "width": 907,
+    "height": 984,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La distancia recorrida es la hipotenusa de un triángulo rectángulo con catetos $d$, en el suelo, y $h+1$, en altura.",
+    "planteamiento": "Se pide la distancia recorrida por la pelota desde el punto penal hasta el punto que pasa $1$ m sobre el centro del travesaño. Datos: la altura del arco es $h$ metros y la distancia entre el punto penal y el punto medio entre los postes es $d$ metros.",
+    "steps": [
+     "Se ubica el origen en el punto medio entre los postes, sobre el suelo. El punto penal queda en el suelo a $d$ metros de ese origen.",
+     "El punto que la pelota debe pasar está sobre el centro del travesaño, a $h$ metros de altura, y $1$ metro más arriba: a $h+1$ metros de altura sobre el origen.",
+     "La trayectoria es una línea recta, así que la distancia recorrida es la distancia en línea recta entre el punto penal y ese punto. Sus catetos son $d$ (horizontal) y $h+1$ (vertical).",
+     "Por el teorema de Pitágoras: $D=\\sqrt{d^{2}+(h+1)^{2}}$.",
+     "Se desarrolla el cuadrado: $(h+1)^{2}=h^{2}+2h+1$, luego $D=\\sqrt{d^{2}+h^{2}+2h+1}$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$\\sqrt{d^{2}+h^{2}}$: es la distancia al centro del travesaño mismo, sin el metro extra por sobre él.",
+     "B": "$\\sqrt{d^{2}+h^{2}+1}$: desarrolla mal $(h+1)^{2}$: escribe $h^{2}+1$ y olvida el término $2h$.",
+     "C": "$\\sqrt{d^{2}+2d+1+h^{2}}$: expande $(d+1)^{2}$ en lugar de $(h+1)^{2}$, sumando el metro a la distancia horizontal y no a la altura."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q16",
+   "number": 16,
+   "origin": "m2-2027-invierno-q37",
+   "axis": "Geometría",
+   "topic": "Circunferencia y círculo",
+   "subtopic": "m2-circunferencia",
+   "stem": "Considera siete círculos, cuyos radios miden r, 2r, 3r, 4r, 5r, 6r y 7r, con todas las\n\nmedidas en centímetros.\n\nSi la suma del área de todos los círculos es 35πx² cm², ¿cuál de las siguientes\n\nexpresiones es igual a x?",
+   "options": [
+    {
+     "key": "A",
+     "text": "r"
+    },
+    {
+     "key": "B",
+     "text": "2r"
+    },
+    {
+     "key": "C",
+     "text": "7r"
+    },
+    {
+     "key": "D",
+     "text": "28r"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q37.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las áreas de los círculos son proporcionales a $r^{2}$; el área total es $\\pi r^{2}$ por la suma de los cuadrados de $1$ a $7$, y la comparación con $35\\pi x^{2}$ da $x$.",
+    "planteamiento": "Se pide la expresión igual a $x$. Datos: siete círculos de radios $r, 2r, \\ldots, 7r$ cm, cuya área total es $35\\pi x^{2}$ cm$^{2}$.",
+    "steps": [
+     "El área del círculo de radio $kr$ es $\\pi(kr)^{2}=\\pi r^{2}k^{2}$, para $k=1,\\ldots,7$.",
+     "Área total: $\\pi r^{2}\\,(1^{2}+2^{2}+3^{2}+4^{2}+5^{2}+6^{2}+7^{2}) = \\pi r^{2}(1+4+9+16+25+36+49)$.",
+     "Suma: $1+4=5$, $5+9=14$, $14+16=30$, $30+25=55$, $55+36=91$ y $91+49=140$. Entonces el área total es $140\\pi r^{2}$ cm$^{2}$.",
+     "Igualando con el dato: $140\\pi r^{2}=35\\pi x^{2}$. Se divide por $35\\pi$: $4r^{2}=x^{2}$.",
+     "Como $x$ y $r$ son positivos, se saca raíz cuadrada: $x=\\sqrt{4r^{2}}=2r$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$x=r$: se obtiene al suponer $x^{2}=r^{2}$, es decir, al no notar que $140:35=4$.",
+     "C": "$7r$: toma el radio mayor sin hacer la comparación de áreas.",
+     "D": "$28r$: multiplica el cociente $140:35=4$ por $7r$, sin sacar la raíz cuadrada de $4$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q17",
+   "number": 17,
+   "origin": "m2-2026-invierno-q19",
+   "axis": "Geometría",
+   "topic": "Volúmenes",
+   "subtopic": "m2-esfera",
+   "stem": "La densidad ρ de un cuerpo, en gramos por centímetro cúbico, se calcula como ρ = m , tal que m es la masa del cuerpo, en gramos, y V es su volumen, V en centímetros cúbicos.\n\ng Considera dos esferas macizas, una de plata de densidad ρplata = 10,5 cm³ y la g otra de piedra de alabastro de densidad ρalabastro = 2,7 cm³.\n\nSi ambas esferas tienen un volumen de 81 cm³, ¿cuál es la diferencia positiva de\n\nsus masas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "1069,2 g"
+    },
+    {
+     "key": "B",
+     "text": "850,5 g"
+    },
+    {
+     "key": "C",
+     "text": "631,8 g"
+    },
+    {
+     "key": "D",
+     "text": "218,7 g"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2026-invierno/q19.webp",
+    "width": 907,
+    "height": 537,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La densidad relaciona masa y volumen mediante $\\rho=\\frac{m}{V}$, así que la masa es $m=\\rho\\cdot V$; con el mismo volumen, la diferencia de masas depende solo de la diferencia de densidades.",
+    "planteamiento": "Se pide la diferencia positiva entre las masas de dos esferas macizas del mismo volumen. Datos: $\\rho_{\\mathrm{plata}}=10{,}5\\ \\frac{\\mathrm{g}}{\\mathrm{cm}^{3}}$, $\\rho_{\\mathrm{alabastro}}=2{,}7\\ \\frac{\\mathrm{g}}{\\mathrm{cm}^{3}}$ y $V=81\\ \\mathrm{cm}^{3}$ para ambas esferas.",
+    "steps": [
+     "Se despeja la masa de la definición de densidad: $\\rho=\\frac{m}{V}$; multiplicando ambos lados por $V$ se obtiene $m=\\rho\\cdot V$. Las unidades quedan en gramos, porque $\\frac{\\mathrm{g}}{\\mathrm{cm}^{3}}\\cdot\\mathrm{cm}^{3}=\\mathrm{g}$.",
+     "Masa de la esfera de plata: $m_{\\mathrm{plata}}=10{,}5\\cdot 81$. Se calcula $10\\cdot 81=810$ y $0{,}5\\cdot 81=40{,}5$, luego $m_{\\mathrm{plata}}=850{,}5$ g.",
+     "Masa de la esfera de alabastro: $m_{\\mathrm{alabastro}}=2{,}7\\cdot 81$. Se calcula $2\\cdot 81=162$ y $0{,}7\\cdot 81=56{,}7$, luego $m_{\\mathrm{alabastro}}=218{,}7$ g.",
+     "Como ambas esferas tienen el mismo volumen, la diferencia también se puede escribir como $(\\rho_{\\mathrm{plata}}-\\rho_{\\mathrm{alabastro}})\\cdot V=(10{,}5-2{,}7)\\cdot 81=7{,}8\\cdot 81=631{,}8$ g, que coincide con la resta directa de las masas.",
+     "Diferencia positiva: $850{,}5-218{,}7=631{,}8$ g. La plata es la más masiva, así que la resta se hace en ese orden. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "1069,2 g es la suma de ambas masas, $850{,}5+218{,}7$. La pregunta pide la diferencia y no el total de las dos esferas.",
+     "B": "850,5 g es solo la masa de la esfera de plata, sin restar la masa de la de alabastro. Ignora la segunda esfera y por eso no responde la diferencia.",
+     "D": "218,7 g es la masa de la esfera de alabastro, no la diferencia entre las dos. Confunde la masa de una esfera con el resultado de comparar ambas."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q18",
+   "number": 18,
+   "origin": "m2-2027-invierno-q10",
+   "axis": "Geometría",
+   "topic": "Cuerpos geométricos",
+   "subtopic": "m2-homotecia",
+   "stem": "Considera un cubo cuya arista mide 4² cm.\n\nSi su arista aumenta a cuatro veces su longitud, ¿cuál es volumen del nuevo cubo?\n\n4⁶ cm³",
+   "options": [
+    {
+     "key": "A",
+     "text": "4⁷ cm³"
+    },
+    {
+     "key": "B",
+     "text": "4⁸ cm³"
+    },
+    {
+     "key": "C",
+     "text": "4⁹ cm³"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q10.webp",
+    "width": 907,
+    "height": 340,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al aumentar la arista cuatro veces, el volumen se multiplica por $4^{3}=64$, no por $4$, porque el volumen de un cubo es la tercera potencia de la arista.",
+    "planteamiento": "Se pide el volumen del nuevo cubo. Datos: la arista original mide $4^{2}$ cm y la nueva arista es cuatro veces la original.",
+    "steps": [
+     "El volumen de un cubo es $V=a^{3}$, donde $a$ es la arista. Con arista original $a=4^{2}$ cm, el volumen original es $V=(4^{2})^{3}=4^{6}$ cm³.",
+     "La nueva arista es cuatro veces la original: $4\\cdot 4^{2}=4^{1}\\cdot 4^{2}=4^{3}$ cm.",
+     "El nuevo volumen es $(4^{3})^{3}=4^{9}$ cm³, por la regla de potencia de potencia $(a^{m})^{n}=a^{mn}$, con $3\\cdot 3=9$.",
+     "Comprobación: $\\frac{4^{9}}{4^{6}}=4^{3}=64$, que es el factor por el que se multiplica el volumen al cuadruplicar la arista, como corresponde a $(4)^{3}$.",
+     "El volumen $4^{9}$ cm³ coincide con la alternativa D. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$4^{6}$ cm³: deja el volumen original, sin actualizar la arista. El cubo ya cambió de tamaño y el volumen debe recalcularse.",
+     "B": "$4^{7}$ cm³: multiplica el volumen por $4$ en vez de por $4^{3}=64$, es decir, trata el cambio como si fuera lineal.",
+     "C": "$4^{8}$ cm³: multiplica el volumen por $4^{2}$ en vez de por $4^{3}$, con lo que aplica el factor de un cuadrado y no de un cubo."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q19",
+   "number": 19,
+   "origin": "m2-2027-invierno-q54",
+   "axis": "Geometría",
+   "topic": "Áreas",
+   "subtopic": "m2-suficiencia",
+   "stem": "En la figura adjunta se representa la red de un paralelepípedo recto de base cuadrada.\n\nSe puede determinar el volumen del cuerpo generado por la red, si se conoce:\n\n(1) el área de la base y el perímetro de la red.\n\n(2) el área lateral del cuerpo y el perímetro de la base.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q54.webp",
+    "width": 907,
+    "height": 972,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La red forma un prisma recto de base cuadrada, con lado $a$ y altura $h$, y volumen $V=a^{2}h$; cada dato, por separado, permite obtener $a$ y $h$.",
+    "planteamiento": "Se pide decidir si el volumen queda determinado con (1) o con (2). El cuerpo es un prisma recto de base cuadrada, con lado $a$ y altura $h$. Datos: (1) el área de la base y el perímetro de la red; (2) el área lateral y el perímetro de la base.",
+    "steps": [
+     "La red tiene dos cuadrados de lado $a$ (base y tapa) y cuatro rectángulos de lados $a$ y $h$. El volumen es $V=a^{2}h$.",
+     "Con (1): el área de la base es $a^{2}$, luego $a$ se conoce.",
+     "El perímetro de la red: la fila de cuatro rectángulos tiene contorno $8a+2h$, y cada cuadrado pegado a ella agrega $2a$ al contorno; así el perímetro es $12a+2h$.",
+     "Como $a$ ya se conoce, de $12a+2h=P$ se despeja $h=\\frac{P-12a}{2}$, y el volumen queda determinado. (1) basta por sí sola.",
+     "Con (2): el área lateral es $4ah$ y el perímetro de la base es $4a$. De $4a$ se obtiene $a$, y de $4ah$ se despeja $h=\\frac{\\text{área lateral}}{4a}$. (2) también basta por sí sola.",
+     "Así cada dato, por separado, determina $a$ y $h$, y por lo tanto el volumen. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: es cierto que (1) basta, pero (2) también basta; la alternativa omite esa segunda vía.",
+     "B": "(2) por sí sola: es cierto que (2) basta, pero (1) también basta; la alternativa omite esa segunda vía.",
+     "C": "Ambas juntas, (1) y (2): cree que cada dato es insuficiente por separado; en realidad cada uno basta, y combinarlos no es necesario.",
+     "E": "Se requiere información adicional: olvida que el área de la base da $a$, y que el perímetro de la red depende de $h$ a través de $2h$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q20",
+   "number": 20,
+   "origin": "m2-2027-invierno-q17",
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "subtopic": "m2-trigonometria",
+   "stem": "El triángulo de Sierpinski es un fractal que se puede construir uniendo sucesivamente\n\nlos puntos medios de los lados de un triángulo equilátero sombreado. Se pinta de\n\nblanco el triángulo central y se repite el mismo procedimiento sobre los nuevos\n\ntriángulos sombreados que se generan.\n\nLa siguiente imagen representa el procedimiento antes mencionado hasta la tercera\n\nfigura:\n\nSi A es el área del triángulo de la Figura 1, ¿cuál de las siguientes expresiones\n\npermite calcular la suma del área de todos los triángulos en blanco de la Figura 3?\n\n�² �1",
+   "options": [
+    {
+     "key": "A",
+     "text": "A 4 �² �1"
+    },
+    {
+     "key": "B",
+     "text": "3 · A 4 1 � � 1 + ³"
+    },
+    {
+     "key": "C",
+     "text": "A 4 4 � �²� 1 �3 1 + ³"
+    },
+    {
+     "key": "D",
+     "text": "A 4 ⁺ 4 4"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q17.webp",
+    "width": 907,
+    "height": 966,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Figura 3 tiene un triángulo central blanco de área $\\frac{A}{4}$ y tres triángulos blancos pequeños de área $\\frac{A}{16}$. Su suma es $\\frac{A}{4}\\left(1+\\frac{3}{4}\\right)$.",
+    "planteamiento": "Se pide la suma de las áreas de los triángulos blancos de la Figura 3, en función de $A$. Datos: la Figura 1 es un triángulo de área $A$; en cada paso se unen los puntos medios de un triángulo sombreado, que queda dividido en cuatro triángulos de área $\\frac{1}{4}$ de la original, y se pinta de blanco el central.",
+    "steps": [
+     "En la Figura 1, al unir los puntos medios, el triángulo central tiene lados de la mitad del original, así que su área es $\\frac{A}{4}$. Ese es el primer triángulo blanco, que aparece en la Figura 2.",
+     "Cada uno de los tres triángulos sombreados de la Figura 2 tiene área $\\frac{A}{4}$. En cada uno, el triángulo central mide un cuarto de su área: $\\frac{1}{4}\\cdot\\frac{A}{4}=\\frac{A}{16}$. Esos son los tres blancos pequeños de la Figura 3.",
+     "Por lo tanto, la Figura 3 tiene un blanco de área $\\frac{A}{4}$ y tres blancos de área $\\frac{A}{16}$. Su suma es $\\frac{A}{4}+3\\cdot\\frac{A}{16}$.",
+     "Factoriza $\\frac{A}{4}$: $\\frac{A}{4}+\\frac{3A}{16}=\\frac{A}{4}\\left(1+\\frac{3}{4}\\right)$, porque $\\frac{3A}{16}=\\frac{A}{4}\\cdot\\frac{3}{4}$.",
+     "Comprobación numérica: si $A=16$, la suma es $4+3=7$, y $\\frac{16}{4}\\left(1+\\frac{3}{4}\\right)=4\\cdot\\frac{7}{4}=7$, que coincide.",
+     "La expresión $\\frac{1}{4}\\left(1+\\frac{3}{4}\\right)A$ coincide con la alternativa C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\left(\\frac{1}{4}\\right)^{2}A$: considera un solo triángulo blanco pequeño de área $\\frac{A}{16}$, olvidando el triángulo central grande de la Figura 2 que también queda en la Figura 3.",
+     "B": "$3\\left(\\frac{1}{4}\\right)^{2}A$: multiplica por $3$ el área de un blanco pequeño y omite el triángulo central de área $\\frac{A}{4}$.",
+     "D": "$\\frac{1}{4}\\left(1+\\frac{3}{4}+\\left(\\frac{3}{4}\\right)^{2}\\right)A$: agrega un término más, como si la Figura 3 tuviera un nivel adicional de iteraciones. La Figura 3 solo llega hasta dos niveles de blancos."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q21",
+   "number": 21,
+   "origin": "m2-2027-invierno-q50",
+   "axis": "Probabilidad y estadística",
+   "topic": "Álgebra y funciones",
+   "subtopic": "m2-combinatoria",
+   "stem": "Un grupo de cinco personas está compuesto por tres niños y dos adultos. Este grupo\n\nse quiere tomar una fotografía en alguna de las siguientes poses:\n\n¿De cuántas formas distintas se pueden ordenar para tomarse la fotografía?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2 · 3!"
+    },
+    {
+     "key": "B",
+     "text": "4 · 3!"
+    },
+    {
+     "key": "C",
+     "text": "2 · 6!"
+    },
+    {
+     "key": "D",
+     "text": "4 · 6!"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q50.webp",
+    "width": 907,
+    "height": 647,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay dos poses distintas y cada una admite $2\\cdot 3!$ ordenaciones, pues los adultos y los niños se permutan dentro de sus posiciones; el total es $4\\cdot 3!$.",
+    "planteamiento": "Se pide de cuántas formas distintas se pueden ordenar las cinco personas para la fotografía en alguna de las dos poses. Datos: tres niños y dos adultos, y dos poses distintas.",
+    "steps": [
+     "Pose 1: los dos adultos ocupan los extremos y los tres niños, el centro. Los adultos se intercambian de $2!=2$ formas y los niños se ordenan de $3!=6$ formas.",
+     "Ordenaciones de la pose 1: $2!\\cdot 3!=2\\cdot 6=12$.",
+     "Pose 2: el orden es niño, adulto, niño, adulto, niño. Los adultos se ordenan de $2!$ formas y los niños de $3!$ formas.",
+     "Ordenaciones de la pose 2: $2!\\cdot 3!=12$.",
+     "Como las poses son alternativas excluyentes, se suman: $2\\cdot 3!+2\\cdot 3!=12+12=24=4\\cdot 3!$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$2\\cdot 3!$: considera solo una de las dos poses.",
+     "C": "$2\\cdot 6!$: usa $6!$ como si hubiera seis personas, cuando el grupo tiene cinco, y multiplica por $2$ poses.",
+     "D": "$4\\cdot 6!$: repite el error de la alternativa C, con $6!$ en vez de $3!$; el resultado sería $2\\,880$ y el grupo tiene cinco personas."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q22",
+   "number": 22,
+   "origin": "m2-2027-invierno-q47",
+   "axis": "Probabilidad y estadística",
+   "topic": "Áreas",
+   "subtopic": "m2-condicional",
+   "stem": "En una superficie de área S, la probabilidad de que un dardo acierte en una región totalmente incluida en la región de área S se puede calcular como A , tal que A es el S área de la región incluida.\n\nConsidera dos círculos, cada uno de área M, de modo que la superficie de la\n\nintersección tiene un área Q, tal como se representa en la figura adjunta.\n\nEn la superficie formada por los dos círculos, ¿cuál es la probabilidad de que un\n\ndardo no acierte en la intersección?\n\nM −Q",
+   "options": [
+    {
+     "key": "A",
+     "text": "M �M −Q �"
+    },
+    {
+     "key": "B",
+     "text": "2 · M �M −Q �"
+    },
+    {
+     "key": "C",
+     "text": "2 · 2M −Q �M −Q �"
+    },
+    {
+     "key": "D",
+     "text": "2 · 2M −2Q"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q47.webp",
+    "width": 907,
+    "height": 961,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La superficie total tiene área $2M-Q$ y la zona fuera de la intersección tiene área $2M-2Q$; la probabilidad es el cociente entre esas dos áreas.",
+    "planteamiento": "Se pide la probabilidad de no acertar en la intersección. Datos: dos círculos de área $M$ cada uno, con intersección de área $Q$, y la regla de probabilidad $\\frac{A}{S}$, donde $S$ es el área de la superficie total.",
+    "steps": [
+     "Área de la superficie formada por los dos círculos: la intersección se cuenta una sola vez, así que $S=M+M-Q=2M-Q$.",
+     "Área de la zona que no es intersección: $A=(2M-Q)-Q=2M-2Q$.",
+     "Con la regla dada, la probabilidad es $\\frac{A}{S}=\\frac{2M-2Q}{2M-Q}$.",
+     "Se factoriza el numerador: $2M-2Q=2(M-Q)$, luego la probabilidad es $\\frac{2(M-Q)}{2M-Q}=2\\cdot\\frac{M-Q}{2M-Q}$.",
+     "Verificación con valores: si $M=10$ y $Q=4$, entonces $S=16$, $A=12$ y $\\frac{12}{16}=0{,}75$; la expresión $2\\cdot\\frac{6}{16}=0{,}75$ coincide. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$\\frac{M-Q}{M}$: usa el área de un solo círculo como total y no considera el área de la superficie completa.",
+     "B": "$2\\cdot\\frac{M-Q}{M}$: usa $M$ como total; con $M=10$ y $Q=4$ da $1{,}2$, que es mayor que $1$ y no puede ser una probabilidad.",
+     "D": "$2\\cdot\\frac{M-Q}{2M-2Q}$: usa como total la zona no intersectada, lo que da siempre $1$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q23",
+   "number": 23,
+   "origin": "m2-2027-invierno-q42",
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de frecuencia",
+   "subtopic": "m2-dispersion",
+   "stem": "En la tabla adjunta se presenta la frecuencia acumulada para un grupo de datos.\n\nDato Frecuencia acumulada\n\n1 5\n\n2 7\n\n3 9\n\n4 12\n\n¿Cuál de los siguientes gráficos representa de mejor manera la frecuencia de los\n\ndatos?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q42.webp",
+    "width": 907,
+    "height": 937,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La tabla da frecuencias acumuladas: la frecuencia de cada dato es la diferencia con la acumulada anterior, así que las alturas de las barras son $5$, $2$, $2$ y $3$.",
+    "planteamiento": "Se pide el gráfico que muestra la frecuencia, no la acumulada, de cada dato. Datos: las acumuladas son $5$, $7$, $9$ y $12$ para los datos $1$, $2$, $3$ y $4$.",
+    "steps": [
+     "La frecuencia acumulada del dato $k$ es la suma de las frecuencias de los datos desde $1$ hasta $k$. Por eso $f_k=F_k-F_{k-1}$, con $F_0=0$.",
+     "Dato $1$: $f_1=5-0=5$.",
+     "Dato $2$: $f_2=7-5=2$.",
+     "Dato $3$: $f_3=9-7=2$.",
+     "Dato $4$: $f_4=12-9=3$. Verificación: $5+2+2+3=12$, que coincide con la última acumulada.",
+     "El gráfico B muestra barras de alturas $5$, $2$, $2$ y $3$ para los datos $1$ a $4$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Barras de alturas $5$, $7$, $9$ y $12$: grafica directamente las acumuladas como frecuencias, sin restar. La suma sería $33$, no $12$.",
+     "C": "Barras de alturas $1$, $2$, $3$ y $4$: grafica el número de orden de cada dato, no su frecuencia.",
+     "D": "Barras de alturas $1$, $3$, $6$ y $10$: no se obtienen de la tabla ni como frecuencias ni como acumuladas; no reproducen el $5$ del dato $1$ ni el $2$ del dato $2$."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q24",
+   "number": 24,
+   "origin": "m2-2027-invierno-q43",
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de tendencia central",
+   "subtopic": "m2-dispersion",
+   "stem": "El cuarto medio B tiene 25 estudiantes, pero uno de ellos está con su promedio final\n\npendiente.\n\nEn el sistema de registro de notas se presenta el promedio final de este curso\n\nconsiderando los 24 estudiantes que tienen sus notas al día. El promedio registrado\n\nes exactamente 6,0.\n\nPosteriormente, se agregó el promedio final del estudiante que estaba pendiente, el\n\ncual corresponde a un 4,5.\n\n¿Cuál es el promedio del cuarto medio B luego de incorporar el promedio final del\n\nestudiante que estaba pendiente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5,25"
+    },
+    {
+     "key": "B",
+     "text": "5,76"
+    },
+    {
+     "key": "C",
+     "text": "5,94"
+    },
+    {
+     "key": "D",
+     "text": "6,18"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q43.webp",
+    "width": 907,
+    "height": 612,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las $24$ notas registradas suman $144$; al agregar el $4{,}5$ y dividir entre los $25$ estudiantes se obtiene el nuevo promedio.",
+    "planteamiento": "Se pide el promedio de los $25$ estudiantes tras incorporar el promedio del estudiante pendiente. Datos: $24$ promedios registrados con media $6{,}0$, y el promedio pendiente de $4{,}5$.",
+    "steps": [
+     "Suma de los promedios de los $24$ estudiantes: $24\\cdot 6{,}0=144$.",
+     "Se agrega el promedio del estudiante pendiente: $144+4{,}5=148{,}5$.",
+     "Ahora hay $25$ estudiantes, así que el promedio es $\\frac{148{,}5}{25}$.",
+     "Cálculo: $\\frac{148{,}5}{25}=\\frac{148{,}5\\cdot 4}{100}=\\frac{594}{100}=5{,}94$.",
+     "Comprobación: $25\\cdot 5{,}94=148{,}5$, que es la suma total. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$5{,}25$: promedia simplemente $6{,}0$ y $4{,}5$, ignorando que el primer promedio corresponde a $24$ estudiantes.",
+     "B": "$5{,}76$: divide $144$ entre $25$; olvida sumar el promedio del estudiante pendiente.",
+     "D": "$6{,}18$: supone que los $25$ estudiantes tienen $6{,}0$ y luego suma el $4{,}5$: $\\frac{25\\cdot 6{,}0+4{,}5}{25}=\\frac{154{,}5}{25}=6{,}18$, es decir, cuenta un estudiante de más."
+    }
+   }
+  },
+  {
+   "id": "m2-curado-2-q25",
+   "number": 25,
+   "origin": "m2-2027-invierno-q55",
+   "axis": "Probabilidad y estadística",
+   "topic": "Medidas de posición",
+   "subtopic": "m2-suficiencia",
+   "stem": "Para un estudio se registraron las masas de un grupo de 83 personas. En la siguiente\n\ntabla se presentan algunos datos de los resultados parciales del estudio:\n\nMasa mínima Percentil 50 Masa máxima\n\n45 kg 65 kg 92 kg\n\nLuego, en este registro se agregaron las masas de 11 personas que faltaba\n\nconsiderar.\n\nSe puede determinar el percentil 50 de las masas de las 94 personas, si se sabe que:\n\n(1) de las 11 personas que faltaba considerar exactamente 5 tienen una\n\nmasa menor que 65 kg.\n\n(2) de las 94 personas exactamente 46 tienen una masa de más de 65 kg\n\ny solo 2 tienen una masa de 65 kg.",
+   "options": [
+    {
+     "key": "A",
+     "text": "(1) por sí sola"
+    },
+    {
+     "key": "B",
+     "text": "(2) por sí sola"
+    },
+    {
+     "key": "C",
+     "text": "Ambas juntas, (1) y (2)"
+    },
+    {
+     "key": "D",
+     "text": "Cada una por sí sola, (1) ó (2)"
+    },
+    {
+     "key": "E",
+     "text": "Se requiere información adicional"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m2-2027-invierno/q55.webp",
+    "width": 907,
+    "height": 759,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con $94$ datos, la mediana es el promedio de los lugares $47$ y $48$; si $46$ datos son mayores que $65$ kg y $2$ valen $65$ kg, esos dos lugares valen $65$ kg.",
+    "planteamiento": "Se pide la mediana (percentil $50$) de las masas de las $94$ personas. Datos: en las $83$ personas iniciales la mediana es $65$ kg, con mínimo $45$ kg y máximo $92$ kg; luego se agregan $11$ personas. Se pide si (1) o (2) permiten determinar la mediana.",
+    "steps": [
+     "Con $94$ datos (número par), la mediana es el promedio de los valores que ocupan los lugares $47$ y $48$ al ordenarlos de menor a mayor.",
+     "Con (2): hay $46$ datos mayores que $65$ kg y $2$ datos iguales a $65$ kg.",
+     "Entonces, los datos menores que $65$ kg son $94-46-2=46$.",
+     "Como hay $46$ datos menores que $65$, los lugares $1$ a $46$ son menores que $65$. Los lugares $47$ y $48$ son los dos datos iguales a $65$ kg.",
+     "Por lo tanto, la mediana es $\\frac{65+65}{2}=65$ kg, y (2) basta por sí sola.",
+     "Con (1) solo: se sabe que $5$ de las $11$ nuevas personas pesan menos de $65$ kg, pero no cuántas de las $83$ iniciales lo hacen, así que no se sabe qué valores ocupan los lugares $47$ y $48$. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "(1) por sí sola: supone que la mediana no cambia porque hay $5$ personas bajo $65$ kg, sin ver que el total por debajo de $65$ kg depende de las demás personas.",
+     "C": "Ambas juntas, (1) y (2): cree que (1) aporta algo necesario; con (2) ya se determina la mediana.",
+     "D": "Cada una por sí sola, (1) ó (2): supone que (1) también basta, lo que no ocurre porque no se conoce cuántos de las $83$ iniciales están bajo $65$ kg.",
+     "E": "Se requiere información adicional: descarta (2), aunque fija exactamente cuántos datos quedan a cada lado de $65$ kg."
+    }
+   }
+  }
+ ]
+}

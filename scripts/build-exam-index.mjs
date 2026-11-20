@@ -40,9 +40,10 @@ for (const subject of SUBJECTS) {
     const axes = [...new Set(exam.questions.map((q) => q.axis))]
     const axisQuestions = {}
     for (const q of exam.questions) (axisQuestions[q.axis] ??= []).push(q.number)
+    // Las copias de preguntas oficiales (`origin`) ya cuentan en su prueba: no se repiten en temas, prácticas ni desafío.
     const subtopicQuestions = {}
-    for (const q of exam.questions) if (q.subtopic) (subtopicQuestions[q.subtopic] ??= []).push(q.number)
-    const explainedQuestions = exam.questions.filter((q) => q.explanation).map((q) => q.number)
+    for (const q of exam.questions) if (q.subtopic && !q.origin) (subtopicQuestions[q.subtopic] ??= []).push(q.number)
+    const explainedQuestions = exam.questions.filter((q) => q.explanation && !q.origin).map((q) => q.number)
     entries.push({
       id: exam.id,
       subject: exam.subject,

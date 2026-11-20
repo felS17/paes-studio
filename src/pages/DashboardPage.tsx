@@ -46,8 +46,8 @@ export function DashboardPage() {
   )
 
   return (
-    <div className="space-y-5">
-      <PageHeader title="ensayos" />
+    <div className="space-y-6">
+      <PageHeader title="ensayos" large />
       <ExamFilters value={filters} onChange={setFilters} />
       {visible.length ? (
         <ExamList exams={visible} lastScores={lastScores} flat={filters.subject !== 'todas'} />

@@ -16,6 +16,19 @@ const macros = { '\\sen': '\\operatorname{sen}', '\\tg': '\\operatorname{tg}', '
 const DOLLAR = /(?<!\\)\$/g
 const MATH = /(?<!\\)\$\$([\s\S]+?)(?<!\\)\$\$|(?<!\\)\$([^$]+?)(?<!\\)\$/g
 const problems = []
+function checkMath(t, tag) {
+  if ((t.match(DOLLAR) ?? []).length % 2) problems.push(`${tag}: signos $ desbalanceados en «${t.slice(0, 50)}»`)
+  for (const m of t.matchAll(MATH)) {
+    formulas++
+    try {
+      katex.renderToString(m[1] ?? m[2], { throwOnError: true, displayMode: Boolean(m[1]), macros: { ...macros }, strict: 'ignore' })
+    } catch (e) {
+      problems.push(`${tag}: KaTeX «${(m[1] ?? m[2]).slice(0, 50)}» → ${e.message.split('\n')[0].slice(0, 80)}`)
+    }
+  }
+}
+const byId = new Map()
+const copies = []
 let files = 0, questions = 0, explained = 0, deep = 0, formulas = 0
 
 for (const subject of readdirSync(examsDir, { withFileTypes: true }).filter((d) => d.isDirectory())) {
@@ -30,6 +43,8 @@ for (const subject of readdirSync(examsDir, { withFileTypes: true }).filter((d) 
     }
     for (const q of exam.questions) {
       questions++
+      byId.set(q.id, q)
+      if (q.origin) copies.push(q)
       if (!q.options.some((o) => o.key === q.answer)) problems.push(`${q.id}: la clave ${q.answer} no está entre las alternativas`)
       const saved = store[q.id]
       if (saved && saved.answer !== q.answer) problems.push(`${q.id}: la clave ${q.answer} no coincide con la del almacén (${saved.answer})`)
@@ -38,17 +53,7 @@ for (const subject of readdirSync(examsDir, { withFileTypes: true }).filter((d) 
       explained++
       if (ex.planteamiento) deep++
       const texts = [ex.summary, ex.planteamiento ?? '', ...ex.steps, ...Object.values(ex.distractors ?? {})]
-      for (const t of texts) {
-        if ((t.match(DOLLAR) ?? []).length % 2) problems.push(`${q.id}: signos $ desbalanceados en «${t.slice(0, 50)}»`)
-        for (const m of t.matchAll(MATH)) {
-          formulas++
-          try {
-            katex.renderToString(m[1] ?? m[2], { throwOnError: true, displayMode: Boolean(m[1]), macros: { ...macros }, strict: 'ignore' })
-          } catch (e) {
-            problems.push(`${q.id}: KaTeX «${(m[1] ?? m[2]).slice(0, 50)}» → ${e.message.split('\n')[0].slice(0, 80)}`)
-          }
-        }
-      }
+      for (const t of texts) checkMath(t, q.id)
       const last = ex.steps.at(-1) ?? ''
       if (ex.planteamiento && !new RegExp(`alternativa correcta es la ${q.answer}\\b`).test(last)) {
         problems.push(`${q.id}: el último paso no confirma la clave ${q.answer}`)
@@ -56,7 +61,26 @@ for (const subject of readdirSync(examsDir, { withFileTypes: true }).filter((d) 
     }
   }
 }
-console.log(`${files} ensayos, ${questions} preguntas, ${explained} con solución (${deep} con planteamiento), ${formulas} fórmulas KaTeX`)
+// Guías de ejercicios resueltos (src/data/guides.json): clave, alternativas y todas sus fórmulas en KaTeX.
+const guides = JSON.parse(readFileSync(join(root, 'src', 'data', 'guides.json'), 'utf8'))
+let guideExercises = 0
+for (const g of guides) {
+  g.exercises.forEach((e, i) => {
+    guideExercises++
+    const tag = `guía ${g.id}, ejercicio ${i + 1}`
+    if (!e.options.some((o) => o.key === e.answer)) problems.push(`${tag}: la clave ${e.answer} no está entre las alternativas`)
+    const ex = e.explanation
+    for (const t of [e.stem, ...e.options.map((o) => o.text), ex.summary, ...ex.steps, ...Object.values(ex.distractors ?? {})]) checkMath(t, tag)
+  })
+}
+
+// Las preguntas oficiales copiadas en ensayos curados deben conservar la clave y las alternativas de su original.
+for (const q of copies) {
+  const src = byId.get(q.origin)
+  if (!src) problems.push(`${q.id}: la pregunta de origen ${q.origin} no existe`)
+  else if (src.answer !== q.answer || src.options.length !== q.options.length) problems.push(`${q.id}: no coincide con ${q.origin}`)
+}
+console.log(`${files} ensayos, ${questions} preguntas, ${explained} con solución (${deep} con planteamiento), ${guides.length} guías con ${guideExercises} ejercicios, ${formulas} fórmulas KaTeX`)
 if (problems.length) {
   console.error(`✗ ${problems.length} problema(s):\n  ` + problems.slice(0, 40).join('\n  '))
   process.exit(1)

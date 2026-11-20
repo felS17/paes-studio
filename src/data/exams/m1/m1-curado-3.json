@@ -1,0 +1,1657 @@
+{
+ "id": "m1-curado-3",
+ "subject": "m1",
+ "title": "Ensayo curado 3",
+ "description": "30 preguntas oficiales del DEMRE (pruebas rendidas de 2024 a 2026) que recorren los ejes de M1, cada una con su explicación paso a paso y la prueba de la que viene.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 65,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   173,
+   199,
+   222,
+   244,
+   265,
+   284,
+   301,
+   316,
+   331,
+   346,
+   362,
+   378,
+   391,
+   402,
+   412,
+   422,
+   434,
+   447,
+   462,
+   476,
+   487,
+   496,
+   503,
+   510,
+   518,
+   529,
+   542,
+   557,
+   570,
+   581,
+   589,
+   596,
+   602,
+   610,
+   621,
+   634,
+   648,
+   662,
+   674,
+   683,
+   691,
+   700,
+   710,
+   723,
+   738,
+   753,
+   767,
+   779,
+   792,
+   805,
+   821,
+   838,
+   856,
+   875,
+   894,
+   915,
+   938,
+   964,
+   992,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated_bank.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "m1-curado-3-q01",
+   "number": 1,
+   "origin": "m1-2027-invierno-q15",
+   "axis": "Números",
+   "topic": "Números",
+   "subtopic": "m1-porcentajes",
+   "stem": "Una empresa de estacionamientos cobra una tarifa de \\$25 por cada minuto de uso.\n\nPor un incremento en los costos, la empresa decide aumentar la tarifa por minuto en\n\nun 12 %.\n\n¿Cuánto se tiene que pagar por usar el estacionamiento 10 minutos, después del\n\naumento de la tarifa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$370"
+    },
+    {
+     "key": "B",
+     "text": "\\$300"
+    },
+    {
+     "key": "C",
+     "text": "\\$280"
+    },
+    {
+     "key": "D",
+     "text": "\\$120"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q15.webp",
+    "width": 907,
+    "height": 452,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se aplica el aumento de 12 % a la tarifa por minuto y luego se multiplica el nuevo valor por los 10 minutos de uso.",
+    "planteamiento": "Se pide cuánto se paga por 10 minutos después del aumento. Datos: la tarifa inicial es de 25 pesos por minuto y el aumento es de 12 %.",
+    "steps": [
+     "Nueva tarifa por minuto: $25\\cdot 1{,}12=28$ pesos. El aumento de 12 % de 25 pesos son 3 pesos, que se suman a la tarifa original.",
+     "Cobro por 10 minutos: $28\\cdot 10=280$ pesos.",
+     "Comprobación: el cobro original por 10 minutos es $250$ pesos y, con el aumento, $250\\cdot 1{,}12=280$ pesos. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "370 pesos corresponde a sumar 12 pesos a cada minuto: $(25+12)\\cdot 10=370$. Quien lo elige confunde el 12 % con 12 pesos.",
+     "B": "300 pesos se obtiene con un aumento de 20 %: $25\\cdot 1{,}2=30$ pesos por minuto, y $30\\cdot 10=300$ pesos.",
+     "D": "120 pesos toma el 12 como si fuera el precio por minuto, $12\\cdot 10=120$, y olvida la tarifa de 25 pesos."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q02",
+   "number": 2,
+   "origin": "m1-2027-invierno-q17",
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "subtopic": "m1-porcentajes",
+   "stem": "Para arrendar botes en una empresa se debe enviar una solicitud. En la siguiente\n\nfigura se representa una solicitud que está en estado de “Aprobada” y le falta pasar\n\npor los últimos tres estados.\n\nPara calcular el progreso de las últimas 20 solicitudes, la empresa calcula el\n\nporcentaje de ellas que está o ya ha pasado el estado “Aprobada”.\n\nEn la siguiente tabla se presentan las últimas 20 solicitudes:\n\nSolicitud Estado Solicitud Estado\n\n1 Enviada 11 En curso\n\n2 En curso 12 En curso\n\n3 En curso 13 En curso\n\n4 Finalizada 14 Enviada\n\n5 Finalizada 15 Enviada\n\n6 Pagada 16 Pagada\n\n7 Enviada 17 Finalizada\n\n8 Aprobada 18 Aprobada\n\n9 Enviada 19 Pagada\n\n10 Pagada 20 Pagada\n\n¿Cuál es el porcentaje de las solicitudes que está o ya ha pasado por el estado\n\n“Aprobada”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "13 %"
+    },
+    {
+     "key": "B",
+     "text": "15 %"
+    },
+    {
+     "key": "C",
+     "text": "65 %"
+    },
+    {
+     "key": "D",
+     "text": "75 %"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q17.webp",
+    "width": 907,
+    "height": 1133,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se cuentan las solicitudes que están en «Aprobada» o en un estado posterior, y ese número se expresa como porcentaje de las 20 solicitudes.",
+    "planteamiento": "Se pide el porcentaje de solicitudes que está o ya pasó por el estado «Aprobada». Datos: son 20 solicitudes, y el orden de los estados es Enviada, Aprobada, Pagada, En curso y Finalizada.",
+    "steps": [
+     "Los estados que cuentan son Aprobada, Pagada, En curso y Finalizada, porque en todos ellos la solicitud ya pasó o está en «Aprobada». Solo no cuentan las solicitudes que están en «Enviada».",
+     "Solicitudes en «Enviada»: 1, 7, 9, 14 y 15, es decir, 5 solicitudes.",
+     "Solicitudes que están o ya pasaron «Aprobada»: $20-5=15$.",
+     "Porcentaje: $\\frac{15}{20}\\cdot 100\\,\\%=75\\,\\%$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "13 % no corresponde a ninguna cantidad de la tabla. Quien lo elige confunde las solicitudes que están en «Aprobada» con otro grupo.",
+     "B": "15 % confunde el número de solicitudes (15) con el porcentaje, que es 75 %.",
+     "C": "65 % es 13 de 20 solicitudes. Deja fuera las dos que están exactamente en «Aprobada» (solicitudes 8 y 18)."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q03",
+   "number": 3,
+   "origin": "m1-2027-invierno-q18",
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "subtopic": "m1-porcentajes",
+   "stem": "En la siguiente tabla se presenta la cantidad de licencias de conducir tramitadas a\n\nmujeres durante el 2021 por clase.\n\nClase Cantidad\n\nA1 244\n\nA2 3617\n\nA3 1962\n\nA4 1535\n\nA5 199\n\nB 248 700\n\nC 5859\n\nD 3734\n\nE 7\n\nF 687\n\nTotal 266 544\n\n¿Cuál de las siguientes expresiones representa el porcentaje de licencias clase\n\nA1 que se tramitaron, con respecto al total de licencias cuya clase comienza con la\n\nletra A?\n\n244 · 100",
+   "options": [
+    {
+     "key": "A",
+     "text": "% 7557 244"
+    },
+    {
+     "key": "B",
+     "text": "7557 · 100 % 244 · 100"
+    },
+    {
+     "key": "C",
+     "text": "% 7313 244"
+    },
+    {
+     "key": "D",
+     "text": "7313 · 100 %"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q18.webp",
+    "width": 907,
+    "height": 988,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El total de la clase A es la suma de A1 a A5, y el porcentaje de A1 es la parte dividida por ese total, multiplicada por 100 %.",
+    "planteamiento": "Se pide la expresión del porcentaje de licencias de clase A1 respecto del total de licencias cuya clase comienza con A. Datos: A1 = 244, A2 = 3617, A3 = 1962, A4 = 1535 y A5 = 199.",
+    "steps": [
+     "Total de licencias de clase A: $244+3617+1962+1535+199$. Por partes: $244+3617=3861$, $3861+1962=5823$, $5823+1535=7358$ y $7358+199=7557$.",
+     "Porcentaje de A1 respecto de ese total: $\\frac{244}{7557}\\cdot 100\\,\\%$, es decir, la parte dividida por el total y multiplicada por 100 %. Escrita como una sola fracción, queda $\\frac{244\\cdot 100}{7557}\\,\\%$.",
+     "Se revisan las opciones: la A coincide con $\\frac{244\\cdot 100}{7557}\\,\\%$. Las otras usan un total distinto o colocan el 100 en el denominador. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{244}{7557\\cdot 100}\\,\\%$ divide por 100 dentro del denominador, lo que da un valor 100 veces menor que el porcentaje real.",
+     "C": "$\\frac{244\\cdot 100}{7313}\\,\\%$ usa 7313, que es 7557 menos 244. Descuenta A1 del total de la clase A, aunque A1 sí forma parte de ese total.",
+     "D": "$\\frac{244}{7313\\cdot 100}\\,\\%$ combina el total erróneo de 7313 con el 100 en el denominador."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q04",
+   "number": 4,
+   "origin": "m1-2027-invierno-q19",
+   "axis": "Números",
+   "topic": "Números",
+   "subtopic": "m1-porcentajes",
+   "stem": "La Maratón de Santiago, realizada el 28 de abril de 2024 tenía tres categorías 10k,\n\n21k y 42k, y participaron 31 000 corredores.\n\nDel total de corredores, un 25 % eran extranjeros y un 12 % de estos compitieron en\n\nla categoría 10k.\n\n¿Cuál de las siguientes expresiones representa la cantidad de corredores extranjeros\n\nque compitieron en la categoría 10k?",
+   "options": [
+    {
+     "key": "A",
+     "text": "25 · 12 · 31 000"
+    },
+    {
+     "key": "B",
+     "text": "(25 + 12) · 31 000"
+    },
+    {
+     "key": "C",
+     "text": "0,25 · 0,12 · 31 000"
+    },
+    {
+     "key": "D",
+     "text": "(0,25 + 0,12) · 31 000"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q19.webp",
+    "width": 907,
+    "height": 474,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se toma el 25 % de los corredores y luego el 12 % de esos extranjeros, lo que equivale a multiplicar ambas proporciones por el total de corredores.",
+    "planteamiento": "Se pide la expresión que representa la cantidad de corredores extranjeros que compitieron en 10k. Datos: el total de corredores es 31 000; el 25 % son extranjeros y el 12 % de ellos compitió en 10k.",
+    "steps": [
+     "Corredores extranjeros: $0{,}25\\cdot 31\\,000=7\\,750$.",
+     "De esos extranjeros, los que compitieron en 10k son el 12 %: $0{,}12\\cdot 7\\,750=930$.",
+     "Reemplazando el primer valor en el segundo: $0{,}12\\cdot(0{,}25\\cdot 31\\,000)=0{,}25\\cdot 0{,}12\\cdot 31\\,000=930$, porque la multiplicación puede reordenarse sin cambiar el resultado.",
+     "La expresión que corresponde es $0{,}25\\cdot 0{,}12\\cdot 31\\,000$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$25\\cdot 12\\cdot 31\\,000$ usa 25 y 12 sin pasarlos a decimal, así que da un número enorme que no es una cantidad de corredores.",
+     "B": "$(25+12)\\cdot 31\\,000$ suma los porcentajes en vez de multiplicarlos, y sin pasar a decimal da un número muy superior al total de corredores.",
+     "D": "$(0{,}25+0{,}12)\\cdot 31\\,000$ suma las proporciones en vez de tomar el 12 % del grupo de extranjeros. Da un valor mayor que el total de extranjeros."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q05",
+   "number": 5,
+   "origin": "m1-2027-invierno-q20",
+   "axis": "Números",
+   "topic": "Porcentajes",
+   "subtopic": "m1-porcentajes",
+   "stem": "Una empresa de limpieza de automóviles realiza un cobro base de \\$20 000 por\n\nlavado y secado exterior del vehículo. Al agregar otros servicios extras, se cobra un\n\nadicional de \\$5000 por cada uno.\n\nLa empresa ofrece un 15 % de descuento en el total a pagar si se realizan más de\n\ntres tipos de servicios extras.\n\nSi una persona realiza el lavado y secado exterior con cinco servicios extras, ¿cuánto\n\nes el total que debe pagar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "\\$38 250"
+    },
+    {
+     "key": "B",
+     "text": "\\$41 250"
+    },
+    {
+     "key": "C",
+     "text": "\\$42 000"
+    },
+    {
+     "key": "D",
+     "text": "\\$42 750"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q20.webp",
+    "width": 907,
+    "height": 503,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se suma el cobro base con los servicios extras y luego se aplica el 15 % de descuento sobre el total, porque hay más de tres servicios extras.",
+    "planteamiento": "Se pide el total a pagar por el lavado y secado exterior con cinco servicios extras. Datos: cobro base de 20 000 pesos; cada servicio extra cuesta 5000 pesos; hay 15 % de descuento sobre el total si se contratan más de tres servicios extras.",
+    "steps": [
+     "Servicios extras: $5\\cdot 5000=25\\,000$ pesos.",
+     "Total sin descuento: $20\\,000+25\\,000=45\\,000$ pesos.",
+     "Como hay cinco servicios extras, son más de tres, así que corresponde el descuento de 15 %. El total queda al 85 % del precio: $45\\,000\\cdot 0{,}85=38\\,250$ pesos.",
+     "Comprobación: el descuento es $0{,}15\\cdot 45\\,000=6\\,750$ pesos, y $45\\,000-6\\,750=38\\,250$ pesos. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "41 250 pesos aplica el descuento solo a los servicios extras: $45\\,000-0{,}15\\cdot 25\\,000=41\\,250$. El descuento corresponde al total a pagar y no solo a una parte.",
+     "C": "42 000 pesos no corresponde a ningún cálculo correcto con los datos. Quien lo elige aplica un descuento distinto o suma mal los servicios extras.",
+     "D": "42 750 pesos resulta de aplicar un 5 % de descuento en vez de 15 %: $45\\,000\\cdot 0{,}95=42\\,750$."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q06",
+   "number": 6,
+   "origin": "m1-2027-invierno-q11",
+   "axis": "Números",
+   "topic": "Números",
+   "subtopic": "m1-racionales",
+   "stem": "En el siguiente mapa se presenta la hora en cuatro ciudades del mundo en un mismo\n\nmomento del día lunes.\n\nUna persona viaja en un vuelo directo desde Nueva York hasta Tokio. Su vuelo partió\n\na las 05:00 horas de Nueva York de ese día lunes y duró 14,5 horas.\n\n¿A qué hora de Tokio aterrizó el vuelo de esta persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A las 19:50 del día lunes"
+    },
+    {
+     "key": "B",
+     "text": "A las 19:30 del día lunes"
+    },
+    {
+     "key": "C",
+     "text": "A las 09:30 del día martes"
+    },
+    {
+     "key": "D",
+     "text": "A las 09:50 del día miércoles"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q11.webp",
+    "width": 907,
+    "height": 932,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que pasar la hora de partida de Nueva York a la hora de Tokio, usando la diferencia de 14 horas que muestra el mapa, y luego sumar la duración del vuelo.",
+    "planteamiento": "Se pide la hora local de Tokio a la que aterrizó el vuelo. Datos: el vuelo partió a las 05:00 en Nueva York un lunes y duró 14,5 horas; el mapa indica que, cuando en Nueva York son las 05:00, en Tokio son las 19:00.",
+    "steps": [
+     "La duración del vuelo es 14,5 horas, es decir, 14 horas y 30 minutos.",
+     "Hora de partida en la hora de Tokio: cuando en Nueva York son las 05:00, en Tokio son las 19:00 del mismo lunes. Tokio está 14 horas adelante de Nueva York.",
+     "Hora de llegada en Tokio: 19:00 más 14 horas y 30 minutos. Primero se suman las horas: $19+14=33$, y luego los minutos: $00+30=30$. Así, la llegada queda en 33:30.",
+     "Como 33:30 supera las 24 horas, se resta un día: 33:30 − 24:00 = 09:30 del día siguiente, es decir, el martes. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "19:50 del día lunes surge al sumar 14 horas y 50 minutos a las 05:00 de Nueva York. Suma mal los minutos y no considera la diferencia horaria.",
+     "B": "19:30 del día lunes es la hora de llegada en Nueva York, no en Tokio. Quien lo elige no suma la diferencia horaria de 14 horas.",
+     "D": "09:50 del día miércoles tiene dos errores: suma mal los minutos (50 en vez de 30) y además pasa al miércoles, cuando la llegada es el martes."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q07",
+   "number": 7,
+   "origin": "m1-2027-invierno-q14",
+   "axis": "Números",
+   "topic": "Números",
+   "subtopic": "m1-racionales",
+   "stem": "En una prueba, el índice de dificultad de una pregunta se calcula como c , tal que n c es la cantidad de personas que respondieron correctamente la pregunta y n es el\n\ntotal de personas que la respondieron.\n\nConsidera una pregunta que fue respondida correctamente por 280 personas e\n\nincorrectamente por 560 personas.\n\n¿Cuál es el índice de dificultad de esa pregunta?\n\n1",
+   "options": [
+    {
+     "key": "A",
+     "text": "3 1"
+    },
+    {
+     "key": "B",
+     "text": "2 2"
+    },
+    {
+     "key": "C",
+     "text": "3"
+    },
+    {
+     "key": "D",
+     "text": "2"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q14.webp",
+    "width": 907,
+    "height": 597,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El índice de dificultad es la fracción de respuestas correctas sobre el total de personas que respondieron la pregunta, y no sobre las incorrectas.",
+    "planteamiento": "Se pide el índice de dificultad de la pregunta. Datos: $c=280$ personas la respondieron correctamente y 560 la respondieron incorrectamente, así que el total es $n=280+560$.",
+    "steps": [
+     "Total de personas que respondieron la pregunta: $n=280+560=840$.",
+     "Personas que respondieron correctamente: $c=280$.",
+     "Índice de dificultad: $\\frac{c}{n}=\\frac{280}{840}$. Dividiendo numerador y denominador entre 280 se obtiene $\\frac{1}{3}$, porque $840=3\\cdot 280$.",
+     "Verificación: $\\frac{1}{3}$ es menor que $\\frac{1}{2}$, lo que indica que menos de la mitad respondió bien. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{1}{2}$ resulta de dividir las correctas entre las incorrectas, $\\frac{280}{560}$, en vez de dividir entre el total de personas.",
+     "C": "$\\frac{2}{3}$ resulta de dividir las incorrectas entre el total, $\\frac{560}{840}$. Es el índice de las respuestas erradas, no el de dificultad.",
+     "D": "2 es $\\frac{560}{280}$: divide las incorrectas entre las correctas. El resultado supera 1, así que no puede ser un índice de dificultad."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q08",
+   "number": 8,
+   "origin": "m1-2027-invierno-q23",
+   "axis": "Números",
+   "topic": "Números",
+   "subtopic": "m1-racionales",
+   "stem": "En un laboratorio, a partir de un estudio bajo ciertas condiciones, se determinó que\n\nun tipo de bacteria se duplica cada 4 minutos.\n\nSi en un instante se tenía una de estas bacterias, ¿cuánto tiempo transcurrió para\n\ntener 64 de esas bacterias?",
+   "options": [
+    {
+     "key": "A",
+     "text": "5 minutos"
+    },
+    {
+     "key": "B",
+     "text": "6 minutos"
+    },
+    {
+     "key": "C",
+     "text": "20 minutos"
+    },
+    {
+     "key": "D",
+     "text": "24 minutos"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q23.webp",
+    "width": 907,
+    "height": 383,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada duplicación multiplica la cantidad por 2, así que hay que contar cuántas duplicaciones llevan de 1 a 64 bacterias y luego multiplicar ese número por los 4 minutos que dura cada una.",
+    "planteamiento": "Se pide el tiempo que transcurre para pasar de $1$ bacteria a $64$ bacterias. Datos: la población se duplica cada $4\\,\\mathrm{min}$, el punto de partida es $1$ bacteria y la meta es $64$ bacterias.",
+    "steps": [
+     "Si la cantidad se duplica en cada intervalo, después de $n$ duplicaciones habrá $2^{n}$ bacterias, porque se parte de $1$ bacteria y cada duplicación multiplica por $2$.",
+     "Se busca $n$ con $2^{n} = 64$. Descomponiendo, $64 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2 = 2^{6}$, luego $2^{n} = 2^{6}$ y, por igualdad de bases, $n = 6$ duplicaciones.",
+     "Para comprobar, $2^{5} = 32$ no alcanza para 64 bacterias, y $2^{6} = 64$ sí. Por eso hacen falta exactamente 6 duplicaciones.",
+     "Cada duplicación demora $4$ minutos, así que el tiempo total es $6 \\cdot 4 = 24$ minutos.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "5 minutos: toma el número 5 como si fuera el tiempo, pero cinco duplicaciones solo llevan a 32 bacterias y además no se multiplica por los 4 minutos de cada una.",
+     "B": "6 minutos: usa la cantidad de duplicaciones (6) como si fueran minutos y no multiplica por los 4 minutos que dura cada duplicación.",
+     "C": "20 minutos: cuenta 5 duplicaciones, que llevan a 32 bacterias y no a 64, y multiplica por 4."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q09",
+   "number": 9,
+   "origin": "m1-2027-invierno-q30",
+   "axis": "Números",
+   "topic": "Números",
+   "subtopic": "m1-racionales",
+   "stem": "En una empresa que se dedica a la mantención y reparación de calefont, trabajan\n\nPedro, Joaquín, Rosario y Teresa, como técnicos.\n\nEn una semana de trabajo se registra la cantidad de clientes atendidos por los\n\ntécnicos, la cual dio un total de 79 clientes.\n\nEn dicha semana Pedro atendió 18 clientes, Joaquín atendió 8 clientes más que\n\nRosario y Teresa atendió 9 clientes más que Joaquín.\n\n¿Cuántos clientes atendió Rosario en esa semana de trabajo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12"
+    },
+    {
+     "key": "B",
+     "text": "18"
+    },
+    {
+     "key": "C",
+     "text": "22"
+    },
+    {
+     "key": "D",
+     "text": "36"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q30.webp",
+    "width": 907,
+    "height": 552,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se usa una incógnita para Rosario y se expresan los demás clientes a partir de ella, de modo que la suma de los cuatro técnicos debe dar 79.",
+    "planteamiento": "Se pide el número de clientes que atendió Rosario. Datos: en total se atendieron 79 clientes; Pedro atendió 18; Joaquín atendió 8 más que Rosario, y Teresa atendió 9 más que Joaquín.",
+    "steps": [
+     "Sea $R$ la cantidad de clientes de Rosario. Joaquín atendió $R + 8$ clientes.",
+     "Teresa atendió 9 más que Joaquín, así que atendió $(R + 8) + 9 = R + 17$ clientes.",
+     "La suma de los cuatro técnicos es el total: $18 + R + (R + 8) + (R + 17) = 79$.",
+     "Se reducen los términos semejantes: $18 + 8 + 17 = 43$ y $R + R + R = 3R$, luego $3R + 43 = 79$.",
+     "Se despeja: $3R = 79 - 43 = 36$ y $R = \\frac{36}{3} = 12$ clientes. Comprobación: Joaquín atendió $20$ y Teresa $29$, y $18 + 12 + 20 + 29 = 79$. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "18: confunde a Rosario con Pedro, que también atendió 18 clientes; el enunciado da ese valor para Pedro y pregunta por Rosario.",
+     "C": "22: resulta de dividir por 2, en vez de por 3, el valor $79 - 18 - 17 = 44$; así se trata a tres personas como si fueran dos.",
+     "D": "36: obtiene $3R = 36$ y no divide por 3, por lo que entrega el valor de $3R$ en vez del número de clientes de Rosario."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q10",
+   "number": 10,
+   "origin": "m1-2027-invierno-q34",
+   "axis": "Números",
+   "topic": "Números",
+   "subtopic": "m1-racionales",
+   "stem": "Si (p −3)² −36 = 0, ¿cuál de los siguientes valores puede ser un valor de p?",
+   "options": [
+    {
+     "key": "A",
+     "text": "−15"
+    },
+    {
+     "key": "B",
+     "text": "−9"
+    },
+    {
+     "key": "C",
+     "text": "9"
+    },
+    {
+     "key": "D",
+     "text": "15"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q34.webp",
+    "width": 907,
+    "height": 256,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Al sacar raíz cuadrada en ambos lados de $(p-3)^{2} = 36$ aparecen dos soluciones: $p = 9$ y $p = -3$.",
+    "planteamiento": "Se pide cuál de las alternativas puede ser un valor de $p$ que cumpla $(p - 3)^{2} - 36 = 0$. Datos: la ecuación completa y las cuatro alternativas $-15$, $-9$, $9$ y $15$.",
+    "steps": [
+     "Se despeja la potencia sumando 36 a ambos lados: $(p - 3)^{2} = 36$.",
+     "Se saca raíz cuadrada a ambos lados, considerando los dos signos: $p - 3 = 6$ o $p - 3 = -6$.",
+     "Para $p - 3 = 6$, se suma 3 a ambos lados: $p = 9$.",
+     "Para $p - 3 = -6$, se suma 3 a ambos lados: $p = -3$. Así las soluciones son $p = 9$ y $p = -3$.",
+     "Entre las alternativas solo aparece el $9$. Comprobación: $(9 - 3)^{2} - 36 = 36 - 36 = 0$. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "-15: no cumple la ecuación, porque $(-15 - 3)^{2} - 36 = 324 - 36 = 288 \\neq 0$.",
+     "B": "-9: al resolver $p - 3 = -6$ resta 3 en el lado equivocado, calculando $p = -6 - 3 = -9$; el 3 debe sumarse, no restarse.",
+     "D": "15: no cumple la ecuación, pues $(15 - 3)^{2} - 36 = 144 - 36 = 108 \\neq 0$; aparece al sumar 6 y 9 sin resolver correctamente la ecuación."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q11",
+   "number": 11,
+   "origin": "m1-2025-regular-q42",
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "subtopic": "m1-cuadratica",
+   "stem": "Considera la función cuadrática f, cuyo dominio es el conjunto de los números reales, definida por () 2 f x = ax + bx + c .\n\nSi los coeficientes b y c son cero, ¿cuál de los siguientes gráficos podría corresponder a la gráfica asociada a f?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Y X"
+    },
+    {
+     "key": "B",
+     "text": "Y X Y D)"
+    },
+    {
+     "key": "C",
+     "text": "Y X X"
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q42.webp",
+    "width": 903,
+    "height": 763,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si $b$ y $c$ son cero, la función queda $f(x) = ax^2$: una parábola con vértice en el origen, simétrica respecto al eje $Y$.",
+    "planteamiento": "Se pide qué gráfico podría corresponder a $f$. Datos: $f(x) = ax^2 + bx + c$ con $b = 0$ y $c = 0$, de modo que $f(x) = ax^2$.",
+    "steps": [
+     "Al reemplazar $b = 0$ y $c = 0$, la función se reduce a $f(x) = ax^2$.",
+     "Evaluamos en $x = 0$: $f(0) = a\\cdot 0 = 0$. Por lo tanto, la gráfica pasa por el origen $(0, 0)$ y el vértice está en el origen.",
+     "La función es simétrica respecto al eje $Y$ porque solo tiene término cuadrático: $f(-x) = f(x)$.",
+     "Por lo tanto, el gráfico debe ser una parábola con vértice en $(0,0)$, con el eje de simetría sobre el eje $Y$ y con la concavidad dada por el signo de $a$. Solo la opción B tiene el vértice en el origen. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La parábola de A tiene su vértice sobre el eje $Y$, pero por encima del origen. Eso requiere un término constante $c \\neq 0$, que no está permitido por el enunciado.",
+     "C": "La parábola de C tiene el vértice desplazado hacia la derecha del eje $Y$, lo que supone un término lineal $bx$ distinto de cero, contra lo que indica el enunciado.",
+     "D": "La parábola de D tiene el vértice sobre el eje $Y$, pero por debajo del eje $X$. Esto indica un término constante negativo, por lo que $c \\neq 0$."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q12",
+   "number": 12,
+   "origin": "m1-2026-invierno-q32",
+   "axis": "Álgebra y funciones",
+   "topic": "Intervalos",
+   "subtopic": "m1-ecuaciones",
+   "stem": "La solución de una inecuación se representa en el intervalo de la figura adjunta.\n\n¿Cuál de los siguientes intervalos representa este gráfico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "[1, 3]"
+    },
+    {
+     "key": "B",
+     "text": "]1, 3["
+    },
+    {
+     "key": "C",
+     "text": "[1, 3["
+    },
+    {
+     "key": "D",
+     "text": "]1, 3]"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q32.webp",
+    "width": 907,
+    "height": 452,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El punto relleno indica que el extremo pertenece al intervalo y se escribe con corchete; el círculo blanco indica que no pertenece y se escribe con el símbolo de intervalo abierto.",
+    "planteamiento": "Se pide el intervalo que representa la recta. Datos: el extremo 1 es un punto negro (incluido) y el extremo 3 es un círculo blanco (excluido); el sombreado va entre ambos.",
+    "steps": [
+     "En el extremo izquierdo, el 1, hay un punto negro: el 1 pertenece al conjunto, así que el intervalo comienza con corchete, $[1$.",
+     "En el extremo derecho, el 3, hay un círculo blanco: el 3 no pertenece al conjunto, así que el intervalo termina con el símbolo de extremo abierto, $3[$.",
+     "El intervalo es $[1,\\,3[$, que incluye el 1 y todos los números hasta 3 sin llegar a él.",
+     "Comprobación: el 1 pertenece, el 2 pertenece porque está sombreado y el 3 no pertenece. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "$[1,3]$ incluiría también el 3, pero el círculo del 3 es blanco y no pertenece al conjunto.",
+     "B": "$]1,3[$ excluiría el 1, pero el punto del 1 está relleno y sí pertenece al conjunto.",
+     "D": "$]1,3]$ excluye el 1 e incluye el 3, justo al revés de lo que muestra el gráfico."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q13",
+   "number": 13,
+   "origin": "m1-2027-invierno-q12",
+   "axis": "Álgebra y funciones",
+   "topic": "Números",
+   "subtopic": "m1-expresiones",
+   "stem": "En la entrada de una obra de teatro, hay una persona encargada de recibir los tickets\n\nde entrada de los asistentes.\n\nSi se estima que la persona encargada recibe 15 tickets cada 60 segundos, ¿cuál\n\nde las siguientes expresiones permite estimar la cantidad de tickets que recibe cada\n\nt minutos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "15t"
+    },
+    {
+     "key": "B",
+     "text": "900t"
+    },
+    {
+     "key": "C",
+     "text": "4t t"
+    },
+    {
+     "key": "D",
+     "text": "900"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q12.webp",
+    "width": 907,
+    "height": 468,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se traduce la tasa de 15 tickets por minuto a una expresión que depende de los $t$ minutos, multiplicando la tasa por el tiempo.",
+    "planteamiento": "Se pide la expresión que estima la cantidad de tickets recibidos en $t$ minutos. Datos: la persona recibe 15 tickets cada 60 segundos, es decir, 15 tickets por minuto.",
+    "steps": [
+     "La tasa en minutos: 15 tickets en 60 segundos equivalen a 15 tickets en 1 minuto, porque 1 minuto son 60 segundos.",
+     "En $t$ minutos se reciben la tasa por el tiempo: $15\\cdot t=15t$ tickets.",
+     "La unidad del tiempo ya está en minutos, igual que la tasa. Por eso no se multiplica por 60: los 60 segundos ya están incluidos en la tasa de 15 tickets por minuto.",
+     "Comprobación: con $t=2$ minutos se reciben $15\\cdot 2=30$ tickets, que es el doble de los 15 tickets de un minuto. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "900t multiplica la tasa por 60 como si fuera por segundo. Obtiene 900 tickets por minuto, cuando la persona recibe 15.",
+     "C": "4t surge de dividir 60 entre 15, lo que da el cociente invertido (60 segundos por cada 15 tickets), y no la tasa de tickets por minuto.",
+     "D": "$\\frac{t}{900}$ invierte la relación: divide el tiempo entre 900 en vez de multiplicar por 15 tickets por minuto."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q14",
+   "number": 14,
+   "origin": "m1-2027-invierno-q31",
+   "axis": "Álgebra y funciones",
+   "topic": "Números",
+   "subtopic": "m1-expresiones",
+   "stem": "En la siguiente infografía se presenta información respecto a la rapidez máxima\n\npermitida en zonas de escuela.\n\nConaset.(2018). Comisión Nacional de Seguridad de Tránsito - ProyectoCATI.\n\n¿En cuál de las siguientes gráficas se representan únicamente todas las posibles rapideces de un vehículo, en km , con las que puede transitar en zona de escuela en h\n\nhorario de entrada y salida de clases?",
+   "options": [
+    {
+     "key": "A",
+     "text": "0 30"
+    },
+    {
+     "key": "B",
+     "text": "0 30"
+    },
+    {
+     "key": "C",
+     "text": "30"
+    },
+    {
+     "key": "D",
+     "text": "30"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q31.webp",
+    "width": 907,
+    "height": 1142,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La rapidez debe ser mayor que 0 y como máximo 30 km/h, así que el intervalo incluye el 30 y excluye el 0.",
+    "planteamiento": "Se pide la gráfica que representa exactamente las rapideces permitidas en zona de escuela en horario de entrada y salida. Datos: la infografía indica que los vehículos no deben circular a más de $30\\,\\mathrm{km/h}$, y un vehículo que transita se está moviendo.",
+    "steps": [
+     "La infografía establece que no se debe superar 30 km/h. Si $v$ es la rapidez en km/h, se cumple $v \\le 30$.",
+     "Como 30 km/h está permitida, el extremo 30 debe quedar incluido, es decir, con un punto cerrado.",
+     "Un vehículo que transita tiene rapidez positiva, así que $v = 0$ no corresponde y ese extremo debe quedar abierto: $v > 0$.",
+     "El conjunto de rapideces posibles es $0 < v \\le 30$: abierto en 0 y cerrado en 30.",
+     "Entre las gráficas, solo la B tiene el extremo 0 abierto y el extremo 30 cerrado. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Muestra $0 < v < 30$, con el 30 excluido; pero la velocidad máxima de 30 km/h sí está permitida, así que ese extremo debe ir cerrado.",
+     "C": "Muestra $v > 30$, con el 30 excluido y la flecha hacia la derecha: describe rapideces que superan el límite, lo opuesto a lo permitido.",
+     "D": "Muestra $v \\ge 30$, con el 30 incluido pero la flecha hacia la derecha: invierte la desigualdad de la infografía y admite velocidades prohibidas."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q15",
+   "number": 15,
+   "origin": "m1-2027-invierno-q39",
+   "axis": "Álgebra y funciones",
+   "topic": "Funciones",
+   "subtopic": "m1-funcion-afin",
+   "stem": "Considera la función f definida por f(x) = 2x² −7x + 1.\n\n¿Cuál es el valor de f(−3)?",
+   "options": [
+    {
+     "key": "A",
+     "text": "−56"
+    },
+    {
+     "key": "B",
+     "text": "−38"
+    },
+    {
+     "key": "C",
+     "text": "40"
+    },
+    {
+     "key": "D",
+     "text": "58"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q39.webp",
+    "width": 907,
+    "height": 324,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Se reemplaza $x = -3$ en la función y se cuidan los signos de cada término, sobre todo el del término lineal, que es positivo.",
+    "planteamiento": "Se pide el valor de $f(-3)$ para $f(x) = 2x^{2} - 7x + 1$. Datos: $x = -3$ se reemplaza en cada término; el cuadrado de un número negativo es positivo y el producto de dos negativos también.",
+    "steps": [
+     "Se reemplaza: $f(-3) = 2(-3)^{2} - 7(-3) + 1$.",
+     "El término cuadrático: $(-3)^{2} = 9$, luego $2 \\cdot 9 = 18$.",
+     "El término lineal: $-7 \\cdot (-3) = +21$, porque el producto de dos números negativos es positivo.",
+     "Se suma: $18 + 21 + 1 = 40$.",
+     "Comprobación: los dos primeros términos son positivos, así que el resultado debe ser positivo, y $40$ cumple. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "-56: no corresponde; con $2(-3)^{2} = 18$ y $-7(-3) = 21$ los dos primeros términos son positivos, así que el resultado no puede ser negativo.",
+     "B": "-38: toma $-7 \\cdot (-3)$ como $-21$, con un error de signo, y obtiene $-18 - 21 + 1 = -38$.",
+     "D": "58: es un error al sumar, por ejemplo $18 + 21 + 19$, porque el término independiente es $+1$ y no 19; la suma correcta es 40."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q16",
+   "number": 16,
+   "origin": "m1-2027-invierno-q28",
+   "axis": "Álgebra y funciones",
+   "topic": "Números",
+   "subtopic": "m1-proporcionalidad",
+   "stem": "En una empresa hay 4 trabajadores para cosechar uvas y estos logran llenar\n\n2000 cajas en 20 días de trabajo, todos trabajando todos los días, al mismo ritmo y\n\nla misma cantidad de horas.\n\nEn la empresa se realiza el siguiente procedimiento para calcular la cantidad de\n\ntrabajadores necesarios para llenar 32 000 cajas en 10 días, bajo las mismas\n\ncondiciones, cometiéndose un error.\n\n**Paso 1:** se calcula la cantidad de cajas que llenan diariamente los 4 trabajadores\n\niniciales en conjunto como ²⁰⁰⁰ , obteniéndose que llenan 100 cajas diarias. 20\n\n**Paso 2:** se calcula la cantidad de cajas que cada trabajador llena diariamente como 100 · 4, obteniéndose 400 cajas diarias por trabajador.\n\n**Paso 3:** se calcula la cantidad de cajas que se deben llenar diariamente para la\n\nnueva producción como ³² ⁰⁰⁰ , obteniéndose que deben llenar 3200 cajas 10 diarias.\n\n**Paso 4:** se divide la cantidad de cajas diarias que deben llenar por la cantidad que\n\ncada trabajador llena diariamente como ³²⁰⁰ , obteniéndose que necesitan 400 8 trabajadores.\n\n¿En cuál de los pasos se cometió el error?",
+   "options": [
+    {
+     "key": "A",
+     "text": "En el Paso 1"
+    },
+    {
+     "key": "B",
+     "text": "En el Paso 2"
+    },
+    {
+     "key": "C",
+     "text": "En el Paso 3"
+    },
+    {
+     "key": "D",
+     "text": "En el Paso 4"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q28.webp",
+    "width": 907,
+    "height": 976,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El error está en el Paso 2: los 4 trabajadores juntos llenan 100 cajas diarias, así que cada uno llena $\\frac{100}{4} = 25$ cajas, y no 400.",
+    "planteamiento": "Se pide identificar el paso con error al calcular cuántos trabajadores se necesitan para llenar $32\\,000$ cajas en $10$ días. Datos: 4 trabajadores llenan $2000$ cajas en $20$ días, todos con el mismo ritmo.",
+    "steps": [
+     "El Paso 1 es correcto: en 20 días, los 4 trabajadores llenan $2000$ cajas, así que en conjunto llenan $\\frac{2000}{20} = 100$ cajas diarias.",
+     "En el Paso 2 se multiplica cuando debía dividirse: si los 4 trabajadores juntos llenan 100 cajas diarias y todos rinden igual, cada uno llena $\\frac{100}{4} = 25$ cajas diarias. El Paso 2 escribe $100 \\cdot 4 = 400$, lo que supondría que cada trabajador llena las 100 cajas: aquí está el error.",
+     "El Paso 3 es correcto: para llenar $32\\,000$ cajas en $10$ días, se deben llenar $\\frac{32\\,000}{10} = 3200$ cajas diarias.",
+     "Con el rendimiento correcto de 25 cajas diarias por trabajador, la cantidad necesaria es $\\frac{3200}{25} = 128$ trabajadores.",
+     "Comprobación: $128 \\cdot 25 = 3200$ cajas diarias, que es exactamente lo que hay que llenar. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "En el Paso 1: como 100 cajas diarias puede parecer un valor alto para 4 trabajadores, se podría dudar del cálculo, pero $\\frac{2000}{20} = 100$ está bien hecho.",
+     "C": "En el Paso 3: la división $\\frac{32\\,000}{10} = 3200$ está bien calculada; el dato es correcto y el error aparece en el paso siguiente.",
+     "D": "En el Paso 4: la división $\\frac{3200}{400} = 8$ está bien hecha, pero usa el dato erróneo del Paso 2, por lo que la respuesta de 8 trabajadores es incorrecta."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q17",
+   "number": 17,
+   "origin": "m1-2026-invierno-q35",
+   "axis": "Álgebra y funciones",
+   "topic": "Problemas con dinero",
+   "subtopic": "m1-sistemas",
+   "stem": "Una persona compró una camisa y un pantalón, pagando en total \\$50 000.\n\nLa camisa costó un 30 % del total pagado, mientras que el pantalón tenía ya un\n\ndescuento de un 20 % sobre su precio original.\n\nEn el siguiente sistema de ecuaciones se modela la situación anterior:\n\nA 50 000 = ³⁰ 100 B · ⁸⁰ 100 ⁺ A = ⁵⁰ ⁰⁰⁰\n\n¿Qué representa B en el sistema de ecuaciones?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El precio original del pantalón"
+    },
+    {
+     "key": "B",
+     "text": "El precio final del pantalón"
+    },
+    {
+     "key": "C",
+     "text": "La suma del precio original de ambas prendas"
+    },
+    {
+     "key": "D",
+     "text": "La suma del precio final de ambas prendas"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q35.webp",
+    "width": 907,
+    "height": 635,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La segunda ecuación suma el precio final del pantalón y el de la camisa; el término $B$ aparece antes del descuento, así que es el precio original del pantalón.",
+    "planteamiento": "Se pide qué representa $B$ en el sistema. Datos: total pagado de 50 000 pesos; la camisa es el 30 % del total (variable $A$), y el pantalón tiene un descuento de 20 %, por lo que se paga el 80 % de $B$.",
+    "steps": [
+     "Primera ecuación: $\\frac{A}{50\\,000}=\\frac{30}{100}$, luego $A=0{,}30\\cdot 50\\,000=15\\,000$ pesos, que es el precio de la camisa.",
+     "En la segunda ecuación, el pantalón se paga con un descuento del 20 %, es decir, al 80 % de su precio: $B\\cdot\\frac{80}{100}$ pesos.",
+     "Segunda ecuación: $B\\cdot\\frac{80}{100}+A=50\\,000$, que dice que el precio final del pantalón más el de la camisa suma 50 000 pesos.",
+     "Se despeja: $0{,}8\\,B=50\\,000-15\\,000=35\\,000$, luego $B=\\frac{35\\,000}{0{,}8}=43\\,750$ pesos.",
+     "Como $B$ es el precio antes del descuento, 43 750 pesos es el precio original del pantalón; su precio final es $0{,}8\\cdot 43\\,750=35\\,000$ pesos. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "El precio final es $B\\cdot\\frac{80}{100}$, es decir, 35 000 pesos. Confunde $B$, que es el valor antes del descuento, con el término multiplicado por 0,8.",
+     "C": "La suma de precios originales sería $43\\,750+15\\,000=58\\,750$ pesos, que no coincide con los 50 000 pesos pagados, porque la camisa no tiene descuento.",
+     "D": "La suma de precios finales es $35\\,000+15\\,000=50\\,000$ pesos, que corresponde al lado izquierdo de la segunda ecuación, no a la variable $B$."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q18",
+   "number": 18,
+   "origin": "m1-2027-invierno-q40",
+   "axis": "Geometría",
+   "topic": "Cuadriláteros",
+   "subtopic": "m1-areas",
+   "stem": "Un proyector de imágenes tiene una proporción de 9: 16 entre la altura y el ancho\n\nde su proyección rectangular, siendo su altura el lado menor. Al situar el proyector a\n\ncierta distancia de la pared, la longitud de la diagonal del rectángulo de proyección\n\nserá de 100 pulgadas, tal como se representa en la siguiente imagen:\n\nPara calcular la altura de este rectángulo de proyección, se utiliza el siguiente modelo:\n\n(9x)² + (16x)² = 100²\n\n¿Qué representa 16x en el modelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El factor de proporcionalidad"
+    },
+    {
+     "key": "B",
+     "text": "El ancho del rectángulo de proyección"
+    },
+    {
+     "key": "C",
+     "text": "La altura del rectángulo de proyección"
+    },
+    {
+     "key": "D",
+     "text": "La distancia desde el proyector hasta la pared"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q40.webp",
+    "width": 907,
+    "height": 764,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el modelo, $9x$ representa la altura, que es el lado menor, y $16x$ representa el ancho, que es el lado mayor del rectángulo de proyección.",
+    "planteamiento": "Se pide qué representa $16x$ en el modelo $(9x)^{2} + (16x)^{2} = 100^{2}$. Datos: la proporción altura : ancho es $9 : 16$, la altura es el lado menor y la diagonal mide 100 pulgadas.",
+    "steps": [
+     "La proporción altura : ancho es $9 : 16$, así que la altura se escribe como $9x$ y el ancho como $16x$, con $x$ el factor común.",
+     "Como la altura es el lado menor y $x > 0$, se cumple $9x < 16x$. Por eso $16x$ es el lado mayor, es decir, el ancho del rectángulo.",
+     "El modelo aplica el teorema de Pitágoras: la diagonal de 100 pulgadas es la hipotenusa y los dos lados del rectángulo son los catetos.",
+     "Por lo tanto, $16x$ corresponde al ancho del rectángulo de proyección. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "El factor de proporcionalidad: $x$ es el factor común, pero $16x$ es un lado completo del rectángulo, no solo el factor que multiplica la proporción.",
+     "C": "La altura del rectángulo: la altura es $9x$, que corresponde al lado menor, no a $16x$; confundir ambos lados es el error típico al leer la proporción.",
+     "D": "La distancia desde el proyector hasta la pared: esa distancia no aparece en el modelo, que solo relaciona los lados del rectángulo con la diagonal."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q19",
+   "number": 19,
+   "origin": "m1-2027-invierno-q47",
+   "axis": "Geometría",
+   "topic": "Triángulos",
+   "subtopic": "m1-areas",
+   "stem": "Una hoja de papel se dobla dos veces consecutivas y luego se le realiza una\n\nperforación con forma de triángulo, tal como se presenta a continuación:\n\n¿Cuál de las siguientes imágenes representa las perforaciones que tendrá el papel\n\nal extenderse?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q47.webp",
+    "width": 907,
+    "height": 1026,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Cada perforación se refleja en los dos dobleces, así que el patrón desplegado tiene cuatro triángulos simétricos respecto del centro de la hoja.",
+    "planteamiento": "Se pide la hoja desplegada tras dos dobleces y una perforación triangular. Datos: primero se dobla la hoja por la mitad horizontal y luego por la mitad vertical; en el papel doblado, el triángulo tiene el ángulo recto en la esquina inferior izquierda.",
+    "steps": [
+     "En el papel doblado, el triángulo tiene el ángulo recto en la esquina inferior izquierda: un cateto va sobre el borde izquierdo y el otro sobre el doblez horizontal.",
+     "Al desdoblar el doblez vertical, el triángulo se refleja al otro lado: aparece otro igual con el ángulo recto en el borde derecho, sobre el mismo doblez horizontal.",
+     "Al desdoblar el doblez horizontal, cada uno de los dos triángulos se refleja hacia abajo, en espejo respecto de esa línea; quedan cuatro triángulos en total.",
+     "Los cuatro triángulos forman un patrón simétrico respecto de ambos dobleces: los dos de arriba son el reflejo de los de abajo, y los de la izquierda son el reflejo de los de la derecha.",
+     "Solo la opción D muestra cuatro triángulos con esa simetría, con los ángulos rectos junto al doblez horizontal y a los bordes laterales. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Los triángulos no quedan reflejados respecto del doblez horizontal: el patrón de A pierde la simetría vertical que deja el papel desplegado.",
+     "B": "Tiene la orientación de los triángulos de la parte superior, pero la inferior no es el reflejo del doblez horizontal: el papel se reflejó solo una vez.",
+     "C": "Los cuatro triángulos tienen la misma orientación, como si el papel no se reflejara en los dobleces; un despliegue con dobleces siempre invierte la orientación."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q20",
+   "number": 20,
+   "origin": "m1-2027-invierno-q50",
+   "axis": "Geometría",
+   "topic": "Números",
+   "subtopic": "m1-cuerpos",
+   "stem": "En una empresa de embalaje, al ingresar una caja a una cinta transportadora se\n\nle efectúa suavemente los movimientos para su sellado, tal como se representa a\n\ncontinuación:\n\nSi los movimientos de la caja en la cinta transportadora son en relación con su cara\n\nfrontal, ¿en qué posición ingresó la caja a la cinta transportadora?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q50.webp",
+    "width": 907,
+    "height": 912,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los tres giros de 90° ocurren en el mismo plano; el giro neto es de 90° en sentido antihorario, así que la caja entró girada en sentido horario para compensarlo.",
+    "planteamiento": "Se pide la posición en que la caja entró a la cinta. Datos: tres giros de 90° (①  horario, ② antihorario y ③ antihorario) sobre la cinta, y a la salida la cara frontal muestra dos flechas hacia arriba; los movimientos se miden respecto de la cara frontal.",
+    "steps": [
+     "Se asigna signo a los giros: tomando el sentido antihorario como positivo, el giro ① es de $-90^{\\circ}$ y los giros ② y ③ son de $+90^{\\circ}$ cada uno.",
+     "El giro neto es $-90^{\\circ} + 90^{\\circ} + 90^{\\circ} = +90^{\\circ}$, es decir, la caja quedó girada 90° en sentido antihorario respecto de su posición de entrada.",
+     "Para encontrar la posición de entrada hay que deshacer ese giro neto, girando 90° en sentido horario.",
+     "Al girar 90° en sentido horario, las dos flechas hacia arriba de la cara frontal pasan a apuntar hacia la derecha.",
+     "Comprobación: girar después 90° en sentido antihorario recupera las flechas hacia arriba de la salida. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Muestra las flechas hacia arriba, igual que en la salida: supone que los giros se anulan (+90° y −90°) y olvida el tercer giro.",
+     "B": "Toma el giro neto como de 180°, lo que invierte las flechas hacia abajo; la suma correcta de los tres giros es de 90°.",
+     "C": "Deshace el giro en sentido antihorario en vez de horario, lo que deja las flechas hacia la izquierda; el sentido de deshacer debe ser opuesto al giro neto."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q21",
+   "number": 21,
+   "origin": "m1-2026-invierno-q07",
+   "axis": "Geometría",
+   "topic": "Números",
+   "subtopic": "m1-cuerpos",
+   "stem": "Una persona tiene una caja con 12 huevos y realiza lo siguiente:\n\n- aparta ¹ y ¹ del total de los huevos de la caja para la preparación de una tortilla 3 6 y huevos revueltos, respectivamente,\n\n- utiliza la mitad de los huevos restantes para preparar un queque y\n\n- al guardar la caja se le rompe un huevo y lo elimina.\n\n¿Cuántos huevos le quedan a la persona en la caja para ser utilizados en otra\n\npreparación?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q07.webp",
+    "width": 907,
+    "height": 1139,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Hay que descontar en orden: primero lo que se aparta sobre el total, luego la mitad de lo que queda y, por último, el huevo roto.",
+    "planteamiento": "Se pide cuántos huevos quedan en la caja. Datos: 12 huevos en total; se aparta $\\frac{1}{3}$ para la tortilla y $\\frac{1}{6}$ para los revueltos, ambas fracciones del total; luego se usa la mitad de los restantes para un queque, y se rompe y elimina 1 huevo.",
+    "steps": [
+     "Huevos para la tortilla: $\\frac{1}{3}$ de 12 es $\\frac{12}{3}=4$ huevos.",
+     "Huevos para los revueltos: $\\frac{1}{6}$ de 12 es $\\frac{12}{6}=2$ huevos. Las dos fracciones se calculan sobre el total de 12, como indica el enunciado.",
+     "Huevos restantes tras apartar: $12-4-2=6$.",
+     "Para el queque se usa la mitad de los restantes, no del total: $\\frac{1}{2}\\cdot 6=3$ huevos. Quedan $6-3=3$ huevos.",
+     "Al guardar la caja se rompe un huevo y se elimina, así que quedan $3-1=2$ huevos.",
+     "Comprobación: $4+2+3+1+2=12$, es decir, los 12 huevos quedan asignados a un uso o al descarte. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "La caja queda sin huevos. Aparece al usar todos los restantes en el queque, olvidando que solo se usa la mitad de ellos.",
+     "C": "Muestra 3 huevos: olvida descontar el huevo que se rompió al guardar la caja.",
+     "D": "Muestra 4 huevos, que aparecen al tomar la mitad de $12-4=8$ para el queque y omitir el descuento de los revueltos. Es un descuento sobre una base distinta a la pedida."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q22",
+   "number": 22,
+   "origin": "m1-2026-invierno-q51",
+   "axis": "Geometría",
+   "topic": "Vectores",
+   "subtopic": "m1-transformaciones",
+   "stem": "Considera la siguiente figura:\n\n¿Cuáles son las coordenadas del vector de traslación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "(−12, 6)"
+    },
+    {
+     "key": "B",
+     "text": "(−12, −6)"
+    },
+    {
+     "key": "C",
+     "text": "(12, 6)"
+    },
+    {
+     "key": "D",
+     "text": "(12, −6)"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q51.webp",
+    "width": 907,
+    "height": 833,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El vector de traslación se obtiene restando las coordenadas de un punto de la figura original a las del mismo punto en la figura trasladada.",
+    "planteamiento": "Se pide el vector $(a,b)$ que lleva la figura original a la trasladada. Datos: la figura original ocupa desde $x=4$ hasta $x=9$ y desde $y=10$ hasta $y=14$; la trasladada ocupa desde $x=16$ hasta $x=21$ y desde $y=4$ hasta $y=8$.",
+    "steps": [
+     "Se comparan bordes homólogos de las dos figuras. El borde izquierdo de la original está en $x=4$ y el de la trasladada en $x=16$, así que el desplazamiento horizontal es $16-4=12$ unidades hacia la derecha.",
+     "El borde superior de la original está en $y=14$ y el de la trasladada en $y=8$. El desplazamiento vertical es $8-14=-6$, es decir, 6 unidades hacia abajo, porque la figura baja.",
+     "Se verifica con otros bordes: el borde derecho pasa de $x=9$ a $x=21$, con $21-9=12$, y el borde inferior pasa de $y=10$ a $y=4$, con $4-10=-6$. Los cuatro bordes dan el mismo desplazamiento.",
+     "El vector de traslación es $(12,\\,-6)$. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "$(-12,\\,6)$ invierte ambos signos. Es el vector opuesto, y lleva la figura trasladada de vuelta a la izquierda y hacia arriba.",
+     "B": "$(-12,\\,-6)$ invierte el signo horizontal y haría que la figura se mueva a la izquierda, cuando en realidad se desplaza hacia la derecha.",
+     "C": "$(12,\\,6)$ cambia el signo vertical y lee que la figura sube, cuando en realidad baja 6 unidades."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q23",
+   "number": 23,
+   "origin": "m1-2025-regular-q63",
+   "axis": "Geometría",
+   "topic": "Transformaciones isométricas",
+   "subtopic": "m1-transformaciones",
+   "stem": "Considera el siguiente dibujo de un velero en el agua:\n\n¿En cuál de las siguientes opciones se representa el velero y su traslación en el agua?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2025-regular/q63.webp",
+    "width": 903,
+    "height": 1121,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una traslación solo desplaza la figura: conserva su tamaño, su forma y su orientación, así que la copia debe verse idéntica, pero en otro lugar.",
+    "planteamiento": "Se pide la opción que muestra el velero junto con su traslación en el agua. Dato de la figura: el velero original tiene la vela grande a la izquierda, la vela chica a la derecha y la punta del casco hacia la derecha.",
+    "steps": [
+     "Recuerda qué conserva una traslación: cada punto se mueve en la misma dirección y la misma distancia, por lo que la figura no cambia de tamaño, no gira y no se refleja.",
+     "Usa esas condiciones como filtro y compara el segundo velero de cada opción con el primero: su tamaño, el lado de la vela grande y hacia dónde apunta el casco.",
+     "En A, el segundo velero tiene la vela grande a la derecha y el casco apunta al revés: es una reflexión. En B, el segundo velero es claramente más grande: es una ampliación.",
+     "En D, el casco mantiene su dirección, pero las velas quedan invertidas: la vela grande pasa a la derecha, así que tampoco es una copia fiel del original.",
+     "En C, el segundo velero tiene el mismo tamaño, la vela grande a la izquierda y el casco en la misma dirección: solo se desplazó hacia la derecha. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Muestra una reflexión: el segundo velero es como el reflejo del primero en un espejo, con las velas y el casco invertidos. Conserva el tamaño, pero no la orientación.",
+     "B": "Muestra una ampliación: el segundo velero conserva la forma, pero es más grande. En una traslación el tamaño no cambia, así que esta transformación es una homotecia.",
+     "D": "Es la trampa más sutil: los dos veleros parecen iguales a simple vista, pero en el segundo las velas están invertidas. Basta una parte que cambie para que deje de ser una traslación."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q24",
+   "number": 24,
+   "origin": "m1-2026-invierno-q60",
+   "axis": "Probabilidad y estadística",
+   "topic": "Gráficos estadísticos",
+   "subtopic": "m1-posicion",
+   "stem": "La distribución de seguidores, en redes sociales de internet, que tiene un grupo de\n\nestudiantes de cuarto año medio está representada en el diagrama de cajón adjunto.\n\n¿Cuál de las siguientes afirmaciones se puede deducir a partir de este diagrama?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El promedio de la cantidad de seguidores en el grupo de estudiantes es de 270."
+    },
+    {
+     "key": "B",
+     "text": "La mitad de estudiantes del grupo tiene 270 seguidores."
+    },
+    {
+     "key": "C",
+     "text": "Hay 60 estudiantes en el grupo que tienen entre 80 y 140 seguidores."
+    },
+    {
+     "key": "D",
+     "text": "Al menos un 25 % de los estudiantes del grupo tiene desde 140 hasta 270 seguidores."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q60.webp",
+    "width": 907,
+    "height": 603,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El diagrama de cajón muestra mínimo, cuartiles, mediana y máximo. Permite afirmar cuántos estudiantes caen en un rango de cuartiles, pero no el promedio ni cantidades exactas.",
+    "planteamiento": "Se pide la afirmación que se puede deducir del diagrama. Datos: mínimo 80, primer cuartil 140, mediana 270, tercer cuartil 320 y máximo 580 seguidores; el diagrama no indica cuántos estudiantes forman el grupo.",
+    "steps": [
+     "El primer cuartil $Q_1=140$ deja por debajo al 25 % de los estudiantes, y la mediana $Q_2=270$ deja por debajo al 50 %. Entre ambos valores queda el 25 % siguiente de estudiantes.",
+     "Por lo tanto, al menos un 25 % de los estudiantes tiene entre 140 y 270 seguidores. Esa afirmación sí se deduce, porque el tramo entre $Q_1$ y la mediana contiene exactamente ese 25 %.",
+     "La alternativa A habla del promedio, pero el diagrama solo muestra la mediana, 270. No se puede deducir que el promedio sea 270.",
+     "La alternativa B confunde la mediana con un valor exacto: la mediana indica que la mitad de los estudiantes tiene 270 seguidores o menos, no exactamente 270.",
+     "La alternativa C pide una cantidad exacta de estudiantes. El diagrama no informa cuántos estudiantes hay en total, así que no se puede saber cuántos tienen entre 80 y 140 seguidores. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Promedio de 270: confunde la mediana con el promedio, que no aparece en el diagrama de cajón.",
+     "B": "La mitad tiene 270 seguidores: confunde «la mitad tiene 270 o menos» con «la mitad tiene exactamente 270».",
+     "C": "60 estudiantes con entre 80 y 140 seguidores: pide una cantidad exacta que el diagrama no entrega, porque no indica el tamaño del grupo."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q25",
+   "number": 25,
+   "origin": "m1-2026-invierno-q61",
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "subtopic": "m1-posicion",
+   "stem": "Considera el siguiente grupo de datos: 18, 19, 20, 21, 21, 27, 30, 30, 31, 34 y 35.\n\n¿Cuál de los siguientes diagramas de cajón representa a este grupo de datos?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q61.webp",
+    "width": 907,
+    "height": 986,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con 11 datos, la mediana es el sexto valor ordenado, y los cuartiles son las medianas de cada mitad de los datos, sin incluir la mediana.",
+    "planteamiento": "Se pide el diagrama de cajón que representa el grupo 18, 19, 20, 21, 21, 27, 30, 30, 31, 34 y 35. Datos: hay $n=11$ valores, ya ordenados, con mínimo 18 y máximo 35.",
+    "steps": [
+     "Los 11 datos ya están ordenados. La mediana ocupa el lugar $\\frac{11+1}{2}=6$, es decir, el sexto dato, que es 27.",
+     "Primer cuartil: se toma la mitad inferior, 18, 19, 20, 21 y 21, sin incluir la mediana. Son 5 datos y su mediana, el tercero, es 20.",
+     "Tercer cuartil: se toma la mitad superior, 30, 30, 31, 34 y 35. Son 5 datos y su mediana, el tercero, es 31.",
+     "Resumen de los cinco valores: mínimo 18, $Q_1=20$, mediana 27, $Q_3=31$ y máximo 35. La caja va de 20 a 31 con una línea en 27, y los bigotes llegan a 18 y a 35.",
+     "Al comparar: la alternativa A tiene la caja hasta 34, la B tiene mediana 26 y la C tiene la caja desde 19 con mediana 26. Solo la D coincide con los cinco valores. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Caja hasta 34: toma como tercer cuartil el dato 34 en vez de 31, que es el centro de la mitad superior.",
+     "B": "Mediana 26: no corresponde a ningún dato del conjunto. Se obtiene promediando 21 y 31, que no son los datos centrales.",
+     "C": "Caja desde 19 y mediana 26: usa como primer cuartil el dato 19, que no es la mediana de la mitad inferior, y repite la mediana errónea de la alternativa B."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q26",
+   "number": 26,
+   "origin": "m1-2027-invierno-q65",
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "subtopic": "m1-probabilidad",
+   "stem": "De acuerdo al estudio “Profundización de Ocupaciones 2024” de la Subsecretaría\n\ndel Trabajo, la cantidad de guías de turismo que se han registrado en Chile y en la\n\nRegión de Valparaíso son:\n\nGuías de turismo Cantidad\n\nen Chile 3621\n\nen la Región de Valparaíso 441\n\nAdemás, las comunas de la Región de Valparaíso con más guías de turismo son:\n\nComuna Cantidad de guías de turismo\n\nRapa Nui 172\n\nValparaíso 64\n\nViña del Mar 51\n\nSi se escoge al azar a un guía de turismo de la Región de Valparaíso, ¿cuál de\n\nlas siguientes expresiones representa la probabilidad de que esté registrado en la\n\ncomuna de Valparaíso o en la de Viña del Mar?\n\n64",
+   "options": [
+    {
+     "key": "A",
+     "text": "64 + 51 64 + 51"
+    },
+    {
+     "key": "B",
+     "text": "441 441"
+    },
+    {
+     "key": "C",
+     "text": "3621 64 + 51"
+    },
+    {
+     "key": "D",
+     "text": "3621"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q65.webp",
+    "width": 907,
+    "height": 984,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como el guía se escoge dentro de la Región de Valparaíso, el espacio muestral es 441, y el caso favorable suma las dos comunas, Valparaíso y Viña del Mar.",
+    "planteamiento": "Se pide la probabilidad de que un guía elegido al azar de la Región de Valparaíso esté registrado en la comuna de Valparaíso o en la de Viña del Mar. Datos: en la región hay 441 guías, 64 en Valparaíso y 51 en Viña del Mar.",
+    "steps": [
+     "El espacio muestral es el conjunto de guías de la Región de Valparaíso: 441 guías, porque la elección se hace dentro de la región y no en todo Chile.",
+     "Los casos favorables son los guías de Valparaíso o de Viña del Mar. Como las comunas no se superponen, la palabra «o» indica una suma: $64 + 51 = 115$.",
+     "La probabilidad es $P = \\frac{64 + 51}{441} = \\frac{115}{441}$.",
+     "Comprobación: $\\frac{115}{441} \\approx 0{,}26$, un valor entre 0 y 1, como corresponde a una probabilidad. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{64}{64 + 51}$: usa como espacio muestral solo a las dos comunas, en lugar del total de la región, y deja a Viña del Mar fuera del numerador.",
+     "C": "$\\frac{441}{3621}$: invierte la fracción de la región sobre Chile, sin usar los guías de las dos comunas; no representa la probabilidad pedida.",
+     "D": "$\\frac{64 + 51}{3621}$: suma bien los casos favorables, pero usa el total de Chile, 3621, como espacio muestral, aunque la elección es dentro de la región."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q27",
+   "number": 27,
+   "origin": "m1-2026-invierno-q62",
+   "axis": "Probabilidad y estadística",
+   "topic": "Probabilidad",
+   "subtopic": "m1-probabilidad",
+   "stem": "En la tabla adjunta se presentan los resultados de una encuesta realizada a un grupo\n\nde estudiantes sobre el área de preferencia para realizar sus estudios superiores.\n\nÁrea de preferencia Hombre Mujer\n\nCientífica 7 10\n\nHumanista 4 6\n\nMatemática 8 9\n\nArtística 3 5\n\nSi se selecciona al azar a una persona del grupo de estudiantes, ¿cuál es la\n\nprobabilidad de que sea mujer y que escoja el área artística?\n\n5",
+   "options": [
+    {
+     "key": "A",
+     "text": "52 1"
+    },
+    {
+     "key": "B",
+     "text": "5 5"
+    },
+    {
+     "key": "C",
+     "text": "8 5"
+    },
+    {
+     "key": "D",
+     "text": "30"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2026-invierno/q62.webp",
+    "width": 907,
+    "height": 771,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Es una probabilidad conjunta: el numerador es la casilla «mujer y artística» y el denominador es el total de estudiantes encuestados, no solo el de mujeres.",
+    "planteamiento": "Se pide la probabilidad de que la persona elegida al azar sea mujer y escoja el área artística. Datos: en la tabla, las mujeres que prefieren el área artística son 5; el total de estudiantes es la suma de todas las casillas.",
+    "steps": [
+     "Total de hombres: $7+4+8+3=22$ estudiantes.",
+     "Total de mujeres: $10+6+9+5=30$ estudiantes.",
+     "Total general del grupo: $22+30=52$ estudiantes. Este es el espacio muestral al elegir a una persona al azar.",
+     "Casos favorables: las mujeres que prefieren el área artística, que son 5 según la tabla.",
+     "Probabilidad conjunta: $P(\\text{mujer y artística})=\\frac{5}{52}$, porque el evento se busca sobre todos los estudiantes. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "$\\frac{1}{5}$ no corresponde a ningún cociente entre una casilla y un total de la tabla. Quien lo elige mezcla valores de filas y columnas.",
+     "C": "$\\frac{5}{8}$ es la probabilidad de ser mujer dado que la persona prefiere el área artística: 5 de las 8 personas artísticas son mujeres. Cambia el denominador por el total artístico.",
+     "D": "$\\frac{5}{30}$ usa solo el total de mujeres como denominador, lo que da la probabilidad de ser artística dado que es mujer, y no la probabilidad conjunta."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q28",
+   "number": 28,
+   "origin": "m1-2027-invierno-q52",
+   "axis": "Probabilidad y estadística",
+   "topic": "Tablas de datos",
+   "subtopic": "m1-tendencia",
+   "stem": "En la siguiente tabla se presenta el tiempo que las personas han trabajado en un\n\ncolegio.\n\nTiempo de trabajo Cantidad de\n\nen años personas 1 2 2 4 3 5 4 4 5 2 6 6 7 2 8 5 9 3 10 2\n\nSi se entrega una bonificación salarial a aquellas personas que lleven como mínimo\n\n6 años trabajando en el colegio, ¿cuántas personas recibirán la bonificación salarial?",
+   "options": [
+    {
+     "key": "A",
+     "text": "12"
+    },
+    {
+     "key": "B",
+     "text": "17"
+    },
+    {
+     "key": "C",
+     "text": "18"
+    },
+    {
+     "key": "D",
+     "text": "23"
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q52.webp",
+    "width": 907,
+    "height": 798,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La bonificación alcanza a quienes trabajan 6 años o más, así que hay que sumar las frecuencias de los años desde 6 en adelante.",
+    "planteamiento": "Se pide cuántas personas tienen como mínimo 6 años de trabajo en el colegio. Datos: la tabla entrega la cantidad de personas por cada tiempo de trabajo, desde 1 hasta 10 años.",
+    "steps": [
+     "Los tiempos que reciben la bonificación son los de 6 años o más: 6, 7, 8, 9 y 10 años.",
+     "Según la tabla: 6 años tienen 6 personas, 7 años tienen 2, 8 años tienen 5, 9 años tienen 3 y 10 años tienen 2.",
+     "Se suman estas cantidades: $6 + 2 + 5 + 3 + 2 = 18$ personas.",
+     "Como verificación, el total de la tabla es $2 + 4 + 5 + 4 + 2 + 6 + 2 + 5 + 3 + 2 = 35$ personas. Las que tienen entre 1 y 5 años suman $2 + 4 + 5 + 4 + 2 = 17$, y $17 + 18 = 35$.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "12: suma solo parte de los grupos de 6 años o más y no incluye todos los años de la bonificación; los grupos de 9 y 10 años también deben sumarse.",
+     "B": "17: cuenta a quienes tienen menos de 6 años (1 a 5), que son justamente los que no reciben la bonificación.",
+     "D": "23: cuenta a quienes tienen 6 años o menos ($17 + 6 = 23$), con la desigualdad mal planteada; la bonificación exige 6 años o más, no 6 años o menos."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q29",
+   "number": 29,
+   "origin": "m1-2027-invierno-q53",
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "subtopic": "m1-tendencia",
+   "stem": "En el siguiente gráfico se presenta la producción mensual de huevos de consumo en\n\nChile desde febrero de 2024 a febrero de 2025.\n\nCreación propia con datos de Producción pecuaria (2024): Encuesta de producción de huevos.\n\n¿Cuál de las siguientes afirmaciones interpreta de mejor manera la evolución de la\n\nproducción mensual a lo largo del periodo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hasta agosto la producción aumentó mes a mes."
+    },
+    {
+     "key": "B",
+     "text": "En enero de 2024 no hubo producción."
+    },
+    {
+     "key": "C",
+     "text": "En junio hubo la menor producción."
+    },
+    {
+     "key": "D",
+     "text": "En agosto hubo la mayor producción."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q53.webp",
+    "width": 907,
+    "height": 898,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La producción sube hasta agosto de 2024, pero no es monótona: baja en junio y el mínimo está en febrero de 2025, así que el máximo del periodo es agosto.",
+    "planteamiento": "Se pide la afirmación que mejor interpreta la evolución mensual de la producción de huevos entre febrero de 2024 y febrero de 2025. Datos: el gráfico muestra la producción en millones, con valores aproximados entre 314 y 340 millones.",
+    "steps": [
+     "De febrero a mayo de 2024 la producción sube, desde unos 320 a unos 330 millones. En junio baja levemente, a unos 329 millones.",
+     "Desde junio la curva sube de nuevo hasta el máximo de unos 340 millones en agosto de 2024.",
+     "Después de agosto la producción baja mes a mes, pasando por unos 330 millones en octubre y noviembre, unos 327 en diciembre y unos 326 en enero de 2025.",
+     "En febrero de 2025 cae a unos 314 millones, el valor más bajo de todo el periodo.",
+     "Con esto se descartan: A, porque la producción no aumenta mes a mes hasta agosto (baja en junio); B, porque el gráfico comienza en febrero de 2024 y no muestra enero; C, porque el mínimo de la serie está en febrero de 2025 y no en junio.",
+     "Solo D coincide con el máximo del periodo, en agosto de 2024. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Hasta agosto la producción aumentó mes a mes: es falso, porque en junio de 2024 la producción baja de unos 330 a unos 329 millones; la trayectoria no es monótona.",
+     "B": "En enero de 2024 no hubo producción: el gráfico comienza en febrero de 2024 y no muestra datos de enero; esa afirmación no se puede deducir del gráfico.",
+     "C": "En junio hubo la menor producción: la baja de junio es local, y el mínimo del periodo está en febrero de 2025, con unos 314 millones."
+    }
+   }
+  },
+  {
+   "id": "m1-curado-3-q30",
+   "number": 30,
+   "origin": "m1-2027-invierno-q54",
+   "axis": "Probabilidad y estadística",
+   "topic": "Análisis de datos",
+   "subtopic": "m1-tendencia",
+   "stem": "Una municipalidad desea implementar un plan de vacunación y esterilización de\n\nmascotas, para lo cual realiza una encuesta sobre la cantidad de mascotas que hay\n\nen cierto sector.\n\nLos resultados de la encuesta se presentan en la siguiente tabla:\n\nCantidad de mascotas Cantidad de familias 0 12 1 10 2 15 3 6 4 5 5 o más 2\n\nEsta municipalidad dará un beneficio a las familias que tengan 3 o más mascotas\n\nque consiste en vacunación o esterilización gratis.\n\n¿Cuál de las siguientes expresiones representa el porcentaje de familias\n\nbeneficiadas?\n\n7",
+   "options": [
+    {
+     "key": "A",
+     "text": "50 ·¹⁰⁰ % 13"
+    },
+    {
+     "key": "B",
+     "text": "50 ·¹⁰⁰ % 37"
+    },
+    {
+     "key": "C",
+     "text": "50 ·¹⁰⁰ % 43"
+    },
+    {
+     "key": "D",
+     "text": "50 ·¹⁰⁰ %"
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/m1-2027-invierno/q54.webp",
+    "width": 907,
+    "height": 939,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las familias beneficiadas son las que tienen 3 o más mascotas, y su porcentaje se obtiene dividiendo entre el total de familias encuestadas y multiplicando por 100 %.",
+    "planteamiento": "Se pide la expresión que representa el porcentaje de familias beneficiadas. Datos: la tabla registra la cantidad de familias según su número de mascotas, y el beneficio es para las familias con 3 o más mascotas.",
+    "steps": [
+     "Las familias con 3 o más mascotas son las de 3 mascotas (6 familias), las de 4 mascotas (5 familias) y las de 5 o más (2 familias).",
+     "Beneficiadas: $6 + 5 + 2 = 13$ familias.",
+     "Total de familias encuestadas: $12 + 10 + 15 + 6 + 5 + 2 = 50$ familias.",
+     "El porcentaje de beneficiadas es $\\frac{13}{50} \\cdot 100\\,\\%$, es decir, $26\\,\\%$.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "$\\frac{7}{50} \\cdot 100\\,\\%$: usa solo las familias con 4 o más mascotas ($5 + 2 = 7$) y deja fuera a las de 3 mascotas, que también reciben el beneficio.",
+     "C": "$\\frac{37}{50} \\cdot 100\\,\\%$: suma $12 + 10 + 15 = 37$ familias con menos de 3 mascotas y las usa como beneficiadas, invirtiendo el criterio.",
+     "D": "$\\frac{43}{50} \\cdot 100\\,\\%$: calcula el complemento de las familias con 4 o más mascotas ($50 - 7 = 43$), que son las de 3 mascotas o menos, en lugar de las de 3 o más."
+    }
+   }
+  }
+ ]
+}

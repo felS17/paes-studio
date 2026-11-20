@@ -1,0 +1,1583 @@
+{
+ "id": "ciencias-curado-3",
+ "subject": "ciencias",
+ "title": "Ensayo curado 3",
+ "description": "30 preguntas oficiales del DEMRE (pruebas rendidas de 2024 a 2026) que recorren los ejes de Ciencias, cada una con su explicación paso a paso y la prueba de la que viene.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 60,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   108,
+   132,
+   153,
+   173,
+   191,
+   209,
+   225,
+   240,
+   253,
+   267,
+   281,
+   296,
+   309,
+   320,
+   329,
+   337,
+   347,
+   358,
+   371,
+   385,
+   396,
+   405,
+   411,
+   417,
+   423,
+   430,
+   440,
+   452,
+   465,
+   477,
+   486,
+   493,
+   497,
+   502,
+   506,
+   512,
+   521,
+   532,
+   545,
+   557,
+   567,
+   575,
+   580,
+   585,
+   589,
+   595,
+   602,
+   613,
+   625,
+   638,
+   649,
+   658,
+   665,
+   670,
+   676,
+   684,
+   694,
+   706,
+   720,
+   732,
+   743,
+   752,
+   761,
+   772,
+   784,
+   798,
+   813,
+   828,
+   842,
+   857,
+   874,
+   893,
+   913,
+   934,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated_bank.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "ciencias-curado-3-q01",
+   "number": 1,
+   "origin": "ciencias-biologia-2027-invierno-q04",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-celula",
+   "stem": "Los macrófagos son un tipo de célula del sistema inmunológico, capaces de desplazarse por los tejidos, localizando y destruyendo algunos agentes infecciosos. En este contexto, un grupo de estudiantes expone macrófagos cultivados *in vitro* a concentraciones crecientes de una droga, encontrando que, a partir de cierta concentración, las células pierden la capacidad de desplazarse. De acuerdo con los antecedentes, ¿cuál de las siguientes inferencias es correcta con respecto al mecanismo de acción de la droga?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La droga interfiere en la formación de las vesículas de secreción."
+    },
+    {
+     "key": "B",
+     "text": "La droga interfiere en la estructura y funcionamiento del citoesqueleto."
+    },
+    {
+     "key": "C",
+     "text": "La droga interfiere en el traslado de vesículas del Golgi a la membrana."
+    },
+    {
+     "key": "D",
+     "text": "La droga interfiere en el funcionamiento de las enzimas de los lisosomas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La motilidad celular depende del citoesqueleto, así que una droga que anula el desplazamiento de los macrófagos actúa sobre esa estructura.",
+    "planteamiento": "Se pide la inferencia correcta sobre el mecanismo de acción de la droga. Datos: los macrófagos se desplazan por los tejidos para localizar y destruir agentes infecciosos; a partir de cierta concentración de la droga pierden la capacidad de desplazarse, lo que muestra un efecto dependiente de la dosis.",
+    "steps": [
+     "Identificar la función afectada. El enunciado indica que los macrófagos son capaces de «desplazarse por los tejidos» y que, a partir de cierta concentración, «pierden la capacidad de desplazarse». Lo que falla es la movilidad de la célula completa, no una secreción ni una digestión.",
+     "Relacionar la movilidad con una estructura celular. Para desplazarse, la célula debe cambiar su forma de manera coordinada; esa función la cumplen los microfilamentos de actina y los microtúbulos, que forman el citoesqueleto.",
+     "Analizar el patrón de dosis. Como el efecto aparece «a partir de cierta concentración», la droga actúa sobre un componente específico y el efecto crece con la dosis. Una inferencia correcta debe explicar la pérdida de movilidad por la alteración de una estructura concreta.",
+     "Descartar las opciones que afectan otros procesos. La formación de vesículas de secreción, el traslado de vesículas del Golgi a la membrana y las enzimas lisosomales alteran la secreción o la digestión, pero no explican por sí solos que la célula deje de desplazarse.",
+     "Concluir que si la droga altera la estructura y el funcionamiento del citoesqueleto, la célula no puede moverse. En consecuencia, la inferencia correcta es la B. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Formación de vesículas de secreción: alteraría la liberación de sustancias, pero no el desplazamiento de la célula; es una confusión entre movimiento celular y secreción.",
+     "C": "Traslado de vesículas del Golgi a la membrana: es transporte intracelular de productos; confunde el movimiento del material interno con el movimiento de la célula completa.",
+     "D": "Funcionamiento de las enzimas de los lisosomas: los lisosomas digieren material; su falla afectaría la digestión, pero no explica por qué la célula deja de desplazarse."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q02",
+   "number": 2,
+   "origin": "ciencias-biologia-2027-invierno-q09",
+   "axis": "Biología",
+   "topic": "Microorganismos",
+   "subtopic": "cs-celula",
+   "stem": "Un equipo de investigadores está analizando la estructura proteica del virus VHS-1, causante del herpes genital, con el objetivo de diseñar un test rápido de detección de este agente infeccioso. Como resultado de la investigación se elaboran cuatro posibles tests rápidos, los que deben ser evaluados en base a la especificidad de respuesta al virus. Los resultados preliminares del experimento se resumen en la siguiente tabla:\n\nOrigen de la Test 1 Test 2 Test 3 Test 4 proteína viral VHS-1 + – + + Virus de la\n\n– + – + hepatitis Virus de la\n\n– – – – influenza VIH + – – –\n\n(+) Reacción positiva (–) Sin reacción\n\nRespecto a los resultados de la investigación, ¿cuál de las siguientes opciones identifica, dentro de los tests diseñados, el apropiado para detectar exclusivamente el VHS-1?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Test 1."
+    },
+    {
+     "key": "B",
+     "text": "Test 2."
+    },
+    {
+     "key": "C",
+     "text": "Test 3."
+    },
+    {
+     "key": "D",
+     "text": "Test 4."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q09.webp",
+    "width": 907,
+    "height": 716,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El test que reacciona solo con el VHS-1 es el que da positivo con ese virus y negativo con los demás orígenes de proteína de la tabla.",
+    "planteamiento": "Se pide identificar el test que detecta exclusivamente el VHS-1. Datos: la tabla indica, para cada test, si hay reacción positiva (+) o sin reacción (–) frente a la proteína de VHS-1, del virus de la hepatitis, de la influenza y del VIH.",
+    "steps": [
+     "Leer la fila de VHS-1: el Test 1 (+), el Test 3 (+) y el Test 4 (+) reaccionan con la proteína del VHS-1, mientras que el Test 2 (–) no reacciona. Un test útil debe reaccionar con el virus objetivo, así que el Test 2 queda descartado.",
+     "Revisar la especificidad del Test 1: reacciona con el VHS-1 (+), pero también con el VIH (+). Como reacciona con dos orígenes distintos, no es exclusivo del VHS-1.",
+     "Revisar la especificidad del Test 4: reacciona con el VHS-1 (+) y con el virus de la hepatitis (+), así que tampoco es exclusivo del herpes genital.",
+     "Revisar el Test 3: reacciona solo con el VHS-1 (+) y es negativo con la hepatitis, la influenza y el VIH (–). Es el único test que cumple la condición de especificidad exclusiva.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Test 1: detecta el VHS-1, pero también reacciona con el VIH, lo que le falta en especificidad; un test positivo para dos virus no sirve para diagnosticar exclusivamente el herpes genital.",
+     "B": "Test 2: reconoce la proteína del virus de la hepatitis, no la del VHS-1; su resultado sería negativo para el herpes genital.",
+     "D": "Test 4: reacciona con el VHS-1 y también con el virus de la hepatitis, así que no es exclusivo del herpes genital; la trampa es pensar que basta con detectar el virus objetivo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q03",
+   "number": 3,
+   "origin": "ciencias-biologia-2027-invierno-q73",
+   "axis": "Biología",
+   "topic": "Especies",
+   "subtopic": "cs-ecologia",
+   "stem": "Un equipo científico que estudia relaciones de parentesco entre organismos, se encuentra investigando cuatro especies conocidas de plantas que presentan la misma distribución geográfica. Su propósito es determinar directamente cuál de estas cuatro especies está más cercanamente emparentada con una especie 𝑋, recién descubierta en otra localidad lejana. Para lograr de manera eficiente el objetivo de esta investigación, ¿qué aspecto debería ser un foco de análisis del equipo científico?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El nivel de actividad de las enzimas asociadas con la fotosíntesis en células de las cuatro especies conocidas y en las de la especie 𝑋."
+    },
+    {
+     "key": "B",
+     "text": "La cantidad de almidón almacenada en células de las cuatro especies conocidas y en las de la especie 𝑋."
+    },
+    {
+     "key": "C",
+     "text": "El porcentaje de hidratos de carbono estructurales en la pared de células de las cuatro especies conocidas y en las de la especie 𝑋."
+    },
+    {
+     "key": "D",
+     "text": "La secuencia de aminoácidos de una proteína presente en células de las cuatro especies conocidas y en las de la especie 𝑋."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para inferir parentesco directo se comparan moléculas heredadas, como las proteínas, porque reflejan la historia evolutiva y no solo las condiciones del ambiente.",
+    "planteamiento": "Se pide el aspecto que conviene analizar para determinar directamente cuál de las cuatro especies conocidas está más emparentada con la especie $X$. Datos: las cuatro especies conocidas comparten la misma distribución geográfica, y $X$ fue descubierta en una localidad lejana.",
+    "steps": [
+     "Para inferir parentesco de forma directa se necesita un rasgo heredado de un ancestro común, cuyas diferencias reflejen la historia evolutiva y no solo las condiciones del entorno.",
+     "La secuencia de aminoácidos de una proteína está determinada por el ADN. Al compararla entre especies, las diferencias se deben a mutaciones acumuladas desde un ancestro común; cuanto más parecidas son las secuencias, más cercano es el parentesco.",
+     "Las opciones A, B y C miden la actividad de enzimas fotosintéticas, la cantidad de almidón o el contenido de hidratos de carbono estructurales. Estos rasgos dependen de la luz, del ambiente y del metabolismo, y pueden parecerse entre especies que viven en condiciones similares.",
+     "Un rasgo estructural como la pared celular puede aparecer por convergencia en especies de ambientes parecidos, sin reflejar la ancestría.",
+     "Por lo tanto, la comparación de secuencias de aminoácidos es el foco de análisis que permite inferir parentesco directamente. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Mide la actividad de enzimas fotosintéticas, que varía con la luz y el ambiente y no con la historia evolutiva; especies de ambientes parecidos mostrarían actividades parecidas sin estar emparentadas.",
+     "B": "Mide la cantidad de almidón, una reserva que depende de la luz y del momento del ciclo de vida, no del parentesco entre especies.",
+     "C": "Mide el porcentaje de hidratos de carbono estructurales en la pared celular, que puede aparecer por convergencia en especies de ambientes parecidos y no refleja solo la ancestría."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q04",
+   "number": 4,
+   "origin": "ciencias-biologia-2027-invierno-q67",
+   "axis": "Biología",
+   "topic": "Especies",
+   "subtopic": "cs-evolucion",
+   "stem": "En una investigación se usaron como modelos de estudio dos especies de algas unicelulares (1 y 2), las que presentan una base donde se ubica el núcleo, una larga prolongación citoplasmática (tallo) y una estructura con forma de sombrilla. De acuerdo a su apariencia, estas sombrillas pueden ser ovaladas (especie 1) o dentadas (especie 2). Tras eliminar las sombrillas de ambas especies, se cortaron e intercambiaron sus tallos. Parte de este procedimiento y los resultados se esquematizan a continuación:\n\nEspecie 1 Especie 2 Seccionamiento e Especie 1 Especie 2 intercambio de tallos Sombrilla\n\nTallo\n\nBase\n\nRegeneración de sombrillas\n\nSi se realiza un nuevo experimento, con otros individuos de la especie 1 y 2, donde se elimine la sombrilla a cada uno y luego se intercambie exclusivamente el núcleo entre ambos, ¿cuál sería el resultado esperado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ambos individuos presentarían una apariencia intermedia entre la sombrilla dentada y la ovalada."
+    },
+    {
+     "key": "B",
+     "text": "El individuo de la especie 1 presentaría una sombrilla dentada y el de la especie 2 una ovalada."
+    },
+    {
+     "key": "C",
+     "text": "Ambos individuos presentarían una mitad de su sombrilla dentada y la otra mitad ovalada."
+    },
+    {
+     "key": "D",
+     "text": "El individuo de la especie 1 presentaría una sombrilla ovalada y el de la especie 2 una dentada."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q67.webp",
+    "width": 907,
+    "height": 954,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El núcleo, ubicado en la base, dirige la forma de la sombrilla que se regenera: al intercambiar solo los núcleos cambia la forma de la sombrilla, mientras que el tallo no define esa característica.",
+    "planteamiento": "Se pide el resultado de eliminar la sombrilla de cada individuo e intercambiar solo los núcleos. Datos del esquema original: la especie 1 (núcleo en la base) regenera una sombrilla ovalada aunque reciba el tallo de la especie 2, y la especie 2 regenera una sombrilla dentada aunque reciba el tallo de la especie 1.",
+    "steps": [
+     "Del esquema original se deduce que la base, donde está el núcleo, controla la forma de la sombrilla: la especie 1 regenera una sombrilla ovalada aunque su tallo provenga de la especie 2, y la especie 2 regenera una dentada aunque reciba el tallo de la especie 1.",
+     "Por lo tanto, el tallo no define la forma de la sombrilla. Lo que determina la regeneración es el núcleo.",
+     "En el nuevo experimento se elimina la sombrilla de cada individuo y solo se intercambia el núcleo. El individuo que originalmente era de la especie 1 queda con el núcleo de la especie 2, y el de la especie 2 con el núcleo de la especie 1.",
+     "Como la sombrilla se regenera según el núcleo, el individuo con núcleo de la especie 2 regenerará una sombrilla dentada, y el individuo con núcleo de la especie 1 regenerará una ovalada.",
+     "Las alternativas A y C suponen una mezcla de caracteres, pero la regeneración no mezcla formas: cada sombrilla sale completa y con una forma definida. La D mantiene la forma original de cada individuo, lo que contradice que el núcleo sea quien decide. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Supone que ambos individuos quedan con una apariencia intermedia. El esquema muestra que cada sombrilla se regenera completa, dentada u ovalada, según el núcleo; no aparecen formas mezcladas.",
+     "C": "Supone que cada sombrilla queda dividida en dos mitades de formas distintas. El esquema no muestra sombrillas mixtas: la regeneración depende de un solo núcleo.",
+     "D": "Supone que la sombrilla sigue ligada al tallo o a la especie de origen. Ese error ignora que, en el esquema original, la especie 1 mantiene la sombrilla ovalada aunque reciba un tallo ajeno."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q05",
+   "number": 5,
+   "origin": "ciencias-biologia-2027-invierno-q12",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-genetica",
+   "stem": "En la mayoría de las formas de vida donde ocurre reproducción sexual, sean animales, plantas u hongos, es necesario que un tipo de células llamadas germinales realicen exitosamente el proceso de meiosis. Lo anterior permite dar origen a gametos haploides, los cuales deben fusionarse posteriormente para formar un cigoto diploide. De acuerdo con lo anterior, ¿cuál de las siguientes opciones es una evidencia del resultado exitoso de la meiosis?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las células del embrión formado a partir de los gametos son diploides."
+    },
+    {
+     "key": "B",
+     "text": "Las células resultantes del proceso son de diferente tamaño."
+    },
+    {
+     "key": "C",
+     "text": "Las células germinales incrementan sus genes en cada gameto."
+    },
+    {
+     "key": "D",
+     "text": "Los gametos se mueven activamente para formar un cigoto diploide."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Si dos gametos haploides se fusionan y el embrión resultante es diploide, la meiosis que los produjo redujo correctamente el número de cromosomas.",
+    "planteamiento": "Se pide la evidencia del resultado exitoso de la meiosis. Datos: la meiosis produce gametos haploides, y al fusionarse dos de ellos se forma un cigoto diploide. La evidencia debe mostrar que la reducción cromosómica efectivamente ocurrió.",
+    "steps": [
+     "La meiosis reduce a la mitad el número de cromosomas, así que cada gameto es haploide. Si la meiosis hubiera fallado, los gametos conservarían el número diploide de la célula germinal.",
+     "Al fusionarse dos gametos haploides, el cigoto recupera el número diploide, y sus células embrionarias conservan ese número en las divisiones posteriores.",
+     "Por lo tanto, un embrión diploide es consecuencia de haber fusionado dos gametos haploides, lo que indica que la reducción cromosómica se produjo. Esa es la evidencia directa del resultado exitoso de la meiosis.",
+     "Evaluar las demás opciones. El tamaño celular no refleja la reducción cromosómica; el aumento de genes en cada gameto es lo contrario de lo que hace la meiosis; y la motilidad de los gametos no depende de la meiosis.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Células de diferente tamaño: el tamaño no refleja la reducción cromosómica; el óvulo y el espermatozoide difieren en tamaño sin relación con la meiosis.",
+     "C": "Incremento de genes en cada gameto: la meiosis reduce la dotación cromosómica, no la aumenta; la opción invierte el efecto esperado.",
+     "D": "Gametos con movimiento activo: la motilidad es una propiedad de algunos gametos y no es evidencia de que la meiosis haya ocurrido."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q06",
+   "number": 6,
+   "origin": "ciencias-biologia-2027-invierno-q13",
+   "axis": "Biología",
+   "topic": "Genética",
+   "subtopic": "cs-genetica",
+   "stem": "La tasa de crecimiento de la población mundial y el cambio climático plantean desafíos importantes para la industria alimentaria, principalmente en países menos desarrollados. La erosión del suelo y la falta de agua son algunos factores que han provocado escasez de alimentos en gran parte de estos países. En este sentido, “la manipulación genética emerge como una herramienta potencial para darle solución a esta problemática a largo plazo”. Teniendo en cuenta este contexto, ¿qué evidencia científica sustenta la afirmación que se encuentra entre comillas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Estudios demostraron que los cultivos genéticamente modificados del maíz Bt tienen una producción mayor que los del maíz convencional."
+    },
+    {
+     "key": "B",
+     "text": "Experimentos han demostrado que la polinización puede verse afectada por la presencia de cultivos transgénicos en áreas con flores silvestres."
+    },
+    {
+     "key": "C",
+     "text": "Investigaciones han mostrado que la modificación genética de tomates mejora el sabor en comparación con los tomates no modificados."
+    },
+    {
+     "key": "D",
+     "text": "Estudios demostraron que los cultivos de arroz genéticamente modificados presentan una mayor cantidad de vitaminas que el arroz silvestre."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La afirmación sobre manipulación genética se sustenta con evidencia de mayor producción de alimento, porque el problema que plantea el texto es la escasez.",
+    "planteamiento": "Se pide la evidencia que respalda que la manipulación genética es una solución a la escasez de alimentos a largo plazo. Datos del texto: el crecimiento poblacional, el cambio climático, la erosión del suelo y la falta de agua han provocado escasez en países menos desarrollados.",
+    "steps": [
+     "Identificar lo que la afirmación debe demostrar. Dice que la manipulación genética ayuda a resolver la escasez; para sostenerlo se necesita evidencia de aumento de la cantidad de alimento, es decir, de mayor rendimiento.",
+     "Revisar la opción A. Reporta que los cultivos de maíz Bt genéticamente modificados tienen una producción mayor que los del maíz convencional. Eso responde directamente al problema de disponibilidad de alimentos.",
+     "Revisar la opción B. Describe un efecto sobre la polinización de flores silvestres, que es un riesgo ambiental y no un beneficio para la producción de alimentos.",
+     "Revisar las opciones C y D. El sabor del tomate y el contenido de vitaminas del arroz son atributos de calidad; mejoran el alimento, pero no demuestran que haya más alimento disponible.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Polinización afectada por transgénicos: es un riesgo ambiental, no un beneficio que sustente la solución; la trampa es elegir una evidencia verdadera que no responde a la escasez.",
+     "C": "Mejor sabor del tomate: es un atributo de calidad, no de cantidad de alimento; no sirve para sostener que la modificación resuelve la escasez.",
+     "D": "Más vitaminas en el arroz: mejora la calidad nutricional, pero no demuestra mayor disponibilidad de alimento; la opción habla de nutrición, no de abastecimiento."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q07",
+   "number": 7,
+   "origin": "ciencias-biologia-2027-invierno-q07",
+   "axis": "Biología",
+   "topic": "Hormonas",
+   "subtopic": "cs-habilidades",
+   "stem": "Un equipo de científicos está desarrollando un nuevo método de control de natalidad masculino, que consiste en la aplicación de una inyección capaz de inhibir temporalmente la producción de espermatozoides sin afectar la producción de hormonas sexuales. Los investigadores plantean evaluarlo mediante un estudio en el que participarán parejas sexualmente activas, las cuales serán divididas en dos grupos: uno recibirá la inyección y el otro usará condón masculino como método de control. Se les hará un seguimiento a las parejas durante dos años para registrar incidencias de embarazo. Considerando la implementación correcta del procedimiento, ¿cuál de las siguientes preguntas de investigación pudo dar origen al procedimiento planteado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "¿Cuál es la cantidad de hombres que utilizan el nuevo método anticonceptivo en comparación con aquellos que usan condón masculino?"
+    },
+    {
+     "key": "B",
+     "text": "¿Qué diferencias existen en las concentraciones de hormonas sexuales entre los hombres que reciben la inyección y aquellos que no?"
+    },
+    {
+     "key": "C",
+     "text": "¿De qué manera influyen las preferencias personales en la elección entre el nuevo método propuesto y el uso del condón masculino?"
+    },
+    {
+     "key": "D",
+     "text": "¿Cuál es la eficacia relativa de la inyección masculina en comparación con el uso del condón masculino en la prevención de embarazos?"
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La pregunta de investigación que origina el diseño compara la eficacia relativa de la inyección frente al condón para prevenir embarazos.",
+    "planteamiento": "Se pide la pregunta de investigación que pudo dar origen al procedimiento. Datos: una inyección inhibe temporalmente la producción de espermatozoides sin afectar las hormonas sexuales; un grupo recibe la inyección y otro usa condón masculino; se registran las incidencias de embarazo durante dos años.",
+    "steps": [
+     "Identificar los grupos del diseño. Uno recibe la inyección, que es el tratamiento nuevo, y el otro usa condón, que es el método de control. Comparar dos métodos exige tener ambos grupos.",
+     "Identificar la variable medida. El dato registrado es la incidencia de embarazo en cada grupo durante dos años. Comparar esas incidencias responde a qué método previene mejor el embarazo.",
+     "Traducir ese objetivo a una pregunta de investigación. Preguntar por la eficacia relativa de la inyección en comparación con el condón es exactamente lo que el diseño permite contestar.",
+     "Descartar las demás opciones. La A pregunta cuántos hombres usan cada método, algo que el diseño no cuenta; la B busca diferencias hormonales, pero el método está pensado para no alterar las hormonas; la C pregunta por preferencias personales, que el estudio no registra.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Cantidad de hombres que usan cada método: el diseño asigna grupos experimentales y no cuenta usuarios; la trampa es confundir una muestra asignada con cifras de uso.",
+     "B": "Diferencias en hormonas: el método busca precisamente no alterar las hormonas, así que el estudio no está diseñado para responder esa pregunta.",
+     "C": "Preferencias personales: el estudio no registra opiniones ni elecciones de las parejas; la comparación es de eficacia, no de preferencia."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q08",
+   "number": 8,
+   "origin": "ciencias-biologia-2027-invierno-q08",
+   "axis": "Biología",
+   "topic": "Hormonas",
+   "subtopic": "cs-habilidades",
+   "stem": "La vasectomía es un método quirúrgico que impide el embarazo sin causar alteraciones hormonales. Aun cuando es considerada irreversible, quienes han optado por este método pueden realizarse cirugías de reconexión de los conductos, restituyendo total o parcialmente el flujo de gametos. De acuerdo con lo anterior, ¿cuál de las siguientes acciones permitiría comprobar que la reversión fue exitosa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Estudiar muestras de semen en el microscopio."
+    },
+    {
+     "key": "B",
+     "text": "Evaluar la maduración de los espermatozoides."
+    },
+    {
+     "key": "C",
+     "text": "Evaluar la producción de gametos a nivel testicular."
+    },
+    {
+     "key": "D",
+     "text": "Estudiar la morfología espermática en los tubos seminíferos."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras una reconexión, el semen contiene espermatozoides si el conducto volvió a permitir el paso; por eso la prueba directa es examinar la muestra de semen.",
+    "planteamiento": "Se pide la acción que permitiría comprobar que la reversión de la vasectomía fue exitosa. Datos: la vasectomía impide el embarazo sin alterar las hormonas; la reconexión de los conductos restituye total o parcialmente el flujo de gametos.",
+    "steps": [
+     "Identificar dónde está el bloqueo. La vasectomía interrumpe la vía de salida de los espermatozoides (el conducto deferente), no su producción. Los testículos siguen fabricando gametos aunque el paso esté cerrado.",
+     "Identificar qué debe demostrar la reversión. Si el conducto vuelve a ser permeable, los espermatozoides que se producen llegan al eyaculado. La prueba de éxito debe medir el paso hacia el exterior, no la producción.",
+     "Evaluar las opciones que miden producción o maduración. La producción en el testículo y la maduración de los espermatozoides ocurren antes del bloqueo, así que se mantienen igual con o sin reconexión y no distinguen un caso exitoso de uno fallido.",
+     "Evaluar la morfología en los túbulos seminíferos. Se observa dentro del testículo, antes del bloqueo, y no informa si los gametos alcanzan el exterior. Solo la muestra de semen refleja lo que llega a eyacularse.",
+     "Estudiar la muestra de semen en el microscopio. Permite detectar espermatozoides en el eyaculado, que es la prueba directa del paso restablecido. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Evaluar la maduración de los espermatozoides: ocurre antes del bloqueo y no prueba que el conducto esté abierto; un paciente con el paso cerrado también produce espermatozoides maduros.",
+     "C": "Evaluar la producción de gametos a nivel testicular: se mantiene aunque la vasectomía impida el paso, así que no distingue un caso exitoso de uno fallido.",
+     "D": "Morfología en los túbulos seminíferos: se observa dentro del testículo, antes del bloqueo, y no informa sobre el flujo hacia el exterior."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q09",
+   "number": 9,
+   "origin": "ciencias-biologia-2026-invierno-q57",
+   "axis": "Biología",
+   "topic": "Célula",
+   "subtopic": "cs-nervioso",
+   "stem": "A finales del siglo XIX y comienzos del XX, no había evidencia concluyente que validara la existencia de las neuronas. Por esto, la comunidad científica estaba dividida entre quienes apoyaban la teoría reticularista, según la cual el tejido nervioso consistía en un continuo citoplasmático con múltiples núcleos, y quienes postulaban que estaba constituido por células. En el contexto de esta disyuntiva, ¿qué opción presenta un aspecto procedimental que explicaría las limitaciones en la investigación de aquella época?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La ausencia de una teoría que abordara la existencia de estas células."
+    },
+    {
+     "key": "B",
+     "text": "El desconocimiento acerca de las funciones del sistema nervioso."
+    },
+    {
+     "key": "C",
+     "text": "La insuficiencia de las técnicas relacionadas con la microscopía."
+    },
+    {
+     "key": "D",
+     "text": "El conocimiento inexacto de los órganos del sistema nervioso."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La limitación era técnica: la microscopía de la época no tenía la resolución necesaria para distinguir los límites entre células en el tejido nervioso.",
+    "planteamiento": "Se pide el aspecto procedimental que explica las limitaciones de la investigación. Datos: la disputa entre el reticularismo y la teoría celular se resolvía con la observación directa de si el tejido es un continuo o está formado por células separadas.",
+    "steps": [
+     "Identificar el tipo de aspecto que se pide: procedimental significa relativo al método, es decir, a cómo se observa y se mide, no a lo que se sabe ni a lo que se teoriza.",
+     "Identificar la disputa: se trata de decidir si el tejido nervioso es un continuo citoplasmático con varios núcleos o está formado por células. Esa distinción solo podía resolverse observando los límites de las estructuras.",
+     "Evaluar la capacidad de observación: las estructuras del tejido nervioso son muy finas y densas, y la microscopía de la época no alcanzaba la resolución para distinguir sus límites. Eso es una limitación del método, no de la teoría.",
+     "Comparar con el resultado histórico: la microscopía electrónica, de mayor resolución, permitió después ver las uniones entre neuronas y confirmar que el tejido está formado por células. Esto muestra que el obstáculo era técnico. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Es un problema teórico (falta de una teoría), no un aspecto procedimental. La disputa tenía teorías en conflicto, pero el obstáculo para resolverla era cómo observar.",
+     "B": "Desconocer las funciones del sistema nervioso es un vacío conceptual, no una falla del método de observación.",
+     "D": "Conocer mal los órganos del sistema nervioso es un problema de conocimiento anatómico, no de la técnica para observar los límites celulares."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q10",
+   "number": 10,
+   "origin": "ciencias-biologia-2027-invierno-q61",
+   "axis": "Biología",
+   "topic": "Tejidos",
+   "subtopic": "cs-reproduccion",
+   "stem": "El síndrome de Asherman se caracteriza por la presencia de adherencias cicatrizantes (bandas de tejido cicatricial) en la cavidad uterina. Este síndrome puede ser leve, moderado o severo, dependiendo de la extensión de las adherencias, lo que también puede ocasionar alteraciones del ciclo menstrual e, incluso, problemas graves de fertilidad. Si se quisiera optar por una solución que no involucre intervención quirúrgica uterina para mejorar la fertilidad en las personas que presentan este síndrome, ¿cuál de los siguientes aspectos se debería estudiar?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El reclutamiento folicular múltiple."
+    },
+    {
+     "key": "B",
+     "text": "El tiempo de mantención del cuerpo lúteo."
+    },
+    {
+     "key": "C",
+     "text": "El nivel de desarrollo del tejido endometrial."
+    },
+    {
+     "key": "D",
+     "text": "El grado de elasticidad del cuello uterino."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El síndrome de Asherman daña el endometrio, así que una alternativa no quirúrgica debe apuntar a que el tejido endometrial se regenere y alcance un desarrollo adecuado para la implantación.",
+    "planteamiento": "Se pide el aspecto que conviene estudiar para mejorar la fertilidad sin intervención quirúrgica uterina en el síndrome de Asherman. Datos: el síndrome causa adherencias cicatrizantes en la cavidad uterina, lo que puede alterar el ciclo menstrual y provocar problemas de fertilidad.",
+    "steps": [
+     "Las adherencias cicatrizantes ocupan la cavidad uterina y dañan el endometrio, el tejido en el que se implanta el embrión.",
+     "Si no se opera el útero, la mejora debe venir de la regeneración del endometrio, por ejemplo con tratamientos hormonales que estimulen su crecimiento.",
+     "Por lo tanto, lo que conviene estudiar es si el endometrio alcanza un nivel de desarrollo (grosor y calidad) suficiente para recibir un embrión.",
+     "Las demás opciones miran procesos que no corrigen la cavidad uterina: el reclutamiento folicular múltiple ocurre en el ovario, la mantención del cuerpo lúteo depende de hormonas ováricas y la elasticidad del cuello uterino no es la estructura afectada.",
+     "Solo la opción C apunta directamente a la estructura dañada. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El reclutamiento folicular múltiple es un proceso ovárico que madura varios folículos; no repara el útero dañado por las adherencias.",
+     "B": "El tiempo de mantención del cuerpo lúteo depende de hormonas ováricas y no mide la cavidad uterina; no resuelve el problema de implantación.",
+     "D": "La elasticidad del cuello uterino no es el tejido dañado por las adherencias de la cavidad, así que estudiarla no responde al problema."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q11",
+   "number": 11,
+   "origin": "ciencias-fisica-2026-invierno-q66",
+   "axis": "Física",
+   "topic": "Cinemática",
+   "subtopic": "cs-cinematica",
+   "stem": "En el interior de un ascensor en reposo, se cuelga un objeto desde uno de los N, elongándose 6 cm extremos de un resorte ideal, cuya constante elástica es 4 cm respecto a su posición de equilibrio. Posteriormente el ascensor se eleva con una m. rapidez constante de 2 s\n\ngρ\n\nm Considerando que la magnitud de la aceleración de gravedad g es 10 ²¿cuál es , s la masa del objeto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "2,4 kg"
+    },
+    {
+     "key": "B",
+     "text": "3,0 kg"
+    },
+    {
+     "key": "C",
+     "text": "12,0 kg"
+    },
+    {
+     "key": "D",
+     "text": "15,0 kg"
+    },
+    {
+     "key": "E",
+     "text": "48,0 kg"
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2026-invierno/q66.webp",
+    "width": 908,
+    "height": 570,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Con rapidez constante no hay aceleración, así que el peso del objeto iguala a la fuerza elástica del resorte: $mg = kx$. La rapidez no interviene en el cálculo.",
+    "planteamiento": "Se pide la masa de un objeto colgado de un resorte dentro de un ascensor que sube con rapidez constante. Datos: $k = 4\\ \\frac{\\mathrm{N}}{\\mathrm{cm}}$, elongación $x = 6$ cm, rapidez constante $v = 2\\ \\mathrm{m/s}$ y $g = 10\\ \\mathrm{m/s^{2}}$.",
+    "steps": [
+     "Con rapidez constante la aceleración del ascensor es nula. Por la primera ley de Newton, la fuerza neta sobre el objeto también es cero.",
+     "Sobre el objeto actúan dos fuerzas verticales: el peso $mg$ hacia abajo y la fuerza elástica del resorte $F_{e}$ hacia arriba. Por equilibrio, $F_{e} = mg$.",
+     "La fuerza elástica es $F_{e} = k\\,x$. Se reemplazan los valores: $F_{e} = 4\\ \\frac{\\mathrm{N}}{\\mathrm{cm}} \\cdot 6\\ \\mathrm{cm} = 24\\ \\mathrm{N}$.",
+     "Se despeja la masa dividiendo la fuerza por la gravedad: $m = \\frac{F_{e}}{g}$.",
+     "Se reemplaza: $m = \\frac{24\\ \\mathrm{N}}{10\\ \\mathrm{m/s^{2}}} = 2{,}4\\ \\mathrm{kg}$.",
+     "Comprobación de unidades: $\\frac{\\mathrm{N}}{\\mathrm{m/s^{2}}} = \\mathrm{kg}$, así que el resultado tiene sentido. La rapidez de 2 m/s no cambia el valor, porque solo importaría si existiera aceleración. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "3,0 kg: resulta de usar una fuerza de 30 N, que no corresponde a $k\\,x$ con $x = 6$ cm; es un valor que no sale de los datos.",
+     "C": "12,0 kg: divide la fuerza por la rapidez ($24 / 2$) en vez de dividir por la gravedad, lo que mezcla magnitudes de distinta naturaleza.",
+     "D": "15,0 kg: no se obtiene de ninguna relación física con estos datos; es el resultado de un error de cálculo al despejar $m$.",
+     "E": "48,0 kg: multiplica la fuerza por la rapidez ($24 \\cdot 2$) en vez de dividir por la gravedad."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q12",
+   "number": 12,
+   "origin": "ciencias-biologia-2027-invierno-q30",
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "subtopic": "cs-dinamica",
+   "stem": "Un docente realiza una actividad en la que mide la estatura de un estudiante primero estando de pie y luego acostado, utilizando una misma regla métrica. Al comparar las mediciones, encuentra que la estatura del estudiante es mayor al estar acostado que al estar de pie. El docente explica que esta diferencia se debe a que la fuerza de gravedad comprime el tejido blando entre las vértebras de la columna mientras estamos de pie, y que al acostarnos, la columna se extiende. A partir de lo anterior, ¿cuál de las siguientes tecnologías tiene que considerar la explicación entregada por el docente en relación con el fenómeno estudiado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los trajes de astronautas."
+    },
+    {
+     "key": "B",
+     "text": "Las plantillas ortopédicas."
+    },
+    {
+     "key": "C",
+     "text": "Las camas ergonómicas."
+    },
+    {
+     "key": "D",
+     "text": "Los sofás cama."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La diferencia de estatura se explica por la carga que la gravedad impone a la columna; con gravedad muy baja la columna se alarga, y por eso los trajes espaciales deben considerar ese cambio.",
+    "planteamiento": "Se pide la tecnología que debe considerar la explicación del docente. Datos: el estudiante mide más estatura acostado que de pie; según el docente, de pie la gravedad comprime el tejido blando entre las vértebras, y al acostarse la columna se extiende.",
+    "steps": [
+     "Identificar el fenómeno: la estatura depende de la carga que la gravedad ejerce sobre la columna. De pie, esa carga comprime el tejido entre las vértebras; acostado, la columna se extiende.",
+     "Extender la idea: si la gravedad es muy baja, la carga sobre la columna disminuye todavía más, y la columna se extiende aún más. Una persona puede llegar a ganar unos centímetros de estatura.",
+     "Buscar la tecnología que debe considerar ese efecto: los trajes de astronautas se usan en condiciones de gravedad casi nula, así que deben contemplar el alargamiento del cuerpo para su ajuste y movilidad.",
+     "Evaluar las demás tecnologías: las plantillas ortopédicas actúan sobre la pisada y la postura en la Tierra; las camas ergonómicas y los sofás cama apoyan el cuerpo en gravedad terrestre y no necesitan considerar el alargamiento de la columna. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Plantillas ortopédicas: actúan sobre la pisada y la postura en la Tierra; no tienen que considerar el alargamiento de la columna por falta de gravedad.",
+     "C": "Camas ergonómicas: buscan el descanso de la columna acostada en gravedad terrestre; la trampa es asumir que la postura horizontal obliga a considerar el efecto de la gravedad sobre la estatura.",
+     "D": "Sofás cama: no requieren considerar cambios de estatura; la trampa es confundir la posición acostada con el efecto de la gravedad sobre la columna."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q13",
+   "number": 13,
+   "origin": "ciencias-fisica-2027-invierno-q08",
+   "axis": "Física",
+   "topic": "Masa y peso",
+   "subtopic": "cs-dinamica",
+   "stem": "Una persona asiste a una feria de exhibición aeronáutica y luego de observar la caída de un grupo de paracaidistas, nota que, a pesar de que todos los paracaidistas abren sus paracaídas en el mismo instante, no todos llegan al suelo al mismo tiempo. Al investigar acerca del hecho, la persona constata que todos los paracaidistas tienen masas muy similares y que los paracaídas están hechos del mismo material, por lo que afirma que el tamaño de los paracaídas debe ser distinto. Al respecto, ¿a qué componente de la investigación científica corresponde la afirmación de la persona?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un marco conceptual."
+    },
+    {
+     "key": "B",
+     "text": "A un procedimiento."
+    },
+    {
+     "key": "C",
+     "text": "A una observación."
+    },
+    {
+     "key": "D",
+     "text": "A una inferencia."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La persona explica un hecho observado con una causa que no vio directamente, el tamaño de los paracaídas; esa explicación deducida es una inferencia.",
+    "planteamiento": "Se pide el componente de la investigación al que corresponde la afirmación de la persona. Datos: los paracaidistas abren los paracaídas en el mismo instante pero no llegan juntos al suelo; tienen masas muy similares y los paracaídas son del mismo material; la persona concluye que el tamaño de los paracaídas debe ser distinto.",
+    "steps": [
+     "Identificar lo observado: todos los paracaidistas abren sus paracaídas en el mismo instante, pero no llegan al suelo al mismo tiempo. Eso es un hecho registrado por la persona.",
+     "Identificar lo constatado: las masas son muy similares y el material de los paracaídas es el mismo. Con esos datos se descartan esas dos posibles causas.",
+     "Identificar la afirmación: que el tamaño de los paracaídas debe ser distinto no se observó directamente. Es una explicación que se deduce de lo observado y de lo constatado, es decir, una inferencia.",
+     "Diferenciar con las otras categorías: un procedimiento describe pasos de medición o prueba, un marco conceptual es un conjunto general de ideas, y una observación es lo que se ve directamente. La afirmación es una explicación puntual.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Marco conceptual: sería un conjunto general de ideas que organiza una investigación; la afirmación es una explicación puntual de un hecho concreto.",
+     "B": "Procedimiento: describe pasos para medir o probar algo; en el texto no hay pasos ni datos registrados, solo una conclusión.",
+     "C": "Observación: confunde lo que se ve (los paracaidistas llegan en tiempos distintos) con la explicación que la persona da de ese hecho."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q14",
+   "number": 14,
+   "origin": "ciencias-biologia-2027-invierno-q35",
+   "axis": "Física",
+   "topic": "Circuitos eléctricos",
+   "subtopic": "cs-electricidad",
+   "stem": "En el contexto de una actividad escolar, un grupo de estudiantes arma un circuito eléctrico con dos resistencias conectadas a una fuente de poder variable. Para cada valor de diferencia de potencial entregado por la fuente de poder, los estudiantes registran los valores de la diferencia de potencial y de la intensidad de corriente, en cada una de las resistencias, utilizando un voltímetro y un amperímetro. Los datos obtenidos se presentan en las siguientes tablas:\n\nResistencia 1 Resistencia 2 Diferencia de Intensidad de Diferencia de Intensidad de potencial (𝑉) corriente (𝐴) potencial (𝑉) corriente (𝐴) 3,0 0,1 2,0 0,1 6,0 0,2 4,0 0,2 9,0 0,3 6,0 0,3 12,0 0,4 8,0 0,4\n\nA partir del análisis de la información entregada, ¿cuál de las siguientes inferencias es acorde con los resultados obtenidos por el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las resistencias fueron conectadas en paralelo, y la resistencia 1 es de mayor magnitud que la resistencia 2."
+    },
+    {
+     "key": "B",
+     "text": "Las resistencias fueron conectadas en paralelo, y la resistencia 1 es de menor magnitud que la resistencia 2."
+    },
+    {
+     "key": "C",
+     "text": "Las resistencias fueron conectadas en serie, y la resistencia 1 es de mayor magnitud que la resistencia 2."
+    },
+    {
+     "key": "D",
+     "text": "Las resistencias fueron conectadas en serie, y la resistencia 1 es de menor magnitud que la resistencia 2."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q35.webp",
+    "width": 907,
+    "height": 715,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las dos resistencias tienen la misma corriente en cada registro pero voltajes distintos que se suman, lo que indica conexión en serie; con $R_1 = 30\\ \\Omega$ y $R_2 = 20\\ \\Omega$, la resistencia 1 es la de mayor magnitud.",
+    "planteamiento": "Se pide la inferencia acorde con los datos sobre la conexión y la magnitud de las resistencias. Datos: en la resistencia 1, $3{,}0\\ \\mathrm{V}$ con $0{,}1\\ \\mathrm{A}$ y $12{,}0\\ \\mathrm{V}$ con $0{,}4\\ \\mathrm{A}$; en la resistencia 2, $2{,}0\\ \\mathrm{V}$ con $0{,}1\\ \\mathrm{A}$ y $8{,}0\\ \\mathrm{V}$ con $0{,}4\\ \\mathrm{A}$.",
+    "steps": [
+     "Calcular cada resistencia con $R = \\frac{V}{I}$: para la resistencia 1, $\\frac{3{,}0}{0{,}1} = 30\\ \\Omega$ y $\\frac{12{,}0}{0{,}4} = 30\\ \\Omega$; para la resistencia 2, $\\frac{2{,}0}{0{,}1} = 20\\ \\Omega$ y $\\frac{8{,}0}{0{,}4} = 20\\ \\Omega$. El valor es constante en cada resistencia.",
+     "Analizar la corriente: en cada registro ambas resistencias son recorridas por la misma intensidad, por ejemplo $0{,}1$ A en el primero. Una misma corriente que atraviesa las dos indica conexión en serie.",
+     "Comprobar con el voltaje: en paralelo las dos tendrían la misma diferencia de potencial, y aquí no ocurre ($3{,}0$ V frente a $2{,}0$ V). En serie los voltajes se suman: $3{,}0 + 2{,}0 = 5{,}0$ V, y $\\frac{5{,}0}{0{,}1} = 50\\ \\Omega = 30\\ \\Omega + 20\\ \\Omega$, lo que es coherente.",
+     "Comparar las magnitudes: $R_1 = 30\\ \\Omega$ y $R_2 = 20\\ \\Omega$, así que la resistencia 1 es de mayor magnitud. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Paralelo con resistencia 1 mayor: acierta que la resistencia 1 es mayor, pero en paralelo las dos tendrían el mismo voltaje, y en los datos no ocurre.",
+     "B": "Paralelo con resistencia 1 menor: supone conexión en paralelo e invierte la magnitud; la resistencia 1 vale $30\\ \\Omega$, mayor que los $20\\ \\Omega$ de la resistencia 2.",
+     "D": "Serie con resistencia 1 menor: acierta la conexión en serie, pero invierte la comparación; la resistencia 1 vale $30\\ \\Omega$ y la 2 vale $20\\ \\Omega$."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q15",
+   "number": 15,
+   "origin": "ciencias-biologia-2027-invierno-q27",
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "subtopic": "cs-habilidades",
+   "stem": "Un grupo de estudiantes realiza un experimento en el cual atan un extremo de una cuerda a una caja de madera que se encuentra sobre una mesa, y luego hacen pasar la cuerda por una polea, ubicada en el borde de la mesa, de manera que en su extremo libre puedan colgarse cuerpos de distintas masas. Si en todo momento la caja se mantuvo en reposo, ¿cuál de las opciones es una conclusión correcta acerca de las fuerzas que actúan sobre la caja?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La fuerza de roce estático aumenta con la tensión de la cuerda."
+    },
+    {
+     "key": "B",
+     "text": "La fuerza normal aumenta con la tensión de la cuerda."
+    },
+    {
+     "key": "C",
+     "text": "El peso de la caja aumenta con la tensión de la cuerda."
+    },
+    {
+     "key": "D",
+     "text": "La fuerza de reacción a la normal aumenta con la tensión de la cuerda."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q27.webp",
+    "width": 907,
+    "height": 302,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Como la caja está en reposo, el roce estático equilibra la tensión horizontal de la cuerda y crece con ella, mientras que la normal y el peso no dependen de la tensión.",
+    "planteamiento": "Se pide la conclusión correcta sobre las fuerzas que actúan sobre la caja, que permanece en reposo sobre una mesa horizontal. Datos: la cuerda tira la caja horizontalmente con una tensión $T$ que depende de la masa colgada en la polea.",
+    "steps": [
+     "Identificar las fuerzas horizontales: la cuerda ejerce una tensión $T$ hacia la polea. Como la caja no se mueve, el roce estático $f_e$ la equilibra, así que $f_e = T$.",
+     "Relacionar roce y tensión: al colgar cuerpos de mayor masa, $T$ aumenta, y para mantener el reposo el roce estático debe aumentar en la misma medida. Por lo tanto, el roce estático crece con la tensión de la cuerda.",
+     "Analizar las fuerzas verticales: el peso de la caja es $m\\,g$ y la normal lo equilibra, $N = m\\,g$. Ninguno de los dos depende de la tensión, porque la tensión es horizontal.",
+     "Evaluar las opciones B, C y D: la normal no aumenta con la tensión; el peso depende solo de la masa de la caja; y la reacción a la normal es la fuerza que la caja ejerce sobre la mesa, igual en módulo a $m\\,g$.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Fuerza normal: se piensa que la normal aumenta con la tensión, pero la tensión es horizontal y no altera el equilibrio vertical, que sigue igual a $m\\,g$.",
+     "C": "Peso de la caja: el peso es $m\\,g$ y depende solo de la masa de la caja, que no cambia al variar la tensión.",
+     "D": "Reacción a la normal: es la fuerza que la caja ejerce sobre la mesa, igual en módulo a $m\\,g$; por lo tanto, tampoco aumenta con la tensión."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q16",
+   "number": 16,
+   "origin": "ciencias-biologia-2027-invierno-q28",
+   "axis": "Física",
+   "topic": "Fuerzas y leyes de Newton",
+   "subtopic": "cs-habilidades",
+   "stem": "Una persona realiza un experimento, con el fin de determinar la relación que existe entre la masa de un objeto y la fuerza máxima horizontal que se le debe aplicar para que este comience a moverse, y recorra una cierta distancia sobre una superficie horizontal con roce. A partir de lo anterior, ¿cuál de los siguientes instrumentos de medición le permitiría registrar los valores de la variable dependiente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una regla."
+    },
+    {
+     "key": "B",
+     "text": "Una balanza."
+    },
+    {
+     "key": "C",
+     "text": "Un cronómetro."
+    },
+    {
+     "key": "D",
+     "text": "Un dinamómetro."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La variable dependiente es la fuerza horizontal máxima necesaria para iniciar el movimiento, y para medir una fuerza se usa un dinamómetro.",
+    "planteamiento": "Se pide el instrumento que registra la variable dependiente. Datos: el experimento relaciona la masa del objeto con la fuerza horizontal máxima que hay que aplicar para que comience a moverse sobre una superficie con roce.",
+    "steps": [
+     "Identificar las variables: la masa del objeto es la independiente, porque se cambia deliberadamente; la fuerza horizontal máxima necesaria para iniciar el movimiento es la dependiente.",
+     "Identificar la magnitud de la variable dependiente: es una fuerza, que se expresa en newtons. Por lo tanto, el instrumento debe medir fuerzas.",
+     "Revisar los instrumentos: la regla mide longitudes, la balanza mide masa (la variable independiente) y el cronómetro mide tiempo. Ninguno de los tres mide fuerza.",
+     "Un dinamómetro mide fuerzas y permite registrar el valor de la fuerza justo antes de que el objeto comience a moverse. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Regla: mide longitudes y sirve para medir la distancia recorrida, pero no la fuerza necesaria para iniciar el movimiento.",
+     "B": "Balanza: mide masa, que es la variable independiente y no la dependiente; confundir ambas es el error típico.",
+     "C": "Cronómetro: mide tiempo; el procedimiento busca la fuerza máxima y no cuánto dura el movimiento."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q17",
+   "number": 17,
+   "origin": "ciencias-biologia-2027-invierno-q22",
+   "axis": "Física",
+   "topic": "Energía",
+   "subtopic": "cs-luz",
+   "stem": "Un investigador grafica sus mediciones de la cantidad de energía solar que llega a la superficie de la Tierra por unidad de área, para algunas longitudes de onda, y lo compara con la medición realizada por un satélite ubicado fuera de la atmósfera terrestre. Ambas mediciones se muestran en el siguiente gráfico:\n\nMedición desde fuera de la Cantidad de energía solar por unidad de área (𝑢. 𝑎.) atmósfera Medición desde la superficie terrestre\n\nRango de longitud de onda\n\nA partir de la información presentada en el gráfico, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A la superficie terrestre llega radiación de todas las zonas del espectro electromagnético."
+    },
+    {
+     "key": "B",
+     "text": "Las estrellas emiten mayor cantidad de energía en la zona visible del espectro en comparación a las zonas del infrarrojo."
+    },
+    {
+     "key": "C",
+     "text": "Los gases presentes en la atmósfera terrestre transmiten el espectro infrarrojo de manera irregular."
+    },
+    {
+     "key": "D",
+     "text": "La cantidad de energía del espectro UV emitida por el Sol es en parte absorbida por el espacio."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q22.webp",
+    "width": 907,
+    "height": 905,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La curva de superficie presenta caídas irregulares en el infrarrojo que no aparecen en la medición satelital: los gases atmosféricos transmiten esas longitudes de onda de manera irregular.",
+    "planteamiento": "Se pide la inferencia correcta a partir del gráfico. Datos: la curva discontinua (medición fuera de la atmósfera) y la continua (medición desde la superficie) se comparan en los rangos UV, visible e infrarrojo; la curva de superficie es mucho más baja en el UV y muestra caídas bruscas en el infrarrojo.",
+    "steps": [
+     "Comparar las dos curvas en cada zona del espectro. Fuera de la atmósfera la energía es alta en casi todo el rango; en la superficie la energía es menor, y la diferencia se hace más marcada en el UV y en el infrarrojo.",
+     "Analizar el infrarrojo. La curva de superficie presenta caídas y picos bruscos e irregulares, por debajo de la curva externa. Esa irregularidad no aparece en la medición satelital, que sigue una curva mucho más suave.",
+     "Interpretar la irregularidad. La atmósfera absorbe y transmite de manera selectiva ciertas longitudes de onda, de modo que algunas pasan y otras se bloquean en distinta medida. Esa transmisión irregular explica las caídas.",
+     "Descartar las demás opciones. La A afirma que llega radiación de todo el espectro, pero la curva de superficie es casi nula en el UV y cae hacia el extremo del infrarrojo; la B habla de estrellas, que el gráfico no mide; la D atribuye la absorción al espacio, cuando la absorbe la atmósfera.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Radiación de todas las zonas: la curva de superficie es baja en el UV y cae casi a cero hacia el final del infrarrojo; el gráfico muestra atenuación, no una cobertura uniforme del espectro.",
+     "B": "Estrellas con más energía en el visible: el gráfico corresponde a energía solar medida dentro y fuera de la atmósfera, no a estrellas; la comparación no se hace con emisiones estelares.",
+     "D": "Energía UV absorbida por el espacio: la UV se atenúa al atravesar la atmósfera, no en el espacio, que no está en la trayectoria de la luz hacia la superficie."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q18",
+   "number": 18,
+   "origin": "ciencias-biologia-2027-invierno-q23",
+   "axis": "Física",
+   "topic": "Luz y óptica",
+   "subtopic": "cs-luz",
+   "stem": "Un faro situado en la costa, contiene un gran espejo cóncavo y una ampolleta potente. Un equipo de mantención, se da cuenta de que el faro presenta fallas en su funcionamiento e intentan solucionarlo. Para ello, realizan una prueba en donde instalan obstáculos, paralelos al eje óptico y entre sí, frente al espejo y observan los rayos reflejados por este, como se representa en la siguiente figura:\n\nDe acuerdo al procedimiento descrito, ¿cuál es el objetivo del trabajo que realiza el equipo de mantención?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Comprobar la intensidad lumínica de la ampolleta del faro."
+    },
+    {
+     "key": "B",
+     "text": "Identificar irregularidades en la superficie del espejo del faro."
+    },
+    {
+     "key": "C",
+     "text": "Verificar si el obstáculo es el adecuado para la mantención del faro."
+    },
+    {
+     "key": "D",
+     "text": "Identificar el tipo de material con que fue fabricado el espejo del faro."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q23.webp",
+    "width": 907,
+    "height": 719,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En un espejo cóncavo sin defectos, los rayos que parten del foco se reflejan paralelos al eje óptico; si la superficie tiene irregularidades, los rayos reflejados se desordenan y la prueba los detecta.",
+    "planteamiento": "Se pide el objetivo del trabajo del equipo de mantención. Datos: el espejo es cóncavo y la ampolleta está ubicada en su foco, como muestra la figura; se instalan obstáculos paralelos al eje óptico que dejan pasar solo algunos rayos, y se observan los rayos reflejados.",
+    "steps": [
+     "Identificar el comportamiento esperado: en un espejo cóncavo sin defectos, los rayos que parten del foco se reflejan paralelos al eje óptico.",
+     "Interpretar la prueba: los obstáculos dejan pasar solo algunos rayos hacia el espejo, y lo que se observa es la dirección de los rayos reflejados. En la figura, esos rayos salen horizontales y ordenados.",
+     "Analizar una falla: si la superficie tiene abolladuras, rayaduras o irregularidades, cada rayo rebota con un ángulo distinto y los rayos reflejados dejan de ser paralelos entre sí.",
+     "Descartar las demás opciones: la prueba no mide la intensidad de la ampolleta, no evalúa la adecuación de los obstáculos ni permite conocer el material; solo revela la forma y regularidad de la superficie reflectora.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Comprobar la intensidad lumínica de la ampolleta: lo que se observa es la dirección de los rayos reflejados, no cuánta luz emite la ampolleta; confundir ambas cosas es el error típico.",
+     "C": "Verificar si el obstáculo es el adecuado para la mantención: los obstáculos solo sirven para seleccionar rayos; lo que se evalúa es el espejo, no los obstáculos.",
+     "D": "Identificar el material del espejo: los rayos reflejados informan sobre la forma y regularidad de la superficie, no sobre su composición."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q19",
+   "number": 19,
+   "origin": "ciencias-fisica-2027-invierno-q13",
+   "axis": "Física",
+   "topic": "Sismos",
+   "subtopic": "cs-tierra",
+   "stem": "Una persona que desea comprar una casa en una de las comunas del sector precordillerano de Santiago, se entera de que esta es atravesada por la falla de San Ramón, una fractura geológica ubicada a los pies de la cordillera de los Andes. Se estima que la falla tiene una longitud de entre 30 y 50 𝑘𝑚 y una profundidad de entre 10 y 12 𝑘𝑚. Ante esta información, la persona decide investigar si existe la posibilidad de que la falla genere sismos de gran magnitud. Al respecto, ¿cuál de los siguientes datos sería relevante para iniciar su investigación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las características de los sismos generados por fallas similares a la de San Ramón."
+    },
+    {
+     "key": "B",
+     "text": "La cantidad de sismos registrados en la falla de San Ramón en los últimos 2 𝑎ñ𝑜𝑠."
+    },
+    {
+     "key": "C",
+     "text": "La cantidad de fallas similares a la de San Ramón que existen en la placa Sudamericana."
+    },
+    {
+     "key": "D",
+     "text": "La clasificación de la falla de San Ramón según la forma de desplazamiento de las rocas."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para estimar si la falla puede generar sismos de gran magnitud, lo más útil son los sismos registrados en fallas parecidas, porque muestran qué magnitudes alcanzan fallas de tamaño similar.",
+    "planteamiento": "Se pide el dato relevante para iniciar la investigación sobre sismos de gran magnitud. Datos: la falla de San Ramón tiene entre $30$ y $50$ km de longitud y entre $10$ y $12$ km de profundidad; la pregunta es si puede generar sismos de gran magnitud.",
+    "steps": [
+     "Identificar la pregunta: si la falla puede producir sismos de gran magnitud. Esto depende del tamaño de la superficie que puede romperse y desplazarse en un evento.",
+     "Usar los datos de tamaño: la longitud de entre 30 y 50 km y la profundidad de entre 10 y 12 km describen el tamaño de la falla y permiten buscar fallas comparables.",
+     "Identificar el dato que responde la pregunta: los sismos registrados en fallas similares, con longitud y profundidad parecidas, muestran qué magnitudes son posibles para ese tipo de falla.",
+     "Evaluar las demás opciones: dos años de registros son un intervalo muy corto para conocer los sismos grandes; la cantidad de fallas similares no informa la magnitud; y la clasificación por desplazamiento describe el movimiento, pero no la energía liberada. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Sismos en los últimos 2 años: es un intervalo muy corto para conocer los sismos grandes, que ocurren con mucha menos frecuencia.",
+     "C": "Fallas similares en la placa Sudamericana: su cantidad no informa sobre la magnitud que puede generar la falla de San Ramón.",
+     "D": "Clasificación según el desplazamiento: describe el tipo de movimiento de las rocas, pero no indica por sí sola cuánta energía liberaría la falla en un sismo."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q20",
+   "number": 20,
+   "origin": "ciencias-fisica-2025-regular-q60",
+   "axis": "Física",
+   "topic": "Ondas",
+   "subtopic": "cs-universo",
+   "stem": "Una cefeida es un tipo de estrella que cambia periódicamente de tamaño, lo que produce alteraciones en su luminosidad que son detectadas como pulsaciones. En 1912, se descubrió que las estrellas más luminosas presentan una menor frecuencia de pulsación. Entre los gráficos de luminosidad L en función del tiempo t que se presentan a continuación, ¿cuál representa a dos cefeidas distintas que cumplen con la relación descubierta?\n\nC)",
+   "options": [
+    {
+     "key": "A",
+     "text": "B) Cefeida 1 L L Cefeida 2 Cefeida 1 Cefeida 2 t t D) Cefeida 2 L Cefeida 1 L Cefeida 2 Cefeida 1 t t"
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2025-regular/q60.webp",
+    "width": 908,
+    "height": 905,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una estrella más luminosa pulsa menos veces en el mismo intervalo de tiempo; por eso, en el gráfico correcto, la curva más alta (la más luminosa) debe tener menos pulsos que la otra.",
+    "planteamiento": "Se pide el gráfico que muestra dos cefeidas que cumplen la relación descubierta en 1912: mayor luminosidad implica menor frecuencia de pulsación. Datos: se compara la altura media de cada curva, que representa la luminosidad, y el número de pulsos en un mismo intervalo de $t$.",
+    "steps": [
+     "Según la relación descubierta, la estrella más luminosa tiene menor frecuencia de pulsación: pulsa menos veces en el mismo intervalo de tiempo.",
+     "Para comparar, se cuentan los pulsos de cada curva en un mismo intervalo de $t$ y se compara la altura media de cada curva, que representa su luminosidad.",
+     "En la alternativa A, la cefeida 2 está más arriba (mayor luminosidad) y pulsa dos veces en el intervalo, mientras que la cefeida 1, más abajo, pulsa tres o cuatro veces. Se cumple la relación.",
+     "En la alternativa B, la cefeida 1 está arriba y pulsa más veces que la cefeida 2. La estrella más luminosa tendría mayor frecuencia, lo que contradice la relación.",
+     "En la alternativa C, ambas cefeidas presentan una cantidad similar de pulsos en el intervalo, así que no se distingue una diferencia de frecuencia.",
+     "En la alternativa D, las dos curvas tienen un número casi igual de pulsos y no hay una relación clara entre luminosidad y frecuencia.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Cefeida 1 arriba con más pulsos: es la estrella más luminosa y con mayor frecuencia, lo que invierte la relación descubierta en 1912. La trampa es leer solo la cantidad de pulsos.",
+     "C": "Pulsos casi iguales en ambas curvas: no hay diferencia de frecuencia que justifique la relación, así que la alternativa no muestra lo que se pide.",
+     "D": "Número de pulsos casi igual en ambas curvas, con formas irregulares: el gráfico no permite identificar cuál es la estrella más luminosa ni cuál pulsa menos."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q21",
+   "number": 21,
+   "origin": "ciencias-fisica-2027-invierno-q40",
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "subtopic": "cs-atomo",
+   "stem": "Durante una clase, a un estudiante le piden analizar cuatro especies químicas (𝑅, 𝐽, 𝑋 y 𝑍) de acuerdo a sus partículas subatómicas. La información disponible sobre estas especies se presenta a continuación:\n\nCantidad de Cantidad de Cantidad de Especie protones neutrones electrones 𝑅 11 12 10 𝐽 13 14 13 𝑋 16 16 17 𝑍 17 18 18\n\nA partir de los datos de la tabla, ¿cuál de las siguientes inferencias es correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La especie 𝑅 es un anión."
+    },
+    {
+     "key": "B",
+     "text": "La especie 𝐽 es un catión."
+    },
+    {
+     "key": "C",
+     "text": "La especie 𝑋 es un anión."
+    },
+    {
+     "key": "D",
+     "text": "La especie 𝑍 es un átomo neutro."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2027-invierno/q40.webp",
+    "width": 907,
+    "height": 477,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La carga neta de una especie es el número de protones menos el de electrones; si hay más electrones que protones, la especie es un anión, y así resulta que X es un anión.",
+    "planteamiento": "Se pide la inferencia correcta a partir de protones, neutrones y electrones de cuatro especies. Datos: $R$ tiene 11 protones y 10 electrones; $J$, 13 y 13; $X$, 16 y 17; $Z$, 17 y 18. Los neutrones no tienen carga y no intervienen en la carga neta.",
+    "steps": [
+     "Calcular la carga neta de cada especie como número de protones menos número de electrones. Los neutrones no tienen carga y no intervienen. R: $11 - 10 = +1$; J: $13 - 13 = 0$; X: $16 - 17 = -1$; Z: $17 - 18 = -1$.",
+     "Interpretar cada resultado: R tiene carga positiva, por lo que es un catión; J es neutra, es decir, un átomo neutro; X y Z tienen carga negativa, por lo que son aniones.",
+     "Revisar la afirmación de la opción A: R es un catión, no un anión.",
+     "Revisar las opciones B y D: J es un átomo neutro, no un catión, y Z es un anión, no un átomo neutro. Solo la afirmación sobre X se cumple. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Especie R como anión: tiene 11 protones y 10 electrones, así que su carga es $+1$ y es un catión.",
+     "B": "Especie J como catión: tiene 13 protones y 13 electrones, por lo que es neutra.",
+     "D": "Especie Z como átomo neutro: tiene 17 protones y 18 electrones; su carga es $-1$, es decir, es un anión."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q22",
+   "number": 22,
+   "origin": "ciencias-fisica-2027-invierno-q53",
+   "axis": "Química",
+   "topic": "Química general",
+   "subtopic": "cs-atomo",
+   "stem": "En una clase de química, una profesora le entrega a un grupo de estudiantes cuatro muestras líquidas desconocidas, rotuladas como 𝑊, 𝑋, 𝑌 y 𝑍. El grupo realiza cuatro ensayos de solubilidad con las muestras antes mencionadas, cuyos resultados se representan en la siguiente imagen:\n\nConsiderando los resultados anteriores y considerando que los ensayos de solubilidad se hicieron correctamente, ¿cuál de las siguientes opciones representa la figura con el aspecto que tendría la mezcla entre 𝑋, 𝑌 y 𝑍?",
+   "options": [
+    {
+     "key": "A",
+     "text": ""
+    },
+    {
+     "key": "B",
+     "text": ""
+    },
+    {
+     "key": "C",
+     "text": ""
+    },
+    {
+     "key": "D",
+     "text": ""
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2027-invierno/q53.webp",
+    "width": 907,
+    "height": 1141,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una sola capa indica líquidos miscibles y dos capas indican inmiscibles: $X$ y $Z$ forman una fase única, mientras que $X$ e $Y$ forman dos capas.",
+    "planteamiento": "Se pide la figura que muestra la mezcla de $X$, $Y$ y $Z$. Datos de los ensayos: en $W+Y$ y en $X+Y$ aparecen dos superficies de separación (dos capas); en $X+Z$ y en $W+X$ aparece una sola superficie (una fase).",
+    "steps": [
+     "En $W+Y$ aparecen dos superficies, es decir, dos capas: $W$ e $Y$ son inmiscibles.",
+     "En $X+Y$ también aparecen dos capas: $X$ e $Y$ son inmiscibles.",
+     "En $X+Z$ hay una sola superficie: $X$ y $Z$ son miscibles y forman una fase única.",
+     "En $W+X$ hay una sola superficie, así que $W$ y $X$ también se mezclan. Este dato no cambia la respuesta, porque $W$ no participa en la mezcla pedida.",
+     "En la mezcla de $X$, $Y$ y $Z$, la fase $X+Z$ es una sola capa y $Y$ no se mezcla con $X$, así que queda como capa separada: en total, dos capas. Como el enunciado no entrega densidades, el orden de las capas se lee directamente de la figura D, con $Y$ arriba.",
+     "La opción A muestra $X+Y$ como una sola capa, lo que contradice que $X$ e $Y$ formen dos capas. La opción B muestra tres capas y separa $X$ y $Z$, que son miscibles. La opción C muestra una sola fase, lo que ignora la capa de $Y$. Solo la D muestra dos capas. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Mostrar $X+Y$ como una sola capa contradice los ensayos, en los que $X+Y$ forma dos capas. Además, separa $Z$ como si no se mezclara con $X$.",
+     "B": "Dibujar tres capas separadas ($Z$, $X$ e $Y$) supone que $X$ y $Z$ son inmiscibles, pero el ensayo $X+Z$ muestra una sola capa.",
+     "C": "Dibujar una sola fase con $X+Y+Z$ es la trampa de suponer que todo se mezcla porque $X$ se mezcla con $Z$, sin notar que $Y$ forma capa aparte con $X$."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q23",
+   "number": 23,
+   "origin": "ciencias-biologia-2027-invierno-q54",
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "subtopic": "cs-disoluciones",
+   "stem": "El litio es un metal ampliamente utilizado en distintos rubros, cuyo proceso de producción implica la precipitación de carbonato de litio (𝐿𝑖²𝐶𝑂³) desde una solución acuosa. Una dificultad en la obtención de este compuesto es que presenta alta solubilidad en agua, por lo que un grupo de investigadores está analizando qué parámetros permiten disminuir su solubilidad. En la siguiente tabla, se presentan los parámetros estudiados en cuatro ensayos:\n\nVelocidad de Concentración inicial Ensayo Temperatura (°𝐶) agitación (𝑟𝑝𝑚) de 𝐿𝑖²𝐶𝑂³ (𝑚𝑜𝑙/𝐿) 1 25 150 2 2 25 300 2 3 45 150 2 4 45 300 1\n\n¿Cuál de las siguientes relaciones es correcta para cumplir con el análisis de alguno de los parámetros estudiados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Relacionar los resultados de los ensayos 1 y 3, permite analizar el efecto de la velocidad de agitación."
+    },
+    {
+     "key": "B",
+     "text": "Relacionar los resultados de los ensayos 2 y 3, permite analizar el efecto de la concentración."
+    },
+    {
+     "key": "C",
+     "text": "Relacionar los resultados de los ensayos 1 y 3, permite analizar el efecto de la temperatura."
+    },
+    {
+     "key": "D",
+     "text": "Relacionar los resultados de los ensayos 1 y 4, permite analizar el efecto de la concentración."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q54.webp",
+    "width": 907,
+    "height": 664,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Para estudiar un parámetro hay que comparar dos ensayos que difieran solo en ese parámetro; los ensayos 1 y 3 cambian solo la temperatura.",
+    "planteamiento": "Se pide la relación entre ensayos que aísla un parámetro. Datos de la tabla: ensayo 1, $25\\,^\\circ\\mathrm{C}$, $150$ rpm y $2\\ \\mathrm{mol/L}$; ensayo 2, $25\\,^\\circ\\mathrm{C}$, $300$ rpm y $2\\ \\mathrm{mol/L}$; ensayo 3, $45\\,^\\circ\\mathrm{C}$, $150$ rpm y $2\\ \\mathrm{mol/L}$; ensayo 4, $45\\,^\\circ\\mathrm{C}$, $300$ rpm y $1\\ \\mathrm{mol/L}$.",
+    "steps": [
+     "Para analizar el efecto de un parámetro, los dos ensayos comparados deben tener el mismo valor en los otros dos parámetros (control de variables).",
+     "Opción A, ensayos 1 y 3: ambos tienen $150$ rpm, así que la velocidad de agitación no cambia. Esta relación no sirve para analizar la agitación.",
+     "Opción B, ensayos 2 y 3: cambian la temperatura ($25 \\to 45\\,^\\circ\\mathrm{C}$) y la agitación ($300 \\to 150$ rpm) a la vez. Además, la concentración es igual en ambos ($2\\ \\mathrm{mol/L}$), así que no hay nada que aislar para el efecto de la concentración.",
+     "Opción C, ensayos 1 y 3: solo cambia la temperatura, de $25$ a $45\\,^\\circ\\mathrm{C}$. La agitación ($150$ rpm) y la concentración ($2\\ \\mathrm{mol/L}$) se mantienen constantes.",
+     "Opción D, ensayos 1 y 4: cambian la temperatura, la agitación y la concentración a la vez, así que cualquier diferencia no puede atribuirse solo a la concentración.",
+     "Solo la relación de la opción C aísla un parámetro. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Relacionar los ensayos 1 y 3 parece aislar la agitación, pero ambos usan $150$ rpm. Lo que cambia entre ellos es la temperatura.",
+     "B": "Relacionar los ensayos 2 y 3 parece aislar la concentración, pero ambos usan $2\\ \\mathrm{mol/L}$. Además, cambian la temperatura y la agitación.",
+     "D": "Relacionar los ensayos 1 y 4 parece comparar la concentración, pero también cambian la temperatura y la agitación, así que el efecto no se puede separar."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q24",
+   "number": 24,
+   "origin": "ciencias-fisica-2027-invierno-q50",
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "subtopic": "cs-disoluciones",
+   "stem": "En una clase de química, la profesora les solicita a sus estudiantes preparar una solución de glucosa en agua de concentración 6 𝑚𝑜𝑙/𝐿. Para ello, realizaron la preparación utilizando 108 𝑔 de glucosa (masa molar = 180 𝑔/𝑚𝑜𝑙) y la disolvieron agregando 100 𝑚𝐿 de agua. Luego, al revisar el procedimiento realizado por los estudiantes, la profesora les comenta que este no es correcto. Al respecto, ¿cuál de las siguientes opciones corresponde al procedimiento adecuado para lograr el objetivo propuesto por la profesora?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Masar 108 𝑔 de glucosa y disolverlos en 0,5 𝐿 de agua y luego agregar 0,5 𝐿 de agua."
+    },
+    {
+     "key": "B",
+     "text": "Masar 100 𝑔 de agua, considerando una densidad de 1 𝑔/𝑚𝐿, y agregarla a los 108 𝑔 de glucosa."
+    },
+    {
+     "key": "C",
+     "text": "Agregar agua sobre los 108 𝑔 de glucosa hasta completar un volumen de 100 𝑚𝐿."
+    },
+    {
+     "key": "D",
+     "text": "Disolver previamente 108 𝑔 de glucosa en agua, tomar 2 𝑚𝐿 de esta solución y disolverlos en 100 𝑚𝐿 de agua."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La molaridad se refiere al volumen final de la solución, no al volumen de agua agregada: el procedimiento correcto es llevar la glucosa a un volumen total de $100\\ \\mathrm{mL}$.",
+    "planteamiento": "Se pide el procedimiento que logra una solución de $6\\ \\mathrm{mol/L}$. Datos: $m = 108\\ \\mathrm{g}$ de glucosa, $M = 180\\ \\mathrm{g/mol}$ y $c = 6\\ \\mathrm{mol/L}$; el grupo original agregó $100\\ \\mathrm{mL}$ de agua sobre la glucosa.",
+    "steps": [
+     "Se calcula la cantidad de sustancia: $n = \\frac{m}{M} = \\frac{108\\ \\mathrm{g}}{180\\ \\mathrm{g/mol}} = 0{,}6\\ \\mathrm{mol}$.",
+     "Se calcula el volumen de solución final: $V = \\frac{n}{c} = \\frac{0{,}6\\ \\mathrm{mol}}{6\\ \\mathrm{mol/L}} = 0{,}1\\ \\mathrm{L} = 100\\ \\mathrm{mL}$.",
+     "Por lo tanto, el volumen total de la solución debe ser de $100\\ \\mathrm{mL}$, con los $108\\ \\mathrm{g}$ de glucosa incluidos.",
+     "El error del procedimiento original: al agregar $100\\ \\mathrm{mL}$ de agua sobre la glucosa, esta ocupa además un volumen propio, así que el volumen final supera los $100\\ \\mathrm{mL}$. Como $c = \\frac{n}{V}$, al aumentar $V$ la concentración baja por debajo de $6\\ \\mathrm{mol/L}$.",
+     "El procedimiento adecuado es agregar agua sobre los $108\\ \\mathrm{g}$ de glucosa hasta completar un volumen total de $100\\ \\mathrm{mL}$, que corresponde a la opción C. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Disolver $108\\ \\mathrm{g}$ en $0{,}5\\ \\mathrm{L}$ y luego agregar otros $0{,}5\\ \\mathrm{L}$ da $1\\ \\mathrm{L}$ de solución: $c = \\frac{0{,}6\\ \\mathrm{mol}}{1\\ \\mathrm{L}} = 0{,}6\\ \\mathrm{mol/L}$, diez veces menos que lo pedido.",
+     "B": "Masar $100\\ \\mathrm{g}$ de agua parece medir el volumen con precisión, pero el volumen final sigue superando los $100\\ \\mathrm{mL}$ porque la glucosa ocupa volumen. La concentración queda por debajo de $6\\ \\mathrm{mol/L}$.",
+     "D": "Tomar una alícuota de $2\\ \\mathrm{mL}$ de una solución previa y disolverla en $100\\ \\mathrm{mL}$ de agua no asegura los $0{,}6\\ \\mathrm{mol}$ en $0{,}1\\ \\mathrm{L}$: solo una parte de la glucosa pasa a la alícuota. Es la trampa de confundir dilución con preparación."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q25",
+   "number": 25,
+   "origin": "ciencias-fisica-2027-invierno-q39",
+   "axis": "Química",
+   "topic": "Estructura atómica",
+   "subtopic": "cs-habilidades",
+   "stem": "Según el modelo de Bohr, los átomos están constituidos por un núcleo, de carga positiva, alrededor del cual giran en órbitas los electrones, de carga negativa. En cada órbita, los electrones poseen diferente energía, y “a medida que el electrón se encuentra más alejado del núcleo se requiere de menor energía para separarlo del átomo, en relación a los electrones más cercanos al núcleo”. Si un estudiante requiere visualizar en un gráfico la relación que se describe entre comillas para distintas órbitas de los electrones de un átomo, ¿cuál de las siguientes opciones muestra correctamente las variables de este gráfico?\n\nVariable independiente Variable dependiente",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cantidad de electrones Número de órbitas"
+    },
+    {
+     "key": "B",
+     "text": "Energía Cantidad de electrones"
+    },
+    {
+     "key": "C",
+     "text": "Número de órbitas Distancia del electrón al núcleo"
+    },
+    {
+     "key": "D",
+     "text": "Distancia del electrón al núcleo Energía"
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-fisica-2027-invierno/q39.webp",
+    "width": 907,
+    "height": 396,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "En el gráfico, la variable independiente es la que se cambia (la distancia del electrón al núcleo) y la dependiente es la que responde (la energía necesaria para separarlo).",
+    "planteamiento": "Se pide identificar las variables del gráfico que describe la relación entre comillas. Datos del texto: a medida que el electrón está más alejado del núcleo, se requiere menor energía para separarlo del átomo; esto se compara entre distintas órbitas.",
+    "steps": [
+     "Identificar la relación del texto: «a medida que el electrón se encuentra más alejado del núcleo se requiere de menor energía para separarlo». Una variable cambia y la otra responde.",
+     "Asignar la variable independiente: al comparar órbitas, lo que cambia es la distancia del electrón al núcleo, porque cada órbita tiene una distancia distinta.",
+     "Asignar la variable dependiente: la energía necesaria para separar el electrón es la que responde al cambio de distancia.",
+     "Descartar las demás opciones: la cantidad de electrones y el número de órbitas no son las variables de la relación que describe el texto, y las opciones B y C invierten los roles o dejan fuera la energía. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Cantidad de electrones y número de órbitas: no son las variables de la relación que describe el texto.",
+     "B": "Energía como independiente y cantidad de electrones como dependiente: invierte los roles y no corresponde a la relación descrita.",
+     "C": "Número de órbitas como independiente y distancia como dependiente: la distancia es la variable que cambia entre órbitas, y la energía, que es la que responde, no aparece."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q26",
+   "number": 26,
+   "origin": "ciencias-fisica-2027-invierno-q49",
+   "axis": "Química",
+   "topic": "Disoluciones",
+   "subtopic": "cs-habilidades",
+   "stem": "En un laboratorio, un grupo de estudiantes preparó 100 𝑚𝐿 de cuatro soluciones acuosas de permanganato de potasio (𝐾𝑀𝑛𝑂⁴) con concentraciones 1,0; 0,2; 0,01 y 0,002 𝑚𝑜𝑙/𝐿, respectivamente. Durante su preparación, se aseguraron de que todas las soluciones se mantuvieran a una temperatura constante de 25 °𝐶. Luego, agitaron cada solución uniformemente por 60 𝑠𝑒𝑔𝑢𝑛𝑑𝑜𝑠 y las almacenaron por separado en frascos de vidrio del mismo material y tamaño. Posteriormente, las dejaron reposar por 5 𝑚𝑖𝑛𝑢𝑡𝑜𝑠 en un cuarto a la misma intensidad de luz, y finalmente observaron la tonalidad de cada solución. A partir de lo anterior, ¿cuál de las siguientes hipótesis es pertinente considerando el experimento realizado por el grupo de estudiantes?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El tiempo de agitación de una solución afecta la tonalidad de su color."
+    },
+    {
+     "key": "B",
+     "text": "La variación de la concentración de una solución afecta la tonalidad de su color."
+    },
+    {
+     "key": "C",
+     "text": "El tiempo de exposición a la luz solar de una solución afecta la tonalidad de su color."
+    },
+    {
+     "key": "D",
+     "text": "La variación de la temperatura de una solución cambia la tonalidad de su color."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una hipótesis pertinente relaciona la única variable que cambia entre los frascos, la concentración, con el efecto observado, la tonalidad del color.",
+    "planteamiento": "Se pide la hipótesis que corresponde al experimento. Datos: cuatro soluciones de $\\mathrm{KMnO_4}$ de $100\\ \\mathrm{mL}$ con concentraciones de $1{,}0$; $0{,}2$; $0{,}01$ y $0{,}002\\ \\mathrm{mol/L}$, todas a $25\\,^\\circ\\mathrm{C}$, agitadas $60\\ \\mathrm{s}$, en reposo $5\\ \\mathrm{min}$ y con la misma intensidad de luz.",
+    "steps": [
+     "Se identifica la variable independiente, la que el grupo cambió a propósito: la concentración de cada solución de $\\mathrm{KMnO_4}$.",
+     "Se revisa que el resto de condiciones se mantuvo igual: temperatura ($25\\,^\\circ\\mathrm{C}$), volumen ($100\\ \\mathrm{mL}$), tiempo de agitación ($60\\ \\mathrm{s}$), tiempo de reposo ($5\\ \\mathrm{min}$), intensidad de luz y tipo de frasco.",
+     "La variable dependiente es la tonalidad observada en cada solución.",
+     "Una hipótesis pertinente debe proponer una relación entre la variable que se cambió y la que se observó. La opción B afirma que la concentración afecta la tonalidad, y el experimento permite contrastarla.",
+     "Las otras opciones proponen variables que no cambiaron entre frascos: el tiempo de agitación (A), la luz (C) y la temperatura (D). Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone que el tiempo de agitación afecta el color. Ese tiempo fue el mismo ($60\\ \\mathrm{s}$) en todas las soluciones, así que el experimento no puede contrastar esa hipótesis.",
+     "C": "Propone que la exposición a la luz solar cambia el color. Los frascos recibieron la misma intensidad de luz en el mismo cuarto; esa variable no cambió.",
+     "D": "Propone que la temperatura cambia el color. La temperatura se mantuvo en $25\\,^\\circ\\mathrm{C}$ en todas las soluciones, así que no hay variación que comparar."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q27",
+   "number": 27,
+   "origin": "ciencias-biologia-2027-invierno-q44",
+   "axis": "Química",
+   "topic": "Modelos atómicos",
+   "subtopic": "cs-organica",
+   "stem": "Un estudiante encuentra en un libro los valores experimentales medidos para la propiedad 𝑋, a temperatura ambiente y 1 𝑎𝑡𝑚, para un conjunto de compuestos orgánicos, todos diferentes, de cadena lineal, no ramificados. Los átomos de carbono están unidos entre sí por enlaces simples 𝐶– 𝐶. En base a la información encontrada, el estudiante elabora el siguiente gráfico:\n\n160\n\n120\n\n80 Propiedad 𝑋 40\n\n0 3 4 5 6 7 8 9 N° de átomos de carbono -40\n\nConsiderando la información entregada, ¿cuál de las siguientes afirmaciones describe correctamente el comportamiento de la propiedad 𝑋 con respecto a las variables experimentales y el número de átomos de carbono presentes en los compuestos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A medida que aumenta el número de átomos de carbono el valor de la propiedad 𝑋 es menor que cero."
+    },
+    {
+     "key": "B",
+     "text": "La propiedad 𝑋 disminuye a medida que disminuye la temperatura ambiente."
+    },
+    {
+     "key": "C",
+     "text": "A medida que disminuye el número de átomos de carbono en los compuestos, la propiedad 𝑋 disminuye."
+    },
+    {
+     "key": "D",
+     "text": "La propiedad 𝑋 se mantiene constante para los compuestos con más de 8 átomos de carbono."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q44.webp",
+    "width": 907,
+    "height": 871,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los alcanos lineales muestran que la propiedad X aumenta con el número de átomos de carbono; por lo tanto, al disminuir los carbonos, X disminuye.",
+    "planteamiento": "Se pide la afirmación que describe correctamente el comportamiento de la propiedad $X$ respecto del número de átomos de carbono. Datos: los compuestos son lineales, con solo enlaces simples C–C, medidos a temperatura ambiente y 1 atm; el gráfico va desde unos $-40$ con 3 carbonos hasta unos $150$ con 9 carbonos.",
+    "steps": [
+     "Identificar la serie: los compuestos son lineales, no ramificados y con solo enlaces simples C–C. Por lo tanto, la única variable que cambia entre ellos es el número de átomos de carbono.",
+     "Leer el gráfico: con 3 carbonos $X \\approx -40$; con 4, $X \\approx 0$; con 5, $X \\approx 37$; con 6, $X \\approx 70$; con 7, $X \\approx 100$; con 8, $X \\approx 125$; y con 9, $X \\approx 150$.",
+     "Describir la tendencia: $X$ aumenta de forma continua a medida que aumenta el número de carbonos. Por lo tanto, cuando el número de carbonos disminuye, $X$ también disminuye.",
+     "Evaluar las opciones: la A afirma que $X$ es negativa al aumentar los carbonos, pero ya es positiva desde 5 carbonos; la B habla de la temperatura, que se mantiene fija en el estudio; la D supone que $X$ se estabiliza, pero sigue creciendo. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Valor negativo con más carbonos: X es negativa solo con 3 carbonos; a partir de 5 carbonos ya es positiva y sigue aumentando.",
+     "B": "Relación con la temperatura ambiente: la temperatura se mantiene fija en el estudio, y el gráfico no muestra cómo cambia X con ella.",
+     "D": "Propiedad constante sobre 8 carbonos: X sigue aumentando hasta cerca de 150 con 9 carbonos."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q28",
+   "number": 28,
+   "origin": "ciencias-biologia-2027-invierno-q52",
+   "axis": "Química",
+   "topic": "Compuestos",
+   "subtopic": "cs-organica",
+   "stem": "Un grupo de científicos quemó una muestra de masa conocida de un cierto compuesto, en un ambiente controlado, obteniendo dióxido de carbono y agua. Luego, masaron estos productos para calcular las cantidades de carbono e hidrógeno presentes en la muestra original, y después, por diferencia determinaron la cantidad de oxígeno presente en la muestra original. Finalmente, con esta información, realizaron los cálculos correspondientes para establecer la fórmula empírica del compuesto. Al respecto, ¿a qué componente de la investigación corresponde el texto presentado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "A un resultado."
+    },
+    {
+     "key": "B",
+     "text": "A una conclusión."
+    },
+    {
+     "key": "C",
+     "text": "A una predicción."
+    },
+    {
+     "key": "D",
+     "text": "A un procedimiento."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto describe el método con el que se obtuvo la fórmula empírica, es decir, los pasos del procedimiento, y no un dato final ni una interpretación.",
+    "planteamiento": "Se pide clasificar el texto dentro de la investigación. El texto describe lo que hizo el grupo: quemar una muestra de masa conocida, masar el $\\mathrm{CO_2}$ y el $\\mathrm{H_2O}$ producidos, calcular carbono e hidrógeno, obtener el oxígeno por diferencia y establecer la fórmula empírica.",
+    "steps": [
+     "Se identifica el tipo de enunciado. Un resultado es un dato obtenido, por ejemplo una masa o una fórmula calculada; una conclusión es una interpretación de los resultados; una predicción anticipa lo que aún no ocurre; un procedimiento es una secuencia de acciones.",
+     "El texto usa verbos de acción en pasado (quemó, masaron, calcularon, determinaron, realizaron) y cada frase describe lo que hizo el grupo, en orden.",
+     "No aparece ninguna cifra de masa ni la fórmula empírica como dato. La fórmula se menciona como lo que se busca establecer, no como un valor obtenido.",
+     "No hay interpretación: el texto no dice qué significa el resultado ni qué se concluye de él.",
+     "No hay anticipación: no se afirma qué ocurrirá en el futuro.",
+     "La secuencia completa (combustión, pesaje, cálculo por diferencia y fórmula) es el método del análisis. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Pensar que la fórmula empírica es el resultado. El texto no la enuncia ni entrega cifras; solo describe cómo se calcula.",
+     "B": "Pensar que el texto es una conclusión. No interpreta lo obtenido ni extrae consecuencias; se limita a describir las acciones.",
+     "C": "Pensar que es una predicción porque menciona la fórmula que se establecería. Ese verbo describe un proceso ya realizado, no un resultado anticipado."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q29",
+   "number": 29,
+   "origin": "ciencias-biologia-2027-invierno-q43",
+   "axis": "Química",
+   "topic": "Química general",
+   "subtopic": "cs-reacciones",
+   "stem": "Una profesora de química distribuye al curso en cuatro grupos. Cada grupo debe experimentar con un tipo de aceite para evaluar cambios en sus propiedades físicas al variar la temperatura, comenzando con la densidad. En el procedimiento, utilizan 50 𝑔 de cada aceite, agregándolos por separado a diferentes vasos de precipitados de 100 𝑚𝐿. Luego, incrementan su temperatura paulatinamente y registran sus densidades a 38 y 49 °𝐶. Los resultados obtenidos se muestran a continuación:\n\nDensidad a 38 °𝐶 Densidad a 49 °𝐶 Grupo Origen del aceite (𝑔/𝑚𝐿) (𝑔/𝑚𝐿) 1 Coco 0,9107 0,9033 2 Poroto de soya 0,9082 0,9023 3 Maíz 0,9082 0,9028 4 Canola 0,8987 0,8908\n\nConsiderando la información anterior, ¿cuál de los componentes del experimento se podría cambiar sin afectar la reproducibilidad de los resultados?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El tipo de aceite evaluado."
+    },
+    {
+     "key": "B",
+     "text": "La propiedad física estudiada."
+    },
+    {
+     "key": "C",
+     "text": "La masa utilizada de cada aceite."
+    },
+    {
+     "key": "D",
+     "text": "La temperatura a la que se mide la densidad."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q43.webp",
+    "width": 907,
+    "height": 591,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La densidad es una propiedad intensiva: no depende de cuánta masa de aceite se use, así que la masa utilizada puede cambiar sin afectar la reproducibilidad de los resultados.",
+    "planteamiento": "Se pide el componente del experimento que puede cambiar sin afectar la reproducibilidad. Datos: se usan 50 g de cada aceite en vasos de 100 mL; se registran las densidades a 38 y 49 °C; cada grupo trabaja con un aceite de distinto origen.",
+    "steps": [
+     "Recordar qué es la reproducibilidad: otro grupo, siguiendo el mismo procedimiento, debe obtener resultados equivalentes. Para eso, las condiciones que definen lo que se mide deben mantenerse.",
+     "Analizar la densidad: se calcula como $\\rho = \\frac{m}{V}$. Es una propiedad intensiva: el cociente es el mismo si se usa más o menos masa de un mismo aceite a la misma temperatura.",
+     "Identificar las condiciones que definen el experimento: el tipo de aceite y la temperatura son las que se comparan en la tabla, y cambiarlas sí cambia el resultado. Por ejemplo, el grupo 1 baja de $0{,}9107$ a $0{,}9033\\ \\mathrm{g/mL}$ al subir la temperatura de 38 a 49 °C.",
+     "La masa utilizada es, por tanto, la única condición que puede variar sin afectar la reproducibilidad, y la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Tipo de aceite evaluado: define los grupos que se comparan; cambiarlo cambia lo que se mide, no solo la forma de medirlo.",
+     "B": "Propiedad física estudiada: es la densidad; si cambia, el experimento deja de ser el mismo y no puede repetirse para lo mismo.",
+     "D": "Temperatura a la que se mide: la temperatura cambia la densidad en la tabla, así que modificarla altera los resultados."
+    }
+   }
+  },
+  {
+   "id": "ciencias-curado-3-q30",
+   "number": 30,
+   "origin": "ciencias-biologia-2027-invierno-q45",
+   "axis": "Química",
+   "topic": "Reacciones químicas",
+   "subtopic": "cs-reacciones",
+   "stem": "El hidrógeno verde es un compuesto con aplicaciones tecnológicas avanzadas, tales como combustible, generación de energía limpia y almacenamiento de energía renovable. Se produce mediante la electrólisis del agua utilizando fuentes de energía renovable, como la solar o eólica, y sin emitir dióxido de carbono. Adicionalmente, existen diferentes métodos para optimizar la producción de hidrógeno, por ejemplo, acelerando o mejorando la eficiencia de reacción. En la siguiente tabla, se muestran datos de producción de hidrógeno verde a partir de agua usando cuatro métodos distintos:\n\nVolumen de agua Cantidad de hidrógeno Método usado (𝐿) producido (𝑚𝑜𝑙) 1 10 0,8 2 12 1,0 3 15 1,5 4 25 1,8\n\nConsiderando la cantidad de hidrógeno obtenido y el volumen de agua empleado en cada caso, ¿cuál de los cuatro métodos presenta una mayor eficiencia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El método 1."
+    },
+    {
+     "key": "B",
+     "text": "El método 2."
+    },
+    {
+     "key": "C",
+     "text": "El método 3."
+    },
+    {
+     "key": "D",
+     "text": "El método 4."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/ciencias-biologia-2027-invierno/q45.webp",
+    "width": 907,
+    "height": 616,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La eficiencia de cada método se mide como hidrógeno producido por litro de agua empleado, así que hay que dividir la cantidad de producto por el volumen de agua y comparar los cocientes.",
+    "planteamiento": "Se pide el método con mayor eficiencia, entendida como $\\frac{n(\\mathrm{H_2})}{V(\\mathrm{H_2O})}$. Datos de la tabla: método 1, $10\\ \\mathrm{L}$ y $0{,}8\\ \\mathrm{mol}$; método 2, $12\\ \\mathrm{L}$ y $1{,}0\\ \\mathrm{mol}$; método 3, $15\\ \\mathrm{L}$ y $1{,}5\\ \\mathrm{mol}$; método 4, $25\\ \\mathrm{L}$ y $1{,}8\\ \\mathrm{mol}$.",
+    "steps": [
+     "Se define la eficiencia como la cantidad de hidrógeno producida por cada litro de agua empleado: $e = \\frac{n(\\mathrm{H_2})}{V(\\mathrm{H_2O})}$, con unidades de $\\mathrm{mol/L}$. Un método es más eficiente cuando obtiene más hidrógeno con menos agua.",
+     "Método 1: $e_1 = \\frac{0{,}8\\ \\mathrm{mol}}{10\\ \\mathrm{L}} = 0{,}080\\ \\mathrm{mol/L}$, porque al dividir por $10$ la coma se corre un lugar a la izquierda.",
+     "Método 2: $e_2 = \\frac{1{,}0\\ \\mathrm{mol}}{12\\ \\mathrm{L}} = \\frac{1}{12} \\approx 0{,}083\\ \\mathrm{mol/L}$, pues $12 \\cdot 0{,}083 \\approx 1{,}0$.",
+     "Método 3: $e_3 = \\frac{1{,}5\\ \\mathrm{mol}}{15\\ \\mathrm{L}} = 0{,}100\\ \\mathrm{mol/L}$, porque $15 \\cdot 0{,}1 = 1{,}5$.",
+     "Método 4: $e_4 = \\frac{1{,}8\\ \\mathrm{mol}}{25\\ \\mathrm{L}} = 0{,}072\\ \\mathrm{mol/L}$, porque $25 \\cdot 0{,}072 = 1{,}8$.",
+     "Comparación de los cuatro valores: $0{,}072 < 0{,}080 < 0{,}083 < 0{,}100$. El cociente mayor es $e_3 = 0{,}100\\ \\mathrm{mol/L}$, así que el método 3 es el más eficiente. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "El método 1 usa el menor volumen de agua ($10\\ \\mathrm{L}$), pero solo produce $0{,}8\\ \\mathrm{mol}$. Su eficiencia es $0{,}080\\ \\mathrm{mol/L}$, menor que la del método 3. La trampa es mirar solo el volumen y no la producción por litro.",
+     "B": "El método 2 tiene una eficiencia de $0{,}083\\ \\mathrm{mol/L}$, cercana a la del método 3. La trampa es compararlo solo con el método 1 y olvidar que el método 3 llega a $0{,}100\\ \\mathrm{mol/L}$.",
+     "D": "El método 4 tiene la mayor producción absoluta ($1{,}8\\ \\mathrm{mol}$), pero también el mayor volumen ($25\\ \\mathrm{L}$). Su eficiencia es la más baja, $0{,}072\\ \\mathrm{mol/L}$. El error típico es comparar cantidades absolutas en vez de cocientes."
+    }
+   }
+  }
+ ]
+}

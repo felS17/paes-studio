@@ -20,9 +20,14 @@ function ExamRow({ exam, label, last }: { exam: ExamMeta; label: string; last?: 
       ? `último ${last}`
       : `${exam.questionCount} preg, ${formatMinutes(exam.durationMinutes)}`
   return (
-    <li className="relative flex min-h-10 items-center gap-3 py-1 transition-colors hover:bg-zinc-900/[0.02] dark:hover:bg-zinc-100/[0.03]">
-      <Link to={`/ensayo/${exam.id}`} className="min-w-0 flex-1 text-[13.5px] after:absolute after:inset-0 sm:truncate">{label}</Link>
-      <span className="shrink-0 font-mono text-[12px] text-zinc-500 tabular-nums sm:w-36 sm:text-right dark:text-zinc-400">{detail}</span>
+    <li className="relative flex min-h-12 items-center gap-3 py-1.5 transition-colors hover:bg-zinc-900/[0.02] dark:hover:bg-zinc-100/[0.03]">
+      <Link
+        to={`/ensayo/${exam.id}`}
+        className="min-w-0 flex-1 text-[16px] font-medium tracking-tight text-zinc-900 after:absolute after:inset-0 sm:truncate sm:text-[17px] dark:text-zinc-100"
+      >
+        {label}
+      </Link>
+      <span className="shrink-0 font-mono text-[12.5px] text-zinc-500 tabular-nums sm:w-40 sm:text-right dark:text-zinc-400">{detail}</span>
       <div className="relative z-10 hidden shrink-0 gap-1 sm:flex">
         <Button size="sm" variant="ghost" asChild>
           <Link to={`/ensayo/${exam.id}?modo=practica`}>práctica</Link>
@@ -56,12 +61,22 @@ export function ExamList({ exams, lastScores, flat }: { exams: ExamMeta[]; lastS
     groups.set(name, [...(groups.get(name) ?? []), exam])
   }
   return (
-    <div className="space-y-6">
+    <div className="space-y-10">
       {[...groups].map(([name, list], i) => (
         <section key={name} aria-labelledby={`grupo-${i}`}>
-          <h2 id={`grupo-${i}`} className="mb-1 font-mono text-[12px] text-zinc-500 dark:text-zinc-400">{name}</h2>
+          <h2 id={`grupo-${i}`} className="mb-2 text-[21px] leading-tight font-semibold tracking-tight text-zinc-900 sm:text-[24px] dark:text-zinc-100">
+            {name}
+          </h2>
           <ul className={LIST}>
-            {list.map((exam) => <ExamRow key={exam.id} exam={exam} label={withArea(exam, exam.subject)} last={lastScores.get(exam.id)} />)}
+            {list.map((exam) => (
+              <ExamRow
+                key={exam.id}
+                exam={exam}
+                // Hay varios curados por materia: el grupo los distingue por su número.
+                label={exam.source === 'curado' ? `${exam.subject}, ${exam.title}` : withArea(exam, exam.subject)}
+                last={lastScores.get(exam.id)}
+              />
+            ))}
           </ul>
         </section>
       ))}

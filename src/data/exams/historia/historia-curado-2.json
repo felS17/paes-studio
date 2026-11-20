@@ -1,0 +1,1553 @@
+{
+ "id": "historia-curado-2",
+ "subject": "historia",
+ "title": "Ensayo curado 2",
+ "description": "30 preguntas oficiales del DEMRE (pruebas rendidas de 2024 a 2026) que recorren los ejes de Historia, cada una con su explicación paso a paso y la prueba de la que viene.",
+ "year": 2027,
+ "modality": "curado",
+ "source": "curado",
+ "durationMinutes": 55,
+ "scoring": {
+  "method": "reference-table",
+  "table": [
+   100,
+   106,
+   135,
+   161,
+   184,
+   206,
+   227,
+   248,
+   266,
+   282,
+   297,
+   311,
+   327,
+   344,
+   360,
+   374,
+   385,
+   395,
+   404,
+   415,
+   429,
+   444,
+   460,
+   473,
+   484,
+   492,
+   499,
+   506,
+   515,
+   527,
+   542,
+   557,
+   572,
+   583,
+   591,
+   598,
+   605,
+   614,
+   625,
+   639,
+   655,
+   670,
+   683,
+   693,
+   703,
+   712,
+   724,
+   739,
+   756,
+   772,
+   788,
+   802,
+   817,
+   834,
+   853,
+   873,
+   895,
+   917,
+   941,
+   968,
+   1000
+  ]
+ },
+ "generatedBy": "scripts/pipeline/build_curated_bank.py",
+ "passages": [],
+ "questions": [
+  {
+   "id": "historia-curado-2-q01",
+   "number": 1,
+   "origin": "historia-2027-invierno-q01",
+   "axis": "Formación ciudadana",
+   "topic": "Democracia",
+   "subtopic": "hi-democracia",
+   "stem": "La probidad en el ejercicio de la función pública corresponde a una característica que contribuye al funcionamiento de la democracia. Considerando la institucionalidad democrática vigente en Chile, ¿cuál es una medida utilizada por el Estado para resguardar esta característica de la democracia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La regulación a la formación de organizaciones sociales."
+    },
+    {
+     "key": "B",
+     "text": "La realización de entrevistas para postular a empleos públicos."
+    },
+    {
+     "key": "C",
+     "text": "La obligación de algunas autoridades de declarar su patrimonio."
+    },
+    {
+     "key": "D",
+     "text": "La actualización del registro de inscripción en los partidos políticos."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La probidad se resguarda con mecanismos que hacen transparente el patrimonio de quienes ejercen funciones públicas, como la declaración obligatoria de patrimonio.",
+    "planteamiento": "Se pide una medida del Estado que resguarde la probidad, entendida como el actuar honesto y correcto en la función pública. Datos del enunciado: la probidad es una característica que contribuye al funcionamiento de la democracia, y la pregunta exige una medida vigente en la institucionalidad chilena.",
+    "steps": [
+     "La probidad significa actuar con honestidad y rectitud en el ejercicio de la función pública: quien ocupa un cargo público no debe usarlo para beneficio personal.",
+     "Para resguardarla, el Estado necesita mecanismos que permitan verificar que las autoridades no se enriquecen de forma indebida mientras ejercen su cargo. Uno de ellos es hacer transparente el patrimonio.",
+     "La obligación de algunas autoridades de declarar su patrimonio cumple esa función: permite fiscalizar si la evolución de sus bienes es coherente con los ingresos del cargo y detectar un eventual enriquecimiento indebido.",
+     "Las demás opciones no apuntan a la conducta ética: la regulación de organizaciones sociales (A) se refiere a la libertad de asociación; la actualización del registro de partidos (D) es un trámite administrativo; y las entrevistas de postulación (B) evalúan idoneidad para un cargo, no la integridad de quien ya lo ejerce.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Asociar la probidad con la regulación de organizaciones sociales, que se refiere a la libertad de asociación y no al comportamiento de los funcionarios. Confundir la vida asociativa con la conducta pública es la trampa.",
+     "B": "Confundir un proceso de selección con un control de probidad: las entrevistas miden idoneidad, no integridad. Quien ya ejerce un cargo no se controla con una entrevista de postulación.",
+     "D": "La actualización del registro de partidos es un trámite de inscripción y no un mecanismo que controle el comportamiento de las autoridades. Se elige por confundir cualquier registro público con transparencia."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q02",
+   "number": 2,
+   "origin": "historia-2027-invierno-q05",
+   "axis": "Formación ciudadana",
+   "topic": "Ciudadanía",
+   "subtopic": "hi-democracia",
+   "stem": "Los partidos políticos son organizaciones formadas por personas que comparten principios políticos e ideológicos respecto de la vida en sociedad. Considerando la institucionalidad democrática chilena, ¿cuál es una de las contribuciones que hacen los partidos políticos al funcionamiento de la democracia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Impiden la radicalización de las posturas ideológicas."
+    },
+    {
+     "key": "B",
+     "text": "Evitan la fragmentación de las visiones sociales comunes."
+    },
+    {
+     "key": "C",
+     "text": "Promueven la interrelación activa de la ciudadanía con el Estado."
+    },
+    {
+     "key": "D",
+     "text": "Garantizan la participación ciudadana en los procesos electorales."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los partidos políticos contribuyen a la democracia al conectar a la ciudadanía con el Estado, canalizando intereses, propuestas y participación.",
+    "planteamiento": "Se pide una contribución de los partidos políticos al funcionamiento de la democracia en Chile. Datos del enunciado: los partidos son organizaciones de personas que comparten principios políticos e ideológicos sobre la vida en sociedad. Hay que decidir cuál función se deriva de esa definición.",
+    "steps": [
+     "El enunciado define a los partidos como organizaciones de personas que «comparten principios políticos e ideológicos respecto de la vida en sociedad». Su función es agrupar visiones de sociedad.",
+     "Al agrupar esos principios, los partidos canalizan demandas ciudadanas hacia las instituciones del Estado, por ejemplo, presentando candidaturas, proponiendo iniciativas a través de sus representantes y ocupando cargos.",
+     "De ese modo promueven la interrelación activa de la ciudadanía con el Estado: las personas participan en la vida política a través de los partidos y sus propuestas llegan a las instituciones.",
+     "Las opciones A y B describen funciones que el enunciado no atribuye a los partidos: no impiden la radicalización ni evitan la diversidad de visiones, que es propia del pluralismo. La opción D atribuye al Estado la garantía de participación electoral, no a los partidos.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Creer que los partidos moderan automáticamente las posturas; el enunciado los define por sus principios ideológicos, no por evitar la radicalización. Es un error de atribución: los partidos expresan visiones y no las suavizan por definición.",
+     "B": "Suponer que los partidos evitan la fragmentación de las visiones sociales; en democracia la diversidad de visiones es normal y los partidos la expresan. Confundir pluralismo con fragmentación es el error típico.",
+     "D": "Atribuir a los partidos la garantía de participación electoral, que es responsabilidad del Estado a través de sus instituciones electorales. Los partidos contribuyen a la participación, pero no la garantizan por sí solos."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q03",
+   "number": 3,
+   "origin": "historia-2027-invierno-q12",
+   "axis": "Formación ciudadana",
+   "topic": "Ciudadanía",
+   "subtopic": "hi-democracia",
+   "stem": "En las sociedades democráticas una de las formas que tiene la ciudadanía para expresar su voluntad es la elección de las autoridades públicas. Respecto de la participación ciudadana, ¿qué implicancia tienen los resultados de una votación para quienes se presentan a la reelección a un cargo de representación popular?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Facilita una mejor vinculación con el electorado."
+    },
+    {
+     "key": "B",
+     "text": "Mejora la atención de las demandas de la población."
+    },
+    {
+     "key": "C",
+     "text": "Permite la oportunidad de evaluar la gestión realizada."
+    },
+    {
+     "key": "D",
+     "text": "Asegura la aplicación de propuestas políticas moderadas."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El resultado de una votación permite a la ciudadanía evaluar la gestión de quien busca la reelección, por lo que la elección funciona como un juicio sobre lo realizado en el cargo.",
+    "planteamiento": "Se pide la implicancia que tienen los resultados de una votación para quien se presenta a la reelección en un cargo de representación popular. Datos: la elección de autoridades es una forma en que la ciudadanía expresa su voluntad; la pregunta se centra en lo que el voto significa para la gestión previa.",
+    "steps": [
+     "El enunciado afirma que elegir autoridades es una de las formas en que la ciudadanía expresa su voluntad. El voto, entonces, tiene un contenido y no es solo un trámite.",
+     "Cuando alguien se presenta a la reelección, el voto recae sobre quien ya ejerció el cargo. El resultado es, por tanto, una evaluación de la gestión realizada durante el mandato.",
+     "Esa evaluación permite a los electores premiar o castigar lo hecho: si la gestión fue valorada, la autoridad se mantiene; si no, la ciudadanía puede optar por otra alternativa.",
+     "Las opciones A (vinculación con el electorado), B (atención de las demandas) y D (aplicación de propuestas moderadas) son promesas o efectos que el resultado electoral no garantiza por sí mismo: ganar no asegura cumplir lo prometido.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Suponer que ganar una elección asegura una mejor vinculación con el electorado; la vinculación depende del trabajo posterior de la autoridad, y el voto por sí solo no la garantiza.",
+     "B": "Asumir que ganar una elección asegura atender las demandas; el voto evalúa la gestión, pero no obliga a cumplir las promesas. Confundir la legitimidad del resultado con la efectividad de la gestión es el error típico.",
+     "D": "Pensar que el voto garantiza la moderación de las propuestas; la elección no regula el contenido de las políticas. Es una atribución que no corresponde al acto de votar."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q04",
+   "number": 4,
+   "origin": "historia-2027-invierno-q09",
+   "axis": "Formación ciudadana",
+   "topic": "Regiones",
+   "subtopic": "hi-estado",
+   "stem": "Lee el siguiente texto que refiere a la reforma que creó el cargo de Gobernador Regional en Chile:\n\n«Las principales modificaciones a la descentralización política (leyes 21.074 y 20.990) contienen la eliminación de la figura del intendente regional y las competencias y funciones de las nuevas autoridades regionales. […] Como reemplazo de la función de administración regional, se crea la figura del gobernador regional, actor político electo por sufragio universal, quien cumplirá la función de ejecutivo del gobierno regional».\n\nMontecinos, E. (2020). Elección de gobernadores regionales en Chile: escenarios de cambio en las relaciones intergubernamentales.\n\nConsiderando lo expuesto en el fragmento, ¿cuál es una contribución del cargo de Gobernador Regional al funcionamiento de la democracia en Chile?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Facilitar la ejecución del programa del Ejecutivo en las regiones."
+    },
+    {
+     "key": "B",
+     "text": "Fortalecer la representación de los intereses de la población a nivel regional."
+    },
+    {
+     "key": "C",
+     "text": "Reemplazar la labor de las autoridades del Poder Legislativo a nivel regional."
+    },
+    {
+     "key": "D",
+     "text": "Coordinar la planificación de los recursos municipales existentes en las regiones."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q09.webp",
+    "width": 907,
+    "height": 578,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El gobernador regional, electo por sufragio universal, aporta a la democracia al representar los intereses de la población de su región.",
+    "planteamiento": "Se pide una contribución del cargo de Gobernador Regional al funcionamiento de la democracia en Chile, según el fragmento. Datos: el gobernador regional es un «actor político electo por sufragio universal» que cumple la función de ejecutivo del gobierno regional, y reemplaza la figura del intendente regional, que era de designación.",
+    "steps": [
+     "El fragmento señala que el gobernador regional es un «actor político electo por sufragio universal» y que cumple la función de «ejecutivo del gobierno regional». Su legitimidad nace del voto de los habitantes de la región.",
+     "A diferencia del intendente, que era un cargo de designación presidencial, la elección directa vincula a la autoridad regional con los votantes de la región. Así, las decisiones regionales responden a quienes la eligieron.",
+     "Esa vinculación contribuye a la democracia porque permite que los intereses de la población regional tengan una autoridad que los representa y que debe rendir cuentas a sus electores.",
+     "Las opciones A (ejecutar el programa del Ejecutivo) y C (reemplazar al Poder Legislativo) no aparecen en el texto, que habla de reemplazar la administración regional; la opción D (coordinar recursos municipales) tampoco es la función que describe el fragmento.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Confundir al gobernador con un agente del Ejecutivo central; el texto lo presenta como una autoridad regional electa, no como representante del gobierno nacional. Es un error habitual al pensar en el antiguo intendente.",
+     "C": "Creer que el gobernador reemplaza al Poder Legislativo; el fragmento habla de reemplazar la administración regional, no la función legislativa del Congreso. Confundir ejecución regional con legislación es la trampa.",
+     "D": "Confundir la función del gobernador con la coordinación de los municipios; el fragmento no menciona recursos municipales. Es un ámbito cercano, pero distinto, de la administración regional."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q05",
+   "number": 5,
+   "origin": "historia-2027-invierno-q19",
+   "axis": "Formación ciudadana",
+   "topic": "Poderes del Estado",
+   "subtopic": "hi-estado",
+   "stem": "Durante el siglo XIX, el liberalismo político difundió por América la elaboración de marcos jurídicos para la organización estatal. En este contexto, ¿cuál era un objetivo que se buscaba con la implementación de dichos marcos jurídicos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Restringir los derechos individuales de la elite económica."
+    },
+    {
+     "key": "B",
+     "text": "Fortalecer el Poder Legislativo por sobre el Poder Ejecutivo."
+    },
+    {
+     "key": "C",
+     "text": "Privilegiar la continuidad de sistemas de gobierno monárquicos."
+    },
+    {
+     "key": "D",
+     "text": "Limitar la autoridad de los gobernantes en el ejercicio del poder."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q19.webp",
+    "width": 907,
+    "height": 236,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los marcos jurídicos del liberalismo político buscaban limitar el poder de los gobernantes mediante reglas escritas que organizan el Estado.",
+    "planteamiento": "Se pide un objetivo de la elaboración de marcos jurídicos para la organización estatal, difundida por el liberalismo político en América durante el siglo XIX. Datos: los marcos jurídicos organizan el Estado, y la pregunta exige identificar el propósito de limitar la autoridad de los gobernantes.",
+    "steps": [
+     "El enunciado señala que el liberalismo político difundió la elaboración de marcos jurídicos para organizar el Estado. Estos marcos son constituciones y leyes que establecen competencias, derechos y procedimientos.",
+     "Al definir por escrito qué puede hacer cada autoridad y cómo debe hacerlo, las reglas restringen la arbitrariedad de quien gobierna. El poder queda sujeto a normas que todos deben respetar.",
+     "El propósito, entonces, es limitar la autoridad de los gobernantes en el ejercicio del poder, lo que constituye el núcleo del constitucionalismo liberal.",
+     "La opción A (restringir los derechos de la elite) contradice la idea liberal de garantizar derechos individuales; la opción B (fortalecer el Legislativo sobre el Ejecutivo) rompe el equilibrio de poderes; la opción C (monarquías) es opuesta al ideal republicano del período.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Confundir la protección de derechos con su restricción; el liberalismo buscaba garantizar derechos individuales, no quitárselos a un grupo. Es una lectura invertida del ideal liberal.",
+     "B": "Pensar que el liberalismo buscaba un Congreso dominante; el objetivo era repartir el poder, no concentrarlo en una sola rama. Un Legislativo que se impone al Ejecutivo también concentra el poder.",
+     "C": "Asociar el liberalismo político con la continuidad de la monarquía; los marcos jurídicos se escribieron justamente para reemplazar el gobierno absoluto. Es una opción contraria al proyecto republicano del período."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q06",
+   "number": 6,
+   "origin": "historia-2027-invierno-q20",
+   "axis": "Formación ciudadana",
+   "topic": "Leyes",
+   "subtopic": "hi-estado",
+   "stem": "En el contexto de la formación de la república en Chile, se promulgaron las Leyes Federales de 1826 que permitieron la implementación de asambleas autónomas en las provincias, constituidas por diputados electos. En este contexto histórico, ¿cuál fue uno de los argumentos políticos que impulsó la creación de dichas asambleas provinciales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La promoción de la descentralización estatal en materia legislativa."
+    },
+    {
+     "key": "B",
+     "text": "La integración de los sectores populares a la administración pública."
+    },
+    {
+     "key": "C",
+     "text": "La supresión de liderazgos locales que ponían en riesgo las ideas liberales."
+    },
+    {
+     "key": "D",
+     "text": "La eliminación progresiva del voto censitario en los mecanismos de sufragio."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Las asambleas provinciales de 1826 se justificaron como una forma de descentralizar el poder y acercar las decisiones legislativas a las provincias.",
+    "planteamiento": "Se pide uno de los argumentos políticos que impulsaron la creación de asambleas provinciales con diputados electos, por las Leyes Federales de 1826. Datos del enunciado: las asambleas eran autónomas en las provincias y estaban formadas por diputados electos; la pregunta se refiere al argumento de fondo de esa medida.",
+    "steps": [
+     "Las Leyes Federales de 1826 permitieron la creación de «asambleas autónomas en las provincias, constituidas por diputados electos». Eso significa que cada provincia tendría un órgano propio de decisión.",
+     "El argumento de fondo es federal: que las provincias decidan sobre sus asuntos en lugar de concentrar toda la decisión en el gobierno central. La descentralización es el principio que sustenta la medida.",
+     "Cuando las asambleas dictan normas sobre asuntos locales, la autoridad se acerca a quienes la sufren. Por eso se presenta como un modo de descentralizar la legislación.",
+     "Las opciones B (integrar a sectores populares), C (suprimir liderazgos locales) y D (eliminar el voto censitario) no corresponden a la medida: el sufragio de la época era restringido, y el federalismo buscaba dar más autonomía a las provincias, no eliminar sus liderazgos.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Pensar que la ley integraba a los sectores populares a la administración; el sufragio de la época era censitario, por lo que la participación era restringida. Es una trampa al asociar autonomía con inclusión social.",
+     "C": "Creer que la ley buscaba suprimir liderazgos locales; el federalismo les dio más autonomía, no las eliminó. Confundir reorganización del poder con eliminación de dirigentes es el error típico.",
+     "D": "Pensar que la ley eliminó el voto censitario; esta medida no modificó los requisitos del sufragio. Es un cambio que no se produjo con las asambleas provinciales."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q07",
+   "number": 7,
+   "origin": "historia-2025-invierno-q02",
+   "axis": "Formación ciudadana",
+   "topic": "Participación",
+   "subtopic": "hi-fuentes",
+   "stem": "Observa la siguiente caricatura referida al sistema electoral:\n\nMartín, F. (2014). Mensaje a la población [caricatura].\n\nLa imagen aborda críticamente la forma en que funcionan las democracias representativas. Al respecto, ¿cuál es el rasgo de este sistema político criticado por el autor de la caricatura?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La crítica por la baja participación ciudadana en las últimas elecciones."
+    },
+    {
+     "key": "B",
+     "text": "La limitada importancia que se le asigna a otras formas de participación."
+    },
+    {
+     "key": "C",
+     "text": "La pérdida de relevancia del sufragio como mecanismo de participación."
+    },
+    {
+     "key": "D",
+     "text": "La oposición a las formas violentas de participación en el espacio público."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2025-invierno/q02.webp",
+    "width": 907,
+    "height": 864,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La caricatura critica una democracia que reduce la participación a votar cada cierto tiempo, mientras que las protestas y otras formas de expresión quedan sin valor institucional.",
+    "planteamiento": "Se pide identificar el rasgo del sistema político criticado por el autor de la caricatura de Ferran Martín (2014). Datos: dos megáfonos dicen «¡Por favor, permanezcan ordenadamente en sus hogares hasta nuevas elecciones!», mientras la ciudadanía protesta con carteles que dicen «NO», «BASTA» e «YA NOS VALE».",
+    "steps": [
+     "La caricatura contrasta dos actores: a la izquierda, dos megáfonos que representan la autoridad y hablan desde arriba, y abajo, una multitud que sostiene carteles de protesta. El centro de la crítica está en lo que se le pide a la ciudadanía.",
+     "El mensaje de los megáfonos asocia la participación con el voto: la población debe quedarse en casa hasta las próximas elecciones. Así, la elección aparece como la única instancia legítima de intervención política.",
+     "Los carteles «NO», «BASTA» e «YA NOS VALE» y la multitud muestran otras formas de participación, como la manifestación pública, la protesta y la expresión colectiva, que el discurso oficial no reconoce como canal válido.",
+     "Por lo tanto, el rasgo criticado es que el sistema político le asigna poca importancia a otras formas de participación distintas del sufragio. Eso corresponde a la alternativa B.",
+     "La alternativa A habla de baja participación electoral, algo que la caricatura no muestra ni cuantifica; su foco es el silencio impuesto a quienes protestan.",
+     "La alternativa C afirma que el sufragio pierde relevancia, pero el megáfono asume que la elección es el único canal que importa, lo que pone al voto en el centro del sistema.",
+     "La alternativa D habla de oposición a formas violentas. Los carteles son pacíficos y la caricatura no alude a violencia, por lo que esta idea no aparece en la fuente.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Habla de baja participación en las últimas elecciones. La trampa es leer el mensaje solo por el contexto electoral, cuando la caricatura se centra en las formas de participación que quedan fuera.",
+     "C": "Afirma que el sufragio pierde relevancia. La caricatura no dice que el voto sea irrelevante; al contrario, presenta la elección como el único canal reconocido.",
+     "D": "Habla de oposición a formas violentas de participación. Los carteles son pacíficos, por lo que la trampa es suponer que toda protesta se asocia con violencia."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q08",
+   "number": 8,
+   "origin": "historia-2027-invierno-q03",
+   "axis": "Formación ciudadana",
+   "topic": "Constitución",
+   "subtopic": "hi-informacion",
+   "stem": "Lee el siguiente texto sobre el funcionamiento de un sistema democrático:\n\n«El derecho internacional permite establecer límites al ejercicio de la libertad de expresión, si bien estas restricciones deben estar establecidas en la ley de un modo claro y accesible, sólo pueden imponerse para ciertos fines legítimos específicos […], deben ser manifiestamente necesarias, es decir, deben ser la medida menos intrusiva que alcance el fin perseguido, y deben ser proporcionales».\n\nEscaño, C. (2021). Los límites de la libertad de expresión y la apología del odio. *Amnistía Internacional.*\n\nDe acuerdo con el marco constitucional vigente en Chile, ¿en qué situación se justifica realizar lo planteado en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cuando se divulgan públicamente opiniones contrarias al gobierno."
+    },
+    {
+     "key": "B",
+     "text": "Cuando se organiza una manifestación masiva en el espacio público."
+    },
+    {
+     "key": "C",
+     "text": "Cuando se publica una carta que cuestiona los valores de la sociedad."
+    },
+    {
+     "key": "D",
+     "text": "Cuando se difunden opiniones que incitan a discriminar a una persona."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q03.webp",
+    "width": 907,
+    "height": 506,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los límites a la libertad de expresión son legítimos cuando persiguen un fin legítimo y son necesarios y proporcionales; difundir opiniones que incitan a discriminar a una persona cumple esas condiciones.",
+    "planteamiento": "Se pide la situación en que se justifica establecer un límite a la libertad de expresión según el texto, de acuerdo con el marco constitucional chileno. Datos del texto: el límite debe estar en la ley de forma clara y accesible, perseguir fines legítimos específicos, ser manifiestamente necesario y proporcional. La fuente es Escaño (2021), de Amnistía Internacional.",
+    "steps": [
+     "El texto exige cuatro condiciones para limitar la libertad de expresión: que la restricción esté en la ley de modo claro y accesible, que persiga fines legítimos específicos, que sea «manifiestamente necesaria» y que sea «proporcional».",
+     "Entre los fines legítimos está proteger los derechos de otras personas. La Constitución protege la libertad de expresión, pero su ejercicio tiene límites cuando afecta derechos ajenos, y la ley chilena sanciona la discriminación arbitraria (Ley N.° 20.609).",
+     "Al aplicar la condición de necesidad, la medida menos intrusiva para proteger a una persona de la incitación a discriminarla consiste en limitar esas opiniones concretas, no en impedir la expresión en general.",
+     "Las opciones A (criticar al gobierno), B (manifestarse en el espacio público) y C (cuestionar los valores de la sociedad) son ejercicios legítimos de la libertad de expresión que no afectan derechos de terceros, por lo que no justifican una restricción.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Creer que criticar al gobierno es un límite legítimo; la crítica política está protegida y no cumple el fin que exige el texto. Confundir la fiscalización política con una afectación de derechos es el error típico.",
+     "B": "Confundir una manifestación pacífica con un fin de restricción: el derecho a reunirse en el espacio público no se limita por la sola presencia de opiniones. Es una trampa al asociar protesta con alteración del orden.",
+     "C": "Confundir cuestionar valores sociales con incitar a tratar mal a alguien; cuestionar no es lo mismo que discriminar. La crítica de ideas no cumple las condiciones de necesidad y finalidad que exige el texto."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q09",
+   "number": 9,
+   "origin": "historia-2027-invierno-q06",
+   "axis": "Formación ciudadana",
+   "topic": "Democracia",
+   "subtopic": "hi-informacion",
+   "stem": "En las sociedades democráticas del siglo XXI existen mecanismos institucionales que resguardan la transparencia en la gestión estatal. En el contexto de la democracia chilena, ¿cuál de las siguientes opciones corresponde a uno de estos mecanismos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La rendición de una cuenta pública anual por parte del Ejecutivo."
+    },
+    {
+     "key": "B",
+     "text": "La existencia de garantías al ejercicio de la libertad de expresión."
+    },
+    {
+     "key": "C",
+     "text": "La inscripción automática de las personas en el registro electoral."
+    },
+    {
+     "key": "D",
+     "text": "La publicación de una norma legal contra la discriminación arbitraria."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cuenta pública anual es un mecanismo de transparencia que obliga al Ejecutivo a informar a la ciudadanía sobre su gestión.",
+    "planteamiento": "Se pide un mecanismo institucional que haga transparente la gestión estatal en la democracia chilena. Datos del enunciado: se trata de mecanismos que resguardan la transparencia, es decir, que permiten a la ciudadanía conocer y fiscalizar lo que hace el Estado.",
+    "steps": [
+     "La pregunta busca un mecanismo que haga transparente la gestión del Estado. Un mecanismo así obliga a las autoridades a informar y permite que la ciudadanía evalúe lo que se hace con los recursos y las decisiones públicas.",
+     "La cuenta pública anual que el Presidente de la República presenta ante el Congreso cumple esa función: informa sobre el estado administrativo, político y económico del país y sobre los resultados de la gestión.",
+     "Como la rendición es anual y pública, la ciudadanía puede comparar lo anunciado con lo realizado, lo que convierte la gestión en objeto de control social.",
+     "Las opciones B (libertad de expresión) y D (norma contra la discriminación) son garantías de derechos, y la opción C (inscripción en el registro electoral) regula quién puede votar; ninguna de ellas es un control de la gestión.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Confundir garantías de derechos fundamentales con mecanismos de transparencia; la libertad de expresión protege a la ciudadanía, pero no obliga al Estado a informar. Es un derecho, no un procedimiento de rendición.",
+     "C": "Creer que la inscripción electoral controla la gestión pública; esa inscripción solo define quién está habilitado para votar. El registro electoral organiza la participación, no fiscaliza al Estado.",
+     "D": "Confundir una norma de igualdad con un mecanismo de control de la gestión: la ley contra la discriminación arbitraria protege derechos, pero no obliga a una autoridad a rendir cuentas de su gestión."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q10",
+   "number": 10,
+   "origin": "historia-2027-invierno-q07",
+   "axis": "Formación ciudadana",
+   "topic": "Riesgos naturales",
+   "subtopic": "hi-informacion",
+   "stem": "En un sistema democrático los medios de comunicación representan una oportunidad para la libre expresión de la ciudadanía. Sin embargo, existen algunos riesgos asociados a su uso. En este contexto, ¿en cuál de las siguientes situaciones es posible evidenciar un riesgo para la democracia?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una revista publicó artículos relacionados con la corrupción política."
+    },
+    {
+     "key": "B",
+     "text": "Un canal de televisión emitió contenido dirigido a criticar al gobierno."
+    },
+    {
+     "key": "C",
+     "text": "Una red social admitió opiniones en contra de la población extranjera."
+    },
+    {
+     "key": "D",
+     "text": "Un diario declaró una línea editorial con ideas políticas conservadoras."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El riesgo para la democracia aparece cuando un medio difunde opiniones que promueven la discriminación contra un grupo de personas, y no cuando ejerce el pluralismo o la crítica.",
+    "planteamiento": "Se pide la situación en que se evidencia un riesgo para la democracia, asociado al uso de los medios de comunicación. Datos: las opciones A, B y D describen ejercicios de la libertad de prensa (denunciar corrupción, criticar al gobierno, tener una línea editorial), y la opción C describe la difusión de opiniones contra un grupo de personas.",
+    "steps": [
+     "La pregunta busca una situación que muestre un riesgo, es decir, un uso de los medios que afecte la convivencia democrática, y no un ejercicio legítimo de la libertad de expresión.",
+     "Denunciar corrupción (A), criticar al gobierno (B) y tener una línea editorial conservadora (D) son expresiones propias de una democracia plural: la prensa cumple un rol de contrapeso y de pluralismo de ideas.",
+     "En la opción C, una red social admite «opiniones en contra de la población extranjera». Esto difunde discriminación contra un grupo y puede excluirlo de la deliberación pública, lo que debilita la igualdad que sostiene la democracia.",
+     "Por eso la situación que evidencia un riesgo es la de la red social que admite discriminación. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Denunciar corrupción es una función de la prensa que fortalece la democracia; por eso no es un riesgo. La trampa es pensar que cualquier tema político incómodo es un riesgo.",
+     "B": "Creer que criticar al gobierno es un riesgo; la crítica es un contrapeso propio de la democracia. Confundir la oposición con una amenaza es el error típico.",
+     "D": "Confundir una línea editorial ideológica con un riesgo: el pluralismo de ideas es parte de la democracia, aunque no compartamos las posturas. Lo que daña la democracia es la discriminación, no la orientación política."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q11",
+   "number": 11,
+   "origin": "historia-2027-invierno-q04",
+   "axis": "Formación ciudadana",
+   "topic": "Derechos",
+   "subtopic": "hi-justicia",
+   "stem": "El Ministerio Público es un organismo autónomo del Estado que tiene como función dirigir la investigación de los delitos, llevar a los imputados a los tribunales y dar protección a las víctimas y los testigos. Considerando el funcionamiento del sistema judicial chileno, ¿cuál es una implicancia de que este organismo sea autónomo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Amplía la garantía de acceso de las personas a la justicia."
+    },
+    {
+     "key": "B",
+     "text": "Asegura el derecho ciudadano de recibir asesoría jurídica."
+    },
+    {
+     "key": "C",
+     "text": "Garantiza la imparcialidad en la ejecución de las pesquisas."
+    },
+    {
+     "key": "D",
+     "text": "Promueve el respeto de los derechos humanos de la población."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La autonomía del Ministerio Público busca que la investigación penal se realice sin presiones externas, lo que asegura la imparcialidad en las pesquisas.",
+    "planteamiento": "Se pide una implicancia de que el Ministerio Público sea autónomo. Datos del enunciado: el organismo dirige la investigación de los delitos, lleva a los imputados a los tribunales y protege a víctimas y testigos. Hay que relacionar la autonomía con el ejercicio de la investigación.",
+    "steps": [
+     "El enunciado indica que el Ministerio Público es un organismo autónomo que dirige la investigación de los delitos. Esa función consiste en reunir antecedentes que determinarán si hay responsabilidad penal.",
+     "La autonomía significa que el organismo no recibe instrucciones de otros poderes del Estado ni del Gobierno al conducir sus investigaciones. Las decisiones se toman según los antecedentes del caso y no según la conveniencia política.",
+     "Una investigación sin presiones externas se conduce con imparcialidad: se investiga lo que muestran los hechos, sin favorecer ni perjudicar a ninguna de las partes.",
+     "Las opciones A (acceso a la justicia), B (asesoría jurídica) y D (derechos humanos) corresponden a otros roles del sistema judicial, como la defensa de las personas o la protección general de derechos, y no son una consecuencia directa de la autonomía.",
+     "Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Pensar que la autonomía amplía el acceso a la justicia; la autonomía se refiere a la independencia de la investigación, no a la cobertura de atención. Es un efecto que se asocia a otras instituciones.",
+     "B": "Asociar la autonomía con la asesoría jurídica, que corresponde a la Defensoría Penal Pública y no al Ministerio Público. Confundir ambos organismos del sistema penal es el error típico.",
+     "D": "La promoción de los derechos humanos es un deber general del Estado y no una consecuencia específica de la autonomía de la fiscalía. Es una respuesta verdadera en un plano general, pero no la implicancia buscada."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q12",
+   "number": 12,
+   "origin": "historia-2027-invierno-q08",
+   "axis": "Formación ciudadana",
+   "topic": "Poderes del Estado",
+   "subtopic": "hi-justicia",
+   "stem": "Lee el siguiente texto sobre la labor del Poder Judicial chileno:\n\n«Su trabajo está enfocado a generar confianza entre los ciudadanos, fortaleciendo la democracia y contribuyendo a la paz social. Para ello, cumple su función de administrar justicia de manera honesta, confiable y eficiente, bajo el concepto de servicio de calidad a las personas, donde priman el respeto, la no discriminación y el más amplio acceso a la justicia».\n\nPoder Judicial (2023). *¿Qué es el Poder Judicial?*\n\n¿Cuál de las siguientes situaciones atenta contra la forma de administrar justicia descrita en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Una jueza suspende una audiencia de control de detención."
+    },
+    {
+     "key": "B",
+     "text": "Un ciudadano presenta un recurso de apelación ante un tribunal."
+    },
+    {
+     "key": "C",
+     "text": "Una fiscal comenta una resolución judicial en una entrevista radial."
+    },
+    {
+     "key": "D",
+     "text": "Un defensor penal público se niega a reunirse con su representado."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q08.webp",
+    "width": 907,
+    "height": 486,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El texto define la labor judicial por el respeto, la no discriminación y el amplio acceso a la justicia; que un defensor se niegue a reunirse con su representado vulnera directamente esos valores.",
+    "planteamiento": "Se pide la situación que atenta contra la forma de administrar justicia descrita en el texto del Poder Judicial. Datos: la justicia debe ser honesta, confiable y eficiente, con respeto, no discriminación y el más amplio acceso a la justicia. Hay que evaluar cada situación frente a esos valores.",
+    "steps": [
+     "El texto señala que el Poder Judicial debe administrar justicia de manera «honesta, confiable y eficiente», y que en ese servicio «priman el respeto, la no discriminación y el más amplio acceso a la justicia».",
+     "La suspensión de una audiencia de control de detención (A) es un acto procesal regular que la ley prevé cuando corresponde. La presentación de una apelación (B) es un mecanismo que amplía el acceso a la justicia, no lo restringe.",
+     "La fiscal que comenta una resolución judicial en una entrevista radial (C) actúa de manera reprochable desde la ética profesional, pero no afecta directamente el acceso a la justicia ni la no discriminación que enfatiza el texto.",
+     "En la opción D, un defensor penal público se niega a reunirse con su representado. Así se impide preparar la defensa y ejercer el derecho a ser asistido, lo que vulnera el acceso efectivo a la justicia y el respeto que el texto pone como base del servicio.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Considerar que toda suspensión de audiencia es arbitraria; la ley prevé suspensiones cuando corresponde, por lo que no es en sí una vulneración. Confundir una suspensión regulada con un atentado es el error típico.",
+     "B": "Pensar que presentar un recurso perjudica la administración de justicia; la apelación es un derecho que permite revisar una decisión y acerca a las personas a la justicia.",
+     "C": "Pensar que cualquier comentario público vulnera la labor judicial; el texto no menciona a los medios de comunicación, y la falta cometida aquí es de ética profesional y no de acceso a la justicia. Es una falta distinta a la que enfatiza el texto."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q13",
+   "number": 13,
+   "origin": "historia-2027-invierno-q10",
+   "axis": "Formación ciudadana",
+   "topic": "Estado",
+   "subtopic": "hi-justicia",
+   "stem": "Lee la siguiente situación hipotética:\n\nEn Chile, un juez de la República realizó un comentario en redes sociales expresando una opinión sobre la actuación de uno de los imputados en un caso en el que debía dictar sentencia.\n\nElaboración propia.\n\nEn el marco de una correcta aplicación de la ley en el sistema judicial, ¿cuál es un principio que se transgrede en esta situación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La responsabilidad en el resguardo de la información privada de los litigantes."
+    },
+    {
+     "key": "B",
+     "text": "La imparcialidad en la resolución de las causas presentadas ante los tribunales."
+    },
+    {
+     "key": "C",
+     "text": "La autonomía en la toma de decisiones por parte de las instituciones del Estado."
+    },
+    {
+     "key": "D",
+     "text": "La independencia respecto de las personas que mantenían algún vínculo con el inculpado."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q10.webp",
+    "width": 907,
+    "height": 462,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Un juez que opina públicamente sobre la actuación de un imputado en una causa que debe sentenciar pierde la imparcialidad, principio que exige resolver sin prejuicios.",
+    "planteamiento": "Se pide el principio que se transgrede cuando un juez comenta en redes sociales la actuación de un imputado en una causa que debe sentenciar. Datos de la situación: el comentario expresa una opinión sobre el imputado y el juez debe dictar sentencia en ese caso.",
+    "steps": [
+     "La situación describe a un juez que comenta en redes sociales la actuación de un imputado en un caso en el que «debía dictar sentencia». Es decir, el juez se pronuncia antes de resolver.",
+     "Una opinión pública previa sobre el imputado puede generar un prejuicio, es decir, una inclinación a favor o en contra antes de conocer toda la prueba. Eso compromete la neutralidad con que debe decidirse el caso.",
+     "La imparcialidad es el principio que exige que el juez resuelva sin prejuicios y con equidistancia de las partes. Es el principio que se transgrede aquí.",
+     "Las opciones A (privacidad de los litigantes) y C (autonomía de las instituciones) no se transgreden, pues la situación no describe una filtración de datos ni una presión externa. La opción D se refiere a un vínculo personal con el inculpado, algo que la situación no menciona.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Asociar el comentario con la privacidad de los litigantes; la situación no describe la divulgación de información reservada, sino una opinión sobre la conducta de un imputado. Es una confusión entre reserva de datos e imparcialidad.",
+     "C": "Confundir la autonomía de las instituciones con la conducta de un juez: la autonomía protege al Estado de presiones externas, pero aquí el problema es el prejuicio del propio juez. Es una lectura del problema desde el lugar equivocado.",
+     "D": "Confundir imparcialidad con independencia: la independencia protege frente a presiones externas o vínculos, pero aquí el problema es el prejuicio expresado por el propio juez. La situación no menciona vínculos con el inculpado."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q14",
+   "number": 14,
+   "origin": "historia-2027-invierno-q02",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Historia: mundo, América y Chile",
+   "subtopic": "hi-chile-xix",
+   "stem": "El desarrollo de las Tecnologías de la Información y la Comunicación ha permitido que exista una proliferación de medios que han utilizado plataformas virtuales para darse a conocer en forma independiente a los medios tradicionales. En este sentido, ¿cuál es una ventaja de la proliferación de este tipo de medios?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La entrega de información objetiva."
+    },
+    {
+     "key": "B",
+     "text": "La protección de información privada."
+    },
+    {
+     "key": "C",
+     "text": "La veracidad de los contenidos publicados."
+    },
+    {
+     "key": "D",
+     "text": "La diversificación de los contenidos difundidos."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La proliferación de medios independientes en plataformas virtuales tiene como ventaja principal la diversificación de los contenidos que llegan a la ciudadanía.",
+    "planteamiento": "Se pide una ventaja de que se multipliquen los medios que usan plataformas virtuales y se dan a conocer de forma independiente a los medios tradicionales. Datos del enunciado: el desarrollo de las TIC ha permitido esa proliferación, y la pregunta busca un beneficio, no un riesgo.",
+    "steps": [
+     "El enunciado señala que estos medios se dan a conocer «en forma independiente a los medios tradicionales». Eso significa que ya no dependen de un único canal o de unos pocos grupos para llegar al público.",
+     "Cuando aumenta el número de emisores, también aumenta la variedad de temas, enfoques, lenguajes y puntos de vista que circulan en la sociedad. Esa diversidad es la principal ventaja que describe el enunciado.",
+     "La objetividad (A) y la veracidad (C) no se garantizan por el solo hecho de multiplicar medios: dependen de cómo se verifica la información. La protección de información privada (B) tampoco es una ventaja de los medios, pues se relaciona con la privacidad de las personas.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Suponer que un medio independiente es objetivo por definición, cuando la objetividad depende de la verificación de sus contenidos. Es una trampa porque la independencia no garantiza la imparcialidad.",
+     "B": "Confundir el rol de los medios con la protección de datos personales. La privacidad es un derecho que las plataformas deben resguardar, no una ventaja que aporte la proliferación de medios.",
+     "C": "Confundir cantidad de medios con calidad: que haya más medios no garantiza que sus contenidos sean verdaderos. La veracidad depende de la verificación de cada medio."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q15",
+   "number": 15,
+   "origin": "historia-2027-invierno-q62",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Historia: mundo, América y Chile",
+   "subtopic": "hi-chile-xx",
+   "stem": "En 2016 se firmó un acuerdo internacional denominado Acuerdo de París, en el cual los países firmantes se comprometieron a reducir las emisiones de gases de efecto invernadero. Considerando lo anterior, ¿cuál es uno de los propósitos que persiguen este tipo de acuerdos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Desincentivar la firma de tratados comerciales bilaterales."
+    },
+    {
+     "key": "B",
+     "text": "Limitar la creación de sistemas de producción alternativos."
+    },
+    {
+     "key": "C",
+     "text": "Estimular la aplicación de medidas de desarrollo sostenible."
+    },
+    {
+     "key": "D",
+     "text": "Promover el crecimiento de la industria de carácter extractivo."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los acuerdos climáticos como el de París buscan estimular medidas de desarrollo sostenible, que permitan crecer reduciendo emisiones y sin degradar los recursos naturales.",
+    "planteamiento": "Se pide un propósito de los acuerdos internacionales como el Acuerdo de París (2016), que comprometió a los países a reducir las emisiones de gases de efecto invernadero. Datos: año 2016; compromiso de reducción de emisiones; se busca el propósito que describe mejor el sentido del acuerdo.",
+    "steps": [
+     "El enunciado dice que los países firmantes del Acuerdo de París (2016) se comprometieron a «reducir las emisiones de gases de efecto invernadero». Ese es el dato central para inferir su propósito.",
+     "Reducir emisiones exige cambiar la forma de producir y consumir, por lo que el acuerdo impulsa la mitigación del cambio climático y el uso de tecnologías más limpias.",
+     "Ese cambio corresponde al desarrollo sostenible: crecer sin degradar los recursos naturales ni comprometer las necesidades de las generaciones futuras.",
+     "La alternativa A no es el objeto del acuerdo: el texto no habla de tratados comerciales bilaterales. La alternativa B tampoco: el acuerdo no limita sistemas de producción alternativos, sino que promueve tecnologías más limpias. La alternativa D va en sentido opuesto a reducir emisiones, porque promover la industria extractiva no contribuye a ese propósito.",
+     "La alternativa que describe ese propósito es estimular la aplicación de medidas de desarrollo sostenible. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone desincentivar la firma de tratados comerciales bilaterales. Los tratados comerciales no son el objeto del acuerdo; el error es pensar que el acuerdo busca frenar otros tratados.",
+     "B": "Propone limitar la creación de sistemas de producción alternativos. El acuerdo no limita esos sistemas; al contrario, promueve tecnologías más limpias y formas de producción compatibles con el clima.",
+     "D": "Propone promover el crecimiento de la industria de carácter extractivo. Va en sentido opuesto a reducir emisiones; el error es asumir que cualquier actividad productiva sirve al propósito del acuerdo."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q16",
+   "number": 16,
+   "origin": "historia-2027-invierno-q31",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "subtopic": "hi-cuestion-social",
+   "stem": "Lee la siguiente fuente sobre los reclamos de los empresarios salitreros a la autoridad política de la época a fines del siglo XIX:\n\n«Carta de los industriales salitreros al Intendente de Tarapacá, Iquique, 26 de octubre de 1891.\n\n“Sucede, señor, que desde tiempo atrás, ha disminuido en la mayor parte de los trabajadores el espíritu de orden y respeto a sus superiores; hacen valer exigencias caprichosas y pretensiones injustas, imponiéndolas con la dureza que les da el número y con las vías de hecho a que generalmente acuden, seguros de que no hay elementos para contrarrestarlos. Las insubordinaciones de más o menos consideración se suceden con frecuencia y sin motivo alguno que las justifique […]. Sus peticiones de dinero, justas o no, deben ser forzosamente atendidas; sin que valga manifestarles que no es día de pago y que por consiguiente no han llegado los fondos, o que el trabajo no está debidamente ejecutado, o que no se les debe lo que cobran. Contra ellos no hay más razón que su voluntad y ella impera”».\n\nCarta de los industriales salitreros al Intendente de Tarapacá (1891) como se citó en Grez, S. (2000). Transición en las formas de lucha: motines peonales y huelgas obreras en Chile (1891-1907).\n\nDe acuerdo con el contexto histórico en el que se inserta esta carta, ¿qué situación explica el descontento de quienes firmaron este documento?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La falta de organizaciones de apoyo entre los obreros."
+    },
+    {
+     "key": "B",
+     "text": "La baja calificación laboral de los trabajadores salitreros."
+    },
+    {
+     "key": "C",
+     "text": "La implementación de una nueva legislación en materia laboral."
+    },
+    {
+     "key": "D",
+     "text": "La expansión de movimientos de protesta en las oficinas salitreras."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q31.webp",
+    "width": 907,
+    "height": 765,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El descontento de los industriales salitreros se explica por el aumento de insubordinaciones, motines y reclamos de los trabajadores en las oficinas salitreras.",
+    "planteamiento": "Se pide la situación que explica el malestar de quienes firmaron la carta de 1891 al intendente de Tarapacá. Datos: fecha 26 de octubre de 1891; quejas por la falta de «espíritu de orden», las «vías de hecho», las «insubordinaciones» y las peticiones de dinero que los patrones debían atender.",
+    "steps": [
+     "La carta es un reclamo de empresarios que se quejan de la conducta de los trabajadores. Hay que identificar qué hecho del periodo genera ese reclamo, a partir de lo que dice el texto.",
+     "Los firmantes señalan que los trabajadores han disminuido «el espíritu de orden y respeto a sus superiores», que hacen valer exigencias con «la dureza que les da el número» y «las vías de hecho», y que las insubordinaciones se suceden con frecuencia.",
+     "Según Grez (2000), a inicios de la década de 1890 los peones salitreros protagonizaron motines y huelgas. La carta refleja esa realidad: los patrones percibían la presión colectiva como una amenaza al control de las faenas.",
+     "El documento también muestra que los trabajadores obligaban a los empresarios a atender sus peticiones de dinero, incluso cuando no correspondían, porque «contra ellos no hay más razón que su voluntad». Eso confirma que los obreros habían logrado presionar a las empresas.",
+     "La alternativa A es lo contrario de lo que dice la carta, porque los empresarios se quejan de que «no hay elementos para contrarrestarlos», es decir, de que los trabajadores tenían capacidad de presión. La alternativa B no aparece en el documento, y la C tampoco: la carta no menciona ninguna legislación nueva, y el malestar se debe a la conducta de los obreros.",
+     "La alternativa D recoge la situación: la expansión de movimientos de protesta en las oficinas salitreras. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone la falta de organizaciones de apoyo entre los obreros. Es lo contrario de lo que sugiere la carta: los empresarios temen una presión colectiva eficaz, lo que supone una organización de respaldo.",
+     "B": "Propone la baja calificación laboral de los trabajadores. El documento no evalúa la destreza de los obreros; se queja de su conducta y de sus reclamos, no de su capacitación técnica.",
+     "C": "Propone una nueva legislación laboral. La carta no menciona leyes; el malestar se explica por la conducta de los trabajadores y su presión sobre las faenas, no por una norma."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q17",
+   "number": 17,
+   "origin": "historia-2027-invierno-q50",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Constitución",
+   "subtopic": "hi-dictadura",
+   "stem": "Lee el siguiente texto que describe la situación vivida en Chile meses antes del Golpe de Estado de 1973:\n\n«Mientras el Congreso y el presidente se trenzaban una vez más en sus discusiones constitucionales, el país parecía atascarse en una parálisis creciente. Los trabajadores seguían ocupando las fábricas, extendiendo los cordones industriales. Los grupos paramilitares tanto de derecha como de izquierda se preparaban para la lucha armada que sus corazones anhelaban. Las demostraciones callejeras se intensificaban».\n\nCollier, S. et al. (1998). *Historia de Chile. 1808-1994.*\n\nDe acuerdo con la interpretación de estos autores y considerando el contexto histórico del país, ¿qué factor permite explicar el quiebre de la democracia en Chile?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La crisis de gobernabilidad que experimentaba el país."
+    },
+    {
+     "key": "B",
+     "text": "La exclusión de las Fuerzas Armadas del sistema político."
+    },
+    {
+     "key": "C",
+     "text": "La ausencia de una organización constitucional en el país."
+    },
+    {
+     "key": "D",
+     "text": "La dependencia de la economía nacional del mercado exterior."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q50.webp",
+    "width": 907,
+    "height": 558,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La cita describe un país bloqueado, con parálisis institucional, ocupaciones de fábricas, grupos armados y manifestaciones crecientes: una crisis de gobernabilidad que explica el quiebre democrático.",
+    "planteamiento": "Se pide el factor que permite explicar el quiebre de la democracia, según Collier et al. (1998) y el contexto de meses antes del Golpe de Estado de 1973. Datos: Congreso y presidente enfrentados en discusiones constitucionales; parálisis creciente; ocupación de fábricas y cordones industriales; grupos paramilitares que se preparan para la lucha armada; demostraciones callejeras en aumento.",
+    "steps": [
+     "La cita muestra que «el Congreso y el presidente se trenzaban una vez más en sus discusiones constitucionales» y que el país «parecía atascarse en una parálisis creciente». Los poderes del Estado no logran acuerdos.",
+     "Al mismo tiempo, «los trabajadores seguían ocupando las fábricas, extendiendo los cordones industriales» y «las demostraciones callejeras se intensificaban». El orden social se debilita y el conflicto se multiplica.",
+     "Aparecen «grupos paramilitares tanto de derecha como de izquierda» que se preparaban para la lucha armada. La violencia organizada se suma a la parálisis institucional.",
+     "Un sistema en el que los poderes no logran acuerdos, con paralización y violencia social creciente, enfrenta una crisis de gobernabilidad: el Estado ya no puede tomar decisiones ni garantizar el orden. Esa crisis es el factor que permite explicar el quiebre. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone la exclusión de las Fuerzas Armadas del sistema político. El texto no dice que hayan sido excluidas; se centra en los poderes civiles y en los grupos sociales y armados.",
+     "C": "Propone la ausencia de una organización constitucional en el país. El texto muestra discusiones constitucionales en pleno curso, por lo que el problema no es la falta de un marco, sino su bloqueo.",
+     "D": "Propone la dependencia de la economía nacional del mercado exterior. Esa dependencia no aparece en la cita, que se centra en la política interna y en el conflicto social."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q18",
+   "number": 18,
+   "origin": "historia-2027-invierno-q37",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "subtopic": "hi-fuentes",
+   "stem": "Lee el siguiente fragmento de un recurso educativo utilizado durante el régimen fascista italiano en el periodo de Entreguerras:\n\n«En matemática se resolvían problemas como: “Mussolini profesor. En 1902 el sueldo del profesor Mussolini era de 56 liras al mes. ¿Cuánto ganaba al día?, ¿y al año?” […] Un libro de lectura de tercer grado tenía la siguiente lección: Obedece porque debes obedecer […] con nuestra obediencia entregamos al Duce el regalo de nuestra voluntad fortalecida».\n\nTannenbaum, E. (1975). *La experiencia fascista. Sociedad y cultura en Italia (1922-1945).*\n\nConsiderando esta información, ¿qué principio ideológico del fascismo se evidencia en esta fuente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La segregación social del sistema escolar."
+    },
+    {
+     "key": "B",
+     "text": "La exaltación de la figura suprema del líder."
+    },
+    {
+     "key": "C",
+     "text": "La violencia como método de adoctrinamiento."
+    },
+    {
+     "key": "D",
+     "text": "La implementación del colectivismo en las escuelas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q37.webp",
+    "width": 907,
+    "height": 510,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La fuente muestra el culto al líder en la educación fascista: la voluntad personal se subordina a la figura del Duce, a quien se exige obediencia absoluta.",
+    "planteamiento": "Se pide el principio ideológico del fascismo que evidencia el fragmento de Tannenbaum (1975). Datos: problema de matemática sobre el «profesor Mussolini»; lección «Obedece porque debes obedecer»; frase final sobre «entregar al Duce el regalo de nuestra voluntad fortalecida».",
+    "steps": [
+     "El fragmento es un recurso educativo del régimen fascista. Hay que identificar qué idea se transmite a los alumnos a través de la matemática y de la lectura.",
+     "El problema de matemática presenta a «Mussolini profesor» como figura central de la enseñanza. Así, el líder aparece dentro del sistema escolar como un referente cotidiano para los estudiantes.",
+     "El libro de lectura enseña «Obedece porque debes obedecer», una frase que exige sumisión sin cuestionamiento y no entrega razones.",
+     "La frase final habla de «entregar al Duce el regalo de nuestra voluntad fortalecida». La voluntad personal se pone al servicio del líder, lo que refleja la exaltación de su figura como autoridad suprema.",
+     "La alternativa A no se evidencia: la fuente habla de adoctrinamiento de todo el alumnado y no separa a los estudiantes según su condición social. La alternativa C tampoco: la fuente muestra adoctrinamiento por obediencia, no violencia física o castigo directo. La alternativa D no corresponde: el fragmento no describe una organización colectivista de la enseñanza.",
+     "Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone la segregación social del sistema escolar. La fuente habla de adoctrinamiento de todos los alumnos, sin distinguir grupos sociales.",
+     "C": "Propone la violencia como método de adoctrinamiento. Es tentadora porque el fascismo recurrió a la violencia, pero el fragmento muestra adoctrinamiento por obediencia, no castigo físico.",
+     "D": "Propone el colectivismo en las escuelas. El texto habla de la voluntad individual subordinada al líder, no de una organización colectivista de la enseñanza."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q19",
+   "number": 19,
+   "origin": "historia-2026-invierno-q47",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Dictaduras",
+   "subtopic": "hi-guerra-fria",
+   "stem": "Lee el siguiente extracto de la carta de fundación de la Organización de las Naciones Unidas (ONU) del año 1945:\n\n«[…] prevenir y eliminar amenazas a la paz, y para suprimir actos de agresión u otros quebrantamientos de la paz; y lograr por medios pacíficos, y de conformidad con los principios de la justicia y del derecho internacional, el ajuste o arreglo de controversias o situaciones internacionales susceptibles de conducir a quebrantamientos de la paz».\n\nOrganización de las Naciones Unidas. Carta de las Naciones Unidas. Capítulo 1: propósitos y principios. 1945.\n\nConsiderando el contexto histórico y la información de la cita, ¿cuál fue una de las características de las relaciones internacionales que justificó la creación de la ONU?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El fomento de los procesos de descolonización."
+    },
+    {
+     "key": "B",
+     "text": "El apoyo a la instalación de dictaduras militares."
+    },
+    {
+     "key": "C",
+     "text": "El desarrollo de un enfrentamiento ideológico bipolar."
+    },
+    {
+     "key": "D",
+     "text": "El protagonismo que tenían los nacionalismos belicistas."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2026-invierno/q47.webp",
+    "width": 907,
+    "height": 548,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La carta de la ONU busca impedir agresiones entre Estados, lo que responde a las guerras provocadas por nacionalismos belicistas, como la Segunda Guerra Mundial.",
+    "planteamiento": "Se pide la característica de las relaciones internacionales que justificó la creación de la ONU. Datos de la cita: la organización se propone «prevenir y eliminar amenazas a la paz», «suprimir actos de agresión» y lograr el «arreglo» de controversias por medios pacíficos. La fuente es la Carta de las Naciones Unidas (1945), capítulo 1.",
+    "steps": [
+     "La cita establece los propósitos de la organización: prevenir amenazas a la paz, suprimir actos de agresión y resolver controversias por medios pacíficos antes de que se conviertan en guerras.",
+     "Esa preocupación se entiende por la experiencia de la Segunda Guerra Mundial, desatada por Estados que impulsaban expansiones territoriales y nacionalismos agresivos, como Alemania, Italia y Japón.",
+     "La Sociedad de Naciones no logró contener esas agresiones. La ONU surge para evitar una nueva guerra mundial, y para eso propone un mecanismo de prevención y arreglo pacífico de las disputas.",
+     "Entre las alternativas, la descolonización (A), las dictaduras militares (B) y el enfrentamiento bipolar (C) no justifican la creación de la organización en 1945: la cita no menciona colonias ni regímenes, y la bipolaridad se consolida después. El punto que explica la creación es el protagonismo de los nacionalismos belicistas (D).",
+     "Comprobación: la carta responde a agresiones entre Estados nacidas de nacionalismos belicistas, y por eso su énfasis está en prevenir la guerra. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "La descolonización fue un proceso posterior que la ONU acompañó, pero la cita no menciona colonias ni explica la creación de la organización. Sirve de trampa porque el tema es real en la historia del siglo XX, pero no en el texto.",
+     "B": "Las dictaduras militares no aparecen en la cita; la ONU condena las agresiones entre Estados y no respalda regímenes. Confundir un documento de paz con un apoyo a gobiernos autoritarios es el error típico.",
+     "C": "El enfrentamiento bipolar se consolidó después de 1945, durante la Guerra Fría, y no es el motivo central de la carta, que se enfoca en la agresión entre Estados. Es una característica real del período posterior, pero no justifica la creación de la ONU."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q20",
+   "number": 20,
+   "origin": "historia-2027-invierno-q34",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "subtopic": "hi-guerras",
+   "stem": "Lee el siguiente texto referido a las impresiones de un sector de la elite respecto a la propagación de ideas socialistas a inicios del siglo XX en Chile:\n\n«Detrás del miedo al socialismo subyacían otros temores más concretos o próximos. Se reconocía que el discurso socialista podía ser capaz de seducir, “este pueblo de alma buena y de corazón patriota puede ser seducido y engañado por la palabra envenenada y por la propaganda desquiciadora de elementos venidos desde fuera. La mentira podrá crear, entre los inocentes, ilusiones peligrosas”. Si el pueblo admitía como propio el discurso maximalista “se crearía un foco de desorden y de anarquía”».\n\nTorres, I. (2010). *El imaginario de las elites y los sectores populares. 1919-1922.*\n\nConsiderando la fuente y el contexto histórico, ¿cuál fue uno de los temores de la elite de la época respecto a la propagación de ideas socialistas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El intervencionismo de algunas potencias extranjeras en los asuntos internos."
+    },
+    {
+     "key": "B",
+     "text": "El incremento de la injerencia de las Fuerzas Armadas en la actividad política."
+    },
+    {
+     "key": "C",
+     "text": "El cuestionamiento al poder de la clase política por parte de los sectores populares."
+    },
+    {
+     "key": "D",
+     "text": "El surgimiento de movimientos que buscaban la instalación de regímenes totalitarios."
+    }
+   ],
+   "answer": "C",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q34.webp",
+    "width": 907,
+    "height": 606,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La elite temía que el discurso socialista llevara a los sectores populares a cuestionar el poder establecido, generando desorden y anarquía.",
+    "planteamiento": "Se pide un temor de la elite frente a la propagación del socialismo a inicios del siglo XX, según la fuente de Torres (2010). Datos: la fuente habla de un pueblo «de alma buena» que puede ser «seducido» por el «discurso maximalista», y de un posible «foco de desorden y de anarquía».",
+    "steps": [
+     "La fuente indica que, detrás del miedo al socialismo, había temores más concretos: que el discurso socialista pudiera seducir al pueblo y engañarlo con «palabra envenenada» y «propaganda desquiciadora».",
+     "El texto señala que, si el pueblo admitía como propio el «discurso maximalista», se creaba «un foco de desorden y de anarquía». Es decir, el peligro es que los sectores populares se movilicen contra el orden establecido.",
+     "En el contexto de 1919-1922, con huelgas, tensiones sociales y el crecimiento de organizaciones obreras, la elite temía que los sectores populares desafiaran a la clase política y a las autoridades.",
+     "La alternativa A no aparece en la fuente: aunque se mencionan «elementos venidos desde fuera», se refiere a agitadores que difunden propaganda, no a una intervención de potencias en la política interna. La alternativa B tampoco: la fuente no menciona a las Fuerzas Armadas.",
+     "La alternativa D tampoco es un temor del texto: los totalitarismos no aparecen en la fuente, y el miedo es al desorden social y a la desobediencia popular. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone el intervencionismo de potencias extranjeras en los asuntos internos. Es tentadora porque la fuente menciona «elementos venidos desde fuera», pero se refiere a propagandistas y agitadores, no a potencias que intervienen en la política.",
+     "B": "Propone un aumento de la injerencia de las Fuerzas Armadas en la política. La fuente no habla de militares; el temor es al desorden social y a la pérdida de obediencia del pueblo.",
+     "D": "Propone el surgimiento de movimientos que buscaban regímenes totalitarios. Los totalitarismos no aparecen en la fuente, y el miedo de la elite se refería al desorden popular, no a un régimen de ese tipo."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q21",
+   "number": 21,
+   "origin": "historia-2027-invierno-q41",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Guerras mundiales",
+   "subtopic": "hi-guerras",
+   "stem": "Entre 1948 y 1952, Estados Unidos implementó el Plan Marshall, iniciativa de ayuda económica que tuvo como uno de sus objetivos la reconstrucción de países europeos afectados por la Segunda Guerra Mundial. Este plan jugó un papel en la configuración de la hegemonía estadounidense en el nuevo orden geopolítico internacional. En este contexto, ¿cuál fue uno de los objetivos geopolíticos del Plan Marshall?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Debilitar los incipientes procesos de descolonización en África."
+    },
+    {
+     "key": "B",
+     "text": "Combatir el surgimiento de dictaduras militares en América Latina."
+    },
+    {
+     "key": "C",
+     "text": "Fortalecer el rol mundial de la Organización de las Naciones Unidas."
+    },
+    {
+     "key": "D",
+     "text": "Contener la expansión de las ideas comunistas en Europa Occidental."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Plan Marshall buscó reconstruir Europa Occidental y, al mismo tiempo, frenar la expansión del comunismo, afianzando la hegemonía de Estados Unidos.",
+    "planteamiento": "Se pide un objetivo geopolítico del Plan Marshall (1948-1952) en el nuevo orden internacional. Datos: ayuda económica de Estados Unidos a países europeos devastados por la Segunda Guerra Mundial; se busca el objetivo de contención que justifica la ayuda en el contexto de la Guerra Fría.",
+    "steps": [
+     "El Plan Marshall fue una ayuda económica de Estados Unidos para reconstruir países europeos. Cuando se pide un objetivo geopolítico, hay que pensar en su efecto sobre el equilibrio entre bloques.",
+     "La ayuda, cercana a 13.000 millones de dólares entre 1948 y 1952, se destinó a reconstruir la industria y el comercio europeos. Estados Unidos condicionó su entrega a la adopción de economías de mercado y a la cooperación entre los países beneficiados.",
+     "La reconstrucción buscaba evitar que la pobreza y el malestar social fortalecieran a los partidos comunistas, especialmente en Francia e Italia. Así, el plan contenía la expansión de las ideas comunistas en Europa Occidental.",
+     "La alternativa A no corresponde: la descolonización en África no fue un objetivo del plan, que se aplicó en Europa. La alternativa B tampoco: las dictaduras latinoamericanas no eran el foco de la ayuda europea.",
+     "La alternativa C tampoco: la ONU es parte del orden de posguerra, pero el Plan Marshall fue una iniciativa bilateral de Estados Unidos y no un refuerzo de la organización. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone debilitar la descolonización en África. Es tentadora porque coincide en el tiempo con la descolonización de Asia y África, pero el plan se aplicó en Europa y no buscaba debilitar esos procesos.",
+     "B": "Propone combatir las dictaduras militares en América Latina. El plan no se orientaba a América Latina; su objetivo era Europa Occidental frente a la amenaza comunista.",
+     "C": "Propone fortalecer la ONU. Es tentadora porque la ONU forma parte del nuevo orden internacional, pero el Plan Marshall fue una iniciativa bilateral de Estados Unidos."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q22",
+   "number": 22,
+   "origin": "historia-2027-invierno-q18",
+   "axis": "Historia: mundo, América y Chile",
+   "topic": "Procesos históricos",
+   "subtopic": "hi-revoluciones",
+   "stem": "Durante la primera mitad del siglo XIX, en el marco del proceso de formación de los nuevos Estados latinoamericanos se originaron diversos conflictos. En este contexto, ¿cuál fue uno de los problemas existentes entre los nuevos países vecinos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las diferencias de criterio para la demarcación de límites territoriales."
+    },
+    {
+     "key": "B",
+     "text": "Las desigualdades en las condiciones de acceso al mercado internacional."
+    },
+    {
+     "key": "C",
+     "text": "Las tensiones provocadas por los desplazamientos migratorios en la región."
+    },
+    {
+     "key": "D",
+     "text": "Las distintas concepciones respecto a las ventajas de la influencia extranjera."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Tras la independencia, los nuevos Estados latinoamericanos disputaron sus límites territoriales, lo que originó conflictos entre países vecinos.",
+    "planteamiento": "Se pide un problema existente entre países vecinos durante la formación de los nuevos Estados latinoamericanos en la primera mitad del siglo XIX. Datos: la pregunta busca un conflicto entre Estados vecinos, y no tensiones internas ni comerciales.",
+    "steps": [
+     "La pregunta pide un problema existente entre países vecinos durante la formación de los nuevos Estados en la primera mitad del siglo XIX, es decir, un conflicto entre dos naciones que compartían una frontera.",
+     "Las antiguas divisiones coloniales no siempre eran claras. Al heredar esas divisiones, los nuevos países discrepaban sobre dónde debía trazarse la frontera entre ellos, lo que daba lugar a disputas territoriales.",
+     "Esas diferencias de criterio para la demarcación de límites generaron tensiones diplomáticas y, en algunos casos, enfrentamientos entre vecinos por la posesión de territorios poco poblados.",
+     "Las demás alternativas describen temas del período, pero no disputas limítrofes: el acceso al mercado internacional (B), los desplazamientos migratorios (C) y la influencia extranjera (D) no definen fronteras entre vecinos.",
+     "Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Pensar que la competencia comercial originó conflictos limítrofes; las desigualdades de acceso al mercado no definen fronteras. Es un problema real de la economía del período, pero no entre vecinos por territorio.",
+     "C": "Asumir que las migraciones generaron conflictos territoriales directos; fueron tensiones sociales y no disputas por límites. Es una trampa porque las migraciones sí generaban tensiones internas.",
+     "D": "Confundir la influencia extranjera con un conflicto entre vecinos; las distintas posturas sobre las potencias no fijan una frontera. Es un tema político del período que no define un conflicto entre dos países."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q23",
+   "number": 23,
+   "origin": "historia-2027-invierno-q32",
+   "axis": "Sistema económico",
+   "topic": "Procesos históricos",
+   "subtopic": "hi-laborales",
+   "stem": "Lee el siguiente texto que describe las condiciones de vida del peón rural a fines del siglo XIX y principios del siglo XX en Chile:\n\n«Los peones rurales eran otra cuestión: endurecidos y degradados por una subocupación y por una pobreza crónica, eran los más afectados cuando las malas cosechas producían hambrunas locales».\n\nCollier, S. et al. (1999). *Historia de Chile 1808-1994.*\n\nEn este contexto histórico, ¿con qué fenómeno social se relaciona la situación descrita en el texto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Con la paralización de las actividades agropecuarias."
+    },
+    {
+     "key": "B",
+     "text": "Con la organización sindical de los trabajadores agrícolas."
+    },
+    {
+     "key": "C",
+     "text": "Con la realización de huelgas de trabajadores en el campo."
+    },
+    {
+     "key": "D",
+     "text": "Con la migración en busca de mejores oportunidades laborales."
+    }
+   ],
+   "answer": "D",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q32.webp",
+    "width": 907,
+    "height": 462,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La precariedad del peón rural, con subocupación, pobreza crónica y hambrunas, empujaba a muchos a migrar hacia ciudades y zonas mineras en busca de trabajo más estable.",
+    "planteamiento": "Se pide el fenómeno social con el que se relaciona la situación del peón rural según la cita de Collier (1999). Datos: subocupación, pobreza crónica y malas cosechas que provocaban hambrunas locales, en el periodo de fines del siglo XIX y principios del XX.",
+    "steps": [
+     "La cita describe a los peones como «endurecidos y degradados por una subocupación y por una pobreza crónica». La subocupación significa trabajar menos de lo necesario, por lo que el ingreso es insuficiente de forma permanente.",
+     "Cuando «las malas cosechas producían hambrunas locales», los peones eran los más afectados, porque dependían del trabajo estacional de la hacienda y tenían pocos recursos para resistir. Una precariedad así empuja a buscar otro lugar donde trabajar.",
+     "El fenómeno social que se deduce es la migración. Esa presión llevó a muchos peones hacia las ciudades y hacia el norte salitrero y minero, donde había más oportunidades laborales y salarios en dinero.",
+     "La alternativa A no encaja, porque el texto habla de precariedad de los trabajadores, no de paralización de las actividades agropecuarias. La alternativa B tampoco: el texto no menciona organización sindical, y la subocupación dificultaba la acción colectiva en el campo.",
+     "La alternativa C tampoco se infiere, porque las huelgas rurales fueron escasas en la época; la protesta obrera se concentró en las ciudades y en la minería. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone la paralización de las actividades agropecuarias. La cita describe trabajadores en condiciones precarias, no una suspensión de la producción; la trampa es confundir precariedad con paralización.",
+     "B": "Propone la organización sindical de los trabajadores agrícolas. El texto no menciona sindicatos; la subocupación y la pobreza dificultaban la acción colectiva en el campo.",
+     "C": "Propone huelgas de trabajadores en el campo. Es tentadora porque los peones sufren malestar, pero la cita no describe protesta, y las huelgas se concentraron en centros urbanos y mineros."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q24",
+   "number": 24,
+   "origin": "historia-2027-invierno-q57",
+   "axis": "Sistema económico",
+   "topic": "Derechos",
+   "subtopic": "hi-laborales",
+   "stem": "La Central Unitaria de Trabajadores y Trabajadoras (CUT) en Chile es una organización multisindical que agrupa a diversos sindicatos, siendo esta la principal organización de este tipo en Chile en la actualidad. Al respecto, ¿cuál es una contribución que este tipo de organizaciones realiza a la protección de los derechos laborales?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sancionar las denuncias de prácticas laborales de carácter ilegal."
+    },
+    {
+     "key": "B",
+     "text": "Legislar en favor de la promoción de condiciones laborales dignas."
+    },
+    {
+     "key": "C",
+     "text": "Garantizar la aplicación de los convenios internacionales en materia laboral."
+    },
+    {
+     "key": "D",
+     "text": "Representar intereses colectivos en negociaciones laborales frente al Estado."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La CUT, como organización multisindical, representa los intereses colectivos de los trabajadores en negociaciones laborales, incluso frente al Estado, y así contribuye a proteger sus derechos.",
+    "planteamiento": "Se pide una contribución de una organización multisindical como la CUT a la protección de los derechos laborales. Datos: la CUT agrupa a diversos sindicatos y es la principal organización de ese tipo en la actualidad; se busca el aporte que hace la acción colectiva a los trabajadores.",
+    "steps": [
+     "El enunciado señala que la CUT es una organización «multisindical» que agrupa a diversos sindicatos. Hay que identificar qué hace una organización de ese tipo en favor de los trabajadores.",
+     "La protección de los derechos laborales se fortalece con la acción colectiva: los sindicatos negocian en nombre de sus socios y defienden intereses comunes, lo que tiene más fuerza que la negociación individual.",
+     "Esa representación colectiva en negociaciones laborales, también frente al Estado, es una contribución directa a la protección de los derechos de los trabajadores, porque el Estado es a la vez empleador en algunos sectores y regulador en todos.",
+     "La alternativa A no corresponde: sancionar prácticas ilegales es función de los tribunales y de la Dirección del Trabajo. La alternativa B tampoco: legislar es función del Congreso, aunque la CUT puede proponer cambios. La alternativa C no es una garantía que pueda asumir una organización sindical, porque su aplicación corresponde al Estado que ratifica los convenios.",
+     "La contribución que corresponde a este tipo de organizaciones es representar intereses colectivos en negociaciones laborales. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone sancionar las denuncias de prácticas laborales ilegales. Esa función corresponde a los tribunales y a la Dirección del Trabajo, no a una organización sindical; la trampa es atribuirle una facultad sancionadora.",
+     "B": "Propone legislar en favor de la promoción de condiciones laborales dignas. Legislar es función del Congreso; la CUT puede proponer cambios y presionar, pero no dicta leyes.",
+     "C": "Propone garantizar la aplicación de los convenios internacionales en materia laboral. Esa garantía corresponde al Estado que los ratifica; la CUT puede exigir su cumplimiento o denunciar incumplimientos, pero no asegurarlo."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q25",
+   "number": 25,
+   "origin": "historia-2027-invierno-q61",
+   "axis": "Sistema económico",
+   "topic": "Leyes",
+   "subtopic": "hi-laborales",
+   "stem": "Lee el siguiente extracto de la Ley 21.645 sobre teletrabajo:\n\n«El empleador deberá ofrecer a la persona trabajadora que, durante la vigencia de la relación laboral, tenga el cuidado personal de un niño o niña menor de catorce años o que tenga a su cargo el cuidado de una persona con discapacidad o en situación de dependencia severa o moderada, no importando la edad de quien se cuida, sin recibir remuneración por dicha actividad, que todo o parte de su jornada diaria o semanal pueda ser desarrollada bajo modalidad de trabajo a distancia o teletrabajo, en la medida que la naturaleza de sus funciones lo permita».\n\nLey 21.645 de 2023 modifica el Título II del libro II del Código del Trabajo “de la protección a la maternidad, paternidad y vida familiar” y regula un régimen de trabajo a distancia y teletrabajo en las condiciones que indica. 22 de diciembre de 2023.\n\n¿Cuál es uno de los objetivos que se persigue con esta ley respecto de los derechos laborales de las personas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mejorar la conciliación de la vida laboral con la vida familiar."
+    },
+    {
+     "key": "B",
+     "text": "Facilitar la inserción laboral de las personas con discapacidad."
+    },
+    {
+     "key": "C",
+     "text": "Resguardar la estabilidad laboral de las personas sindicalizadas."
+    },
+    {
+     "key": "D",
+     "text": "Corregir los mecanismos de dependencia laboral de los trabajadores."
+    }
+   ],
+   "answer": "A",
+   "presentation": "snapshot",
+   "snapshot": {
+    "src": "/exam-assets/historia-2027-invierno/q61.webp",
+    "width": 907,
+    "height": 574,
+    "mono": true
+   },
+   "textQuality": "approximate",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La Ley 21.645 ofrece teletrabajo a quienes cuidan a niños o a personas con discapacidad o dependencia, con el fin de conciliar la vida laboral con la vida familiar.",
+    "planteamiento": "Se pide un objetivo de la Ley 21.645 sobre teletrabajo respecto de los derechos laborales de las personas. Datos: el empleador debe ofrecer trabajo a distancia o teletrabajo, total o parcial, a quien cuide a un niño menor de catorce años o a una persona con discapacidad o dependencia severa o moderada; título de la ley: protección a la maternidad, paternidad y vida familiar.",
+    "steps": [
+     "El texto indica que el empleador «deberá ofrecer» trabajo a distancia o teletrabajo a quien tenga «el cuidado personal de un niño o niña menor de catorce años» o «el cuidado de una persona con discapacidad o en situación de dependencia severa o moderada».",
+     "La ley permite que «todo o parte de su jornada diaria o semanal» se realice a distancia, lo que facilita atender el cuidado de la familia sin tener que dejar el empleo.",
+     "El título de la ley es «de la protección a la maternidad, paternidad y vida familiar», lo que refleja su propósito de compatibilizar el trabajo remunerado con las responsabilidades de cuidado.",
+     "Las demás alternativas no se desprenden del texto. La B pone como beneficiarias a las personas con discapacidad, cuando ellas aparecen como personas cuidadas y no como sujetos de inserción laboral. La C menciona a los sindicalizados, tema ausente. La D supone que la ley corrige la dependencia laboral, cuando solo regula la forma de la jornada.",
+     "El objetivo que se persigue es conciliar la vida laboral con la vida familiar. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Propone facilitar la inserción laboral de las personas con discapacidad. Estas aparecen en el texto como personas cuidadas por un trabajador, no como sujetos de inserción laboral; el error es confundir al beneficiario.",
+     "C": "Propone resguardar la estabilidad laboral de las personas sindicalizadas. La estabilidad de los sindicalizados no aparece en el texto, que trata del cuidado familiar y de la forma de la jornada.",
+     "D": "Propone corregir los mecanismos de dependencia laboral de los trabajadores. La ley no corrige la relación de subordinación; solo regula la forma en que se desarrolla la jornada, por lo que ese no es su objetivo."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q26",
+   "number": 26,
+   "origin": "historia-2027-invierno-q36",
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "subtopic": "hi-macro",
+   "stem": "Como respuesta a la crisis del Estado liberal en la primera mitad del siglo XX, se desarrollaron en América Latina los populismos que buscaban superar los problemas derivados de este sistema político. En este contexto, ¿cuál fue una estrategia económica de los gobiernos populistas latinoamericanos para superar la crisis del Estado liberal?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La supresión de los impuestos aplicados al comercio exterior."
+    },
+    {
+     "key": "B",
+     "text": "La mayor intervención del fisco en las decisiones económicas."
+    },
+    {
+     "key": "C",
+     "text": "El aumento de la inversión extranjera en las industrias nacionales."
+    },
+    {
+     "key": "D",
+     "text": "El abandono del modelo económico de exportación de materias primas."
+    }
+   ],
+   "answer": "B",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Los gobiernos populistas latinoamericanos buscaron superar la crisis del Estado liberal con una fuerte intervención estatal en la economía, por ejemplo mediante la industrialización por sustitución de importaciones.",
+    "planteamiento": "Se pide una estrategia económica de los populismos latinoamericanos frente a la crisis del Estado liberal en la primera mitad del siglo XX. Datos: crisis de 1929; populismos como el de Vargas en Brasil y el de Perón en Argentina; se busca la alternativa que refleje un mayor rol del fisco en la economía.",
+    "steps": [
+     "La crisis de 1929 y el debilitamiento del Estado liberal llevaron a que el Estado asumiera un papel más activo. La pregunta pide una estrategia económica, así que hay que identificar qué hicieron los gobiernos populistas con la economía.",
+     "Gobiernos como el de Vargas en Brasil y el de Perón en Argentina aumentaron la presencia del fisco en la economía: crearon empresas públicas, regularon precios y fomentaron la producción nacional.",
+     "Esa estrategia corresponde a la industrialización por sustitución de importaciones, en la que el Estado dirigía parte importante de la inversión para reemplazar bienes que antes se compraban en el extranjero.",
+     "La alternativa A no corresponde: los populismos subieron aranceles para proteger la industria, en lugar de suprimirlos. La alternativa C tampoco: su estrategia no se basó en atraer inversión extranjera a las industrias nacionales, sino en la acción estatal.",
+     "La alternativa D tampoco describe la estrategia, porque la sustitución de importaciones buscaba reducir la dependencia de la exportación, pero las exportaciones seguían financiando la industrialización y no fueron abandonadas de inmediato. Por lo tanto, la alternativa correcta es la B."
+    ],
+    "distractors": {
+     "A": "Propone suprimir los impuestos al comercio exterior. Sería coherente con un modelo liberal de libre comercio, no con la protección arancelaria que aplicaron los gobiernos populistas.",
+     "C": "Propone aumentar la inversión extranjera en las industrias nacionales. Los populismos dependían de la inversión pública y de la protección del mercado interno; no era su estrategia central.",
+     "D": "Propone abandonar la exportación de materias primas. Es tentadora porque la sustitución de importaciones buscaba reducir la dependencia externa, pero la exportación siguió financiando el proceso y no fue abandonada."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q27",
+   "number": 27,
+   "origin": "historia-2027-invierno-q59",
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "subtopic": "hi-macro",
+   "stem": "Cuando en el contexto de una economía de libre mercado la tasa de inflación varía de un 3 % a un 12,5 % en un año, ¿qué consecuencia ocasiona en el funcionamiento de esta economía?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Crece la cantidad de personas empleadas."
+    },
+    {
+     "key": "B",
+     "text": "Disminuye la tasa de interés de los créditos."
+    },
+    {
+     "key": "C",
+     "text": "Reduce el poder adquisitivo de las personas."
+    },
+    {
+     "key": "D",
+     "text": "Aumenta la capacidad de ahorro de las familias."
+    }
+   ],
+   "answer": "C",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "Una inflación que sube de $3\\%$ a $12{,}5\\%$ reduce el poder adquisitivo de las personas, porque con el mismo ingreso se compra menos.",
+    "planteamiento": "Se pide la consecuencia, en una economía de libre mercado, de que la inflación pase de $3\\%$ a $12{,}5\\%$ en un año. Datos: inflación inicial $3\\%$; inflación final $12{,}5\\%$; se busca el efecto sobre el funcionamiento económico y, en particular, sobre el poder de compra de las personas.",
+    "steps": [
+     "La inflación pasa de $3\\%$ a $12{,}5\\%$ en un año, es decir, sube $12{,}5 - 3 = 9{,}5$ puntos porcentuales. Esa aceleración de los precios es el dato central del enunciado.",
+     "La inflación mide el aumento general de los precios. Si los precios suben más rápido que los ingresos, cada peso alcanza para comprar menos bienes y servicios.",
+     "Para cuantificarlo, si el ingreso se mantiene nominal y los precios suben un $12{,}5\\%$, el mismo ingreso compra $\\frac{1}{1{,}125} \\approx 0{,}889$ de lo que compraba antes, es decir, alrededor de un $11\\%$ menos de poder adquisitivo.",
+     "Las demás consecuencias no siguen de esa variación: un alza de la inflación no hace crecer el empleo por sí misma, no baja las tasas de interés y no incentiva el ahorro, porque el dinero guardado pierde valor.",
+     "La consecuencia para el funcionamiento de la economía es la reducción del poder adquisitivo de las personas. Por lo tanto, la alternativa correcta es la C."
+    ],
+    "distractors": {
+     "A": "Propone que crece la cantidad de personas empleadas. Un alza de la inflación no hace crecer el empleo por sí misma; el error es suponer que cualquier aumento de la actividad económica se traduce en más trabajo.",
+     "B": "Propone que disminuye la tasa de interés de los créditos. La inflación suele llevar a subir las tasas de interés, no a bajarlas; el error es pensar que el dinero se encarece menos cuando los precios suben.",
+     "D": "Propone que aumenta la capacidad de ahorro de las familias. La inflación erosiona el ahorro, porque el dinero guardado vale menos; el error es creer que más inflación incentiva el ahorro."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q28",
+   "number": 28,
+   "origin": "historia-2027-invierno-q27",
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "subtopic": "hi-mercado",
+   "stem": "Chile desarrolló en el siglo XIX un modelo económico de crecimiento hacia afuera influido por algunos eventos que impactaron la organización de la economía nacional. En este contexto, ¿qué fenómeno económico estimuló el crecimiento de la agricultura chilena a mediados del siglo XIX?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El alza de la demanda de cereales chilenos ocasionada por la fiebre del oro de California."
+    },
+    {
+     "key": "B",
+     "text": "El predominio del puerto chileno de Valparaíso como importador de insumos para el sector agrario."
+    },
+    {
+     "key": "C",
+     "text": "La migración de campesinos chilenos motivada por el hallazgo de yacimientos de oro en Australia."
+    },
+    {
+     "key": "D",
+     "text": "La industrialización del norte chileno debido al descubrimiento de yacimientos mineros como Chañarcillo."
+    }
+   ],
+   "answer": "A",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "La fiebre del oro de California (1848-1849) aumentó la demanda de alimentos chilenos, especialmente trigo y harina, y estimuló la agricultura dentro del modelo de crecimiento hacia afuera.",
+    "planteamiento": "Se pide un fenómeno económico que estimuló la agricultura chilena a mediados del siglo XIX. Datos: periodo cercano a 1848-1850; modelo de crecimiento hacia afuera; se busca un estímulo externo que aumentara la demanda de productos agrícolas chilenos.",
+    "steps": [
+     "La pregunta busca un fenómeno ocurrido a mediados del siglo XIX que aumentara la demanda de productos agrícolas, dentro de un modelo de crecimiento hacia afuera.",
+     "En 1848 se descubrió oro en California. Miles de personas llegaron en poco tiempo, y necesitaban alimentos que no podían producir en la cantidad requerida.",
+     "Chile, con su producción de trigo y harina, abasteció ese mercado a través de puertos como Valparaíso. El aumento de la demanda elevó los precios y los incentivos para cultivar más, lo que impulsó la agricultura nacional.",
+     "La alternativa B no sirve, porque Valparaíso era un puerto exportador y no un proveedor de insumos agrarios. La alternativa C describe una migración hacia Australia, un fenómeno posterior al auge agrícola. La alternativa D confunde la minería con la agricultura, pues el hallazgo de Chañarcillo (1832) estimuló la plata.",
+     "La alternativa A coincide con la cadena causal descrita: la demanda de cereales generada por la fiebre del oro de California estimuló la agricultura chilena. Por lo tanto, la alternativa correcta es la A."
+    ],
+    "distractors": {
+     "B": "Atribuye el crecimiento agrícola a Valparaíso como importador de insumos. Valparaíso funcionaba sobre todo como puerto de exportación; el error es invertir su función económica.",
+     "C": "Ubica la causa en la migración de campesinos hacia los yacimientos de oro de Australia. Esa migración es posterior al auge agrícola de California y no explica el crecimiento de la agricultura chilena, aunque sí hubo emigración a esos yacimientos.",
+     "D": "Propone una industrialización del norte por el descubrimiento de Chañarcillo. La trampa es confundir minería con agricultura: Chañarcillo estimuló la producción de plata en 1832, antes del auge agrícola, y no implicó industrialización."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q29",
+   "number": 29,
+   "origin": "historia-2027-invierno-q28",
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "subtopic": "hi-mercado",
+   "stem": "Hacia 1850 en el puerto de Caldera se iniciaron los trabajos de construcción de la primera vía férrea de Chile, bajo la supervisión de ingenieros y técnicos extranjeros. La locomotora fue construida en Estados Unidos y los rieles fueron importados desde Inglaterra. En julio de 1851 se inauguró el primer trayecto que unió el puerto de Caldera con la ciudad de Copiapó. Al respecto, ¿qué proceso histórico característico de la economía nacional del siglo XIX se vincula con esta situación?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La crisis comercial de la industria local frente a la competencia internacional."
+    },
+    {
+     "key": "B",
+     "text": "La disolución del monopolio comercial liderado tempranamente por el puerto de Valparaíso."
+    },
+    {
+     "key": "C",
+     "text": "La mayor dependencia financiera respecto de los créditos bancarios internacionales."
+    },
+    {
+     "key": "D",
+     "text": "La introducción de innovaciones tecnológicas a partir del crecimiento del sector exportador."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El ferrocarril Caldera-Copiapó (1851) muestra cómo el crecimiento del sector exportador minero impulsó la incorporación de innovaciones tecnológicas traídas desde el extranjero.",
+    "planteamiento": "Se pide el proceso histórico característico de la economía del siglo XIX con el que se vincula la primera vía férrea de Chile. Datos: obra iniciada hacia 1850 en Caldera; locomotora construida en Estados Unidos; rieles importados desde Inglaterra; técnicos extranjeros; inauguración en julio de 1851 entre Caldera y Copiapó.",
+    "steps": [
+     "La obra une Caldera con Copiapó, en la zona minera del norte. Hay que identificar qué proceso económico explica que se construyera un ferrocarril en esa zona, con técnicos extranjeros y tecnología importada.",
+     "La locomotora se fabricó en Estados Unidos y los rieles llegaron desde Inglaterra. Esto muestra que la tecnología necesaria no se producía en Chile y se incorporaba desde el exterior.",
+     "El ferrocarril servía para sacar minerales desde los centros de producción hacia el puerto de embarque, con mayor rapidez y en mayor volumen. Es una respuesta a las necesidades de un sector exportador en expansión.",
+     "La alternativa A no corresponde, porque el texto no menciona una crisis de la industria local. La alternativa B tampoco, porque el ferrocarril no elimina el rol de Valparaíso, sino que agrega una vía de transporte. La alternativa C no se sostiene, porque el texto no habla de créditos bancarios internacionales, sino de compras de tecnología.",
+     "La alternativa D recoge el proceso: la introducción de innovaciones tecnológicas a partir del crecimiento del sector exportador. Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Asocia la obra con una crisis de la industria local frente a la competencia internacional. El texto no describe una industria nacional en retroceso; solo muestra una obra de transporte vinculada a la minería.",
+     "B": "Relaciona el ferrocarril con la disolución del monopolio de Valparaíso. Es tentadora porque la obra une otro puerto, pero Caldera no eliminó el papel comercial de Valparaíso; solo ofreció una vía de transporte adicional.",
+     "C": "Vincula la obra con una mayor dependencia de créditos bancarios internacionales. El texto menciona compras de tecnología y rieles a proveedores extranjeros, no financiamiento de largo plazo, por lo que la conclusión va más allá de la fuente."
+    }
+   }
+  },
+  {
+   "id": "historia-curado-2-q30",
+   "number": 30,
+   "origin": "historia-2027-invierno-q39",
+   "axis": "Sistema económico",
+   "topic": "Economía",
+   "subtopic": "hi-mercado",
+   "stem": "Tras la crisis económica de 1929 se implementó el modelo de Estado de bienestar en distintos países, reorientando el rol del Estado en la economía y la sociedad. En este contexto, ¿cuál fue una de las estrategias adoptadas por los Estados bajo este nuevo modelo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "La aplicación de restricciones a la producción manufacturera."
+    },
+    {
+     "key": "B",
+     "text": "La eliminación de las regulaciones aplicadas al mercado laboral."
+    },
+    {
+     "key": "C",
+     "text": "El término de los impuestos aplicados al consumo de la población."
+    },
+    {
+     "key": "D",
+     "text": "El aumento del gasto público destinado a las prestaciones sociales."
+    }
+   ],
+   "answer": "D",
+   "presentation": "text",
+   "explanation": {
+    "kind": "solucion",
+    "summary": "El Estado de bienestar respondió a la crisis de 1929 aumentando el gasto público en prestaciones sociales, como salud, previsión y subsidios.",
+    "planteamiento": "Se pide una estrategia de los Estados de bienestar tras la crisis económica de 1929. Datos: reorientación del rol del Estado en la economía y en la sociedad; se busca la medida que implica más protección social y, por tanto, más gasto en prestaciones.",
+    "steps": [
+     "Tras 1929, el Estado asumió un rol activo en la economía y en la protección de la sociedad. Hay que identificar qué medida concreta caracteriza ese modelo.",
+     "El modelo de bienestar requería recursos para financiar las prestaciones sociales, como pensiones, seguros de salud, subsidios y apoyo al desempleo. Por eso el gasto público destinado a esas prestaciones aumentó de forma sostenida.",
+     "En Chile existe un antecedente de esa orientación: el Seguro Obrero obligatorio de 1924, que amplió la protección social de los trabajadores.",
+     "Las alternativas A, B y C describen lo contrario del Estado de bienestar. Restringir la producción manufacturera, eliminar la regulación del mercado laboral o quitar impuestos al consumo debilitaría la protección social y los recursos para financiarla.",
+     "Por lo tanto, la alternativa correcta es la D."
+    ],
+    "distractors": {
+     "A": "Propone restringir la producción manufacturera. Es tentadora porque el Estado intervino en la economía, pero el modelo buscaba fomentar la producción y financiar la protección social, no limitarla.",
+     "B": "Propone eliminar las regulaciones del mercado laboral. Un Estado de bienestar regulaba el trabajo, por ejemplo con normas de jornada y seguros; eliminarlas sería contrario al modelo.",
+     "C": "Propone poner término a los impuestos al consumo. Los Estados de bienestar se financiaban en buena parte con impuestos; eliminar los impuestos al consumo iría en sentido contrario al modelo."
+    }
+   }
+  }
+ ]
+}

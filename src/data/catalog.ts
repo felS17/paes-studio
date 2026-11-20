@@ -88,7 +88,8 @@ export function sortExams(exams: ExamMeta[]): ExamMeta[] {
       b.year - a.year ||
       (MODALITY_ORDER[a.modality] ?? 9) - (MODALITY_ORDER[b.modality] ?? 9) ||
       SUBJECT_TABS.indexOf(a.subject) - SUBJECT_TABS.indexOf(b.subject) ||
-      (a.area ?? '').localeCompare(b.area ?? ''),
+      (a.area ?? '').localeCompare(b.area ?? '') ||
+      a.id.localeCompare(b.id, 'es', { numeric: true }),
   )
 }
 

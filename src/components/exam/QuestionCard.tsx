@@ -8,6 +8,7 @@ import { Kbd } from '@/components/ui/kbd'
 import { Tag } from '@/components/ui/subject-tag'
 import { cn } from '@/lib/utils'
 import type { OptionKey, Question, SubjectId } from '@/types/exam'
+import { originLabel } from '@/utils/practice'
 import { AnswerStrip, OptionButton, type OptionState } from './OptionButton'
 import { SolutionAccordion } from './SolutionAccordion'
 
@@ -32,11 +33,13 @@ interface QuestionCardProps {
   /** Muestra «Consultar teoría del subtema» (no en Modo Ensayo: el Inspector está bloqueado hasta entregar). */
   theory?: boolean
   subject?: SubjectId
+  /** Revisión a todo el ancho: pregunta, explicación y animación más amplias. */
+  wide?: boolean
 }
 
 export function QuestionCard({
   question, mode, position, total, selected, revealed, flagged, onSelect, onCheck, onToggleFlag, showHints,
-  struck = [], onToggleStrike, theory, subject,
+  struck = [], onToggleStrike, theory, subject, wide = false,
 }: QuestionCardProps) {
   const locked = revealed || mode === 'revision'
   const stateOf = (key: OptionKey): OptionState => {
@@ -54,7 +57,7 @@ export function QuestionCard({
   const snapshot = question.presentation === 'snapshot' && question.snapshot
 
   return (
-    <article className="relative mx-auto w-full max-w-[740px] normal-case" aria-labelledby={`q-${question.id}`}>
+    <article className={cn('relative mx-auto w-full normal-case', wide ? 'max-w-[1040px]' : 'max-w-[740px]')} aria-labelledby={`q-${question.id}`}>
       {confirming && (
         <span aria-hidden className="pointer-events-none absolute -inset-3 animate-confirm rounded-xl border border-emerald-500/60 ring-2 ring-emerald-500/15" />
       )}
@@ -72,6 +75,7 @@ export function QuestionCard({
             <Tag>{question.axis}</Tag>
             {question.topic && question.topic !== question.axis && <Badge tone="outline">{question.topic}</Badge>}
             {question.pilot && mode === 'revision' && <Badge tone="outline">Piloto, no puntúa</Badge>}
+            {question.origin && <Badge tone="outline" title="Pregunta oficial del DEMRE">{originLabel(question.origin)}</Badge>}
           </div>
         )}
         {(onToggleFlag || (theory && mode !== 'ensayo')) && (
@@ -109,7 +113,7 @@ export function QuestionCard({
             <figcaption className="sr-only">Imagen de la prueba oficial del DEMRE</figcaption>
           </figure>
         ) : (
-          <MathText text={question.stem} className="text-[15.5px] leading-[1.7] text-zinc-900 dark:text-zinc-100" />
+          <MathText text={question.stem} className={cn('leading-[1.7] text-zinc-900 dark:text-zinc-100', wide ? 'max-w-[75ch] text-[16.5px]' : 'text-[15.5px]')} />
         )}
       </div>
 
@@ -165,7 +169,7 @@ export function QuestionCard({
           ) : (
             <p className="text-[13px] font-medium text-zinc-500">Sin responder. La correcta es la {question.answer}.</p>
           )}
-          <SolutionAccordion key={question.id} question={question} defaultOpen={!isCorrect} />
+          <SolutionAccordion key={question.id} question={question} defaultOpen={!isCorrect} wide={wide} />
         </div>
       )}
     </article>

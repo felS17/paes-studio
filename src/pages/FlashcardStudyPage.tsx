@@ -23,7 +23,7 @@ const RATINGS: { rating: Rating; label: string }[] = [
 ]
 
 const FACE =
-  'flex min-h-72 flex-col rounded-xl border border-zinc-200/80 bg-surface p-6 [grid-area:1/1] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] sm:min-h-80 sm:p-8 dark:border-zinc-800/80'
+  'flex min-h-72 flex-col rounded-xl border border-zinc-200/80 bg-surface p-6 [grid-area:1/1] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] sm:min-h-80 sm:p-8 lg:min-h-[27rem] lg:p-12 dark:border-zinc-800/80'
 
 function minutesUntil(ts: number, now: number) {
   const m = Math.max(1, Math.round((ts - now) / 60_000))
@@ -98,7 +98,8 @@ export function FlashcardStudyPage() {
   const consolidated = (view ?? deck).cards.filter((c) => states[c.id]?.phase === 'review').length
 
   return (
-    <div className="mx-auto max-w-2xl">
+    // En escritorio la tarjeta ocupa el espacio lateral: más ancha, más alta y con letra de lectura cómoda.
+    <div className="mx-auto max-w-2xl lg:max-w-4xl xl:max-w-5xl">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
           <Button variant="ghost" size="sm" asChild className="-ml-2">
@@ -167,9 +168,9 @@ export function FlashcardStudyPage() {
                   )}
                   aria-label="Mostrar respuesta"
                 >
-                  <span className="text-xs text-zinc-500 dark:text-zinc-400">{current.unit}</span>
-                  <span className="flex flex-1 items-center py-4">
-                    <MathText text={current.front} className="w-full text-[19px] leading-snug font-medium tracking-tight sm:text-[21px]" />
+                  <span className="text-xs text-zinc-500 lg:text-[13px] dark:text-zinc-400">{current.unit}</span>
+                  <span className="flex flex-1 items-center py-4 lg:py-8">
+                    <MathText text={current.front} className="w-full max-w-[52ch] text-[19px] leading-snug font-medium tracking-tight sm:text-[21px] lg:text-[27px] lg:leading-[1.35]" />
                   </span>
                   <span className="flex items-center gap-2 text-xs text-zinc-400 dark:text-zinc-500">
                     Piensa la respuesta antes de voltear
@@ -180,12 +181,12 @@ export function FlashcardStudyPage() {
                   aria-hidden={!flipped}
                   className={cn(FACE, '[transform:rotateY(180deg)]')}
                 >
-                  <span className="text-xs text-zinc-500 dark:text-zinc-400">{current.unit}</span>
-                  <MathText text={current.front} className="mt-2 text-[14px] text-zinc-500 dark:text-zinc-400" />
-                  <div className="my-4 h-px bg-zinc-200/80 dark:bg-zinc-800/80" />
-                  <MathText text={current.back} className="text-[16.5px] leading-relaxed" />
+                  <span className="text-xs text-zinc-500 lg:text-[13px] dark:text-zinc-400">{current.unit}</span>
+                  <MathText text={current.front} className="mt-2 text-[14px] text-zinc-500 lg:text-[16px] dark:text-zinc-400" />
+                  <div className="my-4 h-px bg-zinc-200/80 lg:my-6 dark:bg-zinc-800/80" />
+                  <MathText text={current.back} className="max-w-[68ch] text-[16.5px] leading-relaxed lg:text-[20px] lg:leading-[1.65]" />
                   {current.points && (
-                    <ul className="mt-4 space-y-1.5 text-[13.5px] text-zinc-600 dark:text-zinc-400">
+                    <ul className="mt-4 max-w-[68ch] space-y-1.5 text-[13.5px] text-zinc-600 lg:mt-6 lg:space-y-2 lg:text-[16px] dark:text-zinc-400">
                       {current.points.map((p, i) => (
                         <li key={i} className="flex gap-2">
                           <span aria-hidden className="mt-[0.62em] size-1 shrink-0 rounded-full bg-zinc-400 dark:bg-zinc-500" />
@@ -208,7 +209,7 @@ export function FlashcardStudyPage() {
                 </Button>
               </div>
             ) : (
-              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+              <div className="mx-auto grid max-w-3xl grid-cols-2 gap-2 sm:grid-cols-4">
                 {RATINGS.map(({ rating, label }) => (
                   <button
                     key={rating}
