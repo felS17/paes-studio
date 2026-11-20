@@ -32,7 +32,7 @@ export interface ThemeInfo {
   graph: GraphPalette
 }
 
-/** Los 15 temas, en el orden del selector. Sus tokens de interfaz viven en src/styles/index.css, bajo `[data-theme]`. */
+/** Los 17 temas, en el orden del selector. Sus tokens de interfaz viven en src/styles/index.css, bajo `[data-theme]`. */
 export const THEMES: readonly ThemeInfo[] = [
   {
     id: 'github-dark',
@@ -192,6 +192,38 @@ export const THEMES: readonly ThemeInfo[] = [
       bg: '#282C34', surface: '#21252B', strong: '#D7DAE0', mid: '#9AA1AD', muted: '#5C6370', faint: '#3E4451', accent: '#61AFEF',
       tree: 'rgba(154,161,173,0.6)', leaf: 'rgba(92,99,112,0.6)', cross: 'rgba(97,175,239,0.32)', dim: 'rgba(62,68,81,0.35)',
       correct: '#98C379', incorrect: '#E8848C',
+    },
+  },
+  {
+    id: 'tron-legacy',
+    label: 'tron legacy',
+    hint: 'el grid · cian y ámbar',
+    dark: true,
+    canvas: '#05090D',
+    surface: '#0A1219',
+    text: '#D5EEF6',
+    accent: '#6FE3FF',
+    accent2: '#FFA940',
+    graph: {
+      bg: '#05090D', surface: '#0A1219', strong: '#D5EEF6', mid: '#7FA5B3', muted: '#456977', faint: '#183240', accent: '#6FE3FF',
+      tree: 'rgba(127,165,179,0.6)', leaf: 'rgba(69,105,119,0.6)', cross: 'rgba(111,227,255,0.32)', dim: 'rgba(24,50,64,0.4)',
+      correct: '#3FDD9A', incorrect: '#FF7385',
+    },
+  },
+  {
+    id: 'tron-ares',
+    label: 'tron ares',
+    hint: 'red de ares · carmesí y blanco',
+    dark: true,
+    canvas: '#09080A',
+    surface: '#121013',
+    text: '#ECEFF4',
+    accent: '#FF4D5E',
+    accent2: '#CBD5E1',
+    graph: {
+      bg: '#09080A', surface: '#121013', strong: '#ECEFF4', mid: '#9AA2B0', muted: '#5A606B', faint: '#29262C', accent: '#FF4D5E',
+      tree: 'rgba(154,162,176,0.6)', leaf: 'rgba(90,96,107,0.6)', cross: 'rgba(255,77,94,0.32)', dim: 'rgba(41,38,44,0.4)',
+      correct: '#5FD9A9', incorrect: '#FF7CB4',
     },
   },
   {

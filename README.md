@@ -23,7 +23,7 @@ Las explicaciones oficiales las redactó una IA y se validaron contra la clave d
 ## Qué trae
 
 - **Shell `animfetch`:** el inicio es una ventana de terminal con nebulosa animada, cuenta regresiva a la PAES, comandos de un clic y un prompt opcional con menú `/`. Puedes ponerle tu nombre a la sesión con `/nombre <alias>`.
-- **10 temas de color y 5 tipografías**, de GitHub Dark y Catppuccin a Papel Cálido.
+- **17 temas de color y 6 tipografías**, de GitHub Dark y Catppuccin a Papel Cálido, tron legacy y tron ares.
 - **Motor de ensayos:** modo práctica y cronometrado, tachado de alternativas, atajos de teclado y puntaje en escala PAES.
 - **Tutor de voz `LaTeX-to-Speech`:** lee cada explicación por bloques y convierte las fórmulas a español hablado, con velocidad de 1x, 1,25x y 1,5x.
 - **Animaciones al estilo Manim** en SVG nativo, solo donde ver la figura ayuda: geometría y probabilidad de M1 y M2, con los datos de la pregunta cuando se pueden leer y sincronizadas con la voz.

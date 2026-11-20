@@ -10,13 +10,14 @@ export interface UiFontInfo {
 
 export const DEFAULT_UI_FONT: UiFontId = 'geist'
 
-/** Las 5 tipografías del Inicio y los menús. El ExamRunner usa siempre `geist`. */
+/** Las 6 tipografías del Inicio y los menús. El ExamRunner usa siempre `geist`. */
 export const UI_FONTS: readonly UiFontInfo[] = [
   { id: 'geist', label: 'Geist Sans', hint: 'La de siempre: clara y sobria', stack: "'Geist Variable', 'Geist', sans-serif" },
   { id: 'space-grotesk', label: 'Space Grotesk', hint: 'Geométrica y con más carácter', stack: "'Space Grotesk', sans-serif" },
   { id: 'jetbrains-mono', label: 'JetBrains Mono', hint: 'De editor de código, muy legible', stack: "'JetBrains Mono Variable', 'JetBrains Mono', monospace" },
   { id: 'fira-code', label: 'Fira Code', hint: 'De programador, con trazos abiertos', stack: "'Fira Code', monospace" },
   { id: 'ibm-plex-mono', label: 'IBM Plex Mono', hint: 'Como una máquina de escribir moderna', stack: "'IBM Plex Mono', monospace" },
+  { id: 'tron-grid', label: 'tron grid', hint: 'angular y de circuito, como una terminal del grid', stack: "'Oxanium', 'JetBrains Mono Variable', monospace" },
 ]
 
 export const UI_FONT_BY_ID = Object.fromEntries(UI_FONTS.map((f) => [f.id, f])) as Record<UiFontId, UiFontInfo>

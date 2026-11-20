@@ -419,6 +419,74 @@
   --color-amber-500: #e5c07b;
 }
 
+/* Tron Legacy: el vacío del grid, grises teñidos de cian como líneas de circuito, cian eléctrico para lo activo y ámbar de programa para el avance. */
+[data-theme='tron-legacy'] {
+  --canvas: #05090d;
+  --surface: #0a1219;
+  --accent: #6fe3ff;
+  --progress: #ffa940;
+  --color-white: #f2fcff;
+  --color-zinc-50: #e6f8fd;
+  --color-zinc-100: #d5eef6;
+  --color-zinc-200: #b3d5e0;
+  --color-zinc-300: #95bac7;
+  --color-zinc-400: #7fa5b3;
+  --color-zinc-500: #628896;
+  --color-zinc-600: #456977;
+  --color-zinc-700: #2a4a58;
+  --color-zinc-800: #183240;
+  --color-zinc-900: #0d1c26;
+  --color-zinc-950: #03070a;
+  --color-emerald-100: #c8f7e2;
+  --color-emerald-300: #74f0c0;
+  --color-emerald-400: #3fdd9a;
+  --color-emerald-500: #3fdd9a;
+  --color-emerald-600: #23a874;
+  --color-emerald-700: #1a7f58;
+  --color-rose-100: #ffd8dc;
+  --color-rose-300: #ff9fa9;
+  --color-rose-400: #ff7385;
+  --color-rose-500: #ff5d72;
+  --color-rose-600: #d63b52;
+  --color-rose-700: #a82a3e;
+  --color-amber-400: #ffb54d;
+  --color-amber-500: #ffb54d;
+}
+
+/* Tron Ares: negro profundo, grises metálicos fríos y rojo láser; lo incorrecto se corre al rosa para no confundirse con el acento. */
+[data-theme='tron-ares'] {
+  --canvas: #09080a;
+  --surface: #121013;
+  --accent: #ff4d5e;
+  --progress: #ff4d5e;
+  --color-white: #ffffff;
+  --color-zinc-50: #f8fafc;
+  --color-zinc-100: #eceff4;
+  --color-zinc-200: #cbd5e1;
+  --color-zinc-300: #b1bac7;
+  --color-zinc-400: #9aa2b0;
+  --color-zinc-500: #7a828f;
+  --color-zinc-600: #5a606b;
+  --color-zinc-700: #3b3a42;
+  --color-zinc-800: #29262c;
+  --color-zinc-900: #1a171b;
+  --color-zinc-950: #060507;
+  --color-emerald-100: #cff5e6;
+  --color-emerald-300: #8debc6;
+  --color-emerald-400: #5fd9a9;
+  --color-emerald-500: #5fd9a9;
+  --color-emerald-600: #36a77c;
+  --color-emerald-700: #267d5c;
+  --color-rose-100: #ffd9ea;
+  --color-rose-300: #ffa3cb;
+  --color-rose-400: #ff7cb4;
+  --color-rose-500: #f9649f;
+  --color-rose-600: #d4417f;
+  --color-rose-700: #a33062;
+  --color-amber-400: #f5b94f;
+  --color-amber-500: #f5b94f;
+}
+
 /* Claras: la escala zinc se tiñe como en Papel Cálido; zinc-900 es el texto y zinc-500 el secundario. */
 [data-theme='catppuccin-latte'] {
   --canvas: #eff1f5;
@@ -479,7 +547,9 @@
 [data-theme='dracula'],
 [data-theme='everforest-dark'],
 [data-theme='kanagawa'],
-[data-theme='one-dark'] {
+[data-theme='one-dark'],
+[data-theme='tron-legacy'],
+[data-theme='tron-ares'] {
   --heat-0: var(--color-zinc-800);
   --heat-1: color-mix(in oklab, var(--accent) 32%, var(--canvas));
   --heat-2: color-mix(in oklab, var(--accent) 55%, var(--canvas));
@@ -506,11 +576,16 @@
   --font-sans: 'IBM Plex Mono', ui-monospace, monospace;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
+/* Tron grid: Oxanium, angular y de cortes rectos como los paneles del grid. Si no carga, cae a la mono local. El reloj y los puntajes siguen en JetBrains Mono, que sí tiene cifras tabulares. */
+[data-font='tron-grid'] {
+  --font-sans: 'Oxanium', 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+}
 /* Los rasgos `ss01` y `cv11` son de Geist: en otra fuente cambiarían letras que no queremos tocar. */
 [data-font='space-grotesk'],
 [data-font='jetbrains-mono'],
 [data-font='fira-code'],
-[data-font='ibm-plex-mono'] {
+[data-font='ibm-plex-mono'],
+[data-font='tron-grid'] {
   font-feature-settings: normal;
 }
 /* Una fuente mono es más ancha: apretarla un poco evita que los menús se rompan. */
